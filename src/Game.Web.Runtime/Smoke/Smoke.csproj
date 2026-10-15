@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><EnableDefaultCompileItems>false</EnableDefaultCompileItems><AllowUnsafeBlocks>true</AllowUnsafeBlocks><NoWarn>$(NoWarn);CA1416</NoWarn></PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="../BrowserBridge.cs" Link="BrowserBridge.cs" />
+    <ProjectReference Include="../../Game.Core/Game.Core.csproj" />
+    <ProjectReference Include="../../Game.Content/Game.Content.csproj" />
+    <ProjectReference Include="../../Game.Application/Game.Application.csproj" />
+    <ProjectReference Include="../../Game.Presentation/Game.Presentation.csproj" />
+  </ItemGroup>
+</Project>

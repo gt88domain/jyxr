@@ -1,0 +1,22 @@
+{
+  "name": "jyxr-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "content": "python3 scripts/build-content.py",
+    "runtime": "node scripts/build-runtime.mjs",
+    "prepare:game": "npm run content && npm run runtime",
+    "dev": "vite --host 0.0.0.0",
+    "build": "npm run prepare:game && tsc --noEmit && vite build",
+    "package": "npm run build && python3 scripts/package-web.py",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node tests/browser-smoke.mjs"
+  },
+  "dependencies": { "phaser": "3.90.0" },
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "vite": "8.3.4",
+    "playwright": "^1.58.0"
+  }
+}

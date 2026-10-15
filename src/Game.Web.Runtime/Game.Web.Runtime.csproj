@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.WebAssembly">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RuntimeIdentifier>browser-wasm</RuntimeIdentifier>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <WasmMainJSPath>main.js</WasmMainJSPath>
+    <PublishTrimmed>false</PublishTrimmed>
+    <WasmEnableHotReload>false</WasmEnableHotReload>
+    <JsonSerializerIsReflectionEnabledByDefault>true</JsonSerializerIsReflectionEnabledByDefault>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Smoke/**/*.cs" />
+    <ProjectReference Include="../Game.Core/Game.Core.csproj" />
+    <ProjectReference Include="../Game.Content/Game.Content.csproj" />
+    <ProjectReference Include="../Game.Application/Game.Application.csproj" />
+    <ProjectReference Include="../Game.Presentation/Game.Presentation.csproj" />
+  </ItemGroup>
+</Project>
