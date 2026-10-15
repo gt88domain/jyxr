@@ -7,7 +7,7 @@ const baseURL = process.env.GAME_WEB_URL || 'http://127.0.0.1:4173';
 const output = fileURLToPath(new URL('../test-results/', import.meta.url));
 await mkdir(output, {recursive: true});
 const content = JSON.parse(await readFile(new URL('../public/data/content-package.json', import.meta.url), 'utf8'));
-const segments = new Map(content.storyScripts.starter.segments.map(segment => [segment.name, segment]));
+const segments = new Map(Object.values(content.storyScripts).flatMap(script => script.segments).map(segment => [segment.name, segment]));
 const plain = text => text.replace(/\[\[[a-z]+:([^\]]*)\]\]/gi, '$1').replace(/<\/?color[^>]*>/g, '');
 const report = {baseURL, startedAt: new Date().toISOString(), passed: false, checks: [], dialogues: [], console: [], errors: [], expectedErrors: [], failedRequests: [], failedResponses: []};
 let browser, context, page;

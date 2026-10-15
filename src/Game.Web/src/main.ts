@@ -6,7 +6,7 @@ import type {SaveSlot} from './storage';
 import {Board} from './board';
 import {packIndex, assetUrl} from './content';
 import type {PackListing} from './content';
-import {titleView, worldView, shopView, currency} from './world';
+import {titleView, worldView, shopView, sectView, currency} from './world';
 import {battleShell as battleMarkup, updateBattleView} from './battle-view';
 import {panelContent} from './panels';
 import type {PanelName, InventoryFilter} from './panels';
@@ -57,7 +57,7 @@ function heroCard() {
   const hero = state.hero;
   return `<aside class="hero-card paper"><div class="eyebrow">旅途行者</div><div class="hero-heading"><div class="avatar">${e(hero.name.slice(0, 1))}</div><div><h2>${e(hero.name)}</h2><span>旅程初始 · 第 ${hero.level} 级</span></div></div><div class="vital"><label>气血 <span>${hero.hp} <small>/ ${hero.maxHp}</small></span></label><div class="bar hp"><i style="width:${100 * hero.hp / hero.maxHp}%"></i></div></div><div class="vital"><label>${e(state.pack.terms?.energy || '内力')} <span>${hero.mp} <small>/ ${hero.maxMp}</small></span></label><div class="bar mp"><i style="width:${100 * hero.mp / hero.maxMp}%"></i></div></div><div class="hero-meta"><span>随身${e(state.pack.currencyName || '钱币')}</span><strong>${state.silver.toLocaleString()} <small>${e(currency(state))}</small></strong></div><button class="text-button" data-action="character">查看人物 ${icon('arrow')}</button></aside>`;
 }
-function world() {return topbar() + worldView(state, heroCard()) + dialogueOverlay() + shopView(state);}
+function world() {return topbar() + worldView(state, heroCard()) + dialogueOverlay() + shopView(state) + sectView(state);}
 function dialogueOverlay() {
   if (state.phase !== 'dialogue' && state.phase !== 'choice') return '';
   const choice = state.phase === 'choice';
@@ -226,6 +226,7 @@ document.addEventListener('click', event => {
   else if (action === 'worlds') chooseWorld();
   else if (action === 'select-pack') void selectPack(button.dataset.id!);
   else if (action === 'close-shop') void command({type:'closeShop'});
+  else if (action === 'select-sect') void command({type:'selectSect',sectId:button.dataset.id});
   else if (action === 'buy-item') {const quantity = shopQuantity(); if (quantity) void command({type:'buy',productId:button.dataset.id,quantity});}
   else if (action === 'sell-item') {const quantity = shopQuantity(); if (quantity) void command({type:'sell',entryNumber:Number(button.dataset.entryNumber),quantity});}
   else if (action === 'close-modal') document.querySelector<HTMLDialogElement>('#game-modal')?.close();
@@ -282,6 +283,14 @@ document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && state?.phase === 'shop' && !modalOpen()) {
     event.preventDefault(); void command({type: 'closeShop'});
   }
+});
+document.addEventListener('input', event => {
+  const input = event.target;
+  if (!(input instanceof HTMLInputElement) || input.id !== 'destination-search') return;
+  const text = input.value.trim().toLocaleLowerCase();
+  document.querySelectorAll<HTMLElement>('.chapter-locations .map-spot').forEach(button => {
+    button.hidden = !button.textContent?.toLocaleLowerCase().includes(text);
+  });
 });
 document.addEventListener('submit', event => {
   if (!(event.target instanceof HTMLFormElement) || event.target.id !== 'character-form') return;

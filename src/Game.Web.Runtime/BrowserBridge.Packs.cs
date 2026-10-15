@@ -51,7 +51,7 @@ public static partial class BrowserBridge
         RequireManagement();
         if (_shopId is not null || _storyTask is { IsCompleted: false }) throw new InvalidOperationException("请先结束当前交互。");
         var session = RequireSession();
-        var location = session.MapService.GetCurrentMap().Locations.FirstOrDefault(l => l.Location.Id == locationId);
+        var location = CurrentMapView().Locations.FirstOrDefault(l => l.Location.Id == locationId);
         if (location.Location is null || location.Event is null) throw new InvalidOperationException("此地点当前没有可用事件。");
         var interaction = session.MapService.InteractWithLocation(location);
         _storyTask = session.MapService.ExecuteInteractionAsync(interaction, _storyCancellation.Token);

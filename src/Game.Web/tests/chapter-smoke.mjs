@@ -54,7 +54,10 @@ async function finishBattle(label, companionId) {
     `${label}: companion must be represented by a real allied battle unit`);
   await click('[data-action="battle-speed"][data-id="4"]');
   await page.screenshot({path: `${output}${label}-battle.png`, fullPage: true});
-  await click('[data-action="battle-mode"][data-id="auto"]');
+  const auto = page.locator('[data-action="battle-mode"][data-id="auto"]');
+  // Auto mode persists between encounters. A short fight may already finish
+  // while its screenshot is captured; never wait on its disabled mode button.
+  if (await auto.getAttribute('aria-pressed') !== 'true' && await auto.isEnabled()) await click('[data-action="battle-mode"][data-id="auto"]');
   await page.locator('[data-action="leave-battle"]').waitFor({state: 'visible', timeout: 180_000});
   const after = await state();
   assert.equal(after.battle.outcome, 'win', `${label}: actual battle must be won`);

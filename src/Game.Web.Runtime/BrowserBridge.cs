@@ -72,12 +72,14 @@ public static partial class BrowserBridge
     [JSExport]
     public static async Task<string> Dispatch(string commandJson)
     {
+        var readOnly = false;
         try
         {
             _error = null;
             using var command = JsonDocument.Parse(commandJson);
             var args = command.RootElement;
             var type = Read(args, "type");
+            readOnly = type == "state";
             switch (type)
             {
                 case "createCharacter": CreateCharacter(Read(args, "name", "小虾米"), Read(args, "difficulty", "Normal")); break;
@@ -136,6 +138,7 @@ public static partial class BrowserBridge
                 case "buy": Buy(args); break;
                 case "sell": Sell(args); break;
                 case "closeShop": CloseShop(); break;
+                case "selectSect": _host.ChooseSect(Read(args, "sectId")); break;
                 case "next": _host.ContinueDialogue(); break;
                 case "choose": _host.Choose(args.GetProperty("index").GetInt32()); break;
                 case "playStory": StartStory(Read(args, "storyId")); break;
@@ -185,8 +188,11 @@ public static partial class BrowserBridge
                 default: throw new InvalidOperationException($"未知指令：{type}");
             }
             if (_storyTask?.IsFaulted == true) throw _storyTask.Exception!.GetBaseException();
+            if (type != "state") PumpLegacyWorld();
+            if (_storyTask?.IsFaulted == true) throw _storyTask.Exception!.GetBaseException();
         }
         catch (Exception exception) { _error = exception.Message; }
+        if (!readOnly) _mapView = null;
         return Snapshot();
     }
 
@@ -228,6 +234,15 @@ public static partial class BrowserBridge
             candidate.SaveGameService.LoadSave(save);
             if (!candidate.State.Party.ContainsMember(Party.HeroCharacterId)) throw new InvalidOperationException("存档缺少主角。");
             if (!_content.TryGetMap(candidate.State.Location.CurrentMapId, out _)) throw new InvalidOperationException("存档地图不属于当前内容包。");
+            var savedMap = _content.GetMap(candidate.State.Location.CurrentMapId);
+            if (savedMap.Kind == MapKind.Large && !candidate.State.Location.TryGetLargeMapPosition(savedMap.Id, out _))
+            {
+                // Earlier browser slices exposed the world as a small card map.
+                // Seed its new position without healing or replacing the state.
+                var origin = savedMap.Locations.Single(l => l.Id == savedMap.DefaultLocation).Position
+                    ?? throw new InvalidOperationException("大地图缺少初始坐标。");
+                candidate.State.Location.SetLargeMapPosition(savedMap.Id, origin);
+            }
             var victories = version == 2 && root.TryGetProperty("wonBattles", out var wins) ? wins.Deserialize<string[]>(Json) ?? [] : [];
             foreach (var victory in victories) if (!_content.TryGetBattle(victory, out _)) throw new InvalidOperationException("存档战斗记录不属于当前内容包。");
             var cultivation = wrapped && root.TryGetProperty("cultivationItemId", out var selectedBook) && selectedBook.ValueKind == JsonValueKind.String ? selectedBook.GetString() : null;
@@ -398,8 +413,10 @@ public static partial class BrowserBridge
                 ok = _error is null, error = _error,
                 state = new
                 {
-                    phase = _session is null ? "title" : _battle is not null ? "battle" : _host.Dialogue is not null ? "dialogue" : _host.Choice is not null ? "choice" : _shopId is not null ? "shop" : "world",
+                    phase = _session is null ? "title" : _battle is not null ? "battle" : _host.Dialogue is not null ? "dialogue" : _host.Choice is not null ? "choice" : _shopId is not null ? "shop" : _host.SelectingSect ? "sect" : "world",
                     pack = _pack,
+                    sects = SectView(), tutorial = TutorialView(),
+                    adventure = _session is null ? null : new { sect = _session.State.Adventure.SectId, morality = _session.State.Adventure.Morality, days = _session.State.Clock.TotalDays, timeSlot = _session.State.Clock.TimeSlot.ToChineseBranch() },
                     party = PartyView(), objectives = ObjectiveView(), shop = ShopSnapshot(),
                     hero = hero is null ? null : new
                     {
@@ -417,7 +434,7 @@ public static partial class BrowserBridge
                     silver = _session?.State.Currency.Silver ?? 0,
                     backgroundId = _backgroundId, musicId = _musicId,
                     inventory = _session?.State.Inventory.Entries.Select(InventoryView).ToArray(),
-                    map = map is null ? null : new { id = map.Id, name = map.Name, description = map.Description, background = MapMedia(map.Id), locations = RequireSession().MapService.GetCurrentMap().Locations.Select(l => new { id = l.Location.Id, name = l.Location.Name, description = l.Event?.Description ?? l.Location.Description, action = l.Event?.Action.Root.Name }) },
+                    map = map is null ? null : new { id = map.Id, name = map.Name, description = map.Description, background = MapMedia(map.Id), kind = map.Kind.ToString().ToLowerInvariant(), locations = CurrentMapView().Locations.Select(l => new { id = l.Location.Id, name = l.Location.Name, description = l.Event?.Description ?? l.Location.Description, action = l.Event?.Action.Root.Name, timeSlots = RequireSession().MapService.PreviewInteractionConsumedTimeSlots(l) }) },
                     battle = _battle is null ? null : new
                     {
                         name = _content!.GetBattle(_request!.BattleId).Name, width = _battle.Grid.Width, height = _battle.Grid.Height,
@@ -445,6 +462,9 @@ public static partial class BrowserBridge
 
     private static void ResetStory()
     {
+        ExpiredStories.Clear();
+        _mapView = null;
+        _mapViewState = null;
         _storyCancellation.Cancel();
         _storyCancellation.Dispose();
         _storyCancellation = new CancellationTokenSource();
@@ -463,7 +483,7 @@ public static partial class BrowserBridge
         if (_storyTask.IsFaulted) throw _storyTask.Exception!.GetBaseException();
     }
 
-    private sealed class BrowserStoryHost : Game.Core.Story.IRuntimeHost
+    private sealed partial class BrowserStoryHost : Game.Core.Story.IRuntimeHost
     {
         [StoryCommand("story")]
         public ValueTask ExecuteStory(string storyId, CancellationToken cancellationToken) => new(RequireSession().StoryService.ExecuteAsync(storyId, cancellationToken: cancellationToken));

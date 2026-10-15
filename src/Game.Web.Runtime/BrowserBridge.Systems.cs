@@ -16,7 +16,7 @@ public static partial class BrowserBridge
     private static long _eventSequence;
 
     private static CharacterInstance Hero => RequireSession().State.Party.Members.First();
-    private static bool CanManage => _session is not null && _battle is null && _host.Dialogue is null && _host.Choice is null && _shopId is null;
+    private static bool CanManage => _session is not null && _battle is null && _host.Dialogue is null && _host.Choice is null && !_host.SelectingSect && _shopId is null;
 
     private static void RequireManagement()
     {

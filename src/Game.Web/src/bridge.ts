@@ -19,14 +19,17 @@ export interface Battle {
   action?: {unitId: string; team: number; mainActionCommitted: boolean; canMove: boolean; canRest: boolean; canAttack: boolean} | null;
 }
 export interface GameState {
-  phase: 'title' | 'world' | 'battle' | 'dialogue' | 'choice' | 'shop';
+  phase: 'title' | 'world' | 'battle' | 'dialogue' | 'choice' | 'shop' | 'sect';
+  sects?: {id: string; name: string; description: string; focus: string; masters: string[]; skills: string[]; traits: string[]; available: boolean}[];
+  tutorial?: {id: string; description: string; locations: string[]} | null;
+  adventure?: {sect?: string | null; morality: number; days: number; timeSlot: string};
   pack: ContentPack;
   party: PartyMember[];
   objectives: Objective[];
   shop: Shop | null;
   hero: {id: string; definitionId?: string; sprite?: string | null; portrait?: string | null; name: string; level: number; hp: number; maxHp: number; mp: number; maxMp: number; skills: Skill[]; experience?: number; nextLevelExperience?: number; attributes?: {id: string; label: string; value: number; baseValue: number}[]; talents?: {id: string; name: string; description: string}[]; externalSkills?: Skill[]; internalSkills?: Skill[]; equipment?: EquipmentSlot[]; cultivation?: Cultivation | null; equippedInternalSkillId?: string | null; canManage?: boolean};
   silver: number;
-  map: {id: string; name: string; description: string; background?: string | null; locations: {id: string; name: string; description: string; action?: string | null}[]};
+  map: {id: string; name: string; description: string; kind?: string; background?: string | null; locations: {id: string; name: string; description: string; action?: string | null; timeSlots?: number}[]};
   battle: Battle | null;
   dialogue: {speaker: string; text: string} | null;
   choices: (string | {id?: string; text?: string; label?: string; index?: number})[] | null;

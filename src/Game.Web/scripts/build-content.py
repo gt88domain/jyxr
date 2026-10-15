@@ -2,9 +2,8 @@
 """Rebuild browser content from the checked-in legacy data submodule.
 
 The legacy directory contains every existing converter's unmodified output.
-The runtime package excludes story-dependent world data until its DSL migration
-is implemented. starter-world.json is a lossless, attributed XML projection;
-it is deliberately separate from the current C# story DSL.
+The runtime package contains dependency-closed original stories and world events.
+Unsupported originals remain in the lossless source projection and audit.
 """
 from __future__ import annotations
 
@@ -271,6 +270,15 @@ def build(output: Path) -> None:
     report["starterRuleEffects"] = apply_starter_rule_effects(package)
     from browser_packs import assemble_jyx
     package = assemble_jyx(package, source_maps, SOURCE, script)
+    from legacy_world import expand_original
+    package, original_audit = expand_original(package, source_maps, SOURCE, script)
+    write_json(output / "original-migration-audit.json", original_audit)
+    write_json(output / "original-story-source.json", {
+        "sourceCommit": report["sourceCommit"],
+        "scope": "Lossless source archive, not an executable story script.",
+        "stories": [{"source": filename, **xml_node(s)} for filename in ("storys.xml", "storysCG.xml", "storysPY.xml") for s in ET.parse(SOURCE / filename).getroot().findall("story")],
+    })
+    report["originalMigration"] = original_audit["structurallyMigrated"]
     frontier_module_spec = importlib.util.spec_from_file_location("build_frontier", Path(__file__).with_name("build-frontier.py"))
     frontier_module = importlib.util.module_from_spec(frontier_module_spec)
     frontier_module_spec.loader.exec_module(frontier_module)
@@ -306,19 +314,20 @@ def build(output: Path) -> None:
     # event completion should be inferred from playing these excerpts.
     write_json(output / "starter-dialogue-excerpts.story.json", {"version": 3, "segments": dialogue_segments})
     report["starterStories"] = len(world["stories"])
-    report["migratedStorySegments"] = len(script["segments"])
+    report["verifiedOpeningSegments"] = len(script["segments"])
+    report["migratedStorySegments"] = original_audit["structurallyMigrated"]["originalStories"]
     report["browserPacks"] = [{"id": p["browser"]["id"], "maps": len(p["maps"]), "storySegments": sum(len(s["segments"]) for s in p["storyScripts"].values())} for p in packs]
     report["deferred"]["maps"] = [m["id"] for m in source_maps if m["id"] not in {m["id"] for m in package["maps"]}]
     report["chapterAdaptations"] = [
         {"id": "browser_结伴练习", "reason": "Legacy battle references missing role 经验木头人; a separately named encounter uses the existing 木头人 definition and two party slots."},
         {"id": "browser_新手章节回顾", "reason": "New browser chapter boundary; does not finish or reward unported original sect/world stories."},
-        {"id": "大地图", "reason": "Destination-card map exposes only supported chapter locations, without claiming full legacy travel simulation."},
-        {"id": "NEWBIE", "reason": "Supported buying-medicine stage explicitly maps to a persisted Boolean flag; other original newbie stages are not presented as migrated."},
+        {"id": "昆仑派", "reason": "Original map has no locations or exit event; a separately identified browser exit prevents trapping the player."},
+        {"id": "NEWBIE", "reason": "All six stages from newbie.xml use a single active persisted flag and original finish expressions/result stories."},
     ]
     report["runtimeCounts"] = {key: len(value) for key, value in package.items()}
     report["limitations"] = [
-        "The 14 original opening/trainer segments remain unchanged; the extended chapter adds attributed original stories, with unsupported sect choice explicitly unavailable. Full world events/global triggers remain deferred.",
-        "Runtime maps expose only supported story/map/shop events. NEWBIE state uses explicit Boolean flags for the supported buying-medicine tutorial; no false placeholder is treated as implemented.",
+        "The 14 verified opening/trainer segments remain unchanged; dependency-closed original stories/maps/events and nine sect entries are now exposed. Structural migration is not proof of full playthroughs.",
+        "Original source and all deferred story/event reasons are archived separately. Six original newbie tasks, large-map distance/time and supported global triggers run through the current C# session.",
         "The original four-enemy training battle references missing role 经验木头人. browser_结伴练习 is explicitly authored using the real 木头人 definition, not a claim that this missing role was recovered.",
         "Converted talent/buff descriptions do not implement missing legacy battle hooks; this is an integration slice, not full original-rule parity.",
         "Original media references are retained; browser rendering supplies its own generated art.",
