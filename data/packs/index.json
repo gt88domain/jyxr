@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "defaultPackId": "jyx",
+  "packs": [
+    {
+      "id": "jyx",
+      "title": "金庸群侠传 X",
+      "subtitle": "初入江湖",
+      "description": "原版开场与规则迁移；本章新增结伴训练，门派与后续世界逐步开放。",
+      "url": "packs/jyx/content-package.json"
+    },
+    {
+      "id": "frontier",
+      "title": "灰烬边境",
+      "subtitle": "佣兵的第一份委托",
+      "description": "原创低魔佣兵冒险。一个营地、一段旧道、一座废塔，靠装备与战技活着回来。",
+      "url": "packs/frontier/content-package.json"
+    }
+  ]
+}

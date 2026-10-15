@@ -30702,6 +30702,40 @@
         }
       ],
       "randomParticipants": []
+    },
+    {
+      "id": "browser_结伴练习",
+      "name": "结伴练习",
+      "background": "battle_bg/city2",
+      "participants": [
+        {
+          "position": {
+            "x": 2,
+            "y": 1
+          },
+          "team": 1,
+          "facing": 1,
+          "partyIndex": 0
+        },
+        {
+          "position": {
+            "x": 2,
+            "y": 3
+          },
+          "team": 1,
+          "facing": 1,
+          "partyIndex": 1
+        },
+        {
+          "position": {
+            "x": 7,
+            "y": 2
+          },
+          "team": 2,
+          "facing": 0,
+          "characterId": "木头人"
+        }
+      ]
     }
   ],
   "characters": [
@@ -78324,33 +78358,161 @@
   ],
   "maps": [
     {
-      "id": "南贤居",
-      "name": "南贤居",
-      "description": "你回到了南贤居，南贤还是保持着你离开时的模样，正摇头晃脑地看着一本书，口里念念有词。",
-      "picture": "地图.主角之家",
+      "id": "大地图",
+      "name": "大地图",
+      "description": "有人的地方，就是江湖！本章可前往洛阳、万劫谷与南贤居；其他地区将随章节开放。",
+      "picture": "地图.大地图",
+      "kind": "small",
       "musics": [
-        "音乐.室内_清新"
+        "音乐.逍遥",
+        "音乐.逍遥1",
+        "音乐.逍遥2",
+        "音乐.逍遥3",
+        "音乐.逍遥4",
+        "音乐.天龙八部.佛音2",
+        "音乐.天龙八部.佛音3"
       ],
       "locations": [
         {
-          "id": "南贤",
+          "id": "万劫谷",
           "position": {
-            "x": -1,
-            "y": -1
+            "x": 599,
+            "y": 1014
           },
-          "description": "一个糟老头子",
+          "description": "历经万劫的苦逼山谷",
           "picture": null,
-          "events": []
+          "events": [
+            {
+              "id": "2",
+              "action": "map('万劫谷')",
+              "image": "town.6",
+              "description": null
+            }
+          ]
         },
         {
-          "id": "木头人",
+          "id": "洛阳",
+          "position": {
+            "x": 925,
+            "y": 537
+          },
+          "description": "繁华的洛阳城",
+          "picture": null,
+          "events": [
+            {
+              "id": "3",
+              "action": "map('洛阳')",
+              "image": "town.city.luoyang",
+              "description": null
+            }
+          ]
+        },
+        {
+          "id": "南贤居",
+          "position": {
+            "x": 1098,
+            "y": 717
+          },
+          "description": "南贤的简陋居室，现在也是你在这个世界的家",
+          "picture": null,
+          "events": [
+            {
+              "id": "2",
+              "action": "map('南贤居')",
+              "image": "town.cunzhuang",
+              "description": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "洛阳",
+      "name": "洛阳",
+      "description": "你来到了繁华的东都洛阳，洛阳牡丹的美誉名动天下，才子佳人相会于此，无数传世佳作自洛阳问世。",
+      "picture": "地图.洛阳",
+      "musics": [
+        "音乐.城市3"
+      ],
+      "locations": [
+        {
+          "id": "商店",
           "position": {
             "x": -1,
             "y": -1
           },
-          "description": "一个用于练级的木头人",
+          "description": "洛阳城的杂货店，专卖各种杂货药品",
+          "picture": "地图.商店",
+          "events": [
+            {
+              "id": "1",
+              "action": "story('original_新手引导.买药')",
+              "image": null,
+              "description": null,
+              "when": "has_flag('newbie_购买物品')",
+              "repeatMode": "once"
+            },
+            {
+              "id": "3",
+              "action": "shop('洛阳.商店')",
+              "image": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "id": "返回",
+          "position": {
+            "x": -1,
+            "y": -1
+          },
+          "description": "夜晚关闭城门，禁止出城",
           "picture": null,
-          "events": []
+          "events": [
+            {
+              "id": "1",
+              "action": "map('大地图')",
+              "image": null,
+              "description": "返回大地图"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "万劫谷",
+      "name": "万劫谷",
+      "description": "你来到一座千奇百怪的山谷前，此山谷怪石崚峋，远远望去仿佛一个愁眉苦脸的人脸模样。",
+      "picture": "地图.村口2",
+      "musics": [
+        "音乐.天龙八部8"
+      ],
+      "locations": [
+        {
+          "id": "钟灵",
+          "position": {
+            "x": -1,
+            "y": -1
+          },
+          "description": "万劫谷钟万仇的爱女",
+          "picture": null,
+          "events": [
+            {
+              "id": "2",
+              "action": "story('tlbb.dy_钟灵')",
+              "image": null,
+              "description": null,
+              "when": "!story_completed('tlbb.dy_闪电貂还钟灵') && !story_completed('tlbb.dy_闪电貂') && !story_completed('tlbb.dy_闪电貂带路2')",
+              "repeatMode": "once"
+            },
+            {
+              "id": "3",
+              "action": "story('tlbb.dy_钟灵不找2')",
+              "image": null,
+              "description": null,
+              "when": "story_completed('tlbb.dy_钟灵不找')"
+            }
+          ]
         },
         {
           "id": "返回",
@@ -78360,7 +78522,66 @@
           },
           "description": "返回大地图",
           "picture": null,
-          "events": []
+          "events": [
+            {
+              "id": "1",
+              "action": "map('大地图')",
+              "image": null,
+              "description": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "南贤居",
+      "name": "南贤居",
+      "description": "你回到了南贤居，南贤还是保持着你离开时的模样，正摇头晃脑地看着一本书，口里念念有词。",
+      "picture": "地图.主角之家",
+      "musics": [
+        "音乐.室内_清新"
+      ],
+      "locations": [
+        {
+          "id": "返回",
+          "position": {
+            "x": -1,
+            "y": -1
+          },
+          "description": "返回大地图",
+          "picture": null,
+          "events": [
+            {
+              "id": "1",
+              "action": "map('大地图')",
+              "image": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "id": "结伴练习",
+          "name": "结伴练习",
+          "description": "本章新增的伙伴配合练习；使用原木头人规则。",
+          "events": [
+            {
+              "id": "browser-team-training",
+              "action": "story('browser_结伴练习')",
+              "when": "in_team('钟灵')"
+            }
+          ]
+        },
+        {
+          "id": "章节回顾",
+          "name": "章节回顾",
+          "description": "回顾本章，准备下一段旅程。",
+          "events": [
+            {
+              "id": "browser-chapter-review",
+              "action": "story('browser_新手章节回顾')",
+              "when": "has_flag('browser_team_training_won')"
+            }
+          ]
         }
       ]
     },
@@ -78381,17 +78602,14 @@
           },
           "description": "南贤老头子的屋子",
           "picture": "地图.农舍内",
-          "events": []
-        },
-        {
-          "id": "破庙",
-          "position": {
-            "x": -1,
-            "y": -1
-          },
-          "description": "一个破破烂烂的寺庙",
-          "picture": "地图.破庙",
-          "events": []
+          "events": [
+            {
+              "id": "1",
+              "action": "map('南贤屋内')",
+              "image": null,
+              "description": null
+            }
+          ]
         },
         {
           "id": "武师",
@@ -78401,7 +78619,21 @@
           },
           "description": "小村里负责授人习武的武师",
           "picture": "头像.士兵",
-          "events": []
+          "events": [
+            {
+              "id": "1",
+              "action": "story('新手村_武师')",
+              "image": null,
+              "description": null,
+              "repeatMode": "once"
+            },
+            {
+              "id": "2",
+              "action": "story('新手村_武师选择')",
+              "image": null,
+              "description": null
+            }
+          ]
         },
         {
           "id": "杂货店",
@@ -78411,7 +78643,21 @@
           },
           "description": "杂货店",
           "picture": "地图.商店",
-          "events": []
+          "events": [
+            {
+              "id": "1",
+              "action": "story('杂货店_商店教程')",
+              "image": null,
+              "description": null,
+              "repeatMode": "once"
+            },
+            {
+              "id": "2",
+              "action": "shop('新手村.杂货店')",
+              "image": null,
+              "description": null
+            }
+          ]
         }
       ]
     },
@@ -78432,7 +78678,22 @@
           },
           "description": "糟老头子南贤",
           "picture": null,
-          "events": []
+          "events": [
+            {
+              "id": "1",
+              "action": "story('新手村_南贤开场')",
+              "image": null,
+              "description": null,
+              "repeatMode": "once"
+            },
+            {
+              "id": "2",
+              "action": "story('新手村_南贤')",
+              "image": null,
+              "description": null,
+              "when": "!story_completed('original_新手引导.任务买药')"
+            }
+          ]
         },
         {
           "id": "小村",
@@ -78442,7 +78703,27 @@
           },
           "description": "一个宁静的村庄",
           "picture": "地图.小村",
-          "events": []
+          "events": [
+            {
+              "id": "1",
+              "action": "map('小村')",
+              "image": null,
+              "description": null,
+              "when": "story_completed('新手村_南贤开场')"
+            }
+          ]
+        },
+        {
+          "id": "出村",
+          "name": "出村",
+          "description": "返回已经开放的江湖地图。",
+          "events": [
+            {
+              "id": "browser-return-world",
+              "action": "map('大地图')",
+              "when": "story_completed('original_新手引导.任务买药')"
+            }
+          ]
         }
       ]
     }
@@ -85694,6 +85975,16 @@
           "level": 3,
           "duration": 5,
           "chance": 100
+        }
+      ],
+      "intent": "support",
+      "effects": [
+        {
+          "type": "add_rage",
+          "target": {
+            "type": "self"
+          },
+          "value": 2
         }
       ]
     },
@@ -98976,7 +99267,28 @@
       "id": "攻击强化",
       "name": "攻击强化",
       "description": "增加攻击力",
-      "isDebuff": false
+      "isDebuff": false,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 1.0,
+              "deltaPerBuffLevel": 0.1
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "易容",
@@ -99422,7 +99734,59 @@
       "id": "异世人",
       "name": "异世人",
       "point": 0,
-      "description": "来自另外一个世界的神秘人，具有深不见底的潜力。在危机时刻能够爆发出最大的能力。"
+      "description": "来自另外一个世界的神秘人，具有深不见底的潜力。在危机时刻能够爆发出最大的能力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_hp_ratio",
+              "maxInclusive": 0.2
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 2.0
+            },
+            {
+              "type": "modify_damage_context",
+              "field": "critical_chance",
+              "op": "more",
+              "delta": 2.0
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_hp_ratio",
+              "maxInclusive": 0.2
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "target_defence",
+              "op": "more",
+              "delta": 1.5
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "御剑",
@@ -99674,7 +100038,17 @@
       "id": "瘸子",
       "name": "瘸子",
       "point": 0,
-      "description": "这人竟是一个瘸子!移动距离下降1。"
+      "description": "这人竟是一个瘸子!移动距离下降1。",
+      "affixes": [
+        {
+          "type": "stat_modifier",
+          "stat": "movement",
+          "value": {
+            "op": "add",
+            "delta": -1
+          }
+        }
+      ]
     },
     {
       "id": "白内障",
@@ -102178,8 +102552,772 @@
               }
             }
           ]
+        },
+        {
+          "name": "新手村_南贤",
+          "steps": [
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "南贤",
+                "text": "有什么事吗？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "[[yellow:【结束新手村】放我出村吧！]]",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "新手村_南贤_出村"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "【离开】没事了",
+                      "steps": [
+                        {
+                          "kind": "command",
+                          "call": "map('南贤屋内')"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "【询问】这个世界有善恶之分吗？",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "新手村_南贤_善恶之分"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "【询问】我要如何募集队友？",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "新手村_南贤_募集队友"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "【询问】我上次来这个世界都做了什么？",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "新手村_南贤_DOS版"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "【询问】我需要在这个世界做什么？",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "新手村_南贤_目标"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "【挑战】我想跟你打一架",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "新手村_南贤_打一架"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "新手村_南贤_出村",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "好了，看来你也学得差不多了。那么现在就送你出村！"
+            },
+            {
+              "kind": "jump",
+              "target": "original_教学开始"
+            }
+          ]
+        },
+        {
+          "name": "新手村_南贤_善恶之分",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "当然，惩恶扬善是我辈本分。你的道德评价将直接和你在这个世界中的一举一动关联。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "究竟是要做一个大侠，还是一个坏蛋，完全取决于你自己！所以请慎重选择在这个江湖中的每一步吧！"
+            },
+            {
+              "kind": "jump",
+              "target": "新手村_南贤"
+            }
+          ]
+        },
+        {
+          "name": "新手村_南贤_募集队友",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "大多数队友都是需要你完成固定剧情才能加入你。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "当然，剧情走向和你的每一步选择相关！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "还有，每当你打通一个周目的时候，下个周目的时候可能会送给你神秘队友噢~"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "另外，还有松鼠旅馆，也是可以招募到强大的江湖侠士。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "总之，多到处逛逛，总是能让一些得力助手加入你的队伍的！"
+            },
+            {
+              "kind": "jump",
+              "target": "新手村_南贤"
+            }
+          ]
+        },
+        {
+          "name": "新手村_南贤_DOS版",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "十多年前，你来到了这个世界。以江湖最常见的野球拳，打败了当世所有绝顶高手。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "当江湖奉你为武林盟主的时候，你却独自离开了这个世界。据说是回到了原本属于你自己的那个世界去了……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "但你的故事，一直是江湖的一个丰碑、一个传说，或者说，你已经成为了江湖的一个信仰。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "如今，你又是新的你，这个世界却不曾记得你来过，你是否还能谱写神话——我们拭目以待！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "哎，听你说得鸭梨好大，但貌似很有激情的样子……"
+            },
+            {
+              "kind": "jump",
+              "target": "新手村_南贤"
+            }
+          ]
+        },
+        {
+          "name": "新手村_南贤_目标",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "那么我到底来这个世界是为了什么？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "刚才我已经说了，这个世界中，邪恶气息降临……送你回来，冥冥中也印证了你一定会要再续写一个武林传奇。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "问你等于没问……"
+            },
+            {
+              "kind": "jump",
+              "target": "新手村_南贤"
+            }
+          ]
+        },
+        {
+          "name": "新手村_南贤_打一架",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "你这么欠扁，请问我可以扁你吗？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "年轻人火气不要这么大，尊老爱幼是基本道德……来瓶凉茶降降火吧。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……"
+            },
+            {
+              "kind": "jump",
+              "target": "新手村_南贤"
+            }
+          ]
+        },
+        {
+          "name": "杂货店_商店教程",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.商店')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "商人",
+              "text": "欢迎光临！第一次来商店吧，我来介绍一下。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "商人",
+              "text": "在许多城市，都有这样的店铺，你可以购买或者卖出东西。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "商人",
+              "text": "货币分两种，一般我们用的就是银两了，另外还有元宝，一些特别贵重的物品，都是使用元宝交易的。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "商人",
+              "text": "值得一提的是，所有的东西我们回收，也就是你卖的时候，是半价的。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "商人",
+              "text": "同样一个物品，在不同的商店也可能价格不一样。另外，据说有时候深夜的时候一些商店还开辟[[red:黑市]]喔，所以有时晚上可以去碰碰运气！"
+            },
+            {
+              "kind": "command",
+              "call": "shop('新手村.杂货店')"
+            }
+          ]
+        },
+        {
+          "name": "original_教学开始",
+          "steps": [
+            {
+              "kind": "jump",
+              "target": "original_新手引导.开始"
+            }
+          ]
+        },
+        {
+          "name": "tlbb.dy_钟灵",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "钟灵",
+              "text": "大哥哥，我的闪电貂走丢了，你能帮我去找找吗？"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "要帮钟灵找闪电貂吗？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "义不容辞",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "tlbb.dy_钟灵找"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "我还有要事在身……",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "tlbb.dy_钟灵不找"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "tlbb.dy_钟灵找",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "钟灵",
+              "text": "太好了！我们出发吧！"
+            },
+            {
+              "kind": "command",
+              "call": "join('钟灵')"
+            }
+          ]
+        },
+        {
+          "name": "tlbb.dy_钟灵不找",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "钟灵",
+              "text": "大哥哥是坏蛋……"
+            }
+          ]
+        },
+        {
+          "name": "tlbb.dy_钟灵不找2",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "钟灵",
+              "text": "哼，你不找就不找。我请别人帮我找……"
+            }
+          ]
+        },
+        {
+          "name": "original_新手引导.开始",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "等一下，我想起一个事。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "我得来点新手任务。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "不会吧，又是新手任务……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "放心吧，一定有好礼物的哦？做不做啊？"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "要不要做新手任务？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "还是做一做吧。",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "original_新手引导.任务买药"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "做啥新手任务，我要闯江湖！",
+                      "steps": [],
+                      "when": "false"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "original_新手引导.任务买药",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……好吧，你赢了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "那给你第一个任务吧，这里有300银两。"
+            },
+            {
+              "kind": "command",
+              "call": "change_silver(300)"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "哇！真是慷慨！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "你先别开心太早！这钱给你是教你怎么买药的。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "呃……买药？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "人在江湖飘，哪能不挨刀。你现在武功都被封印了，战斗中被虐了就吃点药……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "卖药的地方在洛阳，你先在大地图中找到[[red:洛阳]]，然后点进去以后再找到[[red:商店]]。在商店买[[yellow:5]]颗[[yellow:小还丹]]回来。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "哦……"
+            },
+            {
+              "kind": "command",
+              "call": "set_flag('newbie_购买物品')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "你可以点击右边的[[red:日志]]按钮查看当前游戏进度和任务目标。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "好，我买药去了。"
+            },
+            {
+              "kind": "command",
+              "call": "map('大地图')"
+            }
+          ]
+        },
+        {
+          "name": "original_新手引导.买药",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "商人",
+              "text": "哎呀，小兄弟来买药的？欢迎光临！看你是新手，我送你一本武功秘籍！你要什么类型的？"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "要什么类型的秘籍呢？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "拳掌",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "original_新手引导.买药拳"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "剑法",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "original_新手引导.买药剑"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "刀法",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "original_新手引导.买药刀"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "奇门",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "original_新手引导.买药奇门"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "original_新手引导.买药拳",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "item('罗汉拳谱', 1)"
+            },
+            {
+              "kind": "jump",
+              "target": "original_新手引导.买药继续"
+            }
+          ]
+        },
+        {
+          "name": "original_新手引导.买药剑",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "item('青蟒剑法秘籍', 1)"
+            },
+            {
+              "kind": "jump",
+              "target": "original_新手引导.买药继续"
+            }
+          ]
+        },
+        {
+          "name": "original_新手引导.买药刀",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "item('万劫刀法谱', 1)"
+            },
+            {
+              "kind": "jump",
+              "target": "original_新手引导.买药继续"
+            }
+          ]
+        },
+        {
+          "name": "original_新手引导.买药奇门",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "item('疯魔杖法秘诀', 1)"
+            },
+            {
+              "kind": "jump",
+              "target": "original_新手引导.买药继续"
+            }
+          ]
+        },
+        {
+          "name": "original_新手引导.买药继续",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "谢谢掌柜！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "商人",
+              "text": "哈哈，太客气了。你可是要成为一代大侠的人物，我得讨好你这个大主顾……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "商人",
+              "text": "我再送你五颗小还丹！你不用花钱买了！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "哇！慷慨啊！"
+            },
+            {
+              "kind": "command",
+              "call": "item('小还丹', 5)"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "商人",
+              "text": "嘿嘿，小意思。小兄弟可要成为一代大侠哦，这个游戏很好玩的哦。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "一定一定！"
+            }
+          ]
+        },
+        {
+          "name": "browser_结伴练习",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "先和伙伴配合一下，再继续闯荡江湖。"
+            },
+            {
+              "kind": "battle",
+              "battleId": "browser_结伴练习",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "command",
+                    "call": "set_flag('browser_team_training_won')"
+                  },
+                  {
+                    "kind": "command",
+                    "call": "map('南贤居')"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "command",
+                    "call": "map('南贤居')"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "browser_新手章节回顾",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "suggest('本章开放了剧情、装备、修炼、结伴与交易。可以对照旅程目标补完尚未尝试的内容，并保存旅程；寻找闪电貂和门派拜师将在后续章节开放。')"
+            }
+          ]
         }
       ]
     }
+  },
+  "browser": {
+    "id": "jyx",
+    "title": "金庸群侠传 X",
+    "subtitle": "初入江湖",
+    "chapterTitle": "初入江湖 · 新手章节",
+    "description": "原版开场与规则迁移；本章新增结伴训练，门派与后续世界逐步开放。",
+    "defaultName": "小虾米",
+    "heroDefinitionId": "主角",
+    "initialMapId": "南贤屋内",
+    "initialStoryId": "新手村_出生",
+    "trainingMapId": "小村",
+    "trainingStoryId": "新手村_武师7",
+    "currencyName": "银两",
+    "currencyUnit": "两",
+    "terms": {
+      "cultivation": "功法修炼",
+      "internalSkills": "内功",
+      "externalSkills": "外功招式",
+      "energy": "内力"
+    },
+    "completionStoryId": "browser_新手章节回顾",
+    "media": {
+      "titleBackground": "art/nanxian-retreat.png",
+      "worldBackground": "art/nanxian-retreat.png",
+      "battleBackground": "art/training-courtyard.png",
+      "defaultFriendly": "art/hero-swordsman.png",
+      "defaultEnemy": "art/training-dummy.png",
+      "characters": {
+        "主角": "art/hero-swordsman.png",
+        "木头人": "art/training-dummy.png",
+        "钟灵": "art/green-traveler.png"
+      },
+      "maps": {}
+    },
+    "objectives": [
+      {
+        "id": "opening",
+        "title": "听南贤说说这个江湖",
+        "kind": "story",
+        "target": "新手村_小村介绍"
+      },
+      {
+        "id": "cultivation",
+        "title": "选择一本秘籍修炼",
+        "kind": "cultivation"
+      },
+      {
+        "id": "training",
+        "title": "在武师处完成第一场练习",
+        "kind": "battle",
+        "target": "南贤居_木头人_战斗"
+      },
+      {
+        "id": "tutorial",
+        "title": "找南贤出村，接下买药教学",
+        "kind": "story",
+        "target": "original_新手引导.任务买药"
+      },
+      {
+        "id": "shopping",
+        "title": "到洛阳商店完成一次交易",
+        "kind": "purchase",
+        "target": "洛阳.商店"
+      },
+      {
+        "id": "equipment",
+        "title": "穿上一件装备",
+        "kind": "equipment"
+      },
+      {
+        "id": "companion",
+        "title": "去万劫谷邀请钟灵同行",
+        "kind": "party",
+        "target": "钟灵"
+      },
+      {
+        "id": "team",
+        "title": "回南贤居完成结伴练习",
+        "kind": "battle",
+        "target": "browser_结伴练习"
+      },
+      {
+        "id": "save",
+        "title": "保存这段江湖旅程",
+        "kind": "save"
+      }
+    ]
   }
 }

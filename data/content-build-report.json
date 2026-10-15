@@ -40,9 +40,7 @@
   },
   "deferred": {
     "maps": [
-      "大地图",
       "龙门镖局",
-      "洛阳",
       "平一指居",
       "长安",
       "长安城中心",
@@ -94,7 +92,6 @@
       "大理树林",
       "无量山洞",
       "无量秘洞",
-      "万劫谷",
       "五毒教山中1",
       "五毒教山中2",
       "五毒教山中3",
@@ -122,7 +119,6 @@
       "程英居",
       "风陵渡口",
       "剑魔荒冢",
-      "南贤居",
       "白驼山庄",
       "桃花岛",
       "武当派",
@@ -185,8 +181,6 @@
       "石梁派大殿",
       "天安门",
       "公主寝宫",
-      "小村",
-      "南贤屋内",
       "破庙",
       "长安一梦",
       "长安一梦草场",
@@ -228,17 +222,69 @@
     ],
     "storyItems": []
   },
+  "starterRuleEffects": {
+    "profile": "jyx-first-encounter",
+    "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+    "files": [
+      "JyGame/BattleSprite.cs",
+      "JyGame/AttackLogic.cs"
+    ],
+    "talents": [
+      "瘸子",
+      "异世人"
+    ],
+    "buffs": [
+      "攻击强化"
+    ],
+    "specialSkills": [
+      "打鸡血"
+    ],
+    "deferred": [
+      "草头百姓50%血线分支",
+      "其余未显式装配的天赋及Buff效果"
+    ]
+  },
   "starterStories": 25,
   "migratedStorySegments": 14,
+  "browserPacks": [
+    {
+      "id": "jyx",
+      "maps": 6,
+      "storySegments": 37
+    },
+    {
+      "id": "frontier",
+      "maps": 3,
+      "storySegments": 9
+    }
+  ],
+  "chapterAdaptations": [
+    {
+      "id": "browser_结伴练习",
+      "reason": "Legacy battle references missing role 经验木头人; a separately named encounter uses the existing 木头人 definition and two party slots."
+    },
+    {
+      "id": "browser_新手章节回顾",
+      "reason": "New browser chapter boundary; does not finish or reward unported original sect/world stories."
+    },
+    {
+      "id": "大地图",
+      "reason": "Destination-card map exposes only supported chapter locations, without claiming full legacy travel simulation."
+    },
+    {
+      "id": "NEWBIE",
+      "reason": "Supported buying-medicine stage explicitly maps to a persisted Boolean flag; other original newbie stages are not presented as migrated."
+    }
+  ],
   "runtimeCounts": {
-    "battles": 393,
+    "battles": 394,
     "characters": 513,
     "externalSkills": 158,
     "gameTips": 89,
     "growTemplates": 17,
     "internalSkills": 43,
     "legendSkills": 137,
-    "maps": 3,
+    "maps": 6,
     "worldTriggers": 0,
     "resources": 1091,
     "sects": 9,
@@ -251,11 +297,13 @@
     "towers": 7,
     "scopedBattleEffects": 0,
     "itemTags": 0,
-    "storyScripts": 1
+    "storyScripts": 1,
+    "browser": 17
   },
   "limitations": [
-    "Only the 14 explicitly selected opening/trainer story segments are migrated to current DSL; full legacy world events and global triggers are deferred.",
-    "Runtime maps retain real IDs, locations and descriptions, with events empty; the lossless XML projection and legacy maps preserve original event instructions and conditions.",
+    "The 14 original opening/trainer segments remain unchanged; the extended chapter adds attributed original stories, with unsupported sect choice explicitly unavailable. Full world events/global triggers remain deferred.",
+    "Runtime maps expose only supported story/map/shop events. NEWBIE state uses explicit Boolean flags for the supported buying-medicine tutorial; no false placeholder is treated as implemented.",
+    "The original four-enemy training battle references missing role 经验木头人. browser_结伴练习 is explicitly authored using the real 木头人 definition, not a claim that this missing role was recovered.",
     "Converted talent/buff descriptions do not implement missing legacy battle hooks; this is an integration slice, not full original-rule parity.",
     "Original media references are retained; browser rendering supplies its own generated art.",
     "The separately uploaded X1.0.0.1 archive and its 78 Ludingji story records are not merged into the pinned baseline."
