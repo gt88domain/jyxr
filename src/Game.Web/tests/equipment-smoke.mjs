@@ -94,7 +94,7 @@ try {
   pass('real inventory button equips the original wooden blade', {instanceId});
   await click('[data-action="close-modal"]');
   await click('[data-action="save"]');
-  await page.waitForFunction(() => document.querySelector('#toast')?.textContent === '此刻江湖，已记入行囊。');
+  await page.waitForFunction(() => document.querySelector('#toast')?.textContent === '当前世界的进度已保存。');
   await page.reload({waitUntil: 'networkidle'});
   await visible('[data-action="load"]');
   await click('[data-action="load"]');
@@ -106,7 +106,8 @@ try {
   const exportedPath = `${output}equipment-equipped-save.json`;
   await download.saveAs(exportedPath);
   const exported = JSON.parse(await readFile(exportedPath, 'utf8'));
-  assert.equal(exported.browserSaveVersion, 1);
+  assert.equal(exported.browserSaveVersion, 2);
+  assert.equal(exported.packId, 'jyx');
   assert.ok(JSON.stringify(exported.game.characters).includes(JSON.stringify(instanceId)), 'Exported game must serialize the original equipment instance ID');
   await click('[data-action="close-modal"]');
   await page.reload({waitUntil: 'networkidle'});

@@ -361,7 +361,7 @@ try {
   assert.equal(await page.locator('.hero-heading h2').innerText(), '云游测试侠');
   assert.equal(await page.locator('.location-heading h1').innerText(), '南贤屋内');
   await noOverflow('mobile world');
-  await click('[data-action="talk"][data-id="南贤"]');
+  await click('[data-action="interact"][data-id="南贤"]');
   await noOverflow('mobile dialogue');
   await dialogues('新手村_南贤开场');
   await dialogues('新手村_小村介绍');
@@ -372,7 +372,7 @@ try {
   const initialCultivation = await equipmentAndCultivation();
   await page.screenshot({path: `${output}world-mobile.png`, fullPage: true});
 
-  await click('[data-action="talk"][data-id="武师"]');
+  await click('[data-action="interact"][data-id="武师"]');
   await dialogues('新手村_武师');
   await visible('[data-action="choice"][data-index="0"]');
   assert.match(await page.locator('[data-action="choice"][data-index="0"]').innerText(), /实战练习/);
@@ -394,8 +394,9 @@ try {
   const battleStarted = Date.now();
   await click('[data-action="battle-mode"][data-id="auto"]');
   await page.locator('[data-action="leave-battle"]').waitFor({state: 'visible', timeout: 180_000});
-  assert.match(await page.locator('[aria-label="战斗结算"]').innerText(), /切磋落幕/);
+  assert.match(await page.locator('[aria-label="战斗结算"]').innerText(), /战斗结算/);
   const finishedBattle = await readBattleState();
+  assert.equal(finishedBattle.outcome, 'win', 'The original training battle must end in an actual victory');
   const damageFacts = finishedBattle.events.filter(event => event.kind === 'Damaged' && event.amount > 0);
   assert.ok(damageFacts.length > 0, 'The battle must contain real positive damage facts');
   const shownDamage = JSON.parse(await page.locator('#board-viewport').getAttribute('data-last-damage'));
@@ -421,7 +422,7 @@ try {
   assert.ok(trainedState.equipment.every(slot => slot.item === null), 'Training must not invent physical equipment rewards');
   pass('original battle reward and real book cultivation progress', trainedState);
   await click('[data-action="save"]');
-  await page.waitForFunction(() => document.querySelector('#toast')?.textContent === '此刻江湖，已记入行囊。');
+  await page.waitForFunction(() => document.querySelector('#toast')?.textContent === '当前世界的进度已保存。');
   await page.reload({waitUntil: 'networkidle'});
   await visible('[data-action="load"]');
   assert.equal(await page.locator('[data-action="load"]').isEnabled(), true, 'Saved game must be offered after reload');
@@ -443,7 +444,8 @@ try {
   const savePath = `${output}exported-save.json`;
   await download.saveAs(savePath);
   const exported = JSON.parse(await readFile(savePath, 'utf8'));
-  assert.equal(exported.browserSaveVersion, 1, 'Export must contain a browser save version');
+  assert.equal(exported.browserSaveVersion, 2, 'Export must contain the pack-aware browser save version');
+  assert.equal(exported.packId, 'jyx', 'The original campaign save must retain its content pack');
   assert.ok(exported.game && exported.profile, 'Export must contain game and player profile');
   assert.equal(exported.cultivationItemId, '内功入门', 'Downloaded save must include the selected cultivation book');
   assert.equal(exported.error, undefined, 'An export error must never be downloaded as a save');

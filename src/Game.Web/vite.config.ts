@@ -1,12 +1,21 @@
 import {defineConfig} from 'vite';
 import {createHash} from 'node:crypto';
-import {existsSync, readFileSync} from 'node:fs';
+import {existsSync, readFileSync, readdirSync} from 'node:fs';
 
 const versionHash = createHash('sha256');
 for (const relative of ['public/runtime/_framework/dotnet.js', 'public/data/content-package.json', 'public/runtime-loader.js']) {
   const path = new URL(relative, import.meta.url);
   if (existsSync(path)) versionHash.update(readFileSync(path));
 }
+function hashPackDirectory(directory: URL): void {
+  if (!existsSync(directory)) return;
+  for (const entry of readdirSync(directory, {withFileTypes: true}).sort((a, b) => a.name.localeCompare(b.name))) {
+    const path = new URL(entry.name + (entry.isDirectory() ? '/' : ''), directory);
+    if (entry.isDirectory()) hashPackDirectory(path);
+    else if (entry.name.endsWith('.json')) versionHash.update(entry.name).update(readFileSync(path));
+  }
+}
+hashPackDirectory(new URL('public/data/packs/', import.meta.url));
 const gameVersion = versionHash.digest('hex').slice(0, 16);
 
 // The same static files must work at a domain root and at /jyxr/ on Pages.

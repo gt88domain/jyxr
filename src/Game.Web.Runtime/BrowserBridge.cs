@@ -38,19 +38,31 @@ public static partial class BrowserBridge
         try
         {
             var root = JsonNode.Parse(contentJson)?.AsObject() ?? throw new InvalidOperationException("内容包为空。");
+            var metadata = root["browser"]?.DeepClone()?.AsObject() ?? LegacyPack();
+            root.Remove("browser");
             var scripts = root["storyScripts"]?.DeepClone();
             root.Remove("storyScripts");
             var package = root.Deserialize<ContentPackage>(Json) ?? throw new InvalidOperationException("内容包无效。");
             if (scripts is JsonObject storyObjects)
                 foreach (var entry in storyObjects)
                     package.StoryScripts[entry.Key] = Game.Core.Story.StoryScriptJson.Parse(entry.Value!.ToJsonString(), entry.Key);
-            _content = new JsonContentLoader().LoadFromPackage(package);
+            var candidate = new JsonContentLoader().LoadFromPackage(package);
+            ValidatePack(metadata, candidate);
+            // Cancel the old flow only after the complete replacement is valid.
+            ResetStory();
+            _content = candidate;
+            _pack = metadata;
             _session = null;
             _battle = null;
+            _shopId = null;
+            _hasSaved = false;
+            WonBattles.Clear();
+            _backgroundId = null;
+            _musicId = null;
             _cultivationItemId = null;
             BattleEvents.Clear();
             Logs.Clear();
-            Log($"原版内容载入：{_content.GetCharacters().Count} 名角色、{_content.GetExternalSkills().Count} 门外功、{_content.GetItems().Count} 件物品。");
+            Log($"{PackText("title")}内容载入：{_content.GetCharacters().Count} 名角色、{_content.GetExternalSkills().Count} 门外功、{_content.GetItems().Count} 件物品。");
             _error = null;
         }
         catch (Exception exception) { _error = exception.Message; }
@@ -119,23 +131,17 @@ public static partial class BrowserBridge
                     break;
                 case "talk":
                 case "interact":
-                    var location = Read(args, "locationId", "武师");
-                    if (location is "南贤居" or "小村")
-                    {
-                        RequireSession().MapService.EnterMap(location == "南贤居" ? "南贤屋内" : "小村");
-                        break;
-                    }
-                    if (location == "南贤" && RequireSession().State.Story.IsStoryCompleted("新手村_南贤开场"))
-                        throw new InvalidOperationException("开场引导已完成，可以前往小村寻找武师。");
-                    var storyId = location switch { "武师" => "新手村_武师", "南贤" => "新手村_南贤开场", _ => throw new InvalidOperationException("此地点尚未迁移交互剧情。") };
-                    StartStory(storyId);
+                    Interact(Read(args, "locationId"));
                     break;
+                case "buy": Buy(args); break;
+                case "sell": Sell(args); break;
+                case "closeShop": CloseShop(); break;
                 case "next": _host.ContinueDialogue(); break;
                 case "choose": _host.Choose(args.GetProperty("index").GetInt32()); break;
                 case "playStory": StartStory(Read(args, "storyId")); break;
                 case "startTraining":
-                    if (RequireSession().State.Location.CurrentMapId != "小村") throw new InvalidOperationException("请先完成南贤引导，再前往小村武师处练习。");
-                    StartStory("新手村_武师7");
+                    if (PackText("trainingMapId") is not { Length: > 0 } trainingMap || RequireSession().State.Location.CurrentMapId != trainingMap) throw new InvalidOperationException("请前往本章的训练地点。");
+                    StartStory(PackText("trainingStoryId"));
                     break;
                 case "move":
                     EnsurePlayerAction();
@@ -172,6 +178,7 @@ public static partial class BrowserBridge
                     _host.CompleteBattle();
                     break;
                 case "enterMap":
+                    RequireManagement();
                     RequireSession().MapService.EnterMap(Read(args, "mapId"));
                     break;
                 case "state": break;
@@ -190,7 +197,9 @@ public static partial class BrowserBridge
             return JsonSerializer.Serialize(new { error = "请在战斗结束后存档。" }, Json);
         var session = RequireSession();
         if (_host.Dialogue is not null || _host.Choice is not null) return JsonSerializer.Serialize(new { error = "请先结束当前对话。" }, Json);
-        return JsonSerializer.Serialize(new { browserSaveVersion = 1, game = session.SaveGameService.CreateSave(), profile = session.ProfileService.CreateProfileRecord(), cultivationItemId = _cultivationItemId }, Json);
+        if (_shopId is not null || _storyTask is { IsCompleted: false }) return JsonSerializer.Serialize(new { error = "请先结束当前交互。" }, Json);
+        _hasSaved = true;
+        return JsonSerializer.Serialize(new { browserSaveVersion = 2, packId = PackText("id"), game = session.SaveGameService.CreateSave(), profile = session.ProfileService.CreateProfileRecord(), cultivationItemId = _cultivationItemId, hasSaved = true, wonBattles = WonBattles.ToArray() }, Json);
     }
 
     [JSExport]
@@ -202,7 +211,10 @@ public static partial class BrowserBridge
             using var document = JsonDocument.Parse(saveJson);
             var root = document.RootElement;
             var wrapped = root.TryGetProperty("browserSaveVersion", out var browserVersion);
-            if (wrapped && browserVersion.GetInt32() != 1) throw new InvalidOperationException("浏览器存档版本不匹配。");
+            var version = wrapped ? browserVersion.GetInt32() : 1;
+            if (version is not (1 or 2)) throw new InvalidOperationException("浏览器存档版本不匹配。");
+            var savedPack = version == 2 ? root.GetProperty("packId").GetString() : "jyx";
+            if (savedPack != PackText("id")) throw new InvalidOperationException("存档属于另一套内容，请先切换对应世界。");
             var save = JsonSerializer.Deserialize<SaveGame>(wrapped ? root.GetProperty("game") : root, Json) ?? throw new InvalidOperationException("存档无效。");
             if (save.Version != SaveGame.CurrentVersion) throw new InvalidOperationException("存档版本不匹配。");
             // Validate into a fresh candidate before replacing a running session.
@@ -214,6 +226,10 @@ public static partial class BrowserBridge
                 candidate.ProfileService.LoadProfile(profile);
             }
             candidate.SaveGameService.LoadSave(save);
+            if (!candidate.State.Party.ContainsMember(Party.HeroCharacterId)) throw new InvalidOperationException("存档缺少主角。");
+            if (!_content.TryGetMap(candidate.State.Location.CurrentMapId, out _)) throw new InvalidOperationException("存档地图不属于当前内容包。");
+            var victories = version == 2 && root.TryGetProperty("wonBattles", out var wins) ? wins.Deserialize<string[]>(Json) ?? [] : [];
+            foreach (var victory in victories) if (!_content.TryGetBattle(victory, out _)) throw new InvalidOperationException("存档战斗记录不属于当前内容包。");
             var cultivation = wrapped && root.TryGetProperty("cultivationItemId", out var selectedBook) && selectedBook.ValueKind == JsonValueKind.String ? selectedBook.GetString() : null;
             if (cultivation is not null)
             {
@@ -226,6 +242,10 @@ public static partial class BrowserBridge
             _host = candidateHost;
             _session = candidate;
             _battle = null;
+            _shopId = null;
+            _hasSaved = true;
+            WonBattles.Clear();
+            WonBattles.UnionWith(victories);
             _cultivationItemId = cultivation;
             BattleEvents.Clear();
             _error = null;
@@ -238,7 +258,7 @@ public static partial class BrowserBridge
     private static GameConfig RuntimeConfig => new()
     {
         MaximizeNewPartyCharacterSkills = false,
-        InitialStorySegmentId = "新手村_出生",
+        InitialStorySegmentId = PackText("initialStoryId"),
         // Legacy Item.Generate(bool): .1 => 4, otherwise .2 => 3,
         // otherwise .4 => 2, otherwise 1. These are conditional rolls.
         EquipmentRandomAffixCountWeights = [new(4, 100), new(3, 180), new(2, 288), new(1, 432)]
@@ -257,16 +277,18 @@ public static partial class BrowserBridge
         if (Enum.TryParse<GameDifficulty>(difficulty, true, out var selectedDifficulty)) state.Adventure.SetDifficulty(selectedDifficulty);
         ResetStory();
         _session = new GameSession(state, _content, _host, config: RuntimeConfig);
-        var hero = new InitialCharacterFactory(_content, RuntimeConfig).Create("主角", "主角", state.EquipmentInstanceFactory);
+        var hero = new InitialCharacterFactory(_content, RuntimeConfig).Create(Party.HeroCharacterId, PackText("heroDefinitionId"), state.EquipmentInstanceFactory);
         hero.Name = name;
         state.Party.AddMember(hero);
-        var map = _content.TryGetMap("小村", out var village) ? village : _content.TryGetMap("南贤屋内", out var room) ? room : null;
-        if (map is not null) _session.MapService.EnterMap(map.Id);
+        _session.MapService.EnterMap(PackText("initialMapId"));
         _battle = null;
         _cultivationItemId = null;
+        _shopId = null;
+        _hasSaved = false;
+        WonBattles.Clear();
         Logs.Clear();
-        Log($"{name}初入江湖。" );
-        if (_content.TryGetStorySegment("新手村_出生", out _)) StartStory("新手村_出生");
+        Log($"{name}开始冒险。" );
+        if (PackText("initialStoryId").Length > 0) StartStory(PackText("initialStoryId"));
     }
 
     private static void StartBattle(string id)
@@ -280,12 +302,13 @@ public static partial class BrowserBridge
             buffResolver: _content!.GetBuff,
             legendSkillsProvider: _content!.GetLegendSkillsFor,
             skillMaxLevelResolver: session.SkillMaxLevelPolicy.GetMaxLevel,
-            characterGrowTemplateResolver: c => _content!.GetGrowTemplate(c.GrowTemplateId ?? CharacterExperienceProgression.DefaultGrowTemplateId));
+            characterGrowTemplateResolver: c => _content!.GetGrowTemplate(c.GrowTemplateId ?? CharacterExperienceProgression.DefaultGrowTemplateId),
+            skillUseExperienceResolver: PackText("id") == "jyx" ? BrowserLegacyRules.ResolveSkillUseExperience : null);
         _ai = new BasicEnemyBattleAgent(new BattleTurnCandidateGenerator(_engine), new BattleAiPolicyResolver(session.SkillMaxLevelPolicy.GetMaxLevel));
         _settled = false;
         BattleEvents.Clear();
         Check(_engine.StartBattle(_battle));
-        Log($"进入原版战斗：{_content.GetBattle(id).Name}。");
+        Log($"进入战斗：{_content.GetBattle(id).Name}。");
         AdvanceEnemies();
     }
 
@@ -343,6 +366,7 @@ public static partial class BrowserBridge
             var settlement = session.BattleService.PreviewVictorySettlement(_battle!, _request!);
             session.BattleService.ApplyOrdinaryVictorySettlement(_battle!, settlement);
             ApplyCultivationExperience(settlement.ExperiencePerMember);
+            WonBattles.Add(_request!.BattleId);
             Log("战斗胜利，已按原有规则结算经验和掉落。");
         }
         else Log("战斗结束。可返回地图重新切磋。");
@@ -364,8 +388,8 @@ public static partial class BrowserBridge
     {
         try
         {
-            var hero = _session?.State.Party.Members.FirstOrDefault();
-            var battleHero = _battle?.Units.FirstOrDefault(u => u.Team == 1);
+            var hero = _session?.State.Party.Members.FirstOrDefault(c => c.Id == Party.HeroCharacterId);
+            var battleHero = _battle?.Units.FirstOrDefault(u => u.Character.Id == Party.HeroCharacterId && u.Team == 1);
             var mapId = _session?.State.Location.CurrentMapId;
             var map = mapId is not null && _content is not null && _content.TryGetMap(mapId, out var definition) ? definition : null;
             var outcome = _battle is null ? null : BattleOutcomeEvaluator.Evaluate(_battle);
@@ -374,10 +398,13 @@ public static partial class BrowserBridge
                 ok = _error is null, error = _error,
                 state = new
                 {
-                    phase = _session is null ? "title" : _battle is not null ? "battle" : _host.Dialogue is not null ? "dialogue" : _host.Choice is not null ? "choice" : "world",
+                    phase = _session is null ? "title" : _battle is not null ? "battle" : _host.Dialogue is not null ? "dialogue" : _host.Choice is not null ? "choice" : _shopId is not null ? "shop" : "world",
+                    pack = _pack,
+                    party = PartyView(), objectives = ObjectiveView(), shop = ShopSnapshot(),
                     hero = hero is null ? null : new
                     {
                         id = hero.Id, name = hero.Name, level = hero.Level,
+                        definitionId = hero.Definition.Id, sprite = CharacterMedia(hero.Definition.Id, "characters"), portrait = CharacterMedia(hero.Definition.Id, "portraits"),
                         hp = battleHero?.Hp ?? hero.CurrentHp ?? (int)hero.GetStat(StatType.MaxHp), maxHp = (int)hero.GetStat(StatType.MaxHp),
                         mp = battleHero?.Mp ?? hero.CurrentMp ?? (int)hero.GetStat(StatType.MaxMp), maxMp = (int)hero.GetStat(StatType.MaxMp),
                         skills = Skills(hero).Select(s => SkillView(s)).ToArray(),
@@ -390,12 +417,13 @@ public static partial class BrowserBridge
                     silver = _session?.State.Currency.Silver ?? 0,
                     backgroundId = _backgroundId, musicId = _musicId,
                     inventory = _session?.State.Inventory.Entries.Select(InventoryView).ToArray(),
-                    map = map is null ? null : new { id = map.Id, name = map.Name, description = map.Description, locations = map.Locations.Select(l => new { id = l.Id, name = l.Name, description = l.Description }) },
+                    map = map is null ? null : new { id = map.Id, name = map.Name, description = map.Description, background = MapMedia(map.Id), locations = RequireSession().MapService.GetCurrentMap().Locations.Select(l => new { id = l.Location.Id, name = l.Location.Name, description = l.Event?.Description ?? l.Location.Description, action = l.Event?.Action.Root.Name }) },
                     battle = _battle is null ? null : new
                     {
                         name = _content!.GetBattle(_request!.BattleId).Name, width = _battle.Grid.Width, height = _battle.Grid.Height,
+                        id = _request.BattleId, background = BattleMedia(_request.BattleId),
                         activeUnitId = Active?.Id, tick = _battle.Tick, outcome = outcome!.Kind == BattleOutcomeKind.Ongoing ? "ongoing" : outcome.WinningTeam == 1 ? "win" : "lose",
-                        units = _battle.Units.Select(u => new { id = u.Id, name = u.Character.Name, team = u.Team, x = u.Position.X, y = u.Position.Y, hp = u.Hp, maxHp = u.MaxHp, mp = u.Mp, maxMp = u.MaxMp, alive = u.IsAlive }),
+                        units = _battle.Units.Select(u => new { id = u.Id, definitionId = u.Character.Definition.Id, sprite = CharacterMedia(u.Character.Definition.Id, "characters", u.Team), portrait = CharacterMedia(u.Character.Definition.Id, "portraits", u.Team), name = u.Character.Name, team = u.Team, x = u.Position.X, y = u.Position.Y, hp = u.Hp, maxHp = u.MaxHp, mp = u.Mp, maxMp = u.MaxMp, alive = u.IsAlive }),
                         skills = Active?.Team == 1 ? Skills(Active.Character).Select(s => SkillView(s, Active)).ToArray() : [],
                         reachable = Active?.Team == 1 && outcome.Kind == BattleOutcomeKind.Ongoing ? _engine!.GetReachablePositions(_battle, Active.Id).Keys.Select(p => new { x = p.X, y = p.Y }).ToArray() : [],
                         targets = TargetView(), events = BattleEvents.ToArray(), playerCanAct = Active?.Team == 1 && outcome.Kind == BattleOutcomeKind.Ongoing,
@@ -429,6 +457,7 @@ public static partial class BrowserBridge
         var session = RequireSession();
         if (_storyTask is { IsCompleted: false }) throw new InvalidOperationException("请先结束当前剧情。");
         if (_battle is not null) throw new InvalidOperationException("请先离开当前战斗。");
+        if (_shopId is not null) throw new InvalidOperationException("请先离开商店。");
         if (!_content!.TryGetStorySegment(storyId, out _)) throw new InvalidOperationException("此剧情尚未完成迁移。");
         _storyTask = session.StoryService.ExecuteAsync(storyId, cancellationToken: _storyCancellation.Token);
         if (_storyTask.IsFaulted) throw _storyTask.Exception!.GetBaseException();
@@ -436,6 +465,21 @@ public static partial class BrowserBridge
 
     private sealed class BrowserStoryHost : Game.Core.Story.IRuntimeHost
     {
+        [StoryCommand("story")]
+        public ValueTask ExecuteStory(string storyId, CancellationToken cancellationToken) => new(RequireSession().StoryService.ExecuteAsync(storyId, cancellationToken: cancellationToken));
+
+        [StoryCommand("shop")]
+        public ValueTask OpenShop(string shopId, CancellationToken cancellationToken)
+        {
+            RequireSession().ShopService.Open(shopId);
+            _shopId = shopId;
+            var pending = new TaskCompletionSource();
+            ShopCompletion = pending;
+            cancellationToken.Register(() => pending.TrySetCanceled(cancellationToken));
+            return new ValueTask(pending.Task);
+        }
+        public TaskCompletionSource? ShopCompletion { get; set; }
+
         [StoryCommand("map", "set_map", "tutorial")]
         public void EnterMap(string mapId) => RequireSession().MapService.EnterMap(mapId);
 

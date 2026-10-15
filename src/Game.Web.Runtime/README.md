@@ -11,6 +11,7 @@ python3 src/Game.Web.Runtime/scripts/verify-wasm-workload.py
 dotnet build src/Game.Web.Runtime/Game.Web.Runtime.csproj
 dotnet publish src/Game.Web.Runtime/Game.Web.Runtime.csproj -c Debug
 dotnet run --project src/Game.Web.Runtime/Smoke/Smoke.csproj
+dotnet run --project src/Game.Web.Runtime/Smoke/Smoke.csproj -- --packs src/Game.Web/public/data/packs/jyx/content-package.json src/Game.Web/public/data/packs/frontier/content-package.json
 ```
 
 The SDK 10 development bundle is `bin/Debug/net10.0/wwwroot/_framework/`; the complete published static bundle is `bin/Debug/net10.0/publish/wwwroot/_framework/`. Copy the chosen `_framework` directory into the web app's `public/runtime/`. Hot reload is explicitly disabled because the host is served by Vite without the .NET development server. SDK 10 inlines its boot configuration into `dotnet.js`. The development bundle is approximately 40 MB before HTTP compression; this build deliberately preserves reflection metadata required by content loading and expression command registration. Release size, trimming and AOT remain separate measurements.
@@ -30,21 +31,24 @@ const next = JSON.parse(await api.Dispatch(JSON.stringify({type: 'createCharacte
 
 Exports:
 
-- `Initialize(contentJson): string` loads a `ContentPackage` plus v3 `storyScripts` objects and returns a snapshot.
+- `Initialize(contentJson): string` validates a `ContentPackage`, v3 `storyScripts`, and its `browser` manifest into a candidate. Only after validation succeeds does it cancel the previous conversation/battle/shop and replace the active pack. An invalid candidate leaves the previous session usable.
 - `Dispatch(commandJson): Promise<string>` executes one command and returns `{ok,error,state}`.
-- `ExportSave(): string` returns an opaque versioned browser save containing the existing `SaveGame` and `GameProfileRecord`. A pending conversation or unfinished battle returns an error object instead.
-- `ImportSave(saveJson): string` validates into a candidate session before replacing the current one. It returns a snapshot. Existing raw `SaveGame` JSON is also accepted.
+- `ExportSave(): string` returns an opaque version-2 browser save containing `packId`, the existing `SaveGame` and `GameProfileRecord`, independent cultivation selection, and settled battle IDs. A pending conversation, shop, story, or unfinished battle returns an error object instead.
+- `ImportSave(saveJson): string` validates the pack binding and a candidate session before replacing the current one. Version-1 browser saves and raw `SaveGame` JSON remain supported in the `jyx` pack. They are rejected in `frontier`; a failed import preserves the current session and pending interaction.
 - `Ping(): string` reports host availability.
 
 Commands:
 
 | type | Fields and behavior |
 | --- | --- |
-| `createCharacter` | `name`, optional existing `GameDifficulty` enum name; uses the real `主角` definition and begins `新手村_出生`. Opening attribute questions are not yet migrated. |
-| `interact` / `talk` | `locationId`: `南贤`, `武师`, `南贤居`, or `小村`; the first two invoke migrated original stories, the latter two navigate existing maps. |
+| `createCharacter` | `name`, optional existing `GameDifficulty` enum name; creates stable instance `主角` from the pack's `heroDefinitionId` and starts `initialMapId` / `initialStoryId`. Opening attribute questions are not yet migrated. |
+| `interact` / `talk` | `locationId` from the current snapshot; resolves the current map's eligible event through `MapService`, including conditions, once completion, clock costs, and its actual story/map/shop command. |
+| `buy` | `productId`, optional positive `quantity` (default 1); only in the active shop, uses `ShopService.Buy`. |
+| `sell` | `entryNumber`, optional positive `quantity` (default 1); only in the active shop, uses `ShopService.Sell` and its half-price rule. |
+| `closeShop` | Finishes the suspended shop command and map event. |
 | `next` | Acknowledge pending dialogue or suggestion. |
 | `choose` | `index`: the opaque index provided in `state.choices`; original trainer choices and conditions run through `StoryService`. |
-| `startTraining` | Only in `小村`; runs the original `新手村_武师7` branch before its real battle. |
+| `startTraining` | Runs the pack's `trainingStoryId`, only when currently in its configured `trainingMapId`. |
 | `move` | `x`,`y`, validated by the domain engine. |
 | `attack` | `skillId`, and either `targetId` or `x`,`y`; the engine validates costs/range/targets, finishes the action and advances enemy AI. |
 | `rest` / `defend` | Executes the domain rest command and enemy turns. |
@@ -60,6 +64,12 @@ Character and inventory commands require the map state, with no pending dialogue
 
 Snapshots now expose real attributes, talents, learned skill progress, all three equipment slots (including empty slots), running internal-skill ID, independent cultivation progress, inventory categories and validated action flags. `battle.targets` lists domain-generated legal cast coordinates, without implying a guaranteed hit. `battle.events` contains sequenced domain facts/cues such as `Moved`, `SkillCast`, `Damaged`, and `Rested`; damage amounts and critical flags come from `BattleFact.Damage`. Old version-1 browser saves without cultivation metadata still load normally. Native smoke validates the original reward/manual battle flow and uses a separate temporary save fixture for actual 木刀 equip/unequip and instance persistence; it never seeds production inventory.
 
-Snapshots include `phase`, `hero`, `silver`, `inventory`, `map`, `battle`, `dialogue`, `choices`, and `logs`. Battle includes the real grid dimensions, unit positions and resources, current actor, skill availability and reachable positions. The 14 migrated opening/trainer segments and their actual rewards/choices/battle branches are executable; other map interactions report an explicit migration gap. Map event selection, other services and the full world are not implemented in this slice.
+Snapshots include `phase` (including `shop`), `pack`, `hero`, `party`, `objectives`, `shop`, `silver`, `inventory`, `map`, `battle`, `dialogue`, `choices`, and `logs`. Battle includes the real grid dimensions, unit positions and resources, current actor, skill availability and reachable positions. Every team-1 participant can be controlled manually or through the same AI. Party membership comes from the actual `join` story command and `PartyService`; battle definitions determine their available party slots. Equipment and cultivation management currently target the protagonist.
+
+The top-level `browser` manifest has `id` (`jyx` or `frontier`), `title`, `heroDefinitionId`, `initialMapId`, `initialStoryId`, optional training story/map IDs, UI text, `media`, and `objectives`. It is removed before domain content loading. `media.characters` / `portraits` key art by character definition ID, `media.maps` by map ID, and `media.battles` by battle ID, with optional defaults. Snapshot hero/party/units carry resolved `sprite` and `portrait` relative paths; map/battle carry `background`. The browser adds its deployment base path; the rules engine does not know a hosting URL or depend on wuxia names/art.
+
+`objectives` use stable IDs, titles, and `kind` / `target`: completed story ID, party member ID, equipped item ID (or any equipment), selected cultivation item ID (or any), purchased shop ID (or any), and won battle ID. Story, party, equipment, purchase, and cultivation status derive from real session state; won battles are recorded only after victory settlement and preserved in the browser save. This progress does not grant rewards or replace original story conditions. The snapshot exposes each objective's current `completed` state. Optional `save` objectives record a successful save creation/import.
+
+`shop.products` exposes `id,itemId,name,description,price,premiumPrice,remaining,purchased,canBuy`; `shop.sellable` exposes `entryNumber,id,name,quantity,price`. Buying cannot exceed the core's remaining claims; selling does not replenish those claims. All balances, inventory instances, and purchases are stored by the existing save service. Native pack smoke additionally verifies invalid candidate replacement, cancelling a pending old story, cross-pack rejection, legacy-save isolation, shop arithmetic, exhausted stock, and save persistence using an isolated fixture.
 
 The legacy random equipment affix-count distribution is preserved from `jyx-legacy-dll/JyGame/Item.cs` `Generate(bool)`: conditional chances 0.1, then 0.2, then 0.4, else yield unconditional weights 100/180/288/432 for counts 4/3/2/1.

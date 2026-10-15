@@ -1,6 +1,12 @@
 using System.Text.Json;
 using Game.Web.Runtime;
 
+if (args.FirstOrDefault() == "--packs")
+{
+    await PackSmoke.Run(args[1], args[2]);
+    return;
+}
+
 var path = args.FirstOrDefault() ?? "src/Game.Web/public/data/content-package.json";
 Check(BrowserBridge.Initialize(File.ReadAllText(path)), "initialize");
 Check(await BrowserBridge.Dispatch("{\"type\":\"createCharacter\",\"name\":\"测试侠客\"}"), "create");
@@ -55,6 +61,9 @@ if (restored.GetProperty("hero").GetProperty("equippedInternalSkillId").GetStrin
 if (restored.GetProperty("inventory").EnumerateArray().Single(i => i.GetProperty("id").GetString() == "内功入门").GetProperty("count").GetInt32() != 1) throw new InvalidOperationException("Cultivation consumed its book.");
 var legacy = System.Text.Json.Nodes.JsonNode.Parse(save)!.AsObject();
 legacy.Remove("cultivationItemId");
+legacy["browserSaveVersion"] = 1;
+legacy.Remove("packId");
+legacy.Remove("wonBattles");
 Check(BrowserBridge.ImportSave(legacy.ToJsonString()), "older v1 save without cultivation metadata");
 Check(BrowserBridge.ImportSave(save), "restore current save");
 var invalidCultivationSave = System.Text.Json.Nodes.JsonNode.Parse(save)!.AsObject();
@@ -84,6 +93,14 @@ if (persistedSlot.GetProperty("item").GetProperty("instanceId").GetString() != e
 Check(await Command(new { type = "unequipItem", slot = "Weapon" }), "unequip returns actual inventory item");
 if (!State(await Command(new { type = "state" })).GetProperty("inventory").EnumerateArray().Any(i => i.GetProperty("id").GetString() == "木刀")) throw new InvalidOperationException("Unequipped item was lost.");
 Check(BrowserBridge.ImportSave(save), "discard isolated equipment fixture");
+var originalV1Path = "src/Game.Web/tests/fixtures/legacy-v1-save.json";
+if (File.Exists(originalV1Path))
+{
+    Check(BrowserBridge.ImportSave(File.ReadAllText(originalV1Path)), "frozen original-browser v1 save");
+    var oldSaveHero = State(await Command(new { type = "state" })).GetProperty("hero");
+    if (oldSaveHero.GetProperty("name").GetString() != "云游测试侠") throw new InvalidOperationException("Original browser save lost its hero.");
+    Check(BrowserBridge.ImportSave(save), "restore current version after legacy fixture");
+}
 
 static Task<string> Command(object command) => BrowserBridge.Dispatch(JsonSerializer.Serialize(command));
 static JsonElement State(string response) { using var doc = JsonDocument.Parse(response); return doc.RootElement.GetProperty("state").Clone(); }

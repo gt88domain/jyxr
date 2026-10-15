@@ -1,9 +1,12 @@
 import './style.css';
-import {loadRuntime, dispatch, exportSave, importSave} from './bridge';
+import {loadRuntime, initializePack, dispatch, exportSave, importSave} from './bridge';
 import type {GameState, Result} from './bridge';
 import {readSlot, writeSlot} from './storage';
 import type {SaveSlot} from './storage';
 import {Board} from './board';
+import {packIndex, assetUrl} from './content';
+import type {PackListing} from './content';
+import {titleView, worldView, shopView, currency} from './world';
 import {battleShell as battleMarkup, updateBattleView} from './battle-view';
 import {panelContent} from './panels';
 import type {PanelName, InventoryFilter} from './panels';
@@ -15,6 +18,7 @@ let state: GameState, slot: SaveSlot | undefined, busy = false, board: Board | u
 let screen = '', selectedSkill = '', enemyTimer: ReturnType<typeof setTimeout> | undefined;
 let autoBattle = false, battlePaused = false;
 let battleIntent: 'move' | 'attack' = 'move';
+let packs: PackListing[] = [];
 const settings = readSettings();
 applySettings(settings);
 let activePanel: PanelName | null = null, inventoryFilter: InventoryFilter = 'all';
@@ -43,25 +47,17 @@ function toast(message: string) {
   setTimeout(() => node.classList.remove('visible'), 3600);
 }
 function topbar(inGame = true) {
-  return `<header class="topbar"><button class="wordmark" data-action="guide" aria-label="行走指南"><span class="seal small">侠</span><span>金庸群侠传<span class="wordmark-x">X</span><small>山水有相逢</small></span></button>
-    <nav aria-label="游戏菜单">${inGame ? `<span class="chapter">初入江湖 <i></i> ${e(state.map?.name)}</span><button class="save-button" data-action="save" ${state.phase === 'battle' || state.phase === 'dialogue' || state.phase === 'choice' ? 'disabled' : ''}>${icon('save')}<span>保存进度</span></button>` : '<span class="edition">经典江湖 · 浏览器新篇</span>'}<button class="icon-button" data-action="settings" aria-label="设置">${icon('settings')}</button><button class="icon-button" data-action="guide" aria-label="帮助">${icon('help')}</button></nav></header>${inGame ? `<nav class="system-nav" aria-label="人物与江湖设置">${([['character', 'person', '人物'], ['equipment', 'sword', '装备'], ['cultivation', 'leaf', '功法修炼'], ['inventory', 'bag', '行囊'], ['settings', 'settings', '设置']] as const).map(([action, symbol, label]) => `<button data-action="${action}">${icon(symbol)}<span>${label}</span></button>`).join('')}</nav>` : ''}`;
+  const pack = state.pack;
+  const menus = [['character', 'person', '人物'], ['equipment', 'sword', '装备'], ['cultivation', 'leaf', pack.terms?.cultivation || '功法修炼'], ['inventory', 'bag', '行囊'], ['party', 'person', '队伍'], ['quests', 'leaf', '目标'], ['settings', 'settings', '设置']];
+  return `<header class="topbar"><button class="wordmark" data-action="guide" aria-label="游玩指南"><span class="seal small">${e(pack.title.slice(0,1))}</span><span>${e(pack.title)}<small>${e(pack.subtitle)}</small></span></button>
+    <nav aria-label="游戏菜单">${inGame ? `<span class="chapter">${e(state.map?.name)}</span><button class="save-button" data-action="save" ${state.phase !== 'world' ? 'disabled' : ''}>${icon('save')}<span>保存进度</span></button>` : ''}<button class="icon-button" data-action="worlds" aria-label="切换世界">${icon('leaf')}</button><button class="icon-button" data-action="settings" aria-label="设置">${icon('settings')}</button><button class="icon-button" data-action="guide" aria-label="帮助">${icon('help')}</button></nav></header>${inGame ? `<nav class="system-nav" aria-label="角色与世界设置">${menus.map(([action,symbol,label]) => `<button data-action="${action}">${icon(symbol)}<span>${e(label)}</span></button>`).join('')}</nav>` : ''}`;
 }
-function title() {
-  return `${topbar(false)}<main class="title-screen"><div class="title-overline"><span></span> 第一回 · 初入江湖</div><h1>江湖路远，<br>今朝启程<span class="title-dot">。</span></h1><p class="title-copy">一卷山河，万般际遇。<br>自南贤居起，走自己的侠客路。</p><div class="title-actions"><button class="button primary" data-action="new" data-testid="new-game">初入江湖 ${icon('arrow')}</button><button class="button ghost" data-action="load" ${slot ? '' : 'disabled'}>续写前缘 ${slot ? `<small>${e(slot.name)} · 第 ${slot.level} 级</small>` : '<small>尚无存档</small>'}</button></div><button class="text-button import-link" data-action="import">${icon('upload')}导入存档</button><div class="chapter-note"><span class="chapter-numeral">壹</span><span>清风入竹，故人候君。<small>南贤居 · 晨</small></span></div></main><footer class="title-footer"><span>金庸群侠传 X · HTML5 重制初版</span><span>原创山水画卷 <span class="footer-rule"></span> 单机游玩 · 本地存档</span></footer>`;
-}
+function title() {return topbar(false) + titleView(state, slot, packs);}
 function heroCard() {
   const hero = state.hero;
-  return `<aside class="hero-card paper"><div class="eyebrow">江湖行客</div><div class="hero-heading"><div class="avatar">${e(hero.name.slice(0, 1))}</div><div><h2>${e(hero.name)}</h2><span>初入江湖 · 第 ${hero.level} 级</span></div></div><div class="vital"><label>气血 <span>${hero.hp} <small>/ ${hero.maxHp}</small></span></label><div class="bar hp"><i style="width:${100 * hero.hp / hero.maxHp}%"></i></div></div><div class="vital"><label>内力 <span>${hero.mp} <small>/ ${hero.maxMp}</small></span></label><div class="bar mp"><i style="width:${100 * hero.mp / hero.maxMp}%"></i></div></div><div class="hero-meta"><span>随身银两</span><strong>${state.silver.toLocaleString()} <small>两</small></strong></div><button class="text-button" data-action="character">查看人物 ${icon('arrow')}</button></aside>`;
+  return `<aside class="hero-card paper"><div class="eyebrow">旅途行者</div><div class="hero-heading"><div class="avatar">${e(hero.name.slice(0, 1))}</div><div><h2>${e(hero.name)}</h2><span>旅程初始 · 第 ${hero.level} 级</span></div></div><div class="vital"><label>气血 <span>${hero.hp} <small>/ ${hero.maxHp}</small></span></label><div class="bar hp"><i style="width:${100 * hero.hp / hero.maxHp}%"></i></div></div><div class="vital"><label>${e(state.pack.terms?.energy || '内力')} <span>${hero.mp} <small>/ ${hero.maxMp}</small></span></label><div class="bar mp"><i style="width:${100 * hero.mp / hero.maxMp}%"></i></div></div><div class="hero-meta"><span>随身${e(state.pack.currencyName || '钱币')}</span><strong>${state.silver.toLocaleString()} <small>${e(currency(state))}</small></strong></div><button class="text-button" data-action="character">查看人物 ${icon('arrow')}</button></aside>`;
 }
-function world() {
-  const locations = (state.map?.locations ?? []).filter(location => ['南贤', '武师', '南贤居', '小村'].includes(location.id));
-  const inVillage = state.map?.id === '小村';
-  return `${topbar()}<main class="world-screen"><section class="location-heading"><div class="eyebrow">第一回 · 山水有相逢</div><h1>${e(state.map.name)}</h1><p>${e(state.map.description)}</p><span class="location-time">${icon('leaf')} 清风徐来 · 万物初醒</span></section>${heroCard()}<div class="map-spots" aria-label="当前地点">${locations.slice(0, 8).map((place, index) => `<button class="map-spot spot-${index}" data-action="interact" data-id="${e(place.id)}" title="${e(place.description)}"><span class="spot-glyph">${e(place.name.slice(0, 1))}</span><span>${e(place.name)}${icon('arrow')}</span></button>`).join('')}</div><section class="travel-panel paper"><div><div class="eyebrow">此间江湖</div><h2>走近一人，听一段往事。</h2><p>点击地点与人物，继续你的旅程。</p></div><div class="travel-actions"><button class="button primary" data-action="talk" data-id="${inVillage ? '武师' : '南贤'}">与${inVillage ? '武师' : '南贤'}交谈 ${icon('arrow')}</button><button class="button outline" data-action="${inVillage ? 'training' : 'interact'}" data-id="小村">${icon(inVillage ? 'sword' : 'arrow')} ${inVillage ? '切磋武艺' : '前往小村'}</button></div></section>${journal()}</main>${dialogueOverlay()}`;
-}
-function journal() {
-  const logs = (state.logs ?? []).slice(-3).reverse();
-  return logs.length ? `<aside class="journal"><span>江湖记事</span>${logs.map(line => `<p>${e(plain(line))}</p>`).join('')}</aside>` : '';
-}
+function world() {return topbar() + worldView(state, heroCard()) + dialogueOverlay() + shopView(state);}
 function dialogueOverlay() {
   if (state.phase !== 'dialogue' && state.phase !== 'choice') return '';
   const choice = state.phase === 'choice';
@@ -98,6 +94,10 @@ function render() {
   else autoBattle = false;
   screen = nextScreen;
   app.className = `app ${screen}-app`;
+  document.documentElement.dataset.pack = state.pack.id;
+  const sceneArt = screen === 'title' ? state.pack.media?.titleBackground : state.map?.background || state.pack.media?.worldBackground;
+  app.style.backgroundImage = sceneArt ? `url("${assetUrl(sceneArt)}")` : '';
+  document.title = `${state.pack.title} · ${state.pack.subtitle || '浏览器冒险'}`;
   app.innerHTML = nextScreen === 'title' ? title() : nextScreen === 'battle' ? battleShell() : world();
   app.setAttribute('aria-busy', String(busy));
   if (nextScreen === 'battle') {
@@ -111,7 +111,7 @@ function render() {
       }
       else if (battleIntent === 'move' && state.battle!.reachable.some(point => point.x === x && point.y === y)) void command({type: 'move', x, y});
       else toast('请点击高亮格移动，或选择武功后点击橙色目标格出招。');
-    });
+    }, state.battle!);
     updateBattle();
   }
 }
@@ -137,24 +137,27 @@ function modal(titleText: string, content: string, wide = false) {
   if (!wide) activePanel = null;
   document.querySelector('#game-modal')?.remove();
   const node = document.createElement('dialog'); node.id = 'game-modal'; node.className = `paper game-modal${wide ? ' system-modal' : ''}`;
-  node.innerHTML = `<button class="icon-button close-modal" data-action="close-modal" aria-label="关闭">${icon('close')}</button><div class="eyebrow">江湖一页</div><h2>${e(titleText)}</h2>${content}`;
+  node.innerHTML = `<button class="icon-button close-modal" data-action="close-modal" aria-label="关闭">${icon('close')}</button><div class="eyebrow">旅途一页</div><h2>${e(titleText)}</h2>${content}`;
   document.body.append(node); node.showModal();
   node.addEventListener('close', () => {activePanel = null; if (screen === 'battle') updateBattle(); scheduleBattle();});
   node.addEventListener('click', event => {if (event.target === node) node.close();});
   if (screen === 'battle') updateBattle();
 }
 function createCharacter() {
-  modal('请留侠名', `<p class="modal-intro">江湖故事，从你的名字开始。</p><form id="character-form"><label class="form-label" for="hero-name">侠客姓名</label><input id="hero-name" name="name" value="小虾米" minlength="1" maxlength="12" autocomplete="off" required autofocus><label class="form-label" for="difficulty">行走难度</label><select id="difficulty" name="difficulty"><option value="normal">简单 · 初识江湖</option><option value="hard">进阶 · 小试锋芒</option><option value="crazy">炼狱 · 千锤百炼</option></select><p class="field-note">难度影响战斗规则与历练所得。</p><button class="button primary full-width" type="submit">踏入江湖 ${icon('arrow')}</button></form>`);
+  modal('为旅人命名', `<p class="modal-intro">${e(state.pack.title)}的故事，从你的名字开始。</p><form id="character-form"><label class="form-label" for="hero-name">角色姓名</label><input id="hero-name" name="name" value="${e(state.pack.defaultName || '旅人')}" minlength="1" maxlength="12" autocomplete="off" required autofocus><label class="form-label" for="difficulty">行走难度</label><select id="difficulty" name="difficulty"><option value="normal">普通 · 初次冒险</option><option value="hard">困难 · 迎接挑战</option><option value="crazy">炼狱 · 千锤百炼</option></select><p class="field-note">难度影响战斗规则与历练所得。</p><button class="button primary full-width" type="submit">开始旅程 ${icon('arrow')}</button></form>`);
 }
 async function save() {
   if (busy || state.phase !== 'world') return;
+  busy = true; app.setAttribute('aria-busy', 'true');
   try {
-    const data = await exportSave();
-    const parsed = JSON.parse(data);
+    const data = await exportSave(), parsed = JSON.parse(data);
     if (parsed.error || parsed.ok === false) throw new Error(parsed.error || '无法保存当前进度。');
-    slot = {version: 1, savedAt: new Date().toISOString(), name: state.hero.name, level: state.hero.level, map: state.map.name, data};
-    await writeSlot(slot); toast('此刻江湖，已记入行囊。');
+    slot = {version: 1, packId: state.pack.id, savedAt: new Date().toISOString(), name: state.hero.name, level: state.hero.level, map: state.map.name, data};
+    await writeSlot(slot);
+    applyResult(await dispatch({type: 'state'}));
+    toast('当前世界的进度已保存。');
   } catch (error) {console.error(error); toast('保存未能完成，请导出存档备份后重试。');}
+  finally {busy = false; app.setAttribute('aria-busy', 'false'); refreshPanel();}
 }
 async function load() {
   if (!slot || busy) return;
@@ -173,7 +176,7 @@ function refreshPanel() {
   if (!node || !activePanel) return;
   const scroll = node.scrollTop;
   const content = panelContent(activePanel, state, settings, busy, inventoryFilter);
-  node.innerHTML = `<button class="icon-button close-modal" data-action="close-modal" aria-label="关闭">${icon('close')}</button><div class="eyebrow">江湖一页</div><h2>${e(content.title)}</h2>${content.content}`;
+  node.innerHTML = `<button class="icon-button close-modal" data-action="close-modal" aria-label="关闭">${icon('close')}</button><div class="eyebrow">旅途一页</div><h2>${e(content.title)}</h2>${content.content}`;
   node.scrollTop = scroll;
 }
 async function manage(data: Record<string, unknown>, message: string) {
@@ -186,11 +189,45 @@ function battleMode(mode: 'manual' | 'auto') {
   if (!writeSettings(settings)) toast('设置已在本次游玩生效，但此浏览器暂不能保存设置。');
   updateBattle(); scheduleBattle();
 }
+function chooseWorld() {
+  activePanel = null;
+  modal('选择冒险世界', `<p class="panel-intro">两个世界分别保存进度。地图上的当前进度会在切换前保存；对话、商店和战斗中无法保存，请先结束当前流程再切换，以免丢失未保存进度。</p><section class="pack-picker">${packs.map(p => `<button class="pack-choice ${p.id === state.pack.id ? 'selected' : ''}" data-action="select-pack" data-id="${e(p.id)}"><strong>${e(p.title)}</strong><small>${e(p.description)}</small></button>`).join('')}</section>`, true);
+}
+async function selectPack(id: string) {
+  if (busy || !packs.some(p => p.id === id)) return;
+  clearTimeout(enemyTimer);
+  busy = true; app.setAttribute('aria-busy','true');
+  try {
+    if (state.phase === 'world') {
+      const data = await exportSave(), parsed = JSON.parse(data);
+      if (parsed.error) throw new Error(parsed.error);
+      await writeSlot({version:1,packId:state.pack.id,savedAt:new Date().toISOString(),name:state.hero.name,level:state.hero.level,map:state.map.name,data});
+    }
+    const saved = await readSlot(id).catch(() => undefined);
+    const next = await initializePack(id);
+    if (!next.ok) throw new Error(next.error || '世界未能打开。');
+    document.querySelector('#game-modal')?.remove(); activePanel = null;
+    slot = saved;
+    applyResult(next);
+    const url = new URL(location.href); url.searchParams.set('pack',id); history.replaceState(null,'',url);
+  } catch (error) {console.error(error); toast(error instanceof Error ? error.message : '世界未能打开。');}
+  finally {busy=false; app.setAttribute('aria-busy','false'); scheduleBattle();}
+}
+function shopQuantity() {
+  const value = Number(document.querySelector<HTMLInputElement>('#shop-quantity')?.value || 1);
+  if (!Number.isInteger(value) || value < 1 || value > 99) {toast('每次交易数量请填写 1 至 99 的整数。'); return null;}
+  return value;
+}
 document.addEventListener('click', event => {
   const button = (event.target as HTMLElement).closest<HTMLElement>('[data-action]');
   if (!button || button.matches(':disabled')) return;
   const action = button.dataset.action;
   if (action === 'new') createCharacter();
+  else if (action === 'worlds') chooseWorld();
+  else if (action === 'select-pack') void selectPack(button.dataset.id!);
+  else if (action === 'close-shop') void command({type:'closeShop'});
+  else if (action === 'buy-item') {const quantity = shopQuantity(); if (quantity) void command({type:'buy',productId:button.dataset.id,quantity});}
+  else if (action === 'sell-item') {const quantity = shopQuantity(); if (quantity) void command({type:'sell',entryNumber:Number(button.dataset.entryNumber),quantity});}
   else if (action === 'close-modal') document.querySelector<HTMLDialogElement>('#game-modal')?.close();
   else if (action === 'save') void save();
   else if (action === 'load') void load();
@@ -208,7 +245,7 @@ document.addEventListener('click', event => {
   else if (action === 'leave-battle') void command({type: 'leaveBattle'});
   else if (action === 'skill') {selectedSkill = button.dataset.id!; battleIntent = 'attack'; updateBattle();}
   else if (action === 'battle-intent' && (button.dataset.id === 'move' || button.dataset.id === 'attack')) {battleIntent = button.dataset.id; updateBattle();}
-  else if (action === 'character' || action === 'inventory' || action === 'equipment' || action === 'cultivation' || action === 'settings') openPanel(action);
+  else if (action === 'character' || action === 'inventory' || action === 'equipment' || action === 'cultivation' || action === 'settings' || action === 'party' || action === 'quests') openPanel(action);
   else if (action === 'inventory-filter') {inventoryFilter = button.dataset.id as InventoryFilter; refreshPanel();}
   else if (action === 'equip-item') void manage({type: 'equipItem', entryNumber: Number(button.dataset.entryNumber)}, '装备已穿戴，人物属性已更新。');
   else if (action === 'unequip-item') void manage({type: 'unequipItem', slot: button.dataset.slot}, '装备已放回行囊。');
@@ -218,9 +255,9 @@ document.addEventListener('click', event => {
   else if (action === 'clear-internal') void manage({type: 'clearInternalSkill'}, '已停止主运内功。');
   else if (action === 'toggle-skill') void manage({type: 'setExternalSkillActive', skillId: button.dataset.id, active: button.dataset.active === 'true'}, button.dataset.active === 'true' ? '招式已启用。' : '招式已停用。');
   else if (action === 'use-item') void manage({type: 'useItem', entryNumber: Number(button.dataset.entryNumber)}, '物品已使用。');
-  else if (action === 'guide') modal('行走指南', '<p class="guide-text">点击地图人物继续剧情。拿到《内功入门》后，在“功法修炼”选择秘籍；主运内功与秘籍修炼可分别调整。装备与丹药可在行囊使用。<br><br>手动战斗时，青色格表示可移动的位置。选择武学，点击橙色目标格施展；有些招式可对自己使用。也可切换自动战斗、调整倍速，或暂停观察。<br><br>打开人物、设置等面板时战斗暂停。离开战斗后可保存进度；清除网站数据前请在行囊导出备份。</p>');
+  else if (action === 'guide') modal('行走指南', '<p class="guide-text">点击地图上的人物或地点继续剧情，在“目标”查看当前章节。获得修炼书后，在修炼面板选择；运行的心法与正在研习的书可分别调整。装备和补给可在行囊使用，伙伴可在队伍查看。<br><br>手动战斗时，青色格表示可移动的位置。选择战技，点击橙色目标格施展；有些招式可对自己使用。也可切换自动战斗、调整倍速，或暂停观察。<br><br>打开人物、设置等面板时战斗暂停。离开战斗、对话和商店后可保存进度。两套世界分别存档；清除网站数据前请在行囊导出备份。</p>');
   else if (action === 'download-save') void (async () => {
-    try {const data = await exportSave(); const parsed = JSON.parse(data); if (parsed.error || parsed.ok === false) throw new Error(parsed.error || '无法导出当前进度。'); const href = URL.createObjectURL(new Blob([data], {type: 'application/json'})); const link = document.createElement('a'); link.href = href; link.download = `江湖-${state.hero.name}.json`; link.click(); setTimeout(() => URL.revokeObjectURL(href), 1000);}
+    try {const data = await exportSave(); const parsed = JSON.parse(data); if (parsed.error || parsed.ok === false) throw new Error(parsed.error || '无法导出当前进度。'); const href = URL.createObjectURL(new Blob([data], {type: 'application/json'})); const link = document.createElement('a'); link.href = href; link.download = `${state.pack.title}-${state.hero.name}.json`; link.click(); setTimeout(() => URL.revokeObjectURL(href), 1000);}
     catch (error) {console.error(error); toast('导出未能完成，请先离开战斗。');}
   })();
 });
@@ -241,6 +278,11 @@ document.addEventListener('change', event => {
   if (screen === 'battle') updateBattle();
   scheduleBattle();
 });
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && state?.phase === 'shop' && !modalOpen()) {
+    event.preventDefault(); void command({type: 'closeShop'});
+  }
+});
 document.addEventListener('submit', event => {
   if (!(event.target instanceof HTMLFormElement) || event.target.id !== 'character-form') return;
   event.preventDefault();
@@ -255,19 +297,22 @@ document.querySelector<HTMLInputElement>('#import-file')!.addEventListener('chan
   try {
     if (file.size > 5 * 1024 * 1024) throw new Error('存档文件过大。');
     const data = await file.text(); applyResult(await importSave(data));
-    slot = {version: 1, savedAt: new Date().toISOString(), name: state.hero.name, level: state.hero.level, map: state.map.name, data};
+    slot = {version: 1, packId: state.pack.id, savedAt: new Date().toISOString(), name: state.hero.name, level: state.hero.level, map: state.map.name, data};
     await writeSlot(slot); toast('存档已导入。');
   } catch (error) {console.error(error); toast('无法导入此存档，请使用本版导出的存档文件。');}
   finally {input.value = '';}
 });
 async function boot() {
   try {
-    slot = await readSlot().catch(() => undefined);
-    const result = await loadRuntime(message => {const text = document.querySelector('#loading-message'); if (text) text.textContent = message;});
+    const catalog = await packIndex(); packs = catalog.packs;
+    const requested = new URL(location.href).searchParams.get('pack') || catalog.defaultPackId;
+    const id = packs.some(p => p.id === requested) ? requested : catalog.defaultPackId;
+    slot = await readSlot(id).catch(() => undefined);
+    const result = await loadRuntime(message => {const text = document.querySelector('#loading-message'); if (text) text.textContent = message;}, id);
     applyResult(result);
   } catch (error) {
     console.error(error);
-    app.innerHTML = '<main class="loading-screen"><span class="seal">侠</span><h1>画卷暂未展开</h1><p>加载未能完成，请刷新后重试。</p><button class="button primary" onclick="location.reload()">重新载入</button></main>';
+    app.innerHTML = '<main class="loading-screen"><span class="seal">旅</span><h1>世界暂未展开</h1><p>加载未能完成，请刷新后重试。</p><button class="button primary" onclick="location.reload()">重新载入</button></main>';
   }
 }
 void boot();

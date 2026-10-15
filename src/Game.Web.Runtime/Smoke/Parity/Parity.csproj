@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="../../BrowserLegacyRules.cs" Link="BrowserLegacyRules.cs" />
+    <ProjectReference Include="../../../Game.Core/Game.Core.csproj" />
+    <ProjectReference Include="../../../Game.Content/Game.Content.csproj" />
+    <ProjectReference Include="../../../Game.Application/Game.Application.csproj" />
+  </ItemGroup>
+</Project>

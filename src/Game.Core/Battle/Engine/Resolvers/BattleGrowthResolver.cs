@@ -8,7 +8,8 @@ internal sealed class BattleGrowthResolver(
     Func<SkillInstance, int> skillMaxLevelResolver,
     Func<CharacterInstance, GrowTemplateDefinition> characterGrowTemplateResolver,
     Func<CharacterInstance, int> characterMaxLevelResolver,
-    Func<BattleUnit, bool> eligibilityResolver)
+    Func<BattleUnit, bool> eligibilityResolver,
+    Func<SkillInstance, int, int>? skillUseExperienceResolver = null)
 {
     private const int SkillCastCharacterExperience = 3;
 
@@ -41,7 +42,12 @@ internal sealed class BattleGrowthResolver(
             !progressedSkills.Add(progressSkill)) return;
 
         var change = SkillExperienceProgression.TryAddExperience(
-            progressSkill, experience, skillMaxLevelResolver(progressSkill));
+            progressSkill,
+            experience,
+            skillMaxLevelResolver(progressSkill),
+            skillUseExperienceResolver is null
+                ? null
+                : (_, amount) => skillUseExperienceResolver(progressSkill, amount));
         if (change is not { LeveledUp: true }) return;
 
         unit.ClampResourcesToLimits();

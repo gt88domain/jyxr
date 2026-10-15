@@ -42,7 +42,8 @@ public sealed partial class BattleEngine
         Func<SkillInstance, int>? skillMaxLevelResolver = null,
         Func<CharacterInstance, GrowTemplateDefinition>? characterGrowTemplateResolver = null,
         Func<CharacterInstance, int>? characterMaxLevelResolver = null,
-        Func<BattleUnit, bool>? battleExperienceEligibilityResolver = null)
+        Func<BattleUnit, bool>? battleExperienceEligibilityResolver = null,
+        Func<SkillInstance, int, int>? skillUseExperienceResolver = null)
     {
         _damageCalculator = damageCalculator ?? new BattleDamageCalculator();
         _damageResolver = new BattleDamageResolver(this);
@@ -62,7 +63,8 @@ public sealed partial class BattleEngine
             skillMaxLevelResolver ?? DefaultSkillMaxLevelResolver,
             characterGrowTemplateResolver ?? DefaultCharacterGrowTemplateResolver,
             characterMaxLevelResolver ?? DefaultCharacterMaxLevelResolver,
-            battleExperienceEligibilityResolver ?? DefaultBattleExperienceEligibilityResolver);
+            battleExperienceEligibilityResolver ?? DefaultBattleExperienceEligibilityResolver,
+            skillUseExperienceResolver);
         _recoveryResolver = new BattleRecoveryResolver(
             (state, timing, unit, configure) => TriggerHooks(state, timing, unit, configure));
     }

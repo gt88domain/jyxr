@@ -3,9 +3,15 @@ export interface EquipmentSlot { slot: string; slotName: string; item: {id: stri
 export interface Cultivation { entryNumber: number; itemId: string; itemName: string; skillId: string; skillName: string; kind: string; level: number; exp: number; nextExp: number; maxLevel: number; }
 export interface InventoryItem { id: string; entryNumber: number; name: string; count: number; quantity: number; description: string; kind: string; itemType: string; slot: string | null; canEquip: boolean; canUse: boolean; canCultivate: boolean; reason: string; }
 export interface BattleEvent { sequence: number; kind: string; unitId: string; amount: number | null; critical: boolean; sourceUnitId: string | null; skillId: string | null; skillName: string | null; text: string | null; }
-export interface Unit { id: string; name: string; team: number; x: number; y: number; hp: number; maxHp: number; mp: number; maxMp: number; alive: boolean; }
+export interface Unit { id: string; definitionId?: string; sprite?: string | null; portrait?: string | null; name: string; team: number; x: number; y: number; hp: number; maxHp: number; mp: number; maxMp: number; alive: boolean; }
+export interface PackMedia { titleBackground?: string; worldBackground?: string; battleBackground?: string; defaultFriendly?: string; defaultEnemy?: string; characters?: Record<string, string>; portraits?: Record<string, string>; maps?: Record<string, string>; battles?: Record<string, string>; }
+export interface Objective { id: string; title: string; description?: string | null; kind: 'story' | 'party' | 'equipment' | 'cultivation' | 'purchase' | 'battle' | 'save'; target?: string; completed: boolean; }
+export interface ContentPack { id: string; title: string; subtitle?: string; chapterTitle?: string; description?: string; defaultName?: string; currencyName?: string; currencyUnit?: string; terms?: Record<string, string>; heroDefinitionId: string; initialMapId: string; initialStoryId?: string; trainingStoryId?: string; trainingMapId?: string; completionStoryId?: string; media?: PackMedia; objectives?: Omit<Objective, 'completed'>[]; }
+export interface PartyMember { id: string; definitionId: string; name: string; level: number; hp: number; maxHp: number; mp: number; maxMp: number; skills: Skill[]; equipment: EquipmentSlot[]; isHero: boolean; sprite?: string | null; portrait?: string | null; }
+export interface Shop { id: string; name: string; products: { id: string; itemId: string | null; name: string; description: string; price: number | null; premiumPrice: number | null; remaining: number | null; purchased: number; canBuy: boolean }[]; sellable: { entryNumber: number; id: string; name: string; quantity: number; price: number }[]; }
 export interface Battle {
   name: string; width: number; height: number; activeUnitId: string | null; outcome: string | null;
+  id?: string; background?: string | null;
   units: Unit[]; skills: Skill[]; reachable: {x: number; y: number}[]; logs: string[];
   targets?: {skillId: string; x: number; y: number; targetId: string | null}[];
   events?: BattleEvent[];
@@ -13,10 +19,14 @@ export interface Battle {
   action?: {unitId: string; team: number; mainActionCommitted: boolean; canMove: boolean; canRest: boolean; canAttack: boolean} | null;
 }
 export interface GameState {
-  phase: 'title' | 'world' | 'battle' | 'dialogue' | 'choice';
-  hero: {id: string; name: string; level: number; hp: number; maxHp: number; mp: number; maxMp: number; skills: Skill[]; experience?: number; nextLevelExperience?: number; attributes?: {id: string; label: string; value: number; baseValue: number}[]; talents?: {id: string; name: string; description: string}[]; externalSkills?: Skill[]; internalSkills?: Skill[]; equipment?: EquipmentSlot[]; cultivation?: Cultivation | null; equippedInternalSkillId?: string | null; canManage?: boolean};
+  phase: 'title' | 'world' | 'battle' | 'dialogue' | 'choice' | 'shop';
+  pack: ContentPack;
+  party: PartyMember[];
+  objectives: Objective[];
+  shop: Shop | null;
+  hero: {id: string; definitionId?: string; sprite?: string | null; portrait?: string | null; name: string; level: number; hp: number; maxHp: number; mp: number; maxMp: number; skills: Skill[]; experience?: number; nextLevelExperience?: number; attributes?: {id: string; label: string; value: number; baseValue: number}[]; talents?: {id: string; name: string; description: string}[]; externalSkills?: Skill[]; internalSkills?: Skill[]; equipment?: EquipmentSlot[]; cultivation?: Cultivation | null; equippedInternalSkillId?: string | null; canManage?: boolean};
   silver: number;
-  map: {id: string; name: string; description: string; locations: {id: string; name: string; description: string}[]};
+  map: {id: string; name: string; description: string; background?: string | null; locations: {id: string; name: string; description: string; action?: string | null}[]};
   battle: Battle | null;
   dialogue: {speaker: string; text: string} | null;
   choices: (string | {id?: string; text?: string; label?: string; index?: number})[] | null;
@@ -42,21 +52,21 @@ function decode(value: string): Result {
   }
   return result;
 }
-export async function loadRuntime(progress: (message: string) => void): Promise<Result> {
-  progress('正在载入江湖规则……');
+export async function loadRuntime(progress: (message: string) => void, packId = 'jyx'): Promise<Result> {
+  progress('正在载入游戏规则……');
   const runtime = await window.loadJyxrRuntime();
   const config = runtime.getConfig();
   const assemblies = await runtime.getAssemblyExports(config.mainAssemblyName);
   api = assemblies.Game.Web.Runtime.BrowserBridge;
-  progress('正在装载人物、武学与剧情……');
-  const contentUrl = new URL(`${import.meta.env.BASE_URL}data/content-package.json`, document.baseURI);
-  contentUrl.searchParams.set('v', import.meta.env.VITE_GAME_VERSION);
-  const response = await fetch(contentUrl);
-  if (!response.ok) throw new Error(`Content request failed: ${response.status}`);
-  return decode(await api.Initialize(await response.text()));
+  progress('正在装载人物、技能与剧情……');
+  return initializePack(packId);
+}
+export async function initializePack(packId: string): Promise<Result> {
+  return decode(await api.Initialize(await readPack(packId)));
 }
 export async function dispatch(command: Record<string, unknown>): Promise<Result> {
   return decode(await api.Dispatch(JSON.stringify(command)));
 }
 export async function exportSave(): Promise<string> { return await api.ExportSave(); }
 export async function importSave(data: string): Promise<Result> { return decode(await api.ImportSave(data)); }
+import {readPack} from './content';

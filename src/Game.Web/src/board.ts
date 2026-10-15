@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import {assetUrl} from './content';
 import type {Battle, Unit} from './bridge';
 
 export interface BoardOptions {selectedSkillId?: string; speed?: number; manual?: boolean; busy?: boolean; showGrid?: boolean; showDamage?: boolean; reducedMotion?: boolean; intent?: 'move' | 'attack';}
@@ -18,16 +19,23 @@ class BattleScene extends Phaser.Scene {
   private hover?: Phaser.GameObjects.Graphics;
   private pawns = new Map<string, Pawn>();
   private eventSequence = -1;
-  constructor(private onCell: (x: number, y: number) => void, private parentElement: HTMLElement) {super('battle');}
+  private spriteKeys = new Map<string, string>();
+  constructor(private onCell: (x: number, y: number) => void, private parentElement: HTMLElement, initial: Battle) {
+    super('battle'); this.battle = initial;
+  }
   preload() {
-    const base = `${import.meta.env.BASE_URL}art/`;
-    this.load.image('courtyard', `${base}training-courtyard.png`);
-    this.load.image('hero', `${base}hero-swordsman.png`);
-    this.load.image('dummy', `${base}training-dummy.png`);
+    if (this.battle?.background) this.load.image('background', assetUrl(this.battle.background));
+    const keys = new Map<string, string>();
+    for (const unit of this.battle?.units || []) {
+      if (!unit.sprite) continue;
+      let key = keys.get(unit.sprite);
+      if (!key) {key = 'pawn-' + keys.size; keys.set(unit.sprite,key); this.load.image(key,assetUrl(unit.sprite));}
+      this.spriteKeys.set(unit.id,key);
+    }
   }
   create() {
     this.cameras.main.setBackgroundColor('#52614a');
-    if (this.textures.exists('courtyard')) this.background = this.add.image(0, 0, 'courtyard').setDepth(-10);
+    if (this.textures.exists('background')) this.background = this.add.image(0, 0, 'background').setDepth(-10);
     this.ground = this.add.graphics().setDepth(-1);
     this.hover = this.add.graphics().setDepth(6);
     this.scale.on('resize', () => this.draw(true));
@@ -88,8 +96,8 @@ class BattleScene extends Phaser.Scene {
     const first = !pawn;
     if (!pawn) {
       const container = this.add.container(x, y), ring = this.add.graphics();
-      const key = unit.team === 1 ? 'hero' : 'dummy';
-      const art = this.textures.exists(key) ? this.add.image(0, 0, key).setOrigin(.5, .92) : this.add.text(0, 0, unit.team === 1 ? '侠' : '木', {fontFamily: 'serif', fontSize: '32px', color: '#fff3cb', backgroundColor: unit.team === 1 ? '#325b48' : '#784937'}).setOrigin(.5, 1);
+      const key = this.spriteKeys.get(unit.id) || '';
+      const art = this.textures.exists(key) ? this.add.image(0, 0, key).setOrigin(.5, .92) : this.add.text(0, 0, unit.name.slice(0,1), {fontFamily: 'serif', fontSize: '32px', color: '#fff3cb', backgroundColor: unit.team === 1 ? '#325b48' : '#784937'}).setOrigin(.5, 1);
       const bars = this.add.graphics(), name = this.add.text(0, 0, '', {fontFamily: 'sans-serif', fontSize: '11px', color: '#fff5de', stroke: '#263d2d', strokeThickness: 3}).setOrigin(.5, 0);
       container.add([ring, art, bars, name]);
       pawn = {container, art, ring, bars, name, previous: {...unit}};
@@ -170,8 +178,8 @@ class BattleScene extends Phaser.Scene {
 export class Board {
   private game: Phaser.Game;
   private scene: BattleScene;
-  constructor(parent: HTMLElement, onCell: (x: number, y: number) => void) {
-    this.scene = new BattleScene(onCell, parent);
+  constructor(parent: HTMLElement, onCell: (x: number, y: number) => void, battle: Battle) {
+    this.scene = new BattleScene(onCell, parent, battle);
     this.game = new Phaser.Game({type: Phaser.CANVAS, parent, transparent: true, audio: {noAudio: true}, banner: false,
       scale: {mode: Phaser.Scale.RESIZE, width: parent.clientWidth, height: parent.clientHeight}, scene: [this.scene], render: {antialias: true, roundPixels: false}});
   }

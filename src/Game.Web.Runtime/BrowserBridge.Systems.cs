@@ -16,13 +16,14 @@ public static partial class BrowserBridge
     private static long _eventSequence;
 
     private static CharacterInstance Hero => RequireSession().State.Party.Members.First();
-    private static bool CanManage => _session is not null && _battle is null && _host.Dialogue is null && _host.Choice is null;
+    private static bool CanManage => _session is not null && _battle is null && _host.Dialogue is null && _host.Choice is null && _shopId is null;
 
     private static void RequireManagement()
     {
         RequireSession();
         if (_battle is not null) throw new InvalidOperationException("战斗中不能换装、切换功法或调整修炼，请先完成战斗并返回地图。");
         if (_host.Dialogue is not null || _host.Choice is not null) throw new InvalidOperationException("请先结束当前对话。");
+        if (_shopId is not null) throw new InvalidOperationException("请先离开商店。");
     }
 
     private static InventoryEntry Entry(long entryNumber) => RequireSession().State.Inventory.Entries.FirstOrDefault(e => e.EntryNumber == entryNumber)

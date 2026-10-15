@@ -26,7 +26,8 @@ public static class SkillExperienceProgression
     public static SkillExperienceChange? TryAddExperience(
         SkillInstance skill,
         int experience,
-        int maxLevel)
+        int maxLevel,
+        Func<CharacterInstance, int, int>? experienceGainResolver = null)
     {
         ArgumentNullException.ThrowIfNull(skill);
         ArgumentOutOfRangeException.ThrowIfNegative(experience);
@@ -38,7 +39,8 @@ public static class SkillExperienceProgression
             return null;
         }
 
-        var addedExperience = ExperienceGainPolicy.Resolve(progressSkill.Owner, experience);
+        var addedExperience = (experienceGainResolver ?? ExperienceGainPolicy.Resolve)(progressSkill.Owner, experience);
+        ArgumentOutOfRangeException.ThrowIfNegative(addedExperience);
         var oldLevel = progressSkill.Level;
         var effectiveMaxLevel = Math.Max(maxLevel, oldLevel);
         progressSkill.Exp = checked(progressSkill.Exp + addedExperience);

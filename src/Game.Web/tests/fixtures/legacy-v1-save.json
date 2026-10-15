@@ -1,0 +1,175 @@
+{
+  "browserSaveVersion": 1,
+  "game": {
+    "version": 24,
+    "adventure": {
+      "round": 1,
+      "difficulty": "normal",
+      "sectId": null,
+      "morality": 50,
+      "favorabilityByTarget": {},
+      "rank": 0,
+      "noRegret": false
+    },
+    "characters": [
+      {
+        "id": "主角",
+        "definitionId": "主角",
+        "name": "云游测试侠",
+        "portrait": "头像.主角",
+        "model": "xiake",
+        "growTemplateId": "主角",
+        "level": 2,
+        "experience": 53,
+        "unspentStatPoints": 2,
+        "baseStats": {
+          "bili": 32,
+          "dingli": 32,
+          "fuyuan": 32,
+          "gengu": 32,
+          "jianfa": 22,
+          "daofa": 22,
+          "quanzhang": 22,
+          "qimen": 22,
+          "shenfa": 32,
+          "wuxing": 30,
+          "max_hp": 320,
+          "max_mp": 280
+        },
+        "unlockedTalentIds": [
+          "异世人"
+        ],
+        "specialSkills": [
+          {
+            "specialSkillDefinitionId": "打鸡血",
+            "isActive": true
+          }
+        ],
+        "externalSkills": [
+          {
+            "externalSkillDefinitionId": "野球拳",
+            "level": 4,
+            "exp": 346,
+            "isActive": true,
+            "disabledFormSkillIds": []
+          }
+        ],
+        "internalSkills": [
+          {
+            "internalSkillDefinitionId": "基本内功",
+            "level": 9,
+            "exp": 149,
+            "equipped": true,
+            "disabledFormSkillIds": []
+          }
+        ],
+        "equippedItems": {},
+        "gender": "male",
+        "aiType": "Basic"
+      }
+    ],
+    "party": {
+      "memberIds": [
+        "主角"
+      ],
+      "followerIds": [],
+      "reserveIds": []
+    },
+    "inventory": {
+      "nextEntryNumber": 2,
+      "entries": [
+        {
+          "kind": "stack",
+          "itemDefinitionId": "内功入门",
+          "quantity": 1,
+          "entryNumber": 1
+        }
+      ]
+    },
+    "chest": {
+      "inventory": {
+        "nextEntryNumber": 1,
+        "entries": []
+      }
+    },
+    "equipmentInstanceFactory": {
+      "nextNumber": 1
+    },
+    "currency": {
+      "silver": 10
+    },
+    "clock": {
+      "year": 1,
+      "month": 1,
+      "day": 1,
+      "timeSlot": "Chen"
+    },
+    "location": {
+      "currentMapId": "小村",
+      "largeMapPositions": {}
+    },
+    "mapEventProgress": {
+      "completedEvents": []
+    },
+    "worldTriggerState": {
+      "isBlocked": false,
+      "completedTriggerIds": []
+    },
+    "storyState": {
+      "variables": {},
+      "completedStoryIds": [
+        "新手村_出生",
+        "新手村_南贤开场",
+        "新手村_小村介绍",
+        "新手村_武师",
+        "新手村_武师7",
+        "新手村_武师木头人",
+        "新手村_武师选择"
+      ],
+      "lastStoryId": "新手村_武师选择",
+      "timeKeys": []
+    },
+    "journal": {
+      "entries": [
+        {
+          "timestamp": {
+            "year": 1,
+            "month": 1,
+            "day": 1,
+            "timeSlot": "Chen"
+          },
+          "text": "再次来到金庸十四天书的世界。"
+        }
+      ]
+    },
+    "shopState": {
+      "purchases": []
+    },
+    "specialBattleState": {
+      "trialCompletedCharacterIds": [],
+      "towerRewardClaims": []
+    },
+    "miniGameState": {
+      "practicePoints": {},
+      "claimedUniqueRewardIds": []
+    },
+    "playTimeSeconds": 0
+  },
+  "profile": {
+    "version": 6,
+    "unlockedAchievementIds": [
+      "初出茅庐"
+    ],
+    "deathCount": 0,
+    "killCount": 1,
+    "zhenlongqijuLevel": 0,
+    "yuanbao": 0,
+    "skillMaxLevelBonuses": {},
+    "consumedSkillMaxLevelKeys": [],
+    "completionCount": 0,
+    "highestRound": 1,
+    "saveCount": 0,
+    "totalPlayTimeSeconds": 0
+  },
+  "cultivationItemId": "内功入门"
+}

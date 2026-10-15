@@ -11,7 +11,9 @@
     "build": "npm run prepare:game && tsc --noEmit && vite build",
     "package": "npm run build && python3 scripts/package-web.py",
     "preview": "vite preview --host 0.0.0.0",
-    "test": "node tests/browser-smoke.mjs"
+    "test": "node tests/browser-smoke.mjs",
+    "test:equipment": "node tests/equipment-smoke.mjs",
+    "test:chapter": "node tests/chapter-smoke.mjs"
   },
   "dependencies": { "phaser": "3.90.0" },
   "devDependencies": {
