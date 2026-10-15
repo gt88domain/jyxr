@@ -9,6 +9,8 @@ using Game.Core.Model.Character;
 using Game.Core.Model.Skills;
 using Game.Core.Persistence;
 using Game.Core.Serialization;
+using Game.Core.Definitions;
+using Game.Presentation.Battle;
 
 namespace Game.Web.Runtime;
 
@@ -45,6 +47,8 @@ public static partial class BrowserBridge
             _content = new JsonContentLoader().LoadFromPackage(package);
             _session = null;
             _battle = null;
+            _cultivationItemId = null;
+            BattleEvents.Clear();
             Logs.Clear();
             Log($"原版内容载入：{_content.GetCharacters().Count} 名角色、{_content.GetExternalSkills().Count} 门外功、{_content.GetItems().Count} 件物品。");
             _error = null;
@@ -54,7 +58,7 @@ public static partial class BrowserBridge
     }
 
     [JSExport]
-    public static Task<string> Dispatch(string commandJson)
+    public static async Task<string> Dispatch(string commandJson)
     {
         try
         {
@@ -65,6 +69,54 @@ public static partial class BrowserBridge
             switch (type)
             {
                 case "createCharacter": CreateCharacter(Read(args, "name", "小虾米"), Read(args, "difficulty", "Normal")); break;
+                case "equipItem":
+                    RequireManagement();
+                    var equipmentEntry = Entry(args.GetProperty("entryNumber").GetInt64());
+                    if (equipmentEntry.Definition is not EquipmentDefinition) throw new InvalidOperationException("请选择武器、防具或饰品。");
+                    var equipResult = await RequireSession().ItemUseService.UseAsync(equipmentEntry, Hero.Id);
+                    if (!equipResult.Success) throw new InvalidOperationException(equipResult.Message);
+                    Log(equipResult.Message);
+                    break;
+                case "unequipItem":
+                    RequireManagement();
+                    if (!Enum.TryParse<EquipmentSlotType>(Read(args, "slot"), true, out var slot) || !Enum.IsDefined(slot)) throw new InvalidOperationException("装备槽无效。");
+                    var removed = RequireSession().InventoryService.UnequipToInventory(Hero, slot);
+                    Log($"已卸下「{removed.Definition.Name}」。");
+                    break;
+                case "setCultivation": SetCultivation(args.GetProperty("entryNumber").GetInt64()); break;
+                case "clearCultivation": RequireManagement(); _cultivationItemId = null; Log("已停止秘籍修炼；已学武功保留。"); break;
+                case "equipInternalSkill":
+                    RequireManagement();
+                    RequireSession().CharacterService.EquipInternalSkill(Hero.Id, Read(args, "skillId"));
+                    Log("已切换当前运行内功。");
+                    break;
+                case "clearInternalSkill":
+                    RequireManagement(); Hero.EquipInternalSkill(null); RequireSession().Events.Publish(new CharacterChangedEvent(Hero.Id)); break;
+                case "setExternalSkillActive":
+                    RequireManagement(); RequireSession().CharacterService.SetExternalSkillActive(Hero.Id, Read(args, "skillId"), args.GetProperty("active").GetBoolean()); break;
+                case "useItem":
+                    var useEntry = Entry(args.GetProperty("entryNumber").GetInt64());
+                    if (_battle is not null)
+                    {
+                        EnsurePlayerAction();
+                        if (useEntry.Definition.Type != ItemType.Consumable) throw new InvalidOperationException("战斗中只可使用战斗消耗品。");
+                        var actingId = Active!.Id;
+                        var itemTargetId = Read(args, "targetId", actingId);
+                        if (itemTargetId == actingId && BattleSelfItemUnavailableReason(useEntry.Definition) is { } itemReason) throw new InvalidOperationException(itemReason);
+                        Check(_engine!.UseItem(_battle, actingId, useEntry.Definition, itemTargetId));
+                        RequireSession().ItemUseService.CommitSuccessfulUse(useEntry);
+                        FinishPlayerAction(actingId);
+                    }
+                    else
+                    {
+                        RequireManagement();
+                        if (BookSkill(useEntry.Definition) is not null) throw new InvalidOperationException("武学秘籍请通过修炼栏选择，逐步积累经验。");
+                        if (useEntry.Definition.UseEffects.Any(e => e is RunStoryItemUseEffectDefinition)) throw new InvalidOperationException("此物品的剧情使用流程尚未迁移。");
+                        var useResult = await RequireSession().ItemUseService.UseAsync(useEntry, Hero.Id);
+                        if (!useResult.Success) throw new InvalidOperationException(useResult.Message);
+                        Log(useResult.Message);
+                    }
+                    break;
                 case "talk":
                 case "interact":
                     var location = Read(args, "locationId", "武师");
@@ -128,7 +180,7 @@ public static partial class BrowserBridge
             if (_storyTask?.IsFaulted == true) throw _storyTask.Exception!.GetBaseException();
         }
         catch (Exception exception) { _error = exception.Message; }
-        return Task.FromResult(Snapshot());
+        return Snapshot();
     }
 
     [JSExport]
@@ -138,7 +190,7 @@ public static partial class BrowserBridge
             return JsonSerializer.Serialize(new { error = "请在战斗结束后存档。" }, Json);
         var session = RequireSession();
         if (_host.Dialogue is not null || _host.Choice is not null) return JsonSerializer.Serialize(new { error = "请先结束当前对话。" }, Json);
-        return JsonSerializer.Serialize(new { browserSaveVersion = 1, game = session.SaveGameService.CreateSave(), profile = session.ProfileService.CreateProfileRecord() }, Json);
+        return JsonSerializer.Serialize(new { browserSaveVersion = 1, game = session.SaveGameService.CreateSave(), profile = session.ProfileService.CreateProfileRecord(), cultivationItemId = _cultivationItemId }, Json);
     }
 
     [JSExport]
@@ -162,10 +214,20 @@ public static partial class BrowserBridge
                 candidate.ProfileService.LoadProfile(profile);
             }
             candidate.SaveGameService.LoadSave(save);
+            var cultivation = wrapped && root.TryGetProperty("cultivationItemId", out var selectedBook) && selectedBook.ValueKind == JsonValueKind.String ? selectedBook.GetString() : null;
+            if (cultivation is not null)
+            {
+                if (!_content.TryGetItem(cultivation, out var bookItem) || BookSkill(bookItem) is not { } selected || !candidate.State.Inventory.Entries.Any(e => e.Definition.Id == cultivation)) throw new InvalidOperationException("存档中的修炼秘籍无效。");
+                var candidateHero = candidate.State.Party.Members.FirstOrDefault();
+                var hasSkill = candidateHero is not null && (selected.Internal ? candidateHero.InternalSkills.Any(s => s.Id == selected.SkillId) : candidateHero.ExternalSkills.Any(s => s.Id == selected.SkillId));
+                if (!hasSkill) throw new InvalidOperationException("存档中的修炼武功尚未学会，无法恢复修炼设置。");
+            }
             ResetStory();
             _host = candidateHost;
             _session = candidate;
             _battle = null;
+            _cultivationItemId = cultivation;
+            BattleEvents.Clear();
             _error = null;
             Log("已读取浏览器存档。");
         }
@@ -201,6 +263,7 @@ public static partial class BrowserBridge
         var map = _content.TryGetMap("小村", out var village) ? village : _content.TryGetMap("南贤屋内", out var room) ? room : null;
         if (map is not null) _session.MapService.EnterMap(map.Id);
         _battle = null;
+        _cultivationItemId = null;
         Logs.Clear();
         Log($"{name}初入江湖。" );
         if (_content.TryGetStorySegment("新手村_出生", out _)) StartStory("新手村_出生");
@@ -220,6 +283,7 @@ public static partial class BrowserBridge
             characterGrowTemplateResolver: c => _content!.GetGrowTemplate(c.GrowTemplateId ?? CharacterExperienceProgression.DefaultGrowTemplateId));
         _ai = new BasicEnemyBattleAgent(new BattleTurnCandidateGenerator(_engine), new BattleAiPolicyResolver(session.SkillMaxLevelPolicy.GetMaxLevel));
         _settled = false;
+        BattleEvents.Clear();
         Check(_engine.StartBattle(_battle));
         Log($"进入原版战斗：{_content.GetBattle(id).Name}。");
         AdvanceEnemies();
@@ -278,6 +342,7 @@ public static partial class BrowserBridge
         {
             var settlement = session.BattleService.PreviewVictorySettlement(_battle!, _request!);
             session.BattleService.ApplyOrdinaryVictorySettlement(_battle!, settlement);
+            ApplyCultivationExperience(settlement.ExperiencePerMember);
             Log("战斗胜利，已按原有规则结算经验和掉落。");
         }
         else Log("战斗结束。可返回地图重新切磋。");
@@ -285,13 +350,14 @@ public static partial class BrowserBridge
 
     private static void Check<T>(BattleCommandResult<T> result)
     {
-        if (!result.Success) throw new InvalidOperationException($"操作未执行：{result.Failure?.Reason}");
+        if (!result.Success) throw new InvalidOperationException(result.Failure is { } failure ? BattleCommandFailurePresenter.Format(failure) : "此操作暂时无法执行。");
+        CollectMessages(result.Messages);
     }
 
     private static object SkillView(SkillInstance skill, BattleUnit? unit = null)
     {
         var available = unit is not null && _battle is not null ? _engine!.EvaluateSkillAvailability(_battle, unit.Id, skill) : null;
-        return new { id = skill.Id, name = skill.Name, level = skill.Level, mpCost = available?.MpCost ?? skill.MpCost, castSize = skill.CastSize, impactSize = skill.ImpactSize, available = available?.IsAvailable ?? true, reason = available?.Status.ToString() };
+        return new { id = skill.Id, name = skill.Name, description = skill.Description, level = skill.Level, mpCost = available?.MpCost ?? skill.MpCost, castSize = unit is null ? skill.CastSize : BattleSkillTargeting.ResolveEffectiveCastSize(unit, skill), impactSize = unit is null ? skill.ImpactSize : BattleSkillTargeting.ResolveEffectiveImpactSize(unit, skill), available = available?.IsAvailable ?? true, reason = SkillUnavailableReason(available) };
     }
 
     private static string Snapshot()
@@ -309,10 +375,21 @@ public static partial class BrowserBridge
                 state = new
                 {
                     phase = _session is null ? "title" : _battle is not null ? "battle" : _host.Dialogue is not null ? "dialogue" : _host.Choice is not null ? "choice" : "world",
-                    hero = hero is null ? null : new { id = hero.Id, name = hero.Name, level = hero.Level, hp = battleHero?.Hp ?? hero.CurrentHp ?? (int)hero.GetStat(StatType.MaxHp), maxHp = (int)hero.GetStat(StatType.MaxHp), mp = battleHero?.Mp ?? hero.CurrentMp ?? (int)hero.GetStat(StatType.MaxMp), maxMp = (int)hero.GetStat(StatType.MaxMp), skills = Skills(hero).Select(s => SkillView(s)).ToArray() },
+                    hero = hero is null ? null : new
+                    {
+                        id = hero.Id, name = hero.Name, level = hero.Level,
+                        hp = battleHero?.Hp ?? hero.CurrentHp ?? (int)hero.GetStat(StatType.MaxHp), maxHp = (int)hero.GetStat(StatType.MaxHp),
+                        mp = battleHero?.Mp ?? hero.CurrentMp ?? (int)hero.GetStat(StatType.MaxMp), maxMp = (int)hero.GetStat(StatType.MaxMp),
+                        skills = Skills(hero).Select(s => SkillView(s)).ToArray(),
+                        experience = hero.Experience, nextLevelExperience = CharacterLevelProgression.GetTotalExperienceRequiredForLevel(hero.Level + 1),
+                        attributes = Enum.GetValues<StatType>().Select(stat => new { id = StatCatalog.GetCode(stat), label = StatCatalog.GetDisplayNameCn(stat), value = hero.GetStat(stat), baseValue = hero.GetBaseStat(stat) }).ToArray(),
+                        talents = hero.EffectiveTalents.Select(t => new { id = t.Id, name = t.Name, description = t.Description }).ToArray(),
+                        externalSkills = hero.ExternalSkills.Select(LearnedSkillView).ToArray(), internalSkills = hero.InternalSkills.Select(LearnedSkillView).ToArray(),
+                        equipment = EquipmentView(hero), cultivation = CultivationView(hero), equippedInternalSkillId = hero.EquippedInternalSkillId, canManage = CanManage
+                    },
                     silver = _session?.State.Currency.Silver ?? 0,
                     backgroundId = _backgroundId, musicId = _musicId,
-                    inventory = _session?.State.Inventory.Entries.Select(e => new { id = e.Definition.Id, name = e.Definition.Name, count = e is StackInventoryEntry stack ? stack.Quantity : 1, quantity = e is StackInventoryEntry stack2 ? stack2.Quantity : 1, description = e.Definition.Description }).ToArray(),
+                    inventory = _session?.State.Inventory.Entries.Select(InventoryView).ToArray(),
                     map = map is null ? null : new { id = map.Id, name = map.Name, description = map.Description, locations = map.Locations.Select(l => new { id = l.Id, name = l.Name, description = l.Description }) },
                     battle = _battle is null ? null : new
                     {
@@ -321,6 +398,8 @@ public static partial class BrowserBridge
                         units = _battle.Units.Select(u => new { id = u.Id, name = u.Character.Name, team = u.Team, x = u.Position.X, y = u.Position.Y, hp = u.Hp, maxHp = u.MaxHp, mp = u.Mp, maxMp = u.MaxMp, alive = u.IsAlive }),
                         skills = Active?.Team == 1 ? Skills(Active.Character).Select(s => SkillView(s, Active)).ToArray() : [],
                         reachable = Active?.Team == 1 && outcome.Kind == BattleOutcomeKind.Ongoing ? _engine!.GetReachablePositions(_battle, Active.Id).Keys.Select(p => new { x = p.X, y = p.Y }).ToArray() : [],
+                        targets = TargetView(), events = BattleEvents.ToArray(), playerCanAct = Active?.Team == 1 && outcome.Kind == BattleOutcomeKind.Ongoing,
+                        action = Active is { } acting && _battle.CurrentAction is { } current ? new { unitId = acting.Id, team = acting.Team, mainActionCommitted = current.HasCommittedMainAction, canMove = acting.Team == 1 && !current.HasCommittedMainAction, canRest = acting.Team == 1 && !current.HasCommittedMainAction, canAttack = acting.Team == 1 && !current.HasCommittedMainAction } : null,
                         logs = Logs.TakeLast(20).ToArray()
                     },
                     dialogue = _host.Dialogue is { } d ? new { speaker = d.Speaker == "主角" ? hero?.Name ?? d.Speaker : d.Speaker, text = d.Text } : _host.Choice is { } c ? new { speaker = c.PromptSpeaker, text = c.PromptText } : null,

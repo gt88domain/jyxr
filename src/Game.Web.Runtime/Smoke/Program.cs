@@ -7,10 +7,32 @@ Check(await BrowserBridge.Dispatch("{\"type\":\"createCharacter\",\"name\":\"测
 await ContinueDialogue();
 Check(await BrowserBridge.Dispatch("{\"type\":\"talk\",\"locationId\":\"南贤\"}"), "opening");
 await ContinueDialogue();
+var beforeTraining = State(await BrowserBridge.Dispatch("{\"type\":\"state\"}"));
+var book = beforeTraining.GetProperty("inventory").EnumerateArray().Single(i => i.GetProperty("id").GetString() == "内功入门");
+var entryNumber = book.GetProperty("entryNumber").GetInt64();
+if (book.GetProperty("count").GetInt32() != 1 || beforeTraining.GetProperty("hero").GetProperty("equipment").EnumerateArray().Any(s => s.GetProperty("item").ValueKind != JsonValueKind.Null)) throw new InvalidOperationException("Opening rewards or empty equipment slots changed.");
+var cultivated = State(await Command(new { type = "setCultivation", entryNumber }));
+var cultivation = cultivated.GetProperty("hero").GetProperty("cultivation");
+if (cultivation.GetProperty("level").GetInt32() != 1 || cultivated.GetProperty("hero").GetProperty("equippedInternalSkillId").GetRawText() != beforeTraining.GetProperty("hero").GetProperty("equippedInternalSkillId").GetRawText()) throw new InvalidOperationException("Cultivation changed the source level or running internal skill.");
+Check(await Command(new { type = "clearInternalSkill" }), "clear running internal skill independently");
+if (State(await Command(new { type = "state" })).GetProperty("hero").GetProperty("cultivation").GetProperty("itemId").GetString() != "内功入门") throw new InvalidOperationException("Clearing internal skill changed cultivation.");
+Check(await Command(new { type = "equipInternalSkill", skillId = "基本内功" }), "run learned internal skill");
+Check(await Command(new { type = "clearCultivation" }), "clear cultivation without forgetting");
+if (State(await Command(new { type = "state" })).GetProperty("hero").GetProperty("internalSkills").GetArrayLength() != 1) throw new InvalidOperationException("Clearing cultivation forgot a learned skill.");
+Check(await Command(new { type = "setCultivation", entryNumber }), "select cultivation again");
+var preBattleSave = BrowserBridge.ExportSave();
+Check(BrowserBridge.ImportSave(preBattleSave), "prebattle cultivation save/load");
+if (State(await Command(new { type = "state" })).GetProperty("hero").GetProperty("cultivation").GetProperty("itemId").GetString() != "内功入门") throw new InvalidOperationException("Cultivation selection was lost.");
 Check(await BrowserBridge.Dispatch("{\"type\":\"talk\",\"locationId\":\"武师\"}"), "trainer");
 await ContinueDialogue();
 Check(await BrowserBridge.Dispatch("{\"type\":\"choose\",\"index\":0}"), "choose training");
 await ContinueDialogue();
+var forbidden = State(await Command(new { type = "state" })).GetProperty("hero").GetProperty("cultivation").GetRawText();
+var battleSkills = State(await Command(new { type = "state" })).GetProperty("battle").GetProperty("skills");
+if (battleSkills.EnumerateArray().Any(s => s.GetProperty("available").GetBoolean() && s.GetProperty("reason").ValueKind != JsonValueKind.Null)) throw new InvalidOperationException("Available skills displayed a failure reason.");
+var rejected = await Command(new { type = "clearCultivation" });
+using (var rejectDoc = JsonDocument.Parse(rejected)) if (rejectDoc.RootElement.GetProperty("ok").GetBoolean()) throw new InvalidOperationException("Battle permitted cultivation changes.");
+if (State(await Command(new { type = "state" })).GetProperty("hero").GetProperty("cultivation").GetRawText() != forbidden) throw new InvalidOperationException("Rejected command mutated cultivation.");
 var turns = 0;
 while (turns++ < 200)
 {
@@ -26,6 +48,45 @@ Check(await BrowserBridge.Dispatch("{\"type\":\"leaveBattle\"}"), "battle return
 Check(await BrowserBridge.Dispatch("{\"type\":\"choose\",\"index\":1}"), "leave trainer");
 save = BrowserBridge.ExportSave();
 Check(BrowserBridge.ImportSave(save), "save/load");
+var restored = State(await Command(new { type = "state" }));
+var restoredCultivation = restored.GetProperty("hero").GetProperty("cultivation");
+if (restoredCultivation.GetProperty("level").GetInt32() <= 1 && restoredCultivation.GetProperty("exp").GetInt32() <= 0) throw new InvalidOperationException("Cultivation did not grow through battle.");
+if (restored.GetProperty("hero").GetProperty("equippedInternalSkillId").GetString() != "基本内功") throw new InvalidOperationException("Running internal skill was lost.");
+if (restored.GetProperty("inventory").EnumerateArray().Single(i => i.GetProperty("id").GetString() == "内功入门").GetProperty("count").GetInt32() != 1) throw new InvalidOperationException("Cultivation consumed its book.");
+var legacy = System.Text.Json.Nodes.JsonNode.Parse(save)!.AsObject();
+legacy.Remove("cultivationItemId");
+Check(BrowserBridge.ImportSave(legacy.ToJsonString()), "older v1 save without cultivation metadata");
+Check(BrowserBridge.ImportSave(save), "restore current save");
+var invalidCultivationSave = System.Text.Json.Nodes.JsonNode.Parse(save)!.AsObject();
+invalidCultivationSave["game"]!["characters"]![0]!["internalSkills"] = new System.Text.Json.Nodes.JsonArray();
+var oldHeroState = State(await Command(new { type = "state" })).GetProperty("hero").GetRawText();
+var failedImport = BrowserBridge.ImportSave(invalidCultivationSave.ToJsonString());
+using (var failedDocument = JsonDocument.Parse(failedImport)) if (failedDocument.RootElement.GetProperty("ok").GetBoolean()) throw new InvalidOperationException("Unlearned cultivation skill was accepted from a malformed save.");
+if (State(await Command(new { type = "state" })).GetProperty("hero").GetRawText() != oldHeroState) throw new InvalidOperationException("Rejected save changed the existing session.");
+Console.WriteLine("PASS reject invalid cultivation save without modifying active session");
+Console.WriteLine("PASS real book training growth, independent internal skill, battle lock and save persistence");
+// Isolated save fixture exercises a real existing equipment definition. It does
+// not change production opening rewards, content, or the initial character.
+var equipmentFixture = System.Text.Json.Nodes.JsonNode.Parse(save)!.AsObject();
+var fixtureInventory = equipmentFixture["game"]!["inventory"]!;
+var equipmentEntryNumber = fixtureInventory["nextEntryNumber"]!.GetValue<long>();
+fixtureInventory["entries"]!.AsArray().Add(new System.Text.Json.Nodes.JsonObject { ["kind"] = "stack", ["entryNumber"] = equipmentEntryNumber, ["itemDefinitionId"] = "木刀", ["quantity"] = 1 });
+fixtureInventory["nextEntryNumber"] = equipmentEntryNumber + 1;
+Check(BrowserBridge.ImportSave(equipmentFixture.ToJsonString()), "isolated real-equipment save fixture");
+Check(await Command(new { type = "equipItem", entryNumber = equipmentEntryNumber }), "equip real wooden blade");
+var equippedState = State(await Command(new { type = "state" }));
+var equippedSlot = equippedState.GetProperty("hero").GetProperty("equipment").EnumerateArray().Single(e => e.GetProperty("slot").GetString() == "Weapon");
+if (equippedSlot.GetProperty("item").GetProperty("id").GetString() != "木刀") throw new InvalidOperationException("Real equipment was not applied.");
+var equippedId = equippedSlot.GetProperty("item").GetProperty("instanceId").GetString();
+Check(BrowserBridge.ImportSave(BrowserBridge.ExportSave()), "equipment save/load");
+var persistedSlot = State(await Command(new { type = "state" })).GetProperty("hero").GetProperty("equipment").EnumerateArray().Single(e => e.GetProperty("slot").GetString() == "Weapon");
+if (persistedSlot.GetProperty("item").GetProperty("instanceId").GetString() != equippedId) throw new InvalidOperationException("Equipment instance changed after save/load.");
+Check(await Command(new { type = "unequipItem", slot = "Weapon" }), "unequip returns actual inventory item");
+if (!State(await Command(new { type = "state" })).GetProperty("inventory").EnumerateArray().Any(i => i.GetProperty("id").GetString() == "木刀")) throw new InvalidOperationException("Unequipped item was lost.");
+Check(BrowserBridge.ImportSave(save), "discard isolated equipment fixture");
+
+static Task<string> Command(object command) => BrowserBridge.Dispatch(JsonSerializer.Serialize(command));
+static JsonElement State(string response) { using var doc = JsonDocument.Parse(response); return doc.RootElement.GetProperty("state").Clone(); }
 
 static async Task ContinueDialogue()
 {

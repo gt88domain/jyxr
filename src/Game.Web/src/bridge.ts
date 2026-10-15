@@ -1,18 +1,26 @@
-export interface Skill { id: string; name: string; level: number; mpCost: number; available?: boolean; reason?: string; }
+export interface Skill { id: string; name: string; level: number; mpCost: number; available?: boolean; reason?: string | null; description?: string; exp?: number; nextExp?: number; maxLevel?: number; active?: boolean; equipped?: boolean; kind?: string; castSize?: number; impactSize?: number; }
+export interface EquipmentSlot { slot: string; slotName: string; item: {id: string; name: string; instanceId: string; description: string} | null; }
+export interface Cultivation { entryNumber: number; itemId: string; itemName: string; skillId: string; skillName: string; kind: string; level: number; exp: number; nextExp: number; maxLevel: number; }
+export interface InventoryItem { id: string; entryNumber: number; name: string; count: number; quantity: number; description: string; kind: string; itemType: string; slot: string | null; canEquip: boolean; canUse: boolean; canCultivate: boolean; reason: string; }
+export interface BattleEvent { sequence: number; kind: string; unitId: string; amount: number | null; critical: boolean; sourceUnitId: string | null; skillId: string | null; skillName: string | null; text: string | null; }
 export interface Unit { id: string; name: string; team: number; x: number; y: number; hp: number; maxHp: number; mp: number; maxMp: number; alive: boolean; }
 export interface Battle {
   name: string; width: number; height: number; activeUnitId: string | null; outcome: string | null;
   units: Unit[]; skills: Skill[]; reachable: {x: number; y: number}[]; logs: string[];
+  targets?: {skillId: string; x: number; y: number; targetId: string | null}[];
+  events?: BattleEvent[];
+  playerCanAct?: boolean;
+  action?: {unitId: string; team: number; mainActionCommitted: boolean; canMove: boolean; canRest: boolean; canAttack: boolean} | null;
 }
 export interface GameState {
   phase: 'title' | 'world' | 'battle' | 'dialogue' | 'choice';
-  hero: {id: string; name: string; level: number; hp: number; maxHp: number; mp: number; maxMp: number; skills: Skill[]};
+  hero: {id: string; name: string; level: number; hp: number; maxHp: number; mp: number; maxMp: number; skills: Skill[]; experience?: number; nextLevelExperience?: number; attributes?: {id: string; label: string; value: number; baseValue: number}[]; talents?: {id: string; name: string; description: string}[]; externalSkills?: Skill[]; internalSkills?: Skill[]; equipment?: EquipmentSlot[]; cultivation?: Cultivation | null; equippedInternalSkillId?: string | null; canManage?: boolean};
   silver: number;
   map: {id: string; name: string; description: string; locations: {id: string; name: string; description: string}[]};
   battle: Battle | null;
   dialogue: {speaker: string; text: string} | null;
   choices: (string | {id?: string; text?: string; label?: string; index?: number})[] | null;
-  inventory?: {id: string; name: string; count: number; description?: string}[];
+  inventory?: InventoryItem[];
   logs: string[];
 }
 export interface Result { ok: boolean; error?: string; state: GameState; }
@@ -41,7 +49,9 @@ export async function loadRuntime(progress: (message: string) => void): Promise<
   const assemblies = await runtime.getAssemblyExports(config.mainAssemblyName);
   api = assemblies.Game.Web.Runtime.BrowserBridge;
   progress('正在装载人物、武学与剧情……');
-  const response = await fetch(`${import.meta.env.BASE_URL}data/content-package.json`);
+  const contentUrl = new URL(`${import.meta.env.BASE_URL}data/content-package.json`, document.baseURI);
+  contentUrl.searchParams.set('v', import.meta.env.VITE_GAME_VERSION);
+  const response = await fetch(contentUrl);
   if (!response.ok) throw new Error(`Content request failed: ${response.status}`);
   return decode(await api.Initialize(await response.text()));
 }

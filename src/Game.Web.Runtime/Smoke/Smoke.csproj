@@ -3,6 +3,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="../BrowserBridge.cs" Link="BrowserBridge.cs" />
+    <Compile Include="../BrowserBridge.Systems.cs" Link="BrowserBridge.Systems.cs" />
     <ProjectReference Include="../../Game.Core/Game.Core.csproj" />
     <ProjectReference Include="../../Game.Content/Game.Content.csproj" />
     <ProjectReference Include="../../Game.Application/Game.Application.csproj" />

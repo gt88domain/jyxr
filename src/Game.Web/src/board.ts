@@ -1,66 +1,180 @@
 import Phaser from 'phaser';
-import type { Battle } from './bridge';
+import type {Battle, Unit} from './bridge';
+
+export interface BoardOptions {selectedSkillId?: string; speed?: number; manual?: boolean; busy?: boolean; showGrid?: boolean; showDamage?: boolean; reducedMotion?: boolean; intent?: 'move' | 'attack';}
+type VisualBattle = Battle & {targets?: {x: number; y: number; skillId: string}[]};
+interface Pawn {container: Phaser.GameObjects.Container; art: Phaser.GameObjects.Image | Phaser.GameObjects.Text; ring: Phaser.GameObjects.Graphics; bars: Phaser.GameObjects.Graphics; name: Phaser.GameObjects.Text; previous: Unit;}
+
+export function boardGeometry(width: number, height: number, columns: number, rows: number) {
+  const cell = Math.min((width - 24) / columns, (height - 92) / rows, 92);
+  return {cell, left: (width - cell * columns) / 2, top: (height - cell * rows) * .65};
+}
 
 class BattleScene extends Phaser.Scene {
-  private battle?: Battle;
-  private onCell: (x: number, y: number) => void;
-  private ink?: Phaser.GameObjects.Container;
-  constructor(onCell: (x: number, y: number) => void) {super('battle'); this.onCell = onCell;}
+  private battle?: VisualBattle;
+  private options: BoardOptions = {};
+  private background?: Phaser.GameObjects.Image;
+  private ground?: Phaser.GameObjects.Graphics;
+  private hover?: Phaser.GameObjects.Graphics;
+  private pawns = new Map<string, Pawn>();
+  private eventSequence = -1;
+  constructor(private onCell: (x: number, y: number) => void, private parentElement: HTMLElement) {super('battle');}
+  preload() {
+    const base = `${import.meta.env.BASE_URL}art/`;
+    this.load.image('courtyard', `${base}training-courtyard.png`);
+    this.load.image('hero', `${base}hero-swordsman.png`);
+    this.load.image('dummy', `${base}training-dummy.png`);
+  }
   create() {
-    this.scale.on('resize', () => this.draw());
-    this.input.on('pointerup', (pointer: Phaser.Input.Pointer) => {
-      if (!this.battle) return;
-      const {cell, left, top} = this.geometry();
-      const x = Math.floor((pointer.x - left) / cell), y = Math.floor((pointer.y - top) / cell);
-      if (x >= 0 && y >= 0 && x < this.battle.width && y < this.battle.height) this.onCell(x, y);
+    this.cameras.main.setBackgroundColor('#52614a');
+    if (this.textures.exists('courtyard')) this.background = this.add.image(0, 0, 'courtyard').setDepth(-10);
+    this.ground = this.add.graphics().setDepth(-1);
+    this.hover = this.add.graphics().setDepth(6);
+    this.scale.on('resize', () => this.draw(true));
+    this.input.on('pointermove', (pointer: Phaser.Input.Pointer) => {
+      this.hover!.clear();
+      if (!this.canAct()) return;
+      const point = this.cellAt(pointer), {cell, left, top} = this.geometry();
+      if (point) this.hover!.lineStyle(2, 0xffe1a5, .95).strokeRoundedRect(left + point.x * cell + 3, top + point.y * cell + 3, cell - 6, cell - 6, 7);
     });
-    this.draw();
+    this.input.on('pointerout', () => this.hover?.clear());
+    this.input.on('pointerup', (pointer: Phaser.Input.Pointer) => {
+      if (!this.canAct()) return;
+      const point = this.cellAt(pointer);
+      if (point) this.onCell(point.x, point.y);
+    });
+    this.draw(true);
   }
-  updateBattle(battle: Battle) { this.battle = battle; if (this.sys.isActive()) this.draw(); }
-  private geometry() {
-    const b = this.battle!;
-    const cell = Math.min((this.scale.width - 36) / b.width, (this.scale.height - 46) / b.height, 76);
-    return {cell, left: (this.scale.width - cell * b.width) / 2, top: (this.scale.height - cell * b.height) / 2};
+  updateBattle(battle: Battle, options: BoardOptions) {this.battle = battle; this.options = options; if (this.sys.isActive()) this.draw();}
+  private canAct() {return !!this.battle && !this.options.busy && this.options.manual !== false && this.battle.units.some(unit => unit.id === this.battle!.activeUnitId && unit.team === 1);}
+  private geometry() {return boardGeometry(this.scale.width, this.scale.height, this.battle!.width, this.battle!.height);}
+  private cellAt(pointer: Phaser.Input.Pointer) {
+    if (!this.battle) return;
+    const {cell, left, top} = this.geometry();
+    const x = Math.floor((pointer.x - left) / cell), y = Math.floor((pointer.y - top) / cell);
+    if (x >= 0 && y >= 0 && x < this.battle.width && y < this.battle.height) return {x, y};
   }
-  private draw() {
-    if (!this.battle || !this.add) return;
-    this.ink?.destroy(true);
-    const layer = this.add.container(); this.ink = layer;
+  private draw(resize = false) {
+    if (!this.battle || !this.ground) return;
     const b = this.battle, {cell, left, top} = this.geometry();
-    const grid = this.add.graphics(); layer.add(grid);
-    grid.fillStyle(0x142b26, .62); grid.fillRoundedRect(left - 12, top - 12, cell * b.width + 24, cell * b.height + 24, 10);
+    this.parentElement.dataset.boardGeometry = JSON.stringify({cell, left, top, width: b.width, height: b.height});
+    if (this.background) {
+      this.background.setPosition(this.scale.width / 2, this.scale.height / 2);
+      this.background.setScale(Math.max(this.scale.width / this.background.width, this.scale.height / this.background.height));
+    }
+    const grid = this.ground.clear();
+    grid.fillStyle(0x10251e, .18).fillRect(0, 0, this.scale.width, this.scale.height);
+    grid.fillStyle(0xf8f0d3, .10).fillRoundedRect(left - 7, top - 7, cell * b.width + 14, cell * b.height + 14, 10);
+    grid.lineStyle(1, 0xffe6ac, .45).strokeRoundedRect(left - 7, top - 7, cell * b.width + 14, cell * b.height + 14, 10);
+    const targets = (b.targets ?? []).filter(point => point.skillId === this.options.selectedSkillId);
     for (let y = 0; y < b.height; y++) for (let x = 0; x < b.width; x++) {
-      const reachable = b.reachable.some(p => p.x === x && p.y === y);
-      grid.fillStyle(reachable ? 0x88c7ad : (x + y) % 2 ? 0xe4dac0 : 0xc4bea7, reachable ? .36 : .12);
-      grid.fillRect(left + x * cell + 1, top + y * cell + 1, cell - 2, cell - 2);
-      grid.lineStyle(1, 0xc7bea0, .22); grid.strokeRect(left + x * cell, top + y * cell, cell, cell);
-      if (reachable) {grid.fillStyle(0xa8d3b7, .65); grid.fillCircle(left + (x + .5) * cell, top + (y + .5) * cell, 2.5);}
+      const reachable = this.canAct() && this.options.intent !== 'attack' && b.reachable.some(point => point.x === x && point.y === y);
+      const attackable = this.canAct() && this.options.intent === 'attack' && targets.some(point => point.x === x && point.y === y);
+      if (reachable || attackable || this.options.showGrid !== false) {
+        grid.fillStyle(attackable ? 0xce7148 : reachable ? 0x79baa2 : 0xeee3c4, attackable ? .38 : reachable ? .32 : ((x + y) % 2 ? .045 : .10));
+        grid.fillRoundedRect(left + x * cell + 1, top + y * cell + 1, cell - 2, cell - 2, 3);
+      }
+      if (this.options.showGrid !== false) grid.lineStyle(1, 0xffefd0, .19).strokeRect(left + x * cell, top + y * cell, cell, cell);
+      if (reachable) grid.fillStyle(0xd6ffe2, .85).fillCircle(left + (x + .5) * cell, top + (y + .5) * cell, Math.max(2, cell * .035));
     }
-    for (const unit of b.units.filter(u => u.alive)) {
-      const x = left + (unit.x + .5) * cell, y = top + (unit.y + .5) * cell;
-      const active = unit.id === b.activeUnitId, radius = Math.max(11, cell * .29);
-      grid.fillStyle(0x000000, .27); grid.fillEllipse(x, y + radius * .85, radius * 2.2, radius * .65);
-      if (active) {grid.lineStyle(2, 0xf4d281, .95); grid.strokeCircle(x, y, radius + 5);}
-      grid.fillStyle(unit.team === 1 ? 0x254f49 : 0x8a4a39, 1); grid.fillCircle(x, y, radius);
-      grid.lineStyle(1, unit.team === 1 ? 0x92bdac : 0xd5a27e); grid.strokeCircle(x, y, radius);
-      const glyph = unit.name.includes('木头') ? '木' : unit.name.slice(0, 1);
-      layer.add(this.add.text(x, y, glyph, {fontFamily: 'serif', fontSize: `${Math.max(14, cell * .34)}px`, color: '#fff5dc'}).setOrigin(.5));
-      const barWidth = Math.max(24, cell * .7), barY = y + radius + 7;
-      grid.fillStyle(0x14201e, .8); grid.fillRoundedRect(x - barWidth / 2, barY, barWidth, 4, 2);
-      grid.fillStyle(unit.team === 1 ? 0x96c5a3 : 0xd78f76); grid.fillRoundedRect(x - barWidth / 2, barY, barWidth * Math.max(0, unit.hp / unit.maxHp), 4, 2);
-      if (cell > 42) layer.add(this.add.text(x, barY + 8, unit.name, {fontFamily: 'sans-serif', fontSize: '11px', color: '#f0e9d2'}).setOrigin(.5, 0));
+    const current = new Set(b.units.map(unit => unit.id));
+    for (const [id, pawn] of this.pawns) if (!current.has(id)) {pawn.container.destroy(true); this.pawns.delete(id);}
+    for (const unit of b.units) this.drawPawn(unit, cell, left, top, resize);
+    this.playEvents();
+  }
+  private drawPawn(unit: Unit, cell: number, left: number, top: number, resize: boolean) {
+    const x = left + (unit.x + .5) * cell, y = top + (unit.y + .7) * cell;
+    let pawn = this.pawns.get(unit.id);
+    const first = !pawn;
+    if (!pawn) {
+      const container = this.add.container(x, y), ring = this.add.graphics();
+      const key = unit.team === 1 ? 'hero' : 'dummy';
+      const art = this.textures.exists(key) ? this.add.image(0, 0, key).setOrigin(.5, .92) : this.add.text(0, 0, unit.team === 1 ? '侠' : '木', {fontFamily: 'serif', fontSize: '32px', color: '#fff3cb', backgroundColor: unit.team === 1 ? '#325b48' : '#784937'}).setOrigin(.5, 1);
+      const bars = this.add.graphics(), name = this.add.text(0, 0, '', {fontFamily: 'sans-serif', fontSize: '11px', color: '#fff5de', stroke: '#263d2d', strokeThickness: 3}).setOrigin(.5, 0);
+      container.add([ring, art, bars, name]);
+      pawn = {container, art, ring, bars, name, previous: {...unit}};
+      this.pawns.set(unit.id, pawn);
     }
+    const previous = pawn.previous, moved = previous.x !== unit.x || previous.y !== unit.y;
+    const reduced = this.options.reducedMotion || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (moved && !resize) {
+      this.tweens.killTweensOf(pawn.container);
+      this.tweens.add({targets: pawn.container, x, y, duration: reduced ? 0 : 340 / (this.options.speed || 1), ease: 'Sine.easeInOut'});
+    } else if (first || resize) pawn.container.setPosition(x, y);
+    pawn.container.setDepth(10 + unit.y);
+    if (pawn.art instanceof Phaser.GameObjects.Image) {
+      const size = cell * (unit.team === 1 ? 1.25 : 1.4);
+      pawn.art.setDisplaySize(size, size).setOrigin(unit.team === 1 ? .56 : .5, .96);
+      pawn.art.setFlipX(false);
+    }
+    else pawn.art.setFontSize(Math.max(17, cell * .55));
+    const active = unit.id === this.battle!.activeUnitId, ring = pawn.ring.clear();
+    ring.fillStyle(0x102318, .32).fillEllipse(0, -cell * .04, cell * .78, cell * .26);
+    ring.lineStyle(active ? 3 : 1.5, active ? 0xffd883 : unit.team === 1 ? 0x8bdbb5 : 0xd89d75, active ? .95 : .7).strokeEllipse(0, -cell * .04, cell * .85, cell * .32);
+    if (active) ring.fillStyle(0xffd783).fillTriangle(-4, -cell * 1.5, 4, -cell * 1.5, 0, -cell * 1.4);
+    const width = cell * .82, barY = cell * .08, bars = pawn.bars.clear();
+    bars.fillStyle(0x1c2d24, .94).fillRoundedRect(-width / 2 - 1, barY - 1, width + 2, 7, 3);
+    bars.fillStyle(unit.team === 1 ? 0xa7d1a5 : 0xe8a27e).fillRoundedRect(-width / 2, barY, width * Math.max(0, unit.hp / unit.maxHp), 5, 2);
+    pawn.name.setPosition(0, barY + 9).setFontSize(Math.max(9, Math.min(12, cell * .18))).setText(unit.name);
+    if (!first && this.battle!.events === undefined && unit.hp !== previous.hp) {
+      const delta = unit.hp - previous.hp;
+      if (this.options.showDamage !== false) {
+        const floating = this.add.text(x, y - cell, `${delta > 0 ? '+' : '−'}${Math.abs(delta)}`, {fontFamily: 'serif', fontSize: `${Math.max(19, cell * .44)}px`, fontStyle: 'bold', color: delta > 0 ? '#d0f3bc' : '#fff0d0', stroke: '#8d3f27', strokeThickness: 4}).setOrigin(.5).setDepth(80);
+        this.tweens.add({targets: floating, y: y - cell * (reduced ? 1 : 1.7), alpha: 0, duration: Math.max(350, 900 / (this.options.speed || 1)), ease: 'Cubic.easeOut', onComplete: () => floating.destroy()});
+      }
+      if (delta < 0 && !reduced) {
+        if (pawn.art instanceof Phaser.GameObjects.Image) {pawn.art.setTint(0xffc5a1); this.time.delayedCall(160, () => {if (pawn?.art.active && pawn.art instanceof Phaser.GameObjects.Image) pawn.art.clearTint();});}
+        const hit = this.add.graphics().setDepth(70).lineStyle(3, 0xffe3ad, .9).strokeCircle(x, y - cell * .45, cell * .35);
+        this.tweens.add({targets: hit, alpha: 0, duration: 180, onComplete: () => hit.destroy()});
+      }
+    }
+    pawn.container.setAlpha(unit.alive ? 1 : .25); pawn.previous = {...unit};
+  }
+  private playEvents() {
+    const events = this.battle!.events;
+    if (!events) return;
+    if (this.eventSequence < 0) {this.eventSequence = Math.max(0, ...events.map(event => event.sequence)); return;}
+    const {cell, left, top} = this.geometry();
+    const reduced = this.options.reducedMotion || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let floatIndex = 0;
+    for (const event of events.filter(event => event.sequence > this.eventSequence)) {
+      this.eventSequence = Math.max(this.eventSequence, event.sequence);
+      this.parentElement.dataset.lastBattleEvent = JSON.stringify(event);
+      const pawn = this.pawns.get(event.unitId);
+      if (!pawn) continue;
+      const x = left + (pawn.previous.x + .5) * cell, y = top + (pawn.previous.y + .7) * cell;
+      let text = '', color = '#fff1d1';
+      if (event.kind === 'Damaged' && event.amount != null) {
+        text = `${event.critical ? '暴击 ' : ''}−${event.amount}`;
+        this.parentElement.dataset.lastDamage = JSON.stringify(event);
+        if (!reduced) {
+          if (pawn.art instanceof Phaser.GameObjects.Image) {
+            const image = pawn.art; image.setTint(0xffb593);
+            this.time.delayedCall(140, () => {if (image.active) image.clearTint();});
+          }
+          const hit = this.add.graphics().setDepth(70).lineStyle(event.critical ? 4 : 2, 0xffe3ad, .9).strokeCircle(x, y - cell * .45, cell * .35);
+          this.tweens.add({targets: hit, alpha: 0, duration: 140 / (this.options.speed || 1), onComplete: () => hit.destroy()});
+        }
+      } else if (event.kind === 'SkillCast') {text = event.skillName || ''; color = '#ead292';}
+      else if (event.kind === 'FloatTextRequested') text = event.text || '';
+      else if (event.kind === 'Healed' || event.kind === 'Lifesteal') {text = '气血恢复'; color = '#cdf2bd';}
+      if (!text || this.options.showDamage === false) continue;
+      const isDamage = event.kind === 'Damaged';
+      const floating = this.add.text(x, y - cell * (1 + floatIndex++ * .32), text, {fontFamily: 'serif', fontSize: `${Math.max(isDamage ? 18 : 12, cell * (isDamage ? .42 : .23))}px`, fontStyle: isDamage ? 'bold' : 'normal', color, stroke: isDamage ? '#87462c' : '#273e2c', strokeThickness: 3}).setOrigin(.5).setDepth(80);
+      this.tweens.add({targets: floating, y: floating.y - cell * (reduced ? 0 : .6), alpha: 0, duration: Math.max(180, 620 / (this.options.speed || 1)), ease: 'Cubic.easeOut', onComplete: () => floating.destroy()});
+    }
+    this.parentElement.dataset.eventSequence = String(this.eventSequence);
   }
 }
+
 export class Board {
   private game: Phaser.Game;
   private scene: BattleScene;
   constructor(parent: HTMLElement, onCell: (x: number, y: number) => void) {
-    this.scene = new BattleScene(onCell);
+    this.scene = new BattleScene(onCell, parent);
     this.game = new Phaser.Game({type: Phaser.CANVAS, parent, transparent: true, audio: {noAudio: true}, banner: false,
-      scale: {mode: Phaser.Scale.RESIZE, width: parent.clientWidth, height: parent.clientHeight}, scene: [this.scene],
-      render: {antialias: true, roundPixels: true}});
+      scale: {mode: Phaser.Scale.RESIZE, width: parent.clientWidth, height: parent.clientHeight}, scene: [this.scene], render: {antialias: true, roundPixels: false}});
   }
-  update(battle: Battle) {this.scene.updateBattle(battle);}
+  update(battle: Battle, options: BoardOptions = {}) {this.scene.updateBattle(battle, options);}
   destroy() {this.game.destroy(true);}
 }

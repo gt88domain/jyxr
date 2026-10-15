@@ -2,9 +2,11 @@
 
 TypeScript / Phaser 显示界面，.NET 10 WebAssembly 运行现有的 `Game.Core`、`Game.Content`、`Game.Application` 与 `Game.Presentation`。战斗、AI、剧情执行和存档沿用 C# 内核，不在前端重复实现伤害公式。
 
-当前可玩：命名并选择难度 → 原版出生对白 → 南贤开场、奖励 → 小村武师的八项选择 → 木头人实战 → 结算、返回原剧情 → 浏览器存档、刷新续玩。也可以手动移动、选择武学攻击，或自动过招。存档保存在 IndexedDB，可导出与重新导入 JSON 备份。
+当前可玩：命名并选择难度 → 原版出生对白 → 南贤开场、奖励 → 小村武师的八项选择 → 木头人实战 → 结算、返回原剧情 → 浏览器存档、刷新续玩。首战支持手动走位/出招、自动交手、暂停和 1/2/4 倍速，使用原创练武场、侠客与木人素材，实际伤害事件驱动受击反馈。
 
-这不是完整游戏移植。目前迁移 14 个原开场/武师剧情段和三个地图视图；完整开局属性问答、其他地图交互、全量剧情、商店操作、道具使用界面及未实现的天赋/Buff Hook 仍待完成。内容包中的定义总数不代表这些系统都已经接入。旧版存档导入不在本轮范围。
+人物、装备、功法修炼、行囊与设置均有独立入口。装备穿戴/卸下、切换主内功、选择秘籍修炼、启停外功和支持的物品使用调用实际规则；《内功入门》可选为修炼秘籍，战斗结算后获得真实经验，修炼选择与主运内功独立。原版主角已有基本内功，初始武器、防具、饰品为空，界面如实显示，不额外发放道具。存档保存在 IndexedDB，可导出与重新导入 JSON 备份；原 v1 浏览器存档仍可导入。
+
+这不是完整游戏移植。目前迁移 14 个原开场/武师剧情段和三个地图视图；完整开局属性问答、其他地图交互、全量剧情、商店操作、剧情道具使用及未实现的天赋/Buff Hook 仍待完成。内容包中的定义总数不代表这些系统都已经接入。Silverlight/Unity 旧版存档导入不在本轮范围。
 
 ## 开发
 
@@ -44,9 +46,17 @@ npm run preview -- --port 4173 --strictPort
 CHROMIUM_PATH=/usr/bin/chromium GAME_WEB_URL=http://127.0.0.1:4173 npm test
 ```
 
-浏览器测试需要可用的 Chromium。Linux 云环境已提供 `/usr/bin/chromium`；本地也可安装 Playwright Chromium，再将 `CHROMIUM_PATH` 指向其程序。测试从用户可见按钮进入游戏，逐条核对原对白、奖励、真实棋盘点击移动、战斗结算和刷新后的存档恢复，并实际下载、导入存档，确认非法 JSON 不会破坏当前会话。同时检查移动屏幕溢出、未预期控制台异常及资源请求失败。截图与 trace 保存在被忽略的 `test-results/`。
+浏览器测试需要可用的 Chromium。Linux 云环境已提供 `/usr/bin/chromium`；本地也可安装 Playwright Chromium，再将 `CHROMIUM_PATH` 指向其程序。测试从用户可见按钮进入游戏，逐条核对原对白、奖励、真实棋盘点击移动和施法、手动/自动切换与暂停、修炼经验、设置持久化及刷新后的存档恢复，并实际下载、导入存档，确认非法 JSON 不会破坏当前会话。同时检查移动屏幕溢出、未预期控制台异常及资源请求失败。截图与 trace 保存在被忽略的 `test-results/`。
 
-交付压缩包可用 `npm run package` 重新生成，位置为仓库根的 `artifacts/jyxr-web-first-playable.zip`。解压后按其中的 `开始试玩.txt` 启动 HTTP 服务。当前交付包已在解压后的独立静态服务器上通过 20 项检查，核对 37 条原对白与提示，包含 375 像素窄屏检查。
+交付压缩包可用 `npm run package` 重新生成，位置为仓库根的 `artifacts/jyxr-web-first-playable.zip`。解压后按其中的 `开始试玩.txt` 启动 HTTP 服务。自动化验收核对 37 条原对白与提示，包含 375 像素窄屏检查；以 `test-results/browser-smoke.json` 中当前运行的结果为准。
+
+新版首战在独立静态服务器的 `/jyxr/` 路径上通过 37 项主流程检查（37 条原对白），1440×900 战斗控件完整一屏，375 像素窄屏也通过。另有 6 项装备 UI 检查，以复制的测试存档加入原始木刀定义，经真实文件导入、行囊装备、保存/刷新/导入恢复、卸下返还验证；该道具只在隔离测试存档中，原开局三装备槽仍为空。两套检查均没有未预期浏览器错误或失败请求。
+
+主流程测试生成导出存档后，可在同一静态服务器上运行独立装备验收：
+
+```bash
+CHROMIUM_PATH=/usr/bin/chromium GAME_WEB_URL=http://127.0.0.1:4173 node tests/equipment-smoke.mjs
+```
 
 仓库根还可验证不依赖浏览器 UI 的同一完整流程：
 
@@ -60,6 +70,8 @@ dotnet run --project src/Game.Web.Runtime/Smoke/Smoke.csproj
 
 静态产物使用相对资源路径，同一份文件支持域名根目录和 GitHub Pages 的 `/jyxr/` 子目录。保留 `public/.nojekyll`，避免 Pages 忽略 .NET 的 `_framework` 目录；`runtime-loader.js` 作为普通脚本复制，由 .NET SDK 自己处理内部模块和资源指纹，不将它改成 Vite 打包的入口。
 
+构建按运行时、内容包及加载器的实际字节生成版本标识，放到加载器、内嵌清单的 `dotnet.js` 和内容 JSON 请求参数中，避免网站升级时浏览器混用旧运行时清单与新程序。SDK 的哈希校验照常保留。
+
 对应源码保存在 `html5-web` 分支，预构建的静态网站发布到独立 `gh-pages` 分支。GitHub 仓库的 Settings → Pages 应选择 Deploy from a branch、`gh-pages`、`/ (root)`。平台完成 Pages 构建后，预期地址为 `https://gt88domain.github.io/jyxr/`；必须通过实际 HTTP 和浏览器检查才能称为上线，推送分支本身不代表网站已经可用。
 
 浏览器存档按网站来源隔离，本地试玩和线上网站不会自动共享存档；需要通过 JSON 导出与导入转移。
@@ -68,7 +80,7 @@ dotnet run --project src/Game.Web.Runtime/Smoke/Smoke.csproj
 
 - [内容导入说明](scripts/CONTENT.md)：源提交、转换范围、原剧情与训练入口。
 - [运行时桥接说明](../Game.Web.Runtime/README.md)：导出 API、支持指令、真实 C# 规则与限制。
-- `public/art/nanxian-retreat.png`：本轮生成的一张原创山居背景。头像及棋子目前用文字和程序图形表示，没有复制原游戏的图片。声音、更多场景和动画尚未制作。
+- `public/art/`：四张原创图片，包括山居背景、练武场、透明侠客和木人棋子；来源与视角见目录内 README。没有复制原游戏的图片。声音、其他角色与更多场景尚未制作。
 - `public/data/`、`public/runtime/` 均为构建输出，已忽略；请从锁定的参考源重新生成，不手改生成文件。
 - 原 `Game.Godot` 宿主与既有测试未修改。普通 .NET 全套测试仍受缺少正式 `mods/jyxr-base` 的既有单项失败影响；本工程使用单独生成的浏览器内容包，不能将它误称为恢复了正式 MOD。
 
