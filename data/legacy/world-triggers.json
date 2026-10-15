@@ -1,0 +1,128 @@
+[
+  {
+    "id": "mainStory_黑暗的阴影",
+    "action": "story('mainStory_黑暗的阴影')",
+    "repeatMode": "once",
+    "when": "character_level('主角') >= 10 && friend_count >= 4"
+  },
+  {
+    "id": "mainStory_神秘剑客",
+    "action": "story('mainStory_神秘剑客')",
+    "repeatMode": "once",
+    "when": "character_level('主角') >= 15 && friend_count >= 8 && story_completed('mainStory_黑暗的阴影1')"
+  },
+  {
+    "id": "mainStory_组织1",
+    "action": "story('mainStory_组织1')",
+    "repeatMode": "once",
+    "when": "character_level('主角') >= 22 && friend_count >= 8 && story_completed('mainStory_神秘剑客1')"
+  },
+  {
+    "id": "mainStory_紧急",
+    "action": "story('mainStory_紧急')",
+    "repeatMode": "once",
+    "when": "character_level('主角') >= 25 && friend_count >= 8 && story_completed('mainStory_组织1')"
+  },
+  {
+    "id": "血刀门_出师",
+    "action": "story('血刀门_出师')",
+    "repeatMode": "once",
+    "when": "elapsed_days > 40 && sect == '血刀门'"
+  },
+  {
+    "id": "血刀门_门内比武",
+    "action": "story('血刀门_门内比武')",
+    "repeatMode": "once",
+    "when": "elapsed_days > 85 && sect == '血刀门'"
+  },
+  {
+    "id": "门派灵鹫宫_出师",
+    "action": "story('门派灵鹫宫_出师')",
+    "repeatMode": "once",
+    "when": "elapsed_days > 50 && sect == '灵鹫宫'"
+  },
+  {
+    "id": "灵鹫宫_攻打",
+    "action": "story('灵鹫宫_攻打')",
+    "repeatMode": "once",
+    "when": "elapsed_days > 240 && sect == '灵鹫宫' && !story_completed('灵鹫宫_委屈求全')"
+  },
+  {
+    "id": "灵鹫宫_攻打_完成珍珑棋局",
+    "action": "story('灵鹫宫_攻打_完成珍珑棋局')",
+    "repeatMode": "once",
+    "when": "elapsed_days > 360 && sect == '灵鹫宫' && story_completed('灵鹫宫_委屈求全')"
+  },
+  {
+    "id": "少林寺_福建南少林",
+    "action": "story('少林寺_福建南少林')",
+    "repeatMode": "once",
+    "when": "elapsed_days > 40 && sect == '少林寺'"
+  },
+  {
+    "id": "少林派_南少林出师",
+    "action": "story('少林派_南少林出师')",
+    "repeatMode": "once",
+    "when": "elapsed_days > 75 && sect == '少林寺' && story_completed('少林寺_福建南少林破败')"
+  },
+  {
+    "id": "南少林_如来神掌",
+    "action": "story('南少林_如来神掌')",
+    "repeatMode": "once",
+    "when": "elapsed_days > 390 && sect == '少林寺' && story_completed('少林派_南少林出师')"
+  },
+  {
+    "id": "少林派_少林出师",
+    "action": "story('少林派_少林出师')",
+    "repeatMode": "once",
+    "when": "elapsed_days > 75 && sect == '少林寺' && !story_completed('少林寺_福建南少林破败')"
+  },
+  {
+    "id": "少林派_门派大比",
+    "action": "story('少林派_门派大比')",
+    "repeatMode": "once",
+    "when": "elapsed_days > 150 && sect == '少林寺' && !story_completed('少林寺_福建南少林破败')"
+  },
+  {
+    "id": "少林_金刚门",
+    "action": "story('少林_金刚门')",
+    "repeatMode": "once",
+    "when": "elapsed_days > 400 && sect == '少林寺' && !story_completed('少林寺_南北之争')"
+  },
+  {
+    "id": "全真教_门派大比",
+    "action": "story('全真教_门派大比')",
+    "repeatMode": "once",
+    "when": "elapsed_days > 50 && sect == '全真教'"
+  },
+  {
+    "id": "全真教_大校",
+    "action": "story('全真教_大校')",
+    "repeatMode": "once",
+    "when": "elapsed_days > 90 && sect == '全真教'"
+  },
+  {
+    "id": "武当派_出师",
+    "action": "story('武当派_出师')",
+    "repeatMode": "once",
+    "when": "elapsed_days > 65 && sect == '武当派'"
+  },
+  {
+    "id": "星宿派_出师",
+    "action": "story('星宿派_出师')",
+    "repeatMode": "once",
+    "when": "elapsed_days > 40 && sect == '星宿派'"
+  },
+  {
+    "id": "星宿派_星宿老仙考校",
+    "action": "story('星宿派_星宿老仙考校')",
+    "repeatMode": "once",
+    "when": "elapsed_days > 90 && sect == '星宿派'"
+  },
+  {
+    "id": "星宿派_召回擂鼓山",
+    "action": "story('星宿派_召回擂鼓山')",
+    "repeatMode": "once",
+    "when": "elapsed_days > 150 && sect == '星宿派'"
+  }
+]

@@ -1,0 +1,603 @@
+{
+  "version": 3,
+  "segments": [
+    {
+      "name": "新手村_出生",
+      "steps": [
+        {
+          "kind": "command",
+          "call": "music('音乐.室内_清新')"
+        },
+        {
+          "kind": "command",
+          "call": "background('地图.农舍内')"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "主角",
+          "text": "咦，这是哪里？"
+        },
+        {
+          "kind": "command",
+          "call": "suggest('点击人物头像，即可触发与人物交互。')"
+        },
+        {
+          "kind": "command",
+          "call": "map('南贤屋内')"
+        }
+      ]
+    },
+    {
+      "name": "新手村_南贤开场",
+      "steps": [
+        {
+          "kind": "dialogue",
+          "speaker": "南贤",
+          "text": "年轻人，你醒了。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "主角",
+          "text": "这里是哪里？"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "南贤",
+          "text": "这里是金庸[[red:十四天书]]的世界。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "主角",
+          "text": "飞雪连天射白鹿，笑书神侠倚碧鸳？"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "南贤",
+          "text": "正是！"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "主角",
+          "text": "我穿越到这里来冒险了？"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "南贤",
+          "text": "正是！而且，你还不是第一次来！"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "主角",
+          "text": "我来过这里？"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "南贤",
+          "text": "正是！当然，那是90年代的事情了，请参见当时DOS版的金庸群侠传。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "主角",
+          "text": "你可以不要每次都说“正是”么？还打个感叹号吵得我耳朵都要聋了。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "南贤",
+          "text": "……"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "主角",
+          "text": "那我这次来这里是要干什么？"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "南贤",
+          "text": "我也不知道。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "主角",
+          "text": "……"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "南贤",
+          "text": "我只能告诉你，我感觉到有[[red:邪恶的气息]]在逼近，这个世界正在呼唤英雄。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "主角",
+          "text": "可是我什么武功都不会！"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "南贤",
+          "text": "出去打打怪，练练级，很快的……"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "主角",
+          "text": "……我一个人闯江湖搞不定啊！妈妈说江湖坏人太多了。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "南贤",
+          "text": "你可以[[yellow:招募小伙伴]]，这个江湖中有很多人愿意和你一起闯荡。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "南贤",
+          "text": "但是因为一些未知的原因，曾经在DOS版和你一起闯荡的小伙伴都不认识你了，你得一切从头来过。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "主角",
+          "text": "我忽然很想知道这游戏编剧的工资是谁发的。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "南贤",
+          "text": "……"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "南贤",
+          "text": "好了，时间不早了，来，我带你到外头看看吧！"
+        },
+        {
+          "kind": "command",
+          "call": "nick('初出茅庐')"
+        },
+        {
+          "kind": "command",
+          "call": "journal('再次来到金庸十四天书的世界。')"
+        },
+        {
+          "kind": "jump",
+          "target": "新手村_小村介绍"
+        }
+      ]
+    },
+    {
+      "name": "新手村_小村介绍",
+      "steps": [
+        {
+          "kind": "command",
+          "call": "background('地图.小村')"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "主角",
+          "text": "不是这么老土吧？这就是这个游戏的新手村？"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "南贤",
+          "text": "我只能说，外头的世界很凶险……你还是在这里先学会一些基本的技能，再出去闯荡江湖吧。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "主角",
+          "text": "那我现在应该做些什么？"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "南贤",
+          "text": "村里有许多去处，你可以跟大伙学学基本的技能。我这里有一本记载了[[yellow:基本内功]]的心法，你拿去好好修炼吧。"
+        },
+        {
+          "kind": "command",
+          "call": "item('内功入门', 1)"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "主角",
+          "text": "我靠，这是什么？内功入门？！至少拿点像样的东西嘛。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "南贤",
+          "text": "老朽这儿也只有这点货了……你就将就着学着吧。"
+        },
+        {
+          "kind": "command",
+          "call": "suggest('点击人物状态栏，点击修炼，可以装备内功入门。')"
+        },
+        {
+          "kind": "command",
+          "call": "suggest('装备上的武学经书，在战斗结束后能将获得的经验快速分配到该项武学上，可以迅速提升武学等级。')"
+        },
+        {
+          "kind": "command",
+          "call": "map('小村')"
+        }
+      ]
+    },
+    {
+      "name": "新手村_武师",
+      "steps": [
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "哈喽，小兄弟，你是新来的吧？"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "主角",
+          "text": "看你这装扮，就一定是教人打架的武师了。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "完全正确，关于打架，有什么问题就找我来问吧，我会尽量给你解答的。"
+        },
+        {
+          "kind": "jump",
+          "target": "新手村_武师选择"
+        }
+      ]
+    },
+    {
+      "name": "新手村_武师选择",
+      "steps": [
+        {
+          "kind": "command",
+          "call": "background('地图.小村')"
+        },
+        {
+          "kind": "choice",
+          "prompt": {
+            "speaker": "武师",
+            "text": "你有什么问题？"
+          },
+          "blocks": [
+            {
+              "kind": "options",
+              "options": [
+                {
+                  "text": "[[yellow:【战斗】请让我实战练习一下吧]]",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "新手村_武师7"
+                    }
+                  ]
+                },
+                {
+                  "text": "【离开】没事了",
+                  "steps": [
+                    {
+                      "kind": "command",
+                      "call": "map('小村')"
+                    }
+                  ]
+                },
+                {
+                  "text": "武功都怎么分类的？",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "新手村_武师1"
+                    }
+                  ]
+                },
+                {
+                  "text": "天赋有什么用？",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "新手村_武师2"
+                    }
+                  ]
+                },
+                {
+                  "text": "如何获取顶级武学？",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "新手村_武师3"
+                    }
+                  ]
+                },
+                {
+                  "text": "武功的适性有什么用？",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "新手村_武师4"
+                    }
+                  ]
+                },
+                {
+                  "text": "如何打败难缠的对手？",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "新手村_武师5"
+                    }
+                  ]
+                },
+                {
+                  "text": "如何提升武学等级上限？",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "新手村_武师6"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "新手村_武师1",
+      "steps": [
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "从技能本身来说，分四大类：[[red:外功、内功、绝技、特殊技能。]]"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "外功就是战斗中可以直接使用的技能，也就是白色的技能。每个角色可以学习十种外功。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "内功关系到整个角色的各个属性增益，并且同时只能装备一种。一个角色可以学习五种内功。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "内功和外功学到一定程度，有些武学可以领悟绝技（红色技能），一般的绝技需要在战斗中积攒怒气才可以使用。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "特殊技能是指一些角色特有的功能（蓝色技能），一般都附带特殊效果，属于战斗中的战略性技能。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "从武学分类来说，武学又分四种：[[red:拳法、剑法、刀法、奇门。]]"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "所以，选择你想要学习的技能，搭配不同种类的技能才能在战斗中致胜。"
+        },
+        {
+          "kind": "jump",
+          "target": "新手村_武师选择"
+        }
+      ]
+    },
+    {
+      "name": "新手村_武师2",
+      "steps": [
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "每个人物都可以学习若干天赋，也有一些人物自带天赋。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "天赋给每个人物赋予了独特的属性，大部分是提供被动技能。可以在战斗中发挥特殊作用，如减少伤害、提高命中率等等。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "当然并不是每个天赋都是有益的，也有一些人物出场就自带坑爹天赋。甚至还有一些天赋会坑队友喔，这个需要你自己来把握。"
+        },
+        {
+          "kind": "jump",
+          "target": "新手村_武师选择"
+        }
+      ]
+    },
+    {
+      "name": "新手村_武师3",
+      "steps": [
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "如果你加入一个门派的话，大部分顶级武学都是通过门派任务来获得的。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "当然，江湖上也有许多绝顶高手，机缘巧合的话，也许会教你个一招半式。如果有机会认识的话，赶紧和他们处好关系吧！"
+        },
+        {
+          "kind": "jump",
+          "target": "新手村_武师选择"
+        }
+      ]
+    },
+    {
+      "name": "新手村_武师4",
+      "steps": [
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "外功分三种，[[red:阴性、阳性以及阴阳调和。]]"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "例如丐帮洪老帮主的降龙十八掌，就是典型的阳性武功；而西毒欧阳前辈的灵蛇拳，就是典型的阴性武功……"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "阴阳调和的武功顾名思义，就是阴阳均适配，这种武学一般是高级武学，是否能学到就看你的机缘了。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "同理，所有的内功都带阴阳加成属性，你当前装备的内功将直接影响所选外功武学的威力。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "阳性武功加成取决于当前内功的阳适性，阴性武功加成取决于当前内功的阴适性，调和型武功加成取决于当前内功阴阳适性中较大的那个。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "简而言之，就是你如果要使用阳性的外功，就带阳属性的内功；阴性亦然。如果是调和型外功，就无所谓了。"
+        },
+        {
+          "kind": "jump",
+          "target": "新手村_武师选择"
+        }
+      ]
+    },
+    {
+      "name": "新手村_武师5",
+      "steps": [
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "在江湖中闯荡，你将会遇到很多难缠的对手和艰难的战斗。那么如何在这种战斗中取胜呢？"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "决定一场战斗的因素很多，主要包含以下几个方面："
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "1、走位——你将需要了解敌方的技能覆盖范围，敌方的走位意图，来进行选择，避免被敌人包围或者一次性群攻到你的队友。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "2、技能选择——合适的时候，释放合适的技能。请仔细思考，如本回合到底是应该发动进攻呢，还是应该退避防守。是应该给队友增强型技能呢，还是应该给敌方削弱型技能。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "3、上场队员——仔细分析一场战斗中敌方的弱点，针对性的培养队友，用人物属性、天赋克制的方式，能给战斗带来很大胜算加成。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "4、运气——由于奥义、攻击力等各方面因素的随机性都很强，在实力满足的情况下，你可能还需要一些运气！"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "最后，补充说一下，可能很多自动无法打过的战斗，由您亲手操作可以打过！所以艰难的战斗，不妨想象成一盘棋，当一个棋手去赢得胜利吧！"
+        },
+        {
+          "kind": "jump",
+          "target": "新手村_武师选择"
+        }
+      ]
+    },
+    {
+      "name": "新手村_武师6",
+      "steps": [
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "俗话说，师傅带进门，修行靠个人。即使遇到再好的老师，你也很难从他那儿修行到一门武艺的顶峰。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "如果你想要突破武学上限，目前有几种方法："
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "1、在一些战斗中，会掉落武学残章，将会自动解锁该项武学的专精。"
+        },
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "2、完成一些江湖奇遇，可能也会解锁武学的专精喔！但这些往往只能解锁一次，也就是说重复完成这项任务是没法反复获得奖励的。"
+        },
+        {
+          "kind": "jump",
+          "target": "新手村_武师选择"
+        }
+      ]
+    },
+    {
+      "name": "新手村_武师7",
+      "steps": [
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "好嘞，那边有个木头人，你可以去练习一下！"
+        },
+        {
+          "kind": "branch",
+          "cases": [
+            {
+              "when": "character_level('主角') >= 5",
+              "steps": [
+                {
+                  "kind": "jump",
+                  "target": "新手村_武师不能打木头人"
+                }
+              ]
+            }
+          ],
+          "fallback": [
+            {
+              "kind": "jump",
+              "target": "新手村_武师木头人"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "新手村_武师不能打木头人",
+      "steps": [
+        {
+          "kind": "dialogue",
+          "speaker": "武师",
+          "text": "额，你等级已经太高了，打木头人已经提高不了了，赶紧到江湖上去闯荡吧~"
+        },
+        {
+          "kind": "jump",
+          "target": "新手村_武师选择"
+        }
+      ]
+    },
+    {
+      "name": "新手村_武师木头人",
+      "steps": [
+        {
+          "kind": "battle",
+          "battleId": "南贤居_木头人_战斗",
+          "outcomes": {
+            "win": [
+              {
+                "kind": "jump",
+                "target": "新手村_武师选择"
+              }
+            ],
+            "lose": [
+              {
+                "kind": "jump",
+                "target": "新手村_武师选择"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

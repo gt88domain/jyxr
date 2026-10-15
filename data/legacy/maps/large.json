@@ -1,0 +1,1959 @@
+[
+  {
+    "id": "大地图",
+    "name": "大地图",
+    "description": "有人的地方，就是江湖！",
+    "picture": "地图.大地图",
+    "kind": "large",
+    "travelSpeed": 22,
+    "musics": [
+      "音乐.逍遥",
+      "音乐.逍遥1",
+      "音乐.逍遥2",
+      "音乐.逍遥3",
+      "音乐.逍遥4",
+      "音乐.天龙八部.佛音2",
+      "音乐.天龙八部.佛音3"
+    ],
+    "locations": [
+      {
+        "id": "昆仑山",
+        "position": {
+          "x": 294,
+          "y": 402
+        },
+        "description": "昆仑山延绵千里，白雪皑皑，流传着无数关于她的神奇故事。",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('昆仑山')",
+            "image": "town.waiguo4",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "黑木崖",
+        "position": {
+          "x": 731,
+          "y": 321
+        },
+        "description": "日月神教黑木崖，易守难攻的军事要冲",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('笑傲江湖_黑木崖岳父')",
+            "image": "town.waiguo3",
+            "description": null,
+            "when": "in_team('任盈盈') && story_completed('笑傲江湖_平一指治好')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "map('黑木崖下')",
+            "image": "town.waiguo3",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "灵鹫宫",
+        "position": {
+          "x": 591,
+          "y": 167
+        },
+        "description": "缥缈峰灵鹫宫",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('灵鹫宫')",
+            "image": "town.2",
+            "description": null,
+            "when": "sect == '灵鹫宫'"
+          },
+          {
+            "id": "2",
+            "action": "story('original_非灵鹫')",
+            "image": "town.2",
+            "description": null,
+            "when": "sect != '灵鹫宫' && !story_completed('original_灭门灵鹫成功')"
+          }
+        ]
+      },
+      {
+        "id": "松鼠旅馆",
+        "position": {
+          "x": 927,
+          "y": 861
+        },
+        "description": "汉家松鼠童鞋找了个惬意的位置开了间客栈。",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('松鼠旅馆')",
+            "image": "town.kezhan",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "大轮寺",
+        "position": {
+          "x": 121,
+          "y": 827
+        },
+        "description": "雪山密宗大轮寺，仅大轮弟子可以进入。",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('门派大轮寺')",
+            "image": "town.waiguo2",
+            "description": null,
+            "when": "sect == '大轮寺'"
+          },
+          {
+            "id": "2",
+            "action": "story('original_非大轮')",
+            "image": "town.waiguo2",
+            "description": null,
+            "when": "sect != '大轮寺' && !story_completed('original_灭门大轮成功')"
+          }
+        ]
+      },
+      {
+        "id": "血刀门",
+        "position": {
+          "x": 147,
+          "y": 689
+        },
+        "description": "邪恶的血刀门。",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('血刀门')",
+            "image": "town.waiguo3",
+            "description": null,
+            "when": "sect == '血刀门'"
+          },
+          {
+            "id": "2",
+            "action": "story('original_非血刀')",
+            "image": "town.waiguo3",
+            "description": null,
+            "when": "sect != '血刀门' && !story_completed('original_灭门血刀成功')"
+          }
+        ]
+      },
+      {
+        "id": "香格里拉",
+        "position": {
+          "x": 779,
+          "y": 984
+        },
+        "description": "香格里拉，通往天堂之门。",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('香格里拉')",
+            "image": "town.waiguo4",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "沙漠",
+        "position": {
+          "x": 385,
+          "y": 372
+        },
+        "description": "一片沙漠",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('original_女主出场1')",
+            "image": "头像.民女",
+            "description": null,
+            "when": "!in_team('女主') && !story_completed('original_女主出场.结束')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('original_女主出场1')",
+            "image": "头像.民女",
+            "description": null,
+            "when": "!in_team('女主') && !story_completed('original_女主出场.结束') && chance(0.3)"
+          }
+        ]
+      },
+      {
+        "id": "唐军营",
+        "position": {
+          "x": 459,
+          "y": 392
+        },
+        "description": "大唐在西域的军营",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('original_大唐军营.父亲大人')",
+            "image": "头像.行军司马",
+            "description": null,
+            "when": "story_completed('original_女主出场.结束')",
+            "repeatMode": "once"
+          }
+        ]
+      },
+      {
+        "id": "光明顶",
+        "position": {
+          "x": 215,
+          "y": 552
+        },
+        "description": "明教圣地光明顶",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('original_光明顶开始')",
+            "image": "头像.张无忌",
+            "description": null,
+            "when": "in_team('张无忌') && story_completed('original_光明顶') && !story_completed('original_光明顶胜') && !story_completed('original_光明顶胜简单模式')"
+          },
+          {
+            "id": "2",
+            "action": "story('original_光明顶')",
+            "image": "头像.张无忌",
+            "description": null,
+            "when": "in_team('张无忌') && story_completed('mainStory_黑暗的阴影1')",
+            "repeatMode": "once"
+          }
+        ]
+      },
+      {
+        "id": "雁门关",
+        "position": {
+          "x": 1213,
+          "y": 163
+        },
+        "description": "中原北方的重要边塞。",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('雁门关')",
+            "image": "town.waiguo4",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "哈萨克部落",
+        "position": {
+          "x": 159,
+          "y": 419
+        },
+        "description": "哈萨克部落。",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('白马啸西风_初见陈达海')",
+            "image": "town.zhangpeng",
+            "description": null,
+            "when": "!in_team('李文秀') && story_completed('白马啸西风_初次见面') && chance(0.3)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "map('哈萨克部落')",
+            "image": "town.zhangpeng",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "高昌迷宫",
+        "position": {
+          "x": 387,
+          "y": 170
+        },
+        "description": "高昌迷宫。",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('白马啸西风_进入高昌迷宫')",
+            "image": "town.waiguo4",
+            "description": null,
+            "when": "in_team('李文秀') && story_completed('白马啸西风_李文秀加入') && chance(0.5)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('白马啸西风_高昌秘宝')",
+            "image": "town.waiguo4",
+            "description": null,
+            "when": "!in_team('李文秀') && story_completed('白马啸西风_前往高昌') && chance(0.5)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "3",
+            "action": "map('高昌迷宫')",
+            "image": "town.waiguo4",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "回族部落",
+        "position": {
+          "x": 771,
+          "y": 186
+        },
+        "description": "回族部落。",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('书剑恩仇录_回族部落')",
+            "image": "town.zhangpeng",
+            "description": null,
+            "when": "!in_team('霍青桐') && !story_completed('mainStory_神秘剑客1')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('书剑恩仇录_回族部落')",
+            "image": "town.zhangpeng",
+            "description": null,
+            "when": "!in_team('霍青桐') && !story_completed('mainStory_神秘剑客1') && !story_completed('书剑恩仇录_回族部落霍青桐')"
+          },
+          {
+            "id": "3",
+            "action": "map('回族部落')",
+            "image": "town.zhangpeng",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "青城派",
+        "position": {
+          "x": 757,
+          "y": 773
+        },
+        "description": "传说中武林最弱的门派。",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('倚天屠龙_劝说青城')",
+            "image": "头像.长青子",
+            "description": null,
+            "when": "in_team('张无忌') && story_completed('倚天屠龙_光明顶胜利2')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('倚天邪线_劝说青城')",
+            "image": "头像.长青子",
+            "description": null,
+            "when": "story_completed('倚天邪线_劝说完成')",
+            "repeatMode": "once"
+          }
+        ]
+      },
+      {
+        "id": "峨眉山",
+        "position": {
+          "x": 620,
+          "y": 644
+        },
+        "description": "四川峨眉山",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('峨眉山中1')",
+            "image": "town.3",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "恒山",
+        "position": {
+          "x": 1299,
+          "y": 251
+        },
+        "description": "恒山派",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('恒山山顶')",
+            "image": "town.4",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "星宿海",
+        "position": {
+          "x": 296,
+          "y": 759
+        },
+        "description": "星宿老仙丁春秋一手创办的门派，以毒功为主。",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('tlbb.xz_星宿派')",
+            "image": "头像.丁春秋",
+            "description": null,
+            "when": "story_completed('tlbb.xz_擂鼓山4')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "map('星宿派')",
+            "image": "town.waiguo3",
+            "description": null,
+            "when": "sect == '星宿派'"
+          }
+        ]
+      },
+      {
+        "id": "秦红棉居",
+        "position": {
+          "x": 635,
+          "y": 775
+        },
+        "description": "修罗刀秦红棉的居所",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('tlbb.dy_秦红棉居秦红棉1')",
+            "image": null,
+            "description": null,
+            "when": "story_completed('tlbb.dy_马夫人3') && in_team('段誉') && in_team('木婉清') && in_team('段正淳') && !story_completed('tlbb.dy_木婉清.攻略成功')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('tlbb.dy_秦红棉居段誉')",
+            "image": null,
+            "description": null,
+            "when": "story_completed('tlbb.dy_小镜湖阮星竹6') && in_team('段正淳') && in_team('阿朱') && !story_completed('tlbb.dy_木婉清.攻略成功')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "3",
+            "action": "story('tlbb.dy_木婉清.攻略成功')",
+            "image": null,
+            "description": null,
+            "when": "story_completed('tlbb.dy_木婉清.touch.成功') && !in_team('木婉清') && chance(0.1)",
+            "repeatMode": "once"
+          }
+        ]
+      },
+      {
+        "id": "大理",
+        "position": {
+          "x": 527,
+          "y": 937
+        },
+        "description": "云南大理",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('鹿鼎记_吴三桂1')",
+            "image": "头像.吴三桂",
+            "description": "吴三桂府上正在办寿宴",
+            "when": "story_completed('鹿鼎记_阿九3') && chance(0.5)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "map('大理')",
+            "image": "town.city.dali",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "大理树林",
+        "position": {
+          "x": 409,
+          "y": 937
+        },
+        "description": "大理城外的一片茂密森林",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('tlbb.dy_闪电貂')",
+            "image": "town.waiguo4",
+            "description": null,
+            "when": "story_completed('tlbb.dy_钟灵找') && in_team('钟灵') && story_completed('mainStory_黑暗的阴影1') && !story_completed('mainStory_紧急1') && chance(0.4)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "map('大理树林')",
+            "image": "town.waiguo4",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "无量山洞",
+        "position": {
+          "x": 347,
+          "y": 1032
+        },
+        "description": "洞中无日月，人间至乐也",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('tlbb.dy_无量山洞1')",
+            "image": "town.waiguo4",
+            "description": null,
+            "when": "!in_team('段誉')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('original_无量山洞庄子')",
+            "image": "头像.陈家洛",
+            "description": null,
+            "when": "in_team('段誉') && in_team('陈家洛') && story_completed('mainStory_神秘剑客1')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "3",
+            "action": "story('tlbb.dy_无量山洞段誉慕容复')",
+            "image": "头像.慕容复",
+            "description": null,
+            "when": "in_team('段誉') && in_team('慕容复') && story_completed('mainStory_神秘剑客1')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "4",
+            "action": "map('无量山洞')",
+            "image": "town.waiguo4",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "万劫谷",
+        "position": {
+          "x": 599,
+          "y": 1014
+        },
+        "description": "历经万劫的苦逼山谷",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('tlbb.dy_万劫谷地牢1')",
+            "image": "头像.木婉清2",
+            "description": "万劫谷中一间普通的石屋",
+            "when": "!in_team('段誉') && !in_team('木婉清') && story_completed('tlbb.dy_木婉清身世3') && chance(0.5)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "map('万劫谷')",
+            "image": "town.6",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "天龙寺",
+        "position": {
+          "x": 320,
+          "y": 930
+        },
+        "description": "天龙寺",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('tlbb.dy_天龙寺.六脉神剑')",
+            "image": "头像.段誉",
+            "description": "吐蕃国师鸠摩智造访天龙寺",
+            "when": "in_team('段誉') && in_team('木婉清') && !story_completed('tlbb.dy_木婉清.攻略成功') && story_completed('tlbb.dy_天龙寺.救段誉1') && chance(0.5)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('tlbb.dy_天龙寺.救段誉1')",
+            "image": "头像.段誉",
+            "description": "大理保定帝驾临天龙寺",
+            "when": "!in_team('段誉') && in_team('木婉清') && story_completed('tlbb.dy_万劫谷地牢.上') && story_completed('tlbb.dy_镇南王府.救木婉清2') && chance(0.5)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "3",
+            "action": "story('tlbb.dy_天龙寺.战鸠摩智')",
+            "image": "头像.段誉",
+            "description": "大理保定帝驾临天龙寺",
+            "when": "!in_team('段誉') && story_completed('tlbb.dy_万劫谷地牢.不上') && chance(0.5)",
+            "repeatMode": "once"
+          }
+        ]
+      },
+      {
+        "id": "西夏",
+        "position": {
+          "x": 447,
+          "y": 264
+        },
+        "description": "西夏",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('西夏')",
+            "image": "town.city.xixia",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "擂鼓山",
+        "position": {
+          "x": 378,
+          "y": 649
+        },
+        "description": "聪辩先生苏星河的居所。",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('擂鼓山')",
+            "image": "town.9",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "武道大会",
+        "position": {
+          "x": 985,
+          "y": 248
+        },
+        "description": "华山的武道大会",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('武道大会')",
+            "image": "town.jian2",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "华山",
+        "position": {
+          "x": 1062,
+          "y": 284
+        },
+        "description": "西岳华山，随处可见险峰峭壁，如同一把利剑直插天际。",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('original_华山论剑')",
+            "image": "town.jian1",
+            "description": "华山论剑！",
+            "when": "story_completed('mainStory_最终决战3')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('original_华山论剑')",
+            "image": "town.jian1",
+            "description": "华山论剑！",
+            "when": "story_completed('original_女主.重伤.南贤居')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "3",
+            "action": "story('黑衣_华山论剑')",
+            "image": "town.jian1",
+            "description": "华山论剑！",
+            "when": "story_completed('黑衣_南贤')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "4",
+            "action": "map('华山')",
+            "image": "town.4",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "小镜湖",
+        "position": {
+          "x": 486,
+          "y": 797
+        },
+        "description": "小镜湖",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('tlbb.dy_小镜湖乔峰1')",
+            "image": "头像.阿朱",
+            "description": null,
+            "when": "story_completed('tlbb.dy_雁门关有阿朱') && in_team('乔峰') && in_team('阿朱') && chance(0.3)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('tlbb.dy_小镜湖阮星竹1')",
+            "image": "头像.阿朱",
+            "description": null,
+            "when": "story_completed('tlbb.dy_秦红棉居秦红棉1') && in_team('段誉') && in_team('段正淳') && in_team('阿朱') && !story_completed('tlbb.dy_木婉清.攻略成功') && chance(0.3)",
+            "repeatMode": "once"
+          }
+        ]
+      },
+      {
+        "id": "古墓派",
+        "position": {
+          "x": 558,
+          "y": 442
+        },
+        "description": "内有美女，点击进入！",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('古墓派')",
+            "image": "town.4",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "绝情谷",
+        "position": {
+          "x": 1007,
+          "y": 395
+        },
+        "description": "绝情谷",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('sdxl_断肠崖.杨过跳崖')",
+            "image": "town.6",
+            "description": null,
+            "when": "in_team('杨过') && !in_team('小龙女') && !in_team('郭襄') && story_completed('mainStory_黑暗的阴影1')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('sdxl_断肠崖.杨过郭襄跳崖')",
+            "image": "town.6",
+            "description": null,
+            "when": "in_team('杨过') && !in_team('小龙女') && in_team('郭襄') && story_completed('mainStory_黑暗的阴影1')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "3",
+            "action": "map('绝情谷')",
+            "image": "town.6",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "程英居",
+        "position": {
+          "x": 728,
+          "y": 600
+        },
+        "description": "程英居",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('sdxl_程英.月下吹箫')",
+            "image": "town.cunzhuang",
+            "description": "这里隐居着一位恬淡的女子。",
+            "when": "!in_team('杨过') && !in_team('程英') && !in_team('田伯光') && !story_completed('mainStory_神秘剑客1') && chance(0.6)"
+          },
+          {
+            "id": "2",
+            "action": "map('程英居')",
+            "image": "town.cunzhuang",
+            "description": "这里隐居着一位恬淡的女子。"
+          }
+        ]
+      },
+      {
+        "id": "风陵渡口",
+        "position": {
+          "x": 1237,
+          "y": 429
+        },
+        "description": "一个有故事的渡口",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('鸳鸯刀_太岳四侠')",
+            "image": "town.shui",
+            "description": null,
+            "when": "current_time_slot in ['子', '丑', '寅', '卯', '亥'] && !story_completed('鸳鸯刀_风陵渡胜2')"
+          },
+          {
+            "id": "2",
+            "action": "story('sdxl_程英.风陵渡口')",
+            "image": "town.shui",
+            "description": null,
+            "when": "in_team('杨过') && !in_team('程英')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "3",
+            "action": "story('笑傲江湖_风陵渡黑衣人')",
+            "image": "town.shui",
+            "description": null,
+            "when": "in_team('令狐冲') && in_team('任盈盈') && story_completed('笑傲江湖_琴居东方胜')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "4",
+            "action": "story('sdxl_郭襄.风陵渡口')",
+            "image": "town.shui",
+            "description": null,
+            "when": "in_team('田伯光') && !in_team('杨过') && chance(0.2)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "5",
+            "action": "map('风陵渡口')",
+            "image": "town.shui",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "剑魔荒冢",
+        "position": {
+          "x": 409,
+          "y": 561
+        },
+        "description": "剑魔独孤求败埋冢之地",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('original_剑魔荒冢独孤求败')",
+            "image": "头像.杨过",
+            "description": "研习独孤求败武学",
+            "when": "in_team('杨过') && in_team('令狐冲') && story_completed('mainStory_黑暗的阴影1')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('笑傲江湖_真独孤九剑')",
+            "image": "town.jian2",
+            "description": "令狐冲领悟真独孤九剑",
+            "when": "in_team('令狐冲') && story_completed('笑傲江湖_风陵渡黑衣人胜2')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "3",
+            "action": "map('剑魔荒冢')",
+            "image": "town.jian2",
+            "description": "剑魔独孤求败埋冢之地，有大鸟出没，非高手勿入！"
+          }
+        ]
+      },
+      {
+        "id": "北京",
+        "position": {
+          "x": 1374,
+          "y": 158
+        },
+        "description": "北京欢迎您",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('少林寺_南北之争1')",
+            "image": "头像.玄生",
+            "description": "一个很老很老的和尚",
+            "when": "story_completed('少林寺_南北之争')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('鹿鼎记_皇宫太后1')",
+            "image": "头像.韦小宝",
+            "description": "韦小宝又有鬼点子了……",
+            "when": "in_team('韦小宝') && story_completed('鹿鼎记_皇宫鳌拜1') && chance(0.3)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "3",
+            "action": "story('鹿鼎记_皇宫鳌拜1')",
+            "image": "头像.韦小宝",
+            "description": "韦小宝又有鬼点子了……",
+            "when": "in_team('韦小宝') && story_completed('鹿鼎记_北京韦小宝加入') && chance(0.3)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "4",
+            "action": "story('倚天屠龙_北京救赵敏')",
+            "image": "头像.赵敏",
+            "description": "天下兵马大元帅的府邸",
+            "when": "story_completed('倚天屠龙_张无忌2')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "5",
+            "action": "map('北京')",
+            "image": "town.city.beijing",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "丐帮总舵",
+        "position": {
+          "x": 1652,
+          "y": 503
+        },
+        "description": "丐帮总舵。",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('tlbb.dy_丐帮总舵')",
+            "image": "town.10",
+            "description": null,
+            "when": "!story_completed('tlbb.dy_丐帮总舵胜')"
+          },
+          {
+            "id": "2",
+            "action": "map('丐帮')",
+            "image": "town.10",
+            "description": null,
+            "when": "story_completed('tlbb.dy_丐帮总舵胜')"
+          }
+        ]
+      },
+      {
+        "id": "聚贤庄",
+        "position": {
+          "x": 1544,
+          "y": 422
+        },
+        "description": "聚贤庄",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('tlbb.dy_聚贤庄1')",
+            "image": "头像.萧峰",
+            "description": null,
+            "when": "story_completed('tlbb.dy_少林寺2') && in_team('段誉') && story_completed('mainStory_黑暗的阴影1') && chance(0.5)",
+            "repeatMode": "once"
+          }
+        ]
+      },
+      {
+        "id": "龙门镖局",
+        "position": {
+          "x": 843,
+          "y": 494
+        },
+        "description": "每个江湖都有一个龙门镖局",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('original_新手地图.送镖')",
+            "image": "town.7",
+            "description": null,
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "map('龙门镖局')",
+            "image": "town.7",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "洛阳",
+        "position": {
+          "x": 925,
+          "y": 537
+        },
+        "description": "繁华的洛阳城",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('mainStory_紧急.洛阳')",
+            "image": "town.city.luoyang",
+            "description": "洛阳告急！",
+            "when": "story_completed('mainStory_紧急4')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('tlbb.dy_马夫人1')",
+            "image": "town.city.luoyang",
+            "description": "木婉清又有了新的发现……",
+            "when": "story_completed('tlbb.dy_曼陀山庄李青萝3') && in_team('段誉') && in_team('木婉清') && in_team('阿朱') && !story_completed('tlbb.dy_木婉清.攻略成功') && chance(0.3)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "3",
+            "action": "map('洛阳')",
+            "image": "town.city.luoyang",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "襄阳",
+        "position": {
+          "x": 1280,
+          "y": 586
+        },
+        "description": "蒙古人年年南下，襄阳城早已经破败不堪。",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('mainStory_襄阳1')",
+            "image": "town.city.xiangyang",
+            "description": "最后的战场！",
+            "when": "story_completed('mainStory_紧急.杭州胜')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "map('襄阳')",
+            "image": "town.city.xiangyang",
+            "description": "战火纷飞的襄阳城"
+          }
+        ]
+      },
+      {
+        "id": "嵩山",
+        "position": {
+          "x": 1148,
+          "y": 397
+        },
+        "description": "中岳嵩山，卓然立于中原大地。",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('嵩山')",
+            "image": "town.4",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "武当派",
+        "position": {
+          "x": 978,
+          "y": 599
+        },
+        "description": "武林各门派中的泰山北斗",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('武当派')",
+            "image": "town.3",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "长安",
+        "position": {
+          "x": 675,
+          "y": 460
+        },
+        "description": "都城长安",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('长安')",
+            "image": "town.city.changan",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "苗人凤居",
+        "position": {
+          "x": 1355,
+          "y": 325
+        },
+        "description": "打遍天下无敌手金面佛苗人凤的居所",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('苗人凤居')",
+            "image": "头像.苗人凤",
+            "description": null,
+            "when": "!story_completed('雪山飞狐_苗人凤居.阎基对峙.杀苗人凤.战斗.胜利') && !story_completed('雪山飞狐_苗人凤居.田归农胡斐.杀苗人凤.胜利') && !story_completed('雪山飞狐_苗人凤居.阎基对峙.杀苗人凤.战斗.胜利简单模式') && !story_completed('雪山飞狐_苗人凤居.田归农胡斐.杀苗人凤.胜利简单模式')"
+          }
+        ]
+      },
+      {
+        "id": "南贤居",
+        "position": {
+          "x": 1098,
+          "y": 717
+        },
+        "description": "南贤的简陋居室，现在也是你在这个世界的家",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('original_女主.重伤.南贤居')",
+            "image": "头像.民女",
+            "description": "南贤的简陋居室，现在也是你在这个世界的家",
+            "when": "story_completed('original_女主.襄阳受重伤结束.南贤')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "map('南贤居')",
+            "image": "town.cunzhuang",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "田伯光居",
+        "position": {
+          "x": 1338,
+          "y": 825
+        },
+        "description": "万里独行田伯光的居所",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('全真教_杀死田伯光')",
+            "image": "头像.田伯光",
+            "description": "采花大盗田伯光，依然乖乖地呆在家里。",
+            "when": "story_completed('全真教_孙不二是')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('笑傲江湖_田伯光居1')",
+            "image": "头像.田伯光",
+            "description": "采花大盗田伯光，依然乖乖地呆在家里。",
+            "when": "!story_completed('全真教_杀死田伯光完成') && !story_completed('mainStory_黑暗的阴影1')",
+            "repeatMode": "once"
+          }
+        ]
+      },
+      {
+        "id": "衡阳",
+        "position": {
+          "x": 1201,
+          "y": 906
+        },
+        "description": "南部城市衡阳",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('mainStory_紧急.衡阳')",
+            "image": "town.city.hengyang",
+            "description": "衡阳告急！",
+            "when": "story_completed('mainStory_紧急4')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "map('衡阳')",
+            "image": "town.city.hengyang",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "杭州",
+        "position": {
+          "x": 1599,
+          "y": 710
+        },
+        "description": "人间天堂",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('mainStory_紧急.杭州')",
+            "image": "town.city.hangzhou",
+            "description": "杭州告急！",
+            "when": "story_completed('mainStory_紧急4') && story_completed('mainStory_紧急.衡阳胜') && story_completed('mainStory_紧急.洛阳胜')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "map('杭州')",
+            "image": "town.city.hangzhou",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "东海剑池",
+        "position": {
+          "x": 1705,
+          "y": 278
+        },
+        "description": "剑气纵横，豪侠辈出！",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('original_东海剑池')",
+            "image": "town.jian2",
+            "description": null,
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('original_东海剑池')",
+            "image": "town.jian2",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "商家堡",
+        "position": {
+          "x": 1491,
+          "y": 314
+        },
+        "description": "八卦门前掌门紫金八卦刀商剑鸣的住所",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('雪山飞狐_商家堡.商宝震练功')",
+            "image": "头像.商宝震",
+            "description": "商家堡的少爷商宝震整天在练武，去和他一起练两手吧。",
+            "when": "!story_completed('雪山飞狐_商家堡.商家堡风波1') && !story_completed('雪山飞狐_商家堡.商家堡风波2') && current_time_slot not in ['子', '丑', '寅', '卯', '亥']",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('雪山飞狐_商家堡.商宝震练功')",
+            "image": "头像.商宝震",
+            "description": "商家堡的少爷商宝震整天在练武，去和他一起练两手吧。",
+            "when": "!story_completed('雪山飞狐_商家堡.商家堡风波1') && !story_completed('雪山飞狐_商家堡.商家堡风波2') && current_time_slot not in ['子', '丑', '寅', '卯', '亥']"
+          },
+          {
+            "id": "3",
+            "action": "story('雪山飞狐_商家堡.商家堡风波1')",
+            "image": "头像.商宝震",
+            "description": "夜深人静的商家堡，还传出阵阵练武吆喝声，不知道是什么情况。",
+            "when": "current_time_slot in ['子', '丑', '寅', '卯', '亥'] && in_team('胡斐')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "4",
+            "action": "story('雪山飞狐_商家堡.商家堡风波2')",
+            "image": "头像.商老太",
+            "description": "隐隐约约听见商老婆子那令人毛骨悚然的笑声，不知道又在搞什么阴谋？",
+            "when": "current_time_slot in ['子', '丑', '寅', '卯', '亥'] && story_completed('雪山飞狐_商家堡.商家堡风波1') && in_team('胡斐') && chance(0.5)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "5",
+            "action": "story('雪山飞狐_商家堡.商家堡风波3')",
+            "image": "头像.胡斐",
+            "description": "商家堡自从上次的风波后，空荡荡的好像成为了一个鬼屋！",
+            "when": "current_time_slot in ['子', '丑', '寅', '卯', '亥'] && story_completed('雪山飞狐_商家堡.商家堡风波2') && in_team('胡斐')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "6",
+            "action": "story('侠客行_赏善罚恶令')",
+            "image": "头像.张三",
+            "description": "赏善罚恶二使驾到商家堡",
+            "when": "story_completed('雪山飞狐_商家堡.商家堡风波3') && chance(0.3)",
+            "repeatMode": "once"
+          }
+        ]
+      },
+      {
+        "id": "阎基居",
+        "position": {
+          "x": 1391,
+          "y": 447
+        },
+        "description": "一个江湖跌打医生的住所",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('雪山飞狐_阎基居.两页刀法')",
+            "image": "头像.阎基",
+            "description": null,
+            "when": "in_team('胡斐')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('雪山飞狐_阎基居.七星海棠')",
+            "image": "头像.阎基",
+            "description": null,
+            "when": "story_completed('雪山飞狐_药王庄.程灵素.求药') && chance(0.5)",
+            "repeatMode": "once"
+          }
+        ]
+      },
+      {
+        "id": "江陵",
+        "position": {
+          "x": 1163,
+          "y": 627
+        },
+        "description": "又名荆州，人间水乡",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('江陵')",
+            "image": "town.chengshi",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "佛山镇",
+        "position": {
+          "x": 1321,
+          "y": 1002
+        },
+        "description": "广东的一个小镇",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('佛山镇')",
+            "image": "town.cunzhuang",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "鄱阳湖",
+        "position": {
+          "x": 1484,
+          "y": 692
+        },
+        "description": "五湖四海之一",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('倚天邪线_鄱阳湖偷粮')",
+            "image": "头像.全冠清",
+            "description": null,
+            "when": "story_completed('倚天邪线_劝说青城完成4')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('倚天屠龙_鄱阳湖')",
+            "image": "头像.常遇春",
+            "description": null,
+            "when": "story_completed('倚天屠龙_劝说武当成功') && story_completed('倚天屠龙_劝说少林成功') && story_completed('倚天屠龙_劝说华山成功') && story_completed('倚天屠龙_劝说嵩山2') && story_completed('倚天屠龙_劝说峨眉成功') && story_completed('倚天屠龙_劝说青城成功')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "3",
+            "action": "story('倚天邪线_康茂才')",
+            "image": "头像.康茂才",
+            "description": null,
+            "when": "story_completed('倚天邪线_加入丐帮')",
+            "repeatMode": "once"
+          }
+        ]
+      },
+      {
+        "id": "福建少林寺",
+        "position": {
+          "x": 1455,
+          "y": 892
+        },
+        "description": "拳打少林，脚踢武当",
+        "picture": null,
+        "events": []
+      },
+      {
+        "id": "胡斐居",
+        "position": {
+          "x": 1645,
+          "y": 159
+        },
+        "description": "雪山飞狐胡斐的居所",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('雪山飞狐_胡斐居')",
+            "image": "头像.胡斐",
+            "description": null,
+            "when": "!in_team('胡斐') && !story_completed('mainStory_黑暗的阴影1') && !story_completed('雪山飞狐_胡斐居.胜利')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('雪山飞狐_胡斐居')",
+            "image": "头像.胡斐",
+            "description": null,
+            "when": "!in_team('胡斐') && !story_completed('mainStory_黑暗的阴影1') && !story_completed('雪山飞狐_胡斐居.胜利')"
+          }
+        ]
+      },
+      {
+        "id": "帐篷",
+        "position": {
+          "x": 975,
+          "y": 136
+        },
+        "description": "江南七怪在大漠里的帐篷",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('射雕英雄传_塞外郭靖')",
+            "image": "头像.郭靖",
+            "description": null,
+            "when": "!in_team('郭靖') && !story_completed('mainStory_黑暗的阴影1') && chance(0.5)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('射雕英雄传_梅超风1')",
+            "image": "头像.梅超风",
+            "description": "帐篷附近有奇怪的声音响起……",
+            "when": "current_time_slot in ['子', '丑'] && chance(0.25)",
+            "repeatMode": "once"
+          }
+        ]
+      },
+      {
+        "id": "白驼山庄",
+        "position": {
+          "x": 63,
+          "y": 595
+        },
+        "description": "西毒欧阳锋的奇幻蛇庄",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('白驼山庄')",
+            "image": "town.waiguo1",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "张家口",
+        "position": {
+          "x": 1184,
+          "y": 275
+        },
+        "description": "一个普通的北方城市",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('射雕英雄传_张家口1')",
+            "image": "头像.黄蓉",
+            "description": "一个小叫花",
+            "when": "in_team('郭靖') && !story_completed('mainStory_黑暗的阴影1')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('刀法_雁行刀')",
+            "image": "头像.牧羊女",
+            "description": "塞上明珠",
+            "when": "!story_completed('mainStory_黑暗的阴影1')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "3",
+            "action": "story('侠客行_主张家口')",
+            "image": "头像.石破天",
+            "description": "狗杂种石破天",
+            "when": "story_completed('侠客行_主杭州石清')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "4",
+            "action": "story('侠客行_石张家口')",
+            "image": "头像.石破天",
+            "description": "高富帅石破天",
+            "when": "story_completed('侠客行_石太玄神功')",
+            "repeatMode": "once"
+          }
+        ]
+      },
+      {
+        "id": "一灯居",
+        "position": {
+          "x": 932,
+          "y": 1016
+        },
+        "description": "南帝一灯大师隐居之所",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('射雕英雄传_渔樵耕读1')",
+            "image": "头像.段王爷",
+            "description": null,
+            "when": "story_completed('射雕英雄传_张家口1') && in_team('郭靖') && story_completed('mainStory_黑暗的阴影1') && chance(0.2)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('射雕英雄传_一灯居1')",
+            "image": "头像.段王爷",
+            "description": "一灯大师等候你多时了",
+            "when": "story_completed('射雕英雄传_渔樵耕读2') && in_team('郭靖') && story_completed('mainStory_黑暗的阴影1')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "3",
+            "action": "story('射雕英雄传_一灯居再战')",
+            "image": "头像.段王爷",
+            "description": "一灯大师等候你多时了",
+            "when": "story_completed('射雕英雄传_渔樵耕读2') && in_team('郭靖') && story_completed('mainStory_黑暗的阴影1') && story_completed('射雕英雄传_一灯居1') && !story_completed('射雕英雄传_一灯居2')",
+            "repeatMode": "once"
+          }
+        ]
+      },
+      {
+        "id": "桃花岛",
+        "position": {
+          "x": 1811,
+          "y": 482
+        },
+        "description": "东邪黄药师的花花小岛",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('桃花岛')",
+            "image": "town.waiguo4",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "黑龙潭",
+        "position": {
+          "x": 1079,
+          "y": 932
+        },
+        "description": "周伯通已经搬到黑龙潭和瑛姑一起住了。",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('黑龙潭')",
+            "image": "头像.周伯通",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "长江岸边",
+        "position": {
+          "x": 1371,
+          "y": 654
+        },
+        "description": "长江岸边，迁客骚人都喜欢的地方",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('射雕英雄传_洪七公1')",
+            "image": "头像.洪七公",
+            "description": null,
+            "when": "story_completed('射雕英雄传_张家口1') && in_team('郭靖') && story_completed('mainStory_黑暗的阴影1') && chance(0.2)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('射雕英雄传_洪七公再战')",
+            "image": "头像.洪七公",
+            "description": null,
+            "when": "story_completed('射雕英雄传_张家口1') && in_team('郭靖') && story_completed('mainStory_黑暗的阴影1') && story_completed('射雕英雄传_洪七公1') && !story_completed('射雕英雄传_洪七公2')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "3",
+            "action": "story('original_李白1')",
+            "image": "头像.李白",
+            "description": "诗仙李白行吟江畔",
+            "when": "!story_completed('original_李白2') && chance(0.5)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "4",
+            "action": "story('original_李白2')",
+            "image": "头像.李白",
+            "description": "诗仙李白行吟江畔",
+            "when": "story_completed('original_李白1') && !story_completed('original_李白3') && chance(0.5)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "5",
+            "action": "story('original_李白3')",
+            "image": "头像.李白",
+            "description": "诗仙李白行吟江畔",
+            "when": "story_completed('original_李白2') && !story_completed('original_李白4') && chance(0.5)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "6",
+            "action": "story('original_李白4')",
+            "image": "头像.李白",
+            "description": "诗仙李白行吟江畔",
+            "when": "story_completed('original_李白3') && !story_completed('original_李白5') && chance(0.5)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "7",
+            "action": "story('original_李白5')",
+            "image": "头像.李白",
+            "description": "诗仙李白行吟江畔",
+            "when": "story_completed('original_李白4') && !story_completed('original_李白6') && chance(0.5)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "8",
+            "action": "story('original_李白6')",
+            "image": "头像.李白",
+            "description": "诗仙李白行吟江畔",
+            "when": "story_completed('original_李白5') && !story_completed('original_李白7') && chance(0.5)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "9",
+            "action": "story('original_李白7')",
+            "image": "头像.李白",
+            "description": "诗仙李白行吟江畔",
+            "when": "story_completed('original_李白6') && !story_completed('original_李白8') && chance(0.5)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "10",
+            "action": "story('original_李白8')",
+            "image": "头像.李白",
+            "description": "诗仙李白行吟江畔",
+            "when": "story_completed('original_李白7') && !story_completed('original_李白9') && chance(0.5)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "11",
+            "action": "story('original_李白9')",
+            "image": "头像.李白",
+            "description": "诗仙李白行吟江畔",
+            "when": "story_completed('original_李白8') && !story_completed('original_李白10') && chance(0.5)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "12",
+            "action": "story('original_李白10')",
+            "image": "头像.李白",
+            "description": "诗仙李白行吟江畔",
+            "when": "story_completed('original_李白9') && chance(0.5)",
+            "repeatMode": "once"
+          }
+        ]
+      },
+      {
+        "id": "同福客栈",
+        "position": {
+          "x": 841,
+          "y": 640
+        },
+        "description": "七侠镇的同福客栈。",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('同福客栈')",
+            "image": "town.kezhan",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "全真教",
+        "position": {
+          "x": 543,
+          "y": 341
+        },
+        "description": "全真教",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('射雕英雄传_重阳宫王重阳1')",
+            "image": "town.3",
+            "description": "和黄蓉说说话……",
+            "when": "story_completed('射雕英雄传_桃花岛招亲2') && in_team('郭靖') && in_team('黄蓉')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('射雕英雄传_重阳宫九阴真经1')",
+            "image": "头像.王重阳",
+            "description": "天下第一王重阳",
+            "when": "story_completed('射雕英雄传_重阳宫王重阳3')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "3",
+            "action": "story('original_长安深夜怪事.重阳宫')",
+            "image": "town.3",
+            "description": "重阳宫",
+            "when": "story_completed('original_长安深夜怪事.女主的提议') && in_team('女主')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "4",
+            "action": "map('全真教')",
+            "image": "town.3",
+            "description": "终南山全真教",
+            "when": "sect == '全真教'"
+          },
+          {
+            "id": "5",
+            "action": "story('original_非全真')",
+            "image": "town.3",
+            "description": "终南山全真教",
+            "when": "sect != '全真教' && !story_completed('original_灭门全真成功')"
+          }
+        ]
+      },
+      {
+        "id": "太湖",
+        "position": {
+          "x": 1583,
+          "y": 548
+        },
+        "description": "太湖广袤，尤以姑苏慕容氏斗转星移绝学天下闻名。",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('tlbb.dy_阿朱阿碧')",
+            "image": "头像.阿碧",
+            "description": "姑苏慕容氏，斗转星移绝学天下闻名",
+            "when": "chance(0.5)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "2",
+            "action": "story('tlbb.dy_阿朱阿碧')",
+            "image": "头像.阿碧",
+            "description": "姑苏慕容氏，斗转星移绝学天下闻名",
+            "when": "!story_completed('tlbb.dy_阿朱阿碧事件结束') && chance(0.5)"
+          },
+          {
+            "id": "3",
+            "action": "story('tlbb.dy_曼陀山庄1')",
+            "image": "头像.段誉",
+            "description": "姑苏慕容氏，斗转星移绝学天下闻名",
+            "when": "story_completed('tlbb.dy_天龙寺.战鸠摩智') && chance(0.5)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "4",
+            "action": "story('tlbb.dy_燕子坞慕容复')",
+            "image": "头像.慕容复",
+            "description": "姑苏慕容氏，斗转星移绝学天下闻名",
+            "when": "story_completed('tlbb.dy_少林寺帮助慕容复') && in_team('段誉') && in_team('阿碧') && chance(0.5)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "5",
+            "action": "story('tlbb.dy_曼陀山庄李青萝1')",
+            "image": "头像.李青萝",
+            "description": "曼陀山庄",
+            "when": "in_team('段誉') && in_team('阿朱') && in_team('木婉清') && !story_completed('tlbb.dy_木婉清.攻略成功') && chance(0.3)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "6",
+            "action": "story('tlbb.dy_琴韵小筑阿碧1')",
+            "image": "头像.阿碧",
+            "description": "姑苏慕容氏，斗转星移绝学天下闻名",
+            "when": "story_completed('tlbb.dy_湘江阿碧') && in_team('阿碧') && in_team('段誉') && in_team('木婉清') && !story_completed('tlbb.dy_木婉清.攻略成功') && chance(0.3)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "7",
+            "action": "story('tlbb.dy_曼陀山庄逍遥子')",
+            "image": "头像.阿碧",
+            "description": "姑苏慕容氏，斗转星移绝学天下闻名",
+            "when": "story_completed('tlbb.dy_无量山洞无崖子战胜') && in_team('阿碧') && in_team('段誉') && in_team('木婉清') && !story_completed('tlbb.dy_木婉清.攻略成功')",
+            "repeatMode": "once"
+          },
+          {
+            "id": "8",
+            "action": "story('tlbb.dy_曼陀山庄初见王语嫣')",
+            "image": null,
+            "description": "走访姑苏曼陀山庄",
+            "when": "story_completed('tlbb.dy_天龙寺.救段誉1') && chance(0.1)",
+            "repeatMode": "once"
+          },
+          {
+            "id": "9",
+            "action": "story('tlbb.dy_曼陀山庄阿朱王语嫣')",
+            "image": null,
+            "description": "走访曼陀山庄",
+            "when": "story_completed('tlbb.dy_天龙寺.救段誉1') && in_team('阿朱') && chance(0.1)",
+            "repeatMode": "once"
+          }
+        ]
+      },
+      {
+        "id": "勃泥岛",
+        "position": {
+          "x": 1674,
+          "y": 411
+        },
+        "description": "袁承志和温青青隐居之所。",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('勃泥岛')",
+            "image": "town.waiguo4",
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "神龙岛",
+        "position": {
+          "x": 1832,
+          "y": 309
+        },
+        "description": "神龙教盘踞的海岛",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('鹿鼎记_神龙岛')",
+            "image": "头像.韦小宝",
+            "description": null,
+            "when": "story_completed('鹿鼎记_吴三桂4') && chance(0.3)",
+            "repeatMode": "once"
+          }
+        ]
+      },
+      {
+        "id": "台湾",
+        "position": {
+          "x": 1868,
+          "y": 645
+        },
+        "description": "宝岛台湾，中国不可分割的领土！！",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('鹿鼎记_台湾1')",
+            "image": "头像.韦小宝",
+            "description": null,
+            "when": "story_completed('鹿鼎记_神龙岛') && !in_team('阿珂') && chance(0.3)",
+            "repeatMode": "once"
+          }
+        ]
+      },
+      {
+        "id": "鹿鼎山",
+        "position": {
+          "x": 1835,
+          "y": 192
+        },
+        "description": "满清龙脉所在",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "story('鹿鼎记_鹿鼎山1')",
+            "image": "头像.韦小宝",
+            "description": null,
+            "when": "story_completed('鹿鼎记_台湾1') && chance(0.3)",
+            "repeatMode": "once"
+          }
+        ]
+      },
+      {
+        "id": "霹雳堂",
+        "position": {
+          "x": 1770,
+          "y": 588
+        },
+        "description": "孔八拉的霹雳堂",
+        "picture": null,
+        "events": [
+          {
+            "id": "1",
+            "action": "map('霹雳堂')",
+            "image": "town.1",
+            "description": null
+          }
+        ]
+      }
+    ]
+  }
+]
