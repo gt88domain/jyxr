@@ -1,0 +1,2186 @@
+{
+  "scope": "Configuration inventory and source literal references, not a completion percentage. Engine behavior and configured effects still need formula/route/combination verification.",
+  "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+  "sections": {
+    "talents": {
+      "total": 158,
+      "states": {
+        "metadata-only": 107,
+        "configured": 47,
+        "partial": 3,
+        "identity-only": 1
+      },
+      "entries": [
+        {
+          "id": "万年长春",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:774"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "不稳定的六脉神剑",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1528"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "不老长春",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:778"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "乾坤大挪移",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2109"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "乾坤大挪移奥义",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2104"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "五行阵",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:858"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "令狐冲的怪病",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:1018"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "伤口撕裂",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "俗家弟子",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1854"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "倚天屠龙",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:945"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "光明圣火阵",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:960"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "八卦阵",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:871"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "刀封印",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1730",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1733",
+            "jyx-legacy-dll/JyGame/SkillBox.cs:191"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "刀法增益",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttributeFinalHelper.cs:28"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "刀系装备",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2024"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "刚柔并济",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:459"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "剑封印",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1722",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1725",
+            "jyx-legacy-dll/JyGame/SkillBox.cs:191"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "剑法增益",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttributeFinalHelper.cs:24"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "剑系装备",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2020"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "化功大法",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:996"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "北冥真气",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1860",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1865"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "北冥神功",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:970",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1860",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1865"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "医仙",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:797"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "博览群书",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AoyiLogic.cs:15"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "右臂有伤",
+          "configurationState": "partial",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1886",
+            "jyx-legacy-dll/JyGame/BattleField.cs:909"
+          ],
+          "remaining": [
+            "extra rage behavior is not configured"
+          ],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "吴侬软语",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:214",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:226"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "吴钩霜雪",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/SkillBox.cs:368"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "吸星大法",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1008"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "哀歌",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:831"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "嗜血狂魔",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:948"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "嗜酒如命",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:875"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "墨家传人",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1093"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "大小姐",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1770",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1791",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1802",
+            "jyx-legacy-dll/JyGame/CommonSettings.cs:496"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "大理世家",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:519"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "天龙.盖世英雄",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:479"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "太极宗师",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1585",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1592",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1597"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "太极高手",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1580"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "夫妻同心",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1472",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1476",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1489",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1493"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "奇门增益",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttributeFinalHelper.cs:32"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "奇门封印",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1746",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1749",
+            "jyx-legacy-dll/JyGame/SkillBox.cs:191"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "奇门装备",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2028"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "奇门遁甲",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:680",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:686"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "奋战",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1521"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "好色",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1538",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1544",
+            "jyx-legacy-dll/JyGame/CommonSettings.cs:496"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "妙手仁心",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:1696",
+            "jyx-legacy-dll/JyGame/RollRoleUI.cs:586",
+            "jyx-legacy-dll/JyGame/RollRoleUI.cs:622"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "孤独求败",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:650",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1574"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "宝甲",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2150"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "寒冰真气",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1762"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "寸长寸强",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/SkillBox.cs:358"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "射雕英雄",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:499"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "屌丝",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AoyiLogic.cs:19"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "峨眉宗师",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:449"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "左右互搏",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1221"
+          ],
+          "remaining": [
+            "multiple strikes are not configured"
+          ],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "左手剑",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1880"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "幽居",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1211"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "异世人",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1444",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1459",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1521"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "御剑",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "御风",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1849"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "心眼通明",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleSprite.cs:701",
+            "jyx-legacy-dll/JyGame/SkillBox.cs:349",
+            "jyx-legacy-dll/JyGame/SkillBox.cs:379"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "怒不可遏",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1638"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "悲酥清风",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:861"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "情花奇毒",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "慕容世家",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:723"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "我就是神",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:1600"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "我是疯子",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1171"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "拳掌增益",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttributeFinalHelper.cs:20"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "拳掌封印",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1738",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1741",
+            "jyx-legacy-dll/JyGame/SkillBox.cs:191"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "拳系装备",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2016"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "摧筋破骨",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "攀云乘龙",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2162"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "救死扶伤",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:811"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "斗转星移",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:727",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:730"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "斗魂",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1203",
+            "jyx-legacy-dll/JyGame/BattleField.cs:1484"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "无尽斗志",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:1600"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "无形剑气",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:567"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "无相",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:754"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "易筋伐髓",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:469"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "普照",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:723"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "暴躁",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1196",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1645",
+            "jyx-legacy-dll/JyGame/BattleField.cs:1477"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "木婉清的眷恋",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:530"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "武学奇才",
+          "configurationState": "partial",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/InternalSkillInstance.cs:317",
+            "jyx-legacy-dll/JyGame/Role.cs:661",
+            "jyx-legacy-dll/JyGame/SkillInstance.cs:275"
+          ],
+          "remaining": [
+            "validate equipment/skill attribute doubling and both cast/book EXP paths"
+          ],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "死生茫茫",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:802"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "段王爷的电眼",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:550",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:644"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "毒圣",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1164"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "毒系精通",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1157"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "毒素抗性",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BuffInstance.cs:84"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "沾衣十八跌",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:626",
+            "jyx-legacy-dll/JyGame/RollRoleUI.cs:598",
+            "jyx-legacy-dll/JyGame/RollRoleUI.cs:632"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "浪子剑客",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1412",
+            "jyx-legacy-dll/JyGame/AttributeFinalHelper.cs:12"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "混元一气",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1511",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1516"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "清心",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleSprite.cs:731"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "清风",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleSprite.cs:735"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "灵心慧质",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2177",
+            "jyx-legacy-dll/JyGame/RollRoleUI.cs:599",
+            "jyx-legacy-dll/JyGame/RollRoleUI.cs:621"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "狗杂种",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1914",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1919"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "猎人",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1622"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "玄门罡气",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1043"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "玲珑璇玑",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:509"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "琴胆剑心",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:766"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "瘸子",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleSprite.cs:261"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "白内障",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:704"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "百变千幻",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:930"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "百穴归一",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:900"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "百足之虫",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:1587"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "真武七截阵",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:398",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:402",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:409",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:836",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:840",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:843"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "真气护体",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:1593"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "破甲",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1808"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "碎裂的怒吼",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:1422",
+            "jyx-legacy-dll/JyGame/RollRoleUI.cs:597"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "神兵",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1891"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "神拳无敌",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1416",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1672",
+            "jyx-legacy-dll/JyGame/AttributeFinalHelper.cs:16"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "神经病",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1896",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2154"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "神行百变",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:662"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "神雕大侠",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1549"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "精打细算",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1649",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2114"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "精明",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1656",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2122"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "素心神剑",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1216"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "老江湖",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1869"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "自我主义",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1770",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1773",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1795",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1802"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "臭叫花",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1824"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "臭蛤蟆",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1602",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1607"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "至刚至阳",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/InternalSkillInstance.cs:48"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "至空至明",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:561"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "芷若的眷念",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1818"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "苦命儿",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1905"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "草头百姓",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1447",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1462"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "血海魔功",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:937"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "血魔刀法",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:942"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "诸般封印",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1714",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1717",
+            "jyx-legacy-dll/JyGame/SkillBox.cs:191"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "赵敏的眷念",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:601"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "越女剑",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:1446"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "软猬宝甲",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "轻功大师",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleAI.cs:58"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "轻功高超",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleSprite.cs:257"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "追魂",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1685"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "金刚",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1505"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "金刚伏魔圈",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:414",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:419",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:429",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:440",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:443",
+            "jyx-legacy-dll/JyGame/BattleSprite.cs:228",
+            "jyx-legacy-dll/JyGame/SkillBox.cs:372"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "金蛇狂舞",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1836"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "金蛇郎君",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1831"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "金钟罩",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1628"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "铁剑掌门",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:489"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "铁口直断",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:692"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "铁拳无双",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1676"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "铁骨墨萼",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1842"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "锐眼",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:698"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "长平公主的眷恋",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:540"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "阉人",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:550",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:644",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1633"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "阴毒",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1909"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "阴谋家",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1568"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "阴阳",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1754"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "隔空取物",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:1669",
+            "jyx-legacy-dll/JyGame/RollRoleUI.cs:585"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "雪山飞狐",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:656",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1563"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "飘然",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:595"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "飞向天际",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:31",
+            "jyx-legacy-dll/JyGame/RollRoleUI.cs:587"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "鬼魅",
+          "configurationState": "partial",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleSprite.cs:449"
+          ],
+          "remaining": [
+            "verify all claimed status immunity, not only action speed"
+          ],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "魔神降临",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1123",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2093",
+            "jyx-legacy-dll/JyGame/BattleField.cs:914",
+            "jyx-legacy-dll/JyGame/BattleField.cs:921"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "鲁莽",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1900",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2158"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "鲲跃北溟",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:983"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "鹿鼎.一等鹿鼎公",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:607"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "黑天死炎",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2145"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "黑衣",
+          "configurationState": "identity-only",
+          "sourceLiteralReferences": [],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        }
+      ]
+    },
+    "buffs": {
+      "total": 33,
+      "states": {
+        "engine-behavior": 16,
+        "configured": 6,
+        "metadata-only": 10,
+        "partial": 1
+      },
+      "entries": [
+        {
+          "id": "中毒",
+          "configurationState": "engine-behavior",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:87",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:191",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:192",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:195",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:796",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:798",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1157",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1164",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1909",
+            "jyx-legacy-dll/JyGame/BattleField.cs:1773",
+            "jyx-legacy-dll/JyGame/BuffInstance.cs:71"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "伤害加深",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1691",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1700",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1708",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2070"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "内伤",
+          "configurationState": "engine-behavior",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BuffInstance.cs:102"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "刀封印",
+          "configurationState": "engine-behavior",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1730",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1733",
+            "jyx-legacy-dll/JyGame/SkillBox.cs:191"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "剑封印",
+          "configurationState": "engine-behavior",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1722",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1725",
+            "jyx-legacy-dll/JyGame/SkillBox.cs:191"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "圣战",
+          "configurationState": "engine-behavior",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1132",
+            "jyx-legacy-dll/JyGame/BattleField.cs:951"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "坚守",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "奇门封印",
+          "configurationState": "engine-behavior",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1746",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1749",
+            "jyx-legacy-dll/JyGame/SkillBox.cs:191"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "定身",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleSprite.cs:224"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "封穴",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1020",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1022",
+            "jyx-legacy-dll/JyGame/BattleField.cs:1858"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "左右互搏",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1221"
+          ],
+          "remaining": [
+            "multiple strikes are not configured"
+          ],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "恢复",
+          "configurationState": "engine-behavior",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:733",
+            "jyx-legacy-dll/JyGame/BattleField.cs:739",
+            "jyx-legacy-dll/JyGame/BuffInstance.cs:91"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "拳掌封印",
+          "configurationState": "engine-behavior",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1738",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1741",
+            "jyx-legacy-dll/JyGame/SkillBox.cs:191"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "攻击弱化",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2059",
+            "jyx-legacy-dll/JyGame/BattleField.cs:841",
+            "jyx-legacy-dll/JyGame/BattleField.cs:847"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "攻击强化",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:103",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:105",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:334",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:336",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2058",
+            "jyx-legacy-dll/JyGame/BattleField.cs:776",
+            "jyx-legacy-dll/JyGame/BattleField.cs:782"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "易容",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:271",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:273",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:893",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:901",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2138",
+            "jyx-legacy-dll/JyGame/BattleField.cs:936"
+          ],
+          "remaining": [
+            "ambush, immunity and consumption are not configured"
+          ],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "晕眩",
+          "configurationState": "engine-behavior",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:231",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:237",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:246",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:247",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:555",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:613",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:623",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:632",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1679",
+            "jyx-legacy-dll/JyGame/BattleField.cs:993",
+            "jyx-legacy-dll/JyGame/BattleField.cs:1434",
+            "jyx-legacy-dll/JyGame/BattleSprite.cs:484"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "沾衣十八跌",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:626",
+            "jyx-legacy-dll/JyGame/RollRoleUI.cs:598",
+            "jyx-legacy-dll/JyGame/RollRoleUI.cs:632"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "溜须拍马",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:23",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:27",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1335",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2131"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "狂战",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "神行",
+          "configurationState": "engine-behavior",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleSprite.cs:471"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "神速攻击",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:370",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:372",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1233"
+          ],
+          "remaining": [
+            "multiple strikes are not configured"
+          ],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "缓速",
+          "configurationState": "engine-behavior",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleSprite.cs:232"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "致盲",
+          "configurationState": "engine-behavior",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleSprite.cs:701",
+            "jyx-legacy-dll/JyGame/SkillBox.cs:348",
+            "jyx-legacy-dll/JyGame/SkillBox.cs:378"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "诸般封印",
+          "configurationState": "engine-behavior",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1714",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1717",
+            "jyx-legacy-dll/JyGame/SkillBox.cs:191"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "轻身",
+          "configurationState": "engine-behavior",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BattleSprite.cs:252"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "醉酒",
+          "configurationState": "partial",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1228",
+            "jyx-legacy-dll/JyGame/BattleField.cs:881",
+            "jyx-legacy-dll/JyGame/BattleField.cs:887",
+            "jyx-legacy-dll/JyGame/BattleField.cs:1001"
+          ],
+          "remaining": [
+            "extra-strike probability is not configured"
+          ],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "重伤",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:782",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:822",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:960",
+            "jyx-legacy-dll/JyGame/BattleField.cs:1706",
+            "jyx-legacy-dll/JyGame/BattleField.cs:1844",
+            "jyx-legacy-dll/JyGame/BattleField.cs:1854"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "防御强化",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:352",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:354",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2086"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "集气",
+          "configurationState": "engine-behavior",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/BuffInstance.cs:113"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "飘渺",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:581"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "魔神降临",
+          "configurationState": "metadata-only",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1123",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2093",
+            "jyx-legacy-dll/JyGame/BattleField.cs:914",
+            "jyx-legacy-dll/JyGame/BattleField.cs:921"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "麻痹",
+          "configurationState": "engine-behavior",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1757",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1765",
+            "jyx-legacy-dll/JyGame/BattleSprite.cs:466"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        }
+      ]
+    },
+    "specialSkills": {
+      "total": 27,
+      "states": {
+        "configured": 16,
+        "partial": 11
+      },
+      "entries": [
+        {
+          "id": "华佗再世",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1298"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "一刀两断",
+          "configurationState": "partial",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1317",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2099"
+          ],
+          "remaining": [
+            "verify special damage hit/reaction pipeline against original; currently direct damage"
+          ],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "沉鱼落雁",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1328"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "打鸡血",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1341"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "诗酒飘零",
+          "configurationState": "partial",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1348"
+          ],
+          "remaining": [
+            "醉酒: extra-strike probability is not configured"
+          ],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "凌波微步",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1355"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "雪遁步行",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1379"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "同归剑法",
+          "configurationState": "partial",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:68"
+          ],
+          "remaining": [
+            "verify self-cost separately from preventable incoming damage",
+            "verify special damage hit/reaction pipeline against original; currently direct damage"
+          ],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "天地同寿",
+          "configurationState": "partial",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:59"
+          ],
+          "remaining": [
+            "verify permanent max-HP cost and unblockable self-cost semantics",
+            "verify special damage hit/reaction pipeline against original; currently direct damage"
+          ],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "笑傲江湖曲",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:96",
+            "jyx-legacy-dll/JyGame/RollRoleUI.cs:639"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "襄儿的心愿",
+          "configurationState": "partial",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1361"
+          ],
+          "remaining": [
+            "verify special damage hit/reaction pipeline against original; currently direct damage"
+          ],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "火枪",
+          "configurationState": "partial",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1367"
+          ],
+          "remaining": [
+            "verify special damage hit/reaction pipeline against original; currently direct damage"
+          ],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "撒石灰",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1374"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "溜须拍马",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:23",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:27",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1335",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2131"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "易容术",
+          "configurationState": "partial",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:267"
+          ],
+          "remaining": [
+            "易容: ambush, immunity and consumption are not configured"
+          ],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "过肩摔",
+          "configurationState": "partial",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:291"
+          ],
+          "remaining": [
+            "verify special damage hit/reaction pipeline against original; currently direct damage"
+          ],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "神龙摆尾",
+          "configurationState": "partial",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:304"
+          ],
+          "remaining": [
+            "verify special damage hit/reaction pipeline against original; currently direct damage"
+          ],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "闪电貂",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1311"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "清心普善咒",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:128"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "阿碧的歌声",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:157"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "吴侬软语",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:214",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:226"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "武穆兵法",
+          "configurationState": "partial",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:328",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1384"
+          ],
+          "remaining": [
+            "attack/defence buffs configured; triple-strike behavior remains",
+            "神速攻击: multiple strikes are not configured"
+          ],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "解毒",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:796",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:799",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1305",
+            "jyx-legacy-dll/JyGame/ItemInstance.cs:609"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "梯云纵",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "六合劲",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:76"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "腐尸毒",
+          "configurationState": "partial",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:85"
+          ],
+          "remaining": [
+            "verify special damage hit/reaction pipeline against original; currently direct damage"
+          ],
+          "fullBehaviorVerified": false
+        },
+        {
+          "id": "飞星术",
+          "configurationState": "configured",
+          "sourceLiteralReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:186"
+          ],
+          "remaining": [],
+          "fullBehaviorVerified": false
+        }
+      ]
+    }
+  }
+}

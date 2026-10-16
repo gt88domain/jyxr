@@ -117,6 +117,83 @@
     ],
     "scope": "explicit source-backed common rules; not full talent/Buff parity"
   },
+  "advancedRuleEffects": {
+    "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+    "talents": [
+      "武学奇才",
+      "灵心慧质",
+      "毒素抗性",
+      "轻功高超",
+      "鬼魅",
+      "博览群书",
+      "轻功大师",
+      "毒圣",
+      "毒系精通",
+      "嗜酒如命",
+      "令狐冲的怪病",
+      "阴谋家",
+      "怒不可遏",
+      "不稳定的六脉神剑",
+      "神雕大侠",
+      "雪山飞狐",
+      "太极高手",
+      "太极宗师",
+      "混元一气",
+      "北冥真气",
+      "金蛇郎君",
+      "金蛇狂舞",
+      "铁骨墨萼",
+      "飘然",
+      "神行百变",
+      "奇门遁甲",
+      "白内障",
+      "锐眼",
+      "铁口直断",
+      "拳系装备",
+      "剑系装备",
+      "刀系装备",
+      "奇门装备"
+    ],
+    "buffs": [
+      "定身",
+      "伤害加深",
+      "飘渺",
+      "醉酒"
+    ],
+    "specialSkills": [
+      "华佗再世",
+      "一刀两断",
+      "沉鱼落雁",
+      "同归剑法",
+      "天地同寿",
+      "笑傲江湖曲",
+      "襄儿的心愿",
+      "火枪",
+      "过肩摔",
+      "神龙摆尾",
+      "清心普善咒",
+      "阿碧的歌声",
+      "吴侬软语",
+      "易容术",
+      "武穆兵法",
+      "解毒",
+      "六合劲",
+      "腐尸毒",
+      "飞星术",
+      "诗酒飘零",
+      "凌波微步",
+      "雪遁步行",
+      "溜须拍马",
+      "梯云纵"
+    ],
+    "scope": "configured effects; individual execution and cross-effect order require validation",
+    "remaining": [
+      "stat-specialist integer transforms",
+      "multi-strike timing",
+      "disguise ambush",
+      "special damage shared pipeline and self-cost semantics"
+    ]
+  },
   "legacyArt": {
     "source": {
       "archive": "X.rar",
@@ -184,21 +261,48 @@
       "部分问答天赋的完整战斗效果"
     ]
   },
+  "battleRuleConfiguration": {
+    "talents": {
+      "total": 158,
+      "states": {
+        "metadata-only": 107,
+        "configured": 47,
+        "partial": 3,
+        "identity-only": 1
+      }
+    },
+    "buffs": {
+      "total": 33,
+      "states": {
+        "engine-behavior": 16,
+        "configured": 6,
+        "metadata-only": 10,
+        "partial": 1
+      }
+    },
+    "specialSkills": {
+      "total": 27,
+      "states": {
+        "configured": 16,
+        "partial": 11
+      }
+    }
+  },
   "originalMigration": {
-    "originalStories": 1881,
+    "originalStories": 1885,
     "maps": 162,
-    "mapEvents": 1116,
+    "mapEvents": 1118,
     "worldTriggers": 21,
     "newbieTasks": 6
   },
   "starterStories": 25,
   "verifiedOpeningSegments": 14,
-  "migratedStorySegments": 1881,
+  "migratedStorySegments": 1885,
   "browserPacks": [
     {
       "id": "jyx",
       "maps": 162,
-      "storySegments": 1883
+      "storySegments": 1887
     },
     {
       "id": "frontier",

@@ -85795,6 +85795,13 @@
           "picture": "地图.森林1",
           "events": [
             {
+              "id": "1",
+              "action": "story('碧血剑_五毒教圣地2')",
+              "image": null,
+              "description": null,
+              "when": "(story_completed('碧血剑_何红药胜'))"
+            },
+            {
               "id": "2",
               "action": "story('碧血剑_五毒教圣地1')",
               "image": null,
@@ -90436,7 +90443,16 @@
           },
           "description": "武当派弟子卓一航陷入了进退两难之地",
           "picture": null,
-          "events": []
+          "events": [
+            {
+              "id": "1",
+              "action": "story('武当派_卓一航')",
+              "image": null,
+              "description": null,
+              "when": "(story_completed('武当派_蛇形刁手之战胜利'))",
+              "repeatMode": "once"
+            }
+          ]
         },
         {
           "id": "乔峰",
@@ -102441,7 +102457,18 @@
       },
       "animation": "guanghuan_yellow3",
       "audio": "音效.恢复类物品",
-      "buffs": []
+      "buffs": [],
+      "intent": "support",
+      "effects": [
+        {
+          "type": "custom_ability",
+          "effectId": "huatuo_reborn_healing",
+          "target": {
+            "type": "target"
+          },
+          "parameters": {}
+        }
+      ]
     },
     {
       "id": "一刀两断",
@@ -102460,7 +102487,18 @@
       },
       "animation": "jian_zhan",
       "audio": "音效.利器4",
-      "buffs": []
+      "buffs": [],
+      "intent": "offensive",
+      "effects": [
+        {
+          "type": "custom_ability",
+          "effectId": "sever_in_two",
+          "target": {
+            "type": "target"
+          },
+          "parameters": {}
+        }
+      ]
     },
     {
       "id": "沉鱼落雁",
@@ -102479,7 +102517,17 @@
       },
       "animation": "guanghuan_bianfu",
       "audio": "音效.恢复类物品",
-      "buffs": []
+      "buffs": [],
+      "intent": "offensive",
+      "effects": [
+        {
+          "type": "set_rage",
+          "target": {
+            "type": "target"
+          },
+          "value": 0
+        }
+      ]
     },
     {
       "id": "打鸡血",
@@ -102545,7 +102593,9 @@
           "duration": 3,
           "chance": 100
         }
-      ]
+      ],
+      "intent": "support",
+      "effects": []
     },
     {
       "id": "凌波微步",
@@ -102579,7 +102629,9 @@
           "duration": 3,
           "chance": 100
         }
-      ]
+      ],
+      "intent": "support",
+      "effects": []
     },
     {
       "id": "雪遁步行",
@@ -102613,7 +102665,9 @@
           "duration": 2,
           "chance": 100
         }
-      ]
+      ],
+      "intent": "support",
+      "effects": []
     },
     {
       "id": "同归剑法",
@@ -102632,7 +102686,18 @@
       },
       "animation": "huozhu_jin",
       "audio": "音效.利器4",
-      "buffs": []
+      "buffs": [],
+      "intent": "offensive",
+      "effects": [
+        {
+          "type": "custom_ability",
+          "effectId": "mutual_destruction_sword",
+          "target": {
+            "type": "target"
+          },
+          "parameters": {}
+        }
+      ]
     },
     {
       "id": "天地同寿",
@@ -102651,7 +102716,18 @@
       },
       "animation": "huozhu_jin",
       "audio": "音效.利器4",
-      "buffs": []
+      "buffs": [],
+      "intent": "offensive",
+      "effects": [
+        {
+          "type": "custom_ability",
+          "effectId": "heaven_and_earth_same_lifespan",
+          "target": {
+            "type": "target"
+          },
+          "parameters": {}
+        }
+      ]
     },
     {
       "id": "笑傲江湖曲",
@@ -102672,7 +102748,19 @@
       },
       "animation": "guanghuan_orange",
       "audio": "音效.恢复类物品",
-      "buffs": []
+      "buffs": [],
+      "intent": "support",
+      "effects": [
+        {
+          "type": "apply_buff",
+          "target": {
+            "type": "all_allies"
+          },
+          "buffId": "攻击强化",
+          "level": 5,
+          "duration": 3
+        }
+      ]
     },
     {
       "id": "襄儿的心愿",
@@ -102691,7 +102779,18 @@
       },
       "animation": "guanghuan_shengji",
       "audio": "音效.利器4",
-      "buffs": []
+      "buffs": [],
+      "intent": "offensive",
+      "effects": [
+        {
+          "type": "custom_ability",
+          "effectId": "xiang_er_wish_damage",
+          "target": {
+            "type": "target"
+          },
+          "parameters": {}
+        }
+      ]
     },
     {
       "id": "火枪",
@@ -102722,6 +102821,17 @@
           "level": 3,
           "duration": 3,
           "chance": 100
+        }
+      ],
+      "intent": "offensive",
+      "effects": [
+        {
+          "type": "custom_ability",
+          "effectId": "firearm_damage",
+          "target": {
+            "type": "target"
+          },
+          "parameters": {}
         }
       ]
     },
@@ -102777,7 +102887,9 @@
           "duration": 3,
           "chance": 100
         }
-      ]
+      ],
+      "intent": "support",
+      "effects": []
     },
     {
       "id": "易容术",
@@ -102798,7 +102910,19 @@
       },
       "animation": "guanghuan_yellow",
       "audio": "音效.恢复类物品",
-      "buffs": []
+      "buffs": [],
+      "intent": "support",
+      "effects": [
+        {
+          "type": "apply_buff",
+          "target": {
+            "type": "self"
+          },
+          "buffId": "易容",
+          "level": 0,
+          "duration": 3
+        }
+      ]
     },
     {
       "id": "过肩摔",
@@ -102829,6 +102953,17 @@
           "level": 3,
           "duration": 4,
           "chance": 100
+        }
+      ],
+      "intent": "offensive",
+      "effects": [
+        {
+          "type": "custom_ability",
+          "effectId": "shoulder_throw",
+          "target": {
+            "type": "target"
+          },
+          "parameters": {}
         }
       ]
     },
@@ -102861,6 +102996,17 @@
           "level": 3,
           "duration": 4,
           "chance": 100
+        }
+      ],
+      "intent": "offensive",
+      "effects": [
+        {
+          "type": "custom_ability",
+          "effectId": "dragon_tail_sweep",
+          "target": {
+            "type": "target"
+          },
+          "parameters": {}
         }
       ]
     },
@@ -102909,7 +103055,16 @@
       },
       "animation": "guanghuan_white",
       "audio": "音效.恢复类物品",
-      "buffs": []
+      "buffs": [],
+      "intent": "support",
+      "effects": [
+        {
+          "type": "remove_negative_buffs",
+          "target": {
+            "type": "all_allies"
+          }
+        }
+      ]
     },
     {
       "id": "阿碧的歌声",
@@ -102930,7 +103085,16 @@
       },
       "animation": "guanghuan_white",
       "audio": "音效.恢复类物品",
-      "buffs": []
+      "buffs": [],
+      "intent": "support",
+      "effects": [
+        {
+          "type": "remove_negative_buffs",
+          "target": {
+            "type": "all_allies"
+          }
+        }
+      ]
     },
     {
       "id": "吴侬软语",
@@ -102951,7 +103115,32 @@
       },
       "animation": "guanghuan_white",
       "audio": "音效.恢复类物品",
-      "buffs": []
+      "buffs": [],
+      "intent": "support",
+      "effects": [
+        {
+          "type": "remove_positive_buffs",
+          "target": {
+            "type": "all_enemies"
+          }
+        },
+        {
+          "type": "custom_ability",
+          "effectId": "random_buff",
+          "target": {
+            "type": "all_enemies"
+          },
+          "parameters": {
+            "buffId": "晕眩",
+            "chance": 1,
+            "minimumLevel": 0,
+            "maximumLevel": 0,
+            "minimumDuration": 2,
+            "maximumDuration": 2,
+            "requiredTalentId": "吴侬软语"
+          }
+        }
+      ]
     },
     {
       "id": "武穆兵法",
@@ -102972,7 +103161,37 @@
       },
       "animation": "aoyi_fire",
       "audio": "音效.恢复类物品",
-      "buffs": []
+      "buffs": [],
+      "intent": "support",
+      "effects": [
+        {
+          "type": "apply_buff",
+          "target": {
+            "type": "all_allies"
+          },
+          "buffId": "攻击强化",
+          "level": 5,
+          "duration": 3
+        },
+        {
+          "type": "apply_buff",
+          "target": {
+            "type": "all_allies"
+          },
+          "buffId": "防御强化",
+          "level": 5,
+          "duration": 3
+        },
+        {
+          "type": "apply_buff",
+          "target": {
+            "type": "all_allies"
+          },
+          "buffId": "神速攻击",
+          "level": 5,
+          "duration": 3
+        }
+      ]
     },
     {
       "id": "解毒",
@@ -102992,7 +103211,17 @@
       },
       "animation": "guanghuan_yellow",
       "audio": "音效.恢复类物品",
-      "buffs": []
+      "buffs": [],
+      "intent": "support",
+      "effects": [
+        {
+          "type": "remove_buff",
+          "target": {
+            "type": "allied_targets"
+          },
+          "buffId": "中毒"
+        }
+      ]
     },
     {
       "id": "梯云纵",
@@ -103020,7 +103249,9 @@
           "duration": 2,
           "chance": 100
         }
-      ]
+      ],
+      "intent": "support",
+      "effects": []
     },
     {
       "id": "六合劲",
@@ -103046,6 +103277,23 @@
           "duration": 2,
           "chance": 100
         }
+      ],
+      "intent": "offensive",
+      "effects": [
+        {
+          "type": "set_rage",
+          "target": {
+            "type": "target"
+          },
+          "value": 0
+        },
+        {
+          "type": "set_action_gauge",
+          "target": {
+            "type": "target"
+          },
+          "value": 0
+        }
       ]
     },
     {
@@ -103065,7 +103313,18 @@
       },
       "animation": "baozha2",
       "audio": "音效.内功攻击5",
-      "buffs": []
+      "buffs": [],
+      "intent": "offensive",
+      "effects": [
+        {
+          "type": "custom_ability",
+          "effectId": "corpse_poison",
+          "target": {
+            "type": "target"
+          },
+          "parameters": {}
+        }
+      ]
     },
     {
       "id": "飞星术",
@@ -103086,7 +103345,25 @@
       },
       "animation": "aoyi_jianpurple",
       "audio": "音效.利器3",
-      "buffs": []
+      "buffs": [],
+      "intent": "support",
+      "effects": [
+        {
+          "type": "custom_ability",
+          "effectId": "random_buff",
+          "target": {
+            "type": "all_units"
+          },
+          "parameters": {
+            "buffId": "中毒",
+            "chance": 1,
+            "minimumLevel": 1,
+            "maximumLevel": 10,
+            "minimumDuration": 3,
+            "maximumDuration": 6
+          }
+        }
+      ]
     }
   ],
   "items": [
@@ -115720,7 +115997,28 @@
       "id": "伤害加深",
       "name": "伤害加深",
       "description": "伤害不停加深，受到与BUFF等级相关的额外伤害。",
-      "isDebuff": true
+      "isDebuff": true,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 1.0,
+              "deltaPowerBasePerBuffLevel": 1.15
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "内伤",
@@ -115762,7 +116060,13 @@
       "id": "定身",
       "name": "定身",
       "description": "无法移动。",
-      "isDebuff": true
+      "isDebuff": true,
+      "affixes": [
+        {
+          "type": "trait",
+          "traitId": "CannotMove"
+        }
+      ]
     },
     {
       "id": "封穴",
@@ -115912,7 +116216,26 @@
       "id": "醉酒",
       "name": "醉酒",
       "description": "20%概率因为醉酒不能行动，80%概率怒气全满，同时攻击有一定几率出两次攻击",
-      "isDebuff": false
+      "isDebuff": false,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeActionStart",
+          "priority": 0,
+          "conditions": [],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "drunkenness",
+              "parameters": {
+                "skipChance": 0.2,
+                "rage": 6,
+                "skipReason": "醉酒"
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "重伤",
@@ -115957,7 +116280,31 @@
       "id": "飘渺",
       "name": "飘渺",
       "description": "一定概率躲避攻击",
-      "isDebuff": false
+      "isDebuff": false,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeHitResolved",
+          "priority": 0,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "buff_level_chance",
+              "baseValue": 0,
+              "valuePerLevel": 0.07,
+              "maxValue": 1
+            }
+          ],
+          "effects": [
+            {
+              "type": "cancel_hit"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "魔神降临",
@@ -115983,7 +116330,39 @@
       "id": "不稳定的六脉神剑",
       "name": "不稳定的六脉神剑",
       "point": 0,
-      "description": "段誉时灵时不灵的六脉神剑，但爆发起来威力很恐怖。"
+      "description": "段誉时灵时不灵的六脉神剑，但爆发起来威力很恐怖。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "六脉神剑"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack_low",
+              "op": "more",
+              "delta": 0.5
+            },
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack_high",
+              "op": "more",
+              "delta": 1.5
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "不老长春",
@@ -116013,7 +116392,27 @@
       "id": "令狐冲的怪病",
       "name": "令狐冲的怪病",
       "point": 0,
-      "description": "令狐冲的怪病让他咳嗽不止。"
+      "description": "令狐冲的怪病让他咳嗽不止。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeActionStart",
+          "priority": -100,
+          "conditions": [],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "illness",
+              "parameters": {
+                "protectorCharacterId": "平一指",
+                "minimumProtectorHp": 2,
+                "skipReason": "咳嗽",
+                "chance": 0.4
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "伤口撕裂",
@@ -116061,7 +116460,29 @@
       "id": "刀系装备",
       "name": "刀系装备",
       "point": 0,
-      "description": "使用刀法以外的武功，有伤害减益。"
+      "description": "使用刀法以外的武功，有伤害减益。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "weapon_equipment_penalty",
+              "parameters": {
+                "expectedWeaponType": "daofa",
+                "damageFactor": 0.9
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "刚柔并济",
@@ -116085,7 +116506,29 @@
       "id": "剑系装备",
       "name": "剑系装备",
       "point": 0,
-      "description": "使用剑法以外的武功，有伤害减益。"
+      "description": "使用剑法以外的武功，有伤害减益。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "weapon_equipment_penalty",
+              "parameters": {
+                "expectedWeaponType": "jianfa",
+                "damageFactor": 0.9
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "化功大法",
@@ -116097,7 +116540,57 @@
       "id": "北冥真气",
       "name": "北冥真气",
       "point": 10,
-      "description": "北冥神功精义，使用内功为北冥神功时，攻击提高80%，防御提高100%。"
+      "description": "北冥神功精义，使用内功为北冥神功时，攻击提高80%，防御提高100%。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_equipped_internal_skill",
+              "internalSkillIds": [
+                "北冥神功"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 1.8
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_equipped_internal_skill",
+              "internalSkillIds": [
+                "北冥神功"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "target_defence",
+              "op": "more",
+              "delta": 2.0
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "北冥神功",
@@ -116115,7 +116608,13 @@
       "id": "博览群书",
       "name": "博览群书",
       "point": 80,
-      "description": "大幅增加奥义的发动几率。"
+      "description": "大幅增加奥义的发动几率。",
+      "affixes": [
+        {
+          "type": "trait",
+          "traitId": "BroadLearning"
+        }
+      ]
     },
     {
       "id": "右臂有伤",
@@ -116177,7 +116676,31 @@
       "id": "嗜酒如命",
       "name": "嗜酒如命",
       "point": 15,
-      "description": "每回合有一定概率进入醉酒状态。"
+      "description": "每回合有一定概率进入醉酒状态。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeActionReadiness",
+          "priority": 0,
+          "conditions": [
+            {
+              "type": "chance",
+              "value": 0.15
+            }
+          ],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "self"
+              },
+              "buffId": "醉酒",
+              "level": 2,
+              "duration": 3
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "墨家传人",
@@ -116207,13 +116730,96 @@
       "id": "太极宗师",
       "name": "太极宗师",
       "point": 30,
-      "description": "对太极的掌握已经达到无我的境界，能够最大效率的发挥以柔克刚的效果。太极系武功增加20%伤害，15%暴击概率，装备太极神功、纯阳无极功防御力提高20%。"
+      "description": "对太极的掌握已经达到无我的境界，能够最大效率的发挥以柔克刚的效果。太极系武功增加20%伤害，15%暴击概率，装备太极神功、纯阳无极功防御力提高20%。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "太极"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 1.2
+            },
+            {
+              "type": "modify_damage_context",
+              "field": "critical_chance",
+              "op": "add",
+              "delta": 0.15
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_equipped_internal_skill",
+              "internalSkillIds": [
+                "太极神功",
+                "纯阳无极功"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "target_defence",
+              "op": "more",
+              "delta": 1.2
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "太极高手",
       "name": "太极高手",
       "point": 10,
-      "description": "精通太极，太极剑、太极拳暴击概率增加25%。"
+      "description": "精通太极，太极剑、太极拳暴击概率增加25%。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "太极"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "critical_chance",
+              "op": "add",
+              "delta": 0.25
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "夫妻同心",
@@ -116237,13 +116843,81 @@
       "id": "奇门装备",
       "name": "奇门装备",
       "point": 0,
-      "description": "使用奇门以外的武功，有伤害减益。"
+      "description": "使用奇门以外的武功，有伤害减益。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "weapon_equipment_penalty",
+              "parameters": {
+                "expectedWeaponType": "qimen",
+                "damageFactor": 0.9
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "奇门遁甲",
       "name": "奇门遁甲",
       "point": 50,
-      "description": "擅长奇门五行之术，增加9%的闪避概率，极大的增加自己的攻击命中率。"
+      "description": "擅长奇门五行之术，增加9%的闪避概率，极大的增加自己的攻击命中率。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeHitResolved",
+          "priority": 0,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "chance",
+              "value": 0.09
+            }
+          ],
+          "effects": [
+            {
+              "type": "cancel_hit"
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeHitResolved",
+          "priority": 0,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_hit_state",
+              "state": "miss"
+            },
+            {
+              "type": "chance",
+              "value": 0.8
+            }
+          ],
+          "effects": [
+            {
+              "type": "set_hit_success"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "奋战",
@@ -116580,7 +117254,28 @@
       "id": "怒不可遏",
       "name": "怒不可遏",
       "point": 50,
-      "description": "怒气值将提高所有伤害，怒气越多，伤害越高。"
+      "description": "怒气值将提高所有伤害，怒气越多，伤害越高。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "rage_damage",
+              "parameters": {
+                "bonusPerRage": 0.1
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "悲酥清风",
@@ -116628,7 +117323,29 @@
       "id": "拳系装备",
       "name": "拳系装备",
       "point": 0,
-      "description": "使用拳法以外的武功，有伤害减益。"
+      "description": "使用拳法以外的武功，有伤害减益。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "weapon_equipment_penalty",
+              "parameters": {
+                "expectedWeaponType": "quanzhang",
+                "damageFactor": 0.9
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "摧筋破骨",
@@ -116736,7 +117453,13 @@
       "id": "武学奇才",
       "name": "武学奇才",
       "point": 10,
-      "description": "天生的武学奇才，经验值成长翻倍，来自技能、装备的兵器熟练度及角色属性加成翻倍。"
+      "description": "天生的武学奇才，经验值成长翻倍，来自技能、装备的兵器熟练度及角色属性加成翻倍。",
+      "affixes": [
+        {
+          "type": "trait",
+          "traitId": "DoubleSkillEquipmentTenDimensionAffixes"
+        }
+      ]
     },
     {
       "id": "死生茫茫",
@@ -116754,19 +117477,73 @@
       "id": "毒圣",
       "name": "毒圣",
       "point": 25,
-      "description": "用毒的老祖宗，用毒等级提高5。增加毒功持续时间。"
+      "description": "用毒的老祖宗，用毒等级提高5。增加毒功持续时间。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeBuffApplied",
+          "priority": 0,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_buff_id",
+              "buffId": "中毒"
+            }
+          ],
+          "effects": [
+            {
+              "type": "strengthen_context_buff",
+              "levelDelta": 5,
+              "turnDelta": 4
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "毒系精通",
       "name": "毒系精通",
       "point": 10,
-      "description": "精通用毒的高手，用毒等级提高3。增加毒功持续时间。"
+      "description": "精通用毒的高手，用毒等级提高3。增加毒功持续时间。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeBuffApplied",
+          "priority": 0,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_buff_id",
+              "buffId": "中毒"
+            }
+          ],
+          "effects": [
+            {
+              "type": "strengthen_context_buff",
+              "levelDelta": 3,
+              "turnDelta": 2
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "毒素抗性",
       "name": "毒素抗性",
       "point": 20,
-      "description": "中毒所受的伤害减少为50%。"
+      "description": "中毒所受的伤害减少为50%。",
+      "affixes": [
+        {
+          "type": "trait",
+          "traitId": "PoisonResistance"
+        }
+      ]
     },
     {
       "id": "沾衣十八跌",
@@ -116784,7 +117561,57 @@
       "id": "混元一气",
       "name": "混元一气",
       "point": 5,
-      "description": "对混元功融会贯通，混元功防御增加50%，混元掌暴击概率提高25%。"
+      "description": "对混元功融会贯通，混元功防御增加50%，混元掌暴击概率提高25%。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "混元掌"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "critical_chance",
+              "op": "add",
+              "delta": 0.25
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_equipped_internal_skill",
+              "internalSkillIds": [
+                "混元功"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "target_defence",
+              "op": "more",
+              "delta": 1.5
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "清心",
@@ -116802,7 +117629,13 @@
       "id": "灵心慧质",
       "name": "灵心慧质",
       "point": 20,
-      "description": "对武学之掌握，收放自如，不会误伤队友。"
+      "description": "对武学之掌握，收放自如，不会误伤队友。",
+      "affixes": [
+        {
+          "type": "trait",
+          "traitId": "AvoidFriendlyFire"
+        }
+      ]
     },
     {
       "id": "狗杂种",
@@ -116881,7 +117714,29 @@
       "id": "白内障",
       "name": "白内障",
       "point": 0,
-      "description": "让我穿针眼？算了吧！命中率下降10%。"
+      "description": "让我穿针眼？算了吧！命中率下降10%。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeHitResolved",
+          "priority": 0,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "chance",
+              "value": 0.1
+            }
+          ],
+          "effects": [
+            {
+              "type": "cancel_hit"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "百变千幻",
@@ -117006,13 +117861,96 @@
       "id": "神行百变",
       "name": "神行百变",
       "point": 80,
-      "description": "铁剑门轻功绝学，在生命值大于80%时，15%闪避概率。否则7%闪避概率。"
+      "description": "铁剑门轻功绝学，在生命值大于80%时，15%闪避概率。否则7%闪避概率。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeHitResolved",
+          "priority": 0,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "chance",
+              "value": 0.15
+            },
+            {
+              "type": "context_unit_hp_ratio",
+              "minInclusive": 0.8
+            }
+          ],
+          "effects": [
+            {
+              "type": "cancel_hit"
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeHitResolved",
+          "priority": 0,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "chance",
+              "value": 0.07
+            },
+            {
+              "type": "context_unit_hp_ratio",
+              "maxExclusive": 0.8
+            }
+          ],
+          "effects": [
+            {
+              "type": "cancel_hit"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "神雕大侠",
       "name": "神雕大侠",
       "point": 30,
-      "description": "作为神雕大侠的招牌武功，玄铁剑法和黯然销魂掌暴击概率提高25%，威力提高40%。"
+      "description": "作为神雕大侠的招牌武功，玄铁剑法和黯然销魂掌暴击概率提高25%，威力提高40%。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_skill_name_equals",
+              "values": [
+                "玄铁剑法",
+                "黯然销魂掌"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 1.3
+            },
+            {
+              "type": "modify_damage_context",
+              "field": "critical_chance",
+              "op": "add",
+              "delta": 0.25
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "精打细算",
@@ -117172,13 +118110,29 @@
       "id": "轻功大师",
       "name": "轻功大师",
       "point": 15,
-      "description": "精通轻功，可以在战场上来去无踪，无视敌方阵型对行动的阻碍。"
+      "description": "精通轻功，可以在战场上来去无踪，无视敌方阵型对行动的阻碍。",
+      "affixes": [
+        {
+          "type": "trait",
+          "traitId": "IgnoreZoneOfControl"
+        }
+      ]
     },
     {
       "id": "轻功高超",
       "name": "轻功高超",
       "point": 5,
-      "description": "这人曾下苦功练习轻功。移动格子增加1。"
+      "description": "这人曾下苦功练习轻功。移动格子增加1。",
+      "affixes": [
+        {
+          "type": "stat_modifier",
+          "stat": "movement",
+          "value": {
+            "op": "add",
+            "delta": 1
+          }
+        }
+      ]
     },
     {
       "id": "追魂",
@@ -117202,13 +118156,65 @@
       "id": "金蛇狂舞",
       "name": "金蛇狂舞",
       "point": 25,
-      "description": "只有装备了金蛇剑，金蛇剑法才能发挥绝对的威力。"
+      "description": "只有装备了金蛇剑，金蛇剑法才能发挥绝对的威力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "金蛇剑法"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 1.4
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "金蛇郎君",
       "name": "金蛇郎君",
       "point": 30,
-      "description": "作为金蛇郎君的招牌武功，金蛇剑法暴击概率增加50%。"
+      "description": "作为金蛇郎君的招牌武功，金蛇剑法暴击概率增加50%。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "金蛇剑法"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "critical_chance",
+              "op": "add",
+              "delta": 0.5
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "金钟罩",
@@ -117226,7 +118232,33 @@
       "id": "铁口直断",
       "name": "铁口直断",
       "point": 10,
-      "description": "我掐指一算，哎呀，你有血光之灾！我这有一贴，可以趋凶。（增加命中率）"
+      "description": "我掐指一算，哎呀，你有血光之灾！我这有一贴，可以趋凶。（增加命中率）",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeHitResolved",
+          "priority": 0,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_hit_state",
+              "state": "miss"
+            },
+            {
+              "type": "chance",
+              "value": 0.1
+            }
+          ],
+          "effects": [
+            {
+              "type": "set_hit_success"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "铁拳无双",
@@ -117238,13 +118270,71 @@
       "id": "铁骨墨萼",
       "name": "铁骨墨萼",
       "point": 40,
-      "description": "大侠梅念笙的看家本领，连城剑法攻击力提高40%，暴击概率提高20%。"
+      "description": "大侠梅念笙的看家本领，连城剑法攻击力提高40%，暴击概率提高20%。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "连城剑法"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 1.4
+            },
+            {
+              "type": "modify_damage_context",
+              "field": "critical_chance",
+              "op": "add",
+              "delta": 0.2
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "锐眼",
       "name": "锐眼",
       "point": 5,
-      "description": "哼！我看到了真相！增加命中率。"
+      "description": "哼！我看到了真相！增加命中率。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeHitResolved",
+          "priority": 0,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_hit_state",
+              "state": "miss"
+            },
+            {
+              "type": "chance",
+              "value": 0.05
+            }
+          ],
+          "effects": [
+            {
+              "type": "set_hit_success"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "长平公主的眷恋",
@@ -117268,7 +118358,28 @@
       "id": "阴谋家",
       "name": "阴谋家",
       "point": 25,
-      "description": "阴谋得逞，敌方生命值越低，对其造成伤害越高。"
+      "description": "阴谋得逞，敌方生命值越低，对其造成伤害越高。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "low_health_target_damage",
+              "parameters": {
+                "maximumBonus": 0.5
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "阴阳",
@@ -117292,13 +118403,81 @@
       "id": "雪山飞狐",
       "name": "雪山飞狐",
       "point": 30,
-      "description": "飞天狐狸绝学，胡家刀法暴击概率增加50%，另外增加10%闪避。"
+      "description": "飞天狐狸绝学，胡家刀法暴击概率增加50%，另外增加10%闪避。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "胡家刀法"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "critical_chance",
+              "op": "add",
+              "delta": 0.5
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeHitResolved",
+          "priority": 0,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "chance",
+              "value": 0.1
+            }
+          ],
+          "effects": [
+            {
+              "type": "cancel_hit"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "飘然",
       "name": "飘然",
       "point": 50,
-      "description": "飘然如一叶，一定概率回避所受伤害。"
+      "description": "飘然如一叶，一定概率回避所受伤害。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeHitResolved",
+          "priority": 0,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "chance",
+              "value": 0.08
+            }
+          ],
+          "effects": [
+            {
+              "type": "cancel_hit"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "飞向天际",
@@ -117310,7 +118489,13 @@
       "id": "鬼魅",
       "name": "鬼魅",
       "point": 150,
-      "description": "像鬼魅一样身形飘忽不定，集气速度突破极限。且不受任何状态影响。"
+      "description": "像鬼魅一样身形飘忽不定，集气速度突破极限。且不受任何状态影响。",
+      "affixes": [
+        {
+          "type": "trait",
+          "traitId": "Ghost"
+        }
+      ]
     },
     {
       "id": "魔神降临",
@@ -162770,6 +163955,35 @@
           ]
         },
         {
+          "name": "碧血剑_五毒教圣地2",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "五毒教弟子",
+              "text": "此处通往五毒教圣地，严禁擅闯！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（掏出五毒教信物）你看看，这是什么？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "五毒教弟子",
+              "text": "啊，这是我五毒教教主授予的信物。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "五毒教弟子",
+              "text": "既然是我五毒教的贵宾，请通行。"
+            },
+            {
+              "kind": "command",
+              "call": "map('五毒教森林1')"
+            }
+          ]
+        },
+        {
           "name": "碧血剑_五毒教金蛇窟",
           "steps": [
             {
@@ -182233,6 +183447,153 @@
             {
               "kind": "command",
               "call": "map('大地图')"
+            }
+          ]
+        },
+        {
+          "name": "武当派_卓一航",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "卓一航",
+              "text": "霓裳，四位师叔收手吧，不要再徒增杀戮了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "宋远桥",
+              "text": "这妖女武功高强，杀我武当弟子……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "莫声谷",
+              "text": "一航快来助我等一臂之力。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "练霓裳",
+              "text": "卓一航你是名门高徒，我是魔教妖女，当年你在武当山下都敢刺我一剑！现在你怕什么！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "卓一航",
+              "text": "霓裳，你这又是何苦……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "宋远桥",
+              "text": "一航快动手，妖女武功高强我们快顶不住了……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "卓一航",
+              "text": "对不起师叔，我不能这么做！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "不好！武当派的师叔师伯们和卓师兄以及练霓裳打起来了，我该怎么办？"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "该怎么办？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "帮助武当派师叔师伯",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "武当派_卓一航1"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "帮助卓一航与练霓裳",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "武当派_卓一航2"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "还是不要参与了",
+                      "steps": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "武当派_卓一航1",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "legacy_unattributed_dialogue('师伯，我来祝你们一臂之力！')"
+            },
+            {
+              "kind": "battle",
+              "battleId": "武当派_玉罗刹之战",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "武当派_玉罗刹之战胜利"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "command",
+                    "call": "legacy_flow('gameover')"
+                  }
+                ],
+                "timeout": [
+                  {
+                    "kind": "command",
+                    "call": "legacy_flow('gameover')"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "武当派_卓一航2",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "legacy_unattributed_dialogue('唉，一航师兄，我来祝你一臂之力！')"
+            },
+            {
+              "kind": "battle",
+              "battleId": "武当派_玉罗刹之战2",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "武当派_玉罗刹之战胜利"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "command",
+                    "call": "legacy_flow('gameover')"
+                  }
+                ],
+                "timeout": [
+                  {
+                    "kind": "command",
+                    "call": "legacy_flow('gameover')"
+                  }
+                ]
+              }
             }
           ]
         },
@@ -223043,11 +224404,11 @@
       }
     ],
     "migration": {
-      "stories": 1881,
+      "stories": 1885,
       "totalStories": 1887,
       "maps": 162,
       "totalMaps": 162,
-      "deferredStories": 6
+      "deferredStories": 2
     },
     "artSource": {
       "kind": "legacy",
