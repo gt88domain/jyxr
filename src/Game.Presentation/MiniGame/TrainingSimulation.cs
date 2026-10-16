@@ -12,6 +12,8 @@ public sealed class TrainingTarget
     public double Y { get; internal set; }
     public bool Visible { get; internal set; }
     public int Generation { get; internal set; }
+    public double? Age { get; internal set; }
+    public string? Rating { get; internal set; }
     internal double VelocityX, VelocityY, ShowAt, HideAt;
 }
 

@@ -33,6 +33,9 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
         talent_metadata_fallbacks.append("黑衣")
     records = {s.get("name"): (filename, s) for filename in STORY_FILES
                for s in ET.parse(source / filename).getroot().findall("story")}
+    result["browser"]["touchGames"] = {t.get("key"): {"background": t.get("pic"), "zones": [
+        {"minX": int(z.get("x1")), "maxX": int(z.get("x2")), "minY": int(z.get("y2")), "maxY": int(z.get("y1"))}
+        for z in t.findall("zone")]} for t in ET.parse(source / "touch.xml").getroot().findall("touch")}
     # NICK instructions themselves declare stable achievement IDs. Some have
     # no resource description; preserve their original names without inventing
     # resources/effects or blocking otherwise valid gameplay behind UI text.
@@ -158,8 +161,10 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
         parts = value.split("#")
         if kind == "DIALOG":
             speaker, separator, text = value.partition("#")
-            if not separator or not text:
-                raise ValueError("invalid dialogue")
+            if not separator:
+                raise ValueError("missing dialogue speaker separator")
+            # Empty text is a real silent dialogue frame, not an unknown
+            # instruction or a skipped completion. The host still awaits Next.
             return [{"kind": "dialogue", "speaker": speaker, "text": text}]
         if kind in {"BACKGROUND", "MUSIC", "SUGGEST", "LOG", "SHOP", "NICK"}:
             if kind == "SHOP":
@@ -283,6 +288,13 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
                 if kind == "BATTLE":
                     battle(value)
                     steps.append({"kind": "battle", "battleId": value, "outcomes": {outcome: sequence(i + 1, outcome) for outcome in ("win", "lose", "timeout")}})
+                    return steps
+                if kind == "TOUCH":
+                    if value not in result["browser"]["touchGames"]:
+                        raise ValueError(f"unknown original touch game: {value}")
+                    steps.append(command(f"legacy_touch({quote(value)})"))
+                    steps.append({"kind": "branch", "cases": [{"when": "has_flag('browser_touch_won')", "steps": sequence(i + 1, "win")}],
+                                  "fallback": sequence(i + 1, "lose")})
                     return steps
                 steps.extend(simple_action(a, name))
             steps.extend(exits([r for r in results if r.get("ret", "0") == ret], name))
@@ -421,8 +433,14 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
         "deferredStories": failures, "directStoryFailures": direct_failures,
         "achievementTextFallbacks": sorted(missing_achievement_descriptions),
         "talentMetadataFallbacks": talent_metadata_fallbacks,
+        "preservedEmptyDialogues": [{"story": name, "speaker": a.get("value", "").partition("#")[0]}
+            for name, (_, story) in records.items() for a in story.findall("action")
+            if a.get("type") == "DIALOG" and "#" in a.get("value", "") and not a.get("value", "").partition("#")[2]],
         "instructionEvidence": {"MINUS_MAXPOINTS": {"source": "uploaded X1.0.0.1 Assembly-CSharp.dll / MapUI.ExecuteAction",
-            "sha256": "a9d1456b1fa5e09f9e39a18c66564612da2aa4c7c83db6ff34430d436b872b4a", "ilRange": "0x153b..0x16eb", "argumentUnit": "tenths retained, not percent deducted"}},
+            "sha256": "a9d1456b1fa5e09f9e39a18c66564612da2aa4c7c83db6ff34430d436b872b4a", "ilRange": "0x153b..0x16eb", "argumentUnit": "tenths retained, not percent deducted"},
+            "TOUCH": {"source": "same uploaded assembly / TouchUI and TouchPoint", "rounds": 5, "pointsPerRound": 8,
+                "pointLifetimeSeconds": 3, "aimAgeSeconds": 1.5, "startIntervalSeconds": [0.3,0.5], "successScore": 100,
+                "configuration": "pinned touch.xml matches the uploaded touch.txt for all five definitions"}},
         "sourceCorrections": [{"story": story, "originalType": original, "value": value, "normalizedType": normalized}
                               for (story, original, value), normalized in ACTION_SPELLING_CORRECTIONS.items()
                               if any(a.get("type") == original and a.get("value") == value for a in records[story][1].findall("action"))],

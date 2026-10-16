@@ -1,6 +1,18 @@
 using System.Text.Json;
 using Game.Web.Runtime;
 
+if (args.FirstOrDefault() == "--battle-return")
+{
+    await BattleReturnSmoke.Run(args[1],args[2],args[3]);
+    return;
+}
+
+if (args.FirstOrDefault() == "--touch")
+{
+    await TouchSmoke.Run(args[1],args[2],args[3],args[4]);
+    return;
+}
+
 if (args.FirstOrDefault() == "--journal")
 {
     JournalSmoke.Run(args[1],args[2]);

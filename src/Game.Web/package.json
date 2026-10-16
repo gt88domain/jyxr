@@ -24,6 +24,8 @@
     "test:battle-items": "node tests/battle-item-smoke.mjs",
     "test:timeout": "node tests/timeout-smoke.mjs",
     "test:journal": "node tests/journal-smoke.mjs",
+    "test:touch": "node tests/touch-smoke.mjs",
+    "test:battle-return": "node tests/battle-return-smoke.mjs",
     "assets:restore": "python3 scripts/art-bundle.py restore"
   },
   "dependencies": { "phaser": "3.90.0" },

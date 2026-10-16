@@ -29,12 +29,48 @@ async Task<JsonNode> Resolve()
                     ??choices.FirstOrDefault(c=>c!["text"]!.GetValue<string>().Contains("不加入黑衣"))
                     ??choices.FirstOrDefault(c=>c!["text"]!.GetValue<string>()=="留他狗命")
                     ??choices.FirstOrDefault(c=>c!["text"]!.GetValue<string>()=="不接")??choices[0];
+                if(stage=="--touch-chapter")chosen=choices.FirstOrDefault(c=>c!["text"]!.GetValue<string>().Contains("不揭"))
+                    ??choices.FirstOrDefault(c=>c!["text"]!.GetValue<string>().Contains("你不要怕"))
+                    ??choices.FirstOrDefault(c=>c!["text"]!.GetValue<string>().Contains("忍住"))??chosen;
+                if(stage=="--arena-growth"&&s["dialogue"]?["text"]?.GetValue<string>()=="选择竞技场")chosen=choices.First(c=>c!["text"]!.GetValue<string>()=="三吃一");
+                if(stage=="--arena-growth"&&s["dialogue"]?["text"]?.GetValue<string>()=="选择难度")chosen=choices.First(c=>c!["text"]!.GetValue<string>()=="天人合一");
                 s=await Cmd(new{type="choose",index=chosen!["index"]!.GetValue<int>()});break;
             case "rename":s=await Cmd(new{type="renameHeroine",name="同路人"});break;
             case "shop":s=await Cmd(new{type="closeShop"});break;
+            case "combatants":
+                var selection=s["combatantSelection"]!;var candidates=selection["candidates"]!.AsArray().Where(c=>!c!["forbidden"]!.GetValue<bool>()).ToArray();
+                var selected=candidates.Where(c=>c!["required"]!.GetValue<bool>()).Select(c=>c!["id"]!.GetValue<string>()).ToList();
+                foreach(var id in new[]{"主角","田伯光","令狐冲"}.Concat(candidates.Select(c=>c!["id"]!.GetValue<string>())))
+                    if(selected.Count<selection["capacity"]!.GetValue<int>()&&!selected.Contains(id)&&candidates.Any(c=>c!["id"]!.GetValue<string>()==id))selected.Add(id);
+                s=await Cmd(new{type="selectCombatants",characterIds=selected.ToArray()});break;
+            case "minigame":
+                if(s["miniGame"]!["id"]!.GetValue<string>()!="touch")throw new InvalidOperationException("Campaign has no input policy for this minigame.");
+                JsonNode Input(object input)
+                {
+                    var result=JsonNode.Parse(BrowserBridge.MiniGameInput(JsonSerializer.Serialize(input)))!;
+                    if(!result["ok"]!.GetValue<bool>())throw new InvalidOperationException(result["error"]!.ToString());return result["frame"]!;
+                }
+                var frame=Input(new{action="start"});
+                for(var poll=0;poll<6000&&!frame["finished"]!.GetValue<bool>();poll++)
+                {
+                    foreach(var target in frame["targets"]!.AsArray().Where(t=>t!["rating"] is null&&t["age"]!.GetValue<double>()>=1.35&&t["age"]!.GetValue<double>()<1.65).ToArray())
+                        Input(new{action="hit",id=target!["id"]!.GetValue<string>(),generation=target["generation"]!.GetValue<int>()});
+                    await Task.Delay(15);frame=Input(new{action="frame"});
+                }
+                if(!frame["finished"]!.GetValue<bool>())throw new InvalidOperationException("Campaign timing game did not settle.");
+                events.Add(new{miniGame="touch",score=frame["score"]!.GetValue<int>()});Console.WriteLine("TOUCH real timing score "+frame["score"]);
+                s=await Cmd(new{type="finishMiniGame"});break;
             case "battle":
                 var name=s["battle"]!["id"]!.GetValue<string>();
-                for(var turn=0;turn<2000&&s["battle"]!["outcome"]!.GetValue<string>()=="ongoing";turn++)s=await Cmd(new{type="autoTurn"});
+                for(var turn=0;turn<2000&&s["battle"]!["outcome"]!.GetValue<string>()=="ongoing";turn++)
+                {
+                    var active=s["battle"]!["activeUnitId"]!.GetValue<string>();
+                    var actor=s["battle"]!["units"]!.AsArray().Single(u=>u!["id"]!.GetValue<string>()==active)!;
+                    var medicine=actor["hp"]!.GetValue<int>()<actor["maxHp"]!.GetValue<int>()*.35?s["inventory"]!.AsArray()
+                        .Where(i=>i!["canUse"]!.GetValue<bool>()&&new[]{"天王保命丹","黑玉断续膏","大还丹","小还丹"}.Contains(i["id"]!.GetValue<string>())&&i["battleTargets"]!.AsArray().Any(t=>t!["id"]!.GetValue<string>()==active&&t["canUse"]!.GetValue<bool>()))
+                        .OrderBy(i=>Array.IndexOf(new[]{"天王保命丹","黑玉断续膏","大还丹","小还丹"},i!["id"]!.GetValue<string>())).FirstOrDefault():null;
+                    s=medicine is null?await Cmd(new{type="autoTurn"}):await Cmd(new{type="useItem",entryNumber=medicine["entryNumber"]!.GetValue<long>(),targetId=active});
+                }
                 var outcome=s["battle"]!["outcome"]!.GetValue<string>();
                 if(outcome=="ongoing")throw new InvalidOperationException("Battle did not settle: "+name);
                 battles++;if(outcome=="win")wins++;
@@ -112,13 +148,52 @@ async Task Manage()
 try
 {
     Parse(BrowserBridge.Initialize(File.ReadAllText(contentPath)));
-    if(args.Contains("--resume")||args.Contains("--midgame")||args.Contains("--chapter2")||args.Contains("--chapter3"))
+    if(args.Contains("--resume")||args.Contains("--midgame")||args.Contains("--chapter2")||args.Contains("--chapter3")||args.Contains("--touch-chapter")||args.Contains("--arena-growth"))
     {
         Parse(BrowserBridge.ImportSave(File.ReadAllText(directory+"/normal-save.json")));
         var previous=JsonNode.Parse(File.ReadAllText(directory+"/normal-report.json"))!;
         battles=previous["battles"]!.GetValue<int>();wins=previous["wins"]!.GetValue<int>();
         foreach(var e in previous["events"]!.AsArray())events.Add(e!.DeepClone());
-        if(args.Contains("--chapter3"))
+        if(args.Contains("--arena-growth"))
+        {
+            var members=(await Resolve())["party"]!.AsArray().Select(c=>c!["id"]!.GetValue<string>()).ToArray();
+            foreach(var id in members)
+            {
+                var character=await Cmd(new{type="selectCharacter",characterId=id});
+                var points=character["managedCharacter"]!["unspentStatPoints"]!.GetValue<int>();
+                if(points>0)await Cmd(new{type="allocateStat",stat="bili",points});
+            }
+            await Cmd(new{type="selectCharacter",characterId="主角"});await Travel("同福客栈");
+            for(var i=0;i<5;i++)
+            {
+                await Step("燕小六");await Manage();
+                var snapshot=await Resolve();Console.WriteLine($"ARENA {i}: level={snapshot["hero"]!["level"]} exp={snapshot["hero"]!["experience"]} silver={snapshot["silver"]}");
+            }
+        }
+        else if(args.Contains("--touch-chapter"))
+        {
+            async Task VisitChanceNpc(string map,string npc)
+            {
+                for(var attempt=0;attempt<40;attempt++)
+                {
+                    await Travel(map);if(await Step(npc))return;
+                }
+                throw new InvalidOperationException($"Original chance NPC did not appear: {map}/{npc}");
+            }
+            await VisitChanceNpc("大理树林","木婉清.蒙面");await Manage();
+            await Travel("无量山洞");
+            await VisitChanceNpc("大理树林","木婉清");
+            await Travel("大理");await Step("镇南王府");
+            for(var attempt=0;attempt<40;attempt++)
+            {
+                await Travel("万劫谷");
+                var snapshot=JsonNode.Parse(BrowserBridge.ExportSave())!;
+                if(snapshot["game"]!["storyState"]!["completedStoryIds"]!.AsArray().Any(n=>n!.GetValue<string>()=="tlbb.dy_木婉清.touch.成功"))break;
+            }
+            var rescued=JsonNode.Parse(BrowserBridge.ExportSave())!;
+            if(!rescued["game"]!["storyState"]!["completedStoryIds"]!.AsArray().Any(n=>n!.GetValue<string>()=="tlbb.dy_木婉清.touch.成功"))throw new InvalidOperationException("Normal source Dali/Muwanqing path did not complete actual treatment.");
+        }
+        else if(args.Contains("--chapter3"))
         {
             Console.WriteLine("CONTINUE actual normal-growth mainline from its unedited checkpoint");
         }
@@ -155,7 +230,7 @@ try
             }
             Console.WriteLine("PARTY "+string.Join(',',(await Resolve())["party"]!.AsArray().Select(c=>c!["name"]!.GetValue<string>())));
         }
-        for(var i=0;i<(args.Contains("--chapter2")?100:args.Contains("--chapter3")?60:24);i++)
+        for(var i=0;i<(args.Contains("--touch-chapter")||args.Contains("--arena-growth")?0:args.Contains("--chapter2")?100:args.Contains("--chapter3")?60:24);i++)
         {
             await Travel("同福客栈");await Step("邢捕头");await Manage();
             await Travel("南贤居");await Step("南贤");await Manage();
@@ -188,7 +263,8 @@ try
     if(saved["error"] is not null)throw new InvalidOperationException(saved["error"]!.ToString());
     File.WriteAllText(directory+"/normal-save.json",save);
     var mainline=saved["game"]!["storyState"]!["completedStoryIds"]!.AsArray().Select(n=>n!.GetValue<string>()).Where(id=>id.StartsWith("mainStory_")).ToArray();
-    File.WriteAllText(directory+"/normal-report.json",JsonSerializer.Serialize(new{battles,wins,mainline,events},new JsonSerializerOptions{WriteIndented=true}));
+    var touchStories=saved["game"]!["storyState"]!["completedStoryIds"]!.AsArray().Select(n=>n!.GetValue<string>()).Where(id=>id.Contains(".touch.")).ToArray();
+    File.WriteAllText(directory+"/normal-report.json",JsonSerializer.Serialize(new{stage,completedAt=DateTimeOffset.UtcNow,battles,wins,mainline,touchStories,events},new JsonSerializerOptions{WriteIndented=true}));
     Console.WriteLine($"DONE legitimate creation/tutorial/recruitment/training/travel: battles={battles}, wins={wins}, mainline={string.Join(',',mainline)}");
 }
 catch(Exception e)

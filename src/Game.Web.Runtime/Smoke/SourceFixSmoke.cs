@@ -46,5 +46,14 @@ internal static class SourceFixSmoke
             Check(lost["baseStats"]![stat.Key]!.GetValue<double>()==(int)(stat.Value!.GetValue<double>()*.5),"Original five-tenths loss must halve each base stat with integer truncation: "+stat.Key);
         Check(lost["unspentStatPoints"]!.GetValue<int>()==baseline["unspentStatPoints"]!.GetValue<int>()/2,"Original five-tenths loss must also halve unspent points.");
         Console.WriteLine("PASS source-declared Black Sect identity and binary-verified five-tenths loss, actual continuation and save");
+        Parse(BrowserBridge.ImportSave(File.ReadAllText(save)));
+        var silent=await Cmd(new{type="playStory",storyId="original_女主.李白.诗话"});var lines=0;var sawEmpty=false;
+        while(silent["phase"]!.GetValue<string>()=="dialogue"&&lines<20)
+        {
+            lines++;if(silent["dialogue"]!["text"]!.GetValue<string>()=="")sawEmpty=true;
+            silent=await Cmd(new{type="next"});
+        }
+        Check(lines==9&&sawEmpty&&silent["phase"]!.GetValue<string>()=="world","Original empty dialogue must remain a real ninth frame awaiting Next, without fabricated text or silently skipping it.");
+        Console.WriteLine("PASS original silent heroine dialogue remains an actual ninth frame and continues normally");
     }
 }

@@ -98,11 +98,12 @@ export async function dispatch(command: Record<string, unknown>): Promise<Result
 }
 export async function exportSave(): Promise<string> { return await api.ExportSave(); }
 export async function importSave(data: string): Promise<Result> { return decode(await api.ImportSave(data)); }
-export interface MiniGameConfig {id: string; title: string; heroPortrait?: string; portraits: Record<string, string>; itemIcons: Record<string, string>;}
+export interface MiniGameConfig {id: string; title: string; heroPortrait?: string; portraits: Record<string, string>; itemIcons: Record<string, string>; background?: string | null; pointIcons?: Record<string, string | null>;}
 export interface MiniGameFrame {
   id: string; width: number; height: number; targetSize: number; elapsed: number; remaining: number; score: number;
   started: boolean; finished: boolean; paused: boolean; hero: {x: number; y: number} | null;
-  targets: {id: string; x: number; y: number; visible: boolean; points: number; itemId: string | null; generation: number}[];
+  round?: number; totalRounds?: number;
+  targets: {id: string; x: number; y: number; visible: boolean; points: number; itemId: string | null; generation: number; age?: number | null; rating?: string | null}[];
 }
 export async function miniGameInput(input: Record<string, unknown>): Promise<MiniGameFrame> {
   const result = JSON.parse(await api.MiniGameInput(JSON.stringify(input)));

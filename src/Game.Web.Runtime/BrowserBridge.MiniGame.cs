@@ -2,6 +2,8 @@ using System.Diagnostics;
 using System.Runtime.InteropServices.JavaScript;
 using System.Text.Json;
 using Game.Application;
+using Game.Core.Story;
+using Game.Expressions;
 using Game.Presentation.MiniGame;
 
 namespace Game.Web.Runtime;
@@ -25,7 +27,9 @@ public static partial class BrowserBridge
 
     private static object? MiniGameSnapshot() => _host.Training is not { } training ? null : new
     {
-        id = training.Id, title = training.Id == "qinggong" ? "轻功修炼" : "葵花点穴手",
+        id = training.Id, title = training.Id == "qinggong" ? "轻功修炼" : training.Id == "touch" ? "点穴救治 · " + _host.TrainingTouchKey : "葵花点穴手",
+        background = _host.TrainingTouchKey is { } key ? ResourceMedia(_pack["touchGames"]?[key]?["background"]?.GetValue<string>()) : null,
+        pointIcons = Enumerable.Range(1, 8).ToDictionary(n => n.ToString(), n => ResourceMedia("ui/touch/number" + n)),
         heroPortrait = CharacterMedia(Hero, "portraits"),
         portraits = new[] { "东", "南", "西", "北" }.ToDictionary(n => n, n => ResourceMedia("头像." + n)),
         itemIcons = _host.TrainingItems.ToDictionary(id => id, ItemMedia)
@@ -35,10 +39,24 @@ public static partial class BrowserBridge
     {
         public TrainingSimulation? Training { get; private set; }
         public IReadOnlyList<string> TrainingItems { get; private set; } = [];
+        public string? TrainingTouchKey { get; private set; }
         private TaskCompletionSource? _trainingResult;
         private readonly Stopwatch _trainingClock = new();
         private double _lastTrainingTime;
         private bool _trainingPaused;
+
+        [StoryCommand("legacy_touch")]
+        public async ValueTask RunOriginalTouch(string key, CancellationToken cancellationToken)
+        {
+            var definition = _pack["touchGames"]?[key] ?? throw new InvalidOperationException("原版点穴配置不存在。");
+            var zones = definition["zones"]!.AsArray().Select(z => new TouchZone(z!["minX"]!.GetValue<int>(), z["maxX"]!.GetValue<int>(), z["minY"]!.GetValue<int>(), z["maxY"]!.GetValue<int>()));
+            var simulation = new TouchTrainingSimulation(zones);
+            TrainingTouchKey = key; TrainingItems = [];
+            await RunTraining(simulation, cancellationToken);
+            RequireSession().State.Story.SetVariable("browser_touch_won", ExpressionValue.FromBoolean(simulation.Won));
+            TrainingTouchKey = null;
+            Log($"点穴成绩 {simulation.Score} / 120，" + (simulation.Won ? "救治成功。" : "此次未能成功。"));
+        }
 
         private async ValueTask RunTraining(TrainingSimulation simulation, CancellationToken cancellationToken)
         {
@@ -68,14 +86,16 @@ public static partial class BrowserBridge
         public object TrainingFrame()
         {
             var t = Training ?? throw new InvalidOperationException("当前没有进行小游戏。");
-            return new { id = t.Id, width = TrainingSimulation.Width, height = TrainingSimulation.Height,
-                targetSize = TrainingSimulation.TargetSize, elapsed = t.ElapsedSeconds, started = t.Started,
+            var touch = t as TouchTrainingSimulation;
+            return new { id = t.Id, width = touch is null ? TrainingSimulation.Width : TouchTrainingSimulation.CanvasWidth, height = touch is null ? TrainingSimulation.Height : TouchTrainingSimulation.CanvasHeight,
+                targetSize = touch is null ? TrainingSimulation.TargetSize : TouchTrainingSimulation.PointSize, elapsed = t.ElapsedSeconds, started = t.Started,
                 finished = t.Finished, paused = _trainingPaused,
-                score = t is StrengthTrainingSimulation strength ? strength.Score : 0,
+                score = touch?.Score ?? (t is StrengthTrainingSimulation strength ? strength.Score : 0),
+                round = touch is null ? 0 : Math.Min(touch.Round, TouchTrainingSimulation.Rounds), totalRounds = touch is null ? 0 : TouchTrainingSimulation.Rounds,
                 remaining = t is StrengthTrainingSimulation s ? s.RemainingSeconds : 0,
                 hero = t is LightnessTrainingSimulation lightness ? new { x = lightness.HeroX, y = lightness.HeroY } : null,
                 targets = t.Targets.Select(target => new { id = target.Id, x = target.X, y = target.Y, visible = target.Visible,
-                    points = target.Points, itemId = target.ItemId, generation = target.Generation }).ToArray() };
+                    points = target.Points, itemId = target.ItemId, generation = target.Generation, age = target.Age, rating = target.Rating }).ToArray() };
         }
 
         public void UpdateTraining(JsonElement args)
@@ -98,6 +118,9 @@ public static partial class BrowserBridge
                     break;
                 case "hit" when t is StrengthTrainingSimulation strength:
                     if (!_trainingPaused) strength.Hit(Read(args, "id"), args.GetProperty("generation").GetInt32());
+                    break;
+                case "hit" when t is TouchTrainingSimulation touch:
+                    if (!_trainingPaused) touch.Hit(Read(args, "id"), args.GetProperty("generation").GetInt32());
                     break;
                 case "quit": t.Finish(); break;
                 default: throw new InvalidOperationException("小游戏操作无效。");

@@ -6,7 +6,8 @@ import './minigame.css';
 const e = (v: unknown) => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
 export function miniGameView(config: MiniGameConfig) {
   const lightness = config.id === 'qinggong';
-  return `<div class="training-scrim"><section class="training-window paper" role="dialog" aria-modal="true" aria-label="${e(config.title)}"><header><div><div class="eyebrow">同福客栈 · 实战修炼</div><h2>${e(config.title)}</h2></div><strong id="training-score" aria-live="off">准备就绪</strong></header><p class="training-hint">${lightness ? '拖动、点击场地或按方向键移动头像，躲开四方来客；坚持越久，修炼收获越多。' : '30 秒内点击出现的头像：东 −2、西 +4、南 +2、北 +3；点击物品可以收进背包。'}<span>横屏操作空间更大。离开页面时自动暂停。</span></p><div id="training-area" class="training-area" tabindex="0" aria-label="${lightness ? '轻功场地，使用方向键或拖动头像' : '点穴场地，点击出现的目标'}">${lightness ? `<img class="training-hero" src="${e(assetUrl(config.heroPortrait))}" alt="你的头像">` : ''}<div class="training-targets"></div><div class="training-status"></div></div><footer><button class="button primary" data-mini-action="start">开始修炼</button><button class="button outline" data-mini-action="pause" disabled>暂停</button><button class="button outline" data-mini-action="quit">结束此次修炼</button></footer><p class="panel-notice">按原版规则结算实际成绩、奖励与修炼进度。提前结束也会消耗此次修炼机会。</p></section></div>`;
+  const touch = config.id === 'touch';
+  return `<div class="training-scrim"><section class="training-window paper" role="dialog" aria-modal="true" aria-label="${e(config.title)}"><header><div><div class="eyebrow">${touch?'江湖救急 · 点穴':'同福客栈 · 实战修炼'}</div><h2>${e(config.title)}</h2></div><strong id="training-score" aria-live="off">准备就绪</strong></header><p class="training-hint">${touch?'等外圈收拢至穴位时点击。五轮，每轮八个穴位；精准 +3、良好 +1，累计至少 100 分成功。圈未靠近时点击无效。':lightness ? '拖动、点击场地或按方向键移动头像，躲开四方来客；坚持越久，修炼收获越多。' : '30 秒内点击出现的头像：东 −2、西 +4、南 +2、北 +3；点击物品可以收进背包。'}<span>离开页面时自动暂停。</span></p><div id="training-area" class="training-area ${touch?'touch-area':''}" tabindex="0" aria-label="${touch?'点穴场地，等待圈靠拢时点击穴位':lightness?'轻功场地，使用方向键或拖动头像':'点穴场地，点击出现的目标'}">${touch&&config.background?`<img class="touch-backdrop" src="${e(assetUrl(config.background))}" alt="">`:lightness?`<img class="training-hero" src="${e(assetUrl(config.heroPortrait))}" alt="你的头像">`:''}<div class="training-targets"></div><div class="training-status"></div></div><footer><button class="button primary" data-mini-action="start">${touch?'开始点穴':'开始修炼'}</button><button class="button outline" data-mini-action="pause" disabled>暂停</button><button class="button outline" data-mini-action="quit">${touch?'放弃此次救治':'结束此次修炼'}</button></footer><p class="panel-notice">${touch?'完成五轮后按实际成绩继续剧情；放弃将按救治失败继续。':'按原版规则结算实际成绩、奖励与修炼进度。提前结束也会消耗此次修炼机会。'}</p></section></div>`;
 }
 
 export class MiniGameController {
@@ -65,7 +66,11 @@ export class MiniGameController {
   private draw(f: MiniGameFrame) {
     this.area.dataset.started=String(f.started); this.area.dataset.paused=String(f.paused);
     this.area.dataset.score=String(f.score);
-    this.root.querySelector('#training-score')!.textContent=f.id==='qinggong'?`坚持 ${Math.floor(f.elapsed)} 秒`:`剩余 ${f.remaining} 秒 · 得分 ${f.score}`;
+    const touch=f.id==='touch';
+    this.area.dataset.round=String(f.round??0);
+    this.root.querySelector('#training-score')!.textContent=touch?`第 ${f.round} / ${f.totalRounds} 轮 · ${f.score} 分 / 100`:f.id==='qinggong'?`坚持 ${Math.floor(f.elapsed)} 秒`:`剩余 ${f.remaining} 秒 · 得分 ${f.score}`;
+    const backdrop=this.root.querySelector<HTMLImageElement>('.touch-backdrop');
+    if(backdrop?.naturalWidth)backdrop.style.width=`${100*backdrop.naturalWidth/f.width}%`;
     const start=this.root.querySelector<HTMLButtonElement>('[data-mini-action="start"]')!;
     start.hidden=f.started;
     const pause=this.root.querySelector<HTMLButtonElement>('[data-mini-action="pause"]')!;
@@ -77,18 +82,31 @@ export class MiniGameController {
       let node=this.targets.get(t.id);
       if(!node){
         node=document.createElement('button');node.className='training-target';node.dataset.target=t.id;
-        node.innerHTML='<img alt=""><span></span>';
+        node.innerHTML=touch?'<i class="touch-ring" aria-hidden="true"></i><img alt=""><span></span>':'<img alt=""><span></span>';
+        if(touch)node.classList.add('touch-target');
         node.addEventListener('click',()=>{if(!this.frame?.paused) void this.send({action:'hit',id:t.id,generation:Number(node!.dataset.generation)});});
         this.root.querySelector('.training-targets')!.append(node);this.targets.set(t.id,node);
       }
-      node.hidden=!t.visible;node.disabled=f.id==='qinggong'||f.paused||!f.started;
+      node.hidden=!t.visible;node.disabled=f.id==='qinggong'||f.paused||!f.started||touch&&(!!t.rating||(t.age??-1)<0);
       node.dataset.generation=String(t.generation);node.dataset.points=String(t.points);
       node.setAttribute('aria-label',t.itemId||`${t.id}，${t.points} 分`);
       const image=node.querySelector('img')!;
-      const url=assetUrl(t.itemId?this.config.itemIcons[t.itemId]:this.config.portraits[t.id]);
+      const url=assetUrl(touch?this.config.pointIcons?.[t.id]??'':t.itemId?this.config.itemIcons[t.itemId]:this.config.portraits[t.id]);
       if(url && image.getAttribute('src')!==url) image.src=url;
       node.querySelector('span')!.textContent=t.itemId|| (f.id==='qinggong'?t.id:`${t.id} ${t.points>0?'+':''}${t.points}`);
       position(node,t.x,t.y);
+      if(touch){
+        node.style.left=`${100*(t.x+f.targetSize/2)/f.width}%`;node.style.top=`${100*(t.y+f.targetSize/2)/f.height}%`;
+        node.dataset.age=String(t.age??-1);node.dataset.rating=t.rating||'';
+        image.hidden=!!t.rating||!url;
+        const labels:Record<string,string>={perfect:'精准 +3',good:'良好 +1',bad:'失准',miss:'错过'};
+        node.querySelector('span')!.textContent=t.rating?labels[t.rating]:url?'':t.id;
+        node.setAttribute('aria-label',`穴位 ${t.id}${t.rating?' · '+labels[t.rating]:''}`);
+        const ring=node.querySelector<HTMLElement>('.touch-ring')!;
+        ring.hidden=!!t.rating||(t.age??-1)<0;
+        ring.style.transform=`translate(-50%,-50%) scale(${Math.abs(3-4*(t.age??0)/3)})`;
+        node.classList.toggle('touch-aim',Math.abs((t.age??-1)-1.5)<.2);
+      }
     }
   }
 }

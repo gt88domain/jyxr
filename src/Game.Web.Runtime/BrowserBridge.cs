@@ -26,6 +26,7 @@ public static partial class BrowserBridge
     private static readonly List<string> Logs = [];
     private static string? _error;
     private static bool _settled;
+    private static bool _restoreResourcesWhenBackOnMap;
     private static BrowserStoryHost _host = new();
     private static Task? _storyTask;
     private static CancellationTokenSource _storyCancellation = new();
@@ -84,6 +85,7 @@ public static partial class BrowserBridge
             var args = command.RootElement;
             var type = Read(args, "type");
             readOnly = type is "state" or "selectCharacter";
+            if (!readOnly) RestoreResourcesAtMapBoundary();
             switch (type)
             {
                 case "createCharacter": CreateCharacter(Read(args, "name", "小虾米"), Read(args, "difficulty", "Normal")); break;
@@ -197,8 +199,10 @@ public static partial class BrowserBridge
                     AdvanceEnemies();
                     break;
                 case "leaveBattle":
-                    if (_battle is not null && EvaluateBattleOutcome().Kind == BattleOutcomeKind.Ongoing)
+                    if (_battle is null) throw new InvalidOperationException("尚未进入战斗。");
+                    if (EvaluateBattleOutcome().Kind == BattleOutcomeKind.Ongoing)
                         throw new InvalidOperationException("战斗尚未结束。");
+                    _restoreResourcesWhenBackOnMap = true;
                     _battle = null;
                     _host.CompleteBattle();
                     break;
@@ -210,6 +214,7 @@ public static partial class BrowserBridge
                 default: throw new InvalidOperationException($"未知指令：{type}");
             }
             if (_storyTask?.IsFaulted == true) throw _storyTask.Exception!.GetBaseException();
+            if (!readOnly) RestoreResourcesAtMapBoundary();
             if (!readOnly) PumpLegacyWorld();
             if (!readOnly && _session is not null) ClearUnavailableCultivations();
             if (_storyTask?.IsFaulted == true) throw _storyTask.Exception!.GetBaseException();
@@ -548,8 +553,19 @@ public static partial class BrowserBridge
     private static GridPosition Position(JsonElement args) => new(args.GetProperty("x").GetInt32(), args.GetProperty("y").GetInt32());
     private static void Log(string message) { Logs.Add(message); if (Logs.Count > 200) Logs.RemoveAt(0); }
 
+    private static void RestoreResourcesAtMapBoundary()
+    {
+        if (!_restoreResourcesWhenBackOnMap || !CanManage || _storyTask is { IsCompletedSuccessfully: false }) return;
+        // Legacy GameEngine's map result calls ResetTeam. Returning to the
+        // same displayed map must do so too, after the story has completed.
+        // Do not enter the map again: that would reroll events and positions.
+        RequireSession().BattleService.RestorePartyBattleResources();
+        _restoreResourcesWhenBackOnMap = false;
+    }
+
     private static void ResetStory(bool replaceHost = true)
     {
+        _restoreResourcesWhenBackOnMap = false;
         ExpiredStories.Clear();
         _mapView = null;
         _mapViewState = null;
