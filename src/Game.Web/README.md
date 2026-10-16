@@ -9,9 +9,11 @@ TypeScript / Phaser 显示界面，.NET 10 WebAssembly 运行现有的 `Game.Cor
 
 战斗支持手动走位/出招、自动交手、暂停和 1/2/4 倍速，实际伤害事件驱动受击反馈。首战已补齐部分旧版天赋、Buff 和使用经验差异，仍不等同完整原版；具体已验证和未复原项目见 [战斗对照](../Game.Web.Runtime/BATTLE_PARITY.md)。
 
-人物、装备、功法修炼、行囊与设置均有独立入口。装备穿戴/卸下、切换主内功、选择秘籍修炼、启停外功和支持的物品使用调用实际规则；《内功入门》可选为修炼秘籍，战斗结算后获得真实经验，修炼选择与主运内功独立。原版主角已有基本内功，初始武器、防具、饰品为空，界面如实显示，不额外发放道具。存档保存在 IndexedDB，可导出与重新导入 JSON 备份；原 v1 浏览器存档仍可导入。
+人物、装备、功法修炼、行囊与设置均有独立入口。装备穿戴/卸下、切换主内功、选择秘籍修炼、启停外功和支持的物品使用调用实际规则；《内功入门》可选为修炼秘籍，战斗结算后获得真实经验，修炼选择与主运内功独立。原版主角已有基本内功，初始武器、防具、饰品为空；问答奖励放在行囊，需要自行穿戴。存档保存在 IndexedDB，可导出与重新导入 JSON 备份；原 v1 浏览器存档仍可导入。
 
-这不是完整游戏移植。开局属性问答、139 段隔离剧情及特殊玩法、剧情道具使用和更多天赋/Buff Hook 仍待完成。地图数、角色数和武学数不代表对应全部流程都已验收。Silverlight/Unity 旧版存档导入不在本轮范围。
+原版一周目开局已接入七组问答、24 个头像、基础属性重摇、初始银两与物品预览确认，规则来源为固定 `RollRoleUI.cs`；实际角色、奖励和外观进入同一 C# 会话与存档。无悔／多周目继承尚未开放，问答新增天赋的完整战斗效果仍须逐项补齐。
+
+这不是完整游戏移植。139 段隔离剧情及特殊玩法、剧情道具使用和更多天赋/Buff Hook 仍待完成。地图数、角色数和武学数不代表对应全部流程都已验收。Silverlight/Unity 旧版存档导入不在本轮范围。
 
 标题页或右上角可切换世界，URL 的 `pack=jyx` / `pack=frontier` 可指定启动包。IndexedDB 使用独立包键；v2 导出绑定内容包，错包导入不替换当前会话。原 v1 浏览器存档只在金庸包导入。切换世界前会保存世界地图上的进度；对话、交易及战斗中尚未保存的进度不能续接。
 
@@ -66,6 +68,7 @@ CHROMIUM_PATH=/usr/bin/chromium GAME_WEB_URL=http://127.0.0.1:4173 node tests/eq
 CHROMIUM_PATH=/usr/bin/chromium GAME_WEB_URL=http://127.0.0.1:4173 node tests/chapter-smoke.mjs
 CHROMIUM_PATH=/usr/bin/chromium GAME_WEB_URL=http://127.0.0.1:4173 node tests/original-world-smoke.mjs
 CHROMIUM_PATH=/usr/bin/chromium GAME_WEB_URL=http://127.0.0.1:4173 npm run test:art
+CHROMIUM_PATH=/usr/bin/chromium GAME_WEB_URL=http://127.0.0.1:4173 npm run test:creation
 ```
 
 仓库根还可验证不依赖浏览器 UI 的同一完整流程：
@@ -73,6 +76,7 @@ CHROMIUM_PATH=/usr/bin/chromium GAME_WEB_URL=http://127.0.0.1:4173 npm run test:
 ```bash
 dotnet run --project src/Game.Web.Runtime/Smoke/Smoke.csproj
 dotnet run --project src/Game.Web.Runtime/Smoke/Smoke.csproj -- --original src/Game.Web/public/data/content-package.json
+dotnet run --project src/Game.Web.Runtime/Smoke/Smoke.csproj -- --creation src/Game.Web/public/data/content-package.json
 ```
 
 `dist/` 可以由支持 WASM MIME 类型的 HTTP 静态服务器提供。不要双击 `index.html` 使用 `file://` 打开；浏览器模块与 WASM 需要 HTTP。当前使用保留反射元数据的 Debug 发布，下载体积、裁剪及 AOT 优化尚未完成。生产网站应使用 HTTPS；发布部署另行处理。

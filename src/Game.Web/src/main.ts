@@ -9,6 +9,7 @@ import type {PackListing} from './content';
 import {titleView, worldView, shopView, sectView, currency} from './world';
 import {battleShell as battleMarkup, updateBattleView} from './battle-view';
 import {panelContent} from './panels';
+import {creationView} from './creation';
 import type {PanelName, InventoryFilter} from './panels';
 import {readSettings, writeSettings, applySettings} from './settings';
 import type {Settings} from './settings';
@@ -139,12 +140,20 @@ function modal(titleText: string, content: string, wide = false) {
   const node = document.createElement('dialog'); node.id = 'game-modal'; node.className = `paper game-modal${wide ? ' system-modal' : ''}`;
   node.innerHTML = `<button class="icon-button close-modal" data-action="close-modal" aria-label="关闭">${icon('close')}</button><div class="eyebrow">旅途一页</div><h2>${e(titleText)}</h2>${content}`;
   document.body.append(node); node.showModal();
-  node.addEventListener('close', () => {activePanel = null; if (screen === 'battle') updateBattle(); scheduleBattle();});
+  node.addEventListener('close', () => {activePanel = null; if (node.classList.contains('creation-modal') && state.creation && !busy) void command({type: 'cancelCreation'}); if (screen === 'battle') updateBattle(); scheduleBattle();});
   node.addEventListener('click', event => {if (event.target === node) node.close();});
   if (screen === 'battle') updateBattle();
 }
 function createCharacter() {
   modal('为旅人命名', `<p class="modal-intro">${e(state.pack.title)}的故事，从你的名字开始。</p><form id="character-form"><label class="form-label" for="hero-name">角色姓名</label><input id="hero-name" name="name" value="${e(state.pack.defaultName || '旅人')}" minlength="1" maxlength="12" autocomplete="off" required autofocus><label class="form-label" for="difficulty">行走难度</label><select id="difficulty" name="difficulty"><option value="normal">普通 · 初次冒险</option><option value="hard">困难 · 迎接挑战</option><option value="crazy">炼狱 · 千锤百炼</option></select><p class="field-note">难度影响战斗规则与历练所得。</p><button class="button primary full-width" type="submit">开始旅程 ${icon('arrow')}</button></form>`);
+}
+async function creationCommand(data: Record<string, unknown>) {
+  if (!await command(data)) return;
+  if (state.creation) {
+    const view = creationView(state.creation);
+    modal(view.title, view.content, true);
+    document.querySelector('#game-modal')!.classList.add('creation-modal');
+  } else document.querySelector<HTMLDialogElement>('#game-modal')?.close();
 }
 async function save() {
   if (busy || state.phase !== 'world') return;
@@ -223,6 +232,11 @@ document.addEventListener('click', event => {
   if (!button || button.matches(':disabled')) return;
   const action = button.dataset.action;
   if (action === 'new') createCharacter();
+  else if (action === 'creation-answer') void creationCommand({type: 'answerCreation', index: Number(button.dataset.index), questionIndex: Number(button.dataset.question)});
+  else if (action === 'creation-portrait') void creationCommand({type: 'selectCreationPortrait', portraitId: button.dataset.id});
+  else if (action === 'creation-back') void creationCommand({type: 'backCreation'});
+  else if (action === 'creation-roll') void creationCommand({type: 'rollCreation'});
+  else if (action === 'creation-confirm') void creationCommand({type: 'confirmCreation'});
   else if (action === 'worlds') chooseWorld();
   else if (action === 'select-pack') void selectPack(button.dataset.id!);
   else if (action === 'close-shop') void command({type:'closeShop'});
@@ -298,7 +312,8 @@ document.addEventListener('submit', event => {
   const form = new FormData(event.target), name = String(form.get('name') || '').trim();
   if (!name) return;
   document.querySelector<HTMLDialogElement>('#game-modal')!.close();
-  void command({type: 'createCharacter', name, difficulty: form.get('difficulty')});
+  if ('creation' in state.pack) void creationCommand({type: 'beginCreation', name, difficulty: form.get('difficulty')});
+  else void command({type: 'createCharacter', name, difficulty: form.get('difficulty')});
 });
 document.querySelector<HTMLInputElement>('#import-file')!.addEventListener('change', async event => {
   const input = event.target as HTMLInputElement, file = input.files?.[0];

@@ -19,7 +19,14 @@ export interface Battle {
   playerCanAct?: boolean;
   action?: {unitId: string; team: number; mainActionCommitted: boolean; canMove: boolean; canRest: boolean; canAttack: boolean} | null;
 }
+export interface CreationState {
+  name: string; difficulty: string; step: 'question' | 'portrait' | 'preview'; questionIndex: number; total: number; answers: number[]; roll: number;
+  question: {title: string; options: {text: string}[]} | null;
+  portraits: {id: string; name: string; image: string}[];
+  preview: {portrait: string; sprite: string; silver: number; randomBonus: Record<string, number>; attributes: {id: string; label: string; value: number}[]; talents: {id: string; name: string}[]; internalSkills: {id: string; name: string; level: number}[]; items: {id: string; name: string; quantity: number; icon?: string}[]} | null;
+}
 export interface GameState {
+  creation?: CreationState | null;
   sceneBackground?: string | null;
   phase: 'title' | 'world' | 'battle' | 'dialogue' | 'choice' | 'shop' | 'sect';
   sects?: {id: string; name: string; description: string; focus: string; masters: string[]; skills: string[]; traits: string[]; available: boolean}[];

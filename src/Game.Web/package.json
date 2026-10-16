@@ -15,7 +15,8 @@
     "test:equipment": "node tests/equipment-smoke.mjs",
     "test:chapter": "node tests/chapter-smoke.mjs",
     "test:original": "node tests/original-world-smoke.mjs",
-    "test:art": "node tests/legacy-art-smoke.mjs"
+    "test:art": "node tests/legacy-art-smoke.mjs",
+    "test:creation": "python3 tests/creation-source-parity.py && node tests/creation-smoke.mjs"
   },
   "dependencies": { "phaser": "3.90.0" },
   "devDependencies": {

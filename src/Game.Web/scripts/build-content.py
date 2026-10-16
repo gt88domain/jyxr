@@ -275,6 +275,8 @@ def build(output: Path) -> None:
     from legacy_media import apply_legacy_media
     report["legacyArt"] = apply_legacy_media(package, WEB)
     write_json(output / "legacy-art-coverage.json", report["legacyArt"])
+    from legacy_creation import apply_legacy_creation
+    report["legacyCreation"] = apply_legacy_creation(package)
     write_json(output / "original-migration-audit.json", original_audit)
     write_json(output / "original-story-source.json", {
         "sourceCommit": report["sourceCommit"],

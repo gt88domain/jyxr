@@ -38,7 +38,7 @@ try {
   await choice(0);
   const gifts = await state();
   assert.equal(gifts.tutorial.id,'购买药品完成');
-  assert.equal(gifts.inventory.find(i=>i.id==='小还丹').count,5);
+  assert.equal(gifts.inventory.find(i=>i.id==='小还丹').count,(started.inventory.find(i=>i.id==='小还丹')?.count||0)+5);
   pass('original map travel, original 300 silver and newbie.xml gift completion');
   await location('返回');
   await location('南贤居');

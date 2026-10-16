@@ -1,6 +1,12 @@
 using System.Text.Json;
 using Game.Web.Runtime;
 
+if (args.FirstOrDefault() == "--creation")
+{
+    await CreationSmoke.Run(args[1]);
+    return;
+}
+
 if (args.FirstOrDefault() == "--original")
 {
     await OriginalSmoke.Run(args[1]);

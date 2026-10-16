@@ -140,16 +140,17 @@ try {
   assert.equal(tutorial.silver, 310, 'Original 300-silver tutorial reward must add to the original 10-silver training reward');
   pass('source tutorial grants 300 silver and opens the configured world route');
   await location('洛阳');
+  const carriedPotions = count(await state(), '小还丹');
   await location('商店');
   await continueDialogue();
   await choice(0);
   await continueDialogue();
   const gifts = await state();
-  assert.equal(count(gifts, '小还丹'), 5, 'Preserve the five original tutorial potions');
+  assert.equal(count(gifts, '小还丹'), carriedPotions + 5, 'Add the five original tutorial potions to original creation supplies');
   assert.equal(count(gifts, '罗汉拳谱'), 1, 'Original fist-book choice must grant its real book');
   await location('商店');
   await visible('.shop-screen');
-  assert.equal(count(await state(), '小还丹'), 5, 'Reopening the shop must not repeat tutorial gifts');
+  assert.equal(count(await state(), '小还丹'), carriedPotions + 5, 'Reopening the shop must not repeat tutorial gifts');
   await buy('粗布道袍');
   await buy('小还丹');
   // Exhaust affordable medicine using UI purchases, then verify the real

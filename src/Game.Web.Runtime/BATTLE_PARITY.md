@@ -26,7 +26,7 @@ dotnet run --project src/Game.Web.Runtime/Smoke/Parity/Parity.csproj -- /workspa
 | 项目 | 核对结果与范围 |
 | --- | --- |
 | 战场与站位 | 首战使用原 `南贤居_木头人_战斗` 定义；11×4 棋盘，主角 (2,2)、木人 (8,2)。 |
-| 主角基础 HP/MP | 原角色模板 200/200，现代初始实例相符；未包含原开局问答产生的加点。 |
+| 主角模板 HP/MP | 原角色模板 200/200，现代模板测试实例相符。正式新游戏现经过问答／重摇，特殊答案与心法会改变角色结果；由独立开局验收覆盖，不外推模板数值到所有新角色。 |
 | 木人基础 HP/MP | 原模板 500/1，现代实例相符。 |
 | 初始武功 | 主角野球拳 1 级、基本内功 1 级、打鸡血；木人猴抓。 |
 | 普通难度 | 现代与旧 `AttackLogic.cs` 都将我方普通攻击区间乘 2、敌方乘 0.5。这不表示 HP/MP 也翻倍。 |
@@ -53,7 +53,7 @@ dotnet run --project src/Game.Web.Runtime/Smoke/Parity/Parity.csproj -- /workspa
 | 主角“异世人” | HP≤20% 时攻击区间×2、暴击概率×2、防御×1.5；实测 40/200 触发、41/200 不触发，并验证防御与暴击。 | `AttackLogic.cs:1444`、`:1459` |
 | 攻击强化 | `source_attack` 完整乘数为 `1 + Buff等级/10`，3 级实际伤害约 1.3 倍，包含整数取整验证。 | `AttackLogic.cs:2058` |
 | 打鸡血 | 保留 XML 的 100 MP 消耗、3级5轮攻击强化，并补齐 +2 怒气；显式配置 Support 意图，确保普通难度可对自身施加正面 Buff。 | `AttackLogic.cs:1341`、`special_skills.xml` |
-| 外功/内功使用经验 | 金庸包显式启用 `BrowserLegacyRules`：初始悟性30，普通外功31/内功62；武学奇才外功62/内功93。实际施法后检查总经验，避免二次天赋加倍。 | `BattleField.cs:1491`、`:1496`；`SkillInstance.cs:272`；`InternalSkillInstance.cs:314` |
+| 外功/内功使用经验 | 金庸包显式启用 `BrowserLegacyRules`：模板测试悟性30，普通外功31/内功62；武学奇才外功62/内功93。正式新游戏按问答后实际悟性计算。实际施法后检查总经验，避免二次天赋加倍。 | `BattleField.cs:1491`、`:1496`；`SkillInstance.cs:272`；`InternalSkillInstance.cs:314` |
 
 成长规则由 `BattleEngine` 的可选 `skillUseExperienceResolver` 注入，先归一化招式到其
 外功/内功，再解析最终经验；未注入时继续使用原有现代成长策略。
@@ -91,7 +91,7 @@ dotnet run --project src/Game.Web.Runtime/Smoke/Parity/Parity.csproj -- /workspa
 - **随机性**：当前执行使用 `Random.Shared` 等多个路径，不共享旧引擎的随机种子、调用序列。
   不能要求同一存档下每击、暴击、掉落完全相同。未来对照应向执行路径注入可记录随机源，
   记录决策输入、随机抽样及结构化结果，再比较规则；不用“打赢了”代替公式验证。
-- **原版操作与表现**：新网页画面、素材、自动/暂停/倍速为新表现层；棋盘战术玩法可复原，
+- **原版操作与表现**：原版图片／角色帧由现代网页 UI、自动/暂停/倍速表现层驱动；棋盘战术玩法可复原，
   不宣称 Unity 原界面、动画时序和音效逐帧相同。
 
 本章验收应优先保证：角色基础数值、用到的天赋/Buff/技能、走位与用药、伙伴归属、

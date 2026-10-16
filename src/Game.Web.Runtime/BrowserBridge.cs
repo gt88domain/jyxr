@@ -53,6 +53,7 @@ public static partial class BrowserBridge
             _content = candidate;
             _pack = metadata;
             _session = null;
+            _creation = null;
             _battle = null;
             _shopId = null;
             _hasSaved = false;
@@ -83,6 +84,13 @@ public static partial class BrowserBridge
             switch (type)
             {
                 case "createCharacter": CreateCharacter(Read(args, "name", "小虾米"), Read(args, "difficulty", "Normal")); break;
+                case "beginCreation": BeginCreation(args); break;
+                case "answerCreation": AnswerCreation(args); break;
+                case "selectCreationPortrait": SelectCreationPortrait(Read(args, "portraitId")); break;
+                case "backCreation": BackCreation(); break;
+                case "rollCreation": RollCreation(); break;
+                case "confirmCreation": ConfirmCreation(); break;
+                case "cancelCreation": _creation = null; break;
                 case "equipItem":
                     RequireManagement();
                     var equipmentEntry = Entry(args.GetProperty("entryNumber").GetInt64());
@@ -256,6 +264,7 @@ public static partial class BrowserBridge
             ResetStory();
             _host = candidateHost;
             _session = candidate;
+            _creation = null;
             _battle = null;
             _shopId = null;
             _hasSaved = true;
@@ -283,7 +292,7 @@ public static partial class BrowserBridge
     private static IEnumerable<SkillInstance> Skills(CharacterInstance character) =>
         character.ExternalSkills.Cast<SkillInstance>().Concat(character.GetFormSkills()).Concat(character.SpecialSkills).Where(s => s.IsActive);
 
-    private static void CreateCharacter(string name, string difficulty)
+    private static void CreateCharacter(string name, string difficulty, CreationResult? prepared = null)
     {
         if (_content is null) throw new InvalidOperationException("请先加载内容包。");
         name = name.Trim();
@@ -292,9 +301,15 @@ public static partial class BrowserBridge
         if (Enum.TryParse<GameDifficulty>(difficulty, true, out var selectedDifficulty)) state.Adventure.SetDifficulty(selectedDifficulty);
         ResetStory();
         _session = new GameSession(state, _content, _host, config: RuntimeConfig);
-        var hero = new InitialCharacterFactory(_content, RuntimeConfig).Create(Party.HeroCharacterId, PackText("heroDefinitionId"), state.EquipmentInstanceFactory);
+        var hero = prepared?.Hero ?? new InitialCharacterFactory(_content, RuntimeConfig).Create(Party.HeroCharacterId, PackText("heroDefinitionId"), state.EquipmentInstanceFactory);
         hero.Name = name;
         state.Party.AddMember(hero);
+        if (prepared is not null)
+        {
+            state.Currency.AddSilver(prepared.Silver);
+            foreach (var (id, quantity) in prepared.Items) _session.InventoryService.AddItem(id, quantity);
+        }
+        _creation = null;
         _session.MapService.EnterMap(PackText("initialMapId"));
         _battle = null;
         _cultivationItemId = null;
@@ -415,6 +430,7 @@ public static partial class BrowserBridge
                 {
                     phase = _session is null ? "title" : _battle is not null ? "battle" : _host.Dialogue is not null ? "dialogue" : _host.Choice is not null ? "choice" : _shopId is not null ? "shop" : _host.SelectingSect ? "sect" : "world",
                     pack = _pack,
+                    creation = CreationSnapshot(),
                     sects = SectView(), tutorial = TutorialView(),
                     adventure = _session is null ? null : new { sect = _session.State.Adventure.SectId, morality = _session.State.Adventure.Morality, days = _session.State.Clock.TotalDays, timeSlot = _session.State.Clock.TimeSlot.ToChineseBranch() },
                     party = PartyView(), objectives = ObjectiveView(), shop = ShopSnapshot(),

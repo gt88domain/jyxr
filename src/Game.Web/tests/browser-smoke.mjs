@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {completeCreation} from './creation-controls.mjs';
 import {mkdir, readFile, writeFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import {chromium} from 'playwright';
@@ -156,7 +157,10 @@ async function equipmentAndCultivation() {
   await click('[data-action="equipment"]');
   for (const slot of ['Weapon', 'Armor', 'Accessory'])
     assert.match(await page.locator(`.equipment-slot[data-slot="${slot}"]`).innerText(), /尚未装备/);
-  assert.equal(await page.locator('[data-action="equip-item"]').count(), 0, 'No equipment may be fabricated just to fill slots');
+  assert.equal(await page.locator('[data-action="equip-item"]').count(), 1, 'The original vagrant answer grants exactly one unequipped 草帽');
+  assert.equal(original.inventory.find(i => i.id === '草帽')?.count, 1);
+  assert.equal(original.inventory.find(i => i.id === '小还丹')?.count, 3);
+  assert.equal(original.inventory.find(i => i.id === '新手礼包-大蟠桃')?.count, 5);
   await noOverflow('mobile real equipment');
   await page.screenshot({path: `${output}equipment-mobile.png`, fullPage: true});
   await page.setViewportSize({width: 1440, height: 900});
@@ -357,6 +361,7 @@ try {
   await noOverflow('mobile naming');
   await page.locator('#character-form button[type="submit"]').click();
   await ready();
+  await completeCreation(page, click);
   await dialogues('新手村_出生');
   assert.equal(await page.locator('.hero-heading h2').innerText(), '云游测试侠');
   assert.equal(await page.locator('.location-heading h1').innerText(), '南贤屋内');
