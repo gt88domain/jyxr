@@ -15,12 +15,13 @@ public static partial class BrowserBridge
     private static readonly List<object> BattleEvents = [];
     private static long _eventSequence;
 
-    private static CharacterInstance Hero => RequireSession().State.Party.Members.First();
-    private static bool CanManage => _session is not null && _battle is null && _host.Dialogue is null && _host.Choice is null && !_host.SelectingSect && _shopId is null;
+    private static CharacterInstance Hero => RequireSession().State.Party.GetMember(Party.HeroCharacterId);
+    private static bool CanManage => _session is not null && _battle is null && _host.Dialogue is null && _host.Choice is null && !_host.SelectingSect && !_host.InteractionPending && _shopId is null;
 
     private static void RequireManagement()
     {
         RequireSession();
+        if (_host.InteractionPending || _host.SelectingSect) throw new InvalidOperationException("请先完成当前剧情交互。");
         if (_battle is not null) throw new InvalidOperationException("战斗中不能换装、切换功法或调整修炼，请先完成战斗并返回地图。");
         if (_host.Dialogue is not null || _host.Choice is not null) throw new InvalidOperationException("请先结束当前对话。");
         if (_shopId is not null) throw new InvalidOperationException("请先离开商店。");
@@ -39,7 +40,7 @@ public static partial class BrowserBridge
 
     private static SkillInstance? CultivationSkill(CharacterInstance hero)
     {
-        if (_cultivationItemId is null || !_content!.TryGetItem(_cultivationItemId, out var item) || BookSkill(item) is not { } book) return null;
+        if (CultivationId(hero) is not { } id || !_content!.TryGetItem(id, out var item) || BookSkill(item) is not { } book) return null;
         return book.Internal ? hero.InternalSkills.FirstOrDefault(s => s.Id == book.SkillId) : hero.ExternalSkills.FirstOrDefault(s => s.Id == book.SkillId);
     }
 
@@ -52,22 +53,28 @@ public static partial class BrowserBridge
 
     private static void SetCultivation(long entryNumber)
     {
-        RequireManagement();
+        RequireCharacterManagement();
         var session = RequireSession();
         var entry = Entry(entryNumber);
         var book = BookSkill(entry.Definition) ?? throw new InvalidOperationException("请选择可以修炼内功或外功的秘籍。");
-        var analysis = session.ItemUseService.AnalyzeTarget(entry, Hero);
+        var analysis = session.ItemUseService.AnalyzeTarget(entry, Managed);
         if (!analysis.CanUse) throw new InvalidOperationException(analysis.Reason);
-        if (book.Internal) session.CharacterService.StudyInternalSkillFromBook(Hero, book.SkillId, 1);
-        else session.CharacterService.StudyExternalSkillFromBook(Hero, book.SkillId, 1);
-        _cultivationItemId = entry.Definition.Id;
+        if (!ManualAvailable(entry, Managed)) throw new InvalidOperationException("秘籍正由其他队友修炼，需要另一本或先暂停对方修炼。");
+        if (book.Internal) session.CharacterService.StudyInternalSkillFromBook(Managed, book.SkillId, 1);
+        else session.CharacterService.StudyExternalSkillFromBook(Managed, book.SkillId, 1);
+        SetCultivationId(Managed, entry.Definition.Id);
         Log($"已选择修炼秘籍「{entry.Definition.Name}」。秘籍保留在背包，战斗结算经验将用于此项修炼。");
     }
 
     private static void ApplyCultivationExperience(int experience)
     {
-        if (_cultivationItemId is null || CultivationSkill(Hero) is not { } skill) return;
-        var item = _content!.GetItem(_cultivationItemId);
+        foreach (var c in _battle!.Units.Where(u => u.Team == 1).Select(u => u.Character).DistinctBy(c => c.Id)) ApplyCultivationExperience(c, experience);
+    }
+
+    private static void ApplyCultivationExperience(CharacterInstance c, int experience)
+    {
+        if (CultivationId(c) is not { } id || CultivationSkill(c) is not { } skill) return;
+        var item = _content!.GetItem(id);
         if (!RequireSession().State.Inventory.Entries.Any(e => e.Definition.Id == item.Id)) return;
         var maxLevel = BookMaxLevel(item, skill);
         if (skill.Level >= maxLevel) return;
@@ -79,29 +86,31 @@ public static partial class BrowserBridge
 
     private static object? CultivationView(CharacterInstance hero)
     {
-        if (_cultivationItemId is null || CultivationSkill(hero) is not { } skill) return null;
-        var entry = RequireSession().State.Inventory.Entries.FirstOrDefault(e => e.Definition.Id == _cultivationItemId);
+        if (CultivationId(hero) is not { } id || CultivationSkill(hero) is not { } skill) return null;
+        var entry = RequireSession().State.Inventory.Entries.FirstOrDefault(e => e.Definition.Id == id);
         if (entry is null) return null;
         return new { entryNumber = entry.EntryNumber, itemId = entry.Definition.Id, itemName = entry.Definition.Name, skillId = skill.Id, skillName = skill.Name, kind = skill.SkillKind.ToString(), level = skill.Level, exp = skill.Exp, nextExp = SkillExperienceProgression.GetLevelUpExp(skill), maxLevel = BookMaxLevel(entry.Definition, skill) };
     }
 
     private static object InventoryView(InventoryEntry entry)
     {
-        var analysis = _session!.ItemUseService.AnalyzeTarget(entry, Hero);
+        var analysis = _session!.ItemUseService.AnalyzeTarget(entry, Managed);
         var book = BookSkill(entry.Definition);
         var equipment = entry.Definition as EquipmentDefinition;
         var itemBattleReason = _battle is not null ? BattleSelfItemUnavailableReason(entry.Definition) : null;
         var battleConsumable = _battle is not null && itemBattleReason is null;
         var reason = _battle is not null ? itemBattleReason ?? "" : !CanManage ? "对话中暂不可调整。" : analysis.CanUse ? "" : analysis.Reason;
+        if (book is not null && !ManualAvailable(entry, Managed)) reason = "秘籍正由其他队友修炼。";
         return new
         {
             id = entry.Definition.Id, entryNumber = entry.EntryNumber, name = entry.Definition.Name, icon = ItemMedia(entry.Definition.Id),
             count = entry is StackInventoryEntry stack ? stack.Quantity : 1, quantity = entry is StackInventoryEntry stack2 ? stack2.Quantity : 1,
             description = entry.Definition.Description, kind = equipment is not null ? "equipment" : book is not null ? "skillBook" : entry.Definition.Type == ItemType.Consumable ? "consumable" : "other",
+            affixes = entry is EquipmentInstanceInventoryEntry instanceEntry ? AffixFormatter.FormatEquipmentLinesCn(instanceEntry.Equipment.ExtraAffixes, _content!) : [],
             itemType = entry.Definition.Type.ToString(), slot = equipment?.SlotType.ToString(),
-            canEquip = CanManage && equipment is not null && analysis.CanUse,
-            canCultivate = CanManage && book is not null && analysis.CanUse,
-            canUse = battleConsumable || CanManage && equipment is null && book is null && analysis.CanUse && !entry.Definition.UseEffects.Any(e => e is RunStoryItemUseEffectDefinition), reason
+            canEquip = CanManage && _session.State.Party.ContainsMember(Managed.Id) && equipment is not null && analysis.CanUse,
+            canCultivate = CanManage && _session.State.Party.ContainsMember(Managed.Id) && book is not null && analysis.CanUse && ManualAvailable(entry, Managed),
+            canUse = battleConsumable || CanManage && _session.State.Party.ContainsMember(Managed.Id) && equipment is null && book is null && analysis.CanUse && !entry.Definition.UseEffects.Any(e => e is RunStoryItemUseEffectDefinition), reason
         };
     }
 
@@ -145,7 +154,7 @@ public static partial class BrowserBridge
     private static object[] EquipmentView(CharacterInstance hero) => Enum.GetValues<EquipmentSlotType>().Select(slot =>
     {
         var instance = hero.GetEquipment(slot);
-        return (object)new { slot = slot.ToString(), slotName = slot switch { EquipmentSlotType.Weapon => "武器", EquipmentSlotType.Armor => "防具", _ => "饰品" }, item = instance is null ? null : new { id = instance.Definition.Id, name = instance.Definition.Name, icon = ItemMedia(instance.Definition.Id), instanceId = instance.Id, description = instance.Definition.Description } };
+        return (object)new { slot = slot.ToString(), slotName = slot switch { EquipmentSlotType.Weapon => "武器", EquipmentSlotType.Armor => "防具", _ => "饰品" }, item = instance is null ? null : new { id = instance.Definition.Id, name = instance.Definition.Name, icon = ItemMedia(instance.Definition.Id), instanceId = instance.Id, description = instance.Definition.Description, affixes = AffixFormatter.FormatEquipmentLinesCn(instance.ExtraAffixes, _content!) } };
     }).ToArray();
 
     private static object[] TargetView()

@@ -12,4 +12,8 @@ terms. The Jin Yong pack now uses artwork decoded from the user-provided X1.0.0.
 archive. See art/legacy/README.md and manifest.json for provenance and hashes.
 The western prototype retains its separate generated artwork.
 
+Media payloads are maintained separately from source Git. The source retains
+resource indexes, provenance and a SHA-256 bundle lock. Existing website media is
+reused while code is updated; original submission history has not been rewritten.
+
 License: https://github.com/gt88domain/jyxr/blob/html5-web/LICENSE

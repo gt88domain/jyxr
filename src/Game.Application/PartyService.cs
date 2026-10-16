@@ -79,31 +79,41 @@ public sealed class PartyService
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(characterId);
 
-        if (!State.Party.TryGetMember(characterId, out var character))
+        if (!State.Party.TryGetMember(characterId, out var character) && !State.Party.TryGetReserve(characterId, out character))
         {
             return;
         }
 
         MoveToReserves(character);
-        _session.Events.Publish(new PartyChangedEvent());
+        _session.Events.Publish(new PartyChangedEvent(characterId));
+    }
+
+    public void MoveMemberToReserves(string characterId)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(characterId);
+        if (characterId == Party.HeroCharacterId) throw new InvalidOperationException("Hero must remain in the active party.");
+        if (!State.Party.ContainsCharacter(characterId)) throw new InvalidOperationException($"Character '{characterId}' is not recruited.");
+        // Formation changes keep the same instance, including gear and growth.
+        // Story-driven Leave deliberately uses the separate unequip path.
+        if (State.Party.MoveToReserves(characterId)) _session.Events.Publish(new PartyChangedEvent());
     }
 
     public void LeaveFollow(string characterId)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(characterId);
 
-        if (!State.Party.TryGetFollower(characterId, out var character))
+        if (!State.Party.TryGetFollower(characterId, out var character) && !State.Party.TryGetReserve(characterId, out character))
         {
             return;
         }
 
         MoveToReserves(character);
-        _session.Events.Publish(new PartyChangedEvent());
+        _session.Events.Publish(new PartyChangedEvent(characterId));
     }
 
     public void LeaveAll()
     {
-        var departingMembers = State.Party.Members
+        var departingMembers = State.Party.Members.Concat(State.Party.Reserves)
             .Where(member => !string.Equals(member.Id, Party.HeroCharacterId, StringComparison.Ordinal))
             .ToArray();
         if (departingMembers.Length == 0)
@@ -116,7 +126,7 @@ public sealed class PartyService
             MoveToReserves(member);
         }
 
-        _session.Events.Publish(new PartyChangedEvent());
+        _session.Events.Publish(new PartyChangedEvent(ReleasedAll: true));
     }
 
     public CharacterInstance RenameOrCreateReserve(string characterId, string name)

@@ -22,7 +22,7 @@ public static partial class BrowserBridge
     private static BattleState? _battle;
     private static BattleEngine? _engine;
     private static BasicEnemyBattleAgent? _ai;
-    private static OrdinaryBattleRequest? _request;
+    private static SpecialBattleRequest? _request;
     private static readonly List<string> Logs = [];
     private static string? _error;
     private static bool _settled;
@@ -53,6 +53,7 @@ public static partial class BrowserBridge
             _content = candidate;
             _pack = metadata;
             _session = null;
+            _partySubscription?.Dispose(); _partySubscription = null; FormationReserves.Clear();
             _creation = null;
             _battle = null;
             _shopId = null;
@@ -61,6 +62,8 @@ public static partial class BrowserBridge
             _backgroundId = null;
             _musicId = null;
             _cultivationItemId = null;
+            CompanionCultivations.Clear();
+            _managedCharacterId = Party.HeroCharacterId;
             BattleEvents.Clear();
             Logs.Clear();
             Log($"{PackText("title")}内容载入：{_content.GetCharacters().Count} 名角色、{_content.GetExternalSkills().Count} 门外功、{_content.GetItems().Count} 件物品。");
@@ -80,7 +83,7 @@ public static partial class BrowserBridge
             using var command = JsonDocument.Parse(commandJson);
             var args = command.RootElement;
             var type = Read(args, "type");
-            readOnly = type == "state";
+            readOnly = type is "state" or "selectCharacter";
             switch (type)
             {
                 case "createCharacter": CreateCharacter(Read(args, "name", "小虾米"), Read(args, "difficulty", "Normal")); break;
@@ -91,31 +94,40 @@ public static partial class BrowserBridge
                 case "rollCreation": RollCreation(); break;
                 case "confirmCreation": ConfirmCreation(); break;
                 case "cancelCreation": _creation = null; break;
+                case "selectCharacter": SelectManagedCharacter(Read(args, "characterId")); break;
+                case "allocateStat": AllocateCharacterStat(args); break;
+                case "setPartyPlacement": MovePartyCharacter(args); break;
+                case "reorderParty": RequireManagement(); RequireSession().PartyService.MoveMember(Read(args, "characterId"), args.GetProperty("index").GetInt32()); break;
+                case "chestDeposit": MoveChestItem(args, true); break;
+                case "chestWithdraw": MoveChestItem(args, false); break;
+                case "selectCombatants": _host.SelectCombatants(args); break;
+                case "renameHeroine": _host.CompleteRename(Read(args, "name")); break;
+                case "closeChest": _host.CloseChest(); break;
                 case "equipItem":
-                    RequireManagement();
+                    RequireCharacterManagement();
                     var equipmentEntry = Entry(args.GetProperty("entryNumber").GetInt64());
                     if (equipmentEntry.Definition is not EquipmentDefinition) throw new InvalidOperationException("请选择武器、防具或饰品。");
-                    var equipResult = await RequireSession().ItemUseService.UseAsync(equipmentEntry, Hero.Id);
+                    var equipResult = await RequireSession().ItemUseService.UseAsync(equipmentEntry, Managed.Id);
                     if (!equipResult.Success) throw new InvalidOperationException(equipResult.Message);
                     Log(equipResult.Message);
                     break;
                 case "unequipItem":
-                    RequireManagement();
+                    RequireCharacterManagement();
                     if (!Enum.TryParse<EquipmentSlotType>(Read(args, "slot"), true, out var slot) || !Enum.IsDefined(slot)) throw new InvalidOperationException("装备槽无效。");
-                    var removed = RequireSession().InventoryService.UnequipToInventory(Hero, slot);
+                    var removed = RequireSession().InventoryService.UnequipToInventory(Managed, slot);
                     Log($"已卸下「{removed.Definition.Name}」。");
                     break;
                 case "setCultivation": SetCultivation(args.GetProperty("entryNumber").GetInt64()); break;
-                case "clearCultivation": RequireManagement(); _cultivationItemId = null; Log("已停止秘籍修炼；已学武功保留。"); break;
+                case "clearCultivation": RequireCharacterManagement(); SetCultivationId(Managed, null); Log("已停止秘籍修炼；已学武功保留。"); break;
                 case "equipInternalSkill":
-                    RequireManagement();
-                    RequireSession().CharacterService.EquipInternalSkill(Hero.Id, Read(args, "skillId"));
+                    RequireCharacterManagement();
+                    RequireSession().CharacterService.EquipInternalSkill(Managed.Id, Read(args, "skillId"));
                     Log("已切换当前运行内功。");
                     break;
                 case "clearInternalSkill":
-                    RequireManagement(); Hero.EquipInternalSkill(null); RequireSession().Events.Publish(new CharacterChangedEvent(Hero.Id)); break;
+                    RequireCharacterManagement(); Managed.EquipInternalSkill(null); RequireSession().Events.Publish(new CharacterChangedEvent(Managed.Id)); break;
                 case "setExternalSkillActive":
-                    RequireManagement(); RequireSession().CharacterService.SetExternalSkillActive(Hero.Id, Read(args, "skillId"), args.GetProperty("active").GetBoolean()); break;
+                    RequireCharacterManagement(); RequireSession().CharacterService.SetExternalSkillActive(Managed.Id, Read(args, "skillId"), args.GetProperty("active").GetBoolean()); break;
                 case "useItem":
                     var useEntry = Entry(args.GetProperty("entryNumber").GetInt64());
                     if (_battle is not null)
@@ -131,10 +143,10 @@ public static partial class BrowserBridge
                     }
                     else
                     {
-                        RequireManagement();
+                        RequireCharacterManagement();
                         if (BookSkill(useEntry.Definition) is not null) throw new InvalidOperationException("武学秘籍请通过修炼栏选择，逐步积累经验。");
                         if (useEntry.Definition.UseEffects.Any(e => e is RunStoryItemUseEffectDefinition)) throw new InvalidOperationException("此物品的剧情使用流程尚未迁移。");
-                        var useResult = await RequireSession().ItemUseService.UseAsync(useEntry, Hero.Id);
+                        var useResult = await RequireSession().ItemUseService.UseAsync(useEntry, Managed.Id);
                         if (!useResult.Success) throw new InvalidOperationException(useResult.Message);
                         Log(useResult.Message);
                     }
@@ -196,7 +208,8 @@ public static partial class BrowserBridge
                 default: throw new InvalidOperationException($"未知指令：{type}");
             }
             if (_storyTask?.IsFaulted == true) throw _storyTask.Exception!.GetBaseException();
-            if (type != "state") PumpLegacyWorld();
+            if (!readOnly) PumpLegacyWorld();
+            if (!readOnly && _session is not null) ClearUnavailableCultivations();
             if (_storyTask?.IsFaulted == true) throw _storyTask.Exception!.GetBaseException();
         }
         catch (Exception exception) { _error = exception.Message; }
@@ -213,7 +226,7 @@ public static partial class BrowserBridge
         if (_host.Dialogue is not null || _host.Choice is not null) return JsonSerializer.Serialize(new { error = "请先结束当前对话。" }, Json);
         if (_shopId is not null || _storyTask is { IsCompleted: false }) return JsonSerializer.Serialize(new { error = "请先结束当前交互。" }, Json);
         _hasSaved = true;
-        return JsonSerializer.Serialize(new { browserSaveVersion = 2, packId = PackText("id"), game = session.SaveGameService.CreateSave(), profile = session.ProfileService.CreateProfileRecord(), cultivationItemId = _cultivationItemId, hasSaved = true, wonBattles = WonBattles.ToArray() }, Json);
+        return JsonSerializer.Serialize(new { browserSaveVersion = 2, packId = PackText("id"), game = session.SaveGameService.CreateSave(), profile = session.ProfileService.CreateProfileRecord(), cultivationItemId = _cultivationItemId, companionCultivations = CompanionCultivations, formationReserveIds = FormationReserves.ToArray(), hasSaved = true, wonBattles = WonBattles.ToArray() }, Json);
     }
 
     [JSExport]
@@ -261,7 +274,25 @@ public static partial class BrowserBridge
                 var hasSkill = candidateHero is not null && (selected.Internal ? candidateHero.InternalSkills.Any(s => s.Id == selected.SkillId) : candidateHero.ExternalSkills.Any(s => s.Id == selected.SkillId));
                 if (!hasSkill) throw new InvalidOperationException("存档中的修炼武功尚未学会，无法恢复修炼设置。");
             }
+            var companionBooks = wrapped && root.TryGetProperty("companionCultivations", out var books) ? books.Deserialize<Dictionary<string, string>>(Json) ?? [] : [];
+            foreach (var (id, itemId) in companionBooks)
+            {
+                if (id == Party.HeroCharacterId || !candidate.State.Party.TryGetCharacter(id, out var c) || !_content.TryGetItem(itemId, out var item) || BookSkill(item) is not { } book || !candidate.State.Inventory.Entries.Any(e => e.Definition.Id == itemId) || !(book.Internal ? c.InternalSkills.Any(s => s.Id == book.SkillId) : c.ExternalSkills.Any(s => s.Id == book.SkillId)))
+                    throw new InvalidOperationException("存档中的队友修炼配置无效。");
+            }
+            if (!candidate.State.Party.ContainsMember(Party.HeroCharacterId) || candidate.State.Party.Members.First().Id != Party.HeroCharacterId) throw new InvalidOperationException("存档中的主角队伍位置无效。");
+            foreach (var group in companionBooks.Values.Concat(cultivation is null ? [] : new[] { cultivation }).GroupBy(id => id))
+            {
+                var copies = candidate.State.Inventory.Entries.Where(e => e.Definition.Id == group.Key).Sum(e => e is StackInventoryEntry stack ? stack.Quantity : 1);
+                if (group.Count() > copies) throw new InvalidOperationException("存档中的修炼人数超过秘籍数量。");
+            }
+            var formation = wrapped && root.TryGetProperty("formationReserveIds", out var formationNode) ? formationNode.Deserialize<string[]>(Json) ?? [] : [];
+            if (formation.Distinct(StringComparer.Ordinal).Count() != formation.Length || formation.Any(id => id == Party.HeroCharacterId || !candidate.State.Party.ContainsReserve(id))) throw new InvalidOperationException("存档中的编队后备配置无效。");
             ResetStory();
+            FormationReserves.Clear(); FormationReserves.UnionWith(formation);
+            CompanionCultivations.Clear();
+            foreach (var (id, itemId) in companionBooks) CompanionCultivations[id] = itemId;
+            _managedCharacterId = Party.HeroCharacterId;
             _host = candidateHost;
             _session = candidate;
             _creation = null;
@@ -271,6 +302,7 @@ public static partial class BrowserBridge
             WonBattles.Clear();
             WonBattles.UnionWith(victories);
             _cultivationItemId = cultivation;
+            BindPartyEvents();
             BattleEvents.Clear();
             _error = null;
             Log("已读取浏览器存档。");
@@ -313,20 +345,27 @@ public static partial class BrowserBridge
         _session.MapService.EnterMap(PackText("initialMapId"));
         _battle = null;
         _cultivationItemId = null;
+        CompanionCultivations.Clear();
+        _managedCharacterId = Party.HeroCharacterId;
         _shopId = null;
         _hasSaved = false;
         WonBattles.Clear();
         Logs.Clear();
         Log($"{name}开始冒险。" );
+        FormationReserves.Clear();
+        BindPartyEvents();
         if (PackText("initialStoryId").Length > 0) StartStory(PackText("initialStoryId"));
     }
 
     private static void StartBattle(string id)
+        => StartBattle(new OrdinaryBattleRequest(id, RequireSession().State.Party.Members.Select(c => c.Id).ToArray()));
+
+    private static void StartBattle(SpecialBattleRequest request)
     {
         var session = RequireSession();
         if (_battle is not null && BattleOutcomeEvaluator.Evaluate(_battle).Kind == BattleOutcomeKind.Ongoing)
             throw new InvalidOperationException("已有战斗正在进行。");
-        _request = new OrdinaryBattleRequest(id, session.State.Party.Members.Select(c => c.Id).ToArray());
+        _request = request;
         _battle = session.BattleService.BuildBattleState(_request);
         _engine = new BattleEngine(
             buffResolver: _content!.GetBuff,
@@ -338,7 +377,7 @@ public static partial class BrowserBridge
         _settled = false;
         BattleEvents.Clear();
         Check(_engine.StartBattle(_battle));
-        Log($"进入战斗：{_content.GetBattle(id).Name}。");
+        Log($"进入战斗：{_content.GetBattle(request.BattleId).Name}。");
         AdvanceEnemies();
     }
 
@@ -428,9 +467,12 @@ public static partial class BrowserBridge
                 ok = _error is null, error = _error,
                 state = new
                 {
-                    phase = _session is null ? "title" : _battle is not null ? "battle" : _host.Dialogue is not null ? "dialogue" : _host.Choice is not null ? "choice" : _shopId is not null ? "shop" : _host.SelectingSect ? "sect" : "world",
+                    phase = _session is null ? "title" : _battle is not null ? "battle" : _host.Dialogue is not null ? "dialogue" : _host.Choice is not null ? "choice" : _shopId is not null ? "shop" : _host.SelectingSect ? "sect" : _host.Selection is not null ? "combatants" : _host.RenameDefault is not null ? "rename" : _host.GameOver ? "gameover" : _host.ChestOpen ? "chest" : "world",
                     pack = _pack,
                     creation = CreationSnapshot(),
+                    combatantSelection = CombatantsSnapshot(), rename = _host.RenameDefault is { } defaultName ? new { defaultName } : null, gameOver = _host.GameOver,
+                    managedCharacter = _session is null ? null : CharacterSheet(Managed), chest = ChestSnapshot(),
+                    roster = RosterView(),
                     sects = SectView(), tutorial = TutorialView(),
                     adventure = _session is null ? null : new { sect = _session.State.Adventure.SectId, morality = _session.State.Adventure.Morality, days = _session.State.Clock.TotalDays, timeSlot = _session.State.Clock.TimeSlot.ToChineseBranch() },
                     party = PartyView(), objectives = ObjectiveView(), shop = ShopSnapshot(),
@@ -448,6 +490,7 @@ public static partial class BrowserBridge
                         equipment = EquipmentView(hero), cultivation = CultivationView(hero), equippedInternalSkillId = hero.EquippedInternalSkillId, canManage = CanManage
                     },
                     silver = _session?.State.Currency.Silver ?? 0,
+                    yuanbao = _session?.Profile.Yuanbao ?? 0,
                     backgroundId = _backgroundId, musicId = _musicId, sceneBackground = _host.Dialogue is not null || _host.Choice is not null ? ResourceMedia(_backgroundId) : null,
                     inventory = _session?.State.Inventory.Entries.Select(InventoryView).ToArray(),
                     map = map is null ? null : new { id = map.Id, name = map.Name, description = map.Description, background = MapMedia(map.Id), kind = map.Kind.ToString().ToLowerInvariant(), locations = CurrentMapView().Locations.Select(l => new { id = l.Location.Id, name = l.Location.Name, description = l.Event?.Description ?? l.Location.Description, action = l.Event?.Action.Root.Name, image = ResourceMedia(l.Event?.Image) ?? ResourceMedia(l.Location.Picture), timeSlots = RequireSession().MapService.PreviewInteractionConsumedTimeSlots(l) }) },
@@ -578,6 +621,7 @@ public static partial class BrowserBridge
 
         public void CompleteBattle()
         {
+            if (CompleteSpecialBattle()) return;
             var pending = _battleResult;
             _battleResult = null;
             pending?.SetResult(_lastBattleWinner == 1 ? Game.Core.Story.BattleOutcome.Win : Game.Core.Story.BattleOutcome.Lose);

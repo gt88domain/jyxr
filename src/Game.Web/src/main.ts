@@ -10,6 +10,7 @@ import {titleView, worldView, shopView, sectView, currency} from './world';
 import {battleShell as battleMarkup, updateBattleView} from './battle-view';
 import {panelContent} from './panels';
 import {creationView} from './creation';
+import {interactionView} from './interactions';
 import type {PanelName, InventoryFilter} from './panels';
 import {readSettings, writeSettings, applySettings} from './settings';
 import type {Settings} from './settings';
@@ -56,9 +57,9 @@ function topbar(inGame = true) {
 function title() {return topbar(false) + titleView(state, slot, packs);}
 function heroCard() {
   const hero = state.hero;
-  return `<aside class="hero-card paper"><div class="eyebrow">旅途行者</div><div class="hero-heading"><div class="avatar">${hero.portrait ? `<img src="${e(assetUrl(hero.portrait))}" alt="">` : e(hero.name.slice(0, 1))}</div><div><h2>${e(hero.name)}</h2><span>旅程初始 · 第 ${hero.level} 级</span></div></div><div class="vital"><label>气血 <span>${hero.hp} <small>/ ${hero.maxHp}</small></span></label><div class="bar hp"><i style="width:${100 * hero.hp / hero.maxHp}%"></i></div></div><div class="vital"><label>${e(state.pack.terms?.energy || '内力')} <span>${hero.mp} <small>/ ${hero.maxMp}</small></span></label><div class="bar mp"><i style="width:${100 * hero.mp / hero.maxMp}%"></i></div></div><div class="hero-meta"><span>随身${e(state.pack.currencyName || '钱币')}</span><strong>${state.silver.toLocaleString()} <small>${e(currency(state))}</small></strong></div><button class="text-button" data-action="character">查看人物 ${icon('arrow')}</button></aside>`;
+  return `<aside class="hero-card paper"><div class="eyebrow">旅途行者</div><div class="hero-heading"><div class="avatar">${hero.portrait ? `<img src="${e(assetUrl(hero.portrait))}" alt="">` : e(hero.name.slice(0, 1))}</div><div><h2>${e(hero.name)}</h2><span>旅程初始 · 第 ${hero.level} 级</span></div></div><div class="vital"><label>气血 <span>${hero.hp} <small>/ ${hero.maxHp}</small></span></label><div class="bar hp"><i style="width:${100 * hero.hp / hero.maxHp}%"></i></div></div><div class="vital"><label>${e(state.pack.terms?.energy || '内力')} <span>${hero.mp} <small>/ ${hero.maxMp}</small></span></label><div class="bar mp"><i style="width:${100 * hero.mp / hero.maxMp}%"></i></div></div><div class="hero-meta"><span>随身${e(state.pack.currencyName || '钱币')}</span><strong>${state.silver.toLocaleString()} <small>${e(currency(state))}</small></strong></div><button class="text-button" data-action="manage-character" data-id="${e(hero.id)}">查看人物 ${icon('arrow')}</button></aside>`;
 }
-function world() {return topbar() + worldView(state, heroCard()) + dialogueOverlay() + shopView(state) + sectView(state);}
+function world() {return topbar() + worldView(state, heroCard()) + dialogueOverlay() + shopView(state) + sectView(state) + interactionView(state);}
 function dialogueOverlay() {
   if (state.phase !== 'dialogue' && state.phase !== 'choice') return '';
   const choice = state.phase === 'choice';
@@ -237,6 +238,14 @@ document.addEventListener('click', event => {
   else if (action === 'creation-back') void creationCommand({type: 'backCreation'});
   else if (action === 'creation-roll') void creationCommand({type: 'rollCreation'});
   else if (action === 'creation-confirm') void creationCommand({type: 'confirmCreation'});
+  else if (action === 'manage-character') void (async()=>{if(await command({type:'selectCharacter',characterId:button.dataset.id})) openPanel('character');})();
+  else if (action === 'allocate-stat') void manage({type:'allocateStat',stat:button.dataset.stat},'属性点已分配。');
+  else if (action === 'party-placement') void manage({type:'setPartyPlacement',characterId:button.dataset.id,placement:button.dataset.placement},'队伍已调整。');
+  else if (action === 'party-order') void manage({type:'reorderParty',characterId:button.dataset.id,index:Number(button.dataset.index)},'队伍顺序已调整。');
+  else if (action === 'chest') openPanel('chest');
+  else if (action === 'return-title') void selectPack(state.pack.id);
+  else if (action === 'close-chest') void command({type:'closeChest'});
+  else if (action === 'chest-deposit' || action === 'chest-withdraw') void manage({type:action === 'chest-deposit'?'chestDeposit':'chestWithdraw',entryNumber:Number(button.dataset.entryNumber)},'储物箱已更新。');
   else if (action === 'worlds') chooseWorld();
   else if (action === 'select-pack') void selectPack(button.dataset.id!);
   else if (action === 'close-shop') void command({type:'closeShop'});
@@ -278,6 +287,7 @@ document.addEventListener('click', event => {
 });
 document.addEventListener('change', event => {
   const control = event.target;
+  if (control instanceof HTMLSelectElement && control.id === 'managed-character') {void command({type:'selectCharacter',characterId:control.value}); return;}
   if (!(control instanceof HTMLInputElement || control instanceof HTMLSelectElement) || !control.closest('#game-settings')) return;
   const name = control.name as keyof Settings;
   if (name === 'battleMode' && (control.value === 'manual' || control.value === 'auto')) {
@@ -307,6 +317,14 @@ document.addEventListener('input', event => {
   });
 });
 document.addEventListener('submit', event => {
+  if(event.target instanceof HTMLFormElement && event.target.id === 'combatants-form'){
+    event.preventDefault();
+    void command({type:'selectCombatants',characterIds:new FormData(event.target).getAll('character')});return;
+  }
+  if(event.target instanceof HTMLFormElement && event.target.id === 'heroine-name-form'){
+    event.preventDefault();
+    void command({type:'renameHeroine',name:new FormData(event.target).get('name')});return;
+  }
   if (!(event.target instanceof HTMLFormElement) || event.target.id !== 'character-form') return;
   event.preventDefault();
   const form = new FormData(event.target), name = String(form.get('name') || '').trim();

@@ -270,6 +270,7 @@ def build(output: Path) -> None:
     report["starterRuleEffects"] = apply_starter_rule_effects(package)
     from browser_packs import assemble_jyx
     package = assemble_jyx(package, source_maps, SOURCE, script)
+    package["browser"]["chestMapId"] = "松鼠旅馆"
     from legacy_world import expand_original
     package, original_audit = expand_original(package, source_maps, SOURCE, script)
     from legacy_media import apply_legacy_media

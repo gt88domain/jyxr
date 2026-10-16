@@ -9,7 +9,7 @@ const h = await createHarness('chapter-smoke');
 const {page, output, report, pass, ready, visible, click, state, continueDialogue, closeModal, rejectImport, noOverflow} = h;
 const legacyPath = fileURLToPath(new URL('./fixtures/legacy-v1-save.json', import.meta.url));
 const baselinePath = `${output}exported-save.json`;
-const count = (s, id) => s.inventory.find(item => item.id === id)?.count ?? 0;
+const count = (s, id) => s.inventory.filter(item => item.id === id).reduce((sum,item)=>sum+item.count,0);
 const objective = (s, id) => s.objectives.find(item => item.id === id);
 async function location(id) {await click(`[data-action="interact"][data-id="${id}"]`);}
 async function revisitIfAvailable(id) {
@@ -78,6 +78,8 @@ async function buy(itemId) {
   const after = await state();
   assert.equal(after.silver, before.silver - product.price, 'Buying must debit the real price');
   assert.equal(count(after, itemId), count(before, itemId) + 1, 'Buying must add exactly one real item');
+  for(const existing of before.inventory.filter(item=>item.id===itemId&&item.affixes?.length))
+    assert.deepEqual(after.inventory.find(item=>item.entryNumber===existing.entryNumber),existing,'Buying a stack must preserve separately rolled equipment instances');
   const updated = after.shop.products.find(item => item.id === product.id);
   assert.equal(updated.purchased, product.purchased + 1, 'Purchase accounting must update');
   if (product.remaining !== null) assert.equal(updated.remaining, product.remaining - 1, 'Limited stock must decrease');
@@ -86,7 +88,7 @@ async function buy(itemId) {
 async function equip(itemId) {
   await click('[data-action="equipment"]');
   const before = await state();
-  const entry = before.inventory.find(item => item.id === itemId);
+  const entry = before.inventory.filter(item => item.id === itemId).at(-1);
   assert.ok(entry?.canEquip);
   await click(`[data-action="equip-item"][data-entry-number="${entry.entryNumber}"]`);
   const after = await state();

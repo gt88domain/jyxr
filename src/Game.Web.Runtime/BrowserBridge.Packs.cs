@@ -72,13 +72,14 @@ public static partial class BrowserBridge
         RequireShop();
         var quantity = args.TryGetProperty("quantity", out var amount) ? amount.GetInt32() : 1;
         var entry = Entry(args.GetProperty("entryNumber").GetInt64());
+        if ((entry is StackInventoryEntry stackEntry ? stackEntry.Quantity : 1) - quantity < AssignedManuals(entry.Definition.Id)) throw new InvalidOperationException("秘籍正在修炼，请先暂停相应人物的修炼。");
         // ShopService validates ownership/quantity; preflight arithmetic before it
         // removes inventory so malformed huge commands cannot overflow afterward.
         var proceeds = checked(RequireSession().ShopService.GetSellPrice(entry.Definition) * quantity);
         _ = checked(RequireSession().State.Currency.Silver + proceeds);
         var result = RequireSession().ShopService.Sell(entry, quantity);
         if (!result.Success) throw new InvalidOperationException(result.Message);
-        if (_cultivationItemId == entry.Definition.Id && !RequireSession().State.Inventory.Entries.Any(e => e.Definition.Id == _cultivationItemId)) _cultivationItemId = null;
+        ClearUnavailableCultivations();
         Log(result.Message);
     }
 
@@ -130,6 +131,18 @@ public static partial class BrowserBridge
             mp = battleUnit?.Mp ?? c.CurrentMp ?? (int)c.GetStat(StatType.MaxMp), maxMp = (int)c.GetStat(StatType.MaxMp),
             skills = Skills(c).Select(s => SkillView(s)).ToArray(), equipment = EquipmentView(c), isHero = c.Id == Party.HeroCharacterId
         };
+    }).ToArray() ?? [];
+
+    private static object[] RosterView() => _session?.State.Party.GetAllCharacters().Select(c => (object)new
+    {
+        id = c.Id, definitionId = c.Definition.Id, name = c.Name, level = c.Level, portrait = CharacterMedia(c, "portraits"),
+        placement = _session.State.Party.ContainsMember(c.Id) ? "member" : _session.State.Party.ContainsFollower(c.Id) ? "follower" : "reserve",
+        isHero = c.Id == Party.HeroCharacterId, equipment = EquipmentView(c),
+        sprite = CharacterMedia(c, "characters"), skills = Skills(c).Select(s => SkillView(s)).ToArray(),
+        hp = c.CurrentHp ?? (int)c.GetStat(StatType.MaxHp), maxHp = (int)c.GetStat(StatType.MaxHp),
+        mp = c.CurrentMp ?? (int)c.GetStat(StatType.MaxMp), maxMp = (int)c.GetStat(StatType.MaxMp),
+        unspentStatPoints = c.UnspentStatPoints
+        ,canBench = CanManage && c.Id != Party.HeroCharacterId && _session.State.Party.ContainsMember(c.Id), canRejoin = CanManage && FormationReserves.Contains(c.Id) && _session.State.Party.ContainsReserve(c.Id)
     }).ToArray() ?? [];
 
     private static object[] ObjectiveView() => (_pack["objectives"]?.AsArray() ?? []).OfType<JsonObject>().Select(o =>

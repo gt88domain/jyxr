@@ -27,6 +27,9 @@ python3 -m pip install -r scripts/requirements-art.txt
 python3 scripts/extract-legacy-art.py --archive /path/to/X.rar --data-root /path/to/jygame_Data
 ```
 
-Ordinary content/web builds use the committed exports and do not need UnityPy,
-Pillow or the archive. When replacing exports, use a clean output directory so
+Ordinary content/web builds use a verified external/local artwork bundle and do
+not need UnityPy, Pillow or the archive. Media payloads are no longer tracked in
+source Git; the manifest and provenance remain source files. Restore with
+`python3 scripts/art-bundle.py restore --archive /path/to/jyxr-web-art.zip`.
+When replacing exports, use a clean output directory so
 obsolete content-hashed files do not accumulate; preserve this provenance file.

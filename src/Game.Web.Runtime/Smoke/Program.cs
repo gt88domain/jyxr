@@ -1,6 +1,18 @@
 using System.Text.Json;
 using Game.Web.Runtime;
 
+if (args.FirstOrDefault() == "--special")
+{
+    await SpecialSmoke.Run(args[1],args[2]);
+    return;
+}
+
+if (args.FirstOrDefault() == "--management")
+{
+    await ManagementSmoke.Run(args[1],args[2]);
+    return;
+}
+
 if (args.FirstOrDefault() == "--creation")
 {
     await CreationSmoke.Run(args[1]);

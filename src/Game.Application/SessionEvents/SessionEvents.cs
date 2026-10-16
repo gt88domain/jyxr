@@ -135,7 +135,7 @@ public sealed record ToastRequestedEvent(string Message, ToastTone Tone = ToastT
 
 public sealed record AutoSaveRequestedEvent(string Reason) : ISessionEvent;
 
-public sealed record PartyChangedEvent : ISessionEvent;
+public sealed record PartyChangedEvent(string? DepartedCharacterId = null, bool ReleasedAll = false) : ISessionEvent;
 
 public sealed record CharacterChangedEvent(string CharacterId) : ISessionEvent;
 

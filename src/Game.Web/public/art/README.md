@@ -1,5 +1,10 @@
 # Browser-game artwork
 
+Media payloads are kept in a separate local/external bundle and ignored by source
+Git. Only provenance and the original resource manifest remain tracked. Restore
+with `scripts/art-bundle.py` and the locked checksum before building a new checkout.
+Existing deployed media is reused; new publication must not add/modify media in Git.
+
 The JYX pack now uses the original artwork and animation frames in [`legacy/`](legacy/README.md),
 extracted from the user-provided archive. That directory has its own provenance
 and is not generated artwork. The images listed below remain as earlier assets;

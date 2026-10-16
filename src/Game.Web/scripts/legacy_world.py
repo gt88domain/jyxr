@@ -92,6 +92,17 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
             elif kind == "shop":
                 require("shops", value)
                 steps = [command(f"shop({quote(value)})")]
+            elif kind in {"tower", "trial", "zhenlongqiju", "xilian"}:
+                steps = [command({"tower": "tower()", "trial": "trial()", "zhenlongqiju": "zhenlongqiju()", "xilian": "refine()"}[kind])]
+                if kind == "zhenlongqiju":
+                    dependencies[story_id].update({"珍珑棋局_胜利", "珍珑棋局_失败"})
+                if kind == "trial":
+                    dependencies[story_id].update({"original_试炼之地.失败", "霹雳堂_胜利"})
+            elif kind == "arena":
+                # test_ARENA is a legacy scene key, not a callback story.
+                steps = [command("arena()")]
+            elif kind == "game" and value == "levelup":
+                steps = [command('minigame("levelup")')]
             else:
                 raise ValueError(f"unsupported result: {kind} ({value})")
             conditions = node.findall("condition")
@@ -156,6 +167,9 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
         if kind == "HAOGAN":
             character, amount = ("女主", parts[0]) if len(parts) == 1 else parts
             return [command(f"change_favorability({quote(character)}, {int(amount)})")]
+        if kind == "CHANGE_FEMALE_NAME":
+            require("characters", "女主")
+            return [command(f"legacy_rename_heroine({quote(value)})")]
         if kind == "GET_POINT":
             return [command(f"grant_points({quote(parts[0])}, {int(parts[1])})")]
         if kind == "MAXLEVEL":
@@ -280,7 +294,7 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
                     if kind == "battle":
                         battle(value)
                     if kind == "xiangzi":
-                        raise ValueError("storage chest UI not implemented")
+                        event["action"] = "chest()"
                     event["when"] = " && ".join(f"({condition(c)})" for c in raw.findall("condition")) or "true"
                     probability = int(raw.get("probability", "100"))
                     if probability != 100:

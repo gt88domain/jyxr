@@ -1,5 +1,44 @@
 # Browser runtime
 
+## Original management and challenge flows
+
+`selectCharacter {characterId}` changes only the viewed character; it does not
+advance time, reroll map events or check world triggers. `managedCharacter` and
+`roster` expose the selected sheet and actual placements. Equipment, skill and
+cultivation commands act on that selected active member. `allocateStat` accepts
+only the ten base attributes and real available stat points. `setPartyPlacement`
+can bench active companions or recall player-benched companions; story followers
+and story departures remain locked. Narrative departures return equipment and
+invalidate player recall, including when a character was already on the bench.
+
+`chestDeposit` / `chestWithdraw` use ChestService at the configured original inn
+or during its actual `chest()` interaction. They preserve quantities, capacity,
+quest restrictions and equipment identity; assigned manuals cannot be removed.
+`closeChest` completes the pending original map interaction.
+
+Special flows call the existing SpecialBattleService and EquipmentRefinementService.
+`combatantSelection` awaits `selectCombatants {characterIds}` and enforces slots,
+required characters, distinct IDs and stage exclusions. Arena, tower, trial and
+Zhenlong requests retain their actual request types during battle construction
+and settlement. `renameHeroine {name}` completes the original name prompt.
+
+Version-2 save wrappers additionally carry optional `companionCultivations` and
+`formationReserveIds`. Imports validate ownership, learned skills, manual copy
+counts and actual reserve placement before replacing a running session. Older
+wrappers default these fields to empty; no rewards or recall eligibility are
+invented for existing saves.
+
+```sh
+dotnet run --project src/Game.Web.Runtime/Smoke/Smoke.csproj -- --management src/Game.Web/public/data/content-package.json src/Game.Web/test-results/management-save.json
+dotnet run --project src/Game.Web.Runtime/Smoke/Smoke.csproj -- --special src/Game.Web/public/data/content-package.json src/Game.Web/test-results/management-save.json
+```
+
+The first test creates an isolated money/item fixture, then uses actual original
+training, recruitment, character services, chest transactions and combat. Special
+tests distinguish original encounter outcomes from controlled wooden-dummy
+opponents used to guarantee victory-branch coverage. These are adapter/state
+checks, not proof of original boss difficulty or a complete campaign clear.
+
 This host compiles the existing C# domain, content, application and presentation libraries for browser WebAssembly. Combat runs through `BattleService`, `BattleEngine`, and the existing AI; JavaScript renders snapshots and stores opaque save strings.
 
 ## Build and validate

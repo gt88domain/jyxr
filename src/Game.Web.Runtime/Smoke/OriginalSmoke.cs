@@ -155,7 +155,10 @@ internal static class OriginalSmoke
         Assert(ending.GetProperty("phase").GetString() == "sect", "Alternative tutorial must reach original sect UI.");
         var displayed = ending.GetProperty("map").GetRawText();
         for (var i = 0; i < 40; i++)
+        {
             Assert((await Command(new { type = "state" })).GetProperty("map").GetRawText() == displayed, "Read-only snapshots must not reroll original chance events.");
+            Assert((await Command(new { type = "selectCharacter", characterId = "主角" })).GetProperty("map").GetRawText() == displayed, "Viewing a character must not reroll map events or advance world triggers.");
+        }
         Console.WriteLine("PASS original alternative 黑老大 tutorial and stable displayed random events");
     }
 }

@@ -3,3 +3,12 @@ dist/
 public/runtime/
 public/data/
 test-results/
+
+# Media stays in an external/local bundle; only provenance and resource indexes
+# are source files. Publishers must also untrack pre-existing media explicitly.
+public/art/*
+!public/art/README.md
+!public/art/legacy/
+public/art/legacy/*
+!public/art/legacy/README.md
+!public/art/legacy/manifest.json

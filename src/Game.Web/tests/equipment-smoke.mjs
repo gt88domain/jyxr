@@ -9,7 +9,9 @@ await mkdir(output, {recursive: true});
 // This is an isolated test save, never a production reward or a direct runtime mutation.
 const fixture = JSON.parse(await readFile(`${output}exported-save.json`, 'utf8'));
 const inventory = fixture.game.inventory;
-assert.ok(!inventory.entries.some(entry => entry.itemDefinitionId === '木刀'), 'Baseline smoke save must retain its authentic equipment-free rewards');
+// Random battle loot may already contain a blade. Normalize only this copied
+// fixture, leaving the authentic baseline and its rolled items untouched.
+inventory.entries=inventory.entries.filter(entry=>entry.itemDefinitionId!=='木刀'&&entry.equipment?.equipmentDefinitionId!=='木刀');
 const entryNumber = inventory.nextEntryNumber;
 inventory.entries.push({kind: 'stack', entryNumber, itemDefinitionId: '木刀', quantity: 1});
 inventory.nextEntryNumber = entryNumber + 1;

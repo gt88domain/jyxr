@@ -1,7 +1,7 @@
 export interface Skill { id: string; name: string; level: number; mpCost: number; available?: boolean; reason?: string | null; description?: string; exp?: number; nextExp?: number; maxLevel?: number; active?: boolean; equipped?: boolean; kind?: string; castSize?: number; impactSize?: number; }
-export interface EquipmentSlot { slot: string; slotName: string; item: {id: string; name: string; instanceId: string; description: string; icon?: string | null} | null; }
+export interface EquipmentSlot { slot: string; slotName: string; item: {id: string; name: string; instanceId: string; description: string; affixes?: string[]; icon?: string | null} | null; }
 export interface Cultivation { entryNumber: number; itemId: string; itemName: string; skillId: string; skillName: string; kind: string; level: number; exp: number; nextExp: number; maxLevel: number; }
-export interface InventoryItem { icon?: string | null; id: string; entryNumber: number; name: string; count: number; quantity: number; description: string; kind: string; itemType: string; slot: string | null; canEquip: boolean; canUse: boolean; canCultivate: boolean; reason: string; }
+export interface InventoryItem { icon?: string | null; id: string; entryNumber: number; name: string; count: number; quantity: number; description: string; affixes?: string[]; kind: string; itemType: string; slot: string | null; canEquip: boolean; canUse: boolean; canCultivate: boolean; reason: string; }
 export interface BattleEvent { sequence: number; kind: string; unitId: string; amount: number | null; critical: boolean; sourceUnitId: string | null; skillId: string | null; skillName: string | null; text: string | null; }
 export interface CharacterAnimation {id: string; texture: string; atlas: string; poster: string; baseHeight: number; clips: Record<string, {frames: string[]; frameRate: number}>;}
 export interface Unit { animation?: CharacterAnimation | null; facing?: string; id: string; definitionId?: string; sprite?: string | null; portrait?: string | null; name: string; team: number; x: number; y: number; hp: number; maxHp: number; mp: number; maxMp: number; alive: boolean; }
@@ -26,9 +26,15 @@ export interface CreationState {
   preview: {portrait: string; sprite: string; silver: number; randomBonus: Record<string, number>; attributes: {id: string; label: string; value: number}[]; talents: {id: string; name: string}[]; internalSkills: {id: string; name: string; level: number}[]; items: {id: string; name: string; quantity: number; icon?: string}[]} | null;
 }
 export interface GameState {
+  combatantSelection?: {battleId: string; title: string; capacity: number; candidates: {id: string; name: string; level: number; portrait?: string; required: boolean; forbidden: boolean}[]} | null;
+  rename?: {defaultName: string} | null;
+  gameOver?: boolean;
+  managedCharacter?: GameState['hero'] | null;
+  roster?: (PartyMember & {placement: 'member' | 'follower' | 'reserve'; unspentStatPoints: number; canBench: boolean; canRejoin: boolean})[];
+  chest?: {capacity: number; stored: number; canManage: boolean; entries: ChestItem[]; inventory: ChestItem[]} | null;
   creation?: CreationState | null;
   sceneBackground?: string | null;
-  phase: 'title' | 'world' | 'battle' | 'dialogue' | 'choice' | 'shop' | 'sect';
+  phase: 'title' | 'world' | 'battle' | 'dialogue' | 'choice' | 'shop' | 'sect' | 'combatants' | 'rename' | 'gameover' | 'chest';
   sects?: {id: string; name: string; description: string; focus: string; masters: string[]; skills: string[]; traits: string[]; available: boolean}[];
   tutorial?: {id: string; description: string; locations: string[]} | null;
   adventure?: {sect?: string | null; morality: number; days: number; timeSlot: string};
@@ -36,8 +42,9 @@ export interface GameState {
   party: PartyMember[];
   objectives: Objective[];
   shop: Shop | null;
-  hero: {id: string; definitionId?: string; sprite?: string | null; portrait?: string | null; name: string; level: number; hp: number; maxHp: number; mp: number; maxMp: number; skills: Skill[]; experience?: number; nextLevelExperience?: number; attributes?: {id: string; label: string; value: number; baseValue: number}[]; talents?: {id: string; name: string; description: string}[]; externalSkills?: Skill[]; internalSkills?: Skill[]; equipment?: EquipmentSlot[]; cultivation?: Cultivation | null; equippedInternalSkillId?: string | null; canManage?: boolean};
+  hero: {id: string; definitionId?: string; sprite?: string | null; portrait?: string | null; name: string; level: number; unspentStatPoints?: number; hp: number; maxHp: number; mp: number; maxMp: number; skills: Skill[]; experience?: number; nextLevelExperience?: number; attributes?: {id: string; label: string; value: number; baseValue: number; canAllocate?: boolean}[]; talents?: {id: string; name: string; description: string}[]; externalSkills?: Skill[]; internalSkills?: Skill[]; equipment?: EquipmentSlot[]; cultivation?: Cultivation | null; equippedInternalSkillId?: string | null; canManage?: boolean};
   silver: number;
+  yuanbao?: number;
   map: {id: string; name: string; description: string; kind?: string; background?: string | null; locations: {id: string; name: string; description: string; action?: string | null; image?: string | null; timeSlots?: number}[]};
   battle: Battle | null;
   dialogue: {speaker: string; text: string; portrait?: string | null} | null;
@@ -46,6 +53,7 @@ export interface GameState {
   logs: string[];
 }
 export interface Result { ok: boolean; error?: string; state: GameState; }
+export interface ChestItem {id: string; entryNumber: number; name: string; icon?: string | null; quantity: number; canDeposit: boolean;}
 interface Exports {
   Initialize: (content: string) => string | Promise<string>;
   Dispatch: (command: string) => string | Promise<string>;
