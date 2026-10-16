@@ -78939,6 +78939,14 @@
           "picture": null,
           "events": [
             {
+              "id": "1",
+              "action": "story('tlbb.dy_万劫谷地牢1')",
+              "image": "头像.木婉清2",
+              "description": "万劫谷中一间普通的石屋",
+              "when": "(!(in_team('段誉') || in_team('华山段誉') || in_team('天关段誉'))) && (!(in_team('木婉清(蒙面)') || in_team('木婉清.蒙面') || in_team('木婉清'))) && (story_completed('tlbb.dy_木婉清身世3')) && chance(0.5)",
+              "repeatMode": "once"
+            },
+            {
               "id": "2",
               "action": "map('万劫谷')",
               "image": "town.6",
@@ -80219,6 +80227,14 @@
               "image": "头像.李青萝",
               "description": "曼陀山庄",
               "when": "((in_team('段誉') || in_team('华山段誉') || in_team('天关段誉'))) && ((in_team('阿朱'))) && ((in_team('木婉清(蒙面)') || in_team('木婉清.蒙面') || in_team('木婉清'))) && (!story_completed('tlbb.dy_木婉清.攻略成功')) && chance(0.3)",
+              "repeatMode": "once"
+            },
+            {
+              "id": "6",
+              "action": "story('tlbb.dy_琴韵小筑阿碧1')",
+              "image": "头像.阿碧",
+              "description": "姑苏慕容氏，斗转星移绝学天下闻名",
+              "when": "(story_completed('tlbb.dy_湘江阿碧')) && ((in_team('阿碧'))) && ((in_team('段誉') || in_team('华山段誉') || in_team('天关段誉'))) && ((in_team('木婉清(蒙面)') || in_team('木婉清.蒙面') || in_team('木婉清'))) && (!story_completed('tlbb.dy_木婉清.攻略成功')) && chance(0.3)",
               "repeatMode": "once"
             },
             {
@@ -93774,7 +93790,16 @@
           },
           "description": "一个唉声叹气的女孩",
           "picture": null,
-          "events": []
+          "events": [
+            {
+              "id": "1",
+              "action": "story('破庙_田青文')",
+              "image": null,
+              "description": null,
+              "when": "true && chance(0.5)",
+              "repeatMode": "once"
+            }
+          ]
         },
         {
           "id": "梅超风",
@@ -119699,6 +119724,231 @@
           ]
         },
         {
+          "name": "破庙_田青文",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "田青文",
+              "text": "哎！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "这个女子在这里唉声叹气的，也不知是为何事。"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "田青文",
+                "text": "你是谁？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "在下无心路过，不知姑娘所叹何事？",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "破庙_田青文_询问"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "【调戏】美女，一起去兜个风吧",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "破庙_田青文_调戏"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "【打劫】把你值钱的东西交出来！",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "破庙_田青文_打劫"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "【离开】没事了",
+                      "steps": [
+                        {
+                          "kind": "command",
+                          "call": "map('破庙')"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "破庙_田青文_询问",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "田青文",
+              "text": "说出来你也不懂。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "田青文",
+              "text": "（陶师哥是我的未婚夫，可我却稀里糊涂的怀上了曹师哥的孩子，这笔孽帐到底如何是好……）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "看来她也不想说什么。"
+            },
+            {
+              "kind": "jump",
+              "target": "破庙_田青文"
+            }
+          ]
+        },
+        {
+          "name": "破庙_田青文_调戏",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "change_morality(-1)"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "田青文",
+              "text": "大胆狂徒，你不知道我是什么身份么？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "美女不要生气嘛，我只是看你长得靓，心生仰慕……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "田青文",
+              "text": "（看来这家伙还是有几分眼光）你赶紧走开吧，我现在没空跟你贫嘴！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "哎哟，还害羞嘛，过来让大爷看看。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "田青文",
+              "text": "大胆！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "破庙战田青文",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "破庙_田青文_调戏胜利"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "jump",
+                    "target": "破庙_田青文_打劫_lose"
+                  }
+                ],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "破庙_田青文_调戏胜利",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "哈哈！软的不吃让你吃硬的！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "田青文",
+              "text": "呜呜呜呜……好疼……糟了，刚刚动了胎气……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "！！原来你有身孕！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "田青文",
+              "text": "都是你这个天杀的……过来要打要杀……孩子……好疼……孩子……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "她忽然变得很痛苦，怎么办？为什么这个村子里没有医生啊？！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "田青文",
+              "text": "（强运真气）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "不可！现在强运真气，孩子会保不住的！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "田青文",
+              "text": "好难过，咳咳（鲜血喷出）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "不好！这下子她自己也有生命危险了！我惹下的祸我来解决！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（必须尽快[[yellow:封住她周身大穴]]，阻止事态[[yellow:进一步恶化]]！）"
+            },
+            {
+              "kind": "command",
+              "call": "suggest('即将进入点穴模式，你需要在规定时间内达成目标。')"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_touch('田青文')"
+            },
+            {
+              "kind": "branch",
+              "cases": [
+                {
+                  "when": "has_flag('browser_touch_won')",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "破庙_田青文_TOUCH_win"
+                    }
+                  ]
+                }
+              ],
+              "fallback": [
+                {
+                  "kind": "jump",
+                  "target": "破庙_田青文_TOUCH_lose"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "破庙_田青文_TOUCH_win",
           "steps": [
             {
@@ -125814,6 +126064,56 @@
             {
               "kind": "command",
               "call": "map('大地图')"
+            }
+          ]
+        },
+        {
+          "name": "original_女主.李白.诗话",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "嘻嘻，你的诗吟诵得不错。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "李白",
+              "text": "那当然喽，你要是自己写的诗，自己来吟诵肯定也是不错的。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "自己写的诗……？哇，原来你是李白呀！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……难怪老是念些我半懂不懂的东西……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "……你就是笨笨的。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……那你要去要个签名不？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "俗。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": ""
             }
           ]
         },
@@ -140257,6 +140557,96 @@
           ]
         },
         {
+          "name": "tlbb.dy_万劫谷地牢1",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.地牢')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.天龙八部.逍遥派抒情版')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "段誉",
+              "text": "（跟木婉清被关在小屋里，身中段延庆所下的阴阳和合散，正在屋子里施展凌波微步，疯狂地跑来跑去）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "木婉清",
+              "text": "段郎，段郎，我身上好热，你抱我……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "段誉",
+              "text": "（一时间意识空白，没有闪过，木婉清扑入怀中）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "段誉",
+              "text": "[[red:（忽然觉得丹田中一股热气急速上升，霎时间血脉贲张，情欲如潮，不可遏止，但觉搂在怀里的姑娘娇喘细细，幽香阵阵，心情大乱，便往她唇上吻去。）]]"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "木婉清",
+              "text": "[[red:（唇被封住，发出一声娇喘）呜……]]"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "段誉",
+              "text": "[[red:（一斜眼间，见到木婉清海棠春睡般的脸庞、芙蓉初放般的身子，一颗心怦怦猛跳，几乎连自己心跳的声音也听见了。）]]"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "木婉清",
+              "text": "[[red:你刚才在屋里蹦跳了半天，什么乾卦、坤卦的。你就是乾卦，我就是坤卦，两人结成夫妻，日后生儿育女，再生下震卦、巽卦来……]]"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "段誉",
+              "text": "[[red:婉妹……（烛光照耀之下，只见木婉清媚眼流波，娇美不可名状。）]]"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "段誉",
+              "text": "我实在是忍不住了……"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "段誉",
+                "text": "我该怎么办？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "上吧，少年！",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "tlbb.dy_万劫谷地牢.上"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "忍住！",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "tlbb.dy_万劫谷地牢.不上"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "tlbb.dy_万劫谷地牢.上",
           "steps": [
             {
@@ -140369,6 +140759,109 @@
             {
               "kind": "command",
               "call": "map('大地图')"
+            }
+          ]
+        },
+        {
+          "name": "tlbb.dy_万劫谷地牢.不上",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.地牢')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.天龙八部.逍遥派抒情版')"
+            },
+            {
+              "kind": "command",
+              "call": "change_morality(5)"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "段誉",
+              "text": "（忽然脑中飘过一丝清明，趁势猛地一把推开木婉清，再次在小屋中施展起凌波微步）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "木婉清",
+              "text": "段郎……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "段誉",
+              "text": "（一个小时后……）"
+            },
+            {
+              "kind": "jump",
+              "target": "tlbb.dy_万劫谷地牢.不上2"
+            }
+          ]
+        },
+        {
+          "name": "tlbb.dy_万劫谷地牢.不上2",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.地牢')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.天龙八部.逍遥派抒情版')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "华赫艮",
+              "text": "嘿嘿，都说了老子挖地道的功夫是天下一绝吧。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "巴天石",
+              "text": "别在这里吹了，快把小王爷弄走……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "范晔",
+              "text": "木姑娘呢？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "巴天石",
+              "text": "你傻啊，带回去让他们继续乱来啊，留下。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "范晔",
+              "text": "嗯……你说得对，小王爷背上了，咱们闪吧。"
+            },
+            {
+              "kind": "branch",
+              "cases": [
+                {
+                  "when": "(!in_team('女主'))",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "tlbb.dy_木婉清.touch.前奏"
+                    }
+                  ]
+                },
+                {
+                  "when": "(story_completed('original_长安.家中')) && (in_team('女主'))",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "original_女主.天龙八部.万劫谷不上"
+                    }
+                  ]
+                }
+              ],
+              "fallback": [
+                {
+                  "kind": "command",
+                  "call": "map('大地图')"
+                }
+              ]
             }
           ]
         },
@@ -146874,6 +147367,155 @@
             {
               "kind": "command",
               "call": "learn_talent('段誉', '木婉清的眷恋')"
+            }
+          ]
+        },
+        {
+          "name": "tlbb.dy_琴韵小筑阿碧1",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.院内')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.天龙八部.燕子坞')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "阿碧",
+              "text": "一阵子没回来燕子坞看看了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "木婉清",
+              "text": "阿碧，当时你住在哪里呢？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "阿碧",
+              "text": "琴韵小筑啊，要去看看吗？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "段誉",
+              "text": "好啊好啊。"
+            },
+            {
+              "kind": "jump",
+              "target": "tlbb.dy_琴韵小筑阿碧2"
+            }
+          ]
+        },
+        {
+          "name": "tlbb.dy_琴韵小筑阿碧2",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.琴韵小筑')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.天龙八部.燕子坞')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "段誉",
+              "text": "此处古色生香，真是一个好地方。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "阿碧",
+              "text": "公子喜欢这里？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "段誉",
+              "text": "此处地处太湖之中，湖水广袤无边，冬赏雪，夏赏荷。又兼阿碧姑娘吴侬软语，清歌小曲。实在是骨头都酥了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "木婉清",
+              "text": "呸呸呸，你这个色鬼。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "段誉",
+              "text": "婉妹，这就叫做文化~"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "木婉清",
+              "text": "羞羞脸，你这哄女孩子的本事，我看一点也不比你爹爹差呢。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "段誉",
+              "text": "婉妹，要不你也弹个曲子吧~"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "木婉清",
+              "text": "我才不会呢。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "段誉",
+              "text": "婉妹，来，我教你。"
+            },
+            {
+              "kind": "command",
+              "call": "change_stat('木婉清', '定力', 20)"
+            },
+            {
+              "kind": "command",
+              "call": "change_stat('木婉清', '悟性', 20)"
+            },
+            {
+              "kind": "command",
+              "call": "change_stat('木婉清', '福缘', 20)"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "木婉清",
+              "text": "嘻嘻，今天真是开心。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "段誉",
+              "text": "我也是，嘻嘻。"
+            },
+            {
+              "kind": "command",
+              "call": "learn_special('阿碧', '吴侬软语')"
+            },
+            {
+              "kind": "command",
+              "call": "change_stat('阿碧', 'max_hp', 500)"
+            },
+            {
+              "kind": "command",
+              "call": "change_stat('阿碧', 'max_mp', 500)"
+            },
+            {
+              "kind": "branch",
+              "cases": [
+                {
+                  "when": "(story_completed('tlbb.dy_曼陀山庄初见王语嫣')) && (!(in_team('王语嫣')))",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "tlbb.dy_阿碧线王语嫣touch"
+                    }
+                  ]
+                }
+              ],
+              "fallback": [
+                {
+                  "kind": "command",
+                  "call": "map('大地图')"
+                }
+              ]
             }
           ]
         },
@@ -202256,6 +202898,110 @@
           ]
         },
         {
+          "name": "tlbb.dy_木婉清.touch.前奏",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "木婉清",
+              "text": "段郎！段郎！！（泪流满面）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "木婉清",
+              "text": "你不要走！不要走！！为什么！！为什么在这个时候要离开我！！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "木婉清",
+              "text": "为什么兄妹就不可以！为什么要离我而去！！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "木婉清",
+              "text": "我把什么都愿意给你，为什么你却不接受我！我不管那些人怎么讲，我好喜欢你！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "木姑娘！你还好吧！！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "木婉清",
+              "text": "我好喜欢你啊，段郎！我为了你什么都可以做啊！你不要走，不要走！（哽咽）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "木婉清",
+              "text": "你为什么要这么抛弃我，你抛弃我，你抛弃我……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "木婉清",
+              "text": "我好恨你啊！你为什么要走！你就不怕我死给你看！我好恨你，我恨你！！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "木姑娘！你冷静点！（她的情绪波动太大了，必须让她冷静下来！）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "木婉清",
+              "text": "（脸色涨得通红）我好热，好热。好难受，好难受……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "木婉清",
+              "text": "（眼中春色流波，美艳不可方物）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "木姑娘！（糟了，必须想办法替她解毒才可以！）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "木婉清",
+              "text": "我……段誉……（昏了过去）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "形势紧急……木姑娘，得罪了！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（必须立刻替木姑娘[[yellow:封住周身大穴]]才可以！木姑娘，得罪了！）"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_touch('木婉清')"
+            },
+            {
+              "kind": "branch",
+              "cases": [
+                {
+                  "when": "has_flag('browser_touch_won')",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "tlbb.dy_木婉清.touch.成功"
+                    }
+                  ]
+                }
+              ],
+              "fallback": [
+                {
+                  "kind": "jump",
+                  "target": "tlbb.dy_木婉清.touch.不成功"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "tlbb.dy_木婉清.touch.成功",
           "steps": [
             {
@@ -203211,6 +203957,226 @@
         {
           "name": "tlbb.dy_听香水榭阿碧王语嫣",
           "steps": []
+        },
+        {
+          "name": "tlbb.dy_阿碧线王语嫣touch",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "阿碧",
+              "text": "公子，此处事情已了，我们走吧。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "等等，你看那边的求救信号！曼陀山庄里，好像有些变故。"
+            },
+            {
+              "kind": "jump",
+              "target": "tlbb.dy_阿碧线王语嫣touch2"
+            }
+          ]
+        },
+        {
+          "name": "tlbb.dy_阿碧线王语嫣touch2",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.院内')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.紧张感')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "曼陀山庄神秘人",
+              "text": "不老长春的秘密到底在哪里，给我说！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "李青萝",
+              "text": "我……不知……道……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "王语嫣",
+              "text": "母亲！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "李青萝",
+              "text": "这是……什……么毒，为……什么我……身……上一点……力……气……都没有了……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "曼陀山庄神秘人",
+              "text": "哈哈哈哈！本来你们母女二人武功粗浅，用不着这悲酥清风。不过嘛，为了让兄弟们还能有点乐子，嘿嘿……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "李青萝",
+              "text": "你们……敢……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "曼陀山庄神秘人",
+              "text": "有什么不敢？哈哈哈哈！看你们吐不吐出不老长春的秘密！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "王语嫣",
+              "text": "啊啊！救命啊！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "王姑娘！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "touch王语嫣_战斗",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "tlbb.dy_阿碧线王语嫣touch3"
+                  }
+                ],
+                "lose": [],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "tlbb.dy_阿碧线王语嫣touch3",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.院内')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.天龙八部.逍遥派抒情版')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "阿碧",
+              "text": "公子，敌人虽然击退了。但是小姐和夫人中的毒怎么办？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "这悲酥清风毒性极强，若不及时解毒只怕要伤及五脏六腑！我来试试吧。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "李青萝",
+              "text": "小贼！我……不要……不要……你解毒！我不相信任何男人！！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……看来只能先替王姑娘解毒了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "王语嫣",
+              "text": "……公……公子，语嫣……都……拜托……了……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（必须封住王姑娘[[yellow:周身大穴]]，阻止[[yellow:毒气流转]]！）"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_touch('王语嫣')"
+            },
+            {
+              "kind": "branch",
+              "cases": [
+                {
+                  "when": "has_flag('browser_touch_won')",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "tlbb.dy_阿碧线王语嫣.touch.成功"
+                    }
+                  ]
+                }
+              ],
+              "fallback": [
+                {
+                  "kind": "jump",
+                  "target": "tlbb.dy_阿碧线王语嫣.touch.不成功"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "tlbb.dy_阿碧线王语嫣.touch.成功",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.院内')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.天龙八部.逍遥派抒情版')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "好了，毒终于解了……王姑娘，得罪了……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "王语嫣",
+              "text": "……没有……语嫣很感激……公子……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "李青萝",
+              "text": "啊……好难受……毒好像……扩散……了……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "王语嫣",
+              "text": "母亲！公子，求你救救母亲吧！！语嫣给你做牛做马了！！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（必须按照刚才救治王姑娘的方法，封住王夫人的[[yellow:周身大穴]]，阻止[[yellow:毒气流转]]，救人水火之中，不能犹豫！）"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_touch('李青萝')"
+            },
+            {
+              "kind": "branch",
+              "cases": [
+                {
+                  "when": "has_flag('browser_touch_won')",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "tlbb.dy_阿碧线李青萝.touch.成功"
+                    }
+                  ]
+                }
+              ],
+              "fallback": [
+                {
+                  "kind": "jump",
+                  "target": "tlbb.dy_阿碧线李青萝.touch.不成功"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "tlbb.dy_阿碧线李青萝.touch.成功",
@@ -218160,6 +219126,99 @@
       }
     ],
     "chestMapId": "松鼠旅馆",
+    "touchGames": {
+      "测试": {
+        "background": "touch.test",
+        "zones": [
+          {
+            "minX": -8,
+            "maxX": 131,
+            "minY": -89,
+            "maxY": 338
+          },
+          {
+            "minX": -247,
+            "maxX": 203,
+            "minY": -83,
+            "maxY": -26
+          },
+          {
+            "minX": -49,
+            "maxX": 186,
+            "minY": 6,
+            "maxY": 150
+          }
+        ]
+      },
+      "田青文": {
+        "background": "touch.tianqingwen",
+        "zones": [
+          {
+            "minX": -145,
+            "maxX": 75,
+            "minY": -16,
+            "maxY": 184
+          },
+          {
+            "minX": -28,
+            "maxX": 165,
+            "minY": -293,
+            "maxY": -74
+          }
+        ]
+      },
+      "王语嫣": {
+        "background": "touch.wangyuyan",
+        "zones": [
+          {
+            "minX": -116,
+            "maxX": 72,
+            "minY": -274,
+            "maxY": 224
+          },
+          {
+            "minX": -158,
+            "maxX": 218,
+            "minY": -267,
+            "maxY": -72
+          }
+        ]
+      },
+      "木婉清": {
+        "background": "touch.muwanqing",
+        "zones": [
+          {
+            "minX": 23,
+            "maxX": 114,
+            "minY": -236,
+            "maxY": 304
+          },
+          {
+            "minX": -29,
+            "maxX": 187,
+            "minY": -97,
+            "maxY": 147
+          }
+        ]
+      },
+      "李青萝": {
+        "background": "touch.liqingluo",
+        "zones": [
+          {
+            "minX": -60,
+            "maxX": 104,
+            "minY": -274,
+            "maxY": 255
+          },
+          {
+            "minX": -140,
+            "maxX": 180,
+            "minY": -277,
+            "maxY": -75
+          }
+        ]
+      }
+    },
     "achievements": [
       {
         "id": "一阳指禅",
@@ -218831,11 +219890,11 @@
       }
     ],
     "migration": {
-      "stories": 1866,
+      "stories": 1881,
       "totalStories": 1887,
       "maps": 162,
       "totalMaps": 162,
-      "deferredStories": 21
+      "deferredStories": 6
     },
     "artSource": {
       "kind": "legacy",
