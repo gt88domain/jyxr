@@ -133,7 +133,36 @@ CheckCommonTalent("猎人", false, c => {c.AttackLow*=1.5;c.AttackHigh*=1.5;}, t
 CheckCommonTalent("猎人", false, _ => {}, targetGender:CharacterGender.Male);
 CheckCommonBuff("攻击弱化", false, c => {c.AttackLow*=.7;c.AttackHigh*=.7;});
 CheckCommonBuff("防御强化", true, c => c.Defence+=80);
+foreach(var sample in new (bool SourceGrass,bool TargetGrass,int SourceHp,int TargetHp,double Random)[]{
+    (true,false,500,1000,.5),(true,false,501,1000,.5),(true,false,200,1000,.5),
+    (false,false,500,1000,.5),(true,false,1000,500,.5),(false,true,1000,500,.5),
+    (true,true,500,500,.5),(true,false,500,1000,.04),(true,false,1000,501,.5),(true,true,1000,200,.5)})
+    CheckOutsiderCombination(sample.SourceGrass,sample.TargetGrass,sample.SourceHp,sample.TargetHp,sample.Random);
 Console.WriteLine($"PASS {count} selected modern-core / legacy-source checks. This does not establish full game parity.");
+
+void CheckOutsiderCombination(bool sourceGrass,bool targetGrass,int sourceHp,int targetHp,double randomValue)
+{
+    var fighter=FreshHero("outsider_source");var defender=FreshHero("outsider_target");
+    if(sourceGrass)fighter.LearnTalent(content.GetTalent("草头百姓"));
+    if(targetGrass)defender.LearnTalent(content.GetTalent("草头百姓"));
+    fighter.BaseStats[StatType.MaxHp]=1000;defender.BaseStats[StatType.MaxHp]=1000;
+    fighter.RebuildSnapshot();defender.RebuildSnapshot();
+    var attacker=new BattleUnit("attacker",fighter,1,new GridPosition(0,0),hp:sourceHp);
+    var target=new BattleUnit("target",defender,2,new GridPosition(1,0),hp:targetHp);
+    var expectedCalculator=new BattleDamageCalculator(new FixedRandom(randomValue));
+    var expected=expectedCalculator.CreateSkillDamageContext(new BattleDamageContext(attacker,target,fighter.ExternalSkills.Single()));
+    if(sourceHp<=(sourceGrass?500:200)){expected.AttackLow*=2;expected.AttackHigh*=2;expected.CriticalChance*=2;}
+    // AttackLogic.cs1462 reads the source's 草头百姓, not the defender's.
+    if(targetHp<=(sourceGrass?500:200))expected.Defence*=1.5;
+    var expectedDamage=expectedCalculator.CalculateSkillDamage(expected);
+    var state=new BattleState(new BattleGrid(3,2),[attacker,target]);var runner=Engine(true,randomValue);
+    attacker.SetActionGauge(100);if(!runner.BeginAction(state,attacker.Id).Success)throw new InvalidOperationException("Outsider combo could not begin action.");
+    var result=runner.CastSkill(state,attacker.Id,fighter.ExternalSkills.Single(),target.Position);
+    if(!result.Success)throw new InvalidOperationException("Outsider combo cast failed.");
+    var actual=result.Messages.OfType<BattleFact>().Single(f=>f.Kind==BattleFactKind.Damaged&&f.UnitId==target.Id).Damage!;
+    Check(actual.Amount==expectedDamage.Amount&&actual.IsCritical==expectedDamage.IsCritical,
+        $"草头百姓/异世人 actual source={sourceGrass}, target={targetGrass}, HP={sourceHp}/{targetHp}: damage {actual.Amount}, critical {actual.IsCritical}; legacy source-side defense gate");
+}
 
 void CheckCommonTalent(string name,bool targetSide,Action<BattleDamageCalculationContext> expectation,
     CharacterGender sourceGender=CharacterGender.Male,CharacterGender targetGender=CharacterGender.Male,double randomValue=.5)

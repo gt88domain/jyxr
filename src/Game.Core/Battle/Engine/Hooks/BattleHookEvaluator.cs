@@ -20,7 +20,7 @@ internal static class BattleHookEvaluator
             ContextBuffNegativeBattleHookConditionDefinition => context.Buff?.Definition.IsDebuff == true,
             ContextUnitHpRatioBattleHookConditionDefinition hpRatio => IsContextUnitHpRatio(context, hpRatio),
             ContextUnitEffectiveTalentBattleHookConditionDefinition talent =>
-                talent.TalentIds.Any(context.Unit.Character.HasEffectiveTalent),
+                HasContextUnitTalent(context, talent),
             ContextUnitEquippedInternalSkillBattleHookConditionDefinition internalSkill =>
                 internalSkill.InternalSkillIds.Any(id => string.Equals(
                     id,
@@ -95,6 +95,18 @@ internal static class BattleHookEvaluator
             _ => throw new ArgumentOutOfRangeException(nameof(condition.Role), condition.Role, null),
         };
         return unit is not null && condition.Genders.Contains(unit.Character.Gender);
+    }
+
+    private static bool HasContextUnitTalent(BattleHookContext context, ContextUnitEffectiveTalentBattleHookConditionDefinition condition)
+    {
+        var unit = condition.Role switch
+        {
+            null => context.Unit,
+            BattleHookContextUnitRole.Source => context.Source,
+            BattleHookContextUnitRole.Target => context.Target,
+            _ => throw new ArgumentOutOfRangeException(nameof(condition.Role), condition.Role, null),
+        };
+        return unit is not null && condition.TalentIds.Any(unit.Character.HasEffectiveTalent);
     }
 
     private static bool IsContextUnitHpRatio(

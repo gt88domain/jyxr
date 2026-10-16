@@ -165,7 +165,12 @@ public sealed record ContextUnitHpRatioBattleHookConditionDefinition(
 }
 
 public sealed record ContextUnitEffectiveTalentBattleHookConditionDefinition(
-    IReadOnlyList<string> TalentIds) : BattleHookConditionDefinition;
+    IReadOnlyList<string> TalentIds) : BattleHookConditionDefinition
+{
+    // Omitted means the hook owner, preserving existing content behavior.
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public BattleHookContextUnitRole? Role { get; init; }
+}
 
 public sealed record ContextUnitEquippedInternalSkillBattleHookConditionDefinition(
     IReadOnlyList<string> InternalSkillIds) : BattleHookConditionDefinition;

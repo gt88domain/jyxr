@@ -770,12 +770,35 @@ public sealed class ContentLoadingTests
             {
                 var effectiveTalent = Assert.IsType<ContextUnitEffectiveTalentBattleHookConditionDefinition>(condition);
                 Assert.Equal(["caotou"], effectiveTalent.TalentIds);
+                Assert.Null(effectiveTalent.Role);
             },
             condition =>
             {
                 var skillWeaponType = Assert.IsType<ContextSkillWeaponTypeBattleHookConditionDefinition>(condition);
                 Assert.Equal([WeaponType.Jianfa], skillWeaponType.WeaponTypes);
             });
+    }
+
+    [Theory]
+    [InlineData(null)]
+    [InlineData(BattleHookContextUnitRole.Source)]
+    [InlineData(BattleHookContextUnitRole.Target)]
+    public void EffectiveTalentCondition_JsonPreservesExplicitRoleAndLegacyDefault(BattleHookContextUnitRole? role)
+    {
+        BattleHookConditionDefinition condition = new ContextUnitEffectiveTalentBattleHookConditionDefinition(["caotou"])
+        {
+            Role = role,
+        };
+        var options = new JsonSerializerOptions(GameJson.Default) { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
+        var json = JsonSerializer.Serialize(condition, options);
+        using var document = JsonDocument.Parse(json);
+        Assert.Equal(role.HasValue, document.RootElement.TryGetProperty("role", out _));
+        if (role.HasValue)
+            Assert.Equal(role.Value.ToString().ToLowerInvariant(), document.RootElement.GetProperty("role").GetString());
+        var restored = Assert.IsType<ContextUnitEffectiveTalentBattleHookConditionDefinition>(
+            JsonSerializer.Deserialize<BattleHookConditionDefinition>(json, options));
+        Assert.Equal(role, restored.Role);
+        Assert.Equal(["caotou"], restored.TalentIds);
     }
 
     [Fact]

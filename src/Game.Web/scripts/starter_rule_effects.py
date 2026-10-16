@@ -39,14 +39,17 @@ def apply_starter_rule_effects(package: dict) -> dict:
         {"type": "stat_modifier", "stat": "movement", "value": {"op": "add", "delta": -1}},
     ]
 
-    # AttackLogic, lines 1444–1475: this chapter's protagonist has 异世人,
-    # without 草头百姓. Keep that exact 20% low-health attack/defence behavior.
-    # The 50% defence branch in legacy reads the attacker's 草头百姓 talent;
-    # it is deliberately not generalized here to a different semantic rule.
+    # AttackLogic 1444–1470: base 20%; 草头百姓 extends the attack window to
+    # 50%. The defender branch deliberately checks the attacker's 草头百姓.
+    # Split the ranges to prevent multiplying twice below the base threshold.
     low_health = [{"type": "context_unit_hp_ratio", "maxInclusive": 0.2}]
+    extended_health = [{"type": "context_unit_hp_ratio", "minExclusive": 0.2, "maxInclusive": 0.5},
+                       {"type": "context_unit_effective_talent", "role": "source", "talentIds": ["草头百姓"]}]
     _definition(package, "talents", "异世人")["affixes"] = [
         _damage_hook("source", [_multiply("source_attack", 2.0), _multiply("critical_chance", 2.0)], low_health),
         _damage_hook("target", [_multiply("target_defence", 1.5)], low_health),
+        _damage_hook("source", [_multiply("source_attack", 2.0), _multiply("critical_chance", 2.0)], extended_health),
+        _damage_hook("target", [_multiply("target_defence", 1.5)], extended_health),
     ]
 
     # AttackLogic, lines 2058–2063: ×(1 + level/10), NOT ×(2 + level/10).
@@ -69,8 +72,8 @@ def apply_starter_rule_effects(package: dict) -> dict:
         "profile": "jyx-first-encounter",
         "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
         "files": ["JyGame/BattleSprite.cs", "JyGame/AttackLogic.cs"],
-        "talents": ["瘸子", "异世人"],
+        "talents": ["瘸子", "异世人", "草头百姓（异世人联动）"],
         "buffs": ["攻击强化"],
         "specialSkills": ["打鸡血"],
-        "deferred": ["草头百姓50%血线分支", "其余未显式装配的天赋及Buff效果"],
+        "deferred": ["其余未显式装配的天赋及Buff效果"],
     }

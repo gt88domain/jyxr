@@ -34,7 +34,7 @@ dotnet run --project src/Game.Web.Runtime/Smoke/Parity/Parity.csproj -- /workspa
 | 战后经验和银两 | 当前首战结算最低每人 5 经验、10 银两，与旧 `BonusLogic.CalcExp/CalcMoney` 的最低值一致。 |
 | 普通模式用药冷却 | 现代 `BattleEngine.Actions.cs` 与旧 `BattleField.OnItemResultRun` 均不在 normal 模式增加用药冷却。此项为源码核对，尚未单独执行多目标药品对照。 |
 
-验证程序完成 47 个针对性检查，包含实际施法、伤害、暴击、Buff、怒气与成长结果；
+验证程序完成 57 个针对性检查，包含实际施法、伤害、暴击、Buff、怒气与成长结果；
 同时打印默认现代策略的差异。它不是“全部玩法已复原”的承诺。
 浏览器完整流程、存读档和设备尺寸由另外的 Smoke/UI 检查负责。
 
@@ -50,7 +50,7 @@ dotnet run --project src/Game.Web.Runtime/Smoke/Parity/Parity.csproj -- /workspa
 | 项目 | 已补齐与验证 | 旧源码位置 |
 | --- | --- | --- |
 | 木人“瘸子” | `movement -1`，实际移动力从 2 恢复为 1。 | `BattleSprite.cs:261` |
-| 主角“异世人” | HP≤20% 时攻击区间×2、暴击概率×2、防御×1.5；实测 40/200 触发、41/200 不触发，并验证防御与暴击。 | `AttackLogic.cs:1444`、`:1459` |
+| 主角“异世人” | 基础 HP≤20% 时攻击区间×2、暴击概率×2、防御×1.5；草头百姓使攻击侧扩大到 HP≤50%。保留旧防御分支读取攻击者草头百姓的行为。 | `AttackLogic.cs:1444`、`:1459` |
 | 攻击强化 | `source_attack` 完整乘数为 `1 + Buff等级/10`，3 级实际伤害约 1.3 倍，包含整数取整验证。 | `AttackLogic.cs:2058` |
 | 打鸡血 | 保留 XML 的 100 MP 消耗、3级5轮攻击强化，并补齐 +2 怒气；显式配置 Support 意图，确保普通难度可对自身施加正面 Buff。 | `AttackLogic.cs:1341`、`special_skills.xml` |
 | 外功/内功使用经验 | 金庸包显式启用 `BrowserLegacyRules`：模板测试悟性30，普通外功31/内功62；武学奇才外功62/内功93。正式新游戏按问答后实际悟性计算。实际施法后检查总经验，避免二次天赋加倍。 | `BattleField.cs:1491`、`:1496`；`SkillInstance.cs:272`；`InternalSkillInstance.cs:314` |
@@ -58,6 +58,11 @@ dotnet run --project src/Game.Web.Runtime/Smoke/Parity/Parity.csproj -- /workspa
 成长规则由 `BattleEngine` 的可选 `skillUseExperienceResolver` 注入，先归一化招式到其
 外功/内功，再解析最终经验；未注入时继续使用原有现代成长策略。
 验证同时覆盖默认策略 62/62（武学奇才124/124）与金庸策略，原 Godot 宿主无需改用新配置。
+
+草头百姓联动另有 10 项实际施法核对：500/1000 与 501/1000 的边界、攻击及暴击、
+攻击者与防御者分别有无草头百姓，以及 20% 以下不重复叠乘。防御侧读取攻击者天赋
+是所选旧源码的实际行为，未擅自改成读取防御者。旧内容未指定判断角色时，仍按 Hook
+拥有者判断；指定 source/target 的条件可跨角色读取天赋。
 
 ## 新增常用规则
 
@@ -77,7 +82,6 @@ dotnet run --project src/Game.Web.Runtime/Smoke/Parity/Parity.csproj -- /workspa
 | 项目 | 已知差异 | 对新手章的影响 |
 | --- | --- | --- |
 | 天赋数据装配 | 原转换器仅提取天赋名称、说明、点数，不会把旧硬编码自动转成现代 Affix/Hook。初次核对时 157 个天赋都只有元数据。 | 高：必须逐项为本章实际使用的天赋配置效果，不能把条目数当作实现数。 |
-| 草头百姓组合 | 旧攻击侧将异世人血线提高至50%；旧防御分支却读攻击者是否有草头百姓。本次只补主角实际拥有的20%血线基础效果。 | 中：后续开放该天赋时，需要明确版本与是否保留旧分支行为，再添加对照。 |
 | 其余 Buff 元数据 | Buff 名称、说明、正负分类不等于属性、命中、回合和特殊效果都已装配。Core 内有部分内置状态判断，其余由数据 Affix/Hook 提供。 | 高：本章新出现的中毒等效果需要逐项跑实际效果测试。 |
 | 同 tick 行动顺序 | 旧 `BattleField.BattleTimeRun` 按 `_sprites` 顺序入队，并把 SP 上限夹为 100；现代按行动条降序、速度降序、ID 排序，行动后减 100 可保留溢出。 | 中：多人战同 tick 与高速单位连续行动可能不同，首战同速首次我方先动不能证明一般情况。 |
 | AI | 旧 `BattleAI.GetAIResult` 可被 Lua 替代，C# 低血有 50% 概率逃开休息。现代按伤害、击杀、友伤、恢复及距离评分。 | 中：同一合法局面不保证做相同决策；自动模式应称现代自动战斗。 |
