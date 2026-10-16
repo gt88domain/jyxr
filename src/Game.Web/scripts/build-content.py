@@ -284,11 +284,15 @@ def build(output: Path) -> None:
     write_json(output / "legacy-art-coverage.json", report["legacyArt"])
     from legacy_creation import apply_legacy_creation
     report["legacyCreation"] = apply_legacy_creation(package)
+    from companion_catalog import build_catalog
+    companions = build_catalog(package, SOURCE, original_audit)
+    write_json(output / "companion-catalog.json", companions)
+    report["companionCatalog"] = companions["counts"]
     from legacy_rule_audit import audit_rules
     rule_audit = audit_rules(package, REPO)
     write_json(output / "original-battle-rule-audit.json", rule_audit)
     from restoration_progress import build_progress
-    write_json(output / "restoration-progress.json", build_progress(original_audit, rule_audit))
+    write_json(output / "restoration-progress.json", build_progress(original_audit, rule_audit, package, companions))
     report["battleRuleConfiguration"] = {key: {"total": value["total"], "states": value["states"]} for key, value in rule_audit["sections"].items()}
     write_json(output / "original-migration-audit.json", original_audit)
     write_json(output / "original-story-source.json", {

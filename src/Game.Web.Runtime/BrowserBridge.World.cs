@@ -8,6 +8,14 @@ namespace Game.Web.Runtime;
 
 public static partial class BrowserBridge
 {
+    private static object CompanionJournalView()
+    {
+        var tracked = (_pack["companionRecruitmentStories"]?.AsArray() ?? [])
+            .Select(node => node!.GetValue<string>()).ToHashSet(StringComparer.Ordinal);
+        return new { completedRecruitmentStories = _session?.State.Story.CompletedStoryIds
+            .Where(tracked.Contains).Order(StringComparer.Ordinal).ToArray() ?? [] };
+    }
+
     private static readonly Queue<string> ExpiredStories = new();
     private static MapEnterResult? _mapView;
     private static Game.Core.Model.GameState? _mapViewState;

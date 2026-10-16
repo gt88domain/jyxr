@@ -1,5 +1,7 @@
 # Native runtime checks
 
+`--companions CONTENT MANAGEMENT_SAVE OUTPUT_SAVE` checks the real 华山后山 Linghu entry at morality 34/35/64/65, using a copied fixture and a real `change_morality` story command. It verifies rejection and recruitment evidence, repeated read-only snapshots, source heroine JOIN from follower to member, and export/import. These are isolated boundary checks, not natural acquisition of every companion. Browser `test:companions` covers all-form browsing, ordered conditions, variants, real normal-party and reserve/follower/member displays, read-only state, mobile layout and the eight feature estimates. `test:companion-source` verifies all 65 source role forms, 80 JOIN/FOLLOW instructions and 155 reference paths directly against pinned XML.
+
 Run from the repository root with .NET 10. The native host links the same browser bridge and application services.
 
 Normal gameplay regression, in sequence (output directory is caller-selected and not committed):

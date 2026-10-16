@@ -21,6 +21,7 @@
     <Compile Include="StoryDefeatSmoke.cs" />
     <Compile Include="ReferenceRepairSmoke.cs" />
     <Compile Include="AdvancedUiFixture.cs" />
+    <Compile Include="CompanionSmoke.cs" />
     <Compile Include="../BrowserBridge.cs" Link="BrowserBridge.cs" />
     <Compile Include="../BrowserBridge.Systems.cs" Link="BrowserBridge.Systems.cs" />
     <Compile Include="../BrowserBridge.Packs.cs" Link="BrowserBridge.Packs.cs" />

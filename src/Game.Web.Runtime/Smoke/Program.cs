@@ -1,6 +1,12 @@
 using System.Text.Json;
 using Game.Web.Runtime;
 
+if (args.FirstOrDefault() == "--companions")
+{
+    await CompanionSmoke.Run(args[1],args[2],args[3]);
+    return;
+}
+
 if (args.FirstOrDefault() == "--advanced-ui")
 {
     await AdvancedUiFixture.Create(args[1], args[2], args[3]);

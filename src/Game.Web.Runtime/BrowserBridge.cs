@@ -513,7 +513,7 @@ public static partial class BrowserBridge
                     ending = _host.Ending,
                     combatantSelection = CombatantsSnapshot(), rename = _host.RenameDefault is { } defaultName ? new { defaultName } : null, gameOver = _host.GameOver,
                     managedCharacter = _session is null ? null : CharacterSheet(Managed), chest = ChestSnapshot(),
-                    roster = RosterView(),
+                    roster = RosterView(), companionJournal = CompanionJournalView(),
                     sects = SectView(), tutorial = TutorialView(),
                     adventure = _session is null ? null : new { round = _session.State.Adventure.Round, difficulty = _session.State.Adventure.Difficulty.ToString().ToLowerInvariant(), sect = _session.State.Adventure.SectId, morality = _session.State.Adventure.Morality, days = _session.State.Clock.TotalDays, timeSlot = _session.State.Clock.TimeSlot.ToChineseBranch() },
                     profile = _session is null ? null : new { completionCount = _session.Profile.CompletionCount, highestRound = _session.Profile.HighestRound, deathCount = _session.Profile.DeathCount },
