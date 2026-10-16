@@ -5,9 +5,9 @@
     "talents": {
       "total": 158,
       "states": {
-        "metadata-only": 107,
-        "configured": 47,
-        "partial": 3,
+        "metadata-only": 93,
+        "configured": 57,
+        "partial": 7,
         "identity-only": 1
       },
       "entries": [
@@ -83,7 +83,7 @@
         },
         {
           "id": "俗家弟子",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1854"
           ],
@@ -310,7 +310,7 @@
         },
         {
           "id": "大小姐",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1770",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1791",
@@ -360,7 +360,7 @@
         },
         {
           "id": "夫妻同心",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1472",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1476",
@@ -411,7 +411,7 @@
         },
         {
           "id": "奋战",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1521"
           ],
@@ -442,7 +442,7 @@
         },
         {
           "id": "孤独求败",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:650",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1574"
@@ -506,12 +506,12 @@
         },
         {
           "id": "左右互搏",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1221"
           ],
           "remaining": [
-            "multiple strikes are not configured"
+            "talent has combined extra strikes; buff spelling differs from source 左右互博 and remains unmodified"
           ],
           "fullBehaviorVerified": false
         },
@@ -526,11 +526,13 @@
         },
         {
           "id": "幽居",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1211"
           ],
-          "remaining": [],
+          "remaining": [
+            "combined positive-damage extra strikes tested; original negative damage and special-hit timing remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -1084,11 +1086,13 @@
         },
         {
           "id": "素心神剑",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1216"
           ],
-          "remaining": [],
+          "remaining": [
+            "combined positive-damage extra strikes tested; original negative damage and special-hit timing remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -1102,7 +1106,7 @@
         },
         {
           "id": "自我主义",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1770",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1773",
@@ -1114,7 +1118,7 @@
         },
         {
           "id": "臭叫花",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1824"
           ],
@@ -1151,7 +1155,7 @@
         },
         {
           "id": "芷若的眷念",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1818"
           ],
@@ -1302,7 +1306,7 @@
         },
         {
           "id": "金钟罩",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1628"
           ],
@@ -1365,18 +1369,20 @@
         },
         {
           "id": "阉人",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:550",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:644",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1633"
           ],
-          "remaining": [],
+          "remaining": [
+            "single-talent guaranteed critical configured; ordered interaction with later critical modifiers remains"
+          ],
           "fullBehaviorVerified": false
         },
         {
           "id": "阴毒",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1909"
           ],
@@ -1514,8 +1520,8 @@
       "states": {
         "engine-behavior": 16,
         "configured": 6,
-        "metadata-only": 10,
-        "partial": 1
+        "metadata-only": 9,
+        "partial": 2
       },
       "entries": [
         {
@@ -1635,7 +1641,7 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1221"
           ],
           "remaining": [
-            "multiple strikes are not configured"
+            "talent has combined extra strikes; buff spelling differs from source 左右互博 and remains unmodified"
           ],
           "fullBehaviorVerified": false
         },
@@ -1764,14 +1770,14 @@
         },
         {
           "id": "神速攻击",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:370",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:372",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1233"
           ],
           "remaining": [
-            "multiple strikes are not configured"
+            "combined positive-damage extra strikes tested; negative damage and original post-buff timing remain"
           ],
           "fullBehaviorVerified": false
         },
@@ -1825,7 +1831,7 @@
             "jyx-legacy-dll/JyGame/BattleField.cs:1001"
           ],
           "remaining": [
-            "extra-strike probability is not configured"
+            "combined positive-damage extra strikes tested; negative damage and original post-buff timing remain"
           ],
           "fullBehaviorVerified": false
         },
@@ -1950,7 +1956,7 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1348"
           ],
           "remaining": [
-            "醉酒: extra-strike probability is not configured"
+            "醉酒: combined positive-damage extra strikes tested; negative damage and original post-buff timing remain"
           ],
           "fullBehaviorVerified": false
         },
@@ -2127,8 +2133,8 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1384"
           ],
           "remaining": [
-            "attack/defence buffs configured; triple-strike behavior remains",
-            "神速攻击: multiple strikes are not configured"
+            "team buffs and combined extra strikes configured; negative damage and original post-buff timing remain",
+            "神速攻击: combined positive-damage extra strikes tested; negative damage and original post-buff timing remain"
           ],
           "fullBehaviorVerified": false
         },

@@ -116186,7 +116186,72 @@
       "id": "神速攻击",
       "name": "神速攻击",
       "description": "一定概率出三次攻击",
-      "isDebuff": false
+      "isDebuff": false,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "conditions": [
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "幽居",
+                "素心神剑",
+                "左右互搏"
+              ],
+              "absent": true
+            },
+            {
+              "type": "context_unit_buff",
+              "buffIds": [
+                "醉酒"
+              ],
+              "absent": true
+            }
+          ],
+          "effects": [
+            {
+              "type": "extra_strike",
+              "target": {
+                "type": "target"
+              },
+              "damageFactors": [
+                0.6,
+                0.3
+              ],
+              "runDamageHooks": false,
+              "talentContributions": [
+                {
+                  "talentId": "幽居",
+                  "chancePerLevel": 0.005,
+                  "singlePrecision": true
+                },
+                {
+                  "talentId": "素心神剑",
+                  "randomMaximum": 0.2
+                },
+                {
+                  "talentId": "左右互搏",
+                  "randomMaximum": 0.6
+                }
+              ],
+              "buffContributions": [
+                {
+                  "buffId": "醉酒",
+                  "maximumStrikes": 1,
+                  "singlePrecision": true
+                },
+                {
+                  "buffId": "神速攻击",
+                  "maximumStrikes": 2,
+                  "singlePrecision": true,
+                  "stopAfterMatch": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "缓速",
@@ -116232,6 +116297,62 @@
                 "rage": 6,
                 "skipReason": "醉酒"
               }
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "conditions": [
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "幽居",
+                "素心神剑",
+                "左右互搏"
+              ],
+              "absent": true
+            }
+          ],
+          "effects": [
+            {
+              "type": "extra_strike",
+              "target": {
+                "type": "target"
+              },
+              "damageFactors": [
+                0.6,
+                0.3
+              ],
+              "runDamageHooks": false,
+              "talentContributions": [
+                {
+                  "talentId": "幽居",
+                  "chancePerLevel": 0.005,
+                  "singlePrecision": true
+                },
+                {
+                  "talentId": "素心神剑",
+                  "randomMaximum": 0.2
+                },
+                {
+                  "talentId": "左右互搏",
+                  "randomMaximum": 0.6
+                }
+              ],
+              "buffContributions": [
+                {
+                  "buffId": "醉酒",
+                  "maximumStrikes": 1,
+                  "singlePrecision": true
+                },
+                {
+                  "buffId": "神速攻击",
+                  "maximumStrikes": 2,
+                  "singlePrecision": true,
+                  "stopAfterMatch": true
+                }
+              ]
             }
           ]
         }
@@ -116424,7 +116545,32 @@
       "id": "俗家弟子",
       "name": "俗家弟子",
       "point": 5,
-      "description": "随着等级的提高，有一定概率忽略对方一定数额防御力。"
+      "description": "随着等级的提高，有一定概率忽略对方一定数额防御力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "chance",
+              "value": 0.3
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "target_defence",
+              "op": "more",
+              "delta": 0.8,
+              "deltaPerUnitLevel": -0.005
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "倚天屠龙",
@@ -116712,7 +116858,58 @@
       "id": "大小姐",
       "name": "大小姐",
       "point": 5,
-      "description": "任性的大小姐，大家都必须围着她团团转。降低所有场上队友能力，提高自己能力，俗称坑队友。坑得越多，自己越强。"
+      "description": "任性的大小姐，大家都必须围着她团团转。降低所有场上队友能力，提高自己能力，俗称坑队友。坑得越多，自己越强。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "自我主义"
+              ],
+              "absent": true
+            }
+          ],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "team_count_attack_bonus",
+              "parameters": {
+                "factorPerUnit": 0.1,
+                "maximumUnits": 10,
+                "includeSelf": true,
+                "singlePrecision": true,
+                "field": "source_attack"
+              }
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "OnBattleStart",
+          "conditions": [
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "自我主义"
+              ],
+              "absent": true
+            }
+          ],
+          "effects": [
+            {
+              "type": "grant_scoped_battle_effect",
+              "effectId": "original_self_interest_team_penalty"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "大理世家",
@@ -116825,7 +117022,47 @@
       "id": "夫妻同心",
       "name": "夫妻同心",
       "point": 0,
-      "description": "场上若己方有一男一女同时拥有【夫妻同心】天赋，则两人攻防提高随机20%到100%。"
+      "description": "场上若己方有一男一女同时拥有【夫妻同心】天赋，则两人攻防提高随机20%到100%。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "couple_unity_attack",
+              "parameters": {
+                "talentId": "夫妻同心"
+              }
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            }
+          ],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "couple_unity_defence",
+              "parameters": {
+                "talentId": "夫妻同心"
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "奇门增益",
@@ -116923,7 +117160,44 @@
       "id": "奋战",
       "name": "奋战",
       "point": 35,
-      "description": "浴血奋战，战斗力随着血量减少大幅度提高。"
+      "description": "浴血奋战，战斗力随着血量减少大幅度提高。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_hp_ratio",
+              "maxInclusive": 0.3
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "异世人"
+              ],
+              "absent": true
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 1.5
+            },
+            {
+              "type": "modify_damage_context",
+              "field": "critical_chance",
+              "op": "more",
+              "delta": 1.5
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "好色",
@@ -116999,7 +117273,37 @@
       "id": "孤独求败",
       "name": "孤独求败",
       "point": 80,
-      "description": "站在武林巅峰，几乎洞悉一切敌人的弱点。"
+      "description": "站在武林巅峰，几乎洞悉一切敌人的弱点。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "chance",
+              "value": 0.3
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "target_defence",
+              "op": "more",
+              "delta": 0.3
+            },
+            {
+              "type": "modify_damage_context",
+              "field": "critical_chance",
+              "op": "add",
+              "delta": 0.25
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "宝甲",
@@ -117062,7 +117366,64 @@
       "id": "左右互搏",
       "name": "左右互搏",
       "point": 70,
-      "description": "周伯通原汁原味的左右互搏之术，每回合攻击较高几率造成两次伤害。"
+      "description": "周伯通原汁原味的左右互搏之术，每回合攻击较高几率造成两次伤害。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "conditions": [
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "幽居",
+                "素心神剑"
+              ],
+              "absent": true
+            }
+          ],
+          "effects": [
+            {
+              "type": "extra_strike",
+              "target": {
+                "type": "target"
+              },
+              "damageFactors": [
+                0.6,
+                0.3
+              ],
+              "runDamageHooks": false,
+              "talentContributions": [
+                {
+                  "talentId": "幽居",
+                  "chancePerLevel": 0.005,
+                  "singlePrecision": true
+                },
+                {
+                  "talentId": "素心神剑",
+                  "randomMaximum": 0.2
+                },
+                {
+                  "talentId": "左右互搏",
+                  "randomMaximum": 0.6
+                }
+              ],
+              "buffContributions": [
+                {
+                  "buffId": "醉酒",
+                  "maximumStrikes": 1,
+                  "singlePrecision": true
+                },
+                {
+                  "buffId": "神速攻击",
+                  "maximumStrikes": 2,
+                  "singlePrecision": true,
+                  "stopAfterMatch": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "左手剑",
@@ -117100,7 +117461,55 @@
       "id": "幽居",
       "name": "幽居",
       "point": 5,
-      "description": "随着等级逐步提升，提高多重攻击的概率。"
+      "description": "随着等级逐步提升，提高多重攻击的概率。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "conditions": [],
+          "effects": [
+            {
+              "type": "extra_strike",
+              "target": {
+                "type": "target"
+              },
+              "damageFactors": [
+                0.6,
+                0.3
+              ],
+              "runDamageHooks": false,
+              "talentContributions": [
+                {
+                  "talentId": "幽居",
+                  "chancePerLevel": 0.005,
+                  "singlePrecision": true
+                },
+                {
+                  "talentId": "素心神剑",
+                  "randomMaximum": 0.2
+                },
+                {
+                  "talentId": "左右互搏",
+                  "randomMaximum": 0.6
+                }
+              ],
+              "buffContributions": [
+                {
+                  "buffId": "醉酒",
+                  "maximumStrikes": 1,
+                  "singlePrecision": true
+                },
+                {
+                  "buffId": "神速攻击",
+                  "maximumStrikes": 2,
+                  "singlePrecision": true,
+                  "stopAfterMatch": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "异世人",
@@ -117968,7 +118377,63 @@
       "id": "素心神剑",
       "name": "素心神剑",
       "point": 70,
-      "description": "小龙女由于机缘巧合所领悟的左右互搏之术，每回合攻击一定几率造成两次伤害。"
+      "description": "小龙女由于机缘巧合所领悟的左右互搏之术，每回合攻击一定几率造成两次伤害。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "conditions": [
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "幽居"
+              ],
+              "absent": true
+            }
+          ],
+          "effects": [
+            {
+              "type": "extra_strike",
+              "target": {
+                "type": "target"
+              },
+              "damageFactors": [
+                0.6,
+                0.3
+              ],
+              "runDamageHooks": false,
+              "talentContributions": [
+                {
+                  "talentId": "幽居",
+                  "chancePerLevel": 0.005,
+                  "singlePrecision": true
+                },
+                {
+                  "talentId": "素心神剑",
+                  "randomMaximum": 0.2
+                },
+                {
+                  "talentId": "左右互搏",
+                  "randomMaximum": 0.6
+                }
+              ],
+              "buffContributions": [
+                {
+                  "buffId": "醉酒",
+                  "maximumStrikes": 1,
+                  "singlePrecision": true
+                },
+                {
+                  "buffId": "神速攻击",
+                  "maximumStrikes": 2,
+                  "singlePrecision": true,
+                  "stopAfterMatch": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "老江湖",
@@ -118006,13 +118471,81 @@
       "id": "自我主义",
       "name": "自我主义",
       "point": 25,
-      "description": "为了达到目的，不管队友死活。降低所有场上队友能力，提高自己能力，俗称坑队友。坑得越多，自己越强。"
+      "description": "为了达到目的，不管队友死活。降低所有场上队友能力，提高自己能力，俗称坑队友。坑得越多，自己越强。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "team_count_attack_bonus",
+              "parameters": {
+                "factorPerUnit": 0.18,
+                "maximumUnits": 10,
+                "includeSelf": true,
+                "singlePrecision": true,
+                "field": "source_attack"
+              }
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "OnBattleStart",
+          "conditions": [],
+          "effects": [
+            {
+              "type": "grant_scoped_battle_effect",
+              "effectId": "original_self_interest_team_penalty"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "臭叫花",
       "name": "臭叫花",
       "point": 20,
-      "description": "只有被称为臭叫花的人才对打狗棒法精要具有绝对的掌握。"
+      "description": "只有被称为臭叫花的人才对打狗棒法精要具有绝对的掌握。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "打狗棒法"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 1.2
+            },
+            {
+              "type": "modify_damage_context",
+              "field": "critical_chance",
+              "op": "add",
+              "delta": 0.2
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "臭蛤蟆",
@@ -118036,7 +118569,27 @@
       "id": "芷若的眷念",
       "name": "芷若的眷念",
       "point": 0,
-      "description": "峨眉掌门周芷若，用她卓绝的武功帮助她的夫君上阵杀敌。(张无忌攻击增加10%)"
+      "description": "峨眉掌门周芷若，用她卓绝的武功帮助她的夫君上阵杀敌。(张无忌攻击增加10%)",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 1.1
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "苦命儿",
@@ -118220,7 +118773,31 @@
       "id": "金钟罩",
       "name": "金钟罩",
       "point": 25,
-      "description": "具有强大的防御力，有一定概率在战斗中大幅度减免伤害。"
+      "description": "具有强大的防御力，有一定概率在战斗中大幅度减免伤害。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "chance",
+              "value": 0.25
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "target_defence",
+              "op": "more",
+              "delta": 2
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "铁剑掌门",
@@ -118346,13 +118923,63 @@
       "id": "阉人",
       "name": "阉人",
       "point": 5,
-      "description": "已经去“势”，内力消耗增大，使用葵花宝典、辟邪剑法必定暴击。"
+      "description": "已经去“势”，内力消耗增大，使用葵花宝典、辟邪剑法必定暴击。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "葵花宝典",
+                "辟邪剑法"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "critical_chance",
+              "op": "override",
+              "delta": 1
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "阴毒",
       "name": "阴毒",
       "point": 5,
-      "description": "随着等级逐步提升，提高对中毒的敌人的伤害。"
+      "description": "随着等级逐步提升，提高对中毒的敌人的伤害。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "poisoned_target_level_damage",
+              "parameters": {
+                "buffId": "中毒",
+                "maximumBonus": 0.2,
+                "referenceLevel": 30
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "阴谋家",
@@ -120118,7 +120745,38 @@
       "when": "item_count('天关.华山论剑之证') >= 1"
     }
   ],
-  "scopedBattleEffects": [],
+  "scopedBattleEffects": [
+    {
+      "id": "original_self_interest_team_penalty",
+      "scope": {
+        "type": "all_allies",
+        "includeSelf": false
+      },
+      "activation": "source_alive",
+      "grantMode": "per_provider",
+      "lifetime": "battle",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 0.9
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "itemTags": [],
   "storyScripts": {
     "legacy": {

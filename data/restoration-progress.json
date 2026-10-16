@@ -1,0 +1,63 @@
+{
+  "estimate": 65,
+  "weightedEstimate": 63.0,
+  "basis": "工程估算，按六类验收范围加权并取整到5%。不是通关率、测试覆盖率或素材导入率。",
+  "categories": [
+    {
+      "name": "系统与人物管理",
+      "weight": 20,
+      "estimate": 85,
+      "evidence": "装备、修炼、伙伴、后备、商店和存读档已接入。",
+      "remaining": "无悔存档、跨存档档案与部分特殊互动。"
+    },
+    {
+      "name": "剧情与世界",
+      "weight": 20,
+      "estimate": 75,
+      "evidence": "绝大多数原剧情已通过结构与依赖检查。",
+      "remaining": "隐藏条件、限时任务及各门派中后期仍需逐路实玩。"
+    },
+    {
+      "name": "战斗与天赋组合",
+      "weight": 30,
+      "estimate": 45,
+      "evidence": "基础战斗、特技及选定天赋组合已有实际执行检查。",
+      "remaining": "大量天赋、奥义、免疫反击与组合顺序仍待逐项复原。"
+    },
+    {
+      "name": "正常成长与后期通关",
+      "weight": 15,
+      "estimate": 40,
+      "evidence": "正常26级八人队完成紧急首战与三城救援。",
+      "remaining": "最终战场实际失败；华山和结局只做过隔离流程检查。"
+    },
+    {
+      "name": "画面与操作表现",
+      "weight": 10,
+      "estimate": 70,
+      "evidence": "原素材、角色动作、触屏、状态显示与战场柔光可用。",
+      "remaining": "音频、完整招式特效、动作时序与性能优化。"
+    },
+    {
+      "name": "打包与发布",
+      "weight": 5,
+      "estimate": 90,
+      "evidence": "浏览器试玩与离线HTTP包可构建、发布和校验。",
+      "remaining": "加载体积、异常网络恢复与长期兼容验证。"
+    }
+  ],
+  "stories": {
+    "current": 1885,
+    "total": 1887
+  },
+  "events": {
+    "current": 1118,
+    "total": 1120
+  },
+  "talents": {
+    "configured": 64,
+    "total": 158,
+    "metadataOnly": 93
+  },
+  "fullGameVerified": false
+}

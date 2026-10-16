@@ -194,6 +194,30 @@
       "special damage shared pipeline and self-cost semantics"
     ]
   },
+  "combinationRuleEffects": {
+    "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+    "talents": [
+      "大小姐",
+      "自我主义",
+      "夫妻同心",
+      "奋战",
+      "孤独求败",
+      "金钟罩",
+      "芷若的眷念",
+      "臭叫花",
+      "阉人",
+      "俗家弟子",
+      "阴毒",
+      "幽居",
+      "素心神剑",
+      "左右互搏"
+    ],
+    "buffs": [
+      "醉酒",
+      "神速攻击"
+    ],
+    "scope": "explicit combinations; negative damage, special-hit and global modifier ordering still require verification"
+  },
   "legacyArt": {
     "source": {
       "archive": "X.rar",
@@ -265,9 +289,9 @@
     "talents": {
       "total": 158,
       "states": {
-        "metadata-only": 107,
-        "configured": 47,
-        "partial": 3,
+        "metadata-only": 93,
+        "configured": 57,
+        "partial": 7,
         "identity-only": 1
       }
     },
@@ -276,8 +300,8 @@
       "states": {
         "engine-behavior": 16,
         "configured": 6,
-        "metadata-only": 10,
-        "partial": 1
+        "metadata-only": 9,
+        "partial": 2
       }
     },
     "specialSkills": {
@@ -347,7 +371,7 @@
     "buffs": 33,
     "talents": 158,
     "towers": 7,
-    "scopedBattleEffects": 0,
+    "scopedBattleEffects": 1,
     "itemTags": 0,
     "storyScripts": 1,
     "browser": 25
