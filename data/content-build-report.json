@@ -155,20 +155,20 @@
     ]
   },
   "originalMigration": {
-    "originalStories": 1748,
+    "originalStories": 1781,
     "maps": 162,
-    "mapEvents": 1077,
+    "mapEvents": 1095,
     "worldTriggers": 19,
     "newbieTasks": 6
   },
   "starterStories": 25,
   "verifiedOpeningSegments": 14,
-  "migratedStorySegments": 1748,
+  "migratedStorySegments": 1781,
   "browserPacks": [
     {
       "id": "jyx",
       "maps": 162,
-      "storySegments": 1750
+      "storySegments": 1783
     },
     {
       "id": "frontier",
@@ -216,7 +216,7 @@
     "scopedBattleEffects": 0,
     "itemTags": 0,
     "storyScripts": 1,
-    "browser": 21
+    "browser": 22
   },
   "limitations": [
     "The 14 verified opening/trainer segments remain unchanged; dependency-closed original stories/maps/events and nine sect entries are now exposed. Structural migration is not proof of full playthroughs.",

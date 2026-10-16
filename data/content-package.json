@@ -78537,7 +78537,23 @@
           },
           "description": "一片沙漠",
           "picture": null,
-          "events": []
+          "events": [
+            {
+              "id": "1",
+              "action": "story('original_女主出场1')",
+              "image": "头像.民女",
+              "description": null,
+              "when": "(!in_team('女主')) && (!story_completed('original_女主出场.结束'))",
+              "repeatMode": "once"
+            },
+            {
+              "id": "2",
+              "action": "story('original_女主出场1')",
+              "image": "头像.民女",
+              "description": null,
+              "when": "(!in_team('女主')) && (!story_completed('original_女主出场.结束')) && chance(0.3)"
+            }
+          ]
         },
         {
           "id": "唐军营",
@@ -79574,7 +79590,23 @@
           },
           "description": "剑气纵横，豪侠辈出！",
           "picture": null,
-          "events": []
+          "events": [
+            {
+              "id": "1",
+              "action": "story('original_东海剑池')",
+              "image": "town.jian2",
+              "description": null,
+              "repeatMode": "once",
+              "when": "true"
+            },
+            {
+              "id": "2",
+              "action": "story('original_东海剑池')",
+              "image": "town.jian2",
+              "description": null,
+              "when": "true"
+            }
+          ]
         },
         {
           "id": "商家堡",
@@ -82299,6 +82331,21 @@
           "description": "霹雳堂堂主孔八拉",
           "picture": "头像.孔八拉",
           "events": [
+            {
+              "id": "1",
+              "action": "story('original_孔八拉')",
+              "image": null,
+              "description": null,
+              "repeatMode": "once",
+              "when": "true"
+            },
+            {
+              "id": "2",
+              "action": "story('original_孔八拉_挑战')",
+              "image": null,
+              "description": null,
+              "when": "(!story_completed('original_孔八拉_简单模式'))"
+            },
             {
               "id": "3",
               "action": "story('original_孔八拉_简单模式_对话')",
@@ -92453,6 +92500,34 @@
           "picture": null,
           "events": [
             {
+              "id": "1",
+              "action": "story('original_同福客栈.升级')",
+              "image": null,
+              "description": null,
+              "when": "(story_completed('original_同福客栈')) && (!story_completed('mainStory_黑暗的阴影1')) && (!has_time_key('同福客栈_邢捕头'))"
+            },
+            {
+              "id": "2",
+              "action": "story('original_同福客栈.升级.2')",
+              "image": null,
+              "description": null,
+              "when": "(story_completed('original_同福客栈')) && (story_completed('mainStory_黑暗的阴影1')) && (!story_completed('mainStory_神秘剑客1')) && (!has_time_key('同福客栈_邢捕头'))"
+            },
+            {
+              "id": "3",
+              "action": "story('original_同福客栈.升级.3')",
+              "image": null,
+              "description": null,
+              "when": "(story_completed('original_同福客栈')) && (story_completed('mainStory_神秘剑客1')) && (!story_completed('mainStory_紧急1')) && (!has_time_key('同福客栈_邢捕头'))"
+            },
+            {
+              "id": "4",
+              "action": "story('original_同福客栈.升级.4')",
+              "image": null,
+              "description": null,
+              "when": "(story_completed('original_同福客栈')) && (story_completed('mainStory_紧急1')) && (!has_time_key('同福客栈_邢捕头'))"
+            },
+            {
               "id": "5",
               "action": "story('original_同福客栈')",
               "image": null,
@@ -92471,6 +92546,34 @@
           "description": "七侠镇燕捕头",
           "picture": null,
           "events": [
+            {
+              "id": "1",
+              "action": "story('original_同福客栈.竞技场4')",
+              "image": null,
+              "description": null,
+              "when": "(story_completed('original_同福客栈')) && (elapsed_days > 1080)"
+            },
+            {
+              "id": "2",
+              "action": "story('original_同福客栈.竞技场3')",
+              "image": null,
+              "description": null,
+              "when": "(story_completed('original_同福客栈')) && (elapsed_days > 720)"
+            },
+            {
+              "id": "3",
+              "action": "story('original_同福客栈.竞技场2')",
+              "image": null,
+              "description": null,
+              "when": "(story_completed('original_同福客栈')) && (elapsed_days > 360)"
+            },
+            {
+              "id": "4",
+              "action": "story('original_同福客栈.竞技场')",
+              "image": null,
+              "description": null,
+              "when": "(story_completed('original_同福客栈'))"
+            },
             {
               "id": "5",
               "action": "story('original_同福客栈')",
@@ -92813,6 +92916,13 @@
               "description": null,
               "when": "(story_completed('tlbb.xz_擂鼓山4'))",
               "repeatMode": "once"
+            },
+            {
+              "id": "2",
+              "action": "story('珍珑棋局_ask')",
+              "image": null,
+              "description": null,
+              "when": "(story_completed('珍珑棋局_intro'))"
             }
           ]
         },
@@ -92925,7 +93035,23 @@
           },
           "description": "北丑",
           "picture": null,
-          "events": []
+          "events": [
+            {
+              "id": "1",
+              "action": "story('original_天关.挑战')",
+              "image": null,
+              "description": null,
+              "when": "(story_completed('original_天关'))"
+            },
+            {
+              "id": "2",
+              "action": "story('original_天关')",
+              "image": null,
+              "description": null,
+              "repeatMode": "once",
+              "when": "true"
+            }
+          ]
         },
         {
           "id": "返回",
@@ -93033,6 +93159,13 @@
               "image": null,
               "description": null,
               "repeatMode": "once",
+              "when": "true"
+            },
+            {
+              "id": "2",
+              "action": "chest()",
+              "image": null,
+              "description": null,
               "when": "true"
             }
           ]
@@ -122828,6 +122961,490 @@
           ]
         },
         {
+          "name": "original_女主出场1",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.沙漠')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.紧张感')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "华服女子",
+              "text": "救命啊！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "车夫",
+              "text": "小姐，小的不行了，不能再保护您的周全了……啊！（背上中了一刀倒地身亡）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "马贼王",
+              "text": "嘿嘿，哪里跑啊！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "华服女子",
+              "text": "朱二！你们眼里，到底有没有王法！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "马贼王",
+              "text": "小姐好胆量，带两个侍从就跑到这大沙漠里来兜风啊！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "华服女子",
+              "text": "（呜……第一次来塞外，太贪玩了）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "马贼王",
+              "text": "兄弟们，还客气啥啊！说好了，这漂亮的妞我第一个啊！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "马贼",
+              "text": "大哥！记得给兄弟们也解解馋嘛~"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "马贼王",
+              "text": "大家放心，难得开个荤，都有份，有份~"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "华服女子",
+              "text": "啊！！！别过来啊！！"
+            },
+            {
+              "kind": "jump",
+              "target": "original_女主出场2"
+            }
+          ]
+        },
+        {
+          "name": "original_女主出场2",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.沙漠')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.太行八径')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "远处传来一阵呼救声，要去看看吗？"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "去看看吗？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "去",
+                      "steps": [
+                        {
+                          "kind": "branch",
+                          "cases": [
+                            {
+                              "when": "(story_completed('original_长安一梦.民女12'))",
+                              "steps": [
+                                {
+                                  "kind": "jump",
+                                  "target": "original_女主出场.仙丽雅"
+                                }
+                              ]
+                            },
+                            {
+                              "when": "(!story_completed('original_长安一梦.民女12'))",
+                              "steps": [
+                                {
+                                  "kind": "jump",
+                                  "target": "original_女主出场.普通"
+                                }
+                              ]
+                            }
+                          ],
+                          "fallback": []
+                        }
+                      ]
+                    },
+                    {
+                      "text": "不管闲事了。",
+                      "steps": [
+                        {
+                          "kind": "command",
+                          "call": "map('大地图')"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "original_女主出场.仙丽雅",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.沙漠')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.紧张感')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "华服女子",
+              "text": "救命啊！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "马贼王",
+              "text": "嘿嘿嘿嘿……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "！！是你……"
+            },
+            {
+              "kind": "jump",
+              "target": "original_女主出场.仙丽雅2"
+            }
+          ]
+        },
+        {
+          "name": "original_女主出场.仙丽雅2",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "music('音乐.琵琶语')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "！！真的是你么……仙丽雅……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "华服女子",
+              "text": "？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "马贼王",
+              "text": "哪里来的野小子，喂，要泡马子你还太嫩了点，哈哈哈哈！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（愤怒）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": " 给"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": " 我"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": " 滚！！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "马贼王_战斗",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "original_女主出场.仙丽雅3"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "jump",
+                    "target": "original_女主出场负"
+                  }
+                ],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "original_女主出场.仙丽雅3",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.沙漠')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.琵琶语')"
+            },
+            {
+              "kind": "command",
+              "call": "maxlevel('野球拳', 1, 'legacy.original_女主出场.仙丽雅3.野球拳')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "仙丽雅，你没事吧？你还好吧？你到底去哪里了？到底怎么回事？这到底是怎么了？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "华服女子",
+              "text": "你说话慢一点，吓到我了……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "额……对不起。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "华服女子",
+              "text": "仙丽雅是谁？这名字好美，你是称呼我么？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "你……不记得你的名字了？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "华服女子",
+              "text": "（噗嗤一声）怎么会呢，我当然是有名姓的了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "原来你不是……唉。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "华服女子",
+              "text": "认错人了？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……呜。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "华服女子",
+              "text": "没关系，一定会找到她的。还没谢谢恩公的救命大恩呢。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "不用客气，区区小事不足挂齿。你一个人怎么会到这大沙漠里来？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "华服女子",
+              "text": "请待我向恩公细细道来。小女子名叫……"
+            },
+            {
+              "kind": "jump",
+              "target": "original_女主出场.结束"
+            }
+          ]
+        },
+        {
+          "name": "original_女主出场.普通",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.沙漠')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.紧张感')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "华服女子",
+              "text": "救命啊！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "马贼王",
+              "text": "嘿嘿嘿嘿……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "给我住手！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "马贼王_战斗",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "original_女主出场.普通2"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "jump",
+                    "target": "original_女主出场负"
+                  }
+                ],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "original_女主出场.普通2",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.沙漠')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.琵琶语')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "你没事吧？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "华服女子",
+              "text": "谢谢恩公出手相救，我没事……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "你……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "华服女子",
+              "text": "怎么了？为什么盯着我的脸，人家会不好意思的……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "为什么，我看到你会感到那么亲切，又那么伤悲……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "华服女子",
+              "text": "嘻嘻，你看到漂亮的女孩子都是这样说的么？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "华服女子",
+              "text": "好啦，不取笑你了。还没谢谢恩公救命之恩呢，我真是不像话。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "不用客气，区区小事不足挂齿。你一个人怎么会到这大沙漠里来？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "华服女子",
+              "text": "请待我向恩公细细道来。小女子名叫……"
+            },
+            {
+              "kind": "jump",
+              "target": "original_女主出场.结束"
+            }
+          ]
+        },
+        {
+          "name": "original_女主出场.结束",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "legacy_rename_heroine('铃兰')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "家父随现任陇右节度使王忠嗣大人辖制河西重地。家父性情豪爽，教女也别具一格，让我随军来陇右体验一番边塞风情。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "小女子平日久居长安，一时来到塞外，颇感新奇，便带上三五随从出来游玩。谁知在沙漠中迷了路途，又遇上了马贼，若不是恩公出手相助，我……我……呜呜呜呜……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "额……最怕看到女孩子哭了。刚不还挺有礼节的么……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "嘻嘻，刚刚是一直憋着嘛。说着说着就感觉好可怕，所以就哭了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "额……好吧。那现在姑娘准备怎么办？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "能请你护送我回去么？帅气的护花使者？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "好吧，送佛送到西吧。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "嘻嘻。"
+            },
+            {
+              "kind": "command",
+              "call": "follow('女主')"
+            },
+            {
+              "kind": "command",
+              "call": "map('大地图')"
+            }
+          ]
+        },
+        {
           "name": "original_女主出场负",
           "steps": [
             {
@@ -125816,6 +126433,240 @@
           ]
         },
         {
+          "name": "original_天关",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……这里是？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "哈哈，你来了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "丑叔？原来你躲在这里啊。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "嘿嘿，小子，想我了吧？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "差点都不记得还有你存在了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "你在这里干什么？还要向我讨债吗？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "小子，你太小看你丑叔了！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "我在这里，守护这一个惊天动地的大秘密！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "虾米？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "你听好了，这里可以通向天关之门！你知道什么是天关么？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "什么啊？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "我告诉你！你在这里，可以[[red:连续挑战各大高手]]！获得丰厚奖励！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "切，那和同福客栈的燕小六有啥区别啊。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "可不一样！在闯天关的过程中，你必须连续战斗！连续战斗！一个天关由若干场战斗组成！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "连续战斗也没什么了不起啊，小爷有的是药，管你是单挑还是血战重阳宫，嗑两颗就能满血再战了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "不不不，你错了。在闯天关过程中，[[red:每个人只能在一场战斗中登场]]！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "啥？！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "在一局天关过程中，如果你在第一场战斗中出场了，那么同一局的后续战斗都无法再出场了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "靠！那我不得有一票打手，才能闯过天关？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "不错，天关强调的，就是团队战斗。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "让你的人渣队友们强大起来，然后来挑战天关吧！哈哈哈哈。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "对了，还有一点。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "天关都是由若干场战斗组成，每场战斗后你可以选择继续，还是退出。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "选择继续，你就挑战下一个战斗。但是如果下一场战斗失败，你无法获得任何奖励，包括之前的所有奖励！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "选择退出，你至少可以保证得到目前已经得到的战斗奖励。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "所以，每次都掂量自己的实力再挑战下一战斗吧。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……这么麻烦，我不玩了，回去刷同福客栈去。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "嘿嘿，燕小六那里的顶级宝贝都被我搜刮到天关里来了，你不玩也得玩。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……无耻啊。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "一开始你只能挑战一个天关。如果在你的历险过程中，得到了更多的天关之证明，我会开放其他天关给你挑战的。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……好吧。我先试试你的天关……"
+            },
+            {
+              "kind": "jump",
+              "target": "original_天关.挑战"
+            }
+          ]
+        },
+        {
+          "name": "original_天关.挑战",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "要来挑战天关吗？"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "挑战天关吗？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "挑战！",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "original_天关.开始前"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "算了，不跟北丑玩。",
+                      "steps": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "original_天关.开始前",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "我再重申两点。[[red:一、所有人只能出场一次。二、不主动退出，战斗失败就什么也得不到！]]"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "那么来吧！"
+            },
+            {
+              "kind": "command",
+              "call": "set_time_key('天关_北丑', 30, '')"
+            },
+            {
+              "kind": "command",
+              "call": "tower()"
+            }
+          ]
+        },
+        {
           "name": "original_天关.失败",
           "steps": [
             {
@@ -125827,6 +126678,120 @@
               "kind": "dialogue",
               "speaker": "主角",
               "text": "……"
+            }
+          ]
+        },
+        {
+          "name": "original_孔八拉",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "这里是……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "孔八拉",
+              "text": "小兄弟，你来啦"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "孔八拉！！霹雳堂！！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "N年前《金庸群侠传DOS版》，我就是最后在这里穿越回到现实世界去的，是不是这次又要拿十四本天书来开启密道之门啊？赶紧剧透一下！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（友情提示，没有玩过《金庸群侠传DOS版》的同学，强烈建议回顾一下！)"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "孔八拉",
+              "text": "很抱歉，编剧跟我打了招呼，无可奉告。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……那上次的几个神器物品，槟榔、皮衣、霹雳秘笈总得给我吧？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "孔八拉",
+              "text": "继续抱歉，槟榔啥的都被那该死的松鼠没收了，我这现在都是个穷光蛋了。每天就喝喝稀饭……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "那你在这有啥用？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "孔八拉",
+              "text": "……这次我这里守护着[[red:更大的一个宝藏]]。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "别卖关子了，孔叔，我看你现在是越来越像北丑叔了，整天晕乎乎的吹牛。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "孔八拉",
+              "text": "好吧，废话不说了，我这里叫做【试炼之所】，你培养的每个队友，可以在我这里接受终极试炼。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "孔八拉",
+              "text": "试炼通过的话，每个队友可能会得到终极提升或奖励神兵绝学。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "孔八拉",
+              "text": "试炼的方法是：这名队友[[red:单独挑战BOSS关卡]]。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "孔八拉",
+              "text": "通过试炼的队友数量，会极大的影响你在[[red:下一周目中的初始奖励]]。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "说的我都心动了！赶紧赶紧！我要挑战！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "孔八拉",
+              "text": "抱歉，主角是不能挑战的。只有队友可以挑战。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "孔八拉",
+              "text": "另外，还要说一句，由于试炼的高手都是我很不容易请来的……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "所以呢？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "孔八拉",
+              "text": "所以试炼一次要收6000两银子。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "我擦，太黑了！"
+            },
+            {
+              "kind": "jump",
+              "target": "original_孔八拉_挑战"
             }
           ]
         },
@@ -125861,6 +126826,72 @@
               "kind": "dialogue",
               "speaker": "主角",
               "text": "这简直是赤裸裸的歧视啊！"
+            }
+          ]
+        },
+        {
+          "name": "original_孔八拉_挑战",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "孔八拉",
+              "text": "要挑战试炼之所么？"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "出6000块钱挑战试炼之所吗？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "挑战！",
+                      "steps": [
+                        {
+                          "kind": "branch",
+                          "cases": [
+                            {
+                              "when": "(silver >= 6000)",
+                              "steps": [
+                                {
+                                  "kind": "jump",
+                                  "target": "original_孔八拉_挑战_有钱"
+                                }
+                              ]
+                            }
+                          ],
+                          "fallback": [
+                            {
+                              "kind": "jump",
+                              "target": "original_孔八拉_挑战_没钱"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "算了。",
+                      "steps": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "original_孔八拉_挑战_有钱",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "change_silver(-6000)"
+            },
+            {
+              "kind": "command",
+              "call": "trial()"
             }
           ]
         },
@@ -128143,6 +129174,326 @@
           ]
         },
         {
+          "name": "original_同福客栈.竞技场",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "燕小六",
+              "text": "我这里可以挑战游戏里的各路小虾小鱼、牛鬼蛇神、狗屁高手。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "燕小六",
+              "text": "一次耗时一天，需要交入场费25元，要来玩玩吗？"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "要挑战竞技场吗？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "战！",
+                      "steps": [
+                        {
+                          "kind": "branch",
+                          "cases": [
+                            {
+                              "when": "(silver >= 25)",
+                              "steps": [
+                                {
+                                  "kind": "jump",
+                                  "target": "original_同福客栈.竞技场开始"
+                                }
+                              ]
+                            }
+                          ],
+                          "fallback": [
+                            {
+                              "kind": "jump",
+                              "target": "original_同福客栈.竞技场没钱"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "算了。",
+                      "steps": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "original_同福客栈.竞技场开始",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "change_silver(-25)"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "燕小六",
+              "text": "Ready？Go！"
+            },
+            {
+              "kind": "command",
+              "call": "advance_days(1)"
+            },
+            {
+              "kind": "command",
+              "call": "arena()"
+            }
+          ]
+        },
+        {
+          "name": "original_同福客栈.竞技场2",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "燕小六",
+              "text": "我这里可以挑战游戏里的各路小虾小鱼、牛鬼蛇神、狗屁高手。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "燕小六",
+              "text": "一次耗时一天，需要交入场费200元，要来玩玩吗？"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "要挑战竞技场吗？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "战！",
+                      "steps": [
+                        {
+                          "kind": "branch",
+                          "cases": [
+                            {
+                              "when": "(silver >= 200)",
+                              "steps": [
+                                {
+                                  "kind": "jump",
+                                  "target": "original_同福客栈.竞技场开始2"
+                                }
+                              ]
+                            }
+                          ],
+                          "fallback": [
+                            {
+                              "kind": "jump",
+                              "target": "original_同福客栈.竞技场没钱"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "算了。",
+                      "steps": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "original_同福客栈.竞技场开始2",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "change_silver(-200)"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "燕小六",
+              "text": "Ready？Go！"
+            },
+            {
+              "kind": "command",
+              "call": "advance_days(1)"
+            },
+            {
+              "kind": "command",
+              "call": "arena()"
+            }
+          ]
+        },
+        {
+          "name": "original_同福客栈.竞技场3",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "燕小六",
+              "text": "我这里可以挑战游戏里的各路小虾小鱼、牛鬼蛇神、狗屁高手。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "燕小六",
+              "text": "一次耗时一天，需要交入场费500元，要来玩玩吗？"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "要挑战竞技场吗？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "战！",
+                      "steps": [
+                        {
+                          "kind": "branch",
+                          "cases": [
+                            {
+                              "when": "(silver >= 500)",
+                              "steps": [
+                                {
+                                  "kind": "jump",
+                                  "target": "original_同福客栈.竞技场开始3"
+                                }
+                              ]
+                            }
+                          ],
+                          "fallback": [
+                            {
+                              "kind": "jump",
+                              "target": "original_同福客栈.竞技场没钱"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "算了。",
+                      "steps": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "original_同福客栈.竞技场开始3",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "change_silver(-500)"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "燕小六",
+              "text": "Ready？Go！"
+            },
+            {
+              "kind": "command",
+              "call": "advance_days(1)"
+            },
+            {
+              "kind": "command",
+              "call": "arena()"
+            }
+          ]
+        },
+        {
+          "name": "original_同福客栈.竞技场4",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "燕小六",
+              "text": "我这里可以挑战游戏里的各路小虾小鱼、牛鬼蛇神、狗屁高手。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "燕小六",
+              "text": "一次耗时一天，需要交入场费1000元，要来玩玩吗？"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "要挑战竞技场吗？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "战！",
+                      "steps": [
+                        {
+                          "kind": "branch",
+                          "cases": [
+                            {
+                              "when": "(silver >= 1000)",
+                              "steps": [
+                                {
+                                  "kind": "jump",
+                                  "target": "original_同福客栈.竞技场开始4"
+                                }
+                              ]
+                            }
+                          ],
+                          "fallback": [
+                            {
+                              "kind": "jump",
+                              "target": "original_同福客栈.竞技场没钱"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "算了。",
+                      "steps": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "original_同福客栈.竞技场开始4",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "change_silver(-1000)"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "燕小六",
+              "text": "Ready？Go！"
+            },
+            {
+              "kind": "command",
+              "call": "advance_days(1)"
+            },
+            {
+              "kind": "command",
+              "call": "arena()"
+            }
+          ]
+        },
+        {
           "name": "original_同福客栈.竞技场没钱",
           "steps": [
             {
@@ -128163,12 +129514,245 @@
           ]
         },
         {
+          "name": "original_同福客栈.升级",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "邢捕头",
+              "text": "到我们衙门练习练习，一次十天，一百两银子，12级以下包你升一级。怎么样？"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "要闭关修炼吗？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "修炼！",
+                      "steps": [
+                        {
+                          "kind": "branch",
+                          "cases": [
+                            {
+                              "when": "(silver >= 100)",
+                              "steps": [
+                                {
+                                  "kind": "jump",
+                                  "target": "original_同福客栈.升级开始"
+                                }
+                              ]
+                            }
+                          ],
+                          "fallback": [
+                            {
+                              "kind": "jump",
+                              "target": "original_同福客栈.升级没钱"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "不要，外面世界多精彩。",
+                      "steps": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "original_同福客栈.升级.2",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "邢捕头",
+              "text": "到我们衙门练习练习，一次十天，一百两银子，18级以下包你升一级。怎么样？"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "要闭关修炼吗？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "修炼！",
+                      "steps": [
+                        {
+                          "kind": "branch",
+                          "cases": [
+                            {
+                              "when": "(silver >= 100)",
+                              "steps": [
+                                {
+                                  "kind": "jump",
+                                  "target": "original_同福客栈.升级开始"
+                                }
+                              ]
+                            }
+                          ],
+                          "fallback": [
+                            {
+                              "kind": "jump",
+                              "target": "original_同福客栈.升级没钱"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "不要，外面世界多精彩。",
+                      "steps": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "original_同福客栈.升级.3",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "邢捕头",
+              "text": "到我们衙门练习练习，一次十天，一百两银子，22级以下包你升一级。怎么样？"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "要闭关修炼吗？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "修炼！",
+                      "steps": [
+                        {
+                          "kind": "branch",
+                          "cases": [
+                            {
+                              "when": "(silver >= 100)",
+                              "steps": [
+                                {
+                                  "kind": "jump",
+                                  "target": "original_同福客栈.升级开始"
+                                }
+                              ]
+                            }
+                          ],
+                          "fallback": [
+                            {
+                              "kind": "jump",
+                              "target": "original_同福客栈.升级没钱"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "不要，外面世界多精彩。",
+                      "steps": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "original_同福客栈.升级.4",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "邢捕头",
+              "text": "到我们衙门练习练习，一次十天，一百两银子，25级以下包你升一级。怎么样？"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "要闭关修炼吗？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "修炼！",
+                      "steps": [
+                        {
+                          "kind": "branch",
+                          "cases": [
+                            {
+                              "when": "(silver >= 100)",
+                              "steps": [
+                                {
+                                  "kind": "jump",
+                                  "target": "original_同福客栈.升级开始"
+                                }
+                              ]
+                            }
+                          ],
+                          "fallback": [
+                            {
+                              "kind": "jump",
+                              "target": "original_同福客栈.升级没钱"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "不要，外面世界多精彩。",
+                      "steps": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "original_同福客栈.升级没钱",
           "steps": [
             {
               "kind": "dialogue",
               "speaker": "邢捕头",
               "text": "没钱？一边凉快去吧，穷光蛋！"
+            }
+          ]
+        },
+        {
+          "name": "original_同福客栈.升级开始",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "change_silver(-100)"
+            },
+            {
+              "kind": "command",
+              "call": "advance_days(10)"
+            },
+            {
+              "kind": "command",
+              "call": "set_time_key('同福客栈_邢捕头', 30, '')"
+            },
+            {
+              "kind": "command",
+              "call": "minigame(\"levelup\")"
             }
           ]
         },
@@ -184880,6 +186464,77 @@
           ]
         },
         {
+          "name": "珍珑棋局_ask",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "无崖子",
+              "text": "你当前挑战到第$ZHENLONG_LEVEL$关。"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "无崖子",
+                "text": "要挑战珍珑棋局吗？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "挑战",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "珍珑棋局_judge"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "离开",
+                      "steps": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "珍珑棋局_judge",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "哈哈，让我愉快一战吧！"
+            },
+            {
+              "kind": "branch",
+              "cases": [
+                {
+                  "when": "(!story_completed('mainStory_黑衣教入教'))",
+                  "steps": [
+                    {
+                      "kind": "command",
+                      "call": "zhenlongqiju()"
+                    }
+                  ]
+                },
+                {
+                  "when": "(story_completed('mainStory_黑衣教入教'))",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "珍珑棋局_黑衣"
+                    }
+                  ]
+                }
+              ],
+              "fallback": []
+            }
+          ]
+        },
+        {
           "name": "珍珑棋局_黑衣",
           "steps": [
             {
@@ -192521,6 +194176,128 @@
           ]
         },
         {
+          "name": "original_东海剑池",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.剑魔荒冢')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.开场')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "此处剑气纵横，仿佛可以感受到前辈高人的气息……"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "来到剑池做什么？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "静修",
+                      "steps": [
+                        {
+                          "kind": "branch",
+                          "cases": [
+                            {
+                              "when": "(!story_completed('original_东海剑池开始'))",
+                              "steps": [
+                                {
+                                  "kind": "jump",
+                                  "target": "original_东海剑池开始"
+                                }
+                              ]
+                            },
+                            {
+                              "when": "(!story_completed('original_东海剑池开始2'))",
+                              "steps": [
+                                {
+                                  "kind": "jump",
+                                  "target": "original_东海剑池开始2"
+                                }
+                              ]
+                            },
+                            {
+                              "when": "(!story_completed('original_东海剑池开始3'))",
+                              "steps": [
+                                {
+                                  "kind": "jump",
+                                  "target": "original_东海剑池开始3"
+                                }
+                              ]
+                            },
+                            {
+                              "when": "(!story_completed('original_东海剑池开始4'))",
+                              "steps": [
+                                {
+                                  "kind": "jump",
+                                  "target": "original_东海剑池开始4"
+                                }
+                              ]
+                            },
+                            {
+                              "when": "(!story_completed('original_东海剑池开始5'))",
+                              "steps": [
+                                {
+                                  "kind": "jump",
+                                  "target": "original_东海剑池开始5"
+                                }
+                              ]
+                            }
+                          ],
+                          "fallback": [
+                            {
+                              "kind": "jump",
+                              "target": "original_东海剑池开始6"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "洗练装备",
+                      "steps": [
+                        {
+                          "kind": "branch",
+                          "cases": [
+                            {
+                              "when": "(!story_completed('洗练装备介绍'))",
+                              "steps": [
+                                {
+                                  "kind": "jump",
+                                  "target": "洗练装备介绍"
+                                }
+                              ]
+                            }
+                          ],
+                          "fallback": [
+                            {
+                              "kind": "jump",
+                              "target": "洗练选择"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "离开",
+                      "steps": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "original_东海剑池开始",
           "steps": [
             {
@@ -196980,6 +198757,72 @@
           ]
         },
         {
+          "name": "洗练装备介绍",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "这里有无数剑气，我能感受到前辈高人的武学精髓，似乎可以被兵刃所吸收，何不试一试？"
+            },
+            {
+              "kind": "command",
+              "call": "suggest('在东海剑池可以支付元宝，将装备的一项属性重置，从而强化你的装备。')"
+            },
+            {
+              "kind": "jump",
+              "target": "洗练选择"
+            }
+          ]
+        },
+        {
+          "name": "洗练选择",
+          "steps": [
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "要开始洗练装备吗？（消耗一个元宝）"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "是",
+                      "steps": [
+                        {
+                          "kind": "branch",
+                          "cases": [
+                            {
+                              "when": "(yuanbao >= 1)",
+                              "steps": [
+                                {
+                                  "kind": "command",
+                                  "call": "refine()"
+                                }
+                              ]
+                            }
+                          ],
+                          "fallback": [
+                            {
+                              "kind": "jump",
+                              "target": "洗练元宝不够"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "否",
+                      "steps": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "洗练元宝不够",
           "steps": [
             {
@@ -197004,6 +198847,20 @@
             {
               "kind": "command",
               "call": "map('大地图')"
+            }
+          ]
+        },
+        {
+          "name": "洗练_洗练成功",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "洗练成功！"
+            },
+            {
+              "kind": "jump",
+              "target": "洗练选择"
             }
           ]
         },
@@ -211320,6 +213177,7 @@
         "kind": "save"
       }
     ],
+    "chestMapId": "松鼠旅馆",
     "legacyTasks": [
       {
         "id": "购买物品",
@@ -211383,11 +213241,11 @@
       }
     ],
     "migration": {
-      "stories": 1748,
+      "stories": 1781,
       "totalStories": 1887,
       "maps": 162,
       "totalMaps": 162,
-      "deferredStories": 139
+      "deferredStories": 106
     },
     "artSource": {
       "kind": "legacy",

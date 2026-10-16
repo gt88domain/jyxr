@@ -14,9 +14,9 @@
     "maps": 6
   },
   "structurallyMigrated": {
-    "originalStories": 1748,
+    "originalStories": 1781,
     "maps": 162,
-    "mapEvents": 1077,
+    "mapEvents": 1095,
     "worldTriggers": 19,
     "newbieTasks": 6
   },
@@ -40,10 +40,6 @@
     "黑衣_对战魔君失败": {
       "source": "storys.xml",
       "reason": "unsupported action: MINUS_MAXPOINTS (主角#5)"
-    },
-    "original_女主出场.结束": {
-      "source": "storys.xml",
-      "reason": "unsupported action: CHANGE_FEMALE_NAME (铃兰)"
     },
     "original_女主.李白.诗话": {
       "source": "storys.xml",
@@ -77,14 +73,6 @@
       "source": "storys.xml",
       "reason": "battle 南贤居_练功木头人_战斗 missing characters: 练功木头人"
     },
-    "original_天关.开始前": {
-      "source": "storys.xml",
-      "reason": "unsupported result: tower (tower)"
-    },
-    "original_孔八拉_挑战_有钱": {
-      "source": "storys.xml",
-      "reason": "unsupported result: trial (trial)"
-    },
     "original_同福客栈.修炼轻功": {
       "source": "storys.xml",
       "reason": "unsupported result: game (qinggong)"
@@ -92,26 +80,6 @@
     "original_同福客栈.修炼臂力": {
       "source": "storys.xml",
       "reason": "unsupported result: game (dianxue)"
-    },
-    "original_同福客栈.竞技场开始": {
-      "source": "storys.xml",
-      "reason": "unsupported result: arena (test_ARENA)"
-    },
-    "original_同福客栈.竞技场开始2": {
-      "source": "storys.xml",
-      "reason": "unsupported result: arena (test_ARENA)"
-    },
-    "original_同福客栈.竞技场开始3": {
-      "source": "storys.xml",
-      "reason": "unsupported result: arena (test_ARENA)"
-    },
-    "original_同福客栈.竞技场开始4": {
-      "source": "storys.xml",
-      "reason": "unsupported result: arena (test_ARENA)"
-    },
-    "original_同福客栈.升级开始": {
-      "source": "storys.xml",
-      "reason": "unsupported result: game (levelup)"
     },
     "华山论剑_天关": {
       "source": "storys.xml",
@@ -197,10 +165,6 @@
       "source": "storys.xml",
       "reason": "unsupported stat action: UPGRADE.SKILLL"
     },
-    "珍珑棋局_judge": {
-      "source": "storys.xml",
-      "reason": "unsupported result: zhenlongqiju ()"
-    },
     "作弊佬": {
       "source": "storysCG.xml",
       "reason": "unsupported result: restart (restart)"
@@ -220,10 +184,6 @@
     "tlbb.dy_阿碧线王语嫣.touch.成功": {
       "source": "storysPY.xml",
       "reason": "unsupported action: TOUCH (李青萝)"
-    },
-    "洗练选择": {
-      "source": "storysPY.xml",
-      "reason": "unsupported result: xilian (0)"
     },
     "破庙_田青文_调戏": {
       "source": "storys.xml",
@@ -258,20 +218,6 @@
       "reason": "blocked story dependencies",
       "targets": [
         "黑衣_华山胜利"
-      ]
-    },
-    "original_女主出场.仙丽雅3": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_女主出场.结束"
-      ]
-    },
-    "original_女主出场.普通2": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_女主出场.结束"
       ]
     },
     "original_女主.重伤.醒来": {
@@ -309,20 +255,6 @@
         "original_主角之家.开场2"
       ]
     },
-    "original_天关.挑战": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_天关.开始前"
-      ]
-    },
-    "original_孔八拉_挑战": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_孔八拉_挑战_有钱"
-      ]
-    },
     "original_同福客栈.轻功开始": {
       "source": "storys.xml",
       "reason": "blocked story dependencies",
@@ -335,62 +267,6 @@
       "reason": "blocked story dependencies",
       "targets": [
         "original_同福客栈.修炼臂力"
-      ]
-    },
-    "original_同福客栈.竞技场": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_同福客栈.竞技场开始"
-      ]
-    },
-    "original_同福客栈.竞技场2": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_同福客栈.竞技场开始2"
-      ]
-    },
-    "original_同福客栈.竞技场3": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_同福客栈.竞技场开始3"
-      ]
-    },
-    "original_同福客栈.竞技场4": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_同福客栈.竞技场开始4"
-      ]
-    },
-    "original_同福客栈.升级": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_同福客栈.升级开始"
-      ]
-    },
-    "original_同福客栈.升级.2": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_同福客栈.升级开始"
-      ]
-    },
-    "original_同福客栈.升级.3": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_同福客栈.升级开始"
-      ]
-    },
-    "original_同福客栈.升级.4": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_同福客栈.升级开始"
       ]
     },
     "original_华山论剑": {
@@ -492,13 +368,6 @@
         "倚天屠龙_劝说少林成功"
       ]
     },
-    "珍珑棋局_ask": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "珍珑棋局_judge"
-      ]
-    },
     "original_山庄风云.贾飞女主": {
       "source": "storysPY.xml",
       "reason": "blocked story dependencies",
@@ -506,32 +375,11 @@
         "original_山庄风云.贾飞女主2"
       ]
     },
-    "original_东海剑池": {
-      "source": "storysPY.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "洗练选择"
-      ]
-    },
     "tlbb.dy_阿碧线王语嫣touch2": {
       "source": "storysPY.xml",
       "reason": "blocked story dependencies",
       "targets": [
         "tlbb.dy_阿碧线王语嫣touch3"
-      ]
-    },
-    "洗练装备介绍": {
-      "source": "storysPY.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "洗练选择"
-      ]
-    },
-    "洗练_洗练成功": {
-      "source": "storysPY.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "洗练选择"
       ]
     },
     "破庙_田青文": {
@@ -562,20 +410,6 @@
         "mainStory_黑衣人的邀请解散队伍"
       ]
     },
-    "original_女主出场.仙丽雅2": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_女主出场.仙丽雅3"
-      ]
-    },
-    "original_女主出场.普通": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_女主出场.普通2"
-      ]
-    },
     "original_女主.重伤.长夜": {
       "source": "storys.xml",
       "reason": "blocked story dependencies",
@@ -602,20 +436,6 @@
       "reason": "blocked story dependencies",
       "targets": [
         "original_女主.华山论剑.trueEnding2.结束"
-      ]
-    },
-    "original_天关": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_天关.挑战"
-      ]
-    },
-    "original_孔八拉": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_孔八拉_挑战"
       ]
     },
     "original_同福客栈.轻功": {
@@ -710,20 +530,6 @@
         "mainStory_黑衣人的邀请接受"
       ]
     },
-    "original_女主出场2": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_女主出场.普通"
-      ]
-    },
-    "original_女主出场.仙丽雅": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_女主出场.仙丽雅2"
-      ]
-    },
     "original_女主.重伤.南贤居结束": {
       "source": "storys.xml",
       "reason": "blocked story dependencies",
@@ -771,13 +577,6 @@
       "reason": "blocked story dependencies",
       "targets": [
         "mainStory_黑衣人的邀请"
-      ]
-    },
-    "original_女主出场1": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_女主出场2"
       ]
     },
     "original_女主.重伤.表白": {
@@ -866,10 +665,6 @@
       "source": "storys.xml",
       "reason": "unsupported action: MINUS_MAXPOINTS (主角#5)"
     },
-    "original_女主出场.结束": {
-      "source": "storys.xml",
-      "reason": "unsupported action: CHANGE_FEMALE_NAME (铃兰)"
-    },
     "original_女主.李白.诗话": {
       "source": "storys.xml",
       "reason": "invalid dialogue"
@@ -902,14 +697,6 @@
       "source": "storys.xml",
       "reason": "battle 南贤居_练功木头人_战斗 missing characters: 练功木头人"
     },
-    "original_天关.开始前": {
-      "source": "storys.xml",
-      "reason": "unsupported result: tower (tower)"
-    },
-    "original_孔八拉_挑战_有钱": {
-      "source": "storys.xml",
-      "reason": "unsupported result: trial (trial)"
-    },
     "original_同福客栈.修炼轻功": {
       "source": "storys.xml",
       "reason": "unsupported result: game (qinggong)"
@@ -917,26 +704,6 @@
     "original_同福客栈.修炼臂力": {
       "source": "storys.xml",
       "reason": "unsupported result: game (dianxue)"
-    },
-    "original_同福客栈.竞技场开始": {
-      "source": "storys.xml",
-      "reason": "unsupported result: arena (test_ARENA)"
-    },
-    "original_同福客栈.竞技场开始2": {
-      "source": "storys.xml",
-      "reason": "unsupported result: arena (test_ARENA)"
-    },
-    "original_同福客栈.竞技场开始3": {
-      "source": "storys.xml",
-      "reason": "unsupported result: arena (test_ARENA)"
-    },
-    "original_同福客栈.竞技场开始4": {
-      "source": "storys.xml",
-      "reason": "unsupported result: arena (test_ARENA)"
-    },
-    "original_同福客栈.升级开始": {
-      "source": "storys.xml",
-      "reason": "unsupported result: game (levelup)"
     },
     "华山论剑_天关": {
       "source": "storys.xml",
@@ -1022,10 +789,6 @@
       "source": "storys.xml",
       "reason": "unsupported stat action: UPGRADE.SKILLL"
     },
-    "珍珑棋局_judge": {
-      "source": "storys.xml",
-      "reason": "unsupported result: zhenlongqiju ()"
-    },
     "作弊佬": {
       "source": "storysCG.xml",
       "reason": "unsupported result: restart (restart)"
@@ -1045,10 +808,6 @@
     "tlbb.dy_阿碧线王语嫣.touch.成功": {
       "source": "storysPY.xml",
       "reason": "unsupported action: TOUCH (李青萝)"
-    },
-    "洗练选择": {
-      "source": "storysPY.xml",
-      "reason": "unsupported result: xilian (0)"
     }
   },
   "deferredMapEvents": [
@@ -1057,18 +816,6 @@
       "location": "周伯通",
       "eventId": "source-3",
       "reason": "invalid legacy event action type: not_has_time_key"
-    },
-    {
-      "map": "大地图",
-      "location": "沙漠",
-      "eventId": "1",
-      "reason": "story deferred: original_女主出场1"
-    },
-    {
-      "map": "大地图",
-      "location": "沙漠",
-      "eventId": "2",
-      "reason": "story deferred: original_女主出场1"
     },
     {
       "map": "大地图",
@@ -1108,18 +855,6 @@
     },
     {
       "map": "大地图",
-      "location": "东海剑池",
-      "eventId": "1",
-      "reason": "story deferred: original_东海剑池"
-    },
-    {
-      "map": "大地图",
-      "location": "东海剑池",
-      "eventId": "2",
-      "reason": "story deferred: original_东海剑池"
-    },
-    {
-      "map": "大地图",
       "location": "一灯居",
       "eventId": "2",
       "reason": "story deferred: 射雕英雄传_一灯居1"
@@ -1153,18 +888,6 @@
       "location": "司马府",
       "eventId": "1",
       "reason": "story deferred: original_山庄风云.贾飞女主"
-    },
-    {
-      "map": "霹雳堂",
-      "location": "孔八拉",
-      "eventId": "1",
-      "reason": "story deferred: original_孔八拉"
-    },
-    {
-      "map": "霹雳堂",
-      "location": "孔八拉",
-      "eventId": "2",
-      "reason": "story deferred: original_孔八拉_挑战"
     },
     {
       "map": "侠客岛洞内",
@@ -1231,78 +954,6 @@
       "location": "白展堂",
       "eventId": "2",
       "reason": "story deferred: original_同福客栈.葵花点穴手"
-    },
-    {
-      "map": "同福客栈",
-      "location": "邢捕头",
-      "eventId": "1",
-      "reason": "story deferred: original_同福客栈.升级"
-    },
-    {
-      "map": "同福客栈",
-      "location": "邢捕头",
-      "eventId": "2",
-      "reason": "story deferred: original_同福客栈.升级.2"
-    },
-    {
-      "map": "同福客栈",
-      "location": "邢捕头",
-      "eventId": "3",
-      "reason": "story deferred: original_同福客栈.升级.3"
-    },
-    {
-      "map": "同福客栈",
-      "location": "邢捕头",
-      "eventId": "4",
-      "reason": "story deferred: original_同福客栈.升级.4"
-    },
-    {
-      "map": "同福客栈",
-      "location": "燕小六",
-      "eventId": "1",
-      "reason": "story deferred: original_同福客栈.竞技场4"
-    },
-    {
-      "map": "同福客栈",
-      "location": "燕小六",
-      "eventId": "2",
-      "reason": "story deferred: original_同福客栈.竞技场3"
-    },
-    {
-      "map": "同福客栈",
-      "location": "燕小六",
-      "eventId": "3",
-      "reason": "story deferred: original_同福客栈.竞技场2"
-    },
-    {
-      "map": "同福客栈",
-      "location": "燕小六",
-      "eventId": "4",
-      "reason": "story deferred: original_同福客栈.竞技场"
-    },
-    {
-      "map": "擂鼓山",
-      "location": "无崖子",
-      "eventId": "2",
-      "reason": "story deferred: 珍珑棋局_ask"
-    },
-    {
-      "map": "香格里拉",
-      "location": "北丑",
-      "eventId": "1",
-      "reason": "story deferred: original_天关.挑战"
-    },
-    {
-      "map": "香格里拉",
-      "location": "北丑",
-      "eventId": "2",
-      "reason": "story deferred: original_天关"
-    },
-    {
-      "map": "松鼠旅馆",
-      "location": "箱子",
-      "eventId": "2",
-      "reason": "storage chest UI not implemented"
     },
     {
       "map": "破庙",
