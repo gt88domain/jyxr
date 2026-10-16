@@ -23,6 +23,11 @@ internal sealed class BattleBuffResolver(
         int duration,
         HookTiming? timing = null)
     {
+        if (definition.Id == BattleContentIds.Blind && target.HasTrait(TraitId.MindEye))
+        {
+            return false;
+        }
+
         if (definition.IsDebuff && target.HasBuff(BattleContentIds.HolyWar))
         {
             return false;

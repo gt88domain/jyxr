@@ -113,7 +113,65 @@ inspiringUnit.SetActionGauge(100);
 Check(inspireEngine.BeginAction(inspireState, inspiringUnit.Id).Success && inspireEngine.CastSkill(inspireState, inspiringUnit.Id, inspiringHero.SpecialSkills.Single(), inspiringUnit.Position).Success, "real 打鸡血 self cast");
 Console.WriteLine($"打鸡血 observed rage={inspiringUnit.Rage}, mp={inspiringUnit.Mp}, buff={inspiringUnit.TryGetBuff("攻击强化")?.Level}/{inspiringUnit.TryGetBuff("攻击强化")?.RemainingTurns}");
 Check(inspiringUnit.Rage == 2 && inspiringUnit.Mp == 100 && inspiringUnit.TryGetBuff("攻击强化") is { Level: 3, RemainingTurns: 5 }, "打鸡血 spends 100 MP, grants exactly two rage and original level-three five-round Buff");
+CheckCommonTalent("神兵", false, c => {c.AttackLow*=1.05;c.AttackHigh*=1.05;});
+CheckCommonTalent("右臂有伤", false, c => {c.AttackLow*=.95;c.AttackHigh*=.95;});
+CheckCommonTalent("左手剑", false, c => {c.AttackLow*=1.05;c.AttackHigh*=1.05;c.CriticalChance-=.02;});
+CheckCommonTalent("老江湖", false, c => {c.AttackLow*=1.2;c.AttackHigh*=.9;});
+CheckCommonTalent("神经病", false, c => c.AttackHigh*=1.1);
+CheckReceivedDamage(["神经病"], x => (int)(x*1.1));
+CheckCommonTalent("鲁莽", false, c => {c.AttackLow*=1.06;c.AttackHigh*=1.06;});
+CheckReceivedDamage(["鲁莽"], x => (int)(x*1.1));
+CheckReceivedDamage(["宝甲"], x => (int)(x*.95));
+CheckReceivedDamage(["鲁莽","宝甲","神经病"], x => (int)((int)((int)(x*.95)*1.1)*1.1));
+CheckCommonTalent("苦命儿", true, c => c.Defence+=30);
+CheckCommonTalent("暴躁", true, c => c.CriticalChance+=.1, randomValue:.08);
+CheckCommonTalent("好色", false, c => {c.AttackLow*=1.2;c.AttackHigh*=1.2;}, targetGender:CharacterGender.Female);
+CheckCommonTalent("好色", false, _ => {}, targetGender:CharacterGender.Male);
+CheckCommonTalent("好色", true, c => c.Defence*=.8, sourceGender:CharacterGender.Female);
+CheckCommonTalent("好色", true, _ => {}, sourceGender:CharacterGender.Male);
+CheckCommonTalent("猎人", false, c => {c.AttackLow*=1.5;c.AttackHigh*=1.5;}, targetGender:CharacterGender.Animal);
+CheckCommonTalent("猎人", false, _ => {}, targetGender:CharacterGender.Male);
+CheckCommonBuff("攻击弱化", false, c => {c.AttackLow*=.7;c.AttackHigh*=.7;});
+CheckCommonBuff("防御强化", true, c => c.Defence+=80);
 Console.WriteLine($"PASS {count} selected modern-core / legacy-source checks. This does not establish full game parity.");
+
+void CheckCommonTalent(string name,bool targetSide,Action<BattleDamageCalculationContext> expectation,
+    CharacterGender sourceGender=CharacterGender.Male,CharacterGender targetGender=CharacterGender.Male,double randomValue=.5)
+    => CheckCommon(name,targetSide,expectation,sourceGender,targetGender,randomValue,false);
+void CheckReceivedDamage(string[] talents,Func<int,int> transform)
+{
+    var a=FreshHero("receive_source");var b=FreshHero("receive_target");a.UnlockedTalents.Clear();b.UnlockedTalents.Clear();
+    var caster=new BattleUnit("a",a,1,new GridPosition(0,0));var victim=new BattleUnit("b",b,2,new GridPosition(1,0));
+    var expected=new BattleDamageCalculator(new FixedRandom(.5)).CalculateSkillDamage(new BattleDamageContext(caster,victim,a.ExternalSkills.Single())).Amount;
+    foreach(var id in talents)b.LearnTalent(content.GetTalent(id));
+    var state=new BattleState(new BattleGrid(3,2),[caster,victim]);var runner=Engine(true);caster.SetActionGauge(100);
+    if(!runner.BeginAction(state,caster.Id).Success)throw new InvalidOperationException("Received damage fixture did not begin.");
+    var result=runner.CastSkill(state,caster.Id,a.ExternalSkills.Single(),victim.Position);
+    if(!result.Success)throw new InvalidOperationException("Received damage fixture cast failed.");
+    var actual=result.Messages.OfType<BattleFact>().Single(f=>f.Kind==BattleFactKind.Damaged&&f.UnitId==victim.Id).Damage!.Amount;
+    Check(actual==transform(expected),$"source-backed received {string.Join('+',talents)}: sequential integer truncation and order {actual}");
+}
+void CheckCommonBuff(string name,bool targetSide,Action<BattleDamageCalculationContext> expectation)
+    => CheckCommon(name,targetSide,expectation,CharacterGender.Male,CharacterGender.Male,.5,true);
+void CheckCommon(string name,bool targetSide,Action<BattleDamageCalculationContext> expectation,
+    CharacterGender sourceGender,CharacterGender targetGender,double randomValue,bool buff)
+{
+    var a=FreshHero("common_source");var b=FreshHero("common_target");
+    a.UnlockedTalents.Clear();b.UnlockedTalents.Clear();a.SetGender(sourceGender);b.SetGender(targetGender);
+    a.BaseStats[StatType.MaxHp]=10000;b.BaseStats[StatType.MaxHp]=10000;a.RebuildSnapshot();b.RebuildSnapshot();
+    var caster=new BattleUnit("a",a,1,new GridPosition(0,0));var victim=new BattleUnit("b",b,2,new GridPosition(1,0));
+    var expectedCalculator=new BattleDamageCalculator(new FixedRandom(randomValue));
+    var expected=expectedCalculator.CreateSkillDamageContext(new BattleDamageContext(caster,victim,a.ExternalSkills.Single()));
+    expectation(expected);var damage=expectedCalculator.CalculateSkillDamage(expected);
+    if(buff)(targetSide?victim:caster).TryApplyBuff(new BattleBuffInstance(content.GetBuff(name),3,5,caster.Id,0));
+    else (targetSide?b:a).LearnTalent(content.GetTalent(name));
+    var state=new BattleState(new BattleGrid(3,2),[caster,victim]);var runner=Engine(true,randomValue);caster.SetActionGauge(100);
+    if(!runner.BeginAction(state,caster.Id).Success)throw new InvalidOperationException("Common-rules fixture could not begin.");
+    var result=runner.CastSkill(state,caster.Id,a.ExternalSkills.Single(),victim.Position);
+    if(!result.Success)throw new InvalidOperationException("Common-rules fixture cast failed.");
+    var actual=result.Messages.OfType<BattleFact>().Single(f=>f.Kind==BattleFactKind.Damaged&&f.UnitId==victim.Id).Damage!;
+    Check(actual.Amount==damage.Amount&&actual.IsCritical==damage.IsCritical,$"source-backed {name}: actual damage/critical {actual.Amount}/{actual.IsCritical}, source gender {sourceGender}, target gender {targetGender}");
+}
 
 CharacterInstance FreshHero(string id) => new InitialCharacterFactory(content, config).Create(id, "主角", new EquipmentInstanceFactory());
 

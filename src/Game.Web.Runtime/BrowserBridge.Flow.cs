@@ -58,6 +58,14 @@ public static partial class BrowserBridge
 
     private sealed partial class BrowserStoryHost
     {
+        [StoryCommand("legacy_nick")]
+        public void UnlockOriginalAchievement(string id)
+        {
+            if (!(_pack["achievements"]?.AsArray().Any(a => a?["id"]?.GetValue<string>() == id) ?? false))
+                throw new InvalidOperationException("此称号不属于当前原版内容。");
+            RequireSession().ProfileService.UnlockAchievement(id);
+        }
+
         public EndingState? Ending { get; private set; }
         private TaskCompletionSource? _endingResult;
 

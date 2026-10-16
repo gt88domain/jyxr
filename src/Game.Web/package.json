@@ -20,6 +20,8 @@
     "test:management": "node tests/management-smoke.mjs",
     "test:minigame": "node tests/minigame-smoke.mjs",
     "test:flow": "node tests/flow-smoke.mjs",
+    "test:achievements": "node tests/achievement-smoke.mjs",
+    "test:battle-items": "node tests/battle-item-smoke.mjs",
     "assets:restore": "python3 scripts/art-bundle.py restore"
   },
   "dependencies": { "phaser": "3.90.0" },

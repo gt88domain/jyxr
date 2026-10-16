@@ -202,7 +202,8 @@ class BattleScene extends Phaser.Scene {
         }
       } else if (event.kind === 'SkillCast') {text = event.skillName || ''; color = '#ead292';}
       else if (event.kind === 'FloatTextRequested') text = event.text || '';
-      else if (event.kind === 'Healed' || event.kind === 'Lifesteal') {text = '气血恢复'; color = '#cdf2bd';}
+      else if (event.kind === 'Healed' || event.kind === 'Lifesteal') {text = event.amount == null ? '气血恢复' : `气血 +${event.amount}`; color = '#cdf2bd';}
+      else if (event.kind === 'MpRecovered') {text = event.amount == null ? '内力恢复' : `内力 +${event.amount}`; color = '#bce3ff';}
       if (!text || this.options.showDamage === false) continue;
       const isDamage = event.kind === 'Damaged';
       const floating = this.add.text(x, y - cell * (1 + floatIndex++ * .32), text, {fontFamily: 'serif', fontSize: `${Math.max(isDamage ? 18 : 12, cell * (isDamage ? .42 : .23))}px`, fontStyle: isDamage ? 'bold' : 'normal', color, stroke: isDamage ? '#87462c' : '#273e2c', strokeThickness: 3}).setOrigin(.5).setDepth(80);

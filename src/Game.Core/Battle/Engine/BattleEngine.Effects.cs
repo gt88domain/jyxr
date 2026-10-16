@@ -252,36 +252,28 @@ public sealed partial class BattleEngine
             switch (effect)
             {
                 case AddHpItemUseEffectDefinition hp:
-                    _recoveryResolver.Apply(
-                        state,
-                        source,
-                        target,
-                        BattleRecoveryKind.Hp,
-                        hp.Value);
+                    ApplyDirectHpRecovery(state, source, target, hp.Value);
                     break;
                 case AddMpItemUseEffectDefinition mp:
-                    _recoveryResolver.Apply(
+                    var mpRestored = _recoveryResolver.Apply(
                         state,
                         source,
                         target,
                         BattleRecoveryKind.Mp,
-                        mp.Value);
+                        mp.Value).ActualAmount;
+                    AddMessage(state, new BattleFact(BattleFactKind.MpRecovered, target.Id, detail: mpRestored.ToString()));
                     break;
                 case AddHpPercentItemUseEffectDefinition hpPercent:
-                    _recoveryResolver.Apply(
-                        state,
-                        source,
-                        target,
-                        BattleRecoveryKind.Hp,
-                        target.MaxHp * hpPercent.Value / 100);
+                    ApplyDirectHpRecovery(state, source, target, target.MaxHp * hpPercent.Value / 100);
                     break;
                 case AddMpPercentItemUseEffectDefinition mpPercent:
-                    _recoveryResolver.Apply(
+                    var mpPercentRestored = _recoveryResolver.Apply(
                         state,
                         source,
                         target,
                         BattleRecoveryKind.Mp,
-                        target.MaxMp * mpPercent.Value / 100);
+                        target.MaxMp * mpPercent.Value / 100).ActualAmount;
+                    AddMessage(state, new BattleFact(BattleFactKind.MpRecovered, target.Id, detail: mpPercentRestored.ToString()));
                     break;
                 case AddRageItemUseEffectDefinition rage:
                     BattleResourceResolver.AddRage(state, target, rage.Value, detailSource: "item");

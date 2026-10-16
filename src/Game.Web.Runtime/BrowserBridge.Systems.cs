@@ -97,7 +97,13 @@ public static partial class BrowserBridge
         var analysis = _session!.ItemUseService.AnalyzeTarget(entry, Managed);
         var book = BookSkill(entry.Definition);
         var equipment = entry.Definition as EquipmentDefinition;
-        var itemBattleReason = _battle is not null ? BattleSelfItemUnavailableReason(entry.Definition) : null;
+        var targets = _battle?.Units.Where(u => u.Team == 1 && u.IsAlive).Select(u => new
+        {
+            id = u.Id, name = u.Character.Name, hp = u.Hp, maxHp = u.MaxHp,
+            canUse = BattleItemUnavailableReason(entry.Definition, u) is null,
+            reason = BattleItemUnavailableReason(entry.Definition, u) ?? ""
+        }).ToArray();
+        var itemBattleReason = _battle is not null ? targets?.Any(t => t.canUse) == true ? null : BattleSelfItemUnavailableReason(entry.Definition) : null;
         var battleConsumable = _battle is not null && itemBattleReason is null;
         var reason = _battle is not null ? itemBattleReason ?? "" : !CanManage ? "对话中暂不可调整。" : analysis.CanUse ? "" : analysis.Reason;
         if (book is not null && !ManualAvailable(entry, Managed)) reason = "秘籍正由其他队友修炼。";
@@ -107,6 +113,7 @@ public static partial class BrowserBridge
             count = entry is StackInventoryEntry stack ? stack.Quantity : 1, quantity = entry is StackInventoryEntry stack2 ? stack2.Quantity : 1,
             description = entry.Definition.Description, kind = equipment is not null ? "equipment" : book is not null ? "skillBook" : entry.Definition.Type == ItemType.Consumable ? "consumable" : "other",
             affixes = entry is EquipmentInstanceInventoryEntry instanceEntry ? AffixFormatter.FormatEquipmentLinesCn(instanceEntry.Equipment.ExtraAffixes, _content!) : [],
+            battleTargets = targets,
             itemType = entry.Definition.Type.ToString(), slot = equipment?.SlotType.ToString(),
             canEquip = CanManage && _session.State.Party.ContainsMember(Managed.Id) && equipment is not null && analysis.CanUse,
             canCultivate = CanManage && _session.State.Party.ContainsMember(Managed.Id) && book is not null && analysis.CanUse && ManualAvailable(entry, Managed),
@@ -125,15 +132,24 @@ public static partial class BrowserBridge
     };
 
     private static string? BattleSelfItemUnavailableReason(ItemDefinition item)
+        => BattleItemUnavailableReason(item, Active);
+
+    private static string? BattleItemUnavailableReason(ItemDefinition item, BattleUnit? target)
     {
         if (item.Type != ItemType.Consumable) return "战斗中只可使用战斗消耗品。";
         if (_battle is null || BattleOutcomeEvaluator.Evaluate(_battle).Kind != BattleOutcomeKind.Ongoing) return "当前战斗已结束。";
         if (Active is not { Team: 1, IsAlive: true } actor) return "当前不是我方行动回合。";
         if (_battle.CurrentAction!.HasCommittedMainAction) return "本回合的主要行动已经完成。";
+        if (target is null || !target.IsAlive || target.Team != actor.Team) return "请选择仍在场上的我方队员。";
+        if (target.Id != actor.Id)
+        {
+            if (!actor.HasTrait(TraitId.CanUseItemOnAlly)) return "需要隔空取物天赋才能给队友使用物品。";
+            if (actor.Position.ManhattanDistanceTo(target.Position) > 2) return "队友距离过远，请先移动到两格以内。";
+        }
         // The engine currently has no public item-preview API. These are its
-        // self-target action/cooldown guards; UseItem remains authoritative.
+        // action, target and cooldown guards; UseItem remains authoritative.
         var cooldownEnabled = !_battle.RuleSettings.EnableDifficultyItemCooldownRules || _battle.RuleSettings.Difficulty != GameDifficulty.Normal;
-        if (cooldownEnabled && actor.ItemCooldown > 0 && !actor.HasTrait(TraitId.IgnoreItemCooldown)) return $"还需等待 {actor.ItemCooldown} 回合才能再次使用物品。";
+        if (cooldownEnabled && target.ItemCooldown > 0 && !actor.HasTrait(TraitId.IgnoreItemCooldown)) return $"还需等待 {target.ItemCooldown} 回合才能再次使用物品。";
         if (item.UseEffects.Count == 0 || item.UseEffects.Any(effect => effect is not (AddHpItemUseEffectDefinition or AddMpItemUseEffectDefinition or AddHpPercentItemUseEffectDefinition or AddMpPercentItemUseEffectDefinition or AddRageItemUseEffectDefinition or AddBuffItemUseEffectDefinition or DetoxifyItemUseEffectDefinition))) return "此物品的战斗效果尚未接入。";
         return null;
     }
@@ -173,7 +189,8 @@ public static partial class BrowserBridge
             var fact = message as BattleFact;
             var cue = message as BattleCue;
             var text = cue?.FloatText?.Text ?? cue?.Speech?.Text;
-            BattleEvents.Add(new { sequence = ++_eventSequence, kind = fact?.Kind.ToString() ?? cue!.Kind.ToString(), unitId = message.UnitId, amount = fact?.Damage?.Amount, critical = fact?.Damage?.IsCritical ?? false, sourceUnitId = fact?.Damage?.SourceUnitId, skillId = fact?.SkillCast?.BaseSkillId, skillName = fact?.SkillCast?.ResolvedSkillName, text });
+            int? recovery = fact?.Kind is BattleFactKind.Healed or BattleFactKind.MpRecovered && int.TryParse(fact.Detail, out var restored) ? restored : null;
+            BattleEvents.Add(new { sequence = ++_eventSequence, kind = fact?.Kind.ToString() ?? cue!.Kind.ToString(), unitId = message.UnitId, amount = fact?.Damage?.Amount ?? recovery, critical = fact?.Damage?.IsCritical ?? false, sourceUnitId = fact?.Damage?.SourceUnitId, skillId = fact?.SkillCast?.BaseSkillId, skillName = fact?.SkillCast?.ResolvedSkillName, text });
             if (fact?.Damage is { } damage)
                 Log($"{_battle?.TryGetUnit(message.UnitId)?.Character.Name ?? message.UnitId}受到 {damage.Amount} 点伤害" + (damage.IsCritical ? "（暴击）。" : "。"));
         }

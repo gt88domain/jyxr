@@ -19,6 +19,20 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
     result = copy.deepcopy(package)
     records = {s.get("name"): (filename, s) for filename in STORY_FILES
                for s in ET.parse(source / filename).getroot().findall("story")}
+    # NICK instructions themselves declare stable achievement IDs. Some have
+    # no resource description; preserve their original names without inventing
+    # resources/effects or blocking otherwise valid gameplay behind UI text.
+    achievements = {r["id"][5:]: {"id": r["id"][5:], "name": r["id"][5:], "description": r.get("value", "")}
+                    for r in result.get("resources", []) if r["id"].startswith("nick.")}
+    missing_achievement_descriptions = set()
+    for _, story in records.values():
+        for action in story.findall("action"):
+            if action.get("type") == "NICK" and action.get("value"):
+                identifier = action.get("value")
+                if identifier not in achievements:
+                    achievements[identifier] = {"id": identifier, "name": identifier, "description": ""}
+                    missing_achievement_descriptions.add(identifier)
+    result["browser"]["achievements"] = sorted(achievements.values(), key=lambda a: a["id"])
     ids = {key: {x["id"] for x in values} for key, values in result.items() if isinstance(values, list)}
     ids["maps"] = {x["id"] for x in source_maps}
     broken_battles = {b["id"]: sorted({p["characterId"] for p in b.get("participants", [])
@@ -136,7 +150,9 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
             if kind == "SHOP":
                 require("shops", value)
             if kind == "NICK":
-                require("resources", "nick." + value)
+                if value not in achievements:
+                    raise ValueError(f"unknown original achievement: {value}")
+                return [command(f"legacy_nick({quote(value)})")]
             call = {"LOG": "journal"}.get(kind, kind.lower())
             return [command(f"{call}({quote(value)})")]
         if kind == "ITEM":
@@ -360,8 +376,9 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
         "previous": {"originalStories": 35, "maps": 6},
         "structurallyMigrated": {"originalStories": len(accepted), "maps": len(maps), "mapEvents": accepted_events, "worldTriggers": len(triggers), "newbieTasks": len(tasks)},
         "deferredStories": failures, "directStoryFailures": direct_failures,
+        "achievementTextFallbacks": sorted(missing_achievement_descriptions),
         "deferredMapEvents": deferred_events, "deferredWorldTriggers": deferred_triggers, "brokenBattleReferences": broken_battles,
         "actionCounts": dict(Counter(a.get("type") for _, s in records.values() for a in s.findall("action"))),
-        "notes": ["Structural compilation and dependency closure do not prove full playability or original-rule equivalence.", "All 14 verified opening segments remain unchanged. Browser-authored practice IDs remain for existing saves.", "All original destinations use Core large-map distance and time progression; scenery remains generated placeholders.", "Unsupported commands, malformed source and missing references are quarantined with their callers; no successful no-op completion."]}
+        "notes": ["Structural compilation and dependency closure do not prove full playability or original-rule equivalence.", "All 14 verified opening segments remain unchanged. Browser-authored practice IDs remain for existing saves.", "All original destinations use Core large-map distance and time progression; media resolution is a separate build step.", "Unsupported commands, malformed source and missing references are quarantined with their callers; no successful no-op completion."]}
     metadata["migration"] = {"stories": len(accepted), "totalStories": len(records), "maps": len(maps), "totalMaps": len(source_maps), "deferredStories": len(failures)}
     return result, report

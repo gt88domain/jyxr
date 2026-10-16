@@ -1,6 +1,24 @@
 using System.Text.Json;
 using Game.Web.Runtime;
 
+if (args.FirstOrDefault() == "--campaign")
+{
+    await CampaignSmoke.Run(args[1],args[2],args.ElementAtOrDefault(3)??"new");
+    return;
+}
+
+if (args.FirstOrDefault() == "--battle-items")
+{
+    await BattleItemSmoke.Run(args[1],args[2],args[3]);
+    return;
+}
+
+if (args.FirstOrDefault() == "--achievements")
+{
+    await AchievementSmoke.Run(args[1],args[2],args[3]);
+    return;
+}
+
 if (args.FirstOrDefault() == "--flow")
 {
     await FlowSmoke.Run(args[1],args[2],args[3]);

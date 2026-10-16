@@ -268,6 +268,8 @@ def build(output: Path) -> None:
     package["storyScripts"] = {"starter": script}
     from starter_rule_effects import apply_starter_rule_effects
     report["starterRuleEffects"] = apply_starter_rule_effects(package)
+    from legacy_common_rules import apply_common_rules
+    report["commonRuleEffects"] = apply_common_rules(package)
     from browser_packs import assemble_jyx
     package = assemble_jyx(package, source_maps, SOURCE, script)
     package["browser"]["chestMapId"] = "松鼠旅馆"

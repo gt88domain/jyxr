@@ -25,10 +25,17 @@ public static partial class BrowserBridge
     private static string? SpeakerPortrait(string speaker)
     {
         if (_session is not null && (speaker == "主角" || speaker == Hero.Name)) return CharacterMedia(Hero, "portraits");
+        if (SpeakerCharacter(speaker) is { } current) return CharacterMedia(current, "portraits");
         if (ResourceMedia("头像." + speaker) is { } portrait) return portrait;
         var character = _content?.Characters.Values.FirstOrDefault(c => c.Name == speaker || c.Id == speaker);
         return character is null ? null : ResourceMedia(character.Portrait);
     }
+
+    private static CharacterInstance? SpeakerCharacter(string speaker) => _session?.State.Party.GetActiveMembers()
+        .FirstOrDefault(c => c.Id == speaker || c.Name == speaker || c.Definition.Name == speaker)
+        ?? _session?.State.Party.Reserves.FirstOrDefault(c => c.Id == speaker);
+
+    private static string SpeakerName(string speaker) => SpeakerCharacter(speaker)?.Name ?? speaker;
 
     private static string? ItemMedia(string itemId) => _pack["media"]?["items"]?[itemId]?.GetValue<string>();
 }

@@ -29,7 +29,11 @@ function itemActions(item: InventoryItem, state: GameState, busy: boolean) {
   const current = state.hero.cultivation?.itemId === item.id;
   if (item.kind === 'equipment') return `<div class="item-actions"><button class="item-action primary-action" data-action="equip-item" data-entry-number="${item.entryNumber}" ${disabled(locked || !item.canEquip)} title="${e(item.reason)}">装备到人物</button></div>`;
   if (item.kind === 'skillBook') return `<div class="item-actions"><button class="item-action primary-action" data-action="cultivate" data-entry-number="${item.entryNumber}" ${disabled(locked || !item.canCultivate || current)} title="${e(item.reason)}">${current ? '正在修炼' : '选择修炼'}</button>${item.reason && !item.canCultivate ? `<span class="field-note">${e(item.reason)}</span>` : ''}</div>`;
-  if (item.canUse || item.kind === 'consumable') return `<div class="item-actions"><button class="item-action primary-action" data-action="use-item" data-entry-number="${item.entryNumber}" ${disabled(busy || !item.canUse)} title="${e(item.reason)}">使用</button>${item.reason && !item.canUse ? `<span class="field-note">${e(item.reason)}</span>` : ''}</div>`;
+  if (item.canUse || item.kind === 'consumable') {
+    const first=item.battleTargets?.find(t=>t.canUse&&t.id===state.battle?.activeUnitId)?.id??item.battleTargets?.find(t=>t.canUse)?.id;
+    const selector=item.battleTargets?.length?`<label class="battle-item-target-label">使用目标<select class="battle-item-target" data-entry-number="${item.entryNumber}" ${disabled(busy||!item.canUse)}>${item.battleTargets.map(t=>`<option value="${e(t.id)}" ${disabled(!t.canUse)} ${t.id===first?'selected':''}>${e(t.name)} · ${t.hp}/${t.maxHp}${t.canUse?'':` · ${e(t.reason)}`}</option>`).join('')}</select></label>`:'';
+    return `<div class="item-actions">${selector}<button class="item-action primary-action" data-action="use-item" data-entry-number="${item.entryNumber}" ${disabled(busy || !item.canUse)} title="${e(item.reason)}">使用</button>${item.reason && !item.canUse ? `<span class="field-note">${e(item.reason)}</span>` : ''}</div>`;
+  }
   return '';
 }
 function itemList(items: InventoryItem[], state: GameState, busy: boolean, empty: string) {
@@ -78,7 +82,7 @@ function questPanel(state: GameState) {
 export function panelContent(name: PanelName, state: GameState, settings: Settings, busy = false, filter: InventoryFilter = 'all'): {title: string; content: string} {
   if (name === 'party') return {title: '同行队伍', content: partyPanel(state) + rosterControls(state,busy)};
   if (name === 'chest') return {title: '储物箱', content: chestPanel(state,busy)};
-  if (name === 'quests') return {title: '章节目标', content: questPanel(state)};
+  if (name === 'quests') return {title: '章节目标与江湖成就', content: questPanel(state)+(state.achievements?.length?`<h3 class="panel-heading">已获称号</h3><div class="skill-records">${state.achievements.map(a=>`<article data-achievement-id="${e(a.id)}"><strong>${e(a.name)}</strong>${a.description?`<p>${e(a.description)}</p>`:''}</article>`).join('')}</div>`:'')};
   if (name === 'settings') return {title: '游玩设置', content: settingsPanel(settings)};
   state = {...state, hero: state.managedCharacter || state.hero};
   const selector=characterSelector(state,busy);

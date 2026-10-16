@@ -12,6 +12,28 @@ namespace Game.Tests;
 
 public sealed class BattleEngineTests
 {
+    [Theory]
+    [InlineData(false, "致盲", true)]
+    [InlineData(true, "致盲", false)]
+    [InlineData(false, "中毒", true)]
+    [InlineData(true, "中毒", true)]
+    public void BeginAction_MindEyeRejectsBlindnessButNotOtherDebuffs(bool mindEye, string buffId, bool expectedApplied)
+    {
+        var buff = new BuffDefinition { Id = buffId, Name = buffId, IsDebuff = true };
+        var apply = CreateDamageContextTalent("测试施加", new HookAffix
+        {
+            Timing = HookTiming.BeforeActionStart,
+            Effects = [new ApplyBuffBattleEffectDefinition(new SelfBattleUnitSelectorDefinition(), buffId, Level: 1, Duration: 3)],
+        });
+        var immunity = new TalentDefinition { Id = "心眼", Name = "心眼", Affixes = [new TraitAffix(TraitId.MindEye)] };
+        var hero = CreateUnit("hero", 1, new GridPosition(0, 0), talents: mindEye ? [apply, immunity] : [apply]);
+        var enemy = CreateUnit("enemy", 2, new GridPosition(2, 0));
+        var state = new BattleState(new BattleGrid(3, 2), [hero, enemy]);
+        hero.ActionGauge = 100;
+        var engine = new BattleEngine(buffResolver: _ => buff);
+        Assert.True(engine.BeginAction(state, hero.Id).Success);
+        Assert.Equal(expectedApplied, hero.HasBuff(buffId));
+    }
     [Fact]
     public void GetImpactPositions_ReturnsLegacyFaceSquare()
     {
@@ -3754,6 +3776,33 @@ public sealed class BattleEngineTests
         Assert.True(result.Success);
         Assert.Equal(15, ally.Mp);
         Assert.Null(state.CurrentAction);
+    }
+
+    [Theory]
+    [InlineData(false)]
+    [InlineData(true)]
+    public void UseItem_RecoveryFactsReportActualClampedHpAndMp(bool percent)
+    {
+        var hero = CreateUnit("hero", team: 1, new GridPosition(0, 0), maxHp: 100, hp: 20, maxMp: 100, mp: 30);
+        hero.ActionGauge = 100;
+        var item = new NormalItemDefinition
+        {
+            Id = "recovery_pill", Name = "recovery_pill", Type = ItemType.Consumable, ConsumeOnUse = true,
+            UseEffects = percent
+                ? [new AddHpPercentItemUseEffectDefinition(200), new AddMpPercentItemUseEffectDefinition(200)]
+                : [new AddHpItemUseEffectDefinition(200), new AddMpItemUseEffectDefinition(200)],
+        };
+        var state = new BattleState(new BattleGrid(4, 4), [hero]);
+        var engine = new BattleEngine();
+        engine.BeginAction(state, hero.Id);
+
+        var result = engine.UseItem(state, hero.Id, item, hero.Id);
+
+        Assert.True(result.Success);
+        Assert.Equal(100, hero.Hp);
+        Assert.Equal(100, hero.Mp);
+        Assert.Single(result.Messages.OfType<BattleFact>(), f => f.Kind == BattleFactKind.Healed && f.UnitId == hero.Id && f.Detail == "80");
+        Assert.Single(result.Messages.OfType<BattleFact>(), f => f.Kind == BattleFactKind.MpRecovered && f.UnitId == hero.Id && f.Detail == "70");
     }
 
     [Fact]

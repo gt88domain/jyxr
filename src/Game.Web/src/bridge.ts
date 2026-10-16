@@ -1,7 +1,7 @@
 export interface Skill { id: string; name: string; level: number; mpCost: number; available?: boolean; reason?: string | null; description?: string; exp?: number; nextExp?: number; maxLevel?: number; active?: boolean; equipped?: boolean; kind?: string; castSize?: number; impactSize?: number; }
 export interface EquipmentSlot { slot: string; slotName: string; item: {id: string; name: string; instanceId: string; description: string; affixes?: string[]; icon?: string | null} | null; }
 export interface Cultivation { entryNumber: number; itemId: string; itemName: string; skillId: string; skillName: string; kind: string; level: number; exp: number; nextExp: number; maxLevel: number; }
-export interface InventoryItem { icon?: string | null; id: string; entryNumber: number; name: string; count: number; quantity: number; description: string; affixes?: string[]; kind: string; itemType: string; slot: string | null; canEquip: boolean; canUse: boolean; canCultivate: boolean; reason: string; }
+export interface InventoryItem { icon?: string | null; id: string; entryNumber: number; name: string; count: number; quantity: number; description: string; affixes?: string[]; battleTargets?: {id: string; name: string; hp: number; maxHp: number; canUse: boolean; reason: string}[] | null; kind: string; itemType: string; slot: string | null; canEquip: boolean; canUse: boolean; canCultivate: boolean; reason: string; }
 export interface BattleEvent { sequence: number; kind: string; unitId: string; amount: number | null; critical: boolean; sourceUnitId: string | null; skillId: string | null; skillName: string | null; text: string | null; }
 export interface CharacterAnimation {id: string; texture: string; atlas: string; poster: string; baseHeight: number; clips: Record<string, {frames: string[]; frameRate: number}>;}
 export interface Unit { animation?: CharacterAnimation | null; facing?: string; id: string; definitionId?: string; sprite?: string | null; portrait?: string | null; name: string; team: number; x: number; y: number; hp: number; maxHp: number; mp: number; maxMp: number; alive: boolean; }
@@ -27,6 +27,7 @@ export interface CreationState {
   preview: {portrait: string; sprite: string; silver: number; randomBonus: Record<string, number>; attributes: {id: string; label: string; value: number}[]; talents: {id: string; name: string}[]; internalSkills: {id: string; name: string; level: number}[]; items: {id: string; name: string; quantity: number; icon?: string}[]} | null;
 }
 export interface GameState {
+  achievements?: {id: string; name: string; description: string}[];
   ending?: {kind: 'restart' | 'next' | 'complete' | 'gameover' | 'title'; completedRound: number; targetRound: number | null} | null;
   profile?: {completionCount: number; highestRound: number; deathCount: number} | null;
   miniGame?: MiniGameConfig | null;

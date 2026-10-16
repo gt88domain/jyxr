@@ -482,6 +482,7 @@ public static partial class BrowserBridge
                     sects = SectView(), tutorial = TutorialView(),
                     adventure = _session is null ? null : new { round = _session.State.Adventure.Round, difficulty = _session.State.Adventure.Difficulty.ToString().ToLowerInvariant(), sect = _session.State.Adventure.SectId, morality = _session.State.Adventure.Morality, days = _session.State.Clock.TotalDays, timeSlot = _session.State.Clock.TimeSlot.ToChineseBranch() },
                     profile = _session is null ? null : new { completionCount = _session.Profile.CompletionCount, highestRound = _session.Profile.HighestRound, deathCount = _session.Profile.DeathCount },
+                    achievements = (_pack["achievements"]?.AsArray() ?? []).Where(a => _session?.Profile.IsAchievementUnlocked(a!["id"]!.GetValue<string>()) == true).Select(a => a!.DeepClone()).ToArray(),
                     party = PartyView(), objectives = ObjectiveView(), shop = ShopSnapshot(),
                     hero = hero is null ? null : new
                     {
@@ -513,7 +514,7 @@ public static partial class BrowserBridge
                         action = Active is { } acting && _battle.CurrentAction is { } current ? new { unitId = acting.Id, team = acting.Team, mainActionCommitted = current.HasCommittedMainAction, canMove = acting.Team == 1 && !current.HasCommittedMainAction, canRest = acting.Team == 1 && !current.HasCommittedMainAction, canAttack = acting.Team == 1 && !current.HasCommittedMainAction } : null,
                         logs = Logs.TakeLast(20).ToArray()
                     },
-                    dialogue = _host.Dialogue is { } d ? new { speaker = d.Speaker == "主角" ? hero?.Name ?? d.Speaker : d.Speaker, text = d.Text, portrait = SpeakerPortrait(d.Speaker) } : _host.Choice is { } c ? new { speaker = c.PromptSpeaker, text = c.PromptText, portrait = SpeakerPortrait(c.PromptSpeaker) } : null,
+                    dialogue = _host.Dialogue is { } d ? new { speaker = SpeakerName(d.Speaker), text = d.Text, portrait = SpeakerPortrait(d.Speaker) } : _host.Choice is { } c ? new { speaker = SpeakerName(c.PromptSpeaker), text = c.PromptText, portrait = SpeakerPortrait(c.PromptSpeaker) } : null,
                     choices = _host.Choice?.Options.Select(o => new { index = o.Index, text = o.Text }).ToArray(), logs = Logs.TakeLast(30).ToArray()
                 }
             };
