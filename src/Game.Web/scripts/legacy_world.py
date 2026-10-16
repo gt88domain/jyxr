@@ -12,6 +12,15 @@ import xml.etree.ElementTree as ET
 
 STORY_FILES = ("storys.xml", "storysCG.xml", "storysPY.xml")
 
+# The uploaded storys.txt has the same four dialogue actions and this corrected
+# result. Its map definitions contain 五毒教森林1, never 五毒教森林.
+RESULT_VALUE_CORRECTIONS = {("碧血剑_五毒教圣地2", "map", "五毒教森林"): "五毒教森林1"}
+
+UNATTRIBUTED_DIALOGUES = {
+    ("武当派_卓一航1", "师伯，我来祝你们一臂之力！"),
+    ("武当派_卓一航2", "唉，一航师兄，我来祝你一臂之力！"),
+}
+
 # Exact, audited source typos. Never guess at unknown instructions globally.
 ACTION_SPELLING_CORRECTIONS = {
     ("霹雳堂_小龙女", "UPGRADE……SKILL", "小龙女#玉女素心剑#5"): "UPGRADE.SKILL",
@@ -112,6 +121,7 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
         cases, fallback = [], list(default_steps or [])
         for node in nodes:
             kind, value = node.get("type"), node.get("value", "")
+            value = RESULT_VALUE_CORRECTIONS.get((story_id, kind, value), value)
             if kind == "story":
                 if value not in records:
                     raise ValueError(f"unknown story: {value}")
@@ -162,6 +172,8 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
         if kind == "DIALOG":
             speaker, separator, text = value.partition("#")
             if not separator:
+                if (story_id, value) in UNATTRIBUTED_DIALOGUES:
+                    return [command(f"legacy_unattributed_dialogue({quote(value)})")]
                 raise ValueError("missing dialogue speaker separator")
             # Empty text is a real silent dialogue frame, not an unknown
             # instruction or a skipped completion. The host still awaits Next.
@@ -439,6 +451,8 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
         "preservedEmptyDialogues": [{"story": name, "speaker": a.get("value", "").partition("#")[0]}
             for name, (_, story) in records.items() for a in story.findall("action")
             if a.get("type") == "DIALOG" and "#" in a.get("value", "") and not a.get("value", "").partition("#")[2]],
+        "preservedUnattributedDialogues": [{"story": story, "text": text, "speaker": None,
+            "presentation": "verbatim unattributed dialogue; no actor or portrait inferred"} for story, text in sorted(UNATTRIBUTED_DIALOGUES)],
         "instructionEvidence": {"MINUS_MAXPOINTS": {"source": "uploaded X1.0.0.1 Assembly-CSharp.dll / MapUI.ExecuteAction",
             "sha256": "a9d1456b1fa5e09f9e39a18c66564612da2aa4c7c83db6ff34430d436b872b4a", "ilRange": "0x153b..0x16eb", "argumentUnit": "tenths retained, not percent deducted"},
             "TOUCH": {"source": "same uploaded assembly / TouchUI and TouchPoint", "rounds": 5, "pointsPerRound": 8,
@@ -451,6 +465,9 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
         "sourceCorrections": [{"story": story, "originalType": original, "value": value, "normalizedType": normalized}
                               for (story, original, value), normalized in ACTION_SPELLING_CORRECTIONS.items()
                               if any(a.get("type") == original and a.get("value") == value for a in records[story][1].findall("action"))],
+        "sourceResultCorrections": [{"story": story, "type": kind, "originalValue": original, "normalizedValue": normalized,
+            "evidence": "uploaded X1.0.0.1 storys.txt", "sha256": "180e341e1fde8660c2216f951c8330216c035082a78348d4cb813ad134585bd8"}
+            for (story, kind, original), normalized in RESULT_VALUE_CORRECTIONS.items()],
         "deferredMapEvents": deferred_events, "deferredWorldTriggers": deferred_triggers, "brokenBattleReferences": broken_battles,
         "actionCounts": dict(Counter(a.get("type") for _, s in records.values() for a in s.findall("action"))),
         "notes": ["Structural compilation and dependency closure do not prove full playability or original-rule equivalence.", "All 14 verified opening segments remain unchanged. Browser-authored practice IDs remain for existing saves.", "All original destinations use Core large-map distance and time progression; media resolution is a separate build step.", "Unsupported commands, malformed source and missing references are quarantined with their callers; no successful no-op completion."]}

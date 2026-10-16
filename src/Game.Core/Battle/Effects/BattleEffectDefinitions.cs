@@ -11,6 +11,8 @@ namespace Game.Core.Battle;
 [JsonDerivedType(typeof(SelfBattleUnitSelectorDefinition), "self")]
 [JsonDerivedType(typeof(SourceBattleUnitSelectorDefinition), "source")]
 [JsonDerivedType(typeof(TargetBattleUnitSelectorDefinition), "target")]
+[JsonDerivedType(typeof(AlliedTargetsBattleUnitSelectorDefinition), "allied_targets")]
+[JsonDerivedType(typeof(EnemyTargetsBattleUnitSelectorDefinition), "enemy_targets")]
 [JsonDerivedType(typeof(AllUnitsBattleUnitSelectorDefinition), "all_units")]
 [JsonDerivedType(typeof(AllAlliesBattleUnitSelectorDefinition), "all_allies")]
 [JsonDerivedType(typeof(AllEnemiesBattleUnitSelectorDefinition), "all_enemies")]
@@ -29,6 +31,10 @@ public sealed record SelfBattleUnitSelectorDefinition : BattleUnitSelectorDefini
 public sealed record SourceBattleUnitSelectorDefinition : BattleUnitSelectorDefinition;
 
 public sealed record TargetBattleUnitSelectorDefinition : BattleUnitSelectorDefinition;
+
+public sealed record AlliedTargetsBattleUnitSelectorDefinition : BattleUnitSelectorDefinition;
+
+public sealed record EnemyTargetsBattleUnitSelectorDefinition : BattleUnitSelectorDefinition;
 
 public sealed record AllUnitsBattleUnitSelectorDefinition : BattleUnitSelectorDefinition;
 

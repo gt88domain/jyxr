@@ -16,7 +16,7 @@ public sealed class HuatuoRebornHealingBattleEffectHandler
         {
             var statHealing = healerStatTotal * Lerp(5d, 15d, context.Random.NextDouble());
             var maximumHpHealing = target.MaxHp * Lerp(0.1d, 0.3d, context.Random.NextDouble());
-            context.ApplyHpRecovery(target, (int)(statHealing + maximumHpHealing));
+            context.ApplyHpRecovery(target, (int)statHealing + (int)maximumHpHealing);
         }
     }
 

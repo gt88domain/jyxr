@@ -11,7 +11,7 @@ public sealed class SpecialSkillAiScorer : IBattleSkillAiScorer
             Definition.Intent: SpecialSkillIntent.Offensive,
             Definition.Effects: { Count: > 0 } effects
         } && effects.OfType<CustomAbilityBattleEffectDefinition>()
-            .Any(effect => effect.Target is TargetBattleUnitSelectorDefinition);
+            .Any(effect => effect.Target is TargetBattleUnitSelectorDefinition or AlliedTargetsBattleUnitSelectorDefinition or EnemyTargetsBattleUnitSelectorDefinition);
 
     public BattleSkillAiEvaluation Score(BattleSkillAiContext context)
     {
@@ -30,10 +30,10 @@ public sealed class SpecialSkillAiScorer : IBattleSkillAiScorer
             var damage = 0;
             foreach (var effect in skill.Definition.Effects ?? [])
             {
-                if (effect is not CustomAbilityBattleEffectDefinition
-                    {
-                        Target: TargetBattleUnitSelectorDefinition,
-                    } customAbility)
+                if (effect is not CustomAbilityBattleEffectDefinition customAbility ||
+                    customAbility.Target is not (TargetBattleUnitSelectorDefinition or AlliedTargetsBattleUnitSelectorDefinition or EnemyTargetsBattleUnitSelectorDefinition) ||
+                    customAbility.Target is AlliedTargetsBattleUnitSelectorDefinition && context.State.AreEnemies(context.Source, target) ||
+                    customAbility.Target is EnemyTargetsBattleUnitSelectorDefinition && !context.State.AreEnemies(context.Source, target))
                 {
                     continue;
                 }

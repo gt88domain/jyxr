@@ -270,6 +270,8 @@ def build(output: Path) -> None:
     report["starterRuleEffects"] = apply_starter_rule_effects(package)
     from legacy_common_rules import apply_common_rules
     report["commonRuleEffects"] = apply_common_rules(package)
+    from legacy_advanced_rules import apply_advanced_rules
+    report["advancedRuleEffects"] = apply_advanced_rules(package)
     from browser_packs import assemble_jyx
     package = assemble_jyx(package, source_maps, SOURCE, script)
     package["browser"]["chestMapId"] = "松鼠旅馆"
@@ -280,6 +282,10 @@ def build(output: Path) -> None:
     write_json(output / "legacy-art-coverage.json", report["legacyArt"])
     from legacy_creation import apply_legacy_creation
     report["legacyCreation"] = apply_legacy_creation(package)
+    from legacy_rule_audit import audit_rules
+    rule_audit = audit_rules(package, REPO)
+    write_json(output / "original-battle-rule-audit.json", rule_audit)
+    report["battleRuleConfiguration"] = {key: {"total": value["total"], "states": value["states"]} for key, value in rule_audit["sections"].items()}
     write_json(output / "original-migration-audit.json", original_audit)
     write_json(output / "original-story-source.json", {
         "sourceCommit": report["sourceCommit"],

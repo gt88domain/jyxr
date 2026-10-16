@@ -4754,6 +4754,82 @@ public sealed class BattleEngineTests
     }
 
     [Fact]
+    public void CastSkill_HuatuoReborn_TruncatesBothSourceFormulaTermsSeparately()
+    {
+        var skill = CreateCustomSpecialSkill("huatuo_rounding", "huatuo_reborn_healing");
+        var source = CreateUnit("source", 1, new GridPosition(0, 0),
+            stats: new Dictionary<StatType, int> { [StatType.Gengu] = 1, [StatType.Fuyuan] = 1 }, specialSkills: [skill]);
+        var target = CreateUnit("target", 1, new GridPosition(1, 0), maxHp: 101, hp: 1);
+        var state = new BattleState(new BattleGrid(3, 2), [source, target]);
+        var engine = new BattleEngine(random: new FixedRandomService(0.18)); source.SetActionGauge(100);
+        engine.BeginAction(state, source.Id);
+        Assert.True(engine.CastSkill(state, source.Id, source.Character.GetSpecialSkills().Single(), target.Position).Success);
+        // trunc(2*6.8) + trunc(101*.136) = 13+13; trunc(sum) would add 27.
+        Assert.Equal(27, target.Hp);
+    }
+
+    [Theory]
+    [InlineData(0, 0.01, false)]
+    [InlineData(1, 0.069, true)]
+    [InlineData(1, 0.07, false)]
+    [InlineData(8, 0.559, true)]
+    [InlineData(8, 0.56, false)]
+    [InlineData(20, 0.99, true)]
+    public void CastSkill_BuffChanceUsesActualBuffLevelAndStrictBoundary(int level, double roll, bool missed)
+    {
+        var strike = TestContentFactory.CreateExternalSkill("strike", powerBase: 10, castSize: 3);
+        var source = CreateUnit("source", 1, new GridPosition(0, 0), externalSkills: [new InitialExternalSkillEntryDefinition(strike, 1)]);
+        var target = CreateUnit("target", 2, new GridPosition(1, 0), maxHp: 10000);
+        var buff = new BuffDefinition { Id = "飘渺", Name = "飘渺", IsDebuff = false, Affixes = [new HookAffix {
+            Timing = HookTiming.BeforeHitResolved,
+            Conditions = [new BuffLevelChanceBattleHookConditionDefinition(0, .07)],
+            Effects = [new CancelHitBattleHookEffectDefinition()]
+        }] };
+        target.TryApplyBuff(new BattleBuffInstance(buff, level, 3, target.Id, 0));
+        var state = new BattleState(new BattleGrid(3, 2), [source, target]);
+        var engine = new BattleEngine(random: new FixedRandomService(roll));source.SetActionGauge(100);engine.BeginAction(state, source.Id);
+        var result = engine.CastSkill(state, source.Id, source.Character.GetExternalSkills().Single(), target.Position);
+        Assert.True(result.Success);
+        Assert.Equal(missed, target.Hp == 10000);
+    }
+
+    [Theory]
+    [InlineData(false)]
+    [InlineData(true)]
+    public void CastSkill_RandomBuffHonorsRequiredCasterTalent(bool learned)
+    {
+        using var json = JsonDocument.Parse("""{"buffId":"晕眩","chance":1,"minimumLevel":0,"maximumLevel":0,"minimumDuration":2,"maximumDuration":2,"requiredTalentId":"吴侬软语"}""");
+        var buff = new BuffDefinition { Id = "晕眩", Name = "晕眩", IsDebuff = true };
+        var effect = new CustomAbilityBattleEffectDefinition("random_buff", new AllEnemiesBattleUnitSelectorDefinition(), json.RootElement.Clone());
+        var skill = new SpecialSkillDefinition("song", "song", "", SpecialSkillIntent.Support, "", 0, SkillCostDefinition.None,
+            new SkillTargetingDefinition(CanCastAtSelf: true, CanImpactSelf: true, CastSize: 0, ImpactType: SkillImpactType.Single, ImpactSize: 0), "", "", null, [], [effect]);
+        var repository = TestContentFactory.CreateRepository(buffs: [buff], specialSkills: [skill]);effect.Resolve(repository);
+        var talent = new TalentDefinition { Id = "吴侬软语", Name = "吴侬软语" };
+        var source = CreateUnit("source", 1, new GridPosition(0, 0), talents: learned ? [talent] : [], specialSkills: [skill]);
+        var enemy = CreateUnit("enemy", 2, new GridPosition(2, 0));
+        var state = new BattleState(new BattleGrid(3, 2), [source, enemy]);
+        var engine = new BattleEngine(buffResolver: repository.GetBuff);source.SetActionGauge(100);engine.BeginAction(state, source.Id);
+        Assert.True(engine.CastSkill(state, source.Id, source.Character.GetSpecialSkills().Single(), source.Position).Success);
+        Assert.Equal(learned, enemy.HasBuff("晕眩"));
+    }
+
+    [Fact]
+    public void CastSkill_AlliedTargetsPurgesOnlyAlliesInsideTheSelectedArea()
+    {
+        var poison = new BuffDefinition { Id = "中毒", Name = "中毒", IsDebuff = true };
+        var effect = new RemoveBuffBattleEffectDefinition(new AlliedTargetsBattleUnitSelectorDefinition(), poison.Id);
+        var skill = new SpecialSkillDefinition("detox", "detox", "", SpecialSkillIntent.Support, "", 0, SkillCostDefinition.None,
+            new SkillTargetingDefinition(CanCastAtSelf: true, CanImpactSelf: true, CastSize: 3, ImpactType: SkillImpactType.Square, ImpactSize: 1), "", "", null, [], [effect]);
+        var source = CreateUnit("source", 1, new GridPosition(0, 0), specialSkills: [skill]);
+        var ally = CreateUnit("ally", 1, new GridPosition(1, 0));var far = CreateUnit("far", 1, new GridPosition(4, 0));
+        var enemy = CreateUnit("enemy", 2, new GridPosition(1, 1));
+        foreach (var unit in new[] { source, ally, far, enemy }) unit.TryApplyBuff(new BattleBuffInstance(poison, 1, 3, source.Id, 0));
+        var state = new BattleState(new BattleGrid(5, 3), [source, ally, far, enemy]);var engine = new BattleEngine();source.SetActionGauge(100);engine.BeginAction(state, source.Id);
+        Assert.True(engine.CastSkill(state, source.Id, source.Character.GetSpecialSkills().Single(), ally.Position).Success);
+        Assert.False(ally.HasBuff(poison.Id));Assert.True(far.HasBuff(poison.Id));Assert.True(enemy.HasBuff(poison.Id));
+    }
+
+    [Fact]
     public void CastSkill_SeverInTwo_OnSuccessfulRollDealsHalfCurrentHp()
     {
         var skill = CreateCustomSpecialSkill("sever_in_two_test", "sever_in_two");

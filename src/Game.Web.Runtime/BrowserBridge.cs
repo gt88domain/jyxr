@@ -547,7 +547,8 @@ public static partial class BrowserBridge
                         name = _content!.GetBattle(_request!.BattleId).Name, width = _battle.Grid.Width, height = _battle.Grid.Height,
                         id = _request.BattleId, background = BattleMedia(_request.BattleId),
                         activeUnitId = Active?.Id, tick = _battle.Tick, tickLimit = BattleTickLimit, timedOut = BattleTimedOut, outcome = outcome!.Kind == BattleOutcomeKind.Ongoing ? "ongoing" : outcome.WinningTeam == 1 ? "win" : "lose",
-                        units = _battle.Units.Select(u => new { id = u.Id, definitionId = u.Character.Definition.Id, sprite = CharacterMedia(u.Character, "characters", u.Team), portrait = CharacterMedia(u.Character, "portraits", u.Team), name = u.Character.Name, animation = CharacterAnimation(u.Character), facing = u.Facing.ToString().ToLowerInvariant(), team = u.Team, x = u.Position.X, y = u.Position.Y, hp = u.Hp, maxHp = u.MaxHp, mp = u.Mp, maxMp = u.MaxMp, alive = u.IsAlive }),
+                        units = _battle.Units.Select(u => new { id = u.Id, definitionId = u.Character.Definition.Id, sprite = CharacterMedia(u.Character, "characters", u.Team), portrait = CharacterMedia(u.Character, "portraits", u.Team), name = u.Character.Name, animation = CharacterAnimation(u.Character), facing = u.Facing.ToString().ToLowerInvariant(), team = u.Team, x = u.Position.X, y = u.Position.Y, hp = u.Hp, maxHp = u.MaxHp, mp = u.Mp, maxMp = u.MaxMp, alive = u.IsAlive,
+                            buffs = u.ActiveBuffs.Select(b => new { id = b.Definition.Id, name = b.Definition.Name, description = b.Definition.Description, level = b.Level, remainingTurns = b.RemainingTurns, isDebuff = b.Definition.IsDebuff }) }),
                         skills = Active?.Team == 1 ? Skills(Active.Character).Select(s => SkillView(s, Active)).ToArray() : [],
                         reachable = Active?.Team == 1 && outcome.Kind == BattleOutcomeKind.Ongoing ? _engine!.GetReachablePositions(_battle, Active.Id).Keys.Select(p => new { x = p.X, y = p.Y }).ToArray() : [],
                         targets = TargetView(), events = BattleEvents.ToArray(), playerCanAct = Active?.Team == 1 && outcome.Kind == BattleOutcomeKind.Ongoing,
@@ -629,6 +630,10 @@ public static partial class BrowserBridge
 
         [StoryCommand("suggest")]
         public ValueTask Suggest(string text, CancellationToken cancellationToken) => DialogueAsync(new Game.Core.Story.DialogueContext("提示", text), cancellationToken);
+
+        [StoryCommand("legacy_unattributed_dialogue")]
+        public ValueTask UnattributedDialogue(string text, CancellationToken cancellationToken) =>
+            DialogueAsync(new Game.Core.Story.DialogueContext("", text), cancellationToken);
 
         public Game.Core.Story.DialogueContext? Dialogue { get; private set; }
         public Game.Core.Story.ChoiceContext? Choice { get; private set; }

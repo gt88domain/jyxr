@@ -119,6 +119,7 @@ public interface IBuffApplicationEffectContext : IBattleEffectContext
 
 public interface IActionStartEffectContext : IBattleEffectContext
 {
+    bool IsActionSkipRequested { get; }
     void SkipCurrentAction(string? reason = null);
     int SetRage(int value, string? detail = null);
     int ApplyHpRecovery(BattleUnit target, int amount, string? detail = null);

@@ -683,6 +683,12 @@ public sealed partial class JsonContentLoader
                     Ensure(chance.BaseValue <= chance.MaxValue,
                         $"{ownerName} has battle hook '{hook.Timing}' with base chance greater than its maximum chance.");
                     break;
+                case BuffLevelChanceBattleHookConditionDefinition chance:
+                    Ensure(chance.BaseValue >= 0d && chance.BaseValue <= 1d &&
+                           double.IsFinite(chance.ValuePerLevel) && chance.ValuePerLevel >= 0d &&
+                           chance.MaxValue >= chance.BaseValue && chance.MaxValue <= 1d,
+                        $"{ownerName} has battle hook '{hook.Timing}' with invalid buff-level chance.");
+                    break;
                 case DamagePositiveBattleHookConditionDefinition:
                     break;
                 case ContextBuffIdBattleHookConditionDefinition buffCondition:
@@ -1060,6 +1066,8 @@ public sealed partial class JsonContentLoader
             case SelfBattleUnitSelectorDefinition:
             case SourceBattleUnitSelectorDefinition:
             case TargetBattleUnitSelectorDefinition:
+            case AlliedTargetsBattleUnitSelectorDefinition:
+            case EnemyTargetsBattleUnitSelectorDefinition:
             case AllUnitsBattleUnitSelectorDefinition:
             case AllAlliesBattleUnitSelectorDefinition:
             case AllEnemiesBattleUnitSelectorDefinition:

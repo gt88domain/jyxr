@@ -13,6 +13,8 @@ internal static class BattleUnitSelectorResolver
             SelfBattleUnitSelectorDefinition => [contextUnit],
             SourceBattleUnitSelectorDefinition => [source],
             TargetBattleUnitSelectorDefinition => primaryTargets,
+            AlliedTargetsBattleUnitSelectorDefinition => primaryTargets.Where(unit => unit.Team == contextUnit.Team).ToArray(),
+            EnemyTargetsBattleUnitSelectorDefinition => primaryTargets.Where(unit => unit.Team != contextUnit.Team).ToArray(),
             AllUnitsBattleUnitSelectorDefinition => state.GetLivingUnits(),
             AllAlliesBattleUnitSelectorDefinition allAllies => state.GetLivingUnits()
                 .Where(unit => unit.Team == contextUnit.Team)
@@ -63,7 +65,8 @@ internal static class BattleUnitSelectorResolver
                 .Where(unit => unit.Position.ManhattanDistanceTo(anchor.Position) <= nearby.Radius)
                 .ToList(),
             ExplicitUnitsBattleUnitSelectorDefinition => state.Units.Where(unit => explicitUnitIds.Contains(unit.Id)).ToList(),
-            SelfBattleUnitSelectorDefinition or SourceBattleUnitSelectorDefinition or TargetBattleUnitSelectorDefinition =>
+            SelfBattleUnitSelectorDefinition or SourceBattleUnitSelectorDefinition or TargetBattleUnitSelectorDefinition or
+                AlliedTargetsBattleUnitSelectorDefinition or EnemyTargetsBattleUnitSelectorDefinition =>
                 throw new InvalidOperationException($"Selector '{selector.GetType().Name}' is not stable for a scoped effect."),
             _ => throw new InvalidOperationException($"Selector '{selector.GetType().Name}' requires a living anchor."),
         };

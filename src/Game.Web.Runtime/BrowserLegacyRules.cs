@@ -21,9 +21,19 @@ public static class BrowserLegacyRules
             ?? throw new ArgumentException("Skill has no experience progression.", nameof(skill));
         var owner = progressionSkill.Owner;
         var wuxing = checked((int)Math.Floor(owner.GetStat(StatType.Wuxing)));
-        // BattleField.cs1491/1496 passes 15+wuxing/2. External
-        // SkillInstance.cs274 adds wuxing/30, then doubles only for 武学奇才.
-        var increment = checked(15 + wuxing / 2 + wuxing / 30);
+        // BattleField.cs1491/1496 passes 15+wuxing/2 to TryAddExp.
+        return ResolveSkillAwardExperience(progressionSkill, checked(15 + wuxing / 2));
+    }
+
+    public static int ResolveSkillAwardExperience(SkillInstance skill, int experience)
+    {
+        ArgumentOutOfRangeException.ThrowIfNegative(experience);
+        var progressionSkill = SkillExperienceProgression.NormalizeProgressionSkill(skill)
+            ?? throw new ArgumentException("Skill has no experience progression.", nameof(skill));
+        var owner = progressionSkill.Owner;
+        // Role.AddExp sends the same award to the selected cultivation book.
+        // SkillInstance/InternalSkillInstance both add wuxing/30 themselves.
+        var increment = checked(experience + (int)Math.Floor(owner.GetStat(StatType.Wuxing)) / 30);
         var talented = owner.HasEffectiveTalent("武学奇才");
         // InternalSkillInstance.cs316–325 additionally adds the same increment
         // after that talent branch: two increments normally, three if talented.

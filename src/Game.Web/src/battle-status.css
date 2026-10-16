@@ -1,0 +1,5 @@
+.duel-combatant-info .duel-statuses{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:4px;margin-top:5px;min-width:0}
+.duel-combatant-info .duel-state{display:inline-flex;align-items:center;gap:4px;max-width:100%;padding:3px 5px;border:1px solid #42685c;border-radius:4px;background:#203c32;color:#def0df;font-size:10px;line-height:1.3;overflow-wrap:anywhere;white-space:normal}
+.duel-combatant-info .duel-state.negative{background:#482d30;border-color:#94615f;color:#ffe1d4}
+.duel-combatant-info .duel-state small{font:inherit;opacity:.8;white-space:nowrap}
+.duel-state:focus-visible{outline:2px solid #e9c783;outline-offset:2px}

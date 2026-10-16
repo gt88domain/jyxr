@@ -8,6 +8,8 @@ internal static class BattleHookEvaluator
         condition switch
         {
             ChanceBattleHookConditionDefinition chance => Probability.RollChance(context.Random, chance.Value),
+            BuffLevelChanceBattleHookConditionDefinition chance => context.Buff is not null && Probability.RollChance(
+                context.Random, Math.Clamp(chance.BaseValue + chance.ValuePerLevel * context.Buff.Level, 0d, chance.MaxValue)),
             UnitLevelChanceBattleHookConditionDefinition chance => Probability.RollChance(
                 context.Random,
                 Math.Clamp(

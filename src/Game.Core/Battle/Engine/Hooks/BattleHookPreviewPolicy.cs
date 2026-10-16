@@ -22,7 +22,7 @@ internal static class BattleHookPreviewPolicy
         }
 
         if (hook.Conditions.Any(static condition => condition is
-                ChanceBattleHookConditionDefinition or UnitLevelChanceBattleHookConditionDefinition))
+                ChanceBattleHookConditionDefinition or UnitLevelChanceBattleHookConditionDefinition or BuffLevelChanceBattleHookConditionDefinition))
         {
             throw Unsupported(context, "random chance conditions");
         }

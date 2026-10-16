@@ -6,13 +6,16 @@ public sealed record RandomBuffBattleEffectParameters(
     [property: NonNegative] int MinimumLevel,
     [property: NonNegative] int MaximumLevel,
     [property: Positive] int MinimumDuration,
-    [property: Positive] int MaximumDuration);
+    [property: Positive] int MaximumDuration,
+    string? RequiredTalentId = null);
 
 public sealed class RandomBuffBattleEffectHandler
     : CustomAbilityBattleEffectHandler<RandomBuffBattleEffectParameters>
 {
     public override void Validate(RandomBuffBattleEffectParameters parameters)
     {
+        if (parameters.RequiredTalentId is not null && string.IsNullOrWhiteSpace(parameters.RequiredTalentId))
+            throw new InvalidOperationException("Required talent ID cannot be blank.");
         if (parameters.MinimumLevel > parameters.MaximumLevel)
             throw new InvalidOperationException("Minimum buff level cannot exceed the maximum level.");
         if (parameters.MinimumDuration > parameters.MaximumDuration)
@@ -25,6 +28,7 @@ public sealed class RandomBuffBattleEffectHandler
         IBattleAbilityEffectContext context,
         RandomBuffBattleEffectParameters parameters)
     {
+        if (parameters.RequiredTalentId is { } talent && !context.Source.Character.HasEffectiveTalent(talent)) return;
         foreach (var target in context.Targets)
         {
             if (!Probability.RollChance(context.Random, parameters.Chance))

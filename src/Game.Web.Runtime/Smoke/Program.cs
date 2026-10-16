@@ -1,6 +1,18 @@
 using System.Text.Json;
 using Game.Web.Runtime;
 
+if (args.FirstOrDefault() == "--advanced-ui")
+{
+    await AdvancedUiFixture.Create(args[1], args[2], args[3]);
+    return;
+}
+
+if (args.FirstOrDefault() == "--reference-repairs")
+{
+    await ReferenceRepairSmoke.Run(args[1], args[2]);
+    return;
+}
+
 if (args.FirstOrDefault() == "--story-defeat")
 {
     await StoryDefeatSmoke.Run(args[1], args[2], args[3]);

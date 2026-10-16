@@ -14,7 +14,7 @@ public sealed class FirearmDamageBattleEffectHandler
         foreach (var target in context.Targets)
         {
             var fortuneDifference = (int)Math.Abs(
-                context.Source.GetStat(StatType.Fuyuan) - target.GetStat(StatType.Fuyuan));
+                context.Source.Character.GetBaseStat(StatType.Fuyuan) - target.Character.GetBaseStat(StatType.Fuyuan));
             var randomDamage = fortuneDifference == 0
                 ? 0
                 : context.Random.Next(5 * fortuneDifference, 20 * fortuneDifference + 1);
@@ -27,7 +27,7 @@ public sealed class FirearmDamageBattleEffectHandler
         FirearmDamageBattleEffectParameters parameters)
     {
         var fortuneDifference = (int)Math.Abs(
-            context.Source.GetStat(StatType.Fuyuan) - context.Target.GetStat(StatType.Fuyuan));
+            context.Source.Character.GetBaseStat(StatType.Fuyuan) - context.Target.Character.GetBaseStat(StatType.Fuyuan));
         return 200 + (int)(12.5d * fortuneDifference);
     }
 }

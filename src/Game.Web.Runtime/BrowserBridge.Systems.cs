@@ -79,8 +79,8 @@ public static partial class BrowserBridge
         var maxLevel = BookMaxLevel(item, skill);
         if (skill.Level >= maxLevel) return;
         // Legacy Role.AddExp trains equipment slot 4 with the same role EXP.
-        // Reuse the modern skill progression resolver; no additional EXP formula.
-        var change = SkillExperienceProgression.TryAddExperience(skill, experience, maxLevel);
+        var change = SkillExperienceProgression.TryAddExperience(skill, experience, maxLevel,
+            PackText("id") == "jyx" ? (_, amount) => BrowserLegacyRules.ResolveSkillAwardExperience(skill, amount) : null);
         if (change is not null) Log($"秘籍修炼「{skill.Name}」经验 +{change.AddedExperience}" + (change.LeveledUp ? $"，提升至 {change.NewLevel} 级。" : "。"));
     }
 
