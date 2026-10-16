@@ -82557,7 +82557,16 @@
           },
           "description": "刻有太玄经的石壁",
           "picture": "头像.石壁",
-          "events": []
+          "events": [
+            {
+              "id": "1",
+              "action": "story('侠客行_太玄经')",
+              "image": null,
+              "description": null,
+              "repeatMode": "once",
+              "when": "true"
+            }
+          ]
         },
         {
           "id": "返回",
@@ -83476,6 +83485,14 @@
               "when": "(story_completed('血刀门_血刀老祖杀死狄云OK')) && (!story_completed('连城诀_唐诗山洞.狄云死亡'))"
             },
             {
+              "id": "3",
+              "action": "story('血刀门_血刀老祖杀死狄云完成')",
+              "image": null,
+              "description": null,
+              "when": "(story_completed('连城诀_唐诗山洞.狄云死亡'))",
+              "repeatMode": "once"
+            },
+            {
               "id": "4",
               "action": "story('血刀门_血刀老祖的试炼')",
               "image": null,
@@ -83615,6 +83632,14 @@
           "description": "全真教掌门人，马钰",
           "picture": null,
           "events": [
+            {
+              "id": "1",
+              "action": "story('全真教_马钰考核')",
+              "image": null,
+              "description": null,
+              "when": "(story_completed('全真教_出师')) && (story_completed('全真教_周伯通胜'))",
+              "repeatMode": "once"
+            },
             {
               "id": "2",
               "action": "story('全真教_马钰废话')",
@@ -87295,6 +87320,14 @@
           "description": "千年古刹少林寺",
           "picture": "地图.少林",
           "events": [
+            {
+              "id": "1",
+              "action": "story('倚天屠龙_劝说少林')",
+              "image": null,
+              "description": null,
+              "when": "(story_completed('倚天屠龙_光明顶胜利2')) && ((in_team('张无忌') || in_team('光明顶张无忌') || in_team('变身张无忌') || in_team('神级张无忌')))",
+              "repeatMode": "once"
+            },
             {
               "id": "2",
               "action": "story('tlbb.dy_少林寺1')",
@@ -95090,6 +95123,12 @@
       "repeatMode": "once"
     },
     {
+      "id": "legacy-global-6",
+      "action": "story('血刀门_门内比武')",
+      "when": "(elapsed_days > 85) && (sect == '血刀门')",
+      "repeatMode": "once"
+    },
+    {
       "id": "legacy-global-7",
       "action": "story('门派灵鹫宫_出师')",
       "when": "(elapsed_days > 50) && (sect == '灵鹫宫')",
@@ -95147,6 +95186,12 @@
       "id": "legacy-global-16",
       "action": "story('全真教_门派大比')",
       "when": "(elapsed_days > 50) && (sect == '全真教')",
+      "repeatMode": "once"
+    },
+    {
+      "id": "legacy-global-17",
+      "action": "story('全真教_大校')",
+      "when": "(elapsed_days > 90) && (sect == '全真教')",
       "repeatMode": "once"
     },
     {
@@ -115706,7 +115751,28 @@
       "id": "攻击弱化",
       "name": "攻击弱化",
       "description": "减少攻击力",
-      "isDebuff": true
+      "isDebuff": true,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 1.0,
+              "deltaPerBuffLevel": -0.1
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "攻击强化",
@@ -115817,7 +115883,28 @@
       "id": "防御强化",
       "name": "防御强化",
       "description": "提升防御力。",
-      "isDebuff": false
+      "isDebuff": false,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "target_defence",
+              "op": "add",
+              "delta": 20,
+              "deltaPerBuffLevel": 20
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "集气",
@@ -115993,7 +116080,27 @@
       "id": "右臂有伤",
       "name": "右臂有伤",
       "point": 5,
-      "description": "小伤而已，不碍事！攻击力降低5%，怒气每回合额外增加1。"
+      "description": "小伤而已，不碍事！攻击力降低5%，怒气每回合额外增加1。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 0.95
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "吴侬软语",
@@ -116107,13 +116214,71 @@
       "id": "好色",
       "name": "好色",
       "point": 0,
-      "description": "见一个爱一个。对女性的攻击力提高，防御力降低。"
+      "description": "见一个爱一个。对女性的攻击力提高，防御力降低。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_gender",
+              "role": "target",
+              "genders": [
+                "female"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 1.2
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_gender",
+              "role": "source",
+              "genders": [
+                "female"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "target_defence",
+              "op": "more",
+              "delta": 0.8
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "妙手仁心",
       "name": "妙手仁心",
       "point": 50,
-      "description": "对药物属性了如指掌，使用药物无CD。"
+      "description": "对药物属性了如指掌，使用药物无CD。",
+      "affixes": [
+        {
+          "type": "trait",
+          "traitId": "IgnoreItemCooldown"
+        }
+      ]
     },
     {
       "id": "孤独求败",
@@ -116125,7 +116290,28 @@
       "id": "宝甲",
       "name": "宝甲",
       "point": 5,
-      "description": "穿上这护身宝甲就觉着安全。受到的伤害减少5%。"
+      "description": "穿上这护身宝甲就觉着安全。受到的伤害减少5%。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageApplied",
+          "priority": 330,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage",
+              "op": "more",
+              "delta": 0.95,
+              "rounding": "Truncate"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "寒冰真气",
@@ -116167,7 +116353,33 @@
       "id": "左手剑",
       "name": "左手剑",
       "point": 10,
-      "description": "什么？你说用右手？？增加伤害5%，降低暴击概率2%。"
+      "description": "什么？你说用右手？？增加伤害5%，降低暴击概率2%。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 1.05
+            },
+            {
+              "type": "modify_damage_context",
+              "field": "critical_chance",
+              "op": "add",
+              "delta": -0.02
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "幽居",
@@ -116249,7 +116461,13 @@
       "id": "心眼通明",
       "name": "心眼通明",
       "point": 10,
-      "description": "能够用心眼视物，致盲无效。"
+      "description": "能够用心眼视物，致盲无效。",
+      "affixes": [
+        {
+          "type": "trait",
+          "traitId": "MindEye"
+        }
+      ]
     },
     {
       "id": "怒不可遏",
@@ -116333,7 +116551,13 @@
       "id": "斗魂",
       "name": "斗魂",
       "point": 40,
-      "description": "斗志昂扬，怒气增长效率翻倍。"
+      "description": "斗志昂扬，怒气增长效率翻倍。",
+      "affixes": [
+        {
+          "type": "trait",
+          "traitId": "DoubleCombatRageGain"
+        }
+      ]
     },
     {
       "id": "无尽斗志",
@@ -116369,7 +116593,31 @@
       "id": "暴躁",
       "name": "暴躁",
       "point": 5,
-      "description": "火爆脾气，更容易受到致命一击，也更容易在战斗中获得怒气。"
+      "description": "火爆脾气，更容易受到致命一击，也更容易在战斗中获得怒气。",
+      "affixes": [
+        {
+          "type": "trait",
+          "traitId": "Irascible"
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "critical_chance",
+              "op": "add",
+              "delta": 0.1
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "木婉清的眷恋",
@@ -116459,7 +116707,34 @@
       "id": "猎人",
       "name": "猎人",
       "point": 5,
-      "description": "擅长捕猎，对动物系列具有额外的攻击加成。"
+      "description": "擅长捕猎，对动物系列具有额外的攻击加成。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_gender",
+              "role": "target",
+              "genders": [
+                "animal"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 1.5
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "玄门罡气",
@@ -116547,7 +116822,27 @@
       "id": "神兵",
       "name": "神兵",
       "point": 5,
-      "description": "这把武器锋芒锐利的紧。伤害增加5%。"
+      "description": "这把武器锋芒锐利的紧。伤害增加5%。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 1.05
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "神拳无敌",
@@ -116559,7 +116854,46 @@
       "id": "神经病",
       "name": "神经病",
       "point": 5,
-      "description": "我想抱抱你！攻击上限增加10%，遭到的伤害增加10%。"
+      "description": "我想抱抱你！攻击上限增加10%，遭到的伤害增加10%。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack_high",
+              "op": "more",
+              "delta": 1.1
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeDamageApplied",
+          "priority": 320,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage",
+              "op": "more",
+              "delta": 1.1,
+              "rounding": "Truncate"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "神行百变",
@@ -116595,7 +116929,33 @@
       "id": "老江湖",
       "name": "老江湖",
       "point": 5,
-      "description": "这位老江湖很沉稳，降低攻击上限，提高攻击下限。"
+      "description": "这位老江湖很沉稳，降低攻击上限，提高攻击下限。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack_low",
+              "op": "more",
+              "delta": 1.2
+            },
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack_high",
+              "op": "more",
+              "delta": 0.9
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "自我主义",
@@ -116637,7 +116997,27 @@
       "id": "苦命儿",
       "name": "苦命儿",
       "point": 5,
-      "description": "他生来便是为了受苦，而受苦会让他更坚强。防御力增加30。"
+      "description": "他生来便是为了受苦，而受苦会让他更坚强。防御力增加30。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "target_defence",
+              "op": "add",
+              "delta": 30
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "草头百姓",
@@ -116793,7 +117173,13 @@
       "id": "隔空取物",
       "name": "隔空取物",
       "point": 15,
-      "description": "战斗时可以给队友使用物品。"
+      "description": "战斗时可以给队友使用物品。",
+      "affixes": [
+        {
+          "type": "trait",
+          "traitId": "CanUseItemOnAlly"
+        }
+      ]
     },
     {
       "id": "雪山飞狐",
@@ -116829,7 +117215,46 @@
       "id": "鲁莽",
       "name": "鲁莽",
       "point": 5,
-      "description": "勇气和鲁莽往往只有一线之隔。伤害增加6%，受到的伤害增加10%。"
+      "description": "勇气和鲁莽往往只有一线之隔。伤害增加6%，受到的伤害增加10%。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 1.06
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeDamageApplied",
+          "priority": 310,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage",
+              "op": "more",
+              "delta": 1.1,
+              "rounding": "Truncate"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "鲲跃北溟",
@@ -122072,7 +122497,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('唯我独黑')"
+              "call": "legacy_nick('唯我独黑')"
             },
             {
               "kind": "jump",
@@ -127722,7 +128147,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('初出茅庐')"
+              "call": "legacy_nick('初出茅庐')"
             },
             {
               "kind": "jump",
@@ -127944,7 +128369,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('初出茅庐')"
+              "call": "legacy_nick('初出茅庐')"
             },
             {
               "kind": "command",
@@ -128854,7 +129279,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('太白诗仙')"
+              "call": "legacy_nick('太白诗仙')"
             }
           ]
         },
@@ -129831,7 +130256,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('长安一梦')"
+              "call": "legacy_nick('长安一梦')"
             },
             {
               "kind": "command",
@@ -132098,7 +132523,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('易筋脱骨')"
+              "call": "legacy_nick('易筋脱骨')"
             },
             {
               "kind": "command",
@@ -132875,7 +133300,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('极北沧冥')"
+              "call": "legacy_nick('极北沧冥')"
             },
             {
               "kind": "dialogue",
@@ -132965,7 +133390,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('极北沧冥')"
+              "call": "legacy_nick('极北沧冥')"
             },
             {
               "kind": "command",
@@ -133176,7 +133601,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('独孤求败')"
+              "call": "legacy_nick('独孤求败')"
             },
             {
               "kind": "dialogue",
@@ -133284,7 +133709,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('独孤求败')"
+              "call": "legacy_nick('独孤求败')"
             },
             {
               "kind": "command",
@@ -133482,7 +133907,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('明教教主')"
+              "call": "legacy_nick('明教教主')"
             },
             {
               "kind": "command",
@@ -133548,7 +133973,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('明教教主')"
+              "call": "legacy_nick('明教教主')"
             },
             {
               "kind": "command",
@@ -133806,7 +134231,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('神雕侠侣')"
+              "call": "legacy_nick('神雕侠侣')"
             },
             {
               "kind": "command",
@@ -133925,7 +134350,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('神雕侠侣')"
+              "call": "legacy_nick('神雕侠侣')"
             },
             {
               "kind": "command",
@@ -134347,7 +134772,7 @@
           "steps": [
             {
               "kind": "command",
-              "call": "nick('真华山论剑')"
+              "call": "legacy_nick('真华山论剑')"
             },
             {
               "kind": "jump",
@@ -136330,7 +136755,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('古墓寻幽')"
+              "call": "legacy_nick('古墓寻幽')"
             },
             {
               "kind": "command",
@@ -136576,7 +137001,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('双剑合璧')"
+              "call": "legacy_nick('双剑合璧')"
             },
             {
               "kind": "command",
@@ -137324,7 +137749,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('黯然销魂')"
+              "call": "legacy_nick('黯然销魂')"
             },
             {
               "kind": "command",
@@ -137804,7 +138229,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('素月冰心')"
+              "call": "legacy_nick('素月冰心')"
             },
             {
               "kind": "command",
@@ -138080,7 +138505,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('三枚金针')"
+              "call": "legacy_nick('三枚金针')"
             },
             {
               "kind": "command",
@@ -138435,7 +138860,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('峨眉宗师')"
+              "call": "legacy_nick('峨眉宗师')"
             },
             {
               "kind": "command",
@@ -138516,7 +138941,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('峨眉宗师')"
+              "call": "legacy_nick('峨眉宗师')"
             },
             {
               "kind": "command",
@@ -139335,7 +139760,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('地牢春情')"
+              "call": "legacy_nick('地牢春情')"
             },
             {
               "kind": "command",
@@ -139490,7 +139915,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('婉而清扬')"
+              "call": "legacy_nick('婉而清扬')"
             },
             {
               "kind": "jump",
@@ -140140,7 +140565,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('六脉传人')"
+              "call": "legacy_nick('六脉传人')"
             },
             {
               "kind": "dialogue",
@@ -140332,7 +140757,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('六脉传人')"
+              "call": "legacy_nick('六脉传人')"
             },
             {
               "kind": "command",
@@ -140453,7 +140878,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('枯荣刹那')"
+              "call": "legacy_nick('枯荣刹那')"
             },
             {
               "kind": "dialogue",
@@ -141047,7 +141472,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('结义金兰')"
+              "call": "legacy_nick('结义金兰')"
             },
             {
               "kind": "dialogue",
@@ -141941,7 +142366,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('降龙神掌')"
+              "call": "legacy_nick('降龙神掌')"
             }
           ]
         },
@@ -142102,7 +142527,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('降龙神掌')"
+              "call": "legacy_nick('降龙神掌')"
             }
           ]
         },
@@ -142705,7 +143130,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('盖世英雄')"
+              "call": "legacy_nick('盖世英雄')"
             },
             {
               "kind": "dialogue",
@@ -143106,7 +143531,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('鸠摩国师')"
+              "call": "legacy_nick('鸠摩国师')"
             },
             {
               "kind": "dialogue",
@@ -143236,7 +143661,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('易筋神功')"
+              "call": "legacy_nick('易筋神功')"
             }
           ]
         },
@@ -144062,7 +144487,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('斗转星移')"
+              "call": "legacy_nick('斗转星移')"
             }
           ]
         },
@@ -144228,7 +144653,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('无量逍遥')"
+              "call": "legacy_nick('无量逍遥')"
             }
           ]
         },
@@ -144665,7 +145090,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('曼陀嫣然')"
+              "call": "legacy_nick('曼陀嫣然')"
             }
           ]
         },
@@ -144806,7 +145231,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('捉奸在床')"
+              "call": "legacy_nick('捉奸在床')"
             },
             {
               "kind": "dialogue",
@@ -145707,7 +146132,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('六脉神剑')"
+              "call": "legacy_nick('六脉神剑')"
             },
             {
               "kind": "branch",
@@ -146335,7 +146760,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('不老长春')"
+              "call": "legacy_nick('不老长春')"
             },
             {
               "kind": "dialogue",
@@ -147018,7 +147443,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('闪电毒貂')"
+              "call": "legacy_nick('闪电毒貂')"
             }
           ]
         },
@@ -147375,7 +147800,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('野球神拳')"
+              "call": "legacy_nick('野球神拳')"
             },
             {
               "kind": "dialogue",
@@ -147635,7 +148060,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('逍遥掌门')"
+              "call": "legacy_nick('逍遥掌门')"
             },
             {
               "kind": "command",
@@ -147901,7 +148326,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('乾坤挪移')"
+              "call": "legacy_nick('乾坤挪移')"
             },
             {
               "kind": "command",
@@ -148056,7 +148481,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('万里独行')"
+              "call": "legacy_nick('万里独行')"
             },
             {
               "kind": "command",
@@ -148579,7 +149004,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('古琴知音')"
+              "call": "legacy_nick('古琴知音')"
             },
             {
               "kind": "command",
@@ -149734,7 +150159,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('狂风快剑')"
+              "call": "legacy_nick('狂风快剑')"
             },
             {
               "kind": "dialogue",
@@ -153369,7 +153794,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('人生一醉')"
+              "call": "legacy_nick('人生一醉')"
             },
             {
               "kind": "command",
@@ -154488,7 +154913,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('唯我不败')"
+              "call": "legacy_nick('唯我不败')"
             },
             {
               "kind": "command",
@@ -154806,7 +155231,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('商家堡主')"
+              "call": "legacy_nick('商家堡主')"
             },
             {
               "kind": "command",
@@ -155554,7 +155979,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('七星海棠')"
+              "call": "legacy_nick('七星海棠')"
             },
             {
               "kind": "command",
@@ -156167,7 +156592,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('金面神佛')"
+              "call": "legacy_nick('金面神佛')"
             }
           ]
         },
@@ -156285,7 +156710,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('金面神佛')"
+              "call": "legacy_nick('金面神佛')"
             }
           ]
         },
@@ -156876,7 +157301,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('天龙掌门')"
+              "call": "legacy_nick('天龙掌门')"
             }
           ]
         },
@@ -156999,7 +157424,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('天龙掌门')"
+              "call": "legacy_nick('天龙掌门')"
             }
           ]
         },
@@ -157209,7 +157634,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('雪山飞狐')"
+              "call": "legacy_nick('雪山飞狐')"
             },
             {
               "kind": "command",
@@ -157290,7 +157715,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('雪山飞狐')"
+              "call": "legacy_nick('雪山飞狐')"
             }
           ]
         },
@@ -157450,7 +157875,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('药王传人')"
+              "call": "legacy_nick('药王传人')"
             },
             {
               "kind": "command",
@@ -157633,7 +158058,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('毒手药王')"
+              "call": "legacy_nick('毒手药王')"
             },
             {
               "kind": "command",
@@ -157698,7 +158123,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('药王庄主')"
+              "call": "legacy_nick('药王庄主')"
             },
             {
               "kind": "command",
@@ -158101,7 +158526,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('白骨摧筋')"
+              "call": "legacy_nick('白骨摧筋')"
             },
             {
               "kind": "dialogue",
@@ -158288,7 +158713,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('蛤蟆神功')"
+              "call": "legacy_nick('蛤蟆神功')"
             },
             {
               "kind": "command",
@@ -158491,7 +158916,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('碧海潮生')"
+              "call": "legacy_nick('碧海潮生')"
             },
             {
               "kind": "command",
@@ -158721,7 +159146,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('一阳指禅')"
+              "call": "legacy_nick('一阳指禅')"
             },
             {
               "kind": "command",
@@ -158941,7 +159366,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('天下无狗')"
+              "call": "legacy_nick('天下无狗')"
             },
             {
               "kind": "command",
@@ -159350,7 +159775,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('剑傲华山')"
+              "call": "legacy_nick('剑傲华山')"
             },
             {
               "kind": "command",
@@ -159595,7 +160020,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('金蛇传人')"
+              "call": "legacy_nick('金蛇传人')"
             }
           ]
         },
@@ -159803,7 +160228,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('神剑仙猿')"
+              "call": "legacy_nick('神剑仙猿')"
             }
           ]
         },
@@ -159898,7 +160323,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('神剑仙猿')"
+              "call": "legacy_nick('神剑仙猿')"
             }
           ]
         },
@@ -159970,7 +160395,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('铁剑传人')"
+              "call": "legacy_nick('铁剑传人')"
             }
           ]
         },
@@ -160052,7 +160477,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('铁剑传人')"
+              "call": "legacy_nick('铁剑传人')"
             }
           ]
         },
@@ -160482,7 +160907,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('连城剑客')"
+              "call": "legacy_nick('连城剑客')"
             }
           ]
         },
@@ -160770,7 +161195,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('血刀传人')"
+              "call": "legacy_nick('血刀传人')"
             }
           ]
         },
@@ -160844,7 +161269,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('富可敌国')"
+              "call": "legacy_nick('富可敌国')"
             },
             {
               "kind": "dialogue",
@@ -161200,7 +161625,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('铁骨墨萼')"
+              "call": "legacy_nick('铁骨墨萼')"
             },
             {
               "kind": "command",
@@ -161613,7 +162038,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('融会贯通')"
+              "call": "legacy_nick('融会贯通')"
             }
           ]
         },
@@ -162057,7 +162482,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('为民除害')"
+              "call": "legacy_nick('为民除害')"
             },
             {
               "kind": "dialogue",
@@ -163549,7 +163974,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('古墓弟子')"
+              "call": "legacy_nick('古墓弟子')"
             },
             {
               "kind": "command",
@@ -165887,7 +166312,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('大轮弟子')"
+              "call": "legacy_nick('大轮弟子')"
             },
             {
               "kind": "command",
@@ -167268,7 +167693,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('血刀门人')"
+              "call": "legacy_nick('血刀门人')"
             },
             {
               "kind": "command",
@@ -168262,6 +168687,215 @@
           ]
         },
         {
+          "name": "血刀门_门内比武",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.血刀门')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.血刀门')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "血刀老祖",
+              "text": "小的们，又到了我们门内一年一度比武的日子。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "血刀老祖",
+              "text": "武功对我们坏人来说是很重要的，木有武功就无法为恶，所以我要对武功卓越者提出特别奖励！来，大家一起去比武！"
+            },
+            {
+              "kind": "jump",
+              "target": "血刀门_门内比武1"
+            }
+          ]
+        },
+        {
+          "name": "血刀门_门内比武1",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.血刀门外')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "血刀老祖",
+              "text": "比赛制度为单淘，现在正式开始！谁先上场呢……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "血刀老祖",
+              "text": "喂，你，就你了，上场吧！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（左看右看，难道是我？）啊？"
+            },
+            {
+              "kind": "battle",
+              "battleId": "血刀门_门内比武1",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "血刀门_门内比武2"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "jump",
+                    "target": "血刀门_门内比武负"
+                  }
+                ],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "血刀门_门内比武2",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.血刀门外')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "血刀老祖",
+              "text": "第二场！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "血刀门_门内比武2",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "血刀门_门内比武3"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "jump",
+                    "target": "血刀门_门内比武负"
+                  }
+                ],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "血刀门_门内比武3",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.血刀门外')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "血刀老祖",
+              "text": "第三场！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "血刀门_门内比武3",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "血刀门_门内比武4"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "jump",
+                    "target": "血刀门_门内比武负"
+                  }
+                ],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "血刀门_门内比武4",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.血刀门外')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "血刀老祖",
+              "text": "第四场！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "血刀门_门内比武4",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "血刀门_门内比武胜"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "jump",
+                    "target": "血刀门_门内比武负"
+                  }
+                ],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "血刀门_门内比武胜",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.血刀门')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.血刀门')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "血刀老祖",
+              "text": "很好！你获得了门内比武第一名，作为我血刀门后起之秀，你已经非常了不得了！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "血刀老祖",
+              "text": "作为奖励，我来传你一手绝招！看好了！"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_maxlevel('血刀大法', 1, 'legacy.血刀门_门内比武胜.血刀大法')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "谢老祖！（你那诱人的血海魔功啥时候能教我啊……）"
+            },
+            {
+              "kind": "command",
+              "call": "journal('血刀门门内比武获胜')"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_nick('血刀高手')"
+            }
+          ]
+        },
+        {
           "name": "血刀门_门内比武负",
           "steps": [
             {
@@ -168406,6 +169040,61 @@
               "kind": "dialogue",
               "speaker": "主角",
               "text": "是！"
+            }
+          ]
+        },
+        {
+          "name": "血刀门_血刀老祖杀死狄云完成",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "启禀老祖，在下幸不辱命！狄云首级在此！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "血刀老祖",
+              "text": "哈哈！我果然没看错人，你小子真是个可塑之才。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "全仗老祖全力培养啊！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "血刀老祖",
+              "text": "很好，很好，也不能让你白干活，今天教你一手，看好了。"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_maxlevel('血刀大法', 1, 'legacy.血刀门_血刀老祖杀死狄云完成.血刀大法')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "血刀老祖",
+              "text": "另外这里有一本秘籍记载我门绝世心法，看在你办事利索，一并赏给你了。"
+            },
+            {
+              "kind": "command",
+              "call": "item('血海魔功秘籍', 1)"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_maxlevel('血海魔功', 1, 'legacy.血刀门_血刀老祖杀死狄云完成.血海魔功')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "哇！血刀门的绝世心法！终于拿到手了！"
+            },
+            {
+              "kind": "command",
+              "call": "journal('获得血刀门绝世心法血海魔功')"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_nick('血海魔功')"
             }
           ]
         },
@@ -168738,7 +169427,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('全真弟子')"
+              "call": "legacy_nick('全真弟子')"
             },
             {
               "kind": "command",
@@ -170042,6 +170731,163 @@
           ]
         },
         {
+          "name": "全真教_马钰考核",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "马钰",
+              "text": "你下山历练这么久，也闯下不小的名头了，就让我看看你现在的功夫如何吧。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "是，掌门。"
+            },
+            {
+              "kind": "battle",
+              "battleId": "全真教_马钰",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "全真教_马钰胜"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "jump",
+                    "target": "全真教_马钰胜"
+                  }
+                ],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "全真教_马钰胜",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "马钰",
+              "text": "（这，这手功夫……九阴……）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "掌门手下留情"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "马钰",
+              "text": "（罢了，天意……）你……你去祖师爷的房间，去打扫一下吧，注意房间里的蒲团，不要弄错了位置。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（好奇怪）是，掌门。"
+            },
+            {
+              "kind": "jump",
+              "target": "全真教_九阴蒲团"
+            }
+          ]
+        },
+        {
+          "name": "全真教_九阴蒲团",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.室内')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.紧张感')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "蒲团？蒲团里有东西么？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "蒲团下面的石板！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（石板背面刻着九阴真经的总诀）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "什么！这段话的意思难道是将内力直接从丹田灌入？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "富贵险中求，拼了！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "全真教_真九阴",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "全真教_真九阴胜利"
+                  }
+                ],
+                "lose": [],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "全真教_真九阴胜利",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.室内')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.紧张感')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "内力澎湃汹涌，仿佛要爆炸了一般！！"
+            },
+            {
+              "kind": "branch",
+              "cases": [
+                {
+                  "when": "(morality >= 75)",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "全真教_真九阴胜利正义"
+                    }
+                  ]
+                },
+                {
+                  "when": "(morality < 75)",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "全真教_真九阴胜利邪恶"
+                    }
+                  ]
+                }
+              ],
+              "fallback": []
+            }
+          ]
+        },
+        {
           "name": "全真教_真九阴胜利邪恶",
           "steps": [
             {
@@ -170079,6 +170925,53 @@
             {
               "kind": "command",
               "call": "journal('学习全真教顶级武学九阴真经过程中，走火入魔，领悟逆运九阴。')"
+            },
+            {
+              "kind": "command",
+              "call": "map('大地图')"
+            }
+          ]
+        },
+        {
+          "name": "全真教_真九阴胜利正义",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（重阳遗剑传来一阵又一阵的清凉，逐渐压制了澎湃汹涌的内力）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "多亏了祖师爷的佩剑，否则就要走火入魔了。如果是没有佩戴这重阳遗剑的人来练这九阴真经的总纲，一定会走火入魔，全身内力迸发而死。好险好险。"
+            },
+            {
+              "kind": "command",
+              "call": "learn_internal('主角', '九阴神功', 12)"
+            },
+            {
+              "kind": "command",
+              "call": "learn_talent('主角', '玄门罡气')"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_maxlevel('九阴神功', 1, 'legacy.全真教_真九阴胜利正义.九阴神功')"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_maxlevel('先天功', 1, 'legacy.全真教_真九阴胜利正义.先天功')"
+            },
+            {
+              "kind": "command",
+              "call": "grant_points('主角', 15)"
+            },
+            {
+              "kind": "command",
+              "call": "journal('学会全真教相传顶级武学，九阴真经。')"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_nick('重阳祖师')"
             },
             {
               "kind": "command",
@@ -170355,6 +171248,170 @@
           ]
         },
         {
+          "name": "全真教_大校",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.全真教')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.全真教')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "马钰",
+              "text": "今天又到了我全真教大校的时间了，大家以武会友，点到为止！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "好！看我大显身手的时刻到了！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "全真教大校_战斗1",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "全真教_大校2"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "jump",
+                    "target": "全真教_大校负"
+                  }
+                ],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "全真教_大校2",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "马钰",
+              "text": "第二轮！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "全真教大校_战斗2",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "全真教_大校3"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "jump",
+                    "target": "全真教_大校负"
+                  }
+                ],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "全真教_大校3",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "马钰",
+              "text": "第三轮！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "全真教大校_战斗3",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "全真教_大校4"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "jump",
+                    "target": "全真教_大校负"
+                  }
+                ],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "全真教_大校4",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "马钰",
+              "text": "第四轮！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "全真教大校_战斗4",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "全真教_大校胜"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "jump",
+                    "target": "全真教_大校负"
+                  }
+                ],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "全真教_大校胜",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "马钰",
+              "text": "很好！恭喜你获得全真教大校优胜！这是这次的奖品！"
+            },
+            {
+              "kind": "command",
+              "call": "item('七星七绝剑剑谱', 1)"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_maxlevel('七星七绝剑', 3, 'legacy.全真教_大校胜.七星七绝剑')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "谢谢掌门！"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_nick('全真高手')"
+            },
+            {
+              "kind": "command",
+              "call": "journal('获得全真教比武大校胜利。')"
+            },
+            {
+              "kind": "command",
+              "call": "map('大地图')"
+            }
+          ]
+        },
+        {
           "name": "全真教_大校负",
           "steps": [
             {
@@ -170401,7 +171458,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('灵鹫弟子')"
+              "call": "legacy_nick('灵鹫弟子')"
             },
             {
               "kind": "command",
@@ -171892,7 +172949,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('灵鹫尊主')"
+              "call": "legacy_nick('灵鹫尊主')"
             },
             {
               "kind": "dialogue",
@@ -172399,7 +173456,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('诸天生死')"
+              "call": "legacy_nick('诸天生死')"
             },
             {
               "kind": "command",
@@ -172696,7 +173753,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('鲲鹏展翅')"
+              "call": "legacy_nick('鲲鹏展翅')"
             }
           ]
         },
@@ -172811,7 +173868,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('看破红尘')"
+              "call": "legacy_nick('看破红尘')"
             },
             {
               "kind": "command",
@@ -172850,7 +173907,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('俗家弟子')"
+              "call": "legacy_nick('俗家弟子')"
             },
             {
               "kind": "command",
@@ -174236,7 +175293,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('达摩再世')"
+              "call": "legacy_nick('达摩再世')"
             }
           ]
         },
@@ -174350,7 +175407,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('如梦春深')"
+              "call": "legacy_nick('如梦春深')"
             },
             {
               "kind": "command",
@@ -174685,7 +175742,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('如来神掌')"
+              "call": "legacy_nick('如来神掌')"
             },
             {
               "kind": "command",
@@ -174929,7 +175986,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('金刚头陀')"
+              "call": "legacy_nick('金刚头陀')"
             },
             {
               "kind": "choice",
@@ -176751,7 +177808,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('忘年之爱')"
+              "call": "legacy_nick('忘年之爱')"
             },
             {
               "kind": "command",
@@ -177185,7 +178242,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('沧海桑田')"
+              "call": "legacy_nick('沧海桑田')"
             },
             {
               "kind": "command",
@@ -177334,7 +178391,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('太乙纯阳')"
+              "call": "legacy_nick('太乙纯阳')"
             },
             {
               "kind": "command",
@@ -177471,7 +178528,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('金陵怀古')"
+              "call": "legacy_nick('金陵怀古')"
             },
             {
               "kind": "command",
@@ -177754,7 +178811,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('太极生圆')"
+              "call": "legacy_nick('太极生圆')"
             },
             {
               "kind": "command",
@@ -177791,12 +178848,142 @@
           ]
         },
         {
+          "name": "武当派_又遇卓一航",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "这不是卓师兄么？卓师兄怎么弄成了这个样子?"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "卓一航",
+              "text": "（只见卓一航头发算乱的坐在寒风中）霓裳，霓裳你终究还是不肯见我……我……我当初是多么的傻瓜啊，就是不肯相信你。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（这样下去……卓师兄一定会疯掉的）师兄来，和师弟舞舞剑。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（顷刻间已经对招拆招数回合，这样可不行，卓师兄居然没有丝毫战意）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "想我堂堂武当首徒，竟然如此差劲。连情之一字都看不破，真是给紫阳道长丢脸。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "卓一航",
+              "text": "师父……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "卓一航",
+              "text": "师父传我我忘情剑原来如此……来师弟我们再比划比划……"
+            },
+            {
+              "kind": "battle",
+              "battleId": "武当派_天柱峰之战",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "武当派_又遇卓一航1"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "jump",
+                    "target": "武当派_又遇卓一航2"
+                  }
+                ],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "武当派_又遇卓一航1",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "卓一航",
+              "text": "原来如此……原来如此……慧剑斩情丝……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "卓一航",
+              "text": "（只见卓一航在自己的脚下画了一个三丈的圆），来吧师弟我们再过过招。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "好……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（师兄剑招方中带圆，圆中有方。三丈之圆，看似封死了自己的步伐，实则无限可能。招式间，似乎处处是漏洞，却无处可攻。）"
+            },
+            {
+              "kind": "battle",
+              "battleId": "武当派_天柱峰之战1",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "武当派_又遇卓一航3"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "jump",
+                    "target": "武当派_又遇卓一航2"
+                  }
+                ],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
           "name": "武当派_又遇卓一航2",
           "steps": [
             {
               "kind": "dialogue",
               "speaker": "卓一航",
               "text": "我果然想错了……你走吧……"
+            },
+            {
+              "kind": "command",
+              "call": "map('大地图')"
+            }
+          ]
+        },
+        {
+          "name": "武当派_又遇卓一航3",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "道可道，非常道。名可名，非常名……恭喜师兄悟得坐忘无我之境。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "卓一航",
+              "text": "多谢师弟，这本紫阳剑经你拿去吧……我要去找霓裳了，哪怕她不再见我。"
+            },
+            {
+              "kind": "command",
+              "call": "item('紫阳剑经', 1)"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_nick('画地为牢')"
             },
             {
               "kind": "command",
@@ -178212,6 +179399,171 @@
               "kind": "dialogue",
               "speaker": "石破天",
               "text": "再让我睡一会……睡完这一觉……随便看看就回去找阿黄了……"
+            }
+          ]
+        },
+        {
+          "name": "侠客行_太玄经",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（这太玄神功我自然是知道真相的，不就是‘小蝌蚪’么，但这么多的‘小蝌蚪’在身体里钻来钻去会不会出问题？毕竟我还不是石破天那个怪胎啊！怎么办？感觉很是危险的样子）"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "这太玄神功应该怎么对待？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "自己练！",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "侠客行_主_修炼太玄"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "回去找石破天",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "侠客行_石_修炼太玄"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "侠客行_主_修炼太玄",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "music('音乐.金庸群侠传4')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（第一天）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（恩……先是至阳穴，然后是悬枢穴，接着是中渚穴……）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（第二天）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（哼，哼哼，万法化极，百穴归一！生生不息，汹涌无极！哈哈哈哈，这天下谁还能阻我！）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（第三天）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "废物，你们都是废物，都去死好了！哼，哈哈哈哈！赵客缦胡缨，吴钩霜雪明。银鞍照白马，飒沓如流星。十步杀一人，千里不留行。事了拂衣去，深藏身与名。闲过信陵饮，脱剑膝前横。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "将炙啖朱亥，持觞劝侯嬴。三杯吐然诺，五岳倒为轻。眼花耳热后，意气素霓生。救赵挥金槌，邯郸先震惊。千秋二壮士，煊赫大梁城。纵死侠骨香，不惭世上英。谁能书阁下，白首太玄经！！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "侠客行_主角太玄经",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "侠客行_主太玄神功"
+                  }
+                ],
+                "lose": [],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "侠客行_主太玄神功",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.侠客岛')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.天龙八部.逍遥派')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "啊！我，我怎么了？你们怎么了啊？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "木岛主",
+              "text": "小兄弟，你，你静坐了三天之后，适才突然发狂，竟无论敌我发起疯来！岛上这么多人联手，才堪堪将你拖住。看来……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "龙岛主",
+              "text": "看来小兄弟是练成了这传说中的太玄经，能，能不能告诉我等，这侠客行中有何秘密？小兄弟是如何练了这太玄经的？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "其实，那不是诗……我只能说这么多。哈哈，龙岛主，木岛主，小弟这就告辞了！"
+            },
+            {
+              "kind": "command",
+              "call": "change_stat('主角', 'max_mp', 2000)"
+            },
+            {
+              "kind": "command",
+              "call": "grant_points('主角', 25)"
+            },
+            {
+              "kind": "command",
+              "call": "change_stat('主角', '根骨', 20)"
+            },
+            {
+              "kind": "command",
+              "call": "learn_internal('主角', '太玄神功', 10)"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_maxlevel('太玄神功', 1, 'legacy.侠客行_主太玄神功.太玄神功')"
+            },
+            {
+              "kind": "command",
+              "call": "journal('参悟了侠客岛的太玄神功')"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_nick('侠客行')"
+            },
+            {
+              "kind": "command",
+              "call": "map('大地图')"
             }
           ]
         },
@@ -179027,7 +180379,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('玄冥神掌')"
+              "call": "legacy_nick('玄冥神掌')"
             },
             {
               "kind": "command",
@@ -179316,11 +180668,140 @@
             },
             {
               "kind": "command",
-              "call": "nick('乾坤挪移')"
+              "call": "legacy_nick('乾坤挪移')"
             },
             {
               "kind": "command",
               "call": "journal('劝说武当不加入陈友谅援军')"
+            },
+            {
+              "kind": "command",
+              "call": "map('大地图')"
+            }
+          ]
+        },
+        {
+          "name": "倚天屠龙_劝说少林",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.嵩山')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.天龙八部5')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "方证大师",
+              "text": "张无忌？你为何事而来？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "张无忌",
+              "text": "方证大师，蒙古人已经快被赶出中原了，您为何还要插手汉人之争呢？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "方证大师",
+              "text": "这不仅是汉人之争，这是正邪两道之争。张无忌，看在你以往从蒙古手上拯救过中原武林的事情，我少林寺不强留你，你走吧。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "张无忌",
+              "text": "又是所谓正派邪派，方证大师，请问，我们明教有做过多少伤天害理的邪教事情？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "张无忌",
+              "text": "这一次抗元斗争，我们是不是出了大力，这半壁江山都是我们光复的，难道这也是不对的吗！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "方证大师",
+              "text": "阿弥陀佛，张施主还是执念太深。就请再来闯闯我少林三位渡字前辈的金刚伏魔圈吧。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "方证大师",
+              "text": "施主若是胜了，我少林遵守诺言绝不参战，施主若是败了，就留在我少林寺青灯古卷，以伴佛缘吧。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "张无忌",
+              "text": "好，我便再来闯一闯三位神僧的金刚伏魔圈！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "金刚伏魔圈",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "倚天屠龙_劝说少林成功"
+                  }
+                ],
+                "lose": [],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "倚天屠龙_劝说少林成功",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.嵩山')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.天龙八部5')"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_nick('金刚伏魔圈')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "张无忌",
+              "text": "承让！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "方证大师",
+              "text": "张施主既然破得了这金刚伏魔圈。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "方证大师",
+              "text": "自也是参透这若当来世，后五百岁，其有众生得闻是经，信解受持，是人即为第一希有。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "方证大师",
+              "text": "唉，天意天意，罢了，施主下山去吧，我少林绝不参战。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "张无忌",
+              "text": "多谢方证大师"
+            },
+            {
+              "kind": "command",
+              "call": "change_morality(2)"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_maxlevel('太极拳', 1, 'legacy.倚天屠龙_劝说少林成功.太极拳')"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_maxlevel('太极剑', 1, 'legacy.倚天屠龙_劝说少林成功.太极剑')"
+            },
+            {
+              "kind": "command",
+              "call": "journal('劝说少林不加入陈友谅援军')"
             },
             {
               "kind": "command",
@@ -180497,7 +181978,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('至空至明')"
+              "call": "legacy_nick('至空至明')"
             },
             {
               "kind": "command",
@@ -180912,7 +182393,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('金刚伏魔')"
+              "call": "legacy_nick('金刚伏魔')"
             },
             {
               "kind": "dialogue",
@@ -181696,7 +183177,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('岳飞传人')"
+              "call": "legacy_nick('岳飞传人')"
             },
             {
               "kind": "jump",
@@ -182161,7 +183642,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('太岳四侠')"
+              "call": "legacy_nick('太岳四侠')"
             },
             {
               "kind": "jump",
@@ -182455,7 +183936,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('仁者无敌')"
+              "call": "legacy_nick('仁者无敌')"
             },
             {
               "kind": "command",
@@ -182600,7 +184081,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('双刀之谜')"
+              "call": "legacy_nick('双刀之谜')"
             },
             {
               "kind": "command",
@@ -186051,7 +187532,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('丧心病狂')"
+              "call": "legacy_nick('丧心病狂')"
             },
             {
               "kind": "command",
@@ -186246,7 +187727,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('铁剑掌门')"
+              "call": "legacy_nick('铁剑掌门')"
             },
             {
               "kind": "dialogue",
@@ -186700,7 +188181,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('石梁五祖')"
+              "call": "legacy_nick('石梁五祖')"
             },
             {
               "kind": "command",
@@ -186893,7 +188374,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('天外飞龙')"
+              "call": "legacy_nick('天外飞龙')"
             },
             {
               "kind": "command",
@@ -187640,7 +189121,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('百变不传')"
+              "call": "legacy_nick('百变不传')"
             },
             {
               "kind": "dialogue",
@@ -187841,7 +189322,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('千招无敌')"
+              "call": "legacy_nick('千招无敌')"
             },
             {
               "kind": "command",
@@ -188095,7 +189576,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('金蛇之志')"
+              "call": "legacy_nick('金蛇之志')"
             },
             {
               "kind": "command",
@@ -188653,7 +190134,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('剑光殿前')"
+              "call": "legacy_nick('剑光殿前')"
             },
             {
               "kind": "command",
@@ -188953,7 +190434,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('苍穹碧落')"
+              "call": "legacy_nick('苍穹碧落')"
             },
             {
               "kind": "dialogue",
@@ -189317,7 +190798,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('星宿门人')"
+              "call": "legacy_nick('星宿门人')"
             },
             {
               "kind": "command",
@@ -189805,7 +191286,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('魔神之谜')"
+              "call": "legacy_nick('魔神之谜')"
             },
             {
               "kind": "command",
@@ -199521,7 +201002,7 @@
             },
             {
               "kind": "command",
-              "call": "nick('白马西风')"
+              "call": "legacy_nick('白马西风')"
             },
             {
               "kind": "branch",
@@ -215936,6 +217417,573 @@
       }
     ],
     "chestMapId": "松鼠旅馆",
+    "achievements": [
+      {
+        "id": "一阳指禅",
+        "name": "一阳指禅",
+        "description": "击败南帝段王爷。"
+      },
+      {
+        "id": "七星海棠",
+        "name": "七星海棠",
+        "description": "杀死阎基，获得七星海棠。"
+      },
+      {
+        "id": "万里独行",
+        "name": "万里独行",
+        "description": "击败万里独行田伯光，说服加入队伍。"
+      },
+      {
+        "id": "三枚金针",
+        "name": "三枚金针",
+        "description": "帮郭襄找到遗失的三枚金针"
+      },
+      {
+        "id": "不老长春",
+        "name": "不老长春",
+        "description": "获得不老长春功法"
+      },
+      {
+        "id": "丧心病狂",
+        "name": "丧心病狂",
+        "description": "抢劫闯王军饷。"
+      },
+      {
+        "id": "为民除害",
+        "name": "为民除害",
+        "description": "杀死鳌拜。"
+      },
+      {
+        "id": "乾坤挪移",
+        "name": "乾坤挪移",
+        "description": "张无忌获得张三丰授艺"
+      },
+      {
+        "id": "人生一醉",
+        "name": "人生一醉",
+        "description": "令狐冲击败东方不败"
+      },
+      {
+        "id": "仁者无敌",
+        "name": "仁者无敌",
+        "description": "书生袁冠南入队"
+      },
+      {
+        "id": "侠客行",
+        "name": "侠客行",
+        "description": ""
+      },
+      {
+        "id": "俗家弟子",
+        "name": "俗家弟子",
+        "description": "成为少林寺挂名弟子"
+      },
+      {
+        "id": "全真弟子",
+        "name": "全真弟子",
+        "description": "加入全真教。"
+      },
+      {
+        "id": "全真高手",
+        "name": "全真高手",
+        "description": ""
+      },
+      {
+        "id": "六脉传人",
+        "name": "六脉传人",
+        "description": "天龙寺胜鸠摩智，段誉和木婉清被成全。"
+      },
+      {
+        "id": "六脉神剑",
+        "name": "六脉神剑",
+        "description": "获得六脉神剑心法"
+      },
+      {
+        "id": "决战光明顶",
+        "name": "决战光明顶",
+        "description": "通过天关【决战光明顶】。"
+      },
+      {
+        "id": "初出茅庐",
+        "name": "初出茅庐",
+        "description": "开始闯荡金庸世界。"
+      },
+      {
+        "id": "剑傲华山",
+        "name": "剑傲华山",
+        "description": "击败中神通王重阳。"
+      },
+      {
+        "id": "剑光殿前",
+        "name": "剑光殿前",
+        "description": "打败崇祯皇帝。"
+      },
+      {
+        "id": "千招无敌",
+        "name": "千招无敌",
+        "description": "袁承志单挑归辛树胜利。"
+      },
+      {
+        "id": "双刀之谜",
+        "name": "双刀之谜",
+        "description": "找到鸳鸯刀宝藏"
+      },
+      {
+        "id": "双剑合璧",
+        "name": "双剑合璧",
+        "description": "击败绝情谷主公孙止。"
+      },
+      {
+        "id": "古墓寻幽",
+        "name": "古墓寻幽",
+        "description": "在古墓击败李莫愁。"
+      },
+      {
+        "id": "古墓弟子",
+        "name": "古墓弟子",
+        "description": "加入古墓派。"
+      },
+      {
+        "id": "古琴知音",
+        "name": "古琴知音",
+        "description": "曲非烟加入队伍。"
+      },
+      {
+        "id": "唯我不败",
+        "name": "唯我不败",
+        "description": "帮助东方不败重夺黑木崖"
+      },
+      {
+        "id": "唯我独黑",
+        "name": "唯我独黑",
+        "description": "打败黑衣魔君。"
+      },
+      {
+        "id": "商家堡主",
+        "name": "商家堡主",
+        "description": "击败商家堡主商剑鸣的八卦迷魂阵。"
+      },
+      {
+        "id": "地牢春情",
+        "name": "地牢春情",
+        "description": "段誉、木婉清行夫妻之实。"
+      },
+      {
+        "id": "大轮弟子",
+        "name": "大轮弟子",
+        "description": "加入雪山大轮寺。"
+      },
+      {
+        "id": "天下无狗",
+        "name": "天下无狗",
+        "description": "击败北丐洪七公。"
+      },
+      {
+        "id": "天外飞龙",
+        "name": "天外飞龙",
+        "description": "习得华山派剑法绝技，天外飞龙。"
+      },
+      {
+        "id": "天龙掌门",
+        "name": "天龙掌门",
+        "description": "田归农阴谋得逞，杀死了胡斐的杀父仇人金面佛苗人凤。"
+      },
+      {
+        "id": "太乙纯阳",
+        "name": "太乙纯阳",
+        "description": "大梦谁先觉，平生我自知。领悟烈阳无忌道。"
+      },
+      {
+        "id": "太岳四侠",
+        "name": "太岳四侠",
+        "description": "打赢四个看似搞笑却很仗义的货"
+      },
+      {
+        "id": "太极生圆",
+        "name": "太极生圆",
+        "description": "领悟太极之道刚柔并济"
+      },
+      {
+        "id": "太白诗仙",
+        "name": "太白诗仙",
+        "description": "长江之滨聆听诗仙真意。"
+      },
+      {
+        "id": "如来神掌",
+        "name": "如来神掌",
+        "description": "领悟少林派神技如来神掌。"
+      },
+      {
+        "id": "如梦春深",
+        "name": "如梦春深",
+        "description": "小和尚虚竹再次见到了梦姑"
+      },
+      {
+        "id": "婉而清扬",
+        "name": "婉而清扬",
+        "description": "镇南王府营救木婉清成功。"
+      },
+      {
+        "id": "富可敌国",
+        "name": "富可敌国",
+        "description": "得到天宁寺的宝藏。"
+      },
+      {
+        "id": "岳飞传人",
+        "name": "岳飞传人",
+        "description": "获得武穆遗书。"
+      },
+      {
+        "id": "峨眉宗师",
+        "name": "峨眉宗师",
+        "description": "郭襄领悟天赋，峨眉宗师"
+      },
+      {
+        "id": "忘年之爱",
+        "name": "忘年之爱",
+        "description": "成就殷梨亭与杨不悔。"
+      },
+      {
+        "id": "捉奸在床",
+        "name": "捉奸在床",
+        "description": "段正淳被儿子、女儿捉奸在床……"
+      },
+      {
+        "id": "斗转星移",
+        "name": "斗转星移",
+        "description": "三十年前雁门关之谜已解，慕容复加入队伍。"
+      },
+      {
+        "id": "无量逍遥",
+        "name": "无量逍遥",
+        "description": "无量山洞，段誉、慕容复领悟逍遥派武学精义"
+      },
+      {
+        "id": "明教教主",
+        "name": "明教教主",
+        "description": "与张无忌回忆光明顶之战胜利。"
+      },
+      {
+        "id": "易筋神功",
+        "name": "易筋神功",
+        "description": "归还少林寺《法华经》，获得易筋经神功。"
+      },
+      {
+        "id": "易筋脱骨",
+        "name": "易筋脱骨",
+        "description": "击败扫地神僧，获得易筋经。"
+      },
+      {
+        "id": "星宿门人",
+        "name": "星宿门人",
+        "description": "加入星宿派。"
+      },
+      {
+        "id": "曼陀嫣然",
+        "name": "曼陀嫣然",
+        "description": "曼陀山庄，或王语嫣赠书"
+      },
+      {
+        "id": "极北沧冥",
+        "name": "极北沧冥",
+        "description": "无量山洞中，段誉与陈家洛研习《庄子》"
+      },
+      {
+        "id": "林平之复仇",
+        "name": "林平之复仇",
+        "description": "通过天关【林平之的复仇】。"
+      },
+      {
+        "id": "枯荣刹那",
+        "name": "枯荣刹那",
+        "description": "天龙寺战胜鸠摩智。"
+      },
+      {
+        "id": "毒手药王",
+        "name": "毒手药王",
+        "description": "程灵素单挑击败毒手药王。"
+      },
+      {
+        "id": "沧海桑田",
+        "name": "沧海桑田",
+        "description": "张三丰遇到郭襄又一次回忆起了陈年往事"
+      },
+      {
+        "id": "灵鹫尊主",
+        "name": "灵鹫尊主",
+        "description": "获得逍遥派掌门扳指"
+      },
+      {
+        "id": "灵鹫弟子",
+        "name": "灵鹫弟子",
+        "description": "加入灵鹫宫"
+      },
+      {
+        "id": "狂风快剑",
+        "name": "狂风快剑",
+        "description": "击败野心勃勃的华山剑宗传人封不平。"
+      },
+      {
+        "id": "独孤求败",
+        "name": "独孤求败",
+        "description": "剑魔荒冢中，杨过与令狐冲研习独孤求败武学，击败独孤求败。"
+      },
+      {
+        "id": "玄冥神掌",
+        "name": "玄冥神掌",
+        "description": "击败玄冥二老"
+      },
+      {
+        "id": "画地为牢",
+        "name": "画地为牢",
+        "description": ""
+      },
+      {
+        "id": "白马西风",
+        "name": "白马西风",
+        "description": "高昌迷宫说服李文秀一起浪迹江湖。"
+      },
+      {
+        "id": "白骨摧筋",
+        "name": "白骨摧筋",
+        "description": "击败梅超风。"
+      },
+      {
+        "id": "百变不传",
+        "name": "百变不传",
+        "description": "木桑道人传授袁承志神行百变绝技。"
+      },
+      {
+        "id": "盖世英雄",
+        "name": "盖世英雄",
+        "description": "小镜湖畔，乔峰、段正淳仇恨化解。"
+      },
+      {
+        "id": "看破红尘",
+        "name": "看破红尘",
+        "description": "少林寺出家为僧"
+      },
+      {
+        "id": "真华山论剑",
+        "name": "真华山论剑",
+        "description": "取得真.华山论剑的胜利！"
+      },
+      {
+        "id": "石梁五祖",
+        "name": "石梁五祖",
+        "description": "完胜石梁五祖。"
+      },
+      {
+        "id": "碧海潮生",
+        "name": "碧海潮生",
+        "description": "击败东邪黄药师。"
+      },
+      {
+        "id": "神剑仙猿",
+        "name": "神剑仙猿",
+        "description": "袁承志得到穆人清和木桑道长真传。"
+      },
+      {
+        "id": "神雕侠侣",
+        "name": "神雕侠侣",
+        "description": "古墓之中，与杨过、小龙女一起挑战王重阳与林朝英成功。"
+      },
+      {
+        "id": "素月冰心",
+        "name": "素月冰心",
+        "description": "绝情谷底，杨过与小龙女久别重逢。"
+      },
+      {
+        "id": "结义金兰",
+        "name": "结义金兰",
+        "description": "段誉、乔峰结拜，并过招取胜。"
+      },
+      {
+        "id": "至空至明",
+        "name": "至空至明",
+        "description": "鄱阳湖之战张无忌成就朱元璋。"
+      },
+      {
+        "id": "苍穹碧落",
+        "name": "苍穹碧落",
+        "description": "获得铁剑令，习得铁剑门绝学剑法"
+      },
+      {
+        "id": "药王传人",
+        "name": "药王传人",
+        "description": "和程灵素一起击败毒手药王。"
+      },
+      {
+        "id": "药王庄主",
+        "name": "药王庄主",
+        "description": "程灵素单挑负于毒手药王。"
+      },
+      {
+        "id": "蛤蟆神功",
+        "name": "蛤蟆神功",
+        "description": "击败西毒欧阳锋。"
+      },
+      {
+        "id": "融会贯通",
+        "name": "融会贯通",
+        "description": "帮助陈家洛击败铁手判官张召重。"
+      },
+      {
+        "id": "血刀传人",
+        "name": "血刀传人",
+        "description": "杀死狄云，血刀老祖加入队伍。"
+      },
+      {
+        "id": "血刀门人",
+        "name": "血刀门人",
+        "description": "加入血刀门。"
+      },
+      {
+        "id": "血刀高手",
+        "name": "血刀高手",
+        "description": ""
+      },
+      {
+        "id": "血战少林",
+        "name": "血战少林",
+        "description": "通过天关【血战少室山】。"
+      },
+      {
+        "id": "血海魔功",
+        "name": "血海魔功",
+        "description": ""
+      },
+      {
+        "id": "诸天生死",
+        "name": "诸天生死",
+        "description": "帮李秋水打败童姥，得到天山六阳掌"
+      },
+      {
+        "id": "越女传奇",
+        "name": "越女传奇",
+        "description": "击败越女剑阿青。"
+      },
+      {
+        "id": "达摩再世",
+        "name": "达摩再世",
+        "description": "成功习得洗髓经"
+      },
+      {
+        "id": "连城剑客",
+        "name": "连城剑客",
+        "description": "狄云加入队伍。"
+      },
+      {
+        "id": "逍遥掌门",
+        "name": "逍遥掌门",
+        "description": "破解珍珑棋局，得到逍遥子传功。"
+      },
+      {
+        "id": "重阳祖师",
+        "name": "重阳祖师",
+        "description": ""
+      },
+      {
+        "id": "野球神拳",
+        "name": "野球神拳",
+        "description": "破解珍珑棋局，领悟野球拳精要。"
+      },
+      {
+        "id": "金刚伏魔",
+        "name": "金刚伏魔",
+        "description": "击败少林三大神僧组成的金刚伏魔圈阵法。"
+      },
+      {
+        "id": "金刚伏魔圈",
+        "name": "金刚伏魔圈",
+        "description": ""
+      },
+      {
+        "id": "金刚头陀",
+        "name": "金刚头陀",
+        "description": "找到少林叛徒火工头陀的下落"
+      },
+      {
+        "id": "金蛇之志",
+        "name": "金蛇之志",
+        "description": "得到金蛇郎君的传承。"
+      },
+      {
+        "id": "金蛇传人",
+        "name": "金蛇传人",
+        "description": "找到金蛇剑。"
+      },
+      {
+        "id": "金陵怀古",
+        "name": "金陵怀古",
+        "description": "秦淮河上近酒家"
+      },
+      {
+        "id": "金面神佛",
+        "name": "金面神佛",
+        "description": "阎基阴谋得逞，杀死了金面佛苗人凤。"
+      },
+      {
+        "id": "铁剑传人",
+        "name": "铁剑传人",
+        "description": "木桑道人传授袁承志神行百变绝技。"
+      },
+      {
+        "id": "铁剑掌门",
+        "name": "铁剑掌门",
+        "description": "获得铁剑令。"
+      },
+      {
+        "id": "铁骨墨萼",
+        "name": "铁骨墨萼",
+        "description": "完成天宁寺复仇，击败大侠梅念笙。"
+      },
+      {
+        "id": "长安一梦",
+        "name": "长安一梦",
+        "description": "长安西市上，做了一个牧马塞外的绮丽的梦。"
+      },
+      {
+        "id": "闪电毒貂",
+        "name": "闪电毒貂",
+        "description": "帮助钟灵寻回闪电貂"
+      },
+      {
+        "id": "降龙神掌",
+        "name": "降龙神掌",
+        "description": "雁门关外，乔峰身世大白。"
+      },
+      {
+        "id": "雪山飞狐",
+        "name": "雪山飞狐",
+        "description": "和胡斐一起回忆胡一刀与苗人凤的惊天大决战。"
+      },
+      {
+        "id": "魔神之谜",
+        "name": "魔神之谜",
+        "description": "偶遇魔神。"
+      },
+      {
+        "id": "鲲鹏展翅",
+        "name": "鲲鹏展翅",
+        "description": "偶遇逍遥子"
+      },
+      {
+        "id": "鸠摩国师",
+        "name": "鸠摩国师",
+        "description": "枯井底，鸠摩智戾气化解。"
+      },
+      {
+        "id": "黑衣墨道",
+        "name": "黑衣墨道",
+        "description": "加入黑衣教。"
+      },
+      {
+        "id": "黯然销魂",
+        "name": "黯然销魂",
+        "description": "剑魔荒冢战胜杨过及神雕。"
+      }
+    ],
     "legacyTasks": [
       {
         "id": "购买物品",
@@ -215999,11 +218047,11 @@
       }
     ],
     "migration": {
-      "stories": 1829,
+      "stories": 1854,
       "totalStories": 1887,
       "maps": 162,
       "totalMaps": 162,
-      "deferredStories": 58
+      "deferredStories": 33
     },
     "artSource": {
       "kind": "legacy",

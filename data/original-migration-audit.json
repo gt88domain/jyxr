@@ -14,10 +14,10 @@
     "maps": 6
   },
   "structurallyMigrated": {
-    "originalStories": 1829,
+    "originalStories": 1854,
     "maps": 162,
-    "mapEvents": 1107,
-    "worldTriggers": 19,
+    "mapEvents": 1111,
+    "worldTriggers": 21,
     "newbieTasks": 6
   },
   "deferredStories": {
@@ -49,22 +49,6 @@
       "source": "storys.xml",
       "reason": "unknown maps: 五毒教森林"
     },
-    "血刀门_门内比武胜": {
-      "source": "storys.xml",
-      "reason": "unknown resources: nick.血刀高手"
-    },
-    "血刀门_血刀老祖杀死狄云完成": {
-      "source": "storys.xml",
-      "reason": "unknown resources: nick.血海魔功"
-    },
-    "全真教_真九阴胜利正义": {
-      "source": "storys.xml",
-      "reason": "unknown resources: nick.重阳祖师"
-    },
-    "全真教_大校胜": {
-      "source": "storys.xml",
-      "reason": "unknown resources: nick.全真高手"
-    },
     "武当派_卓一航1": {
       "source": "storys.xml",
       "reason": "invalid dialogue"
@@ -72,18 +56,6 @@
     "武当派_卓一航2": {
       "source": "storys.xml",
       "reason": "invalid dialogue"
-    },
-    "武当派_又遇卓一航3": {
-      "source": "storys.xml",
-      "reason": "unknown resources: nick.画地为牢"
-    },
-    "侠客行_主太玄神功": {
-      "source": "storys.xml",
-      "reason": "unknown resources: nick.侠客行"
-    },
-    "倚天屠龙_劝说少林成功": {
-      "source": "storys.xml",
-      "reason": "unknown resources: nick.金刚伏魔圈"
     },
     "霹雳堂_小龙女": {
       "source": "storys.xml",
@@ -137,54 +109,12 @@
         "tlbb.dy_木婉清.touch.前奏"
       ]
     },
-    "血刀门_门内比武4": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "血刀门_门内比武胜"
-      ]
-    },
-    "全真教_真九阴胜利": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "全真教_真九阴胜利正义"
-      ]
-    },
-    "全真教_大校4": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "全真教_大校胜"
-      ]
-    },
     "武当派_卓一航": {
       "source": "storys.xml",
       "reason": "blocked story dependencies",
       "targets": [
         "武当派_卓一航1",
         "武当派_卓一航2"
-      ]
-    },
-    "武当派_又遇卓一航1": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "武当派_又遇卓一航3"
-      ]
-    },
-    "侠客行_主_修炼太玄": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "侠客行_主太玄神功"
-      ]
-    },
-    "倚天屠龙_劝说少林": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "倚天屠龙_劝说少林成功"
       ]
     },
     "original_山庄风云.贾飞女主": {
@@ -229,41 +159,6 @@
         "tlbb.dy_万劫谷地牢.不上2"
       ]
     },
-    "血刀门_门内比武3": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "血刀门_门内比武4"
-      ]
-    },
-    "全真教_九阴蒲团": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "全真教_真九阴胜利"
-      ]
-    },
-    "全真教_大校3": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "全真教_大校4"
-      ]
-    },
-    "武当派_又遇卓一航": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "武当派_又遇卓一航1"
-      ]
-    },
-    "侠客行_太玄经": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "侠客行_主_修炼太玄"
-      ]
-    },
     "tlbb.dy_阿碧线王语嫣touch": {
       "source": "storysPY.xml",
       "reason": "blocked story dependencies",
@@ -292,27 +187,6 @@
         "tlbb.dy_阿碧线王语嫣touch"
       ]
     },
-    "血刀门_门内比武2": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "血刀门_门内比武3"
-      ]
-    },
-    "全真教_马钰胜": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "全真教_九阴蒲团"
-      ]
-    },
-    "全真教_大校2": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "全真教_大校3"
-      ]
-    },
     "mainStory_襄阳5": {
       "source": "storys.xml",
       "reason": "blocked story dependencies",
@@ -327,39 +201,11 @@
         "tlbb.dy_琴韵小筑阿碧2"
       ]
     },
-    "血刀门_门内比武1": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "血刀门_门内比武2"
-      ]
-    },
-    "全真教_马钰考核": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "全真教_马钰胜"
-      ]
-    },
-    "全真教_大校": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "全真教_大校2"
-      ]
-    },
     "mainStory_襄阳1": {
       "source": "storys.xml",
       "reason": "blocked story dependencies",
       "targets": [
         "mainStory_襄阳5"
-      ]
-    },
-    "血刀门_门内比武": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "血刀门_门内比武1"
       ]
     }
   },
@@ -392,22 +238,6 @@
       "source": "storys.xml",
       "reason": "unknown maps: 五毒教森林"
     },
-    "血刀门_门内比武胜": {
-      "source": "storys.xml",
-      "reason": "unknown resources: nick.血刀高手"
-    },
-    "血刀门_血刀老祖杀死狄云完成": {
-      "source": "storys.xml",
-      "reason": "unknown resources: nick.血海魔功"
-    },
-    "全真教_真九阴胜利正义": {
-      "source": "storys.xml",
-      "reason": "unknown resources: nick.重阳祖师"
-    },
-    "全真教_大校胜": {
-      "source": "storys.xml",
-      "reason": "unknown resources: nick.全真高手"
-    },
     "武当派_卓一航1": {
       "source": "storys.xml",
       "reason": "invalid dialogue"
@@ -415,18 +245,6 @@
     "武当派_卓一航2": {
       "source": "storys.xml",
       "reason": "invalid dialogue"
-    },
-    "武当派_又遇卓一航3": {
-      "source": "storys.xml",
-      "reason": "unknown resources: nick.画地为牢"
-    },
-    "侠客行_主太玄神功": {
-      "source": "storys.xml",
-      "reason": "unknown resources: nick.侠客行"
-    },
-    "倚天屠龙_劝说少林成功": {
-      "source": "storys.xml",
-      "reason": "unknown resources: nick.金刚伏魔圈"
     },
     "霹雳堂_小龙女": {
       "source": "storys.xml",
@@ -453,6 +271,15 @@
       "reason": "unsupported action: TOUCH (李青萝)"
     }
   },
+  "achievementTextFallbacks": [
+    "侠客行",
+    "全真高手",
+    "画地为牢",
+    "血刀高手",
+    "血海魔功",
+    "重阳祖师",
+    "金刚伏魔圈"
+  ],
   "deferredMapEvents": [
     {
       "map": "黑龙潭",
@@ -485,34 +312,10 @@
       "reason": "story deferred: original_山庄风云.贾飞女主"
     },
     {
-      "map": "侠客岛洞内",
-      "location": "石壁",
-      "eventId": "1",
-      "reason": "story deferred: 侠客行_太玄经"
-    },
-    {
-      "map": "血刀门",
-      "location": "血刀老祖",
-      "eventId": "3",
-      "reason": "story deferred: 血刀门_血刀老祖杀死狄云完成"
-    },
-    {
-      "map": "全真教",
-      "location": "马钰",
-      "eventId": "1",
-      "reason": "story deferred: 全真教_马钰考核"
-    },
-    {
       "map": "五毒教",
       "location": "五毒教深处",
       "eventId": "1",
       "reason": "story deferred: 碧血剑_五毒教圣地2"
-    },
-    {
-      "map": "嵩山",
-      "location": "少林寺",
-      "eventId": "1",
-      "reason": "story deferred: 倚天屠龙_劝说少林"
     },
     {
       "map": "南贤居",
@@ -533,10 +336,7 @@
       "reason": "story deferred: 破庙_田青文"
     }
   ],
-  "deferredWorldTriggers": [
-    "血刀门_门内比武",
-    "全真教_大校"
-  ],
+  "deferredWorldTriggers": [],
   "brokenBattleReferences": {
     "南贤居_经验木头人_战斗": [
       "经验木头人"
@@ -611,7 +411,7 @@
   "notes": [
     "Structural compilation and dependency closure do not prove full playability or original-rule equivalence.",
     "All 14 verified opening segments remain unchanged. Browser-authored practice IDs remain for existing saves.",
-    "All original destinations use Core large-map distance and time progression; scenery remains generated placeholders.",
+    "All original destinations use Core large-map distance and time progression; media resolution is a separate build step.",
     "Unsupported commands, malformed source and missing references are quarantined with their callers; no successful no-op completion."
   ]
 }

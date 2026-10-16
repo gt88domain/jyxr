@@ -87,6 +87,36 @@
       "其余未显式装配的天赋及Buff效果"
     ]
   },
+  "commonRuleEffects": {
+    "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+    "files": [
+      "JyGame/AttackLogic.cs",
+      "JyGame/BattleSprite.cs",
+      "JyGame/BattleField.cs"
+    ],
+    "talents": [
+      "神兵",
+      "右臂有伤",
+      "左手剑",
+      "老江湖",
+      "神经病",
+      "鲁莽",
+      "宝甲",
+      "苦命儿",
+      "好色",
+      "猎人",
+      "暴躁",
+      "斗魂",
+      "心眼通明",
+      "隔空取物",
+      "妙手仁心"
+    ],
+    "buffs": [
+      "攻击弱化",
+      "防御强化"
+    ],
+    "scope": "explicit source-backed common rules; not full talent/Buff parity"
+  },
   "legacyArt": {
     "source": {
       "archive": "X.rar",
@@ -155,20 +185,20 @@
     ]
   },
   "originalMigration": {
-    "originalStories": 1829,
+    "originalStories": 1854,
     "maps": 162,
-    "mapEvents": 1107,
-    "worldTriggers": 19,
+    "mapEvents": 1111,
+    "worldTriggers": 21,
     "newbieTasks": 6
   },
   "starterStories": 25,
   "verifiedOpeningSegments": 14,
-  "migratedStorySegments": 1829,
+  "migratedStorySegments": 1854,
   "browserPacks": [
     {
       "id": "jyx",
       "maps": 162,
-      "storySegments": 1831
+      "storySegments": 1856
     },
     {
       "id": "frontier",
@@ -203,7 +233,7 @@
     "internalSkills": 43,
     "legendSkills": 137,
     "maps": 162,
-    "worldTriggers": 19,
+    "worldTriggers": 21,
     "resources": 1091,
     "sects": 9,
     "shops": 10,
@@ -216,7 +246,7 @@
     "scopedBattleEffects": 0,
     "itemTags": 0,
     "storyScripts": 1,
-    "browser": 22
+    "browser": 23
   },
   "limitations": [
     "The 14 verified opening/trainer segments remain unchanged; dependency-closed original stories/maps/events and nine sect entries are now exposed. Structural migration is not proof of full playthroughs.",
