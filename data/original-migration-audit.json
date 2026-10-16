@@ -109,6 +109,19 @@
       ],
       "successScore": 100,
       "configuration": "pinned touch.xml matches the uploaded touch.txt for all five definitions"
+    },
+    "Role.AddExp": {
+      "source": "pinned Role/CommonSettings and uploaded Role.AddExp/set_level",
+      "curve": "LegacyCumulative",
+      "comparison": "strict greater-than",
+      "overflow": "reset to previous threshold; at most one level per award",
+      "atMaxLevel": "reset EXP to zero"
+    },
+    "StoryFinished": {
+      "source": "uploaded MapUI.StoryFinished RVA 0x2af64 IL 0x100..0x11f",
+      "unmatchedLose": "GameOver",
+      "timeout": "lose",
+      "explicitResult": "first matching source result wins"
     }
   },
   "sourceCorrections": [
