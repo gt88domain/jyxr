@@ -92468,6 +92468,13 @@
               "description": null,
               "repeatMode": "once",
               "when": "true"
+            },
+            {
+              "id": "2",
+              "action": "story('original_同福客栈.轻功')",
+              "image": null,
+              "description": null,
+              "when": "(story_completed('original_同福客栈'))"
             }
           ]
         },
@@ -92487,6 +92494,13 @@
               "description": null,
               "repeatMode": "once",
               "when": "true"
+            },
+            {
+              "id": "2",
+              "action": "story('original_同福客栈.葵花点穴手')",
+              "image": null,
+              "description": "同福客栈白展堂",
+              "when": "(story_completed('original_同福客栈'))"
             }
           ]
         },
@@ -129134,6 +129148,59 @@
           ]
         },
         {
+          "name": "original_同福客栈.轻功",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "佟湘玉",
+              "text": "轻功，十两银子学一次，耗时三个时辰，学吗？"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "学吗？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "学！",
+                      "steps": [
+                        {
+                          "kind": "branch",
+                          "cases": [
+                            {
+                              "when": "(silver >= 10)",
+                              "steps": [
+                                {
+                                  "kind": "jump",
+                                  "target": "original_同福客栈.轻功开始"
+                                }
+                              ]
+                            }
+                          ],
+                          "fallback": [
+                            {
+                              "kind": "jump",
+                              "target": "original_同福客栈.轻功没钱"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "太贵了，黑我！",
+                      "steps": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "original_同福客栈.轻功.等待",
           "steps": [
             {
@@ -129154,12 +129221,164 @@
           ]
         },
         {
+          "name": "original_同福客栈.轻功开始",
+          "steps": [
+            {
+              "kind": "branch",
+              "cases": [
+                {
+                  "when": "(!has_time_key('同福客栈_轻功'))",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "original_同福客栈.修炼轻功"
+                    }
+                  ]
+                }
+              ],
+              "fallback": [
+                {
+                  "kind": "jump",
+                  "target": "original_同福客栈.轻功.等待"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "original_同福客栈.修炼轻功",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "change_silver(-10)"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "佟湘玉",
+              "text": "修炼方式为拖动你的头像，躲避其他头像。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "佟湘玉",
+              "text": "准备好了吗？GOGOGO！"
+            },
+            {
+              "kind": "command",
+              "call": "set_time_key('同福客栈_轻功', 30, '')"
+            },
+            {
+              "kind": "command",
+              "call": "minigame('qinggong')"
+            }
+          ]
+        },
+        {
+          "name": "original_同福客栈.葵花点穴手",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "白展堂",
+              "text": "葵花点穴手，十两银子学一次，耗时三个时辰，学吗？"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "学吗？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "学！",
+                      "steps": [
+                        {
+                          "kind": "branch",
+                          "cases": [
+                            {
+                              "when": "(silver >= 10)",
+                              "steps": [
+                                {
+                                  "kind": "jump",
+                                  "target": "original_同福客栈.葵花点穴手开始"
+                                }
+                              ]
+                            }
+                          ],
+                          "fallback": [
+                            {
+                              "kind": "jump",
+                              "target": "original_同福客栈.葵花点穴手没钱"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "text": "太贵了，黑我！",
+                      "steps": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "original_同福客栈.白展堂.等待",
           "steps": [
             {
               "kind": "dialogue",
               "speaker": "白展堂",
               "text": "你这个月已经学过了，等过段时间再来吧！"
+            }
+          ]
+        },
+        {
+          "name": "original_同福客栈.葵花点穴手开始",
+          "steps": [
+            {
+              "kind": "branch",
+              "cases": [
+                {
+                  "when": "(!has_time_key('同福客栈_白展堂'))",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "original_同福客栈.修炼臂力"
+                    }
+                  ]
+                }
+              ],
+              "fallback": [
+                {
+                  "kind": "jump",
+                  "target": "original_同福客栈.白展堂.等待"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "original_同福客栈.修炼臂力",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "change_silver(-10)"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "白展堂",
+              "text": "记住，别人随便点，千万别点老板娘啊！gogogo！"
+            },
+            {
+              "kind": "command",
+              "call": "set_time_key('同福客栈_白展堂', 30, '')"
+            },
+            {
+              "kind": "command",
+              "call": "minigame('dianxue')"
             }
           ]
         },
@@ -129752,7 +129971,7 @@
             },
             {
               "kind": "command",
-              "call": "minigame(\"levelup\")"
+              "call": "minigame('levelup')"
             }
           ]
         },
@@ -213241,11 +213460,11 @@
       }
     ],
     "migration": {
-      "stories": 1781,
+      "stories": 1787,
       "totalStories": 1887,
       "maps": 162,
       "totalMaps": 162,
-      "deferredStories": 106
+      "deferredStories": 100
     },
     "artSource": {
       "kind": "legacy",

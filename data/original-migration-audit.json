@@ -14,9 +14,9 @@
     "maps": 6
   },
   "structurallyMigrated": {
-    "originalStories": 1781,
+    "originalStories": 1787,
     "maps": 162,
-    "mapEvents": 1095,
+    "mapEvents": 1097,
     "worldTriggers": 19,
     "newbieTasks": 6
   },
@@ -72,14 +72,6 @@
     "original_主角之家.殴打练功木头人": {
       "source": "storys.xml",
       "reason": "battle 南贤居_练功木头人_战斗 missing characters: 练功木头人"
-    },
-    "original_同福客栈.修炼轻功": {
-      "source": "storys.xml",
-      "reason": "unsupported result: game (qinggong)"
-    },
-    "original_同福客栈.修炼臂力": {
-      "source": "storys.xml",
-      "reason": "unsupported result: game (dianxue)"
     },
     "华山论剑_天关": {
       "source": "storys.xml",
@@ -255,20 +247,6 @@
         "original_主角之家.开场2"
       ]
     },
-    "original_同福客栈.轻功开始": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_同福客栈.修炼轻功"
-      ]
-    },
-    "original_同福客栈.葵花点穴手开始": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_同福客栈.修炼臂力"
-      ]
-    },
     "original_华山论剑": {
       "source": "storys.xml",
       "reason": "blocked story dependencies",
@@ -436,20 +414,6 @@
       "reason": "blocked story dependencies",
       "targets": [
         "original_女主.华山论剑.trueEnding2.结束"
-      ]
-    },
-    "original_同福客栈.轻功": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_同福客栈.轻功开始"
-      ]
-    },
-    "original_同福客栈.葵花点穴手": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_同福客栈.葵花点穴手开始"
       ]
     },
     "华山论剑_简单难度": {
@@ -697,14 +661,6 @@
       "source": "storys.xml",
       "reason": "battle 南贤居_练功木头人_战斗 missing characters: 练功木头人"
     },
-    "original_同福客栈.修炼轻功": {
-      "source": "storys.xml",
-      "reason": "unsupported result: game (qinggong)"
-    },
-    "original_同福客栈.修炼臂力": {
-      "source": "storys.xml",
-      "reason": "unsupported result: game (dianxue)"
-    },
     "华山论剑_天关": {
       "source": "storys.xml",
       "reason": "unsupported result: huashan (huashan)"
@@ -942,18 +898,6 @@
       "location": "卓一航",
       "eventId": "1",
       "reason": "story deferred: 武当派_卓一航"
-    },
-    {
-      "map": "同福客栈",
-      "location": "佟湘玉",
-      "eventId": "2",
-      "reason": "story deferred: original_同福客栈.轻功"
-    },
-    {
-      "map": "同福客栈",
-      "location": "白展堂",
-      "eventId": "2",
-      "reason": "story deferred: original_同福客栈.葵花点穴手"
     },
     {
       "map": "破庙",

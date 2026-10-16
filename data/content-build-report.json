@@ -155,20 +155,20 @@
     ]
   },
   "originalMigration": {
-    "originalStories": 1781,
+    "originalStories": 1787,
     "maps": 162,
-    "mapEvents": 1095,
+    "mapEvents": 1097,
     "worldTriggers": 19,
     "newbieTasks": 6
   },
   "starterStories": 25,
   "verifiedOpeningSegments": 14,
-  "migratedStorySegments": 1781,
+  "migratedStorySegments": 1787,
   "browserPacks": [
     {
       "id": "jyx",
       "maps": 162,
-      "storySegments": 1783
+      "storySegments": 1789
     },
     {
       "id": "frontier",
