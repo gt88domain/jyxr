@@ -22,9 +22,12 @@ public static class CharacterLevelProgression
         return required;
     }
 
-    public static int GetTotalExperienceRequiredForLevel(int level)
+    public static int GetTotalExperienceRequiredForLevel(int level, CharacterExperienceCurve curve = CharacterExperienceCurve.PerLevel)
     {
         ArgumentOutOfRangeException.ThrowIfLessThan(level, 1);
+
+        if (curve == CharacterExperienceCurve.LegacyCumulative)
+            return GetLevelUpExperience(level - 1);
 
         var totalRequired = 0;
         for (var currentLevel = 1; currentLevel < level; currentLevel += 1)
@@ -35,7 +38,7 @@ public static class CharacterLevelProgression
         return totalRequired;
     }
 
-    public static int ResolveLevel(int totalExperience, int? maxLevel = null)
+    public static int ResolveLevel(int totalExperience, int? maxLevel = null, CharacterExperienceCurve curve = CharacterExperienceCurve.PerLevel)
     {
         ArgumentOutOfRangeException.ThrowIfNegative(totalExperience);
         var effectiveMaxLevel = ResolveMaxLevel(maxLevel);
@@ -44,6 +47,13 @@ public static class CharacterLevelProgression
         var requiredTotalExperience = 0;
         for (var currentLevel = 1; currentLevel < effectiveMaxLevel; currentLevel += 1)
         {
+            if (curve == CharacterExperienceCurve.LegacyCumulative)
+            {
+                // Original Role.AddExp retains cumulative EXP and uses strict >.
+                if (totalExperience <= GetLevelUpExperience(currentLevel)) break;
+                resolvedLevel = currentLevel + 1;
+                continue;
+            }
             requiredTotalExperience = checked(requiredTotalExperience + GetLevelUpExperience(currentLevel));
             if (totalExperience < requiredTotalExperience)
             {
@@ -59,20 +69,23 @@ public static class CharacterLevelProgression
     public static (int CurrentExperience, int NextLevelExperience) GetDisplayProgress(
         int level,
         int totalExperience,
-        int? maxLevel = null)
+        int? maxLevel = null,
+        CharacterExperienceCurve curve = CharacterExperienceCurve.PerLevel)
     {
         ArgumentOutOfRangeException.ThrowIfLessThan(level, 1);
         ArgumentOutOfRangeException.ThrowIfNegative(totalExperience);
         var effectiveMaxLevel = ResolveMaxLevel(maxLevel);
 
         var clampedLevel = Math.Min(level, effectiveMaxLevel);
-        var nextLevelExperience = GetLevelUpExperience(clampedLevel);
+        var currentLevelStartExperience = GetTotalExperienceRequiredForLevel(clampedLevel, curve);
+        var nextLevelExperience = curve == CharacterExperienceCurve.LegacyCumulative
+            ? GetLevelUpExperience(clampedLevel) - currentLevelStartExperience + 1
+            : GetLevelUpExperience(clampedLevel);
         if (clampedLevel >= effectiveMaxLevel)
         {
             return (nextLevelExperience, nextLevelExperience);
         }
 
-        var currentLevelStartExperience = GetTotalExperienceRequiredForLevel(clampedLevel);
         var currentExperience = Math.Clamp(totalExperience - currentLevelStartExperience, 0, nextLevelExperience);
         return (currentExperience, nextLevelExperience);
     }

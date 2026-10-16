@@ -9,7 +9,8 @@ internal sealed class BattleGrowthResolver(
     Func<CharacterInstance, GrowTemplateDefinition> characterGrowTemplateResolver,
     Func<CharacterInstance, int> characterMaxLevelResolver,
     Func<BattleUnit, bool> eligibilityResolver,
-    Func<SkillInstance, int, int>? skillUseExperienceResolver = null)
+    Func<SkillInstance, int, int>? skillUseExperienceResolver = null,
+    Game.Core.Model.CharacterExperienceCurve characterExperienceCurve = Game.Core.Model.CharacterExperienceCurve.PerLevel)
 {
     private const int SkillCastCharacterExperience = 3;
 
@@ -69,7 +70,8 @@ internal sealed class BattleGrowthResolver(
             unit.Character,
             SkillCastCharacterExperience,
             characterMaxLevelResolver(unit.Character),
-            () => characterGrowTemplateResolver(unit.Character));
+            () => characterGrowTemplateResolver(unit.Character),
+            curve: characterExperienceCurve);
         if (!change.LeveledUp) return;
 
         unit.ClampResourcesToLimits();

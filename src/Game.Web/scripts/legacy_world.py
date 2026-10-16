@@ -107,9 +107,9 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
         if identifier in broken_battles:
             raise ValueError(f"battle {identifier} missing characters: {', '.join(broken_battles[identifier])}")
 
-    def exits(nodes, story_id):
+    def exits(nodes, story_id, default_steps=None):
         # Legacy tests results in document order; the first successful branch wins.
-        cases, fallback = [], []
+        cases, fallback = [], list(default_steps or [])
         for node in nodes:
             kind, value = node.get("type"), node.get("value", "")
             if kind == "story":
@@ -287,7 +287,7 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
                     return steps
                 if kind == "BATTLE":
                     battle(value)
-                    steps.append({"kind": "battle", "battleId": value, "outcomes": {outcome: sequence(i + 1, outcome) for outcome in ("win", "lose", "timeout")}})
+                    steps.append({"kind": "battle", "battleId": value, "outcomes": {outcome: sequence(i + 1, "lose" if outcome == "timeout" else outcome) for outcome in ("win", "lose", "timeout")}})
                     return steps
                 if kind == "TOUCH":
                     if value not in result["browser"]["touchGames"]:
@@ -297,7 +297,10 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
                                   "fallback": sequence(i + 1, "lose")})
                     return steps
                 steps.extend(simple_action(a, name))
-            steps.extend(exits([r for r in results if r.get("ret", "0") == ret], name))
+            # MapUI.StoryFinished uses GameOver when a 'lose' result has no
+            # matching explicit result, including all-false conditional exits.
+            failure_default = [command("legacy_flow('gameover')")] if ret == "lose" else []
+            steps.extend(exits([r for r in results if r.get("ret", "0") == ret], name, failure_default))
             return steps
 
         return {"name": name, "steps": sequence()}
@@ -440,7 +443,11 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
             "sha256": "a9d1456b1fa5e09f9e39a18c66564612da2aa4c7c83db6ff34430d436b872b4a", "ilRange": "0x153b..0x16eb", "argumentUnit": "tenths retained, not percent deducted"},
             "TOUCH": {"source": "same uploaded assembly / TouchUI and TouchPoint", "rounds": 5, "pointsPerRound": 8,
                 "pointLifetimeSeconds": 3, "aimAgeSeconds": 1.5, "startIntervalSeconds": [0.3,0.5], "successScore": 100,
-                "configuration": "pinned touch.xml matches the uploaded touch.txt for all five definitions"}},
+                "configuration": "pinned touch.xml matches the uploaded touch.txt for all five definitions"},
+            "Role.AddExp": {"source": "pinned Role/CommonSettings and uploaded Role.AddExp/set_level",
+                "curve": "LegacyCumulative", "comparison": "strict greater-than", "overflow": "reset to previous threshold; at most one level per award", "atMaxLevel": "reset EXP to zero"},
+            "StoryFinished": {"source": "uploaded MapUI.StoryFinished RVA 0x2af64 IL 0x100..0x11f",
+                "unmatchedLose": "GameOver", "timeout": "lose", "explicitResult": "first matching source result wins"}},
         "sourceCorrections": [{"story": story, "originalType": original, "value": value, "normalizedType": normalized}
                               for (story, original, value), normalized in ACTION_SPELLING_CORRECTIONS.items()
                               if any(a.get("type") == original and a.get("value") == value for a in records[story][1].findall("action"))],

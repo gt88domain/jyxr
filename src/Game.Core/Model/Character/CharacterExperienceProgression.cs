@@ -21,7 +21,8 @@ public static class CharacterExperienceProgression
         int experience,
         int maxLevel,
         Func<GrowTemplateDefinition> growTemplateResolver,
-        int levelUpGrantedStatPoints = DefaultLevelUpGrantedStatPoints)
+        int levelUpGrantedStatPoints = DefaultLevelUpGrantedStatPoints,
+        CharacterExperienceCurve curve = CharacterExperienceCurve.PerLevel)
     {
         ArgumentNullException.ThrowIfNull(character);
         ArgumentNullException.ThrowIfNull(growTemplateResolver);
@@ -35,7 +36,16 @@ public static class CharacterExperienceProgression
 
         var resolvedLevel = Math.Max(
             oldLevel,
-            CharacterLevelProgression.ResolveLevel(character.Experience, maxLevel));
+            CharacterLevelProgression.ResolveLevel(character.Experience, maxLevel, curve));
+        if (curve == CharacterExperienceCurve.LegacyCumulative)
+        {
+            // Legacy Role.level's setter resets EXP to PrevLevelupExp. Thus a
+            // single AddExp can advance only once, discarding excess EXP.
+            resolvedLevel = oldLevel < maxLevel && character.Experience > CharacterLevelProgression.GetLevelUpExperience(oldLevel)
+                ? oldLevel + 1 : oldLevel;
+            if (oldLevel >= maxLevel) character.SetExperience(0);
+            else if (resolvedLevel > oldLevel) character.SetExperience(CharacterLevelProgression.GetLevelUpExperience(oldLevel));
+        }
         if (resolvedLevel > oldLevel)
         {
             ApplyLevelUps(character, oldLevel, resolvedLevel, growTemplateResolver(), levelUpGrantedStatPoints);
@@ -50,7 +60,8 @@ public static class CharacterExperienceProgression
         int experience,
         int maxLevel,
         GrowTemplateDefinition growTemplate,
-        int levelUpGrantedStatPoints = DefaultLevelUpGrantedStatPoints)
+        int levelUpGrantedStatPoints = DefaultLevelUpGrantedStatPoints,
+        CharacterExperienceCurve curve = CharacterExperienceCurve.PerLevel)
     {
         ArgumentNullException.ThrowIfNull(growTemplate);
         return TryAddExperience(
@@ -58,7 +69,8 @@ public static class CharacterExperienceProgression
             experience,
             maxLevel,
             () => growTemplate,
-            levelUpGrantedStatPoints);
+            levelUpGrantedStatPoints,
+            curve);
     }
 
     private static void ApplyLevelUps(

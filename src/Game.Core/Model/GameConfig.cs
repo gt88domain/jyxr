@@ -27,6 +27,7 @@ public sealed class GameConfig
 	public int MaxHpMp { get; init; } = 10000;
 	public int MaxHpMpPerRound { get; init; } = 1000;
 	public int MaxLevel { get; init; } = 30;
+	public CharacterExperienceCurve CharacterExperienceCurve { get; init; } = CharacterExperienceCurve.PerLevel;
 	public int BattlePlayerTeam { get; init; } = 1;
 	public double BattleGoldDropChance { get; init; } = 0.005d;
 	public double OrdinaryBattleDropChance { get; init; } = 0.1d;
@@ -100,4 +101,10 @@ public enum ItemRequirementStatSource
 {
 	Final,
 	Base,
+}
+
+public enum CharacterExperienceCurve
+{
+	PerLevel,
+	LegacyCumulative,
 }

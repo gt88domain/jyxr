@@ -233,7 +233,7 @@ public static partial class BrowserBridge
         if (_host.Dialogue is not null || _host.Choice is not null) return JsonSerializer.Serialize(new { error = "请先结束当前对话。" }, Json);
         if (_shopId is not null || _storyTask is { IsCompleted: false } && _host.Ending is null) return JsonSerializer.Serialize(new { error = "请先结束当前交互。" }, Json);
         _hasSaved = true;
-        return JsonSerializer.Serialize(new { browserSaveVersion = 2, packId = PackText("id"), game = session.SaveGameService.CreateSave(), profile = session.ProfileService.CreateProfileRecord(), cultivationItemId = _cultivationItemId, companionCultivations = CompanionCultivations, formationReserveIds = FormationReserves.ToArray(), ending = _host.Ending, hasSaved = true, wonBattles = WonBattles.ToArray() }, Json);
+        return JsonSerializer.Serialize(new { browserSaveVersion = 2, packId = PackText("id"), characterExperienceCurve = RuntimeConfig.CharacterExperienceCurve, game = session.SaveGameService.CreateSave(), profile = session.ProfileService.CreateProfileRecord(), cultivationItemId = _cultivationItemId, companionCultivations = CompanionCultivations, formationReserveIds = FormationReserves.ToArray(), ending = _host.Ending, hasSaved = true, wonBattles = WonBattles.ToArray() }, Json);
     }
 
     [JSExport]
@@ -251,6 +251,17 @@ public static partial class BrowserBridge
             if (savedPack != PackText("id")) throw new InvalidOperationException("存档属于另一套内容，请先切换对应世界。");
             var save = JsonSerializer.Deserialize<SaveGame>(wrapped ? root.GetProperty("game") : root, Json) ?? throw new InvalidOperationException("存档无效。");
             if (save.Version != SaveGame.CurrentVersion) throw new InvalidOperationException("存档版本不匹配。");
+            var savedCurve = root.TryGetProperty("characterExperienceCurve", out var curveNode)
+                ? curveNode.Deserialize<CharacterExperienceCurve>(Json)
+                : CharacterExperienceCurve.PerLevel;
+            if (!Enum.IsDefined(savedCurve)) throw new InvalidOperationException("存档中的人物经验规则无效。");
+            var migratedExperience = savedCurve != RuntimeConfig.CharacterExperienceCurve;
+            if (migratedExperience)
+            {
+                if (savedCurve != CharacterExperienceCurve.PerLevel || RuntimeConfig.CharacterExperienceCurve != CharacterExperienceCurve.LegacyCumulative)
+                    throw new InvalidOperationException("存档中的人物经验规则不属于当前内容包。");
+                save = save with { Characters = save.Characters.Select(BrowserExperienceMigration.ToLegacyCumulative).ToArray() };
+            }
             // Validate into a fresh candidate before replacing a running session.
             var candidateHost = new BrowserStoryHost();
             var candidate = new GameSession(new GameState(), _content, candidateHost, config: RuntimeConfig);
@@ -315,6 +326,7 @@ public static partial class BrowserBridge
             BattleEvents.Clear();
             _error = null;
             Log("已读取浏览器存档。");
+            if (migratedExperience) Log("旧存档经验已换算为原版累计曲线，等级、属性与本级进度保持。");
         }
         catch (Exception exception) { _error = exception.Message; }
         return Snapshot();
@@ -322,6 +334,7 @@ public static partial class BrowserBridge
 
     private static GameConfig RuntimeConfig => new()
     {
+        CharacterExperienceCurve = PackText("id") == "jyx" ? CharacterExperienceCurve.LegacyCumulative : CharacterExperienceCurve.PerLevel,
         MaximizeNewPartyCharacterSkills = false,
         InitialStorySegmentId = PackText("initialStoryId"),
         // Legacy Item.Generate(bool): .1 => 4, otherwise .2 => 3,
@@ -381,7 +394,8 @@ public static partial class BrowserBridge
             legendSkillsProvider: _content!.GetLegendSkillsFor,
             skillMaxLevelResolver: session.SkillMaxLevelPolicy.GetMaxLevel,
             characterGrowTemplateResolver: c => _content!.GetGrowTemplate(c.GrowTemplateId ?? CharacterExperienceProgression.DefaultGrowTemplateId),
-            skillUseExperienceResolver: PackText("id") == "jyx" ? BrowserLegacyRules.ResolveSkillUseExperience : null);
+            skillUseExperienceResolver: PackText("id") == "jyx" ? BrowserLegacyRules.ResolveSkillUseExperience : null,
+            characterExperienceCurve: session.Config.CharacterExperienceCurve);
         _ai = new BasicEnemyBattleAgent(new BattleTurnCandidateGenerator(_engine), new BattleAiPolicyResolver(session.SkillMaxLevelPolicy.GetMaxLevel));
         _settled = false;
         BattleEvents.Clear();
@@ -517,7 +531,7 @@ public static partial class BrowserBridge
                         hp = battleHero?.Hp ?? hero.CurrentHp ?? (int)hero.GetStat(StatType.MaxHp), maxHp = (int)hero.GetStat(StatType.MaxHp),
                         mp = battleHero?.Mp ?? hero.CurrentMp ?? (int)hero.GetStat(StatType.MaxMp), maxMp = (int)hero.GetStat(StatType.MaxMp),
                         skills = Skills(hero).Select(s => SkillView(s)).ToArray(),
-                        experience = hero.Experience, nextLevelExperience = CharacterLevelProgression.GetTotalExperienceRequiredForLevel(hero.Level + 1),
+                        experience = hero.Experience, nextLevelExperience = NextCharacterLevelExperience(hero),
                         attributes = Enum.GetValues<StatType>().Select(stat => new { id = StatCatalog.GetCode(stat), label = StatCatalog.GetDisplayNameCn(stat), value = hero.GetStat(stat), baseValue = hero.GetBaseStat(stat) }).ToArray(),
                         talents = hero.EffectiveTalents.Select(t => new { id = t.Id, name = t.Name, description = t.Description }).ToArray(),
                         externalSkills = hero.ExternalSkills.Select(LearnedSkillView).ToArray(), internalSkills = hero.InternalSkills.Select(LearnedSkillView).ToArray(),

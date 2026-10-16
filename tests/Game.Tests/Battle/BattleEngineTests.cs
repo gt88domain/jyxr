@@ -435,6 +435,25 @@ public sealed class BattleEngineTests
         Assert.Contains(result.Messages.OfType<BattleFact>(), static battleEvent => battleEvent is BattleFact { Kind: BattleFactKind.CharacterLeveledUp });
     }
 
+    [Theory]
+    [InlineData(17, 1, 20)]
+    [InlineData(18, 2, 20)]
+    public void CastSkill_LegacyCharacterGrowthUsesStrictThresholdAndResetsOverflow(int initialExp, int level, int finalExp)
+    {
+        var skill = TestContentFactory.CreateExternalSkill("strike", hard: 10d, castSize: 3);
+        var hero = CreateUnit("hero", team: 1, new GridPosition(0, 0),
+            externalSkills: [new InitialExternalSkillEntryDefinition(skill, 1)]);
+        hero.Character.GrantExperience(initialExp); hero.ActionGauge = 100;
+        var state = new BattleState(new BattleGrid(4, 4), [hero]);
+        var engine = new BattleEngine(characterExperienceCurve: CharacterExperienceCurve.LegacyCumulative);
+        engine.BeginAction(state, hero.Id);
+        var result = engine.CastSkill(state, hero.Id, hero.Character.GetExternalSkills().Single(), new GridPosition(1, 0));
+        Assert.True(result.Success);
+        Assert.Equal(level, hero.Character.Level);
+        Assert.Equal(finalExp, hero.Character.Experience);
+        Assert.Equal(level == 2, result.Messages.OfType<BattleFact>().Any(e => e.Kind == BattleFactKind.CharacterLeveledUp));
+    }
+
     [Fact]
     public void CastSkill_DoesNotGainBattleExperience_WhenUnitIsNotEligible()
     {

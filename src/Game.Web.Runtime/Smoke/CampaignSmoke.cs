@@ -11,6 +11,7 @@ internal static class CampaignSmoke
         Directory.CreateDirectory(directory);
 var args=new[]{stage};
 var events=new List<object>();var battles=0;var wins=0;JsonNode? last=null;
+var sellForTraining=false;
 JsonNode Parse(string json){var r=JsonNode.Parse(json)!;if(!r["ok"]!.GetValue<bool>())throw new InvalidOperationException(r["error"]!.GetValue<string>());return last=r["state"]!;}
 async Task<JsonNode> Cmd(object c)=>Parse(await BrowserBridge.Dispatch(JsonSerializer.Serialize(c)));
 string Phase(JsonNode s)=>s["phase"]!.GetValue<string>();
@@ -34,9 +35,22 @@ async Task<JsonNode> Resolve()
                     ??choices.FirstOrDefault(c=>c!["text"]!.GetValue<string>().Contains("忍住"))??chosen;
                 if(stage=="--arena-growth"&&s["dialogue"]?["text"]?.GetValue<string>()=="选择竞技场")chosen=choices.First(c=>c!["text"]!.GetValue<string>()=="三吃一");
                 if(stage=="--arena-growth"&&s["dialogue"]?["text"]?.GetValue<string>()=="选择难度")chosen=choices.First(c=>c!["text"]!.GetValue<string>()=="天人合一");
+                if(stage=="--emergency"&&s["dialogue"]?["text"]?.GetValue<string>()=="选择竞技场")chosen=choices.First(c=>c!["text"]!.GetValue<string>()=="沙漠4v4");
+                if(stage=="--emergency"&&s["dialogue"]?["text"]?.GetValue<string>()=="选择难度")chosen=choices.First(c=>c!["text"]!.GetValue<string>()=="惊世骇俗");
                 s=await Cmd(new{type="choose",index=chosen!["index"]!.GetValue<int>()});break;
             case "rename":s=await Cmd(new{type="renameHeroine",name="同路人"});break;
-            case "shop":s=await Cmd(new{type="closeShop"});break;
+            case "shop":
+                if(sellForTraining)
+                {
+                    foreach(var item in s["shop"]!["sellable"]!.AsArray().Where(i=>i!["id"]!.GetValue<string>() is "新手礼包-大蟠桃" or "银手镯" or "金刚杵").ToArray())
+                    {
+                        var quantity=item!["id"]!.GetValue<string>()=="新手礼包-大蟠桃"?Math.Min(3,item["quantity"]!.GetValue<int>()):1;
+                        s=await Cmd(new{type="sell",entryNumber=item["entryNumber"]!.GetValue<long>(),quantity});
+                        events.Add(new{sold=item["id"]!.GetValue<string>(),quantity});
+                    }
+                    sellForTraining=false;
+                }
+                s=await Cmd(new{type="closeShop"});break;
             case "combatants":
                 var selection=s["combatantSelection"]!;var candidates=selection["candidates"]!.AsArray().Where(c=>!c!["forbidden"]!.GetValue<bool>()).ToArray();
                 var selected=candidates.Where(c=>c!["required"]!.GetValue<bool>()).Select(c=>c!["id"]!.GetValue<string>()).ToList();
@@ -67,8 +81,8 @@ async Task<JsonNode> Resolve()
                     var active=s["battle"]!["activeUnitId"]!.GetValue<string>();
                     var actor=s["battle"]!["units"]!.AsArray().Single(u=>u!["id"]!.GetValue<string>()==active)!;
                     var medicine=actor["hp"]!.GetValue<int>()<actor["maxHp"]!.GetValue<int>()*.35?s["inventory"]!.AsArray()
-                        .Where(i=>i!["canUse"]!.GetValue<bool>()&&new[]{"天王保命丹","黑玉断续膏","大还丹","小还丹"}.Contains(i["id"]!.GetValue<string>())&&i["battleTargets"]!.AsArray().Any(t=>t!["id"]!.GetValue<string>()==active&&t["canUse"]!.GetValue<bool>()))
-                        .OrderBy(i=>Array.IndexOf(new[]{"天王保命丹","黑玉断续膏","大还丹","小还丹"},i!["id"]!.GetValue<string>())).FirstOrDefault():null;
+                        .Where(i=>i!["canUse"]!.GetValue<bool>()&&new[]{"天王保命丹","生生造化丹","黑玉断续膏","大还丹","小还丹"}.Contains(i["id"]!.GetValue<string>())&&i["battleTargets"]!.AsArray().Any(t=>t!["id"]!.GetValue<string>()==active&&t["canUse"]!.GetValue<bool>()))
+                        .OrderBy(i=>Array.IndexOf(new[]{"天王保命丹","生生造化丹","黑玉断续膏","大还丹","小还丹"},i!["id"]!.GetValue<string>())).FirstOrDefault():null;
                     s=medicine is null?await Cmd(new{type="autoTurn"}):await Cmd(new{type="useItem",entryNumber=medicine["entryNumber"]!.GetValue<long>(),targetId=active});
                 }
                 var outcome=s["battle"]!["outcome"]!.GetValue<string>();
@@ -148,13 +162,61 @@ async Task Manage()
 try
 {
     Parse(BrowserBridge.Initialize(File.ReadAllText(contentPath)));
-    if(args.Contains("--resume")||args.Contains("--midgame")||args.Contains("--chapter2")||args.Contains("--chapter3")||args.Contains("--touch-chapter")||args.Contains("--arena-growth"))
+    if(args.Contains("--resume")||args.Contains("--midgame")||args.Contains("--chapter2")||args.Contains("--chapter3")||args.Contains("--touch-chapter")||args.Contains("--arena-growth")||args.Contains("--emergency")||args.Contains("--xiangyang"))
     {
         Parse(BrowserBridge.ImportSave(File.ReadAllText(directory+"/normal-save.json")));
         var previous=JsonNode.Parse(File.ReadAllText(directory+"/normal-report.json"))!;
         battles=previous["battles"]!.GetValue<int>();wins=previous["wins"]!.GetValue<int>();
         foreach(var e in previous["events"]!.AsArray())events.Add(e!.DeepClone());
-        if(args.Contains("--arena-growth"))
+        if(args.Contains("--xiangyang"))
+        {
+            foreach(var town in new[]{"洛阳","衡阳","杭州"})
+            {
+                await Travel(town);await Manage();await World();
+                var checkpoint=JsonNode.Parse(BrowserBridge.ExportSave())!;
+                if(!checkpoint["game"]!["storyState"]!["completedStoryIds"]!.AsArray().Any(n=>n!.GetValue<string>()=="mainStory_紧急."+town+"胜"))
+                    throw new InvalidOperationException("Normal relief battle did not reach its original victory: "+town);
+                File.WriteAllText(directory+"/relief-"+town+"-save.json",checkpoint.ToJsonString());
+                Console.WriteLine("PASS actual original relief battle and reward: "+town);
+            }
+            await Travel("襄阳");await Manage();
+            var completed=JsonNode.Parse(BrowserBridge.ExportSave())!["game"]!["storyState"]!["completedStoryIds"]!.AsArray();
+            if(!completed.Any(n=>n!.GetValue<string>()=="mainStory_最终决战3"))throw new InvalidOperationException("Normal final battlefield did not reach its source victory.");
+            Console.WriteLine("PASS actual normal-growth final battlefield and original Mongol retreat continuation");
+        }
+        else if(args.Contains("--emergency"))
+        {
+            await Cmd(new{type="selectCharacter",characterId="主角"});
+            sellForTraining=true;await Travel("洛阳");await Step("商店");
+            for(var n=0;n<2;n++)
+            {
+                var peach=(await Resolve())["inventory"]!.AsArray().FirstOrDefault(i=>i!["id"]!.GetValue<string>()=="新手礼包-大蟠桃"&&i["canUse"]!.GetValue<bool>());
+                if(peach is not null)await Cmd(new{type="useItem",entryNumber=peach["entryNumber"]!.GetValue<long>()});
+            }
+            for(var fight=0;fight<15&&(await Resolve())["hero"]!["level"]!.GetValue<int>()<25;fight++)
+            {
+                var members=(await Resolve())["party"]!.AsArray().Select(c=>c!["id"]!.GetValue<string>()).ToArray();
+                foreach(var id in members)
+                {
+                    var managed=await Cmd(new{type="selectCharacter",characterId=id});
+                    var points=managed["managedCharacter"]!["unspentStatPoints"]!.GetValue<int>();
+                    if(points>0)await Cmd(new{type="allocateStat",stat="bili",points});
+                }
+                await Cmd(new{type="selectCharacter",characterId="主角"});
+                var snapshot=await Resolve();
+                if(snapshot["silver"]!.GetValue<int>()<500)throw new InvalidOperationException("Normal arena route exhausted actual funds.");
+                var oldBattles=battles;
+                await Travel("同福客栈");await Step("燕小六");await Manage();await World();
+                if(battles==oldBattles)throw new InvalidOperationException("Arena NPC did not start a real encounter.");
+                Console.WriteLine($"GROWTH {fight}: level={last!["hero"]!["level"]} exp={last["hero"]!["experience"]} silver={last["silver"]}");
+                File.WriteAllText(directory+"/growth-checkpoint-save.json",BrowserBridge.ExportSave());
+            }
+            await Travel("南贤居");await Step("南贤");await Manage();
+            var completed=JsonNode.Parse(BrowserBridge.ExportSave())!["game"]!["storyState"]!["completedStoryIds"]!.AsArray();
+            if(!completed.Any(n=>n!.GetValue<string>()=="mainStory_紧急4"))throw new InvalidOperationException("Normal-growth emergency battle did not reach its source victory continuation.");
+            Console.WriteLine("PASS actual Lv25 emergency mainline and Xiangyang opening victory");
+        }
+        else if(args.Contains("--arena-growth"))
         {
             var members=(await Resolve())["party"]!.AsArray().Select(c=>c!["id"]!.GetValue<string>()).ToArray();
             foreach(var id in members)
@@ -230,7 +292,7 @@ try
             }
             Console.WriteLine("PARTY "+string.Join(',',(await Resolve())["party"]!.AsArray().Select(c=>c!["name"]!.GetValue<string>())));
         }
-        for(var i=0;i<(args.Contains("--touch-chapter")||args.Contains("--arena-growth")?0:args.Contains("--chapter2")?100:args.Contains("--chapter3")?60:24);i++)
+        for(var i=0;i<(args.Contains("--touch-chapter")||args.Contains("--arena-growth")||args.Contains("--emergency")||args.Contains("--xiangyang")?0:args.Contains("--chapter2")?100:args.Contains("--chapter3")?60:24);i++)
         {
             await Travel("同福客栈");await Step("邢捕头");await Manage();
             await Travel("南贤居");await Step("南贤");await Manage();

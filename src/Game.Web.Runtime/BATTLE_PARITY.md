@@ -66,6 +66,13 @@ dotnet run --project src/Game.Web.Runtime/Smoke/Parity/Parity.csproj -- /workspa
 
 ## 新增常用规则
 
+人物成长现由 `GameConfig.CharacterExperienceCurve` 选择。金庸浏览器包使用原累计经验，
+严格大于门槛才升级；原 `level` setter 会重设经验，单次奖励最多升一级，满级再获经验归零。
+默认 PerLevel 策略保留。创建、应用服务、闭关、战斗出招和显示共用所选曲线。
+源码及上传 DLL 的具体位置见 [行为证据](LEGACY_INSTRUCTION_EVIDENCE.md)。205 项相关测试
+包含硬编码边界、实际施法、成长、结算和存档；另外验证旧网页八人档的逐字段保留及幂等迁移。
+原剧情未匹配 `lose` 分支的默认 GameOver 也已接回；明确的失败分支继续按原数据运行。
+
 `legacy_common_rules.py` 显式装配 15 个原天赋和攻击弱化／防御强化。新增对照覆盖
 神兵、右臂有伤、左手剑、老江湖、神经病、鲁莽、宝甲、苦命儿、好色与猎人，包含男女／动物
 条件的正反例。宝甲→神经病→鲁莽按旧顺序在基础伤害取整后逐次截断，反向学习天赋也不改顺序。

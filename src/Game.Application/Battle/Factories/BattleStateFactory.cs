@@ -191,7 +191,8 @@ internal sealed class BattleStateFactory
             var character = CharacterMapper.CreateInitial(
                 $"battle_{index}_{definition.Id}",
                 definition,
-                tempFactory);
+                tempFactory,
+                _session.Config);
             if (participant.Team != PlayerTeam)
             {
                 _characterFactory.ApplyDifficultyRandomTalents(character, battleDifficulty);

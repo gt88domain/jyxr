@@ -44,6 +44,12 @@ public sealed class CharacterInstance
         Experience += experience;
     }
 
+    public void SetExperience(int experience)
+    {
+        ArgumentOutOfRangeException.ThrowIfNegative(experience);
+        Experience = experience;
+    }
+
     public void GrantStatPoints(int points)
     {
         ArgumentOutOfRangeException.ThrowIfNegative(points);

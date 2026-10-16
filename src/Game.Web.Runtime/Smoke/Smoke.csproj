@@ -17,6 +17,8 @@
     <Compile Include="JournalSmoke.cs" />
     <Compile Include="TouchSmoke.cs" />
     <Compile Include="BattleReturnSmoke.cs" />
+    <Compile Include="ExperienceSmoke.cs" />
+    <Compile Include="StoryDefeatSmoke.cs" />
     <Compile Include="../BrowserBridge.cs" Link="BrowserBridge.cs" />
     <Compile Include="../BrowserBridge.Systems.cs" Link="BrowserBridge.Systems.cs" />
     <Compile Include="../BrowserBridge.Packs.cs" Link="BrowserBridge.Packs.cs" />
@@ -28,6 +30,7 @@
     <Compile Include="../BrowserBridge.MiniGame.cs" Link="BrowserBridge.MiniGame.cs" />
     <Compile Include="../BrowserBridge.Flow.cs" Link="BrowserBridge.Flow.cs" />
     <Compile Include="../BrowserLegacyRules.cs" Link="BrowserLegacyRules.cs" />
+    <Compile Include="../BrowserExperienceMigration.cs" Link="BrowserExperienceMigration.cs" />
     <ProjectReference Include="../../Game.Core/Game.Core.csproj" />
     <ProjectReference Include="../../Game.Content/Game.Content.csproj" />
     <ProjectReference Include="../../Game.Application/Game.Application.csproj" />

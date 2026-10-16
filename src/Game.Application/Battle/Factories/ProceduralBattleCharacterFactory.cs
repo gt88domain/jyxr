@@ -46,7 +46,8 @@ internal sealed class ProceduralBattleCharacterFactory
         var character = CharacterMapper.CreateInitial(
             $"battle_random_{index}_{template.Id}",
             template,
-            tempFactory);
+            tempFactory,
+            Config);
         var resolvedLevel = ResolveRandomSoldierLevel(participant.Tier);
         var externalSkill = PickRandomSkillByTier(participant.Tier);
 
@@ -118,7 +119,8 @@ internal sealed class ProceduralBattleCharacterFactory
         var character = CharacterMapper.CreateInitial(
             $"battle_random_boss_{index}_{definition.Id}",
             definition,
-            tempFactory);
+            tempFactory,
+            Config);
         if (!string.IsNullOrWhiteSpace(participant.Name))
         {
             character.Name = participant.Name.Trim();
@@ -149,7 +151,8 @@ internal sealed class ProceduralBattleCharacterFactory
         return CharacterMapper.CreateInitial(
             $"arena_{hardLevel}_{index}_{definition.Id}",
             definition,
-            tempFactory);
+            tempFactory,
+            Config);
     }
 
     public void ApplyNpcRoundPowerUp(CharacterInstance character)

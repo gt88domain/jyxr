@@ -1,6 +1,18 @@
 using System.Text.Json;
 using Game.Web.Runtime;
 
+if (args.FirstOrDefault() == "--story-defeat")
+{
+    await StoryDefeatSmoke.Run(args[1], args[2], args[3]);
+    return;
+}
+
+if (args.FirstOrDefault() == "--experience")
+{
+    await ExperienceSmoke.Run(args[1], args[2]);
+    return;
+}
+
 if (args.FirstOrDefault() == "--battle-return")
 {
     await BattleReturnSmoke.Run(args[1],args[2],args[3]);

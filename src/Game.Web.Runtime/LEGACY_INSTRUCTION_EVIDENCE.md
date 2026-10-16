@@ -33,3 +33,17 @@ The pinned `touch.xml` and uploaded `touch.txt` match for all five subject defin
 Presentation simulation handles timing and scoring. The runtime accepts only start/pause/resume/hit/quit inputs and advances its own stopwatch; it never accepts a submitted score, duration or outcome. The compiler follows the original TOUCH `win`/`lose` result trees after the host finishes. Quitting is an explicit modern control and follows failure, including when partially accumulated score already exceeds 100.
 
 The modern responsive panel reuses the already deployed original subject images and numbered point icons; no media is generated or newly uploaded. The original Unity animation timeline, sound, identical random sequence and pixel layout are not claimed. Positions are mapped from the XML coordinates around the original image center; mobile hit buttons have a 44px minimum.
+
+## Character EXP curve and overflow
+
+The pinned `CommonSettings.LevelupExp` computes `E(n) = trunc(20*n + 1.1*E(n-1))`, with `E(0)=0`. `Role.AddExp` compares retained cumulative EXP using **strict `>`**, without summing the thresholds again. Uploaded `Role.AddExp` (RVA `0x18edc`) confirms the EXP comparison at IL `0x61a..0x620` and calls `set_level` at `0x223`. The setter (RVA `0x18258`) stores the level and resets `exp` to `PrevLevelupExp` at `0xa..0xf`.
+
+One AddExp therefore advances at most one level, discarding overflow; at the cap it resets EXP to zero. A level-22 template starts with 9,859 EXP, crossing 11,284 advances to 23 and resets EXP to 11,284. Reaching 25 crosses 14,639; the prior browser curve instead summed to 101,132. This is separate from skill-use EXP.
+
+`GameConfig.CharacterExperienceCurve` selects this behavior for the Jin Yong browser pack; the default PerLevel curve remains available for existing hosts and other content. Template creation, application rewards, explicit level-up training, battle cast growth and browser displays use the selected curve. Old browser saves without a curve marker convert their within-level fraction once while retaining level and every non-EXP character field. New exports record `LegacyCumulative`; invalid curve imports are rejected before session replacement.
+
+## Implicit story defeat
+
+Uploaded `MapUI.StoryFinished` (RVA `0x2af64`) first checks explicit results and conditions. If none matches, IL `0x100..0x11f` compares `_storyResult` with `lose` and loads `GameOver`; other unmatched results return to the current large map. The BATTLE callback (`<ExecuteAction>c__AnonStorey2C.<>m__45`, RVA `0x3a354`) supplies this result to StoryFinished.
+
+The original story compiler now emits this fallback for unhandled loss and treats battle timeout as loss. Explicit failure routes retain their source routing. Returning to the map after an unhandled mainline defeat was an omission: it could leave a consumed once-only event with no victory continuation. This differs from the arena's explicit return-to-map policy.

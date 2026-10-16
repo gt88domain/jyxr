@@ -161,7 +161,8 @@ public sealed class CharacterService
             character,
             experience,
             Config.MaxLevel,
-            () => ResolveGrowTemplate(character));
+            () => ResolveGrowTemplate(character),
+            curve: Config.CharacterExperienceCurve);
         if (change.LeveledUp)
         {
             CharacterResourceLimitPolicy.ClampBaseResourceStats(character);
@@ -186,6 +187,16 @@ public sealed class CharacterService
         var targetLevel = Math.Min(character.Level + levels, Config.MaxLevel);
         if (targetLevel <= character.Level)
         {
+            return;
+        }
+
+        if (Config.CharacterExperienceCurve == CharacterExperienceCurve.LegacyCumulative)
+        {
+            while (character.Level < targetLevel)
+            {
+                var threshold = CharacterLevelProgression.GetLevelUpExperience(character.Level);
+                GainExperience(characterId, Math.Max(1, threshold + 1 - character.Experience));
+            }
             return;
         }
 

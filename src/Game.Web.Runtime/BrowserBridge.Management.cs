@@ -138,7 +138,7 @@ public static partial class BrowserBridge
             sprite = CharacterMedia(c, "characters"), portrait = CharacterMedia(c, "portraits"),
             hp = u?.Hp ?? c.CurrentHp ?? (int)c.GetStat(StatType.MaxHp), maxHp = (int)c.GetStat(StatType.MaxHp),
             mp = u?.Mp ?? c.CurrentMp ?? (int)c.GetStat(StatType.MaxMp), maxMp = (int)c.GetStat(StatType.MaxMp),
-            experience = c.Experience, nextLevelExperience = CharacterLevelProgression.GetTotalExperienceRequiredForLevel(c.Level + 1),
+            experience = c.Experience, nextLevelExperience = NextCharacterLevelExperience(c),
             attributes = Enum.GetValues<StatType>().Select(s => new { id = StatCatalog.GetCode(s), label = StatCatalog.GetDisplayNameCn(s), value = c.GetStat(s), baseValue = c.GetBaseStat(s), canAllocate = canManage && c.UnspentStatPoints > 0 && StatCatalog.TenDimensionStats.Contains(s) }).ToArray(),
             talents = c.EffectiveTalents.Select(t => new { id = t.Id, name = t.Name, description = t.Description }).ToArray(),
             skills = Skills(c).Select(s => SkillView(s)).ToArray(), internalSkills = c.InternalSkills.Select(LearnedSkillView).ToArray(), externalSkills = c.ExternalSkills.Select(LearnedSkillView).ToArray(),

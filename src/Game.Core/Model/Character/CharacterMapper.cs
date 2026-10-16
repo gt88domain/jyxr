@@ -25,7 +25,7 @@ public static class CharacterMapper
         };
         character.SetGender(definition.Gender);
         character.SetLevel(definition.Level);
-        EnsureMinimumExperienceForCurrentLevel(character);
+        EnsureMinimumExperienceForCurrentLevel(character, config?.CharacterExperienceCurve ?? CharacterExperienceCurve.PerLevel);
         CopyStats(definition.Stats, character.BaseStats);
 
         EnsureSingleEquippedInternalSkill(definition.InternalSkills.Count(skill => skill.Equipped));
@@ -177,9 +177,9 @@ public static class CharacterMapper
         }
     }
 
-    private static void EnsureMinimumExperienceForCurrentLevel(CharacterInstance character)
+    private static void EnsureMinimumExperienceForCurrentLevel(CharacterInstance character, CharacterExperienceCurve curve)
     {
-        var requiredExperience = CharacterLevelProgression.GetTotalExperienceRequiredForLevel(character.Level);
+        var requiredExperience = CharacterLevelProgression.GetTotalExperienceRequiredForLevel(character.Level, curve);
         if (character.Experience < requiredExperience)
         {
             character.GrantExperience(requiredExperience - character.Experience);

@@ -19,6 +19,12 @@
 
 [GameSession](../src/Game.Application/GameSession.cs) 是普通实例，持有当前状态、档案、配置、设置、仓储、应用服务和事件总线。`Game` 是 Godot 的全局访问入口，不是领域单例。
 
+人物经验由 `GameConfig.CharacterExperienceCurve` 选择：默认 `PerLevel` 保留逐级经验策略；
+`LegacyCumulative` 使用原累计门槛、严格大于判断、升级重设经验和满级经验清零。
+角色模板创建与 CharacterService 使用 session 配置；战斗宿主向 BattleEngine 传入同一策略，
+避免出招成长和战后结算使用不同曲线。金庸网页包启用原累计策略，其浏览器存档额外标记曲线；
+无标记旧网页档由导入适配层保留等级及非经验字段、换算本级进度，Core SaveGame 协议不变。
+
 - `GameState` 保存本轮可存档状态，通过显式 setter 装配；`AdventureState` 承载周目、难度、门派、道德、好感和排名等上下文。
 - `GameProfile` 保存跨存档统计、解锁和元宝，独立落盘为 `GameProfileRecord`，不嵌入单个 `SaveGame`。
 - 运行态角色、技能和装备可直接持有已解析 definition；持久化记录只保存稳定 ID 与实例状态。
