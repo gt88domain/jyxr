@@ -149,26 +149,26 @@
     "portraits": 24,
     "deferred": [
       "无悔实时存档模式",
-      "多周目及试炼继承奖励",
+      "Lua覆盖中的随机初始伙伴",
       "Lua随机下标差异",
       "部分问答天赋的完整战斗效果"
     ]
   },
   "originalMigration": {
-    "originalStories": 1787,
+    "originalStories": 1829,
     "maps": 162,
-    "mapEvents": 1097,
+    "mapEvents": 1107,
     "worldTriggers": 19,
     "newbieTasks": 6
   },
   "starterStories": 25,
   "verifiedOpeningSegments": 14,
-  "migratedStorySegments": 1787,
+  "migratedStorySegments": 1829,
   "browserPacks": [
     {
       "id": "jyx",
       "maps": 162,
-      "storySegments": 1789
+      "storySegments": 1831
     },
     {
       "id": "frontier",

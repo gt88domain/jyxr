@@ -79046,6 +79046,30 @@
           "picture": null,
           "events": [
             {
+              "id": "1",
+              "action": "story('original_华山论剑')",
+              "image": "town.jian1",
+              "description": "华山论剑！",
+              "when": "(story_completed('mainStory_最终决战3'))",
+              "repeatMode": "once"
+            },
+            {
+              "id": "2",
+              "action": "story('original_华山论剑')",
+              "image": "town.jian1",
+              "description": "华山论剑！",
+              "when": "(story_completed('original_女主.重伤.南贤居'))",
+              "repeatMode": "once"
+            },
+            {
+              "id": "3",
+              "action": "story('黑衣_华山论剑')",
+              "image": "town.jian1",
+              "description": "华山论剑！",
+              "when": "(story_completed('黑衣_南贤'))",
+              "repeatMode": "once"
+            },
+            {
               "id": "4",
               "action": "map('华山')",
               "image": "town.4",
@@ -79495,6 +79519,14 @@
           "picture": null,
           "events": [
             {
+              "id": "1",
+              "action": "story('original_女主.重伤.南贤居')",
+              "image": "头像.民女",
+              "description": "南贤的简陋居室，现在也是你在这个世界的家",
+              "when": "(story_completed('original_女主.襄阳受重伤结束.南贤'))",
+              "repeatMode": "once"
+            },
+            {
               "id": "2",
               "action": "map('南贤居')",
               "image": "town.cunzhuang",
@@ -79904,6 +79936,22 @@
               "description": null,
               "when": "(story_completed('射雕英雄传_张家口1')) && ((in_team('郭靖') || in_team('松鼠郭靖'))) && (story_completed('mainStory_黑暗的阴影1')) && chance(0.2)",
               "repeatMode": "once"
+            },
+            {
+              "id": "2",
+              "action": "story('射雕英雄传_一灯居1')",
+              "image": "头像.段王爷",
+              "description": "一灯大师等候你多时了",
+              "when": "(story_completed('射雕英雄传_渔樵耕读2')) && ((in_team('郭靖') || in_team('松鼠郭靖'))) && (story_completed('mainStory_黑暗的阴影1'))",
+              "repeatMode": "once"
+            },
+            {
+              "id": "3",
+              "action": "story('射雕英雄传_一灯居再战')",
+              "image": "头像.段王爷",
+              "description": "一灯大师等候你多时了",
+              "when": "(story_completed('射雕英雄传_渔樵耕读2')) && ((in_team('郭靖') || in_team('松鼠郭靖'))) && (story_completed('mainStory_黑暗的阴影1')) && (story_completed('射雕英雄传_一灯居1')) && (!story_completed('射雕英雄传_一灯居2'))",
+              "repeatMode": "once"
             }
           ]
         },
@@ -79952,6 +80000,22 @@
           "description": "长江岸边，迁客骚人都喜欢的地方",
           "picture": null,
           "events": [
+            {
+              "id": "1",
+              "action": "story('射雕英雄传_洪七公1')",
+              "image": "头像.洪七公",
+              "description": null,
+              "when": "(story_completed('射雕英雄传_张家口1')) && ((in_team('郭靖') || in_team('松鼠郭靖'))) && (story_completed('mainStory_黑暗的阴影1')) && chance(0.2)",
+              "repeatMode": "once"
+            },
+            {
+              "id": "2",
+              "action": "story('射雕英雄传_洪七公再战')",
+              "image": "头像.洪七公",
+              "description": null,
+              "when": "(story_completed('射雕英雄传_张家口1')) && ((in_team('郭靖') || in_team('松鼠郭靖'))) && (story_completed('mainStory_黑暗的阴影1')) && (story_completed('射雕英雄传_洪七公1')) && (!story_completed('射雕英雄传_洪七公2'))",
+              "repeatMode": "once"
+            },
             {
               "id": "3",
               "action": "story('original_李白1')",
@@ -88034,6 +88098,22 @@
           "description": "桃花岛岛主黄药师",
           "picture": null,
           "events": [
+            {
+              "id": "1",
+              "action": "story('射雕英雄传_桃花岛黄药师1')",
+              "image": null,
+              "description": null,
+              "when": "(story_completed('射雕英雄传_张家口1')) && ((in_team('郭靖') || in_team('松鼠郭靖'))) && (story_completed('mainStory_黑暗的阴影1'))",
+              "repeatMode": "once"
+            },
+            {
+              "id": "2",
+              "action": "story('射雕英雄传_桃花岛黄药师再战')",
+              "image": null,
+              "description": null,
+              "when": "(story_completed('射雕英雄传_张家口1')) && ((in_team('郭靖') || in_team('松鼠郭靖'))) && (story_completed('mainStory_黑暗的阴影1')) && (story_completed('射雕英雄传_桃花岛黄药师1')) && (!story_completed('射雕英雄传_桃花岛黄药师2'))",
+              "repeatMode": "once"
+            },
             {
               "id": "3",
               "action": "story('射雕英雄传_桃花岛招亲1')",
@@ -118896,7 +118976,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('九阴白骨爪', 1, 'legacy.破庙_梅超风_战斗结束_胜利.九阴白骨爪')"
+              "call": "legacy_maxlevel('九阴白骨爪', 1, 'legacy.破庙_梅超风_战斗结束_胜利.九阴白骨爪')"
             },
             {
               "kind": "command",
@@ -119807,6 +119887,97 @@
           ]
         },
         {
+          "name": "aboutus_main",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.华山后山')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "哇！居然点进来了，一般人都不会在意制作组这些事情的吧……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "谁让你把这么大的图标放在启动界面上……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "又不想让人点，又想让人点，真是闷骚啊……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "……咳咳，总之！我们感谢以下制作人员和粉丝们的辛勤努力，为大家奉献了这一部神奇的作品。"
+            },
+            {
+              "kind": "jump",
+              "target": "about_1"
+            }
+          ]
+        },
+        {
+          "name": "about_1",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "制作人：[[yellow:cg]]以及[[yellow:子尹]]"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "美术：[[yellow:文艺吕布]]"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "程序：[[yellow:cg]]、[[yellow:子尹]]、[[yellow:home]]"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "吉祥物：[[yellow:素心]]"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "文字：[[yellow:伊格]]、[[yellow:CY]]、[[yellow:Shyou]]、[[yellow:rain]]、[[yellow:小羽]]等。"
+            },
+            {
+              "kind": "jump",
+              "target": "about_2"
+            }
+          ]
+        },
+        {
+          "name": "about_2",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "最后，祝大家新年快乐！在2015年有新的收获，心想事成！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "还是老生常谈，欢迎关注我的新浪微博 @汉家松鼠，来订阅游戏最新的资讯并与我交流~"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "好啦，就不唠叨了，我先闪了！祝大家开心游戏！"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_flow('title')"
+            }
+          ]
+        },
+        {
           "name": "mainStory_黑暗的阴影",
           "steps": [
             {
@@ -120249,7 +120420,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('基本内功', 1, 'legacy.mainStory_神秘剑客5.基本内功')"
+              "call": "legacy_maxlevel('基本内功', 1, 'legacy.mainStory_神秘剑客5.基本内功')"
             },
             {
               "kind": "command",
@@ -120628,7 +120799,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('基本内功', 1, 'legacy.mainStory_紧急4.基本内功')"
+              "call": "legacy_maxlevel('基本内功', 1, 'legacy.mainStory_紧急4.基本内功')"
             },
             {
               "kind": "command",
@@ -120692,7 +120863,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('基本内功', 1, 'legacy.mainStory_紧急.洛阳胜.基本内功')"
+              "call": "legacy_maxlevel('基本内功', 1, 'legacy.mainStory_紧急.洛阳胜.基本内功')"
             },
             {
               "kind": "command",
@@ -120831,7 +121002,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('基本内功', 1, 'legacy.mainStory_紧急.杭州胜.基本内功')"
+              "call": "legacy_maxlevel('基本内功', 1, 'legacy.mainStory_紧急.杭州胜.基本内功')"
             },
             {
               "kind": "command",
@@ -121953,6 +122124,69 @@
           ]
         },
         {
+          "name": "黑衣_华山论剑",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "你来了！那我们开始吧！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "黑衣教主都被我虐翻了，这华山论剑的杂鱼我怕什么。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "哼，杂鱼？让被你卖掉的队友们来教育你杂鱼的愤怒吧！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "黑衣_华山",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "黑衣_华山胜利"
+                  }
+                ],
+                "lose": [],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "黑衣_华山胜利",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "恭喜你通关邪线剧情！这个坏人你做得够彻底啊！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "小意思啦，那我可以再继续玩？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "想继续？没问题啊！快快进入下一周目，做出不同的选择，体验不同的武林人生吧！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "走起！"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_flow('next')"
+            }
+          ]
+        },
+        {
           "name": "mainStory_黑衣人的邀请不解散队伍",
           "steps": [
             {
@@ -122332,7 +122566,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('基本内功', 1, 'legacy.mainStory_最终决战3.基本内功')"
+              "call": "legacy_maxlevel('基本内功', 1, 'legacy.mainStory_最终决战3.基本内功')"
             },
             {
               "kind": "command",
@@ -123219,7 +123453,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('野球拳', 1, 'legacy.original_女主出场.仙丽雅3.野球拳')"
+              "call": "legacy_maxlevel('野球拳', 1, 'legacy.original_女主出场.仙丽雅3.野球拳')"
             },
             {
               "kind": "dialogue",
@@ -124077,7 +124311,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('基本内功', 1, 'legacy.original_女主.白马啸西风.基本内功')"
+              "call": "legacy_maxlevel('基本内功', 1, 'legacy.original_女主.白马啸西风.基本内功')"
             },
             {
               "kind": "dialogue",
@@ -124282,15 +124516,15 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('黯然销魂掌', 1, 'legacy.original_女主.神雕侠侣.绝情谷小龙女.黯然销魂掌')"
+              "call": "legacy_maxlevel('黯然销魂掌', 1, 'legacy.original_女主.神雕侠侣.绝情谷小龙女.黯然销魂掌')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('玄铁剑法', 1, 'legacy.original_女主.神雕侠侣.绝情谷小龙女.玄铁剑法')"
+              "call": "legacy_maxlevel('玄铁剑法', 1, 'legacy.original_女主.神雕侠侣.绝情谷小龙女.玄铁剑法')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('玉女素心剑', 1, 'legacy.original_女主.神雕侠侣.绝情谷小龙女.玉女素心剑')"
+              "call": "legacy_maxlevel('玉女素心剑', 1, 'legacy.original_女主.神雕侠侣.绝情谷小龙女.玉女素心剑')"
             },
             {
               "kind": "dialogue",
@@ -125075,7 +125309,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('六脉神剑', 1, 'legacy.original_女主.天龙八部.天龙寺六脉神剑.六脉神剑')"
+              "call": "legacy_maxlevel('六脉神剑', 1, 'legacy.original_女主.天龙八部.天龙寺六脉神剑.六脉神剑')"
             },
             {
               "kind": "command",
@@ -125745,6 +125979,486 @@
           ]
         },
         {
+          "name": "original_女主.重伤.南贤居",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.主角之家')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.琵琶语')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "终于回来了，你快躺下吧。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "嗯……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "我……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "别说话了，休息好吗？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "我……会不会……这样就……死……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "笨蛋，又说什么傻话！不会的，我绝不会让这样的事情发生的！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "我……好冷……好冷……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "别说话了，我来为你输真气驱寒毒。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（一个时辰后）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（不行……她的伤太重了，筋脉散乱，真气强行灌入只会适得其反。）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（难道我就真的一点办法都没有，这么多能人高手跟我一起闯荡江湖，我却连一个弱女子都救不了？！）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（我不甘心！不甘心！）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "没……关……系……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "?!"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "你是……大……英雄，还有，咳咳，很多事情要做。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "不！我向你父亲承诺了，一定要保护你周全！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "到了此时……此刻，还……只是……因为……父亲的承诺……啊……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "我……"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "我该说什么？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "我其实也很喜欢你。",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "original_女主.重伤.表白"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "君子一诺，驷马难追。",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "original_女主.重伤.不表白"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "original_女主.重伤.表白",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "我……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "嗯……？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "我……其实……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "其实？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "咳咳，你也知道，其实我不是很善于表达。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "所以？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "所以一直都不敢说真是抱歉，我其实也很……很喜欢你。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "（忽然整个人呆住了，许久目光中充满了柔和的光泽，便连惨白的脸上也透出几分晕红的颜色）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "（微笑）真好，咳咳，咳咳。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "你还是快休息吧。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "不，我怕……再也……醒不来了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "不会的，我会一直陪在这里的。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "我……好冷……好怕，好想……妈妈……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "别怕，没事的……（忍不住眼睛湿润了）一定会没事的……（紧紧拥抱）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "嗯……就休息……一下……一定叫我……起来……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "嗯。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "（静静闭上了眼睛）"
+            },
+            {
+              "kind": "jump",
+              "target": "original_女主.重伤.南贤居结束"
+            }
+          ]
+        },
+        {
+          "name": "original_女主.重伤.不表白",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（有几分慌乱）君子，君子一诺，驷马难追。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "嗯……有君子……保……护，真好。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "我……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "别说话了，我会一直在这里陪你的，快睡吧。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "我……好想……妈妈……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "嗯……我们都会保护你的，别怕。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "……就休息……一下……一定叫我……起来……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "嗯。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "（静静闭上了眼睛）"
+            },
+            {
+              "kind": "jump",
+              "target": "original_女主.重伤.南贤居结束"
+            }
+          ]
+        },
+        {
+          "name": "original_女主.重伤.南贤居结束",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "唉。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "所谓人各有命，不能强求……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "你这个安慰词，太早了点吧。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "她奇经八脉都受到了极强的冲击，武功高强如你都没有什么办法，唉。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "你在这里安心陪她吧。我再想想还有什么办法没有。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "嗯……"
+            },
+            {
+              "kind": "jump",
+              "target": "original_女主.重伤.长夜"
+            }
+          ]
+        },
+        {
+          "name": "original_女主.重伤.长夜",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "这也许是我经过的最长的一个晚上。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "如同在长安的那个月夜下一般，今晚我又失眠了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "只是听不到那晚一样的琵琶声，也没有那晚一样的低声细语。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "觉得自己很狼狈……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……一个一直陪伴自己、又救了自己性命的女孩子即将……我却没有任何办法。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "什么办法也没有……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "那天在长安，她念了一首诗。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "谁家今夜扁舟子，何处相思明月楼。《春江花月夜》，意思我怎么会不明了？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "可是我如何能回应你？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "到如今，更是能拿什么去回应你？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "呜……原来就算练成了绝世武功，也摆脱不了凡尘俗世的种种烦恼……更是如此的无力……"
+            },
+            {
+              "kind": "jump",
+              "target": "original_女主.重伤.醒来"
+            }
+          ]
+        },
+        {
+          "name": "original_女主.重伤.醒来",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（第二天早上）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "呜……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "醒来了？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "……守了……一夜？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……嗯。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "死而……无憾了……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "别说这样的傻话。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "一点……力气都没有，我……自己明白……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "不！不会的！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "最后……还有你在身边……我已经……知足了……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "不！！！"
+            },
+            {
+              "kind": "branch",
+              "cases": [
+                {
+                  "when": "(story_completed('射雕英雄传_一灯居2'))",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "original_女主.重伤.痊愈"
+                    }
+                  ]
+                },
+                {
+                  "when": "(!story_completed('射雕英雄传_一灯居2'))",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "original_女主.重伤.死去"
+                    }
+                  ]
+                }
+              ],
+              "fallback": []
+            }
+          ]
+        },
+        {
           "name": "original_女主.重伤.痊愈",
           "steps": [
             {
@@ -125930,7 +126644,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('一阳指', 1, 'legacy.original_女主.重伤.完全恢复.一阳指')"
+              "call": "legacy_maxlevel('一阳指', 1, 'legacy.original_女主.重伤.完全恢复.一阳指')"
             },
             {
               "kind": "branch",
@@ -126252,6 +126966,963 @@
           ]
         },
         {
+          "name": "original_女主.重伤.死去",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "三天后，因无法救治，她离开了我们。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "前尘往事，皆随流水。那长安的夜月，再也见不到了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "作为一个男人，还有比这更失败的么？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "我能守护的，到底还剩下什么……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "……很遗憾，你没有能改天逆命，这是一个Bad Ending。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "接下来你要怎么办？"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "我该如何是好？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "重新开始本周目，寻找幸福的终点。",
+                      "steps": [
+                        {
+                          "kind": "command",
+                          "call": "legacy_flow('restart')"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "这个周目就这么混过去算了，开始下个周目！",
+                      "steps": [
+                        {
+                          "kind": "command",
+                          "call": "legacy_flow('next')"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "就在此结束这个SB的游戏吧。",
+                      "steps": [
+                        {
+                          "kind": "command",
+                          "call": "legacy_flow('complete')"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "original_女主.华山论剑.trueEnding1",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.华山后山')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.琵琶语')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "结束了……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "已经败尽了天下高手，但是我还是一点都不开心。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "为什么？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "我不知道，自己现在该怎么办……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "按照南贤的说法，我应该要回去原来的世界了。但是，我又为什么要回去呢？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "那一天，绝情谷底。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "在看着杨大哥和小龙女历经磨难终能重逢后，我就忽然觉得，这世界上很多事情，冥冥中已经注定了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "$FEMALE$……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "十六年的等待，对于有情人来说，相聚一刻回首也不过是一刻。不是吗？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "回去吧，那是属于你的世界，在这里你只是过客。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "（梗咽）有缘人会再相见，不是么？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "$FEMALE$……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "我……我忘不了你……我也会，一直等你下去的……不管，需要多久的时间……（忍不住眼泪掉下来）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "$FEMALE$……，我本来觉得，自己只是一个过客，而这个世界不过是一个故事。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "然而这恍惚之间，仿佛我已经不再是这个故事的读者，而成了这个故事的一部分……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "我从来就不觉得你是读者呢，因为这故事的结局，不是还将由你来决定吗？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "是啊……"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "要留下吗？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "果断留下。",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "original_女主.华山论剑.trueEnding1.留下"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "等等，让我想想……",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "original_女主.华山论剑.trueEnding1.留下2"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "original_女主.华山论剑.trueEnding1.留下2",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "想个毛啊！True Ending都被你打出来了，不准想了，给我留下！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……"
+            },
+            {
+              "kind": "jump",
+              "target": "original_女主.华山论剑.trueEnding1.留下"
+            }
+          ]
+        },
+        {
+          "name": "original_女主.华山论剑.trueEnding1.留下",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "你说的对，$FEMALE$，这故事的结局，就掌握在我的手上……我决定留下。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "我不是杨过，你也不是小龙女。我们用不着分离，不是么？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "（早已经成了泪人儿）你说的，是真的么？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "还记得，那晚在长安的月下，你说了什么吗？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "“有这么娇滴滴可爱的美人陪你闯江湖，还不满足？”嗯，是该满足了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "嘻嘻，是呀。娇滴滴可爱的美人都要哭成泪人了，还不来给擦一擦？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "嗯……以后我都帮你擦。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "傻瓜，应该是以后都再不让你哭了才对。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "嗯……是呀。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "走吧，我们离开这里，去江湖之上。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "嗯，去江湖之上！"
+            },
+            {
+              "kind": "jump",
+              "target": "original_女主.华山论剑.trueEnding1.结束"
+            }
+          ]
+        },
+        {
+          "name": "original_女主.华山论剑.trueEnding1.结束",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "亲爱的玩家，恭喜你历经千难万苦，终于达成了金庸群侠传X的True Ending！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "那么，一如往常，你可以选择继续进行游戏！游戏将从头开始，并且增大难度，同时可能有更多隐藏要素等待你来探索！"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "汉家松鼠",
+                "text": "要开始下一周目吗？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "挑战下一周目！",
+                      "steps": [
+                        {
+                          "kind": "command",
+                          "call": "legacy_maxlevel('野球拳', 1, 'legacy.original_女主.华山论剑.trueEnding1.结束.野球拳')"
+                        },
+                        {
+                          "kind": "jump",
+                          "target": "original_华山论剑下一周目"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "算了，完美了。等下一版！",
+                      "steps": [
+                        {
+                          "kind": "command",
+                          "call": "legacy_maxlevel('野球拳', 1, 'legacy.original_女主.华山论剑.trueEnding1.结束.野球拳')"
+                        },
+                        {
+                          "kind": "command",
+                          "call": "legacy_flow('complete')"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "original_女主.华山论剑.trueEnding2",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.华山后山')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.琵琶语')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "结束了……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "恭喜你，终于达成了心愿呢。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "达成心愿了么？我不知道，自己现在该怎么办……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "按照南贤的说法，我应该要回去原来的世界了。但是，我又为什么要回去呢？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "那一天在峨眉山上。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "在看着郭小姐在峨眉山上，与杨大哥之间若隐若无的一丝丝情愫的时候，我忽然意识到，很多事情从一开始就已经是必然的了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "$FEMALE$……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "譬如杨大哥那悲伤的宿命，郭小姐那悲伤的宿命……又譬如你必然要回去你的世界。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "$FEMALE$……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "回去吧，那是属于你的世界，你有你的路要走。而我，也是一样。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "来华山的一路上，我都一直在想。是不是我该贪心地请你留下来呢？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "可是我现在想明白了，答案就在峨眉的云海中。不属于你的，你无法留下。你毕竟不属于这个世界，在这里你已经登峰造极，再来只有后退。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "今日华山之上，你再无敌手。往后，便是只能从顶峰往下。而我希望你回去，在属于你的世界里，继续积极地向上爬去。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "我更喜欢那样的你。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "$FEMALE$……，我真不知道原来你有这么多的心思。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "你说得对，每个人都有自己的路要走。在那个世界里，还有我的父母，我的朋友，我该去寻找的道路。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "嗯，快走吧。总有一天，也许我们还会再见面的。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "嗯……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "一定要记住，就算回去遇到再多的困难，也要挺起胸膛，你是我的骄傲，是我们的骄傲！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "嗯……！明白了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "更重要的是，你一定要记住，曾经在这个世界里，有一个女孩深深地爱过你。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "嗯……我也一样。"
+            },
+            {
+              "kind": "jump",
+              "target": "original_女主.华山论剑.trueEnding2.结束"
+            }
+          ]
+        },
+        {
+          "name": "original_女主.华山论剑.trueEnding2.结束",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "时辰到了，你该走了……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "喂，老头子，这次回来的感觉不错！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "……再见！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "再见！你也不要忘记，曾经这个世界上，有一个天不怕地不怕的$MALE$！"
+            },
+            {
+              "kind": "jump",
+              "target": "original_女主.华山论剑.trueEnding2.选择"
+            }
+          ]
+        },
+        {
+          "name": "original_女主.华山论剑.trueEnding2.选择",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "亲爱的玩家，恭喜你历经千难万苦，终于通关了！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "这个结局……说好不算好，说坏也不算坏吧。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "其实……也许会有更好的结局不是么？你可以再次游戏尝试能否达成更棒的结局。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "那么，一如往常，你还可以选择继续进行游戏！游戏将从头开始，并且增大难度，同时可能有更多隐藏要素等待你来探索！"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "汉家松鼠",
+                "text": "要怎么办？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "重新玩一次，尝试不同结局。",
+                      "steps": [
+                        {
+                          "kind": "command",
+                          "call": "legacy_flow('restart')"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "挑战下一周目！",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "original_华山论剑下一周目"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "算了，累死了。等下一版！",
+                      "steps": [
+                        {
+                          "kind": "command",
+                          "call": "legacy_flow('complete')"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "original_女主.华山论剑.normalEnding",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.华山后山')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.琵琶语')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "结束了……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "恭喜你，终于达成了心愿呢。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "嗯，轻轻松松。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "要回去了吗？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "嗯！……不过要跟你说再见，还真是有几分舍不得啊，哈哈。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "（终究……有些该说的话却一直没有说出口……）嗯，没事。你能找到回去的路，我也很替你高兴！一直以来都承蒙你照顾了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "虽然经过了很多事情……不过，江湖还不错吧？没有令你失望吧？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "嗯！很不错，发生了很多精彩的事情，我也一定会一直记在心里的（也会记得你的……）。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "那……天下没有不散的宴席……再见了！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "嗯……等一下！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "（一个紧紧的拥抱）一路保重！回去自己的世界，也要过得精彩啊！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "嗯……谢谢！一定会的！"
+            },
+            {
+              "kind": "jump",
+              "target": "original_女主.华山论剑.normalEnding.结束"
+            }
+          ]
+        },
+        {
+          "name": "original_女主.华山论剑.normalEnding.结束",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "亲爱的玩家，恭喜你历经千难万苦，终于通关了！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "这个结局……好像还不够好呢……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "其实……也许会有更好的结局不是么？你可以再次游戏尝试能否达成更棒的结局。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "那么，一如往常，你还可以选择继续进行游戏！游戏将从头开始，并且增大难度，同时可能有更多隐藏要素等待你来探索！"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "汉家松鼠",
+                "text": "要怎么办？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "重新玩一次，尝试不同结局。",
+                      "steps": [
+                        {
+                          "kind": "command",
+                          "call": "legacy_flow('restart')"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "挑战下一周目！",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "original_华山论剑下一周目"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "算了，累死了。等下一版！",
+                      "steps": [
+                        {
+                          "kind": "command",
+                          "call": "legacy_flow('complete')"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "original_主角之家.开场",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.主角之家')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.室内_清新')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "额……好困，好困，刚又梦到以前了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "好怀念当时的金庸群侠传DOS版，怀念当时穿越的那个金庸世界。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "咦！这里是？！"
+            },
+            {
+              "kind": "command",
+              "call": "nick('初出茅庐')"
+            },
+            {
+              "kind": "jump",
+              "target": "original_主角之家.开场2"
+            }
+          ]
+        },
+        {
+          "name": "original_主角之家.开场2",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "年轻人，你醒了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "这里是哪里？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "这里是十四天书的世界。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "我不是当了武林盟主，坐上时光机回去了吗？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "是这样子……但是又不是这样子……总之你就把这里理解成一个平行的世界就对了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……你真的懂得你自己说的话么……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "这里是哪里并不重要，重要的你要来这里做什么。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "那我要来这里做什么？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "我也不知道。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "我只能告诉你，我感觉到有邪恶的气息在逼近，这个世界正在呼唤英雄。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "为什么我的武功都使不出来了？我的十级野球拳呢？当年对空气挥拳挥到我胃痛才学会的啊！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "此情可待成追忆，现在你只有一级，什么武功都不会了。似乎都被封印了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "太残忍了……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "出去打打怪，练练级，很快的……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "我这次怎么才能回到现实世界？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "你不是觉得那个世界很无聊么？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "那这个游戏总得有个游戏目标吧？告诉我，这回要去扁谁？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "我隐约觉得，邪恶气息降临的时候，就是你回去的机缘了。你现在能做的，就是出去游历游历，找找伙伴。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "我的威猛的哥们呢？尤其是一开始就巨猛的田伯光之类的？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "你还是可以去找他们，不过因为未知的原因，他们都不记得你了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "我忽然很想知道这个游戏编剧的工资是谁发的。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "最后一个问题。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "说。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "为什么你的头像都换全新的了，我的还是这么老土。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "编剧说了，你这个头像太深入人心了，丑得极有亲和力。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "好了，时间不早了，出去历险吧！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "可是我什么武功都不会了！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "别急，我早已经呕血半升，为你解开了野球拳第一级的封印！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "你居然会为我呕血半升，不会吧？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "真的，血还摆在那边的脸盆里，等你检查，不信你自己去看。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……我出门了，拜拜。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "这个游戏里空挥野球拳不会升级的，别太用力！并且最多只能学习10种外功，5种内功，请做好规划！"
+            },
+            {
+              "kind": "command",
+              "call": "journal('再次来到金庸十四天书的世界。')"
+            },
+            {
+              "kind": "command",
+              "call": "map('大地图')"
+            },
+            {
+              "kind": "jump",
+              "target": "original_教学开始"
+            }
+          ]
+        },
+        {
           "name": "original_教学开始",
           "steps": [
             {
@@ -126409,7 +128080,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('基本内功', 1, 'legacy.original_主角之家.回家.基本内功')"
+              "call": "legacy_maxlevel('基本内功', 1, 'legacy.original_主角之家.回家.基本内功')"
             },
             {
               "kind": "dialogue",
@@ -132267,6 +133938,467 @@
           ]
         },
         {
+          "name": "original_华山论剑",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.树林')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.华山论剑')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "好了，到底是十大恶人还是十大好人呢？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "你不觉得善与恶，其实没有严格的界限，尤其是这个东方不败可以跟令狐冲搞在一起的时代？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "来吧，你的精锐，都上场来战吧！"
+            },
+            {
+              "kind": "branch",
+              "cases": [
+                {
+                  "when": "(difficulty == 'normal')",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "华山论剑_简单难度"
+                    }
+                  ]
+                }
+              ],
+              "fallback": [
+                {
+                  "kind": "jump",
+                  "target": "华山论剑_天关"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "华山论剑_天关",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "华山论剑总共4场比试，全部胜出才算赢了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "北丑",
+              "text": "和闯天关一样，你的队友都只能出场一次！所以，把最精锐的力量留在最后一战吧。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "好了，华山论剑第一场，开始了！"
+            },
+            {
+              "kind": "command",
+              "call": "huashan()"
+            }
+          ]
+        },
+        {
+          "name": "华山论剑_简单难度",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "简单难度的华山论剑总共只有一场比试，把你最强的阵容拉出来吧！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "华山论剑.天下第一战",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "original_华山论剑分枝判断"
+                  }
+                ],
+                "lose": [],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "original_华山论剑分枝判断",
+          "steps": [
+            {
+              "kind": "branch",
+              "cases": [
+                {
+                  "when": "(story_completed('original_女主.重伤.trueEnding.结束')) && (story_completed('original_女主.重伤.表白')) && (story_completed('original_女主.襄阳大战后')) && (story_completed('original_女主.神雕侠侣.绝情谷小龙女'))",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "original_女主.华山论剑.trueEnding1"
+                    }
+                  ]
+                },
+                {
+                  "when": "(story_completed('original_女主.重伤.trueEnding.结束')) && (story_completed('original_女主.重伤.表白')) && (story_completed('original_女主.襄阳大战后')) && (story_completed('original_女主.神雕侠侣.峨眉山郭襄'))",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "original_女主.华山论剑.trueEnding2"
+                    }
+                  ]
+                },
+                {
+                  "when": "(story_completed('original_女主.重伤.trueEnding2.结束')) && (story_completed('original_女主.襄阳大战后'))",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "original_女主.华山论剑.normalEnding"
+                    }
+                  ]
+                },
+                {
+                  "when": "(!story_completed('original_女主.襄阳大战后')) && (difficulty == 'crazy')",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "original_华山论剑最终炼狱"
+                    }
+                  ]
+                },
+                {
+                  "when": "(!story_completed('original_女主.襄阳大战后'))",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "original_华山论剑最终"
+                    }
+                  ]
+                }
+              ],
+              "fallback": []
+            }
+          ]
+        },
+        {
+          "name": "original_华山论剑最终",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.树林')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.华山论剑')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "好了，恭喜你，这么BT都赢了!你真是铁杆粉丝啊！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "就这么结束了？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "嗯，结束了。"
+            },
+            {
+              "kind": "jump",
+              "target": "original_华山论剑周目"
+            }
+          ]
+        },
+        {
+          "name": "original_华山论剑周目",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.树林')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.华山论剑')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "不要啊！不想就这么结束啊！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "呜……这么爱玩，你要折磨死我啊！好吧，想玩的话，就进入下一个周目战个痛快吧！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "哇！还有多周目啊！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "哼哼……谁让你这么BT还玩不过瘾。我事先申明，现在周目可以无穷进行下去，但是每个周目难度都会增加。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "多周目可能还有一些本鼠精心准备的隐藏东东哦，看你有没有福缘发现了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "不过，说实话，你不觉得太过于平庸的结局么？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "？？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "为什么到最后结局，你都没有能和$FEMALE$的关系更进一层呢？你真是太令本鼠失望了！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "你错过了很多精彩的剧情。真的。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "我强烈建议你重新开始游戏，认真体会一下$FEMALE$的感情好吗？这将对最终结局产生很大的影响。"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_maxlevel('野球拳', 1, 'legacy.original_华山论剑周目.野球拳')"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "要重新开始吗？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "重新开始，寻找隐藏剧情吧！",
+                      "steps": [
+                        {
+                          "kind": "command",
+                          "call": "legacy_flow('restart')"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "算了，挑战下一周目吧。",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "original_华山论剑下一周目"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "累死了，不玩了，松鼠只知道挖坑让我跳。",
+                      "steps": [
+                        {
+                          "kind": "command",
+                          "call": "legacy_flow('complete')"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "original_华山论剑下一周目",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "好吧！请继续挑战下一周目！你还真是个BT啊！"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_flow('next')"
+            }
+          ]
+        },
+        {
+          "name": "original_华山论剑最终炼狱",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.树林')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.华山论剑')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "好了，恭喜你，连这么BT的一战都赢了!你真是铁杆粉丝啊！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "就这么结束了？感觉还是不过瘾啊，这可是炼狱难度！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "好吧，看在你是炼狱难度，再给你一个隐藏关卡吧，这次可是真正的华山论剑。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "喂喂，好歹让我休息一下啊！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "玩的就是刺激，你要不要挑战一下？"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "要挑战真.华山论剑吗？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "[[red:挑战!]]",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "original_华山论剑最终炼狱1"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "算了",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "original_华山论剑最终炼狱2"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "original_华山论剑最终炼狱1",
+          "steps": [
+            {
+              "kind": "battle",
+              "battleId": "真华山论剑",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "真华山论剑胜利"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "jump",
+                    "target": "真华山论剑失败"
+                  }
+                ],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "真华山论剑胜利",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "nick('真华山论剑')"
+            },
+            {
+              "kind": "jump",
+              "target": "original_华山论剑周目"
+            }
+          ]
+        },
+        {
+          "name": "真华山论剑失败",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "看来你的功力还是没有达到登峰造极的地步啊~"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "你给我安排这么一大帮BT，怎么打得过啊……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "好吧，那游戏就此结束了……"
+            },
+            {
+              "kind": "jump",
+              "target": "original_华山论剑周目"
+            }
+          ]
+        },
+        {
+          "name": "original_华山论剑最终炼狱2",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "算了，还是不挑战了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "好吧，那游戏就结束了……"
+            },
+            {
+              "kind": "jump",
+              "target": "original_华山论剑周目"
+            }
+          ]
+        },
+        {
           "name": "original_佛山镇.黄飞鸿",
           "steps": [
             {
@@ -133597,7 +135729,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('百变千幻云雾十三式', 3, 'legacy.original_莫大胜2.百变千幻云雾十三式')"
+              "call": "legacy_maxlevel('百变千幻云雾十三式', 3, 'legacy.original_莫大胜2.百变千幻云雾十三式')"
             },
             {
               "kind": "dialogue",
@@ -134190,7 +136322,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('五毒神掌', 2, 'legacy.sdxl_古墓幽居.战斗胜利.五毒神掌')"
+              "call": "legacy_maxlevel('五毒神掌', 2, 'legacy.sdxl_古墓幽居.战斗胜利.五毒神掌')"
             },
             {
               "kind": "command",
@@ -134386,7 +136518,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('阴阳倒乱刃', 2, 'legacy.sdxl_绝情谷.战斗胜利1.阴阳倒乱刃')"
+              "call": "legacy_maxlevel('阴阳倒乱刃', 2, 'legacy.sdxl_绝情谷.战斗胜利1.阴阳倒乱刃')"
             },
             {
               "kind": "dialogue",
@@ -134651,7 +136783,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('弹指神通', 1, 'legacy.sdxl_程英.风陵渡口.弹指神通')"
+              "call": "legacy_maxlevel('弹指神通', 1, 'legacy.sdxl_程英.风陵渡口.弹指神通')"
             },
             {
               "kind": "command",
@@ -135660,11 +137792,11 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('玉女素心剑', 1, 'legacy.sdxl_绝情谷底.小龙女加入.玉女素心剑')"
+              "call": "legacy_maxlevel('玉女素心剑', 1, 'legacy.sdxl_绝情谷底.小龙女加入.玉女素心剑')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('玉女心经', 1, 'legacy.sdxl_绝情谷底.小龙女加入.玉女心经')"
+              "call": "legacy_maxlevel('玉女心经', 1, 'legacy.sdxl_绝情谷底.小龙女加入.玉女心经')"
             },
             {
               "kind": "command",
@@ -135952,7 +138084,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('九阴神功', 1, 'legacy.sdxl_三枚金针.襄阳胜.九阴神功')"
+              "call": "legacy_maxlevel('九阴神功', 1, 'legacy.sdxl_三枚金针.襄阳胜.九阴神功')"
             },
             {
               "kind": "command",
@@ -136109,7 +138241,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('玉女素心剑', 1, 'legacy.sdxl_绝情谷底.郭襄2.玉女素心剑')"
+              "call": "legacy_maxlevel('玉女素心剑', 1, 'legacy.sdxl_绝情谷底.郭襄2.玉女素心剑')"
             },
             {
               "kind": "command",
@@ -136376,7 +138508,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('九阳神功', 1, 'legacy.sdxl_峨眉金顶2.九阳神功')"
+              "call": "legacy_maxlevel('九阳神功', 1, 'legacy.sdxl_峨眉金顶2.九阳神功')"
             },
             {
               "kind": "command",
@@ -137586,7 +139718,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('北冥神功', 1, 'legacy.tlbb.dy_天龙寺.救段誉1.北冥神功')"
+              "call": "legacy_maxlevel('北冥神功', 1, 'legacy.tlbb.dy_天龙寺.救段誉1.北冥神功')"
             },
             {
               "kind": "command",
@@ -138171,7 +140303,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('北冥神功', 1, 'legacy.tlbb.dy_天龙寺.六脉神剑胜.北冥神功')"
+              "call": "legacy_maxlevel('北冥神功', 1, 'legacy.tlbb.dy_天龙寺.六脉神剑胜.北冥神功')"
             },
             {
               "kind": "dialogue",
@@ -138350,7 +140482,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('火焰刀法', 3, 'legacy.tlbb.dy_天龙寺.战鸠摩智胜.火焰刀法')"
+              "call": "legacy_maxlevel('火焰刀法', 3, 'legacy.tlbb.dy_天龙寺.战鸠摩智胜.火焰刀法')"
             },
             {
               "kind": "command",
@@ -138911,7 +141043,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('擒龙功', 2, 'legacy.tlbb.dy_江南酒楼2胜.擒龙功')"
+              "call": "legacy_maxlevel('擒龙功', 2, 'legacy.tlbb.dy_江南酒楼2胜.擒龙功')"
             },
             {
               "kind": "command",
@@ -139456,7 +141588,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('大金刚掌', 3, 'legacy.tlbb.dy_少林寺3胜.大金刚掌')"
+              "call": "legacy_maxlevel('大金刚掌', 3, 'legacy.tlbb.dy_少林寺3胜.大金刚掌')"
             },
             {
               "kind": "dialogue",
@@ -139781,7 +141913,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('降龙十八掌', 1, 'legacy.tlbb.dy_雁门关无阿朱.降龙十八掌')"
+              "call": "legacy_maxlevel('降龙十八掌', 1, 'legacy.tlbb.dy_雁门关无阿朱.降龙十八掌')"
             },
             {
               "kind": "dialogue",
@@ -140970,7 +143102,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('北冥神功', 1, 'legacy.tlbb.dy_西夏驸马段誉8.北冥神功')"
+              "call": "legacy_maxlevel('北冥神功', 1, 'legacy.tlbb.dy_西夏驸马段誉8.北冥神功')"
             },
             {
               "kind": "command",
@@ -141100,7 +143232,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('易筋经', 1, 'legacy.tlbb.dy_归还经书1.易筋经')"
+              "call": "legacy_maxlevel('易筋经', 1, 'legacy.tlbb.dy_归还经书1.易筋经')"
             },
             {
               "kind": "command",
@@ -141914,7 +144046,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('斗转星移', 1, 'legacy.tlbb.dy_燕子坞慕容复.斗转星移')"
+              "call": "legacy_maxlevel('斗转星移', 1, 'legacy.tlbb.dy_燕子坞慕容复.斗转星移')"
             },
             {
               "kind": "command",
@@ -142084,11 +144216,11 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('斗转星移', 1, 'legacy.tlbb.dy_无量山洞段誉慕容复胜.斗转星移')"
+              "call": "legacy_maxlevel('斗转星移', 1, 'legacy.tlbb.dy_无量山洞段誉慕容复胜.斗转星移')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('天山折梅手', 1, 'legacy.tlbb.dy_无量山洞段誉慕容复胜.天山折梅手')"
+              "call": "legacy_maxlevel('天山折梅手', 1, 'legacy.tlbb.dy_无量山洞段誉慕容复胜.天山折梅手')"
             },
             {
               "kind": "command",
@@ -142670,7 +144802,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('一阳指', 1, 'legacy.tlbb.dy_马夫人2.一阳指')"
+              "call": "legacy_maxlevel('一阳指', 1, 'legacy.tlbb.dy_马夫人2.一阳指')"
             },
             {
               "kind": "command",
@@ -143427,7 +145559,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('化功大法', 1, 'legacy.tlbb.dy_小镜湖阮星竹6.化功大法')"
+              "call": "legacy_maxlevel('化功大法', 1, 'legacy.tlbb.dy_小镜湖阮星竹6.化功大法')"
             }
           ]
         },
@@ -143556,7 +145688,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('六脉神剑', 1, 'legacy.tlbb.dy_秦红棉居段誉.六脉神剑')"
+              "call": "legacy_maxlevel('六脉神剑', 1, 'legacy.tlbb.dy_秦红棉居段誉.六脉神剑')"
             },
             {
               "kind": "dialogue",
@@ -144199,7 +146331,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('天山折梅手', 1, 'legacy.tlbb.dy_曼陀山庄逍遥子胜.天山折梅手')"
+              "call": "legacy_maxlevel('天山折梅手', 1, 'legacy.tlbb.dy_曼陀山庄逍遥子胜.天山折梅手')"
             },
             {
               "kind": "command",
@@ -145397,7 +147529,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('野球拳', 1, 'legacy.tlbb.xz_擂鼓山3.野球拳')"
+              "call": "legacy_maxlevel('野球拳', 1, 'legacy.tlbb.xz_擂鼓山3.野球拳')"
             },
             {
               "kind": "dialogue",
@@ -145928,7 +148060,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('狂风刀法', 3, 'legacy.笑傲江湖_田伯光居.胜田伯光.狂风刀法')"
+              "call": "legacy_maxlevel('狂风刀法', 3, 'legacy.笑傲江湖_田伯光居.胜田伯光.狂风刀法')"
             },
             {
               "kind": "command",
@@ -147590,7 +149722,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('狂风快剑', 1, 'legacy.笑傲江湖_黑木崖.封不平4.狂风快剑')"
+              "call": "legacy_maxlevel('狂风快剑', 1, 'legacy.笑傲江湖_黑木崖.封不平4.狂风快剑')"
             },
             {
               "kind": "command",
@@ -148047,7 +150179,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('辟邪剑法', 1, 'legacy.笑傲江湖_黑木崖.辟邪剑谱到手.辟邪剑法')"
+              "call": "legacy_maxlevel('辟邪剑法', 1, 'legacy.笑傲江湖_黑木崖.辟邪剑谱到手.辟邪剑法')"
             },
             {
               "kind": "command",
@@ -148320,7 +150452,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('狂风快剑', 1, 'legacy.笑傲江湖_华山后山.剑宗5.狂风快剑')"
+              "call": "legacy_maxlevel('狂风快剑', 1, 'legacy.笑傲江湖_华山后山.剑宗5.狂风快剑')"
             }
           ]
         },
@@ -148739,7 +150871,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('狂风快剑', 1, 'legacy.笑傲江湖_黑木崖.封不平林平之4.狂风快剑')"
+              "call": "legacy_maxlevel('狂风快剑', 1, 'legacy.笑傲江湖_黑木崖.封不平林平之4.狂风快剑')"
             },
             {
               "kind": "command",
@@ -149353,7 +151485,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('日月鞭法', 5, 'legacy.笑傲江湖_嵩山.阻止2.日月鞭法')"
+              "call": "legacy_maxlevel('日月鞭法', 5, 'legacy.笑傲江湖_嵩山.阻止2.日月鞭法')"
             },
             {
               "kind": "dialogue",
@@ -149718,7 +151850,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('独孤九剑', 1, 'legacy.笑傲江湖_平一指治好.独孤九剑')"
+              "call": "legacy_maxlevel('独孤九剑', 1, 'legacy.笑傲江湖_平一指治好.独孤九剑')"
             },
             {
               "kind": "dialogue",
@@ -151212,19 +153344,19 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('易筋经', 1, 'legacy.笑傲江湖_吸星大法1.易筋经')"
+              "call": "legacy_maxlevel('易筋经', 1, 'legacy.笑傲江湖_吸星大法1.易筋经')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('嵩山剑法', 3, 'legacy.笑傲江湖_吸星大法1.嵩山剑法')"
+              "call": "legacy_maxlevel('嵩山剑法', 3, 'legacy.笑傲江湖_吸星大法1.嵩山剑法')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('华山剑法', 3, 'legacy.笑傲江湖_吸星大法1.华山剑法')"
+              "call": "legacy_maxlevel('华山剑法', 3, 'legacy.笑傲江湖_吸星大法1.华山剑法')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('日月鞭法', 3, 'legacy.笑傲江湖_吸星大法1.日月鞭法')"
+              "call": "legacy_maxlevel('日月鞭法', 3, 'legacy.笑傲江湖_吸星大法1.日月鞭法')"
             },
             {
               "kind": "dialogue",
@@ -152348,11 +154480,11 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('葵花宝典', 1, 'legacy.笑傲邪_围攻黑木崖战斗3胜利.葵花宝典')"
+              "call": "legacy_maxlevel('葵花宝典', 1, 'legacy.笑傲邪_围攻黑木崖战斗3胜利.葵花宝典')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('辟邪剑法', 1, 'legacy.笑傲邪_围攻黑木崖战斗3胜利.辟邪剑法')"
+              "call": "legacy_maxlevel('辟邪剑法', 1, 'legacy.笑傲邪_围攻黑木崖战斗3胜利.辟邪剑法')"
             },
             {
               "kind": "command",
@@ -154015,11 +156147,11 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('胡家刀法', 1, 'legacy.雪山飞狐_苗人凤居.阎基对峙.杀苗人凤.战斗.胜利.胡家刀法')"
+              "call": "legacy_maxlevel('胡家刀法', 1, 'legacy.雪山飞狐_苗人凤居.阎基对峙.杀苗人凤.战斗.胜利.胡家刀法')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('苗家剑法', 1, 'legacy.雪山飞狐_苗人凤居.阎基对峙.杀苗人凤.战斗.胜利.苗家剑法')"
+              "call": "legacy_maxlevel('苗家剑法', 1, 'legacy.雪山飞狐_苗人凤居.阎基对峙.杀苗人凤.战斗.胜利.苗家剑法')"
             },
             {
               "kind": "command",
@@ -154329,7 +156461,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('苗家剑法', 1, 'legacy.雪山飞狐_湘妃庙.胡斐单挑田归农阎基.胜利.苗家剑法')"
+              "call": "legacy_maxlevel('苗家剑法', 1, 'legacy.雪山飞狐_湘妃庙.胡斐单挑田归农阎基.胜利.苗家剑法')"
             },
             {
               "kind": "command",
@@ -154736,7 +156868,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('苗家剑法', 1, 'legacy.雪山飞狐_苗人凤居.田归农胡斐.杀苗人凤.胜利.苗家剑法')"
+              "call": "legacy_maxlevel('苗家剑法', 1, 'legacy.雪山飞狐_苗人凤居.田归农胡斐.杀苗人凤.胜利.苗家剑法')"
             },
             {
               "kind": "command",
@@ -155065,11 +157197,11 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('苗家剑法', 1, 'legacy.雪山飞狐_苗人凤居.回忆战.胜利.苗家剑法')"
+              "call": "legacy_maxlevel('苗家剑法', 1, 'legacy.雪山飞狐_苗人凤居.回忆战.胜利.苗家剑法')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('胡家刀法', 1, 'legacy.雪山飞狐_苗人凤居.回忆战.胜利.胡家刀法')"
+              "call": "legacy_maxlevel('胡家刀法', 1, 'legacy.雪山飞狐_苗人凤居.回忆战.胜利.胡家刀法')"
             },
             {
               "kind": "command",
@@ -155497,7 +157629,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('药王神掌', 1, 'legacy.雪山飞狐_药王庄.毒手药王.单挑战.胜利.药王神掌')"
+              "call": "legacy_maxlevel('药王神掌', 1, 'legacy.雪山飞狐_药王庄.毒手药王.单挑战.胜利.药王神掌')"
             },
             {
               "kind": "command",
@@ -155965,7 +158097,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('九阴白骨爪', 1, 'legacy.射雕英雄传_梅超风2.九阴白骨爪')"
+              "call": "legacy_maxlevel('九阴白骨爪', 1, 'legacy.射雕英雄传_梅超风2.九阴白骨爪')"
             },
             {
               "kind": "command",
@@ -156148,7 +158280,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('蛤蟆功', 1, 'legacy.射雕英雄传_白驼山欧阳锋2.蛤蟆功')"
+              "call": "legacy_maxlevel('蛤蟆功', 1, 'legacy.射雕英雄传_白驼山欧阳锋2.蛤蟆功')"
             },
             {
               "kind": "command",
@@ -156161,6 +158293,69 @@
             {
               "kind": "command",
               "call": "map('大地图')"
+            }
+          ]
+        },
+        {
+          "name": "射雕英雄传_桃花岛黄药师1",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.桃花岛')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.神雕.歌泣')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "这不是一个能随便闯的地方，因为冷不丁就会碰到很猛的人物……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "黄药师",
+              "text": "你是说我么？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "哇！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "桃花岛黄药师_战斗",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "射雕英雄传_桃花岛黄药师2"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "branch",
+                    "cases": [
+                      {
+                        "when": "(!story_completed('射雕英雄传_桃花岛黄药师负'))",
+                        "steps": [
+                          {
+                            "kind": "jump",
+                            "target": "射雕英雄传_桃花岛黄药师负"
+                          }
+                        ]
+                      }
+                    ],
+                    "fallback": [
+                      {
+                        "kind": "command",
+                        "call": "legacy_flow('gameover')"
+                      }
+                    ]
+                  }
+                ],
+                "timeout": []
+              }
             }
           ]
         },
@@ -156213,6 +158408,64 @@
           ]
         },
         {
+          "name": "射雕英雄传_桃花岛黄药师再战",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.桃花岛')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.神雕.歌泣')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "再来！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "黄药师",
+              "text": "这次我可不会留情了！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "桃花岛黄药师_战斗",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "射雕英雄传_桃花岛黄药师2"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "branch",
+                    "cases": [
+                      {
+                        "when": "(!story_completed('射雕英雄传_桃花岛黄药师负'))",
+                        "steps": [
+                          {
+                            "kind": "jump",
+                            "target": "射雕英雄传_桃花岛黄药师负"
+                          }
+                        ]
+                      }
+                    ],
+                    "fallback": [
+                      {
+                        "kind": "command",
+                        "call": "legacy_flow('gameover')"
+                      }
+                    ]
+                  }
+                ],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
           "name": "射雕英雄传_桃花岛黄药师2",
           "steps": [
             {
@@ -156243,6 +158496,64 @@
             {
               "kind": "command",
               "call": "map('大地图')"
+            }
+          ]
+        },
+        {
+          "name": "射雕英雄传_一灯居1",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.主角之家')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.室内_清新')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "一灯大师",
+              "text": "小友，我等候你多时了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "敬请大师赐教！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "一灯居一灯大师_战斗",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "射雕英雄传_一灯居2"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "branch",
+                    "cases": [
+                      {
+                        "when": "(!story_completed('射雕英雄传_一灯居负'))",
+                        "steps": [
+                          {
+                            "kind": "jump",
+                            "target": "射雕英雄传_一灯居负"
+                          }
+                        ]
+                      }
+                    ],
+                    "fallback": [
+                      {
+                        "kind": "command",
+                        "call": "legacy_flow('gameover')"
+                      }
+                    ]
+                  }
+                ],
+                "timeout": []
+              }
             }
           ]
         },
@@ -156282,6 +158593,64 @@
               "kind": "dialogue",
               "speaker": "郭靖",
               "text": "多谢大师！"
+            }
+          ]
+        },
+        {
+          "name": "射雕英雄传_一灯居再战",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.主角之家')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.室内_清新')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "再来！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "一灯大师",
+              "text": "这次我会认真了，小友小心！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "一灯居一灯大师_战斗",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "射雕英雄传_一灯居2"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "branch",
+                    "cases": [
+                      {
+                        "when": "(!story_completed('射雕英雄传_一灯居负'))",
+                        "steps": [
+                          {
+                            "kind": "jump",
+                            "target": "射雕英雄传_一灯居负"
+                          }
+                        ]
+                      }
+                    ],
+                    "fallback": [
+                      {
+                        "kind": "command",
+                        "call": "legacy_flow('gameover')"
+                      }
+                    ]
+                  }
+                ],
+                "timeout": []
+              }
             }
           ]
         },
@@ -156361,6 +158730,79 @@
           ]
         },
         {
+          "name": "射雕英雄传_洪七公1",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.树林')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.室内_世俗')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "洪七公",
+              "text": "菜里没有一滴油啊，手捧着窝窝头……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "造孽啊……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "洪七公",
+              "text": "这年头吃油怕吃地沟油，吃粮都爱吃粗粮，我这样很健康的。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "洪七公",
+              "text": "来，小子。今天碰到我是你的缘分。你我比划比划。"
+            },
+            {
+              "kind": "battle",
+              "battleId": "长江岸边洪七公_战斗",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "射雕英雄传_洪七公2"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "branch",
+                    "cases": [
+                      {
+                        "when": "(!story_completed('射雕英雄传_洪七公负'))",
+                        "steps": [
+                          {
+                            "kind": "jump",
+                            "target": "射雕英雄传_洪七公负"
+                          }
+                        ]
+                      }
+                    ],
+                    "fallback": [
+                      {
+                        "kind": "command",
+                        "call": "legacy_flow('gameover')"
+                      }
+                    ]
+                  }
+                ],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
           "name": "射雕英雄传_洪七公负",
           "steps": [
             {
@@ -156412,6 +158854,64 @@
               "kind": "dialogue",
               "speaker": "郭靖",
               "text": "多谢七公传授武艺！"
+            }
+          ]
+        },
+        {
+          "name": "射雕英雄传_洪七公再战",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.树林')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.室内_世俗')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "再来！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "洪七公",
+              "text": "这次我会认真打了，小子小心！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "长江岸边洪七公_战斗",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "射雕英雄传_洪七公2"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "branch",
+                    "cases": [
+                      {
+                        "when": "(!story_completed('射雕英雄传_洪七公负'))",
+                        "steps": [
+                          {
+                            "kind": "jump",
+                            "target": "射雕英雄传_洪七公负"
+                          }
+                        ]
+                      }
+                    ],
+                    "fallback": [
+                      {
+                        "kind": "command",
+                        "call": "legacy_flow('gameover')"
+                      }
+                    ]
+                  }
+                ],
+                "timeout": []
+              }
             }
           ]
         },
@@ -156724,7 +159224,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('先天功', 1, 'legacy.射雕英雄传_重阳宫胜王重阳.先天功')"
+              "call": "legacy_maxlevel('先天功', 1, 'legacy.射雕英雄传_重阳宫胜王重阳.先天功')"
             },
             {
               "kind": "dialogue",
@@ -156842,7 +159342,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('九阴神功', 1, 'legacy.射雕英雄传_重阳宫九阴真经胜.九阴神功')"
+              "call": "legacy_maxlevel('九阴神功', 1, 'legacy.射雕英雄传_重阳宫九阴真经胜.九阴神功')"
             },
             {
               "kind": "command",
@@ -157277,11 +159777,11 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('混元掌', 1, 'legacy.碧血剑_穆人清胜利.混元掌')"
+              "call": "legacy_maxlevel('混元掌', 1, 'legacy.碧血剑_穆人清胜利.混元掌')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('混元功', 1, 'legacy.碧血剑_穆人清胜利.混元功')"
+              "call": "legacy_maxlevel('混元功', 1, 'legacy.碧血剑_穆人清胜利.混元功')"
             },
             {
               "kind": "command",
@@ -157974,7 +160474,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('神照功', 1, 'legacy.连城诀_唐诗山洞.狄云正式加入.神照功')"
+              "call": "legacy_maxlevel('神照功', 1, 'legacy.连城诀_唐诗山洞.狄云正式加入.神照功')"
             },
             {
               "kind": "command",
@@ -158266,7 +160766,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('血刀大法', 1, 'legacy.连城诀_昆仑山.血刀老祖加入.血刀大法')"
+              "call": "legacy_maxlevel('血刀大法', 1, 'legacy.连城诀_昆仑山.血刀老祖加入.血刀大法')"
             },
             {
               "kind": "command",
@@ -158708,11 +161208,11 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('连城剑法', 1, 'legacy.连城诀_连城诀.连城剑法')"
+              "call": "legacy_maxlevel('连城剑法', 1, 'legacy.连城诀_连城诀.连城剑法')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('神照功', 1, 'legacy.连城诀_连城诀.神照功')"
+              "call": "legacy_maxlevel('神照功', 1, 'legacy.连城诀_连城诀.神照功')"
             },
             {
               "kind": "command",
@@ -159105,7 +161605,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('柔云剑法', 2, 'legacy.书剑恩仇录_庖丁解牛胜.柔云剑法')"
+              "call": "legacy_maxlevel('柔云剑法', 2, 'legacy.书剑恩仇录_庖丁解牛胜.柔云剑法')"
             },
             {
               "kind": "command",
@@ -162892,7 +165392,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('玉女心经', 1, 'legacy.门派古墓_回古墓.玄铁剑法2胜.玉女心经')"
+              "call": "legacy_maxlevel('玉女心经', 1, 'legacy.门派古墓_回古墓.玄铁剑法2胜.玉女心经')"
             },
             {
               "kind": "dialogue",
@@ -162943,7 +165443,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('玄铁剑法', 1, 'legacy.门派古墓_回古墓.玄铁剑法3胜.玄铁剑法')"
+              "call": "legacy_maxlevel('玄铁剑法', 1, 'legacy.门派古墓_回古墓.玄铁剑法3胜.玄铁剑法')"
             },
             {
               "kind": "dialogue",
@@ -163916,7 +166416,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('漫天花雨', 2, 'legacy.门派大轮寺_桑结胜.漫天花雨')"
+              "call": "legacy_maxlevel('漫天花雨', 2, 'legacy.门派大轮寺_桑结胜.漫天花雨')"
             },
             {
               "kind": "dialogue",
@@ -164044,7 +166544,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('无上大力杵', 1, 'legacy.门派大轮寺_达尔巴胜.无上大力杵')"
+              "call": "legacy_maxlevel('无上大力杵', 1, 'legacy.门派大轮寺_达尔巴胜.无上大力杵')"
             }
           ]
         },
@@ -164147,7 +166647,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('密宗大手印', 2, 'legacy.门派大轮寺_灵智上人胜.密宗大手印')"
+              "call": "legacy_maxlevel('密宗大手印', 2, 'legacy.门派大轮寺_灵智上人胜.密宗大手印')"
             }
           ]
         },
@@ -164291,7 +166791,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('火焰刀法', 2, 'legacy.门派大轮寺_大理高手胜.火焰刀法')"
+              "call": "legacy_maxlevel('火焰刀法', 2, 'legacy.门派大轮寺_大理高手胜.火焰刀法')"
             },
             {
               "kind": "dialogue",
@@ -164490,7 +166990,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('龙象般若功', 1, 'legacy.门派大轮寺_回大轮寺.郭襄.龙象般若功')"
+              "call": "legacy_maxlevel('龙象般若功', 1, 'legacy.门派大轮寺_回大轮寺.郭襄.龙象般若功')"
             },
             {
               "kind": "dialogue",
@@ -164674,7 +167174,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('龙象般若功', 1, 'legacy.门派大轮寺_回大轮寺.龙象秘籍.龙象般若功')"
+              "call": "legacy_maxlevel('龙象般若功', 1, 'legacy.门派大轮寺_回大轮寺.龙象秘籍.龙象般若功')"
             },
             {
               "kind": "dialogue",
@@ -165679,7 +168179,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('血刀心法', 3, 'legacy.血刀门_胜谛帮4.血刀心法')"
+              "call": "legacy_maxlevel('血刀心法', 3, 'legacy.血刀门_胜谛帮4.血刀心法')"
             },
             {
               "kind": "dialogue",
@@ -166131,11 +168631,11 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('血刀大法', 1, 'legacy.血刀门_血刀老祖的试炼成功.血刀大法')"
+              "call": "legacy_maxlevel('血刀大法', 1, 'legacy.血刀门_血刀老祖的试炼成功.血刀大法')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('血海魔功', 3, 'legacy.血刀门_血刀老祖的试炼成功.血海魔功')"
+              "call": "legacy_maxlevel('血海魔功', 3, 'legacy.血刀门_血刀老祖的试炼成功.血海魔功')"
             },
             {
               "kind": "command",
@@ -167241,7 +169741,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('全真心法', 3, 'legacy.全真教_李志常胜.全真心法')"
+              "call": "legacy_maxlevel('全真心法', 3, 'legacy.全真教_李志常胜.全真心法')"
             },
             {
               "kind": "command",
@@ -168905,7 +171405,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('天山六阳掌', 1, 'legacy.灵鹫宫_委屈求全1.天山六阳掌')"
+              "call": "legacy_maxlevel('天山六阳掌', 1, 'legacy.灵鹫宫_委屈求全1.天山六阳掌')"
             },
             {
               "kind": "command",
@@ -169362,7 +171862,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('北冥神功', 1, 'legacy.灵鹫宫_山顶大战4.北冥神功')"
+              "call": "legacy_maxlevel('北冥神功', 1, 'legacy.灵鹫宫_山顶大战4.北冥神功')"
             },
             {
               "kind": "command",
@@ -169664,7 +172164,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('八荒六合唯我独尊功', 2, 'legacy.灵鹫宫_密室武学.八荒六合唯我独尊功')"
+              "call": "legacy_maxlevel('八荒六合唯我独尊功', 2, 'legacy.灵鹫宫_密室武学.八荒六合唯我独尊功')"
             },
             {
               "kind": "jump",
@@ -169895,7 +172395,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('天山六阳掌', 1, 'legacy.灵鹫宫_攻打完成珍珑棋局大战胜利.天山六阳掌')"
+              "call": "legacy_maxlevel('天山六阳掌', 1, 'legacy.灵鹫宫_攻打完成珍珑棋局大战胜利.天山六阳掌')"
             },
             {
               "kind": "command",
@@ -171263,11 +173763,11 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('小洪拳', 2, 'legacy.少林派_南少林出师.小洪拳')"
+              "call": "legacy_maxlevel('小洪拳', 2, 'legacy.少林派_南少林出师.小洪拳')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('大洪拳', 2, 'legacy.少林派_南少林出师.大洪拳')"
+              "call": "legacy_maxlevel('大洪拳', 2, 'legacy.少林派_南少林出师.大洪拳')"
             },
             {
               "kind": "command",
@@ -171732,7 +174232,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('易筋经', 1, 'legacy.少林派_洗髓经胜利.易筋经')"
+              "call": "legacy_maxlevel('易筋经', 1, 'legacy.少林派_洗髓经胜利.易筋经')"
             },
             {
               "kind": "command",
@@ -171838,15 +174338,15 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('天山折梅手', 1, 'legacy.少林_人生最幸福的事情.天山折梅手')"
+              "call": "legacy_maxlevel('天山折梅手', 1, 'legacy.少林_人生最幸福的事情.天山折梅手')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('八荒六合唯我独尊功', 1, 'legacy.少林_人生最幸福的事情.八荒六合唯我独尊功')"
+              "call": "legacy_maxlevel('八荒六合唯我独尊功', 1, 'legacy.少林_人生最幸福的事情.八荒六合唯我独尊功')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('天山六阳掌', 1, 'legacy.少林_人生最幸福的事情.天山六阳掌')"
+              "call": "legacy_maxlevel('天山六阳掌', 1, 'legacy.少林_人生最幸福的事情.天山六阳掌')"
             },
             {
               "kind": "command",
@@ -172181,7 +174681,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('如来神掌', 3, 'legacy.南少林_如来神掌6.如来神掌')"
+              "call": "legacy_maxlevel('如来神掌', 3, 'legacy.南少林_如来神掌6.如来神掌')"
             },
             {
               "kind": "command",
@@ -172479,7 +174979,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('大力金刚指', 1, 'legacy.少林派_火工头陀胜利_答应.大力金刚指')"
+              "call": "legacy_maxlevel('大力金刚指', 1, 'legacy.少林派_火工头陀胜利_答应.大力金刚指')"
             },
             {
               "kind": "command",
@@ -172750,7 +175250,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('武当心法', 2, 'legacy.武当派_宋青书之战胜利.武当心法')"
+              "call": "legacy_maxlevel('武当心法', 2, 'legacy.武当派_宋青书之战胜利.武当心法')"
             },
             {
               "kind": "dialogue",
@@ -173640,7 +176140,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('玄虚刀法', 2, 'legacy.武当派_黑白双煞之战胜利.玄虚刀法')"
+              "call": "legacy_maxlevel('玄虚刀法', 2, 'legacy.武当派_黑白双煞之战胜利.玄虚刀法')"
             },
             {
               "kind": "dialogue",
@@ -173810,7 +176310,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('倚天屠龙笔法', 1, 'legacy.武当派_宋远桥玄冥二老胜利.倚天屠龙笔法')"
+              "call": "legacy_maxlevel('倚天屠龙笔法', 1, 'legacy.武当派_宋远桥玄冥二老胜利.倚天屠龙笔法')"
             },
             {
               "kind": "dialogue",
@@ -173923,7 +176423,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('太极神功', 2, 'legacy.武当派_宋远桥余沧海胜利.太极神功')"
+              "call": "legacy_maxlevel('太极神功', 2, 'legacy.武当派_宋远桥余沧海胜利.太极神功')"
             },
             {
               "kind": "dialogue",
@@ -174121,7 +176621,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('虎爪绝户手', 2, 'legacy.武当派_俞莲舟考校3.虎爪绝户手')"
+              "call": "legacy_maxlevel('虎爪绝户手', 2, 'legacy.武当派_俞莲舟考校3.虎爪绝户手')"
             }
           ]
         },
@@ -174232,7 +176732,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('神门十三剑', 2, 'legacy.武当派_神门十三剑2.神门十三剑')"
+              "call": "legacy_maxlevel('神门十三剑', 2, 'legacy.武当派_神门十三剑2.神门十三剑')"
             },
             {
               "kind": "dialogue",
@@ -174471,11 +176971,11 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('神门十三剑', 2, 'legacy.武当派_殷梨亭邪胜.神门十三剑')"
+              "call": "legacy_maxlevel('神门十三剑', 2, 'legacy.武当派_殷梨亭邪胜.神门十三剑')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('柔云剑法', 2, 'legacy.武当派_殷梨亭邪胜.柔云剑法')"
+              "call": "legacy_maxlevel('柔云剑法', 2, 'legacy.武当派_殷梨亭邪胜.柔云剑法')"
             },
             {
               "kind": "command",
@@ -174605,11 +177105,11 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('太极拳', 1, 'legacy.武当派_太极拳剑3.太极拳')"
+              "call": "legacy_maxlevel('太极拳', 1, 'legacy.武当派_太极拳剑3.太极拳')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('太极剑', 2, 'legacy.武当派_太极拳剑3.太极剑')"
+              "call": "legacy_maxlevel('太极剑', 2, 'legacy.武当派_太极拳剑3.太极剑')"
             }
           ]
         },
@@ -174817,15 +177317,15 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('太极拳', 1, 'legacy.武当派_山顶悟道之战胜利.太极拳')"
+              "call": "legacy_maxlevel('太极拳', 1, 'legacy.武当派_山顶悟道之战胜利.太极拳')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('太极剑', 1, 'legacy.武当派_山顶悟道之战胜利.太极剑')"
+              "call": "legacy_maxlevel('太极剑', 1, 'legacy.武当派_山顶悟道之战胜利.太极剑')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('纯阳无极功', 1, 'legacy.武当派_山顶悟道之战胜利.纯阳无极功')"
+              "call": "legacy_maxlevel('纯阳无极功', 1, 'legacy.武当派_山顶悟道之战胜利.纯阳无极功')"
             },
             {
               "kind": "dialogue",
@@ -174862,7 +177362,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('太极神功', 2, 'legacy.武当派_山顶悟道之战失败.太极神功')"
+              "call": "legacy_maxlevel('太极神功', 2, 'legacy.武当派_山顶悟道之战失败.太极神功')"
             },
             {
               "kind": "dialogue",
@@ -175068,7 +177568,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('柔云剑法', 2, 'legacy.武当派_对战张召重胜利.柔云剑法')"
+              "call": "legacy_maxlevel('柔云剑法', 2, 'legacy.武当派_对战张召重胜利.柔云剑法')"
             },
             {
               "kind": "command",
@@ -175246,11 +177746,11 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('太极神功', 1, 'legacy.武当派_蛇形刁手之战胜利.太极神功')"
+              "call": "legacy_maxlevel('太极神功', 1, 'legacy.武当派_蛇形刁手之战胜利.太极神功')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('武当心法', 3, 'legacy.武当派_蛇形刁手之战胜利.武当心法')"
+              "call": "legacy_maxlevel('武当心法', 3, 'legacy.武当派_蛇形刁手之战胜利.武当心法')"
             },
             {
               "kind": "command",
@@ -175996,7 +178496,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('太玄神功', 1, 'legacy.侠客行_石太玄神功.太玄神功')"
+              "call": "legacy_maxlevel('太玄神功', 1, 'legacy.侠客行_石太玄神功.太玄神功')"
             },
             {
               "kind": "dialogue",
@@ -177978,7 +180478,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('太极神功', 1, 'legacy.倚天屠龙_朱元璋2.太极神功')"
+              "call": "legacy_maxlevel('太极神功', 1, 'legacy.倚天屠龙_朱元璋2.太极神功')"
             },
             {
               "kind": "dialogue",
@@ -179014,7 +181514,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('太极拳', 1, 'legacy.倚天邪线_劝说青城完成2.太极拳')"
+              "call": "legacy_maxlevel('太极拳', 1, 'legacy.倚天邪线_劝说青城完成2.太极拳')"
             },
             {
               "kind": "jump",
@@ -179267,7 +181767,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('九阳神功', 1, 'legacy.倚天邪线_鄱阳湖终2.九阳神功')"
+              "call": "legacy_maxlevel('九阳神功', 1, 'legacy.倚天邪线_鄱阳湖终2.九阳神功')"
             },
             {
               "kind": "command",
@@ -180091,7 +182591,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('鸳鸯刀法', 3, 'legacy.鸳鸯刀邪_佛山镇1.鸳鸯刀法')"
+              "call": "legacy_maxlevel('鸳鸯刀法', 3, 'legacy.鸳鸯刀邪_佛山镇1.鸳鸯刀法')"
             },
             {
               "kind": "dialogue",
@@ -180275,7 +182775,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('血海魔功', 1, 'legacy.霹雳堂_狄云.血海魔功')"
+              "call": "legacy_maxlevel('血海魔功', 1, 'legacy.霹雳堂_狄云.血海魔功')"
             },
             {
               "kind": "command",
@@ -180319,7 +182819,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('胡家刀法', 1, 'legacy.霹雳堂_胡斐.胡家刀法')"
+              "call": "legacy_maxlevel('胡家刀法', 1, 'legacy.霹雳堂_胡斐.胡家刀法')"
             },
             {
               "kind": "command",
@@ -180409,15 +182909,15 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('落英神剑掌', 1, 'legacy.霹雳堂_程英.初级.落英神剑掌')"
+              "call": "legacy_maxlevel('落英神剑掌', 1, 'legacy.霹雳堂_程英.初级.落英神剑掌')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('玉箫剑法', 1, 'legacy.霹雳堂_程英.初级.玉箫剑法')"
+              "call": "legacy_maxlevel('玉箫剑法', 1, 'legacy.霹雳堂_程英.初级.玉箫剑法')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('弹指神通', 1, 'legacy.霹雳堂_程英.初级.弹指神通')"
+              "call": "legacy_maxlevel('弹指神通', 1, 'legacy.霹雳堂_程英.初级.弹指神通')"
             },
             {
               "kind": "command",
@@ -180463,15 +182963,15 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('落英神剑掌', 1, 'legacy.霹雳堂_程英.高级.落英神剑掌')"
+              "call": "legacy_maxlevel('落英神剑掌', 1, 'legacy.霹雳堂_程英.高级.落英神剑掌')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('玉箫剑法', 1, 'legacy.霹雳堂_程英.高级.玉箫剑法')"
+              "call": "legacy_maxlevel('玉箫剑法', 1, 'legacy.霹雳堂_程英.高级.玉箫剑法')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('弹指神通', 1, 'legacy.霹雳堂_程英.高级.弹指神通')"
+              "call": "legacy_maxlevel('弹指神通', 1, 'legacy.霹雳堂_程英.高级.弹指神通')"
             },
             {
               "kind": "command",
@@ -180510,15 +183010,15 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('落英神剑掌', 1, 'legacy.霹雳堂_郭襄.落英神剑掌')"
+              "call": "legacy_maxlevel('落英神剑掌', 1, 'legacy.霹雳堂_郭襄.落英神剑掌')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('玉箫剑法', 1, 'legacy.霹雳堂_郭襄.玉箫剑法')"
+              "call": "legacy_maxlevel('玉箫剑法', 1, 'legacy.霹雳堂_郭襄.玉箫剑法')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('弹指神通', 1, 'legacy.霹雳堂_郭襄.弹指神通')"
+              "call": "legacy_maxlevel('弹指神通', 1, 'legacy.霹雳堂_郭襄.弹指神通')"
             },
             {
               "kind": "command",
@@ -180585,7 +183085,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('狂风刀法', 5, 'legacy.霹雳堂_田伯光.狂风刀法')"
+              "call": "legacy_maxlevel('狂风刀法', 5, 'legacy.霹雳堂_田伯光.狂风刀法')"
             },
             {
               "kind": "command",
@@ -180623,7 +183123,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('北冥神功', 1, 'legacy.霹雳堂_木婉清.北冥神功')"
+              "call": "legacy_maxlevel('北冥神功', 1, 'legacy.霹雳堂_木婉清.北冥神功')"
             },
             {
               "kind": "command",
@@ -180667,7 +183167,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('苗家剑法', 1, 'legacy.霹雳堂_田归农.苗家剑法')"
+              "call": "legacy_maxlevel('苗家剑法', 1, 'legacy.霹雳堂_田归农.苗家剑法')"
             },
             {
               "kind": "command",
@@ -180712,7 +183212,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('一阳指', 3, 'legacy.霹雳堂_段正淳.一阳指')"
+              "call": "legacy_maxlevel('一阳指', 3, 'legacy.霹雳堂_段正淳.一阳指')"
             },
             {
               "kind": "command",
@@ -180765,7 +183265,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('胡家刀法', 1, 'legacy.霹雳堂_阎基.胡家刀法')"
+              "call": "legacy_maxlevel('胡家刀法', 1, 'legacy.霹雳堂_阎基.胡家刀法')"
             },
             {
               "kind": "command",
@@ -180811,7 +183311,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('药王神掌', 1, 'legacy.霹雳堂_程灵素.药王神掌')"
+              "call": "legacy_maxlevel('药王神掌', 1, 'legacy.霹雳堂_程灵素.药王神掌')"
             },
             {
               "kind": "command",
@@ -181125,7 +183625,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('斗转星移', 1, 'legacy.霹雳堂_慕容复.斗转星移')"
+              "call": "legacy_maxlevel('斗转星移', 1, 'legacy.霹雳堂_慕容复.斗转星移')"
             },
             {
               "kind": "command",
@@ -181168,7 +183668,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('擒龙功', 2, 'legacy.霹雳堂_乔峰.擒龙功')"
+              "call": "legacy_maxlevel('擒龙功', 2, 'legacy.霹雳堂_乔峰.擒龙功')"
             },
             {
               "kind": "command",
@@ -181266,7 +183766,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('化功大法', 1, 'legacy.霹雳堂_阿紫.化功大法')"
+              "call": "legacy_maxlevel('化功大法', 1, 'legacy.霹雳堂_阿紫.化功大法')"
             },
             {
               "kind": "command",
@@ -181357,7 +183857,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('毒龙鞭法', 5, 'legacy.霹雳堂_蓝凤凰.毒龙鞭法')"
+              "call": "legacy_maxlevel('毒龙鞭法', 5, 'legacy.霹雳堂_蓝凤凰.毒龙鞭法')"
             },
             {
               "kind": "command",
@@ -181400,7 +183900,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('日月鞭法', 5, 'legacy.霹雳堂_曲非烟.日月鞭法')"
+              "call": "legacy_maxlevel('日月鞭法', 5, 'legacy.霹雳堂_曲非烟.日月鞭法')"
             },
             {
               "kind": "command",
@@ -181503,11 +184003,11 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('日月鞭法', 3, 'legacy.霹雳堂_任盈盈.日月鞭法')"
+              "call": "legacy_maxlevel('日月鞭法', 3, 'legacy.霹雳堂_任盈盈.日月鞭法')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('华山剑法', 3, 'legacy.霹雳堂_任盈盈.华山剑法')"
+              "call": "legacy_maxlevel('华山剑法', 3, 'legacy.霹雳堂_任盈盈.华山剑法')"
             },
             {
               "kind": "command",
@@ -181550,7 +184050,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('血海魔功', 1, 'legacy.霹雳堂_血刀老祖.血海魔功')"
+              "call": "legacy_maxlevel('血海魔功', 1, 'legacy.霹雳堂_血刀老祖.血海魔功')"
             },
             {
               "kind": "command",
@@ -181598,11 +184098,11 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('连城剑法', 1, 'legacy.霹雳堂_水笙.连城剑法')"
+              "call": "legacy_maxlevel('连城剑法', 1, 'legacy.霹雳堂_水笙.连城剑法')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('神照功', 1, 'legacy.霹雳堂_水笙.神照功')"
+              "call": "legacy_maxlevel('神照功', 1, 'legacy.霹雳堂_水笙.神照功')"
             },
             {
               "kind": "command",
@@ -181773,7 +184273,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('庖丁解牛', 2, 'legacy.霹雳堂_陈家洛.庖丁解牛')"
+              "call": "legacy_maxlevel('庖丁解牛', 2, 'legacy.霹雳堂_陈家洛.庖丁解牛')"
             },
             {
               "kind": "command",
@@ -181976,11 +184476,11 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('混元掌', 1, 'legacy.霹雳堂_九难.混元掌')"
+              "call": "legacy_maxlevel('混元掌', 1, 'legacy.霹雳堂_九难.混元掌')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('混元功', 1, 'legacy.霹雳堂_九难.混元功')"
+              "call": "legacy_maxlevel('混元功', 1, 'legacy.霹雳堂_九难.混元功')"
             },
             {
               "kind": "command",
@@ -182028,11 +184528,11 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('玉女素心剑', 1, 'legacy.霹雳堂_杨冰儿.玉女素心剑')"
+              "call": "legacy_maxlevel('玉女素心剑', 1, 'legacy.霹雳堂_杨冰儿.玉女素心剑')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('九阴神功', 1, 'legacy.霹雳堂_杨冰儿.九阴神功')"
+              "call": "legacy_maxlevel('九阴神功', 1, 'legacy.霹雳堂_杨冰儿.九阴神功')"
             },
             {
               "kind": "command",
@@ -182071,7 +184571,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('混元掌', 2, 'legacy.霹雳堂_崔秋山.混元掌')"
+              "call": "legacy_maxlevel('混元掌', 2, 'legacy.霹雳堂_崔秋山.混元掌')"
             },
             {
               "kind": "command",
@@ -182188,7 +184688,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('金蛇剑法', 1, 'legacy.霹雳堂_温青青.金蛇剑法')"
+              "call": "legacy_maxlevel('金蛇剑法', 1, 'legacy.霹雳堂_温青青.金蛇剑法')"
             },
             {
               "kind": "command",
@@ -184261,7 +186761,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('破玉拳', 2, 'legacy.bixuejianShyou_闯王剧情1.破玉拳')"
+              "call": "legacy_maxlevel('破玉拳', 2, 'legacy.bixuejianShyou_闯王剧情1.破玉拳')"
             },
             {
               "kind": "dialogue",
@@ -184389,7 +186889,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('天外飞龙', 1, 'legacy.bixuejianShyou_闯王剧情3.天外飞龙')"
+              "call": "legacy_maxlevel('天外飞龙', 1, 'legacy.bixuejianShyou_闯王剧情3.天外飞龙')"
             },
             {
               "kind": "command",
@@ -185317,15 +187817,15 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('混元掌', 1, 'legacy.bixuejianShyou_神拳无敌4.混元掌')"
+              "call": "legacy_maxlevel('混元掌', 1, 'legacy.bixuejianShyou_神拳无敌4.混元掌')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('破玉拳', 1, 'legacy.bixuejianShyou_神拳无敌4.破玉拳')"
+              "call": "legacy_maxlevel('破玉拳', 1, 'legacy.bixuejianShyou_神拳无敌4.破玉拳')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('混元功', 1, 'legacy.bixuejianShyou_神拳无敌4.混元功')"
+              "call": "legacy_maxlevel('混元功', 1, 'legacy.bixuejianShyou_神拳无敌4.混元功')"
             },
             {
               "kind": "command",
@@ -185582,11 +188082,11 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('金蛇游身掌', 2, 'legacy.bixuejianShyou_金蛇胜2.金蛇游身掌')"
+              "call": "legacy_maxlevel('金蛇游身掌', 2, 'legacy.bixuejianShyou_金蛇胜2.金蛇游身掌')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('金蛇剑法', 1, 'legacy.bixuejianShyou_金蛇胜2.金蛇剑法')"
+              "call": "legacy_maxlevel('金蛇剑法', 1, 'legacy.bixuejianShyou_金蛇胜2.金蛇剑法')"
             },
             {
               "kind": "dialogue",
@@ -185706,7 +188206,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('金蛇剑法', 1, 'legacy.bixuejianShyou_金蛇败.金蛇剑法')"
+              "call": "legacy_maxlevel('金蛇剑法', 1, 'legacy.bixuejianShyou_金蛇败.金蛇剑法')"
             },
             {
               "kind": "command",
@@ -186615,7 +189115,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('金蛇锥', 3, 'legacy.bixuejianShyou_华山仙境变身03.金蛇锥')"
+              "call": "legacy_maxlevel('金蛇锥', 3, 'legacy.bixuejianShyou_华山仙境变身03.金蛇锥')"
             },
             {
               "kind": "command",
@@ -188283,6 +190783,45 @@
             {
               "kind": "command",
               "call": "item('三阴蜈蚣爪秘籍', 1)"
+            }
+          ]
+        },
+        {
+          "name": "作弊佬",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "当当当当，大侠，你作弊了吧？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "那又如何，你把游戏弄得这么难，不作弊能过吗？自从我作弊之后，身体倍棒、吃饭倍香，烂虐各种奇葩NPC，好不自在！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "嘿嘿，不管如何，作弊就是不对的，既然被我发现了，那么大侠请重新来过吧。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "呜呜呜呜呜……不要啊。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "汉家松鼠",
+              "text": "若觉得游戏难的话，请到百度贴吧“汉家松鼠”去和大家一起讨论攻略吧！那里头有很多高手噢~"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "你这只该死的松鼠！"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_flow('restart')"
             }
           ]
         },
@@ -191503,7 +194042,7 @@
           "steps": [
             {
               "kind": "command",
-              "call": "maxlevel('独孤九剑', 1, 'legacy.original_长安一梦.春花.独孤九剑')"
+              "call": "legacy_maxlevel('独孤九剑', 1, 'legacy.original_长安一梦.春花.独孤九剑')"
             },
             {
               "kind": "jump",
@@ -191516,7 +194055,7 @@
           "steps": [
             {
               "kind": "command",
-              "call": "maxlevel('胡家刀法', 1, 'legacy.original_长安一梦.夏瓜.胡家刀法')"
+              "call": "legacy_maxlevel('胡家刀法', 1, 'legacy.original_长安一梦.夏瓜.胡家刀法')"
             },
             {
               "kind": "jump",
@@ -191529,7 +194068,7 @@
           "steps": [
             {
               "kind": "command",
-              "call": "maxlevel('斗转星移', 1, 'legacy.original_长安一梦.秋月.斗转星移')"
+              "call": "legacy_maxlevel('斗转星移', 1, 'legacy.original_长安一梦.秋月.斗转星移')"
             },
             {
               "kind": "jump",
@@ -191542,7 +194081,7 @@
           "steps": [
             {
               "kind": "command",
-              "call": "maxlevel('野球拳', 1, 'legacy.original_长安一梦.冬日.野球拳')"
+              "call": "legacy_maxlevel('野球拳', 1, 'legacy.original_长安一梦.冬日.野球拳')"
             },
             {
               "kind": "jump",
@@ -192878,7 +195417,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('基本内功', 1, 'legacy.original_新手引导.教训小孩完成.基本内功')"
+              "call": "legacy_maxlevel('基本内功', 1, 'legacy.original_新手引导.教训小孩完成.基本内功')"
             }
           ]
         },
@@ -193066,7 +195605,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('基本内功', 1, 'legacy.original_新手引导.教训黑老大完成.基本内功')"
+              "call": "legacy_maxlevel('基本内功', 1, 'legacy.original_新手引导.教训黑老大完成.基本内功')"
             }
           ]
         },
@@ -193640,15 +196179,15 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('玉女素心剑', 2, 'legacy.original_灭门古墓成功.玉女素心剑')"
+              "call": "legacy_maxlevel('玉女素心剑', 2, 'legacy.original_灭门古墓成功.玉女素心剑')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('玄铁剑法', 2, 'legacy.original_灭门古墓成功.玄铁剑法')"
+              "call": "legacy_maxlevel('玄铁剑法', 2, 'legacy.original_灭门古墓成功.玄铁剑法')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('黯然销魂掌', 2, 'legacy.original_灭门古墓成功.黯然销魂掌')"
+              "call": "legacy_maxlevel('黯然销魂掌', 2, 'legacy.original_灭门古墓成功.黯然销魂掌')"
             },
             {
               "kind": "command",
@@ -193787,7 +196326,7 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('龙象般若功', 2, 'legacy.original_灭门大轮成功.龙象般若功')"
+              "call": "legacy_maxlevel('龙象般若功', 2, 'legacy.original_灭门大轮成功.龙象般若功')"
             },
             {
               "kind": "command",
@@ -193959,11 +196498,11 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('血刀大法', 2, 'legacy.original_灭门血刀成功.血刀大法')"
+              "call": "legacy_maxlevel('血刀大法', 2, 'legacy.original_灭门血刀成功.血刀大法')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('血海魔功', 2, 'legacy.original_灭门血刀成功.血海魔功')"
+              "call": "legacy_maxlevel('血海魔功', 2, 'legacy.original_灭门血刀成功.血海魔功')"
             },
             {
               "kind": "command",
@@ -194202,15 +196741,15 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('九阴神功', 1, 'legacy.original_灭门全真成功.九阴神功')"
+              "call": "legacy_maxlevel('九阴神功', 1, 'legacy.original_灭门全真成功.九阴神功')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('先天功', 2, 'legacy.original_灭门全真成功.先天功')"
+              "call": "legacy_maxlevel('先天功', 2, 'legacy.original_灭门全真成功.先天功')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('七星七绝剑', 2, 'legacy.original_灭门全真成功.七星七绝剑')"
+              "call": "legacy_maxlevel('七星七绝剑', 2, 'legacy.original_灭门全真成功.七星七绝剑')"
             },
             {
               "kind": "command",
@@ -194378,11 +196917,11 @@
             },
             {
               "kind": "command",
-              "call": "maxlevel('八荒六合唯我独尊功', 2, 'legacy.original_灭门灵鹫成功.八荒六合唯我独尊功')"
+              "call": "legacy_maxlevel('八荒六合唯我独尊功', 2, 'legacy.original_灭门灵鹫成功.八荒六合唯我独尊功')"
             },
             {
               "kind": "command",
-              "call": "maxlevel('天山折梅手', 2, 'legacy.original_灭门灵鹫成功.天山折梅手')"
+              "call": "legacy_maxlevel('天山折梅手', 2, 'legacy.original_灭门灵鹫成功.天山折梅手')"
             },
             {
               "kind": "command",
@@ -213460,11 +215999,11 @@
       }
     ],
     "migration": {
-      "stories": 1787,
+      "stories": 1829,
       "totalStories": 1887,
       "maps": 162,
       "totalMaps": 162,
-      "deferredStories": 100
+      "deferredStories": 58
     },
     "artSource": {
       "kind": "legacy",
@@ -213798,6 +216337,95 @@
       "normalItems": {
         "新手礼包-大蟠桃": 5
       },
+      "roundItems": {
+        "2": [
+          [
+            "佛光普照",
+            "百变千幻云雾十三式秘籍",
+            "反两仪刀法",
+            "伏魔杖法"
+          ],
+          [
+            "灭仙爪",
+            "倚天剑",
+            "屠龙刀",
+            "打狗棒"
+          ]
+        ],
+        "3": [
+          [
+            "隔空取物",
+            "妙手仁心",
+            "飞向天际",
+            "血刀"
+          ],
+          [
+            "仙丽雅的项链",
+            "李延宗的项链",
+            "王语嫣的武学概要",
+            "神木王鼎"
+          ]
+        ],
+        "later": [
+          [
+            "碎裂的怒吼",
+            "沾衣十八跌",
+            "灵心慧质",
+            "不老长春功法"
+          ],
+          [
+            "仙丽雅的项链",
+            "李延宗的项链",
+            "王语嫣的武学概要",
+            "神木王鼎"
+          ]
+        ]
+      },
+      "trialItems": [
+        {
+          "minimum": 3,
+          "items": [
+            "王母蟠桃",
+            "道家仙丹"
+          ]
+        },
+        {
+          "minimum": 6,
+          "items": [
+            "灵心慧质",
+            "妙手仁心"
+          ]
+        },
+        {
+          "minimum": 9,
+          "items": [
+            "素心神剑心得",
+            "太极心得手抄本",
+            "乾坤大挪移心法"
+          ]
+        },
+        {
+          "minimum": 12,
+          "items": [
+            "沾衣十八跌",
+            "易筋经",
+            "厚黑学"
+          ]
+        },
+        {
+          "minimum": 15,
+          "items": [
+            "武穆遗书",
+            "笑傲江湖曲"
+          ]
+        },
+        {
+          "minimum": 20,
+          "items": [
+            "真葵花宝典"
+          ]
+        }
+      ],
       "randomStats": [
         "gengu",
         "bili",

@@ -14,9 +14,9 @@
     "maps": 6
   },
   "structurallyMigrated": {
-    "originalStories": 1787,
+    "originalStories": 1829,
     "maps": 162,
-    "mapEvents": 1097,
+    "mapEvents": 1107,
     "worldTriggers": 19,
     "newbieTasks": 6
   },
@@ -25,17 +25,9 @@
       "source": "storys.xml",
       "reason": "unsupported action: TOUCH (田青文)"
     },
-    "about_2": {
-      "source": "storys.xml",
-      "reason": "unsupported result: mainmenu ()"
-    },
     "mainStory_黑衣教入教": {
       "source": "storys.xml",
       "reason": "unknown talents: 黑衣"
-    },
-    "黑衣_华山胜利": {
-      "source": "storys.xml",
-      "reason": "unsupported result: nextZhoumu (nextZhoumu)"
     },
     "黑衣_对战魔君失败": {
       "source": "storys.xml",
@@ -45,26 +37,6 @@
       "source": "storys.xml",
       "reason": "invalid dialogue"
     },
-    "original_女主.重伤.死去": {
-      "source": "storys.xml",
-      "reason": "unsupported result: restart (restart)"
-    },
-    "original_女主.华山论剑.trueEnding1.结束": {
-      "source": "storys.xml",
-      "reason": "unsupported result: gameFin (gameFin)"
-    },
-    "original_女主.华山论剑.trueEnding2.选择": {
-      "source": "storys.xml",
-      "reason": "unsupported result: restart (restart)"
-    },
-    "original_女主.华山论剑.normalEnding.结束": {
-      "source": "storys.xml",
-      "reason": "unsupported result: restart (restart)"
-    },
-    "original_主角之家.开场2": {
-      "source": "storys.xml",
-      "reason": "unsupported result: tutorial (大地图)"
-    },
     "original_主角之家.殴打木头人": {
       "source": "storys.xml",
       "reason": "battle 南贤居_经验木头人_战斗 missing characters: 经验木头人"
@@ -72,42 +44,6 @@
     "original_主角之家.殴打练功木头人": {
       "source": "storys.xml",
       "reason": "battle 南贤居_练功木头人_战斗 missing characters: 练功木头人"
-    },
-    "华山论剑_天关": {
-      "source": "storys.xml",
-      "reason": "unsupported result: huashan (huashan)"
-    },
-    "original_华山论剑周目": {
-      "source": "storys.xml",
-      "reason": "unsupported result: restart (restart)"
-    },
-    "original_华山论剑下一周目": {
-      "source": "storys.xml",
-      "reason": "unsupported result: nextZhoumu (nextZhoumu)"
-    },
-    "射雕英雄传_桃花岛黄药师1": {
-      "source": "storys.xml",
-      "reason": "unsupported result: gameOver (gameOver)"
-    },
-    "射雕英雄传_桃花岛黄药师再战": {
-      "source": "storys.xml",
-      "reason": "unsupported result: gameOver (gameOver)"
-    },
-    "射雕英雄传_一灯居1": {
-      "source": "storys.xml",
-      "reason": "unsupported result: gameOver (gameOver)"
-    },
-    "射雕英雄传_一灯居再战": {
-      "source": "storys.xml",
-      "reason": "unsupported result: gameOver (gameOver)"
-    },
-    "射雕英雄传_洪七公1": {
-      "source": "storys.xml",
-      "reason": "unsupported result: gameOver (gameOver)"
-    },
-    "射雕英雄传_洪七公再战": {
-      "source": "storys.xml",
-      "reason": "unsupported result: gameOver (gameOver)"
     },
     "碧血剑_五毒教圣地2": {
       "source": "storys.xml",
@@ -157,10 +93,6 @@
       "source": "storys.xml",
       "reason": "unsupported stat action: UPGRADE.SKILLL"
     },
-    "作弊佬": {
-      "source": "storysCG.xml",
-      "reason": "unsupported result: restart (restart)"
-    },
     "original_山庄风云.贾飞女主2": {
       "source": "storysPY.xml",
       "reason": "unsupported action: DIALog (主角#他这把佩剑不错，我就收下了。)"
@@ -184,13 +116,6 @@
         "破庙_田青文_调戏胜利"
       ]
     },
-    "about_1": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "about_2"
-      ]
-    },
     "mainStory_黑衣人的邀请解散队伍": {
       "source": "storys.xml",
       "reason": "blocked story dependencies",
@@ -203,90 +128,6 @@
       "reason": "blocked story dependencies",
       "targets": [
         "黑衣_对战魔君失败"
-      ]
-    },
-    "黑衣_华山论剑": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "黑衣_华山胜利"
-      ]
-    },
-    "original_女主.重伤.醒来": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_女主.重伤.死去"
-      ]
-    },
-    "original_女主.华山论剑.trueEnding1.留下": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_女主.华山论剑.trueEnding1.结束"
-      ]
-    },
-    "original_女主.华山论剑.trueEnding2.结束": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_女主.华山论剑.trueEnding2.选择"
-      ]
-    },
-    "original_女主.华山论剑.normalEnding": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_女主.华山论剑.normalEnding.结束"
-      ]
-    },
-    "original_主角之家.开场": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_主角之家.开场2"
-      ]
-    },
-    "original_华山论剑": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "华山论剑_天关"
-      ]
-    },
-    "original_华山论剑分枝判断": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_女主.华山论剑.normalEnding"
-      ]
-    },
-    "original_华山论剑最终": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_华山论剑周目"
-      ]
-    },
-    "真华山论剑胜利": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_华山论剑周目"
-      ]
-    },
-    "真华山论剑失败": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_华山论剑周目"
-      ]
-    },
-    "original_华山论剑最终炼狱2": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_华山论剑周目"
       ]
     },
     "tlbb.dy_万劫谷地牢.不上2": {
@@ -374,68 +215,11 @@
         "破庙_田青文"
       ]
     },
-    "aboutus_main": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "about_1"
-      ]
-    },
     "mainStory_黑衣人的邀请接受": {
       "source": "storys.xml",
       "reason": "blocked story dependencies",
       "targets": [
         "mainStory_黑衣人的邀请解散队伍"
-      ]
-    },
-    "original_女主.重伤.长夜": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_女主.重伤.醒来"
-      ]
-    },
-    "original_女主.华山论剑.trueEnding1": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_女主.华山论剑.trueEnding1.留下"
-      ]
-    },
-    "original_女主.华山论剑.trueEnding1.留下2": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_女主.华山论剑.trueEnding1.留下"
-      ]
-    },
-    "original_女主.华山论剑.trueEnding2": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_女主.华山论剑.trueEnding2.结束"
-      ]
-    },
-    "华山论剑_简单难度": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_华山论剑分枝判断"
-      ]
-    },
-    "original_华山论剑最终炼狱": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_华山论剑最终炼狱2"
-      ]
-    },
-    "original_华山论剑最终炼狱1": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "真华山论剑失败",
-        "真华山论剑胜利"
       ]
     },
     "tlbb.dy_万劫谷地牢.不上": {
@@ -494,13 +278,6 @@
         "mainStory_黑衣人的邀请接受"
       ]
     },
-    "original_女主.重伤.南贤居结束": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_女主.重伤.长夜"
-      ]
-    },
     "tlbb.dy_万劫谷地牢1": {
       "source": "storys.xml",
       "reason": "blocked story dependencies",
@@ -543,20 +320,6 @@
         "mainStory_黑衣人的邀请"
       ]
     },
-    "original_女主.重伤.表白": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_女主.重伤.南贤居结束"
-      ]
-    },
-    "original_女主.重伤.不表白": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_女主.重伤.南贤居结束"
-      ]
-    },
     "tlbb.dy_琴韵小筑阿碧1": {
       "source": "storys.xml",
       "reason": "blocked story dependencies",
@@ -592,14 +355,6 @@
         "mainStory_襄阳5"
       ]
     },
-    "original_女主.重伤.南贤居": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_女主.重伤.不表白",
-        "original_女主.重伤.表白"
-      ]
-    },
     "血刀门_门内比武": {
       "source": "storys.xml",
       "reason": "blocked story dependencies",
@@ -613,17 +368,9 @@
       "source": "storys.xml",
       "reason": "unsupported action: TOUCH (田青文)"
     },
-    "about_2": {
-      "source": "storys.xml",
-      "reason": "unsupported result: mainmenu ()"
-    },
     "mainStory_黑衣教入教": {
       "source": "storys.xml",
       "reason": "unknown talents: 黑衣"
-    },
-    "黑衣_华山胜利": {
-      "source": "storys.xml",
-      "reason": "unsupported result: nextZhoumu (nextZhoumu)"
     },
     "黑衣_对战魔君失败": {
       "source": "storys.xml",
@@ -633,26 +380,6 @@
       "source": "storys.xml",
       "reason": "invalid dialogue"
     },
-    "original_女主.重伤.死去": {
-      "source": "storys.xml",
-      "reason": "unsupported result: restart (restart)"
-    },
-    "original_女主.华山论剑.trueEnding1.结束": {
-      "source": "storys.xml",
-      "reason": "unsupported result: gameFin (gameFin)"
-    },
-    "original_女主.华山论剑.trueEnding2.选择": {
-      "source": "storys.xml",
-      "reason": "unsupported result: restart (restart)"
-    },
-    "original_女主.华山论剑.normalEnding.结束": {
-      "source": "storys.xml",
-      "reason": "unsupported result: restart (restart)"
-    },
-    "original_主角之家.开场2": {
-      "source": "storys.xml",
-      "reason": "unsupported result: tutorial (大地图)"
-    },
     "original_主角之家.殴打木头人": {
       "source": "storys.xml",
       "reason": "battle 南贤居_经验木头人_战斗 missing characters: 经验木头人"
@@ -660,42 +387,6 @@
     "original_主角之家.殴打练功木头人": {
       "source": "storys.xml",
       "reason": "battle 南贤居_练功木头人_战斗 missing characters: 练功木头人"
-    },
-    "华山论剑_天关": {
-      "source": "storys.xml",
-      "reason": "unsupported result: huashan (huashan)"
-    },
-    "original_华山论剑周目": {
-      "source": "storys.xml",
-      "reason": "unsupported result: restart (restart)"
-    },
-    "original_华山论剑下一周目": {
-      "source": "storys.xml",
-      "reason": "unsupported result: nextZhoumu (nextZhoumu)"
-    },
-    "射雕英雄传_桃花岛黄药师1": {
-      "source": "storys.xml",
-      "reason": "unsupported result: gameOver (gameOver)"
-    },
-    "射雕英雄传_桃花岛黄药师再战": {
-      "source": "storys.xml",
-      "reason": "unsupported result: gameOver (gameOver)"
-    },
-    "射雕英雄传_一灯居1": {
-      "source": "storys.xml",
-      "reason": "unsupported result: gameOver (gameOver)"
-    },
-    "射雕英雄传_一灯居再战": {
-      "source": "storys.xml",
-      "reason": "unsupported result: gameOver (gameOver)"
-    },
-    "射雕英雄传_洪七公1": {
-      "source": "storys.xml",
-      "reason": "unsupported result: gameOver (gameOver)"
-    },
-    "射雕英雄传_洪七公再战": {
-      "source": "storys.xml",
-      "reason": "unsupported result: gameOver (gameOver)"
     },
     "碧血剑_五毒教圣地2": {
       "source": "storys.xml",
@@ -745,10 +436,6 @@
       "source": "storys.xml",
       "reason": "unsupported stat action: UPGRADE.SKILLL"
     },
-    "作弊佬": {
-      "source": "storysCG.xml",
-      "reason": "unsupported result: restart (restart)"
-    },
     "original_山庄风云.贾飞女主2": {
       "source": "storysPY.xml",
       "reason": "unsupported action: DIALog (主角#他这把佩剑不错，我就收下了。)"
@@ -781,57 +468,9 @@
     },
     {
       "map": "大地图",
-      "location": "华山",
-      "eventId": "1",
-      "reason": "story deferred: original_华山论剑"
-    },
-    {
-      "map": "大地图",
-      "location": "华山",
-      "eventId": "2",
-      "reason": "story deferred: original_华山论剑"
-    },
-    {
-      "map": "大地图",
-      "location": "华山",
-      "eventId": "3",
-      "reason": "story deferred: 黑衣_华山论剑"
-    },
-    {
-      "map": "大地图",
       "location": "襄阳",
       "eventId": "1",
       "reason": "story deferred: mainStory_襄阳1"
-    },
-    {
-      "map": "大地图",
-      "location": "南贤居",
-      "eventId": "1",
-      "reason": "story deferred: original_女主.重伤.南贤居"
-    },
-    {
-      "map": "大地图",
-      "location": "一灯居",
-      "eventId": "2",
-      "reason": "story deferred: 射雕英雄传_一灯居1"
-    },
-    {
-      "map": "大地图",
-      "location": "一灯居",
-      "eventId": "3",
-      "reason": "story deferred: 射雕英雄传_一灯居再战"
-    },
-    {
-      "map": "大地图",
-      "location": "长江岸边",
-      "eventId": "1",
-      "reason": "story deferred: 射雕英雄传_洪七公1"
-    },
-    {
-      "map": "大地图",
-      "location": "长江岸边",
-      "eventId": "2",
-      "reason": "story deferred: 射雕英雄传_洪七公再战"
     },
     {
       "map": "大地图",
@@ -880,18 +519,6 @@
       "location": "木头人",
       "eventId": "1",
       "reason": "story deferred: original_主角之家.殴打木头人"
-    },
-    {
-      "map": "桃花岛",
-      "location": "黄药师",
-      "eventId": "1",
-      "reason": "story deferred: 射雕英雄传_桃花岛黄药师1"
-    },
-    {
-      "map": "桃花岛",
-      "location": "黄药师",
-      "eventId": "2",
-      "reason": "story deferred: 射雕英雄传_桃花岛黄药师再战"
     },
     {
       "map": "杭州酒楼",
