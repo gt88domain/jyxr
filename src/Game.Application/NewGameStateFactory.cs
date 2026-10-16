@@ -26,7 +26,8 @@ public sealed class NewGameStateFactory
     public GameState Create(
         IReadOnlyList<string> initialPartyCharacterIds,
         int round = 1,
-        ChestState? chest = null)
+        ChestState? chest = null,
+        EquipmentInstanceFactory? equipmentInstanceFactory = null)
     {
         ArgumentNullException.ThrowIfNull(initialPartyCharacterIds);
         ArgumentOutOfRangeException.ThrowIfLessThan(round, 1);
@@ -35,7 +36,7 @@ public sealed class NewGameStateFactory
             throw new InvalidOperationException("Session flow requires at least one initial party character.");
         }
 
-        var equipmentInstanceFactory = new EquipmentInstanceFactory();
+        equipmentInstanceFactory ??= new EquipmentInstanceFactory();
         var party = new Party();
         var initialCharacterFactory = CreateInitialCharacterFactory(round);
         foreach (var characterId in initialPartyCharacterIds)

@@ -1,11 +1,37 @@
 using Game.Application;
 using Game.Core.Model;
 using Game.Core.Story;
+using Game.Core.Affix;
+using Game.Core.Model.Character;
 
 namespace Game.Tests;
 
 public sealed class SessionFlowServiceTests
 {
+    [Theory]
+    [InlineData(false)]
+    [InlineData(true)]
+    public void StartRound_PreservesEquipmentIdentitySequenceWithCarriedChest(bool nextRound)
+    {
+        var hero = TestContentFactory.CreateCharacterDefinition("hero");
+        var sword = TestContentFactory.CreateEquipment("sword");
+        var repository = TestContentFactory.CreateRepository(characters: [hero], equipment: [sword]);
+        var state = new GameState();
+        var affix = new StatModifierAffix(StatType.Bili, ModifierValue.Add(3));
+        var carried = state.EquipmentInstanceFactory.Create(sword, [affix]);
+        state.Chest.Inventory.AddEquipmentInstance(carried);
+        var session = new GameSession(state, repository, config: new GameConfig { InitialPartyCharacterIds = ["hero"] });
+        if (nextRound) session.SessionFlowService.StartNextRound(); else session.SessionFlowService.RestartCurrentRound();
+        var restored = Assert.IsType<EquipmentInstanceInventoryEntry>(Assert.Single(session.State.Chest.Inventory.Entries));
+        Assert.Equal(carried.Id, restored.Equipment.Id);
+        var newlyCreated = session.State.EquipmentInstanceFactory.Create(sword, [affix]);
+        Assert.NotEqual(carried.Id, newlyCreated.Id);
+        session.State.Chest.Inventory.AddEquipmentInstance(newlyCreated);
+        var save = session.SaveGameService.CreateSave();
+        session.SaveGameService.LoadSave(save);
+        Assert.Equal(2, session.State.Chest.Inventory.Entries.Count);
+        Assert.Equal(2, session.State.Chest.Inventory.Entries.OfType<EquipmentInstanceInventoryEntry>().Select(e => e.Equipment.Id).Distinct().Count());
+    }
     [Fact]
     public void StartNewGame_RecordsFirstRoundAsReached()
     {

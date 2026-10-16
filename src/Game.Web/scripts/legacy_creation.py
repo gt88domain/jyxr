@@ -31,12 +31,23 @@ def apply_legacy_creation(package: dict) -> dict:
     media = package["browser"]["media"]
     profile = {"source": {"commit": "2c62a80de46c48e64e5647511a9c41e088293aff", "file": "JyGame/RollRoleUI.cs", "scope": "first round; pinned C# questions, rewards and uniform random-stat rules"},
                "questions": questions, "baseSilver": 100, "baseItems": {"小还丹": 3}, "normalItems": {"新手礼包-大蟠桃": 5},
+               "roundItems": {"2": [["佛光普照", "百变千幻云雾十三式秘籍", "反两仪刀法", "伏魔杖法"], ["灭仙爪", "倚天剑", "屠龙刀", "打狗棒"]],
+                              "3": [["隔空取物", "妙手仁心", "飞向天际", "血刀"], ["仙丽雅的项链", "李延宗的项链", "王语嫣的武学概要", "神木王鼎"]],
+                              "later": [["碎裂的怒吼", "沾衣十八跌", "灵心慧质", "不老长春功法"], ["仙丽雅的项链", "李延宗的项链", "王语嫣的武学概要", "神木王鼎"]]},
+               "trialItems": [{"minimum": 3, "items": ["王母蟠桃", "道家仙丹"]}, {"minimum": 6, "items": ["灵心慧质", "妙手仁心"]},
+                              {"minimum": 9, "items": ["素心神剑心得", "太极心得手抄本", "乾坤大挪移心法"]}, {"minimum": 12, "items": ["沾衣十八跌", "易筋经", "厚黑学"]},
+                              {"minimum": 15, "items": ["武穆遗书", "笑傲江湖曲"]}, {"minimum": 20, "items": ["真葵花宝典"]}],
                "randomStats": ["gengu", "bili", "fuyuan", "shenfa", "dingli", "wuxing", "quanzhang", "jianfa", "daofa", "qimen"],
                "portraits": [{"id": "头像." + h, "name": h, "image": media["resources"]["头像." + h]} for h in heads]}
     items = {i["id"] for i in package["items"]}
     talents = {t["id"] for t in package["talents"]}
     for group in [profile["baseItems"], profile["normalItems"]]:
         assert set(group) <= items, set(group) - items
+    for groups in profile["roundItems"].values():
+        for group in groups:
+            assert set(group) <= items, set(group) - items
+    for tier in profile["trialItems"]:
+        assert set(tier["items"]) <= items, set(tier["items"]) - items
     for question in questions:
         for o in question["options"]:
             assert set(o.get("items", {})) <= items, o
@@ -44,4 +55,4 @@ def apply_legacy_creation(package: dict) -> dict:
             assert not o.get("model") or o["model"] in media["models"], o
     package["browser"]["creation"] = profile
     return {"source": profile["source"], "questions": len(questions), "portraits": len(heads),
-            "deferred": ["无悔实时存档模式", "多周目及试炼继承奖励", "Lua随机下标差异", "部分问答天赋的完整战斗效果"]}
+            "deferred": ["无悔实时存档模式", "Lua覆盖中的随机初始伙伴", "Lua随机下标差异", "部分问答天赋的完整战斗效果"]}

@@ -16,6 +16,9 @@ public static partial class BrowserBridge
         public string Portrait { get; set; } = "头像.主角";
         public int Roll { get; set; }
         public CreationResult? Preview { get; set; }
+        public int Round { get; init; } = 1;
+        public int TrialCount { get; init; }
+        public GameState? OriginState { get; init; }
     }
 
     private sealed record CreationResult(CharacterInstance Hero, int Silver, Dictionary<string, int> Items, Dictionary<string, int> RandomBonus);
@@ -67,7 +70,9 @@ public static partial class BrowserBridge
         if (draft.Answers.Count != CreationQuestions.Count) throw new InvalidOperationException("请先完成开局问答。");
         // Rebuild from the immutable role definition every time. Neither a
         // reroll nor a backtrack can compound attributes, money or inventory.
-        var hero = new InitialCharacterFactory(_content!, RuntimeConfig).Create(Party.HeroCharacterId, PackText("heroDefinitionId"), new GameState().EquipmentInstanceFactory);
+        var policy = new SkillMaxLevelPolicy(RuntimeConfig, _session?.Profile, draft.Round);
+        var ids = EquipmentInstanceFactory.Restore(draft.OriginState?.EquipmentInstanceFactory.NextNumber ?? 1);
+        var hero = new InitialCharacterFactory(_content!, RuntimeConfig, policy).Create(Party.HeroCharacterId, PackText("heroDefinitionId"), ids);
         hero.Name = draft.Name;
         hero.Portrait = draft.Portrait;
         var silver = CreationProfile["baseSilver"]!.GetValue<int>();
@@ -92,7 +97,19 @@ public static partial class BrowserBridge
             if (option["internalSkill"] is { } skill)
                 hero.SetInternalSkillState(_content!.GetInternalSkill(skill["id"]!.GetValue<string>()), skill["level"]!.GetValue<int>(), 0);
         }
-        if (draft.Difficulty == GameDifficulty.Normal) AddItems(CreationProfile["normalItems"]);
+        if (draft.Round == 1 && draft.Difficulty == GameDifficulty.Normal) AddItems(CreationProfile["normalItems"]);
+        if (draft.Round > 1)
+        {
+            var groups = CreationProfile["roundItems"]![draft.Round <= 3 ? draft.Round.ToString() : "later"]!.AsArray();
+            foreach (var group in groups)
+            {
+                var pool = group!.AsArray(); var id = pool[Random.Shared.Next(pool.Count)]!.GetValue<string>();
+                items[id] = checked(items.GetValueOrDefault(id) + 1);
+            }
+        }
+        var trialTier = CreationProfile["trialItems"]!.AsArray().LastOrDefault(t => draft.TrialCount >= t!["minimum"]!.GetValue<int>());
+        if (trialTier is not null)
+            foreach (var node in trialTier["items"]!.AsArray()) { var id = node!.GetValue<string>(); items[id] = checked(items.GetValueOrDefault(id) + 1); }
         var randomStats = CreationProfile["randomStats"]!.AsArray().Select(n => n!.GetValue<string>()).ToArray();
         var bonus = randomStats.ToDictionary(s => s, _ => 0);
         for (var i = 0; i < 13; i++)
@@ -112,7 +129,8 @@ public static partial class BrowserBridge
     {
         var draft = RequireCreation();
         var preview = draft.Preview ?? throw new InvalidOperationException("请先选择头像并查看人物属性。");
-        CreateCharacter(draft.Name, draft.Difficulty.ToString(), preview);
+        if (draft.OriginState is not null) ConfirmRoundCreation(draft, preview);
+        else CreateCharacter(draft.Name, draft.Difficulty.ToString(), preview);
     }
 
     private static object? CreationSnapshot()
@@ -121,7 +139,7 @@ public static partial class BrowserBridge
         var preview = draft.Preview;
         return new
         {
-            name = draft.Name, difficulty = draft.Difficulty.ToString().ToLowerInvariant(),
+            name = draft.Name, difficulty = draft.Difficulty.ToString().ToLowerInvariant(), round = draft.Round,
             step = preview is not null ? "preview" : draft.Answers.Count == CreationQuestions.Count ? "portrait" : "question",
             questionIndex = draft.Answers.Count, total = CreationQuestions.Count, answers = draft.Answers.ToArray(),
             question = draft.Answers.Count < CreationQuestions.Count ? CreationQuestions[draft.Answers.Count]!.DeepClone() : null,

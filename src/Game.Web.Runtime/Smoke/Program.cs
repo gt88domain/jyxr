@@ -1,6 +1,12 @@
 using System.Text.Json;
 using Game.Web.Runtime;
 
+if (args.FirstOrDefault() == "--flow")
+{
+    await FlowSmoke.Run(args[1],args[2],args[3]);
+    return;
+}
+
 if (args.FirstOrDefault() == "--minigame")
 {
     await MiniGameSmoke.Run(args[1],args[2]);

@@ -88,6 +88,7 @@ public static partial class BrowserBridge
             {
                 case "createCharacter": CreateCharacter(Read(args, "name", "小虾米"), Read(args, "difficulty", "Normal")); break;
                 case "beginCreation": BeginCreation(args); break;
+                case "beginRoundCreation": BeginRoundCreation(); break;
                 case "answerCreation": AnswerCreation(args); break;
                 case "selectCreationPortrait": SelectCreationPortrait(Read(args, "portraitId")); break;
                 case "backCreation": BackCreation(); break;
@@ -225,9 +226,9 @@ public static partial class BrowserBridge
             return JsonSerializer.Serialize(new { error = "请在战斗结束后存档。" }, Json);
         var session = RequireSession();
         if (_host.Dialogue is not null || _host.Choice is not null) return JsonSerializer.Serialize(new { error = "请先结束当前对话。" }, Json);
-        if (_shopId is not null || _storyTask is { IsCompleted: false }) return JsonSerializer.Serialize(new { error = "请先结束当前交互。" }, Json);
+        if (_shopId is not null || _storyTask is { IsCompleted: false } && _host.Ending is null) return JsonSerializer.Serialize(new { error = "请先结束当前交互。" }, Json);
         _hasSaved = true;
-        return JsonSerializer.Serialize(new { browserSaveVersion = 2, packId = PackText("id"), game = session.SaveGameService.CreateSave(), profile = session.ProfileService.CreateProfileRecord(), cultivationItemId = _cultivationItemId, companionCultivations = CompanionCultivations, formationReserveIds = FormationReserves.ToArray(), hasSaved = true, wonBattles = WonBattles.ToArray() }, Json);
+        return JsonSerializer.Serialize(new { browserSaveVersion = 2, packId = PackText("id"), game = session.SaveGameService.CreateSave(), profile = session.ProfileService.CreateProfileRecord(), cultivationItemId = _cultivationItemId, companionCultivations = CompanionCultivations, formationReserveIds = FormationReserves.ToArray(), ending = _host.Ending, hasSaved = true, wonBattles = WonBattles.ToArray() }, Json);
     }
 
     [JSExport]
@@ -289,6 +290,8 @@ public static partial class BrowserBridge
             }
             var formation = wrapped && root.TryGetProperty("formationReserveIds", out var formationNode) ? formationNode.Deserialize<string[]>(Json) ?? [] : [];
             if (formation.Distinct(StringComparer.Ordinal).Count() != formation.Length || formation.Any(id => id == Party.HeroCharacterId || !candidate.State.Party.ContainsReserve(id))) throw new InvalidOperationException("存档中的编队后备配置无效。");
+            var ending = wrapped && root.TryGetProperty("ending", out var endingNode) && endingNode.ValueKind != JsonValueKind.Null ? endingNode.Deserialize<EndingState>(Json) : null;
+            if (ending is not null) { ValidateEnding(ending, candidate); candidateHost.RestoreEnding(ending); }
             ResetStory();
             FormationReserves.Clear(); FormationReserves.UnionWith(formation);
             CompanionCultivations.Clear();
@@ -468,15 +471,17 @@ public static partial class BrowserBridge
                 ok = _error is null, error = _error,
                 state = new
                 {
-                    phase = _session is null ? "title" : _battle is not null ? "battle" : _host.Dialogue is not null ? "dialogue" : _host.Choice is not null ? "choice" : _shopId is not null ? "shop" : _host.SelectingSect ? "sect" : _host.Selection is not null ? "combatants" : _host.RenameDefault is not null ? "rename" : _host.GameOver ? "gameover" : _host.ChestOpen ? "chest" : _host.Training is not null ? "minigame" : "world",
+                    phase = _session is null ? "title" : _battle is not null ? "battle" : _host.Dialogue is not null ? "dialogue" : _host.Choice is not null ? "choice" : _shopId is not null ? "shop" : _host.SelectingSect ? "sect" : _host.Selection is not null ? "combatants" : _host.RenameDefault is not null ? "rename" : _host.GameOver ? "gameover" : _host.Ending is not null ? "ending" : _host.ChestOpen ? "chest" : _host.Training is not null ? "minigame" : "world",
                     pack = _pack,
                     creation = CreationSnapshot(),
                     miniGame = MiniGameSnapshot(),
+                    ending = _host.Ending,
                     combatantSelection = CombatantsSnapshot(), rename = _host.RenameDefault is { } defaultName ? new { defaultName } : null, gameOver = _host.GameOver,
                     managedCharacter = _session is null ? null : CharacterSheet(Managed), chest = ChestSnapshot(),
                     roster = RosterView(),
                     sects = SectView(), tutorial = TutorialView(),
-                    adventure = _session is null ? null : new { sect = _session.State.Adventure.SectId, morality = _session.State.Adventure.Morality, days = _session.State.Clock.TotalDays, timeSlot = _session.State.Clock.TimeSlot.ToChineseBranch() },
+                    adventure = _session is null ? null : new { round = _session.State.Adventure.Round, difficulty = _session.State.Adventure.Difficulty.ToString().ToLowerInvariant(), sect = _session.State.Adventure.SectId, morality = _session.State.Adventure.Morality, days = _session.State.Clock.TotalDays, timeSlot = _session.State.Clock.TimeSlot.ToChineseBranch() },
+                    profile = _session is null ? null : new { completionCount = _session.Profile.CompletionCount, highestRound = _session.Profile.HighestRound, deathCount = _session.Profile.DeathCount },
                     party = PartyView(), objectives = ObjectiveView(), shop = ShopSnapshot(),
                     hero = hero is null ? null : new
                     {
@@ -521,7 +526,7 @@ public static partial class BrowserBridge
     private static GridPosition Position(JsonElement args) => new(args.GetProperty("x").GetInt32(), args.GetProperty("y").GetInt32());
     private static void Log(string message) { Logs.Add(message); if (Logs.Count > 200) Logs.RemoveAt(0); }
 
-    private static void ResetStory()
+    private static void ResetStory(bool replaceHost = true)
     {
         ExpiredStories.Clear();
         _mapView = null;
@@ -530,7 +535,7 @@ public static partial class BrowserBridge
         _storyCancellation.Dispose();
         _storyCancellation = new CancellationTokenSource();
         _storyTask = null;
-        _host = new BrowserStoryHost();
+        if (replaceHost) _host = new BrowserStoryHost();
     }
 
     private static void StartStory(string storyId)

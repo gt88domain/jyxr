@@ -20,12 +20,15 @@ export interface Battle {
   action?: {unitId: string; team: number; mainActionCommitted: boolean; canMove: boolean; canRest: boolean; canAttack: boolean} | null;
 }
 export interface CreationState {
+  round?: number;
   name: string; difficulty: string; step: 'question' | 'portrait' | 'preview'; questionIndex: number; total: number; answers: number[]; roll: number;
   question: {title: string; options: {text: string}[]} | null;
   portraits: {id: string; name: string; image: string}[];
   preview: {portrait: string; sprite: string; silver: number; randomBonus: Record<string, number>; attributes: {id: string; label: string; value: number}[]; talents: {id: string; name: string}[]; internalSkills: {id: string; name: string; level: number}[]; items: {id: string; name: string; quantity: number; icon?: string}[]} | null;
 }
 export interface GameState {
+  ending?: {kind: 'restart' | 'next' | 'complete' | 'gameover' | 'title'; completedRound: number; targetRound: number | null} | null;
+  profile?: {completionCount: number; highestRound: number; deathCount: number} | null;
   miniGame?: MiniGameConfig | null;
   combatantSelection?: {battleId: string; title: string; capacity: number; candidates: {id: string; name: string; level: number; portrait?: string; required: boolean; forbidden: boolean}[]} | null;
   rename?: {defaultName: string} | null;
@@ -35,10 +38,10 @@ export interface GameState {
   chest?: {capacity: number; stored: number; canManage: boolean; entries: ChestItem[]; inventory: ChestItem[]} | null;
   creation?: CreationState | null;
   sceneBackground?: string | null;
-  phase: 'title' | 'world' | 'battle' | 'dialogue' | 'choice' | 'shop' | 'sect' | 'combatants' | 'rename' | 'gameover' | 'chest' | 'minigame';
+  phase: 'title' | 'world' | 'battle' | 'dialogue' | 'choice' | 'shop' | 'sect' | 'combatants' | 'rename' | 'gameover' | 'chest' | 'minigame' | 'ending';
   sects?: {id: string; name: string; description: string; focus: string; masters: string[]; skills: string[]; traits: string[]; available: boolean}[];
   tutorial?: {id: string; description: string; locations: string[]} | null;
-  adventure?: {sect?: string | null; morality: number; days: number; timeSlot: string};
+  adventure?: {round?: number; difficulty?: string; sect?: string | null; morality: number; days: number; timeSlot: string};
   pack: ContentPack;
   party: PartyMember[];
   objectives: Objective[];

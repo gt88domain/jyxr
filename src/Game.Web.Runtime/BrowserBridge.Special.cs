@@ -28,10 +28,9 @@ public static partial class BrowserBridge
         public string? RenameDefault { get; private set; }
         private TaskCompletionSource<string>? _renameResult;
         public bool GameOver { get; private set; }
-        private TaskCompletionSource? _gameOverResult;
         public bool ChestOpen { get; private set; }
         private TaskCompletionSource? _chestResult;
-        public bool InteractionPending => Selection is not null || RenameDefault is not null || GameOver || ChestOpen || Training is not null;
+        public bool InteractionPending => Selection is not null || RenameDefault is not null || GameOver || ChestOpen || Training is not null || Ending is not null;
 
         [StoryCommand("chest", "xiangzi")]
         public ValueTask OpenChest(CancellationToken cancellationToken)
@@ -124,11 +123,10 @@ public static partial class BrowserBridge
 
         public ValueTask GameOverAsync(CancellationToken cancellationToken)
         {
+            if (Ending is not null) throw new InvalidOperationException("当前结局已经结束。");
+            RequireSession().ProfileService.AddDeaths();
             GameOver = true;
-            var pending = new TaskCompletionSource();
-            _gameOverResult = pending;
-            cancellationToken.Register(() => pending.TrySetCanceled(cancellationToken));
-            return new(pending.Task);
+            return WaitAtEnding(new("gameover", RequireSession().State.Adventure.Round, null), cancellationToken);
         }
     }
 }

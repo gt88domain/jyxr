@@ -48,10 +48,12 @@ public sealed class SessionFlowService
         _session.PlayTimeService.Checkpoint();
         var lastTrialCount = State.SpecialBattle.TrialCompletedCharacterIds.Count;
         var carriedChest = State.Chest.Clone(ContentRepository);
+        var equipmentIds = EquipmentInstanceFactory.Restore(State.EquipmentInstanceFactory.NextNumber);
         var nextState = _newGameStateFactory.Create(
             Config.InitialPartyCharacterIds,
             round,
-            carriedChest);
+            carriedChest,
+            equipmentIds);
         nextState.Currency.AddSilver(NextRoundInitialSilver);
         nextState.SetPlayTimeSeconds(State.PlayTimeSeconds);
         nextState.Story.SetVariable("last_trial_count", ExpressionValue.FromNumber(lastTrialCount));

@@ -47,7 +47,7 @@
 
 角色派生属性通过 `CharacterInstance.RebuildSnapshot()` 收集装备、天赋和满足条件的技能 affix，再由 resolver 展开。外功激活状态不决定其被动 affix 是否生效；内功 affix 是否要求装备由 `requiresEquippedInternalSkill` 明确表达。新增 affix 来源时要同时检查内容引用解析与角色快照收集。
 
-新游戏与下一周目由 `SessionFlowService` 和 [NewGameStateFactory](../src/Game.Application/NewGameStateFactory.cs) 装配。下一周目保留银两和储物箱、重建初始队伍；全局元宝保留在 GameProfile。
+新游戏与下一周目由 `SessionFlowService` 和 [NewGameStateFactory](../src/Game.Application/NewGameStateFactory.cs) 装配。下一周目克隆储物箱、重建初始队伍，银两按开局规则重置；全局元宝保留在 GameProfile。继承仓库时同时继承装备实例编号序列，新生成装备不能与仓库中的既有实例重号。
 
 ## MOD 启动与内容装配
 

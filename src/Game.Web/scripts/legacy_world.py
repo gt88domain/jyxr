@@ -89,11 +89,19 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
             elif kind == "map":
                 require("maps", value)
                 steps = [command(f"map({quote(value)})")]
+            elif kind == "tutorial":
+                # GameEngine's tutorial scene first enters the world, then
+                # executes original_教学开始; a map-only result drops teaching.
+                require("maps", "大地图")
+                dependencies[story_id].add("original_教学开始")
+                steps = [command(f"map({quote('大地图')})"), {"kind": "jump", "target": "original_教学开始"}]
             elif kind == "shop":
                 require("shops", value)
                 steps = [command(f"shop({quote(value)})")]
-            elif kind in {"tower", "trial", "zhenlongqiju", "xilian"}:
-                steps = [command({"tower": "tower()", "trial": "trial()", "zhenlongqiju": "zhenlongqiju()", "xilian": "refine()"}[kind])]
+            elif kind in {"tower", "trial", "zhenlongqiju", "xilian", "huashan"}:
+                steps = [command({"tower": "tower()", "trial": "trial()", "zhenlongqiju": "zhenlongqiju()", "xilian": "refine()", "huashan": "huashan()"}[kind])]
+                if kind == "huashan":
+                    dependencies[story_id].add("original_华山论剑分枝判断")
                 if kind == "zhenlongqiju":
                     dependencies[story_id].update({"珍珑棋局_胜利", "珍珑棋局_失败"})
                 if kind == "trial":
@@ -103,6 +111,9 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
                 steps = [command("arena()")]
             elif kind == "game" and value in {"levelup", "qinggong", "dianxue"}:
                 steps = [command(f"minigame({quote(value)})")]
+            elif kind in {"restart", "nextZhoumu", "gameFin", "gameOver", "mainmenu"}:
+                mode = {"restart": "restart", "nextZhoumu": "next", "gameFin": "complete", "gameOver": "gameover", "mainmenu": "title"}[kind]
+                steps = [command(f"legacy_flow({quote(mode)})")]
             else:
                 raise ValueError(f"unsupported result: {kind} ({value})")
             conditions = node.findall("condition")
@@ -176,7 +187,7 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
             if parts[0] not in ids["externalSkills"] | ids["internalSkills"]:
                 raise ValueError(f"unknown maxlevel skill: {parts[0]}")
             # Stable once key prevents replay/import from duplicating account rewards.
-            return [command(f"maxlevel({quote(parts[0])}, {int(parts[1])}, {quote('legacy.' + story_id + '.' + parts[0])})")]
+            return [command(f"legacy_maxlevel({quote(parts[0])}, {int(parts[1])}, {quote('legacy.' + story_id + '.' + parts[0])})")]
         if kind in {"LEARN.SKILL", "LEARN.INTERNALSKILL", "LEARN.TALENT", "LEARN.SPECIALSKILL", "REMOVE.TALENT", "UPGRADE.SKILL", "UPGRADE.INTERNALSKILL"}:
             collection, call = {
                 "LEARN.SKILL": ("externalSkills", "learn_external"), "LEARN.INTERNALSKILL": ("internalSkills", "learn_internal"),

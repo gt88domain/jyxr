@@ -162,7 +162,7 @@ async function creationCommand(data: Record<string, unknown>) {
   } else document.querySelector<HTMLDialogElement>('#game-modal')?.close();
 }
 async function save() {
-  if (busy || state.phase !== 'world') return;
+  if (busy || !(state.phase === 'world' || state.phase === 'ending' && state.ending && ['restart','next','complete'].includes(state.ending.kind))) return;
   busy = true; app.setAttribute('aria-busy', 'true');
   try {
     const data = await exportSave(), parsed = JSON.parse(data);
@@ -243,6 +243,8 @@ document.addEventListener('click', event => {
   else if (action === 'creation-back') void creationCommand({type: 'backCreation'});
   else if (action === 'creation-roll') void creationCommand({type: 'rollCreation'});
   else if (action === 'creation-confirm') void creationCommand({type: 'confirmCreation'});
+  else if (action === 'begin-round-creation') void creationCommand({type:'beginRoundCreation'});
+  else if (action === 'save-ending') void save();
   else if (action === 'manage-character') void (async()=>{if(await command({type:'selectCharacter',characterId:button.dataset.id})) openPanel('character');})();
   else if (action === 'allocate-stat') void manage({type:'allocateStat',stat:button.dataset.stat},'属性点已分配。');
   else if (action === 'party-placement') void manage({type:'setPartyPlacement',characterId:button.dataset.id,placement:button.dataset.placement},'队伍已调整。');
