@@ -116483,6 +116483,72 @@
               "delta": 1.5
             }
           ]
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_hp_ratio",
+              "minExclusive": 0.2,
+              "maxInclusive": 0.5
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "role": "source",
+              "talentIds": [
+                "草头百姓"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 2.0
+            },
+            {
+              "type": "modify_damage_context",
+              "field": "critical_chance",
+              "op": "more",
+              "delta": 2.0
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_hp_ratio",
+              "minExclusive": 0.2,
+              "maxInclusive": 0.5
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "role": "source",
+              "talentIds": [
+                "草头百姓"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "target_defence",
+              "op": "more",
+              "delta": 1.5
+            }
+          ]
         }
       ]
     },
