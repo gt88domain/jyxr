@@ -26,6 +26,7 @@ export interface CreationState {
   preview: {portrait: string; sprite: string; silver: number; randomBonus: Record<string, number>; attributes: {id: string; label: string; value: number}[]; talents: {id: string; name: string}[]; internalSkills: {id: string; name: string; level: number}[]; items: {id: string; name: string; quantity: number; icon?: string}[]} | null;
 }
 export interface GameState {
+  miniGame?: MiniGameConfig | null;
   combatantSelection?: {battleId: string; title: string; capacity: number; candidates: {id: string; name: string; level: number; portrait?: string; required: boolean; forbidden: boolean}[]} | null;
   rename?: {defaultName: string} | null;
   gameOver?: boolean;
@@ -34,7 +35,7 @@ export interface GameState {
   chest?: {capacity: number; stored: number; canManage: boolean; entries: ChestItem[]; inventory: ChestItem[]} | null;
   creation?: CreationState | null;
   sceneBackground?: string | null;
-  phase: 'title' | 'world' | 'battle' | 'dialogue' | 'choice' | 'shop' | 'sect' | 'combatants' | 'rename' | 'gameover' | 'chest';
+  phase: 'title' | 'world' | 'battle' | 'dialogue' | 'choice' | 'shop' | 'sect' | 'combatants' | 'rename' | 'gameover' | 'chest' | 'minigame';
   sects?: {id: string; name: string; description: string; focus: string; masters: string[]; skills: string[]; traits: string[]; available: boolean}[];
   tutorial?: {id: string; description: string; locations: string[]} | null;
   adventure?: {sect?: string | null; morality: number; days: number; timeSlot: string};
@@ -55,6 +56,7 @@ export interface GameState {
 export interface Result { ok: boolean; error?: string; state: GameState; }
 export interface ChestItem {id: string; entryNumber: number; name: string; icon?: string | null; quantity: number; canDeposit: boolean;}
 interface Exports {
+  MiniGameInput: (input: string) => string | Promise<string>;
   Initialize: (content: string) => string | Promise<string>;
   Dispatch: (command: string) => string | Promise<string>;
   ExportSave: () => string | Promise<string>;
@@ -89,4 +91,15 @@ export async function dispatch(command: Record<string, unknown>): Promise<Result
 }
 export async function exportSave(): Promise<string> { return await api.ExportSave(); }
 export async function importSave(data: string): Promise<Result> { return decode(await api.ImportSave(data)); }
+export interface MiniGameConfig {id: string; title: string; heroPortrait?: string; portraits: Record<string, string>; itemIcons: Record<string, string>;}
+export interface MiniGameFrame {
+  id: string; width: number; height: number; targetSize: number; elapsed: number; remaining: number; score: number;
+  started: boolean; finished: boolean; paused: boolean; hero: {x: number; y: number} | null;
+  targets: {id: string; x: number; y: number; visible: boolean; points: number; itemId: string | null; generation: number}[];
+}
+export async function miniGameInput(input: Record<string, unknown>): Promise<MiniGameFrame> {
+  const result = JSON.parse(await api.MiniGameInput(JSON.stringify(input)));
+  if (!result.ok) throw new Error(result.error || '修炼暂未完成。');
+  return result.frame;
+}
 import {readPack} from './content';

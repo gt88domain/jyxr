@@ -1,6 +1,12 @@
 using System.Text.Json;
 using Game.Web.Runtime;
 
+if (args.FirstOrDefault() == "--minigame")
+{
+    await MiniGameSmoke.Run(args[1],args[2]);
+    return;
+}
+
 if (args.FirstOrDefault() == "--special")
 {
     await SpecialSmoke.Run(args[1],args[2]);

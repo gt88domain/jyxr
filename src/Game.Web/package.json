@@ -18,6 +18,7 @@
     "test:art": "node tests/legacy-art-smoke.mjs",
     "test:creation": "python3 tests/creation-source-parity.py && node tests/creation-smoke.mjs",
     "test:management": "node tests/management-smoke.mjs",
+    "test:minigame": "node tests/minigame-smoke.mjs",
     "assets:restore": "python3 scripts/art-bundle.py restore"
   },
   "dependencies": { "phaser": "3.90.0" },

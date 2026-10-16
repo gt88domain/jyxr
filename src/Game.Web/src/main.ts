@@ -11,12 +11,14 @@ import {battleShell as battleMarkup, updateBattleView} from './battle-view';
 import {panelContent} from './panels';
 import {creationView} from './creation';
 import {interactionView} from './interactions';
+import {miniGameView, MiniGameController} from './minigame';
 import type {PanelName, InventoryFilter} from './panels';
 import {readSettings, writeSettings, applySettings} from './settings';
 import type {Settings} from './settings';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 let state: GameState, slot: SaveSlot | undefined, busy = false, board: Board | undefined;
+let training: MiniGameController | undefined;
 let screen = '', selectedSkill = '', enemyTimer: ReturnType<typeof setTimeout> | undefined;
 let autoBattle = false, battlePaused = false;
 let battleIntent: 'move' | 'attack' = 'move';
@@ -59,7 +61,7 @@ function heroCard() {
   const hero = state.hero;
   return `<aside class="hero-card paper"><div class="eyebrow">旅途行者</div><div class="hero-heading"><div class="avatar">${hero.portrait ? `<img src="${e(assetUrl(hero.portrait))}" alt="">` : e(hero.name.slice(0, 1))}</div><div><h2>${e(hero.name)}</h2><span>旅程初始 · 第 ${hero.level} 级</span></div></div><div class="vital"><label>气血 <span>${hero.hp} <small>/ ${hero.maxHp}</small></span></label><div class="bar hp"><i style="width:${100 * hero.hp / hero.maxHp}%"></i></div></div><div class="vital"><label>${e(state.pack.terms?.energy || '内力')} <span>${hero.mp} <small>/ ${hero.maxMp}</small></span></label><div class="bar mp"><i style="width:${100 * hero.mp / hero.maxMp}%"></i></div></div><div class="hero-meta"><span>随身${e(state.pack.currencyName || '钱币')}</span><strong>${state.silver.toLocaleString()} <small>${e(currency(state))}</small></strong></div><button class="text-button" data-action="manage-character" data-id="${e(hero.id)}">查看人物 ${icon('arrow')}</button></aside>`;
 }
-function world() {return topbar() + worldView(state, heroCard()) + dialogueOverlay() + shopView(state) + sectView(state) + interactionView(state);}
+function world() {return topbar() + worldView(state, heroCard()) + dialogueOverlay() + shopView(state) + sectView(state) + interactionView(state) + (state.phase === 'minigame' && state.miniGame ? miniGameView(state.miniGame) : '');}
 function dialogueOverlay() {
   if (state.phase !== 'dialogue' && state.phase !== 'choice') return '';
   const choice = state.phase === 'choice';
@@ -89,6 +91,7 @@ function scheduleBattle() {
 }
 function render() {
   if (!state) return;
+  training?.destroy(); training=undefined;
   const nextScreen = state.phase === 'title' ? 'title' : state.phase === 'battle' && state.battle ? 'battle' : 'world';
   if (nextScreen === 'battle' && screen === 'battle') { updateBattle(); return; }
   board?.destroy(); board = undefined;
@@ -102,6 +105,7 @@ function render() {
   document.title = `${state.pack.title} · ${state.pack.subtitle || '浏览器冒险'}`;
   app.innerHTML = nextScreen === 'title' ? title() : nextScreen === 'battle' ? battleShell() : world();
   app.setAttribute('aria-busy', String(busy));
+  if(state.phase==='minigame' && state.miniGame) training=new MiniGameController(app,state.miniGame,()=>command({type:'finishMiniGame'}),error=>{console.error(error);toast(error instanceof Error?error.message:'修炼未能完成。');});
   if (nextScreen === 'battle') {
     board = new Board(document.querySelector('#board-viewport')!, (x, y) => {
       if (busy || ended() || autoBattle || battlePaused || modalOpen()) return;
@@ -136,6 +140,7 @@ async function command(data: Record<string, unknown>) {
 }
 function modal(titleText: string, content: string, wide = false) {
   clearTimeout(enemyTimer);
+  training?.pause();
   if (!wide) activePanel = null;
   document.querySelector('#game-modal')?.remove();
   const node = document.createElement('dialog'); node.id = 'game-modal'; node.className = `paper game-modal${wide ? ' system-modal' : ''}`;

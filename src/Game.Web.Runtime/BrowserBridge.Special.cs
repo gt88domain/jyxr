@@ -31,7 +31,7 @@ public static partial class BrowserBridge
         private TaskCompletionSource? _gameOverResult;
         public bool ChestOpen { get; private set; }
         private TaskCompletionSource? _chestResult;
-        public bool InteractionPending => Selection is not null || RenameDefault is not null || GameOver || ChestOpen;
+        public bool InteractionPending => Selection is not null || RenameDefault is not null || GameOver || ChestOpen || Training is not null;
 
         [StoryCommand("chest", "xiangzi")]
         public ValueTask OpenChest(CancellationToken cancellationToken)

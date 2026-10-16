@@ -101,8 +101,8 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
             elif kind == "arena":
                 # test_ARENA is a legacy scene key, not a callback story.
                 steps = [command("arena()")]
-            elif kind == "game" and value == "levelup":
-                steps = [command('minigame("levelup")')]
+            elif kind == "game" and value in {"levelup", "qinggong", "dianxue"}:
+                steps = [command(f"minigame({quote(value)})")]
             else:
                 raise ValueError(f"unsupported result: {kind} ({value})")
             conditions = node.findall("condition")

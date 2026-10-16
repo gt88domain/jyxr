@@ -103,6 +103,7 @@ public static partial class BrowserBridge
                 case "selectCombatants": _host.SelectCombatants(args); break;
                 case "renameHeroine": _host.CompleteRename(Read(args, "name")); break;
                 case "closeChest": _host.CloseChest(); break;
+                case "finishMiniGame": _host.CompleteTraining(); break;
                 case "equipItem":
                     RequireCharacterManagement();
                     var equipmentEntry = Entry(args.GetProperty("entryNumber").GetInt64());
@@ -467,9 +468,10 @@ public static partial class BrowserBridge
                 ok = _error is null, error = _error,
                 state = new
                 {
-                    phase = _session is null ? "title" : _battle is not null ? "battle" : _host.Dialogue is not null ? "dialogue" : _host.Choice is not null ? "choice" : _shopId is not null ? "shop" : _host.SelectingSect ? "sect" : _host.Selection is not null ? "combatants" : _host.RenameDefault is not null ? "rename" : _host.GameOver ? "gameover" : _host.ChestOpen ? "chest" : "world",
+                    phase = _session is null ? "title" : _battle is not null ? "battle" : _host.Dialogue is not null ? "dialogue" : _host.Choice is not null ? "choice" : _shopId is not null ? "shop" : _host.SelectingSect ? "sect" : _host.Selection is not null ? "combatants" : _host.RenameDefault is not null ? "rename" : _host.GameOver ? "gameover" : _host.ChestOpen ? "chest" : _host.Training is not null ? "minigame" : "world",
                     pack = _pack,
                     creation = CreationSnapshot(),
+                    miniGame = MiniGameSnapshot(),
                     combatantSelection = CombatantsSnapshot(), rename = _host.RenameDefault is { } defaultName ? new { defaultName } : null, gameOver = _host.GameOver,
                     managedCharacter = _session is null ? null : CharacterSheet(Managed), chest = ChestSnapshot(),
                     roster = RosterView(),
