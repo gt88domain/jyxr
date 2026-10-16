@@ -79429,6 +79429,14 @@
           "picture": null,
           "events": [
             {
+              "id": "1",
+              "action": "story('mainStory_襄阳1')",
+              "image": "town.city.xiangyang",
+              "description": "最后的战场！",
+              "when": "(story_completed('mainStory_紧急.杭州胜'))",
+              "repeatMode": "once"
+            },
+            {
               "id": "2",
               "action": "map('襄阳')",
               "image": "town.city.xiangyang",
@@ -80675,6 +80683,14 @@
           "description": "行军司马府邸。",
           "picture": "地图.府门前",
           "events": [
+            {
+              "id": "1",
+              "action": "story('original_山庄风云.贾飞女主')",
+              "image": null,
+              "description": null,
+              "when": "(story_completed('original_山庄风云.贾飞发疯2')) && (!in_team('女主'))",
+              "repeatMode": "once"
+            },
             {
               "id": "2",
               "action": "story('original_长安.家中')",
@@ -117273,6 +117289,13 @@
       "name": "黑天死炎",
       "point": 25,
       "description": "攻击一定几率自动触发“一刀两断”效果。"
+    },
+    {
+      "id": "黑衣",
+      "name": "黑衣",
+      "point": 0,
+      "description": "",
+      "affixes": []
     }
   ],
   "towers": [
@@ -121440,6 +121463,53 @@
           ]
         },
         {
+          "name": "mainStory_襄阳1",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.襄阳')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.天龙八部11')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "吕文德，襄阳城如今局势如何？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "吕文德",
+              "text": "禀报大老爷……如今襄阳城兵马疲顿，再拖下去，恐怕只有死路一条了啊。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "那只能杀出去，方有一条生路！全军将士听令，随我出击！天下大势，在此一战！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "吕文德",
+              "text": "大老爷……祝您马到功成……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "吕文德，随我出战！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "吕文德",
+              "text": "啊……（昏死过去）"
+            },
+            {
+              "kind": "jump",
+              "target": "mainStory_襄阳5"
+            }
+          ]
+        },
+        {
           "name": "mainStory_襄阳2",
           "steps": [
             {
@@ -121490,6 +121560,367 @@
               "kind": "dialogue",
               "speaker": "主角",
               "text": "杀啊！"
+            }
+          ]
+        },
+        {
+          "name": "mainStory_襄阳5",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.沙漠')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.天龙八部11')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "呼呼，杀不完的敌人，怎么办？！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "南贤",
+              "text": "擒贼先擒王！你看那边，那个人很可疑！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "那上啊！"
+            },
+            {
+              "kind": "branch",
+              "cases": [
+                {
+                  "when": "(morality >= 1)",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "mainStory_最终决战1"
+                    }
+                  ]
+                },
+                {
+                  "when": "(morality < 1)",
+                  "steps": [
+                    {
+                      "kind": "jump",
+                      "target": "mainStory_黑衣人的邀请"
+                    }
+                  ]
+                }
+              ],
+              "fallback": []
+            }
+          ]
+        },
+        {
+          "name": "mainStory_黑衣人的邀请",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "神秘使者",
+              "text": "……你好啊，年轻人。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "你认识我？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "神秘使者",
+              "text": "毫无疑问，你是这个江湖中最为出类拔萃的年轻后辈，嘿嘿。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "你找我有事？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "神秘使者",
+              "text": "老子看你一路闯荡江湖，也没少干杀人放火的勾当，要不要干脆加入我们组织算了？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "还有这么个邀请？！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "吕文德",
+              "text": "少侠，不要啊，襄阳百姓还指望着你啊……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "吕文德，给老子闭嘴！让我好好想一想……"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "要不要接受黑衣人的邀请？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "接受！",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "mainStory_黑衣人的邀请接受"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "不接受。",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "mainStory_黑衣人的邀请不接受"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "mainStory_黑衣人的邀请接受",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "好，我接受！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "吕文德",
+              "text": "（昏了过去）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "襄阳这帮鱼虾就交给你们料理了，带我去见你们黑衣老大吧！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "神秘使者",
+              "text": "嘿嘿嘿嘿，好！爽快！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "带路！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "神秘使者",
+              "text": "等等，还有一个要求！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "你说吧。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "神秘使者",
+              "text": "你只能一个人去见魔君，所有队友必须就地解散。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "神马？！这代价也太大了吧。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "神秘使者",
+              "text": "哼，既然要入我黑衣，所有旧事必须忘却。这些人只会成为你进一步问鼎武林至尊的阻碍。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……"
+            },
+            {
+              "kind": "choice",
+              "prompt": {
+                "speaker": "主角",
+                "text": "要遣散所有队友吗？"
+              },
+              "blocks": [
+                {
+                  "kind": "options",
+                  "options": [
+                    {
+                      "text": "都走吧！我天地之间独来往！",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "mainStory_黑衣人的邀请解散队伍"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "代价太大了我受不了。",
+                      "steps": [
+                        {
+                          "kind": "jump",
+                          "target": "mainStory_黑衣人的邀请不解散队伍"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "mainStory_黑衣人的邀请解散队伍",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "好！我跟你走！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "神秘使者",
+              "text": "哈哈哈哈，哈哈哈哈，哇哈哈哈哈哈！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "神秘使者",
+              "text": "入我黑衣，终身为墨！哈哈哈哈！"
+            },
+            {
+              "kind": "command",
+              "call": "leave_all()"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "（看你们是个什么名堂，嘿嘿）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "神秘使者",
+              "text": "走，我带你回总坛！"
+            },
+            {
+              "kind": "jump",
+              "target": "mainStory_黑衣教入教"
+            }
+          ]
+        },
+        {
+          "name": "mainStory_黑衣教入教",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.沙漠')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.紧张感')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "神秘使者",
+              "text": "魔君大人，$MALE$给您带到了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "魔君",
+              "text": "……很好，下去吧。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "神秘使者",
+              "text": "大人，此人武功极高……我……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "魔君",
+              "text": "入我黑衣，终生为墨。此人既然已经皈依我黑衣，就是黑衣教众，本座想和教众单独说几句，不可以？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "神秘使者",
+              "text": "是！属下告退。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "魔君",
+              "text": "你就是江湖中鼎鼎有名的$MALE$？我看也不过如此。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "哦？你不服？要跟我较量下？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "魔君",
+              "text": "你不是我的对手，至少现在还不是。想挑战我？在我黑衣再练几年吧！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "你找我来的目的是？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "魔君",
+              "text": "目的？你来这里不是觉得好玩才来吗？我找你来也只是觉得好玩而已啊。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "魔君",
+              "text": "下去吧，等我随时召唤你，哈哈哈哈。"
+            },
+            {
+              "kind": "command",
+              "call": "learn_talent('主角', '黑衣')"
+            },
+            {
+              "kind": "command",
+              "call": "set_sect('黑衣')"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_nick('黑衣墨道')"
+            },
+            {
+              "kind": "command",
+              "call": "set_time_key('加入黑衣', 45, '黑衣_对战魔君')"
+            },
+            {
+              "kind": "command",
+              "call": "world_triggers(false)"
+            },
+            {
+              "kind": "jump",
+              "target": "mainStory_黑衣新一天"
             }
           ]
         },
@@ -122455,6 +122886,55 @@
           ]
         },
         {
+          "name": "黑衣_对战魔君",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "魔君",
+              "text": "你来了也有几个月了，是不是该和我较量较量了？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "你现在才要和我较量？刚来时候你还有希望胜我，现在已经没希望啦！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "魔君",
+              "text": "哈哈哈哈，猪要养肥了再杀才有意思。你刚来时候根本还不配做我对手！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "哼，告诉你吧。你这黑衣教也不过如此，该学的我都学到了，你也该退位了！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "魔君",
+              "text": "哇哈哈哈，哈哈哈哈，来吧，让我看看你到底学了多少本事！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "黑衣_对战魔君",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "黑衣_对战魔君胜利"
+                  }
+                ],
+                "lose": [
+                  {
+                    "kind": "jump",
+                    "target": "黑衣_对战魔君失败"
+                  }
+                ],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
           "name": "黑衣_对战魔君胜利",
           "steps": [
             {
@@ -122608,6 +123088,54 @@
             {
               "kind": "command",
               "call": "legacy_flow('next')"
+            }
+          ]
+        },
+        {
+          "name": "黑衣_对战魔君失败",
+          "steps": [
+            {
+              "kind": "dialogue",
+              "speaker": "魔君",
+              "text": "无用之人，给你几个月时间学我黑衣神功，居然还是如此无用！滚吧。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "我……我……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "魔君",
+              "text": "你连让我杀的价值都没有，滚回你的江湖中去吧。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "魔君",
+              "text": "不过你走之前，需要付出一点代价！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "啊！"
+            },
+            {
+              "kind": "command",
+              "call": "scale_stats('主角', 0.5)"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "气血、内力、全属性降为【5成】！"
+            },
+            {
+              "kind": "jump",
+              "target": "黑衣_南贤"
             }
           ]
         },
@@ -184575,6 +185103,45 @@
           ]
         },
         {
+          "name": "霹雳堂_小龙女",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.霹雳堂')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.武林至尊')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "小龙女",
+              "text": "过儿，祖师婆婆传下来的武功果然厉害。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "杨过",
+              "text": "是啊，龙儿，恭喜你又精进一层！"
+            },
+            {
+              "kind": "command",
+              "call": "upgrade_external('小龙女', '玉女素心剑', 5)"
+            },
+            {
+              "kind": "command",
+              "call": "learn_talent('小龙女', '左右互搏')"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_maxlevel('玉女素心剑', 1, 'legacy.霹雳堂_小龙女.玉女素心剑')"
+            },
+            {
+              "kind": "command",
+              "call": "map('霹雳堂')"
+            }
+          ]
+        },
+        {
           "name": "霹雳堂_木婉清",
           "steps": [
             {
@@ -186014,6 +186581,53 @@
             {
               "kind": "command",
               "call": "legacy_maxlevel('九阴神功', 1, 'legacy.霹雳堂_杨冰儿.九阴神功')"
+            },
+            {
+              "kind": "command",
+              "call": "map('霹雳堂')"
+            }
+          ]
+        },
+        {
+          "name": "霹雳堂_达尔巴",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.霹雳堂')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.武林至尊')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "师兄，好功夫！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "达尔巴",
+              "text": "师弟，过奖了！壮哉我大轮寺，真是横行江湖啊！"
+            },
+            {
+              "kind": "command",
+              "call": "upgrade_external('达尔巴', '火焰刀法', 5)"
+            },
+            {
+              "kind": "command",
+              "call": "upgrade_internal('达尔巴', '龙象般若功', 5)"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_maxlevel('龙象般若功', 2, 'legacy.霹雳堂_达尔巴.龙象般若功')"
+            },
+            {
+              "kind": "command",
+              "call": "legacy_maxlevel('火焰刀法', 2, 'legacy.霹雳堂_达尔巴.火焰刀法')"
+            },
+            {
+              "kind": "command",
+              "call": "item('金钟罩心法', 1)"
             },
             {
               "kind": "command",
@@ -194589,6 +195203,135 @@
               "kind": "dialogue",
               "speaker": "主角",
               "text": "糟了！他怕是要对$FEMALE$不利！快追！"
+            }
+          ]
+        },
+        {
+          "name": "original_山庄风云.贾飞女主",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "background('地图.府门前')"
+            },
+            {
+              "kind": "command",
+              "call": "music('音乐.刀间鼓')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "救命啊，呜呜呜，呜呜呜，不要啊，不要~"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "疯狂贾飞",
+              "text": "嘿嘿嘿嘿……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "$FEMALE$！畜生，你干了些什么！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "疯狂贾飞",
+              "text": "正要品尝美味，就有搅局的苍蝇出现了。看我先拍死苍蝇，再来料理司马大人的千金小姐，哇哈哈哈！"
+            },
+            {
+              "kind": "battle",
+              "battleId": "original_山庄风云疯狂贾飞女主",
+              "outcomes": {
+                "win": [
+                  {
+                    "kind": "jump",
+                    "target": "original_山庄风云.贾飞女主2"
+                  }
+                ],
+                "lose": [],
+                "timeout": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "original_山庄风云.贾飞女主2",
+          "steps": [
+            {
+              "kind": "command",
+              "call": "music('音乐.中原树林')"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "疯狂贾飞",
+              "text": "怎么……可能……我明明已经……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "疯狂贾飞",
+              "text": "爹……孩儿……不能替你……报仇了……（咽气）"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "报仇你也找错对象了吧，真是疯了。$FEMALE$，你没事吧！那个畜生对你怎么了？！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "（眼泪夺眶而出）呜呜呜……呜呜呜……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "$FEMALE$！到底怎么了！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "呜呜呜……呜呜呜……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "这个畜生！！看我撕碎他！"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "呜呜呜……没事，他还没来得及对我怎么样……只可惜衣裳被他撕破了……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "哦……虚惊一场。只是衣裳撕破了那还好……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "……一点也不好。这个人怎么了？怎么变得这么丧心病狂？"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "我不知道，他父亲死了后，他和那个神秘人之间发生了什么，他又是怎么学会这天山剑法的，一切都已经成为谜了。"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "女主",
+              "text": "恩……"
+            },
+            {
+              "kind": "dialogue",
+              "speaker": "主角",
+              "text": "他这把佩剑不错，我就收下了。"
+            },
+            {
+              "kind": "command",
+              "call": "item('鸣凤剑', 1)"
+            },
+            {
+              "kind": "command",
+              "call": "change_favorability('女主', 10)"
             }
           ]
         },
@@ -218046,12 +218789,53 @@
         "storyId": "original_新手引导结束"
       }
     ],
+    "milestones": [
+      {
+        "id": "mainStory_黑暗的阴影",
+        "storyId": "mainStory_黑暗的阴影",
+        "title": "黑暗的阴影",
+        "requirements": [
+          "主角达到 10 级",
+          "参战队伍至少 4 人（含主角）"
+        ]
+      },
+      {
+        "id": "mainStory_神秘剑客",
+        "storyId": "mainStory_神秘剑客",
+        "title": "神秘剑客",
+        "requirements": [
+          "主角达到 15 级",
+          "参战队伍至少 8 人（含主角）",
+          "经历「黑暗的阴影」"
+        ]
+      },
+      {
+        "id": "mainStory_组织1",
+        "storyId": "mainStory_组织1",
+        "title": "组织",
+        "requirements": [
+          "主角达到 22 级",
+          "参战队伍至少 8 人（含主角）",
+          "经历「神秘剑客」"
+        ]
+      },
+      {
+        "id": "mainStory_紧急",
+        "storyId": "mainStory_紧急",
+        "title": "紧急",
+        "requirements": [
+          "主角达到 25 级",
+          "参战队伍至少 8 人（含主角）",
+          "经历「组织」"
+        ]
+      }
+    ],
     "migration": {
-      "stories": 1854,
+      "stories": 1866,
       "totalStories": 1887,
       "maps": 162,
       "totalMaps": 162,
-      "deferredStories": 33
+      "deferredStories": 21
     },
     "artSource": {
       "kind": "legacy",

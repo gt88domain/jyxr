@@ -14,9 +14,9 @@
     "maps": 6
   },
   "structurallyMigrated": {
-    "originalStories": 1854,
+    "originalStories": 1866,
     "maps": 162,
-    "mapEvents": 1111,
+    "mapEvents": 1113,
     "worldTriggers": 21,
     "newbieTasks": 6
   },
@@ -24,14 +24,6 @@
     "破庙_田青文_调戏胜利": {
       "source": "storys.xml",
       "reason": "unsupported action: TOUCH (田青文)"
-    },
-    "mainStory_黑衣教入教": {
-      "source": "storys.xml",
-      "reason": "unknown talents: 黑衣"
-    },
-    "黑衣_对战魔君失败": {
-      "source": "storys.xml",
-      "reason": "unsupported action: MINUS_MAXPOINTS (主角#5)"
     },
     "original_女主.李白.诗话": {
       "source": "storys.xml",
@@ -57,18 +49,6 @@
       "source": "storys.xml",
       "reason": "invalid dialogue"
     },
-    "霹雳堂_小龙女": {
-      "source": "storys.xml",
-      "reason": "unsupported action: UPGRADE……SKILL (小龙女#玉女素心剑#5)"
-    },
-    "霹雳堂_达尔巴": {
-      "source": "storys.xml",
-      "reason": "unsupported stat action: UPGRADE.SKILLL"
-    },
-    "original_山庄风云.贾飞女主2": {
-      "source": "storysPY.xml",
-      "reason": "unsupported action: DIALog (主角#他这把佩剑不错，我就收下了。)"
-    },
     "tlbb.dy_木婉清.touch.前奏": {
       "source": "storysPY.xml",
       "reason": "unsupported action: TOUCH (木婉清)"
@@ -88,20 +68,6 @@
         "破庙_田青文_调戏胜利"
       ]
     },
-    "mainStory_黑衣人的邀请解散队伍": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "mainStory_黑衣教入教"
-      ]
-    },
-    "黑衣_对战魔君": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "黑衣_对战魔君失败"
-      ]
-    },
     "tlbb.dy_万劫谷地牢.不上2": {
       "source": "storys.xml",
       "reason": "blocked story dependencies",
@@ -115,13 +81,6 @@
       "targets": [
         "武当派_卓一航1",
         "武当派_卓一航2"
-      ]
-    },
-    "original_山庄风云.贾飞女主": {
-      "source": "storysPY.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "original_山庄风云.贾飞女主2"
       ]
     },
     "tlbb.dy_阿碧线王语嫣touch2": {
@@ -145,13 +104,6 @@
         "破庙_田青文"
       ]
     },
-    "mainStory_黑衣人的邀请接受": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "mainStory_黑衣人的邀请解散队伍"
-      ]
-    },
     "tlbb.dy_万劫谷地牢.不上": {
       "source": "storys.xml",
       "reason": "blocked story dependencies",
@@ -164,13 +116,6 @@
       "reason": "blocked story dependencies",
       "targets": [
         "tlbb.dy_阿碧线王语嫣touch2"
-      ]
-    },
-    "mainStory_黑衣人的邀请": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "mainStory_黑衣人的邀请接受"
       ]
     },
     "tlbb.dy_万劫谷地牢1": {
@@ -187,25 +132,11 @@
         "tlbb.dy_阿碧线王语嫣touch"
       ]
     },
-    "mainStory_襄阳5": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "mainStory_黑衣人的邀请"
-      ]
-    },
     "tlbb.dy_琴韵小筑阿碧1": {
       "source": "storys.xml",
       "reason": "blocked story dependencies",
       "targets": [
         "tlbb.dy_琴韵小筑阿碧2"
-      ]
-    },
-    "mainStory_襄阳1": {
-      "source": "storys.xml",
-      "reason": "blocked story dependencies",
-      "targets": [
-        "mainStory_襄阳5"
       ]
     }
   },
@@ -213,14 +144,6 @@
     "破庙_田青文_调戏胜利": {
       "source": "storys.xml",
       "reason": "unsupported action: TOUCH (田青文)"
-    },
-    "mainStory_黑衣教入教": {
-      "source": "storys.xml",
-      "reason": "unknown talents: 黑衣"
-    },
-    "黑衣_对战魔君失败": {
-      "source": "storys.xml",
-      "reason": "unsupported action: MINUS_MAXPOINTS (主角#5)"
     },
     "original_女主.李白.诗话": {
       "source": "storys.xml",
@@ -246,18 +169,6 @@
       "source": "storys.xml",
       "reason": "invalid dialogue"
     },
-    "霹雳堂_小龙女": {
-      "source": "storys.xml",
-      "reason": "unsupported action: UPGRADE……SKILL (小龙女#玉女素心剑#5)"
-    },
-    "霹雳堂_达尔巴": {
-      "source": "storys.xml",
-      "reason": "unsupported stat action: UPGRADE.SKILLL"
-    },
-    "original_山庄风云.贾飞女主2": {
-      "source": "storysPY.xml",
-      "reason": "unsupported action: DIALog (主角#他这把佩剑不错，我就收下了。)"
-    },
     "tlbb.dy_木婉清.touch.前奏": {
       "source": "storysPY.xml",
       "reason": "unsupported action: TOUCH (木婉清)"
@@ -280,6 +191,37 @@
     "重阳祖师",
     "金刚伏魔圈"
   ],
+  "talentMetadataFallbacks": [
+    "黑衣"
+  ],
+  "instructionEvidence": {
+    "MINUS_MAXPOINTS": {
+      "source": "uploaded X1.0.0.1 Assembly-CSharp.dll / MapUI.ExecuteAction",
+      "sha256": "a9d1456b1fa5e09f9e39a18c66564612da2aa4c7c83db6ff34430d436b872b4a",
+      "ilRange": "0x153b..0x16eb",
+      "argumentUnit": "tenths retained, not percent deducted"
+    }
+  },
+  "sourceCorrections": [
+    {
+      "story": "霹雳堂_小龙女",
+      "originalType": "UPGRADE……SKILL",
+      "value": "小龙女#玉女素心剑#5",
+      "normalizedType": "UPGRADE.SKILL"
+    },
+    {
+      "story": "霹雳堂_达尔巴",
+      "originalType": "UPGRADE.SKILLL",
+      "value": "达尔巴#火焰刀法#5",
+      "normalizedType": "UPGRADE.SKILL"
+    },
+    {
+      "story": "original_山庄风云.贾飞女主2",
+      "originalType": "DIALog",
+      "value": "主角#他这把佩剑不错，我就收下了。",
+      "normalizedType": "DIALOG"
+    }
+  ],
   "deferredMapEvents": [
     {
       "map": "黑龙潭",
@@ -295,21 +237,9 @@
     },
     {
       "map": "大地图",
-      "location": "襄阳",
-      "eventId": "1",
-      "reason": "story deferred: mainStory_襄阳1"
-    },
-    {
-      "map": "大地图",
       "location": "太湖",
       "eventId": "6",
       "reason": "story deferred: tlbb.dy_琴韵小筑阿碧1"
-    },
-    {
-      "map": "长安城中心",
-      "location": "司马府",
-      "eventId": "1",
-      "reason": "story deferred: original_山庄风云.贾飞女主"
     },
     {
       "map": "五毒教",

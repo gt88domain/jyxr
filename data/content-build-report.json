@@ -185,20 +185,20 @@
     ]
   },
   "originalMigration": {
-    "originalStories": 1854,
+    "originalStories": 1866,
     "maps": 162,
-    "mapEvents": 1111,
+    "mapEvents": 1113,
     "worldTriggers": 21,
     "newbieTasks": 6
   },
   "starterStories": 25,
   "verifiedOpeningSegments": 14,
-  "migratedStorySegments": 1854,
+  "migratedStorySegments": 1866,
   "browserPacks": [
     {
       "id": "jyx",
       "maps": 162,
-      "storySegments": 1856
+      "storySegments": 1868
     },
     {
       "id": "frontier",
@@ -241,19 +241,19 @@
     "items": 347,
     "randomAffixTables": 4,
     "buffs": 33,
-    "talents": 157,
+    "talents": 158,
     "towers": 7,
     "scopedBattleEffects": 0,
     "itemTags": 0,
     "storyScripts": 1,
-    "browser": 23
+    "browser": 24
   },
   "limitations": [
     "The 14 verified opening/trainer segments remain unchanged; dependency-closed original stories/maps/events and nine sect entries are now exposed. Structural migration is not proof of full playthroughs.",
     "Original source and all deferred story/event reasons are archived separately. Six original newbie tasks, large-map distance/time and supported global triggers run through the current C# session.",
     "The original four-enemy training battle references missing role 经验木头人. browser_结伴练习 is explicitly authored using the real 木头人 definition, not a claim that this missing role was recovered.",
     "Converted talent/buff descriptions do not implement missing legacy battle hooks; this is an integration slice, not full original-rule parity.",
-    "Original media references are retained; browser rendering supplies its own generated art.",
+    "Jin Yong media references resolve to the uploaded original archive; extraction and animation timing coverage are audited separately.",
     "The separately uploaded X1.0.0.1 archive and its 78 Ludingji story records are not merged into the pinned baseline."
   ]
 }
