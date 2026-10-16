@@ -137,7 +137,7 @@ public static partial class BrowserBridge
     private static string? BattleItemUnavailableReason(ItemDefinition item, BattleUnit? target)
     {
         if (item.Type != ItemType.Consumable) return "战斗中只可使用战斗消耗品。";
-        if (_battle is null || BattleOutcomeEvaluator.Evaluate(_battle).Kind != BattleOutcomeKind.Ongoing) return "当前战斗已结束。";
+        if (_battle is null || EvaluateBattleOutcome().Kind != BattleOutcomeKind.Ongoing) return "当前战斗已结束。";
         if (Active is not { Team: 1, IsAlive: true } actor) return "当前不是我方行动回合。";
         if (_battle.CurrentAction!.HasCommittedMainAction) return "本回合的主要行动已经完成。";
         if (target is null || !target.IsAlive || target.Team != actor.Team) return "请选择仍在场上的我方队员。";
@@ -175,7 +175,7 @@ public static partial class BrowserBridge
 
     private static object[] TargetView()
     {
-        if (_battle is null || Active?.Team != 1 || _battle.CurrentAction!.HasCommittedMainAction || BattleOutcomeEvaluator.Evaluate(_battle).Kind != BattleOutcomeKind.Ongoing) return [];
+        if (_battle is null || Active?.Team != 1 || _battle.CurrentAction!.HasCommittedMainAction || EvaluateBattleOutcome().Kind != BattleOutcomeKind.Ongoing) return [];
         return Skills(Active.Character).Where(s => _engine!.EvaluateSkillAvailability(_battle, Active.Id, s).IsAvailable)
             .SelectMany(s => BattleSkillTargeting.EnumerateCastTargets(Active.Position, BattleSkillTargeting.ResolveEffectiveCastSize(Active, s), s.CanCastAtSelf, _battle.Grid)
                 .Select(p => (object)new { skillId = s.Id, x = p.X, y = p.Y, targetId = _battle.GetUnitAt(p)?.Id })).ToArray();

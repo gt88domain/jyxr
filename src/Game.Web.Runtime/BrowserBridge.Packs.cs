@@ -30,6 +30,12 @@ public static partial class BrowserBridge
         foreach (var key in new[] { "initialStoryId", "trainingStoryId" })
             if (pack[key]?.GetValue<string>() is { Length: > 0 } story) content.GetStorySegment(story);
         if (pack["trainingMapId"]?.GetValue<string>() is { Length: > 0 } map) content.GetMap(map);
+        foreach (var milestone in (pack["milestones"]?.AsArray() ?? []).OfType<JsonObject>())
+        {
+            content.GetStorySegment(milestone["storyId"]!.GetValue<string>());
+            if (string.IsNullOrWhiteSpace(milestone["id"]?.GetValue<string>()) || string.IsNullOrWhiteSpace(milestone["title"]?.GetValue<string>()))
+                throw new InvalidOperationException("江湖消息缺少编号或标题。");
+        }
         foreach (var objective in (pack["objectives"]?.AsArray() ?? []).OfType<JsonObject>())
         {
             var kind = objective["kind"]?.GetValue<string>();

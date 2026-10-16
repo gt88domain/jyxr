@@ -1,6 +1,24 @@
 using System.Text.Json;
 using Game.Web.Runtime;
 
+if (args.FirstOrDefault() == "--journal")
+{
+    JournalSmoke.Run(args[1],args[2]);
+    return;
+}
+
+if (args.FirstOrDefault() == "--source-fixes")
+{
+    await SourceFixSmoke.Run(args[1],args[2]);
+    return;
+}
+
+if (args.FirstOrDefault() == "--timeout")
+{
+    await TimeoutSmoke.Run(args[1],args[2],args.ElementAtOrDefault(3));
+    return;
+}
+
 if (args.FirstOrDefault() == "--campaign")
 {
     await CampaignSmoke.Run(args[1],args[2],args.ElementAtOrDefault(3)??"new");

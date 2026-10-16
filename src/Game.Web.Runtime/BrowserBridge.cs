@@ -197,7 +197,7 @@ public static partial class BrowserBridge
                     AdvanceEnemies();
                     break;
                 case "leaveBattle":
-                    if (_battle is not null && BattleOutcomeEvaluator.Evaluate(_battle).Kind == BattleOutcomeKind.Ongoing)
+                    if (_battle is not null && EvaluateBattleOutcome().Kind == BattleOutcomeKind.Ongoing)
                         throw new InvalidOperationException("战斗尚未结束。");
                     _battle = null;
                     _host.CompleteBattle();
@@ -222,7 +222,7 @@ public static partial class BrowserBridge
     [JSExport]
     public static string ExportSave()
     {
-        if (_battle is not null && BattleOutcomeEvaluator.Evaluate(_battle).Kind == BattleOutcomeKind.Ongoing)
+        if (_battle is not null && EvaluateBattleOutcome().Kind == BattleOutcomeKind.Ongoing)
             return JsonSerializer.Serialize(new { error = "请在战斗结束后存档。" }, Json);
         var session = RequireSession();
         if (_host.Dialogue is not null || _host.Choice is not null) return JsonSerializer.Serialize(new { error = "请先结束当前对话。" }, Json);
@@ -367,7 +367,7 @@ public static partial class BrowserBridge
     private static void StartBattle(SpecialBattleRequest request)
     {
         var session = RequireSession();
-        if (_battle is not null && BattleOutcomeEvaluator.Evaluate(_battle).Kind == BattleOutcomeKind.Ongoing)
+        if (_battle is not null && EvaluateBattleOutcome().Kind == BattleOutcomeKind.Ongoing)
             throw new InvalidOperationException("已有战斗正在进行。");
         _request = request;
         _battle = session.BattleService.BuildBattleState(_request);
@@ -385,10 +385,20 @@ public static partial class BrowserBridge
         AdvanceEnemies();
     }
 
+    private static int? BattleTickLimit => PackText("id") == "jyx" ? BrowserLegacyRules.MaxBattleTicks : null;
+    private static bool BattleTimedOut => _battle is not null && BattleTickLimit is { } limit && _battle.Tick > limit;
+    private static Game.Core.Battle.BattleOutcome EvaluateBattleOutcome()
+    {
+        var state = _battle ?? throw new InvalidOperationException("尚未进入战斗。");
+        // Legacy BattleTimeRun ends as Lose before allowing an action past
+        // the limit. Do not kill units or turn a timeout into a fake victory.
+        return BattleTimedOut ? new(Game.Core.Battle.BattleOutcomeKind.Winner, 2) : BattleOutcomeEvaluator.Evaluate(state);
+    }
+
     private static void EnsurePlayerAction()
     {
         if (_battle is null || _engine is null) throw new InvalidOperationException("尚未进入战斗。");
-        if (BattleOutcomeEvaluator.Evaluate(_battle).Kind != BattleOutcomeKind.Ongoing) throw new InvalidOperationException("战斗已经结束。");
+        if (EvaluateBattleOutcome().Kind != BattleOutcomeKind.Ongoing) throw new InvalidOperationException("战斗已经结束。");
         if (Active?.Team != 1) throw new InvalidOperationException("当前不是我方回合。");
     }
 
@@ -417,9 +427,15 @@ public static partial class BrowserBridge
     {
         for (var turns = 0; turns < 100; turns++)
         {
-            var outcome = BattleOutcomeEvaluator.Evaluate(_battle!);
+            var outcome = EvaluateBattleOutcome();
             if (outcome.Kind != BattleOutcomeKind.Ongoing) { Settle(outcome); return; }
-            if (_battle!.CurrentAction is null) Check(_engine!.AdvanceUntilNextAction(_battle));
+            if (_battle!.CurrentAction is null)
+            {
+                var budget = BattleTickLimit is { } limit ? checked((int)Math.Max(1, limit - _battle.Tick + 1)) : 100_000;
+                var advanced = _engine!.AdvanceUntilNextAction(_battle, budget);
+                if (BattleTimedOut) { CollectMessages(advanced.Messages); Settle(EvaluateBattleOutcome()); return; }
+                Check(advanced);
+            }
             if (Active!.Team == 1) return;
             ExecuteAiTurn(Active.Id);
         }
@@ -442,7 +458,7 @@ public static partial class BrowserBridge
             WonBattles.Add(_request!.BattleId);
             Log("战斗胜利，已按原有规则结算经验和掉落。");
         }
-        else Log("战斗结束。可返回地图重新切磋。");
+        else Log(BattleTimedOut ? "战斗超出原版时限，判为失败。" : "战斗结束。可返回地图重新切磋。");
     }
 
     private static void Check<T>(BattleCommandResult<T> result)
@@ -465,7 +481,7 @@ public static partial class BrowserBridge
             var battleHero = _battle?.Units.FirstOrDefault(u => u.Character.Id == Party.HeroCharacterId && u.Team == 1);
             var mapId = _session?.State.Location.CurrentMapId;
             var map = mapId is not null && _content is not null && _content.TryGetMap(mapId, out var definition) ? definition : null;
-            var outcome = _battle is null ? null : BattleOutcomeEvaluator.Evaluate(_battle);
+            var outcome = _battle is null ? null : EvaluateBattleOutcome();
             var snapshot = new
             {
                 ok = _error is null, error = _error,
@@ -484,6 +500,11 @@ public static partial class BrowserBridge
                     profile = _session is null ? null : new { completionCount = _session.Profile.CompletionCount, highestRound = _session.Profile.HighestRound, deathCount = _session.Profile.DeathCount },
                     achievements = (_pack["achievements"]?.AsArray() ?? []).Where(a => _session?.Profile.IsAchievementUnlocked(a!["id"]!.GetValue<string>()) == true).Select(a => a!.DeepClone()).ToArray(),
                     party = PartyView(), objectives = ObjectiveView(), shop = ShopSnapshot(),
+                    milestones = (_pack["milestones"]?.AsArray() ?? []).OfType<JsonObject>().Select(m => new {
+                        id = m["id"]!.GetValue<string>(), title = m["title"]!.GetValue<string>(), requirements = m["requirements"]?.DeepClone(),
+                        completed = _session?.State.Story.IsStoryCompleted(m["storyId"]!.GetValue<string>()) ?? false }).ToArray(),
+                    journal = _session?.State.Journal.Entries.Select((entry, index) => new { id = index,
+                        date = $"{entry.Timestamp.Year}年{entry.Timestamp.Month}月{entry.Timestamp.Day}日 {entry.Timestamp.TimeSlot.ToChineseBranch()}时", text = entry.Text }).Reverse().Take(200).ToArray(),
                     hero = hero is null ? null : new
                     {
                         id = hero.Id, name = hero.Name, level = hero.Level,
@@ -506,7 +527,7 @@ public static partial class BrowserBridge
                     {
                         name = _content!.GetBattle(_request!.BattleId).Name, width = _battle.Grid.Width, height = _battle.Grid.Height,
                         id = _request.BattleId, background = BattleMedia(_request.BattleId),
-                        activeUnitId = Active?.Id, tick = _battle.Tick, outcome = outcome!.Kind == BattleOutcomeKind.Ongoing ? "ongoing" : outcome.WinningTeam == 1 ? "win" : "lose",
+                        activeUnitId = Active?.Id, tick = _battle.Tick, tickLimit = BattleTickLimit, timedOut = BattleTimedOut, outcome = outcome!.Kind == BattleOutcomeKind.Ongoing ? "ongoing" : outcome.WinningTeam == 1 ? "win" : "lose",
                         units = _battle.Units.Select(u => new { id = u.Id, definitionId = u.Character.Definition.Id, sprite = CharacterMedia(u.Character, "characters", u.Team), portrait = CharacterMedia(u.Character, "portraits", u.Team), name = u.Character.Name, animation = CharacterAnimation(u.Character), facing = u.Facing.ToString().ToLowerInvariant(), team = u.Team, x = u.Position.X, y = u.Position.Y, hp = u.Hp, maxHp = u.MaxHp, mp = u.Mp, maxMp = u.MaxMp, alive = u.IsAlive }),
                         skills = Active?.Team == 1 ? Skills(Active.Character).Select(s => SkillView(s, Active)).ToArray() : [],
                         reachable = Active?.Team == 1 && outcome.Kind == BattleOutcomeKind.Ongoing ? _engine!.GetReachablePositions(_battle, Active.Id).Keys.Select(p => new { x = p.X, y = p.Y }).ToArray() : [],

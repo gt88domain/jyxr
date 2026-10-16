@@ -12,6 +12,7 @@ export interface PartyMember { id: string; definitionId: string; name: string; l
 export interface Shop { id: string; name: string; products: { id: string; itemId: string | null; name: string; description: string; icon?: string | null; price: number | null; premiumPrice: number | null; remaining: number | null; purchased: number; canBuy: boolean }[]; sellable: { entryNumber: number; id: string; name: string; icon?: string | null; quantity: number; price: number }[]; }
 export interface Battle {
   name: string; width: number; height: number; activeUnitId: string | null; outcome: string | null;
+  tick: number; tickLimit?: number | null; timedOut?: boolean;
   id?: string; background?: string | null;
   units: Unit[]; skills: Skill[]; reachable: {x: number; y: number}[]; logs: string[];
   targets?: {skillId: string; x: number; y: number; targetId: string | null}[];
@@ -27,6 +28,8 @@ export interface CreationState {
   preview: {portrait: string; sprite: string; silver: number; randomBonus: Record<string, number>; attributes: {id: string; label: string; value: number}[]; talents: {id: string; name: string}[]; internalSkills: {id: string; name: string; level: number}[]; items: {id: string; name: string; quantity: number; icon?: string}[]} | null;
 }
 export interface GameState {
+  milestones?: {id: string; title: string; requirements: string[]; completed: boolean}[];
+  journal?: {id: number; date: string; text: string}[] | null;
   achievements?: {id: string; name: string; description: string}[];
   ending?: {kind: 'restart' | 'next' | 'complete' | 'gameover' | 'title'; completedRound: number; targetRound: number | null} | null;
   profile?: {completionCount: number; highestRound: number; deathCount: number} | null;

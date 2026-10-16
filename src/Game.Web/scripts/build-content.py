@@ -338,7 +338,7 @@ def build(output: Path) -> None:
         "Original source and all deferred story/event reasons are archived separately. Six original newbie tasks, large-map distance/time and supported global triggers run through the current C# session.",
         "The original four-enemy training battle references missing role 经验木头人. browser_结伴练习 is explicitly authored using the real 木头人 definition, not a claim that this missing role was recovered.",
         "Converted talent/buff descriptions do not implement missing legacy battle hooks; this is an integration slice, not full original-rule parity.",
-        "Original media references are retained; browser rendering supplies its own generated art.",
+        "Jin Yong media references resolve to the uploaded original archive; extraction and animation timing coverage are audited separately.",
         "The separately uploaded X1.0.0.1 archive and its 78 Ludingji story records are not merged into the pinned baseline.",
     ]
     write_json(output / "content-build-report.json", report)

@@ -112,13 +112,17 @@ async Task Manage()
 try
 {
     Parse(BrowserBridge.Initialize(File.ReadAllText(contentPath)));
-    if(args.Contains("--resume")||args.Contains("--midgame")||args.Contains("--chapter2"))
+    if(args.Contains("--resume")||args.Contains("--midgame")||args.Contains("--chapter2")||args.Contains("--chapter3"))
     {
         Parse(BrowserBridge.ImportSave(File.ReadAllText(directory+"/normal-save.json")));
         var previous=JsonNode.Parse(File.ReadAllText(directory+"/normal-report.json"))!;
         battles=previous["battles"]!.GetValue<int>();wins=previous["wins"]!.GetValue<int>();
         foreach(var e in previous["events"]!.AsArray())events.Add(e!.DeepClone());
-        if(args.Contains("--chapter2"))
+        if(args.Contains("--chapter3"))
+        {
+            Console.WriteLine("CONTINUE actual normal-growth mainline from its unedited checkpoint");
+        }
+        else if(args.Contains("--chapter2"))
         {
             await Navigate("华山后山");await Step("令狐冲");await Manage();
             await Travel("风陵渡口");await Step("袁承志");await Manage();
@@ -151,7 +155,7 @@ try
             }
             Console.WriteLine("PARTY "+string.Join(',',(await Resolve())["party"]!.AsArray().Select(c=>c!["name"]!.GetValue<string>())));
         }
-        for(var i=0;i<(args.Contains("--chapter2")?100:24);i++)
+        for(var i=0;i<(args.Contains("--chapter2")?100:args.Contains("--chapter3")?60:24);i++)
         {
             await Travel("同福客栈");await Step("邢捕头");await Manage();
             await Travel("南贤居");await Step("南贤");await Manage();

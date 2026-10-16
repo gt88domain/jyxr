@@ -12,6 +12,9 @@
     <Compile Include="AchievementSmoke.cs" />
     <Compile Include="BattleItemSmoke.cs" />
     <Compile Include="CampaignSmoke.cs" />
+    <Compile Include="TimeoutSmoke.cs" />
+    <Compile Include="SourceFixSmoke.cs" />
+    <Compile Include="JournalSmoke.cs" />
     <Compile Include="../BrowserBridge.cs" Link="BrowserBridge.cs" />
     <Compile Include="../BrowserBridge.Systems.cs" Link="BrowserBridge.Systems.cs" />
     <Compile Include="../BrowserBridge.Packs.cs" Link="BrowserBridge.Packs.cs" />

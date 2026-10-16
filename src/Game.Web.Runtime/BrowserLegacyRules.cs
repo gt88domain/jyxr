@@ -6,6 +6,10 @@ namespace Game.Web.Runtime;
 /// <summary>Selected legacy rules explicitly enabled by the Jin Yong pack.</summary>
 public static class BrowserLegacyRules
 {
+    // X-Heroes-of-Jin-Yong 4acd2c7, main.lua.lua:69. BattleField.cs:625
+    // compares strictly greater, so tick 3000 remains playable.
+    public const int MaxBattleTicks = 3000;
+
     /// <summary>
     /// Returns the final experience gain; the Core must not apply its default
     /// experience talent multiplier a second time. Other packs keep that policy.

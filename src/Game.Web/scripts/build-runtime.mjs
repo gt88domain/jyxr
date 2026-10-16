@@ -1,5 +1,6 @@
 import {spawnSync} from 'node:child_process';
-import {existsSync, mkdirSync, cpSync, rmSync} from 'node:fs';
+import {existsSync, mkdirSync, cpSync, rmSync, mkdtempSync} from 'node:fs';
+import {tmpdir} from 'node:os';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
@@ -19,13 +20,20 @@ if (!env.DOTNET_ROOT && existsSync(path.join(cloud, 'dotnet/dotnet'))) {
 env.DOTNET_CLI_TELEMETRY_OPTOUT ??= '1';
 env.DOTNET_NOLOGO ??= '1';
 const dotnet = env.DOTNET_ROOT ? path.join(env.DOTNET_ROOT, process.platform === 'win32' ? 'dotnet.exe' : 'dotnet') : 'dotnet';
-const build = spawnSync(dotnet, ['publish', 'src/Game.Web.Runtime/Game.Web.Runtime.csproj', '-c', 'Debug', '-m:3', '--verbosity', 'minimal'], {cwd: repo, env, stdio: 'inherit'});
-if (build.error) throw build.error;
-if (build.status !== 0) process.exit(build.status ?? 1);
-const source = path.join(repo, 'src/Game.Web.Runtime/bin/Debug/net10.0/publish/wwwroot/_framework');
-if (!existsSync(path.join(source, 'dotnet.js'))) throw new Error('Browser runtime bundle was not generated. Install the .NET 10 wasm-tools workload.');
-const target = path.join(web, 'public/runtime/_framework');
-rmSync(target, {recursive: true, force: true});
-mkdirSync(path.dirname(target), {recursive: true});
-cpSync(source, target, {recursive: true});
-console.log('Browser runtime copied to public/runtime/_framework.');
+// SDK incremental publication leaves prior fingerprinted assemblies in its
+// output directory. Use a fresh destination while retaining compilation caches.
+const publishOutput = mkdtempSync(path.join(tmpdir(), 'jyxr-web-runtime-'));
+try {
+  const build = spawnSync(dotnet, ['publish', 'src/Game.Web.Runtime/Game.Web.Runtime.csproj', '-c', 'Debug', '-m:3', '--output', publishOutput, '--verbosity', 'minimal'], {cwd: repo, env, stdio: 'inherit'});
+  if (build.error) throw build.error;
+  if (build.status !== 0) throw new Error(`Browser runtime publish failed (${build.status ?? 1}).`);
+  const source = path.join(publishOutput, 'wwwroot/_framework');
+  if (!existsSync(path.join(source, 'dotnet.js'))) throw new Error('Browser runtime bundle was not generated. Install the .NET 10 wasm-tools workload.');
+  const target = path.join(web, 'public/runtime/_framework');
+  rmSync(target, {recursive: true, force: true});
+  mkdirSync(path.dirname(target), {recursive: true});
+  cpSync(source, target, {recursive: true});
+  console.log('Fresh browser runtime copied to public/runtime/_framework.');
+} finally {
+  rmSync(publishOutput, {recursive: true, force: true});
+}

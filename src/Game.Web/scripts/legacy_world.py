@@ -12,11 +12,25 @@ import xml.etree.ElementTree as ET
 
 STORY_FILES = ("storys.xml", "storysCG.xml", "storysPY.xml")
 
+# Exact, audited source typos. Never guess at unknown instructions globally.
+ACTION_SPELLING_CORRECTIONS = {
+    ("霹雳堂_小龙女", "UPGRADE……SKILL", "小龙女#玉女素心剑#5"): "UPGRADE.SKILL",
+    ("霹雳堂_达尔巴", "UPGRADE.SKILLL", "达尔巴#火焰刀法#5"): "UPGRADE.SKILL",
+    ("original_山庄风云.贾飞女主2", "DIALog", "主角#他这把佩剑不错，我就收下了。"): "DIALOG",
+}
+
 
 def expand_original(package: dict, source_maps: list[dict], source, opening: dict) -> tuple[dict, dict]:
     from expression_dsl import build_condition_expression, character_guard, quote
 
     result = copy.deepcopy(package)
+    # The original script grants 黑衣 as an identity, although resource.xml has
+    # no description/cost entry. Legacy Resource.GetTalentCost returns zero for
+    # that case and MapUI.ExecuteAction stores the ID without requiring a resource.
+    talent_metadata_fallbacks = []
+    if not any(t["id"] == "黑衣" for t in result["talents"]):
+        result["talents"].append({"id": "黑衣", "name": "黑衣", "point": 0, "description": "", "affixes": []})
+        talent_metadata_fallbacks.append("黑衣")
     records = {s.get("name"): (filename, s) for filename in STORY_FILES
                for s in ET.parse(source / filename).getroot().findall("story")}
     # NICK instructions themselves declare stable achievement IDs. Some have
@@ -140,6 +154,7 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
 
     def simple_action(action, story_id):
         kind, value = action.get("type"), action.get("value", "")
+        kind = ACTION_SPELLING_CORRECTIONS.get((story_id, kind, value), kind)
         parts = value.split("#")
         if kind == "DIALOG":
             speaker, separator, text = value.partition("#")
@@ -199,6 +214,15 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
             return [command(f"legacy_rename_heroine({quote(value)})")]
         if kind == "GET_POINT":
             return [command(f"grant_points({quote(parts[0])}, {int(parts[1])})")]
+        if kind == "MINUS_MAXPOINTS":
+            require("characters", parts[0])
+            tenths = int(parts[1])
+            if not 0 <= tenths <= 10:
+                raise ValueError(f"invalid original stat ratio: {value}")
+            # Verified in the uploaded X1.0.0.1 MapUI.ExecuteAction IL:
+            # argument * 0.1, then truncate each stat. 5 means 五成 (50%).
+            return [command(f"scale_stats({quote(parts[0])}, {tenths / 10:g})"),
+                    {"kind": "dialogue", "speaker": parts[0], "text": f"气血、内力、全属性降为【{tenths}成】！"}]
         if kind == "MAXLEVEL":
             if parts[0] not in ids["externalSkills"] | ids["internalSkills"]:
                 raise ValueError(f"unknown maxlevel skill: {parts[0]}")
@@ -370,6 +394,25 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
     result["worldTriggers"] = triggers
     metadata = result["browser"]
     metadata.update({"subtitle": "原版江湖", "chapterTitle": "原版江湖 · 教学与拜师", "description": "原版剧情、地图事件和门派流程持续迁移；西方试验暂停扩展。", "legacyTasks": tasks})
+    # Reading hints only. Trigger eligibility and rewards stay in the existing
+    # source-derived world trigger service; this never advances a quest.
+    metadata["milestones"] = []
+    for raw in ET.parse(source / "globaltrigger.xml").getroot().findall("trigger"):
+        story = raw.get("story", "")
+        if not story.startswith("mainStory_") or story not in accepted:
+            continue
+        requirements = []
+        for c in raw.findall("condition"):
+            kind, value = c.get("type"), c.get("value", "")
+            if kind == "level_greater_than":
+                character, level = value.split("#")
+                requirements.append(f"{character}达到 {level} 级")
+            elif kind == "friendCount":
+                requirements.append(f"参战队伍至少 {value} 人（含主角）")
+            elif kind == "should_finish":
+                requirements.append(f"经历「{value.removeprefix('mainStory_').removesuffix('1')}」")
+        metadata["milestones"].append({"id": story, "storyId": story,
+            "title": story.removeprefix("mainStory_").removesuffix("1"), "requirements": requirements})
     metadata["media"]["defaultEnemy"] = "art/hero-swordsman.png"
     report = {
         "baseline": {"stories": len(records), "maps": len(source_maps), "mapEvents": sum(len(u.findall('event')) for m in original_maps.values() for u in m.findall('mapunit')), "battles": len(result["battles"]) - 1, "characters": len(result["characters"]), "items": len(result["items"]), "sects": len(result["sects"]), "worldTriggers": 21},
@@ -377,6 +420,12 @@ def expand_original(package: dict, source_maps: list[dict], source, opening: dic
         "structurallyMigrated": {"originalStories": len(accepted), "maps": len(maps), "mapEvents": accepted_events, "worldTriggers": len(triggers), "newbieTasks": len(tasks)},
         "deferredStories": failures, "directStoryFailures": direct_failures,
         "achievementTextFallbacks": sorted(missing_achievement_descriptions),
+        "talentMetadataFallbacks": talent_metadata_fallbacks,
+        "instructionEvidence": {"MINUS_MAXPOINTS": {"source": "uploaded X1.0.0.1 Assembly-CSharp.dll / MapUI.ExecuteAction",
+            "sha256": "a9d1456b1fa5e09f9e39a18c66564612da2aa4c7c83db6ff34430d436b872b4a", "ilRange": "0x153b..0x16eb", "argumentUnit": "tenths retained, not percent deducted"}},
+        "sourceCorrections": [{"story": story, "originalType": original, "value": value, "normalizedType": normalized}
+                              for (story, original, value), normalized in ACTION_SPELLING_CORRECTIONS.items()
+                              if any(a.get("type") == original and a.get("value") == value for a in records[story][1].findall("action"))],
         "deferredMapEvents": deferred_events, "deferredWorldTriggers": deferred_triggers, "brokenBattleReferences": broken_battles,
         "actionCounts": dict(Counter(a.get("type") for _, s in records.values() for a in s.findall("action"))),
         "notes": ["Structural compilation and dependency closure do not prove full playability or original-rule equivalence.", "All 14 verified opening segments remain unchanged. Browser-authored practice IDs remain for existing saves.", "All original destinations use Core large-map distance and time progression; media resolution is a separate build step.", "Unsupported commands, malformed source and missing references are quarantined with their callers; no successful no-op completion."]}
