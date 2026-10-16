@@ -62,7 +62,7 @@ internal static class AdvancedRules
                 case "清心普善咒": case "阿碧的歌声":
                     Check(!caster.HasBuff("中毒") && !ally.HasBuff("中毒") && enemy.HasBuff("中毒") && ally.HasBuff("攻击强化"), name + " purges all allied debuffs while keeping positive/enemy state");break;
                 case "吴侬软语": Check(!enemy.HasBuff("攻击强化") && enemy.HasBuff("中毒") && !enemy.HasBuff("晕眩"), "soft song removes enemy buffs but unlearned talent grants no stun");break;
-                case "武穆兵法": Check(new[] { "攻击强化", "防御强化", "神速攻击" }.All(b => ally.TryGetBuff(b)?.Level == 5), "武穆 source team buffs; triple-strike still deferred");break;
+                case "武穆兵法": Check(new[] { "攻击强化", "防御强化", "神速攻击" }.All(b => ally.TryGetBuff(b)?.Level == 5), "武穆 source team buffs; aggregate strikes checked separately");break;
                 case "解毒": Check(!ally.HasBuff("中毒") && enemy.HasBuff("中毒"), "detox keeps enemy poison in the same area");break;
                 case "六合劲": Check(enemy.Rage == 0 && enemy.ActionGauge == 0, "六合 clears both rage and action gauge");break;
                 case "飞星术": Check(state.Units.All(u => u.TryGetBuff("中毒") is { Level: >= 1 and <= 10, RemainingTurns: >= 3 and <= 6 }), "飞星 poisons all factions including caster");break;

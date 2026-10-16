@@ -130,6 +130,7 @@ public sealed record TraitAffix(TraitId TraitId) : AffixDefinition;
 [JsonDerivedType(typeof(ContextBuffNegativeBattleHookConditionDefinition), "context_buff_negative")]
 [JsonDerivedType(typeof(ContextUnitHpRatioBattleHookConditionDefinition), "context_unit_hp_ratio")]
 [JsonDerivedType(typeof(ContextUnitEffectiveTalentBattleHookConditionDefinition), "context_unit_effective_talent")]
+[JsonDerivedType(typeof(ContextUnitBuffBattleHookConditionDefinition), "context_unit_buff")]
 [JsonDerivedType(typeof(ContextUnitEquippedInternalSkillBattleHookConditionDefinition), "context_unit_equipped_internal_skill")]
 [JsonDerivedType(typeof(ContextUnitRelationBattleHookConditionDefinition), "context_unit_relation")]
 [JsonDerivedType(typeof(ContextUnitRoleBattleHookConditionDefinition), "context_unit_role")]
@@ -176,7 +177,12 @@ public sealed record ContextUnitEffectiveTalentBattleHookConditionDefinition(
     // Omitted means the hook owner, preserving existing content behavior.
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public BattleHookContextUnitRole? Role { get; init; }
+
+    public bool Absent { get; init; }
 }
+
+public sealed record ContextUnitBuffBattleHookConditionDefinition(
+    IReadOnlyList<string> BuffIds, bool Absent = false) : BattleHookConditionDefinition;
 
 public sealed record ContextUnitEquippedInternalSkillBattleHookConditionDefinition(
     IReadOnlyList<string> InternalSkillIds) : BattleHookConditionDefinition;

@@ -3,6 +3,7 @@ export interface Settings {
   battleSpeed: 1 | 2 | 4;
   showGrid: boolean;
   showDamage: boolean;
+  battleLighting: boolean;
   reducedMotion: boolean;
   largeText: boolean;
 }
@@ -10,7 +11,7 @@ export interface Settings {
 const key = 'jyxr.preferences.v1';
 const defaults: Settings = {
   battleMode: 'manual', battleSpeed: 1, showGrid: true, showDamage: true,
-  reducedMotion: matchMedia('(prefers-reduced-motion: reduce)').matches,
+  battleLighting: true, reducedMotion: matchMedia('(prefers-reduced-motion: reduce)').matches,
   largeText: false,
 };
 
@@ -20,6 +21,7 @@ function normalize(value: Partial<Settings>): Settings {
     battleSpeed: value.battleSpeed === 2 || value.battleSpeed === 4 ? value.battleSpeed : 1,
     showGrid: typeof value.showGrid === 'boolean' ? value.showGrid : defaults.showGrid,
     showDamage: typeof value.showDamage === 'boolean' ? value.showDamage : defaults.showDamage,
+    battleLighting: typeof value.battleLighting === 'boolean' ? value.battleLighting : defaults.battleLighting,
     reducedMotion: typeof value.reducedMotion === 'boolean' ? value.reducedMotion : defaults.reducedMotion,
     largeText: typeof value.largeText === 'boolean' ? value.largeText : defaults.largeText,
   };

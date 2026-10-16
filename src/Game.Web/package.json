@@ -28,6 +28,7 @@
     "test:battle-return": "node tests/battle-return-smoke.mjs",
     "test:experience": "node tests/experience-smoke.mjs",
     "test:advanced-skills": "node tests/advanced-skills-smoke.mjs",
+    "test:progress": "node tests/progress-smoke.mjs",
     "assets:restore": "python3 scripts/art-bundle.py restore"
   },
   "dependencies": { "phaser": "3.90.0" },

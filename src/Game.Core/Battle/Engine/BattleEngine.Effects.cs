@@ -198,16 +198,40 @@ public sealed partial class BattleEngine
             return;
         }
 
-        var chance = Math.Clamp(
-            (effect.Chance + effect.ChancePerBuffLevel * (context.Buff?.Level ?? 0)) / 100d,
-            0d,
-            1d);
+        var chance = (effect.Chance + effect.ChancePerBuffLevel * (context.Buff?.Level ?? 0)) / 100d;
+        var maximumStrikes = effect.DamageFactors.Count;
+        if (effect.TalentContributions is not null || effect.BuffContributions is not null)
+        {
+            maximumStrikes = 0;
+            foreach (var contribution in effect.TalentContributions ?? [])
+            {
+                if (!context.Unit.Character.HasEffectiveTalent(contribution.TalentId)) continue;
+                maximumStrikes = Math.Max(maximumStrikes, 1);
+                chance += contribution.SinglePrecision
+                    ? (double)((float)contribution.ChancePerLevel * context.Unit.Character.Level)
+                    : contribution.ChancePerLevel * context.Unit.Character.Level;
+                if (contribution.RandomMaximum > 0) chance += _random.NextDouble() * contribution.RandomMaximum;
+            }
+            // Buff insertion order matters: a terminal contribution stops later buffs.
+            foreach (var buff in context.Unit.ActiveBuffs)
+            {
+                var contribution = effect.BuffContributions?.FirstOrDefault(value => value.BuffId == buff.Definition.Id);
+                if (contribution is null) continue;
+                maximumStrikes = Math.Max(maximumStrikes, contribution.MaximumStrikes);
+                var upper = contribution.SinglePrecision
+                    ? (double)((float)contribution.RandomMaximumPerLevel * buff.Level)
+                    : contribution.RandomMaximumPerLevel * buff.Level;
+                chance += _random.NextDouble() * upper;
+                if (contribution.StopAfterMatch) break;
+            }
+        }
+        chance = Math.Clamp(chance, 0d, 1d);
         if (chance <= 0d)
         {
             return;
         }
 
-        foreach (var factor in effect.DamageFactors)
+        foreach (var factor in effect.DamageFactors.Take(maximumStrikes))
         {
             if (!target.IsAlive)
             {
@@ -232,6 +256,8 @@ public sealed partial class BattleEngine
                 amount,
                 context.Skill,
                 context.IsCritical,
+                runBeforeDamageApplied: effect.RunDamageHooks,
+                runAfterDamageApplied: effect.RunDamageHooks,
                 eventTiming: context.Timing,
                 detail: "extra_strike");
             if (damage.ActualAmount <= 0)

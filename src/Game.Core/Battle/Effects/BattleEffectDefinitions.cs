@@ -166,7 +166,17 @@ public sealed record ExtraStrikeBattleHookEffectDefinition(
     BattleUnitSelectorDefinition Target,
     IReadOnlyList<double> DamageFactors,
     double Chance = 0d,
-    double ChancePerBuffLevel = 0d) : BattleEffectDefinition, ITargetedBattleEffectDefinition;
+    double ChancePerBuffLevel = 0d,
+    IReadOnlyList<ExtraStrikeTalentContribution>? TalentContributions = null,
+    IReadOnlyList<ExtraStrikeBuffContribution>? BuffContributions = null,
+    bool RunDamageHooks = true) : BattleEffectDefinition, ITargetedBattleEffectDefinition;
+
+public sealed record ExtraStrikeTalentContribution(
+    string TalentId, double ChancePerLevel = 0d, double RandomMaximum = 0d, bool SinglePrecision = false);
+
+public sealed record ExtraStrikeBuffContribution(
+    string BuffId, int MaximumStrikes = 1, double RandomMaximumPerLevel = .1d,
+    bool StopAfterMatch = false, bool SinglePrecision = false);
 
 public sealed record CustomBattleEffectDefinition(
     string EffectId,

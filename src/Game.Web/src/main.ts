@@ -15,6 +15,7 @@ import {miniGameView, MiniGameController} from './minigame';
 import type {PanelName, InventoryFilter} from './panels';
 import {readSettings, writeSettings, applySettings} from './settings';
 import type {Settings} from './settings';
+import {estimatedProgress, restorationProgressView} from './restoration-progress';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 let state: GameState, slot: SaveSlot | undefined, busy = false, board: Board | undefined;
@@ -56,7 +57,10 @@ function topbar(inGame = true) {
   return `<header class="topbar"><button class="wordmark" data-action="guide" aria-label="游玩指南"><span class="seal small">${e(pack.title.slice(0,1))}</span><span>${e(pack.title)}<small>${e(pack.subtitle)}</small></span></button>
     <nav aria-label="游戏菜单">${inGame ? `<span class="chapter">${e(state.map?.name)}</span><button class="save-button" data-action="save" ${state.phase !== 'world' ? 'disabled' : ''}>${icon('save')}<span>保存进度</span></button>` : ''}<button class="icon-button" data-action="worlds" aria-label="切换世界">${icon('leaf')}</button><button class="icon-button" data-action="settings" aria-label="设置">${icon('settings')}</button><button class="icon-button" data-action="guide" aria-label="帮助">${icon('help')}</button></nav></header>${inGame ? `<nav class="system-nav" aria-label="角色与世界设置">${menus.map(([action,symbol,label]) => `<button data-action="${action}">${icon(symbol)}<span>${e(label)}</span></button>`).join('')}</nav>` : ''}`;
 }
-function title() {return topbar(false) + titleView(state, slot, packs);}
+function title() {
+  const progress = state.pack.id === 'jyx' ? `<div class="restoration-callout"><button class="restoration-entry" data-action="progress">原版复原 · 约 ${estimatedProgress}%<small>工程估算 · 查看进度、已知问题与改善建议 →</small></button></div>` : '';
+  return topbar(false) + progress + titleView(state, slot, packs);
+}
 function heroCard() {
   const hero = state.hero;
   return `<aside class="hero-card paper"><div class="eyebrow">旅途行者</div><div class="hero-heading"><div class="avatar">${hero.portrait ? `<img src="${e(assetUrl(hero.portrait))}" alt="">` : e(hero.name.slice(0, 1))}</div><div><h2>${e(hero.name)}</h2><span>旅程初始 · 第 ${hero.level} 级</span></div></div><div class="vital"><label>气血 <span>${hero.hp} <small>/ ${hero.maxHp}</small></span></label><div class="bar hp"><i style="width:${100 * hero.hp / hero.maxHp}%"></i></div></div><div class="vital"><label>${e(state.pack.terms?.energy || '内力')} <span>${hero.mp} <small>/ ${hero.maxMp}</small></span></label><div class="bar mp"><i style="width:${100 * hero.mp / hero.maxMp}%"></i></div></div><div class="hero-meta"><span>随身${e(state.pack.currencyName || '钱币')}</span><strong>${state.silver.toLocaleString()} <small>${e(currency(state))}</small></strong></div><button class="text-button" data-action="manage-character" data-id="${e(hero.id)}">查看人物 ${icon('arrow')}</button></aside>`;
@@ -76,7 +80,7 @@ function updateBattle() {
   selectedSkill = updateBattleView({
     state, busy: busy || modalOpen(), selectedSkill, autoBattle, paused: battlePaused || modalOpen(), intent: battleIntent,
     battleSpeed: settings.battleSpeed, showGrid: settings.showGrid,
-    showDamage: settings.showDamage, reducedMotion: settings.reducedMotion,
+    showDamage: settings.showDamage, battleLighting: settings.battleLighting, reducedMotion: settings.reducedMotion,
   }, board);
 }
 function modalOpen() {return !!document.querySelector('#game-modal[open]');}
@@ -149,6 +153,16 @@ function modal(titleText: string, content: string, wide = false) {
   node.addEventListener('close', () => {activePanel = null; if (node.classList.contains('creation-modal') && state.creation && !busy) void command({type: 'cancelCreation'}); if (screen === 'battle') updateBattle(); scheduleBattle();});
   node.addEventListener('click', event => {if (event.target === node) node.close();});
   if (screen === 'battle') updateBattle();
+}
+async function showRestorationProgress() {
+  modal('原版复原进度', '<div data-restoration-report aria-live="polite">正在读取进度记录…</div>', true);
+  const target = document.querySelector<HTMLElement>('[data-restoration-report]')!;
+  try {
+    const content = await restorationProgressView();
+    if (target.isConnected && modalOpen()) target.innerHTML = content;
+  } catch (error) {
+    if (target.isConnected && modalOpen()) target.textContent = error instanceof Error ? error.message : '进度记录暂时无法读取。';
+  }
 }
 function createCharacter() {
   modal('为旅人命名', `<p class="modal-intro">${e(state.pack.title)}的故事，从你的名字开始。</p><form id="character-form"><label class="form-label" for="hero-name">角色姓名</label><input id="hero-name" name="name" value="${e(state.pack.defaultName || '旅人')}" minlength="1" maxlength="12" autocomplete="off" required autofocus><label class="form-label" for="difficulty">行走难度</label><select id="difficulty" name="difficulty"><option value="normal">普通 · 初次冒险</option><option value="hard">困难 · 迎接挑战</option><option value="crazy">炼狱 · 千锤百炼</option></select><p class="field-note">难度影响战斗规则与历练所得。</p><button class="button primary full-width" type="submit">开始旅程 ${icon('arrow')}</button></form>`);
@@ -289,7 +303,8 @@ document.addEventListener('click', event => {
     const target=document.querySelector<HTMLSelectElement>(`.battle-item-target[data-entry-number="${button.dataset.entryNumber}"]`);
     void manage({type:'useItem',entryNumber:Number(button.dataset.entryNumber),...(target?{targetId:target.value}:{})},'物品已使用。');
   }
-  else if (action === 'guide') modal('行走指南', '<p class="guide-text">点击地图上的人物或地点继续剧情，在“目标”查看当前章节。获得修炼书后，在修炼面板选择；运行的心法与正在研习的书可分别调整。装备和补给可在行囊使用，伙伴可在队伍查看。<br><br>手动战斗时，青色格表示可移动的位置。选择战技，点击橙色目标格施展；有些招式可对自己使用。也可切换自动战斗、调整倍速，或暂停观察。<br><br>打开人物、设置等面板时战斗暂停。离开战斗、对话和商店后可保存进度。两套世界分别存档；清除网站数据前请在行囊导出备份。</p>');
+  else if (action === 'progress') void showRestorationProgress();
+  else if (action === 'guide') modal('行走指南', '<p class="guide-text">点击地图上的人物或地点继续剧情，在“目标”查看当前章节。获得修炼书后，在修炼面板选择；运行的心法与正在研习的书可分别调整。装备和补给可在行囊使用，伙伴可在队伍查看。<br><br>手动战斗时，青色格表示可移动的位置。选择战技，点击橙色目标格施展；有些招式可对自己使用。也可切换自动战斗、调整倍速，或暂停观察。<br><br>打开人物、设置等面板时战斗暂停。离开战斗、对话和商店后可保存进度。两套世界分别存档；清除网站数据前请在行囊导出备份。</p>' + (state.pack.id === 'jyx' ? '<button class="button outline full-width" data-action="progress">查看复原进度、问题与改善建议</button>' : ''));
   else if (action === 'download-save') void (async () => {
     try {const data = await exportSave(); const parsed = JSON.parse(data); if (parsed.error || parsed.ok === false) throw new Error(parsed.error || '无法导出当前进度。'); const href = URL.createObjectURL(new Blob([data], {type: 'application/json'})); const link = document.createElement('a'); link.href = href; link.download = `${state.pack.title}-${state.hero.name}.json`; link.click(); setTimeout(() => URL.revokeObjectURL(href), 1000);}
     catch (error) {console.error(error); toast('导出未能完成，请先离开战斗。');}
@@ -306,8 +321,8 @@ document.addEventListener('change', event => {
   } else if (name === 'battleSpeed') {
     const speed = Number(control.value);
     if (speed === 1 || speed === 2 || speed === 4) settings.battleSpeed = speed;
-  } else if (control instanceof HTMLInputElement && ['showGrid', 'showDamage', 'reducedMotion', 'largeText'].includes(name)) {
-    settings[name as 'showGrid' | 'showDamage' | 'reducedMotion' | 'largeText'] = control.checked;
+  } else if (control instanceof HTMLInputElement && ['showGrid', 'showDamage', 'battleLighting', 'reducedMotion', 'largeText'].includes(name)) {
+    settings[name as 'showGrid' | 'showDamage' | 'battleLighting' | 'reducedMotion' | 'largeText'] = control.checked;
   }
   if (!writeSettings(settings)) toast('设置已在本次游玩生效，但此浏览器暂不能保存设置。');
   if (screen === 'battle') updateBattle();

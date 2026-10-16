@@ -1,0 +1,8 @@
+.restoration-entry{display:block;margin:14px 0;padding:10px 14px;border:1px solid #bdab75;border-radius:6px;background:#263e34;color:#eadcb5;max-width:100%;text-align:left;cursor:pointer;font:inherit}
+.restoration-entry small{display:block;margin-top:4px;color:#c1cbbd;font-size:12px}
+.restoration-report{font-size:14px;line-height:1.75;overflow-wrap:anywhere}
+.restoration-total{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}.restoration-total strong{font-size:38px;color:#665b32}.restoration-total span{color:#756d58}
+.restoration-counts{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin:18px 0}.restoration-counts>span{padding:10px;background:#e5e2cf;border-radius:5px}.restoration-counts b{display:block}
+.restoration-category{padding:14px 0;border-bottom:1px solid #cfcbb6}.restoration-category h3{display:flex;justify-content:space-between;gap:10px;margin:0;font-size:16px}.restoration-category progress{width:100%;height:10px;accent-color:#586b4a}.restoration-category p{margin:6px 0}.restoration-remaining,.restoration-category small{color:#766a53}
+.restoration-section{margin-top:24px}.restoration-section h3{font-size:17px}.restoration-section ul{padding-left:20px}.restoration-section li{margin:8px 0}
+.restoration-callout{max-width:1280px;margin:auto;padding:0 24px}

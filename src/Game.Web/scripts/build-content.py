@@ -272,6 +272,8 @@ def build(output: Path) -> None:
     report["commonRuleEffects"] = apply_common_rules(package)
     from legacy_advanced_rules import apply_advanced_rules
     report["advancedRuleEffects"] = apply_advanced_rules(package)
+    from legacy_combination_rules import apply_combination_rules
+    report["combinationRuleEffects"] = apply_combination_rules(package)
     from browser_packs import assemble_jyx
     package = assemble_jyx(package, source_maps, SOURCE, script)
     package["browser"]["chestMapId"] = "松鼠旅馆"
@@ -285,6 +287,8 @@ def build(output: Path) -> None:
     from legacy_rule_audit import audit_rules
     rule_audit = audit_rules(package, REPO)
     write_json(output / "original-battle-rule-audit.json", rule_audit)
+    from restoration_progress import build_progress
+    write_json(output / "restoration-progress.json", build_progress(original_audit, rule_audit))
     report["battleRuleConfiguration"] = {key: {"total": value["total"], "states": value["states"]} for key, value in rule_audit["sections"].items()}
     write_json(output / "original-migration-audit.json", original_audit)
     write_json(output / "original-story-source.json", {

@@ -99,16 +99,17 @@ async function settingsPersistence() {
   await page.locator('[name="battleSpeed"]').selectOption('2');
   await page.locator('[name="showGrid"]').uncheck();
   await page.locator('[name="showDamage"]').uncheck();
+  await page.locator('[name="battleLighting"]').uncheck();
   await page.locator('[name="reducedMotion"]').check();
   await page.locator('[name="largeText"]').check();
-  const expected = {battleMode: 'manual', battleSpeed: '2', showGrid: false, showDamage: false, reducedMotion: true, largeText: true};
+  const expected = {battleMode: 'manual', battleSpeed: '2', showGrid: false, showDamage: false, battleLighting: false, reducedMotion: true, largeText: true};
   assert.deepEqual(await readSettingsForm(), expected);
   await noOverflow('desktop settings');
   await click('[data-action="close-modal"]');
   await page.reload({waitUntil: 'networkidle'});
   await visible('[data-action="new"]');
   await click('[data-action="settings"]');
-  assert.deepEqual(await readSettingsForm(), expected, 'All six settings must survive a real browser reload');
+  assert.deepEqual(await readSettingsForm(), expected, 'All seven settings must survive a real browser reload');
   assert.equal(await page.locator('html').evaluate(element => element.classList.contains('large-text')), true);
   await page.setViewportSize({width: 375, height: 812});
   await noOverflow('mobile large-text settings');
@@ -116,10 +117,11 @@ async function settingsPersistence() {
   // Restore the full visual presentation before checking the first battle.
   await page.locator('[name="showGrid"]').check();
   await page.locator('[name="showDamage"]').check();
+  await page.locator('[name="battleLighting"]').check();
   await page.locator('[name="reducedMotion"]').uncheck();
   await page.locator('[name="largeText"]').uncheck();
   await click('[data-action="close-modal"]');
-  pass('six settings persist across reload and remain usable at 375px', expected);
+  pass('seven settings persist across reload and remain usable at 375px', expected);
 }
 function managementState(state) {
   const hero = state.hero;

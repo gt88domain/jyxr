@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import {existsSync, readFileSync, readdirSync} from 'node:fs';
 
 const versionHash = createHash('sha256');
-for (const relative of ['public/runtime/_framework/dotnet.js', 'public/data/content-package.json', 'public/runtime-loader.js']) {
+for (const relative of ['public/runtime/_framework/dotnet.js', 'public/data/content-package.json', 'public/data/restoration-progress.json', 'public/runtime-loader.js']) {
   const path = new URL(relative, import.meta.url);
   if (existsSync(path)) versionHash.update(readFileSync(path));
 }

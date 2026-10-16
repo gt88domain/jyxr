@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
 import {createHarness} from './ui-harness.mjs';
 
 const h=await createHarness('advanced-skills-smoke');
@@ -11,6 +12,16 @@ async function cell(point){
 }
 try{
   await page.goto(report.baseURL,{waitUntil:'networkidle'});await visible('[data-action="new"]');
+  await click('[data-action="progress"]');await visible('.restoration-report');
+  assert.match(await page.locator('.restoration-total').innerText(),/65%/);
+  assert.match(await page.locator('.restoration-report').innerText(),/工程估算[\s\S]*不是通关率/);
+  for(const text of ['原版值得保留的优点','当前问题与流程缺点','改善想法与下一阶段建议'])
+    assert.ok((await page.locator('.restoration-report').innerText()).includes(text));
+  assert.equal(await page.locator('.restoration-category progress').count(),6);
+  pass('visible approximate progress distinguishes estimates from structural counts and lists strengths, problems and suggestions');
+  await page.setViewportSize({width:375,height:812});await noOverflow('progress and improvement report at 375px');
+  await page.screenshot({path:output+'restoration-progress-mobile.png',fullPage:true});
+  await closeModal();await page.setViewportSize({width:1440,height:900});
   await click('[data-action="settings"]');await page.locator('select[name="battleMode"]').selectOption('manual');await closeModal();
   await page.locator('#import-file').setInputFiles(output+'advanced-ui-save.json');
   await page.waitForFunction(()=>document.querySelector('#toast')?.textContent==='存档已导入。');await ready();
@@ -49,6 +60,20 @@ try{
     await click('[data-action="rest"]');current=await state();
   }
   assert.ok(healed&&buffed,'Both original support effects must execute through visible controls');
+  await click('[data-action="battle-pause"]');
+  const unchanged=await state();
+  const canvas=page.locator('#board-viewport canvas');
+  assert.equal(await page.locator('#board-viewport').getAttribute('data-lighting'),'on');
+  const lit=await canvas.screenshot();
+  await click('[data-action="settings"]');await page.locator('[name="battleLighting"]').uncheck();await closeModal();
+  assert.equal(await page.locator('#board-viewport').getAttribute('data-lighting'),'off');
+  const unlit=await canvas.screenshot();
+  assert.notEqual(createHash('sha256').update(lit).digest('hex'),createHash('sha256').update(unlit).digest('hex'),'Disabling light must change the actual rendered canvas');
+  assert.deepEqual((await state()).battle,unchanged.battle,'Light settings must not change HP, tick, buffs, actions or outcomes');
+  await click('[data-action="settings"]');await page.locator('[name="battleLighting"]').check();await closeModal();
+  assert.equal(await page.locator('#board-viewport').getAttribute('data-lighting'),'on');
+  await page.screenshot({path:output+'battle-lighting-desktop.png',fullPage:true});
+  pass('actual canvas lighting can be disabled and restored while paused without changing battle state');
   await page.setViewportSize({width:375,height:812});await noOverflow('original support skill battle at 375px');
   await page.screenshot({path:output+'advanced-support-mobile.png',fullPage:true});
 }catch(error){failure=error;}

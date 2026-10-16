@@ -1,8 +1,9 @@
 import Phaser from 'phaser';
 import {assetUrl} from './content';
 import type {Battle, Unit} from './bridge';
+import {BattleLighting} from './battle-lighting';
 
-export interface BoardOptions {selectedSkillId?: string; speed?: number; manual?: boolean; busy?: boolean; paused?: boolean; showGrid?: boolean; showDamage?: boolean; reducedMotion?: boolean; intent?: 'move' | 'attack';}
+export interface BoardOptions {selectedSkillId?: string; speed?: number; manual?: boolean; busy?: boolean; paused?: boolean; showGrid?: boolean; showDamage?: boolean; battleLighting?: boolean; reducedMotion?: boolean; intent?: 'move' | 'attack';}
 type VisualBattle = Battle & {targets?: {x: number; y: number; skillId: string}[]};
 interface Pawn {container: Phaser.GameObjects.Container; art: Phaser.GameObjects.Sprite | Phaser.GameObjects.Image | Phaser.GameObjects.Text; ring: Phaser.GameObjects.Graphics; bars: Phaser.GameObjects.Graphics; name: Phaser.GameObjects.Text; previous: Unit;}
 
@@ -20,6 +21,7 @@ class BattleScene extends Phaser.Scene {
   private pawns = new Map<string, Pawn>();
   private eventSequence = -1;
   private spriteKeys = new Map<string, string>();
+  private lighting?: BattleLighting;
   constructor(private onCell: (x: number, y: number) => void, private parentElement: HTMLElement, initial: Battle) {
     super('battle'); this.battle = initial;
   }
@@ -51,6 +53,7 @@ class BattleScene extends Phaser.Scene {
     }
     this.cameras.main.setBackgroundColor('#52614a');
     if (this.textures.exists('background')) this.background = this.add.image(0, 0, 'background').setDepth(-10);
+    this.lighting = new BattleLighting(this);
     this.ground = this.add.graphics().setDepth(-1);
     this.hover = this.add.graphics().setDepth(6);
     this.scale.on('resize', () => this.draw(true));
@@ -68,7 +71,13 @@ class BattleScene extends Phaser.Scene {
     });
     this.draw(true);
   }
-  updateBattle(battle: Battle, options: BoardOptions) {this.battle = battle; this.options = options; if (this.sys.isActive()) this.draw();}
+  updateBattle(battle: Battle, options: BoardOptions) {
+    this.battle = battle; this.options = options;
+    if (this.sys.isActive()) {
+      if (options.paused) this.tweens.pauseAll();else this.tweens.resumeAll();
+      this.draw();
+    }
+  }
   private canAct() {return !!this.battle && !this.options.busy && this.options.manual !== false && this.battle.units.some(unit => unit.id === this.battle!.activeUnitId && unit.team === 1);}
   private geometry() {return boardGeometry(this.scale.width, this.scale.height, this.battle!.width, this.battle!.height);}
   private cellAt(pointer: Phaser.Input.Pointer) {
@@ -81,6 +90,12 @@ class BattleScene extends Phaser.Scene {
     if (!this.battle || !this.ground) return;
     const b = this.battle, {cell, left, top} = this.geometry();
     this.parentElement.dataset.boardGeometry = JSON.stringify({cell, left, top, width: b.width, height: b.height});
+    const active = b.units.find(unit => unit.id === b.activeUnitId && unit.alive);
+    const lit = this.options.battleLighting !== false;
+    this.lighting?.update(this.scale.width, this.scale.height,
+      left + ((active?.x ?? b.width / 2) + .5) * cell,
+      top + ((active?.y ?? b.height / 2) + .7) * cell, cell, lit);
+    this.parentElement.dataset.lighting = lit ? 'on' : 'off';
     if (this.background) {
       this.background.setPosition(this.scale.width / 2, this.scale.height / 2);
       this.background.setScale(Math.max(this.scale.width / this.background.width, this.scale.height / this.background.height));
@@ -188,6 +203,9 @@ class BattleScene extends Phaser.Scene {
       if (event.kind === 'SkillCast') this.animate(pawn, 'attack');
       else if (event.kind === 'Damaged') this.animate(pawn, 'be');
       const x = left + (pawn.previous.x + .5) * cell, y = top + (pawn.previous.y + .7) * cell;
+      if (!reduced && !this.options.paused && this.options.battleLighting !== false &&
+          (event.kind === 'Damaged' || event.kind === 'Healed' || event.kind === 'Lifesteal') && (event.amount ?? 0) > 0)
+        this.lighting?.flash(x, y - cell * .35, cell, event.kind !== 'Damaged', this.options.speed || 1);
       let text = '', color = '#fff1d1';
       if (event.kind === 'Damaged' && event.amount != null) {
         text = `${event.critical ? '暴击 ' : ''}−${event.amount}`;

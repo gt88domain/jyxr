@@ -745,6 +745,11 @@ public sealed partial class JsonContentLoader
                     }
 
                     break;
+                case ContextUnitBuffBattleHookConditionDefinition buffCondition:
+                    Ensure(buffCondition.BuffIds is { Count: > 0 }, $"{ownerName} buff condition is empty.");
+                    foreach (var id in buffCondition.BuffIds)
+                        Ensure(!string.IsNullOrWhiteSpace(id) && (repository is null || repository.Buffs.ContainsKey(id)), $"{ownerName} references missing buff '{id}'.");
+                    break;
                 case ContextUnitEffectiveTalentBattleHookConditionDefinition talentCondition:
                     Ensure(talentCondition.TalentIds.Count > 0,
                         $"{ownerName} has battle hook '{hook.Timing}' effective talent condition without talentIds.");
@@ -1012,6 +1017,22 @@ public sealed partial class JsonContentLoader
                 {
                     Ensure(damageFactor > 0d,
                         $"{ownerName} extra_strike effect has invalid damage factor '{damageFactor}'.");
+                }
+                foreach (var contribution in extraStrike.TalentContributions ?? [])
+                {
+                    Ensure(!string.IsNullOrWhiteSpace(contribution.TalentId), $"{ownerName} extra strike talent is blank.");
+                    Ensure(repository is null || repository.Talents.ContainsKey(contribution.TalentId), $"{ownerName} extra strike talent '{contribution.TalentId}' is missing.");
+                    Ensure(double.IsFinite(contribution.ChancePerLevel) && contribution.ChancePerLevel >= 0 &&
+                        double.IsFinite(contribution.RandomMaximum) && contribution.RandomMaximum >= 0,
+                        $"{ownerName} extra strike talent contribution is invalid.");
+                }
+                foreach (var contribution in extraStrike.BuffContributions ?? [])
+                {
+                    Ensure(!string.IsNullOrWhiteSpace(contribution.BuffId), $"{ownerName} extra strike buff is blank.");
+                    Ensure(repository is null || repository.Buffs.ContainsKey(contribution.BuffId), $"{ownerName} extra strike buff '{contribution.BuffId}' is missing.");
+                    Ensure(contribution.MaximumStrikes > 0 && contribution.MaximumStrikes <= damageFactors.Count &&
+                        double.IsFinite(contribution.RandomMaximumPerLevel) && contribution.RandomMaximumPerLevel >= 0,
+                        $"{ownerName} extra strike buff contribution is invalid.");
                 }
                 ValidateBattleUnitSelector(extraStrike.Target!, ownerName, null);
                 break;

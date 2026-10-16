@@ -6,6 +6,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="AdvancedRules.cs" />
+    <Compile Include="CombinationRules.cs" />
     <Compile Include="../../BrowserLegacyRules.cs" Link="BrowserLegacyRules.cs" />
     <ProjectReference Include="../../../Game.Core/Game.Core.csproj" />
     <ProjectReference Include="../../../Game.Content/Game.Content.csproj" />
