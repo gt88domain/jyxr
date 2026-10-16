@@ -55,13 +55,13 @@ function topbar(inGame = true) {
 function title() {return topbar(false) + titleView(state, slot, packs);}
 function heroCard() {
   const hero = state.hero;
-  return `<aside class="hero-card paper"><div class="eyebrow">旅途行者</div><div class="hero-heading"><div class="avatar">${e(hero.name.slice(0, 1))}</div><div><h2>${e(hero.name)}</h2><span>旅程初始 · 第 ${hero.level} 级</span></div></div><div class="vital"><label>气血 <span>${hero.hp} <small>/ ${hero.maxHp}</small></span></label><div class="bar hp"><i style="width:${100 * hero.hp / hero.maxHp}%"></i></div></div><div class="vital"><label>${e(state.pack.terms?.energy || '内力')} <span>${hero.mp} <small>/ ${hero.maxMp}</small></span></label><div class="bar mp"><i style="width:${100 * hero.mp / hero.maxMp}%"></i></div></div><div class="hero-meta"><span>随身${e(state.pack.currencyName || '钱币')}</span><strong>${state.silver.toLocaleString()} <small>${e(currency(state))}</small></strong></div><button class="text-button" data-action="character">查看人物 ${icon('arrow')}</button></aside>`;
+  return `<aside class="hero-card paper"><div class="eyebrow">旅途行者</div><div class="hero-heading"><div class="avatar">${hero.portrait ? `<img src="${e(assetUrl(hero.portrait))}" alt="">` : e(hero.name.slice(0, 1))}</div><div><h2>${e(hero.name)}</h2><span>旅程初始 · 第 ${hero.level} 级</span></div></div><div class="vital"><label>气血 <span>${hero.hp} <small>/ ${hero.maxHp}</small></span></label><div class="bar hp"><i style="width:${100 * hero.hp / hero.maxHp}%"></i></div></div><div class="vital"><label>${e(state.pack.terms?.energy || '内力')} <span>${hero.mp} <small>/ ${hero.maxMp}</small></span></label><div class="bar mp"><i style="width:${100 * hero.mp / hero.maxMp}%"></i></div></div><div class="hero-meta"><span>随身${e(state.pack.currencyName || '钱币')}</span><strong>${state.silver.toLocaleString()} <small>${e(currency(state))}</small></strong></div><button class="text-button" data-action="character">查看人物 ${icon('arrow')}</button></aside>`;
 }
 function world() {return topbar() + worldView(state, heroCard()) + dialogueOverlay() + shopView(state) + sectView(state);}
 function dialogueOverlay() {
   if (state.phase !== 'dialogue' && state.phase !== 'choice') return '';
   const choice = state.phase === 'choice';
-  return `<div class="dialogue-scrim"><section class="dialogue-panel paper" aria-label="剧情对话" aria-live="polite"><span class="dialogue-decoration">叙</span><div class="dialogue-content"><span class="eyebrow">此间故事</span><h2>${e(state.dialogue?.speaker || '江湖')}</h2><p data-testid="dialogue-text">${e(plain(state.dialogue?.text || ''))}</p>${choice ? `<div class="story-choices">${(state.choices ?? []).map((item, index) => `<button class="button outline" data-action="choice" data-index="${typeof item === 'string' ? index : item.index ?? index}"><span>${String(index + 1).padStart(2, '0')}</span>${e(typeof item === 'string' ? item : item.text ?? item.label ?? item.id)}${icon('arrow')}</button>`).join('')}</div>` : '<button class="text-button dialogue-next" data-action="next">继续 ' + icon('arrow') + '</button>'}</div></section></div>`;
+  return `<div class="dialogue-scrim"><section class="dialogue-panel paper" aria-label="剧情对话" aria-live="polite">${state.dialogue?.portrait ? `<img class="dialogue-portrait" src="${e(assetUrl(state.dialogue.portrait))}" alt="">` : '<span class="dialogue-decoration">叙</span>'}<div class="dialogue-content"><span class="eyebrow">此间故事</span><h2>${e(state.dialogue?.speaker || '江湖')}</h2><p data-testid="dialogue-text">${e(plain(state.dialogue?.text || ''))}</p>${choice ? `<div class="story-choices">${(state.choices ?? []).map((item, index) => `<button class="button outline" data-action="choice" data-index="${typeof item === 'string' ? index : item.index ?? index}"><span>${String(index + 1).padStart(2, '0')}</span>${e(typeof item === 'string' ? item : item.text ?? item.label ?? item.id)}${icon('arrow')}</button>`).join('')}</div>` : '<button class="text-button dialogue-next" data-action="next">继续 ' + icon('arrow') + '</button>'}</div></section></div>`;
 }
 function ended() {
   const value = state.battle?.outcome;
@@ -70,7 +70,7 @@ function ended() {
 function battleShell() {return topbar() + battleMarkup(state);}
 function updateBattle() {
   selectedSkill = updateBattleView({
-    state, busy: busy || modalOpen(), selectedSkill, autoBattle, paused: battlePaused, intent: battleIntent,
+    state, busy: busy || modalOpen(), selectedSkill, autoBattle, paused: battlePaused || modalOpen(), intent: battleIntent,
     battleSpeed: settings.battleSpeed, showGrid: settings.showGrid,
     showDamage: settings.showDamage, reducedMotion: settings.reducedMotion,
   }, board);
@@ -95,7 +95,7 @@ function render() {
   screen = nextScreen;
   app.className = `app ${screen}-app`;
   document.documentElement.dataset.pack = state.pack.id;
-  const sceneArt = screen === 'title' ? state.pack.media?.titleBackground : state.map?.background || state.pack.media?.worldBackground;
+  const sceneArt = screen === 'title' ? state.pack.media?.titleBackground : state.sceneBackground || state.map?.background || state.pack.media?.worldBackground;
   app.style.backgroundImage = sceneArt ? `url("${assetUrl(sceneArt)}")` : '';
   document.title = `${state.pack.title} · ${state.pack.subtitle || '浏览器冒险'}`;
   app.innerHTML = nextScreen === 'title' ? title() : nextScreen === 'battle' ? battleShell() : world();

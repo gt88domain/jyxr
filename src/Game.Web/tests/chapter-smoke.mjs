@@ -52,7 +52,10 @@ async function finishBattle(label, companionId) {
   assert.ok(before.party.some(member => member.definitionId === companionId));
   assert.ok(friendlies.some(unit => unit.name === before.party.find(member => member.definitionId === companionId).name),
     `${label}: companion must be represented by a real allied battle unit`);
-  await click('[data-action="battle-speed"][data-id="4"]');
+  // Speed persists too. Do not click an already-selected setting behind a
+  // settlement overlay when an automatic encounter finishes immediately.
+  const fast = page.locator('[data-action="battle-speed"][data-id="4"]');
+  if (await fast.getAttribute('aria-pressed') !== 'true' && before.battle.outcome === 'ongoing') await click('[data-action="battle-speed"][data-id="4"]');
   await page.screenshot({path: `${output}${label}-battle.png`, fullPage: true});
   const auto = page.locator('[data-action="battle-mode"][data-id="auto"]');
   // Auto mode persists between encounters. A short fight may already finish

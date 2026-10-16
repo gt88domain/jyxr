@@ -8,6 +8,7 @@
     <Compile Include="../BrowserBridge.Systems.cs" Link="BrowserBridge.Systems.cs" />
     <Compile Include="../BrowserBridge.Packs.cs" Link="BrowserBridge.Packs.cs" />
     <Compile Include="../BrowserBridge.World.cs" Link="BrowserBridge.World.cs" />
+    <Compile Include="../BrowserBridge.Media.cs" Link="BrowserBridge.Media.cs" />
     <Compile Include="../BrowserLegacyRules.cs" Link="BrowserLegacyRules.cs" />
     <ProjectReference Include="../../Game.Core/Game.Core.csproj" />
     <ProjectReference Include="../../Game.Content/Game.Content.csproj" />

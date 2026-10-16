@@ -272,6 +272,9 @@ def build(output: Path) -> None:
     package = assemble_jyx(package, source_maps, SOURCE, script)
     from legacy_world import expand_original
     package, original_audit = expand_original(package, source_maps, SOURCE, script)
+    from legacy_media import apply_legacy_media
+    report["legacyArt"] = apply_legacy_media(package, WEB)
+    write_json(output / "legacy-art-coverage.json", report["legacyArt"])
     write_json(output / "original-migration-audit.json", original_audit)
     write_json(output / "original-story-source.json", {
         "sourceCommit": report["sourceCommit"],

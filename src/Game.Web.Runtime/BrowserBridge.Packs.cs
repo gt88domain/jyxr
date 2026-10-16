@@ -106,13 +106,13 @@ public static partial class BrowserBridge
             id = shop.Definition.Id, name = shop.Definition.Name,
             products = shop.Products.Select(p => new
             {
-                id = p.ProductId, itemId = p.Item?.Id, name = p.DisplayName, description = p.Description,
+                id = p.ProductId, itemId = p.Item?.Id, name = p.DisplayName, description = p.Description, icon = p.Item is null ? null : ItemMedia(p.Item.Id),
                 price = p.Price, premiumPrice = p.PremiumPrice, remaining = p.RemainingClaims, purchased = p.PurchasedQuantity,
                 canBuy = p.Price is { } price && price <= _session.State.Currency.Silver && p.RemainingClaims != 0
             }).ToArray(),
             sellable = _session.State.Inventory.Entries.Where(e => _session.ShopService.CanSell(e.Definition)).Select(e => new
             {
-                entryNumber = e.EntryNumber, id = e.Definition.Id, name = e.Definition.Name,
+                entryNumber = e.EntryNumber, id = e.Definition.Id, name = e.Definition.Name, icon = ItemMedia(e.Definition.Id),
                 quantity = e is StackInventoryEntry stack ? stack.Quantity : 1,
                 price = _session.ShopService.GetSellPrice(e.Definition)
             }).ToArray()
@@ -125,7 +125,7 @@ public static partial class BrowserBridge
         return (object)new
         {
             id = c.Id, definitionId = c.Definition.Id, name = c.Name, level = c.Level,
-            sprite = CharacterMedia(c.Definition.Id, "characters"), portrait = CharacterMedia(c.Definition.Id, "portraits"),
+            sprite = CharacterMedia(c, "characters"), portrait = CharacterMedia(c, "portraits"),
             hp = battleUnit?.Hp ?? c.CurrentHp ?? (int)c.GetStat(StatType.MaxHp), maxHp = (int)c.GetStat(StatType.MaxHp),
             mp = battleUnit?.Mp ?? c.CurrentMp ?? (int)c.GetStat(StatType.MaxMp), maxMp = (int)c.GetStat(StatType.MaxMp),
             skills = Skills(c).Select(s => SkillView(s)).ToArray(), equipment = EquipmentView(c), isHero = c.Id == Party.HeroCharacterId

@@ -65,6 +65,7 @@ CHROMIUM_PATH=/usr/bin/chromium GAME_WEB_URL=http://127.0.0.1:4173 npm test
 CHROMIUM_PATH=/usr/bin/chromium GAME_WEB_URL=http://127.0.0.1:4173 node tests/equipment-smoke.mjs
 CHROMIUM_PATH=/usr/bin/chromium GAME_WEB_URL=http://127.0.0.1:4173 node tests/chapter-smoke.mjs
 CHROMIUM_PATH=/usr/bin/chromium GAME_WEB_URL=http://127.0.0.1:4173 node tests/original-world-smoke.mjs
+CHROMIUM_PATH=/usr/bin/chromium GAME_WEB_URL=http://127.0.0.1:4173 npm run test:art
 ```
 
 仓库根还可验证不依赖浏览器 UI 的同一完整流程：
@@ -90,7 +91,8 @@ dotnet run --project src/Game.Web.Runtime/Smoke/Smoke.csproj -- --original src/G
 
 - [内容导入说明](scripts/CONTENT.md)：源提交、转换范围、原剧情与训练入口。
 - [运行时桥接说明](../Game.Web.Runtime/README.md)：导出 API、支持指令、真实 C# 规则与限制。
-- `public/art/`：十张原创图片，包括山居、练武场、侠客、木人、绿衣旅人，以及西方营地、林道、岗哨、佣兵和灰狼；来源与视角见目录内 README。没有复制原游戏图片，灰狼暂为备用素材。声音尚未制作。
+- `public/art/legacy/`：金庸包使用用户上传的原版图片与角色帧，按内容资源引用加载；地图、头像、物品图标和基本战斗动作已接入。提取工具及来源见 [原版素材记录](public/art/legacy/README.md)，动作时间线、音频与完整特效仍有缺口。完整素材库约 146 MiB，按当前场景加载；启动体积仍需优化。
+- `public/art/` 根目录保留此前生成的十张原创图；西方试验章继续使用其中的营地、林道、岗哨、佣兵等，金庸包已切回原版素材。
 - `public/data/`、`public/runtime/` 均为构建输出，已忽略；请从锁定的参考源重新生成，不手改生成文件。
 - 原 `Game.Godot` 宿主与既有测试未修改。Core 仅新增可注入的技能经验策略以支持金庸旧规则，默认现代规则保留。普通 .NET 全套测试仍受缺少正式 `mods/jyxr-base` 的既有单项失败影响；本工程使用单独生成的浏览器内容包，不能将它误称为恢复了正式 MOD。
 

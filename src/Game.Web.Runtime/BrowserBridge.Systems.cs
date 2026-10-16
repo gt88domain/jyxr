@@ -95,7 +95,7 @@ public static partial class BrowserBridge
         var reason = _battle is not null ? itemBattleReason ?? "" : !CanManage ? "对话中暂不可调整。" : analysis.CanUse ? "" : analysis.Reason;
         return new
         {
-            id = entry.Definition.Id, entryNumber = entry.EntryNumber, name = entry.Definition.Name,
+            id = entry.Definition.Id, entryNumber = entry.EntryNumber, name = entry.Definition.Name, icon = ItemMedia(entry.Definition.Id),
             count = entry is StackInventoryEntry stack ? stack.Quantity : 1, quantity = entry is StackInventoryEntry stack2 ? stack2.Quantity : 1,
             description = entry.Definition.Description, kind = equipment is not null ? "equipment" : book is not null ? "skillBook" : entry.Definition.Type == ItemType.Consumable ? "consumable" : "other",
             itemType = entry.Definition.Type.ToString(), slot = equipment?.SlotType.ToString(),
@@ -145,7 +145,7 @@ public static partial class BrowserBridge
     private static object[] EquipmentView(CharacterInstance hero) => Enum.GetValues<EquipmentSlotType>().Select(slot =>
     {
         var instance = hero.GetEquipment(slot);
-        return (object)new { slot = slot.ToString(), slotName = slot switch { EquipmentSlotType.Weapon => "武器", EquipmentSlotType.Armor => "防具", _ => "饰品" }, item = instance is null ? null : new { id = instance.Definition.Id, name = instance.Definition.Name, instanceId = instance.Id, description = instance.Definition.Description } };
+        return (object)new { slot = slot.ToString(), slotName = slot switch { EquipmentSlotType.Weapon => "武器", EquipmentSlotType.Armor => "防具", _ => "饰品" }, item = instance is null ? null : new { id = instance.Definition.Id, name = instance.Definition.Name, icon = ItemMedia(instance.Definition.Id), instanceId = instance.Id, description = instance.Definition.Description } };
     }).ToArray();
 
     private static object[] TargetView()

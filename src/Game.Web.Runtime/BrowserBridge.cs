@@ -421,7 +421,7 @@ public static partial class BrowserBridge
                     hero = hero is null ? null : new
                     {
                         id = hero.Id, name = hero.Name, level = hero.Level,
-                        definitionId = hero.Definition.Id, sprite = CharacterMedia(hero.Definition.Id, "characters"), portrait = CharacterMedia(hero.Definition.Id, "portraits"),
+                        definitionId = hero.Definition.Id, sprite = CharacterMedia(hero, "characters"), portrait = CharacterMedia(hero, "portraits"),
                         hp = battleHero?.Hp ?? hero.CurrentHp ?? (int)hero.GetStat(StatType.MaxHp), maxHp = (int)hero.GetStat(StatType.MaxHp),
                         mp = battleHero?.Mp ?? hero.CurrentMp ?? (int)hero.GetStat(StatType.MaxMp), maxMp = (int)hero.GetStat(StatType.MaxMp),
                         skills = Skills(hero).Select(s => SkillView(s)).ToArray(),
@@ -432,22 +432,22 @@ public static partial class BrowserBridge
                         equipment = EquipmentView(hero), cultivation = CultivationView(hero), equippedInternalSkillId = hero.EquippedInternalSkillId, canManage = CanManage
                     },
                     silver = _session?.State.Currency.Silver ?? 0,
-                    backgroundId = _backgroundId, musicId = _musicId,
+                    backgroundId = _backgroundId, musicId = _musicId, sceneBackground = _host.Dialogue is not null || _host.Choice is not null ? ResourceMedia(_backgroundId) : null,
                     inventory = _session?.State.Inventory.Entries.Select(InventoryView).ToArray(),
-                    map = map is null ? null : new { id = map.Id, name = map.Name, description = map.Description, background = MapMedia(map.Id), kind = map.Kind.ToString().ToLowerInvariant(), locations = CurrentMapView().Locations.Select(l => new { id = l.Location.Id, name = l.Location.Name, description = l.Event?.Description ?? l.Location.Description, action = l.Event?.Action.Root.Name, timeSlots = RequireSession().MapService.PreviewInteractionConsumedTimeSlots(l) }) },
+                    map = map is null ? null : new { id = map.Id, name = map.Name, description = map.Description, background = MapMedia(map.Id), kind = map.Kind.ToString().ToLowerInvariant(), locations = CurrentMapView().Locations.Select(l => new { id = l.Location.Id, name = l.Location.Name, description = l.Event?.Description ?? l.Location.Description, action = l.Event?.Action.Root.Name, image = ResourceMedia(l.Event?.Image) ?? ResourceMedia(l.Location.Picture), timeSlots = RequireSession().MapService.PreviewInteractionConsumedTimeSlots(l) }) },
                     battle = _battle is null ? null : new
                     {
                         name = _content!.GetBattle(_request!.BattleId).Name, width = _battle.Grid.Width, height = _battle.Grid.Height,
                         id = _request.BattleId, background = BattleMedia(_request.BattleId),
                         activeUnitId = Active?.Id, tick = _battle.Tick, outcome = outcome!.Kind == BattleOutcomeKind.Ongoing ? "ongoing" : outcome.WinningTeam == 1 ? "win" : "lose",
-                        units = _battle.Units.Select(u => new { id = u.Id, definitionId = u.Character.Definition.Id, sprite = CharacterMedia(u.Character.Definition.Id, "characters", u.Team), portrait = CharacterMedia(u.Character.Definition.Id, "portraits", u.Team), name = u.Character.Name, team = u.Team, x = u.Position.X, y = u.Position.Y, hp = u.Hp, maxHp = u.MaxHp, mp = u.Mp, maxMp = u.MaxMp, alive = u.IsAlive }),
+                        units = _battle.Units.Select(u => new { id = u.Id, definitionId = u.Character.Definition.Id, sprite = CharacterMedia(u.Character, "characters", u.Team), portrait = CharacterMedia(u.Character, "portraits", u.Team), name = u.Character.Name, animation = CharacterAnimation(u.Character), facing = u.Facing.ToString().ToLowerInvariant(), team = u.Team, x = u.Position.X, y = u.Position.Y, hp = u.Hp, maxHp = u.MaxHp, mp = u.Mp, maxMp = u.MaxMp, alive = u.IsAlive }),
                         skills = Active?.Team == 1 ? Skills(Active.Character).Select(s => SkillView(s, Active)).ToArray() : [],
                         reachable = Active?.Team == 1 && outcome.Kind == BattleOutcomeKind.Ongoing ? _engine!.GetReachablePositions(_battle, Active.Id).Keys.Select(p => new { x = p.X, y = p.Y }).ToArray() : [],
                         targets = TargetView(), events = BattleEvents.ToArray(), playerCanAct = Active?.Team == 1 && outcome.Kind == BattleOutcomeKind.Ongoing,
                         action = Active is { } acting && _battle.CurrentAction is { } current ? new { unitId = acting.Id, team = acting.Team, mainActionCommitted = current.HasCommittedMainAction, canMove = acting.Team == 1 && !current.HasCommittedMainAction, canRest = acting.Team == 1 && !current.HasCommittedMainAction, canAttack = acting.Team == 1 && !current.HasCommittedMainAction } : null,
                         logs = Logs.TakeLast(20).ToArray()
                     },
-                    dialogue = _host.Dialogue is { } d ? new { speaker = d.Speaker == "主角" ? hero?.Name ?? d.Speaker : d.Speaker, text = d.Text } : _host.Choice is { } c ? new { speaker = c.PromptSpeaker, text = c.PromptText } : null,
+                    dialogue = _host.Dialogue is { } d ? new { speaker = d.Speaker == "主角" ? hero?.Name ?? d.Speaker : d.Speaker, text = d.Text, portrait = SpeakerPortrait(d.Speaker) } : _host.Choice is { } c ? new { speaker = c.PromptSpeaker, text = c.PromptText, portrait = SpeakerPortrait(c.PromptSpeaker) } : null,
                     choices = _host.Choice?.Options.Select(o => new { index = o.Index, text = o.Text }).ToArray(), logs = Logs.TakeLast(30).ToArray()
                 }
             };

@@ -2,9 +2,9 @@ import Phaser from 'phaser';
 import {assetUrl} from './content';
 import type {Battle, Unit} from './bridge';
 
-export interface BoardOptions {selectedSkillId?: string; speed?: number; manual?: boolean; busy?: boolean; showGrid?: boolean; showDamage?: boolean; reducedMotion?: boolean; intent?: 'move' | 'attack';}
+export interface BoardOptions {selectedSkillId?: string; speed?: number; manual?: boolean; busy?: boolean; paused?: boolean; showGrid?: boolean; showDamage?: boolean; reducedMotion?: boolean; intent?: 'move' | 'attack';}
 type VisualBattle = Battle & {targets?: {x: number; y: number; skillId: string}[]};
-interface Pawn {container: Phaser.GameObjects.Container; art: Phaser.GameObjects.Image | Phaser.GameObjects.Text; ring: Phaser.GameObjects.Graphics; bars: Phaser.GameObjects.Graphics; name: Phaser.GameObjects.Text; previous: Unit;}
+interface Pawn {container: Phaser.GameObjects.Container; art: Phaser.GameObjects.Sprite | Phaser.GameObjects.Image | Phaser.GameObjects.Text; ring: Phaser.GameObjects.Graphics; bars: Phaser.GameObjects.Graphics; name: Phaser.GameObjects.Text; previous: Unit;}
 
 export function boardGeometry(width: number, height: number, columns: number, rows: number) {
   const cell = Math.min((width - 24) / columns, (height - 92) / rows, 92);
@@ -28,12 +28,27 @@ class BattleScene extends Phaser.Scene {
     const keys = new Map<string, string>();
     for (const unit of this.battle?.units || []) {
       if (!unit.sprite) continue;
-      let key = keys.get(unit.sprite);
-      if (!key) {key = 'pawn-' + keys.size; keys.set(unit.sprite,key); this.load.image(key,assetUrl(unit.sprite));}
+      const source = unit.animation?.id || unit.sprite;
+      let key = keys.get(source);
+      if (!key) {
+        key = 'pawn-' + keys.size; keys.set(source,key);
+        if (unit.animation) this.load.atlas(key, assetUrl(unit.animation.texture), assetUrl(unit.animation.atlas));
+        else this.load.image(key,assetUrl(unit.sprite));
+      }
       this.spriteKeys.set(unit.id,key);
     }
   }
   create() {
+    for (const unit of this.battle?.units || []) {
+      const key = this.spriteKeys.get(unit.id);
+      if (!key || !unit.animation || !this.textures.exists(key)) continue;
+      for (const [name, clip] of Object.entries(unit.animation.clips)) {
+        const animationKey = `${key}-${name}`;
+        if (!this.anims.exists(animationKey)) this.anims.create({key: animationKey,
+          frames: clip.frames.map(frame => ({key, frame})), frameRate: clip.frameRate,
+          repeat: name === 'stand' || name === 'move' ? -1 : 0});
+      }
+    }
     this.cameras.main.setBackgroundColor('#52614a');
     if (this.textures.exists('background')) this.background = this.add.image(0, 0, 'background').setDepth(-10);
     this.ground = this.add.graphics().setDepth(-1);
@@ -97,25 +112,35 @@ class BattleScene extends Phaser.Scene {
     if (!pawn) {
       const container = this.add.container(x, y), ring = this.add.graphics();
       const key = this.spriteKeys.get(unit.id) || '';
-      const art = this.textures.exists(key) ? this.add.image(0, 0, key).setOrigin(.5, .92) : this.add.text(0, 0, unit.name.slice(0,1), {fontFamily: 'serif', fontSize: '32px', color: '#fff3cb', backgroundColor: unit.team === 1 ? '#325b48' : '#784937'}).setOrigin(.5, 1);
+      const art = this.textures.exists(key) ? unit.animation ? this.add.sprite(0, 0, key, unit.animation.clips.stand.frames[0]) : this.add.image(0, 0, key).setOrigin(.5, .92) : this.add.text(0, 0, unit.name.slice(0,1), {fontFamily: 'serif', fontSize: '32px', color: '#fff3cb', backgroundColor: unit.team === 1 ? '#325b48' : '#784937'}).setOrigin(.5, 1);
       const bars = this.add.graphics(), name = this.add.text(0, 0, '', {fontFamily: 'sans-serif', fontSize: '11px', color: '#fff5de', stroke: '#263d2d', strokeThickness: 3}).setOrigin(.5, 0);
       container.add([ring, art, bars, name]);
       pawn = {container, art, ring, bars, name, previous: {...unit}};
       this.pawns.set(unit.id, pawn);
+      if (art instanceof Phaser.GameObjects.Sprite) art.on(Phaser.Animations.Events.ANIMATION_COMPLETE, () => {
+        if (pawn?.art.active) this.animate(pawn, 'stand');
+      });
     }
     const previous = pawn.previous, moved = previous.x !== unit.x || previous.y !== unit.y;
     const reduced = this.options.reducedMotion || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (moved && !resize) {
+      this.animate(pawn, 'move');
       this.tweens.killTweensOf(pawn.container);
-      this.tweens.add({targets: pawn.container, x, y, duration: reduced ? 0 : 340 / (this.options.speed || 1), ease: 'Sine.easeInOut'});
+      this.tweens.add({targets: pawn.container, x, y, duration: reduced ? 0 : 340 / (this.options.speed || 1), ease: 'Sine.easeInOut', onComplete: () => {if (pawn?.art.active) this.animate(pawn, 'stand');}});
     } else if (first || resize) pawn.container.setPosition(x, y);
     pawn.container.setDepth(10 + unit.y);
-    if (pawn.art instanceof Phaser.GameObjects.Image) {
+    if (pawn.art instanceof Phaser.GameObjects.Sprite && unit.animation) {
+      pawn.art.setScale(cell * 1.25 / unit.animation.baseHeight).setFlipX(unit.facing === 'left');
+      pawn.art.anims.timeScale = this.options.speed || 1;
+      if (reduced || this.options.paused || !unit.alive) pawn.art.anims.pause();
+      else if (pawn.art.anims.isPaused) pawn.art.anims.resume();
+      if (first || !pawn.art.anims.currentAnim) this.animate(pawn, 'stand');
+    } else if (pawn.art instanceof Phaser.GameObjects.Image) {
       const size = cell * (unit.team === 1 ? 1.25 : 1.4);
       pawn.art.setDisplaySize(size, size).setOrigin(unit.team === 1 ? .56 : .5, .96);
       pawn.art.setFlipX(false);
     }
-    else pawn.art.setFontSize(Math.max(17, cell * .55));
+    else if (pawn.art instanceof Phaser.GameObjects.Text) pawn.art.setFontSize(Math.max(17, cell * .55));
     const active = unit.id === this.battle!.activeUnitId, ring = pawn.ring.clear();
     ring.fillStyle(0x102318, .32).fillEllipse(0, -cell * .04, cell * .78, cell * .26);
     ring.lineStyle(active ? 3 : 1.5, active ? 0xffd883 : unit.team === 1 ? 0x8bdbb5 : 0xd89d75, active ? .95 : .7).strokeEllipse(0, -cell * .04, cell * .85, cell * .32);
@@ -138,6 +163,16 @@ class BattleScene extends Phaser.Scene {
     }
     pawn.container.setAlpha(unit.alive ? 1 : .25); pawn.previous = {...unit};
   }
+  private animate(pawn: Pawn, action: string) {
+    if (!(pawn.art instanceof Phaser.GameObjects.Sprite)) return;
+    const key = this.spriteKeys.get(pawn.previous.id), animation = `${key}-${action}`;
+    if (!this.anims.exists(animation)) return;
+    if (this.options.reducedMotion || window.matchMedia('(prefers-reduced-motion: reduce)').matches || this.options.paused || !pawn.previous.alive) return;
+    pawn.art.play(animation, true);
+    this.parentElement.dataset.lastAnimation = JSON.stringify({unitId: pawn.previous.id, action});
+    const actions = JSON.parse(this.parentElement.dataset.animationActions || '[]') as string[];
+    this.parentElement.dataset.animationActions = JSON.stringify([...actions.slice(-15), action]);
+  }
   private playEvents() {
     const events = this.battle!.events;
     if (!events) return;
@@ -150,6 +185,8 @@ class BattleScene extends Phaser.Scene {
       this.parentElement.dataset.lastBattleEvent = JSON.stringify(event);
       const pawn = this.pawns.get(event.unitId);
       if (!pawn) continue;
+      if (event.kind === 'SkillCast') this.animate(pawn, 'attack');
+      else if (event.kind === 'Damaged') this.animate(pawn, 'be');
       const x = left + (pawn.previous.x + .5) * cell, y = top + (pawn.previous.y + .7) * cell;
       let text = '', color = '#fff1d1';
       if (event.kind === 'Damaged' && event.amount != null) {

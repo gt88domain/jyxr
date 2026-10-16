@@ -1,6 +1,11 @@
-# Original browser-game artwork
+# Browser-game artwork
 
-All images in this directory were newly generated for this project with the
+The JYX pack now uses the original artwork and animation frames in [`legacy/`](legacy/README.md),
+extracted from the user-provided archive. That directory has its own provenance
+and is not generated artwork. The images listed below remain as earlier assets;
+the frontier pack continues to use its separate generated environments and actors.
+
+All images listed below were newly generated for this project with the
 OpenAI `image_gen` tool on 2026-10-15. They are not copied from the reference
 games or their resource archives. No named artist style was requested.
 
