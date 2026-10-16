@@ -139,6 +139,21 @@
       "No old executable, assembly or Lua code is run. Audio and skill visual effects are outside this artwork pass."
     ]
   },
+  "legacyCreation": {
+    "source": {
+      "commit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+      "file": "JyGame/RollRoleUI.cs",
+      "scope": "first round; pinned C# questions, rewards and uniform random-stat rules"
+    },
+    "questions": 7,
+    "portraits": 24,
+    "deferred": [
+      "无悔实时存档模式",
+      "多周目及试炼继承奖励",
+      "Lua随机下标差异",
+      "部分问答天赋的完整战斗效果"
+    ]
+  },
   "originalMigration": {
     "originalStories": 1748,
     "maps": 162,
@@ -201,7 +216,7 @@
     "scopedBattleEffects": 0,
     "itemTags": 0,
     "storyScripts": 1,
-    "browser": 20
+    "browser": 21
   },
   "limitations": [
     "The 14 verified opening/trainer segments remain unchanged; dependency-closed original stories/maps/events and nine sect entries are now exposed. Structural migration is not proof of full playthroughs.",

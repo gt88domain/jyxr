@@ -211394,6 +211394,467 @@
       "archive": "X.rar",
       "versionLabel": "X1.0.0.1",
       "sha256": "331d5df9e7867621fda2e42ca0fe0072591fd03df57a2b6bfe1162b319b4d995"
+    },
+    "creation": {
+      "source": {
+        "commit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+        "file": "JyGame/RollRoleUI.cs",
+        "scope": "first round; pinned C# questions, rewards and uniform random-stat rules"
+      },
+      "questions": [
+        {
+          "title": "你希望你在武侠小说中的出身是",
+          "options": [
+            {
+              "text": "商人的儿子",
+              "stats": {
+                "bili": -5
+              },
+              "silver": 5000,
+              "items": {
+                "黑玉断续膏": 1,
+                "九转熊蛇丸": 1,
+                "金丝道袍": 1,
+                "金头箍": 1
+              },
+              "model": "zydx"
+            },
+            {
+              "text": "大草原上长大的孩子",
+              "stats": {
+                "shenfa": 15,
+                "dingli": -2,
+                "quanzhang": 15
+              },
+              "talents": [
+                "猎人"
+              ],
+              "model": "caoyuan"
+            },
+            {
+              "text": "名门世家",
+              "stats": {
+                "fuyuan": 3,
+                "bili": -3,
+                "dingli": 2,
+                "wuxing": 20,
+                "jianfa": 2,
+                "gengu": 2
+              },
+              "items": {
+                "银手镯": 1
+              },
+              "silver": 100,
+              "model": "huodu"
+            },
+            {
+              "text": "市井流浪的汉子",
+              "stats": {
+                "fuyuan": -5,
+                "bili": 12,
+                "daofa": 15,
+                "qimen": 12
+              },
+              "items": {
+                "草帽": 1
+              },
+              "silverSet": 0,
+              "model": "shijing"
+            },
+            {
+              "text": "疯子",
+              "stats": {
+                "wuxing": 35,
+                "dingli": 10,
+                "gengu": 10
+              },
+              "talents": [
+                "神经病"
+              ],
+              "model": "fengzi"
+            },
+            {
+              "text": "书香门第",
+              "stats": {
+                "wuxing": 20,
+                "bili": 1,
+                "shenfa": -10,
+                "gengu": -5
+              },
+              "model": "xiake"
+            }
+          ]
+        },
+        {
+          "title": "以下你觉得最宝贵的是",
+          "options": [
+            {
+              "text": "无尽的财宝",
+              "silver": 1000
+            },
+            {
+              "text": "永恒的爱情",
+              "stats": {
+                "fuyuan": 15
+              }
+            },
+            {
+              "text": "坚强的意志",
+              "stats": {
+                "dingli": 15
+              }
+            },
+            {
+              "text": "自由",
+              "stats": {
+                "shenfa": 15
+              }
+            },
+            {
+              "text": "至高无上的权力",
+              "talents": [
+                "自我主义"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "以下你觉得最可恶的行为是",
+          "options": [
+            {
+              "text": "调戏妇女",
+              "stats": {
+                "dingli": 9
+              }
+            },
+            {
+              "text": "欺软怕硬",
+              "stats": {
+                "gengu": 6,
+                "bili": 6
+              }
+            },
+            {
+              "text": "偷奸耍滑",
+              "stats": {
+                "wuxing": 10
+              }
+            },
+            {
+              "text": "切JJ练神功",
+              "stats": {
+                "gengu": 10
+              }
+            },
+            {
+              "text": "有美女不泡",
+              "talents": [
+                "好色"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "你最喜欢的兵刃是",
+          "options": [
+            {
+              "text": "拳",
+              "stats": {
+                "quanzhang": 10
+              }
+            },
+            {
+              "text": "剑",
+              "stats": {
+                "jianfa": 10
+              }
+            },
+            {
+              "text": "刀",
+              "stats": {
+                "daofa": 20
+              }
+            },
+            {
+              "text": "暗器",
+              "stats": {
+                "qimen": 20
+              }
+            }
+          ]
+        },
+        {
+          "title": "以下女性角色你最喜欢的是",
+          "options": [
+            {
+              "text": "黄蓉",
+              "stats": {
+                "wuxing": 5
+              }
+            },
+            {
+              "text": "小龙女",
+              "stats": {
+                "dingli": 5
+              }
+            },
+            {
+              "text": "郭襄",
+              "stats": {
+                "fuyuan": 5,
+                "gengu": 5
+              }
+            },
+            {
+              "text": "梅超风",
+              "stats": {
+                "quanzhang": 6,
+                "bili": 6
+              }
+            },
+            {
+              "text": "周芷若",
+              "stats": {
+                "dingli": 10
+              }
+            }
+          ]
+        },
+        {
+          "title": "以下男性角色你最喜欢的是",
+          "options": [
+            {
+              "text": "张无忌",
+              "stats": {
+                "wuxing": 5,
+                "gengu": 10
+              }
+            },
+            {
+              "text": "郭靖",
+              "stats": {
+                "wuxing": -10,
+                "fuyuan": 15,
+                "bili": 5
+              }
+            },
+            {
+              "text": "杨过",
+              "stats": {
+                "wuxing": 5,
+                "dingli": 5
+              }
+            },
+            {
+              "text": "令狐冲",
+              "stats": {
+                "wuxing": 10
+              }
+            },
+            {
+              "text": "林平之",
+              "stats": {
+                "jianfa": 10,
+                "dingli": 10
+              }
+            }
+          ]
+        },
+        {
+          "title": "以下你觉得最牛逼的人是",
+          "options": [
+            {
+              "text": "乔峰",
+              "stats": {
+                "bili": 10,
+                "quanzhang": 9
+              }
+            },
+            {
+              "text": "韦小宝",
+              "stats": {
+                "fuyuan": 30
+              }
+            },
+            {
+              "text": "金庸先生",
+              "stats": {
+                "wuxing": 13,
+                "jianfa": 5,
+                "daofa": 5,
+                "quanzhang": 5,
+                "qimen": 5
+              }
+            },
+            {
+              "text": "东方不败",
+              "stats": {
+                "gengu": 20
+              }
+            },
+            {
+              "text": "汉家松鼠",
+              "stats": {
+                "gengu": 10
+              },
+              "internalSkill": {
+                "id": "基本内功",
+                "level": 20
+              },
+              "items": {
+                "松果": 3
+              }
+            },
+            {
+              "text": "半瓶神仙醋",
+              "items": {
+                "天王保命丹": 6
+              }
+            }
+          ]
+        }
+      ],
+      "baseSilver": 100,
+      "baseItems": {
+        "小还丹": 3
+      },
+      "normalItems": {
+        "新手礼包-大蟠桃": 5
+      },
+      "randomStats": [
+        "gengu",
+        "bili",
+        "fuyuan",
+        "shenfa",
+        "dingli",
+        "wuxing",
+        "quanzhang",
+        "jianfa",
+        "daofa",
+        "qimen"
+      ],
+      "portraits": [
+        {
+          "id": "头像.主角",
+          "name": "主角",
+          "image": "art/legacy/images/d2f7d590f159a4758339.png"
+        },
+        {
+          "id": "头像.主角3",
+          "name": "主角3",
+          "image": "art/legacy/images/5d59eedb50b5480b9784.png"
+        },
+        {
+          "id": "头像.主角4",
+          "name": "主角4",
+          "image": "art/legacy/images/80e6f7a89b672409167e.png"
+        },
+        {
+          "id": "头像.魔君",
+          "name": "魔君",
+          "image": "art/legacy/images/105be7a57b489e07f7f4.png"
+        },
+        {
+          "id": "头像.全冠清",
+          "name": "全冠清",
+          "image": "art/legacy/images/517350e3fe5b177e08ae.png"
+        },
+        {
+          "id": "头像.李白",
+          "name": "李白",
+          "image": "art/legacy/images/907e53bfd71abdc772af.png"
+        },
+        {
+          "id": "头像.林平之瞎",
+          "name": "林平之瞎",
+          "image": "art/legacy/images/18ea2302e51c0617cd02.png"
+        },
+        {
+          "id": "头像.侠客2",
+          "name": "侠客2",
+          "image": "art/legacy/images/d4937d3e7b442ec784ce.png"
+        },
+        {
+          "id": "头像.归辛树",
+          "name": "归辛树",
+          "image": "art/legacy/images/01054ae0c9754f0a2c08.png"
+        },
+        {
+          "id": "头像.狄云",
+          "name": "狄云",
+          "image": "art/legacy/images/f382f04e0c508eb24f1f.png"
+        },
+        {
+          "id": "头像.独孤求败",
+          "name": "独孤求败",
+          "image": "art/legacy/images/94da402d9c73403bc1e2.png"
+        },
+        {
+          "id": "头像.陈近南",
+          "name": "陈近南",
+          "image": "art/legacy/images/9e8bb77b28bce532a6ad.png"
+        },
+        {
+          "id": "头像.石中玉",
+          "name": "石中玉",
+          "image": "art/legacy/images/358e5a32fb35d6c68d6e.png"
+        },
+        {
+          "id": "头像.商宝震",
+          "name": "商宝震",
+          "image": "art/legacy/images/20a52a1f508c45e01683.png"
+        },
+        {
+          "id": "头像.尹志平",
+          "name": "尹志平",
+          "image": "art/legacy/images/562ca9b8cfc150a0821c.png"
+        },
+        {
+          "id": "头像.流浪汉",
+          "name": "流浪汉",
+          "image": "art/legacy/images/b9d338db2f0c3c604818.png"
+        },
+        {
+          "id": "头像.梁发",
+          "name": "梁发",
+          "image": "art/legacy/images/6c7182635a8a5c9b8e59.png"
+        },
+        {
+          "id": "头像.卓一航",
+          "name": "卓一航",
+          "image": "art/legacy/images/3d760cfc405ad9e0d15e.png"
+        },
+        {
+          "id": "头像.烟霞神龙",
+          "name": "烟霞神龙",
+          "image": "art/legacy/images/96c69eb6207c81fa31fd.png"
+        },
+        {
+          "id": "头像.双手开碑",
+          "name": "双手开碑",
+          "image": "art/legacy/images/0daaba202fb1f69ca576.png"
+        },
+        {
+          "id": "头像.流星赶月",
+          "name": "流星赶月",
+          "image": "art/legacy/images/4bb1f26947ebe247a746.png"
+        },
+        {
+          "id": "头像.盖七省",
+          "name": "盖七省",
+          "image": "art/legacy/images/8c77f1479362a233cf94.png"
+        },
+        {
+          "id": "头像.公子1",
+          "name": "公子1",
+          "image": "art/legacy/images/f4d3f68605fe76534560.png"
+        },
+        {
+          "id": "头像.主角2",
+          "name": "主角2",
+          "image": "art/legacy/images/7ac0c9dc2ae3c48a0ff8.png"
+        }
+      ]
     }
   }
 }
