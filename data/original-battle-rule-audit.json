@@ -7,8 +7,8 @@
       "states": {
         "referenced-behavior": 4,
         "configured": 74,
-        "partial": 27,
-        "metadata-only": 52,
+        "partial": 35,
+        "metadata-only": 44,
         "identity-only": 1
       },
       "entries": [
@@ -124,13 +124,15 @@
         },
         {
           "id": "刀封印",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1730",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1733",
             "jyx-legacy-dll/JyGame/SkillBox.cs:191"
           ],
-          "remaining": [],
+          "remaining": [
+            "confirmed normal hits apply original buff level/duration and probability; ordinary friendly-fire and 灵心慧质/legend exclusion configured; pre-hit RNG, full immunity and extra-strike/reaction ordering remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -166,13 +168,15 @@
         },
         {
           "id": "剑封印",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1722",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1725",
             "jyx-legacy-dll/JyGame/SkillBox.cs:191"
           ],
-          "remaining": [],
+          "remaining": [
+            "confirmed normal hits apply original buff level/duration and probability; ordinary friendly-fire and 灵心慧质/legend exclusion configured; pre-hit RNG, full immunity and extra-strike/reaction ordering remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -404,13 +408,15 @@
         },
         {
           "id": "奇门封印",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1746",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1749",
             "jyx-legacy-dll/JyGame/SkillBox.cs:191"
           ],
-          "remaining": [],
+          "remaining": [
+            "confirmed normal hits apply original buff level/duration and probability; ordinary friendly-fire and 灵心慧质/legend exclusion configured; pre-hit RNG, full immunity and extra-strike/reaction ordering remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -484,11 +490,13 @@
         },
         {
           "id": "寒冰真气",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1762"
           ],
-          "remaining": [],
+          "remaining": [
+            "confirmed normal hits apply original buff level/duration and probability; ordinary friendly-fire and 灵心慧质/legend exclusion configured; pre-hit RNG, full immunity and extra-strike/reaction ordering remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -667,13 +675,15 @@
         },
         {
           "id": "拳掌封印",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1738",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1741",
             "jyx-legacy-dll/JyGame/SkillBox.cs:191"
           ],
-          "remaining": [],
+          "remaining": [
+            "confirmed normal hits apply original buff level/duration and probability; ordinary friendly-fire and 灵心慧质/legend exclusion configured; pre-hit RNG, full immunity and extra-strike/reaction ordering remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -1073,7 +1083,7 @@
           ],
           "remaining": [
             "final weapon aptitude multiplier and sequential truncation configured; earlier equipment/skill additions and battle buff layering still require source comparison",
-            "铁拳无双 stun probability enhancement and cosmetic speech RNG remain"
+            "铁拳无双 stun chance .25→.37 configured; full hit/reaction and cosmetic speech RNG ordering remain"
           ],
           "fullBehaviorVerified": false
         },
@@ -1248,13 +1258,15 @@
         },
         {
           "id": "诸般封印",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1714",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1717",
             "jyx-legacy-dll/JyGame/SkillBox.cs:191"
           ],
-          "remaining": [],
+          "remaining": [
+            "confirmed normal hits apply original buff level/duration and probability; ordinary friendly-fire and 灵心慧质/legend exclusion configured; pre-hit RNG, full immunity and extra-strike/reaction ordering remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -1382,11 +1394,13 @@
         },
         {
           "id": "铁拳无双",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1676"
           ],
-          "remaining": [],
+          "remaining": [
+            "confirmed normal hits apply original buff level/duration and probability; ordinary friendly-fire and 灵心慧质/legend exclusion configured; pre-hit RNG, full immunity and extra-strike/reaction ordering remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -1449,11 +1463,13 @@
         },
         {
           "id": "阴阳",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1754"
           ],
-          "remaining": [],
+          "remaining": [
+            "confirmed normal hits apply original buff level/duration and probability; ordinary friendly-fire and 灵心慧质/legend exclusion configured; pre-hit RNG, full immunity and extra-strike/reaction ordering remain"
+          ],
           "fullBehaviorVerified": false
         },
         {

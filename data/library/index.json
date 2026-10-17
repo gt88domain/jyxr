@@ -14245,7 +14245,7 @@
       "description": "80#精通奇经八脉，攻击一定概率造成诸般封印效果。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14256,7 +14256,7 @@
       "description": "20#攻击一定概率造成剑封印效果。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14267,7 +14267,7 @@
       "description": "20#攻击一定概率造成刀封印效果。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14278,7 +14278,7 @@
       "description": "20#攻击一定概率造成奇门封印效果。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14289,7 +14289,7 @@
       "description": "20#攻击一定概率造成拳掌封印效果。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14300,7 +14300,7 @@
       "description": "40#拳头硬才有话语权！使用拳掌系武功攻击一定概率造成晕眩效果。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14784,7 +14784,7 @@
       "description": "5#随着等级逐步提升，攻击有一定概率附加麻痹效果。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -15400,7 +15400,7 @@
       "description": "50#攻击有一定概率附加重度麻痹效果。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },

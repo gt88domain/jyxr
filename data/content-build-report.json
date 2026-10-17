@@ -278,7 +278,22 @@
       "刀法增益",
       "奇门增益"
     ],
-    "scope": "final weapon aptitude multipliers and ordered truncation; earlier additions and 神拳无敌/铁拳无双 stun interaction remain"
+    "scope": "final weapon aptitude multipliers and ordered truncation; earlier additions and battle-buff layering remain; 神拳无敌/铁拳无双 probability is configured separately"
+  },
+  "controlRuleEffects": {
+    "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+    "file": "JyGame/AttackLogic.cs:1671-1769",
+    "talents": [
+      "铁拳无双",
+      "诸般封印",
+      "剑封印",
+      "刀封印",
+      "拳掌封印",
+      "奇门封印",
+      "阴阳",
+      "寒冰真气"
+    ],
+    "scope": "confirmed normal hits, original buff levels/durations and probability formulas; friendly hits clear for 灵心慧质 and legends; full reaction/extra-strike and RNG timing remain"
   },
   "legacyArt": {
     "source": {
@@ -374,6 +389,18 @@
     "normalVerified": 10,
     "isolatedVerified": 2
   },
+  "remainingChecklist": {
+    "tasks": 19,
+    "groups": {
+      "有旧C#同名引用、效果仍待接入的天赋": 39,
+      "未找到旧C#同名引用、需继续查证的天赋": 5,
+      "已有部分效果、尚未全部等价的天赋": 35,
+      "仅作为其他效果联动条件的天赋": 4,
+      "仅资料的Buff": 7,
+      "部分实现的Buff": 2,
+      "仍有明确差异的特技": 11
+    }
+  },
   "originalLibrary": {
     "categories": 27,
     "entries": 5551,
@@ -401,8 +428,8 @@
       "states": {
         "referenced-behavior": 4,
         "configured": 74,
-        "partial": 27,
-        "metadata-only": 52,
+        "partial": 35,
+        "metadata-only": 44,
         "identity-only": 1
       }
     },

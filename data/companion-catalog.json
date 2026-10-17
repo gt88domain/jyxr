@@ -10316,19 +10316,6 @@
     }
   ],
   "nodes": {
-    "破庙_田青文": {
-      "id": "破庙_田青文",
-      "label": "破庙·田青文",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "SELECT",
-          "value": "田青文#你是谁？#在下无心路过，不知姑娘所叹何事？#【调戏】美女，一起去兜个风吧#【打劫】把你值钱的东西交出来！#【离开】没事了",
-          "index": 2
-        }
-      ]
-    },
     "破庙_田青文_TOUCH_win": {
       "id": "破庙_田青文_TOUCH_win",
       "label": "破庙·田青文·TOUCH·win",
@@ -10361,6 +10348,19 @@
       "runtimeAvailable": true,
       "actions": []
     },
+    "破庙_田青文": {
+      "id": "破庙_田青文",
+      "label": "破庙·田青文",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "SELECT",
+          "value": "田青文#你是谁？#在下无心路过，不知姑娘所叹何事？#【调戏】美女，一起去兜个风吧#【打劫】把你值钱的东西交出来！#【离开】没事了",
+          "index": 2
+        }
+      ]
+    },
     "破庙_田青文_调戏胜利": {
       "id": "破庙_田青文_调戏胜利",
       "label": "破庙·田青文·调戏胜利",
@@ -10373,26 +10373,6 @@
           "index": 11
         }
       ]
-    },
-    "original_女主出场.普通": {
-      "id": "original_女主出场.普通",
-      "label": "女主出场·普通",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "BATTLE",
-          "value": "马贼王_战斗",
-          "index": 5
-        }
-      ]
-    },
-    "original_女主出场.仙丽雅3": {
-      "id": "original_女主出场.仙丽雅3",
-      "label": "女主出场·仙丽雅3",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
     },
     "original_女主出场2": {
       "id": "original_女主出场2",
@@ -10410,6 +10390,13 @@
     "original_女主出场.仙丽雅": {
       "id": "original_女主出场.仙丽雅",
       "label": "女主出场·仙丽雅",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
+    "original_女主出场.普通2": {
+      "id": "original_女主出场.普通2",
+      "label": "女主出场·普通2",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
@@ -10434,12 +10421,25 @@
         }
       ]
     },
-    "original_女主出场.普通2": {
-      "id": "original_女主出场.普通2",
-      "label": "女主出场·普通2",
+    "original_女主出场.仙丽雅3": {
+      "id": "original_女主出场.仙丽雅3",
+      "label": "女主出场·仙丽雅3",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
+    },
+    "original_女主出场.普通": {
+      "id": "original_女主出场.普通",
+      "label": "女主出场·普通",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "BATTLE",
+          "value": "马贼王_战斗",
+          "index": 5
+        }
+      ]
     },
     "original_女主出场.结束": {
       "id": "original_女主出场.结束",
@@ -10448,16 +10448,16 @@
       "runtimeAvailable": true,
       "actions": []
     },
-    "original_女主长安加入队伍": {
-      "id": "original_女主长安加入队伍",
-      "label": "女主长安加入队伍",
+    "original_女主长安加入队伍判断": {
+      "id": "original_女主长安加入队伍判断",
+      "label": "女主长安加入队伍判断",
       "source": "storysPY.xml",
       "runtimeAvailable": true,
       "actions": []
     },
-    "original_女主长安加入队伍判断": {
-      "id": "original_女主长安加入队伍判断",
-      "label": "女主长安加入队伍判断",
+    "original_女主长安加入队伍": {
+      "id": "original_女主长安加入队伍",
+      "label": "女主长安加入队伍",
       "source": "storysPY.xml",
       "runtimeAvailable": true,
       "actions": []
@@ -10482,13 +10482,6 @@
       "runtimeAvailable": true,
       "actions": []
     },
-    "original_女主长安接任务": {
-      "id": "original_女主长安接任务",
-      "label": "女主长安接任务",
-      "source": "storysPY.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
     "original_山庄风云.出发": {
       "id": "original_山庄风云.出发",
       "label": "山庄风云·出发",
@@ -10509,18 +10502,12 @@
         }
       ]
     },
-    "battle_松鼠旅馆公孙谷主": {
-      "id": "battle_松鼠旅馆公孙谷主",
-      "label": "battle·松鼠旅馆公孙谷主",
-      "source": "storys.xml",
+    "original_女主长安接任务": {
+      "id": "original_女主长安接任务",
+      "label": "女主长安接任务",
+      "source": "storysPY.xml",
       "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "BATTLE",
-          "value": "松鼠旅馆公孙谷主",
-          "index": 0
-        }
-      ]
+      "actions": []
     },
     "original_松鼠旅馆周目二": {
       "id": "original_松鼠旅馆周目二",
@@ -10532,6 +10519,19 @@
           "type": "SELECT",
           "value": "主角#请选择：#公孙谷主#木桑道长#岳不群#庄聚贤#下次再来挑战",
           "index": 1
+        }
+      ]
+    },
+    "battle_松鼠旅馆公孙谷主": {
+      "id": "battle_松鼠旅馆公孙谷主",
+      "label": "battle·松鼠旅馆公孙谷主",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "BATTLE",
+          "value": "松鼠旅馆公孙谷主",
+          "index": 0
         }
       ]
     },
@@ -10549,6 +10549,13 @@
       "runtimeAvailable": true,
       "actions": []
     },
+    "original_松鼠旅馆木桑道长": {
+      "id": "original_松鼠旅馆木桑道长",
+      "label": "松鼠旅馆木桑道长",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
     "battle_松鼠旅馆木桑道长": {
       "id": "battle_松鼠旅馆木桑道长",
       "label": "battle·松鼠旅馆木桑道长",
@@ -10561,13 +10568,6 @@
           "index": 0
         }
       ]
-    },
-    "original_松鼠旅馆木桑道长": {
-      "id": "original_松鼠旅馆木桑道长",
-      "label": "松鼠旅馆木桑道长",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
     },
     "original_松鼠旅馆岳不群": {
       "id": "original_松鼠旅馆岳不群",
@@ -10642,13 +10642,6 @@
       "runtimeAvailable": true,
       "actions": []
     },
-    "original_松鼠旅馆毒手药王": {
-      "id": "original_松鼠旅馆毒手药王",
-      "label": "松鼠旅馆毒手药王",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
     "battle_松鼠旅馆毒手药王": {
       "id": "battle_松鼠旅馆毒手药王",
       "label": "battle·松鼠旅馆毒手药王",
@@ -10661,6 +10654,13 @@
           "index": 0
         }
       ]
+    },
+    "original_松鼠旅馆毒手药王": {
+      "id": "original_松鼠旅馆毒手药王",
+      "label": "松鼠旅馆毒手药王",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
     },
     "original_松鼠旅馆周伯通": {
       "id": "original_松鼠旅馆周伯通",
@@ -10682,13 +10682,6 @@
         }
       ]
     },
-    "original_松鼠旅馆一灯大师": {
-      "id": "original_松鼠旅馆一灯大师",
-      "label": "松鼠旅馆一灯大师",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
     "battle_松鼠旅馆一灯大师": {
       "id": "battle_松鼠旅馆一灯大师",
       "label": "battle·松鼠旅馆一灯大师",
@@ -10701,6 +10694,20 @@
           "index": 0
         }
       ]
+    },
+    "original_松鼠旅馆一灯大师": {
+      "id": "original_松鼠旅馆一灯大师",
+      "label": "松鼠旅馆一灯大师",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
+    "original_松鼠旅馆东方不败": {
+      "id": "original_松鼠旅馆东方不败",
+      "label": "松鼠旅馆东方不败",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
     },
     "battle_松鼠旅馆东方不败": {
       "id": "battle_松鼠旅馆东方不败",
@@ -10715,13 +10722,6 @@
         }
       ]
     },
-    "original_松鼠旅馆东方不败": {
-      "id": "original_松鼠旅馆东方不败",
-      "label": "松鼠旅馆东方不败",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
     "original_松鼠旅馆周目四": {
       "id": "original_松鼠旅馆周目四",
       "label": "松鼠旅馆周目四",
@@ -10735,6 +10735,13 @@
         }
       ]
     },
+    "original_松鼠旅馆风清扬": {
+      "id": "original_松鼠旅馆风清扬",
+      "label": "松鼠旅馆风清扬",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
     "battle_松鼠旅馆风清扬": {
       "id": "battle_松鼠旅馆风清扬",
       "label": "battle·松鼠旅馆风清扬",
@@ -10747,13 +10754,6 @@
           "index": 0
         }
       ]
-    },
-    "original_松鼠旅馆风清扬": {
-      "id": "original_松鼠旅馆风清扬",
-      "label": "松鼠旅馆风清扬",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
     },
     "original_松鼠旅馆慕容博": {
       "id": "original_松鼠旅馆慕容博",
@@ -10775,13 +10775,6 @@
         }
       ]
     },
-    "original_松鼠旅馆无崖子": {
-      "id": "original_松鼠旅馆无崖子",
-      "label": "松鼠旅馆无崖子",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
     "battle_松鼠旅馆无崖子": {
       "id": "battle_松鼠旅馆无崖子",
       "label": "battle·松鼠旅馆无崖子",
@@ -10794,6 +10787,13 @@
           "index": 0
         }
       ]
+    },
+    "original_松鼠旅馆无崖子": {
+      "id": "original_松鼠旅馆无崖子",
+      "label": "松鼠旅馆无崖子",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
     },
     "sdxl_程英.月下吹箫": {
       "id": "sdxl_程英.月下吹箫",
@@ -10836,6 +10836,13 @@
       "runtimeAvailable": true,
       "actions": []
     },
+    "sdxl_2判断": {
+      "id": "sdxl_2判断",
+      "label": "神雕侠侣·2判断",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
     "sdxl_剑魔荒冢.杨过": {
       "id": "sdxl_剑魔荒冢.杨过",
       "label": "神雕侠侣·剑魔荒冢·杨过",
@@ -10843,12 +10850,38 @@
       "runtimeAvailable": true,
       "actions": []
     },
+    "sdxl_剑魔荒冢.战胜杨过": {
+      "id": "sdxl_剑魔荒冢.战胜杨过",
+      "label": "神雕侠侣·剑魔荒冢·战胜杨过",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "BATTLE",
+          "value": "剑魔荒冢_战斗.神雕",
+          "index": 10
+        }
+      ]
+    },
     "sdxl_剑魔荒冢.战胜神雕": {
       "id": "sdxl_剑魔荒冢.战胜神雕",
       "label": "神雕侠侣·剑魔荒冢·战胜神雕",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
+    },
+    "sdxl_剑魔荒冢.杨过2": {
+      "id": "sdxl_剑魔荒冢.杨过2",
+      "label": "神雕侠侣·剑魔荒冢·杨过2",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "SELECT",
+          "value": "主角#如何回答杨过？#说说你的故事#[[yellow:特来找杨兄走上两招【切磋】]]#[[red:受死吧！【刺杀】]]#没事了",
+          "index": 1
+        }
+      ]
     },
     "sdxl_2": {
       "id": "sdxl_2",
@@ -10870,45 +10903,18 @@
       "runtimeAvailable": true,
       "actions": []
     },
-    "sdxl_剑魔荒冢.战胜杨过": {
-      "id": "sdxl_剑魔荒冢.战胜杨过",
-      "label": "神雕侠侣·剑魔荒冢·战胜杨过",
+    "sdxl_绝情谷底.小龙女加入": {
+      "id": "sdxl_绝情谷底.小龙女加入",
+      "label": "神雕侠侣·绝情谷底·小龙女加入",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": [
         {
-          "type": "BATTLE",
-          "value": "剑魔荒冢_战斗.神雕",
+          "type": "DAODE",
+          "value": "2",
           "index": 10
         }
       ]
-    },
-    "sdxl_2判断": {
-      "id": "sdxl_2判断",
-      "label": "神雕侠侣·2判断",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
-    "sdxl_剑魔荒冢.杨过2": {
-      "id": "sdxl_剑魔荒冢.杨过2",
-      "label": "神雕侠侣·剑魔荒冢·杨过2",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "SELECT",
-          "value": "主角#如何回答杨过？#说说你的故事#[[yellow:特来找杨兄走上两招【切磋】]]#[[red:受死吧！【刺杀】]]#没事了",
-          "index": 1
-        }
-      ]
-    },
-    "sdxl_断肠崖.杨过跳崖2": {
-      "id": "sdxl_断肠崖.杨过跳崖2",
-      "label": "神雕侠侣·断肠崖·杨过跳崖2",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
     },
     "sdxl_断肠崖.杨过跳崖": {
       "id": "sdxl_断肠崖.杨过跳崖",
@@ -10917,9 +10923,16 @@
       "runtimeAvailable": true,
       "actions": []
     },
-    "sdxl_绝情谷底.小龙女2": {
-      "id": "sdxl_绝情谷底.小龙女2",
-      "label": "神雕侠侣·绝情谷底·小龙女2",
+    "sdxl_断肠崖.杨过跳崖2": {
+      "id": "sdxl_断肠崖.杨过跳崖2",
+      "label": "神雕侠侣·断肠崖·杨过跳崖2",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
+    "sdxl_绝情谷底.小龙女": {
+      "id": "sdxl_绝情谷底.小龙女",
+      "label": "神雕侠侣·绝情谷底·小龙女",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
@@ -10937,29 +10950,36 @@
         }
       ]
     },
-    "sdxl_绝情谷底.小龙女": {
-      "id": "sdxl_绝情谷底.小龙女",
-      "label": "神雕侠侣·绝情谷底·小龙女",
+    "sdxl_绝情谷底.小龙女2": {
+      "id": "sdxl_绝情谷底.小龙女2",
+      "label": "神雕侠侣·绝情谷底·小龙女2",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
     },
-    "sdxl_绝情谷底.小龙女加入": {
-      "id": "sdxl_绝情谷底.小龙女加入",
-      "label": "神雕侠侣·绝情谷底·小龙女加入",
+    "test_选择": {
+      "id": "test_选择",
+      "label": "test·选择",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": [
         {
-          "type": "DAODE",
-          "value": "2",
-          "index": 10
+          "type": "SELECT",
+          "value": "主角#是否要求张无忌加入？#是#否",
+          "index": 1
         }
       ]
     },
     "test_是": {
       "id": "test_是",
       "label": "test·是",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
+    "test_否": {
+      "id": "test_否",
+      "label": "test·否",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
@@ -10977,26 +10997,6 @@
         }
       ]
     },
-    "test_选择": {
-      "id": "test_选择",
-      "label": "test·选择",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "SELECT",
-          "value": "主角#是否要求张无忌加入？#是#否",
-          "index": 1
-        }
-      ]
-    },
-    "test_否": {
-      "id": "test_否",
-      "label": "test·否",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
     "yttlj_昆仑仙境": {
       "id": "yttlj_昆仑仙境",
       "label": "倚天屠龙·昆仑仙境",
@@ -11007,19 +11007,6 @@
           "type": "BATTLE",
           "value": "昆仑仙境_战斗",
           "index": 5
-        }
-      ]
-    },
-    "倚天屠龙_北京救赵敏2": {
-      "id": "倚天屠龙_北京救赵敏2",
-      "label": "倚天屠龙·北京救赵敏2",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "BATTLE",
-          "value": "汝阳王府_战斗",
-          "index": 4
         }
       ]
     },
@@ -11036,6 +11023,19 @@
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
+    },
+    "倚天屠龙_北京救赵敏2": {
+      "id": "倚天屠龙_北京救赵敏2",
+      "label": "倚天屠龙·北京救赵敏2",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "BATTLE",
+          "value": "汝阳王府_战斗",
+          "index": 4
+        }
+      ]
     },
     "tlbb.dy_镇南王府.救木婉清1": {
       "id": "tlbb.dy_镇南王府.救木婉清1",
@@ -11058,23 +11058,9 @@
       "runtimeAvailable": true,
       "actions": []
     },
-    "tlbb.dy_曼陀山庄3": {
-      "id": "tlbb.dy_曼陀山庄3",
-      "label": "天龙八部·曼陀山庄3",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
-    "tlbb.dy_曼陀山庄1": {
-      "id": "tlbb.dy_曼陀山庄1",
-      "label": "天龙八部·曼陀山庄1",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
-    "tlbb.dy_曼陀山庄负": {
-      "id": "tlbb.dy_曼陀山庄负",
-      "label": "天龙八部·曼陀山庄负",
+    "tlbb.dy_曼陀山庄胜": {
+      "id": "tlbb.dy_曼陀山庄胜",
+      "label": "天龙八部·曼陀山庄胜",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
@@ -11092,6 +11078,13 @@
         }
       ]
     },
+    "tlbb.dy_曼陀山庄负": {
+      "id": "tlbb.dy_曼陀山庄负",
+      "label": "天龙八部·曼陀山庄负",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
     "tlbb.dy_曼陀山庄21": {
       "id": "tlbb.dy_曼陀山庄21",
       "label": "天龙八部·曼陀山庄21",
@@ -11105,16 +11098,16 @@
         }
       ]
     },
-    "tlbb.dy_曼陀山庄胜": {
-      "id": "tlbb.dy_曼陀山庄胜",
-      "label": "天龙八部·曼陀山庄胜",
+    "tlbb.dy_曼陀山庄1": {
+      "id": "tlbb.dy_曼陀山庄1",
+      "label": "天龙八部·曼陀山庄1",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
     },
-    "tlbb.dy_雁门关有阿朱": {
-      "id": "tlbb.dy_雁门关有阿朱",
-      "label": "天龙八部·雁门关有阿朱",
+    "tlbb.dy_曼陀山庄3": {
+      "id": "tlbb.dy_曼陀山庄3",
+      "label": "天龙八部·曼陀山庄3",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
@@ -11132,16 +11125,9 @@
         }
       ]
     },
-    "tlbb.dy_西夏驸马段誉2": {
-      "id": "tlbb.dy_西夏驸马段誉2",
-      "label": "天龙八部·西夏驸马段誉2",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
-    "tlbb.dy_西夏驸马段誉4": {
-      "id": "tlbb.dy_西夏驸马段誉4",
-      "label": "天龙八部·西夏驸马段誉4",
+    "tlbb.dy_雁门关有阿朱": {
+      "id": "tlbb.dy_雁门关有阿朱",
+      "label": "天龙八部·雁门关有阿朱",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
@@ -11160,6 +11146,13 @@
       "runtimeAvailable": true,
       "actions": []
     },
+    "tlbb.dy_西夏驸马段誉6": {
+      "id": "tlbb.dy_西夏驸马段誉6",
+      "label": "天龙八部·西夏驸马段誉6",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
     "tlbb.dy_西夏驸马段誉5": {
       "id": "tlbb.dy_西夏驸马段誉5",
       "label": "天龙八部·西夏驸马段誉5",
@@ -11167,9 +11160,16 @@
       "runtimeAvailable": true,
       "actions": []
     },
-    "tlbb.dy_西夏驸马段誉6": {
-      "id": "tlbb.dy_西夏驸马段誉6",
-      "label": "天龙八部·西夏驸马段誉6",
+    "tlbb.dy_西夏驸马段誉2": {
+      "id": "tlbb.dy_西夏驸马段誉2",
+      "label": "天龙八部·西夏驸马段誉2",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
+    "tlbb.dy_西夏驸马段誉4": {
+      "id": "tlbb.dy_西夏驸马段誉4",
+      "label": "天龙八部·西夏驸马段誉4",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
@@ -11188,6 +11188,26 @@
       "runtimeAvailable": true,
       "actions": []
     },
+    "tlbb.dy_琴韵小筑阿碧1": {
+      "id": "tlbb.dy_琴韵小筑阿碧1",
+      "label": "天龙八部·琴韵小筑阿碧1",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
+    "tlbb.dy_阿碧线王语嫣touch3": {
+      "id": "tlbb.dy_阿碧线王语嫣touch3",
+      "label": "天龙八部·阿碧线王语嫣touch3",
+      "source": "storysPY.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "TOUCH",
+          "value": "王语嫣",
+          "index": 8
+        }
+      ]
+    },
     "tlbb.dy_阿碧线王语嫣touch2": {
       "id": "tlbb.dy_阿碧线王语嫣touch2",
       "label": "天龙八部·阿碧线王语嫣touch2",
@@ -11201,17 +11221,17 @@
         }
       ]
     },
-    "tlbb.dy_琴韵小筑阿碧1": {
-      "id": "tlbb.dy_琴韵小筑阿碧1",
-      "label": "天龙八部·琴韵小筑阿碧1",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
     "tlbb.dy_琴韵小筑阿碧2": {
       "id": "tlbb.dy_琴韵小筑阿碧2",
       "label": "天龙八部·琴韵小筑阿碧2",
       "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
+    "tlbb.dy_阿碧线李青萝.touch.成功": {
+      "id": "tlbb.dy_阿碧线李青萝.touch.成功",
+      "label": "天龙八部·阿碧线李青萝·touch·成功",
+      "source": "storysPY.xml",
       "runtimeAvailable": true,
       "actions": []
     },
@@ -11227,26 +11247,6 @@
           "index": 7
         }
       ]
-    },
-    "tlbb.dy_阿碧线王语嫣touch3": {
-      "id": "tlbb.dy_阿碧线王语嫣touch3",
-      "label": "天龙八部·阿碧线王语嫣touch3",
-      "source": "storysPY.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "TOUCH",
-          "value": "王语嫣",
-          "index": 8
-        }
-      ]
-    },
-    "tlbb.dy_阿碧线李青萝.touch.成功": {
-      "id": "tlbb.dy_阿碧线李青萝.touch.成功",
-      "label": "天龙八部·阿碧线李青萝·touch·成功",
-      "source": "storysPY.xml",
-      "runtimeAvailable": true,
-      "actions": []
     },
     "tlbb.dy_阿碧线李青萝.touch.不成功2": {
       "id": "tlbb.dy_阿碧线李青萝.touch.不成功2",
@@ -11288,12 +11288,18 @@
       "runtimeAvailable": true,
       "actions": []
     },
-    "tlbb.dy_小镜湖阮星竹4": {
-      "id": "tlbb.dy_小镜湖阮星竹4",
-      "label": "天龙八部·小镜湖阮星竹4",
+    "tlbb.dy_小镜湖阮星竹5": {
+      "id": "tlbb.dy_小镜湖阮星竹5",
+      "label": "天龙八部·小镜湖阮星竹5",
       "source": "storys.xml",
       "runtimeAvailable": true,
-      "actions": []
+      "actions": [
+        {
+          "type": "BATTLE",
+          "value": "小镜湖阮星竹慕容复_战斗",
+          "index": 34
+        }
+      ]
     },
     "tlbb.dy_小镜湖阮星竹6": {
       "id": "tlbb.dy_小镜湖阮星竹6",
@@ -11309,19 +11315,6 @@
       "runtimeAvailable": true,
       "actions": []
     },
-    "tlbb.dy_小镜湖阮星竹5": {
-      "id": "tlbb.dy_小镜湖阮星竹5",
-      "label": "天龙八部·小镜湖阮星竹5",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "BATTLE",
-          "value": "小镜湖阮星竹慕容复_战斗",
-          "index": 34
-        }
-      ]
-    },
     "tlbb.dy_小镜湖阮星竹3": {
       "id": "tlbb.dy_小镜湖阮星竹3",
       "label": "天龙八部·小镜湖阮星竹3",
@@ -11335,6 +11328,13 @@
         }
       ]
     },
+    "tlbb.dy_小镜湖阮星竹4": {
+      "id": "tlbb.dy_小镜湖阮星竹4",
+      "label": "天龙八部·小镜湖阮星竹4",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
     "tlbb.dy_小镜湖阮星竹1": {
       "id": "tlbb.dy_小镜湖阮星竹1",
       "label": "天龙八部·小镜湖阮星竹1",
@@ -11342,18 +11342,12 @@
       "runtimeAvailable": true,
       "actions": []
     },
-    "tlbb.dy_阿朱阿碧住手": {
-      "id": "tlbb.dy_阿朱阿碧住手",
-      "label": "天龙八部·阿朱阿碧住手",
+    "tlbb.dy_阿朱阿碧.阿朱": {
+      "id": "tlbb.dy_阿朱阿碧.阿朱",
+      "label": "天龙八部·阿朱阿碧·阿朱",
       "source": "storys.xml",
       "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "BATTLE",
-          "value": "阿朱阿碧_战斗",
-          "index": 1
-        }
-      ]
+      "actions": []
     },
     "tlbb.dy_阿朱阿碧2": {
       "id": "tlbb.dy_阿朱阿碧2",
@@ -11386,23 +11380,22 @@
         }
       ]
     },
-    "tlbb.dy_阿朱阿碧.阿朱": {
-      "id": "tlbb.dy_阿朱阿碧.阿朱",
-      "label": "天龙八部·阿朱阿碧·阿朱",
+    "tlbb.dy_阿朱阿碧住手": {
+      "id": "tlbb.dy_阿朱阿碧住手",
+      "label": "天龙八部·阿朱阿碧住手",
       "source": "storys.xml",
       "runtimeAvailable": true,
-      "actions": []
+      "actions": [
+        {
+          "type": "BATTLE",
+          "value": "阿朱阿碧_战斗",
+          "index": 1
+        }
+      ]
     },
     "tlbb.dy_阿朱阿碧.阿碧": {
       "id": "tlbb.dy_阿朱阿碧.阿碧",
       "label": "天龙八部·阿朱阿碧·阿碧",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
-    "tlbb.dy_钟灵找": {
-      "id": "tlbb.dy_钟灵找",
-      "label": "天龙八部·钟灵找",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
@@ -11420,18 +11413,12 @@
         }
       ]
     },
-    "tlbb.xz_星宿派": {
-      "id": "tlbb.xz_星宿派",
-      "label": "天龙八部·星宿派",
+    "tlbb.dy_钟灵找": {
+      "id": "tlbb.dy_钟灵找",
+      "label": "天龙八部·钟灵找",
       "source": "storys.xml",
       "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "BATTLE",
-          "value": "星宿派_灭门",
-          "index": 6
-        }
-      ]
+      "actions": []
     },
     "tlbb.xz_星宿派胜": {
       "id": "tlbb.xz_星宿派胜",
@@ -11459,6 +11446,26 @@
         }
       ]
     },
+    "tlbb.xz_星宿派": {
+      "id": "tlbb.xz_星宿派",
+      "label": "天龙八部·星宿派",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "BATTLE",
+          "value": "星宿派_灭门",
+          "index": 6
+        }
+      ]
+    },
+    "笑傲江湖_田伯光居.胜田伯光": {
+      "id": "笑傲江湖_田伯光居.胜田伯光",
+      "label": "笑傲江湖·田伯光居·胜田伯光",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
     "笑傲江湖_田伯光居1": {
       "id": "笑傲江湖_田伯光居1",
       "label": "笑傲江湖·田伯光居1",
@@ -11471,13 +11478,6 @@
           "index": 13
         }
       ]
-    },
-    "笑傲江湖_田伯光居.胜田伯光": {
-      "id": "笑傲江湖_田伯光居.胜田伯光",
-      "label": "笑傲江湖·田伯光居·胜田伯光",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
     },
     "笑傲江湖_田伯光居.负田伯光": {
       "id": "笑傲江湖_田伯光居.负田伯光",
@@ -11492,9 +11492,9 @@
         }
       ]
     },
-    "笑傲江湖_令狐冲加入": {
-      "id": "笑傲江湖_令狐冲加入",
-      "label": "笑傲江湖·令狐冲加入",
+    "笑傲江湖_天下第一令狐冲": {
+      "id": "笑傲江湖_天下第一令狐冲",
+      "label": "笑傲江湖·天下第一令狐冲",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
@@ -11512,9 +11512,9 @@
         }
       ]
     },
-    "笑傲江湖_天下第一令狐冲": {
-      "id": "笑傲江湖_天下第一令狐冲",
-      "label": "笑傲江湖·天下第一令狐冲",
+    "笑傲江湖_令狐冲加入": {
+      "id": "笑傲江湖_令狐冲加入",
+      "label": "笑傲江湖·令狐冲加入",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
@@ -11559,6 +11559,13 @@
         }
       ]
     },
+    "笑傲江湖_平一指治疗": {
+      "id": "笑傲江湖_平一指治疗",
+      "label": "笑傲江湖·平一指治疗",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
     "笑傲江湖_平一指治好": {
       "id": "笑傲江湖_平一指治好",
       "label": "笑傲江湖·平一指治好",
@@ -11572,32 +11579,12 @@
         }
       ]
     },
-    "笑傲江湖_平一指治疗": {
-      "id": "笑傲江湖_平一指治疗",
-      "label": "笑傲江湖·平一指治疗",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
     "笑傲邪_并派大会胜利2": {
       "id": "笑傲邪_并派大会胜利2",
       "label": "笑傲邪·并派大会胜利2",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
-    },
-    "笑傲邪_五岳并派大会2": {
-      "id": "笑傲邪_五岳并派大会2",
-      "label": "笑傲邪·五岳并派大会2",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "BATTLE",
-          "value": "笑傲邪_并派战斗",
-          "index": 9
-        }
-      ]
     },
     "笑傲邪_五岳并派大会": {
       "id": "笑傲邪_五岳并派大会",
@@ -11619,6 +11606,26 @@
         }
       ]
     },
+    "笑傲邪_五岳并派大会2": {
+      "id": "笑傲邪_五岳并派大会2",
+      "label": "笑傲邪·五岳并派大会2",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "BATTLE",
+          "value": "笑傲邪_并派战斗",
+          "index": 9
+        }
+      ]
+    },
+    "雪山飞狐_胡斐居.胜利": {
+      "id": "雪山飞狐_胡斐居.胜利",
+      "label": "雪山飞狐·胡斐居·胜利",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
     "雪山飞狐_胡斐居": {
       "id": "雪山飞狐_胡斐居",
       "label": "雪山飞狐·胡斐居",
@@ -11632,32 +11639,12 @@
         }
       ]
     },
-    "雪山飞狐_胡斐居.胜利": {
-      "id": "雪山飞狐_胡斐居.胜利",
-      "label": "雪山飞狐·胡斐居·胜利",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
     "雪山飞狐_药王庄.程灵素.求药": {
       "id": "雪山飞狐_药王庄.程灵素.求药",
       "label": "雪山飞狐·药王庄·程灵素·求药",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
-    },
-    "雪山飞狐_阎基居.七星海棠.胜利": {
-      "id": "雪山飞狐_阎基居.七星海棠.胜利",
-      "label": "雪山飞狐·阎基居·七星海棠·胜利",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "SELECT",
-          "value": "主角#杀还是不杀呢？#杀#留他狗命",
-          "index": 7
-        }
-      ]
     },
     "雪山飞狐_阎基居.七星海棠.胜利.不杀": {
       "id": "雪山飞狐_阎基居.七星海棠.胜利.不杀",
@@ -11669,6 +11656,19 @@
           "type": "DAODE",
           "value": "-2",
           "index": 2
+        }
+      ]
+    },
+    "雪山飞狐_阎基居.七星海棠.胜利": {
+      "id": "雪山飞狐_阎基居.七星海棠.胜利",
+      "label": "雪山飞狐·阎基居·七星海棠·胜利",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "SELECT",
+          "value": "主角#杀还是不杀呢？#杀#留他狗命",
+          "index": 7
         }
       ]
     },
@@ -11685,19 +11685,6 @@
         }
       ]
     },
-    "雪山飞狐_湘妃庙.田归农": {
-      "id": "雪山飞狐_湘妃庙.田归农",
-      "label": "雪山飞狐·湘妃庙·田归农",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "SELECT",
-          "value": "主角#该相信田归农么？#相信#不相信",
-          "index": 14
-        }
-      ]
-    },
     "雪山飞狐_湘妃庙.相信田归农": {
       "id": "雪山飞狐_湘妃庙.相信田归农",
       "label": "雪山飞狐·湘妃庙·相信田归农",
@@ -11708,6 +11695,19 @@
           "type": "DAODE",
           "value": "-3",
           "index": 2
+        }
+      ]
+    },
+    "雪山飞狐_湘妃庙.田归农": {
+      "id": "雪山飞狐_湘妃庙.田归农",
+      "label": "雪山飞狐·湘妃庙·田归农",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "SELECT",
+          "value": "主角#该相信田归农么？#相信#不相信",
+          "index": 14
         }
       ]
     },
@@ -11745,6 +11745,13 @@
       "runtimeAvailable": true,
       "actions": []
     },
+    "连城诀_唐诗山洞.狄云加入": {
+      "id": "连城诀_唐诗山洞.狄云加入",
+      "label": "连城诀·唐诗山洞·狄云加入",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
     "连城诀_唐诗山洞.狄云加入前": {
       "id": "连城诀_唐诗山洞.狄云加入前",
       "label": "连城诀·唐诗山洞·狄云加入前",
@@ -11758,13 +11765,6 @@
         }
       ]
     },
-    "连城诀_唐诗山洞.狄云加入": {
-      "id": "连城诀_唐诗山洞.狄云加入",
-      "label": "连城诀·唐诗山洞·狄云加入",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
     "连城诀_昆仑山.血刀老祖加入": {
       "id": "连城诀_昆仑山.血刀老祖加入",
       "label": "连城诀·昆仑山·血刀老祖加入",
@@ -11775,13 +11775,6 @@
     "连城诀_雪谷水笙": {
       "id": "连城诀_雪谷水笙",
       "label": "连城诀·雪谷水笙",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
-    "书剑恩仇录_回族部落霍青桐": {
-      "id": "书剑恩仇录_回族部落霍青桐",
-      "label": "书剑恩仇录·回族部落霍青桐",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
@@ -11799,6 +11792,13 @@
         }
       ]
     },
+    "书剑恩仇录_回族部落霍青桐": {
+      "id": "书剑恩仇录_回族部落霍青桐",
+      "label": "书剑恩仇录·回族部落霍青桐",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
     "书剑恩仇录_庖丁解牛": {
       "id": "书剑恩仇录_庖丁解牛",
       "label": "书剑恩仇录·庖丁解牛",
@@ -11809,19 +11809,6 @@
           "type": "BATTLE",
           "value": "庖丁解牛_战斗",
           "index": 9
-        }
-      ]
-    },
-    "鹿鼎记_北京韦小宝2": {
-      "id": "鹿鼎记_北京韦小宝2",
-      "label": "鹿鼎记·北京韦小宝2",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "SELECT",
-          "value": "主角#1000两银子招募韦小宝？#好吧！#算了。",
-          "index": 1
         }
       ]
     },
@@ -11838,16 +11825,22 @@
         }
       ]
     },
+    "鹿鼎记_北京韦小宝2": {
+      "id": "鹿鼎记_北京韦小宝2",
+      "label": "鹿鼎记·北京韦小宝2",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "SELECT",
+          "value": "主角#1000两银子招募韦小宝？#好吧！#算了。",
+          "index": 1
+        }
+      ]
+    },
     "鹿鼎记_北京韦小宝": {
       "id": "鹿鼎记_北京韦小宝",
       "label": "鹿鼎记·北京韦小宝",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
-    "鹿鼎记_阿九.邀请2": {
-      "id": "鹿鼎记_阿九.邀请2",
-      "label": "鹿鼎记·阿九·邀请2",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
@@ -11865,6 +11858,20 @@
         }
       ]
     },
+    "鹿鼎记_阿九.邀请": {
+      "id": "鹿鼎记_阿九.邀请",
+      "label": "鹿鼎记·阿九·邀请",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
+    "鹿鼎记_阿九1": {
+      "id": "鹿鼎记_阿九1",
+      "label": "鹿鼎记·阿九1",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
     "鹿鼎记_阿九2": {
       "id": "鹿鼎记_阿九2",
       "label": "鹿鼎记·阿九2",
@@ -11878,16 +11885,9 @@
         }
       ]
     },
-    "鹿鼎记_阿九1": {
-      "id": "鹿鼎记_阿九1",
-      "label": "鹿鼎记·阿九1",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
-    "鹿鼎记_阿九.邀请": {
-      "id": "鹿鼎记_阿九.邀请",
-      "label": "鹿鼎记·阿九·邀请",
+    "鹿鼎记_阿九.邀请2": {
+      "id": "鹿鼎记_阿九.邀请2",
+      "label": "鹿鼎记·阿九·邀请2",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
@@ -11899,18 +11899,12 @@
       "runtimeAvailable": true,
       "actions": []
     },
-    "鹿鼎记_台湾2": {
-      "id": "鹿鼎记_台湾2",
-      "label": "鹿鼎记·台湾2",
+    "鹿鼎记_台湾3": {
+      "id": "鹿鼎记_台湾3",
+      "label": "鹿鼎记·台湾3",
       "source": "storys.xml",
       "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "BATTLE",
-          "value": "鹿鼎记_台湾郑克爽2",
-          "index": 16
-        }
-      ]
+      "actions": []
     },
     "鹿鼎记_台湾1": {
       "id": "鹿鼎记_台湾1",
@@ -11925,19 +11919,18 @@
         }
       ]
     },
-    "鹿鼎记_台湾3": {
-      "id": "鹿鼎记_台湾3",
-      "label": "鹿鼎记·台湾3",
+    "鹿鼎记_台湾2": {
+      "id": "鹿鼎记_台湾2",
+      "label": "鹿鼎记·台湾2",
       "source": "storys.xml",
       "runtimeAvailable": true,
-      "actions": []
-    },
-    "鹿鼎记_神龙岛2": {
-      "id": "鹿鼎记_神龙岛2",
-      "label": "鹿鼎记·神龙岛2",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
+      "actions": [
+        {
+          "type": "BATTLE",
+          "value": "鹿鼎记_台湾郑克爽2",
+          "index": 16
+        }
+      ]
     },
     "鹿鼎记_神龙岛": {
       "id": "鹿鼎记_神龙岛",
@@ -11966,6 +11959,54 @@
       "runtimeAvailable": true,
       "actions": []
     },
+    "鹿鼎记_神龙岛2": {
+      "id": "鹿鼎记_神龙岛2",
+      "label": "鹿鼎记·神龙岛2",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
+    "门派古墓_古墓故友负": {
+      "id": "门派古墓_古墓故友负",
+      "label": "门派古墓·古墓故友负",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
+    "门派古墓_古墓世仇2": {
+      "id": "门派古墓_古墓世仇2",
+      "label": "门派古墓·古墓世仇2",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
+    "门派古墓_古墓故友胜": {
+      "id": "门派古墓_古墓故友胜",
+      "label": "门派古墓·古墓故友胜",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
+    "门派古墓_玉蜂之间": {
+      "id": "门派古墓_玉蜂之间",
+      "label": "门派古墓·玉蜂之间",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "COST_DAY",
+          "value": "1",
+          "index": 7
+        }
+      ]
+    },
+    "门派古墓_古墓故友2": {
+      "id": "门派古墓_古墓故友2",
+      "label": "门派古墓·古墓故友2",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
     "门派古墓_古墓故友1": {
       "id": "门派古墓_古墓故友1",
       "label": "门派古墓·古墓故友1",
@@ -11979,22 +12020,22 @@
         }
       ]
     },
-    "门派古墓_杨冰儿比武负": {
-      "id": "门派古墓_杨冰儿比武负",
-      "label": "门派古墓·杨冰儿比武负",
+    "门派古墓_古墓叛徒1": {
+      "id": "门派古墓_古墓叛徒1",
+      "label": "门派古墓·古墓叛徒1",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": [
         {
-          "type": "COST_DAY",
-          "value": "1",
-          "index": 2
+          "type": "SELECT",
+          "value": "主角#要接受这个任务吗？#接受！#下次吧。",
+          "index": 5
         }
       ]
     },
-    "门派古墓_天罗地网之间": {
-      "id": "门派古墓_天罗地网之间",
-      "label": "门派古墓·天罗地网之间",
+    "门派古墓_祖师之间": {
+      "id": "门派古墓_祖师之间",
+      "label": "门派古墓·祖师之间",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": [
@@ -12004,13 +12045,6 @@
           "index": 7
         }
       ]
-    },
-    "门派古墓_新的一天": {
-      "id": "门派古墓_新的一天",
-      "label": "门派古墓·新的一天",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
     },
     "门派古墓_古墓世仇1": {
       "id": "门派古墓_古墓世仇1",
@@ -12025,9 +12059,9 @@
         }
       ]
     },
-    "门派古墓_古墓世仇负": {
-      "id": "门派古墓_古墓世仇负",
-      "label": "门派古墓·古墓世仇负",
+    "门派古墓_古墓叛徒胜": {
+      "id": "门派古墓_古墓叛徒胜",
+      "label": "门派古墓·古墓叛徒胜",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
@@ -12045,13 +12079,6 @@
         }
       ]
     },
-    "门派古墓_古墓故友胜": {
-      "id": "门派古墓_古墓故友胜",
-      "label": "门派古墓·古墓故友胜",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
     "门派古墓_古墓世仇3": {
       "id": "门派古墓_古墓世仇3",
       "label": "门派古墓·古墓世仇3",
@@ -12067,126 +12094,6 @@
           "type": "BATTLE",
           "value": "古墓世仇_战斗",
           "index": 6
-        }
-      ]
-    },
-    "门派古墓_古墓故友2": {
-      "id": "门派古墓_古墓故友2",
-      "label": "门派古墓·古墓故友2",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
-    "门派古墓_杨冰儿比武": {
-      "id": "门派古墓_杨冰儿比武",
-      "label": "门派古墓·杨冰儿比武",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "SELECT",
-          "value": "主角#要和杨冰儿比试吗？#比试！#算了。",
-          "index": 2
-        }
-      ]
-    },
-    "门派古墓_古墓叛徒2": {
-      "id": "门派古墓_古墓叛徒2",
-      "label": "门派古墓·古墓叛徒2",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
-    "门派古墓_绳床之间": {
-      "id": "门派古墓_绳床之间",
-      "label": "门派古墓·绳床之间",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "COST_DAY",
-          "value": "1",
-          "index": 7
-        }
-      ]
-    },
-    "门派古墓_古墓故友负": {
-      "id": "门派古墓_古墓故友负",
-      "label": "门派古墓·古墓故友负",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
-    "门派古墓_古墓叛徒胜": {
-      "id": "门派古墓_古墓叛徒胜",
-      "label": "门派古墓·古墓叛徒胜",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
-    "门派古墓_古墓出师": {
-      "id": "门派古墓_古墓出师",
-      "label": "门派古墓·古墓出师",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
-    "门派古墓_寒玉之间": {
-      "id": "门派古墓_寒玉之间",
-      "label": "门派古墓·寒玉之间",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "COST_DAY",
-          "value": "1",
-          "index": 8
-        }
-      ]
-    },
-    "门派古墓_古墓叛徒1": {
-      "id": "门派古墓_古墓叛徒1",
-      "label": "门派古墓·古墓叛徒1",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "SELECT",
-          "value": "主角#要接受这个任务吗？#接受！#下次吧。",
-          "index": 5
-        }
-      ]
-    },
-    "门派古墓_玉蜂之间": {
-      "id": "门派古墓_玉蜂之间",
-      "label": "门派古墓·玉蜂之间",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "COST_DAY",
-          "value": "1",
-          "index": 7
-        }
-      ]
-    },
-    "门派古墓_古墓世仇2": {
-      "id": "门派古墓_古墓世仇2",
-      "label": "门派古墓·古墓世仇2",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
-    "门派古墓_杨冰儿比武胜": {
-      "id": "门派古墓_杨冰儿比武胜",
-      "label": "门派古墓·杨冰儿比武胜",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "COST_DAY",
-          "value": "1",
-          "index": 2
         }
       ]
     },
@@ -12215,9 +12122,49 @@
       "runtimeAvailable": true,
       "actions": []
     },
-    "门派古墓_祖师之间": {
-      "id": "门派古墓_祖师之间",
-      "label": "门派古墓·祖师之间",
+    "门派古墓_杨冰儿比武": {
+      "id": "门派古墓_杨冰儿比武",
+      "label": "门派古墓·杨冰儿比武",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "SELECT",
+          "value": "主角#要和杨冰儿比试吗？#比试！#算了。",
+          "index": 2
+        }
+      ]
+    },
+    "门派古墓_古墓出师": {
+      "id": "门派古墓_古墓出师",
+      "label": "门派古墓·古墓出师",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
+    "门派古墓_寒玉之间": {
+      "id": "门派古墓_寒玉之间",
+      "label": "门派古墓·寒玉之间",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "COST_DAY",
+          "value": "1",
+          "index": 8
+        }
+      ]
+    },
+    "门派古墓_古墓叛徒2": {
+      "id": "门派古墓_古墓叛徒2",
+      "label": "门派古墓·古墓叛徒2",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
+    "门派古墓_天罗地网之间": {
+      "id": "门派古墓_天罗地网之间",
+      "label": "门派古墓·天罗地网之间",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": [
@@ -12234,6 +12181,39 @@
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
+    },
+    "门派古墓_杨冰儿比武负": {
+      "id": "门派古墓_杨冰儿比武负",
+      "label": "门派古墓·杨冰儿比武负",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "COST_DAY",
+          "value": "1",
+          "index": 2
+        }
+      ]
+    },
+    "门派古墓_古墓世仇负": {
+      "id": "门派古墓_古墓世仇负",
+      "label": "门派古墓·古墓世仇负",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
+    "门派古墓_绳床之间": {
+      "id": "门派古墓_绳床之间",
+      "label": "门派古墓·绳床之间",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "COST_DAY",
+          "value": "1",
+          "index": 7
+        }
+      ]
     },
     "门派古墓_古墓叛徒3": {
       "id": "门派古墓_古墓叛徒3",
@@ -12253,6 +12233,33 @@
         }
       ]
     },
+    "门派古墓_新的一天": {
+      "id": "门派古墓_新的一天",
+      "label": "门派古墓·新的一天",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
+    "门派古墓_杨冰儿比武胜": {
+      "id": "门派古墓_杨冰儿比武胜",
+      "label": "门派古墓·杨冰儿比武胜",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "COST_DAY",
+          "value": "1",
+          "index": 2
+        }
+      ]
+    },
+    "门派大轮寺_大理高手胜": {
+      "id": "门派大轮寺_大理高手胜",
+      "label": "门派大轮寺·大理高手胜",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
     "门派大轮寺_大理高手1": {
       "id": "门派大轮寺_大理高手1",
       "label": "门派大轮寺·大理高手1",
@@ -12260,15 +12267,35 @@
       "runtimeAvailable": true,
       "actions": []
     },
-    "门派大轮寺_雪山小路": {
-      "id": "门派大轮寺_雪山小路",
-      "label": "门派大轮寺·雪山小路",
+    "门派大轮寺_大轮寺出师": {
+      "id": "门派大轮寺_大轮寺出师",
+      "label": "门派大轮寺·大轮寺出师",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
+    "门派大轮寺_参禅": {
+      "id": "门派大轮寺_参禅",
+      "label": "门派大轮寺·参禅",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": [
         {
           "type": "COST_DAY",
           "value": "1",
+          "index": 5
+        }
+      ]
+    },
+    "门派大轮寺_大理高手2": {
+      "id": "门派大轮寺_大理高手2",
+      "label": "门派大轮寺·大理高手2",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "BATTLE",
+          "value": "大轮寺大理高手_战斗",
           "index": 5
         }
       ]
@@ -12286,13 +12313,6 @@
         }
       ]
     },
-    "门派大轮寺_大理高手胜": {
-      "id": "门派大轮寺_大理高手胜",
-      "label": "门派大轮寺·大理高手胜",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
     "门派大轮寺_无上大力杵": {
       "id": "门派大轮寺_无上大力杵",
       "label": "门派大轮寺·无上大力杵",
@@ -12305,33 +12325,6 @@
           "index": 7
         }
       ]
-    },
-    "门派大轮寺_参禅": {
-      "id": "门派大轮寺_参禅",
-      "label": "门派大轮寺·参禅",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "COST_DAY",
-          "value": "1",
-          "index": 5
-        }
-      ]
-    },
-    "门派大轮寺_新的一天": {
-      "id": "门派大轮寺_新的一天",
-      "label": "门派大轮寺·新的一天",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
-    "门派大轮寺_大理高手负": {
-      "id": "门派大轮寺_大理高手负",
-      "label": "门派大轮寺·大理高手负",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
     },
     "门派大轮寺_漫天花雨": {
       "id": "门派大轮寺_漫天花雨",
@@ -12346,22 +12339,29 @@
         }
       ]
     },
-    "门派大轮寺_大轮寺出师": {
-      "id": "门派大轮寺_大轮寺出师",
-      "label": "门派大轮寺·大轮寺出师",
+    "门派大轮寺_大理高手负": {
+      "id": "门派大轮寺_大理高手负",
+      "label": "门派大轮寺·大理高手负",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
     },
-    "门派大轮寺_大理高手2": {
-      "id": "门派大轮寺_大理高手2",
-      "label": "门派大轮寺·大理高手2",
+    "门派大轮寺_新的一天": {
+      "id": "门派大轮寺_新的一天",
+      "label": "门派大轮寺·新的一天",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
+    "门派大轮寺_雪山小路": {
+      "id": "门派大轮寺_雪山小路",
+      "label": "门派大轮寺·雪山小路",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": [
         {
-          "type": "BATTLE",
-          "value": "大轮寺大理高手_战斗",
+          "type": "COST_DAY",
+          "value": "1",
           "index": 5
         }
       ]
@@ -12379,16 +12379,16 @@
         }
       ]
     },
-    "鸳鸯刀_风陵渡1": {
-      "id": "鸳鸯刀_风陵渡1",
-      "label": "鸳鸯刀·风陵渡1",
+    "鸳鸯刀_风陵渡": {
+      "id": "鸳鸯刀_风陵渡",
+      "label": "鸳鸯刀·风陵渡",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": [
         {
           "type": "BATTLE",
-          "value": "鸳鸯刀正风陵渡_战斗",
-          "index": 5
+          "value": "鸳鸯刀风陵渡1_战斗",
+          "index": 3
         }
       ]
     },
@@ -12405,19 +12405,6 @@
         }
       ]
     },
-    "鸳鸯刀_风陵渡": {
-      "id": "鸳鸯刀_风陵渡",
-      "label": "鸳鸯刀·风陵渡",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "BATTLE",
-          "value": "鸳鸯刀风陵渡1_战斗",
-          "index": 3
-        }
-      ]
-    },
     "鸳鸯刀_太岳四侠2": {
       "id": "鸳鸯刀_太岳四侠2",
       "label": "鸳鸯刀·太岳四侠2",
@@ -12427,6 +12414,72 @@
         {
           "type": "BATTLE",
           "value": "鸳鸯刀_太岳四侠战斗",
+          "index": 1
+        }
+      ]
+    },
+    "鸳鸯刀_太岳四侠胜利": {
+      "id": "鸳鸯刀_太岳四侠胜利",
+      "label": "鸳鸯刀·太岳四侠胜利",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
+    "鸳鸯刀_太岳四侠胜利1": {
+      "id": "鸳鸯刀_太岳四侠胜利1",
+      "label": "鸳鸯刀·太岳四侠胜利1",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
+    "鸳鸯刀_风陵渡1": {
+      "id": "鸳鸯刀_风陵渡1",
+      "label": "鸳鸯刀·风陵渡1",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "BATTLE",
+          "value": "鸳鸯刀正风陵渡_战斗",
+          "index": 5
+        }
+      ]
+    },
+    "鸳鸯刀正_风陵渡": {
+      "id": "鸳鸯刀正_风陵渡",
+      "label": "鸳鸯刀正·风陵渡",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "DAODE",
+          "value": "3",
+          "index": 0
+        }
+      ]
+    },
+    "鸳鸯刀_太岳四侠": {
+      "id": "鸳鸯刀_太岳四侠",
+      "label": "鸳鸯刀·太岳四侠",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "SELECT",
+          "value": "主角#（这厮是个变态么？）那就……#没什么好谈的了，手下见真章吧。#就让你摸摸吧……",
+          "index": 16
+        }
+      ]
+    },
+    "鸳鸯刀_风陵渡胜2": {
+      "id": "鸳鸯刀_风陵渡胜2",
+      "label": "鸳鸯刀·风陵渡胜2",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "SELECT",
+          "value": "主角#收下这对刀么？#不收#收下",
           "index": 1
         }
       ]
@@ -12444,66 +12497,6 @@
         }
       ]
     },
-    "鸳鸯刀_太岳四侠胜利": {
-      "id": "鸳鸯刀_太岳四侠胜利",
-      "label": "鸳鸯刀·太岳四侠胜利",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
-    "鸳鸯刀_太岳四侠": {
-      "id": "鸳鸯刀_太岳四侠",
-      "label": "鸳鸯刀·太岳四侠",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "SELECT",
-          "value": "主角#（这厮是个变态么？）那就……#没什么好谈的了，手下见真章吧。#就让你摸摸吧……",
-          "index": 16
-        }
-      ]
-    },
-    "鸳鸯刀_太岳四侠胜利1": {
-      "id": "鸳鸯刀_太岳四侠胜利1",
-      "label": "鸳鸯刀·太岳四侠胜利1",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
-    "鸳鸯刀_风陵渡胜2": {
-      "id": "鸳鸯刀_风陵渡胜2",
-      "label": "鸳鸯刀·风陵渡胜2",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "SELECT",
-          "value": "主角#收下这对刀么？#不收#收下",
-          "index": 1
-        }
-      ]
-    },
-    "鸳鸯刀正_风陵渡": {
-      "id": "鸳鸯刀正_风陵渡",
-      "label": "鸳鸯刀正·风陵渡",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "DAODE",
-          "value": "3",
-          "index": 0
-        }
-      ]
-    },
-    "bixuejianShyou_脱险": {
-      "id": "bixuejianShyou_脱险",
-      "label": "碧血剑·脱险",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
     "bixuejianShyou_东厂追杀": {
       "id": "bixuejianShyou_东厂追杀",
       "label": "碧血剑·东厂追杀",
@@ -12517,18 +12510,12 @@
         }
       ]
     },
-    "bixuejianShyou_风陵渡口": {
-      "id": "bixuejianShyou_风陵渡口",
-      "label": "碧血剑·风陵渡口",
+    "bixuejianShyou_脱险": {
+      "id": "bixuejianShyou_脱险",
+      "label": "碧血剑·脱险",
       "source": "storys.xml",
       "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "SELECT",
-          "value": "主角#要接过黄金吗？#接过#不接",
-          "index": 6
-        }
-      ]
+      "actions": []
     },
     "bixuejianShyou_接黄金2": {
       "id": "bixuejianShyou_接黄金2",
@@ -12561,6 +12548,19 @@
         }
       ]
     },
+    "bixuejianShyou_风陵渡口": {
+      "id": "bixuejianShyou_风陵渡口",
+      "label": "碧血剑·风陵渡口",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "SELECT",
+          "value": "主角#要接过黄金吗？#接过#不接",
+          "index": 6
+        }
+      ]
+    },
     "bixuejianShyou_不接黄金": {
       "id": "bixuejianShyou_不接黄金",
       "label": "碧血剑·不接黄金",
@@ -12571,6 +12571,19 @@
           "type": "DAODE",
           "value": "3",
           "index": 1
+        }
+      ]
+    },
+    "bixuejianShyou_接金败石梁派2": {
+      "id": "bixuejianShyou_接金败石梁派2",
+      "label": "碧血剑·接金败石梁派2",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "BATTLE",
+          "value": "石梁派_战斗5",
+          "index": 13
         }
       ]
     },
@@ -12588,29 +12601,16 @@
       "runtimeAvailable": true,
       "actions": []
     },
-    "bixuejianShyou_接金败石梁派2": {
-      "id": "bixuejianShyou_接金败石梁派2",
-      "label": "碧血剑·接金败石梁派2",
+    "bixuejianShyou_石梁抢金子": {
+      "id": "bixuejianShyou_石梁抢金子",
+      "label": "碧血剑·石梁抢金子",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": [
         {
           "type": "BATTLE",
           "value": "石梁派_战斗5",
-          "index": 13
-        }
-      ]
-    },
-    "bixuejianShyou_不接黄金石梁派6": {
-      "id": "bixuejianShyou_不接黄金石梁派6",
-      "label": "碧血剑·不接黄金石梁派6",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "BATTLE",
-          "value": "石梁派_战斗6",
-          "index": 9
+          "index": 0
         }
       ]
     },
@@ -12634,38 +12634,18 @@
       "runtimeAvailable": true,
       "actions": []
     },
-    "bixuejianShyou_石梁抢金子": {
-      "id": "bixuejianShyou_石梁抢金子",
-      "label": "碧血剑·石梁抢金子",
+    "bixuejianShyou_不接黄金石梁派6": {
+      "id": "bixuejianShyou_不接黄金石梁派6",
+      "label": "碧血剑·不接黄金石梁派6",
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": [
         {
           "type": "BATTLE",
-          "value": "石梁派_战斗5",
-          "index": 0
+          "value": "石梁派_战斗6",
+          "index": 9
         }
       ]
-    },
-    "bixuejianShyou_金蛇胜1": {
-      "id": "bixuejianShyou_金蛇胜1",
-      "label": "碧血剑·金蛇胜1",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "BATTLE",
-          "value": "华山仙境.战斗4",
-          "index": 3
-        }
-      ]
-    },
-    "bixuejianShyou_金蛇败": {
-      "id": "bixuejianShyou_金蛇败",
-      "label": "碧血剑·金蛇败",
-      "source": "storys.xml",
-      "runtimeAvailable": true,
-      "actions": []
     },
     "bixuejianShyou_金蛇郎君": {
       "id": "bixuejianShyou_金蛇郎君",
@@ -12677,6 +12657,26 @@
           "type": "BATTLE",
           "value": "华山仙境.战斗3",
           "index": 7
+        }
+      ]
+    },
+    "bixuejianShyou_金蛇败": {
+      "id": "bixuejianShyou_金蛇败",
+      "label": "碧血剑·金蛇败",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
+    "bixuejianShyou_金蛇胜1": {
+      "id": "bixuejianShyou_金蛇胜1",
+      "label": "碧血剑·金蛇胜1",
+      "source": "storys.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "BATTLE",
+          "value": "华山仙境.战斗4",
+          "index": 3
         }
       ]
     },
@@ -12693,6 +12693,44 @@
       "source": "storys.xml",
       "runtimeAvailable": true,
       "actions": []
+    },
+    "白马啸西风_初见陈达海": {
+      "id": "白马啸西风_初见陈达海",
+      "label": "白马啸西风·初见陈达海",
+      "source": "storysPY.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "SELECT",
+          "value": "主角#我该怎么办？#李姑娘，我帮你教训这些恶人！#李姑娘，这里头是不是有误会……",
+          "index": 7
+        }
+      ]
+    },
+    "白马啸西风_李文秀加入": {
+      "id": "白马啸西风_李文秀加入",
+      "label": "白马啸西风·李文秀加入",
+      "source": "storysPY.xml",
+      "runtimeAvailable": true,
+      "actions": []
+    },
+    "白马啸西风_陈达海和事佬": {
+      "id": "白马啸西风_陈达海和事佬",
+      "label": "白马啸西风·陈达海和事佬",
+      "source": "storysPY.xml",
+      "runtimeAvailable": true,
+      "actions": [
+        {
+          "type": "DAODE",
+          "value": "-3",
+          "index": 3
+        },
+        {
+          "type": "BATTLE",
+          "value": "哈萨克部落李文秀_战斗",
+          "index": 4
+        }
+      ]
     },
     "白马啸西风_陈达海战斗": {
       "id": "白马啸西风_陈达海战斗",
@@ -12713,44 +12751,6 @@
       "source": "storysPY.xml",
       "runtimeAvailable": true,
       "actions": []
-    },
-    "白马啸西风_李文秀加入": {
-      "id": "白马啸西风_李文秀加入",
-      "label": "白马啸西风·李文秀加入",
-      "source": "storysPY.xml",
-      "runtimeAvailable": true,
-      "actions": []
-    },
-    "白马啸西风_初见陈达海": {
-      "id": "白马啸西风_初见陈达海",
-      "label": "白马啸西风·初见陈达海",
-      "source": "storysPY.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "SELECT",
-          "value": "主角#我该怎么办？#李姑娘，我帮你教训这些恶人！#李姑娘，这里头是不是有误会……",
-          "index": 7
-        }
-      ]
-    },
-    "白马啸西风_陈达海和事佬": {
-      "id": "白马啸西风_陈达海和事佬",
-      "label": "白马啸西风·陈达海和事佬",
-      "source": "storysPY.xml",
-      "runtimeAvailable": true,
-      "actions": [
-        {
-          "type": "DAODE",
-          "value": "-3",
-          "index": 3
-        },
-        {
-          "type": "BATTLE",
-          "value": "哈萨克部落李文秀_战斗",
-          "index": 4
-        }
-      ]
     },
     "白马啸西风_陈达海加入": {
       "id": "白马啸西风_陈达海加入",

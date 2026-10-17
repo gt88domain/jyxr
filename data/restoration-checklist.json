@@ -1,0 +1,1274 @@
+{
+  "schemaVersion": 1,
+  "basis": "具体待办与当前规则配置审计；条目不是等权工作量，不能由名称数量换算完成百分比。未找到旧C#同名引用不代表原版未使用。",
+  "tasks": [
+    {
+      "id": "rules-talents",
+      "area": "战斗规则",
+      "state": "待实现",
+      "title": "补齐尚未接入效果的天赋",
+      "detail": "逐项核对伤害、阵法、吸血、控制和特殊角色联动；下方列出实时名称。未找到旧C#同名引用的项目单列，继续查XML、Lua及版本差异，不推测效果。"
+    },
+    {
+      "id": "rules-combinations",
+      "area": "战斗规则",
+      "state": "部分实现",
+      "title": "完成已有天赋的全部组合与结算顺序",
+      "detail": "八类门派伤害、六项武学属性、控制效果、连击、暴击覆盖、濒死和复活等仍需核对顺序、免疫及随机调用。配置存在不等于原版行为全部等价。"
+    },
+    {
+      "id": "rules-buffs",
+      "area": "战斗规则",
+      "state": "待实现",
+      "title": "补齐特殊Buff行为",
+      "detail": "易容伏击、沾衣十八跌、溜须拍马、魔神降临、左右互搏拼写差异等；坚守与狂战的实际来源仍待确认。"
+    },
+    {
+      "id": "rules-legends",
+      "area": "武学与成长",
+      "state": "部分实现",
+      "title": "逐条核对137条奥义",
+      "detail": "现有定义已载入，仍需对照原触发条件、概率、武功/内功/装备要求、数值、范围及派生招式。"
+    },
+    {
+      "id": "rules-special",
+      "area": "武学与成长",
+      "state": "部分实现",
+      "title": "完善27个特技的共有战斗管线",
+      "detail": "11项仍有明确差异；直接伤害与普通命中/反应、自伤代价、多目标天地同寿、易容和追加攻击时点不能只以能施法作为完成依据。"
+    },
+    {
+      "id": "rules-growth",
+      "area": "武学与成长",
+      "state": "部分实现",
+      "title": "核对内功、秘籍与装备的全部加成顺序",
+      "detail": "专属内功、吸血反制、等级/主运加成、武学奇才的属性翻倍、秘籍及使用经验需要完整组合对照。"
+    },
+    {
+      "id": "ai-evaluation",
+      "area": "战斗规则",
+      "state": "部分实现",
+      "title": "让自动战斗正确评价复杂效果",
+      "detail": "全场治疗、控制、濒死保护、自伤、门派最终伤害倍率等仍需进入目标和行动评价；手动与自动继续使用同一套规则。"
+    },
+    {
+      "id": "world-supplement",
+      "area": "剧情与伙伴",
+      "state": "资料已收录/未接线",
+      "title": "接入上传版鹿鼎记补充剧情",
+      "detail": "78段已归档：39段与基线同名，39个补充ID；需先处理双儿人物缺件、入口和版本冲突，不能直接覆盖当前同名剧情。"
+    },
+    {
+      "id": "world-companions",
+      "area": "剧情与伙伴",
+      "state": "部分实现/待验收",
+      "title": "完善伙伴的所有招募和离队分支",
+      "detail": "图鉴65个剧情形态及43个周目开局候选不等于普通剧情已全部验收；正邪、时间、转形态、随行转参战、离队重入等需逐链核对。10名只是过去连续流程已验证数。"
+    },
+    {
+      "id": "world-missing",
+      "area": "剧情与伙伴",
+      "state": "缺原定义",
+      "title": "寻找双儿及两类木人的真实定义",
+      "detail": "双儿、经验木头人、练功木头人在四份参考及上传包中均未找到正式定义；人物数值、武学、奖励不能自行编造。"
+    },
+    {
+      "id": "world-invalid",
+      "area": "剧情与伙伴",
+      "state": "原资料异常",
+      "title": "核对黑龙潭周伯通的非法事件类型",
+      "detail": "原地图把条件名not_has_time_key放进动作类型；没有可靠对应版本前保留隔离记录，不猜改为剧情动作。"
+    },
+    {
+      "id": "items-quests",
+      "area": "道具与装备",
+      "state": "部分实现/待验收",
+      "title": "核对剧情道具、特殊装备和掉率",
+      "detail": "物品、装备、药品、秘籍及商店已可用；特殊物品边界、全部词条联动、残章、掉率和各周目奖励仍需逐项校准。"
+    },
+    {
+      "id": "save-noregrets",
+      "area": "系统与存档",
+      "state": "待实现",
+      "title": "补无悔模式实时存档",
+      "detail": "需要完整持久化战斗与交互边界，保证战败和退出不能回退；目前常规浏览器存读档可用，不等于无悔模式完成。"
+    },
+    {
+      "id": "save-longrun",
+      "area": "系统与存档",
+      "state": "部分实现/待验收",
+      "title": "验证档案、继承和特殊玩法多轮运行",
+      "detail": "竞技场、天关、试炼、珍珑、洗练、小游戏已有入口；仍需长期存档、跨周目继承、多轮发奖不重复及旧档迁移回归。"
+    },
+    {
+      "id": "visual-audio",
+      "area": "音画与发布",
+      "state": "待实现",
+      "title": "补原版音乐和战斗音效",
+      "detail": "不能以已导入地图/头像替代音频完成；还需资源映射、浏览器播放解锁、音量控制及场景切换。"
+    },
+    {
+      "id": "visual-skills",
+      "area": "音画与发布",
+      "state": "部分实现",
+      "title": "补完整招式特效和动作时序",
+      "detail": "角色基本动作与柔光已有；完整武功特效、受击/死亡/连击时序、缺失模型与触屏战场表现仍需补齐。"
+    },
+    {
+      "id": "delivery-loading",
+      "area": "音画与发布",
+      "state": "部分实现",
+      "title": "优化加载体积、失败恢复与性能",
+      "detail": "当前使用.NET Debug WebAssembly包；需改善首次加载、异常网络恢复、内存和帧率，以及长期浏览器兼容。"
+    },
+    {
+      "id": "verify-final",
+      "area": "最终验收",
+      "state": "待验收（后置）",
+      "title": "正常成长完成最终战、华山、结局和下一周目",
+      "detail": "现有正常26级队伍完成四场救援但最终战败；高属性或隔离流程只证明接口，不能算通关。按先补资料的要求暂不新增通关测试。"
+    },
+    {
+      "id": "verify-branches",
+      "area": "最终验收",
+      "state": "待验收（后置）",
+      "title": "扩大九派中后期、隐藏时限和正邪路线验收",
+      "detail": "1885/1887段剧情结构闭合不代表逐条可玩；资料与规则补齐后再执行连续路线检查并记录失败分支。"
+    }
+  ],
+  "groups": [
+    {
+      "id": "talents-metadata-only-True",
+      "title": "有旧C#同名引用、效果仍待接入的天赋",
+      "entries": [
+        {
+          "id": "五行阵",
+          "description": "腾挪移遁的高明阵法，当周围有队友受伤时，发动阵法分担其所受伤害。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:858"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "光明圣火阵",
+          "description": "明教顶级阵法，置于阵法之中，几乎不受任何负面效果影响。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:960"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "八卦阵",
+          "description": "腾挪移遁的高明阵法，当自己收到伤害时，将80%的伤害转移给范围内一名随机队友。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:871"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "吴钩霜雪",
+          "description": "太玄神功施展范围+3。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/SkillBox.cs:368"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "嗜血狂魔",
+          "description": "随着等级逐步提升，提高吸血效果。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:948"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "墨家传人",
+          "description": "战国墨家的世代传人，使用墨家古武术附加随机不良状态。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1093"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "寸长寸强",
+          "description": "增加一格攻击距离。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/SkillBox.cs:358"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "屌丝",
+          "description": "带上这个草帽就成为屌丝了，据说能增加屌丝逆袭的概率。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AoyiLogic.cs:19"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "御风",
+          "description": "随着等级逐步提升，降低受到暴击的概率。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1849"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "慕容世家",
+          "description": "斗转星移反弹几率大幅提升。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:723"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "我是疯子",
+          "description": "逆运自身内功，所有造成的不良状态随机增加0-2的不良状态程度和持续时间。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1171"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "攀云乘龙",
+          "description": "一定概率造成基于身法值的真实伤害，身法值越高，伤害越高。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2162"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "斗转星移",
+          "description": "武学奇才慕容龙城所领悟的借力打力的神奇招式，一定概率反弹一定伤害。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:727",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:730"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "无形剑气",
+          "description": "使用六脉神剑攻击时，附加基于敌我当前内力值差的真实伤害。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:567"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "木婉清的眷恋",
+          "description": "木婉清出场的情况下，提升段誉所有武学的威力。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:530"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "死生茫茫",
+          "description": "一定几率吸收气血上限转化为自己的气血。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:802"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "段王爷的电眼",
+          "description": "风流潇洒中年大叔镇南王段正淳的无敌电眼，对女性及太监极有杀伤力。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:550",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:644"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "沾衣十八跌",
+          "description": "高深玄妙的内家技巧，受到攻击时一定概率让攻击者晕眩。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:626",
+            "jyx-legacy-dll/JyGame/RollRoleUI.cs:598",
+            "jyx-legacy-dll/JyGame/RollRoleUI.cs:632"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "狗杂种",
+          "description": "石破天专属天赋，装备内功为罗汉伏魔神功或太玄神功时大幅度提高暴击概率及防御力。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1914",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1919"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "玄门罡气",
+          "description": "装备内功为九阴真经时，攻击造成减少对手集气效果。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1043"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "百变千幻",
+          "description": "每回合有一定概率自动易容，可以藏于暗处伏击对手。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:930"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "真武七截阵",
+          "description": "武当派镇派绝技，威力可敌六十四位当世高手！(50%几率为队友挡刀，一定几率增强攻击杀伤力)",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:398",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:402",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:409",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:836",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:840",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:843"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "破甲",
+          "description": "攻击有一定概率忽视对方一定数额护甲。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1808"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "碎裂的怒吼",
+          "description": "惊天怒吼，施放奥义时一定概率造成周围敌人晕眩。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:1422",
+            "jyx-legacy-dll/JyGame/RollRoleUI.cs:597"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "臭蛤蟆",
+          "description": "只有被称为臭蛤蟆的人才对蛤蟆功精要具有绝对的掌握。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1602",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1607"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "至刚至阳",
+          "description": "大幅度增加内功阳性适性。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/InternalSkillInstance.cs:48"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "至空至明",
+          "description": "被攻击时有一定概率冷却所有技能。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:561"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "血海魔功",
+          "description": "使用血刀大法增加20%吸血能力。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:937"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "血魔刀法",
+          "description": "使用血刀大法增加15%吸血能力。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:942"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "赵敏的眷念",
+          "description": "蒙元郡主赵敏精通百家武学，提醒她的夫君敌之所长。（张无忌闪避+10%）",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:601"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "越女剑",
+          "description": "越女剑法奥义发动时，全场所有敌人集气减少。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:1446"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "追魂",
+          "description": "不将敌人打倒决不罢休，无道德可言。攻击造成伤害加深效果。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1685"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "金刚",
+          "description": "随着等级逐步提升，提高防御效果。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1505"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "金刚伏魔圈",
+          "description": "少林三大神僧的组成的强力阵法。组阵时不能移动，但互相给予强大的攻击加成。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:414",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:419",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:429",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:440",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:443",
+            "jyx-legacy-dll/JyGame/BattleSprite.cs:228",
+            "jyx-legacy-dll/JyGame/SkillBox.cs:372"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "长平公主的眷恋",
+          "description": "长平公主阿九魂牵梦绕的眷恋，提升袁承志所有武学的威力。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:540"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "飞向天际",
+          "description": "神秘的绝学，攻击时一定概率吹飞对手。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:31",
+            "jyx-legacy-dll/JyGame/RollRoleUI.cs:587"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "魔神降临",
+          "description": "每回合有一定概率变身为恐怖的魔神。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1123",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2093",
+            "jyx-legacy-dll/JyGame/BattleField.cs:914",
+            "jyx-legacy-dll/JyGame/BattleField.cs:921"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "鹿鼎.一等鹿鼎公",
+          "description": "功勋盖世的韦小宝，被攻击时一定几率胡言乱语念晕敌人。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:607"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "黑天死炎",
+          "description": "攻击一定几率自动触发“一刀两断”效果。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2145"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        }
+      ]
+    },
+    {
+      "id": "talents-metadata-only-False",
+      "title": "未找到旧C#同名引用、需继续查证的天赋",
+      "entries": [
+        {
+          "id": "伤口撕裂",
+          "description": "无穷无尽地撕裂伤口，造成伤害会随着攻击次数不断累积增大。",
+          "sourceReferences": [],
+          "remainingEvidence": [],
+          "remainingSummary": "继续查XML、Lua与其他版本的实际规则；未找到同名旧C#引用，暂不按描述猜写效果。"
+        },
+        {
+          "id": "御剑",
+          "description": "随着等级逐步提升，提高暴击的概率和暴击伤害。",
+          "sourceReferences": [],
+          "remainingEvidence": [],
+          "remainingSummary": "继续查XML、Lua与其他版本的实际规则；未找到同名旧C#引用，暂不按描述猜写效果。"
+        },
+        {
+          "id": "情花奇毒",
+          "description": "攻击一定概率附加恐怖的情花奇毒。",
+          "sourceReferences": [],
+          "remainingEvidence": [],
+          "remainingSummary": "继续查XML、Lua与其他版本的实际规则；未找到同名旧C#引用，暂不按描述猜写效果。"
+        },
+        {
+          "id": "摧筋破骨",
+          "description": "力大无穷的猛击直至筋骨深处，直接对气血上限造成打击。",
+          "sourceReferences": [],
+          "remainingEvidence": [],
+          "remainingSummary": "继续查XML、Lua与其他版本的实际规则；未找到同名旧C#引用，暂不按描述猜写效果。"
+        },
+        {
+          "id": "软猬宝甲",
+          "description": "软猬甲护身，直接对周遭敌人造成伤害。",
+          "sourceReferences": [],
+          "remainingEvidence": [],
+          "remainingSummary": "继续查XML、Lua与其他版本的实际规则；未找到同名旧C#引用，暂不按描述猜写效果。"
+        }
+      ]
+    },
+    {
+      "id": "talents-partial-None",
+      "title": "已有部分效果、尚未全部等价的天赋",
+      "entries": [
+        {
+          "id": "不老长春",
+          "description": "永葆青春的神奇功法，一定概率将受到的伤害转为气血。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:778"
+          ],
+          "remainingEvidence": [
+            "selected probability and recovery checks; legacy single-precision rounding and cancellation ordering remain"
+          ],
+          "remainingSummary": "选定概率与恢复已检查，原单精度舍入及取消恢复的先后仍待核对。"
+        },
+        {
+          "id": "刀封印",
+          "description": "攻击一定概率造成刀封印效果。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1730",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1733",
+            "jyx-legacy-dll/JyGame/SkillBox.cs:191"
+          ],
+          "remainingEvidence": [
+            "confirmed normal hits apply original buff level/duration and probability; ordinary friendly-fire and 灵心慧质/legend exclusion configured; pre-hit RNG, full immunity and extra-strike/reaction ordering remain"
+          ],
+          "remainingSummary": "概率、Buff等级/时长与友军保护已接入；原命中、免疫、随机调用及连击/反应的完整顺序待核对。"
+        },
+        {
+          "id": "刀法增益",
+          "description": "刀法威力增加5%。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttributeFinalHelper.cs:28"
+          ],
+          "remainingEvidence": [
+            "final weapon aptitude multiplier and sequential truncation configured; earlier equipment/skill additions and battle buff layering still require source comparison"
+          ],
+          "remainingSummary": "最终属性倍率和逐次取整已接入；全部装备/武学加成与战斗Buff的前置层次、原随机顺序待核对。"
+        },
+        {
+          "id": "刚柔并济",
+          "description": "略微提高武当派所有武学威力。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:459"
+          ],
+          "remainingEvidence": [
+            "source skill-name matching, damage multiplier range and ordered truncation configured; modern hit-check timing, cosmetic RNG sequence and AI valuation remain"
+          ],
+          "remainingSummary": "武功匹配、最终伤害倍率和逐次取整已接入；原命中时点、随机调用与AI估值待补齐。"
+        },
+        {
+          "id": "剑封印",
+          "description": "攻击一定概率造成剑封印效果。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1722",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1725",
+            "jyx-legacy-dll/JyGame/SkillBox.cs:191"
+          ],
+          "remainingEvidence": [
+            "confirmed normal hits apply original buff level/duration and probability; ordinary friendly-fire and 灵心慧质/legend exclusion configured; pre-hit RNG, full immunity and extra-strike/reaction ordering remain"
+          ],
+          "remainingSummary": "概率、Buff等级/时长与友军保护已接入；原命中、免疫、随机调用及连击/反应的完整顺序待核对。"
+        },
+        {
+          "id": "剑法增益",
+          "description": "剑法威力增加5%。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttributeFinalHelper.cs:24"
+          ],
+          "remainingEvidence": [
+            "final weapon aptitude multiplier and sequential truncation configured; earlier equipment/skill additions and battle buff layering still require source comparison"
+          ],
+          "remainingSummary": "最终属性倍率和逐次取整已接入；全部装备/武学加成与战斗Buff的前置层次、原随机顺序待核对。"
+        },
+        {
+          "id": "化功大法",
+          "description": "攻击可以有概率化去对方大量内力。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:996"
+          ],
+          "remainingEvidence": [
+            "integer formula and selected boundaries tested; full hit/reaction ordering remains"
+          ],
+          "remainingSummary": "整数公式已有边界检查，完整命中和受击反应顺序仍待核对。"
+        },
+        {
+          "id": "北冥神功",
+          "description": "攻击带有吸取大量内力效果。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:970",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1860",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1865"
+          ],
+          "remainingEvidence": [
+            "integer formula and selected boundaries tested; full hit/reaction ordering remains"
+          ],
+          "remainingSummary": "吸内整数公式已有检查，完整命中和受击反应顺序仍待核对。"
+        },
+        {
+          "id": "吸星大法",
+          "description": "令江湖中人闻之色变的吸星大法，攻击时吸收一定内力，并造成封穴效果，使对方无法恢复内力。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1008"
+          ],
+          "remainingEvidence": [
+            "integer formula and seal/recovery tested; original repeat-seal replacement and full ordering remain"
+          ],
+          "remainingSummary": "吸内与封印已接入，重复封印替换和完整反应顺序仍待核对。"
+        },
+        {
+          "id": "大理世家",
+          "description": "大理世族的象征，相关武学威力提升。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:519"
+          ],
+          "remainingEvidence": [
+            "source skill-name matching, damage multiplier range and ordered truncation configured; modern hit-check timing, cosmetic RNG sequence and AI valuation remain"
+          ],
+          "remainingSummary": "武功匹配、最终伤害倍率和逐次取整已接入；原命中时点、随机调用与AI估值待补齐。"
+        },
+        {
+          "id": "天龙.盖世英雄",
+          "description": "乔峰专属天赋，出手惊风雷，提升乔峰相关的武学威力。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:479"
+          ],
+          "remainingEvidence": [
+            "source skill-name matching, damage multiplier range and ordered truncation configured; modern hit-check timing, cosmetic RNG sequence and AI valuation remain"
+          ],
+          "remainingSummary": "武功匹配、最终伤害倍率和逐次取整已接入；原命中时点、随机调用与AI估值待补齐。"
+        },
+        {
+          "id": "奇门增益",
+          "description": "奇门威力增加5%。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttributeFinalHelper.cs:32"
+          ],
+          "remainingEvidence": [
+            "final weapon aptitude multiplier and sequential truncation configured; earlier equipment/skill additions and battle buff layering still require source comparison"
+          ],
+          "remainingSummary": "最终属性倍率和逐次取整已接入；全部装备/武学加成与战斗Buff的前置层次、原随机顺序待核对。"
+        },
+        {
+          "id": "奇门封印",
+          "description": "攻击一定概率造成奇门封印效果。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1746",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1749",
+            "jyx-legacy-dll/JyGame/SkillBox.cs:191"
+          ],
+          "remainingEvidence": [
+            "confirmed normal hits apply original buff level/duration and probability; ordinary friendly-fire and 灵心慧质/legend exclusion configured; pre-hit RNG, full immunity and extra-strike/reaction ordering remain"
+          ],
+          "remainingSummary": "概率、Buff等级/时长与友军保护已接入；原命中、免疫、随机调用及连击/反应的完整顺序待核对。"
+        },
+        {
+          "id": "寒冰真气",
+          "description": "攻击有一定概率附加重度麻痹效果。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1762"
+          ],
+          "remainingEvidence": [
+            "confirmed normal hits apply original buff level/duration and probability; ordinary friendly-fire and 灵心慧质/legend exclusion configured; pre-hit RNG, full immunity and extra-strike/reaction ordering remain"
+          ],
+          "remainingSummary": "概率、Buff等级/时长与友军保护已接入；原命中、免疫、随机调用及连击/反应的完整顺序待核对。"
+        },
+        {
+          "id": "射雕英雄",
+          "description": "郭靖专属天赋，提升郭靖相关武学威力。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:499"
+          ],
+          "remainingEvidence": [
+            "source skill-name matching, damage multiplier range and ordered truncation configured; modern hit-check timing, cosmetic RNG sequence and AI valuation remain"
+          ],
+          "remainingSummary": "武功匹配、最终伤害倍率和逐次取整已接入；原命中时点、随机调用与AI估值待补齐。"
+        },
+        {
+          "id": "峨眉宗师",
+          "description": "郭襄专属天赋，大幅度提高与峨眉派及郭襄相关武学威力。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:449"
+          ],
+          "remainingEvidence": [
+            "source skill-name matching, damage multiplier range and ordered truncation configured; modern hit-check timing, cosmetic RNG sequence and AI valuation remain"
+          ],
+          "remainingSummary": "武功匹配、最终伤害倍率和逐次取整已接入；原命中时点、随机调用与AI估值待补齐。"
+        },
+        {
+          "id": "左右互搏",
+          "description": "周伯通原汁原味的左右互搏之术，每回合攻击较高几率造成两次伤害。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1221"
+          ],
+          "remainingEvidence": [
+            "talent has combined extra strikes; buff spelling differs from source 左右互博 and remains unmodified"
+          ],
+          "remainingSummary": "天赋连击已接入；原Buff写作左右互博，现数据写作左右互搏，不能未经证据合并。"
+        },
+        {
+          "id": "幽居",
+          "description": "随着等级逐步提升，提高多重攻击的概率。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1211"
+          ],
+          "remainingEvidence": [
+            "combined positive-damage extra strikes tested; original negative damage and special-hit timing remain"
+          ],
+          "remainingSummary": "追加攻击已接入，负伤害、特技命中与原Buff结算时点仍有差异。"
+        },
+        {
+          "id": "拳掌增益",
+          "description": "拳掌威力增加5%。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttributeFinalHelper.cs:20"
+          ],
+          "remainingEvidence": [
+            "final weapon aptitude multiplier and sequential truncation configured; earlier equipment/skill additions and battle buff layering still require source comparison"
+          ],
+          "remainingSummary": "最终属性倍率和逐次取整已接入；全部装备/武学加成与战斗Buff的前置层次、原随机顺序待核对。"
+        },
+        {
+          "id": "拳掌封印",
+          "description": "攻击一定概率造成拳掌封印效果。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1738",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1741",
+            "jyx-legacy-dll/JyGame/SkillBox.cs:191"
+          ],
+          "remainingEvidence": [
+            "confirmed normal hits apply original buff level/duration and probability; ordinary friendly-fire and 灵心慧质/legend exclusion configured; pre-hit RNG, full immunity and extra-strike/reaction ordering remain"
+          ],
+          "remainingSummary": "概率、Buff等级/时长与友军保护已接入；原命中、免疫、随机调用及连击/反应的完整顺序待核对。"
+        },
+        {
+          "id": "易筋伐髓",
+          "description": "达摩菩提专属天赋，增加少林派武学威力。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:469"
+          ],
+          "remainingEvidence": [
+            "source skill-name matching, damage multiplier range and ordered truncation configured; modern hit-check timing, cosmetic RNG sequence and AI valuation remain"
+          ],
+          "remainingSummary": "武功匹配、最终伤害倍率和逐次取整已接入；原命中时点、随机调用与AI估值待补齐。"
+        },
+        {
+          "id": "武学奇才",
+          "description": "天生的武学奇才，经验值成长翻倍，来自技能、装备的兵器熟练度及角色属性加成翻倍。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/InternalSkillInstance.cs:317",
+            "jyx-legacy-dll/JyGame/Role.cs:661",
+            "jyx-legacy-dll/JyGame/SkillInstance.cs:275"
+          ],
+          "remainingEvidence": [
+            "validate equipment/skill attribute doubling and both cast/book EXP paths"
+          ],
+          "remainingSummary": "装备/武学十维属性翻倍、使用武功与秘籍的经验路径及其组合待完整核对。"
+        },
+        {
+          "id": "浪子剑客",
+          "description": "令狐冲专属天赋，御剑技巧评估提高20%。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1412",
+            "jyx-legacy-dll/JyGame/AttributeFinalHelper.cs:12"
+          ],
+          "remainingEvidence": [
+            "final weapon aptitude multiplier and sequential truncation configured; earlier equipment/skill additions and battle buff layering still require source comparison",
+            "original cosmetic speech RNG ordering remains"
+          ],
+          "remainingSummary": "最终属性倍率和逐次取整已接入；全部装备/武学加成与战斗Buff的前置层次、原随机顺序待核对。"
+        },
+        {
+          "id": "玲珑璇玑",
+          "description": "黄蓉专属天赋，增强黄蓉相关武学。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:509"
+          ],
+          "remainingEvidence": [
+            "source skill-name matching, damage multiplier range and ordered truncation configured; modern hit-check timing, cosmetic RNG sequence and AI valuation remain"
+          ],
+          "remainingSummary": "武功匹配、最终伤害倍率和逐次取整已接入；原命中时点、随机调用与AI估值待补齐。"
+        },
+        {
+          "id": "神拳无敌",
+          "description": "对拳法的掌握达到入微的境界，提升拳法类伤害，并提升铁拳无双发动概率。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1416",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1672",
+            "jyx-legacy-dll/JyGame/AttributeFinalHelper.cs:16"
+          ],
+          "remainingEvidence": [
+            "final weapon aptitude multiplier and sequential truncation configured; earlier equipment/skill additions and battle buff layering still require source comparison",
+            "铁拳无双 stun chance .25→.37 configured; full hit/reaction and cosmetic speech RNG ordering remain"
+          ],
+          "remainingSummary": "最终属性倍率和逐次取整已接入；全部装备/武学加成与战斗Buff的前置层次、原随机顺序待核对。"
+        },
+        {
+          "id": "精打细算",
+          "description": "心思缜密，回避致命伤害。提升暴击概率，一定概率将受到的伤害强制降为200点。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1649",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2114"
+          ],
+          "remainingEvidence": [
+            "defensive cap and priority tested; offensive random multipliers remain"
+          ],
+          "remainingSummary": "防守伤害上限已接入，攻击方随机倍率尚未补齐。"
+        },
+        {
+          "id": "精明",
+          "description": "心思缜密，回避致命伤害。提升暴击概率，一定概率将受到的伤害强制降为500点，多余伤害转化为内力伤害。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1656",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2122"
+          ],
+          "remainingEvidence": [
+            "defensive cap and overflow tested; offensive random multipliers remain"
+          ],
+          "remainingSummary": "防守伤害上限已接入，攻击方随机倍率尚未补齐。"
+        },
+        {
+          "id": "素心神剑",
+          "description": "小龙女由于机缘巧合所领悟的左右互搏之术，每回合攻击一定几率造成两次伤害。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1216"
+          ],
+          "remainingEvidence": [
+            "combined positive-damage extra strikes tested; original negative damage and special-hit timing remain"
+          ],
+          "remainingSummary": "追加攻击已接入，负伤害、特技命中与原Buff结算时点仍有差异。"
+        },
+        {
+          "id": "诸般封印",
+          "description": "精通奇经八脉，攻击一定概率造成诸般封印效果。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1714",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1717",
+            "jyx-legacy-dll/JyGame/SkillBox.cs:191"
+          ],
+          "remainingEvidence": [
+            "confirmed normal hits apply original buff level/duration and probability; ordinary friendly-fire and 灵心慧质/legend exclusion configured; pre-hit RNG, full immunity and extra-strike/reaction ordering remain"
+          ],
+          "remainingSummary": "概率、Buff等级/时长与友军保护已接入；原命中、免疫、随机调用及连击/反应的完整顺序待核对。"
+        },
+        {
+          "id": "铁剑掌门",
+          "description": "对铁剑门武学有深刻的了解，提升相应武学威力。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:489"
+          ],
+          "remainingEvidence": [
+            "source skill-name matching, damage multiplier range and ordered truncation configured; modern hit-check timing, cosmetic RNG sequence and AI valuation remain"
+          ],
+          "remainingSummary": "武功匹配、最终伤害倍率和逐次取整已接入；原命中时点、随机调用与AI估值待补齐。"
+        },
+        {
+          "id": "铁拳无双",
+          "description": "拳头硬才有话语权！使用拳掌系武功攻击一定概率造成晕眩效果。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1676"
+          ],
+          "remainingEvidence": [
+            "confirmed normal hits apply original buff level/duration and probability; ordinary friendly-fire and 灵心慧质/legend exclusion configured; pre-hit RNG, full immunity and extra-strike/reaction ordering remain"
+          ],
+          "remainingSummary": "概率、Buff等级/时长与友军保护已接入；原命中、免疫、随机调用及连击/反应的完整顺序待核对。"
+        },
+        {
+          "id": "阉人",
+          "description": "已经去“势”，内力消耗增大，使用葵花宝典、辟邪剑法必定暴击。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:550",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:644",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1633"
+          ],
+          "remainingEvidence": [
+            "single-talent guaranteed critical configured; ordered interaction with later critical modifiers remains"
+          ],
+          "remainingSummary": "单天赋必暴击已接入，后续天赋对暴击率的覆盖顺序仍待核对。"
+        },
+        {
+          "id": "阴阳",
+          "description": "随着等级逐步提升，攻击有一定概率附加麻痹效果。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1754"
+          ],
+          "remainingEvidence": [
+            "confirmed normal hits apply original buff level/duration and probability; ordinary friendly-fire and 灵心慧质/legend exclusion configured; pre-hit RNG, full immunity and extra-strike/reaction ordering remain"
+          ],
+          "remainingSummary": "概率、Buff等级/时长与友军保护已接入；原命中、免疫、随机调用及连击/反应的完整顺序待核对。"
+        },
+        {
+          "id": "鬼魅",
+          "description": "像鬼魅一样身形飘忽不定，集气速度突破极限。且不受任何状态影响。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/BattleSprite.cs:449"
+          ],
+          "remainingEvidence": [
+            "verify all claimed status immunity, not only action speed"
+          ],
+          "remainingSummary": "目前已接入行动速度，仍需核对原版全部状态免疫。"
+        },
+        {
+          "id": "鲲跃北溟",
+          "description": "攻击有50%概率吸取对手内力。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:983"
+          ],
+          "remainingEvidence": [
+            "integer formula and selected boundaries tested; full hit/reaction ordering remains"
+          ],
+          "remainingSummary": "整数公式已有边界检查，完整命中和受击反应顺序仍待核对。"
+        }
+      ]
+    },
+    {
+      "id": "talents-referenced-behavior-None",
+      "title": "仅作为其他效果联动条件的天赋",
+      "entries": [
+        {
+          "id": "万年长春",
+          "description": "提升不老长春功回血概率。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:774"
+          ],
+          "remainingEvidence": [
+            "Used as a secondary condition: 不老长春 enhanced activation probability; full combinations remain"
+          ],
+          "remainingSummary": "目前只作为其他效果的条件使用，原组合及完整行为仍需核对。"
+        },
+        {
+          "id": "吴侬软语",
+          "description": "在唱出吴侬软语时，可以使所有敌人陶醉而晕眩。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:214",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:226"
+          ],
+          "remainingEvidence": [
+            "Used as a secondary condition: 吴侬软语 special-skill stun gate; full combinations remain"
+          ],
+          "remainingSummary": "目前只作为其他效果的条件使用，原组合及完整行为仍需核对。"
+        },
+        {
+          "id": "我就是神",
+          "description": "每场战斗的第一次【无尽斗志】必定判定成功。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/BattleField.cs:1600"
+          ],
+          "remainingEvidence": [
+            "Used as a secondary condition: 无尽斗志 first successful revival guarantee; full combinations remain"
+          ],
+          "remainingSummary": "目前只作为其他效果的条件使用，原组合及完整行为仍需核对。"
+        },
+        {
+          "id": "草头百姓",
+          "description": "证明你是无门无派的草头小百姓，据说有着神秘的意义。（触发野球拳奥义，提高异世人触发血线比例）",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1447",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1462"
+          ],
+          "remainingEvidence": [
+            "Used as a secondary condition: 异世人 extended HP window; full legend interaction remains; full combinations remain"
+          ],
+          "remainingSummary": "目前只作为其他效果的条件使用，原组合及完整行为仍需核对。"
+        }
+      ]
+    },
+    {
+      "id": "buffs-metadata-only-None",
+      "title": "仅资料的Buff",
+      "entries": [
+        {
+          "id": "坚守",
+          "description": "以减少攻击输出为代价，减少所受伤害。",
+          "sourceReferences": [],
+          "remainingEvidence": [],
+          "remainingSummary": "继续查XML、Lua与其他版本的实际规则；未找到同名旧C#引用，暂不按描述猜写效果。"
+        },
+        {
+          "id": "左右互搏",
+          "description": "一定概率出两次攻击",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1221"
+          ],
+          "remainingEvidence": [
+            "talent has combined extra strikes; buff spelling differs from source 左右互博 and remains unmodified"
+          ],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "易容",
+          "description": "易容改面，藏于暗处。伺机发动致命伤害。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:271",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:273",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:893",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:901",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2138",
+            "jyx-legacy-dll/JyGame/BattleField.cs:936"
+          ],
+          "remainingEvidence": [
+            "ambush, immunity and consumption are not configured"
+          ],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "沾衣十八跌",
+          "description": "气劲充满全身，攻击命中的敌人有一定概率被气劲反伤晕眩。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:626",
+            "jyx-legacy-dll/JyGame/RollRoleUI.cs:598",
+            "jyx-legacy-dll/JyGame/RollRoleUI.cs:632"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "溜须拍马",
+          "description": "溜须拍马，跪地求饶，不受伤害。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:23",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:27",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1335",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2131"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        },
+        {
+          "id": "狂战",
+          "description": "以受到更多伤害为代价，提升攻击力。",
+          "sourceReferences": [],
+          "remainingEvidence": [],
+          "remainingSummary": "继续查XML、Lua与其他版本的实际规则；未找到同名旧C#引用，暂不按描述猜写效果。"
+        },
+        {
+          "id": "魔神降临",
+          "description": "犹如魔神附体，所有攻击必定暴击，暴击伤害提高25%。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1123",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2093",
+            "jyx-legacy-dll/JyGame/BattleField.cs:914",
+            "jyx-legacy-dll/JyGame/BattleField.cs:921"
+          ],
+          "remainingEvidence": [],
+          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
+        }
+      ]
+    },
+    {
+      "id": "buffs-partial-None",
+      "title": "部分实现的Buff",
+      "entries": [
+        {
+          "id": "神速攻击",
+          "description": "一定概率出三次攻击",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:370",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:372",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1233"
+          ],
+          "remainingEvidence": [
+            "combined positive-damage extra strikes tested; negative damage and original post-buff timing remain"
+          ],
+          "remainingSummary": "追加攻击已有配置，负伤害与原Buff结算时点待核对。"
+        },
+        {
+          "id": "醉酒",
+          "description": "20%概率因为醉酒不能行动，80%概率怒气全满，同时攻击有一定几率出两次攻击",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1228",
+            "jyx-legacy-dll/JyGame/BattleField.cs:881",
+            "jyx-legacy-dll/JyGame/BattleField.cs:887",
+            "jyx-legacy-dll/JyGame/BattleField.cs:1001"
+          ],
+          "remainingEvidence": [
+            "combined positive-damage extra strikes tested; negative damage and original post-buff timing remain"
+          ],
+          "remainingSummary": "行动和连击已有配置，负伤害与原Buff结算后的追加攻击时点待核对。"
+        }
+      ]
+    },
+    {
+      "id": "specialSkills-partial-None",
+      "title": "仍有明确差异的特技",
+      "entries": [
+        {
+          "id": "一刀两断",
+          "description": "威力无匹的攻击，一定几率减对方一半气血。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1317",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:2099"
+          ],
+          "remainingEvidence": [
+            "verify special damage hit/reaction pipeline against original; currently direct damage"
+          ],
+          "remainingSummary": "特技可施放，直接伤害与原普通命中、受击和后续反应管线仍有差异。"
+        },
+        {
+          "id": "诗酒飘零",
+          "description": "进入醉酒模式，攻击变得不可理喻。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1348"
+          ],
+          "remainingEvidence": [
+            "醉酒: combined positive-damage extra strikes tested; negative damage and original post-buff timing remain"
+          ],
+          "remainingSummary": "施加醉酒已有配置，醉酒连击与原Buff时点尚未完整等价。"
+        },
+        {
+          "id": "同归剑法",
+          "description": "全真教绝技，对自己同时造成1000点真实伤害，对敌人造成更大伤害。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:68"
+          ],
+          "remainingEvidence": [
+            "verify special damage hit/reaction pipeline against original; currently direct damage"
+          ],
+          "remainingSummary": "特技可施放，直接伤害与原普通命中、受击和后续反应管线仍有差异。"
+        },
+        {
+          "id": "天地同寿",
+          "description": "以死亡和减少10点生命上限为代价，予以与自身残余气血相关的极大伤害。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:59"
+          ],
+          "remainingEvidence": [
+            "single-cast HP snapshot, unblockable cost and permanent max-HP loss tested; multi-target source iteration remains",
+            "verify special damage hit/reaction pipeline against original; currently direct damage"
+          ],
+          "remainingSummary": "单次自伤、永久扣生命上限已接入，多目标依次执行与完整命中/反应管线仍待核对。"
+        },
+        {
+          "id": "襄儿的心愿",
+          "description": "襄儿的心愿，就是随时可以召唤大哥哥保护自己！对敌人造成随机真实伤害。攻击上限随襄儿等级提升。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1361"
+          ],
+          "remainingEvidence": [
+            "verify special damage hit/reaction pipeline against original; currently direct damage"
+          ],
+          "remainingSummary": "特技可施放，直接伤害与原普通命中、受击和后续反应管线仍有差异。"
+        },
+        {
+          "id": "火枪",
+          "description": "韦小宝掏出他的火枪向敌人射击，造成真实伤害（无视护甲）及重伤敌人。伤害取决于敌我“福缘”的差距。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1367"
+          ],
+          "remainingEvidence": [
+            "verify special damage hit/reaction pipeline against original; currently direct damage"
+          ],
+          "remainingSummary": "特技可施放，直接伤害与原普通命中、受击和后续反应管线仍有差异。"
+        },
+        {
+          "id": "易容术",
+          "description": "阿朱的易容绝技，可藏身于敌阵之中。暗中突袭，威力巨大。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:267"
+          ],
+          "remainingEvidence": [
+            "易容: ambush, immunity and consumption are not configured"
+          ],
+          "remainingSummary": "目前可施加易容Buff，伏击、免疫及消耗行为尚未实现。"
+        },
+        {
+          "id": "过肩摔",
+          "description": "将对手摔到身后并定身、麻痹，造成基于敌我定力之差的真实伤害。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:291"
+          ],
+          "remainingEvidence": [
+            "verify special damage hit/reaction pipeline against original; currently direct damage"
+          ],
+          "remainingSummary": "特技可施放，直接伤害与原普通命中、受击和后续反应管线仍有差异。"
+        },
+        {
+          "id": "神龙摆尾",
+          "description": "一脚将对手踢开并定身、麻痹，造成基于移动距离的真实伤害。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:304"
+          ],
+          "remainingEvidence": [
+            "verify special damage hit/reaction pipeline against original; currently direct damage"
+          ],
+          "remainingSummary": "特技可施放，直接伤害与原普通命中、受击和后续反应管线仍有差异。"
+        },
+        {
+          "id": "武穆兵法",
+          "description": "武穆兵法排兵布阵，增强所有队友能力。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:328",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1384"
+          ],
+          "remainingEvidence": [
+            "team buffs and combined extra strikes configured; negative damage and original post-buff timing remain",
+            "神速攻击: combined positive-damage extra strikes tested; negative damage and original post-buff timing remain"
+          ],
+          "remainingSummary": "全队强化和追加攻击已有配置，负伤害及神速攻击的原时点仍待核对。"
+        },
+        {
+          "id": "腐尸毒",
+          "description": "立即清算敌人的中毒，造成真实伤害。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:85"
+          ],
+          "remainingEvidence": [
+            "verify special damage hit/reaction pipeline against original; currently direct damage"
+          ],
+          "remainingSummary": "特技可施放，直接伤害与原普通命中、受击和后续反应管线仍有差异。"
+        }
+      ]
+    }
+  ],
+  "fullGameVerified": false
+}

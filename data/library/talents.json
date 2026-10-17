@@ -5473,7 +5473,7 @@
     "description": "80#精通奇经八脉，攻击一定概率造成诸般封印效果。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -5486,7 +5486,103 @@
       "id": "诸般封印",
       "name": "诸般封印",
       "point": 80,
-      "description": "精通奇经八脉，攻击一定概率造成诸般封印效果。"
+      "description": "精通奇经八脉，攻击一定概率造成诸般封印效果。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "priority": -101,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
+            },
+            {
+              "type": "stat_difference_chance",
+              "sourceStat": "fuyuan",
+              "targetStat": "dingli",
+              "divisor": 100,
+              "truncateQuotients": true,
+              "inclusive": true
+            }
+          ],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "target"
+              },
+              "buffId": "诸般封印",
+              "level": 0,
+              "duration": 2
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "priority": -101,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "ally"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form"
+              ]
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "灵心慧质"
+              ],
+              "absent": true
+            },
+            {
+              "type": "stat_difference_chance",
+              "sourceStat": "fuyuan",
+              "targetStat": "dingli",
+              "divisor": 100,
+              "truncateQuotients": true,
+              "inclusive": true
+            }
+          ],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "target"
+              },
+              "buffId": "诸般封印",
+              "level": 0,
+              "duration": 2
+            }
+          ]
+        }
+      ]
     },
     "variants": [
       {
@@ -5592,7 +5688,7 @@
     "description": "20#攻击一定概率造成剑封印效果。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -5605,7 +5701,103 @@
       "id": "剑封印",
       "name": "剑封印",
       "point": 20,
-      "description": "攻击一定概率造成剑封印效果。"
+      "description": "攻击一定概率造成剑封印效果。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "priority": -102,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
+            },
+            {
+              "type": "stat_difference_chance",
+              "sourceStat": "fuyuan",
+              "targetStat": "dingli",
+              "divisor": 100,
+              "truncateQuotients": true,
+              "inclusive": false
+            }
+          ],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "target"
+              },
+              "buffId": "剑封印",
+              "level": 0,
+              "duration": 2
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "priority": -102,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "ally"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form"
+              ]
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "灵心慧质"
+              ],
+              "absent": true
+            },
+            {
+              "type": "stat_difference_chance",
+              "sourceStat": "fuyuan",
+              "targetStat": "dingli",
+              "divisor": 100,
+              "truncateQuotients": true,
+              "inclusive": false
+            }
+          ],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "target"
+              },
+              "buffId": "剑封印",
+              "level": 0,
+              "duration": 2
+            }
+          ]
+        }
+      ]
     },
     "variants": [
       {
@@ -5636,7 +5828,7 @@
     "description": "20#攻击一定概率造成刀封印效果。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -5649,7 +5841,103 @@
       "id": "刀封印",
       "name": "刀封印",
       "point": 20,
-      "description": "攻击一定概率造成刀封印效果。"
+      "description": "攻击一定概率造成刀封印效果。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "priority": -103,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
+            },
+            {
+              "type": "stat_difference_chance",
+              "sourceStat": "fuyuan",
+              "targetStat": "dingli",
+              "divisor": 100,
+              "truncateQuotients": true,
+              "inclusive": false
+            }
+          ],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "target"
+              },
+              "buffId": "刀封印",
+              "level": 0,
+              "duration": 2
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "priority": -103,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "ally"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form"
+              ]
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "灵心慧质"
+              ],
+              "absent": true
+            },
+            {
+              "type": "stat_difference_chance",
+              "sourceStat": "fuyuan",
+              "targetStat": "dingli",
+              "divisor": 100,
+              "truncateQuotients": true,
+              "inclusive": false
+            }
+          ],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "target"
+              },
+              "buffId": "刀封印",
+              "level": 0,
+              "duration": 2
+            }
+          ]
+        }
+      ]
     },
     "variants": [
       {
@@ -5680,7 +5968,7 @@
     "description": "20#攻击一定概率造成奇门封印效果。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -5693,7 +5981,103 @@
       "id": "奇门封印",
       "name": "奇门封印",
       "point": 20,
-      "description": "攻击一定概率造成奇门封印效果。"
+      "description": "攻击一定概率造成奇门封印效果。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "priority": -105,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
+            },
+            {
+              "type": "stat_difference_chance",
+              "sourceStat": "fuyuan",
+              "targetStat": "dingli",
+              "divisor": 100,
+              "truncateQuotients": true,
+              "inclusive": false
+            }
+          ],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "target"
+              },
+              "buffId": "奇门封印",
+              "level": 0,
+              "duration": 2
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "priority": -105,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "ally"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form"
+              ]
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "灵心慧质"
+              ],
+              "absent": true
+            },
+            {
+              "type": "stat_difference_chance",
+              "sourceStat": "fuyuan",
+              "targetStat": "dingli",
+              "divisor": 100,
+              "truncateQuotients": true,
+              "inclusive": false
+            }
+          ],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "target"
+              },
+              "buffId": "奇门封印",
+              "level": 0,
+              "duration": 2
+            }
+          ]
+        }
+      ]
     },
     "variants": [
       {
@@ -5718,7 +6102,7 @@
     "description": "20#攻击一定概率造成拳掌封印效果。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -5731,7 +6115,103 @@
       "id": "拳掌封印",
       "name": "拳掌封印",
       "point": 20,
-      "description": "攻击一定概率造成拳掌封印效果。"
+      "description": "攻击一定概率造成拳掌封印效果。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "priority": -104,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
+            },
+            {
+              "type": "stat_difference_chance",
+              "sourceStat": "fuyuan",
+              "targetStat": "dingli",
+              "divisor": 100,
+              "truncateQuotients": true,
+              "inclusive": false
+            }
+          ],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "target"
+              },
+              "buffId": "拳掌封印",
+              "level": 0,
+              "duration": 2
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "priority": -104,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "ally"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form"
+              ]
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "灵心慧质"
+              ],
+              "absent": true
+            },
+            {
+              "type": "stat_difference_chance",
+              "sourceStat": "fuyuan",
+              "targetStat": "dingli",
+              "divisor": 100,
+              "truncateQuotients": true,
+              "inclusive": false
+            }
+          ],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "target"
+              },
+              "buffId": "拳掌封印",
+              "level": 0,
+              "duration": 2
+            }
+          ]
+        }
+      ]
     },
     "variants": [
       {
@@ -5782,7 +6262,7 @@
     "description": "40#拳头硬才有话语权！使用拳掌系武功攻击一定概率造成晕眩效果。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -5795,7 +6275,233 @@
       "id": "铁拳无双",
       "name": "铁拳无双",
       "point": 40,
-      "description": "拳头硬才有话语权！使用拳掌系武功攻击一定概率造成晕眩效果。"
+      "description": "拳头硬才有话语权！使用拳掌系武功攻击一定概率造成晕眩效果。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "priority": -100,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
+            },
+            {
+              "type": "context_skill_weapon_type",
+              "weaponTypes": [
+                "quanzhang"
+              ]
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "神拳无敌"
+              ],
+              "absent": true
+            },
+            {
+              "type": "chance",
+              "value": 0.25
+            }
+          ],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "target"
+              },
+              "buffId": "晕眩",
+              "level": 0,
+              "duration": 2
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "priority": -100,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
+            },
+            {
+              "type": "context_skill_weapon_type",
+              "weaponTypes": [
+                "quanzhang"
+              ]
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "神拳无敌"
+              ],
+              "absent": false
+            },
+            {
+              "type": "chance",
+              "value": 0.37
+            }
+          ],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "target"
+              },
+              "buffId": "晕眩",
+              "level": 0,
+              "duration": 2
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "priority": -100,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "ally"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form"
+              ]
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "灵心慧质"
+              ],
+              "absent": true
+            },
+            {
+              "type": "context_skill_weapon_type",
+              "weaponTypes": [
+                "quanzhang"
+              ]
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "神拳无敌"
+              ],
+              "absent": true
+            },
+            {
+              "type": "chance",
+              "value": 0.25
+            }
+          ],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "target"
+              },
+              "buffId": "晕眩",
+              "level": 0,
+              "duration": 2
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "priority": -100,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "ally"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form"
+              ]
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "灵心慧质"
+              ],
+              "absent": true
+            },
+            {
+              "type": "context_skill_weapon_type",
+              "weaponTypes": [
+                "quanzhang"
+              ]
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "神拳无敌"
+              ],
+              "absent": false
+            },
+            {
+              "type": "chance",
+              "value": 0.37
+            }
+          ],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "target"
+              },
+              "buffId": "晕眩",
+              "level": 0,
+              "duration": 2
+            }
+          ]
+        }
+      ]
     },
     "variants": [
       {
@@ -10118,7 +10824,7 @@
     "description": "5#随着等级逐步提升，攻击有一定概率附加麻痹效果。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -10131,7 +10837,99 @@
       "id": "阴阳",
       "name": "阴阳",
       "point": 5,
-      "description": "随着等级逐步提升，攻击有一定概率附加麻痹效果。"
+      "description": "随着等级逐步提升，攻击有一定概率附加麻痹效果。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "priority": -106,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
+            },
+            {
+              "type": "unit_level_chance",
+              "baseValue": 0,
+              "valuePerLevel": 0.01,
+              "maxValue": 1
+            }
+          ],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "target"
+              },
+              "buffId": "麻痹",
+              "level": 0,
+              "duration": 2
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "priority": -106,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "ally"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form"
+              ]
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "灵心慧质"
+              ],
+              "absent": true
+            },
+            {
+              "type": "unit_level_chance",
+              "baseValue": 0,
+              "valuePerLevel": 0.01,
+              "maxValue": 1
+            }
+          ],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "target"
+              },
+              "buffId": "麻痹",
+              "level": 0,
+              "duration": 2
+            }
+          ]
+        }
+      ]
     },
     "variants": [
       {
@@ -14401,7 +15199,7 @@
     "description": "50#攻击有一定概率附加重度麻痹效果。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -14414,7 +15212,99 @@
       "id": "寒冰真气",
       "name": "寒冰真气",
       "point": 50,
-      "description": "攻击有一定概率附加重度麻痹效果。"
+      "description": "攻击有一定概率附加重度麻痹效果。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "priority": -107,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
+            },
+            {
+              "type": "unit_level_chance",
+              "baseValue": 0,
+              "valuePerLevel": 0.5,
+              "maxValue": 1
+            }
+          ],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "target"
+              },
+              "buffId": "麻痹",
+              "level": 3,
+              "duration": 2
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "priority": -107,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "ally"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form"
+              ]
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "灵心慧质"
+              ],
+              "absent": true
+            },
+            {
+              "type": "unit_level_chance",
+              "baseValue": 0,
+              "valuePerLevel": 0.5,
+              "maxValue": 1
+            }
+          ],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "target"
+              },
+              "buffId": "麻痹",
+              "level": 3,
+              "duration": 2
+            }
+          ]
+        }
+      ]
     },
     "variants": [
       {
