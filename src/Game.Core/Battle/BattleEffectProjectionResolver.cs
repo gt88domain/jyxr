@@ -11,7 +11,7 @@ public sealed class BattleEffectProjectionResolver(BattleState state)
         state.ScopedEffects.ResolveProjection(state, unit));
 
     public double GetStat(BattleUnit unit, StatType stat) =>
-        GetBucket(GetEffectiveProjection(unit).StatModifierBuckets, stat).Evaluate(unit.Character.GetBaseStat(stat));
+        GetEffectiveProjection(unit).EvaluateStat(stat, unit.Character.GetBaseStat(stat));
 
     public double GetWeaponBonus(BattleUnit unit, WeaponType weaponType, double baseValue) =>
         GetBucket(GetEffectiveProjection(unit).WeaponModifierBuckets, weaponType).Evaluate(baseValue);
@@ -55,7 +55,8 @@ internal static class AffixProjectionCombiner
             CombineBuckets(projections.Select(static value => value.SkillModifierBuckets)),
             CombineBuckets(projections.Select(static value => value.WeaponModifierBuckets)),
             CombineBuckets(projections.Select(static value => value.TargetingModifierBuckets)),
-            CombineBuckets(projections.Select(static value => value.LegendChanceModifierBuckets)));
+            CombineBuckets(projections.Select(static value => value.LegendChanceModifierBuckets)),
+            projections.SelectMany(static value => value.FinalStatMultipliers).ToArray());
     }
 
     private static IReadOnlyDictionary<TKey, ModifierBucket> CombineBuckets<TKey>(

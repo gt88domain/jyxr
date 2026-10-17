@@ -490,7 +490,7 @@ public sealed class CharacterInstance
 
     public int GetBaseStat(StatType statType) => BaseStats.GetValueOrDefault(statType);
     public double GetStat(StatType statType) =>
-        GetBucket(Projection.Affixes.StatModifierBuckets, statType).Evaluate(GetBaseStat(statType));
+        Projection.Affixes.EvaluateStat(statType, GetBaseStat(statType));
 
     public double GetSkillBonusValue(string skillId, double baseValue = 0) =>
         GetBucket(Projection.Affixes.SkillModifierBuckets, skillId).Evaluate(baseValue);

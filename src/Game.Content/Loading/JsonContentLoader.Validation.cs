@@ -625,7 +625,7 @@ public sealed partial class JsonContentLoader
             ValidateBattleHookAffixes(buff.Affixes, repository, $"Buff '{buff.Id}'");
             foreach (var affix in buff.Affixes)
             {
-                Ensure(affix is BuffLevelStatModifierAffix or StatModifierAffix or SkillBonusModifierAffix or
+                Ensure(affix is BuffLevelStatModifierAffix or StatModifierAffix or FinalStatMultiplierAffix or SkillBonusModifierAffix or
                     WeaponBonusModifierAffix or SkillTargetingModifierAffix or TraitAffix or HookAffix,
                     $"Buff '{buff.Id}' contains unsupported affix '{affix.GetType().Name}'.");
             }
@@ -655,6 +655,12 @@ public sealed partial class JsonContentLoader
         string ownerName,
         InMemoryContentRepository? repository = null)
     {
+        if (affix is FinalStatMultiplierAffix finalStat)
+        {
+            Ensure(Enum.IsDefined(finalStat.Stat) && double.IsFinite(finalStat.Multiplier) && finalStat.Multiplier >= 0d,
+                $"{ownerName} has an invalid final stat multiplier.");
+        }
+
         if (affix is not HookAffix hook)
         {
             return;

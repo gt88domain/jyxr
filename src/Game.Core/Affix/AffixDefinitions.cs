@@ -16,6 +16,7 @@ public interface IAffixProvider
 
 [JsonPolymorphic(TypeDiscriminatorPropertyName = "type")]
 [JsonDerivedType(typeof(StatModifierAffix), "stat_modifier")]
+[JsonDerivedType(typeof(FinalStatMultiplierAffix), "final_stat_multiplier")]
 [JsonDerivedType(typeof(GrantTalentAffix), "grant_talent")]
 [JsonDerivedType(typeof(GrantModelAffix), "grant_model")]
 [JsonDerivedType(typeof(SkillBonusModifierAffix), "skill_bonus_modifier")]
@@ -47,6 +48,10 @@ public sealed record SkillAffixDefinition(
     bool RequiresEquippedInternalSkill = false);
 
 public sealed record StatModifierAffix(StatType Stat, ModifierValue Value) : AffixDefinition;
+
+// Applies after the ordinary modifier bucket, in ascending Order. Each step
+// truncates independently, so these cannot be combined as ModifierOp.More.
+public sealed record FinalStatMultiplierAffix(StatType Stat, double Multiplier, int Order = 0) : AffixDefinition;
 
 public sealed record GrantTalentAffix(string TalentId) : AffixDefinition
 {

@@ -11,8 +11,8 @@ try {
   assert.match(await page.locator('.restoration-total').innerText(),/70%/);
   assert.match(await page.locator('.restoration-report').innerText(),/双儿、经验木头人、练功木头人/);
   const counts=await page.locator('.restoration-counts').innerText();
-  assert.match(counts,/1885\s*\/\s*1887/);assert.match(counts,/95\s*\/\s*158/);
-  assert.match(await page.locator('.restoration-report').innerText(),/58 项只有元数据/);
+  assert.match(counts,/1885\s*\/\s*1887/);assert.match(counts,/101\s*\/\s*158/);
+  assert.match(await page.locator('.restoration-report').innerText(),/52 项只有元数据/);
   assert.match(await page.locator('.restoration-report').innerText(),/4 项作为其他效果的联动条件/);
   assert.equal(await page.locator('.restoration-category progress').count(),6);
   pass('current generated structure and talent counts appear alongside six explicitly estimated categories');

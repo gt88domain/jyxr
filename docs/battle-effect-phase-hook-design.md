@@ -5,6 +5,12 @@
 
 ## 1. 执行边界
 
+角色属性先通过普通ModifierBucket结算，再执行`final_stat_multiplier`词条。
+该词条使用`stat`、`multiplier`和升序`order`，每一步乘法后向零取整，不合并倍率。
+同order以来源ID、来源类型和词条序号稳定排序。角色面板、独立战斗单位与战场组合投影
+都调用`AffixProjection.EvaluateStat`，跨角色／Buff／范围效果合并后只执行一次最终属性阶段。
+这用于原武学属性天赋的有序整数计算，不代表原版全部装备、武学和Buff的前置加成已等价。
+
 - `BattleSkillExecutor` 负责编排技能的有序步骤。
 - 普通技能默认包含命中与伤害步骤；Special Skill 不进入默认伤害流程。
 - Special Skill 只执行自身 Buff 和显式 Effect；混合能力通过有序 Effect 表达。

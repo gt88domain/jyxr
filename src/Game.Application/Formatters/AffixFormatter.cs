@@ -24,6 +24,7 @@ public static class AffixFormatter
         return affix switch
         {
             StatModifierAffix statModifier => $"{FormatterTextCn.GetStatNameCn(statModifier.Stat)}{FormatStatModifierValueCn(statModifier.Stat, statModifier.Value)}",
+            FinalStatMultiplierAffix finalStat => $"{FormatterTextCn.GetStatNameCn(finalStat.Stat)}最终乘以{finalStat.Multiplier.ToString("0.###", CultureInfo.InvariantCulture)}（逐次取整）",
             BuffLevelStatModifierAffix buffLevelStatModifier => FormatBuffLevelStatModifierCn(buffLevelStatModifier),
             GrantTalentAffix grantTalent => FormatGrantTalentCn(grantTalent, contentRepository),
             GrantModelAffix grantModel => $"时装「{GetModelDisplayText(grantModel)}」",

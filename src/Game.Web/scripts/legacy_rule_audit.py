@@ -36,6 +36,11 @@ def audit_rules(package, repository):
     from legacy_school_rules import FAMILIES
     for name, _, _, _ in FAMILIES:
         partial[name] = ["source skill-name matching, damage multiplier range and ordered truncation configured; modern hit-check timing, cosmetic RNG sequence and AI valuation remain"]
+    from legacy_attribute_rules import ATTRIBUTE_RULES
+    for name, *_ in ATTRIBUTE_RULES:
+        partial[name] = ["final weapon aptitude multiplier and sequential truncation configured; earlier equipment/skill additions and battle buff layering still require source comparison"]
+    partial["浪子剑客"].append("original cosmetic speech RNG ordering remains")
+    partial["神拳无敌"].append("铁拳无双 stun probability enhancement and cosmetic speech RNG remain")
     conditional = {
         "万年长春": "不老长春 enhanced activation probability",
         "我就是神": "无尽斗志 first successful revival guarantee",

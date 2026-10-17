@@ -279,7 +279,7 @@ public sealed class BattleUnit
 
     public double GetStat(StatType statType) =>
         _projectionResolver is null
-            ? GetBucket(DetachedProjection.StatModifierBuckets, statType).Evaluate(Character.GetBaseStat(statType))
+            ? DetachedProjection.EvaluateStat(statType, Character.GetBaseStat(statType))
             : Resolver.GetStat(this, statType);
 
     public double GetWeaponBonusValue(WeaponType weaponType, double baseValue) =>

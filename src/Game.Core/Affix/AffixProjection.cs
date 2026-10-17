@@ -59,7 +59,8 @@ public sealed class AffixProjection
         IReadOnlyDictionary<string, ModifierBucket> skillModifierBuckets,
         IReadOnlyDictionary<WeaponType, ModifierBucket> weaponModifierBuckets,
         IReadOnlyDictionary<SkillTargetingModifierKey, ModifierBucket> targetingModifierBuckets,
-        IReadOnlyDictionary<string, ModifierBucket> legendChanceModifierBuckets)
+        IReadOnlyDictionary<string, ModifierBucket> legendChanceModifierBuckets,
+        IReadOnlyList<FinalStatMultiplierAffix>? finalStatMultipliers = null)
     {
         Traits = traits;
         HooksByTiming = hooksByTiming;
@@ -68,6 +69,11 @@ public sealed class AffixProjection
         WeaponModifierBuckets = weaponModifierBuckets;
         TargetingModifierBuckets = targetingModifierBuckets;
         LegendChanceModifierBuckets = legendChanceModifierBuckets;
+        FinalStatMultipliers = Array.AsReadOnly((finalStatMultipliers ?? [])
+            .OrderBy(static value => value.Order)
+            .ThenBy(static value => value.SourceId, StringComparer.Ordinal)
+            .ThenBy(static value => value.SourceKind)
+            .ThenBy(static value => value.SourceAffixOrder).ToArray());
     }
 
     public IReadOnlySet<TraitId> Traits { get; }
@@ -77,6 +83,16 @@ public sealed class AffixProjection
     public IReadOnlyDictionary<WeaponType, ModifierBucket> WeaponModifierBuckets { get; }
     public IReadOnlyDictionary<SkillTargetingModifierKey, ModifierBucket> TargetingModifierBuckets { get; }
     public IReadOnlyDictionary<string, ModifierBucket> LegendChanceModifierBuckets { get; }
+    public IReadOnlyList<FinalStatMultiplierAffix> FinalStatMultipliers { get; }
+
+    public double EvaluateStat(StatType stat, double baseValue)
+    {
+        var result = StatModifierBuckets.GetValueOrDefault(stat, ModifierBucket.Empty).Evaluate(baseValue);
+        foreach (var modifier in FinalStatMultipliers)
+            if (modifier.Stat == stat)
+                result = Math.Truncate(result * modifier.Multiplier);
+        return result;
+    }
 }
 
 public sealed class CharacterProjection

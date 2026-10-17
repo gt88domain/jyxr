@@ -84,7 +84,8 @@ public static class AffixProjectionBuilder
             new ReadOnlyDictionary<string, ModifierBucket>(skill),
             new ReadOnlyDictionary<WeaponType, ModifierBucket>(weapon),
             new ReadOnlyDictionary<SkillTargetingModifierKey, ModifierBucket>(targeting),
-            new ReadOnlyDictionary<string, ModifierBucket>(legend));
+            new ReadOnlyDictionary<string, ModifierBucket>(legend),
+            entries.Select(static entry => entry.Definition).OfType<FinalStatMultiplierAffix>().ToArray());
     }
 
     private static void Apply<TKey>(Dictionary<TKey, ModifierBucket> buckets, TKey key, ModifierValue value) where TKey : notnull =>
