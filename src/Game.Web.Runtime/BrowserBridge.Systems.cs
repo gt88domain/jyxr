@@ -190,7 +190,7 @@ public static partial class BrowserBridge
             var cue = message as BattleCue;
             var text = cue?.FloatText?.Text ?? cue?.Speech?.Text;
             int? recovery = fact?.Kind is BattleFactKind.Healed or BattleFactKind.MpRecovered && int.TryParse(fact.Detail, out var restored) ? restored : null;
-            BattleEvents.Add(new { sequence = ++_eventSequence, kind = fact?.Kind.ToString() ?? cue!.Kind.ToString(), unitId = message.UnitId, amount = fact?.Damage?.Amount ?? recovery, critical = fact?.Damage?.IsCritical ?? false, sourceUnitId = fact?.Damage?.SourceUnitId, skillId = fact?.SkillCast?.BaseSkillId, skillName = fact?.SkillCast?.ResolvedSkillName, text });
+            BattleEvents.Add(new { sequence = ++_eventSequence, kind = fact?.Kind.ToString() ?? cue!.Kind.ToString(), unitId = message.UnitId, amount = fact?.Damage?.Amount ?? recovery, critical = fact?.Damage?.IsCritical ?? false, sourceUnitId = fact?.Damage?.SourceUnitId, skillId = fact?.SkillCast?.BaseSkillId, skillName = fact?.SkillCast?.ResolvedSkillName, audioId = fact?.SkillCast?.AudioId, text });
             if (fact?.Damage is { } damage)
                 Log($"{_battle?.TryGetUnit(message.UnitId)?.Character.Name ?? message.UnitId}受到 {damage.Amount} 点伤害" + (damage.IsCritical ? "（暴击）。" : "。"));
         }

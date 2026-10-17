@@ -6,6 +6,7 @@ if (jyxrLoaderUrl.searchParams.has('v')) jyxrRuntimeUrl.searchParams.set('v', jy
 let jyxrRuntimeTask;
 window.loadJyxrRuntime = function () {
   jyxrRuntimeTask ??= import(jyxrRuntimeUrl.href)
-    .then(({dotnet}) => dotnet.create());
+    .then(({dotnet}) => dotnet.create())
+    .catch(error => { jyxrRuntimeTask = undefined; throw error; });
   return jyxrRuntimeTask;
 };

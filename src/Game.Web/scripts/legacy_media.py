@@ -9,6 +9,13 @@ def apply_legacy_media(package: dict, web: Path) -> dict:
     if not path.is_file():
         raise ValueError("Original art manifest missing; run scripts/extract-legacy-art.py first.")
     manifest = json.loads(path.read_text(encoding="utf-8"))
+    audio_path = path.with_name("audio-manifest.json")
+    if audio_path.is_file():
+        audio = json.loads(audio_path.read_text())
+        for relative, entry in audio["files"].items():
+            if not (path.parent / relative).is_file(): raise ValueError("Original audio missing: " + relative)
+        package["browser"]["audio"] = {"resources": audio["resources"], "titleMusic": "音乐.武侠回忆", "battleMusic": "战斗音乐.云狐之战",
+            "eventSounds": {"ItemUsed": "音效.恢复类物品", "CharacterLeveledUp": "音效.升级"}, "source": audio["source"]}
     if manifest.get("schemaVersion") != 1:
         raise ValueError("Unsupported original art manifest version")
     for relative in manifest["files"]:

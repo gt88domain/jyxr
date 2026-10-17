@@ -42,7 +42,7 @@ internal static class BattleHookEvaluator
             ContextSkillNameEqualsBattleHookConditionDefinition skillName => context.Skill is not null &&
                 skillName.Values.Any(value => string.Equals(context.Skill.Name, value, StringComparison.Ordinal)),
             ContextSkillNameContainsBattleHookConditionDefinition skillName => context.Skill is not null &&
-                skillName.Values.Any(value => context.Skill.Name.Contains(value, StringComparison.Ordinal)),
+                skillName.Values.Any(value => context.Skill.Name.Contains(value, StringComparison.Ordinal)) != skillName.Absent,
             ContextSkillKindBattleHookConditionDefinition skillKind => context.Skill is not null &&
                 skillKind.Kinds.Contains(context.Skill.SkillKind),
             ContextSkillWeaponTypeBattleHookConditionDefinition skillWeaponType => context.Skill is not null &&

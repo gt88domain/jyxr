@@ -5,7 +5,10 @@ const h=await createHarness('companions-smoke');
 const {page,output,report,pass,state,click,ready,visible,closeModal,noOverflow}=h;
 let failure;
 async function search(text){await page.locator('[data-companion-search]').fill(text);}
-async function open(){await click('[data-action="companions"]');await visible('.companion-browser');}
+async function open(){
+  if (!await page.locator('[data-action="companions"]').filter({visible:true}).count()) await click('[data-action="party"]');
+  await click('[data-action="companions"]');await visible('.companion-browser');
+}
 async function importSave(name){
   await closeModal();await page.locator('#import-file').setInputFiles(output+name);
   await page.waitForFunction(()=>document.querySelector('#toast')?.textContent==='存档已导入。');await ready();
@@ -71,7 +74,7 @@ try{
   pass('real follower and source-JOIN exports are displayed as different placements');
   await closeModal();await click('[data-action="guide"]');await click('[data-action="progress"]');await visible('.restoration-report');
   assert.equal(await page.locator('[data-feature-id]').count(),8);
-  for(const [id,percentage] of Object.entries({battle:65,external:55,internal:60,special:70,legend:35,items:80,talents:60,companions:65}))
+  for(const [id,percentage] of Object.entries({battle:85,external:75,internal:75,special:75,legend:55,items:80,talents:85,companions:65}))
     assert.match(await page.locator(`[data-feature-id="${id}"] h4`).innerText(),new RegExp(`${percentage}%`));
   assert.match(await page.locator('[data-feature-id="battle"]').innerText(),/393.*391/);
   assert.match(await page.locator('[data-feature-id="companions"]').innerText(),/65.*80.*10/);

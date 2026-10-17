@@ -4,7 +4,8 @@ namespace Game.Core.Battle.Talents;
 
 public sealed record BrightSacredFireFormationBattleEffectParameters(
     [property: Probability] double ChancePerAlly = 0.2d,
-    string? FloatText = null);
+    string? FloatText = null,
+    bool RollPerVisitedUnit = false);
 
 public sealed class BrightSacredFireFormationBattleEffectHandler
     : CustomBattleEffectHandler<BrightSacredFireFormationBattleEffectParameters, IActionReadinessEffectContext>
@@ -16,6 +17,16 @@ public sealed class BrightSacredFireFormationBattleEffectHandler
         IActionReadinessEffectContext context,
         BrightSacredFireFormationBattleEffectParameters parameters)
     {
+        if (parameters.RollPerVisitedUnit)
+        {
+            var accumulated = 0d;
+            foreach (var unit in context.State.GetLivingUnits())
+            {
+                if (unit.Team == context.Unit.Team && unit.Id != context.Unit.Id) accumulated += parameters.ChancePerAlly;
+                if (accumulated >= 1 || context.Random.NextDouble() < accumulated) context.RemoveNegativeBuffs();
+            }
+            return;
+        }
         var allyCount = context.State.GetLivingUnits().Count(unit =>
             unit.Team == context.Unit.Team &&
             !string.Equals(unit.Id, context.Unit.Id, StringComparison.Ordinal));

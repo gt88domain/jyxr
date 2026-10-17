@@ -5,6 +5,17 @@
 
 ## 1. 执行边界
 
+金庸内容通过可选`BattleFormationRules`启用有序分伤，其他内容默认不启用。真武/金刚最终增伤
+先于AfterDamageCalculation内容修正；目标来袭Hook之后执行BeforeDamageDistribution，允许
+生命上限吸取与恢复，再按真武重定向→五行等分→八卦转移统一处理目标。候选排除同角色定义，
+只选仍存活单位；原BattleField会移除死亡sprite，现代状态保留死亡记录。共享伤害经统一入口
+产出扣血与死亡事实，不重入普通受伤、怒气和吸血；原延迟死亡、濒死/复活及反弹MP仍是明确待办。
+
+`IFinalDamageEffectContext`仅用于AfterDamageCalculation的数值公式；
+`IDamageDistributionEffectContext`仅用于BeforeDamageDistribution的生命上限与吸血恢复能力。
+易容等保护仍保留命中后的普通效果；要求SuppressHitEffects的取消会同时禁止OnHitConfirmed，
+避免闪避或反击取消伤害后仍错误施加攻击方控制。
+
 技能范围词条可用`skillName`匹配当前招式的精确名称，`stage`选择BeforeBlind或AfterBlind。
 原有sourceSkillId词条仍默认在致盲前参与结算。当前施法与影响范围先算前段词条，再施加
 致盲，最后算后段词条；角色、独立单位、战场及AI使用相同投影。用于区分寸长寸强的后加范围

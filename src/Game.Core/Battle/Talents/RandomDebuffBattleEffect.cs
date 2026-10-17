@@ -6,7 +6,8 @@ namespace Game.Core.Battle.Talents;
 public sealed record RandomDebuffBattleEffectParameters(
     [property: Required, MinLength(1)] IReadOnlyList<string> BuffIds,
     [property: NonNegative] int Level,
-    [property: Positive] int Duration);
+    [property: Positive] int Duration,
+    bool AllowAllies = false);
 
 internal sealed class RandomDebuffBattleEffectHandler
     : CustomBattleEffectHandler<RandomDebuffBattleEffectParameters, IHitConfirmedEffectContext>
@@ -27,7 +28,7 @@ internal sealed class RandomDebuffBattleEffectHandler
         RandomDebuffBattleEffectParameters parameters)
     {
         if (context.Source is null || context.Target is null ||
-            !context.State.AreEnemies(context.Source, context.Target))
+            !parameters.AllowAllies && !context.State.AreEnemies(context.Source, context.Target))
         {
             return;
         }

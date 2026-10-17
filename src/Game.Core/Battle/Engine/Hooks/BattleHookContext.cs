@@ -14,6 +14,8 @@ public enum BattleHookExecutionMode
 public sealed class BattleHookContext :
     IBattleEffectContext,
     IDamageCalculationEffectContext,
+    IFinalDamageEffectContext,
+    IDamageDistributionEffectContext,
     IHitResultEffectContext,
     IHitConfirmedEffectContext,
     IDamageApplicationEffectContext,
@@ -90,6 +92,30 @@ public sealed class BattleHookContext :
 
     int IDamageApplicationEffectContext.DamageAmount =>
         DamageAmount ?? throw MissingCapability(nameof(IDamageApplicationEffectContext));
+
+    int IDamageDistributionEffectContext.DamageAmount => DamageAmount ?? 0;
+    void IDamageDistributionEffectContext.ReduceMaximumHp(BattleUnit target, int amount)
+    {
+        var loss = Math.Min(Math.Max(0, amount), Math.Max(0, target.Character.GetBaseStat(StatType.MaxHp) - 1));
+        target.Character.AddBaseStat(StatType.MaxHp, -loss);
+        target.Character.RebuildSnapshot(); target.InvalidateLocalBattleProjection(); target.ClampResourcesToLimits();
+        RequestFloatText(target, "生命上限-" + loss, BattleFloatTextStyle.Harmful);
+    }
+    int IDamageDistributionEffectContext.RecoverLifesteal(int amount)
+    {
+        var actual = Engine.RecoveryResolver.Apply(State, Unit, Unit, BattleRecoveryKind.Hp, amount, BattleRecoveryReason.Lifesteal).ActualAmount;
+        if (actual > 0) State.AddMessage(new BattleFact(BattleFactKind.Lifesteal, Unit.Id, Timing, lifesteal: new BattleLifestealEvent(actual)));
+        return actual;
+    }
+
+    int IFinalDamageEffectContext.DamageAmount
+    {
+        get => DamageAmount ?? throw MissingCapability(nameof(IFinalDamageEffectContext));
+        set => DamageAmount = Math.Max(0, value);
+    }
+
+    void IDamageApplicationRuntimeContext.ApplySharedDamage(BattleUnit target, int amount, string detail) =>
+        Engine.ApplySharedDamage(State, Source ?? Unit, target, amount, Skill, detail);
 
     BattleHitState IHitResultEffectContext.HitState { get => HitState; set => HitState = value; }
     int IHitResultEffectContext.DamageAmount

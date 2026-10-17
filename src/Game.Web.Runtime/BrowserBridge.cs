@@ -54,6 +54,7 @@ public static partial class BrowserBridge
             _content = candidate;
             _pack = metadata;
             _session = null;
+            _deviceProfile = new(); _deviceProfileInitialized = false;
             _partySubscription?.Dispose(); _partySubscription = null; FormationReserves.Clear();
             _creation = null;
             _battle = null;
@@ -238,6 +239,9 @@ public static partial class BrowserBridge
 
     [JSExport]
     public static string ImportSave(string saveJson)
+        => ImportSaveCore(saveJson, preserveDeviceProfile: false);
+
+    private static string ImportSaveCore(string saveJson, bool preserveDeviceProfile)
     {
         try
         {
@@ -264,10 +268,12 @@ public static partial class BrowserBridge
             }
             // Validate into a fresh candidate before replacing a running session.
             var candidateHost = new BrowserStoryHost();
-            var candidate = new GameSession(new GameState(), _content, candidateHost, config: RuntimeConfig);
-            if (wrapped)
+            var candidate = new GameSession(new GameState(), _content, candidateHost,
+                initialProfile: preserveDeviceProfile && _deviceProfileInitialized ? GameProfileRecord.Create(_deviceProfile).Restore() : null, config: RuntimeConfig);
+            if (wrapped && (!preserveDeviceProfile || !_deviceProfileInitialized))
             {
                 var profile = root.GetProperty("profile").Deserialize<GameProfileRecord>(Json) ?? throw new InvalidOperationException("玩家档案无效。");
+                if (profile.Version < 1 || profile.Version > GameProfileRecord.CurrentVersion) throw new InvalidOperationException("玩家档案版本不受支持。");
                 candidate.ProfileService.LoadProfile(profile);
             }
             candidate.SaveGameService.LoadSave(save);
@@ -315,6 +321,7 @@ public static partial class BrowserBridge
             _managedCharacterId = Party.HeroCharacterId;
             _host = candidateHost;
             _session = candidate;
+            _deviceProfile = candidate.Profile; _deviceProfileInitialized = true;
             _creation = null;
             _battle = null;
             _shopId = null;
@@ -354,7 +361,8 @@ public static partial class BrowserBridge
         var state = new GameState();
         if (Enum.TryParse<GameDifficulty>(difficulty, true, out var selectedDifficulty)) state.Adventure.SetDifficulty(selectedDifficulty);
         ResetStory();
-        _session = new GameSession(state, _content, _host, config: RuntimeConfig);
+        _session = new GameSession(state, _content, _host, initialProfile: _deviceProfile, config: RuntimeConfig);
+        _deviceProfileInitialized = true;
         var hero = prepared?.Hero ?? new InitialCharacterFactory(_content, RuntimeConfig).Create(Party.HeroCharacterId, PackText("heroDefinitionId"), state.EquipmentInstanceFactory);
         hero.Name = name;
         state.Party.AddMember(hero);
@@ -393,6 +401,7 @@ public static partial class BrowserBridge
             buffResolver: _content!.GetBuff,
             legendSkillsProvider: _content!.GetLegendSkillsFor,
             legendSkillResolver: new LegendSkillResolver(_pack["legendResolution"]?.Deserialize<LegendSkillResolutionRules>(Json)),
+            formationRules: _pack["formationRules"]?.Deserialize<BattleFormationRules>(Json),
             skillMaxLevelResolver: session.SkillMaxLevelPolicy.GetMaxLevel,
             characterGrowTemplateResolver: c => _content!.GetGrowTemplate(c.GrowTemplateId ?? CharacterExperienceProgression.DefaultGrowTemplateId),
             skillUseExperienceResolver: PackText("id") == "jyx" ? BrowserLegacyRules.ResolveSkillUseExperience : null,
@@ -542,11 +551,11 @@ public static partial class BrowserBridge
                     yuanbao = _session?.Profile.Yuanbao ?? 0,
                     backgroundId = _backgroundId, musicId = _musicId, sceneBackground = _host.Dialogue is not null || _host.Choice is not null ? ResourceMedia(_backgroundId) : null,
                     inventory = _session?.State.Inventory.Entries.Select(InventoryView).ToArray(),
-                    map = map is null ? null : new { id = map.Id, name = map.Name, description = map.Description, background = MapMedia(map.Id), kind = map.Kind.ToString().ToLowerInvariant(), locations = CurrentMapView().Locations.Select(l => new { id = l.Location.Id, name = l.Location.Name, description = l.Event?.Description ?? l.Location.Description, action = l.Event?.Action.Root.Name, image = ResourceMedia(l.Event?.Image) ?? ResourceMedia(l.Location.Picture), timeSlots = RequireSession().MapService.PreviewInteractionConsumedTimeSlots(l) }) },
+                    map = map is null ? null : new { id = map.Id, name = map.Name, description = map.Description, background = MapMedia(map.Id), music = map.Musics.FirstOrDefault(), kind = map.Kind.ToString().ToLowerInvariant(), locations = CurrentMapView().Locations.Select(l => new { id = l.Location.Id, name = l.Location.Name, description = l.Event?.Description ?? l.Location.Description, action = l.Event?.Action.Root.Name, image = ResourceMedia(l.Event?.Image) ?? ResourceMedia(l.Location.Picture), timeSlots = RequireSession().MapService.PreviewInteractionConsumedTimeSlots(l) }) },
                     battle = _battle is null ? null : new
                     {
                         name = _content!.GetBattle(_request!.BattleId).Name, width = _battle.Grid.Width, height = _battle.Grid.Height,
-                        id = _request.BattleId, background = BattleMedia(_request.BattleId),
+                        id = _request.BattleId, background = BattleMedia(_request.BattleId), music = _content!.GetBattle(_request.BattleId).Music,
                         activeUnitId = Active?.Id, tick = _battle.Tick, tickLimit = BattleTickLimit, timedOut = BattleTimedOut, outcome = outcome!.Kind == BattleOutcomeKind.Ongoing ? "ongoing" : outcome.WinningTeam == 1 ? "win" : "lose",
                         units = _battle.Units.Select(u => new { id = u.Id, definitionId = u.Character.Definition.Id, sprite = CharacterMedia(u.Character, "characters", u.Team), portrait = CharacterMedia(u.Character, "portraits", u.Team), name = u.Character.Name, animation = CharacterAnimation(u.Character), facing = u.Facing.ToString().ToLowerInvariant(), team = u.Team, x = u.Position.X, y = u.Position.Y, hp = u.Hp, maxHp = u.MaxHp, mp = u.Mp, maxMp = u.MaxMp, alive = u.IsAlive,
                             buffs = u.ActiveBuffs.Select(b => new { id = b.Definition.Id, name = b.Definition.Name, description = b.Definition.Description, level = b.Level, remainingTurns = b.RemainingTurns, isDebuff = b.Definition.IsDebuff }) }),

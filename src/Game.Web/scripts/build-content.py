@@ -286,10 +286,14 @@ def build(output: Path) -> None:
     report["masteryRuleEffects"] = apply_mastery_rules(package)
     from legacy_legend_rules import apply_legend_rules, LEGEND_RESOLUTION
     report["legendRuleEffects"] = apply_legend_rules(package)
+    from legacy_remaining_rules import apply_remaining_rules, FORMATION_RULES
+    report["remainingRuleEffects"] = apply_remaining_rules(package)
     from browser_packs import assemble_jyx
     package = assemble_jyx(package, source_maps, SOURCE, script)
     package["browser"]["chestMapId"] = "松鼠旅馆"
     package["browser"]["legendResolution"] = LEGEND_RESOLUTION
+    package["browser"]["formationRules"] = FORMATION_RULES
+    package["browser"]["sourceRuleTalents"] = report["remainingRuleEffects"]["talents"]
     from legacy_world import expand_original
     package, original_audit = expand_original(package, source_maps, SOURCE, script)
     from legacy_media import apply_legacy_media

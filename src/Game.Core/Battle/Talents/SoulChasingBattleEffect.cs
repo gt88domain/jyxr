@@ -6,7 +6,8 @@ namespace Game.Core.Battle.Talents;
 public sealed record SoulChasingBattleEffectParameters(
     [property: NotWhiteSpace] string BuffId,
     [property: Probability] double SpeechChance,
-    IReadOnlyList<string> SpeechLines);
+    IReadOnlyList<string> SpeechLines,
+    bool TruncateQuotients = false);
 
 internal sealed class SoulChasingBattleEffectHandler
     : CustomBattleEffectHandler<SoulChasingBattleEffectParameters, IHitConfirmedEffectContext>
@@ -23,11 +24,13 @@ internal sealed class SoulChasingBattleEffectHandler
             return;
         }
 
+        var source = context.Source.GetStat(StatType.Fuyuan) / 100d;
+        var target = context.Target.GetStat(StatType.Dingli) / 100d;
         var chance = Math.Clamp(
-            (context.Source.GetStat(StatType.Fuyuan) - context.Target.GetStat(StatType.Dingli)) / 100d,
+            parameters.TruncateQuotients ? Math.Truncate(source) - Math.Truncate(target) : source - target,
             0d,
             1d);
-        if (!Probability.RollChance(context.Random, chance))
+        if (!(parameters.TruncateQuotients ? chance >= 1 || context.Random.NextDouble() < chance : Probability.RollChance(context.Random, chance)))
         {
             return;
         }

@@ -27,6 +27,13 @@ public static partial class BrowserBridge
                 throw new InvalidOperationException($"内容包缺少 {key}。");
         content.GetCharacter(pack["heroDefinitionId"]!.GetValue<string>());
         content.GetMap(pack["initialMapId"]!.GetValue<string>());
+        if (pack["formationRules"] is { } formationNode)
+        {
+            var formation = formationNode.Deserialize<Game.Core.Battle.BattleFormationRules>(Json) ?? throw new InvalidOperationException("阵法规则为空。");
+            formation.Validate();
+            foreach (var talentId in new[] { formation.InterceptTalentId, formation.SharedDamageTalentId, formation.TransferTalentId, formation.GroupAttackTalentId })
+                content.GetTalent(talentId);
+        }
         foreach (var key in new[] { "initialStoryId", "trainingStoryId" })
             if (pack[key]?.GetValue<string>() is { Length: > 0 } story) content.GetStorySegment(story);
         if (pack["trainingMapId"]?.GetValue<string>() is { Length: > 0 } map) content.GetMap(map);

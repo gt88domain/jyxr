@@ -20,7 +20,7 @@ if args.action == "pack":
     args.archive.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(args.archive, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as z:
         for path in sorted((web / "public/art").rglob("*")):
-            if path.is_file() and path.name not in {"README.md", "manifest.json"}:
+            if path.is_file() and path.name not in {"README.md", "manifest.json", "audio-manifest.json"}:
                 info = zipfile.ZipInfo(path.relative_to(web / "public").as_posix(), date_time=(2026, 1, 1, 0, 0, 0))
                 info.compress_type = zipfile.ZIP_DEFLATED
                 z.writestr(info, path.read_bytes())

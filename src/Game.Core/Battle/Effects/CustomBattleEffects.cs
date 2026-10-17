@@ -161,6 +161,9 @@ public sealed class CustomBattleEffectRegistry
         registry.Register("poisoned_target_level_damage", new PoisonedTargetLevelDamageBattleEffectHandler());
         registry.Register("reset_skill_cooldowns", new ResetSkillCooldownsBattleEffectHandler());
         registry.Register("single_precision_lifesteal", new SinglePrecisionLifestealBattleEffectHandler());
+        registry.Register("final_damage_formula", new FinalDamageFormulaBattleEffectHandler());
+        registry.Register("maximum_hp_drain", new MaximumHpDrainBattleEffectHandler());
+        registry.Register("action_gauge_rule", new ActionGaugeRuleBattleEffectHandler());
         registry.Register("random_debuff", new RandomDebuffBattleEffectHandler());
         registry.Register("random_strengthen_context_buff", new RandomStrengthenContextBuffBattleEffectHandler());
         return registry;
@@ -259,6 +262,8 @@ internal static class BattleEffectCapabilityPolicy
         new Dictionary<Type, HookTiming>
         {
             [typeof(IDamageCalculationEffectContext)] = HookTiming.BeforeDamageCalculation,
+            [typeof(IFinalDamageEffectContext)] = HookTiming.AfterDamageCalculation,
+            [typeof(IDamageDistributionEffectContext)] = HookTiming.BeforeDamageDistribution,
             [typeof(IHitResultEffectContext)] = HookTiming.BeforeHitResolved,
             [typeof(IHitConfirmedEffectContext)] = HookTiming.OnHitConfirmed,
             [typeof(IDamageApplicationEffectContext)] = HookTiming.BeforeDamageApplied,

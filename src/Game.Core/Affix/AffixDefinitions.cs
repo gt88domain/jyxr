@@ -235,7 +235,7 @@ public sealed record ContextSkillNameEqualsBattleHookConditionDefinition(
     IReadOnlyList<string> Values) : BattleHookConditionDefinition;
 
 public sealed record ContextSkillNameContainsBattleHookConditionDefinition(
-    IReadOnlyList<string> Values) : BattleHookConditionDefinition;
+    IReadOnlyList<string> Values, bool Absent = false) : BattleHookConditionDefinition;
 
 public sealed record ContextSkillKindBattleHookConditionDefinition(
     IReadOnlyList<SkillKind> Kinds) : BattleHookConditionDefinition;

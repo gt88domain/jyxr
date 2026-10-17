@@ -1,4 +1,27 @@
 export interface SaveSlot { version: 1; packId?: string; savedAt: string; name: string; level: number; map: string; data: string; }
+
+export async function readProfile(packId: string): Promise<string | undefined> {
+  const db = await open();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction('saves', 'readonly');
+    const request = tx.objectStore('saves').get(`profile:${packId}`);
+    request.onsuccess = () => resolve(request.result as string | undefined);
+    request.onerror = () => reject(request.error);
+    tx.oncomplete = () => db.close();
+    tx.onabort = () => {db.close(); reject(tx.error);};
+  });
+}
+
+export async function writeProfile(packId: string, data: string): Promise<void> {
+  const db = await open();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction('saves', 'readwrite');
+    tx.objectStore('saves').put(data, `profile:${packId}`);
+    tx.oncomplete = () => {db.close(); resolve();};
+    tx.onabort = () => {db.close(); reject(tx.error);};
+    tx.onerror = () => reject(tx.error);
+  });
+}
 function open(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
     const request = indexedDB.open('jyxr-web', 1);

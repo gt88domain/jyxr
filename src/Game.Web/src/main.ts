@@ -15,6 +15,7 @@ import {miniGameView, MiniGameController} from './minigame';
 import type {PanelName, InventoryFilter} from './panels';
 import {readSettings, writeSettings, applySettings} from './settings';
 import type {Settings} from './settings';
+import {GameAudio} from './audio';
 import {estimatedProgress, restorationProgressView} from './restoration-progress';
 import {loadCompanionCatalog, mountCompanionCatalog} from './companions';
 import {loadOriginalLibrary, mountOriginalLibrary} from './library';
@@ -27,6 +28,7 @@ let autoBattle = false, battlePaused = false;
 let battleIntent: 'move' | 'attack' = 'move';
 let packs: PackListing[] = [];
 const settings = readSettings();
+const audio = new GameAudio(settings);
 applySettings(settings);
 let activePanel: PanelName | null = null, inventoryFilter: InventoryFilter = 'all';
 const e = (value: unknown) => String(value ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]!));
@@ -98,6 +100,7 @@ function scheduleBattle() {
 }
 function render() {
   if (!state) return;
+  audio.sync(state);
   training?.destroy(); training=undefined;
   const nextScreen = state.phase === 'title' ? 'title' : state.phase === 'battle' && state.battle ? 'battle' : 'world';
   if (nextScreen === 'battle' && screen === 'battle') { updateBattle(); return; }
@@ -132,6 +135,7 @@ function applyResult(result: Result) {
   if (!result.ok) throw new Error(result.error || '此次行动未能完成。');
   state = result.state;
   render();
+  if (result.warning) toast(result.warning);
 }
 async function command(data: Record<string, unknown>) {
   if (busy) return false;
@@ -215,7 +219,7 @@ async function save() {
 }
 async function load() {
   if (!slot || busy) return;
-  try { applyResult(await importSave(slot.data)); toast('旧事续上，江湖如故。'); }
+  try { applyResult(await importSave(slot.data, true)); toast('旧事续上，江湖如故。'); }
   catch (error) {console.error(error); toast('存档未能读取，请检查存档文件。');}
 }
 function openPanel(name: PanelName) {
@@ -340,7 +344,7 @@ document.addEventListener('click', event => {
 document.addEventListener('change', event => {
   const control = event.target;
   if (control instanceof HTMLSelectElement && control.id === 'managed-character') {void command({type:'selectCharacter',characterId:control.value}); return;}
-  if (!(control instanceof HTMLInputElement || control instanceof HTMLSelectElement) || !control.closest('#game-settings')) return;
+  if (!(control instanceof HTMLInputElement || control instanceof HTMLSelectElement) || !control.closest('#game-settings, #audio-settings')) return;
   const name = control.name as keyof Settings;
   if (name === 'battleMode' && (control.value === 'manual' || control.value === 'auto')) {
     settings.battleMode = control.value;
@@ -348,10 +352,13 @@ document.addEventListener('change', event => {
   } else if (name === 'battleSpeed') {
     const speed = Number(control.value);
     if (speed === 1 || speed === 2 || speed === 4) settings.battleSpeed = speed;
+  } else if (name === 'musicVolume' || name === 'effectsVolume') {
+    settings[name] = Math.max(0, Math.min(1, Number(control.value) / 100));
   } else if (control instanceof HTMLInputElement && ['showGrid', 'showDamage', 'battleLighting', 'reducedMotion', 'largeText'].includes(name)) {
     settings[name as 'showGrid' | 'showDamage' | 'battleLighting' | 'reducedMotion' | 'largeText'] = control.checked;
   }
   if (!writeSettings(settings)) toast('设置已在本次游玩生效，但此浏览器暂不能保存设置。');
+  audio.sync(state);
   if (screen === 'battle') updateBattle();
   scheduleBattle();
 });

@@ -2,7 +2,7 @@ export interface Skill { id: string; name: string; level: number; mpCost: number
 export interface EquipmentSlot { slot: string; slotName: string; item: {id: string; name: string; instanceId: string; description: string; affixes?: string[]; icon?: string | null} | null; }
 export interface Cultivation { entryNumber: number; itemId: string; itemName: string; skillId: string; skillName: string; kind: string; level: number; exp: number; nextExp: number; maxLevel: number; }
 export interface InventoryItem { icon?: string | null; id: string; entryNumber: number; name: string; count: number; quantity: number; description: string; affixes?: string[]; battleTargets?: {id: string; name: string; hp: number; maxHp: number; canUse: boolean; reason: string}[] | null; kind: string; itemType: string; slot: string | null; canEquip: boolean; canUse: boolean; canCultivate: boolean; reason: string; }
-export interface BattleEvent { sequence: number; kind: string; unitId: string; amount: number | null; critical: boolean; sourceUnitId: string | null; skillId: string | null; skillName: string | null; text: string | null; }
+export interface BattleEvent { sequence: number; kind: string; unitId: string; amount: number | null; critical: boolean; sourceUnitId: string | null; skillId: string | null; skillName: string | null; text: string | null; audioId?: string | null; }
 export interface CharacterAnimation {id: string; texture: string; atlas: string; poster: string; baseHeight: number; clips: Record<string, {frames: string[]; frameRate: number}>;}
 export interface Unit { animation?: CharacterAnimation | null; facing?: string; id: string; definitionId?: string; sprite?: string | null; portrait?: string | null; name: string; team: number; x: number; y: number; hp: number; maxHp: number; mp: number; maxMp: number; alive: boolean; buffs?: {id: string; name: string; description: string; level: number; remainingTurns: number; isDebuff: boolean}[]; }
 export interface PackMedia { titleBackground?: string; worldBackground?: string; battleBackground?: string; defaultFriendly?: string; defaultEnemy?: string; characters?: Record<string, string>; portraits?: Record<string, string>; maps?: Record<string, string>; battles?: Record<string, string>; }
@@ -29,6 +29,7 @@ export interface CreationState {
   preview: {portrait: string; sprite: string; silver: number; randomBonus: Record<string, number>; attributes: {id: string; label: string; value: number}[]; talents: {id: string; name: string}[]; internalSkills: {id: string; name: string; level: number}[]; items: {id: string; name: string; quantity: number; icon?: string}[]} | null;
 }
 export interface GameState {
+  musicId?: string | null;
   companionJournal?: {completedRecruitmentStories: string[]};
   milestones?: {id: string; title: string; requirements: string[]; completed: boolean}[];
   journal?: {id: number; date: string; text: string}[] | null;
@@ -62,7 +63,7 @@ export interface GameState {
   inventory?: InventoryItem[];
   logs: string[];
 }
-export interface Result { ok: boolean; error?: string; state: GameState; }
+export interface Result { ok: boolean; error?: string; warning?: string; state: GameState; }
 export interface ChestItem {id: string; entryNumber: number; name: string; icon?: string | null; quantity: number; canDeposit: boolean;}
 interface Exports {
   MiniGameInput: (input: string) => string | Promise<string>;
@@ -70,8 +71,13 @@ interface Exports {
   Dispatch: (command: string) => string | Promise<string>;
   ExportSave: () => string | Promise<string>;
   ImportSave: (save: string) => string | Promise<string>;
+  ImportStoredSave: (save: string) => string | Promise<string>;
+  ExportProfile: () => string | Promise<string>;
+  InitializeProfile: (profile: string) => string | Promise<string>;
 }
 let api: Exports;
+const profileCache = new Map<string, string>();
+const blockedProfiles = new Set<string>();
 declare global { interface Window { loadJyxrRuntime: () => Promise<{getConfig: () => {mainAssemblyName: string}; getAssemblyExports: (name: string) => Promise<any>}>; } }
 function decode(value: string): Result {
   const result = JSON.parse(value) as Result;
@@ -85,21 +91,75 @@ function decode(value: string): Result {
 }
 export async function loadRuntime(progress: (message: string) => void, packId = 'jyx'): Promise<Result> {
   progress('正在载入游戏规则……');
-  const runtime = await window.loadJyxrRuntime();
+  const [runtime, content] = await Promise.all([window.loadJyxrRuntime(), readPack(packId)]);
   const config = runtime.getConfig();
   const assemblies = await runtime.getAssemblyExports(config.mainAssemblyName);
   api = assemblies.Game.Web.Runtime.BrowserBridge;
   progress('正在装载人物、技能与剧情……');
-  return initializePack(packId);
+  return initializePack(packId, content);
 }
-export async function initializePack(packId: string): Promise<Result> {
-  return decode(await api.Initialize(await readPack(packId)));
+export async function initializePack(packId: string, prepared?: string): Promise<Result> {
+  const result = decode(await api.Initialize(prepared ?? await readPack(packId)));
+  if (!result.ok) return result;
+  try {
+    const stored = await readProfile(packId);
+    profileCache.delete(packId); blockedProfiles.delete(packId);
+    if (stored) {
+      const loaded = decode(await api.InitializeProfile(stored));
+      if (!loaded.ok) {
+        blockedProfiles.add(packId);
+        result.warning = '设备档案未能读取，原记录已保留，本次不会自动覆盖；可导入导出的完整存档恢复档案。';
+      } else {profileCache.set(packId, stored); blockedProfiles.delete(packId); return loaded;}
+    } else {
+      // Before independent profiles existed, the only copy lived in the journey
+      // slot. Migrate it before allowing a new character, not just on Continue.
+      const legacy = await readSlot(packId);
+      if (legacy) {
+        const backup = JSON.parse(legacy.data);
+        if (backup.browserSaveVersion === 1 || backup.browserSaveVersion === 2) {
+          const owner = backup.browserSaveVersion === 2 ? backup.packId : 'jyx';
+          if (owner !== packId || !backup.profile) throw new Error('Invalid legacy profile owner');
+          const migrated = decode(await api.InitializeProfile(JSON.stringify({schemaVersion: 1, packId, profile: backup.profile})));
+          if (!migrated.ok) {
+            blockedProfiles.add(packId);
+            result.warning = '旧旅程档案未能迁移，原存档已保留且不会被自动覆盖；请导入有效完整备份恢复。';
+            return result;
+          }
+          try {
+            const normalized = await api.ExportProfile();
+            await writeProfile(packId, normalized); profileCache.set(packId, normalized);
+          } catch {migrated.warning = '旧旅程档案已载入，但设备暂不能写入；请保留完整备份。';}
+          return migrated;
+        }
+      }
+    }
+  } catch {blockedProfiles.add(packId); result.warning = '此浏览器暂不能读取设备档案，原记录不会被覆盖；请保留导出的完整存档。';}
+  return result;
 }
 export async function dispatch(command: Record<string, unknown>): Promise<Result> {
-  return decode(await api.Dispatch(JSON.stringify(command)));
+  return persistProfile(decode(await api.Dispatch(JSON.stringify(command))));
 }
-export async function exportSave(): Promise<string> { return await api.ExportSave(); }
-export async function importSave(data: string): Promise<Result> { return decode(await api.ImportSave(data)); }
+async function persistProfile(result: Result): Promise<Result> {
+  if (!result.ok || blockedProfiles.has(result.state.pack.id)) return result;
+  try {
+    const profile = await api.ExportProfile();
+    if (JSON.parse(profile) === null) return result;
+    if (profileCache.get(result.state.pack.id) !== profile) {
+      await writeProfile(result.state.pack.id, profile); profileCache.set(result.state.pack.id, profile);
+    }
+  } catch {result.warning = '行动已完成，但设备档案暂不能写入；请导出完整存档备份。';}
+  return result;
+}
+export async function exportSave(): Promise<string> {
+  const data = await api.ExportSave();
+  if (!JSON.parse(data).error) await persistProfile(decode(await api.Dispatch('{"type":"state"}')));
+  return data;
+}
+export async function importSave(data: string, stored = false): Promise<Result> {
+  const result = decode(await (stored ? api.ImportStoredSave(data) : api.ImportSave(data)));
+  if (result.ok && !stored) {blockedProfiles.delete(result.state.pack.id); profileCache.delete(result.state.pack.id);}
+  return persistProfile(result);
+}
 export interface MiniGameConfig {id: string; title: string; heroPortrait?: string; portraits: Record<string, string>; itemIcons: Record<string, string>; background?: string | null; pointIcons?: Record<string, string | null>;}
 export interface MiniGameFrame {
   id: string; width: number; height: number; targetSize: number; elapsed: number; remaining: number; score: number;
@@ -113,3 +173,4 @@ export async function miniGameInput(input: Record<string, unknown>): Promise<Min
   return result.frame;
 }
 import {readPack} from './content';
+import {readProfile, writeProfile, readSlot} from './storage';

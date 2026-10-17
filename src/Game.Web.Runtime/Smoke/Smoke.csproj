@@ -2,6 +2,7 @@
   <PropertyGroup><OutputType>Exe</OutputType><EnableDefaultCompileItems>false</EnableDefaultCompileItems><AllowUnsafeBlocks>true</AllowUnsafeBlocks><NoWarn>$(NoWarn);CA1416</NoWarn></PropertyGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="ProfileSmoke.cs" />
     <Compile Include="PackSmoke.cs" />
     <Compile Include="OriginalSmoke.cs" />
     <Compile Include="CreationSmoke.cs" />
@@ -33,6 +34,7 @@
     <Compile Include="../BrowserBridge.Special.cs" Link="BrowserBridge.Special.cs" />
     <Compile Include="../BrowserBridge.MiniGame.cs" Link="BrowserBridge.MiniGame.cs" />
     <Compile Include="../BrowserBridge.Flow.cs" Link="BrowserBridge.Flow.cs" />
+    <Compile Include="../BrowserBridge.Profile.cs" Link="BrowserBridge.Profile.cs" />
     <Compile Include="../BrowserLegacyRules.cs" Link="BrowserLegacyRules.cs" />
     <Compile Include="../BrowserExperienceMigration.cs" Link="BrowserExperienceMigration.cs" />
     <ProjectReference Include="../../Game.Core/Game.Core.csproj" />

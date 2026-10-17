@@ -21,7 +21,7 @@ def audit_rules(package, repository):
         "幽居": ["combined positive-damage extra strikes tested; original negative damage and special-hit timing remain"],
         "素心神剑": ["combined positive-damage extra strikes tested; original negative damage and special-hit timing remain"],
         "阉人": ["single-talent guaranteed critical configured; ordered interaction with later critical modifiers remains"],
-        "易容": ["ambush, immunity and consumption are not configured"],
+        "易容": ["incoming HP suppression and attack ambush/consumption configured; MP, special pipeline and original miss/target iteration remain"],
         "武穆兵法": ["team buffs and combined extra strikes configured; negative damage and original post-buff timing remain"],
         "天地同寿": ["single-cast HP snapshot, unblockable cost and permanent max-HP loss tested; multi-target source iteration remains"],
         "北冥神功": ["integer formula and selected boundaries tested; full hit/reaction ordering remains"],
@@ -47,7 +47,7 @@ def audit_rules(package, repository):
     talent_partial.update({
         "屌丝": ["野球拳 legend chance multiplier +.1 configured; complete equipment/skill-trigger ordering and naturally acquired combination routes remain unverified"],
         "吴钩霜雪": ["exact-name cast +3 branch preserved; baseline selectable form is 太玄神功.太玄真气 while source tests 太玄神功; no playable activation evidence, version reconciliation remains"],
-        "金刚伏魔圈": ["日月神鞭 cast size 10 bypasses blindness; formation damage stacking, break/removal and movement remain"],
+        "金刚伏魔圈": ["range, movement lock, three-member attack multiplier and break/removal configured; full legacy unit-removal lifecycle and equipment-granted talent behavior remain"],
         "至空至明": ["15% target cooldown reset configured; full original hit/reaction and cosmetic RNG ordering remain"],
         "金刚": ["standalone defence *1.2 +10*level configured; sequential interactions with all other defence modifiers remain"],
         "御风": ["critical reduction uses original integer level/30 steps; full critical override/order and cosmetic RNG remain"],
@@ -55,6 +55,7 @@ def audit_rules(package, repository):
            for name in ["血海魔功", "血魔刀法", "嗜血狂魔"]},
     })
     conditional = {
+        "慕容世家": "斗转星移 activation chance .1 to .2",
         "万年长春": "不老长春 enhanced activation probability",
         "我就是神": "无尽斗志 first successful revival guarantee",
         "吴侬软语": "吴侬软语 special-skill stun gate",
@@ -66,6 +67,10 @@ def audit_rules(package, repository):
             name = definition["id"]
             remaining = list(partial.get(name, []))
             if collection == "talents": remaining += talent_partial.get(name, [])
+            if collection == "talents" and name in package.get("browser", {}).get("sourceRuleTalents", []):
+                remaining.append("pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain")
+            if collection == "buffs" and name in {"魔神降临", "溜须拍马"}:
+                remaining.append("source combat effect configured; special skills, MP and complete source reaction order remain")
             if collection == "specialSkills":
                 buff_ids = [buff["id"] for buff in definition.get("buffs", [])]
                 buff_ids += [effect["buffId"] for effect in definition.get("effects", []) if effect.get("type") == "apply_buff"]
@@ -75,6 +80,10 @@ def audit_rules(package, repository):
                     remaining.append("verify special damage hit/reaction pipeline against original; currently direct damage")
             configured = bool(definition.get("affixes") or definition.get("effects") or
                               collection == "specialSkills" and definition.get("buffs"))
+            from legacy_remaining_rules import ENGINE_FORMATIONS
+            if collection == "talents" and name in ENGINE_FORMATIONS:
+                configured = True
+                remaining.append("ordered formation pipeline configured; full original cosmetic RNG and battle lifecycle ordering remain")
             state = "configured" if configured else "metadata-only"
             if collection == "buffs" and name in builtins:
                 state = "engine-behavior"

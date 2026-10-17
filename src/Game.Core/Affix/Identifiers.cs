@@ -55,7 +55,8 @@ public enum HookTiming
     OnDamageTaken,
     OnDamageDealt,
     BeforeRecoveryResolved,
-    AfterDamageCalculation
+    AfterDamageCalculation,
+    BeforeDamageDistribution
 }
 
 public enum SkillTargetingField

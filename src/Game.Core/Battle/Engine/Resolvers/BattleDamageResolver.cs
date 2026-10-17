@@ -80,6 +80,15 @@ internal sealed class BattleDamageResolver(BattleEngine engine)
             applicationContext.ProposedAmount = Math.Max(0, application.DamageAmount ?? amount);
             applicationContext.Target = application.Target ?? target;
             applicationContext.SuppressHitEffects = application.SuppressHitEffects;
+            if (!applicationContext.SuppressHitEffects)
+            {
+                engine.TriggerHooks(state, HookTiming.BeforeDamageDistribution, source, c =>
+                {
+                    c.Source = source; c.Target = applicationContext.Target; c.Skill = skill;
+                    c.DamageAmount = applicationContext.ProposedAmount; c.IsCritical = isCritical;
+                });
+                engine.ApplyFormationDefence(state, applicationContext);
+            }
         }
 
         var actualAmount = applicationContext.Target.TakeDamage(applicationContext.ProposedAmount);

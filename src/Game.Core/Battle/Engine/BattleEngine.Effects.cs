@@ -66,6 +66,7 @@ public sealed partial class BattleEngine
         var result = _damageCalculator.CalculateSkillDamage(damageCalculation);
         var damageMultiplier = BattleDamageRules.GetSkillDamageMultiplier(source, target);
         var resolvedDamageAmount = (int)Math.Floor(result.Amount * damageMultiplier);
+        resolvedDamageAmount = _formationResolver?.ModifyAttack(state, source, resolvedDamageAmount) ?? resolvedDamageAmount;
         var resultModifiers = TriggerHooks(state, HookTiming.AfterDamageCalculation, source, context =>
         {
             context.Source = source;
@@ -86,7 +87,7 @@ public sealed partial class BattleEngine
 
         return new BattleSkillHitResolution(
             damageApplication.Target,
-            true,
+            !damageApplication.SuppressHitEffects,
             damageApplication.ActualAmount,
             result.IsCritical,
             hitCheck.SuppressHitEffects || damageApplication.SuppressHitEffects);

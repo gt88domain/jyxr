@@ -1,6 +1,26 @@
 export interface PackListing {id: string; title: string; subtitle?: string; description?: string; url: string;}
 interface PackIndex {schemaVersion: number; defaultPackId: string; packs: PackListing[];}
 let catalog: PackIndex | undefined;
+
+async function readText(url: URL, label: string): Promise<string> {
+  for (let attempt = 0; ; attempt++) {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        if (attempt === 0 && [502, 503, 504].includes(response.status)) {
+          await new Promise(resolve => setTimeout(resolve, 350)); continue;
+        }
+        throw new Error(`${label}未能载入（${response.status}）。`);
+      }
+      return await response.text();
+    } catch (error) {
+      if (attempt === 0 && error instanceof TypeError) {
+        await new Promise(resolve => setTimeout(resolve, 350)); continue;
+      }
+      throw error;
+    }
+  }
+}
 export function assetUrl(path?: string | null): string {
   return path ? new URL(`${import.meta.env.BASE_URL}${path}`, document.baseURI).href : '';
 }
@@ -8,9 +28,7 @@ export async function packIndex(): Promise<PackIndex> {
   if (catalog) return catalog;
   const url = new URL(assetUrl('data/packs/index.json'));
   url.searchParams.set('v', import.meta.env.VITE_GAME_VERSION);
-  const response = await fetch(url);
-  if (!response.ok) throw new Error(`内容目录未能载入（${response.status}）。`);
-  const candidate = await response.json() as PackIndex;
+  const candidate = JSON.parse(await readText(url, '内容目录')) as PackIndex;
   if (candidate.schemaVersion !== 1 || !Array.isArray(candidate.packs) || !candidate.packs.length)
     throw new Error('内容目录格式不受支持。');
   const ids = new Set<string>();
@@ -29,7 +47,5 @@ export async function readPack(id: string): Promise<string> {
   if (!entry) throw new Error('未找到这个世界。');
   const url = new URL(assetUrl(`data/${entry.url}`));
   url.searchParams.set('v', import.meta.env.VITE_GAME_VERSION);
-  const response = await fetch(url);
-  if (!response.ok) throw new Error(`世界内容未能载入（${response.status}）。`);
-  return response.text();
+  return readText(url, '世界内容');
 }

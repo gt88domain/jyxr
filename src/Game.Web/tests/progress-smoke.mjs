@@ -8,12 +8,12 @@ try {
   await page.goto(report.baseURL,{waitUntil:'networkidle'});await visible('[data-action="new"]');
   const before=await state();
   await click('[data-action="progress"]');await visible('.restoration-report');
-  assert.match(await page.locator('.restoration-total').innerText(),/70%/);
+  assert.match(await page.locator('.restoration-total').innerText(),/80%/);
   assert.match(await page.locator('.restoration-report').innerText(),/双儿、经验木头人、练功木头人/);
   const counts=await page.locator('.restoration-counts').innerText();
-  assert.match(counts,/1885\s*\/\s*1887/);assert.match(counts,/120\s*\/\s*158/);
-  assert.match(await page.locator('.restoration-report').innerText(),/33 项只有元数据/);
-  assert.match(await page.locator('.restoration-report').innerText(),/4 项作为其他效果的联动条件/);
+  assert.match(counts,/1885\s*\/\s*1887/);assert.match(counts,/147\s*\/\s*158/);
+  assert.match(await page.locator('.restoration-report').innerText(),/5 项只有元数据/);
+  assert.match(await page.locator('.restoration-report').innerText(),/5 项作为其他效果的联动条件/);
   assert.equal(await page.locator('.restoration-category progress').count(),6);
   assert.equal(await page.locator('[data-remaining-task]').count(),19);
   assert.equal(await page.locator('[data-remaining-group]').count(),7);

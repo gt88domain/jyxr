@@ -12,3 +12,4 @@ public/art/*
 public/art/legacy/*
 !public/art/legacy/README.md
 !public/art/legacy/manifest.json
+!public/art/legacy/audio-manifest.json

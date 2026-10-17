@@ -1,0 +1,1743 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "archive": "X.rar",
+    "versionLabel": "X1.0.0.1",
+    "bundle": "StreamingAssets/audios",
+    "sha256": "8a953753c0c5f6a267fce2001f3046c252b9fbbfce0f1cabd6c8f8f14728e90c"
+  },
+  "paths": {
+    "audios/a_equipsound.mp3": "art/legacy/audio/68850518814fa3bbf5a0.mp3",
+    "audios/a_levelup.mp3": "art/legacy/audio/f2bbb8fcdb9982461266.mp3",
+    "audios/a_recover.mp3": "art/legacy/audio/f761c6917bd612b51b78.mp3",
+    "audios/a_recover2.mp3": "art/legacy/audio/ec4d546f303925e39d92.mp3",
+    "audios/battle.mp3": "art/legacy/audio/f4910c9deadf2adbcf69.mp3",
+    "audios/battle2.mp3": "art/legacy/audio/7cb578ffcc87d5244621.mp3",
+    "audios/battle3.mp3": "art/legacy/audio/dc542a0022081796ff2d.mp3",
+    "audios/battle4.mp3": "art/legacy/audio/9c73220f9fc42a535003.mp3",
+    "audios/chunyang.mp3": "art/legacy/audio/20eaaac28f3a93d7825c.mp3",
+    "audios/daojiangu.mp3": "art/legacy/audio/a566956b065404bedfbe.mp3",
+    "audios/fist.mp3": "art/legacy/audio/b29ddf156667e28df5bb.mp3",
+    "audios/hit_finger.mp3": "art/legacy/audio/c62a52f6e0f4fffb265b.mp3",
+    "audios/huashanlunjian.mp3": "art/legacy/audio/63d2de7d2b4a79faa7ab.mp3",
+    "audios/jinengyinxiao/atk00.mp3": "art/legacy/audio/f102a0c8dcec7115602b.mp3",
+    "audios/jinengyinxiao/atk01.mp3": "art/legacy/audio/f102a0c8dcec7115602b.mp3",
+    "audios/jinengyinxiao/atk02.mp3": "art/legacy/audio/ee3d30f75e12f0321e01.mp3",
+    "audios/jinengyinxiao/atk03.mp3": "art/legacy/audio/f3766e8b6075c6ee1308.mp3",
+    "audios/jinengyinxiao/atk04.mp3": "art/legacy/audio/e6ff66829f5adc8ebf9e.mp3",
+    "audios/jinengyinxiao/atk05.mp3": "art/legacy/audio/f4639038fedf862348c6.mp3",
+    "audios/jinengyinxiao/atk06.mp3": "art/legacy/audio/5dc55ae0b448f8f0d816.mp3",
+    "audios/jinengyinxiao/atk07.mp3": "art/legacy/audio/3d90aad3c3bd3d657016.mp3",
+    "audios/jinengyinxiao/atk08.mp3": "art/legacy/audio/6e1085afa9792bb830eb.mp3",
+    "audios/jinengyinxiao/atk09.mp3": "art/legacy/audio/52adc370c145d92bc8de.mp3",
+    "audios/jinengyinxiao/atk10.mp3": "art/legacy/audio/6b5eb701f4201b523749.mp3",
+    "audios/jinengyinxiao/atk11.mp3": "art/legacy/audio/f47e2a8b07378d788133.mp3",
+    "audios/jinengyinxiao/atk12.mp3": "art/legacy/audio/2ef7e12cbc29fcad170d.mp3",
+    "audios/jinengyinxiao/atk13.mp3": "art/legacy/audio/ebe38586a005eee99ec4.mp3",
+    "audios/jinengyinxiao/atk14.mp3": "art/legacy/audio/c62a52f6e0f4fffb265b.mp3",
+    "audios/jinengyinxiao/atk15.mp3": "art/legacy/audio/2212c5f96b41e90ea544.mp3",
+    "audios/jinengyinxiao/atk16.mp3": "art/legacy/audio/8f3f8ce130a71ad0fb27.mp3",
+    "audios/jinengyinxiao/atk17.mp3": "art/legacy/audio/bed39b3fe34ed89ca032.mp3",
+    "audios/jinengyinxiao/atk18.mp3": "art/legacy/audio/d0f0e2f2b86cab6aaf0a.mp3",
+    "audios/jinengyinxiao/atk19.mp3": "art/legacy/audio/093b3c93bd13b63ce4c2.mp3",
+    "audios/jinengyinxiao/atk20.mp3": "art/legacy/audio/68253a1952ba10c72d31.mp3",
+    "audios/jinengyinxiao/atk21.mp3": "art/legacy/audio/411b1f49d51340f885ab.mp3",
+    "audios/jinengyinxiao/atk22.mp3": "art/legacy/audio/f120e087bbeb6d91723d.mp3",
+    "audios/jinengyinxiao/atk23.mp3": "art/legacy/audio/6b0b3de0638ec654c031.mp3",
+    "audios/jinengyinxiao/atk24.mp3": "art/legacy/audio/b63deaad99ec59404f2d.mp3",
+    "audios/jinengyinxiao/e00.mp3": "art/legacy/audio/b63deaad99ec59404f2d.mp3",
+    "audios/jinengyinxiao/e01.mp3": "art/legacy/audio/31beba04d46d76b563da.mp3",
+    "audios/jinengyinxiao/e02.mp3": "art/legacy/audio/68b3843a7eb1d5271858.mp3",
+    "audios/jinengyinxiao/e03.mp3": "art/legacy/audio/1c9a2d533c977e2cfbf0.mp3",
+    "audios/jinengyinxiao/e04.mp3": "art/legacy/audio/bbc2c6eb4eca67d124b3.mp3",
+    "audios/jinengyinxiao/e05.mp3": "art/legacy/audio/48180035a203fcee870a.mp3",
+    "audios/jinengyinxiao/e06.mp3": "art/legacy/audio/5427291437f72771b2cc.mp3",
+    "audios/jinengyinxiao/e07.mp3": "art/legacy/audio/b47d5ea267c0883e1d14.mp3",
+    "audios/jinengyinxiao/e08.mp3": "art/legacy/audio/8cb21535602e87ba755d.mp3",
+    "audios/jinengyinxiao/e09.mp3": "art/legacy/audio/e4e587be4ee193de5777.mp3",
+    "audios/jinengyinxiao/e10.mp3": "art/legacy/audio/95f461f58b2dcfbbbd4d.mp3",
+    "audios/jinengyinxiao/e11.mp3": "art/legacy/audio/9e325beb606afb268152.mp3",
+    "audios/jinengyinxiao/e12.mp3": "art/legacy/audio/64fd53cbb56d8abeacc9.mp3",
+    "audios/jinengyinxiao/e13.mp3": "art/legacy/audio/4d4cdd0c27853c11cfc8.mp3",
+    "audios/jinengyinxiao/e14.mp3": "art/legacy/audio/8e15b261110a79f53a87.mp3",
+    "audios/jinengyinxiao/e15.mp3": "art/legacy/audio/bde9f0c1b2c1bd84c932.mp3",
+    "audios/jinengyinxiao/e16.mp3": "art/legacy/audio/99f9d0a6ffad2ce8e7c2.mp3",
+    "audios/jinengyinxiao/e17.mp3": "art/legacy/audio/0e955c3cde4fec11113a.mp3",
+    "audios/jinengyinxiao/e18.mp3": "art/legacy/audio/2718c40f95856524ade3.mp3",
+    "audios/jinengyinxiao/e19.mp3": "art/legacy/audio/ad30b7dc27f29c2b24b6.mp3",
+    "audios/jinengyinxiao/e20.mp3": "art/legacy/audio/8480ee1d721f9b830885.mp3",
+    "audios/jinengyinxiao/e21.mp3": "art/legacy/audio/ecadae47a05dda6fad83.mp3",
+    "audios/jinengyinxiao/e22.mp3": "art/legacy/audio/1c59efc29dec05c71fa9.mp3",
+    "audios/jinengyinxiao/e23.mp3": "art/legacy/audio/e3f2b23fc1ba93bd5ae8.mp3",
+    "audios/jinengyinxiao/e24.mp3": "art/legacy/audio/ea8be59621b8b6fdfe63.mp3",
+    "audios/jinengyinxiao/e25.mp3": "art/legacy/audio/857cad73f9054055866e.mp3",
+    "audios/jinengyinxiao/e26.mp3": "art/legacy/audio/195ade9da7a898528ce2.mp3",
+    "audios/jinengyinxiao/e27.mp3": "art/legacy/audio/1663b2e6bf63b11fef8b.mp3",
+    "audios/jinengyinxiao/e28.mp3": "art/legacy/audio/afab575bd5977d2275c1.mp3",
+    "audios/jinengyinxiao/e29.mp3": "art/legacy/audio/d594ceda0425fd7b4c77.mp3",
+    "audios/jinengyinxiao/e30.mp3": "art/legacy/audio/991054c8d38197fc773a.mp3",
+    "audios/jinengyinxiao/e31.mp3": "art/legacy/audio/e9adeac08df8ae11bfad.mp3",
+    "audios/jinengyinxiao/e32.mp3": "art/legacy/audio/98ffb2a9d5f2b7f88410.mp3",
+    "audios/jinengyinxiao/e33.mp3": "art/legacy/audio/970ee9f834f9a1f0422b.mp3",
+    "audios/jinengyinxiao/e34.mp3": "art/legacy/audio/dd593f4ce5c7b3614ec4.mp3",
+    "audios/jinengyinxiao/e35.mp3": "art/legacy/audio/90956726280e3e0fc11b.mp3",
+    "audios/jinengyinxiao/e36.mp3": "art/legacy/audio/8aededac845abb0b19a3.mp3",
+    "audios/jinengyinxiao/e37.mp3": "art/legacy/audio/6c812bedaf8d75d3967a.mp3",
+    "audios/jinengyinxiao/e38.mp3": "art/legacy/audio/01d1f56d691cffda672f.mp3",
+    "audios/jinengyinxiao/e39.mp3": "art/legacy/audio/172d68922d56253edf66.mp3",
+    "audios/jinengyinxiao/e40.mp3": "art/legacy/audio/967b5f924ff650d6a115.mp3",
+    "audios/jinengyinxiao/e41.mp3": "art/legacy/audio/1210058fe1ad0bb4e0f5.mp3",
+    "audios/jinengyinxiao/e42.mp3": "art/legacy/audio/a1557d938f3ecb04e9d5.mp3",
+    "audios/jinengyinxiao/e43.mp3": "art/legacy/audio/87e0b86a1793505ea04f.mp3",
+    "audios/jinengyinxiao/e44.mp3": "art/legacy/audio/03071a42d02a12e56520.mp3",
+    "audios/jinengyinxiao/e45.mp3": "art/legacy/audio/9e325beb606afb268152.mp3",
+    "audios/jinengyinxiao/e46.mp3": "art/legacy/audio/93573ee7bfe243ff7c8a.mp3",
+    "audios/jinengyinxiao/e47.mp3": "art/legacy/audio/75fb9da6e6a2cee59623.mp3",
+    "audios/jinengyinxiao/e48.mp3": "art/legacy/audio/74ace9a02d57634fa3a5.mp3",
+    "audios/jinengyinxiao/e49.mp3": "art/legacy/audio/8a7c2f2f8a3a17b16265.mp3",
+    "audios/jinengyinxiao/e50.mp3": "art/legacy/audio/a8c32c78d02f610af856.mp3",
+    "audios/jinengyinxiao/e51.mp3": "art/legacy/audio/0ed7fa83f39460b3416b.mp3",
+    "audios/jinengyinxiao/e52.mp3": "art/legacy/audio/1c59efc29dec05c71fa9.mp3",
+    "audios/jinengyinxiao/gunshot.mp3": "art/legacy/audio/d0507ecaeb9e76ff7900.mp3",
+    "audios/jinengyinxiao/longhou.mp3": "art/legacy/audio/1ebfc1d7464156f206da.mp3",
+    "audios/jinzhanggan.mp3": "art/legacy/audio/62092ce0e862187680f9.mp3",
+    "audios/jybackground/game04.mp3": "art/legacy/audio/92cb2185ceecc47ceb66.mp3",
+    "audios/jybackground/game05.mp3": "art/legacy/audio/5afff453b85076352b2f.mp3",
+    "audios/kiss.mp3": "art/legacy/audio/cbad54d067d3ed058a25.mp3",
+    "audios/kiss2.mp3": "art/legacy/audio/5f79bfbc078cc20a3fc5.mp3",
+    "audios/muyunchuji.mp3": "art/legacy/audio/f44059899451c25cbd19.mp3",
+    "audios/new/city1.mp3": "art/legacy/audio/6621c7f2abfb238e8e2f.mp3",
+    "audios/new/city3.mp3": "art/legacy/audio/c2f5cbaea1b8ead5a323.mp3",
+    "audios/new/city4.mp3": "art/legacy/audio/d46a64155146d7135fd5.mp3",
+    "audios/new/gameover.mp3": "art/legacy/audio/7c34bdb7a4eb99dd6b23.mp3",
+    "audios/new/huanle.mp3": "art/legacy/audio/d193ed98d38d5a846abb.mp3",
+    "audios/new/qixi.mp3": "art/legacy/audio/ac3862bda254020224d4.mp3",
+    "audios/new/sound21.mp3": "art/legacy/audio/149ba6574e84e78959cd.mp3",
+    "audios/new/sound32.mp3": "art/legacy/audio/bbc795a375a50f2ea6f1.mp3",
+    "audios/new/sound33.mp3": "art/legacy/audio/3ff8ff5a4d05877a0832.mp3",
+    "audios/new/sound35.mp3": "art/legacy/audio/25fc6fea267b56a27173.mp3",
+    "audios/new/vs03.mp3": "art/legacy/audio/600a1f0d10fbf12a622e.mp3",
+    "audios/new/worklist.mp3": "art/legacy/audio/c9438e19b75da90e7dc7.mp3",
+    "audios/new/xiaoyaogu.mp3": "art/legacy/audio/920446836ef75344d362.mp3",
+    "audios/new/xiaoyaogu1.mp3": "art/legacy/audio/0358310527e6308d59e6.mp3",
+    "audios/new/xiaoyaogu2.mp3": "art/legacy/audio/3aa46504db217f43610a.mp3",
+    "audios/new/xiaoyaogu3.mp3": "art/legacy/audio/176ce0b3afa1b2ec07b6.mp3",
+    "audios/new/xiaoyaogu4.mp3": "art/legacy/audio/f3f0639408d76846c6ab.mp3",
+    "audios/op.mp3": "art/legacy/audio/83c0a4c11f2a7a61db76.mp3",
+    "audios/pipayu.mp3": "art/legacy/audio/1122e64474fc3aaf10c9.mp3",
+    "audios/qixiu.mp3": "art/legacy/audio/e5e0e50ff46e8b4234bf.mp3",
+    "audios/renwushengyin/gandianlaoniang.mp3": "art/legacy/audio/0600705714b70cbea500.mp3",
+    "audios/renwushengyin/mengnan.mp3": "art/legacy/audio/9ee65039b15a160f45a9.mp3",
+    "audios/renwushengyin/nan.mp3": "art/legacy/audio/559c567288e89f508c80.mp3",
+    "audios/renwushengyin/nan2.mp3": "art/legacy/audio/ea0443db6b32d7fec992.mp3",
+    "audios/renwushengyin/nan3.mp3": "art/legacy/audio/792a9e3b891c465eec3d.mp3",
+    "audios/renwushengyin/nan4.mp3": "art/legacy/audio/78bd58d49839af146370.mp3",
+    "audios/renwushengyin/nan5.mp3": "art/legacy/audio/68f7392b14656d9781c6.mp3",
+    "audios/renwushengyin/nancanjiao.mp3": "art/legacy/audio/854235d461caabe1a8bd.mp3",
+    "audios/renwushengyin/nanheng.mp3": "art/legacy/audio/3754adad95dbe0814a0a.mp3",
+    "audios/renwushengyin/nianqingnan.mp3": "art/legacy/audio/7c3e5d22fbba2a62ff60.mp3",
+    "audios/renwushengyin/nv.mp3": "art/legacy/audio/63c0c4c5eaa4129a74d3.mp3",
+    "audios/renwushengyin/nv2.mp3": "art/legacy/audio/95da48364cdaf2e88b9e.mp3",
+    "audios/renwushengyin/nv3.mp3": "art/legacy/audio/9a8c4a3cba66fb9c1a88.mp3",
+    "audios/renwushengyin/nv4.mp3": "art/legacy/audio/9c7ebf3ca7531f449bae.mp3",
+    "audios/renwushengyin/nvdejianxiao.mp3": "art/legacy/audio/575178fd1da90cf790e1.mp3",
+    "audios/renwushengyin/paoxiao.mp3": "art/legacy/audio/002029ae6cfc500f5dc0.mp3",
+    "audios/rumengwangshi.mp3": "art/legacy/audio/bf130450dbbfc156b033.mp3",
+    "audios/shanguxingjin.mp3": "art/legacy/audio/76bb6d41dfbdf79d5acb.mp3",
+    "audios/shanguxingjin2.mp3": "art/legacy/audio/143a2c34c28c548a35f8.mp3",
+    "audios/shaolinshanmen.mp3": "art/legacy/audio/126bc82ee287d5c3a2f0.mp3",
+    "audios/shediaosanbuqu/kumen.mp3": "art/legacy/audio/4df3bf947ff05c92f36d.mp3",
+    "audios/shediaosanbuqu/shendiaogeqi.mp3": "art/legacy/audio/493fac473bcbe3d442a4.mp3",
+    "audios/shediaosanbuqu/shendiaoshuhuan.mp3": "art/legacy/audio/fe772a5916c911bb8980.mp3",
+    "audios/shediaosanbuqu/shendiaozhuti.mp3": "art/legacy/audio/c94dad3deb4a21bbde4e.mp3",
+    "audios/shediaosanbuqu/yitianzuiquan.mp3": "art/legacy/audio/ed9bbab8d806e07a98bf.mp3",
+    "audios/shenghuoling.mp3": "art/legacy/audio/5065f00a850cdb5a1347.mp3",
+    "audios/shenmishandong.mp3": "art/legacy/audio/f7437883da1a21ef134c.mp3",
+    "audios/shineianjing.mp3": "art/legacy/audio/bc68077dd1a32a694333.mp3",
+    "audios/shineiqingxin.mp3": "art/legacy/audio/3f4b674addcab76c23a1.mp3",
+    "audios/shineishisu.mp3": "art/legacy/audio/5a3e305ee3eaf4b03d32.mp3",
+    "audios/suming.mp3": "art/legacy/audio/e03110e7715ffb1d660e.mp3",
+    "audios/sword.mp3": "art/legacy/audio/637d6fe0b1a1e2a15b1d.mp3",
+    "audios/taihangbajing.mp3": "art/legacy/audio/728f925e7c77be258440.mp3",
+    "audios/tianlongbabu/pm01.mp3": "art/legacy/audio/f3c43c8a83ef68220095.mp3",
+    "audios/tianlongbabu/pm02.mp3": "art/legacy/audio/05034646d589481e13de.mp3",
+    "audios/tianlongbabu/pm03.mp3": "art/legacy/audio/87a013522cac1caa58e1.mp3",
+    "audios/tianlongbabu/pm03a.mp3": "art/legacy/audio/0af4c6effb4b1ca32e7b.mp3",
+    "audios/tianlongbabu/pm04.mp3": "art/legacy/audio/af33d8d59594faef0f85.mp3",
+    "audios/tianlongbabu/pm06.mp3": "art/legacy/audio/d08891697a5051af5366.mp3",
+    "audios/tianlongbabu/pm07.mp3": "art/legacy/audio/0ac8e1b9ce3e7d5509b6.mp3",
+    "audios/tianlongbabu/pm08.mp3": "art/legacy/audio/0cfe2d2351fa9d78c18f.mp3",
+    "audios/tianlongbabu/pm09.mp3": "art/legacy/audio/d6efdaef17a396385179.mp3",
+    "audios/tianlongbabu/pm10.mp3": "art/legacy/audio/c004e377d76f6e3a0e3e.mp3",
+    "audios/tianlongbabu/pm11.mp3": "art/legacy/audio/9ae8891d0a6d6446ea41.mp3",
+    "audios/tianlongbabu/pn09-1.mp3": "art/legacy/audio/1a6155bffeba2331c157.mp3",
+    "audios/tianlongbabu/pn09-2.mp3": "art/legacy/audio/8c36e3637b0f5738967e.mp3",
+    "audios/tianlongbabu/pn09-3.mp3": "art/legacy/audio/fcdbba688d0f5e5fd2f3.mp3",
+    "audios/tianlongbabu/pn09-4.mp3": "art/legacy/audio/d5c6847932729f460e87.mp3",
+    "audios/tianlongbabu/power1.mp3": "art/legacy/audio/8279ad2e96ecd68ec079.mp3",
+    "audios/tianlongbabu/power2.mp3": "art/legacy/audio/8195e940c4d2589adceb.mp3",
+    "audios/tianlongbabu/power3.mp3": "art/legacy/audio/a377eaec1acc35e7f22a.mp3",
+    "audios/tianlongbabu/power4.mp3": "art/legacy/audio/deca17267c7cccf92409.mp3",
+    "audios/tianlongbabu/power5.mp3": "art/legacy/audio/51db1ba8534d1ef4bf56.mp3",
+    "audios/tianlongbabu/wuliangyudong.mp3": "art/legacy/audio/2db13be7ada48f4f1d4b.mp3",
+    "audios/tianlongbabu/xiaoyaopai.mp3": "art/legacy/audio/f09db010ee9ed5a2147c.mp3",
+    "audios/tianlongbabu/xiaoyaopaishuqingban.mp3": "art/legacy/audio/f2a665c572c17f51e51c.mp3",
+    "audios/tianlongbabu/yanziwu.mp3": "art/legacy/audio/ec8e4371635cdbbcb05c.mp3",
+    "audios/tianlongbabu/youshang.mp3": "art/legacy/audio/2cd42f439de39d54e2b7.mp3",
+    "audios/tianwaicun.mp3": "art/legacy/audio/9284d45fb7d26e2d919d.mp3",
+    "audios/wulinzhizun.mp3": "art/legacy/audio/ae2fd21a7c57508d5163.mp3",
+    "audios/xianjianqiyuan.mp3": "art/legacy/audio/1480c3d87ac81245c4de.mp3",
+    "audios/yunhuzhizhan.mp3": "art/legacy/audio/3b4fa811d3bb830e93c4.mp3",
+    "audios/zhongyuanshulin.mp3": "art/legacy/audio/f8f2014aa380cd34399e.mp3",
+    "audios/zonghengjianghu.mp3": "art/legacy/audio/17bd313cd06213d79301.mp3"
+  },
+  "resources": {
+    "战斗音乐.1": "art/legacy/audio/f4910c9deadf2adbcf69.mp3",
+    "战斗音乐.2": "art/legacy/audio/7cb578ffcc87d5244621.mp3",
+    "战斗音乐.3": "art/legacy/audio/dc542a0022081796ff2d.mp3",
+    "战斗音乐.4": "art/legacy/audio/9c73220f9fc42a535003.mp3",
+    "战斗音乐.5": "art/legacy/audio/600a1f0d10fbf12a622e.mp3",
+    "战斗音乐.云狐之战": "art/legacy/audio/3b4fa811d3bb830e93c4.mp3",
+    "战斗音乐.山谷行进": "art/legacy/audio/76bb6d41dfbdf79d5acb.mp3",
+    "战斗音乐.山谷行进2": "art/legacy/audio/143a2c34c28c548a35f8.mp3",
+    "战斗音乐.暮云出击": "art/legacy/audio/f44059899451c25cbd19.mp3",
+    "音乐.七夕": "art/legacy/audio/ac3862bda254020224d4.mp3",
+    "音乐.七秀": "art/legacy/audio/e5e0e50ff46e8b4234bf.mp3",
+    "音乐.中原树林": "art/legacy/audio/f8f2014aa380cd34399e.mp3",
+    "音乐.仙剑奇缘": "art/legacy/audio/1480c3d87ac81245c4de.mp3",
+    "音乐.倚天.醉拳": "art/legacy/audio/ed9bbab8d806e07a98bf.mp3",
+    "音乐.全真教": "art/legacy/audio/c94dad3deb4a21bbde4e.mp3",
+    "音乐.刀间鼓": "art/legacy/audio/a566956b065404bedfbe.mp3",
+    "音乐.华山论剑": "art/legacy/audio/63d2de7d2b4a79faa7ab.mp3",
+    "音乐.圣火令": "art/legacy/audio/5065f00a850cdb5a1347.mp3",
+    "音乐.城市1": "art/legacy/audio/6621c7f2abfb238e8e2f.mp3",
+    "音乐.城市2": "art/legacy/audio/6621c7f2abfb238e8e2f.mp3",
+    "音乐.城市3": "art/legacy/audio/c2f5cbaea1b8ead5a323.mp3",
+    "音乐.城市4": "art/legacy/audio/d46a64155146d7135fd5.mp3",
+    "音乐.天外村": "art/legacy/audio/9284d45fb7d26e2d919d.mp3",
+    "音乐.天龙八部.佛音1": "art/legacy/audio/1a6155bffeba2331c157.mp3",
+    "音乐.天龙八部.佛音2": "art/legacy/audio/8c36e3637b0f5738967e.mp3",
+    "音乐.天龙八部.佛音3": "art/legacy/audio/fcdbba688d0f5e5fd2f3.mp3",
+    "音乐.天龙八部.佛音4": "art/legacy/audio/d5c6847932729f460e87.mp3",
+    "音乐.天龙八部.忧伤": "art/legacy/audio/2cd42f439de39d54e2b7.mp3",
+    "音乐.天龙八部.无量山洞": "art/legacy/audio/2db13be7ada48f4f1d4b.mp3",
+    "音乐.天龙八部.燕子坞": "art/legacy/audio/ec8e4371635cdbbcb05c.mp3",
+    "音乐.天龙八部.紧张感1": "art/legacy/audio/8279ad2e96ecd68ec079.mp3",
+    "音乐.天龙八部.紧张感2": "art/legacy/audio/8195e940c4d2589adceb.mp3",
+    "音乐.天龙八部.紧张感3": "art/legacy/audio/a377eaec1acc35e7f22a.mp3",
+    "音乐.天龙八部.紧张感4": "art/legacy/audio/deca17267c7cccf92409.mp3",
+    "音乐.天龙八部.紧张感5": "art/legacy/audio/51db1ba8534d1ef4bf56.mp3",
+    "音乐.天龙八部.逍遥派": "art/legacy/audio/f09db010ee9ed5a2147c.mp3",
+    "音乐.天龙八部.逍遥派抒情版": "art/legacy/audio/f2a665c572c17f51e51c.mp3",
+    "音乐.天龙八部1": "art/legacy/audio/f3c43c8a83ef68220095.mp3",
+    "音乐.天龙八部10": "art/legacy/audio/c004e377d76f6e3a0e3e.mp3",
+    "音乐.天龙八部11": "art/legacy/audio/9ae8891d0a6d6446ea41.mp3",
+    "音乐.天龙八部2": "art/legacy/audio/05034646d589481e13de.mp3",
+    "音乐.天龙八部3": "art/legacy/audio/87a013522cac1caa58e1.mp3",
+    "音乐.天龙八部4": "art/legacy/audio/0af4c6effb4b1ca32e7b.mp3",
+    "音乐.天龙八部5": "art/legacy/audio/af33d8d59594faef0f85.mp3",
+    "音乐.天龙八部6": "art/legacy/audio/d08891697a5051af5366.mp3",
+    "音乐.天龙八部7": "art/legacy/audio/0ac8e1b9ce3e7d5509b6.mp3",
+    "音乐.天龙八部8": "art/legacy/audio/0cfe2d2351fa9d78c18f.mp3",
+    "音乐.天龙八部9": "art/legacy/audio/d6efdaef17a396385179.mp3",
+    "音乐.太行八径": "art/legacy/audio/728f925e7c77be258440.mp3",
+    "音乐.如梦往事": "art/legacy/audio/bf130450dbbfc156b033.mp3",
+    "音乐.室内_世俗": "art/legacy/audio/5a3e305ee3eaf4b03d32.mp3",
+    "音乐.室内_安静": "art/legacy/audio/bc68077dd1a32a694333.mp3",
+    "音乐.室内_清新": "art/legacy/audio/3f4b674addcab76c23a1.mp3",
+    "音乐.宿命": "art/legacy/audio/e03110e7715ffb1d660e.mp3",
+    "音乐.少林山门": "art/legacy/audio/126bc82ee287d5c3a2f0.mp3",
+    "音乐.开场": "art/legacy/audio/83c0a4c11f2a7a61db76.mp3",
+    "音乐.欢乐": "art/legacy/audio/d193ed98d38d5a846abb.mp3",
+    "音乐.欢快工作": "art/legacy/audio/c9438e19b75da90e7dc7.mp3",
+    "音乐.武侠回忆": "art/legacy/audio/bbc795a375a50f2ea6f1.mp3",
+    "音乐.武侠流水": "art/legacy/audio/3ff8ff5a4d05877a0832.mp3",
+    "音乐.武侠进行": "art/legacy/audio/149ba6574e84e78959cd.mp3",
+    "音乐.武侠雄壮": "art/legacy/audio/25fc6fea267b56a27173.mp3",
+    "音乐.武当": "art/legacy/audio/20eaaac28f3a93d7825c.mp3",
+    "音乐.武林至尊": "art/legacy/audio/ae2fd21a7c57508d5163.mp3",
+    "音乐.游戏失败": "art/legacy/audio/7c34bdb7a4eb99dd6b23.mp3",
+    "音乐.琵琶语": "art/legacy/audio/1122e64474fc3aaf10c9.mp3",
+    "音乐.神秘山洞": "art/legacy/audio/f7437883da1a21ef134c.mp3",
+    "音乐.神雕.主题": "art/legacy/audio/c94dad3deb4a21bbde4e.mp3",
+    "音乐.神雕.歌泣": "art/legacy/audio/493fac473bcbe3d442a4.mp3",
+    "音乐.神雕.舒缓": "art/legacy/audio/fe772a5916c911bb8980.mp3",
+    "音乐.紧张感": "art/legacy/audio/62092ce0e862187680f9.mp3",
+    "音乐.纯阳": "art/legacy/audio/20eaaac28f3a93d7825c.mp3",
+    "音乐.纵横江湖": "art/legacy/audio/17bd313cd06213d79301.mp3",
+    "音乐.经典": "art/legacy/audio/92cb2185ceecc47ceb66.mp3",
+    "音乐.苦闷": "art/legacy/audio/4df3bf947ff05c92f36d.mp3",
+    "音乐.血刀门": "art/legacy/audio/8279ad2e96ecd68ec079.mp3",
+    "音乐.逍遥": "art/legacy/audio/920446836ef75344d362.mp3",
+    "音乐.逍遥1": "art/legacy/audio/0358310527e6308d59e6.mp3",
+    "音乐.逍遥2": "art/legacy/audio/3aa46504db217f43610a.mp3",
+    "音乐.逍遥3": "art/legacy/audio/176ce0b3afa1b2ec07b6.mp3",
+    "音乐.逍遥4": "art/legacy/audio/f3f0639408d76846c6ab.mp3",
+    "音乐.金庸群侠传4": "art/legacy/audio/92cb2185ceecc47ceb66.mp3",
+    "音乐.金庸群侠传5": "art/legacy/audio/5afff453b85076352b2f.mp3",
+    "音效.亲吻": "art/legacy/audio/cbad54d067d3ed058a25.mp3",
+    "音效.亲吻2": "art/legacy/audio/5f79bfbc078cc20a3fc5.mp3",
+    "音效.休息": "art/legacy/audio/ec4d546f303925e39d92.mp3",
+    "音效.内功攻击1": "art/legacy/audio/bde9f0c1b2c1bd84c932.mp3",
+    "音效.内功攻击2": "art/legacy/audio/99f9d0a6ffad2ce8e7c2.mp3",
+    "音效.内功攻击3": "art/legacy/audio/ad30b7dc27f29c2b24b6.mp3",
+    "音效.内功攻击4": "art/legacy/audio/8480ee1d721f9b830885.mp3",
+    "音效.内功攻击5": "art/legacy/audio/ecadae47a05dda6fad83.mp3",
+    "音效.内功攻击6": "art/legacy/audio/a8c32c78d02f610af856.mp3",
+    "音效.利器1": "art/legacy/audio/f4639038fedf862348c6.mp3",
+    "音效.利器2": "art/legacy/audio/5dc55ae0b448f8f0d816.mp3",
+    "音效.利器3": "art/legacy/audio/5dc55ae0b448f8f0d816.mp3",
+    "音效.利器4": "art/legacy/audio/6b5eb701f4201b523749.mp3",
+    "音效.利器5": "art/legacy/audio/ebe38586a005eee99ec4.mp3",
+    "音效.利器6": "art/legacy/audio/9e325beb606afb268152.mp3",
+    "音效.利器7": "art/legacy/audio/64fd53cbb56d8abeacc9.mp3",
+    "音效.刺伤": "art/legacy/audio/0ed7fa83f39460b3416b.mp3",
+    "音效.剑": "art/legacy/audio/637d6fe0b1a1e2a15b1d.mp3",
+    "音效.加点": "art/legacy/audio/f761c6917bd612b51b78.mp3",
+    "音效.升级": "art/legacy/audio/f2bbb8fcdb9982461266.mp3",
+    "音效.吸取内力": "art/legacy/audio/d0f0e2f2b86cab6aaf0a.mp3",
+    "音效.咆哮": "art/legacy/audio/002029ae6cfc500f5dc0.mp3",
+    "音效.奥义1": "art/legacy/audio/b47d5ea267c0883e1d14.mp3",
+    "音效.奥义2": "art/legacy/audio/95f461f58b2dcfbbbd4d.mp3",
+    "音效.奥义3": "art/legacy/audio/bde9f0c1b2c1bd84c932.mp3",
+    "音效.奥义4": "art/legacy/audio/1663b2e6bf63b11fef8b.mp3",
+    "音效.奥义5": "art/legacy/audio/172d68922d56253edf66.mp3",
+    "音效.奥义6": "art/legacy/audio/a8c32c78d02f610af856.mp3",
+    "音效.女": "art/legacy/audio/63c0c4c5eaa4129a74d3.mp3",
+    "音效.女2": "art/legacy/audio/95da48364cdaf2e88b9e.mp3",
+    "音效.女3": "art/legacy/audio/9a8c4a3cba66fb9c1a88.mp3",
+    "音效.女4": "art/legacy/audio/9c7ebf3ca7531f449bae.mp3",
+    "音效.女的奸笑": "art/legacy/audio/575178fd1da90cf790e1.mp3",
+    "音效.威猛利器": "art/legacy/audio/970ee9f834f9a1f0422b.mp3",
+    "音效.威猛利器2": "art/legacy/audio/e3f2b23fc1ba93bd5ae8.mp3",
+    "音效.威猛利器3": "art/legacy/audio/8a7c2f2f8a3a17b16265.mp3",
+    "音效.小奖励": "art/legacy/audio/093b3c93bd13b63ce4c2.mp3",
+    "音效.年轻男": "art/legacy/audio/7c3e5d22fbba2a62ff60.mp3",
+    "音效.恢复2": "art/legacy/audio/b63deaad99ec59404f2d.mp3",
+    "音效.恢复3": "art/legacy/audio/8aededac845abb0b19a3.mp3",
+    "音效.恢复类物品": "art/legacy/audio/ec4d546f303925e39d92.mp3",
+    "音效.手枪": "art/legacy/audio/d0507ecaeb9e76ff7900.mp3",
+    "音效.打破罐子": "art/legacy/audio/f47e2a8b07378d788133.mp3",
+    "音效.打雷": "art/legacy/audio/68253a1952ba10c72d31.mp3",
+    "音效.拳1": "art/legacy/audio/f102a0c8dcec7115602b.mp3",
+    "音效.拳2": "art/legacy/audio/f102a0c8dcec7115602b.mp3",
+    "音效.拳3": "art/legacy/audio/ee3d30f75e12f0321e01.mp3",
+    "音效.拳击": "art/legacy/audio/b29ddf156667e28df5bb.mp3",
+    "音效.指1": "art/legacy/audio/e6ff66829f5adc8ebf9e.mp3",
+    "音效.指2": "art/legacy/audio/c62a52f6e0f4fffb265b.mp3",
+    "音效.指法": "art/legacy/audio/c62a52f6e0f4fffb265b.mp3",
+    "音效.敢点老娘": "art/legacy/audio/0600705714b70cbea500.mp3",
+    "音效.暗器1": "art/legacy/audio/2ef7e12cbc29fcad170d.mp3",
+    "音效.暗器2": "art/legacy/audio/5427291437f72771b2cc.mp3",
+    "音效.暗器3": "art/legacy/audio/6c812bedaf8d75d3967a.mp3",
+    "音效.特别回复": "art/legacy/audio/b63deaad99ec59404f2d.mp3",
+    "音效.猛兽1": "art/legacy/audio/8f3f8ce130a71ad0fb27.mp3",
+    "音效.猛兽2": "art/legacy/audio/bed39b3fe34ed89ca032.mp3",
+    "音效.猛兽3": "art/legacy/audio/f120e087bbeb6d91723d.mp3",
+    "音效.猛男": "art/legacy/audio/9ee65039b15a160f45a9.mp3",
+    "音效.男": "art/legacy/audio/559c567288e89f508c80.mp3",
+    "音效.男-哼": "art/legacy/audio/3754adad95dbe0814a0a.mp3",
+    "音效.男2": "art/legacy/audio/ea0443db6b32d7fec992.mp3",
+    "音效.男3": "art/legacy/audio/792a9e3b891c465eec3d.mp3",
+    "音效.男4": "art/legacy/audio/78bd58d49839af146370.mp3",
+    "音效.男5": "art/legacy/audio/68f7392b14656d9781c6.mp3",
+    "音效.男惨叫": "art/legacy/audio/854235d461caabe1a8bd.mp3",
+    "音效.破空钝器": "art/legacy/audio/0e955c3cde4fec11113a.mp3",
+    "音效.蛤蟆叫": "art/legacy/audio/411b1f49d51340f885ab.mp3",
+    "音效.装备": "art/legacy/audio/68850518814fa3bbf5a0.mp3",
+    "音效.钝器1": "art/legacy/audio/3d90aad3c3bd3d657016.mp3",
+    "音效.钝器2": "art/legacy/audio/6e1085afa9792bb830eb.mp3",
+    "音效.钝器3": "art/legacy/audio/52adc370c145d92bc8de.mp3",
+    "音效.钝器4": "art/legacy/audio/31beba04d46d76b563da.mp3",
+    "音效.钝器5": "art/legacy/audio/68b3843a7eb1d5271858.mp3",
+    "音效.钝器6": "art/legacy/audio/1c9a2d533c977e2cfbf0.mp3",
+    "音效.钝器7": "art/legacy/audio/bbc2c6eb4eca67d124b3.mp3",
+    "音效.钝器8": "art/legacy/audio/4d4cdd0c27853c11cfc8.mp3",
+    "音效.长剑": "art/legacy/audio/93573ee7bfe243ff7c8a.mp3",
+    "音效.闷拳": "art/legacy/audio/f3766e8b6075c6ee1308.mp3",
+    "音效.飙血": "art/legacy/audio/2212c5f96b41e90ea544.mp3",
+    "音效.鸟啄": "art/legacy/audio/87e0b86a1793505ea04f.mp3",
+    "音效.龙吼": "art/legacy/audio/1ebfc1d7464156f206da.mp3"
+  },
+  "files": {
+    "audio/002029ae6cfc500f5dc0.mp3": {
+      "sha256": "002029ae6cfc500f5dc0cd05ccca5b59b6d6ca6e329415d6570994ba5fa5c45f",
+      "bytes": 26003
+    },
+    "audio/01d1f56d691cffda672f.mp3": {
+      "sha256": "01d1f56d691cffda672f237d621e729c9eaaa7ca4d34e634f0faee82634a5355",
+      "bytes": 3851
+    },
+    "audio/03071a42d02a12e56520.mp3": {
+      "sha256": "03071a42d02a12e56520ac8ffca2ac67d0e1e7fe19471640e6918e9288619c6f",
+      "bytes": 7961
+    },
+    "audio/0358310527e6308d59e6.mp3": {
+      "sha256": "0358310527e6308d59e68c331921ab81a03ed2e251952231094f15b4589da105",
+      "bytes": 400464
+    },
+    "audio/05034646d589481e13de.mp3": {
+      "sha256": "05034646d589481e13de3d7b7af1594160db1ce2aae4900afc081719bdaadbc6",
+      "bytes": 595584
+    },
+    "audio/0600705714b70cbea500.mp3": {
+      "sha256": "0600705714b70cbea500da87c7e03ab35ff28b8cdda7ae8e8f9ceecfbc1dfaa0",
+      "bytes": 17636
+    },
+    "audio/093b3c93bd13b63ce4c2.mp3": {
+      "sha256": "093b3c93bd13b63ce4c2090076a3a894e1913e33f4860921a4bae46b011b5919",
+      "bytes": 3330
+    },
+    "audio/0ac8e1b9ce3e7d5509b6.mp3": {
+      "sha256": "0ac8e1b9ce3e7d5509b69045cad969568791f50e6ee8430cb13a19593c6a89c4",
+      "bytes": 554868
+    },
+    "audio/0af4c6effb4b1ca32e7b.mp3": {
+      "sha256": "0af4c6effb4b1ca32e7bcdff590b1e2f764c357f9ef888e2ee621e7ae51d0ff5",
+      "bytes": 467604
+    },
+    "audio/0cfe2d2351fa9d78c18f.mp3": {
+      "sha256": "0cfe2d2351fa9d78c18fe241937071c2ae85718ad98310dbf268a9ac587dc0f9",
+      "bytes": 694728
+    },
+    "audio/0e955c3cde4fec11113a.mp3": {
+      "sha256": "0e955c3cde4fec11113a719fb5e926f1f48ccd539d0fb50716ec653f23a12d9b",
+      "bytes": 4840
+    },
+    "audio/0ed7fa83f39460b3416b.mp3": {
+      "sha256": "0ed7fa83f39460b3416b634a8fa71f747867fb256ed08dc3d4ebb0637d7b5a75",
+      "bytes": 3487
+    },
+    "audio/1122e64474fc3aaf10c9.mp3": {
+      "sha256": "1122e64474fc3aaf10c9d8228e2c95c54bb921466988beb9f71870f642a82f4f",
+      "bytes": 895428
+    },
+    "audio/1210058fe1ad0bb4e0f5.mp3": {
+      "sha256": "1210058fe1ad0bb4e0f50a73f8fc73179e070f839e307a74cd02048881971c46",
+      "bytes": 5516
+    },
+    "audio/126bc82ee287d5c3a2f0.mp3": {
+      "sha256": "126bc82ee287d5c3a2f0809e369d43f88e6c986f1a9aa0382213da60c9a5cb05",
+      "bytes": 436284
+    },
+    "audio/143a2c34c28c548a35f8.mp3": {
+      "sha256": "143a2c34c28c548a35f8cb15d84e0dfa1ecbce2aaa373122d067caf30dd12efe",
+      "bytes": 443340
+    },
+    "audio/1480c3d87ac81245c4de.mp3": {
+      "sha256": "1480c3d87ac81245c4de175410aa548d18ffcd1d386ef68b08b8221df68dd30b",
+      "bytes": 708012
+    },
+    "audio/149ba6574e84e78959cd.mp3": {
+      "sha256": "149ba6574e84e78959cde6265dc34ad4418b0b171540ae44666a5d11e29b8748",
+      "bytes": 716040
+    },
+    "audio/1663b2e6bf63b11fef8b.mp3": {
+      "sha256": "1663b2e6bf63b11fef8b2cbdeebeedfc165ffc3cb390b752072ccb1bded2aa3c",
+      "bytes": 3956
+    },
+    "audio/172d68922d56253edf66.mp3": {
+      "sha256": "172d68922d56253edf669e5906084e71f282ff6912fe0046bba7e0e76b4a4894",
+      "bytes": 5826
+    },
+    "audio/176ce0b3afa1b2ec07b6.mp3": {
+      "sha256": "176ce0b3afa1b2ec07b6661c267f76971625a6950a9b9e43450605da7473417b",
+      "bytes": 557964
+    },
+    "audio/17bd313cd06213d79301.mp3": {
+      "sha256": "17bd313cd06213d7930152d70227691a3a9d52be36de6ba90205f0df3ba9bc16",
+      "bytes": 559044
+    },
+    "audio/195ade9da7a898528ce2.mp3": {
+      "sha256": "195ade9da7a898528ce2770be1db5e92b1fecf867d94429387cbd24c5ab1b98a",
+      "bytes": 3071
+    },
+    "audio/1a6155bffeba2331c157.mp3": {
+      "sha256": "1a6155bffeba2331c157888f8d5472e6eed11289a567b51394e4759ce41c82ee",
+      "bytes": 358632
+    },
+    "audio/1c59efc29dec05c71fa9.mp3": {
+      "sha256": "1c59efc29dec05c71fa9ffa664bc7c07d6f5c88f6b3b4cf3cd7ddd0e5153cfdf",
+      "bytes": 2707
+    },
+    "audio/1c9a2d533c977e2cfbf0.mp3": {
+      "sha256": "1c9a2d533c977e2cfbf02bff5798c026ec04dfd1370795efbfd26300c2a3fbce",
+      "bytes": 2916
+    },
+    "audio/1ebfc1d7464156f206da.mp3": {
+      "sha256": "1ebfc1d7464156f206da690f3e448cea58b4e0978eb3c9f8e367b82ca674e99d",
+      "bytes": 16464
+    },
+    "audio/20eaaac28f3a93d7825c.mp3": {
+      "sha256": "20eaaac28f3a93d7825c7c82bbac633f660177b9506741bdc37a9c97089bbf01",
+      "bytes": 327780
+    },
+    "audio/2212c5f96b41e90ea544.mp3": {
+      "sha256": "2212c5f96b41e90ea5440b7f0fd59a48b243ad8376cad832d881e59b5a41f26e",
+      "bytes": 2760
+    },
+    "audio/25fc6fea267b56a27173.mp3": {
+      "sha256": "25fc6fea267b56a27173c33bb8477975761f2973980c1012a28b61bdf4021527",
+      "bytes": 564876
+    },
+    "audio/2718c40f95856524ade3.mp3": {
+      "sha256": "2718c40f95856524ade3cbc5655b4cd060efa08a389b7abf95942499f75a23cf",
+      "bytes": 2551
+    },
+    "audio/2cd42f439de39d54e2b7.mp3": {
+      "sha256": "2cd42f439de39d54e2b7940f5f9a32c401d7b8c82f2d656a09188c3efdd273d5",
+      "bytes": 414180
+    },
+    "audio/2db13be7ada48f4f1d4b.mp3": {
+      "sha256": "2db13be7ada48f4f1d4bf2118779670a5adf4a392d4a87ff07c1055d9203de66",
+      "bytes": 664668
+    },
+    "audio/2ef7e12cbc29fcad170d.mp3": {
+      "sha256": "2ef7e12cbc29fcad170d90cc907b103028dc1d6eb9d1cbc28c5ce9852fb488a2",
+      "bytes": 3332
+    },
+    "audio/31beba04d46d76b563da.mp3": {
+      "sha256": "31beba04d46d76b563da99cd62e719b47c7bd8de593fcf80884969ac4c6600ea",
+      "bytes": 2030
+    },
+    "audio/3754adad95dbe0814a0a.mp3": {
+      "sha256": "3754adad95dbe0814a0a6b141c3f99616396803e220bf6aae2388b1b4e071e10",
+      "bytes": 3719
+    },
+    "audio/3aa46504db217f43610a.mp3": {
+      "sha256": "3aa46504db217f43610aba85c7825d2d92260ed8e58e47faddf2d0570b4073d1",
+      "bytes": 468036
+    },
+    "audio/3b4fa811d3bb830e93c4.mp3": {
+      "sha256": "3b4fa811d3bb830e93c46861c4b1c4eb63fe1e6b6270e293621dde2ea8ca61df",
+      "bytes": 258948
+    },
+    "audio/3d90aad3c3bd3d657016.mp3": {
+      "sha256": "3d90aad3c3bd3d657016fb59404f8039fe2d0deac6bbae17d6bafd3e17cbd013",
+      "bytes": 2604
+    },
+    "audio/3f4b674addcab76c23a1.mp3": {
+      "sha256": "3f4b674addcab76c23a13e02db2d74b5097f306ee8c79b0e1f1f5667f5a8f2c1",
+      "bytes": 422777
+    },
+    "audio/3ff8ff5a4d05877a0832.mp3": {
+      "sha256": "3ff8ff5a4d05877a0832b5ed4a14a5cd0a604f4f8b659e8fd53ae91af6faf9a3",
+      "bytes": 364284
+    },
+    "audio/411b1f49d51340f885ab.mp3": {
+      "sha256": "411b1f49d51340f885aba76ce6242c2932cab7ed3b2570425956e4b4628d9008",
+      "bytes": 3122
+    },
+    "audio/48180035a203fcee870a.mp3": {
+      "sha256": "48180035a203fcee870ae216e142c81efa5744d8981611dc60ca6cd440923209",
+      "bytes": 4892
+    },
+    "audio/493fac473bcbe3d442a4.mp3": {
+      "sha256": "493fac473bcbe3d442a45b7cf356b6ec7a623dc6042cbff4e4c41816af20e857",
+      "bytes": 412416
+    },
+    "audio/4d4cdd0c27853c11cfc8.mp3": {
+      "sha256": "4d4cdd0c27853c11cfc8a2930adff3795433f53a62204398430aa2b1e3995da1",
+      "bytes": 3178
+    },
+    "audio/4df3bf947ff05c92f36d.mp3": {
+      "sha256": "4df3bf947ff05c92f36d8aacea2b4bac3451550b7f9c97ca8e27f478dc4fa54d",
+      "bytes": 735084
+    },
+    "audio/5065f00a850cdb5a1347.mp3": {
+      "sha256": "5065f00a850cdb5a1347871439a8f13a00e31df6d5b158d2fe43092298decda9",
+      "bytes": 343746
+    },
+    "audio/51db1ba8534d1ef4bf56.mp3": {
+      "sha256": "51db1ba8534d1ef4bf56772166e8c5d516e8ec086302167405569e2524f7e5c8",
+      "bytes": 415944
+    },
+    "audio/52adc370c145d92bc8de.mp3": {
+      "sha256": "52adc370c145d92bc8de83be1f010ece3a882025ddf8f906271dc46806581a9b",
+      "bytes": 4061
+    },
+    "audio/5427291437f72771b2cc.mp3": {
+      "sha256": "5427291437f72771b2cc235e1f75c428ab58e406841839163e0116b0a27eb4bd",
+      "bytes": 4372
+    },
+    "audio/559c567288e89f508c80.mp3": {
+      "sha256": "559c567288e89f508c8039054a28628212f5aac30d345fa70efcd5ec3ad299f8",
+      "bytes": 3174
+    },
+    "audio/575178fd1da90cf790e1.mp3": {
+      "sha256": "575178fd1da90cf790e13ff91c6d6b40c1a88d7bfedd81b1f8d8d50ab386b593",
+      "bytes": 12912
+    },
+    "audio/5a3e305ee3eaf4b03d32.mp3": {
+      "sha256": "5a3e305ee3eaf4b03d325b0c96213bd0828f2da202e51f09e5225f2ec994edac",
+      "bytes": 562710
+    },
+    "audio/5afff453b85076352b2f.mp3": {
+      "sha256": "5afff453b85076352b2fa2f7a0957202668e633f52abbb67b37d8c10502b0ed0",
+      "bytes": 284868
+    },
+    "audio/5dc55ae0b448f8f0d816.mp3": {
+      "sha256": "5dc55ae0b448f8f0d816dc59d07d7f95f4f9ddc35c18df709cbb57d385b2e9a8",
+      "bytes": 1978
+    },
+    "audio/5f79bfbc078cc20a3fc5.mp3": {
+      "sha256": "5f79bfbc078cc20a3fc524558ffa54f811fbf98c955a4cb9cbdfffbc7b4b09f9",
+      "bytes": 13482
+    },
+    "audio/600a1f0d10fbf12a622e.mp3": {
+      "sha256": "600a1f0d10fbf12a622ec22a4ec285302e1d1f02d9d9c0375d3d2ecba01ea43e",
+      "bytes": 428508
+    },
+    "audio/62092ce0e862187680f9.mp3": {
+      "sha256": "62092ce0e862187680f98d573671d1e29e879c525c00cbe2b4e86f793a4f8a1e",
+      "bytes": 408647
+    },
+    "audio/637d6fe0b1a1e2a15b1d.mp3": {
+      "sha256": "637d6fe0b1a1e2a15b1dd5a4e108b608398d6713784e9a0acca860fdb80f9112",
+      "bytes": 3748
+    },
+    "audio/63c0c4c5eaa4129a74d3.mp3": {
+      "sha256": "63c0c4c5eaa4129a74d33d41b363522cf3cfbda6be050af7710efedc6ff6d9a9",
+      "bytes": 3617
+    },
+    "audio/63d2de7d2b4a79faa7ab.mp3": {
+      "sha256": "63d2de7d2b4a79faa7ab9de1b452a8bde10698b4dc00c1a47aa91d091226b1b6",
+      "bytes": 614304
+    },
+    "audio/64fd53cbb56d8abeacc9.mp3": {
+      "sha256": "64fd53cbb56d8abeacc94c683453f6f8cbe182811faad7bc8859f460a03a7894",
+      "bytes": 1823
+    },
+    "audio/6621c7f2abfb238e8e2f.mp3": {
+      "sha256": "6621c7f2abfb238e8e2f67fd830415745e8b8d6506db8a07f192597b5495b0e5",
+      "bytes": 513432
+    },
+    "audio/68253a1952ba10c72d31.mp3": {
+      "sha256": "68253a1952ba10c72d319a6021f5dcf085a69765a023a5f4dab576fc21c64df0",
+      "bytes": 5099
+    },
+    "audio/68850518814fa3bbf5a0.mp3": {
+      "sha256": "68850518814fa3bbf5a0e05736a24736babf0ccd348bb3b7dde04a2b0cfec9c8",
+      "bytes": 1926
+    },
+    "audio/68b3843a7eb1d5271858.mp3": {
+      "sha256": "68b3843a7eb1d527185845d6abab7d4b080572f0cf8f53bb00f4745f4623602e",
+      "bytes": 3750
+    },
+    "audio/68f7392b14656d9781c6.mp3": {
+      "sha256": "68f7392b14656d9781c6bb55dadc7b913abfec89484fb0f91c66a3de1163a35d",
+      "bytes": 3563
+    },
+    "audio/6b0b3de0638ec654c031.mp3": {
+      "sha256": "6b0b3de0638ec654c0316cae1bd3714ee4298d43014d5a3c6e4f0d32b044a815",
+      "bytes": 7294
+    },
+    "audio/6b5eb701f4201b523749.mp3": {
+      "sha256": "6b5eb701f4201b5237494ee77ad90a7add4b2ff93571b9e3f82ff69cbc56fb3d",
+      "bytes": 4008
+    },
+    "audio/6c812bedaf8d75d3967a.mp3": {
+      "sha256": "6c812bedaf8d75d3967acbb2419e499052cc0982200e130a3baf6f3bd217bb19",
+      "bytes": 5890
+    },
+    "audio/6e1085afa9792bb830eb.mp3": {
+      "sha256": "6e1085afa9792bb830ebc185cfe2566d391e517a7fda48942223418fa4b1885f",
+      "bytes": 2291
+    },
+    "audio/728f925e7c77be258440.mp3": {
+      "sha256": "728f925e7c77be258440d8a434d4269f9f57ae68abeb651556c6c188707a3286",
+      "bytes": 253569
+    },
+    "audio/74ace9a02d57634fa3a5.mp3": {
+      "sha256": "74ace9a02d57634fa3a56e2463a52247f1657462e0708b47cf7b02f55f0ad4d9",
+      "bytes": 3175
+    },
+    "audio/75fb9da6e6a2cee59623.mp3": {
+      "sha256": "75fb9da6e6a2cee5962340c7b179f014f29b59492d7ed931f96e17de91e3f7b7",
+      "bytes": 3436
+    },
+    "audio/76bb6d41dfbdf79d5acb.mp3": {
+      "sha256": "76bb6d41dfbdf79d5acb8cb4f92c63f8a523deb233327bc3b34c3cf914ffa81e",
+      "bytes": 532256
+    },
+    "audio/78bd58d49839af146370.mp3": {
+      "sha256": "78bd58d49839af1463703cfd14d0294d1f20ee645b353b9f93096c6b98d06494",
+      "bytes": 3539
+    },
+    "audio/792a9e3b891c465eec3d.mp3": {
+      "sha256": "792a9e3b891c465eec3dba18421e9413fb26151b6fe929e108f1a2954dabb9b4",
+      "bytes": 4603
+    },
+    "audio/7c34bdb7a4eb99dd6b23.mp3": {
+      "sha256": "7c34bdb7a4eb99dd6b23790bb8697037793f81b91d1e5bca0d68b6f545153e90",
+      "bytes": 84096
+    },
+    "audio/7c3e5d22fbba2a62ff60.mp3": {
+      "sha256": "7c3e5d22fbba2a62ff6079c6a8e4fbc20a0be591443b05bfbacea5a3461a3888",
+      "bytes": 2030
+    },
+    "audio/7cb578ffcc87d5244621.mp3": {
+      "sha256": "7cb578ffcc87d5244621cbfcec09d36dc4d0246d9ae899254ed45f51a055f9b2",
+      "bytes": 542098
+    },
+    "audio/8195e940c4d2589adceb.mp3": {
+      "sha256": "8195e940c4d2589adceb41ddcfb0f47e002fe012911d1ccf39a4aeeddb980804",
+      "bytes": 288000
+    },
+    "audio/8279ad2e96ecd68ec079.mp3": {
+      "sha256": "8279ad2e96ecd68ec079e9f1c432ee1ae160b43b32e67446bcbbff0571fa718e",
+      "bytes": 470988
+    },
+    "audio/83c0a4c11f2a7a61db76.mp3": {
+      "sha256": "83c0a4c11f2a7a61db766e08bb5ce7093fe9e3bf5848e359510c5f9153754671",
+      "bytes": 526860
+    },
+    "audio/8480ee1d721f9b830885.mp3": {
+      "sha256": "8480ee1d721f9b830885bb70550313f26bc596cf0428f40d7b1b284b9262641a",
+      "bytes": 3330
+    },
+    "audio/854235d461caabe1a8bd.mp3": {
+      "sha256": "854235d461caabe1a8bd4bc873b0323a506dbf907b7c9305307cfc9041803c54",
+      "bytes": 6882
+    },
+    "audio/857cad73f9054055866e.mp3": {
+      "sha256": "857cad73f9054055866ef04c0699eaf371dd9ae8a018cad25909cb1208394a3e",
+      "bytes": 2968
+    },
+    "audio/87a013522cac1caa58e1.mp3": {
+      "sha256": "87a013522cac1caa58e111bca4112761a91fe80583b0e3063d48e9d8d77f0dd2",
+      "bytes": 554544
+    },
+    "audio/87e0b86a1793505ea04f.mp3": {
+      "sha256": "87e0b86a1793505ea04f72ce9bc8a0f1abfa70427aa76d9de3bd532a9a7baae0",
+      "bytes": 2653
+    },
+    "audio/8a7c2f2f8a3a17b16265.mp3": {
+      "sha256": "8a7c2f2f8a3a17b162655c823e7342dd2e88d29e0d2570ef410f347156c34234",
+      "bytes": 5515
+    },
+    "audio/8aededac845abb0b19a3.mp3": {
+      "sha256": "8aededac845abb0b19a3037a02e53254fa2d1f3da1c018252cf2ee83e3c9fae2",
+      "bytes": 5831
+    },
+    "audio/8c36e3637b0f5738967e.mp3": {
+      "sha256": "8c36e3637b0f5738967ec7bd6d795120f9f11ca9be599261d293f5b9188e3b1f",
+      "bytes": 321012
+    },
+    "audio/8cb21535602e87ba755d.mp3": {
+      "sha256": "8cb21535602e87ba755d12af16d87c27e8c9b3b50e36c660f611f8faa9dd04e5",
+      "bytes": 3591
+    },
+    "audio/8e15b261110a79f53a87.mp3": {
+      "sha256": "8e15b261110a79f53a8775533e24007f7e0c213c118254aa1c1c91234a8aee68",
+      "bytes": 3126
+    },
+    "audio/8f3f8ce130a71ad0fb27.mp3": {
+      "sha256": "8f3f8ce130a71ad0fb273c8c2f91fed352c0e2557a9b33cacf0bc400cd17e53a",
+      "bytes": 3956
+    },
+    "audio/90956726280e3e0fc11b.mp3": {
+      "sha256": "90956726280e3e0fc11bfa24a4a1c0279dca26d420c6f78f095449faacdfa961",
+      "bytes": 3749
+    },
+    "audio/920446836ef75344d362.mp3": {
+      "sha256": "920446836ef75344d36207cabb1b4ffdb0c9fe1816efd21e30a45c01fec73cfb",
+      "bytes": 633096
+    },
+    "audio/9284d45fb7d26e2d919d.mp3": {
+      "sha256": "9284d45fb7d26e2d919d720c0b93ae1dfff81d0b1436a030c651dfc81922a9f3",
+      "bytes": 325693
+    },
+    "audio/92cb2185ceecc47ceb66.mp3": {
+      "sha256": "92cb2185ceecc47ceb66e375614ccbda87a37f8fc6b7e2db9c048fbbb52ad3d5",
+      "bytes": 269748
+    },
+    "audio/93573ee7bfe243ff7c8a.mp3": {
+      "sha256": "93573ee7bfe243ff7c8a7ce216c83826b2b6e7a17c7774761b013bbfcb0b0602",
+      "bytes": 3540
+    },
+    "audio/95da48364cdaf2e88b9e.mp3": {
+      "sha256": "95da48364cdaf2e88b9e809cb7e434d95c519d621cc73d657d51549dbd74391b",
+      "bytes": 3389
+    },
+    "audio/95f461f58b2dcfbbbd4d.mp3": {
+      "sha256": "95f461f58b2dcfbbbd4d5f5ee5e00f9aefd0cc484cfb3cc7f79d6d6272996135",
+      "bytes": 8531
+    },
+    "audio/967b5f924ff650d6a115.mp3": {
+      "sha256": "967b5f924ff650d6a115edb927166f116ce28e17cef3370903357f7a5f9ec90e",
+      "bytes": 4372
+    },
+    "audio/970ee9f834f9a1f0422b.mp3": {
+      "sha256": "970ee9f834f9a1f0422beec2c670150d38284a039cddad669fe83ebeed39d634",
+      "bytes": 4791
+    },
+    "audio/98ffb2a9d5f2b7f88410.mp3": {
+      "sha256": "98ffb2a9d5f2b7f88410b1808f88fb574f75da799889a9508a9ab2c88f127dfc",
+      "bytes": 3438
+    },
+    "audio/991054c8d38197fc773a.mp3": {
+      "sha256": "991054c8d38197fc773a64d7dfac1b3fdb684a9d904f2959a280808dc38a2a09",
+      "bytes": 8126
+    },
+    "audio/99f9d0a6ffad2ce8e7c2.mp3": {
+      "sha256": "99f9d0a6ffad2ce8e7c2188a73d987f2bd680a7275c94a118e0d0998c9684a95",
+      "bytes": 5308
+    },
+    "audio/9a8c4a3cba66fb9c1a88.mp3": {
+      "sha256": "9a8c4a3cba66fb9c1a88709f0e64e4c1b2189d42b6e2cdc2f41081eab02587b7",
+      "bytes": 19739
+    },
+    "audio/9ae8891d0a6d6446ea41.mp3": {
+      "sha256": "9ae8891d0a6d6446ea419dcf356a2ad56ec0390fe88685f56488dc87209707d1",
+      "bytes": 294552
+    },
+    "audio/9c73220f9fc42a535003.mp3": {
+      "sha256": "9c73220f9fc42a535003222cee5bdbe6da9dcbf57df157ce13e3cf4dcddd9703",
+      "bytes": 532581
+    },
+    "audio/9c7ebf3ca7531f449bae.mp3": {
+      "sha256": "9c7ebf3ca7531f449baee7ddc54115636442fc5a3026f56bdeef5d7f80292158",
+      "bytes": 5032
+    },
+    "audio/9e325beb606afb268152.mp3": {
+      "sha256": "9e325beb606afb2681522bf6615b2b1ccfaa4342c79457bcc6217bc4ebe1af81",
+      "bytes": 3383
+    },
+    "audio/9ee65039b15a160f45a9.mp3": {
+      "sha256": "9ee65039b15a160f45a906ba9df8782fe6e162490bc57e4f91eecb6d6124a2bf",
+      "bytes": 5695
+    },
+    "audio/a1557d938f3ecb04e9d5.mp3": {
+      "sha256": "a1557d938f3ecb04e9d582ac4afeff2c041fc633b6ef686880520955bd7abd11",
+      "bytes": 5099
+    },
+    "audio/a377eaec1acc35e7f22a.mp3": {
+      "sha256": "a377eaec1acc35e7f22a4452962b7fd490ac3582fe5a5e5b0a7a44b33e9aa3eb",
+      "bytes": 510624
+    },
+    "audio/a566956b065404bedfbe.mp3": {
+      "sha256": "a566956b065404bedfbeb43c6e22ea87fc89e9b50cf472b74229bb530bf04528",
+      "bytes": 460656
+    },
+    "audio/a8c32c78d02f610af856.mp3": {
+      "sha256": "a8c32c78d02f610af8567f31f068aea6fcb4337f449b767631304711c009a48c",
+      "bytes": 5567
+    },
+    "audio/ac3862bda254020224d4.mp3": {
+      "sha256": "ac3862bda254020224d496a9f454c4b6224f20e6158bce9fe3e8709f31f33562",
+      "bytes": 151632
+    },
+    "audio/ad30b7dc27f29c2b24b6.mp3": {
+      "sha256": "ad30b7dc27f29c2b24b655f9d3ff8dc1a40ef32476ef01bb3c4416a7f0b8fdaa",
+      "bytes": 3748
+    },
+    "audio/ae2fd21a7c57508d5163.mp3": {
+      "sha256": "ae2fd21a7c57508d51634fc3b43880b311d30e37dbc76b23c8378a11e0041b80",
+      "bytes": 263982
+    },
+    "audio/af33d8d59594faef0f85.mp3": {
+      "sha256": "af33d8d59594faef0f85871d5e2113bdfb77ea24b6ffa714d8f084791e887199",
+      "bytes": 721332
+    },
+    "audio/afab575bd5977d2275c1.mp3": {
+      "sha256": "afab575bd5977d2275c17288af11ed991608e055574a049c2306dfc453f61c82",
+      "bytes": 3176
+    },
+    "audio/b29ddf156667e28df5bb.mp3": {
+      "sha256": "b29ddf156667e28df5bb1367a3a0204b1191b85db872487fb41a65ebda1793b2",
+      "bytes": 2187
+    },
+    "audio/b47d5ea267c0883e1d14.mp3": {
+      "sha256": "b47d5ea267c0883e1d14e464ef8951b63da7cb288e05f0c4f28e6a952ac45c1e",
+      "bytes": 4579
+    },
+    "audio/b63deaad99ec59404f2d.mp3": {
+      "sha256": "b63deaad99ec59404f2d0ec1016818cd3bf17dff4ccb4165a062e43644b2a69d",
+      "bytes": 5516
+    },
+    "audio/bbc2c6eb4eca67d124b3.mp3": {
+      "sha256": "bbc2c6eb4eca67d124b3c329e8304b1431d12302455eeb0502e3acdfd04e4e41",
+      "bytes": 3595
+    },
+    "audio/bbc795a375a50f2ea6f1.mp3": {
+      "sha256": "bbc795a375a50f2ea6f1f186b7cfc6001029223c62df233cbfbf109d945db1ce",
+      "bytes": 323928
+    },
+    "audio/bc68077dd1a32a694333.mp3": {
+      "sha256": "bc68077dd1a32a694333ae1b28e57514f01662601c43a71fe1f9d022c7abeefc",
+      "bytes": 539909
+    },
+    "audio/bde9f0c1b2c1bd84c932.mp3": {
+      "sha256": "bde9f0c1b2c1bd84c93201210b5d9aa56ca987de26bd49a11c9a86dc1b550664",
+      "bytes": 4579
+    },
+    "audio/bed39b3fe34ed89ca032.mp3": {
+      "sha256": "bed39b3fe34ed89ca0321c36385322885a5af9f20896566700b7a50b95f8fd03",
+      "bytes": 3748
+    },
+    "audio/bf130450dbbfc156b033.mp3": {
+      "sha256": "bf130450dbbfc156b0338ca563d18aecdb796e692600509e2afebee1ee7df2ee",
+      "bytes": 507881
+    },
+    "audio/c004e377d76f6e3a0e3e.mp3": {
+      "sha256": "c004e377d76f6e3a0e3e61e888234d784adf6833444eb7322c5a2d392a054b32",
+      "bytes": 466956
+    },
+    "audio/c2f5cbaea1b8ead5a323.mp3": {
+      "sha256": "c2f5cbaea1b8ead5a323369f9f03ceef2596faff9fe38cb5086fa091ac6f3ea6",
+      "bytes": 624132
+    },
+    "audio/c62a52f6e0f4fffb265b.mp3": {
+      "sha256": "c62a52f6e0f4fffb265bc3b5d0207fa88949cdb7a4cd79b1c4c34aa8632eaa11",
+      "bytes": 2604
+    },
+    "audio/c9438e19b75da90e7dc7.mp3": {
+      "sha256": "c9438e19b75da90e7dc76010ca7ecf45f420a5896d0cb6b10f868f74baf299c5",
+      "bytes": 453672
+    },
+    "audio/c94dad3deb4a21bbde4e.mp3": {
+      "sha256": "c94dad3deb4a21bbde4ef61969f29d2f5c3adfd8d71d2acf0d02fe1fd32917dc",
+      "bytes": 813132
+    },
+    "audio/cbad54d067d3ed058a25.mp3": {
+      "sha256": "cbad54d067d3ed058a2517f2b8e4882fb2a6526f6fea02ed7218773962eb8fd3",
+      "bytes": 14385
+    },
+    "audio/d0507ecaeb9e76ff7900.mp3": {
+      "sha256": "d0507ecaeb9e76ff7900a4d5ad4949d36d81a558e8efe2fdd994c2b638f0b0d9",
+      "bytes": 7182
+    },
+    "audio/d08891697a5051af5366.mp3": {
+      "sha256": "d08891697a5051af536661095f90691c8937fb3e4e64a8e86ff7bca0cda95c61",
+      "bytes": 749232
+    },
+    "audio/d0f0e2f2b86cab6aaf0a.mp3": {
+      "sha256": "d0f0e2f2b86cab6aaf0ab006faae43dae349a43a9971ebaabe794316b79dab34",
+      "bytes": 5982
+    },
+    "audio/d193ed98d38d5a846abb.mp3": {
+      "sha256": "d193ed98d38d5a846abb82faa86d8f541d5d1a40f2cf99ec16a828c34e836c37",
+      "bytes": 543348
+    },
+    "audio/d46a64155146d7135fd5.mp3": {
+      "sha256": "d46a64155146d7135fd5065240e1c2f95751d566cc44e92b3c7a7e045ed9aed8",
+      "bytes": 539892
+    },
+    "audio/d594ceda0425fd7b4c77.mp3": {
+      "sha256": "d594ceda0425fd7b4c77c9f290416ee437a5a276ad0a32a5a8119e8e4c07041f",
+      "bytes": 5411
+    },
+    "audio/d5c6847932729f460e87.mp3": {
+      "sha256": "d5c6847932729f460e8791449013cc91c1070a7bd368a5f112d245158631c405",
+      "bytes": 219096
+    },
+    "audio/d6efdaef17a396385179.mp3": {
+      "sha256": "d6efdaef17a39638517937e60dc42670b62a6d5a8a30c190fe771cebb39f57f1",
+      "bytes": 670320
+    },
+    "audio/dc542a0022081796ff2d.mp3": {
+      "sha256": "dc542a0022081796ff2d349d221c6b829d6a73dcd502b058e460d95623ba837d",
+      "bytes": 274251
+    },
+    "audio/dd593f4ce5c7b3614ec4.mp3": {
+      "sha256": "dd593f4ce5c7b3614ec4c821a892cdff0f3d9118f3eb8f905aded604dc21dbeb",
+      "bytes": 2864
+    },
+    "audio/deca17267c7cccf92409.mp3": {
+      "sha256": "deca17267c7cccf92409fa49ec775926b4ec2628d13e1d405c920db5f59e9e62",
+      "bytes": 326232
+    },
+    "audio/e03110e7715ffb1d660e.mp3": {
+      "sha256": "e03110e7715ffb1d660e88d16623b04d08a4f61daad5ea1d9a5e1c675913f652",
+      "bytes": 337407
+    },
+    "audio/e3f2b23fc1ba93bd5ae8.mp3": {
+      "sha256": "e3f2b23fc1ba93bd5ae8a10cc024783c782f0e31c3159345d72ddd625d17ab77",
+      "bytes": 3488
+    },
+    "audio/e4e587be4ee193de5777.mp3": {
+      "sha256": "e4e587be4ee193de577726c3ab8335e6315184ce04c045a102ae3d3428272e9a",
+      "bytes": 4630
+    },
+    "audio/e5e0e50ff46e8b4234bf.mp3": {
+      "sha256": "e5e0e50ff46e8b4234bfcb239746c39fb90756d61fa8608eb5eabd8da961b0ab",
+      "bytes": 527868
+    },
+    "audio/e6ff66829f5adc8ebf9e.mp3": {
+      "sha256": "e6ff66829f5adc8ebf9e693c77103be83e4614ee72a64936087d46b4ebb46e3b",
+      "bytes": 3229
+    },
+    "audio/e9adeac08df8ae11bfad.mp3": {
+      "sha256": "e9adeac08df8ae11bfad6fa16d9aae24962b81326839611ce5b0df14f2e2feef",
+      "bytes": 5151
+    },
+    "audio/ea0443db6b32d7fec992.mp3": {
+      "sha256": "ea0443db6b32d7fec992687c4c5c13ed9f5cba8f3a25674b5ea6c65bed91286c",
+      "bytes": 3669
+    },
+    "audio/ea8be59621b8b6fdfe63.mp3": {
+      "sha256": "ea8be59621b8b6fdfe63961a6d3817c30f1b39d4f1a8900f674d48c8a464a0bb",
+      "bytes": 1926
+    },
+    "audio/ebe38586a005eee99ec4.mp3": {
+      "sha256": "ebe38586a005eee99ec4e99a29feab0709c9a693e7bbf2a415425ab8bfcad935",
+      "bytes": 2240
+    },
+    "audio/ec4d546f303925e39d92.mp3": {
+      "sha256": "ec4d546f303925e39d92200752f8b7435ee1b8ff2f730002821a01cb3dd70fbb",
+      "bytes": 6137
+    },
+    "audio/ec8e4371635cdbbcb05c.mp3": {
+      "sha256": "ec8e4371635cdbbcb05cc9cb26bc435121e8c6c44339dd346ba2f64522993f82",
+      "bytes": 464292
+    },
+    "audio/ecadae47a05dda6fad83.mp3": {
+      "sha256": "ecadae47a05dda6fad83f9181bccc6736c078b98fc66777e417686459104097f",
+      "bytes": 2759
+    },
+    "audio/ed9bbab8d806e07a98bf.mp3": {
+      "sha256": "ed9bbab8d806e07a98bf13026eb028e8b3b78c019c07611d171e7d10bf097ffb",
+      "bytes": 271044
+    },
+    "audio/ee3d30f75e12f0321e01.mp3": {
+      "sha256": "ee3d30f75e12f0321e01586d12b82d82742b3a0308559500554846743d401e85",
+      "bytes": 2137
+    },
+    "audio/f09db010ee9ed5a2147c.mp3": {
+      "sha256": "f09db010ee9ed5a2147c8dc1b2de47cbcd67ec9af69525dd419b6a5df4c0b736",
+      "bytes": 660888
+    },
+    "audio/f102a0c8dcec7115602b.mp3": {
+      "sha256": "f102a0c8dcec7115602bf2982f6db1224beca45edbb064a31cf508dde0143cd1",
+      "bytes": 2188
+    },
+    "audio/f120e087bbeb6d91723d.mp3": {
+      "sha256": "f120e087bbeb6d91723da02cae0cd768ceb86e41ef621c6187f8776d500acafa",
+      "bytes": 7077
+    },
+    "audio/f2a665c572c17f51e51c.mp3": {
+      "sha256": "f2a665c572c17f51e51c8b4352b41ecde3a8822348c0f8c7ae90755878e80533",
+      "bytes": 694620
+    },
+    "audio/f2bbb8fcdb9982461266.mp3": {
+      "sha256": "f2bbb8fcdb9982461266aa59c68ce73fb74f3de5d68f400a57de0349550ff376",
+      "bytes": 26020
+    },
+    "audio/f3766e8b6075c6ee1308.mp3": {
+      "sha256": "f3766e8b6075c6ee1308f4bac20cb0598bc20e00f15c233047afddf5dfc4ed34",
+      "bytes": 1615
+    },
+    "audio/f3c43c8a83ef68220095.mp3": {
+      "sha256": "f3c43c8a83ef6822009515c9b8d94e0fa3673ea5a2e7b35fdaee44a8a023183c",
+      "bytes": 777024
+    },
+    "audio/f3f0639408d76846c6ab.mp3": {
+      "sha256": "f3f0639408d76846c6abb82145ab6dc7aea4980eac556c5dcab6f0aaf2e3ab93",
+      "bytes": 526104
+    },
+    "audio/f44059899451c25cbd19.mp3": {
+      "sha256": "f44059899451c25cbd19a388c7e5813ca48310f01072891b177b62587f3498ce",
+      "bytes": 375541
+    },
+    "audio/f4639038fedf862348c6.mp3": {
+      "sha256": "f4639038fedf862348c643d119be3580335ff97d6b5c346ee0a19da0cad89f60",
+      "bytes": 3070
+    },
+    "audio/f47e2a8b07378d788133.mp3": {
+      "sha256": "f47e2a8b07378d788133ca03e495186d03248f416fe942816a1aeaec573bdac4",
+      "bytes": 2136
+    },
+    "audio/f4910c9deadf2adbcf69.mp3": {
+      "sha256": "f4910c9deadf2adbcf698806713f2255f908908479c06d1d53e8fcabd5e74afe",
+      "bytes": 106908
+    },
+    "audio/f7437883da1a21ef134c.mp3": {
+      "sha256": "f7437883da1a21ef134cb84d2bb7ad73c4b42e5b7ed5a9a5628c4ba3614df6b5",
+      "bytes": 100120
+    },
+    "audio/f761c6917bd612b51b78.mp3": {
+      "sha256": "f761c6917bd612b51b78eaac94097f3ad0aa7944ac7443aef42495e94e0423b0",
+      "bytes": 6659
+    },
+    "audio/f8f2014aa380cd34399e.mp3": {
+      "sha256": "f8f2014aa380cd34399e16a5aa33e4a257954f40b4fef4e5e33495e9f8a01f6d",
+      "bytes": 326952
+    },
+    "audio/fcdbba688d0f5e5fd2f3.mp3": {
+      "sha256": "fcdbba688d0f5e5fd2f3215bcd6a80a580e6e98604c02ef3c244946bd394d981",
+      "bytes": 697428
+    },
+    "audio/fe772a5916c911bb8980.mp3": {
+      "sha256": "fe772a5916c911bb89803b3e8ced4f92eeb99739544eaa8eed4c26ce7c927eb3",
+      "bytes": 756108
+    }
+  },
+  "clips": 183,
+  "bindings": {
+    "战斗音乐.1": {
+      "sourcePath": "Audios/battle.mp3",
+      "match": "exact"
+    },
+    "战斗音乐.2": {
+      "sourcePath": "Audios/battle2.mp3",
+      "match": "exact"
+    },
+    "战斗音乐.3": {
+      "sourcePath": "Audios/battle3.mp3",
+      "match": "exact"
+    },
+    "战斗音乐.4": {
+      "sourcePath": "Audios/battle4.mp3",
+      "match": "exact"
+    },
+    "战斗音乐.5": {
+      "sourcePath": "Audios/VS03.mp3",
+      "match": "unique-basename"
+    },
+    "战斗音乐.云狐之战": {
+      "sourcePath": "Audios/yunhuzhizhan.mp3",
+      "match": "exact"
+    },
+    "战斗音乐.山谷行进": {
+      "sourcePath": "Audios/shanguxingjin.mp3",
+      "match": "exact"
+    },
+    "战斗音乐.山谷行进2": {
+      "sourcePath": "Audios/shanguxingjin2.mp3",
+      "match": "exact"
+    },
+    "战斗音乐.暮云出击": {
+      "sourcePath": "Audios/muyunchuji.mp3",
+      "match": "exact"
+    },
+    "音乐.七夕": {
+      "sourcePath": "Audios/qixi.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.七秀": {
+      "sourcePath": "Audios/qixiu.mp3",
+      "match": "exact"
+    },
+    "音乐.中原树林": {
+      "sourcePath": "Audios/zhongyuanshulin.mp3",
+      "match": "exact"
+    },
+    "音乐.仙剑奇缘": {
+      "sourcePath": "Audios/xianjianqiyuan.mp3",
+      "match": "exact"
+    },
+    "音乐.倚天.醉拳": {
+      "sourcePath": "Audios/yitianzuiquan.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.全真教": {
+      "sourcePath": "Audios/shendiaozhuti.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.刀间鼓": {
+      "sourcePath": "Audios/daojiangu.mp3",
+      "match": "exact"
+    },
+    "音乐.华山论剑": {
+      "sourcePath": "Audios/huashanlunjian.mp3",
+      "match": "exact"
+    },
+    "音乐.圣火令": {
+      "sourcePath": "Audios/shenghuoling.mp3",
+      "match": "exact"
+    },
+    "音乐.城市1": {
+      "sourcePath": "Audios/city1.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.城市2": {
+      "sourcePath": "Audios/city1.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.城市3": {
+      "sourcePath": "Audios/city3.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.城市4": {
+      "sourcePath": "Audios/city4.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天外村": {
+      "sourcePath": "Audios/tianwaicun.mp3",
+      "match": "exact"
+    },
+    "音乐.天龙八部.佛音1": {
+      "sourcePath": "Audios/pn09-1.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部.佛音2": {
+      "sourcePath": "Audios/pn09-2.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部.佛音3": {
+      "sourcePath": "Audios/pn09-3.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部.佛音4": {
+      "sourcePath": "Audios/pn09-4.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部.忧伤": {
+      "sourcePath": "Audios/youshang.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部.无量山洞": {
+      "sourcePath": "Audios/wuliangyudong.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部.燕子坞": {
+      "sourcePath": "Audios/yanziwu.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部.紧张感1": {
+      "sourcePath": "Audios/power1.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部.紧张感2": {
+      "sourcePath": "Audios/power2.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部.紧张感3": {
+      "sourcePath": "Audios/power3.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部.紧张感4": {
+      "sourcePath": "Audios/power4.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部.紧张感5": {
+      "sourcePath": "Audios/power5.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部.逍遥派": {
+      "sourcePath": "Audios/xiaoyaopai.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部.逍遥派抒情版": {
+      "sourcePath": "Audios/xiaoyaopaishuqingban.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部1": {
+      "sourcePath": "Audios/pm01.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部10": {
+      "sourcePath": "Audios/pm10.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部11": {
+      "sourcePath": "Audios/pm11.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部2": {
+      "sourcePath": "Audios/pm02.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部3": {
+      "sourcePath": "Audios/pm03.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部4": {
+      "sourcePath": "Audios/pm03a.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部5": {
+      "sourcePath": "Audios/pm04.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部6": {
+      "sourcePath": "Audios/pm06.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部7": {
+      "sourcePath": "Audios/pm07.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部8": {
+      "sourcePath": "Audios/pm08.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.天龙八部9": {
+      "sourcePath": "Audios/pm09.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.太行八径": {
+      "sourcePath": "Audios/taihangbajing.mp3",
+      "match": "exact"
+    },
+    "音乐.如梦往事": {
+      "sourcePath": "Audios/rumengwangshi.mp3",
+      "match": "exact"
+    },
+    "音乐.室内_世俗": {
+      "sourcePath": "Audios/shineishisu.mp3",
+      "match": "exact"
+    },
+    "音乐.室内_安静": {
+      "sourcePath": "Audios/shineianjing.mp3",
+      "match": "exact"
+    },
+    "音乐.室内_清新": {
+      "sourcePath": "Audios/shineiqingxin.mp3",
+      "match": "exact"
+    },
+    "音乐.宿命": {
+      "sourcePath": "Audios/suming.mp3",
+      "match": "exact"
+    },
+    "音乐.少林山门": {
+      "sourcePath": "Audios/shaolinshanmen.mp3",
+      "match": "exact"
+    },
+    "音乐.开场": {
+      "sourcePath": "Audios/op.mp3",
+      "match": "exact"
+    },
+    "音乐.欢乐": {
+      "sourcePath": "Audios/huanle.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.欢快工作": {
+      "sourcePath": "Audios/worklist.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.武侠回忆": {
+      "sourcePath": "Audios/sound32.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.武侠流水": {
+      "sourcePath": "Audios/sound33.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.武侠进行": {
+      "sourcePath": "Audios/sound21.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.武侠雄壮": {
+      "sourcePath": "Audios/sound35.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.武当": {
+      "sourcePath": "Audios/chunyang.mp3",
+      "match": "exact"
+    },
+    "音乐.武林至尊": {
+      "sourcePath": "Audios/wulinzhizun.mp3",
+      "match": "exact"
+    },
+    "音乐.游戏失败": {
+      "sourcePath": "Audios/gameover.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.琵琶语": {
+      "sourcePath": "Audios/pipayu.mp3",
+      "match": "exact"
+    },
+    "音乐.神秘山洞": {
+      "sourcePath": "Audios/shenmishandong.mp3",
+      "match": "exact"
+    },
+    "音乐.神雕.主题": {
+      "sourcePath": "Audios/shendiaozhuti.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.神雕.歌泣": {
+      "sourcePath": "Audios/shendiaogeqi.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.神雕.舒缓": {
+      "sourcePath": "Audios/shendiaoshuhuan.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.紧张感": {
+      "sourcePath": "Audios/jinzhanggan.mp3",
+      "match": "exact"
+    },
+    "音乐.纯阳": {
+      "sourcePath": "Audios/chunyang.mp3",
+      "match": "exact"
+    },
+    "音乐.纵横江湖": {
+      "sourcePath": "Audios/zonghengjianghu.mp3",
+      "match": "exact"
+    },
+    "音乐.经典": {
+      "sourcePath": "Audios/game04.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.苦闷": {
+      "sourcePath": "Audios/kumen.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.血刀门": {
+      "sourcePath": "Audios/power1.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.逍遥": {
+      "sourcePath": "Audios/xiaoyaogu.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.逍遥1": {
+      "sourcePath": "Audios/xiaoyaogu1.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.逍遥2": {
+      "sourcePath": "Audios/xiaoyaogu2.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.逍遥3": {
+      "sourcePath": "Audios/xiaoyaogu3.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.逍遥4": {
+      "sourcePath": "Audios/xiaoyaogu4.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.金庸群侠传4": {
+      "sourcePath": "Audios/game04.mp3",
+      "match": "unique-basename"
+    },
+    "音乐.金庸群侠传5": {
+      "sourcePath": "Audios/game05.mp3",
+      "match": "unique-basename"
+    },
+    "音效.亲吻": {
+      "sourcePath": "Audios/kiss.mp3",
+      "match": "exact"
+    },
+    "音效.亲吻2": {
+      "sourcePath": "Audios/kiss2.mp3",
+      "match": "exact"
+    },
+    "音效.休息": {
+      "sourcePath": "Audios/a_recover2.mp3",
+      "match": "exact"
+    },
+    "音效.内功攻击1": {
+      "sourcePath": "Audios/E15.mp3",
+      "match": "unique-basename"
+    },
+    "音效.内功攻击2": {
+      "sourcePath": "Audios/E16.mp3",
+      "match": "unique-basename"
+    },
+    "音效.内功攻击3": {
+      "sourcePath": "Audios/E19.mp3",
+      "match": "unique-basename"
+    },
+    "音效.内功攻击4": {
+      "sourcePath": "Audios/E20.mp3",
+      "match": "unique-basename"
+    },
+    "音效.内功攻击5": {
+      "sourcePath": "Audios/E21.mp3",
+      "match": "unique-basename"
+    },
+    "音效.内功攻击6": {
+      "sourcePath": "Audios/E50.mp3",
+      "match": "unique-basename"
+    },
+    "音效.利器1": {
+      "sourcePath": "Audios/Atk05.mp3",
+      "match": "unique-basename"
+    },
+    "音效.利器2": {
+      "sourcePath": "Audios/Atk06.mp3",
+      "match": "unique-basename"
+    },
+    "音效.利器3": {
+      "sourcePath": "Audios/Atk06.mp3",
+      "match": "unique-basename"
+    },
+    "音效.利器4": {
+      "sourcePath": "Audios/Atk10.mp3",
+      "match": "unique-basename"
+    },
+    "音效.利器5": {
+      "sourcePath": "Audios/Atk13.mp3",
+      "match": "unique-basename"
+    },
+    "音效.利器6": {
+      "sourcePath": "Audios/E11.mp3",
+      "match": "unique-basename"
+    },
+    "音效.利器7": {
+      "sourcePath": "Audios/E12.mp3",
+      "match": "unique-basename"
+    },
+    "音效.刺伤": {
+      "sourcePath": "Audios/E51.mp3",
+      "match": "unique-basename"
+    },
+    "音效.剑": {
+      "sourcePath": "Audios/sword.mp3",
+      "match": "exact"
+    },
+    "音效.加点": {
+      "sourcePath": "Audios/a_recover.mp3",
+      "match": "exact"
+    },
+    "音效.升级": {
+      "sourcePath": "Audios/a_levelup.mp3",
+      "match": "exact"
+    },
+    "音效.吸取内力": {
+      "sourcePath": "Audios/Atk18.mp3",
+      "match": "unique-basename"
+    },
+    "音效.咆哮": {
+      "sourcePath": "Audios/paoxiao.mp3",
+      "match": "unique-basename"
+    },
+    "音效.奥义1": {
+      "sourcePath": "Audios/E07.mp3",
+      "match": "unique-basename"
+    },
+    "音效.奥义2": {
+      "sourcePath": "Audios/E10.mp3",
+      "match": "unique-basename"
+    },
+    "音效.奥义3": {
+      "sourcePath": "Audios/E15.mp3",
+      "match": "unique-basename"
+    },
+    "音效.奥义4": {
+      "sourcePath": "Audios/E27.mp3",
+      "match": "unique-basename"
+    },
+    "音效.奥义5": {
+      "sourcePath": "Audios/E39.mp3",
+      "match": "unique-basename"
+    },
+    "音效.奥义6": {
+      "sourcePath": "Audios/E50.mp3",
+      "match": "unique-basename"
+    },
+    "音效.女": {
+      "sourcePath": "Audios/nv.mp3",
+      "match": "unique-basename"
+    },
+    "音效.女2": {
+      "sourcePath": "Audios/nv2.mp3",
+      "match": "unique-basename"
+    },
+    "音效.女3": {
+      "sourcePath": "Audios/nv3.mp3",
+      "match": "unique-basename"
+    },
+    "音效.女4": {
+      "sourcePath": "Audios/nv4.mp3",
+      "match": "unique-basename"
+    },
+    "音效.女的奸笑": {
+      "sourcePath": "Audios/nvdejianxiao.mp3",
+      "match": "unique-basename"
+    },
+    "音效.威猛利器": {
+      "sourcePath": "Audios/E33.mp3",
+      "match": "unique-basename"
+    },
+    "音效.威猛利器2": {
+      "sourcePath": "Audios/E23.mp3",
+      "match": "unique-basename"
+    },
+    "音效.威猛利器3": {
+      "sourcePath": "Audios/E49.mp3",
+      "match": "unique-basename"
+    },
+    "音效.小奖励": {
+      "sourcePath": "Audios/Atk19.mp3",
+      "match": "unique-basename"
+    },
+    "音效.年轻男": {
+      "sourcePath": "Audios/nianqingnan.mp3",
+      "match": "unique-basename"
+    },
+    "音效.恢复2": {
+      "sourcePath": "Audios/E00.mp3",
+      "match": "unique-basename"
+    },
+    "音效.恢复3": {
+      "sourcePath": "Audios/E36.mp3",
+      "match": "unique-basename"
+    },
+    "音效.恢复类物品": {
+      "sourcePath": "Audios/a_recover2.mp3",
+      "match": "exact"
+    },
+    "音效.手枪": {
+      "sourcePath": "Audios/gunshot.mp3",
+      "match": "unique-basename"
+    },
+    "音效.打破罐子": {
+      "sourcePath": "Audios/Atk11.mp3",
+      "match": "unique-basename"
+    },
+    "音效.打雷": {
+      "sourcePath": "Audios/Atk20.mp3",
+      "match": "unique-basename"
+    },
+    "音效.拳1": {
+      "sourcePath": "Audios/Atk00.mp3",
+      "match": "unique-basename"
+    },
+    "音效.拳2": {
+      "sourcePath": "Audios/Atk01.mp3",
+      "match": "unique-basename"
+    },
+    "音效.拳3": {
+      "sourcePath": "Audios/Atk02.mp3",
+      "match": "unique-basename"
+    },
+    "音效.拳击": {
+      "sourcePath": "Audios/fist.mp3",
+      "match": "exact"
+    },
+    "音效.指1": {
+      "sourcePath": "Audios/Atk04.mp3",
+      "match": "unique-basename"
+    },
+    "音效.指2": {
+      "sourcePath": "Audios/Atk14.mp3",
+      "match": "unique-basename"
+    },
+    "音效.指法": {
+      "sourcePath": "Audios/hit_finger.mp3",
+      "match": "exact"
+    },
+    "音效.敢点老娘": {
+      "sourcePath": "Audios/gandianlaoniang.mp3",
+      "match": "unique-basename"
+    },
+    "音效.暗器1": {
+      "sourcePath": "Audios/Atk12.mp3",
+      "match": "unique-basename"
+    },
+    "音效.暗器2": {
+      "sourcePath": "Audios/E06.mp3",
+      "match": "unique-basename"
+    },
+    "音效.暗器3": {
+      "sourcePath": "Audios/E37.mp3",
+      "match": "unique-basename"
+    },
+    "音效.特别回复": {
+      "sourcePath": "Audios/Atk24.mp3",
+      "match": "unique-basename"
+    },
+    "音效.猛兽1": {
+      "sourcePath": "Audios/Atk16.mp3",
+      "match": "unique-basename"
+    },
+    "音效.猛兽2": {
+      "sourcePath": "Audios/Atk17.mp3",
+      "match": "unique-basename"
+    },
+    "音效.猛兽3": {
+      "sourcePath": "Audios/Atk22.mp3",
+      "match": "unique-basename"
+    },
+    "音效.猛男": {
+      "sourcePath": "Audios/mengnan.mp3",
+      "match": "unique-basename"
+    },
+    "音效.男": {
+      "sourcePath": "Audios/nan.mp3",
+      "match": "unique-basename"
+    },
+    "音效.男-哼": {
+      "sourcePath": "Audios/nanheng.mp3",
+      "match": "unique-basename"
+    },
+    "音效.男2": {
+      "sourcePath": "Audios/nan2.mp3",
+      "match": "unique-basename"
+    },
+    "音效.男3": {
+      "sourcePath": "Audios/nan3.mp3",
+      "match": "unique-basename"
+    },
+    "音效.男4": {
+      "sourcePath": "Audios/nan4.mp3",
+      "match": "unique-basename"
+    },
+    "音效.男5": {
+      "sourcePath": "Audios/nan5.mp3",
+      "match": "unique-basename"
+    },
+    "音效.男惨叫": {
+      "sourcePath": "Audios/nancanjiao.mp3",
+      "match": "unique-basename"
+    },
+    "音效.破空钝器": {
+      "sourcePath": "Audios/E17.mp3",
+      "match": "unique-basename"
+    },
+    "音效.蛤蟆叫": {
+      "sourcePath": "Audios/Atk21.mp3",
+      "match": "unique-basename"
+    },
+    "音效.装备": {
+      "sourcePath": "Audios/a_equipsound.mp3",
+      "match": "exact"
+    },
+    "音效.钝器1": {
+      "sourcePath": "Audios/Atk07.mp3",
+      "match": "unique-basename"
+    },
+    "音效.钝器2": {
+      "sourcePath": "Audios/Atk08.mp3",
+      "match": "unique-basename"
+    },
+    "音效.钝器3": {
+      "sourcePath": "Audios/Atk09.mp3",
+      "match": "unique-basename"
+    },
+    "音效.钝器4": {
+      "sourcePath": "Audios/E01.mp3",
+      "match": "unique-basename"
+    },
+    "音效.钝器5": {
+      "sourcePath": "Audios/E02.mp3",
+      "match": "unique-basename"
+    },
+    "音效.钝器6": {
+      "sourcePath": "Audios/E03.mp3",
+      "match": "unique-basename"
+    },
+    "音效.钝器7": {
+      "sourcePath": "Audios/E04.mp3",
+      "match": "unique-basename"
+    },
+    "音效.钝器8": {
+      "sourcePath": "Audios/E13.mp3",
+      "match": "unique-basename"
+    },
+    "音效.长剑": {
+      "sourcePath": "Audios/E46.mp3",
+      "match": "unique-basename"
+    },
+    "音效.闷拳": {
+      "sourcePath": "Audios/Atk03.mp3",
+      "match": "unique-basename"
+    },
+    "音效.飙血": {
+      "sourcePath": "Audios/Atk15.mp3",
+      "match": "unique-basename"
+    },
+    "音效.鸟啄": {
+      "sourcePath": "Audios/E43.mp3",
+      "match": "unique-basename"
+    },
+    "音效.龙吼": {
+      "sourcePath": "Audios/longhou.mp3",
+      "match": "unique-basename"
+    }
+  }
+}

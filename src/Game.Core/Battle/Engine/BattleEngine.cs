@@ -31,6 +31,7 @@ public sealed partial class BattleEngine
     private readonly LegendSkillResolver _legendSkillResolver;
     private readonly Func<string, IReadOnlyList<LegendSkillDefinition>> _legendSkillsProvider;
     private readonly IRandomService _random;
+    private readonly BattleFormationResolver? _formationResolver;
 
     public BattleEngine(
         BattleDamageCalculator? damageCalculator = null,
@@ -44,8 +45,10 @@ public sealed partial class BattleEngine
         Func<CharacterInstance, int>? characterMaxLevelResolver = null,
         Func<BattleUnit, bool>? battleExperienceEligibilityResolver = null,
         Func<SkillInstance, int, int>? skillUseExperienceResolver = null,
-        CharacterExperienceCurve characterExperienceCurve = CharacterExperienceCurve.PerLevel)
+        CharacterExperienceCurve characterExperienceCurve = CharacterExperienceCurve.PerLevel,
+        BattleFormationRules? formationRules = null)
     {
+        formationRules?.Validate();
         _damageCalculator = damageCalculator ?? new BattleDamageCalculator();
         _damageResolver = new BattleDamageResolver(this);
         _effectExecutor = new BattleEffectExecutor(this);
@@ -55,6 +58,7 @@ public sealed partial class BattleEngine
         _legendSkillResolver = legendSkillResolver ?? new LegendSkillResolver();
         _legendSkillsProvider = legendSkillsProvider ?? EmptyLegendSkillProvider;
         _random = random ?? SharedRandomService.Instance;
+        _formationResolver = formationRules is null ? null : new BattleFormationResolver(this, formationRules, _random);
         _hookRunner = new BattleHookRunner(this, _hookExecutor, _random);
         _battleBuffResolver = new BattleBuffResolver(
             (state, timing, unit, configure) => TriggerHooks(state, timing, unit, configure),
@@ -74,6 +78,19 @@ public sealed partial class BattleEngine
     internal BattleRecoveryResolver RecoveryResolver => _recoveryResolver;
 
     internal BattleBuffResolver BuffResolver => _battleBuffResolver;
+
+    internal void ApplyFormationDefence(BattleState state, BattleDamageApplicationContext hit) => _formationResolver?.ApplyDefence(state, hit);
+
+    internal void ApplySharedDamage(BattleState state, BattleUnit source, BattleUnit target, int amount, SkillInstance? skill, string detail)
+    {
+        var wasAlive = target.IsAlive;
+        _damageResolver.Apply(state, source, target, amount, skill, runBeforeDamageApplied: false, runAfterDamageApplied: false, detail: detail);
+        if (wasAlive && !target.IsAlive)
+        {
+            state.AddMessage(new BattleFact(BattleFactKind.UnitDefeated, target.Id, detail: detail));
+            state.ScopedEffects.NotifyUnitDefeated(state, target);
+        }
+    }
 
     private static BattleCommandFailureReason? ValidateActingUnit(
         BattleState state,

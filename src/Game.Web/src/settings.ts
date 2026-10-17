@@ -6,6 +6,8 @@ export interface Settings {
   battleLighting: boolean;
   reducedMotion: boolean;
   largeText: boolean;
+  musicVolume: number;
+  effectsVolume: number;
 }
 
 const key = 'jyxr.preferences.v1';
@@ -13,9 +15,11 @@ const defaults: Settings = {
   battleMode: 'manual', battleSpeed: 1, showGrid: true, showDamage: true,
   battleLighting: true, reducedMotion: matchMedia('(prefers-reduced-motion: reduce)').matches,
   largeText: false,
+  musicVolume: .35, effectsVolume: .6,
 };
 
 function normalize(value: Partial<Settings>): Settings {
+  const volume = (n: unknown, fallback: number) => typeof n === 'number' && Number.isFinite(n) ? Math.max(0, Math.min(1, n)) : fallback;
   return {
     battleMode: value.battleMode === 'auto' ? 'auto' : 'manual',
     battleSpeed: value.battleSpeed === 2 || value.battleSpeed === 4 ? value.battleSpeed : 1,
@@ -24,6 +28,8 @@ function normalize(value: Partial<Settings>): Settings {
     battleLighting: typeof value.battleLighting === 'boolean' ? value.battleLighting : defaults.battleLighting,
     reducedMotion: typeof value.reducedMotion === 'boolean' ? value.reducedMotion : defaults.reducedMotion,
     largeText: typeof value.largeText === 'boolean' ? value.largeText : defaults.largeText,
+    musicVolume: volume(value.musicVolume, defaults.musicVolume),
+    effectsVolume: volume(value.effectsVolume, defaults.effectsVolume),
   };
 }
 

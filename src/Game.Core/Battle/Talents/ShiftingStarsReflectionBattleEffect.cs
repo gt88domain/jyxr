@@ -8,7 +8,9 @@ public sealed record ShiftingStarsReflectionBattleEffectParameters(
     [property: Probability] double FamilyChance,
     [property: Probability] double DamageFactor,
     string FloatText,
-    string Speech);
+    string Speech,
+    bool Unreactive = false,
+    bool SinglePrecision = false);
 
 internal sealed class ShiftingStarsReflectionBattleEffectHandler
     : CustomBattleEffectHandler<ShiftingStarsReflectionBattleEffectParameters, IDamageApplicationRuntimeContext>
@@ -35,10 +37,11 @@ internal sealed class ShiftingStarsReflectionBattleEffectHandler
             return;
         }
 
-        var reflectedDamage = (int)(context.DamageAmount * parameters.DamageFactor);
+        var reflectedDamage = parameters.SinglePrecision ? (int)((float)context.DamageAmount * (float)parameters.DamageFactor) : (int)(context.DamageAmount * parameters.DamageFactor);
         if (reflectedDamage > 0)
         {
-            context.ApplyDirectDamage(source, reflectedDamage, "斗转星移");
+            if (parameters.Unreactive) context.ApplySharedDamage(source, reflectedDamage, "斗转星移");
+            else context.ApplyDirectDamage(source, reflectedDamage, "斗转星移");
         }
 
         context.RequestFloatText(context.Unit, parameters.FloatText, BattleFloatTextStyle.Special);

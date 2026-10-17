@@ -43,6 +43,18 @@ public interface IDamageCalculationEffectContext : IBattleEffectContext
     BattleDamageCalculationContext DamageCalculation { get; }
 }
 
+public interface IFinalDamageEffectContext : IBattleEffectContext
+{
+    int DamageAmount { get; set; }
+}
+
+public interface IDamageDistributionEffectContext : IBattleEffectContext
+{
+    int DamageAmount { get; }
+    void ReduceMaximumHp(BattleUnit target, int amount);
+    int RecoverLifesteal(int amount);
+}
+
 public interface IHitResultEffectContext : IBattleEffectContext
 {
     BattleHitState HitState { get; set; }
@@ -72,6 +84,7 @@ public interface IDamageApplicationEffectContext : IBattleEffectContext
 
 internal interface IDamageApplicationRuntimeContext : IDamageApplicationEffectContext
 {
+    void ApplySharedDamage(BattleUnit target, int amount, string detail);
     int ApplyDirectDamage(BattleUnit target, int amount, string? detail = null);
     int ApplyHpRecovery(BattleUnit target, int amount, string? detail = null);
     int ApplyMpDamage(BattleUnit target, int amount, string? detail = null);
