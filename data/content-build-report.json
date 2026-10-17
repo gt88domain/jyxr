@@ -316,6 +316,29 @@
     ],
     "scope": "blind-stage targeting, Yang affinity, cooldowns, selected defence/critical and blood drain; full formation, ordering and per-equipment float accumulation remain"
   },
+  "legendRuleEffects": {
+    "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+    "resolution": {
+      "rollBeforeConditions": true,
+      "useBaseWuxing": true,
+      "useSinglePrecisionProbability": true,
+      "matchBonusByName": true,
+      "drawAtZeroProbability": true,
+      "supportSpecialSkillConditions": false
+    },
+    "records": 137,
+    "unselectableStarts": [
+      {
+        "id": "太玄神功奥义式-太玄神功",
+        "name": "太玄神功奥义式",
+        "startSkill": "太玄神功"
+      }
+    ],
+    "unsupportedConditionRecords": [
+      "万劫闪电貂-万劫刀法"
+    ],
+    "scope": "trigger policy only; power, range, full reaction ordering and all live routes remain"
+  },
   "legacyArt": {
     "source": {
       "archive": "X.rar",
@@ -413,9 +436,9 @@
   "remainingChecklist": {
     "tasks": 19,
     "groups": {
-      "有旧C#同名引用、效果仍待接入的天赋": 29,
+      "有旧C#同名引用、效果仍待接入的天赋": 28,
       "未找到旧C#同名引用、需继续查证的天赋": 5,
-      "已有部分效果、尚未全部等价的天赋": 43,
+      "已有部分效果、尚未全部等价的天赋": 44,
       "仅作为其他效果联动条件的天赋": 4,
       "仅资料的Buff": 7,
       "部分实现的Buff": 2,
@@ -449,8 +472,8 @@
       "states": {
         "referenced-behavior": 4,
         "configured": 76,
-        "partial": 43,
-        "metadata-only": 34,
+        "partial": 44,
+        "metadata-only": 33,
         "identity-only": 1
       }
     },
@@ -533,7 +556,7 @@
     "scopedBattleEffects": 1,
     "itemTags": 0,
     "storyScripts": 1,
-    "browser": 26
+    "browser": 27
   },
   "limitations": [
     "The 14 verified opening/trainer segments remain unchanged; dependency-closed original stories/maps/events and nine sect entries are now exposed. Structural migration is not proof of full playthroughs.",

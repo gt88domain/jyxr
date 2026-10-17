@@ -2734,7 +2734,7 @@
             "skillId": "逍遥绝学.生死符",
             "value": {
               "op": "add",
-              "delta": 0.06
+              "delta": 0.05999999865889549
             }
           },
           "minimumLevel": 18
@@ -4294,7 +4294,7 @@
             "skillId": "华山一剑",
             "value": {
               "op": "add",
-              "delta": 0.05
+              "delta": 0.05000000074505806
             }
           },
           "minimumLevel": 15
@@ -6039,7 +6039,7 @@
             "skillId": "太玄神功奥义式",
             "value": {
               "op": "add",
-              "delta": 0.04
+              "delta": 0.03999999910593033
             }
           },
           "minimumLevel": 18
@@ -8227,7 +8227,7 @@
             "skillId": "血刀大法奥义.血海无边",
             "value": {
               "op": "add",
-              "delta": 0.12
+              "delta": 0.11999999731779099
             }
           },
           "minimumLevel": 18
@@ -8639,7 +8639,7 @@
             "skillId": "混元掌奥义.劈石破玉拳",
             "value": {
               "op": "add",
-              "delta": 0.08
+              "delta": 0.07999999821186066
             }
           },
           "minimumLevel": 16
@@ -8661,7 +8661,7 @@
             "skillId": "混元掌奥义.劈石破玉拳",
             "value": {
               "op": "add",
-              "delta": 0.08
+              "delta": 0.07999999821186066
             }
           },
           "minimumLevel": 18
@@ -8683,7 +8683,7 @@
             "skillId": "混元掌奥义.劈石破玉拳",
             "value": {
               "op": "add",
-              "delta": 0.1
+              "delta": 0.10000000149011612
             }
           },
           "minimumLevel": 20
@@ -9438,7 +9438,7 @@
             "skillId": "灵鹫宫绝学.天地唯我独尊",
             "value": {
               "op": "add",
-              "delta": 0.1
+              "delta": 0.10000000149011612
             }
           },
           "minimumLevel": 16
@@ -9460,7 +9460,7 @@
             "skillId": "灵鹫宫绝学.天地唯我独尊",
             "value": {
               "op": "add",
-              "delta": 0.1
+              "delta": 0.10000000149011612
             }
           },
           "minimumLevel": 18
@@ -10003,7 +10003,7 @@
             "skillId": "全真绝学.三花聚顶",
             "value": {
               "op": "add",
-              "delta": 0.05
+              "delta": 0.05000000074505806
             }
           },
           "minimumLevel": 16
@@ -10025,7 +10025,7 @@
             "skillId": "全真绝学.三花聚顶.炼神返虚",
             "value": {
               "op": "add",
-              "delta": 0.05
+              "delta": 0.05000000074505806
             }
           },
           "minimumLevel": 18
@@ -10347,7 +10347,7 @@
             "skillId": "武当绝学.太极拳奥义",
             "value": {
               "op": "add",
-              "delta": 0.06
+              "delta": 0.05999999865889549
             }
           },
           "minimumLevel": 15
@@ -10369,7 +10369,7 @@
             "skillId": "武当绝学.太极剑奥义",
             "value": {
               "op": "add",
-              "delta": 0.06
+              "delta": 0.05999999865889549
             }
           },
           "minimumLevel": 15
@@ -11169,7 +11169,7 @@
             "skillId": "铁剑门绝学.银河落九天",
             "value": {
               "op": "add",
-              "delta": 0.1
+              "delta": 0.10000000149011612
             }
           },
           "minimumLevel": 16

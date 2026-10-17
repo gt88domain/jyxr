@@ -7,8 +7,8 @@
       "states": {
         "referenced-behavior": 4,
         "configured": 76,
-        "partial": 43,
-        "metadata-only": 34,
+        "partial": 44,
+        "metadata-only": 33,
         "identity-only": 1
       },
       "entries": [
@@ -525,11 +525,13 @@
         },
         {
           "id": "屌丝",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AoyiLogic.cs:19"
           ],
-          "remaining": [],
+          "remaining": [
+            "野球拳 legend chance multiplier +.1 configured; complete equipment/skill-trigger ordering and naturally acquired combination routes remain unverified"
+          ],
           "fullBehaviorVerified": false
         },
         {

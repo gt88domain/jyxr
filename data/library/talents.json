@@ -14676,7 +14676,7 @@
     "description": "0#带上这个草帽就成为屌丝了，据说能增加屌丝逆袭的概率。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -14689,7 +14689,14 @@
       "id": "屌丝",
       "name": "屌丝",
       "point": 0,
-      "description": "带上这个草帽就成为屌丝了，据说能增加屌丝逆袭的概率。"
+      "description": "带上这个草帽就成为屌丝了，据说能增加屌丝逆袭的概率。",
+      "affixes": [
+        {
+          "type": "source_skill_legend_chance_bonus",
+          "skillName": "野球拳",
+          "bonus": 0.1
+        }
+      ]
     },
     "variants": [
       {

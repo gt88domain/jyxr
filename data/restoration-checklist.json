@@ -28,7 +28,7 @@
       "area": "武学与成长",
       "state": "部分实现",
       "title": "逐条核对137条奥义",
-      "detail": "现有定义已载入，仍需对照原触发条件、概率、武功/内功/装备要求、数值、范围及派生招式。"
+      "detail": "137条顺序及223个条件已对照；已补先抽概率再查条件、基础悟性、屌丝野球拳和名称概率词条。太玄起手名不可选、万劫闪电貂的specialskill条件未被旧源码支持，均单列。威力、范围、逐装备累加、原反应顺序及实际触发路线仍待核对。"
     },
     {
       "id": "rules-special",
@@ -173,15 +173,6 @@
           "description": "战国墨家的世代传人，使用墨家古武术附加随机不良状态。",
           "sourceReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1093"
-          ],
-          "remainingEvidence": [],
-          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
-        },
-        {
-          "id": "屌丝",
-          "description": "带上这个草帽就成为屌丝了，据说能增加屌丝逆袭的概率。",
-          "sourceReferences": [
-            "jyx-legacy-dll/JyGame/AoyiLogic.cs:19"
           ],
           "remainingEvidence": [],
           "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
@@ -659,6 +650,17 @@
             "source skill-name matching, damage multiplier range and ordered truncation configured; modern hit-check timing, cosmetic RNG sequence and AI valuation remain"
           ],
           "remainingSummary": "武功匹配、最终伤害倍率和逐次取整已接入；原命中时点、随机调用与AI估值待补齐。"
+        },
+        {
+          "id": "屌丝",
+          "description": "带上这个草帽就成为屌丝了，据说能增加屌丝逆袭的概率。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AoyiLogic.cs:19"
+          ],
+          "remainingEvidence": [
+            "野球拳 legend chance multiplier +.1 configured; complete equipment/skill-trigger ordering and naturally acquired combination routes remain unverified"
+          ],
+          "remainingSummary": "野球拳触发奥义的倍率增加0.1已接入；完整装备/武学概率词条顺序及正常取得后的组合路线仍待核对。"
         },
         {
           "id": "峨眉宗师",

@@ -15290,7 +15290,7 @@
       "description": "0#带上这个草帽就成为屌丝了，据说能增加屌丝逆袭的概率。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
