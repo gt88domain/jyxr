@@ -15334,7 +15334,7 @@
       "description": "0#太玄神功施展范围+3。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "configured",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },

@@ -42,7 +42,7 @@
       "area": "武学与成长",
       "state": "部分实现",
       "title": "核对内功、秘籍与装备的全部加成顺序",
-      "detail": "专属内功、吸血反制、等级/主运加成、武学奇才的属性翻倍、秘籍及使用经验需要完整组合对照。"
+      "detail": "专属内功、吸血反制、等级/主运加成、武学奇才的属性翻倍、秘籍及使用经验需要完整组合对照。吴钩霜雪的源码匹配根内功名，现有可选派生招式名称不一致，还需版本核对。"
     },
     {
       "id": "ai-evaluation",
@@ -558,6 +558,17 @@
             "integer formula and selected boundaries tested; full hit/reaction ordering remains"
           ],
           "remainingSummary": "吸内整数公式已有检查，完整命中和受击反应顺序仍待核对。"
+        },
+        {
+          "id": "吴钩霜雪",
+          "description": "太玄神功施展范围+3。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/SkillBox.cs:368"
+          ],
+          "remainingEvidence": [
+            "exact-name cast +3 branch preserved; baseline selectable form is 太玄神功.太玄真气 while source tests 太玄神功; no playable activation evidence, version reconciliation remains"
+          ],
+          "remainingSummary": "源码只匹配太玄神功，但当前可选招式为太玄神功.太玄真气，根内功不在选择列表。原条件已保留，尚无可玩触发依据，不能擅自给派生招式加3范围。"
         },
         {
           "id": "吸星大法",

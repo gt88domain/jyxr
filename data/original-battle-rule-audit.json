@@ -6,8 +6,8 @@
       "total": 158,
       "states": {
         "referenced-behavior": 4,
-        "configured": 77,
-        "partial": 42,
+        "configured": 76,
+        "partial": 43,
         "metadata-only": 34,
         "identity-only": 1
       },
@@ -275,11 +275,13 @@
         },
         {
           "id": "吴钩霜雪",
-          "configurationState": "configured",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/SkillBox.cs:368"
           ],
-          "remaining": [],
+          "remaining": [
+            "exact-name cast +3 branch preserved; baseline selectable form is 太玄神功.太玄真气 while source tests 太玄神功; no playable activation evidence, version reconciliation remains"
+          ],
           "fullBehaviorVerified": false
         },
         {
