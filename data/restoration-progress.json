@@ -156,18 +156,26 @@
     },
     {
       "id": "companions",
-      "name": "伙伴加入与招募路线",
-      "estimate": 60,
-      "evidence": "原加入/随行指令已整理成图鉴；10名伙伴经过普通连续流程验证，包括蓝凤凰、平一指和曲非烟。",
+      "name": "伙伴加入与周目奖励",
+      "estimate": 65,
+      "evidence": "原剧情65个加入/随行形态已整理；43个周目开局候选已接入，确认后随机加入一名。普通连续流程仍仅验证10名，不把奖励池数算作通关证据。",
       "gaps": [
         "其余角色的完整招募链、正邪与时限分支",
-        "特殊演出或无静态地图入口的触发方式",
+        "双儿缺人物定义，补充剧情入口仍待接线",
         "不同形态、随行转参战、离队与重新加入的长流程"
       ],
       "count": 65,
       "countLabel": "图鉴角色形态",
       "instructions": 80,
-      "normalVerified": 10
+      "normalVerified": 10,
+      "startingRewardCandidates": 43,
+      "startingRewardPoolSizes": [
+        0,
+        17,
+        10,
+        7,
+        9
+      ]
     }
   ],
   "fullGameVerified": false

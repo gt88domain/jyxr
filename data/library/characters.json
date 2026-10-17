@@ -17601,6 +17601,11 @@
         "category": "battles",
         "id": "东海剑池太极剑法",
         "name": "东海剑池太极剑法"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -17838,6 +17843,11 @@
         "category": "battles",
         "id": "昆仑仙境_战斗",
         "name": "昆仑仙境_战斗"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -19453,6 +19463,11 @@
         "category": "sects",
         "id": "星宿派",
         "name": "星宿派"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -22588,6 +22603,11 @@
         "category": "battles",
         "id": "商家堡.商家堡风波3",
         "name": "商家堡.商家堡风波3"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       },
       {
         "category": "resources",
@@ -32046,6 +32066,11 @@
         "category": "battles",
         "id": "黑衣_华山",
         "name": "黑衣_华山"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -35466,6 +35491,11 @@
         "category": "battles",
         "id": "光明圣火阵_战斗",
         "name": "光明圣火阵_战斗"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -35477,8 +35507,10 @@
     "state": "资料已接入",
     "source": "roles.xml",
     "effect": null,
-    "initialBonusRounds": [],
-    "recruitment": null,
+    "initialBonusRounds": [
+      "第3周目"
+    ],
+    "recruitment": "late-bonus",
     "node": {
       "tag": "role",
       "key": "殷天正",
@@ -35701,9 +35733,14 @@
     ],
     "usedBy": [
       {
-        "category": "missingCharacters",
+        "category": "referenceAliases",
         "id": "白眉鹰王",
         "name": "白眉鹰王"
+      },
+      {
+        "category": "bonusCompanions",
+        "id": "后期开局伙伴池2",
+        "name": "第3周目 · 开局随机伙伴候选"
       },
       {
         "category": "battles",
@@ -35714,6 +35751,11 @@
         "category": "battles",
         "id": "天关.决战光明顶",
         "name": "天关.决战光明顶"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -35980,6 +36022,11 @@
         "name": "东海剑池七伤拳"
       },
       {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
+      },
+      {
         "category": "resources",
         "id": "人物.谢逊",
         "name": "人物.谢逊"
@@ -36211,6 +36258,11 @@
         "category": "battles",
         "id": "天关.决战光明顶",
         "name": "天关.决战光明顶"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -36496,6 +36548,11 @@
         "category": "battles",
         "id": "光明圣火阵_战斗",
         "name": "光明圣火阵_战斗"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -36754,6 +36811,11 @@
         "category": "battles",
         "id": "光明圣火阵_战斗",
         "name": "光明圣火阵_战斗"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -37051,6 +37113,11 @@
         "category": "battles",
         "id": "黑衣_灭门日月",
         "name": "黑衣_灭门日月"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -37302,6 +37369,11 @@
         "category": "battles",
         "id": "黑衣_灭门日月",
         "name": "黑衣_灭门日月"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -39229,6 +39301,11 @@
         "category": "battles",
         "id": "笑傲邪_围攻黑木崖战斗2",
         "name": "笑傲邪_围攻黑木崖战斗2"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -39438,6 +39515,11 @@
         "category": "battles",
         "id": "笑傲邪_围攻黑木崖战斗2",
         "name": "笑傲邪_围攻黑木崖战斗2"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -44778,6 +44860,11 @@
         "category": "creation",
         "id": "重摇与头像",
         "name": "重摇属性与头像选项"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -57315,6 +57402,11 @@
         "category": "battles",
         "id": "东海剑池打狗棒法",
         "name": "东海剑池打狗棒法"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -59007,6 +59099,11 @@
         "category": "sects",
         "id": "全真教",
         "name": "全真教"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -59839,6 +59936,11 @@
         "category": "battles",
         "id": "古墓王重阳_战斗",
         "name": "古墓王重阳_战斗"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       },
       {
         "category": "resources",
@@ -60950,6 +61052,11 @@
         "category": "battles",
         "id": "霍都_战斗",
         "name": "霍都_战斗"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -63916,6 +64023,11 @@
         "category": "battles",
         "id": "星宿派擂鼓山之战",
         "name": "星宿派擂鼓山之战"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -72578,6 +72690,11 @@
         "category": "battles",
         "id": "东海剑池斗转星移",
         "name": "东海剑池斗转星移"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       },
       {
         "category": "resources",
@@ -103525,6 +103642,11 @@
         "category": "sects",
         "id": "少林派",
         "name": "少林派"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -104027,6 +104149,11 @@
         "category": "battles",
         "id": "黑衣_灭门武当",
         "name": "黑衣_灭门武当"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -105461,6 +105588,11 @@
         "name": "黑衣_灭门武当"
       },
       {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
+      },
+      {
         "category": "resources",
         "id": "人物.宋远桥",
         "name": "人物.宋远桥"
@@ -106706,6 +106838,11 @@
         "category": "battles",
         "id": "黑衣_灭门武当",
         "name": "黑衣_灭门武当"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       },
       {
         "category": "resources",
@@ -109326,6 +109463,11 @@
         "category": "battles",
         "id": "东海剑池倚天屠龙笔法",
         "name": "东海剑池倚天屠龙笔法"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -120888,6 +121030,11 @@
         "category": "battles",
         "id": "灭门全真2",
         "name": "灭门全真2"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -121261,6 +121408,11 @@
         "category": "battles",
         "id": "序章_战斗十大善人",
         "name": "序章_战斗十大善人"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -122850,6 +123002,11 @@
         "category": "maps",
         "id": "华山后山4",
         "name": "华山后山4"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -123926,6 +124083,11 @@
         "category": "battles",
         "id": "石梁派_战斗7",
         "name": "石梁派_战斗7"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -124237,6 +124399,11 @@
         "category": "battles",
         "id": "石梁派_战斗7",
         "name": "石梁派_战斗7"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -124489,6 +124656,11 @@
         "category": "battles",
         "id": "石梁派_战斗7",
         "name": "石梁派_战斗7"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -124780,6 +124952,11 @@
         "category": "battles",
         "id": "石梁派_战斗7",
         "name": "石梁派_战斗7"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -125027,6 +125204,11 @@
         "category": "battles",
         "id": "石梁派_战斗7",
         "name": "石梁派_战斗7"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -125477,6 +125659,11 @@
         "category": "battles",
         "id": "石梁派_战斗4",
         "name": "石梁派_战斗4"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -126375,6 +126562,11 @@
         "category": "creation",
         "id": "重摇与头像",
         "name": "重摇属性与头像选项"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       },
       {
         "category": "resources",
@@ -127604,6 +127796,11 @@
         "category": "battles",
         "id": "铁剑门_战斗1",
         "name": "铁剑门_战斗1"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -128641,6 +128838,11 @@
         "category": "battles",
         "id": "崇祯_战斗",
         "name": "崇祯_战斗"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -130612,6 +130814,11 @@
         "category": "battles",
         "id": "侠客行_主角太玄经",
         "name": "侠客行_主角太玄经"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -130828,6 +131035,11 @@
         "category": "battles",
         "id": "侠客行_主角太玄经",
         "name": "侠客行_主角太玄经"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },
@@ -132082,6 +132294,11 @@
         "name": "侠客行_主角太玄经"
       },
       {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
+      },
+      {
         "category": "resources",
         "id": "人物.白自在",
         "name": "人物.白自在"
@@ -132973,6 +133190,11 @@
         "category": "battles",
         "id": "灭门血刀1",
         "name": "灭门血刀1"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
       }
     ]
   },

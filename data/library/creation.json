@@ -3,8 +3,8 @@
     "id": "开局问答1",
     "category": "creation",
     "name": "你希望你在武侠小说中的出身是",
-    "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
-    "state": "开局配置已接入 · Lua 覆盖待核对",
+    "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
+    "state": "开局配置已接入 · 无悔模式待补",
     "source": "JyGame/RollRoleUI.cs",
     "effect": null,
     "initialBonusRounds": [],
@@ -13,7 +13,7 @@
       "tag": "creation",
       "key": "开局问答1",
       "name": "你希望你在武侠小说中的出身是",
-      "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+      "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
       "children": [
         {
           "tag": "configuration",
@@ -348,8 +348,8 @@
     "id": "开局问答2",
     "category": "creation",
     "name": "以下你觉得最宝贵的是",
-    "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
-    "state": "开局配置已接入 · Lua 覆盖待核对",
+    "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
+    "state": "开局配置已接入 · 无悔模式待补",
     "source": "JyGame/RollRoleUI.cs",
     "effect": null,
     "initialBonusRounds": [],
@@ -358,7 +358,7 @@
       "tag": "creation",
       "key": "开局问答2",
       "name": "以下你觉得最宝贵的是",
-      "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+      "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
       "children": [
         {
           "tag": "configuration",
@@ -477,8 +477,8 @@
     "id": "开局问答3",
     "category": "creation",
     "name": "以下你觉得最可恶的行为是",
-    "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
-    "state": "开局配置已接入 · Lua 覆盖待核对",
+    "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
+    "state": "开局配置已接入 · 无悔模式待补",
     "source": "JyGame/RollRoleUI.cs",
     "effect": null,
     "initialBonusRounds": [],
@@ -487,7 +487,7 @@
       "tag": "creation",
       "key": "开局问答3",
       "name": "以下你觉得最可恶的行为是",
-      "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+      "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
       "children": [
         {
           "tag": "configuration",
@@ -615,8 +615,8 @@
     "id": "开局问答4",
     "category": "creation",
     "name": "你最喜欢的兵刃是",
-    "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
-    "state": "开局配置已接入 · Lua 覆盖待核对",
+    "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
+    "state": "开局配置已接入 · 无悔模式待补",
     "source": "JyGame/RollRoleUI.cs",
     "effect": null,
     "initialBonusRounds": [],
@@ -625,7 +625,7 @@
       "tag": "creation",
       "key": "开局问答4",
       "name": "你最喜欢的兵刃是",
-      "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+      "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
       "children": [
         {
           "tag": "configuration",
@@ -725,8 +725,8 @@
     "id": "开局问答5",
     "category": "creation",
     "name": "以下女性角色你最喜欢的是",
-    "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
-    "state": "开局配置已接入 · Lua 覆盖待核对",
+    "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
+    "state": "开局配置已接入 · 无悔模式待补",
     "source": "JyGame/RollRoleUI.cs",
     "effect": null,
     "initialBonusRounds": [],
@@ -735,7 +735,7 @@
       "tag": "creation",
       "key": "开局问答5",
       "name": "以下女性角色你最喜欢的是",
-      "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+      "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
       "children": [
         {
           "tag": "configuration",
@@ -892,8 +892,8 @@
     "id": "开局问答6",
     "category": "creation",
     "name": "以下男性角色你最喜欢的是",
-    "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
-    "state": "开局配置已接入 · Lua 覆盖待核对",
+    "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
+    "state": "开局配置已接入 · 无悔模式待补",
     "source": "JyGame/RollRoleUI.cs",
     "effect": null,
     "initialBonusRounds": [],
@@ -902,7 +902,7 @@
       "tag": "creation",
       "key": "开局问答6",
       "name": "以下男性角色你最喜欢的是",
-      "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+      "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
       "children": [
         {
           "tag": "configuration",
@@ -1066,8 +1066,8 @@
     "id": "开局问答7",
     "category": "creation",
     "name": "以下你觉得最牛逼的人是",
-    "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
-    "state": "开局配置已接入 · Lua 覆盖待核对",
+    "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
+    "state": "开局配置已接入 · 无悔模式待补",
     "source": "JyGame/RollRoleUI.cs",
     "effect": null,
     "initialBonusRounds": [],
@@ -1076,7 +1076,7 @@
       "tag": "creation",
       "key": "开局问答7",
       "name": "以下你觉得最牛逼的人是",
-      "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+      "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
       "children": [
         {
           "tag": "configuration",
@@ -1295,8 +1295,8 @@
     "id": "初始奖励",
     "category": "creation",
     "name": "初始银两与奖励",
-    "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
-    "state": "开局配置已接入 · Lua 覆盖待核对",
+    "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
+    "state": "开局配置已接入 · 无悔模式待补",
     "source": "JyGame/RollRoleUI.cs",
     "effect": null,
     "initialBonusRounds": [],
@@ -1305,7 +1305,7 @@
       "tag": "creation",
       "key": "初始奖励",
       "name": "初始银两与奖励",
-      "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+      "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
       "children": [
         {
           "tag": "configuration",
@@ -1357,8 +1357,8 @@
     "id": "重摇与头像",
     "category": "creation",
     "name": "重摇属性与头像选项",
-    "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
-    "state": "开局配置已接入 · Lua 覆盖待核对",
+    "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
+    "state": "开局配置已接入 · 无悔模式待补",
     "source": "JyGame/RollRoleUI.cs",
     "effect": null,
     "initialBonusRounds": [],
@@ -1367,7 +1367,7 @@
       "tag": "creation",
       "key": "重摇与头像",
       "name": "重摇属性与头像选项",
-      "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+      "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
       "children": [
         {
           "tag": "configuration",
@@ -2060,8 +2060,8 @@
     "id": "周目奖励",
     "category": "creation",
     "name": "周目与试炼奖励",
-    "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
-    "state": "开局配置已接入 · Lua 覆盖待核对",
+    "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
+    "state": "开局配置已接入 · 无悔模式待补",
     "source": "JyGame/RollRoleUI.cs",
     "effect": null,
     "initialBonusRounds": [],
@@ -2070,7 +2070,7 @@
       "tag": "creation",
       "key": "周目奖励",
       "name": "周目与试炼奖励",
-      "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+      "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
       "children": [
         {
           "tag": "configuration",
@@ -2579,6 +2579,740 @@
         "category": "talents",
         "id": "飞向天际",
         "name": "飞向天际"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "开局伙伴奖励",
+    "category": "creation",
+    "name": "分周目开局伙伴奖励",
+    "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
+    "state": "开局配置已接入 · 无悔模式待补",
+    "source": "JyGame/RollRoleUI.cs",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "creation",
+      "key": "开局伙伴奖励",
+      "name": "分周目开局伙伴奖励",
+      "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
+      "children": [
+        {
+          "tag": "configuration",
+          "children": [
+            {
+              "tag": "startingCompanionPools",
+              "children": [
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "minimumRound",
+                      "value": "1"
+                    },
+                    {
+                      "tag": "characterIds",
+                      "children": []
+                    },
+                    {
+                      "tag": "weights",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "minimumRound",
+                      "value": "2"
+                    },
+                    {
+                      "tag": "characterIds",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "鲁连荣"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "冲虚道长"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "方证大师"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "灭绝师太"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "张翠山"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "宋远桥"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "韦一笑"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "仪清"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "何太冲"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "哑仆"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "温方达"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "温方义"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "温方山"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "温方施"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "温方悟"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "安小慧"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "阿九"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "weights",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "2"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "minimumRound",
+                      "value": "3"
+                    },
+                    {
+                      "tag": "characterIds",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "紫衫龙王"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "殷天正"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "商剑鸣"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "杨逍"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "范遥"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "霍都"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "孙不二"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "龙岛主"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "木岛主"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "善勇"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "weights",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "2"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "minimumRound",
+                      "value": "4"
+                    },
+                    {
+                      "tag": "characterIds",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "白自在"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "向问天"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "丁春秋"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "成昆"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "段延庆"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "丘处机"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "欧阳锋"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "weights",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "2"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "minimumRound",
+                      "value": "5"
+                    },
+                    {
+                      "tag": "characterIds",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "任我行"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "王重阳"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "林朝英"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "归辛树"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "玉真子"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "慕容博"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "卓一航"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "谢逊"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "虚竹"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "weights",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "2"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "startingCompanionSource",
+              "children": [
+                {
+                  "tag": "commit",
+                  "value": "4acd2c718a8afc562f0d5a0cd38464fea6699453"
+                },
+                {
+                  "tag": "file",
+                  "value": "Assets/Resources/textassets/lua/jygame/rollrole.lua.lua"
+                },
+                {
+                  "tag": "caller",
+                  "value": "JyGame/RollRoleUI.cs:664-708"
+                },
+                {
+                  "tag": "drawAt",
+                  "value": "confirmation"
+                },
+                {
+                  "tag": "aliases",
+                  "children": [
+                    {
+                      "tag": "白眉鹰王",
+                      "value": "殷天正"
+                    }
+                  ]
+                },
+                {
+                  "tag": "randomRule",
+                  "value": "GetRandomInt(0, Count) % Count; first candidate has two tickets, others one"
+                },
+                {
+                  "tag": "randomSource",
+                  "value": "JyGame/RollRoleUI.cs:712; JyGame/Tools.cs:45-48"
+                },
+                {
+                  "tag": "aliasEvidence",
+                  "value": "jyx-legacy-data/data-origin/skills.xml:492 · 鹰爪功说明：白眉鹰王殷天正的成名绝技"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "characters",
+        "id": "丁春秋",
+        "name": "丁春秋"
+      },
+      {
+        "category": "characters",
+        "id": "丘处机",
+        "name": "丘处机"
+      },
+      {
+        "category": "characters",
+        "id": "仪清",
+        "name": "仪清"
+      },
+      {
+        "category": "characters",
+        "id": "任我行",
+        "name": "任我行"
+      },
+      {
+        "category": "characters",
+        "id": "何太冲",
+        "name": "何太冲"
+      },
+      {
+        "category": "characters",
+        "id": "冲虚道长",
+        "name": "冲虚道长"
+      },
+      {
+        "category": "characters",
+        "id": "卓一航",
+        "name": "卓一航"
+      },
+      {
+        "category": "characters",
+        "id": "向问天",
+        "name": "向问天"
+      },
+      {
+        "category": "characters",
+        "id": "哑仆",
+        "name": "哑仆"
+      },
+      {
+        "category": "characters",
+        "id": "商剑鸣",
+        "name": "商剑鸣"
+      },
+      {
+        "category": "characters",
+        "id": "善勇",
+        "name": "善勇"
+      },
+      {
+        "category": "characters",
+        "id": "孙不二",
+        "name": "孙不二"
+      },
+      {
+        "category": "characters",
+        "id": "安小慧",
+        "name": "安小慧"
+      },
+      {
+        "category": "characters",
+        "id": "宋远桥",
+        "name": "宋远桥"
+      },
+      {
+        "category": "characters",
+        "id": "张翠山",
+        "name": "张翠山"
+      },
+      {
+        "category": "characters",
+        "id": "归辛树",
+        "name": "归辛树"
+      },
+      {
+        "category": "characters",
+        "id": "慕容博",
+        "name": "慕容博"
+      },
+      {
+        "category": "characters",
+        "id": "成昆",
+        "name": "成昆"
+      },
+      {
+        "category": "characters",
+        "id": "方证大师",
+        "name": "方证大师"
+      },
+      {
+        "category": "characters",
+        "id": "木岛主",
+        "name": "木岛主"
+      },
+      {
+        "category": "characters",
+        "id": "杨逍",
+        "name": "杨逍"
+      },
+      {
+        "category": "characters",
+        "id": "林朝英",
+        "name": "林朝英"
+      },
+      {
+        "category": "characters",
+        "id": "欧阳锋",
+        "name": "欧阳锋"
+      },
+      {
+        "category": "characters",
+        "id": "段延庆",
+        "name": "段延庆"
+      },
+      {
+        "category": "characters",
+        "id": "殷天正",
+        "name": "殷天正"
+      },
+      {
+        "category": "characters",
+        "id": "温方义",
+        "name": "温方义"
+      },
+      {
+        "category": "characters",
+        "id": "温方山",
+        "name": "温方义"
+      },
+      {
+        "category": "characters",
+        "id": "温方悟",
+        "name": "温方义"
+      },
+      {
+        "category": "characters",
+        "id": "温方施",
+        "name": "温方义"
+      },
+      {
+        "category": "characters",
+        "id": "温方达",
+        "name": "温方达"
+      },
+      {
+        "category": "characters",
+        "id": "灭绝师太",
+        "name": "灭绝师太"
+      },
+      {
+        "category": "characters",
+        "id": "玉真子",
+        "name": "玉真子"
+      },
+      {
+        "category": "characters",
+        "id": "王重阳",
+        "name": "王重阳"
+      },
+      {
+        "category": "referenceAliases",
+        "id": "白眉鹰王",
+        "name": "白眉鹰王"
+      },
+      {
+        "category": "characters",
+        "id": "白自在",
+        "name": "白自在"
+      },
+      {
+        "category": "characters",
+        "id": "紫衫龙王",
+        "name": "紫衫龙王"
+      },
+      {
+        "category": "characters",
+        "id": "范遥",
+        "name": "范遥"
+      },
+      {
+        "category": "characters",
+        "id": "虚竹",
+        "name": "虚竹"
+      },
+      {
+        "category": "characters",
+        "id": "谢逊",
+        "name": "谢逊"
+      },
+      {
+        "category": "characters",
+        "id": "阿九",
+        "name": "阿九"
+      },
+      {
+        "category": "characters",
+        "id": "霍都",
+        "name": "霍都"
+      },
+      {
+        "category": "characters",
+        "id": "韦一笑",
+        "name": "韦一笑"
+      },
+      {
+        "category": "characters",
+        "id": "鲁连荣",
+        "name": "鲁连荣"
+      },
+      {
+        "category": "characters",
+        "id": "龙岛主",
+        "name": "龙岛主"
       }
     ],
     "usedBy": []

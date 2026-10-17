@@ -226304,7 +226304,140 @@
           "name": "主角2",
           "image": "art/legacy/images/7ac0c9dc2ae3c48a0ff8.png"
         }
-      ]
+      ],
+      "startingCompanionPools": [
+        {
+          "minimumRound": 1,
+          "characterIds": [],
+          "weights": []
+        },
+        {
+          "minimumRound": 2,
+          "characterIds": [
+            "鲁连荣",
+            "冲虚道长",
+            "方证大师",
+            "灭绝师太",
+            "张翠山",
+            "宋远桥",
+            "韦一笑",
+            "仪清",
+            "何太冲",
+            "哑仆",
+            "温方达",
+            "温方义",
+            "温方山",
+            "温方施",
+            "温方悟",
+            "安小慧",
+            "阿九"
+          ],
+          "weights": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "minimumRound": 3,
+          "characterIds": [
+            "紫衫龙王",
+            "殷天正",
+            "商剑鸣",
+            "杨逍",
+            "范遥",
+            "霍都",
+            "孙不二",
+            "龙岛主",
+            "木岛主",
+            "善勇"
+          ],
+          "weights": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "minimumRound": 4,
+          "characterIds": [
+            "白自在",
+            "向问天",
+            "丁春秋",
+            "成昆",
+            "段延庆",
+            "丘处机",
+            "欧阳锋"
+          ],
+          "weights": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "minimumRound": 5,
+          "characterIds": [
+            "任我行",
+            "王重阳",
+            "林朝英",
+            "归辛树",
+            "玉真子",
+            "慕容博",
+            "卓一航",
+            "谢逊",
+            "虚竹"
+          ],
+          "weights": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "startingCompanionSource": {
+        "commit": "4acd2c718a8afc562f0d5a0cd38464fea6699453",
+        "file": "Assets/Resources/textassets/lua/jygame/rollrole.lua.lua",
+        "caller": "JyGame/RollRoleUI.cs:664-708",
+        "drawAt": "confirmation",
+        "aliases": {
+          "白眉鹰王": "殷天正"
+        },
+        "randomRule": "GetRandomInt(0, Count) % Count; first candidate has two tickets, others one",
+        "randomSource": "JyGame/RollRoleUI.cs:712; JyGame/Tools.cs:45-48",
+        "aliasEvidence": "jyx-legacy-data/data-origin/skills.xml:492 · 鹰爪功说明：白眉鹰王殷天正的成名绝技"
+      }
     },
     "companionRecruitmentStories": [
       "bixuejianShyou_不接黄金",

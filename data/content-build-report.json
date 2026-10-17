@@ -312,9 +312,30 @@
     },
     "questions": 7,
     "portraits": 24,
+    "startingCompanions": {
+      "candidates": 43,
+      "poolSizes": [
+        0,
+        17,
+        10,
+        7,
+        9
+      ],
+      "source": {
+        "commit": "4acd2c718a8afc562f0d5a0cd38464fea6699453",
+        "file": "Assets/Resources/textassets/lua/jygame/rollrole.lua.lua",
+        "caller": "JyGame/RollRoleUI.cs:664-708",
+        "drawAt": "confirmation",
+        "aliases": {
+          "白眉鹰王": "殷天正"
+        },
+        "randomRule": "GetRandomInt(0, Count) % Count; first candidate has two tickets, others one",
+        "randomSource": "JyGame/RollRoleUI.cs:712; JyGame/Tools.cs:45-48",
+        "aliasEvidence": "jyx-legacy-data/data-origin/skills.xml:492 · 鹰爪功说明：白眉鹰王殷天正的成名绝技"
+      }
+    },
     "deferred": [
       "无悔实时存档模式",
-      "Lua覆盖中的随机初始伙伴",
       "Lua随机下标差异",
       "部分问答天赋的完整战斗效果"
     ]
@@ -326,18 +347,21 @@
     "isolatedVerified": 2
   },
   "originalLibrary": {
-    "categories": 26,
-    "entries": 5550,
+    "categories": 27,
+    "entries": 5551,
     "baselineCompanionForms": 65,
     "baselineCompanionNames": 63,
     "referenceCompanionForms": 106,
     "referenceCompanionNames": 101,
     "missingCharacterDefinitions": [
-      "双儿",
-      "白眉鹰王"
+      "双儿"
     ],
     "lateBonusForms": 43,
     "lateBonusAdditionalForms": 40,
+    "startingCompanionRewardsImplemented": true,
+    "correctedCharacterAliases": {
+      "白眉鹰王": "殷天正"
+    },
     "supplementStories": 39,
     "ludingStories": 78,
     "ludingShared": 39,
