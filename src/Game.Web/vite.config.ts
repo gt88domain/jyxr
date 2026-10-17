@@ -16,6 +16,7 @@ function hashPackDirectory(directory: URL): void {
   }
 }
 hashPackDirectory(new URL('public/data/packs/', import.meta.url));
+hashPackDirectory(new URL('public/data/library/', import.meta.url));
 const gameVersion = versionHash.digest('hex').slice(0, 16);
 
 // The same static files must work at a domain root and at /jyxr/ on Pages.

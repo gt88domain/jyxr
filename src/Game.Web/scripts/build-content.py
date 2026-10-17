@@ -92,7 +92,7 @@ def starter_world() -> dict:
         "supplementalSources": [{
             "archive": "X.rar", "archiveVersionLabel": "X1.0.0.1",
             "entry": "storysLudingji", "reportedStoryCount": 78,
-            "status": "discovered separately; not merged with pinned legacy baseline",
+            "status": "lossless reference archived; 39 overlapping version records and 39 supplemental stories; not merged into playable baseline",
         }],
         "maps": maps, "stories": stories,
     }
@@ -293,6 +293,8 @@ def build(output: Path) -> None:
     from legacy_rule_audit import audit_rules
     rule_audit = audit_rules(package, REPO)
     write_json(output / "original-battle-rule-audit.json", rule_audit)
+    from original_library import write_library
+    report["originalLibrary"] = write_library(package, SOURCE, companions, rule_audit, WEB, output)
     from restoration_progress import build_progress
     write_json(output / "restoration-progress.json", build_progress(original_audit, rule_audit, package, companions))
     report["battleRuleConfiguration"] = {key: {"total": value["total"], "states": value["states"]} for key, value in rule_audit["sections"].items()}

@@ -17,6 +17,7 @@ import {readSettings, writeSettings, applySettings} from './settings';
 import type {Settings} from './settings';
 import {estimatedProgress, restorationProgressView} from './restoration-progress';
 import {loadCompanionCatalog, mountCompanionCatalog} from './companions';
+import {loadOriginalLibrary, mountOriginalLibrary} from './library';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 let state: GameState, slot: SaveSlot | undefined, busy = false, board: Board | undefined;
@@ -55,12 +56,12 @@ function toast(message: string) {
 function topbar(inGame = true) {
   const pack = state.pack;
   const menus = [['character', 'person', '人物'], ['equipment', 'sword', '装备'], ['cultivation', 'leaf', pack.terms?.cultivation || '功法修炼'], ['inventory', 'bag', '行囊'], ['party', 'person', '队伍'], ['quests', 'leaf', '目标'], ['settings', 'settings', '设置']];
-  if(pack.id==='jyx')menus.splice(5,0,['companions','person','图鉴']);
+  if(pack.id==='jyx')menus.splice(5,0,['library','person','资料']);
   return `<header class="topbar"><button class="wordmark" data-action="guide" aria-label="游玩指南"><span class="seal small">${e(pack.title.slice(0,1))}</span><span>${e(pack.title)}<small>${e(pack.subtitle)}</small></span></button>
     <nav aria-label="游戏菜单">${inGame ? `<span class="chapter">${e(state.map?.name)}</span><button class="save-button" data-action="save" ${state.phase !== 'world' ? 'disabled' : ''}>${icon('save')}<span>保存进度</span></button>` : ''}<button class="icon-button" data-action="worlds" aria-label="切换世界">${icon('leaf')}</button><button class="icon-button" data-action="settings" aria-label="设置">${icon('settings')}</button><button class="icon-button" data-action="guide" aria-label="帮助">${icon('help')}</button></nav></header>${inGame ? `<nav class="system-nav" aria-label="角色与世界设置">${menus.map(([action,symbol,label]) => `<button data-action="${action}">${icon(symbol)}<span>${e(label)}</span></button>`).join('')}</nav>` : ''}`;
 }
 function title() {
-  const progress = state.pack.id === 'jyx' ? `<div class="restoration-callout"><button class="restoration-entry" data-action="progress">原版复原 · 约 ${estimatedProgress}%<small>工程估算 · 查看分项进度、已知问题与改善建议 →</small></button><button class="restoration-entry" data-action="companions">伙伴图鉴 · 加入条件<small>角色形态、招募地点、前置剧情与选择分支 →</small></button></div>` : '';
+  const progress = state.pack.id === 'jyx' ? `<div class="restoration-callout"><button class="restoration-entry" data-action="library">原版资料馆 · 全量资料与版本对照<small>人物、武学、道具、初始配置、剧情和关联引用 →</small></button><button class="restoration-entry" data-action="companions">伙伴图鉴 · 剧情加入条件<small>剧情基线65个形态；后期另有43个开局候选，见资料馆 →</small></button><button class="restoration-entry" data-action="progress">原版复原 · 约 ${estimatedProgress}%<small>工程估算 · 查看分项进度、已知问题与改善建议 →</small></button></div>` : '';
   return topbar(false) + progress + titleView(state, slot, packs);
 }
 function heroCard() {
@@ -175,6 +176,17 @@ async function showCompanions() {
     if(target.isConnected&&modalOpen())mountCompanionCatalog(target,data,state);
   } catch(error) {
     if(target.isConnected&&modalOpen())target.textContent=error instanceof Error?error.message:'伙伴图鉴暂时无法读取。';
+  }
+}
+async function showOriginalLibrary(initial?: {category?: string; id?: string}) {
+  if(state.pack.id!=='jyx')return;
+  modal('原版资料馆', '<div data-original-library aria-live="polite">正在整理原版资料…</div>', true);
+  const target=document.querySelector<HTMLElement>('[data-original-library]')!;
+  try {
+    const data=await loadOriginalLibrary();
+    if(target.isConnected&&modalOpen())mountOriginalLibrary(target,data,initial);
+  } catch(error) {
+    if(target.isConnected&&modalOpen())target.textContent=error instanceof Error?error.message:'资料暂时无法读取。';
   }
 }
 function createCharacter() {
@@ -317,6 +329,7 @@ document.addEventListener('click', event => {
     void manage({type:'useItem',entryNumber:Number(button.dataset.entryNumber),...(target?{targetId:target.value}:{})},'物品已使用。');
   }
   else if (action === 'companions') void showCompanions();
+  else if (action === 'library') void showOriginalLibrary();
   else if (action === 'progress') void showRestorationProgress();
   else if (action === 'guide') modal('行走指南', '<p class="guide-text">点击地图上的人物或地点继续剧情，在“目标”查看当前章节。获得修炼书后，在修炼面板选择；运行的心法与正在研习的书可分别调整。装备和补给可在行囊使用，伙伴可在队伍查看。<br><br>手动战斗时，青色格表示可移动的位置。选择战技，点击橙色目标格施展；有些招式可对自己使用。也可切换自动战斗、调整倍速，或暂停观察。<br><br>打开人物、设置等面板时战斗暂停。离开战斗、对话和商店后可保存进度。两套世界分别存档；清除网站数据前请在行囊导出备份。</p>' + (state.pack.id === 'jyx' ? '<button class="button outline full-width" data-action="progress">查看复原进度、问题与改善建议</button>' : ''));
   else if (action === 'download-save') void (async () => {
@@ -393,6 +406,7 @@ async function boot() {
     applyResult(result);
     const view=new URL(location.href).searchParams.get('view');
     if(state.pack.id==='jyx'&&view==='companions')void showCompanions();
+    if(state.pack.id==='jyx'&&view==='library')void showOriginalLibrary({category:new URLSearchParams(location.search).get('category')||undefined,id:new URLSearchParams(location.search).get('entry')||undefined});
     else if(state.pack.id==='jyx'&&view==='progress')void showRestorationProgress();
   } catch (error) {
     console.error(error);

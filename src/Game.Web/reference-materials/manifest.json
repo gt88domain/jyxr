@@ -1,0 +1,2046 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "baseline",
+      "name": "gt88domain/jyxr · 原版迁移基线",
+      "version": "现代代码与原版数据分层",
+      "repository": "https://github.com/gt88domain/jyxr",
+      "commit": "50865c7d0c0820d2e70f0258014337cc43d2475d",
+      "dataCommit": "b41198219087858ece19d5484f5061e0289c47bc",
+      "role": "当前运行内容基线"
+    },
+    {
+      "id": "silverlight",
+      "name": "汉家松鼠 JyGameSilverlight",
+      "version": "官方早期 0.6.x",
+      "repository": "https://github.com/hansquirrel/JyGameSilverlight",
+      "commit": "3fa22b12126bd1e7a3cc2645a4cb200216643175",
+      "role": "早期玩法与内容对照；目录统计含可选内容，不视为同时启用"
+    },
+    {
+      "id": "remake",
+      "name": "jyGameXreMake",
+      "version": "非官方 Lua / Excel 重制",
+      "repository": "https://github.com/CppCXY/jyGameXreMake",
+      "commit": "71d4587d60622ba6adf692d5b069c072c1f42fed",
+      "role": "编辑工具和扩展参考；新增角色不直接认定为原版伙伴"
+    },
+    {
+      "id": "late",
+      "name": "X-Heroes-of-Jin-Yong",
+      "version": "1.1.0.6 逆向参考",
+      "repository": "https://github.com/UnicomGamer/X-Heroes-of-Jin-Yong",
+      "commit": "4acd2c718a8afc562f0d5a0cd38464fea6699453",
+      "role": "后期代码与 Lua 对照；本次 XML 来自 modcache/Template，属于 MOD 模板"
+    },
+    {
+      "id": "upload",
+      "name": "用户上传 X.rar",
+      "version": "金庸群侠传 X 1.0.0.1",
+      "repository": "https://github.com/gt88domain/jyxr/releases/tag/downloads-2026-10-15",
+      "role": "用户提供的原始内容与素材；保留版本差异，未覆盖现有剧情"
+    }
+  ],
+  "inventories": {
+    "baseline": {
+      "characters": {
+        "records": 513,
+        "namedIds": 513,
+        "duplicateIds": []
+      },
+      "externalSkills": {
+        "records": 158,
+        "namedIds": 158,
+        "duplicateIds": []
+      },
+      "internalSkills": {
+        "records": 43,
+        "namedIds": 43,
+        "duplicateIds": []
+      },
+      "specialSkills": {
+        "records": 27,
+        "namedIds": 27,
+        "duplicateIds": []
+      },
+      "legendGroups": {
+        "records": 137,
+        "namedIds": 118,
+        "duplicateIds": [
+          "千噬万毒-灵蛇拳",
+          "纯阳一指-一阳指",
+          "华山一剑-狂风快剑",
+          "星宿派绝学.幽冥神掌-三阴蜈蚣爪",
+          "大理绝学.六脉神剑奥义-六脉神剑",
+          "丐帮绝学.打狗棒法奥义-打狗棒法",
+          "慕容绝学.离合参商-斗转星移",
+          "华山绝学.独孤九剑奥义-独孤九剑",
+          "武当绝学.太极拳奥义-太极拳",
+          "武当绝学.太极剑奥义-太极剑",
+          "绝学.无招胜有招-独孤九剑",
+          "血刀大法奥义.血海无边-血刀大法",
+          "绝学.罗汉伏魔拳-青莲掌法",
+          "绝学.罗汉伏魔剑-太白剑法",
+          "绝学.罗汉伏魔刀-金乌刀法"
+        ]
+      },
+      "items": {
+        "records": 347,
+        "namedIds": 347,
+        "duplicateIds": []
+      },
+      "maps": {
+        "records": 162,
+        "namedIds": 162,
+        "duplicateIds": []
+      },
+      "battles": {
+        "records": 393,
+        "namedIds": 393,
+        "duplicateIds": []
+      },
+      "resources": {
+        "records": 1281,
+        "namedIds": 1281,
+        "duplicateIds": []
+      },
+      "sects": {
+        "records": 9,
+        "namedIds": 9,
+        "duplicateIds": []
+      },
+      "shops": {
+        "records": 10,
+        "namedIds": 10,
+        "duplicateIds": []
+      },
+      "towers": {
+        "records": 8,
+        "namedIds": 8,
+        "duplicateIds": []
+      },
+      "growTemplates": {
+        "records": 17,
+        "namedIds": 17,
+        "duplicateIds": []
+      },
+      "newbie": {
+        "records": 6,
+        "namedIds": 6,
+        "duplicateIds": []
+      },
+      "worldTriggers": {
+        "records": 21,
+        "namedIds": 0,
+        "duplicateIds": []
+      },
+      "touch": {
+        "records": 5,
+        "namedIds": 5,
+        "duplicateIds": []
+      },
+      "randomAffixes": {
+        "records": 4,
+        "namedIds": 0,
+        "duplicateIds": []
+      },
+      "animations": {
+        "records": 186,
+        "namedIds": 186,
+        "duplicateIds": []
+      },
+      "tips": {
+        "records": 89,
+        "namedIds": 89,
+        "duplicateIds": []
+      },
+      "stories": {
+        "records": 1887,
+        "namedIds": 1887,
+        "duplicateIds": []
+      }
+    },
+    "silverlight": {
+      "characters": {
+        "records": 458,
+        "namedIds": 457,
+        "duplicateIds": [
+          "御虚阁"
+        ]
+      },
+      "externalSkills": {
+        "records": 149,
+        "namedIds": 149,
+        "duplicateIds": []
+      },
+      "internalSkills": {
+        "records": 38,
+        "namedIds": 38,
+        "duplicateIds": []
+      },
+      "specialSkills": {
+        "records": 25,
+        "namedIds": 25,
+        "duplicateIds": []
+      },
+      "legendGroups": {
+        "records": 133,
+        "namedIds": 116,
+        "duplicateIds": [
+          "千噬万毒-灵蛇拳",
+          "纯阳一指-一阳指",
+          "华山一剑-狂风快剑",
+          "大理绝学.六脉神剑奥义-六脉神剑",
+          "丐帮绝学.打狗棒法奥义-打狗棒法",
+          "慕容绝学.离合参商-斗转星移",
+          "华山绝学.独孤九剑奥义-独孤九剑",
+          "武当绝学.太极拳奥义-太极拳",
+          "武当绝学.太极剑奥义-太极剑",
+          "绝学.无招胜有招-独孤九剑",
+          "绝学.罗汉伏魔拳-青莲掌法",
+          "绝学.罗汉伏魔剑-太白剑法",
+          "绝学.罗汉伏魔刀-金乌刀法"
+        ]
+      },
+      "items": {
+        "records": 332,
+        "namedIds": 332,
+        "duplicateIds": []
+      },
+      "stories": {
+        "records": 1447,
+        "namedIds": 1447,
+        "duplicateIds": []
+      }
+    },
+    "late": {
+      "characters": {
+        "records": 513,
+        "namedIds": 513,
+        "duplicateIds": []
+      },
+      "externalSkills": {
+        "records": 158,
+        "namedIds": 158,
+        "duplicateIds": []
+      },
+      "internalSkills": {
+        "records": 43,
+        "namedIds": 43,
+        "duplicateIds": []
+      },
+      "specialSkills": {
+        "records": 27,
+        "namedIds": 27,
+        "duplicateIds": []
+      },
+      "legendGroups": {
+        "records": 137,
+        "namedIds": 118,
+        "duplicateIds": [
+          "千噬万毒-灵蛇拳",
+          "纯阳一指-一阳指",
+          "华山一剑-狂风快剑",
+          "星宿派绝学.幽冥神掌-三阴蜈蚣爪",
+          "大理绝学.六脉神剑奥义-六脉神剑",
+          "丐帮绝学.打狗棒法奥义-打狗棒法",
+          "慕容绝学.离合参商-斗转星移",
+          "华山绝学.独孤九剑奥义-独孤九剑",
+          "武当绝学.太极拳奥义-太极拳",
+          "武当绝学.太极剑奥义-太极剑",
+          "绝学.无招胜有招-独孤九剑",
+          "血刀大法奥义.血海无边-血刀大法",
+          "绝学.罗汉伏魔拳-青莲掌法",
+          "绝学.罗汉伏魔剑-太白剑法",
+          "绝学.罗汉伏魔刀-金乌刀法"
+        ]
+      },
+      "items": {
+        "records": 347,
+        "namedIds": 347,
+        "duplicateIds": []
+      },
+      "maps": {
+        "records": 162,
+        "namedIds": 162,
+        "duplicateIds": []
+      },
+      "battles": {
+        "records": 391,
+        "namedIds": 391,
+        "duplicateIds": []
+      },
+      "resources": {
+        "records": 1281,
+        "namedIds": 1281,
+        "duplicateIds": []
+      },
+      "sects": {
+        "records": 9,
+        "namedIds": 9,
+        "duplicateIds": []
+      },
+      "shops": {
+        "records": 10,
+        "namedIds": 10,
+        "duplicateIds": []
+      },
+      "towers": {
+        "records": 8,
+        "namedIds": 8,
+        "duplicateIds": []
+      },
+      "growTemplates": {
+        "records": 17,
+        "namedIds": 17,
+        "duplicateIds": []
+      },
+      "newbie": {
+        "records": 6,
+        "namedIds": 6,
+        "duplicateIds": []
+      },
+      "worldTriggers": {
+        "records": 21,
+        "namedIds": 0,
+        "duplicateIds": []
+      },
+      "touch": {
+        "records": 5,
+        "namedIds": 5,
+        "duplicateIds": []
+      },
+      "randomAffixes": {
+        "records": 4,
+        "namedIds": 0,
+        "duplicateIds": []
+      },
+      "animations": {
+        "records": 186,
+        "namedIds": 186,
+        "duplicateIds": []
+      },
+      "tips": {
+        "records": 89,
+        "namedIds": 89,
+        "duplicateIds": []
+      },
+      "stories": {
+        "records": 1885,
+        "namedIds": 1885,
+        "duplicateIds": []
+      }
+    },
+    "upload": {
+      "characters": {
+        "records": 513,
+        "namedIds": 513,
+        "duplicateIds": []
+      },
+      "externalSkills": {
+        "records": 158,
+        "namedIds": 158,
+        "duplicateIds": []
+      },
+      "internalSkills": {
+        "records": 43,
+        "namedIds": 43,
+        "duplicateIds": []
+      },
+      "specialSkills": {
+        "records": 27,
+        "namedIds": 27,
+        "duplicateIds": []
+      },
+      "legendGroups": {
+        "records": 137,
+        "namedIds": 118,
+        "duplicateIds": [
+          "千噬万毒-灵蛇拳",
+          "纯阳一指-一阳指",
+          "华山一剑-狂风快剑",
+          "星宿派绝学.幽冥神掌-三阴蜈蚣爪",
+          "大理绝学.六脉神剑奥义-六脉神剑",
+          "丐帮绝学.打狗棒法奥义-打狗棒法",
+          "慕容绝学.离合参商-斗转星移",
+          "华山绝学.独孤九剑奥义-独孤九剑",
+          "武当绝学.太极拳奥义-太极拳",
+          "武当绝学.太极剑奥义-太极剑",
+          "绝学.无招胜有招-独孤九剑",
+          "血刀大法奥义.血海无边-血刀大法",
+          "绝学.罗汉伏魔拳-青莲掌法",
+          "绝学.罗汉伏魔剑-太白剑法",
+          "绝学.罗汉伏魔刀-金乌刀法"
+        ]
+      },
+      "items": {
+        "records": 347,
+        "namedIds": 347,
+        "duplicateIds": []
+      },
+      "maps": {
+        "records": 162,
+        "namedIds": 162,
+        "duplicateIds": []
+      },
+      "battles": {
+        "records": 391,
+        "namedIds": 391,
+        "duplicateIds": []
+      },
+      "resources": {
+        "records": 1281,
+        "namedIds": 1281,
+        "duplicateIds": []
+      },
+      "sects": {
+        "records": 9,
+        "namedIds": 9,
+        "duplicateIds": []
+      },
+      "shops": {
+        "records": 10,
+        "namedIds": 10,
+        "duplicateIds": []
+      },
+      "towers": {
+        "records": 8,
+        "namedIds": 8,
+        "duplicateIds": []
+      },
+      "growTemplates": {
+        "records": 17,
+        "namedIds": 17,
+        "duplicateIds": []
+      },
+      "newbie": {
+        "records": 6,
+        "namedIds": 6,
+        "duplicateIds": []
+      },
+      "worldTriggers": {
+        "records": 21,
+        "namedIds": 0,
+        "duplicateIds": []
+      },
+      "touch": {
+        "records": 5,
+        "namedIds": 5,
+        "duplicateIds": []
+      },
+      "randomAffixes": {
+        "records": 4,
+        "namedIds": 0,
+        "duplicateIds": []
+      },
+      "animations": {
+        "records": 186,
+        "namedIds": 186,
+        "duplicateIds": []
+      },
+      "tips": {
+        "records": 89,
+        "namedIds": 89,
+        "duplicateIds": []
+      },
+      "stories": {
+        "records": 1963,
+        "namedIds": 1924,
+        "duplicateIds": [
+          "鹿鼎记_北京韦小宝",
+          "鹿鼎记_北京韦小宝2",
+          "鹿鼎记_北京韦小宝加入",
+          "鹿鼎记_北京韦小宝没钱",
+          "鹿鼎记_皇宫鳌拜1",
+          "鹿鼎记_皇宫鳌拜2",
+          "鹿鼎记_皇宫鳌拜3",
+          "鹿鼎记_皇宫鳌拜4",
+          "鹿鼎记_皇宫鳌拜_1",
+          "鹿鼎记_皇宫鳌拜_2",
+          "鹿鼎记_皇宫鳌拜_3",
+          "鹿鼎记_皇宫鳌拜_4",
+          "鹿鼎记_皇宫鳌拜结束",
+          "鹿鼎记_皇宫太后1",
+          "鹿鼎记_皇宫太后2",
+          "鹿鼎记_皇宫太后3",
+          "鹿鼎记_皇宫太后4",
+          "鹿鼎记_皇宫太后5",
+          "鹿鼎记_皇宫太后6",
+          "鹿鼎记_皇宫太后7",
+          "鹿鼎记_阿九1",
+          "鹿鼎记_阿九2",
+          "鹿鼎记_阿九3",
+          "鹿鼎记_阿九.邀请",
+          "鹿鼎记_阿九.邀请2",
+          "鹿鼎记_阿九.不邀请",
+          "鹿鼎记_吴三桂1",
+          "鹿鼎记_吴三桂2",
+          "鹿鼎记_吴三桂3",
+          "鹿鼎记_吴三桂4",
+          "鹿鼎记_神龙岛",
+          "鹿鼎记_神龙岛2",
+          "鹿鼎记_神龙岛3",
+          "鹿鼎记_神龙岛4",
+          "鹿鼎记_台湾1",
+          "鹿鼎记_台湾2",
+          "鹿鼎记_台湾3",
+          "鹿鼎记_鹿鼎山1",
+          "鹿鼎记_鹿鼎山2"
+        ]
+      }
+    }
+  },
+  "differences": {
+    "silverlight": {
+      "characters": {
+        "baselineNamedIds": 513,
+        "referenceNamedIds": 457,
+        "sharedIds": 451,
+        "addedIds": [
+          "back",
+          "front",
+          "left",
+          "right",
+          "何道人",
+          "鹤仙人"
+        ],
+        "absentIds": [
+          "home",
+          "乌护干",
+          "佛像",
+          "出尘子",
+          "华山段誉",
+          "华山狄云",
+          "华山胡斐",
+          "华山袁承志",
+          "华山郭襄",
+          "华辉",
+          "向前走",
+          "向右走",
+          "向左走",
+          "商人",
+          "回纥男子刺客",
+          "回纥男子小贩1",
+          "回纥男子小贩2",
+          "回纥男子花市刺客",
+          "天关林平之",
+          "天狼子",
+          "女主侍从",
+          "山庄风云江湖豪客1",
+          "山庄风云江湖豪客2",
+          "山庄风云神秘人",
+          "山庄风云长安官员1",
+          "山庄风云长安官员2",
+          "山贼",
+          "摘星子",
+          "文艺吕布",
+          "新手村梅超风",
+          "星宿弟子",
+          "曼陀山庄神秘人",
+          "木婉清(蒙面)",
+          "松鼠黄蓉",
+          "武师",
+          "毒猴子",
+          "狮吼子",
+          "瑛姑",
+          "田青文",
+          "疯狂贾飞",
+          "神级张无忌",
+          "素心",
+          "计老人",
+          "贾武",
+          "贾飞",
+          "赵志诚",
+          "返回",
+          "镖局老大",
+          "长安一梦部落众1",
+          "长安一梦长老",
+          "长安一梦阿玉",
+          "长安一梦陌生男子",
+          "长安深夜神秘女子",
+          "长安深夜神秘女子2",
+          "长安深夜神秘女子3",
+          "长安菜农",
+          "阿青",
+          "霓裳",
+          "魔君",
+          "魔神",
+          "鸳鸯刀传人",
+          "黑老大"
+        ],
+        "spellingVariants": []
+      },
+      "externalSkills": {
+        "baselineNamedIds": 158,
+        "referenceNamedIds": 149,
+        "sharedIds": 147,
+        "addedIds": [
+          "无上大力杆",
+          "绝户虎爪手"
+        ],
+        "absentIds": [
+          "七伤摧魂针",
+          "墨剑",
+          "墨拳",
+          "天山剑法",
+          "抽髓掌",
+          "无上大力杵",
+          "灵蛇杖法",
+          "神驼雪山掌",
+          "缚星锁",
+          "虎爪绝户手",
+          "越女剑法"
+        ],
+        "spellingVariants": [
+          {
+            "baseline": "虎爪绝户手",
+            "reference": "绝户虎爪手"
+          }
+        ]
+      },
+      "internalSkills": {
+        "baselineNamedIds": 43,
+        "referenceNamedIds": 38,
+        "sharedIds": 38,
+        "addedIds": [],
+        "absentIds": [
+          "墨阳神功",
+          "墨阴神功",
+          "天山剑法诀",
+          "星宿心法",
+          "逆运九阴神功"
+        ],
+        "spellingVariants": []
+      },
+      "specialSkills": {
+        "baselineNamedIds": 27,
+        "referenceNamedIds": 25,
+        "sharedIds": 24,
+        "addedIds": [
+          "Power Up!"
+        ],
+        "absentIds": [
+          "打鸡血",
+          "腐尸毒",
+          "飞星术"
+        ],
+        "spellingVariants": []
+      },
+      "legendGroups": {
+        "baselineNamedIds": 118,
+        "referenceNamedIds": 116,
+        "sharedIds": 111,
+        "addedIds": [
+          "九阴神爪-九阴白骨爪",
+          "九阴魔爪-九阴白骨爪",
+          "大轮.无上秘境.金刚神杵-无上大力杆",
+          "绝户虎爪手.断子绝孙爪-绝户虎爪手",
+          "铁剑门绝学.银河落九天-碧落苍穹"
+        ],
+        "absentIds": [
+          "九阴白骨爪.九阴神爪-九阴白骨爪",
+          "九阴白骨爪.九阴魔爪-九阴白骨爪",
+          "大轮.无上秘境.金刚神杵-无上大力杵",
+          "星宿派绝学.幽冥神掌-三阴蜈蚣爪",
+          "星宿派绝学.幽冥神掌-抽髓掌",
+          "虎爪绝户手.断子绝孙爪-虎爪绝户手",
+          "越女剑法奥义式-越女剑法"
+        ],
+        "spellingVariants": []
+      },
+      "items": {
+        "baselineNamedIds": 347,
+        "referenceNamedIds": 332,
+        "sharedIds": 324,
+        "addedIds": [
+          "一品鹿鼎公印记",
+          "元宝",
+          "天下轻功总决",
+          "斗转星移决",
+          "无上大力杆秘籍",
+          "狂风快剑决",
+          "绝户虎爪手秘籍",
+          "莽毒蛛蛤"
+        ],
+        "absentIds": [
+          "一等鹿鼎公印记",
+          "七伤摧魂针法",
+          "七星黄蜡丹",
+          "三阴蜈蚣爪秘籍",
+          "回纥宝刀",
+          "墨玉",
+          "天下轻功总诀",
+          "天关.越女剑",
+          "小人物的逆袭",
+          "悲酥清风",
+          "斗转星移诀",
+          "无上大力杵秘籍",
+          "毒物",
+          "河岳英灵集",
+          "渡元禅师的木鱼",
+          "狂风快剑诀",
+          "神奇戒指",
+          "莽牯朱蛤",
+          "虎爪绝户手秘籍",
+          "行军司马的信",
+          "越女剑法秘籍",
+          "越女神剑",
+          "鸣凤剑"
+        ],
+        "spellingVariants": [
+          {
+            "baseline": "莽牯朱蛤",
+            "reference": "莽毒蛛蛤"
+          },
+          {
+            "baseline": "一等鹿鼎公印记",
+            "reference": "一品鹿鼎公印记"
+          },
+          {
+            "baseline": "天下轻功总诀",
+            "reference": "天下轻功总决"
+          },
+          {
+            "baseline": "斗转星移诀",
+            "reference": "斗转星移决"
+          },
+          {
+            "baseline": "狂风快剑诀",
+            "reference": "狂风快剑决"
+          },
+          {
+            "baseline": "虎爪绝户手秘籍",
+            "reference": "绝户虎爪手秘籍"
+          }
+        ]
+      },
+      "stories": {
+        "baselineNamedIds": 1887,
+        "referenceNamedIds": 1447,
+        "sharedIds": 1420,
+        "addedIds": [
+          "original_教学",
+          "original_教学0",
+          "original_教学1",
+          "original_教学2",
+          "original_教学3",
+          "original_教学4",
+          "original_长安一梦.民女10",
+          "original_长安一梦.民女8",
+          "original_长安一梦.民女9",
+          "sdxl_全真派",
+          "tlbb.dy_丐帮大变.王语嫣1负2",
+          "tlbb.dy_无量剑左子穆1",
+          "tlbb.dy_无量剑左子穆2",
+          "昆仑派入门1",
+          "昆仑派入门2",
+          "昆仑派入门3",
+          "昆仑派出茅厕",
+          "昆仑派出茅厕2",
+          "昆仑派留茅厕",
+          "昆仑派茅厕1",
+          "昆仑派茅厕2",
+          "白马啸西风_李文秀",
+          "白马啸西风_白马啸西风1",
+          "白马啸西风_白马啸西风2",
+          "白马啸西风_陈达海",
+          "白马啸西风_高昌迷宫",
+          "门派大轮寺_无上大力杆"
+        ],
+        "absentIds": [
+          "mainStory_黑衣人的邀请",
+          "mainStory_黑衣人的邀请不接受",
+          "mainStory_黑衣人的邀请不解散队伍",
+          "mainStory_黑衣人的邀请接受",
+          "mainStory_黑衣人的邀请解散队伍",
+          "mainStory_黑衣教任务灭门",
+          "mainStory_黑衣教入教",
+          "mainStory_黑衣新一天",
+          "original_东海剑池",
+          "original_东海剑池七伤拳",
+          "original_东海剑池倚天屠龙笔法",
+          "original_东海剑池升级刀",
+          "original_东海剑池升级刀无效",
+          "original_东海剑池升级刀结束",
+          "original_东海剑池升级剑",
+          "original_东海剑池升级剑无效",
+          "original_东海剑池升级剑结束",
+          "original_东海剑池升级奇门",
+          "original_东海剑池升级奇门无效",
+          "original_东海剑池升级奇门结束",
+          "original_东海剑池升级拳",
+          "original_东海剑池升级拳无效",
+          "original_东海剑池升级拳结束",
+          "original_东海剑池太极剑法",
+          "original_东海剑池夫妻刀法",
+          "original_东海剑池开始",
+          "original_东海剑池开始2",
+          "original_东海剑池开始3",
+          "original_东海剑池开始4",
+          "original_东海剑池开始5",
+          "original_东海剑池开始6",
+          "original_东海剑池打狗棒法",
+          "original_东海剑池斗转星移",
+          "original_东海剑池无效",
+          "original_东海剑池狂风快剑",
+          "original_东海剑池独孤九剑",
+          "original_东海剑池白打",
+          "original_东海剑池胡家刀法",
+          "original_东海剑池降龙十八掌",
+          "original_东海剑池鸳鸯刀法",
+          "original_主角之家.殴打练功木头人",
+          "original_华山论剑最终炼狱1",
+          "original_华山论剑最终炼狱2",
+          "original_同福客栈.修炼臂力",
+          "original_同福客栈.修炼轻功",
+          "original_周伯通全真教灭门",
+          "original_女主.一切太平",
+          "original_女主.神雕侠侣.绝情谷结束郭襄",
+          "original_女主出场负",
+          "original_女主长安",
+          "original_女主长安不加入",
+          "original_女主长安加入队伍",
+          "original_女主长安加入队伍判断",
+          "original_女主长安接任务",
+          "original_山庄风云.再见贾飞",
+          "original_山庄风云.再见贾飞2",
+          "original_山庄风云.出发",
+          "original_山庄风云.开篇",
+          "original_山庄风云.开篇不去",
+          "original_山庄风云.贾飞发疯",
+          "original_山庄风云.贾飞发疯2",
+          "original_山庄风云.贾飞女主",
+          "original_山庄风云.贾飞女主2",
+          "original_山庄风云.金盆洗手.回家",
+          "original_山庄风云.金盆洗手.悲戚",
+          "original_山庄风云.金盆洗手大会",
+          "original_山庄风云.金盆洗手大会.恶战",
+          "original_山庄风云.金盆洗手大会.撤退",
+          "original_山庄风云.金盆洗手大会.突变",
+          "original_山庄风云.金盆洗手大会.群豪",
+          "original_山庄风云bonus1",
+          "original_序章01",
+          "original_拜会全真",
+          "original_拜会古墓",
+          "original_拜会大轮",
+          "original_拜会灵鹫",
+          "original_拜会血刀",
+          "original_教训小孩负",
+          "original_新手任务无法进入",
+          "original_新手地图.接镖劫匪1",
+          "original_新手地图.接镖劫匪2",
+          "original_新手地图.接镖失败",
+          "original_新手地图.接镖完成",
+          "original_新手地图.送镖",
+          "original_新手地图.送镖不进入",
+          "original_新手地图.送镖进入",
+          "original_新手引导.买到药了",
+          "original_新手引导.买药",
+          "original_新手引导.买药刀",
+          "original_新手引导.买药剑",
+          "original_新手引导.买药去啊",
+          "original_新手引导.买药奇门",
+          "original_新手引导.买药完成",
+          "original_新手引导.买药拳",
+          "original_新手引导.买药继续",
+          "original_新手引导.任务买药",
+          "original_新手引导.任务打人",
+          "original_新手引导.任务打人小孩",
+          "original_新手引导.任务打人黑帮",
+          "original_新手引导.开始",
+          "original_新手引导.教训小孩去啊",
+          "original_新手引导.教训小孩复命",
+          "original_新手引导.教训小孩完成",
+          "original_新手引导.教训小孩开始",
+          "original_新手引导.教训小孩成功",
+          "original_新手引导.教训黑老大去啊",
+          "original_新手引导.教训黑老大复命",
+          "original_新手引导.教训黑老大完成",
+          "original_新手引导.教训黑老大开始",
+          "original_新手引导.教训黑老大胜",
+          "original_新手引导.教训黑老大负",
+          "original_新手引导结束",
+          "original_灭门全真",
+          "original_灭门全真2",
+          "original_灭门全真成功",
+          "original_灭门全真离开判断",
+          "original_灭门全真超级战",
+          "original_灭门全真郭靖离开",
+          "original_灭门古墓",
+          "original_灭门古墓2",
+          "original_灭门古墓小龙女离开",
+          "original_灭门古墓成功",
+          "original_灭门古墓杨过离开",
+          "original_灭门古墓离开判断",
+          "original_灭门古墓超级战",
+          "original_灭门古墓郭襄离开",
+          "original_灭门古墓黄蓉离开",
+          "original_灭门大轮",
+          "original_灭门大轮2",
+          "original_灭门大轮成功",
+          "original_灭门灵鹫",
+          "original_灭门灵鹫2",
+          "original_灭门灵鹫成功",
+          "original_灭门血刀2",
+          "original_灭门血刀开始",
+          "original_灭门血刀成功",
+          "original_灭门血刀血刀老祖离开",
+          "original_瑛姑",
+          "original_长安一梦.冬日",
+          "original_长安一梦.半个月",
+          "original_长安一梦.半夜鬼叫",
+          "original_长安一梦.半夜鬼叫不去",
+          "original_长安一梦.半夜鬼叫去",
+          "original_长安一梦.夏瓜",
+          "original_长安一梦.宝藏想起",
+          "original_长安一梦.宝藏想起2",
+          "original_长安一梦.宝藏想起3",
+          "original_长安一梦.宝藏想起4",
+          "original_长安一梦.宝藏日常",
+          "original_长安一梦.宝藏日常2",
+          "original_长安一梦.宝藏没想起",
+          "original_长安一梦.宝藏的秘密1",
+          "original_长安一梦.宝藏的秘密2",
+          "original_长安一梦.山洞退缩",
+          "original_长安一梦.山洞阿玉",
+          "original_长安一梦.山洞阿玉2",
+          "original_长安一梦.春花",
+          "original_长安一梦.松鼠告别",
+          "original_长安一梦.汉家松鼠",
+          "original_长安一梦.溪边阿玉",
+          "original_长安一梦.溪边阿玉胡说八道",
+          "original_长安一梦.溪边阿玉调戏",
+          "original_长安一梦.离开",
+          "original_长安一梦.秋月",
+          "original_长安一梦.草场仙丽雅阿玉",
+          "original_长安一梦.选择离开",
+          "original_长安一梦.部落长老",
+          "original_长安一梦.部落长老打水",
+          "original_长安一梦.部落长老放牧",
+          "original_长安一梦.部落长老没事",
+          "original_长安一梦.部落长老砍柴",
+          "original_长安一梦.部落长老聊天",
+          "original_长安一梦.阿玉",
+          "original_长安一梦.阿玉失踪",
+          "original_长安一梦.阿玉失踪2",
+          "original_长安一梦.阿玉失踪结束",
+          "original_长安一梦.阿玉失踪结束2",
+          "original_长安一梦.阿玉失踪追击",
+          "original_长安一梦.阿玉失踪选择",
+          "original_长安一梦.阿玉的镯子",
+          "original_长安一梦.阿玉的镯子有",
+          "original_长安一梦.阿玉的镯子没有",
+          "original_长安一梦.阿玉追踪沙漠",
+          "original_长安一梦.阿玉追踪沙漠2",
+          "original_长安一梦开始",
+          "original_长安深夜怪事",
+          "original_长安深夜怪事.三遇夜间人",
+          "original_长安深夜怪事.三遇夜间人.不杀",
+          "original_长安深夜怪事.三遇夜间人.杀",
+          "original_长安深夜怪事.三遇夜间人2",
+          "original_长安深夜怪事.再遇夜间人",
+          "original_长安深夜怪事.再遇夜间人.回复任务",
+          "original_长安深夜怪事.再遇夜间人2",
+          "original_长安深夜怪事.初遇夜间人",
+          "original_长安深夜怪事.初遇夜间人2",
+          "original_长安深夜怪事.回复任务失败",
+          "original_长安深夜怪事.回复任务成功",
+          "original_长安深夜怪事.女主的提议",
+          "original_长安深夜怪事.开篇",
+          "original_长安深夜怪事.重阳宫",
+          "original_长安深夜怪事.重阳宫2",
+          "original_长安深夜怪事.重阳宫3",
+          "original_非全真",
+          "original_非古墓",
+          "original_非大轮",
+          "original_非灵鹫",
+          "original_非血刀",
+          "sdxl_1",
+          "sdxl_2",
+          "sdxl_2判断",
+          "sdxl_3",
+          "sdxl_剑魔荒冢.杀死杨过",
+          "sdxl_剑魔荒冢.杨过2",
+          "sdxl_剑魔荒冢.杨过不理",
+          "sdxl_古墓幽居3",
+          "sdxl_神雕",
+          "sdxl_神雕2",
+          "sdxl_程英.不加入",
+          "sdxl_程英.加入",
+          "sdxl_绝情谷.战斗胜利3",
+          "sdxl_绝情谷2",
+          "sdxl_绝情谷3",
+          "tlbb.dy_丐帮大变.王语嫣结束",
+          "tlbb.dy_丐帮总舵.硬闯",
+          "tlbb.dy_再见木婉清.仇恨",
+          "tlbb.dy_再见木婉清.仇恨2",
+          "tlbb.dy_再见木婉清.好感",
+          "tlbb.dy_听香水榭阿碧王语嫣",
+          "tlbb.dy_天龙寺.六脉神剑1",
+          "tlbb.dy_天龙寺.六脉神剑2",
+          "tlbb.dy_天龙寺.六脉神剑2胜利",
+          "tlbb.dy_对话.再见木婉清2",
+          "tlbb.dy_描述.再见木婉清.2",
+          "tlbb.dy_描述.木婉清.不蒙面",
+          "tlbb.dy_描述.木婉清.蒙面",
+          "tlbb.dy_描述.王语嫣",
+          "tlbb.dy_描述.钟灵",
+          "tlbb.dy_描述.阿朱",
+          "tlbb.dy_描述.阿碧",
+          "tlbb.dy_曼陀山庄21",
+          "tlbb.dy_曼陀山庄初见王语嫣",
+          "tlbb.dy_曼陀山庄初见王语嫣2",
+          "tlbb.dy_曼陀山庄初见王语嫣3",
+          "tlbb.dy_曼陀山庄初见王语嫣4",
+          "tlbb.dy_曼陀山庄阿朱王语嫣",
+          "tlbb.dy_木婉清.touch.不成功",
+          "tlbb.dy_木婉清.touch.不成功2",
+          "tlbb.dy_木婉清.touch.前奏",
+          "tlbb.dy_木婉清.touch.成功",
+          "tlbb.dy_木婉清.攻略成功",
+          "tlbb.dy_木婉清江南段誉",
+          "tlbb.dy_木婉清身世4",
+          "tlbb.dy_童姥使者11",
+          "tlbb.dy_童姥使者12",
+          "tlbb.dy_童姥使者4",
+          "tlbb.dy_阿朱阿碧事件结束",
+          "tlbb.dy_阿朱阿碧住手",
+          "tlbb.dy_阿朱阿碧剁",
+          "tlbb.dy_阿朱阿碧剁胜利",
+          "tlbb.dy_阿朱阿碧负",
+          "tlbb.dy_阿碧线李青萝.touch.不成功",
+          "tlbb.dy_阿碧线李青萝.touch.不成功2",
+          "tlbb.dy_阿碧线李青萝.touch.成功",
+          "tlbb.dy_阿碧线王语嫣.touch.不成功",
+          "tlbb.dy_阿碧线王语嫣.touch.不成功2",
+          "tlbb.dy_阿碧线王语嫣.touch.成功",
+          "tlbb.dy_阿碧线王语嫣touch",
+          "tlbb.dy_阿碧线王语嫣touch2",
+          "tlbb.dy_阿碧线王语嫣touch3",
+          "tlbb.xz_擂鼓山不许可",
+          "tlbb.xz_擂鼓山许可",
+          "tlbb.xz_星宿派",
+          "tlbb.xz_星宿派剿灭",
+          "tlbb.xz_星宿派投降",
+          "tlbb.xz_星宿派胜",
+          "一键变态",
+          "书剑恩仇录_回族部落霍青桐负",
+          "作弊佬",
+          "倚天邪线_劝说青城完成2",
+          "倚天邪线_劝说青城完成3",
+          "倚天邪线_劝说青城完成4",
+          "全真教_真九阴胜利正义",
+          "全真教_真九阴胜利邪恶",
+          "华山论剑_天关",
+          "华山论剑_简单难度",
+          "告示牌内容",
+          "岳老三树林_战斗1",
+          "岳老三树林_战斗2",
+          "岳老三树林_战斗3",
+          "工作室.CG",
+          "工作室.home",
+          "工作室.子尹",
+          "工作室.文艺吕布",
+          "工作室.素心",
+          "工作室入口",
+          "捐款",
+          "新手村_出生",
+          "新手村_南贤",
+          "新手村_南贤_DOS版",
+          "新手村_南贤_出村",
+          "新手村_南贤_募集队友",
+          "新手村_南贤_善恶之分",
+          "新手村_南贤_打一架",
+          "新手村_南贤_目标",
+          "新手村_南贤开场",
+          "新手村_小村介绍",
+          "新手村_武师",
+          "新手村_武师1",
+          "新手村_武师2",
+          "新手村_武师3",
+          "新手村_武师4",
+          "新手村_武师5",
+          "新手村_武师6",
+          "新手村_武师7",
+          "新手村_武师不能打木头人",
+          "新手村_武师木头人",
+          "新手村_武师选择",
+          "星宿派_三阴蜈蚣爪",
+          "星宿派_三阴蜈蚣爪学习",
+          "星宿派_出师",
+          "星宿派_召回擂鼓山",
+          "星宿派_天狼子交易选择",
+          "星宿派_天狼子介绍",
+          "星宿派_天狼子兑换钱",
+          "星宿派_天狼子判断",
+          "星宿派_天狼子学习内功",
+          "星宿派_天狼子学习武功",
+          "星宿派_天狼子索要",
+          "星宿派_擂鼓山",
+          "星宿派_擂鼓山胜利",
+          "星宿派_星宿老仙废话",
+          "星宿派_星宿老仙考校",
+          "星宿派_星宿老仙考校2",
+          "星宿派_星宿老仙考校3",
+          "星宿派_星宿老仙考校负",
+          "星宿派_毒物林",
+          "星宿派_毒物林1",
+          "星宿派_毒物林2",
+          "星宿派_毒物林2胜利",
+          "星宿派_毒物林3",
+          "星宿派_毒物林3胜利",
+          "星宿派_毒物林介绍",
+          "星宿派_毒物林失败",
+          "星宿派_狮吼子",
+          "星宿派_狮吼子介绍",
+          "星宿派_狮吼子教",
+          "星宿派_狮吼子索要",
+          "星宿派_进军擂鼓山",
+          "星宿派_阿紫介绍",
+          "星宿派_阿紫介绍1",
+          "星宿派_阿紫介绍2",
+          "星宿派_阿紫偷鼎",
+          "星宿派_阿紫偷鼎不去",
+          "星宿派_阿紫偷鼎去",
+          "星宿派_阿紫失败",
+          "星宿派_阿紫胜利",
+          "杂货店_商店教程",
+          "武当派_卓一航1",
+          "武当派_卓一航2",
+          "武当派_挑战张召重",
+          "洗练_没有装备",
+          "洗练_洗练成功",
+          "洗练元宝不够",
+          "洗练装备介绍",
+          "洗练选择",
+          "珍珑棋局_ask",
+          "珍珑棋局_intro",
+          "珍珑棋局_judge",
+          "珍珑棋局_失败",
+          "珍珑棋局_胜利",
+          "珍珑棋局_黑衣",
+          "白马啸西风_再见李文秀",
+          "白马啸西风_初次见面",
+          "白马啸西风_初次见面2",
+          "白马啸西风_初见陈达海",
+          "白马啸西风_前往高昌",
+          "白马啸西风_完结1",
+          "白马啸西风_完结2",
+          "白马啸西风_李文秀出走",
+          "白马啸西风_李文秀加入",
+          "白马啸西风_沙漠恶战",
+          "白马啸西风_沙漠恶战2",
+          "白马啸西风_沙漠战华辉",
+          "白马啸西风_沙漠战华辉2",
+          "白马啸西风_沙漠赔笑",
+          "白马啸西风_进入高昌迷宫",
+          "白马啸西风_郭靖",
+          "白马啸西风_陈达海加入",
+          "白马啸西风_陈达海加入2",
+          "白马啸西风_陈达海加入3",
+          "白马啸西风_陈达海和事佬",
+          "白马啸西风_陈达海战斗",
+          "白马啸西风_韦小宝",
+          "白马啸西风_高昌秘宝",
+          "白马啸西风_高昌秘宝2",
+          "白马啸西风_高昌秘宝3",
+          "真华山论剑失败",
+          "真华山论剑胜利",
+          "破庙_佛像",
+          "破庙_佛像_打扫",
+          "破庙_佛像_拜佛",
+          "破庙_少年袁承志",
+          "破庙_少年袁承志_偷看",
+          "破庙_梅超风",
+          "破庙_梅超风_UFO",
+          "破庙_梅超风_战斗结束_失败",
+          "破庙_梅超风_战斗结束_失败2",
+          "破庙_梅超风_战斗结束_胜利",
+          "破庙_梅超风_求饶",
+          "破庙_梅超风_迎战",
+          "破庙_田青文",
+          "破庙_田青文_TOUCH_lose",
+          "破庙_田青文_TOUCH_win",
+          "破庙_田青文_打劫",
+          "破庙_田青文_打劫_lose",
+          "破庙_田青文_打劫_win",
+          "破庙_田青文_询问",
+          "破庙_田青文_调戏",
+          "破庙_田青文_调戏胜利",
+          "笑傲江湖_令狐冲不加入太正",
+          "笑傲江湖_令狐冲不加入太邪",
+          "笑傲江湖_令狐冲加入",
+          "笑傲江湖_天下第一令狐冲选择",
+          "笑傲江湖_杀死令狐冲",
+          "笑傲江湖_杀死令狐冲奖励",
+          "获得元宝",
+          "血刀门_血刀老祖的试炼不开打",
+          "血刀门_血刀老祖的试炼开打",
+          "连城诀_唐诗山洞.狄云不加入1",
+          "连城诀_唐诗山洞.狄云正式加入",
+          "连城诀_唐诗山洞.直接杀死狄云",
+          "连城诀_唐诗山洞.直接杀死狄云奖励",
+          "门派_无门派",
+          "门派大轮寺_无上大力杵",
+          "门派星宿_入门",
+          "门派星宿_入门口号对",
+          "门派星宿_入门口号错",
+          "鸳鸯刀_太岳四侠1",
+          "鸳鸯刀_太岳四侠2",
+          "鸳鸯刀_风陵渡口下次再来",
+          "黑衣_不接受任务",
+          "黑衣_任务暗杀",
+          "黑衣_使者较量",
+          "黑衣_加蓝",
+          "黑衣_加血",
+          "黑衣_华山胜利",
+          "黑衣_华山论剑",
+          "黑衣_南贤",
+          "黑衣_取药",
+          "黑衣_对战魔君",
+          "黑衣_对战魔君失败",
+          "黑衣_对战魔君胜利",
+          "黑衣_对战黑衣使者",
+          "黑衣_对战黑衣使者奖励",
+          "黑衣_提升",
+          "黑衣_暗杀独孤求败",
+          "黑衣_暗杀独孤求败奖励",
+          "黑衣_暗杀王重阳",
+          "黑衣_暗杀王重阳奖励",
+          "黑衣_暗杀黄裳",
+          "黑衣_暗杀黄裳奖励",
+          "黑衣_灭门少林",
+          "黑衣_灭门少林奖励",
+          "黑衣_灭门日月",
+          "黑衣_灭门日月奖励",
+          "黑衣_灭门武当",
+          "黑衣_灭门武当奖励"
+        ],
+        "spellingVariants": []
+      }
+    },
+    "late": {
+      "characters": {
+        "baselineNamedIds": 513,
+        "referenceNamedIds": 513,
+        "sharedIds": 513,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "externalSkills": {
+        "baselineNamedIds": 158,
+        "referenceNamedIds": 158,
+        "sharedIds": 157,
+        "addedIds": [
+          "绝户虎爪手"
+        ],
+        "absentIds": [
+          "虎爪绝户手"
+        ],
+        "spellingVariants": [
+          {
+            "baseline": "虎爪绝户手",
+            "reference": "绝户虎爪手"
+          }
+        ]
+      },
+      "internalSkills": {
+        "baselineNamedIds": 43,
+        "referenceNamedIds": 43,
+        "sharedIds": 42,
+        "addedIds": [
+          "天山剑法决"
+        ],
+        "absentIds": [
+          "天山剑法诀"
+        ],
+        "spellingVariants": [
+          {
+            "baseline": "天山剑法诀",
+            "reference": "天山剑法决"
+          }
+        ]
+      },
+      "specialSkills": {
+        "baselineNamedIds": 27,
+        "referenceNamedIds": 27,
+        "sharedIds": 27,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "legendGroups": {
+        "baselineNamedIds": 118,
+        "referenceNamedIds": 118,
+        "sharedIds": 117,
+        "addedIds": [
+          "绝户虎爪手.断子绝孙爪-绝户虎爪手"
+        ],
+        "absentIds": [
+          "虎爪绝户手.断子绝孙爪-虎爪绝户手"
+        ],
+        "spellingVariants": []
+      },
+      "items": {
+        "baselineNamedIds": 347,
+        "referenceNamedIds": 347,
+        "sharedIds": 340,
+        "addedIds": [
+          "一品鹿鼎公印记",
+          "七星黄腊丹",
+          "天下轻功总决",
+          "斗转星移决",
+          "狂风快剑决",
+          "绝户虎爪手秘籍",
+          "莽毒蛛蛤"
+        ],
+        "absentIds": [
+          "一等鹿鼎公印记",
+          "七星黄蜡丹",
+          "天下轻功总诀",
+          "斗转星移诀",
+          "狂风快剑诀",
+          "莽牯朱蛤",
+          "虎爪绝户手秘籍"
+        ],
+        "spellingVariants": [
+          {
+            "baseline": "七星黄蜡丹",
+            "reference": "七星黄腊丹"
+          },
+          {
+            "baseline": "莽牯朱蛤",
+            "reference": "莽毒蛛蛤"
+          },
+          {
+            "baseline": "一等鹿鼎公印记",
+            "reference": "一品鹿鼎公印记"
+          },
+          {
+            "baseline": "天下轻功总诀",
+            "reference": "天下轻功总决"
+          },
+          {
+            "baseline": "斗转星移诀",
+            "reference": "斗转星移决"
+          },
+          {
+            "baseline": "狂风快剑诀",
+            "reference": "狂风快剑决"
+          },
+          {
+            "baseline": "虎爪绝户手秘籍",
+            "reference": "绝户虎爪手秘籍"
+          }
+        ]
+      },
+      "maps": {
+        "baselineNamedIds": 162,
+        "referenceNamedIds": 162,
+        "sharedIds": 162,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "battles": {
+        "baselineNamedIds": 393,
+        "referenceNamedIds": 391,
+        "sharedIds": 391,
+        "addedIds": [],
+        "absentIds": [
+          "南贤居_练功木头人_战斗",
+          "南贤居_经验木头人_战斗"
+        ],
+        "spellingVariants": []
+      },
+      "resources": {
+        "baselineNamedIds": 1281,
+        "referenceNamedIds": 1281,
+        "sharedIds": 1278,
+        "addedIds": [
+          "天赋.易经伐髓",
+          "天赋.鹿鼎.一品鹿鼎公",
+          "物品.莽毒蛛蛤"
+        ],
+        "absentIds": [
+          "天赋.易筋伐髓",
+          "天赋.鹿鼎.一等鹿鼎公",
+          "物品.莽牯朱蛤"
+        ],
+        "spellingVariants": [
+          {
+            "baseline": "天赋.易筋伐髓",
+            "reference": "天赋.易经伐髓"
+          },
+          {
+            "baseline": "天赋.鹿鼎.一等鹿鼎公",
+            "reference": "天赋.鹿鼎.一品鹿鼎公"
+          },
+          {
+            "baseline": "物品.莽牯朱蛤",
+            "reference": "物品.莽毒蛛蛤"
+          }
+        ]
+      },
+      "sects": {
+        "baselineNamedIds": 9,
+        "referenceNamedIds": 9,
+        "sharedIds": 9,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "shops": {
+        "baselineNamedIds": 10,
+        "referenceNamedIds": 10,
+        "sharedIds": 10,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "towers": {
+        "baselineNamedIds": 8,
+        "referenceNamedIds": 8,
+        "sharedIds": 8,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "growTemplates": {
+        "baselineNamedIds": 17,
+        "referenceNamedIds": 17,
+        "sharedIds": 17,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "newbie": {
+        "baselineNamedIds": 6,
+        "referenceNamedIds": 6,
+        "sharedIds": 6,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "worldTriggers": {
+        "baselineNamedIds": 0,
+        "referenceNamedIds": 0,
+        "sharedIds": 0,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "touch": {
+        "baselineNamedIds": 5,
+        "referenceNamedIds": 5,
+        "sharedIds": 5,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "randomAffixes": {
+        "baselineNamedIds": 0,
+        "referenceNamedIds": 0,
+        "sharedIds": 0,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "animations": {
+        "baselineNamedIds": 186,
+        "referenceNamedIds": 186,
+        "sharedIds": 186,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "tips": {
+        "baselineNamedIds": 89,
+        "referenceNamedIds": 89,
+        "sharedIds": 89,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "stories": {
+        "baselineNamedIds": 1887,
+        "referenceNamedIds": 1885,
+        "sharedIds": 1885,
+        "addedIds": [],
+        "absentIds": [
+          "original_主角之家.殴打练功木头人",
+          "original_女主.神雕侠侣.绝情谷结束郭襄"
+        ],
+        "spellingVariants": []
+      }
+    },
+    "upload": {
+      "characters": {
+        "baselineNamedIds": 513,
+        "referenceNamedIds": 513,
+        "sharedIds": 513,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "externalSkills": {
+        "baselineNamedIds": 158,
+        "referenceNamedIds": 158,
+        "sharedIds": 157,
+        "addedIds": [
+          "绝户虎爪手"
+        ],
+        "absentIds": [
+          "虎爪绝户手"
+        ],
+        "spellingVariants": [
+          {
+            "baseline": "虎爪绝户手",
+            "reference": "绝户虎爪手"
+          }
+        ]
+      },
+      "internalSkills": {
+        "baselineNamedIds": 43,
+        "referenceNamedIds": 43,
+        "sharedIds": 42,
+        "addedIds": [
+          "天山剑法决"
+        ],
+        "absentIds": [
+          "天山剑法诀"
+        ],
+        "spellingVariants": [
+          {
+            "baseline": "天山剑法诀",
+            "reference": "天山剑法决"
+          }
+        ]
+      },
+      "specialSkills": {
+        "baselineNamedIds": 27,
+        "referenceNamedIds": 27,
+        "sharedIds": 27,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "legendGroups": {
+        "baselineNamedIds": 118,
+        "referenceNamedIds": 118,
+        "sharedIds": 117,
+        "addedIds": [
+          "绝户虎爪手.断子绝孙爪-绝户虎爪手"
+        ],
+        "absentIds": [
+          "虎爪绝户手.断子绝孙爪-虎爪绝户手"
+        ],
+        "spellingVariants": []
+      },
+      "items": {
+        "baselineNamedIds": 347,
+        "referenceNamedIds": 347,
+        "sharedIds": 340,
+        "addedIds": [
+          "一品鹿鼎公印记",
+          "七星黄腊丹",
+          "天下轻功总决",
+          "斗转星移决",
+          "狂风快剑决",
+          "绝户虎爪手秘籍",
+          "莽毒蛛蛤"
+        ],
+        "absentIds": [
+          "一等鹿鼎公印记",
+          "七星黄蜡丹",
+          "天下轻功总诀",
+          "斗转星移诀",
+          "狂风快剑诀",
+          "莽牯朱蛤",
+          "虎爪绝户手秘籍"
+        ],
+        "spellingVariants": [
+          {
+            "baseline": "七星黄蜡丹",
+            "reference": "七星黄腊丹"
+          },
+          {
+            "baseline": "莽牯朱蛤",
+            "reference": "莽毒蛛蛤"
+          },
+          {
+            "baseline": "一等鹿鼎公印记",
+            "reference": "一品鹿鼎公印记"
+          },
+          {
+            "baseline": "天下轻功总诀",
+            "reference": "天下轻功总决"
+          },
+          {
+            "baseline": "斗转星移诀",
+            "reference": "斗转星移决"
+          },
+          {
+            "baseline": "狂风快剑诀",
+            "reference": "狂风快剑决"
+          },
+          {
+            "baseline": "虎爪绝户手秘籍",
+            "reference": "绝户虎爪手秘籍"
+          }
+        ]
+      },
+      "maps": {
+        "baselineNamedIds": 162,
+        "referenceNamedIds": 162,
+        "sharedIds": 162,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "battles": {
+        "baselineNamedIds": 393,
+        "referenceNamedIds": 391,
+        "sharedIds": 391,
+        "addedIds": [],
+        "absentIds": [
+          "南贤居_练功木头人_战斗",
+          "南贤居_经验木头人_战斗"
+        ],
+        "spellingVariants": []
+      },
+      "resources": {
+        "baselineNamedIds": 1281,
+        "referenceNamedIds": 1281,
+        "sharedIds": 1278,
+        "addedIds": [
+          "天赋.易经伐髓",
+          "天赋.鹿鼎.一品鹿鼎公",
+          "物品.莽毒蛛蛤"
+        ],
+        "absentIds": [
+          "天赋.易筋伐髓",
+          "天赋.鹿鼎.一等鹿鼎公",
+          "物品.莽牯朱蛤"
+        ],
+        "spellingVariants": [
+          {
+            "baseline": "天赋.易筋伐髓",
+            "reference": "天赋.易经伐髓"
+          },
+          {
+            "baseline": "天赋.鹿鼎.一等鹿鼎公",
+            "reference": "天赋.鹿鼎.一品鹿鼎公"
+          },
+          {
+            "baseline": "物品.莽牯朱蛤",
+            "reference": "物品.莽毒蛛蛤"
+          }
+        ]
+      },
+      "sects": {
+        "baselineNamedIds": 9,
+        "referenceNamedIds": 9,
+        "sharedIds": 9,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "shops": {
+        "baselineNamedIds": 10,
+        "referenceNamedIds": 10,
+        "sharedIds": 10,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "towers": {
+        "baselineNamedIds": 8,
+        "referenceNamedIds": 8,
+        "sharedIds": 8,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "growTemplates": {
+        "baselineNamedIds": 17,
+        "referenceNamedIds": 17,
+        "sharedIds": 17,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "newbie": {
+        "baselineNamedIds": 6,
+        "referenceNamedIds": 6,
+        "sharedIds": 6,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "worldTriggers": {
+        "baselineNamedIds": 0,
+        "referenceNamedIds": 0,
+        "sharedIds": 0,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "touch": {
+        "baselineNamedIds": 5,
+        "referenceNamedIds": 5,
+        "sharedIds": 5,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "randomAffixes": {
+        "baselineNamedIds": 0,
+        "referenceNamedIds": 0,
+        "sharedIds": 0,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "animations": {
+        "baselineNamedIds": 186,
+        "referenceNamedIds": 186,
+        "sharedIds": 186,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "tips": {
+        "baselineNamedIds": 89,
+        "referenceNamedIds": 89,
+        "sharedIds": 89,
+        "addedIds": [],
+        "absentIds": [],
+        "spellingVariants": []
+      },
+      "stories": {
+        "baselineNamedIds": 1887,
+        "referenceNamedIds": 1924,
+        "sharedIds": 1885,
+        "addedIds": [
+          "偷看太后",
+          "鹿鼎剧情1",
+          "鹿鼎剧情1.1.2",
+          "鹿鼎剧情1.1.3",
+          "鹿鼎剧情1.2",
+          "鹿鼎剧情1.3",
+          "鹿鼎剧情13",
+          "鹿鼎剧情13.1a",
+          "鹿鼎剧情13.1b",
+          "鹿鼎剧情14",
+          "鹿鼎剧情14.1a",
+          "鹿鼎剧情14.1a_win",
+          "鹿鼎剧情14.1b",
+          "鹿鼎剧情14.1b_win",
+          "鹿鼎剧情14.2",
+          "鹿鼎剧情14.2.1a",
+          "鹿鼎剧情14.2.2a",
+          "鹿鼎剧情4",
+          "鹿鼎剧情4.2",
+          "鹿鼎剧情4.4",
+          "鹿鼎剧情4.5",
+          "鹿鼎剧情4.6",
+          "鹿鼎剧情4.7",
+          "鹿鼎剧情4.8_拒绝",
+          "鹿鼎剧情4.8b",
+          "鹿鼎剧情4.8c",
+          "鹿鼎剧情5",
+          "鹿鼎剧情6",
+          "鹿鼎剧情7",
+          "鹿鼎剧情9",
+          "鹿鼎记1.1.1战斗",
+          "鹿鼎记_助陈近南_胜",
+          "鹿鼎记_救人",
+          "鹿鼎记_救人_胜",
+          "鹿鼎记_救人_胜a",
+          "鹿鼎记_救援茅十八_胜",
+          "鹿鼎记_神龙教不当教主",
+          "鹿鼎记_神龙教当教主",
+          "鹿鼎记战斗7_胜"
+        ],
+        "absentIds": [
+          "original_主角之家.殴打练功木头人",
+          "original_女主.神雕侠侣.绝情谷结束郭襄"
+        ],
+        "spellingVariants": []
+      }
+    }
+  },
+  "remakeRoles": {
+    "rows": 580,
+    "uniqueIds": 579,
+    "duplicateIds": [
+      "路人甲"
+    ],
+    "addedIds": [
+      "三三",
+      "乞丐",
+      "乱葬岗恶虎",
+      "全真教弟子",
+      "全真教掌门",
+      "十八铜人甲",
+      "卖花的小姑娘",
+      "南少林弟子",
+      "南少林方丈",
+      "大理包打听",
+      "大理厨子",
+      "大理宁静村老伯",
+      "大理小孩",
+      "大理店小二",
+      "大理店小二弱",
+      "大理有间客栈老板",
+      "大理木头人",
+      "大理树林熊",
+      "大理男主母亲",
+      "大理算账先生",
+      "大理老鸨",
+      "姬书术",
+      "家长乙",
+      "家长甲",
+      "少林寺小和尚",
+      "少林方丈",
+      "峨眉派弟子",
+      "待定",
+      "恒山派弟子",
+      "恒山派掌门",
+      "扎西",
+      "文试官",
+      "星宿派弟子",
+      "有容",
+      "林宇",
+      "楚瑜",
+      "武当弟子",
+      "武林联盟守卫",
+      "武林联盟登记",
+      "武试官",
+      "段小怜",
+      "段鹏",
+      "江莱",
+      "牛车老伯",
+      "琴女",
+      "祭祀乙",
+      "祭祀甲",
+      "绥风",
+      "绿珠儿",
+      "老兵",
+      "莫掌门",
+      "菜鸡",
+      "说书人",
+      "路人丁",
+      "路人丙",
+      "路人乙",
+      "道士",
+      "长安官兵",
+      "陆一鸣",
+      "陆小草",
+      "陆见平",
+      "陈小媛",
+      "青城子",
+      "青城派弟子",
+      "顾影莲",
+      "黎余",
+      "齐自华"
+    ],
+    "absentIds": [
+      "支付宝二维码"
+    ]
+  },
+  "lateLua": {
+    "source": "Assets/Resources/textassets/lua/jygame/AttackLogic.lua.lua",
+    "sha256": "8189d462e8cfd23a048044149fc1b12931a75e61056e86169a3808a3200a88b1",
+    "examples": [
+      {
+        "id": "大力士",
+        "line": 31,
+        "declaredTalent": false,
+        "status": "MOD 模板脚本示例，暂不计入原版天赋"
+      },
+      {
+        "id": "神.化功大法",
+        "line": 42,
+        "declaredTalent": false,
+        "status": "MOD 模板脚本示例，暂不计入原版天赋"
+      },
+      {
+        "id": "诅咒",
+        "line": 51,
+        "declaredTalent": false,
+        "status": "MOD 模板脚本示例，暂不计入原版天赋"
+      },
+      {
+        "id": "不稳定的野球拳",
+        "line": 61,
+        "declaredTalent": false,
+        "status": "MOD 模板脚本示例，暂不计入原版天赋"
+      }
+    ]
+  },
+  "lateBonusCompanions": {
+    "source": "Assets/Resources/textassets/lua/jygame/rollrole.lua.lua",
+    "caller": "JyGame/RollRoleUI.cs:664-708",
+    "pools": [
+      {
+        "index": 0,
+        "round": 1,
+        "roundLabel": "第1周目",
+        "characterIds": []
+      },
+      {
+        "index": 1,
+        "round": 2,
+        "roundLabel": "第2周目",
+        "characterIds": [
+          "鲁连荣",
+          "冲虚道长",
+          "方证大师",
+          "灭绝师太",
+          "张翠山",
+          "宋远桥",
+          "韦一笑",
+          "仪清",
+          "何太冲",
+          "哑仆",
+          "温方达",
+          "温方义",
+          "温方山",
+          "温方施",
+          "温方悟",
+          "安小慧",
+          "阿九"
+        ]
+      },
+      {
+        "index": 2,
+        "round": 3,
+        "roundLabel": "第3周目",
+        "characterIds": [
+          "紫衫龙王",
+          "白眉鹰王",
+          "商剑鸣",
+          "杨逍",
+          "范遥",
+          "霍都",
+          "孙不二",
+          "龙岛主",
+          "木岛主",
+          "善勇"
+        ]
+      },
+      {
+        "index": 3,
+        "round": 4,
+        "roundLabel": "第4周目",
+        "characterIds": [
+          "白自在",
+          "向问天",
+          "丁春秋",
+          "成昆",
+          "段延庆",
+          "丘处机",
+          "欧阳锋"
+        ]
+      },
+      {
+        "index": 4,
+        "round": 5,
+        "roundLabel": "第五周目起",
+        "characterIds": [
+          "任我行",
+          "王重阳",
+          "林朝英",
+          "归辛树",
+          "玉真子",
+          "慕容博",
+          "卓一航",
+          "谢逊",
+          "虚竹"
+        ]
+      }
+    ],
+    "uniqueIds": 43,
+    "missingCharacterIds": [
+      "白眉鹰王"
+    ],
+    "status": "后期 Lua 多周目开局随机奖励池，资料已收录，当前运行未接入"
+  },
+  "legacyCodeComparison": [
+    {
+      "file": "GameEngine.cs",
+      "baselineSha256": "c16f84877294aa29f572b893897bc96db2a0557c70dbafcd15b6f0284045703a",
+      "lateSha256": "1ab383a760a7808ed4ffab0a3c896e972399b9ed5eb4b911e54bb7a577c43e17",
+      "identical": false
+    },
+    {
+      "file": "Battle.cs",
+      "baselineSha256": "9d7657c3e78d269d2af075bf3966c97494c98d591ee0c3f6f0c7ea55b3e6ea67",
+      "lateSha256": "9d7657c3e78d269d2af075bf3966c97494c98d591ee0c3f6f0c7ea55b3e6ea67",
+      "identical": true
+    },
+    {
+      "file": "BattleAI.cs",
+      "baselineSha256": "8653683488b29ed055320372afaca737e211fa874a61a8339032285e95834cee",
+      "lateSha256": "8653683488b29ed055320372afaca737e211fa874a61a8339032285e95834cee",
+      "identical": true
+    },
+    {
+      "file": "AttackFormula.cs",
+      "baselineSha256": "ddfd0f15a7961e66dcc42dd8ae0940412f5abb552cd31e4d789e060d18c8520b",
+      "lateSha256": "ddfd0f15a7961e66dcc42dd8ae0940412f5abb552cd31e4d789e060d18c8520b",
+      "identical": true
+    },
+    {
+      "file": "AoyiLogic.cs",
+      "baselineSha256": "04ada0222ae037e3205fc263a3c73bb319f1f253bf1cab05e4020c1977927bb6",
+      "lateSha256": "04ada0222ae037e3205fc263a3c73bb319f1f253bf1cab05e4020c1977927bb6",
+      "identical": true
+    },
+    {
+      "file": "Skill.cs",
+      "baselineSha256": "257257b665f29b02b7eec7909c70403a4e606e7d9f9a6a73387af6180e0476be",
+      "lateSha256": "257257b665f29b02b7eec7909c70403a4e606e7d9f9a6a73387af6180e0476be",
+      "identical": true
+    },
+    {
+      "file": "Role.cs",
+      "baselineSha256": "97c70b3be15d05dfdf7874e45a1bc7caf7f69730d20693772a01ca395f66fab5",
+      "lateSha256": "97c70b3be15d05dfdf7874e45a1bc7caf7f69730d20693772a01ca395f66fab5",
+      "identical": true
+    },
+    {
+      "file": "Item.cs",
+      "baselineSha256": "308acdfd7323f36e776b9cfa89b5b27fa12e94acc2fcbbe54d77b88cc1220543",
+      "lateSha256": "308acdfd7323f36e776b9cfa89b5b27fa12e94acc2fcbbe54d77b88cc1220543",
+      "identical": true
+    },
+    {
+      "file": "Buff.cs",
+      "baselineSha256": "9960013e8806bcd5694455c8856f8ac7c676a8f1b745dece1747010fe8f0e943",
+      "lateSha256": "9960013e8806bcd5694455c8856f8ac7c676a8f1b745dece1747010fe8f0e943",
+      "identical": true
+    },
+    {
+      "file": "RollRoleUI.cs",
+      "baselineSha256": "2e829d682fe9d01e0c4f9bfa537cf0303f1832d2fddd98947a091257b1152b35",
+      "lateSha256": "2e829d682fe9d01e0c4f9bfa537cf0303f1832d2fddd98947a091257b1152b35",
+      "identical": true
+    },
+    {
+      "file": "AttackLogic.cs",
+      "baselineSha256": "70d446499bd3fb2d532cb0e07a6e1acd979ce6d4714d22a2bcdd5e3883860029",
+      "lateSha256": "db57fcf7db3f39e5f03acbf9c7a63508524bd798db121253ee2b87e679da708b",
+      "identical": false
+    }
+  ],
+  "notes": [
+    "XML 子节点顺序和字段结构不同，不等于新增玩法或数值改动。",
+    "同名资料的版本差异保留原记录；异名对照不改变运行中的稳定 ID。",
+    "资料归档、运行接线、规则实现、流程验证是不同进度。"
+  ]
+}

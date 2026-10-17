@@ -75,7 +75,7 @@ function detail(companion: Companion, data: CompanionCatalog, state: GameState) 
 export function mountCompanionCatalog(root: HTMLElement, data: CompanionCatalog, state: GameState) {
   root.removeAttribute('aria-live');
   let selected=data.characters[0]?.id||'';
-  root.innerHTML=`<p class="panel-intro">收录原数据中 ${data.counts.characterForms} 个可加入／随行角色形态、${data.counts.instructions} 条指令。包含不同阶段形态和测试参考，不等于同样数量的普通伙伴。已验证与待验证路线分别标注。</p>
+  root.innerHTML=`<p class="panel-intro">收录原基线剧情中 ${new Set(data.characters.map(c=>c.name)).size} 个显示名、${data.counts.characterForms} 个可加入／随行角色形态、${data.counts.instructions} 条指令。包含不同阶段形态和测试参考；“10名”仅指已验证的普通流程伙伴。后期另有43个多周目开局奖励候选，上传包还有双儿加入记录，均见原版资料馆；奖励运行及缺定义项另行标注。</p><button class="button outline" data-action="library">原版资料馆 · 后期伙伴池与完整人物资料</button>
     <div class="companion-tools"><label>寻找伙伴<input type="search" data-companion-search placeholder="角色、地点或剧情关键词" autocomplete="off"></label><label>查看范围<select data-companion-filter><option value="all">全部角色形态</option><option value="current">当前队伍与后备</option><option value="absent">当前未在队伍</option><option value="unverified">招募路线待验证</option><option value="follow">有随行阶段</option></select></label></div>
     <p class="companion-result-count" aria-live="polite"></p><div class="companion-browser"><div class="companion-cards" aria-label="伙伴图鉴角色列表"></div><div class="companion-reading"></div></div>`;
   const search=root.querySelector<HTMLInputElement>('[data-companion-search]')!,filter=root.querySelector<HTMLSelectElement>('[data-companion-filter]')!;
