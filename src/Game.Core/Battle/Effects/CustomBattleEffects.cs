@@ -147,6 +147,7 @@ public sealed class CustomBattleEffectRegistry
         registry.Register("attribute_contest_debuff", new AttributeContestDebuffBattleEffectHandler());
         registry.Register("soul_chasing", new SoulChasingBattleEffectHandler());
         registry.Register("medical_immortal", new MedicalImmortalBattleEffectHandler());
+        registry.Register("random_mp_recovery", new RandomMpRecoveryBattleEffectHandler());
         registry.Register("heal_the_wounded", new HealTheWoundedBattleEffectHandler());
         registry.Register("flying_skyward", new FlyingSkywardBattleEffectHandler());
         registry.Register("life_and_death", new LifeAndDeathBattleEffectHandler());
@@ -277,6 +278,8 @@ internal static class BattleEffectCapabilityPolicy
     {
         var contextType = typeof(TContext);
         return contextType == typeof(IBattleEffectContext) ||
+            contextType == typeof(IActionPreparationEffectContext) &&
+                timing is HookTiming.BeforeActionReadiness or HookTiming.BeforeActionStart ||
             SupportedTimings.TryGetValue(contextType, out var supportedTiming) && supportedTiming == timing;
     }
 }

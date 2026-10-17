@@ -1,6 +1,7 @@
 namespace Game.Core.Battle.SpecialSkills;
 
-public sealed record HeavenAndEarthSameLifespanBattleEffectParameters;
+public sealed record HeavenAndEarthSameLifespanBattleEffectParameters(
+    [property: NonNegative] int PermanentMaxHpCost = 0);
 
 public sealed class HeavenAndEarthSameLifespanBattleEffectHandler
     : CustomAbilityBattleEffectHandler<HeavenAndEarthSameLifespanBattleEffectParameters>
@@ -16,7 +17,7 @@ public sealed class HeavenAndEarthSameLifespanBattleEffectHandler
             context.ApplyDirectDamage(target, damage, context.Skill.Id);
         }
 
-        context.ApplyDirectDamage(context.Source, sourceHp, context.Skill.Id);
+        context.PayHpCost(sourceHp, parameters.PermanentMaxHpCost);
     }
 
     public override int? EstimateDamage(

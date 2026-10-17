@@ -142,6 +142,7 @@ public sealed record TraitAffix(TraitId TraitId) : AffixDefinition;
 [JsonDerivedType(typeof(ContextSkillKindBattleHookConditionDefinition), "context_skill_kind")]
 [JsonDerivedType(typeof(ContextSkillWeaponTypeBattleHookConditionDefinition), "context_skill_weapon_type")]
 [JsonDerivedType(typeof(ContextRecoveryKindBattleHookConditionDefinition), "context_recovery_kind")]
+[JsonDerivedType(typeof(ContextRecoveryReasonBattleHookConditionDefinition), "context_recovery_reason")]
 public abstract record BattleHookConditionDefinition;
 
 public sealed record ChanceBattleHookConditionDefinition(double Value) : BattleHookConditionDefinition;
@@ -217,6 +218,9 @@ public sealed record ContextSkillWeaponTypeBattleHookConditionDefinition(
 
 public sealed record ContextRecoveryKindBattleHookConditionDefinition(
     BattleRecoveryKind Kind) : BattleHookConditionDefinition;
+
+public sealed record ContextRecoveryReasonBattleHookConditionDefinition(
+    IReadOnlyList<BattleRecoveryReason> Reasons) : BattleHookConditionDefinition;
 
 public enum BattleHookRounding
 {

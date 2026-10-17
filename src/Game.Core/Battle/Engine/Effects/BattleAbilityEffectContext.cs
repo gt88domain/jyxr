@@ -36,4 +36,7 @@ internal sealed class BattleAbilityEffectContext(
 
     public int ApplyDirectDamage(BattleUnit target, int amount, string? detail = null) =>
         engine.ApplyDirectDamage(state, Source, target, amount, detail: detail);
+
+    public int PayHpCost(int amount, int permanentMaxHpCost = 0) =>
+        engine.PayAbilityHpCost(state, Source, Skill, amount, permanentMaxHpCost);
 }

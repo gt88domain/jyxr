@@ -4,20 +4,22 @@ namespace Game.Core.Battle.Talents;
 
 public sealed record FormlessHealingBattleEffectParameters(
     [property: NonNegative] int BaseValue,
-    [property: NonNegative] int ValuePerLevel);
+    [property: NonNegative] int ValuePerLevel,
+    bool MaximumInclusive = false);
 
 internal sealed class FormlessHealingBattleEffectHandler
-    : CustomBattleEffectHandler<FormlessHealingBattleEffectParameters, IActionStartEffectContext>
+    : CustomBattleEffectHandler<FormlessHealingBattleEffectParameters, IActionPreparationEffectContext>
 {
     public override IReadOnlySet<HookTiming> SupportedTimings { get; } =
-        new HashSet<HookTiming> { HookTiming.BeforeActionStart };
+        new HashSet<HookTiming> { HookTiming.BeforeActionReadiness, HookTiming.BeforeActionStart };
 
     public override void Execute(
-        IActionStartEffectContext context,
+        IActionPreparationEffectContext context,
         FormlessHealingBattleEffectParameters parameters)
     {
         var upperExclusive = checked(
-            parameters.BaseValue + parameters.ValuePerLevel * context.Unit.Character.Level);
+            parameters.BaseValue + parameters.ValuePerLevel * context.Unit.Character.Level +
+            (parameters.MaximumInclusive ? 1 : 0));
         var recovery = upperExclusive == 0
             ? 0
             : (int)(context.Random.NextDouble() * upperExclusive);

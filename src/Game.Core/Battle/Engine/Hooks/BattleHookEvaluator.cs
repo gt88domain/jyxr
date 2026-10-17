@@ -47,6 +47,7 @@ internal static class BattleHookEvaluator
             ContextSkillWeaponTypeBattleHookConditionDefinition skillWeaponType => context.Skill is not null &&
                 skillWeaponType.WeaponTypes.Contains(context.Skill.WeaponType),
             ContextRecoveryKindBattleHookConditionDefinition recoveryKind => context.RecoveryKind == recoveryKind.Kind,
+            ContextRecoveryReasonBattleHookConditionDefinition reason => reason.Reasons.Contains(context.RecoveryReason),
             _ => throw new NotSupportedException($"Unsupported battle hook condition '{condition.GetType().Name}'."),
         };
 

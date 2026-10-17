@@ -4627,7 +4627,7 @@ public sealed class BattleEngineTests
     }
 
     [Fact]
-    public void CastSkill_MutualDestructionSword_DealsScaledDamageThenOneThousandSelfDamage()
+    public void CastSkill_MutualDestructionSword_DealsScaledDamageThenPaysOneThousandHpCost()
     {
         var skill = CreateCustomSpecialSkill("mutual_destruction_test", "mutual_destruction_sword");
         var onDamageTaken = new TalentDefinition
@@ -4676,7 +4676,9 @@ public sealed class BattleEngineTests
                 Assert.Equal(source.Id, damage.UnitId);
                 Assert.Equal(1000, damage.Damage?.Amount);
             });
-        Assert.Contains(result.Messages, message =>
+        // The original skill subtracts HP directly. Its cost is not an
+        // incoming hit and must not activate damage reactions or resurrection.
+        Assert.DoesNotContain(result.Messages, message =>
             message is BattleTrace { Kind: BattleTraceKind.HooksTriggered, UnitId: "source", Timing: HookTiming.OnDamageTaken });
     }
 

@@ -8,6 +8,8 @@
 - `BattleSkillExecutor` 负责编排技能的有序步骤。
 - 普通技能默认包含命中与伤害步骤；Special Skill 不进入默认伤害流程。
 - Special Skill 只执行自身 Buff 和显式 Effect；混合能力通过有序 Effect 表达。
+- 特技的HP代价通过 `IBattleAbilityEffectContext.PayHpCost` 支付，与来袭伤害分开；
+  不触发受伤／濒死保护。实际死亡仍发出一次死亡通知，永久生命上限代价写入角色基础属性。
 - 技能、Hook 和周期效果最终都经 `BattleEffectExecutor` 执行。
 - 物品保持独立事务语义，只复用 Buff、恢复和资源 resolver。
 
@@ -40,6 +42,8 @@ Effect handler 通过窄接口申请能力：
 - `ISkillCostEffectContext`：修改技能消耗；
 - `IBuffApplicationEffectContext`：取消或强化 Buff 应用；
 - `IActionStartEffectContext`：跳过行动开始。
+- `IActionPreparationEffectContext`：行动准备阶段恢复HP／MP，可用于眩晕判定前或行动开始；
+  内容明确选择其中一个时点，不自动执行两次。
 
 专用 handler 只能接收声明的能力。例如真武增伤只能访问伤害计算，真武挡刀只能访问落血前
 改写，怪病只能访问行动开始。内容装配和运行入口都会拒绝错误组合。
@@ -48,6 +52,8 @@ Effect handler 通过窄接口申请能力：
 
 - `BattleDamageResolver`：普通伤害与实际扣血；
 - `BattleRecoveryResolver`：恢复量修正和实际恢复，返回请求量、修正量和实际量；
+- 恢复携带 `BattleRecoveryReason`，内容可分别约束休息、药品、吸血、伤害转恢复或普通效果，
+  避免将仅限休息的封穴扩大到所有回内，或让重伤错误削减直接回合治疗。
 - `BattleBuffResolver`：Buff 应用、抵抗、强化与移除；
 - `BattleResourceResolver`：怒气、行动条等资源；
 - `BattleGrowthResolver`：技能、内功和角色经验及升级事实。

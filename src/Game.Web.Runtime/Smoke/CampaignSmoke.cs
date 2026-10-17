@@ -54,7 +54,7 @@ async Task<JsonNode> Resolve()
             case "combatants":
                 var selection=s["combatantSelection"]!;var candidates=selection["candidates"]!.AsArray().Where(c=>!c!["forbidden"]!.GetValue<bool>()).ToArray();
                 var selected=candidates.Where(c=>c!["required"]!.GetValue<bool>()).Select(c=>c!["id"]!.GetValue<string>()).ToList();
-                foreach(var id in new[]{"主角","田伯光","令狐冲"}.Concat(candidates.Select(c=>c!["id"]!.GetValue<string>())))
+                foreach(var id in new[]{"主角","平一指","令狐冲","田伯光"}.Concat(candidates.Select(c=>c!["id"]!.GetValue<string>())))
                     if(selected.Count<selection["capacity"]!.GetValue<int>()&&!selected.Contains(id)&&candidates.Any(c=>c!["id"]!.GetValue<string>()==id))selected.Add(id);
                 s=await Cmd(new{type="selectCombatants",characterIds=selected.ToArray()});break;
             case "minigame":
@@ -162,13 +162,27 @@ async Task Manage()
 try
 {
     Parse(BrowserBridge.Initialize(File.ReadAllText(contentPath)));
-    if(args.Contains("--resume")||args.Contains("--midgame")||args.Contains("--chapter2")||args.Contains("--chapter3")||args.Contains("--touch-chapter")||args.Contains("--arena-growth")||args.Contains("--emergency")||args.Contains("--xiangyang"))
+    if(args.Contains("--resume")||args.Contains("--midgame")||args.Contains("--chapter2")||args.Contains("--chapter3")||args.Contains("--touch-chapter")||args.Contains("--arena-growth")||args.Contains("--emergency")||args.Contains("--xiangyang")||args.Contains("--companions"))
     {
         Parse(BrowserBridge.ImportSave(File.ReadAllText(directory+"/normal-save.json")));
         var previous=JsonNode.Parse(File.ReadAllText(directory+"/normal-report.json"))!;
         battles=previous["battles"]!.GetValue<int>();wins=previous["wins"]!.GetValue<int>();
         foreach(var e in previous["events"]!.AsArray())events.Add(e!.DeepClone());
-        if(args.Contains("--xiangyang"))
+        if(args.Contains("--companions"))
+        {
+            foreach(var (map,npc,character) in new[]{("五毒教","蓝凤凰","蓝凤凰"),("平一指居","平一指","平一指"),("衡阳郊外","曲非烟","曲非烟")})
+            {
+                await Navigate(map);
+                if(!await Step(npc))throw new InvalidOperationException("Missing natural recruit entry: "+map+"/"+npc);
+                await Manage();
+                var snapshot=await Resolve();
+                if(!snapshot["roster"]!.AsArray().Any(c=>c!["definitionId"]!.GetValue<string>()==character))
+                    throw new InvalidOperationException("Natural source recruitment did not complete: "+character);
+                File.WriteAllText(directory+"/recruit-"+character+"-save.json",BrowserBridge.ExportSave());
+                events.Add(new{recruited=character,map,npc});Console.WriteLine("PASS actual natural recruit chain: "+character);
+            }
+        }
+        else if(args.Contains("--xiangyang"))
         {
             foreach(var town in new[]{"洛阳","衡阳","杭州"})
             {
@@ -292,7 +306,7 @@ try
             }
             Console.WriteLine("PARTY "+string.Join(',',(await Resolve())["party"]!.AsArray().Select(c=>c!["name"]!.GetValue<string>())));
         }
-        for(var i=0;i<(args.Contains("--touch-chapter")||args.Contains("--arena-growth")||args.Contains("--emergency")||args.Contains("--xiangyang")?0:args.Contains("--chapter2")?100:args.Contains("--chapter3")?60:24);i++)
+        for(var i=0;i<(args.Contains("--touch-chapter")||args.Contains("--arena-growth")||args.Contains("--emergency")||args.Contains("--xiangyang")||args.Contains("--companions")?0:args.Contains("--chapter2")?100:args.Contains("--chapter3")?60:24);i++)
         {
             await Travel("同福客栈");await Step("邢捕头");await Manage();
             await Travel("南贤居");await Step("南贤");await Manage();

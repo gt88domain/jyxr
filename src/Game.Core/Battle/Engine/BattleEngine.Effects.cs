@@ -278,7 +278,7 @@ public sealed partial class BattleEngine
             switch (effect)
             {
                 case AddHpItemUseEffectDefinition hp:
-                    ApplyDirectHpRecovery(state, source, target, hp.Value);
+                    ApplyDirectHpRecovery(state, source, target, hp.Value, BattleRecoveryReason.Item);
                     break;
                 case AddMpItemUseEffectDefinition mp:
                     var mpRestored = _recoveryResolver.Apply(
@@ -286,11 +286,11 @@ public sealed partial class BattleEngine
                         source,
                         target,
                         BattleRecoveryKind.Mp,
-                        mp.Value).ActualAmount;
+                        mp.Value, BattleRecoveryReason.Item).ActualAmount;
                     AddMessage(state, new BattleFact(BattleFactKind.MpRecovered, target.Id, detail: mpRestored.ToString()));
                     break;
                 case AddHpPercentItemUseEffectDefinition hpPercent:
-                    ApplyDirectHpRecovery(state, source, target, target.MaxHp * hpPercent.Value / 100);
+                    ApplyDirectHpRecovery(state, source, target, target.MaxHp * hpPercent.Value / 100, BattleRecoveryReason.Item);
                     break;
                 case AddMpPercentItemUseEffectDefinition mpPercent:
                     var mpPercentRestored = _recoveryResolver.Apply(
@@ -298,7 +298,7 @@ public sealed partial class BattleEngine
                         source,
                         target,
                         BattleRecoveryKind.Mp,
-                        target.MaxMp * mpPercent.Value / 100).ActualAmount;
+                        target.MaxMp * mpPercent.Value / 100, BattleRecoveryReason.Item).ActualAmount;
                     AddMessage(state, new BattleFact(BattleFactKind.MpRecovered, target.Id, detail: mpPercentRestored.ToString()));
                     break;
                 case AddRageItemUseEffectDefinition rage:

@@ -55,6 +55,15 @@ try{
   await closeModal();assert.deepEqual(await state(),reserve);
   pass('real visible benching appears as reserve in the guide and browsing preserves that placement');
 
+  await importSave('survival-recruits-save.json');const recruited=await state();await open();
+  await page.locator('[data-companion-filter]').selectOption('current');
+  assert.equal(await page.locator('.companion-card').count(),10);
+  for(const name of ['蓝凤凰','平一指','曲非烟']){
+    await search(name);assert.match(await page.locator('.companion-card').innerText(),/参战中[\s\S]*普通流程已验证/);
+  }
+  await closeModal();assert.deepEqual(await state(),recruited);
+  pass('the new unedited continuous save shows all ten companions including naturally recruited Blue Phoenix, Ping Yizhi and Qu Feiyan');
+
   await importSave('management-save.json');await open();await search('女主');
   assert.match(await page.locator('.companion-profile').innerText(),/随行中/);
   await importSave('companions-member-save.json');await open();await search('女主');
@@ -62,10 +71,10 @@ try{
   pass('real follower and source-JOIN exports are displayed as different placements');
   await closeModal();await click('[data-action="guide"]');await click('[data-action="progress"]');await visible('.restoration-report');
   assert.equal(await page.locator('[data-feature-id]').count(),8);
-  for(const [id,percentage] of Object.entries({battle:60,external:55,internal:55,special:65,legend:35,items:80,talents:40,companions:55}))
+  for(const [id,percentage] of Object.entries({battle:65,external:55,internal:60,special:70,legend:35,items:80,talents:55,companions:60}))
     assert.match(await page.locator(`[data-feature-id="${id}"] h4`).innerText(),new RegExp(`${percentage}%`));
   assert.match(await page.locator('[data-feature-id="battle"]').innerText(),/393.*391/);
-  assert.match(await page.locator('[data-feature-id="companions"]').innerText(),/65.*80.*7/);
+  assert.match(await page.locator('[data-feature-id="companions"]').innerText(),/65.*80.*10/);
   await noOverflow('mobile eight-feature progress and gap report');
   await page.screenshot({path:output+'feature-progress-mobile.png',fullPage:true});
   pass('eight feature estimates show actual counts and specific missing behavior rather than equating data import with completion');

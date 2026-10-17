@@ -237,13 +237,13 @@ public sealed partial class BattleEngine
             unit,
             unit,
             BattleRecoveryKind.Hp,
-            recovery.Hp).ActualAmount;
+            recovery.Hp, BattleRecoveryReason.Rest).ActualAmount;
         var restoredMp = _recoveryResolver.Apply(
             state,
             unit,
             unit,
             BattleRecoveryKind.Mp,
-            recovery.Mp).ActualAmount;
+            recovery.Mp, BattleRecoveryReason.Rest).ActualAmount;
 
         var battleEvent = new BattleFact(
             BattleFactKind.Rested,

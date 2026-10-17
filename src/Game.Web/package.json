@@ -31,6 +31,7 @@
     "test:progress": "node tests/progress-smoke.mjs",
     "test:companion-source": "python3 tests/companion-source-audit.py",
     "test:companions": "node tests/companions-smoke.mjs",
+    "test:survival": "node tests/survival-smoke.mjs",
     "assets:restore": "python3 scripts/art-bundle.py restore"
   },
   "dependencies": { "phaser": "3.90.0" },

@@ -14,7 +14,8 @@ internal sealed class BattleRecoveryResolver(BattleHookTrigger triggerHooks)
         BattleUnit source,
         BattleUnit target,
         BattleRecoveryKind kind,
-        int amount)
+        int amount,
+        BattleRecoveryReason reason = BattleRecoveryReason.Effect)
     {
         ArgumentNullException.ThrowIfNull(state);
         ArgumentNullException.ThrowIfNull(source);
@@ -30,6 +31,7 @@ internal sealed class BattleRecoveryResolver(BattleHookTrigger triggerHooks)
                 hookContext.Source = source;
                 hookContext.Target = target;
                 hookContext.RecoveryKind = kind;
+                hookContext.RecoveryReason = reason;
                 hookContext.RecoveryAmount = amount;
             });
         var resolvedAmount = Math.Max(0, context.RecoveryAmount ?? amount);

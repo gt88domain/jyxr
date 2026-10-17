@@ -32,7 +32,8 @@ def build_progress(world, rules, package, companions):
         "basis": estimate["basis"], "categories": categories,
         "stories": {"current": world["structurallyMigrated"]["originalStories"], "total": world["baseline"]["stories"]},
         "events": {"current": world["structurallyMigrated"]["mapEvents"], "total": world["baseline"]["mapEvents"]},
-        "talents": {"configured": configured, "total": talents["total"], "metadataOnly": talents["states"].get("metadata-only", 0)},
+        "talents": {"configured": configured, "total": talents["total"], "metadataOnly": talents["states"].get("metadata-only", 0),
+                    "conditional": talents["states"].get("referenced-behavior", 0)},
         "features": features,
         "fullGameVerified": False,
     }

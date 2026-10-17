@@ -35,6 +35,7 @@ public interface IBattleAbilityEffectContext
     bool ApplyBuff(BattleUnit target, string buffId, int level, int duration);
     int ApplyHpRecovery(BattleUnit target, int amount);
     int ApplyDirectDamage(BattleUnit target, int amount, string? detail = null);
+    int PayHpCost(int amount, int permanentMaxHpCost = 0);
 }
 
 public interface IDamageCalculationEffectContext : IBattleEffectContext
@@ -103,6 +104,7 @@ public interface IDefeatedEffectContext : IBattleEffectContext;
 public interface IRecoveryEffectContext : IBattleEffectContext
 {
     BattleRecoveryKind RecoveryKind { get; }
+    BattleRecoveryReason RecoveryReason { get; }
     int RecoveryAmount { get; set; }
 }
 
@@ -117,15 +119,20 @@ public interface IBuffApplicationEffectContext : IBattleEffectContext
     bool Cancel { get; set; }
 }
 
-public interface IActionStartEffectContext : IBattleEffectContext
+public interface IActionPreparationEffectContext : IBattleEffectContext
+{
+    int ApplyHpRecovery(BattleUnit target, int amount, string? detail = null);
+    int ApplyMpRecovery(BattleUnit target, int amount, string? detail = null);
+}
+
+public interface IActionStartEffectContext : IActionPreparationEffectContext
 {
     bool IsActionSkipRequested { get; }
     void SkipCurrentAction(string? reason = null);
     int SetRage(int value, string? detail = null);
-    int ApplyHpRecovery(BattleUnit target, int amount, string? detail = null);
 }
 
-public interface IActionReadinessEffectContext : IBattleEffectContext
+public interface IActionReadinessEffectContext : IActionPreparationEffectContext
 {
     int RemoveNegativeBuffs();
 }

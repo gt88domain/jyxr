@@ -75,6 +75,15 @@ public enum BattleRecoveryKind
     Mp
 }
 
+public enum BattleRecoveryReason
+{
+    Effect,
+    Rest,
+    Item,
+    Lifesteal,
+    DamageConversion
+}
+
 public enum TraitId
 {
     Swift,

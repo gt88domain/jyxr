@@ -839,6 +839,10 @@ public sealed partial class JsonContentLoader
                     break;
                 case ContextRecoveryKindBattleHookConditionDefinition:
                     break;
+                case ContextRecoveryReasonBattleHookConditionDefinition reason:
+                    Ensure(reason.Reasons.Count > 0 && reason.Reasons.All(Enum.IsDefined),
+                        $"{ownerName} has battle hook '{hook.Timing}' with invalid recovery reasons.");
+                    break;
                 default:
                     throw new InvalidOperationException($"{ownerName} has unsupported battle hook condition '{condition.GetType().Name}'.");
             }

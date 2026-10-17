@@ -27,6 +27,7 @@ if (scripts is not null)
 var content = new JsonContentLoader().LoadFromPackage(package);
 AdvancedRules.Run(content);
 CombinationRules.Run(content);
+SurvivalRules.Run(content);
 var config = new GameConfig { MaximizeNewPartyCharacterSkills = false };
 var state = new GameState();
 state.Adventure.SetDifficulty(GameDifficulty.Normal);

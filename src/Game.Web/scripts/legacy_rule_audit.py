@@ -15,7 +15,6 @@ def audit_rules(package, repository):
     partial = {
         "鬼魅": ["verify all claimed status immunity, not only action speed"],
         "武学奇才": ["validate equipment/skill attribute doubling and both cast/book EXP paths"],
-        "右臂有伤": ["extra rage behavior is not configured"],
         "醉酒": ["combined positive-damage extra strikes tested; negative damage and original post-buff timing remain"],
         "神速攻击": ["combined positive-damage extra strikes tested; negative damage and original post-buff timing remain"],
         "左右互搏": ["talent has combined extra strikes; buff spelling differs from source 左右互博 and remains unmodified"],
@@ -24,10 +23,22 @@ def audit_rules(package, repository):
         "阉人": ["single-talent guaranteed critical configured; ordered interaction with later critical modifiers remains"],
         "易容": ["ambush, immunity and consumption are not configured"],
         "武穆兵法": ["team buffs and combined extra strikes configured; negative damage and original post-buff timing remain"],
-        "天地同寿": ["verify permanent max-HP cost and unblockable self-cost semantics"],
-        "同归剑法": ["verify self-cost separately from preventable incoming damage"],
+        "天地同寿": ["single-cast HP snapshot, unblockable cost and permanent max-HP loss tested; multi-target source iteration remains"],
+        "北冥神功": ["integer formula and selected boundaries tested; full hit/reaction ordering remains"],
+        "吸星大法": ["integer formula and seal/recovery tested; original repeat-seal replacement and full ordering remain"],
+        "化功大法": ["integer formula and selected boundaries tested; full hit/reaction ordering remains"],
+        "鲲跃北溟": ["integer formula and selected boundaries tested; full hit/reaction ordering remains"],
+        "不老长春": ["selected probability and recovery checks; legacy single-precision rounding and cancellation ordering remain"],
+        "精明": ["defensive cap and overflow tested; offensive random multipliers remain"],
+        "精打细算": ["defensive cap and priority tested; offensive random multipliers remain"],
     }
     sections = {}
+    conditional = {
+        "万年长春": "不老长春 enhanced activation probability",
+        "我就是神": "无尽斗志 first successful revival guarantee",
+        "吴侬软语": "吴侬软语 special-skill stun gate",
+        "草头百姓": "异世人 extended HP window; full legend interaction remains",
+    }
     for collection in ["talents", "buffs", "specialSkills"]:
         entries = []
         for definition in package[collection]:
@@ -49,6 +60,9 @@ def audit_rules(package, repository):
                 state = "partial"
             if name == "黑衣" and collection == "talents":
                 state = "identity-only"
+            elif collection == "talents" and name in conditional and not configured:
+                state = "referenced-behavior"
+                remaining.append("Used as a secondary condition: " + conditional[name] + "; full combinations remain")
             entries.append({"id": name, "configurationState": state,
                             "sourceLiteralReferences": references.get(name, []),
                             "remaining": remaining,

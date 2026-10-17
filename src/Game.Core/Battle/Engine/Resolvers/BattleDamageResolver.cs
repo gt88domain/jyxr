@@ -199,7 +199,7 @@ internal sealed class BattleDamageResolver(BattleEngine engine)
             context.Source,
             context.Source,
             BattleRecoveryKind.Hp,
-            requestedAmount).ActualAmount;
+            requestedAmount, BattleRecoveryReason.Lifesteal).ActualAmount;
         if (actualAmount > 0)
         {
             BattleEngine.AddMessage(state, new BattleFact(

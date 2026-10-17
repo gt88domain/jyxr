@@ -7,7 +7,7 @@ from collections import defaultdict, deque
 import xml.etree.ElementTree as ET
 
 STORY_FILES = ("storys.xml", "storysCG.xml", "storysPY.xml")
-NORMAL_VERIFIED = {"钟灵", "田伯光", "胡斐", "郭靖", "程灵素", "阎基", "令狐冲"}
+NORMAL_VERIFIED = {"钟灵", "田伯光", "胡斐", "郭靖", "程灵素", "阎基", "令狐冲", "蓝凤凰", "平一指", "曲非烟"}
 ISOLATED_VERIFIED = {"田青文", "王语嫣"}
 
 

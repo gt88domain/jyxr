@@ -51,6 +51,6 @@ features = {f["id"]: f for f in progress["features"]}
 for key, collection in {"external": "externalSkills", "internal": "internalSkills", "special": "specialSkills", "legend": "legendSkills", "items": "items"}.items():
     assert features[key]["count"] == len(package[collection])
 assert features["battle"]["count"] == 393 and features["battle"]["structurallyUsable"] == 391
-assert features["companions"]["count"] == 65 and features["companions"]["normalVerified"] == 7
+assert features["companions"]["count"] == 65 and features["companions"]["normalVerified"] == 10
 assert progress["fullGameVerified"] is False
 print("PASS source conditions have readable labels and eight feature rows use actual counts without claiming whole-game verification")

@@ -123,6 +123,7 @@ public sealed class BattleHookContext :
     bool IDefeatPreventionEffectContext.IsDefeatPrevented => IsDefeatPrevented;
     BattleRecoveryKind IRecoveryEffectContext.RecoveryKind =>
         RecoveryKind ?? throw MissingCapability(nameof(IRecoveryEffectContext));
+    BattleRecoveryReason IRecoveryEffectContext.RecoveryReason => RecoveryReason;
     int IRecoveryEffectContext.RecoveryAmount
     {
         get => RecoveryAmount ?? throw MissingCapability(nameof(IRecoveryEffectContext));
@@ -138,6 +139,7 @@ public sealed class BattleHookContext :
     bool IBuffApplicationEffectContext.Cancel { get => Cancel; set => Cancel = value; }
 
     public BattleRecoveryKind? RecoveryKind { get; internal set; }
+    public BattleRecoveryReason RecoveryReason { get; internal set; }
 
     public int? RecoveryAmount { get; internal set; }
 
@@ -318,7 +320,7 @@ public sealed class BattleHookContext :
             detail);
     }
 
-    public int RestoreHp(BattleUnit target, int amount, string? detail = null)
+    public int RestoreHp(BattleUnit target, int amount, string? detail = null, BattleRecoveryReason reason = BattleRecoveryReason.Effect)
     {
         ArgumentNullException.ThrowIfNull(target);
         ArgumentOutOfRangeException.ThrowIfNegative(amount);
@@ -329,7 +331,7 @@ public sealed class BattleHookContext :
             source,
             target,
             BattleRecoveryKind.Hp,
-            amount).ActualAmount;
+            amount, reason).ActualAmount;
         State.AddMessage(new BattleFact(
             BattleFactKind.Healed,
             target.Id,
@@ -346,6 +348,17 @@ public sealed class BattleHookContext :
         return BattleResourceResolver.DamageMp(State, target, amount, Timing, detail);
     }
 
+    private int RestoreMp(BattleUnit target, int amount, string? detail)
+    {
+        ArgumentNullException.ThrowIfNull(target);
+        ArgumentOutOfRangeException.ThrowIfNegative(amount);
+        var restored = Engine.RecoveryResolver.Apply(
+            State, Source ?? Unit, target, BattleRecoveryKind.Mp, amount).ActualAmount;
+        State.AddMessage(new BattleFact(BattleFactKind.MpRecovered, target.Id, Timing,
+            detail: detail ?? restored.ToString()));
+        return restored;
+    }
+
     int IDamageApplicationRuntimeContext.ApplyDirectDamage(
         BattleUnit target,
         int amount,
@@ -354,12 +367,17 @@ public sealed class BattleHookContext :
     int IDamageApplicationRuntimeContext.ApplyHpRecovery(
         BattleUnit target,
         int amount,
-        string? detail) => RestoreHp(target, amount, detail);
+        string? detail) => RestoreHp(target, amount, detail, BattleRecoveryReason.DamageConversion);
 
-    int IActionStartEffectContext.ApplyHpRecovery(
+    int IActionPreparationEffectContext.ApplyHpRecovery(
         BattleUnit target,
         int amount,
         string? detail) => RestoreHp(target, amount, detail);
+
+    int IActionPreparationEffectContext.ApplyMpRecovery(
+        BattleUnit target,
+        int amount,
+        string? detail) => RestoreMp(target, amount, detail);
 
     bool IHitConfirmedEffectContext.IsCellAvailable(GridPosition position, BattleUnit movingUnit)
     {

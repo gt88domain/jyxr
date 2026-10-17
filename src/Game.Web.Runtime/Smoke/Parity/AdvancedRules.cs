@@ -56,7 +56,7 @@ internal static class AdvancedRules
                 case "一刀两断": Check(enemy.Hp == 10000, "一刀两断 strict 50% failed-roll boundary");break;
                 case "沉鱼落雁": Check(enemy.Rage == 0, "沉鱼落雁 empties target rage");break;
                 case "同归剑法": Check(enemy.Hp == 7000 && caster.Hp == 9000, "同归 source/target HP costs");break;
-                case "天地同寿": Check(enemy.Hp == 2500 && caster.Hp == 0, "天地 HP snapshot and self defeat; max-HP cost still deferred");break;
+                case "天地同寿": Check(enemy.Hp == 2500 && caster.Hp == 0 && owner.GetBaseStat(StatType.MaxHp) == 19990, "天地 HP snapshot, self defeat and permanent ten max-HP cost");break;
                 case "笑傲江湖曲": Check(caster.TryGetBuff("攻击强化")?.Level == 5 && ally.TryGetBuff("攻击强化")?.Level == 5 && !enemy.HasBuff("攻击强化"), "笑傲曲 affects all allies only");break;
                 case "火枪": Check(enemy.Hp == 9675, "火枪 source base-fortune damage");break;
                 case "清心普善咒": case "阿碧的歌声":

@@ -1,17 +1,50 @@
 using Game.Core.Affix;
+using Game.Core.Model;
 using Game.Core.Model.Skills;
 
 namespace Game.Core.Battle;
 
 public sealed partial class BattleEngine
 {
+    internal int PayAbilityHpCost(BattleState state, BattleUnit source, SkillInstance skill, int amount, int permanentMaxHpCost)
+    {
+        ArgumentOutOfRangeException.ThrowIfNegative(amount);
+        ArgumentOutOfRangeException.ThrowIfNegative(permanentMaxHpCost);
+        var wasAlive = source.IsAlive;
+        var actual = source.TakeDamage(amount);
+        var maximumLoss = Math.Min(permanentMaxHpCost, Math.Max(0, source.Character.GetBaseStat(StatType.MaxHp) - 1));
+        if (maximumLoss > 0)
+        {
+            source.Character.AddBaseStat(StatType.MaxHp, -maximumLoss);
+            source.Character.RebuildSnapshot();
+            source.InvalidateLocalBattleProjection();
+            source.ClampResourcesToLimits();
+        }
+        AddMessage(state, new BattleFact(BattleFactKind.Damaged, source.Id, detail: skill.Id,
+            damage: new BattleDamageEvent(actual, SourceUnitId: source.Id)));
+        // A skill cost is paid even with immunity or a resurrection talent.
+        // Only the resulting defeat notification uses death hooks.
+        if (wasAlive && !source.IsAlive)
+        {
+            AddMessage(state, new BattleFact(BattleFactKind.UnitDefeated, source.Id, HookTiming.OnDefeated, skill.Id));
+            TriggerHooks(state, HookTiming.OnDefeated, source, context =>
+            {
+                context.Source = source; context.Target = source; context.Skill = skill;
+                context.IncomingDamageAmount = amount; context.DamageAmount = actual;
+            });
+            state.ScopedEffects.NotifyUnitDefeated(state, source);
+        }
+        return actual;
+    }
+
     internal int ApplyDirectHpRecovery(
         BattleState state,
         BattleUnit source,
         BattleUnit target,
-        int amount)
+        int amount,
+        BattleRecoveryReason reason = BattleRecoveryReason.Effect)
     {
-        var actual = _recoveryResolver.Apply(state, source, target, BattleRecoveryKind.Hp, amount).ActualAmount;
+        var actual = _recoveryResolver.Apply(state, source, target, BattleRecoveryKind.Hp, amount, reason).ActualAmount;
         AddMessage(state, new BattleFact(BattleFactKind.Healed, target.Id, detail: actual.ToString()));
         return actual;
     }
