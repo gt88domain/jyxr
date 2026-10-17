@@ -14,6 +14,7 @@
     <Compile Include="MasteryRules.cs" />
     <Compile Include="LegendRules.cs" />
     <Compile Include="RestorationRules.cs" />
+    <Compile Include="Stage90Rules.cs" />
     <Compile Include="../../BrowserLegacyRules.cs" Link="BrowserLegacyRules.cs" />
     <ProjectReference Include="../../../Game.Core/Game.Core.csproj" />
     <ProjectReference Include="../../../Game.Content/Game.Content.csproj" />

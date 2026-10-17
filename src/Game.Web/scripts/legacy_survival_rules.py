@@ -39,7 +39,7 @@ def apply_survival_rules(package):
         "真气护体": [hook("BeforeDefeated", [custom("qi_shield_defeat_prevention", abilityId="真气护体", chance=.5, mpCostPerDamage=2)], priority=200)],
         "无尽斗志": [hook("BeforeDefeated", [custom("endless_fighting_spirit", abilityId="无尽斗志", guaranteedFirstTalentId="我就是神", chance=.1)], priority=100)],
         "不老长春": [hook("BeforeDamageApplied", [custom("eternal_spring", enhancedTalentId="万年长春",
-                          chance=.1, enhancedChance=.2, recoveryFactor=.35, floatText="不老长春回血")], priority=190)],
+                          chance=.1, enhancedChance=.2, recoveryFactor=.35, floatText="不老长春回血", singlePrecision=True)], priority=190)],
     }
     for name, power, high, transfer, before, proc in [
         ("北冥神功", 2, 1.5, True, True, 1), ("鲲跃北溟", 1, 1, True, False, .5),
@@ -54,7 +54,7 @@ def apply_survival_rules(package):
         talents[name] = [hook("AfterBuffRound", [{"type": "remove_context_buff"}],
                              [{"type": "context_buff_negative"}, proc])]
     for name, probability in [("乾坤大挪移奥义", 1), ("乾坤大挪移", .5)]:
-        conditions = [{"type": "context_unit_role", "role": "target"}]
+        conditions = [{"type": "context_unit_role", "role": "target"}, {"type": "context_skill_kind", "kinds": ["External", "Internal", "Form", "Legend"]}]
         if name == "乾坤大挪移":
             conditions.append({"type": "context_unit_effective_talent", "talentIds": ["乾坤大挪移奥义"], "absent": True})
         conditions.append(chance(probability))
@@ -62,8 +62,8 @@ def apply_survival_rules(package):
     for name, mode in [("精打细算", "careful"), ("精明", "smart")]:
         talents[name] = [hook("BeforeDamageApplied", [custom("careful_defense", mode=mode,
             carefulTalentId="精打细算", smartTalentId="精明", carefulChance=.2, carefulDamageCap=200,
-            smartChance=.25, smartDamageCap=500, carefulSpeech={"lines": ["嘿嘿，你可伤不到我。"], "chance": 1},
-            smartSpeech={"lines": ["这一招太狠了，我得躲开一点。"], "chance": 1})], priority=550)]
+            smartChance=.25, smartDamageCap=500, deferMpDamage=True, carefulSpeech={"lines": ["嘿嘿，你可伤不到我。"], "chance": 1},
+            smartSpeech={"lines": ["这一招太狠了，我得躲开一点。"], "chance": 1})], conditions=[{"type": "context_skill_kind", "kinds": ["External", "Internal", "Form", "Legend"]}], priority=550)]
     for identifier, affixes in talents.items():
         _definition(package, "talents", identifier)["affixes"] = affixes
     _definition(package, "talents", "右臂有伤")["affixes"].append(

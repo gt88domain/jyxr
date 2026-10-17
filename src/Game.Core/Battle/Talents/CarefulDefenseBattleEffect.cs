@@ -11,7 +11,8 @@ public sealed record CarefulDefenseBattleEffectParameters(
     [property: Probability] double SmartChance,
     [property: NonNegative] int SmartDamageCap,
     BattleSpeechDefinition CarefulSpeech,
-    BattleSpeechDefinition SmartSpeech);
+    BattleSpeechDefinition SmartSpeech,
+    bool DeferMpDamage = false);
 
 internal sealed class CarefulDefenseBattleEffectHandler
     : CustomBattleEffectHandler<CarefulDefenseBattleEffectParameters, IDamageApplicationRuntimeContext>
@@ -66,7 +67,8 @@ internal sealed class CarefulDefenseBattleEffectHandler
         context.CapDamage(parameters.SmartDamageCap);
         if (overflow > 0)
         {
-            context.ApplyMpDamage(context.Unit, overflow, parameters.SmartTalentId);
+            if (parameters.DeferMpDamage) context.QueueMpDamage(overflow);
+            else context.ApplyMpDamage(context.Unit, overflow, parameters.SmartTalentId);
         }
 
         TryRequestSpeech(context, parameters.SmartSpeech);

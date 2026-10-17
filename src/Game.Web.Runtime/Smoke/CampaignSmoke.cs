@@ -10,6 +10,7 @@ internal static class CampaignSmoke
     {
         Directory.CreateDirectory(directory);
 var args=new[]{stage};
+var extendedRoutes=stage=="--stage90-routes";
 var events=new List<object>();var battles=0;var wins=0;JsonNode? last=null;
 var sellForTraining=false;
 JsonNode Parse(string json){var r=JsonNode.Parse(json)!;if(!r["ok"]!.GetValue<bool>())throw new InvalidOperationException(r["error"]!.GetValue<string>());return last=r["state"]!;}
@@ -162,13 +163,41 @@ async Task Manage()
 try
 {
     Parse(BrowserBridge.Initialize(File.ReadAllText(contentPath)));
-    if(args.Contains("--resume")||args.Contains("--midgame")||args.Contains("--chapter2")||args.Contains("--chapter3")||args.Contains("--touch-chapter")||args.Contains("--arena-growth")||args.Contains("--emergency")||args.Contains("--xiangyang")||args.Contains("--companions"))
+    if(extendedRoutes||args.Contains("--resume")||args.Contains("--midgame")||args.Contains("--chapter2")||args.Contains("--chapter3")||args.Contains("--touch-chapter")||args.Contains("--arena-growth")||args.Contains("--emergency")||args.Contains("--xiangyang")||args.Contains("--companions"))
     {
         Parse(BrowserBridge.ImportSave(File.ReadAllText(directory+"/normal-save.json")));
         var previous=JsonNode.Parse(File.ReadAllText(directory+"/normal-report.json"))!;
         battles=previous["battles"]!.GetValue<int>();wins=previous["wins"]!.GetValue<int>();
         foreach(var e in previous["events"]!.AsArray())events.Add(e!.DeepClone());
-        if(args.Contains("--companions"))
+        if(extendedRoutes)
+        {
+            async Task Recruit(string character,string map,string? npc)
+            {
+                for(var attempt=0;attempt<50;attempt++)
+                {
+                    await Travel(map);
+                    if(npc is not null)await Step(npc);
+                    await Manage();await World();
+                    var snapshot=await Resolve();
+                    if(snapshot["roster"]!.AsArray().Any(c=>c!["definitionId"]!.GetValue<string>()==character))
+                    {
+                        var checkpoint=BrowserBridge.ExportSave();
+                        File.WriteAllText(directory+"/recruit-"+character+"-save.json",checkpoint);
+                        events.Add(new{recruited=character,map,npc,normalRoute=true});
+                        Console.WriteLine("PASS natural source recruit, conditions and reward: "+character);return;
+                    }
+                    // Travel and re-enter through real map actions to advance
+                    // the original clock and retry source probability gates.
+                    await Travel("昆仑山");await World();
+                }
+                throw new InvalidOperationException("Natural source route did not recruit: "+character);
+            }
+            await Recruit("阿朱","太湖",null);
+            await Recruit("郭襄","风陵渡口",null);
+            await Recruit("袁承志","风陵渡口","袁承志");
+            await Recruit("韦小宝","北京","韦小宝");
+        }
+        else if(args.Contains("--companions"))
         {
             foreach(var (map,npc,character) in new[]{("五毒教","蓝凤凰","蓝凤凰"),("平一指居","平一指","平一指"),("衡阳郊外","曲非烟","曲非烟")})
             {
@@ -306,7 +335,7 @@ try
             }
             Console.WriteLine("PARTY "+string.Join(',',(await Resolve())["party"]!.AsArray().Select(c=>c!["name"]!.GetValue<string>())));
         }
-        for(var i=0;i<(args.Contains("--touch-chapter")||args.Contains("--arena-growth")||args.Contains("--emergency")||args.Contains("--xiangyang")||args.Contains("--companions")?0:args.Contains("--chapter2")?100:args.Contains("--chapter3")?60:24);i++)
+        for(var i=0;i<(extendedRoutes||args.Contains("--touch-chapter")||args.Contains("--arena-growth")||args.Contains("--emergency")||args.Contains("--xiangyang")||args.Contains("--companions")?0:args.Contains("--chapter2")?100:args.Contains("--chapter3")?60:24);i++)
         {
             await Travel("同福客栈");await Step("邢捕头");await Manage();
             await Travel("南贤居");await Step("南贤");await Manage();

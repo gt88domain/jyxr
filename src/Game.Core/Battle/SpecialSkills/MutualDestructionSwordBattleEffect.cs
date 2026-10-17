@@ -22,4 +22,6 @@ public sealed class MutualDestructionSwordBattleEffectHandler
         BattleAbilityDamageEstimateContext context,
         MutualDestructionSwordBattleEffectParameters parameters) =>
         1000 + (int)(context.Target.MaxHp * 0.1d);
+
+    public override int EstimateHpCost(BattleAbilityDamageEstimateContext context, MutualDestructionSwordBattleEffectParameters parameters) => 1000;
 }

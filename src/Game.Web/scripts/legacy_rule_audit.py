@@ -21,14 +21,14 @@ def audit_rules(package, repository):
         "幽居": ["combined positive-damage extra strikes tested; original negative damage and special-hit timing remain"],
         "素心神剑": ["combined positive-damage extra strikes tested; original negative damage and special-hit timing remain"],
         "阉人": ["single-talent guaranteed critical configured; ordered interaction with later critical modifiers remains"],
-        "易容": ["incoming HP suppression and attack ambush/consumption configured; MP, special pipeline and original miss/target iteration remain"],
+        "易容": ["ordinary HP/MP immunity and source-backed special bypass configured; ambush consumption, original miss/target iteration and full ordering remain"],
         "武穆兵法": ["team buffs and combined extra strikes configured; negative damage and original post-buff timing remain"],
         "天地同寿": ["single-cast HP snapshot, unblockable cost and permanent max-HP loss tested; multi-target source iteration remains"],
         "北冥神功": ["integer formula and selected boundaries tested; full hit/reaction ordering remains"],
         "吸星大法": ["integer formula and seal/recovery tested; original repeat-seal replacement and full ordering remain"],
         "化功大法": ["integer formula and selected boundaries tested; full hit/reaction ordering remains"],
         "鲲跃北溟": ["integer formula and selected boundaries tested; full hit/reaction ordering remains"],
-        "不老长春": ["selected probability and recovery checks; legacy single-precision rounding and cancellation ordering remain"],
+        "不老长春": ["single-precision recovery, pending MP cancellation and special-hit conversion checked; full hit/target ordering remains"],
         "精明": ["defensive cap and overflow tested; offensive random multipliers remain"],
         "精打细算": ["defensive cap and priority tested; offensive random multipliers remain"],
     }
@@ -70,14 +70,14 @@ def audit_rules(package, repository):
             if collection == "talents" and name in package.get("browser", {}).get("sourceRuleTalents", []):
                 remaining.append("pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain")
             if collection == "buffs" and name in {"魔神降临", "溜须拍马"}:
-                remaining.append("source combat effect configured; special skills, MP and complete source reaction order remain")
+                remaining.append("source combat effect and ordinary pending MP suppression configured; complete special coverage and source reaction order remain")
             if collection == "specialSkills":
                 buff_ids = [buff["id"] for buff in definition.get("buffs", [])]
                 buff_ids += [effect["buffId"] for effect in definition.get("effects", []) if effect.get("type") == "apply_buff"]
                 for buff in buff_ids:
                     remaining += [f"{buff}: {item}" for item in partial.get(buff, [])]
                 if any(effect.get("effectId") in {"sever_in_two", "firearm_damage", "mutual_destruction_sword", "heaven_and_earth_same_lifespan", "shoulder_throw", "dragon_tail_sweep", "corpse_poison", "xiang_er_wish_damage"} for effect in definition.get("effects", [])):
-                    remaining.append("verify special damage hit/reaction pipeline against original; currently direct damage")
+                    remaining.append("common hit/reflection/formation/reaction pipeline configured with source branch-specific final modifiers; own-cost/multi-target timing, negative damage and complete original ordering remain")
             configured = bool(definition.get("affixes") or definition.get("effects") or
                               collection == "specialSkills" and definition.get("buffs"))
             from legacy_remaining_rules import ENGINE_FORMATIONS

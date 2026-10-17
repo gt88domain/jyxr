@@ -303,7 +303,13 @@ def build(output: Path) -> None:
     report["legacyCreation"] = apply_legacy_creation(package)
     from companion_catalog import build_catalog
     companions = build_catalog(package, SOURCE, original_audit)
+    from battle_presentation import apply_battle_presentation
+    apply_battle_presentation(package)
     write_json(output / "companion-catalog.json", companions)
+    from companion_diagrams import build_atlas
+    atlas = build_atlas(companions)
+    (WEB / "ORIGINAL_COMPANION_ATLAS.md").write_text(atlas, encoding="utf-8")
+    (output / "companion-atlas.md").write_text(atlas, encoding="utf-8")
     report["companionCatalog"] = companions["counts"]
     from legacy_rule_audit import audit_rules
     rule_audit = audit_rules(package, REPO)

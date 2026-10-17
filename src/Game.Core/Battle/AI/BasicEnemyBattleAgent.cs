@@ -22,24 +22,10 @@ public sealed class BasicEnemyBattleAgent : IBattleAgent
 
         var unit = state.GetUnit(unitId);
         var isLowHp = unit.MaxHp > 0 && (double)unit.Hp / unit.MaxHp < 0.3d;
-        var restRecovery = ResolveRestRecovery(unit);
+        var recovery = _candidateGenerator.EstimateRestRecovery(state,unit);
+        var restRecovery = recovery.Hp*(isLowHp?2.5d:1d)+recovery.Mp*.5d;
         var policy = _policyResolver.Resolve(unit.AiType);
         var generatedCandidates = policy.GenerateCandidates(state, unit, _candidateGenerator);
-        if (unit.AiType != BattleAiType.RestOnly &&
-            generatedCandidates.All(candidate => candidate.Plan.MainAction.Kind != BattleMainActionKind.CastSkill) &&
-            _candidateGenerator.ShouldUseSupportSpecialSkill())
-        {
-            var supportPositionCandidate = SelectBestRestPosition(generatedCandidates, isLowHp);
-            if (supportPositionCandidate is not null &&
-                _candidateGenerator.CreateRandomSupportSpecialSkillPlan(
-                    state,
-                    unit.Id,
-                    supportPositionCandidate.Plan.MoveDestination) is { } supportPlan)
-            {
-                return supportPlan;
-            }
-        }
-
         BattleTurnCandidate? bestCandidate = null;
         var bestScore = double.NegativeInfinity;
         foreach (var candidate in generatedCandidates)
@@ -56,9 +42,10 @@ public sealed class BasicEnemyBattleAgent : IBattleAgent
             new BattleTurnPlan(unitId, unit.Position, BattleMainActionPlan.Rest());
     }
 
-    private static double ScoreCandidate(BattleTurnCandidate candidate, bool isLowHp, int restRecovery)
+    private static double ScoreCandidate(BattleTurnCandidate candidate, bool isLowHp, double restRecovery)
     {
         var score = (double)(candidate.EnemyDamage - candidate.AllyDamage);
+        score += candidate.TacticalValue;
         score += candidate.EnemyKills * 5000d;
         score -= candidate.AllyKills * 8000d;
         if (candidate.EnemyHitCount > 1)
@@ -69,16 +56,10 @@ public sealed class BasicEnemyBattleAgent : IBattleAgent
         if (candidate.Plan.MainAction.Kind == BattleMainActionKind.Rest)
         {
             score += restRecovery;
-            score += isLowHp ? 1500d : -800d;
+            score -= isLowHp ? 0d : 40d;
         }
 
         return score;
-    }
-
-    private static int ResolveRestRecovery(BattleUnit unit)
-    {
-        var recovery = BattleRestCalculator.EstimateAverage(unit);
-        return recovery.Hp + recovery.Mp;
     }
 
     private static bool IsBetterCandidate(
@@ -163,46 +144,4 @@ public sealed class BasicEnemyBattleAgent : IBattleAgent
             StringComparison.Ordinal) < 0;
     }
 
-    private static BattleTurnCandidate? SelectBestRestPosition(
-        IReadOnlyList<BattleTurnCandidate> candidates,
-        bool isLowHp)
-    {
-        BattleTurnCandidate? bestCandidate = null;
-        foreach (var candidate in candidates)
-        {
-            if (candidate.Plan.MainAction.Kind != BattleMainActionKind.Rest ||
-                bestCandidate is not null && !IsBetterRestPosition(candidate, bestCandidate, isLowHp))
-            {
-                continue;
-            }
-
-            bestCandidate = candidate;
-        }
-
-        return bestCandidate;
-    }
-
-    private static bool IsBetterRestPosition(
-        BattleTurnCandidate candidate,
-        BattleTurnCandidate currentBest,
-        bool isLowHp)
-    {
-        if (candidate.DistanceToNearestEnemy != currentBest.DistanceToNearestEnemy)
-        {
-            return isLowHp
-                ? candidate.DistanceToNearestEnemy > currentBest.DistanceToNearestEnemy
-                : candidate.DistanceToNearestEnemy < currentBest.DistanceToNearestEnemy;
-        }
-
-        if (candidate.MoveCost != currentBest.MoveCost)
-        {
-            return candidate.MoveCost < currentBest.MoveCost;
-        }
-
-        var candidatePosition = candidate.Plan.MoveDestination;
-        var currentBestPosition = currentBest.Plan.MoveDestination;
-        return candidatePosition.Y != currentBestPosition.Y
-            ? candidatePosition.Y < currentBestPosition.Y
-            : candidatePosition.X < currentBestPosition.X;
-    }
 }

@@ -95,6 +95,7 @@ public sealed partial class BattleEngine
             .Where(state.Grid.Contains)
             .ToHashSet();
         var targets = BattleSkillTargeting.ResolveEffectiveTargets(state, unit, resolvedSkill, impactedPositions);
+        skillCastInfo = skillCastInfo with { TargetPosition = target, ImpactedPositions = impactedPositions.OrderBy(p => p.Y).ThenBy(p => p.X).ToArray() };
 
         var battleEvent = new BattleFact(
             BattleFactKind.SkillCast,

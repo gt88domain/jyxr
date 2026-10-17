@@ -233,7 +233,7 @@ public sealed class BattleAiTests
     [Theory]
     [InlineData(100, 100, false)]
     [InlineData(20, 100, true)]
-    public void Decide_SupportSkillUsesRestPositioningRule(int hp, int maxHp, bool shouldRetreat)
+    public void Decide_EmptySupportSkillIsNotCastAndRestUsesHealthPositioning(int hp, int maxHp, bool shouldRetreat)
     {
         var supportSkill = new SpecialSkillDefinition(
             "support",
@@ -271,7 +271,7 @@ public sealed class BattleAiTests
 
         var originalDistance = enemy.Position.ManhattanDistanceTo(player.Position);
         var plannedDistance = plan.MoveDestination.ManhattanDistanceTo(player.Position);
-        Assert.Equal("support", plan.MainAction.SkillId);
+        Assert.Equal(BattleMainActionKind.Rest, plan.MainAction.Kind);
         Assert.Equal(shouldRetreat, plannedDistance > originalDistance);
         Assert.Equal(!shouldRetreat, plannedDistance < originalDistance);
     }

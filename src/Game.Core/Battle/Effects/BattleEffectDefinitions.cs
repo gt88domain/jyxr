@@ -235,4 +235,10 @@ public sealed record CustomAbilityBattleEffectDefinition(
 
     internal int? EstimateAbilityDamage(BattleAbilityDamageEstimateContext context) =>
         Invocation.EstimateAbilityDamage?.Invoke(context);
+
+    internal int EstimateAbilityHealing(BattleAbilityDamageEstimateContext context) =>
+        Invocation.EstimateAbilityHealing?.Invoke(context) ?? 0;
+
+    internal int EstimateAbilityHpCost(BattleAbilityDamageEstimateContext context) =>
+        Invocation.EstimateAbilityHpCost?.Invoke(context) ?? 0;
 }

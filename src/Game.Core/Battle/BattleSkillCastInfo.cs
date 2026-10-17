@@ -10,7 +10,9 @@ public sealed record BattleSkillCastInfo(
     bool IsLegend,
     string? ImpactAnimationId,
     string? ScreenEffectAnimationId,
-    string? AudioId)
+    string? AudioId,
+    Game.Core.Model.GridPosition? TargetPosition = null,
+    IReadOnlyList<Game.Core.Model.GridPosition>? ImpactedPositions = null)
 {
     public static BattleSkillCastInfo Create(SkillInstance baseSkill, SkillInstance resolvedSkill)
     {

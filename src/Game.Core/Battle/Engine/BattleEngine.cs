@@ -81,6 +81,29 @@ public sealed partial class BattleEngine
 
     internal void ApplyFormationDefence(BattleState state, BattleDamageApplicationContext hit) => _formationResolver?.ApplyDefence(state, hit);
 
+    internal void ApplyReflectedDamage(BattleState state, BattleUnit source, BattleUnit target, int hpAmount, int mpAmount, SkillInstance? skill)
+    {
+        var wasAlive = target.IsAlive;
+        var result = _damageResolver.Apply(state, source, target, hpAmount, skill, runBeforeDamageApplied: false, runAfterDamageApplied: false, detail: "斗转星移");
+        if (mpAmount > 0) BattleResourceResolver.DamageMp(state, target, mpAmount, detail: "斗转星移");
+        if (!wasAlive || target.IsAlive) return;
+        // Legacy BattleField.Die receives the cancelled AttackResult (HP=0)
+        // after reflection; its qi-shield cost is therefore zero in this case.
+        TriggerHooks(state, HookTiming.BeforeDefeated, target, c =>
+        {
+            c.Source = source; c.Target = target; c.Skill = skill;
+            c.IncomingDamageAmount = 0; c.DamageAmount = result.ActualAmount;
+        });
+        if (target.IsAlive) return;
+        state.AddMessage(new BattleFact(BattleFactKind.UnitDefeated, target.Id, HookTiming.OnDefeated, "斗转星移"));
+        TriggerHooks(state, HookTiming.OnDefeated, target, c =>
+        {
+            c.Source = source; c.Target = target; c.Skill = skill;
+            c.IncomingDamageAmount = 0; c.DamageAmount = result.ActualAmount;
+        });
+        state.ScopedEffects.NotifyUnitDefeated(state, target);
+    }
+
     internal void ApplySharedDamage(BattleState state, BattleUnit source, BattleUnit target, int amount, SkillInstance? skill, string detail)
     {
         var wasAlive = target.IsAlive;

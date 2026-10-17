@@ -102,14 +102,14 @@ async function settingsPersistence() {
   await page.locator('[name="battleLighting"]').uncheck();
   await page.locator('[name="reducedMotion"]').check();
   await page.locator('[name="largeText"]').check();
-  const expected = {battleMode: 'manual', battleSpeed: '2', showGrid: false, showDamage: false, battleLighting: false, reducedMotion: true, largeText: true};
+  const expected = {battleMode: 'manual', battleSpeed: '2', autoSave: true, showGrid: false, showDamage: false, battleLighting: false, reducedMotion: true, largeText: true};
   assert.deepEqual(await readSettingsForm(), expected);
   await noOverflow('desktop settings');
   await click('[data-action="close-modal"]');
   await page.reload({waitUntil: 'networkidle'});
   await visible('[data-action="new"]');
   await click('[data-action="settings"]');
-  assert.deepEqual(await readSettingsForm(), expected, 'All seven settings must survive a real browser reload');
+  assert.deepEqual(await readSettingsForm(), expected, 'All eight settings must survive a real browser reload');
   assert.equal(await page.locator('html').evaluate(element => element.classList.contains('large-text')), true);
   await page.setViewportSize({width: 375, height: 812});
   await noOverflow('mobile large-text settings');

@@ -1,7 +1,7 @@
 import './style.css';
 import {loadRuntime, initializePack, dispatch, exportSave, importSave} from './bridge';
 import type {GameState, Result} from './bridge';
-import {readSlot, writeSlot} from './storage';
+import {readSlot, readManualSlot, writeSlot, writeAutoSlot} from './storage';
 import type {SaveSlot} from './storage';
 import {Board} from './board';
 import {packIndex, assetUrl} from './content';
@@ -18,10 +18,13 @@ import type {Settings} from './settings';
 import {GameAudio} from './audio';
 import {estimatedProgress, restorationProgressView} from './restoration-progress';
 import {loadCompanionCatalog, mountCompanionCatalog} from './companions';
+import {inspectCompanionConditions} from './bridge';
 import {loadOriginalLibrary, mountOriginalLibrary} from './library';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 let state: GameState, slot: SaveSlot | undefined, busy = false, board: Board | undefined;
+let manualSlot: SaveSlot | undefined;
+let commandWarning: string | undefined;
 let training: MiniGameController | undefined;
 let screen = '', selectedSkill = '', enemyTimer: ReturnType<typeof setTimeout> | undefined;
 let autoBattle = false, battlePaused = false;
@@ -64,7 +67,7 @@ function topbar(inGame = true) {
 }
 function title() {
   const progress = state.pack.id === 'jyx' ? `<div class="restoration-callout"><button class="restoration-entry" data-action="library">原版资料馆 · 全量资料与版本对照<small>人物、武学、道具、初始配置、剧情和关联引用 →</small></button><button class="restoration-entry" data-action="companions">伙伴图鉴 · 剧情加入条件<small>剧情基线65个形态；后期另有43个开局候选，见资料馆 →</small></button><button class="restoration-entry" data-action="progress">原版复原 · 约 ${estimatedProgress}%<small>工程估算 · 查看分项进度、已知问题与改善建议 →</small></button></div>` : '';
-  return topbar(false) + progress + titleView(state, slot, packs);
+  return topbar(false) + progress + titleView(state, slot, packs, manualSlot);
 }
 function heroCard() {
   const hero = state.hero;
@@ -140,10 +143,15 @@ function applyResult(result: Result) {
 async function command(data: Record<string, unknown>) {
   if (busy) return false;
   clearTimeout(enemyTimer); busy = true; app.setAttribute('aria-busy', 'true');
+  commandWarning=undefined;
   let success = false;
   if (screen === 'battle') updateBattle();
   refreshPanel();
-  try { applyResult(await dispatch(data)); success = true; }
+  try {
+    const result=await dispatch(data);commandWarning=result.warning;
+    applyResult(result); success = true;
+    if(settings.autoSave&&data.type!=='state'&&data.type!=='selectCharacter')await autoSave();
+  }
   catch (error) {console.error(error); toast(error instanceof Error ? error.message : '此次行动未能完成。');}
   finally {busy = false; app.setAttribute('aria-busy', 'false'); if (screen === 'battle') updateBattle(); refreshPanel();}
   scheduleBattle();
@@ -176,8 +184,8 @@ async function showCompanions() {
   modal('伙伴图鉴 · 加入条件', '<div data-companion-catalog aria-live="polite">正在整理伙伴线索…</div>', true);
   const target=document.querySelector<HTMLElement>('[data-companion-catalog]')!;
   try {
-    const data=await loadCompanionCatalog();
-    if(target.isConnected&&modalOpen())mountCompanionCatalog(target,data,state);
+    const [data,conditions]=await Promise.all([loadCompanionCatalog(),inspectCompanionConditions()]);
+    if(target.isConnected&&modalOpen())mountCompanionCatalog(target,data,{...state,companionJournal:{completedRecruitmentStories:state.companionJournal?.completedRecruitmentStories||[],conditions}});
   } catch(error) {
     if(target.isConnected&&modalOpen())target.textContent=error instanceof Error?error.message:'伙伴图鉴暂时无法读取。';
   }
@@ -212,14 +220,27 @@ async function save() {
     if (parsed.error || parsed.ok === false) throw new Error(parsed.error || '无法保存当前进度。');
     slot = {version: 1, packId: state.pack.id, savedAt: new Date().toISOString(), name: state.hero.name, level: state.hero.level, map: state.map.name, data};
     await writeSlot(slot);
+    manualSlot=slot;
     applyResult(await dispatch({type: 'state'}));
     toast('当前世界的进度已保存。');
   } catch (error) {console.error(error); toast('保存未能完成，请导出存档备份后重试。');}
   finally {busy = false; app.setAttribute('aria-busy', 'false'); refreshPanel();}
 }
-async function load() {
-  if (!slot || busy) return;
-  try { applyResult(await importSave(slot.data, true)); toast('旧事续上，江湖如故。'); }
+async function autoSave() {
+  if(state.phase!=='world'||state.creation)return;
+  try {
+    const data=await exportSave();
+    if(JSON.parse(data).error)return; // A pending interaction has no stable checkpoint yet.
+    const next: SaveSlot={version:1,packId:state.pack.id,savedAt:new Date().toISOString(),name:state.hero.name,level:state.hero.level,map:state.map.name,data};
+    await writeAutoSlot(next);slot=next;
+    app.dataset.autoSavedAt=next.savedAt;
+    const saved=await dispatch({type:'state'});
+    commandWarning ||= saved.warning;applyResult(saved);
+  } catch {commandWarning='行动已完成，但自动保存未能写入。请保存或导出备份。';toast(commandWarning);}
+}
+async function load(selected=slot) {
+  if (!selected || busy) return;
+  try { applyResult(await importSave(selected.data, true)); toast('旧事续上，江湖如故。'); }
   catch (error) {console.error(error); toast('存档未能读取，请检查存档文件。');}
 }
 function openPanel(name: PanelName) {
@@ -238,7 +259,7 @@ function refreshPanel() {
   node.scrollTop = scroll;
 }
 async function manage(data: Record<string, unknown>, message: string) {
-  if (await command(data)) toast(message);
+  if (await command(data)) toast(commandWarning||message);
 }
 function battleMode(mode: 'manual' | 'auto') {
   clearTimeout(enemyTimer);
@@ -262,10 +283,12 @@ async function selectPack(id: string) {
       await writeSlot({version:1,packId:state.pack.id,savedAt:new Date().toISOString(),name:state.hero.name,level:state.hero.level,map:state.map.name,data});
     }
     const saved = await readSlot(id).catch(() => undefined);
+    const manual = await readManualSlot(id).catch(() => undefined);
     const next = await initializePack(id);
     if (!next.ok) throw new Error(next.error || '世界未能打开。');
     document.querySelector('#game-modal')?.remove(); activePanel = null;
     slot = saved;
+    manualSlot=manual;
     applyResult(next);
     const url = new URL(location.href); url.searchParams.set('pack',id); history.replaceState(null,'',url);
   } catch (error) {console.error(error); toast(error instanceof Error ? error.message : '世界未能打开。');}
@@ -305,6 +328,7 @@ document.addEventListener('click', event => {
   else if (action === 'close-modal') document.querySelector<HTMLDialogElement>('#game-modal')?.close();
   else if (action === 'save') void save();
   else if (action === 'load') void load();
+  else if (action === 'load-manual') void load(manualSlot);
   else if (action === 'import') document.querySelector<HTMLInputElement>('#import-file')!.click();
   else if (action === 'training') void command({type: 'startTraining'});
   else if (action === 'talk') void command({type: 'talk', locationId: button.dataset.id});
@@ -354,8 +378,8 @@ document.addEventListener('change', event => {
     if (speed === 1 || speed === 2 || speed === 4) settings.battleSpeed = speed;
   } else if (name === 'musicVolume' || name === 'effectsVolume') {
     settings[name] = Math.max(0, Math.min(1, Number(control.value) / 100));
-  } else if (control instanceof HTMLInputElement && ['showGrid', 'showDamage', 'battleLighting', 'reducedMotion', 'largeText'].includes(name)) {
-    settings[name as 'showGrid' | 'showDamage' | 'battleLighting' | 'reducedMotion' | 'largeText'] = control.checked;
+  } else if (control instanceof HTMLInputElement && ['autoSave','showGrid', 'showDamage', 'battleLighting', 'reducedMotion', 'largeText'].includes(name)) {
+    settings[name as 'autoSave' | 'showGrid' | 'showDamage' | 'battleLighting' | 'reducedMotion' | 'largeText'] = control.checked;
   }
   if (!writeSettings(settings)) toast('设置已在本次游玩生效，但此浏览器暂不能保存设置。');
   audio.sync(state);
@@ -400,6 +424,7 @@ document.querySelector<HTMLInputElement>('#import-file')!.addEventListener('chan
     const data = await file.text(); applyResult(await importSave(data));
     slot = {version: 1, packId: state.pack.id, savedAt: new Date().toISOString(), name: state.hero.name, level: state.hero.level, map: state.map.name, data};
     await writeSlot(slot); toast('存档已导入。');
+    manualSlot=slot;
   } catch (error) {console.error(error); toast('无法导入此存档，请使用本版导出的存档文件。');}
   finally {input.value = '';}
 });
@@ -409,6 +434,7 @@ async function boot() {
     const requested = new URL(location.href).searchParams.get('pack') || catalog.defaultPackId;
     const id = packs.some(p => p.id === requested) ? requested : catalog.defaultPackId;
     slot = await readSlot(id).catch(() => undefined);
+    manualSlot = await readManualSlot(id).catch(() => undefined);
     const result = await loadRuntime(message => {const text = document.querySelector('#loading-message'); if (text) text.textContent = message;}, id);
     applyResult(result);
     const view=new URL(location.href).searchParams.get('view');

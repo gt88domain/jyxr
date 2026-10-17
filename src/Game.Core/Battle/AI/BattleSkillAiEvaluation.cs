@@ -5,4 +5,5 @@ public sealed record BattleSkillAiEvaluation(
     int AllyDamage,
     int EnemyKills,
     int AllyKills,
-    int EnemyHitCount);
+    int EnemyHitCount,
+    double TacticalValue = 0d);

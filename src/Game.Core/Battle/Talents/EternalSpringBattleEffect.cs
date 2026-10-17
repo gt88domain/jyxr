@@ -7,7 +7,8 @@ public sealed record EternalSpringBattleEffectParameters(
     [property: Probability] double Chance,
     [property: Probability] double EnhancedChance,
     [property: Probability] double RecoveryFactor,
-    string FloatText);
+    string FloatText,
+    bool SinglePrecision = false);
 
 internal sealed class EternalSpringBattleEffectHandler
     : CustomBattleEffectHandler<EternalSpringBattleEffectParameters, IDamageApplicationRuntimeContext>
@@ -32,7 +33,7 @@ internal sealed class EternalSpringBattleEffectHandler
             return;
         }
 
-        var recovery = (int)(context.DamageAmount * parameters.RecoveryFactor);
+        var recovery = parameters.SinglePrecision ? (int)((float)context.DamageAmount * (float)parameters.RecoveryFactor) : (int)(context.DamageAmount * parameters.RecoveryFactor);
         var actual = context.ApplyHpRecovery(context.Unit, recovery, "不老长春");
         context.RequestFloatText(
             context.Unit,

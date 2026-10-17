@@ -4,6 +4,10 @@ namespace Game.Core.Battle;
 
 internal static class BattleHookPreviewPolicy
 {
+    internal static bool IsSafe(HookAffix hook) => hook.Speech is null && hook.FloatText is null &&
+        !hook.Conditions.Any(c => c is ChanceBattleHookConditionDefinition or UnitLevelChanceBattleHookConditionDefinition or BuffLevelChanceBattleHookConditionDefinition or StatDifferenceChanceBattleHookConditionDefinition) &&
+        hook.Effects.All(e => e is ModifyDamageBattleHookEffectDefinition or ModifyDamageContextBattleHookEffectDefinition or ModifyMpCostBattleHookEffectDefinition or ModifyRecoveryBattleHookEffectDefinition or CustomBattleEffectDefinition { SupportsPreview: true });
+
     public static void EnsureSafe(BattleHookContext context, HookAffix hook)
     {
         if (!context.IsPreview)

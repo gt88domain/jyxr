@@ -27,7 +27,7 @@ internal static class BattleSkillExecutionPlanFactory
         var steps = new List<BattleSkillExecutionStep>();
         if (skill is SpecialSkillInstance specialSkill)
         {
-            if (specialSkill.Buffs.Count > 0)
+            if (specialSkill.Buffs.Count > 0 && !specialSkill.Definition.UseAttackPipeline)
             {
                 steps.Add(new ApplySkillBuffsStep());
             }

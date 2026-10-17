@@ -30,6 +30,7 @@
 - `BattleSkillExecutor` 负责编排技能的有序步骤。
 - 普通技能默认包含命中与伤害步骤；Special Skill 不进入默认伤害流程。
 - Special Skill 只执行自身 Buff 和显式 Effect；混合能力通过有序 Effect 表达。
+- 可选`SpecialSkillDefinition.UseAttackPipeline`使伤害型custom ability经共同命中、来袭伤害、阵法和反应；其技能Buff移至有效命中后应用。`ApplyFinalDamageModifiers`配置是否执行源最终修正，原顶层特技与GetAttackResult早退分支分别装配。其他包默认保持独立Effect语义。该配置不等于特技自伤、多目标和原死亡时点已完整复刻。
 - 特技的HP代价通过 `IBattleAbilityEffectContext.PayHpCost` 支付，与来袭伤害分开；
   不触发受伤／濒死保护。实际死亡仍发出一次死亡通知，永久生命上限代价写入角色基础属性。
 - 技能、Hook 和周期效果最终都经 `BattleEffectExecutor` 执行。
@@ -96,6 +97,10 @@ IncomingDamageAmount而非ActualDamageAmount；处理该次吸血后将默认Lif
 `BeforeDamageApplied`减伤／伤害上限。`modify_damage`支持此时点及可选的成对`deltaMin/deltaMax`，
 每个修正分别按配置取整。用于旧版门派武学对已算出伤害的倍率，避免把乘法移到攻击力区间后改变减防结果。
 随机区间不得同时指定固定`delta`；确定性预览采用区间中点，不消耗随机数。
+
+原内容的精明溢出MP通过来袭Context排队，不立即扣目标资源；取消伤害同时清空待结算MP，反弹先按float比例处理HP/MP。反弹的死亡通知与伤害反应分开，原取消AttackResult所致的零真气护体代价有单独检查。该选择由内容参数启用，其他内容保留默认行为；阵法共享伤害的旧延迟死亡仍待核对。
+
+AI仅预览不带表现/随机条件/副作用的数字Hook，倍率区间使用中点。恢复预览按Rest原因、重伤/封穴等修正并限制实际缺额；不把随机天赋的未模拟效果视为完整期望。位置无关的伤害评价可在单次候选生成中缓存，状态或行动变化后重建缓存。
 
 `stat_difference_chance`条件分别读取sourceStat与targetStat，并各自除以正整数divisor；
 可选择逐项截断quotient后相减，概率下限为0。inclusive采用`随机值 <= 概率`，总是取样；

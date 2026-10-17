@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 import {assetUrl} from './content';
 import type {Battle, Unit} from './bridge';
 import {BattleLighting} from './battle-lighting';
+import {BattleSkillEffects} from './battle-effects';
 
 export interface BoardOptions {selectedSkillId?: string; speed?: number; manual?: boolean; busy?: boolean; paused?: boolean; showGrid?: boolean; showDamage?: boolean; battleLighting?: boolean; reducedMotion?: boolean; intent?: 'move' | 'attack';}
 type VisualBattle = Battle & {targets?: {x: number; y: number; skillId: string}[]};
@@ -22,6 +23,7 @@ class BattleScene extends Phaser.Scene {
   private eventSequence = -1;
   private spriteKeys = new Map<string, string>();
   private lighting?: BattleLighting;
+  private effects?: BattleSkillEffects;
   constructor(private onCell: (x: number, y: number) => void, private parentElement: HTMLElement, initial: Battle) {
     super('battle'); this.battle = initial;
   }
@@ -54,6 +56,8 @@ class BattleScene extends Phaser.Scene {
     this.cameras.main.setBackgroundColor('#52614a');
     if (this.textures.exists('background')) this.background = this.add.image(0, 0, 'background').setDepth(-10);
     this.lighting = new BattleLighting(this);
+    this.effects = new BattleSkillEffects(this,this.parentElement);
+    this.events.once(Phaser.Scenes.Events.SHUTDOWN,()=>this.effects?.clear());
     this.ground = this.add.graphics().setDepth(-1);
     this.hover = this.add.graphics().setDepth(6);
     this.scale.on('resize', () => this.draw(true));
@@ -75,6 +79,7 @@ class BattleScene extends Phaser.Scene {
     this.battle = battle; this.options = options;
     if (this.sys.isActive()) {
       if (options.paused) this.tweens.pauseAll();else this.tweens.resumeAll();
+      this.time.paused=!!options.paused;
       this.draw();
     }
   }
@@ -176,19 +181,22 @@ class BattleScene extends Phaser.Scene {
         this.tweens.add({targets: hit, alpha: 0, duration: 180, onComplete: () => hit.destroy()});
       }
     }
-    pawn.container.setAlpha(unit.alive ? 1 : .25); pawn.previous = {...unit};
+    if(unit.alive||!previous.alive||this.options.reducedMotion)pawn.container.setAlpha(unit.alive?1:.25);
+    pawn.previous = {...unit};
   }
-  private animate(pawn: Pawn, action: string) {
+  private animate(pawn: Pawn, action: string, allowDefeated=false) {
     if (!(pawn.art instanceof Phaser.GameObjects.Sprite)) return;
     const key = this.spriteKeys.get(pawn.previous.id), animation = `${key}-${action}`;
     if (!this.anims.exists(animation)) return;
-    if (this.options.reducedMotion || window.matchMedia('(prefers-reduced-motion: reduce)').matches || this.options.paused || !pawn.previous.alive) return;
+    if (this.options.reducedMotion || window.matchMedia('(prefers-reduced-motion: reduce)').matches || this.options.paused || !pawn.previous.alive&&!allowDefeated) return;
+    pawn.art.anims.resume();
     pawn.art.play(animation, true);
     this.parentElement.dataset.lastAnimation = JSON.stringify({unitId: pawn.previous.id, action});
     const actions = JSON.parse(this.parentElement.dataset.animationActions || '[]') as string[];
     this.parentElement.dataset.animationActions = JSON.stringify([...actions.slice(-15), action]);
   }
   private playEvents() {
+    if(this.options.paused)return;
     const events = this.battle!.events;
     if (!events) return;
     if (this.eventSequence < 0) {this.eventSequence = Math.max(0, ...events.map(event => event.sequence)); return;}
@@ -200,8 +208,15 @@ class BattleScene extends Phaser.Scene {
       this.parentElement.dataset.lastBattleEvent = JSON.stringify(event);
       const pawn = this.pawns.get(event.unitId);
       if (!pawn) continue;
-      if (event.kind === 'SkillCast') this.animate(pawn, 'attack');
+      if (event.kind === 'SkillCast') {
+        this.animate(pawn, 'attack');
+        this.effects?.play(event,pawn.previous,this.geometry(),this.options.speed||1,!!reduced);
+      }
       else if (event.kind === 'Damaged') this.animate(pawn, 'be');
+      else if(event.kind==='UnitDefeated') {
+        this.animate(pawn,'be',true);
+        this.tweens.add({targets:pawn.container,alpha:.25,duration:reduced?0:420/(this.options.speed||1)});
+      }
       const x = left + (pawn.previous.x + .5) * cell, y = top + (pawn.previous.y + .7) * cell;
       if (!reduced && !this.options.paused && this.options.battleLighting !== false &&
           (event.kind === 'Damaged' || event.kind === 'Healed' || event.kind === 'Lifesteal') && (event.amount ?? 0) > 0)

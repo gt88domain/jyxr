@@ -48,12 +48,12 @@ source /workspace/.cloud-setup-jyxr/env.sh
 dotnet workload install wasm-tools --skip-manifest-update
 python3 src/Game.Web.Runtime/scripts/verify-wasm-workload.py
 dotnet build src/Game.Web.Runtime/Game.Web.Runtime.csproj
-dotnet publish src/Game.Web.Runtime/Game.Web.Runtime.csproj -c Debug
+dotnet publish src/Game.Web.Runtime/Game.Web.Runtime.csproj -c Release -p:WasmBuildNative=false -p:DebugType=None -p:DebugSymbols=false
 dotnet run --project src/Game.Web.Runtime/Smoke/Smoke.csproj
 dotnet run --project src/Game.Web.Runtime/Smoke/Smoke.csproj -- --packs src/Game.Web/public/data/packs/jyx/content-package.json src/Game.Web/public/data/packs/frontier/content-package.json
 ```
 
-The SDK 10 development bundle is `bin/Debug/net10.0/wwwroot/_framework/`; the complete published static bundle is `bin/Debug/net10.0/publish/wwwroot/_framework/`. Copy the chosen `_framework` directory into the web app's `public/runtime/`. Hot reload is explicitly disabled because the host is served by Vite without the .NET development server. SDK 10 inlines its boot configuration into `dotnet.js`. The development bundle is approximately 40 MB before HTTP compression; this build deliberately preserves reflection metadata required by content loading and expression command registration. Release size, trimming and AOT remain separate measurements.
+The web build defaults to Release managed libraries, with reflection metadata retained for content loading and expression registration. It disables native rebuilding, trimming and AOT; it does not claim a large download reduction. `npm run runtime` publishes into a fresh directory, copies `_framework` to `public/runtime/`, and records actual file count/bytes in `runtime/build-info.json` (approximately 48 MB including precompressed variants). `GAME_WEB_CONFIGURATION=Debug` remains available for development. Hot reload is disabled because the static host does not use the .NET development server; SDK 10 inlines boot configuration into `dotnet.js`.
 
 The verification helper checks all eight installed WASM workload pack archive groups under `$DOTNET_ROOT/packs` plus the SDK pack under `$DOTNET_ROOT/library-packs`; the current pinned SDK retains nine archives. It fails on a missing archive or any failed signature verification and never changes NuGet trust settings. Run it immediately after installation and before using workload artifacts. Certificate revocation servers may produce network warnings; retain those diagnostics in setup logs. If copying a regenerated runtime while Vite is running produces HTML responses for existing WASM files, restart the development server to refresh its public-file index.
 

@@ -49,10 +49,12 @@ public static partial class BrowserBridge
                     package.StoryScripts[entry.Key] = Game.Core.Story.StoryScriptJson.Parse(entry.Value!.ToJsonString(), entry.Key);
             var candidate = new JsonContentLoader().LoadFromPackage(package);
             ValidatePack(metadata, candidate);
+            var companionConditions = ParseCompanionConditions(metadata);
             // Cancel the old flow only after the complete replacement is valid.
             ResetStory();
             _content = candidate;
             _pack = metadata;
+            _companionConditions = companionConditions;
             _session = null;
             _deviceProfile = new(); _deviceProfileInitialized = false;
             _partySubscription?.Dispose(); _partySubscription = null; FormationReserves.Clear();

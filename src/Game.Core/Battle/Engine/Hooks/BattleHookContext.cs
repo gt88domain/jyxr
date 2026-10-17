@@ -83,6 +83,12 @@ public sealed class BattleHookContext :
 
     public int? DamageAmount { get; internal set; }
 
+    internal int PendingMpDamage { get; set; }
+    int IDamageApplicationRuntimeContext.PendingMpDamage => PendingMpDamage;
+    void IDamageApplicationRuntimeContext.QueueMpDamage(int amount) => PendingMpDamage = checked(PendingMpDamage + Math.Max(0, amount));
+    void IDamageApplicationRuntimeContext.ApplyReflectedDamage(BattleUnit target, int hpAmount, int mpAmount) =>
+        Engine.ApplyReflectedDamage(State, Unit, target, hpAmount, mpAmount, Skill);
+
     public int? IncomingDamageAmount { get; internal set; }
 
     public double? LifestealRate { get; internal set; }
@@ -291,6 +297,7 @@ public sealed class BattleHookContext :
         }
 
         DamageAmount = 0;
+        PendingMpDamage = 0;
         SuppressHitEffects |= suppressHitEffects;
     }
 

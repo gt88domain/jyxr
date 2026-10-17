@@ -84,6 +84,9 @@ public interface IDamageApplicationEffectContext : IBattleEffectContext
 
 internal interface IDamageApplicationRuntimeContext : IDamageApplicationEffectContext
 {
+    int PendingMpDamage { get; }
+    void QueueMpDamage(int amount);
+    void ApplyReflectedDamage(BattleUnit target, int hpAmount, int mpAmount);
     void ApplySharedDamage(BattleUnit target, int amount, string detail);
     int ApplyDirectDamage(BattleUnit target, int amount, string? detail = null);
     int ApplyHpRecovery(BattleUnit target, int amount, string? detail = null);

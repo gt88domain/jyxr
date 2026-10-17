@@ -9,12 +9,14 @@ public sealed class BattleTurnCandidateGenerator
     private readonly BattleEngine _engine;
     private readonly IReadOnlyList<IBattleSkillAiScorer> _skillScorers;
 
+    internal BattleRestRecovery EstimateRestRecovery(BattleState state,BattleUnit unit) => _engine.EstimateRestRecovery(state,unit);
+
     public BattleTurnCandidateGenerator(
         BattleEngine engine,
         IReadOnlyList<IBattleSkillAiScorer>? skillScorers = null)
     {
         _engine = engine ?? throw new ArgumentNullException(nameof(engine));
-        _skillScorers = skillScorers ?? [new DamageSkillAiScorer(), new SpecialSkillAiScorer()];
+        _skillScorers = skillScorers ?? [new DamageSkillAiScorer(engine: engine), new SpecialSkillAiScorer(engine)];
     }
 
     public IReadOnlyList<BattleTurnCandidate> Generate(
@@ -65,19 +67,19 @@ public sealed class BattleTurnCandidateGenerator
 							unit,
 							skill,
 							impactedPositions);
-                        if (targets.Count == 0 || targets.All(targetUnit => !state.AreEnemies(unit, targetUnit)))
+                        if (targets.Count == 0 && skill is not SpecialSkillInstance)
                         {
                             continue;
                         }
 
-                        var evaluation = preparedSkill.Scorer.Score(new BattleSkillAiContext(
-                            state,
-                            unit,
-                            skill,
-                            destination,
-                            target,
-                            targets));
-                        if (skill is SpecialSkillInstance && evaluation.EnemyDamage <= 0)
+                        var key = preparedSkill.Scorer.IsPositionIndependent
+                            ? string.Concat(targets.Select(u => u.Id.Length + ":" + u.Id)) : null;
+                        if (key is null || !preparedSkill.Evaluations.TryGetValue(key, out var evaluation))
+                        {
+                            evaluation = preparedSkill.Scorer.Score(new(state, unit, skill, destination, target, targets));
+                            if (key is not null) preparedSkill.Evaluations[key] = evaluation;
+                        }
+                        if (evaluation.EnemyDamage <= 0 && evaluation.TacticalValue <= 0)
                         {
                             continue;
                         }
@@ -90,7 +92,8 @@ public sealed class BattleTurnCandidateGenerator
                             evaluation.AllyKills,
                             evaluation.EnemyHitCount,
                             DistanceToNearestEnemy: distanceToNearestEnemy,
-                            MoveCost: moveCost));
+                            MoveCost: moveCost,
+                            TacticalValue: evaluation.TacticalValue));
                     }
                 }
             }
@@ -113,37 +116,6 @@ public sealed class BattleTurnCandidateGenerator
         return candidates;
     }
 
-    public BattleTurnPlan? CreateRandomSupportSpecialSkillPlan(
-        BattleState state,
-        string unitId,
-        GridPosition destination)
-    {
-        ArgumentNullException.ThrowIfNull(state);
-        ArgumentException.ThrowIfNullOrWhiteSpace(unitId);
-
-        var unit = state.GetUnit(unitId);
-        var skills = unit.Character.GetSpecialSkills()
-            .Where(skill =>
-                skill.IsActive &&
-                skill.Definition.Intent == SpecialSkillIntent.Support &&
-                skill.CanCastAtSelf &&
-                _engine.EvaluateSkillAvailability(state, unit.Id, skill).IsAvailable)
-            .ToArray();
-        if (skills.Length == 0)
-        {
-            return null;
-        }
-
-        var skill = skills[_engine.RandomService.Next(0, skills.Length)];
-        return new BattleTurnPlan(
-            unit.Id,
-            destination,
-            BattleMainActionPlan.CastSkill(skill.Id, destination));
-    }
-
-    internal bool ShouldUseSupportSpecialSkill() =>
-        _engine.RandomService.Next(0, 2) == 0;
-
     private IReadOnlyList<PreparedSkill> PrepareSkills(
         BattleState state,
         BattleUnit unit,
@@ -153,12 +125,6 @@ public sealed class BattleTurnCandidateGenerator
         foreach (var skill in BattleSkillCatalog.CollectSelectableSkills(unit))
         {
             if (skillFilter is not null && !skillFilter(skill))
-            {
-                continue;
-            }
-
-            if (skill is SpecialSkillInstance specialSkill &&
-                specialSkill.Definition.Intent != SpecialSkillIntent.Offensive)
             {
                 continue;
             }
@@ -195,5 +161,10 @@ public sealed class BattleTurnCandidateGenerator
         SkillInstance Skill,
         IBattleSkillAiScorer Scorer,
         int CastSize,
-        int ImpactSize);
+        int ImpactSize)
+    {
+        // This cache belongs to a single Generate call. State, resources and
+        // target sets are never reused across actions or battle instances.
+        public Dictionary<string, BattleSkillAiEvaluation> Evaluations { get; } = new(StringComparer.Ordinal);
+    }
 }

@@ -23,7 +23,7 @@ def apply_common_rules(package):
         # Legacy casts the calculated damage to int before each target talent.
         # Preserve both truncation and 宝甲 → 神经病 → 鲁莽 ordering.
         return {"type": "hook", "timing": "BeforeDamageApplied", "priority": priority,
-                "conditions": [{"type": "context_unit_role", "role": "target"}],
+                "conditions": [{"type": "context_unit_role", "role": "target"}, {"type": "context_skill_kind", "kinds": ["External", "Internal", "Form", "Legend"]}],
                 "effects": [{"type": "modify_damage", "op": "more", "delta": factor, "rounding": "Truncate"}]}
 
     talents = {

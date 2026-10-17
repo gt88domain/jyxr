@@ -19,6 +19,35 @@ public sealed partial class BattleEngine
 
     private readonly record struct BattleSkillHitCheck(bool IsCancelled, bool SuppressHitEffects);
 
+    internal int ApplyAbilityAttackDamage(BattleState state, BattleUnit source, BattleUnit target, int amount, SpecialSkillInstance skill)
+    {
+        ArgumentOutOfRangeException.ThrowIfNegative(amount);
+        var hitCheck = ResolveSkillHit(state, source, target, skill);
+        if (hitCheck.IsCancelled)
+        {
+            AddMessage(state, new BattleFact(BattleFactKind.Damaged, target.Id, detail: skill.Id, damage: new(0, SourceUnitId: source.Id)));
+            return 0;
+        }
+        if (skill.Definition.ApplyFinalDamageModifiers)
+        {
+            amount = _formationResolver?.ModifyAttack(state, source, amount) ?? amount;
+            amount = Math.Max(0, TriggerHooks(state, HookTiming.AfterDamageCalculation, source, c =>
+            {
+                c.Source=source;c.Target=target;c.Skill=skill;c.DamageAmount=amount;
+            }).DamageAmount ?? amount);
+        }
+        var application = _damageResolver.Apply(state, source, target, amount, skill);
+        if (!application.SuppressHitEffects)
+        {
+            TriggerHooks(state, HookTiming.OnHitConfirmed, source, c =>
+            {
+                c.Source=source;c.Target=application.Target;c.Skill=skill;c.DamageAmount=application.ActualAmount;
+            });
+            ApplySkillBuffs(state, source, application.Target, skill.Buffs);
+        }
+        return application.ActualAmount;
+    }
+
     internal void ExecuteSkillDamageStep(
         BattleState state,
         BattleUnit source,

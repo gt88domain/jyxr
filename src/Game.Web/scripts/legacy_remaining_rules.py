@@ -64,7 +64,7 @@ def apply_remaining_rules(package):
             talents["段王爷的电眼"].append(hook(timing, effects, [role("source" if timing == "OnHitConfirmed" else "target"), enemy(other), *conditions, chance(.5)]))
     for name, affixes in talents.items(): _definition(package, "talents", name)["affixes"] = affixes
     for name in ["易容", "溜须拍马"]:
-        effects = [hook("BeforeDamageApplied", [{"type": "modify_damage", "op": "override", "delta": 0}], [role("target"), enemy("source")])]
+        effects = [hook("BeforeDamageApplied", [custom("incoming_damage_immunity")], [role("target"), enemy("source"), {"type": "context_skill_kind", "kinds": ["External", "Internal", "Form", "Legend"]}], 525)]
         if name == "易容":
             effects.append(hook("AfterDamageCalculation", [{"type": "modify_damage", "op": "more", "deltaMin": 1.1, "deltaMax": 1.3},
                 {"type": "remove_buff", "target": {"type": "self"}, "buffId": name}], [role("source"), enemy()], -500))
@@ -73,6 +73,14 @@ def apply_remaining_rules(package):
         _definition(package, "buffs", name)["affixes"] = effects
     _definition(package, "buffs", "魔神降临")["affixes"] = [hook("BeforeDamageCalculation", [
         stat("critical_chance", "override", 1), stat("critical_multiplier", "add", .25)], [role("source")], -1000)]
+    # These bypass defence formula but still pass the common hit, reflection,
+    # formation and reaction stages in AttackLogic.Attack. Five top-level
+    # branches also bypass the final attack modifiers inside its normal branch.
+    top_level = {"同归剑法", "天地同寿", "腐尸毒", "过肩摔", "神龙摆尾"}
+    for name in top_level | {"一刀两断", "襄儿的心愿", "火枪"}:
+        skill = _definition(package, "specialSkills", name)
+        skill["useAttackPipeline"] = True
+        skill["applyFinalDamageModifiers"] = name not in top_level
     return {"sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff", "formations": FORMATION_RULES,
         "talents": list(talents), "buffs": ["易容", "溜须拍马", "魔神降临"],
         "remaining": "Full source cosmetic RNG, mixed modifiers, special reactions and normal acquisition require validation."}

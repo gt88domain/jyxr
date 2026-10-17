@@ -51,6 +51,30 @@ features = {f["id"]: f for f in progress["features"]}
 for key, collection in {"external": "externalSkills", "internal": "internalSkills", "special": "specialSkills", "legend": "legendSkills", "items": "items"}.items():
     assert features[key]["count"] == len(package[collection])
 assert features["battle"]["count"] == 393 and features["battle"]["structurallyUsable"] == 391
-assert features["companions"]["count"] == 65 and features["companions"]["normalVerified"] == 10
+assert features["companions"]["count"] == 65 and features["companions"]["normalVerified"] == 14
 assert progress["fullGameVerified"] is False
 print("PASS source conditions have readable labels and eight feature rows use actual counts without claiming whole-game verification")
+assert catalog["counts"]["normalVerified"] == 14
+assert all(characters[name]["verification"] == "normal" for name in ["阿朱", "郭襄", "袁承志", "韦小宝"])
+access=catalog["mapAccess"]["公主寝宫"]
+assert not access["directPaths"]
+gate=next(g for g in access["storyGates"] if g["storyId"]=="bixuejianShyou_龙游帮VIP传送1")
+assert gate["maps"]==["天安门","公主寝宫"]
+entry=next(e for e in gate["entries"] if e["location"]=="船老大")
+assert {c["value"] for c in entry["conditions"] if c["type"]=="should_finish"}=={"bixuejianShyou_接黄金3","鹿鼎记_皇宫太后7"}
+print("PASS Princess Ajiu keeps the actual palace teleport, boat entry and both hidden chapter prerequisites")
+predicates={p["id"]:p for p in package["browser"]["companionConditions"]}
+def inspect_predicates(value):
+    if isinstance(value,dict):
+        if "translated" in value:
+            assert value["id"] in predicates
+            assert predicates[value["id"]]["random"]==(value["type"]=="probability")
+        for child in value.values():inspect_predicates(child)
+    elif isinstance(value,list):
+        for child in value:inspect_predicates(child)
+inspect_predicates(catalog)
+atlas=(web/"ORIGINAL_COMPANION_ATLAS.md").read_text()
+assert atlas.count("```mermaid")==paths
+assert len([line for line in atlas.splitlines() if line.startswith("## ")])==65
+assert atlas==(web/"public/data/companion-atlas.md").read_text()
+print(f"PASS {len(predicates)} shared runtime predicates and all {paths} diagrams preserve all 65 forms")

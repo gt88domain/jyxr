@@ -30,7 +30,7 @@ function open(): Promise<IDBDatabase> {
     request.onerror = () => reject(request.error);
   });
 }
-export async function readSlot(packId = 'jyx'): Promise<SaveSlot | undefined> {
+export async function readManualSlot(packId = 'jyx'): Promise<SaveSlot | undefined> {
   const db = await open();
   return new Promise((resolve, reject) => {
     const transaction = db.transaction('saves', 'readonly');
@@ -47,6 +47,30 @@ export async function readSlot(packId = 'jyx'): Promise<SaveSlot | undefined> {
     request.onerror = () => reject(request.error);
     transaction.oncomplete = () => db.close();
     transaction.onabort = () => {db.close(); reject(transaction.error);};
+  });
+}
+export async function readAutoSlot(packId = 'jyx'): Promise<SaveSlot | undefined> {
+  const db=await open();
+  return new Promise((resolve,reject)=>{
+    const tx=db.transaction('saves','readonly');
+    const request=tx.objectStore('saves').get(`auto:${packId}`);
+    request.onsuccess=()=>resolve(request.result as SaveSlot|undefined);
+    request.onerror=()=>reject(request.error);
+    tx.oncomplete=()=>db.close();tx.onabort=()=>{db.close();reject(tx.error);};
+  });
+}
+export async function readSlot(packId = 'jyx'): Promise<SaveSlot | undefined> {
+  const [manual,automatic]=await Promise.all([readManualSlot(packId),readAutoSlot(packId)]);
+  if(!automatic)return manual;if(!manual)return automatic;
+  return Date.parse(automatic.savedAt)>Date.parse(manual.savedAt)?automatic:manual;
+}
+export async function writeAutoSlot(slot: SaveSlot): Promise<void> {
+  const db=await open();
+  return new Promise((resolve,reject)=>{
+    const tx=db.transaction('saves','readwrite');
+    tx.objectStore('saves').put(slot,`auto:${slot.packId||'jyx'}`);
+    tx.oncomplete=()=>{db.close();resolve();};
+    tx.onabort=()=>{db.close();reject(tx.error);};tx.onerror=()=>reject(tx.error);
   });
 }
 export async function writeSlot(slot: SaveSlot): Promise<void> {

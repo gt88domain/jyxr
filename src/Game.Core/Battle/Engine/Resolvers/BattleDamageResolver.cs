@@ -27,6 +27,8 @@ internal sealed class BattleDamageApplicationContext(
     public bool IsCritical { get; } = isCritical;
 
     public bool SuppressHitEffects { get; set; }
+
+    public int PendingMpDamage { get; set; }
 }
 
 internal sealed record BattleDamageTakenContext(
@@ -80,6 +82,7 @@ internal sealed class BattleDamageResolver(BattleEngine engine)
             applicationContext.ProposedAmount = Math.Max(0, application.DamageAmount ?? amount);
             applicationContext.Target = application.Target ?? target;
             applicationContext.SuppressHitEffects = application.SuppressHitEffects;
+            applicationContext.PendingMpDamage = application.PendingMpDamage;
             if (!applicationContext.SuppressHitEffects)
             {
                 engine.TriggerHooks(state, HookTiming.BeforeDamageDistribution, source, c =>
@@ -91,6 +94,8 @@ internal sealed class BattleDamageResolver(BattleEngine engine)
             }
         }
 
+        if (applicationContext.PendingMpDamage > 0)
+            BattleResourceResolver.DamageMp(state, applicationContext.Target, applicationContext.PendingMpDamage, detail: "damage-overflow");
         var actualAmount = applicationContext.Target.TakeDamage(applicationContext.ProposedAmount);
         BattleEngine.AddMessage(state, new BattleFact(
             BattleFactKind.Damaged,

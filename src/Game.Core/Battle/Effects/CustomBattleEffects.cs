@@ -34,6 +34,11 @@ public abstract class CustomAbilityBattleEffectHandler<TParameters>
     public virtual int? EstimateDamage(
         BattleAbilityDamageEstimateContext context,
         TParameters parameters) => null;
+
+    public virtual int EstimateHealing(BattleAbilityDamageEstimateContext context, TParameters parameters) => 0;
+
+    // A cast pays its own cost once, regardless of how many units it affects.
+    public virtual int EstimateHpCost(BattleAbilityDamageEstimateContext context, TParameters parameters) => 0;
 }
 
 public sealed record BattleAbilityDamageEstimateContext(
@@ -128,6 +133,7 @@ public sealed class CustomBattleEffectRegistry
             new VajraDemonSubduingFormationDefeatTextHandler());
         registry.Register("careful_defense", new CarefulDefenseBattleEffectHandler());
         registry.Register("shifting_stars_reflection", new ShiftingStarsReflectionBattleEffectHandler());
+        registry.Register("incoming_damage_immunity", new IncomingDamageImmunityBattleEffectHandler());
         registry.Register("eternal_spring", new EternalSpringBattleEffectHandler());
         registry.Register("survive_at_one_hp", new SurviveAtOneHpBattleEffectHandler());
         registry.Register("qi_shield_defeat_prevention", new QiShieldDefeatPreventionBattleEffectHandler());
@@ -241,7 +247,9 @@ public sealed class CustomBattleEffectRegistry
                 SupportedTimings: new HashSet<HookTiming>(),
                 ExecuteHook: null,
                 ExecuteAbility: context => handler.Execute(context, parsedParameters),
-                EstimateAbilityDamage: context => handler.EstimateDamage(context, parsedParameters));
+                EstimateAbilityDamage: context => handler.EstimateDamage(context, parsedParameters),
+                EstimateAbilityHealing: context => handler.EstimateHealing(context, parsedParameters),
+                EstimateAbilityHpCost: context => handler.EstimateHpCost(context, parsedParameters));
         }
     }
 }
@@ -251,7 +259,9 @@ internal sealed record CustomBattleEffectInvocation(
     IReadOnlySet<HookTiming> SupportedTimings,
     Action<BattleHookContext>? ExecuteHook,
     Action<IBattleAbilityEffectContext>? ExecuteAbility,
-    Func<BattleAbilityDamageEstimateContext, int?>? EstimateAbilityDamage)
+    Func<BattleAbilityDamageEstimateContext, int?>? EstimateAbilityDamage,
+    Func<BattleAbilityDamageEstimateContext, int>? EstimateAbilityHealing = null,
+    Func<BattleAbilityDamageEstimateContext, int>? EstimateAbilityHpCost = null)
 {
     public bool SupportsAbility => ExecuteAbility is not null;
 }

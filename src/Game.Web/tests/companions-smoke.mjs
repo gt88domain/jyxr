@@ -74,10 +74,10 @@ try{
   pass('real follower and source-JOIN exports are displayed as different placements');
   await closeModal();await click('[data-action="guide"]');await click('[data-action="progress"]');await visible('.restoration-report');
   assert.equal(await page.locator('[data-feature-id]').count(),8);
-  for(const [id,percentage] of Object.entries({battle:85,external:75,internal:75,special:75,legend:55,items:80,talents:85,companions:65}))
+  for(const [id,percentage] of Object.entries({battle:95,external:85,internal:75,special:90,legend:55,items:80,talents:90,companions:85}))
     assert.match(await page.locator(`[data-feature-id="${id}"] h4`).innerText(),new RegExp(`${percentage}%`));
   assert.match(await page.locator('[data-feature-id="battle"]').innerText(),/393.*391/);
-  assert.match(await page.locator('[data-feature-id="companions"]').innerText(),/65.*80.*10/);
+  assert.match(await page.locator('[data-feature-id="companions"]').innerText(),/65.*80.*14/);
   await noOverflow('mobile eight-feature progress and gap report');
   await page.screenshot({path:output+'feature-progress-mobile.png',fullPage:true});
   pass('eight feature estimates show actual counts and specific missing behavior rather than equating data import with completion');

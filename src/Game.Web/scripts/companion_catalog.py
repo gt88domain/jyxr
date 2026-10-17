@@ -4,10 +4,11 @@ All JOIN/FOLLOW instructions are retained. A route is a source reference, not
 proof that a character can be recruited immediately in the current save.
 """
 from collections import defaultdict, deque
+import hashlib
 import xml.etree.ElementTree as ET
 
 STORY_FILES = ("storys.xml", "storysCG.xml", "storysPY.xml")
-NORMAL_VERIFIED = {"钟灵", "田伯光", "胡斐", "郭靖", "程灵素", "阎基", "令狐冲", "蓝凤凰", "平一指", "曲非烟"}
+NORMAL_VERIFIED = {"钟灵", "田伯光", "胡斐", "郭靖", "程灵素", "阎基", "令狐冲", "蓝凤凰", "平一指", "曲非烟", "阿朱", "郭襄", "袁承志", "韦小宝"}
 ISOLATED_VERIFIED = {"田青文", "王语嫣"}
 
 
@@ -43,7 +44,7 @@ def condition_record(node):
     if kind in {"haogan_more_than", "haogan_less_than"}:
         parts = value.split("#");who, amount = parts if len(parts) == 2 else ("女主", value)
         labels[kind] = f"{who}好感 {'≥' if kind.endswith('more_than') else '<'} {amount}"
-    stat_names = {"dingli": "定力", "wuxing": "悟性", "jianfa": "剑法", "quanzhang": "拳掌", "daofa": "刀法", "qimen": "奇门"}
+    stat_names = {"level": "等级", "dingli": "定力", "wuxing": "悟性", "jianfa": "剑法", "quanzhang": "拳掌", "daofa": "刀法", "qimen": "奇门"}
     for stat, name in stat_names.items():
         for suffix, op in [("greater_than", "≥"), ("less_than", "<")]:
             if kind == f"{stat}_{suffix}":
@@ -52,6 +53,18 @@ def condition_record(node):
 
 
 def build_catalog(package, source, world_audit):
+    from legacy_conditions import compile_condition
+    name_ids = defaultdict(list)
+    for character in package["characters"]:
+        name_ids[character.get("name", character["id"])].append(character["id"])
+    tasks = {t.get("name") for t in ET.parse(source / "newbie.xml").getroot().findall("task")}
+    predicates = {}
+    def record(node):
+        item = condition_record(node)
+        identifier = hashlib.sha256((item["type"] + "\0" + item["value"]).encode()).hexdigest()[:20]
+        expression = compile_condition(node, name_ids, tasks)
+        predicates[identifier] = {"id": identifier, "expression": expression, "random": item["type"] == "probability"}
+        return {**item, "id": identifier}
     stories, files = {}, {}
     for filename in STORY_FILES:
         for node in ET.parse(source / filename).getroot().findall("story"):
@@ -81,9 +94,9 @@ def build_catalog(package, source, world_audit):
             elif choices and ret.isdigit() and int(ret) < len(choices[-1]): label = "选择：" + choices[-1][int(ret)]
             elif ret == "0" and any(a.get("type") in {"BATTLE", "TOUCH"} for a in actions): label = "原默认结果分支（仍须完成战斗或点穴）"
             elif ret not in {"0", ""}: label = f"原结果分支：{ret}"
-            blockers = [{"conditions": [condition_record(c) for c in r.findall("condition")], "destination": story_label(r.get("value", ""))} for r in earlier]
+            blockers = [{"conditions": [record(c) for c in r.findall("condition")], "destination": story_label(r.get("value", ""))} for r in earlier]
             edges[eid] = {"from": sid, "to": target, "label": label,
-                "conditions": [condition_record(c) for c in result.findall("condition")], "earlierBranches": blockers,
+                "conditions": [record(c) for c in result.findall("condition")], "earlierBranches": blockers,
                 "shadowed": any(not r.findall("condition") for r in earlier)}
             # Derive only simple local morality bounds. Negating a multi-term
             # AND is not equivalent to negating every term separately.
@@ -105,11 +118,11 @@ def build_catalog(package, source, world_audit):
                 if event.get("type") != "story": continue
                 sid = event.get("value", "")
                 earlier = [{"storyId": ev.get("value", ""), "label": story_label(ev.get("value", "")), "kind": ev.get("type"), "repeat": ev.get("repeat", ""),
-                    "conditions": [condition_record(c) for c in ev.findall("condition")], "probability": int(ev.get("probability", "100"))}
+                    "conditions": [record(c) for c in ev.findall("condition")], "probability": int(ev.get("probability", "100"))}
                     for ev in events[:index]]
                 roots[sid].append({"id": f"{map_node.get('name')}/{unit.get('name')}/{index}",
                     "map": map_node.get("name"), "location": unit.get("name"), "storyId": sid,
-                    "conditions": [condition_record(c) for c in event.findall("condition")],
+                    "conditions": [record(c) for c in event.findall("condition")],
                     "probability": int(event.get("probability", "100")), "repeat": event.get("repeat", ""), "earlierEvents": earlier})
     # Preserve all ancestor branches, then enumerate source paths from each map
     # entry. Cycles are exposed and never silently interpreted as an open route.
@@ -151,11 +164,58 @@ def build_catalog(package, source, world_audit):
         output.append({"id": cid, "name": "女主" if cid == "女主" else character["name"], "variant": cid if cid != character["name"] else "",
             "portrait": media.get("portraits", {}).get(cid), "routes": routes,
             "departures": departures[cid], "verification": "normal" if cid in NORMAL_VERIFIED else "isolated" if cid in ISOLATED_VERIFIED else "unverified"})
+    # A local NPC map entry is not necessarily reachable from the world. Keep
+    # static connections and story teleports separate, with their own gates.
+    map_parents, map_results = defaultdict(list), defaultdict(list)
+    for map_node in ET.parse(source / "maps.xml").getroot().findall("map"):
+        for unit in map_node.findall("mapunit"):
+            for event in unit.findall("event"):
+                if event.get("type") == "map":
+                    map_parents[event.get("value")].append({"from": map_node.get("name"), "to": event.get("value"),
+                        "location": unit.get("name"), "conditions": [record(c) for c in event.findall("condition")],
+                        "probability": int(event.get("probability", "100"))})
+    for sid, story in stories.items():
+        for result in story.findall("result"):
+            if result.get("type") == "map":
+                map_results[result.get("value")].append({"storyId": sid, "label": story_label(sid),
+                    "returnCode": result.get("ret", "0"), "conditions": [record(c) for c in result.findall("condition")]})
+    access = {}
+    requested_maps = {path["entry"]["map"] for c in output for route in c["routes"] for path in route["paths"]}
+    for map_id in sorted(requested_maps):
+        queue, seen, direct, gates = deque([(map_id, [], [map_id])]), {map_id}, [], []
+        while queue:
+            current, connections, map_path = queue.popleft()
+            if current == "大地图":
+                direct.append({"maps": map_path, "connections": connections}); continue
+            for gate in map_results[current]:
+                ancestors, pending = {gate["storyId"]}, deque([gate["storyId"]])
+                while pending:
+                    for eid in incoming[pending.popleft()]:
+                        parent = edges[eid]["from"]
+                        if parent not in ancestors: ancestors.add(parent); pending.append(parent)
+                gates.append({**gate, "maps": map_path, "connections": connections,
+                    "entries": [entry for sid in sorted(ancestors) for entry in roots[sid]],
+                    "branches": [edge for edge in edges.values() if edge["from"] in ancestors and edge["to"] in ancestors]})
+            for connection in map_parents[current]:
+                parent = connection["from"]
+                if parent not in seen:
+                    seen.add(parent); queue.append((parent, [connection, *connections], [parent, *map_path]))
+        access[map_id] = {"directPaths": direct, "storyGates": gates,
+            "scope": "Shortest static connection per ancestor plus source story transitions; condition gates and event priority still apply."}
     output.sort(key=lambda c: (c["verification"] != "normal", c["name"], c["id"]))
     journal_stories = sorted({r["storyId"] for c in output for r in c["routes"] if r["runtimeAvailable"]})
     package["browser"]["companionRecruitmentStories"] = journal_stories
+    used = set()
+    def collect(value):
+        if isinstance(value, dict):
+            if "translated" in value: used.add(value["id"])
+            for item in value.values(): collect(item)
+        elif isinstance(value, list):
+            for item in value: collect(item)
+    collect(output); collect(all_edges); collect(access)
+    package["browser"]["companionConditions"] = sorted((p for p in predicates.values() if p["id"] in used), key=lambda p: p["id"])
     return {"schemaVersion": 1, "sourceCommit": "b41198219087858ece19d5484f5061e0289c47bc",
         "scope": "Source JOIN/FOLLOW instructions and map-entry branch graphs. Not an immediate recruitment predicate or full playthrough proof.",
         "counts": {"characterForms": len(output), "instructions": sum(len(c["routes"]) for c in output),
             "normalVerified": len(NORMAL_VERIFIED), "isolatedVerified": len(ISOLATED_VERIFIED)},
-        "characters": output, "nodes": all_nodes, "edges": all_edges}
+        "characters": output, "nodes": all_nodes, "edges": all_edges, "mapAccess": access}

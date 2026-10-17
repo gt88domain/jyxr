@@ -8,7 +8,7 @@ try {
   await page.goto(report.baseURL,{waitUntil:'networkidle'});await visible('[data-action="new"]');
   const before=await state();
   await click('[data-action="progress"]');await visible('.restoration-report');
-  assert.match(await page.locator('.restoration-total').innerText(),/80%/);
+  assert.match(await page.locator('.restoration-total').innerText(),/90%/);
   assert.match(await page.locator('.restoration-report').innerText(),/双儿、经验木头人、练功木头人/);
   const counts=await page.locator('.restoration-counts').innerText();
   assert.match(counts,/1885\s*\/\s*1887/);assert.match(counts,/147\s*\/\s*158/);

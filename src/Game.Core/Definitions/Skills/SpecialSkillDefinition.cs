@@ -22,7 +22,9 @@ public sealed record SpecialSkillDefinition(
     string Audio,
     BattleSpeechDefinition? Speech,
     IReadOnlyList<SkillBuffDefinition> Buffs,
-    IReadOnlyList<BattleEffectDefinition>? Effects = null)
+    IReadOnlyList<BattleEffectDefinition>? Effects = null,
+    bool UseAttackPipeline = false,
+    bool ApplyFinalDamageModifiers = true)
 {
     public void Resolve(IContentRepository contentRepository)
     {

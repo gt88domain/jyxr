@@ -2,7 +2,8 @@ export interface Skill { id: string; name: string; level: number; mpCost: number
 export interface EquipmentSlot { slot: string; slotName: string; item: {id: string; name: string; instanceId: string; description: string; affixes?: string[]; icon?: string | null} | null; }
 export interface Cultivation { entryNumber: number; itemId: string; itemName: string; skillId: string; skillName: string; kind: string; level: number; exp: number; nextExp: number; maxLevel: number; }
 export interface InventoryItem { icon?: string | null; id: string; entryNumber: number; name: string; count: number; quantity: number; description: string; affixes?: string[]; battleTargets?: {id: string; name: string; hp: number; maxHp: number; canUse: boolean; reason: string}[] | null; kind: string; itemType: string; slot: string | null; canEquip: boolean; canUse: boolean; canCultivate: boolean; reason: string; }
-export interface BattleEvent { sequence: number; kind: string; unitId: string; amount: number | null; critical: boolean; sourceUnitId: string | null; skillId: string | null; skillName: string | null; text: string | null; audioId?: string | null; }
+export interface BattleEffectVisual {style: 'slash' | 'strike' | 'flame' | 'ring' | 'vortex' | 'burst' | 'petal' | 'orb'; color: number; duration: number;}
+export interface BattleEvent { sequence: number; kind: string; unitId: string; amount: number | null; critical: boolean; sourceUnitId: string | null; skillId: string | null; skillName: string | null; text: string | null; audioId?: string | null; animationId?: string | null; isLegend?: boolean; visual?: BattleEffectVisual | null; targetPosition?: {x: number; y: number} | null; impactedPositions?: {x: number; y: number}[] | null; }
 export interface CharacterAnimation {id: string; texture: string; atlas: string; poster: string; baseHeight: number; clips: Record<string, {frames: string[]; frameRate: number}>;}
 export interface Unit { animation?: CharacterAnimation | null; facing?: string; id: string; definitionId?: string; sprite?: string | null; portrait?: string | null; name: string; team: number; x: number; y: number; hp: number; maxHp: number; mp: number; maxMp: number; alive: boolean; buffs?: {id: string; name: string; description: string; level: number; remainingTurns: number; isDebuff: boolean}[]; }
 export interface PackMedia { titleBackground?: string; worldBackground?: string; battleBackground?: string; defaultFriendly?: string; defaultEnemy?: string; characters?: Record<string, string>; portraits?: Record<string, string>; maps?: Record<string, string>; battles?: Record<string, string>; }
@@ -30,7 +31,7 @@ export interface CreationState {
 }
 export interface GameState {
   musicId?: string | null;
-  companionJournal?: {completedRecruitmentStories: string[]};
+  companionJournal?: {completedRecruitmentStories: string[]; conditions?: Record<string, boolean | null>};
   milestones?: {id: string; title: string; requirements: string[]; completed: boolean}[];
   journal?: {id: number; date: string; text: string}[] | null;
   achievements?: {id: string; name: string; description: string}[];
@@ -74,8 +75,12 @@ interface Exports {
   ImportStoredSave: (save: string) => string | Promise<string>;
   ExportProfile: () => string | Promise<string>;
   InitializeProfile: (profile: string) => string | Promise<string>;
+  InspectCompanionConditions: () => string | Promise<string>;
 }
 let api: Exports;
+export async function inspectCompanionConditions(): Promise<Record<string, boolean | null>> {
+  return JSON.parse(await api.InspectCompanionConditions());
+}
 const profileCache = new Map<string, string>();
 const blockedProfiles = new Set<string>();
 declare global { interface Window { loadJyxrRuntime: () => Promise<{getConfig: () => {mainAssemblyName: string}; getAssemblyExports: (name: string) => Promise<any>}>; } }

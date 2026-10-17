@@ -73,6 +73,7 @@ public sealed class PartyService
         }
 
         State.Party.AddFollower(CreateInitialCharacter(characterId, resolvedDefinitionId));
+        _session.Events.Publish(new PartyChangedEvent());
     }
 
     public void Leave(string characterId)

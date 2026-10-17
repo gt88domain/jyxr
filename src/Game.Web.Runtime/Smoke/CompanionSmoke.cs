@@ -32,6 +32,11 @@ internal static class CompanionSmoke
             }));
             Parse(BrowserBridge.Initialize(content.ToJsonString()));Parse(BrowserBridge.ImportSave(saved));
             await Cmd(new{type="playStory",storyId="fixture_morality"});await Continue();
+            var predicates=JsonSerializer.Deserialize<Dictionary<string,bool?>>(BrowserBridge.InspectCompanionConditions())!;
+            string Id(string type,string value)=>Convert.ToHexString(System.Security.Cryptography.SHA256.HashData(System.Text.Encoding.UTF8.GetBytes(type+"\0"+value))).ToLowerInvariant()[..20];
+            Check(predicates[Id("daode_more_than","65")]==(morality>=65)&&predicates[Id("daode_less_than","35")]==(morality<35),"guide uses actual morality boundaries without altering branch priority");
+            var randomIds=content["browser"]!["companionConditions"]!.AsArray().Where(n=>n!["random"]!.GetValue<bool>()).Select(n=>n!["id"]!.GetValue<string>()).ToArray();
+            Check(randomIds.All(id=>predicates[id] is null),"guide leaves all random conditions unknown instead of drawing them");
             await Cmd(new{type="enterMap",mapId="华山后山"});
             await Cmd(new{type="interact",locationId="令狐冲"});var s=await Continue();
             var joined=s["roster"]!.AsArray().Any(c=>c!["definitionId"]!.GetValue<string>()=="令狐冲");
@@ -41,7 +46,12 @@ internal static class CompanionSmoke
         }
         Parse(BrowserBridge.Initialize(original.ToJsonString()));var normal=Parse(BrowserBridge.ImportSave(saved));
         var before=normal.ToJsonString();
-        for(var n=0;n<5;n++)Check((await Cmd(new{type="state"})).ToJsonString()==before,"read-only companion facts do not reroll maps or change game state");
+        var guide=BrowserBridge.InspectCompanionConditions();
+        for(var n=0;n<5;n++)
+        {
+            Check(BrowserBridge.InspectCompanionConditions()==guide,"repeated condition inspection is stable");
+            Check((await Cmd(new{type="state"})).ToJsonString()==before,"read-only companion facts do not reroll maps or change game state");
+        }
         // The existing management fixture has a genuinely followed heroine.
         var heroine=normal["roster"]!.AsArray().Single(c=>c!["definitionId"]!.GetValue<string>()=="女主")!;
         Check(heroine["placement"]!.GetValue<string>()=="follower","source follower is represented separately from battle members");

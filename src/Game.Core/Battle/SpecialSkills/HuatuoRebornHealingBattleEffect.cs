@@ -22,4 +22,7 @@ public sealed class HuatuoRebornHealingBattleEffectHandler
 
     private static double Lerp(double minimum, double maximum, double amount) =>
         minimum + (maximum - minimum) * amount;
+
+    public override int EstimateHealing(BattleAbilityDamageEstimateContext context, HuatuoRebornHealingBattleEffectParameters parameters) =>
+        (int)((context.Source.GetStat(StatType.Gengu) + context.Source.GetStat(StatType.Fuyuan)) * 10d) + (int)(context.Target.MaxHp * .2d);
 }

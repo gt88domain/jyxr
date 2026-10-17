@@ -496,6 +496,8 @@ public sealed partial class JsonContentLoader
         foreach (var skill in repository.SpecialSkills.Values)
         {
             ValidateSpecialSkillSpeech(skill, repository);
+            Ensure(!skill.UseAttackPipeline || skill.Intent == SpecialSkillIntent.Offensive,
+                $"SpecialSkill '{skill.Id}' attack pipeline requires offensive intent.");
 
             foreach (var effect in skill.Effects ?? [])
             {

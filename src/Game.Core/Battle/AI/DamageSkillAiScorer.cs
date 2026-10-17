@@ -4,11 +4,14 @@ namespace Game.Core.Battle;
 
 public sealed class DamageSkillAiScorer : IBattleSkillAiScorer
 {
+    public bool IsPositionIndependent => true;
     private readonly BattleDamageEstimator _damageEstimator;
+    private readonly BattleEngine? _engine;
 
-    public DamageSkillAiScorer(BattleDamageEstimator? damageEstimator = null)
+    public DamageSkillAiScorer(BattleDamageEstimator? damageEstimator = null, BattleEngine? engine = null)
     {
         _damageEstimator = damageEstimator ?? new BattleDamageEstimator();
+        _engine = engine;
     }
 
     public bool CanScore(SkillInstance skill)
@@ -29,7 +32,8 @@ public sealed class DamageSkillAiScorer : IBattleSkillAiScorer
 
         foreach (var target in context.Targets)
         {
-            var estimate = _damageEstimator.Estimate(context.Source, target, context.Skill);
+            var estimate = _engine?.EstimateSkillDamage(context.State, context.Source, target, context.Skill)
+                ?? _damageEstimator.Estimate(context.Source, target, context.Skill);
             if (estimate.IsEnemy)
             {
                 enemyDamage += estimate.Damage;

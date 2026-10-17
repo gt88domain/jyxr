@@ -38,10 +38,14 @@ internal sealed class ShiftingStarsReflectionBattleEffectHandler
         }
 
         var reflectedDamage = parameters.SinglePrecision ? (int)((float)context.DamageAmount * (float)parameters.DamageFactor) : (int)(context.DamageAmount * parameters.DamageFactor);
-        if (reflectedDamage > 0)
+        if (parameters.Unreactive)
         {
-            if (parameters.Unreactive) context.ApplySharedDamage(source, reflectedDamage, "斗转星移");
-            else context.ApplyDirectDamage(source, reflectedDamage, "斗转星移");
+            var mp = parameters.SinglePrecision ? (int)((float)context.PendingMpDamage * (float)parameters.DamageFactor) : (int)(context.PendingMpDamage * parameters.DamageFactor);
+            context.ApplyReflectedDamage(source, reflectedDamage, mp);
+        }
+        else if (reflectedDamage > 0)
+        {
+            context.ApplyDirectDamage(source, reflectedDamage, "斗转星移");
         }
 
         context.RequestFloatText(context.Unit, parameters.FloatText, BattleFloatTextStyle.Special);
