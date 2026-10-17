@@ -12,16 +12,16 @@
     {
       "id": "rules-combinations",
       "area": "战斗规则",
-      "state": "部分实现",
+      "state": "关键管线已补/全顺序待核",
       "title": "完成已有天赋的全部组合与结算顺序",
-      "detail": "新增真武→五行→八卦有序管线、反击与数值检查；仍需核对反弹MP、分伤/反弹后的濒死复活、特技和负伤害、全表现随机序列、装备与Buff混合层次。"
+      "detail": "已补精明待结算MP、反弹HP/MP、反弹后的濒死保护与float恢复；8个伤害特技进入命中、阵法和反应。原分伤延迟死亡、表现随机序列、装备/Buff混合层次仍待核对。"
     },
     {
       "id": "rules-buffs",
       "area": "战斗规则",
-      "state": "部分实现",
+      "state": "普通HP/MP已补/仍有缺依据",
       "title": "补齐特殊Buff行为",
-      "detail": "易容的普通HP保护/伏击消耗、溜须拍马的保护/攻击取消、魔神必暴击已接入；MP/特技管线、沾衣十八跌Buff、左右互搏拼写、坚守与狂战的原执行依据仍待核对。"
+      "detail": "易容、溜须拍马普通HP/MP保护与特技早退分支按源码区分，魔神必暴击可用。沾衣十八跌Buff、左右互搏拼写、坚守与狂战仍待原执行依据。"
     },
     {
       "id": "rules-legends",
@@ -33,9 +33,9 @@
     {
       "id": "rules-special",
       "area": "武学与成长",
-      "state": "部分实现",
+      "state": "8个伤害特技管线已接入/完整时序待核",
       "title": "完善27个特技的共有战斗管线",
-      "detail": "27项有施放检查；易容与溜须拍马状态已接入普通战斗。11项仍标部分实现，特技直接伤害与普通命中/MP/反应、自伤、多目标天地同寿及追加攻击时点仍需统一。"
+      "detail": "8个伤害特技接共同命中、反弹、分伤和反应，状态在有效命中后应用；按原顶层/特技早退分支配置最终修正。特技自伤、多目标、负伤害及非伤害特技的全部时点仍待核对。"
     },
     {
       "id": "rules-growth",
@@ -47,23 +47,23 @@
     {
       "id": "ai-evaluation",
       "area": "战斗规则",
-      "state": "部分实现",
+      "state": "复杂效果已评价/随机组合待扩大",
       "title": "让自动战斗正确评价复杂效果",
-      "detail": "全场治疗、控制、濒死保护、自伤、门派最终伤害倍率等仍需进入目标和行动评价；手动与自动继续使用同一套规则。"
+      "detail": "治疗按实际缺血量、控制/净化按目标状态、全队强化按新旧Buff、资源与自伤按实际代价评价。安全数字预览和单次候选缓存不消耗游戏随机数；随机天赋、全体阵法与原AI差异仍需扩大。"
     },
     {
       "id": "world-supplement",
       "area": "剧情与伙伴",
-      "state": "资料已收录/未接线",
+      "state": "原资料无入口/继续隔离",
       "title": "接入上传版鹿鼎记补充剧情",
-      "detail": "78段已归档：39段与基线同名，39个补充ID；需先处理双儿人物缺件、入口和版本冲突，不能直接覆盖当前同名剧情。"
+      "detail": "78段保留无损资料：39同名、39补充；又核对上传maps仍没有补充ID入口。双儿定义及版本接线缺证据，不能为提高百分比猜造入口或覆盖基线。"
     },
     {
       "id": "world-companions",
       "area": "剧情与伙伴",
-      "state": "部分实现/待验收",
+      "state": "图册与当前条件已补/全路线待验收",
       "title": "完善伙伴的所有招募和离队分支",
-      "detail": "图鉴65个剧情形态及43个周目开局候选不等于普通剧情已全部验收；正邪、时间、转形态、随行转参战、离队重入等需逐链核对。10名只是过去连续流程已验证数。"
+      "detail": "65形态80条指令、155条路线和219条件共用剧情编译器；图鉴补32处地图前置及155幅可下载图。新增阿朱、郭襄、袁承志、韦小宝正常路线，累计14名；所有离队/转形态/隐藏时限仍待完整验收。"
     },
     {
       "id": "world-missing",
@@ -96,9 +96,9 @@
     {
       "id": "save-longrun",
       "area": "系统与存档",
-      "state": "部分实现/待验收",
+      "state": "自动恢复已接入/长期周目待验收",
       "title": "验证档案、继承和特殊玩法多轮运行",
-      "detail": "独立设备档案已接入并有新角色/旧旅程/重复读取/跨世界浏览器验证；称号、元宝、技能上限及已用键保持。特殊玩法已有入口，长期跨周目、多轮奖励与旧档迁移回归仍待扩大。"
+      "detail": "独立档案继续按世界隔离；新增独立自动进度与手动存档，刷新恢复、关闭自动保存及写入失败保留旧档有浏览器检查。无悔战斗存档和长期跨周目、多轮奖励仍待完成。"
     },
     {
       "id": "visual-audio",
@@ -110,23 +110,23 @@
     {
       "id": "visual-skills",
       "area": "音画与发布",
-      "state": "部分实现",
+      "state": "102个ID已有现代演出/原粒子待复刻",
       "title": "补完整招式特效和动作时序",
-      "detail": "角色基本动作与柔光已有；完整武功特效、受击/死亡/连击时序、缺失模型与触屏战场表现仍需补齐。"
+      "detail": "原角色动作与真实命中格驱动102个原动画ID的配置化矢量演出；受击/败退、暂停、减少动态效果已有检查。原Unity粒子、全部时间线和缺失模型仍待完整复刻。"
     },
     {
       "id": "delivery-loading",
       "area": "音画与发布",
-      "state": "部分实现",
+      "state": "Release已验证/体积与长期兼容待补",
       "title": "优化加载体积、失败恢复与性能",
-      "detail": "已补内容/WASM并行加载、网络及502/503/504限次重试、失败Promise重置，并验证503恢复。仍使用保留反射的Debug WASM；生产体积、持续内存/帧率和长期兼容待优化。"
+      "detail": "已切Release托管程序集并记录实际约48MB运行时文件（含预压缩副本）；保留反射，未声称AOT或裁剪。内容并行与网络重试可用，持续内存/帧率、下载体积及跨浏览器仍待优化。"
     },
     {
       "id": "verify-final",
       "area": "最终验收",
-      "state": "待验收（后置）",
+      "state": "最终战复查失败/完整通关仍后置",
       "title": "正常成长完成最终战、华山、结局和下一周目",
-      "detail": "现有正常26级队伍完成四场救援但最终战败；高属性或隔离流程只证明接口，不能算通关。按先补资料的要求暂不新增通关测试。"
+      "detail": "正常26级队伍复查真实最终战仍失败，失败记录保留；新伙伴路线也保留真实胜败。华山、完整结局、下一周目正常通关仍缺，不能把隔离流程或导入量算通关。"
     },
     {
       "id": "verify-branches",
@@ -194,9 +194,9 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:778"
           ],
           "remainingEvidence": [
-            "selected probability and recovery checks; legacy single-precision rounding and cancellation ordering remain"
+            "single-precision recovery, pending MP cancellation and special-hit conversion checked; full hit/target ordering remains"
           ],
-          "remainingSummary": "选定概率与恢复已检查，原单精度舍入及取消恢复的先后仍待核对。"
+          "remainingSummary": "单精度恢复、待结算MP取消和伤害特技转换已检查；完整命中与目标遍历顺序仍待核对。"
         },
         {
           "id": "五行阵",
@@ -1136,9 +1136,9 @@
             "jyx-legacy-dll/JyGame/BattleField.cs:936"
           ],
           "remainingEvidence": [
-            "incoming HP suppression and attack ambush/consumption configured; MP, special pipeline and original miss/target iteration remain"
+            "ordinary HP/MP immunity and source-backed special bypass configured; ambush consumption, original miss/target iteration and full ordering remain"
           ],
-          "remainingSummary": "普通来袭HP压制、伏击增伤与消耗已接入；MP、特技和原未命中/多目标次序仍有差异。"
+          "remainingSummary": "普通HP/MP保护已接入，8个伤害特技按原早退分支绕过该普通保护；伏击与全部原顺序仍有差异。"
         },
         {
           "id": "溜须拍马",
@@ -1150,9 +1150,9 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:2131"
           ],
           "remainingEvidence": [
-            "source combat effect configured; special skills, MP and complete source reaction order remain"
+            "source combat effect and ordinary pending MP suppression configured; complete special coverage and source reaction order remain"
           ],
-          "remainingSummary": "普通来袭HP压制和攻击后取消已有配置；MP、特技及全部原命中/反应时点仍待核对。"
+          "remainingSummary": "普通来袭HP/MP保护与攻击后取消已有配置；原伤害特技不套普通公式保护，完整命中/反应时点仍待核对。"
         },
         {
           "id": "神速攻击",
@@ -1191,7 +1191,7 @@
             "jyx-legacy-dll/JyGame/BattleField.cs:921"
           ],
           "remainingEvidence": [
-            "source combat effect configured; special skills, MP and complete source reaction order remain"
+            "source combat effect and ordinary pending MP suppression configured; complete special coverage and source reaction order remain"
           ],
           "remainingSummary": "行动准备12%附加3回合状态，状态必暴击且暴击倍率加0.25已接入；原特技覆盖和全部暴击优先级仍待核对。"
         }
@@ -1209,9 +1209,9 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:2099"
           ],
           "remainingEvidence": [
-            "verify special damage hit/reaction pipeline against original; currently direct damage"
+            "common hit/reflection/formation/reaction pipeline configured with source branch-specific final modifiers; own-cost/multi-target timing, negative damage and complete original ordering remain"
           ],
-          "remainingSummary": "特技可施放，直接伤害与原普通命中、受击和后续反应管线仍有差异。"
+          "remainingSummary": "伤害特技已接命中、反弹、阵法和反应，按原分支配置最终修正；自伤、多目标与负伤害的完整先后仍待核对。"
         },
         {
           "id": "诗酒飘零",
@@ -1231,9 +1231,9 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:68"
           ],
           "remainingEvidence": [
-            "verify special damage hit/reaction pipeline against original; currently direct damage"
+            "common hit/reflection/formation/reaction pipeline configured with source branch-specific final modifiers; own-cost/multi-target timing, negative damage and complete original ordering remain"
           ],
-          "remainingSummary": "特技可施放，直接伤害与原普通命中、受击和后续反应管线仍有差异。"
+          "remainingSummary": "伤害特技已接命中、反弹、阵法和反应，按原分支配置最终修正；自伤、多目标与负伤害的完整先后仍待核对。"
         },
         {
           "id": "天地同寿",
@@ -1243,9 +1243,9 @@
           ],
           "remainingEvidence": [
             "single-cast HP snapshot, unblockable cost and permanent max-HP loss tested; multi-target source iteration remains",
-            "verify special damage hit/reaction pipeline against original; currently direct damage"
+            "common hit/reflection/formation/reaction pipeline configured with source branch-specific final modifiers; own-cost/multi-target timing, negative damage and complete original ordering remain"
           ],
-          "remainingSummary": "单次自伤、永久扣生命上限已接入，多目标依次执行与完整命中/反应管线仍待核对。"
+          "remainingSummary": "命中、反弹、分伤与反应已接；单次自伤、永久扣生命上限可用，多目标依次自伤与死亡时点仍待核对。"
         },
         {
           "id": "襄儿的心愿",
@@ -1254,9 +1254,9 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1361"
           ],
           "remainingEvidence": [
-            "verify special damage hit/reaction pipeline against original; currently direct damage"
+            "common hit/reflection/formation/reaction pipeline configured with source branch-specific final modifiers; own-cost/multi-target timing, negative damage and complete original ordering remain"
           ],
-          "remainingSummary": "特技可施放，直接伤害与原普通命中、受击和后续反应管线仍有差异。"
+          "remainingSummary": "伤害特技已接命中、反弹、阵法和反应，按原分支配置最终修正；自伤、多目标与负伤害的完整先后仍待核对。"
         },
         {
           "id": "火枪",
@@ -1265,9 +1265,9 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1367"
           ],
           "remainingEvidence": [
-            "verify special damage hit/reaction pipeline against original; currently direct damage"
+            "common hit/reflection/formation/reaction pipeline configured with source branch-specific final modifiers; own-cost/multi-target timing, negative damage and complete original ordering remain"
           ],
-          "remainingSummary": "特技可施放，直接伤害与原普通命中、受击和后续反应管线仍有差异。"
+          "remainingSummary": "伤害特技已接命中、反弹、阵法和反应，按原分支配置最终修正；自伤、多目标与负伤害的完整先后仍待核对。"
         },
         {
           "id": "易容术",
@@ -1276,9 +1276,9 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:267"
           ],
           "remainingEvidence": [
-            "易容: incoming HP suppression and attack ambush/consumption configured; MP, special pipeline and original miss/target iteration remain"
+            "易容: ordinary HP/MP immunity and source-backed special bypass configured; ambush consumption, original miss/target iteration and full ordering remain"
           ],
-          "remainingSummary": "易容Buff已能压制普通来袭HP伤害，攻击伏击增伤并消耗；MP、特技管线与原未命中/多目标次序仍有差异。"
+          "remainingSummary": "普通来袭HP/MP保护、伏击与消耗已有配置；按原源码区别伤害特技早退分支，完整未命中/多目标次序仍待核对。"
         },
         {
           "id": "过肩摔",
@@ -1287,9 +1287,9 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:291"
           ],
           "remainingEvidence": [
-            "verify special damage hit/reaction pipeline against original; currently direct damage"
+            "common hit/reflection/formation/reaction pipeline configured with source branch-specific final modifiers; own-cost/multi-target timing, negative damage and complete original ordering remain"
           ],
-          "remainingSummary": "特技可施放，直接伤害与原普通命中、受击和后续反应管线仍有差异。"
+          "remainingSummary": "伤害特技已接命中、反弹、阵法和反应，按原分支配置最终修正；自伤、多目标与负伤害的完整先后仍待核对。"
         },
         {
           "id": "神龙摆尾",
@@ -1298,9 +1298,9 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:304"
           ],
           "remainingEvidence": [
-            "verify special damage hit/reaction pipeline against original; currently direct damage"
+            "common hit/reflection/formation/reaction pipeline configured with source branch-specific final modifiers; own-cost/multi-target timing, negative damage and complete original ordering remain"
           ],
-          "remainingSummary": "特技可施放，直接伤害与原普通命中、受击和后续反应管线仍有差异。"
+          "remainingSummary": "伤害特技已接命中、反弹、阵法和反应，按原分支配置最终修正；自伤、多目标与负伤害的完整先后仍待核对。"
         },
         {
           "id": "武穆兵法",
@@ -1322,9 +1322,9 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:85"
           ],
           "remainingEvidence": [
-            "verify special damage hit/reaction pipeline against original; currently direct damage"
+            "common hit/reflection/formation/reaction pipeline configured with source branch-specific final modifiers; own-cost/multi-target timing, negative damage and complete original ordering remain"
           ],
-          "remainingSummary": "特技可施放，直接伤害与原普通命中、受击和后续反应管线仍有差异。"
+          "remainingSummary": "伤害特技已接命中、反弹、阵法和反应，按原分支配置最终修正；自伤、多目标与负伤害的完整先后仍待核对。"
         }
       ]
     }

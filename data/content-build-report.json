@@ -472,7 +472,7 @@
   "companionCatalog": {
     "characterForms": 65,
     "instructions": 80,
-    "normalVerified": 10,
+    "normalVerified": 14,
     "isolatedVerified": 2
   },
   "remainingChecklist": {
@@ -598,7 +598,7 @@
     "scopedBattleEffects": 1,
     "itemTags": 0,
     "storyScripts": 1,
-    "browser": 30
+    "browser": 32
   },
   "limitations": [
     "The 14 verified opening/trainer segments remain unchanged; dependency-closed original stories/maps/events and nine sect entries are now exposed. Structural migration is not proof of full playthroughs.",

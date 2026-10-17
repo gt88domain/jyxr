@@ -7226,6 +7226,15 @@
               "role": "target"
             },
             {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
+            },
+            {
               "type": "context_unit_effective_talent",
               "talentIds": [
                 "乾坤大挪移奥义"
@@ -7355,6 +7364,15 @@
             {
               "type": "context_unit_role",
               "role": "target"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
             },
             {
               "type": "chance",
@@ -8648,7 +8666,8 @@
                 "chance": 0.1,
                 "enhancedChance": 0.2,
                 "recoveryFactor": 0.35,
-                "floatText": "不老长春回血"
+                "floatText": "不老长春回血",
+                "singlePrecision": true
               }
             }
           ]
@@ -12311,7 +12330,17 @@
           "type": "hook",
           "timing": "BeforeDamageApplied",
           "priority": 550,
-          "conditions": [],
+          "conditions": [
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
+            }
+          ],
           "effects": [
             {
               "type": "custom",
@@ -12324,6 +12353,7 @@
                 "carefulDamageCap": 200,
                 "smartChance": 0.25,
                 "smartDamageCap": 500,
+                "deferMpDamage": true,
                 "carefulSpeech": {
                   "lines": [
                     "嘿嘿，你可伤不到我。"
@@ -12405,7 +12435,17 @@
           "type": "hook",
           "timing": "BeforeDamageApplied",
           "priority": 550,
-          "conditions": [],
+          "conditions": [
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
+            }
+          ],
           "effects": [
             {
               "type": "custom",
@@ -12418,6 +12458,7 @@
                 "carefulDamageCap": 200,
                 "smartChance": 0.25,
                 "smartDamageCap": 500,
+                "deferMpDamage": true,
                 "carefulSpeech": {
                   "lines": [
                     "嘿嘿，你可伤不到我。"
@@ -13962,6 +14003,15 @@
             {
               "type": "context_unit_role",
               "role": "target"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
             }
           ],
           "effects": [
@@ -14905,6 +14955,15 @@
             {
               "type": "context_unit_role",
               "role": "target"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
             }
           ],
           "effects": [
@@ -14993,6 +15052,15 @@
             {
               "type": "context_unit_role",
               "role": "target"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
             }
           ],
           "effects": [

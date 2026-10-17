@@ -39,7 +39,7 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:778"
           ],
           "remaining": [
-            "selected probability and recovery checks; legacy single-precision rounding and cancellation ordering remain"
+            "single-precision recovery, pending MP cancellation and special-hit conversion checked; full hit/target ordering remains"
           ],
           "fullBehaviorVerified": false
         },
@@ -1846,7 +1846,7 @@
             "jyx-legacy-dll/JyGame/BattleField.cs:936"
           ],
           "remaining": [
-            "incoming HP suppression and attack ambush/consumption configured; MP, special pipeline and original miss/target iteration remain"
+            "ordinary HP/MP immunity and source-backed special bypass configured; ambush consumption, original miss/target iteration and full ordering remain"
           ],
           "fullBehaviorVerified": false
         },
@@ -1891,7 +1891,7 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:2131"
           ],
           "remaining": [
-            "source combat effect configured; special skills, MP and complete source reaction order remain"
+            "source combat effect and ordinary pending MP suppression configured; complete special coverage and source reaction order remain"
           ],
           "fullBehaviorVerified": false
         },
@@ -2031,7 +2031,7 @@
             "jyx-legacy-dll/JyGame/BattleField.cs:921"
           ],
           "remaining": [
-            "source combat effect configured; special skills, MP and complete source reaction order remain"
+            "source combat effect and ordinary pending MP suppression configured; complete special coverage and source reaction order remain"
           ],
           "fullBehaviorVerified": false
         },
@@ -2072,7 +2072,7 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:2099"
           ],
           "remaining": [
-            "verify special damage hit/reaction pipeline against original; currently direct damage"
+            "common hit/reflection/formation/reaction pipeline configured with source branch-specific final modifiers; own-cost/multi-target timing, negative damage and complete original ordering remain"
           ],
           "fullBehaviorVerified": false
         },
@@ -2130,7 +2130,7 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:68"
           ],
           "remaining": [
-            "verify special damage hit/reaction pipeline against original; currently direct damage"
+            "common hit/reflection/formation/reaction pipeline configured with source branch-specific final modifiers; own-cost/multi-target timing, negative damage and complete original ordering remain"
           ],
           "fullBehaviorVerified": false
         },
@@ -2142,7 +2142,7 @@
           ],
           "remaining": [
             "single-cast HP snapshot, unblockable cost and permanent max-HP loss tested; multi-target source iteration remains",
-            "verify special damage hit/reaction pipeline against original; currently direct damage"
+            "common hit/reflection/formation/reaction pipeline configured with source branch-specific final modifiers; own-cost/multi-target timing, negative damage and complete original ordering remain"
           ],
           "fullBehaviorVerified": false
         },
@@ -2163,7 +2163,7 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1361"
           ],
           "remaining": [
-            "verify special damage hit/reaction pipeline against original; currently direct damage"
+            "common hit/reflection/formation/reaction pipeline configured with source branch-specific final modifiers; own-cost/multi-target timing, negative damage and complete original ordering remain"
           ],
           "fullBehaviorVerified": false
         },
@@ -2174,7 +2174,7 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1367"
           ],
           "remaining": [
-            "verify special damage hit/reaction pipeline against original; currently direct damage"
+            "common hit/reflection/formation/reaction pipeline configured with source branch-specific final modifiers; own-cost/multi-target timing, negative damage and complete original ordering remain"
           ],
           "fullBehaviorVerified": false
         },
@@ -2206,7 +2206,7 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:267"
           ],
           "remaining": [
-            "易容: incoming HP suppression and attack ambush/consumption configured; MP, special pipeline and original miss/target iteration remain"
+            "易容: ordinary HP/MP immunity and source-backed special bypass configured; ambush consumption, original miss/target iteration and full ordering remain"
           ],
           "fullBehaviorVerified": false
         },
@@ -2217,7 +2217,7 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:291"
           ],
           "remaining": [
-            "verify special damage hit/reaction pipeline against original; currently direct damage"
+            "common hit/reflection/formation/reaction pipeline configured with source branch-specific final modifiers; own-cost/multi-target timing, negative damage and complete original ordering remain"
           ],
           "fullBehaviorVerified": false
         },
@@ -2228,7 +2228,7 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:304"
           ],
           "remaining": [
-            "verify special damage hit/reaction pipeline against original; currently direct damage"
+            "common hit/reflection/formation/reaction pipeline configured with source branch-specific final modifiers; own-cost/multi-target timing, negative damage and complete original ordering remain"
           ],
           "fullBehaviorVerified": false
         },
@@ -2317,7 +2317,7 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:85"
           ],
           "remaining": [
-            "verify special damage hit/reaction pipeline against original; currently direct damage"
+            "common hit/reflection/formation/reaction pipeline configured with source branch-specific final modifiers; own-cost/multi-target timing, negative damage and complete original ordering remain"
           ],
           "fullBehaviorVerified": false
         },

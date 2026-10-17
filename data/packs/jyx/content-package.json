@@ -102560,7 +102560,9 @@
           },
           "parameters": {}
         }
-      ]
+      ],
+      "useAttackPipeline": true,
+      "applyFinalDamageModifiers": true
     },
     {
       "id": "沉鱼落雁",
@@ -102759,7 +102761,9 @@
           },
           "parameters": {}
         }
-      ]
+      ],
+      "useAttackPipeline": true,
+      "applyFinalDamageModifiers": false
     },
     {
       "id": "天地同寿",
@@ -102791,7 +102795,9 @@
             "permanentMaxHpCost": 10
           }
         }
-      ]
+      ],
+      "useAttackPipeline": true,
+      "applyFinalDamageModifiers": false
     },
     {
       "id": "笑傲江湖曲",
@@ -102854,7 +102860,9 @@
           },
           "parameters": {}
         }
-      ]
+      ],
+      "useAttackPipeline": true,
+      "applyFinalDamageModifiers": true
     },
     {
       "id": "火枪",
@@ -102897,7 +102905,9 @@
           },
           "parameters": {}
         }
-      ]
+      ],
+      "useAttackPipeline": true,
+      "applyFinalDamageModifiers": true
     },
     {
       "id": "撒石灰",
@@ -103029,7 +103039,9 @@
           },
           "parameters": {}
         }
-      ]
+      ],
+      "useAttackPipeline": true,
+      "applyFinalDamageModifiers": false
     },
     {
       "id": "神龙摆尾",
@@ -103072,7 +103084,9 @@
           },
           "parameters": {}
         }
-      ]
+      ],
+      "useAttackPipeline": true,
+      "applyFinalDamageModifiers": false
     },
     {
       "id": "闪电貂",
@@ -103388,7 +103402,9 @@
           },
           "parameters": {}
         }
-      ]
+      ],
+      "useAttackPipeline": true,
+      "applyFinalDamageModifiers": false
     },
     {
       "id": "飞星术",
@@ -116252,9 +116268,9 @@
           "timing": "BeforeDamageApplied",
           "effects": [
             {
-              "type": "modify_damage",
-              "op": "override",
-              "delta": 0
+              "type": "custom",
+              "effectId": "incoming_damage_immunity",
+              "parameters": {}
             }
           ],
           "conditions": [
@@ -116266,9 +116282,18 @@
               "type": "context_unit_relation",
               "role": "source",
               "relation": "enemy"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
             }
           ],
-          "priority": 0
+          "priority": 525
         },
         {
           "type": "hook",
@@ -116326,9 +116351,9 @@
           "timing": "BeforeDamageApplied",
           "effects": [
             {
-              "type": "modify_damage",
-              "op": "override",
-              "delta": 0
+              "type": "custom",
+              "effectId": "incoming_damage_immunity",
+              "parameters": {}
             }
           ],
           "conditions": [
@@ -116340,9 +116365,18 @@
               "type": "context_unit_relation",
               "role": "source",
               "relation": "enemy"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
             }
           ],
-          "priority": 0
+          "priority": 525
         },
         {
           "type": "hook",
@@ -116797,7 +116831,8 @@
                 "chance": 0.1,
                 "enhancedChance": 0.2,
                 "recoveryFactor": 0.35,
-                "floatText": "不老长春回血"
+                "floatText": "不老长春回血",
+                "singlePrecision": true
               }
             }
           ]
@@ -116818,6 +116853,15 @@
             {
               "type": "context_unit_role",
               "role": "target"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
             },
             {
               "type": "context_unit_effective_talent",
@@ -116856,6 +116900,15 @@
             {
               "type": "context_unit_role",
               "role": "target"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
             },
             {
               "type": "chance",
@@ -118403,6 +118456,15 @@
             {
               "type": "context_unit_role",
               "role": "target"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
             }
           ],
           "effects": [
@@ -120526,6 +120588,15 @@
             {
               "type": "context_unit_role",
               "role": "target"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
             }
           ],
           "effects": [
@@ -120644,7 +120715,17 @@
           "type": "hook",
           "timing": "BeforeDamageApplied",
           "priority": 550,
-          "conditions": [],
+          "conditions": [
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
+            }
+          ],
           "effects": [
             {
               "type": "custom",
@@ -120657,6 +120738,7 @@
                 "carefulDamageCap": 200,
                 "smartChance": 0.25,
                 "smartDamageCap": 500,
+                "deferMpDamage": true,
                 "carefulSpeech": {
                   "lines": [
                     "嘿嘿，你可伤不到我。"
@@ -120685,7 +120767,17 @@
           "type": "hook",
           "timing": "BeforeDamageApplied",
           "priority": 550,
-          "conditions": [],
+          "conditions": [
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
+            }
+          ],
           "effects": [
             {
               "type": "custom",
@@ -120698,6 +120790,7 @@
                 "carefulDamageCap": 200,
                 "smartChance": 0.25,
                 "smartDamageCap": 500,
+                "deferMpDamage": true,
                 "carefulSpeech": {
                   "lines": [
                     "嘿嘿，你可伤不到我。"
@@ -122394,6 +122487,15 @@
             {
               "type": "context_unit_role",
               "role": "target"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
             }
           ],
           "effects": [
@@ -229430,6 +229532,1623 @@
       "鹿鼎记_台湾3",
       "鹿鼎记_神龙岛4",
       "鹿鼎记_阿九.邀请2"
-    ]
+    ],
+    "companionConditions": [
+      {
+        "id": "021ee934cfcfb4961d9b",
+        "expression": "(in_team('段誉') || in_team('华山段誉') || in_team('天关段誉'))",
+        "random": false
+      },
+      {
+        "id": "0226922e1b50f47c43d5",
+        "expression": "story_completed('tlbb.dy_聚贤庄3')",
+        "random": false
+      },
+      {
+        "id": "031bb63875e42736a960",
+        "expression": "(in_team('胡斐') || in_team('华山胡斐'))",
+        "random": false
+      },
+      {
+        "id": "05c40da5b41ebfcd35b2",
+        "expression": "story_completed('门派古墓_回古墓.玄铁剑法')",
+        "random": false
+      },
+      {
+        "id": "06a7f5241f58d0ac9c34",
+        "expression": "silver >= 1000",
+        "random": false
+      },
+      {
+        "id": "07370146a1e98e15e489",
+        "expression": "story_completed('鹿鼎记_北京韦小宝')",
+        "random": false
+      },
+      {
+        "id": "089c66dfa46cebe20fc1",
+        "expression": "story_completed('门派古墓_杨冰儿初登场')",
+        "random": false
+      },
+      {
+        "id": "0982499e6d150c1dd60b",
+        "expression": "story_completed('笑傲邪_收服恒山胜利')",
+        "random": false
+      },
+      {
+        "id": "0cd4cc11f12415887e1d",
+        "expression": "story_completed('original_山庄风云.出发')",
+        "random": false
+      },
+      {
+        "id": "0eeba18999569f5d0f66",
+        "expression": "story_completed('鹿鼎记_北京韦小宝加入')",
+        "random": false
+      },
+      {
+        "id": "0f4b9ee39f9d528ebf8f",
+        "expression": "story_completed('门派大轮寺_灵智上人1')",
+        "random": false
+      },
+      {
+        "id": "115357c0a39fe9125a63",
+        "expression": "(in_team('阿碧'))",
+        "random": false
+      },
+      {
+        "id": "128b8176456aa6f83618",
+        "expression": "!story_completed('门派古墓_古墓叛徒3')",
+        "random": false
+      },
+      {
+        "id": "148bd168bd8e6ee3d52c",
+        "expression": "!story_completed('笑傲江湖_杀死令狐冲')",
+        "random": false
+      },
+      {
+        "id": "15b26d69b1215bcf5b45",
+        "expression": "(in_team('天关乔峰') || in_team('乔峰') || in_team('超级乔峰') || in_team('松鼠乔峰'))",
+        "random": false
+      },
+      {
+        "id": "15b9af2fa9d1389caaf0",
+        "expression": "!story_completed('笑傲江湖_平一指治好')",
+        "random": false
+      },
+      {
+        "id": "17d57611fa13c3b0358f",
+        "expression": "story_completed('门派古墓_古墓出师')",
+        "random": false
+      },
+      {
+        "id": "183c88dd2ca01e63a00c",
+        "expression": "story_completed('倚天屠龙_张无忌2')",
+        "random": false
+      },
+      {
+        "id": "19993cf6263a9af048e7",
+        "expression": "!story_completed('连城诀_昆仑山.血刀老祖胜')",
+        "random": false
+      },
+      {
+        "id": "1a4ed01ce555865a2a82",
+        "expression": "story_completed('tlbb.dy_秦红棉居秦红棉1')",
+        "random": false
+      },
+      {
+        "id": "1a6214afd1c768cfa766",
+        "expression": "sect == '大轮寺'",
+        "random": false
+      },
+      {
+        "id": "1b9d81654b9098663ff5",
+        "expression": "!(in_team('杨过') || in_team('松鼠杨过'))",
+        "random": false
+      },
+      {
+        "id": "208fbfd502ec77e7e438",
+        "expression": "!story_completed('original_长安深夜怪事.开篇')",
+        "random": false
+      },
+      {
+        "id": "21fb0ce49c62064b127d",
+        "expression": "(in_team('袁承志') || in_team('华山袁承志') || in_team('儿时袁承志') || in_team('炼狱袁承志'))",
+        "random": false
+      },
+      {
+        "id": "228f4c6249af2be4d7c5",
+        "expression": "current_time_slot in ['子', '丑', '寅', '卯', '亥']",
+        "random": false
+      },
+      {
+        "id": "239b9dafddd53764bd8a",
+        "expression": "(in_team('狄云') || in_team('华山狄云'))",
+        "random": false
+      },
+      {
+        "id": "2534ac5e20d7e26ffeda",
+        "expression": "story_completed('sdxl_剑魔荒冢.杨过')",
+        "random": false
+      },
+      {
+        "id": "2c1bad1fd8dd66f6af9c",
+        "expression": "!story_completed('门派古墓_古墓出师')",
+        "random": false
+      },
+      {
+        "id": "2c32c1385129b26be2e0",
+        "expression": "!story_completed('书剑恩仇录_回族部落霍青桐')",
+        "random": false
+      },
+      {
+        "id": "2d2fdfb6738eea5b3aa2",
+        "expression": "story_completed('倚天邪线_劝说各大派')",
+        "random": false
+      },
+      {
+        "id": "2e32dd72e5ffe7c718a2",
+        "expression": "story_completed('鹿鼎记_皇宫鳌拜1')",
+        "random": false
+      },
+      {
+        "id": "2efb81cf2e9f35ba339d",
+        "expression": "(in_team('霍青桐'))",
+        "random": false
+      },
+      {
+        "id": "2f20299b6e4946ea2545",
+        "expression": "!story_completed('雪山飞狐_药王庄.毒手药王.单挑战.胜利')",
+        "random": false
+      },
+      {
+        "id": "2fee2b348523261a3a28",
+        "expression": "!story_completed('碧血剑_何红药胜')",
+        "random": false
+      },
+      {
+        "id": "30760714792556bf74c0",
+        "expression": "story_completed('original_长安.出发')",
+        "random": false
+      },
+      {
+        "id": "30d342b22fa6bbecc9f5",
+        "expression": "!(in_team('李文秀'))",
+        "random": false
+      },
+      {
+        "id": "322eee1e99ce228f4232",
+        "expression": "!story_completed('门派古墓_古墓故友3')",
+        "random": false
+      },
+      {
+        "id": "323ee8809224229d8e58",
+        "expression": "story_completed('original_大唐军营.父亲大人')",
+        "random": false
+      },
+      {
+        "id": "32a3fc13aad48780cc4b",
+        "expression": "story_completed('笑傲邪_收服华山胜利')",
+        "random": false
+      },
+      {
+        "id": "350b2e3c30b3a6a967e4",
+        "expression": "story_completed('笑傲江湖_平一指2')",
+        "random": false
+      },
+      {
+        "id": "3566996a0bba43656e82",
+        "expression": "sect != '血刀门'",
+        "random": false
+      },
+      {
+        "id": "357fc8dd916614bb3ed1",
+        "expression": "story_completed('bixuejianShyou_得黄金')",
+        "random": false
+      },
+      {
+        "id": "35a6efa03f2167013166",
+        "expression": "!story_completed('tlbb.dy_闪电貂')",
+        "random": false
+      },
+      {
+        "id": "365740f742141f93def1",
+        "expression": "(in_team('不败令狐冲') || in_team('令狐冲') || in_team('黑木崖超级令狐冲') || in_team('松鼠令狐冲'))",
+        "random": false
+      },
+      {
+        "id": "3747221e73c004eaa456",
+        "expression": "story_completed('鹿鼎记_神龙岛')",
+        "random": false
+      },
+      {
+        "id": "374a41e88696d1704924",
+        "expression": "story_completed('鹿鼎记_皇宫太后7')",
+        "random": false
+      },
+      {
+        "id": "383486d8b52a98757699",
+        "expression": "story_completed('tlbb.dy_小镜湖阮星竹6')",
+        "random": false
+      },
+      {
+        "id": "3899d47096717012b00a",
+        "expression": "!(in_team('阿朱'))",
+        "random": false
+      },
+      {
+        "id": "3aa29a271e89025e0607",
+        "expression": "morality < 35",
+        "random": false
+      },
+      {
+        "id": "3bd84a96071164186894",
+        "expression": "!(in_team('胡斐') || in_team('华山胡斐'))",
+        "random": false
+      },
+      {
+        "id": "3c65a1bae3b3597eb746",
+        "expression": "in_team('女主')",
+        "random": false
+      },
+      {
+        "id": "3f93a1c3c2d82c85feb8",
+        "expression": "story_completed('mainStory_紧急4')",
+        "random": false
+      },
+      {
+        "id": "4021e15c12e7cad835e9",
+        "expression": "!story_completed('笑傲江湖_西湖底.询问林平之辟邪1')",
+        "random": false
+      },
+      {
+        "id": "4130bc96a9d76243d359",
+        "expression": "!story_completed('tlbb.dy_木婉清.攻略成功')",
+        "random": false
+      },
+      {
+        "id": "422d31f09c2e0e16679b",
+        "expression": "story_completed('tlbb.dy_雁门关有阿朱')",
+        "random": false
+      },
+      {
+        "id": "44bcbf0c49adac8a24cf",
+        "expression": "!story_completed('original_女主出场.结束')",
+        "random": false
+      },
+      {
+        "id": "44c191a32a530c67de56",
+        "expression": "!story_completed('全真教_杀死田伯光完成')",
+        "random": false
+      },
+      {
+        "id": "4539b5efef1785e9fd28",
+        "expression": "morality >= 65",
+        "random": false
+      },
+      {
+        "id": "46969abda6b17f569e72",
+        "expression": "story_completed('tlbb.dy_镇南王府.救木婉清2')",
+        "random": false
+      },
+      {
+        "id": "46cd139917b2f54a2da8",
+        "expression": "!story_completed('bixuejianShyou_得黄金')",
+        "random": false
+      },
+      {
+        "id": "47680da9e4c21c5b7674",
+        "expression": "(in_team('阿朱'))",
+        "random": false
+      },
+      {
+        "id": "47a0bb88148140a4ab74",
+        "expression": "!story_completed('original_长安一梦.民女12')",
+        "random": false
+      },
+      {
+        "id": "47c18a25018fcfd8d158",
+        "expression": "!story_completed('门派古墓_回古墓.玄铁剑法练习')",
+        "random": false
+      },
+      {
+        "id": "4841a4dc006a61f57089",
+        "expression": "character_level('主角') >= 5",
+        "random": false
+      },
+      {
+        "id": "496f7028a4f806817b48",
+        "expression": "morality >= 75",
+        "random": false
+      },
+      {
+        "id": "4a27a48f799411f75198",
+        "expression": "!story_completed('original_松鼠旅馆结束')",
+        "random": false
+      },
+      {
+        "id": "4f0b836782c833aac86a",
+        "expression": "story_completed('连城诀_唐诗山洞.狄云加入前')",
+        "random": false
+      },
+      {
+        "id": "50a95482d81e00dbb9eb",
+        "expression": "story_completed('tlbb.dy_童姥使者3')",
+        "random": false
+      },
+      {
+        "id": "50ba92f8b17afcb3b891",
+        "expression": "!(in_team('田伯光'))",
+        "random": false
+      },
+      {
+        "id": "51b2287e7028911c476d",
+        "expression": "(in_team('平一指'))",
+        "random": false
+      },
+      {
+        "id": "521f50559678c20fae17",
+        "expression": "story_completed('雪山飞狐_苗人凤居.苗人凤被毒.胜利')",
+        "random": false
+      },
+      {
+        "id": "528e2b39eb48b7715799",
+        "expression": "story_completed('original_周伯通胜')",
+        "random": false
+      },
+      {
+        "id": "551a76d92a2cdd46024f",
+        "expression": "favorability('女主') >= 60",
+        "random": false
+      },
+      {
+        "id": "5641b06cdc67f1053b42",
+        "expression": "story_completed('tlbb.dy_无量山洞3')",
+        "random": false
+      },
+      {
+        "id": "56b4edc00024377bdb5f",
+        "expression": "!story_completed('笑傲江湖_岳灵珊3胜')",
+        "random": false
+      },
+      {
+        "id": "5cf06cd47662f37d525a",
+        "expression": "story_completed('original_长安一梦.民女C1')",
+        "random": false
+      },
+      {
+        "id": "5da54b1939f85a8a6d74",
+        "expression": "elapsed_days > 40",
+        "random": false
+      },
+      {
+        "id": "5e05e62228fc0b453b22",
+        "expression": "story_completed('tlbb.dy_少林寺帮助慕容复')",
+        "random": false
+      },
+      {
+        "id": "5fe41879c46e4aa5a4a6",
+        "expression": "!(in_team('霍青桐'))",
+        "random": false
+      },
+      {
+        "id": "607552cac43733ed0f74",
+        "expression": "!story_completed('mainStory_黑暗的阴影1')",
+        "random": false
+      },
+      {
+        "id": "607ab53573d8d7671b22",
+        "expression": "!(in_team('王语嫣'))",
+        "random": false
+      },
+      {
+        "id": "64a80890895c55da715a",
+        "expression": "story_completed('original_主角之家.开场')",
+        "random": false
+      },
+      {
+        "id": "6582c70480e1eaf24069",
+        "expression": "story_completed('射雕英雄传_桃花岛黄药师1')",
+        "random": false
+      },
+      {
+        "id": "672529bc6b2449db3cff",
+        "expression": "story_completed('射雕英雄传_张家口1')",
+        "random": false
+      },
+      {
+        "id": "67ac46a86e2194fb46f9",
+        "expression": "(in_team('神级任盈盈') || in_team('任盈盈'))",
+        "random": false
+      },
+      {
+        "id": "6850af9c90ead823166a",
+        "expression": "story_completed('original_长安深夜怪事.三遇夜间人.不杀')",
+        "random": false
+      },
+      {
+        "id": "697c019269e6adb9d142",
+        "expression": "story_completed('original_长安一梦.民女12')",
+        "random": false
+      },
+      {
+        "id": "6ae61603f52abbb0065e",
+        "expression": "story_completed('连城诀_昆仑山.血刀老祖杀')",
+        "random": false
+      },
+      {
+        "id": "6b5d114c71d95b8b30d9",
+        "expression": "(in_team('木婉清(蒙面)') || in_team('木婉清.蒙面') || in_team('木婉清'))",
+        "random": false
+      },
+      {
+        "id": "6ba00bb87bb020bfaf09",
+        "expression": "story_completed('新手村_南贤开场')",
+        "random": false
+      },
+      {
+        "id": "6ba6f16ae0690d26f595",
+        "expression": "story_completed('门派大轮寺_达尔巴1')",
+        "random": false
+      },
+      {
+        "id": "6c2bdc07bc57fa5441b2",
+        "expression": "story_completed('破庙_田青文')",
+        "random": false
+      },
+      {
+        "id": "6df087771108e80480fd",
+        "expression": "sect == '古墓'",
+        "random": false
+      },
+      {
+        "id": "75e64612310bb15a0e18",
+        "expression": "!(in_team('不败令狐冲') || in_team('令狐冲') || in_team('黑木崖超级令狐冲') || in_team('松鼠令狐冲'))",
+        "random": false
+      },
+      {
+        "id": "774a75d33a362cc7289b",
+        "expression": "!story_completed('门派大轮寺_灵智上人胜')",
+        "random": false
+      },
+      {
+        "id": "7990ce5220bee7cf1610",
+        "expression": "story_completed('射雕英雄传_白驼山欧阳锋2')",
+        "random": false
+      },
+      {
+        "id": "7a79a2100f3394241272",
+        "expression": "!story_completed('sdxl_剑魔荒冢.杀死杨过')",
+        "random": false
+      },
+      {
+        "id": "7a82a2b936f4428db617",
+        "expression": "story_completed('tlbb.xz_擂鼓山4')",
+        "random": false
+      },
+      {
+        "id": "7a860d76cdfd6440e875",
+        "expression": "story_completed('笑傲江湖_岳灵珊1胜')",
+        "random": false
+      },
+      {
+        "id": "7b40a75d46d0724e66b0",
+        "expression": "(in_team('韦小宝'))",
+        "random": false
+      },
+      {
+        "id": "7bfce3fce9499114d80a",
+        "expression": "story_completed('白马啸西风_高昌秘宝')",
+        "random": false
+      },
+      {
+        "id": "7dcc1f79d0bc6d659146",
+        "expression": "!(in_team('蓝凤凰'))",
+        "random": false
+      },
+      {
+        "id": "7e4b219432d5a37c667f",
+        "expression": "story_completed('门派大轮寺_灵智上人胜')",
+        "random": false
+      },
+      {
+        "id": "7e6276bb773c12bed002",
+        "expression": "!story_completed('bixuejianShyou_不接黄金石梁派7')",
+        "random": false
+      },
+      {
+        "id": "7e6dc7b3ad5cfed97173",
+        "expression": "story_completed('射雕英雄传_洪七公2')",
+        "random": false
+      },
+      {
+        "id": "7e9f95c06198c1fcd7d4",
+        "expression": "story_completed('tlbb.dy_曼陀山庄初见王语嫣')",
+        "random": false
+      },
+      {
+        "id": "80723ffe517e6d18916d",
+        "expression": "!(in_team('温青青'))",
+        "random": false
+      },
+      {
+        "id": "81ddceecb4eff1986c4e",
+        "expression": "story_completed('original_山庄风云.贾飞发疯2')",
+        "random": false
+      },
+      {
+        "id": "821a20d5a21e46727995",
+        "expression": "story_completed('少林寺_南北之争')",
+        "random": false
+      },
+      {
+        "id": "851f12ab80b018bcf7fc",
+        "expression": "!story_completed('笑傲江湖_令狐冲加入')",
+        "random": false
+      },
+      {
+        "id": "85f5c5691501a3269381",
+        "expression": "story_completed('mainStory_神秘剑客1')",
+        "random": false
+      },
+      {
+        "id": "89c435ee04743a355411",
+        "expression": "!story_completed('tlbb.dy_阿朱阿碧事件结束')",
+        "random": false
+      },
+      {
+        "id": "8c9412ecc6e59431ad6d",
+        "expression": "story_completed('破庙_梅超风')",
+        "random": false
+      },
+      {
+        "id": "8d12f32136dd09b1cb2b",
+        "expression": "story_completed('雪山飞狐_阎基居.七星海棠.胜利.杀')",
+        "random": false
+      },
+      {
+        "id": "8e51c18934719340ff11",
+        "expression": "!(in_team('郭靖') || in_team('松鼠郭靖'))",
+        "random": false
+      },
+      {
+        "id": "90571565bd1fa22fd6a4",
+        "expression": "!story_completed('连城诀_唐诗山洞.直接杀死狄云')",
+        "random": false
+      },
+      {
+        "id": "90ab9b0e9b98a4434153",
+        "expression": "favorability('李文秀') >= 60",
+        "random": false
+      },
+      {
+        "id": "9143e527d15ee16d14e5",
+        "expression": "(in_team('田伯光'))",
+        "random": false
+      },
+      {
+        "id": "92c367887eb1c5d3e0f6",
+        "expression": "!story_completed('雪山飞狐_胡斐居.胜利')",
+        "random": false
+      },
+      {
+        "id": "944cb73144c8d2a79822",
+        "expression": "story_completed('连城诀_唐诗山洞.狄云不加入')",
+        "random": false
+      },
+      {
+        "id": "958e753739b8eafb68b3",
+        "expression": "!(in_team('儿时袁承志'))",
+        "random": false
+      },
+      {
+        "id": "9687016a8c464ce23e9b",
+        "expression": "story_completed('门派大轮寺_达尔巴胜')",
+        "random": false
+      },
+      {
+        "id": "98f35058ce44600c04af",
+        "expression": "story_completed('tlbb.dy_闪电貂带路2')",
+        "random": false
+      },
+      {
+        "id": "993916567b2c69bdce24",
+        "expression": "!(in_team('鸠摩智') || in_team('发狂鸠摩智') || in_team('炼狱鸠摩智'))",
+        "random": false
+      },
+      {
+        "id": "9b202b12e90aa62e1c9d",
+        "expression": "!story_completed('original_长安一梦.民女3')",
+        "random": false
+      },
+      {
+        "id": "9b22624b73591cf85c67",
+        "expression": "story_completed('mainStory_组织1')",
+        "random": false
+      },
+      {
+        "id": "9b2f36ba71a22d429d5e",
+        "expression": "item_count('雪莲花') >= 1",
+        "random": false
+      },
+      {
+        "id": "9ff6f89145b877d3ad60",
+        "expression": "story_completed('雪山飞狐_药王庄.毒手药王')",
+        "random": false
+      },
+      {
+        "id": "a021fa8d5ca4f4dde2de",
+        "expression": "!story_completed('笑傲江湖_曲非烟胜')",
+        "random": false
+      },
+      {
+        "id": "a1a2d52956e6bacd113b",
+        "expression": "!(in_team('阿九'))",
+        "random": false
+      },
+      {
+        "id": "a28c470663f682955069",
+        "expression": "!story_completed('mainStory_紧急1')",
+        "random": false
+      },
+      {
+        "id": "a32aef38372e63167953",
+        "expression": "story_completed('tlbb.dy_天龙寺.战鸠摩智')",
+        "random": false
+      },
+      {
+        "id": "a3e718ccad6913abcb0c",
+        "expression": "!story_completed('门派大轮寺_大轮寺出师')",
+        "random": false
+      },
+      {
+        "id": "a57eec2b23d93912bdd0",
+        "expression": "round == 2",
+        "random": false
+      },
+      {
+        "id": "a595931cead5561a471d",
+        "expression": "!story_completed('门派大轮寺_达尔巴胜')",
+        "random": false
+      },
+      {
+        "id": "a749518cc16b2ffc2de1",
+        "expression": "round != 2",
+        "random": false
+      },
+      {
+        "id": "a9345d5b0ea173594844",
+        "expression": "!story_completed('original_长安深夜怪事.三遇夜间人')",
+        "random": false
+      },
+      {
+        "id": "ab2cf794c60083850e5b",
+        "expression": "story_completed('倚天屠龙_劝说嵩山1')",
+        "random": false
+      },
+      {
+        "id": "ac9a492c9b22eeeca809",
+        "expression": "story_completed('雪山飞狐_药王庄.程灵素.求药')",
+        "random": false
+      },
+      {
+        "id": "afe848f7818d16d78bfe",
+        "expression": "story_completed('mainStory_黑暗的阴影1')",
+        "random": false
+      },
+      {
+        "id": "b156694a6cc7ec9f1af8",
+        "expression": "story_completed('tlbb.dy_湘江阿碧')",
+        "random": false
+      },
+      {
+        "id": "b2abb84d19983cf16ac5",
+        "expression": "chance(0.05)",
+        "random": true
+      },
+      {
+        "id": "b418d22dc44f0f95c679",
+        "expression": "round == 3",
+        "random": false
+      },
+      {
+        "id": "b57c4ba762b911669251",
+        "expression": "!story_completed('original_女主长安加入队伍')",
+        "random": false
+      },
+      {
+        "id": "b846c0e745e0d0bee01a",
+        "expression": "story_completed('倚天屠龙_光明顶胜利2')",
+        "random": false
+      },
+      {
+        "id": "b8c6e63b76f42b72f4c4",
+        "expression": "!story_completed('鹿鼎记_北京韦小宝加入')",
+        "random": false
+      },
+      {
+        "id": "b93e01c7c7f84f7a3391",
+        "expression": "!(in_team('阿珂'))",
+        "random": false
+      },
+      {
+        "id": "ba35db8d42b3bce20d9f",
+        "expression": "(in_team('郭靖') || in_team('松鼠郭靖'))",
+        "random": false
+      },
+      {
+        "id": "bbb63f0ebf8c522d45ea",
+        "expression": "story_completed('鹿鼎记_阿九3')",
+        "random": false
+      },
+      {
+        "id": "be1c638256dcdf696f40",
+        "expression": "story_completed('射雕英雄传_桃花岛黄药师2')",
+        "random": false
+      },
+      {
+        "id": "be22c38e312c5da35164",
+        "expression": "!(in_team('狄云') || in_team('华山狄云'))",
+        "random": false
+      },
+      {
+        "id": "bf4d3375b6f1cd107f2e",
+        "expression": "!story_completed('雪山飞狐_药王庄.毒手药王.胜利')",
+        "random": false
+      },
+      {
+        "id": "bfb55ac8c2c4a88bd596",
+        "expression": "(in_team('张无忌') || in_team('光明顶张无忌') || in_team('变身张无忌') || in_team('神级张无忌'))",
+        "random": false
+      },
+      {
+        "id": "bfe05c43fa7a3c17cb9a",
+        "expression": "story_completed('bixuejianShyou_接黄金3')",
+        "random": false
+      },
+      {
+        "id": "c0fb507b31d426a97590",
+        "expression": "!story_completed('tlbb.dy_闪电貂带路2')",
+        "random": false
+      },
+      {
+        "id": "c10689c9b6aade8908b6",
+        "expression": "story_completed('鹿鼎记_吴三桂4')",
+        "random": false
+      },
+      {
+        "id": "c18b4f9406412227bb9b",
+        "expression": "(in_team('程灵素'))",
+        "random": false
+      },
+      {
+        "id": "c2ef1001729e5943d8d3",
+        "expression": "story_completed('tlbb.dy_万劫谷地牢.上')",
+        "random": false
+      },
+      {
+        "id": "c38df9eee6bcb6822d8a",
+        "expression": "story_completed('书剑恩仇录_六和塔')",
+        "random": false
+      },
+      {
+        "id": "c3d91f78d4cff43696f7",
+        "expression": "!(in_team('小龙女') || in_team('松鼠小龙女'))",
+        "random": false
+      },
+      {
+        "id": "c47501d246e9703b7630",
+        "expression": "(in_team('段正淳'))",
+        "random": false
+      },
+      {
+        "id": "c48dba228a35749bd130",
+        "expression": "!(in_team('木婉清(蒙面)') || in_team('木婉清.蒙面') || in_team('木婉清'))",
+        "random": false
+      },
+      {
+        "id": "c495a95a7f17eec62ea3",
+        "expression": "(in_team('杨冰儿'))",
+        "random": false
+      },
+      {
+        "id": "c5805e1ec62a97a144d0",
+        "expression": "story_completed('笑傲江湖_琴居东方胜')",
+        "random": false
+      },
+      {
+        "id": "c632e71eeb1d1c6c781a",
+        "expression": "(in_team('蓝凤凰'))",
+        "random": false
+      },
+      {
+        "id": "c7e4db75d7d893b7a85b",
+        "expression": "story_completed('tlbb.dy_对话.再见木婉清2')",
+        "random": false
+      },
+      {
+        "id": "c84532924e905e73e691",
+        "expression": "story_completed('侠客行_石太玄神功')",
+        "random": false
+      },
+      {
+        "id": "c980d949abe03fad789b",
+        "expression": "!(in_team('陈达海'))",
+        "random": false
+      },
+      {
+        "id": "cb89406d749b26ae70d7",
+        "expression": "!in_team('女主')",
+        "random": false
+      },
+      {
+        "id": "cd6e2dfd7f6d7af6e926",
+        "expression": "story_completed('bixuejianShyou_不接黄金石梁派4')",
+        "random": false
+      },
+      {
+        "id": "ced36964e8cddf449ee2",
+        "expression": "!(in_team('程英.初级') || in_team('程英.高级'))",
+        "random": false
+      },
+      {
+        "id": "ced660e49b4ceaadc1da",
+        "expression": "item_count('长白人参') >= 1",
+        "random": false
+      },
+      {
+        "id": "cf1957132e0a3f5b9400",
+        "expression": "story_completed('tlbb.dy_木婉清.touch.成功')",
+        "random": false
+      },
+      {
+        "id": "cf3653c118428b4033a8",
+        "expression": "(in_team('杨过') || in_team('松鼠杨过'))",
+        "random": false
+      },
+      {
+        "id": "d170329673b260b83c5c",
+        "expression": "!story_completed('射雕英雄传_桃花岛黄药师2')",
+        "random": false
+      },
+      {
+        "id": "d2317c743874d178d395",
+        "expression": "!story_completed('笑傲江湖_平一指3')",
+        "random": false
+      },
+      {
+        "id": "d48262dbc6daef674448",
+        "expression": "(in_team('温青青'))",
+        "random": false
+      },
+      {
+        "id": "d518cea45113ce0dab1d",
+        "expression": "!story_completed('tlbb.dy_闪电貂还钟灵')",
+        "random": false
+      },
+      {
+        "id": "d71a61f2e71c68053cc4",
+        "expression": "story_completed('original_松鼠旅馆事件启动')",
+        "random": false
+      },
+      {
+        "id": "d723004cf9638efecc7d",
+        "expression": "story_completed('雪山飞狐_阎基居.七星海棠.胜利.不杀')",
+        "random": false
+      },
+      {
+        "id": "da718f5c704958941a40",
+        "expression": "!story_completed('mainStory_神秘剑客1')",
+        "random": false
+      },
+      {
+        "id": "dae3868b8e87010459be",
+        "expression": "story_completed('tlbb.dy_天龙寺.救段誉1')",
+        "random": false
+      },
+      {
+        "id": "dafbb6f75a6b5f739335",
+        "expression": "story_completed('门派古墓_左右互搏')",
+        "random": false
+      },
+      {
+        "id": "db9420f3926fe70f297c",
+        "expression": "!story_completed('门派大轮寺_大理高手1')",
+        "random": false
+      },
+      {
+        "id": "dbaf79fbb52bfaa4c1e9",
+        "expression": "!story_completed('鸳鸯刀_风陵渡胜2')",
+        "random": false
+      },
+      {
+        "id": "e00f019a6061726b5c09",
+        "expression": "story_completed('全真教_孙不二是')",
+        "random": false
+      },
+      {
+        "id": "e0cd5406e9ab21e057a0",
+        "expression": "round != 3",
+        "random": false
+      },
+      {
+        "id": "e37731cbc6a7486a7ef1",
+        "expression": "!story_completed('连城诀_天宁寺毒习武')",
+        "random": false
+      },
+      {
+        "id": "e3c803b69917ac022bdb",
+        "expression": "!(in_team('程灵素'))",
+        "random": false
+      },
+      {
+        "id": "e477dc3cdf2ec4d41762",
+        "expression": "!story_completed('original_灭门血刀成功')",
+        "random": false
+      },
+      {
+        "id": "e5d7ffd5136f513057c0",
+        "expression": "!(in_team('郭襄') || in_team('华山郭襄'))",
+        "random": false
+      },
+      {
+        "id": "e5f8a086bcef54bb412e",
+        "expression": "story_completed('original_松鼠旅馆结束')",
+        "random": false
+      },
+      {
+        "id": "e6e58b0f3f5039cc143e",
+        "expression": "story_completed('bixuejianShyou_接黄金2')",
+        "random": false
+      },
+      {
+        "id": "e92dd20806d0ca7e7a67",
+        "expression": "current_time_slot not in ['子', '丑', '寅', '卯', '亥']",
+        "random": false
+      },
+      {
+        "id": "e9b2a94387c9b2224861",
+        "expression": "!story_completed('门派古墓_左右互搏行')",
+        "random": false
+      },
+      {
+        "id": "ea35f8b238f78eb229bd",
+        "expression": "story_completed('雪山飞狐_苗人凤居.田归农来战.胜利.2')",
+        "random": false
+      },
+      {
+        "id": "eb3b64324d48cfc28300",
+        "expression": "!story_completed('sdxl_剑魔荒冢.战胜神雕')",
+        "random": false
+      },
+      {
+        "id": "eb4df90e24f93345a95c",
+        "expression": "story_completed('bixuejianShyou_不接黄金')",
+        "random": false
+      },
+      {
+        "id": "eb4f7414d65aed71f766",
+        "expression": "story_completed('白马啸西风_初次见面')",
+        "random": false
+      },
+      {
+        "id": "ebabc1d0e7573ffe0e2a",
+        "expression": "morality >= 55",
+        "random": false
+      },
+      {
+        "id": "ec07a543834695e316b3",
+        "expression": "!(in_team('段誉') || in_team('华山段誉') || in_team('天关段誉'))",
+        "random": false
+      },
+      {
+        "id": "ec22c226ddf9162f4144",
+        "expression": "!(in_team('天关慕容复') || in_team('慕容复') || in_team('松鼠慕容复'))",
+        "random": false
+      },
+      {
+        "id": "ec42907f2b157edd3225",
+        "expression": "!(in_team('袁承志') || in_team('华山袁承志') || in_team('儿时袁承志') || in_team('炼狱袁承志'))",
+        "random": false
+      },
+      {
+        "id": "ece2b1e80dcad071a5ca",
+        "expression": "story_completed('bixuejianShyou_华山派')",
+        "random": false
+      },
+      {
+        "id": "ee299e66dc84ba9c0c0d",
+        "expression": "!story_completed('门派古墓_古墓世仇3')",
+        "random": false
+      },
+      {
+        "id": "ee2e320f7d9039be23a4",
+        "expression": "story_completed('tlbb.dy_曼陀山庄李青萝3')",
+        "random": false
+      },
+      {
+        "id": "ef19b0145c91a8d162f5",
+        "expression": "story_completed('侠客行_主杭州石清')",
+        "random": false
+      },
+      {
+        "id": "ef551b8efa6d21c8f91c",
+        "expression": "item_count('万年醉') >= 1",
+        "random": false
+      },
+      {
+        "id": "f174d69fa44008f70a74",
+        "expression": "story_completed('original_长安深夜怪事.再遇夜间人')",
+        "random": false
+      },
+      {
+        "id": "f20038cb67fe98680285",
+        "expression": "story_completed('连城诀_唐诗山洞.狄云死亡')",
+        "random": false
+      },
+      {
+        "id": "f24c1098df33f6084283",
+        "expression": "!story_completed('original_山庄风云.出发')",
+        "random": false
+      },
+      {
+        "id": "f40e609940409f03a5c8",
+        "expression": "story_completed('tlbb.dy_马夫人3')",
+        "random": false
+      },
+      {
+        "id": "f44127e0a882788d4f31",
+        "expression": "!story_completed('sdxl_3')",
+        "random": false
+      },
+      {
+        "id": "f614a3ca1d13b99136d4",
+        "expression": "story_completed('射雕英雄传_一灯居2')",
+        "random": false
+      },
+      {
+        "id": "f78b17bad9bc627096bf",
+        "expression": "round != 1",
+        "random": false
+      },
+      {
+        "id": "f9014b06942fe35e0c8e",
+        "expression": "story_completed('门派古墓_回古墓.玄铁剑法3胜')",
+        "random": false
+      },
+      {
+        "id": "f941e2ff0fcac96a2525",
+        "expression": "story_completed('连城诀_昆仑山.血刀老祖不杀')",
+        "random": false
+      },
+      {
+        "id": "fabcd09e5e3d76ed2f6b",
+        "expression": "story_completed('tlbb.dy_西夏驸马.酒楼传闻')",
+        "random": false
+      },
+      {
+        "id": "fdf92409ac2d95427637",
+        "expression": "elapsed_days > 60",
+        "random": false
+      }
+    ],
+    "combatEffects": {
+      "default": {
+        "style": "orb",
+        "color": 12376305,
+        "duration": 520
+      },
+      "animations": {
+        "zhua": {
+          "style": "petal",
+          "color": 14789064,
+          "duration": 520
+        },
+        "biaoxue": {
+          "style": "burst",
+          "color": 14986382,
+          "duration": 520
+        },
+        "baozha_cheng": {
+          "style": "burst",
+          "color": 14986382,
+          "duration": 520
+        },
+        "dabiaoxue": {
+          "style": "burst",
+          "color": 14986382,
+          "duration": 520
+        },
+        "kongmingquan": {
+          "style": "strike",
+          "color": 15451774,
+          "duration": 520
+        },
+        "baozha5": {
+          "style": "burst",
+          "color": 14986382,
+          "duration": 520
+        },
+        "jinshejianfa": {
+          "style": "slash",
+          "color": 14215923,
+          "duration": 520
+        },
+        "yuanquan": {
+          "style": "strike",
+          "color": 15451774,
+          "duration": 520
+        },
+        "heixue": {
+          "style": "burst",
+          "color": 14986382,
+          "duration": 520
+        },
+        "zhang": {
+          "style": "slash",
+          "color": 14215923,
+          "duration": 520
+        },
+        "xiayu": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "guanghuan_bianfu": {
+          "style": "petal",
+          "color": 14789064,
+          "duration": 520
+        },
+        "baozha_lan": {
+          "style": "burst",
+          "color": 14986382,
+          "duration": 520
+        },
+        "anqi": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "bagua": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "flower2": {
+          "style": "petal",
+          "color": 14789064,
+          "duration": 520
+        },
+        "bingpo": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "taiji": {
+          "style": "ring",
+          "color": 11525099,
+          "duration": 520
+        },
+        "taiji_blue": {
+          "style": "ring",
+          "color": 11525099,
+          "duration": 520
+        },
+        "guanghuan_orange": {
+          "style": "petal",
+          "color": 14789064,
+          "duration": 520
+        },
+        "baozha": {
+          "style": "burst",
+          "color": 14986382,
+          "duration": 520
+        },
+        "taiji3": {
+          "style": "ring",
+          "color": 11525099,
+          "duration": 520
+        },
+        "fo": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "flower": {
+          "style": "petal",
+          "color": 14789064,
+          "duration": 520
+        },
+        "kulou_green": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "ball_purple": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "bingpao": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "duyao": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "bingdong2": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "flower_jian": {
+          "style": "slash",
+          "color": 14215923,
+          "duration": 520
+        },
+        "foxiang": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "yuxiaojianfa": {
+          "style": "slash",
+          "color": 14215923,
+          "duration": 520
+        },
+        "baozha_green": {
+          "style": "burst",
+          "color": 14986382,
+          "duration": 520
+        },
+        "hua": {
+          "style": "petal",
+          "color": 14789064,
+          "duration": 520
+        },
+        "baozha_blue": {
+          "style": "burst",
+          "color": 14986382,
+          "duration": 520
+        },
+        "baozha4": {
+          "style": "burst",
+          "color": 14986382,
+          "duration": 520
+        },
+        "longjuanfeng_green": {
+          "style": "vortex",
+          "color": 10803407,
+          "duration": 520
+        },
+        "taiji4": {
+          "style": "ring",
+          "color": 11525099,
+          "duration": 520
+        },
+        "guanghuan_shengji": {
+          "style": "petal",
+          "color": 14789064,
+          "duration": 520
+        },
+        "miaojiajianfa": {
+          "style": "slash",
+          "color": 14215923,
+          "duration": 520
+        },
+        "maichong_blue": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "bingkuai": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "long": {
+          "style": "vortex",
+          "color": 10803407,
+          "duration": 520
+        },
+        "guanghuan_blue": {
+          "style": "petal",
+          "color": 14789064,
+          "duration": 520
+        },
+        "guanghuan_yellow": {
+          "style": "petal",
+          "color": 14789064,
+          "duration": 520
+        },
+        "kulou": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "luoxing_purple": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "pilihuo": {
+          "style": "flame",
+          "color": 15967323,
+          "duration": 520
+        },
+        "long_jin": {
+          "style": "vortex",
+          "color": 10803407,
+          "duration": 520
+        },
+        "light": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "jian_zhan": {
+          "style": "slash",
+          "color": 14215923,
+          "duration": 520
+        },
+        "huozhu_hong": {
+          "style": "flame",
+          "color": 15967323,
+          "duration": 520
+        },
+        "guanghuan_yellow2": {
+          "style": "petal",
+          "color": 14789064,
+          "duration": 520
+        },
+        "baozha2": {
+          "style": "burst",
+          "color": 14986382,
+          "duration": 520
+        },
+        "hit": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "baozha3": {
+          "style": "burst",
+          "color": 14986382,
+          "duration": 520
+        },
+        "fire": {
+          "style": "flame",
+          "color": 15967323,
+          "duration": 520
+        },
+        "long3": {
+          "style": "vortex",
+          "color": 10803407,
+          "duration": 520
+        },
+        "duyao2": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "hujiadaofa": {
+          "style": "slash",
+          "color": 14215923,
+          "duration": 520
+        },
+        "qiege_blue": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "gunzi": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "aoyi_zhangblue": {
+          "style": "slash",
+          "color": 14215923,
+          "duration": 520
+        },
+        "jianqi": {
+          "style": "slash",
+          "color": 14215923,
+          "duration": 520
+        },
+        "jianhuan": {
+          "style": "slash",
+          "color": 14215923,
+          "duration": 520
+        },
+        "aoyi_zhua": {
+          "style": "petal",
+          "color": 14789064,
+          "duration": 520
+        },
+        "longjuanfeng2": {
+          "style": "vortex",
+          "color": 10803407,
+          "duration": 520
+        },
+        "yunshi": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "yunshi_big": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "aoyi_baozhahuo": {
+          "style": "flame",
+          "color": 15967323,
+          "duration": 520
+        },
+        "quanji": {
+          "style": "strike",
+          "color": 15451774,
+          "duration": 520
+        },
+        "aoyi_jianpurple": {
+          "style": "slash",
+          "color": 14215923,
+          "duration": 520
+        },
+        "aoyi3": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "dalei": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "bingdong": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "aoyi_fire": {
+          "style": "flame",
+          "color": 15967323,
+          "duration": 520
+        },
+        "aoyi_guangjian": {
+          "style": "slash",
+          "color": 14215923,
+          "duration": 520
+        },
+        "aoyi_flower": {
+          "style": "petal",
+          "color": 14789064,
+          "duration": 520
+        },
+        "aoyi_laolong": {
+          "style": "vortex",
+          "color": 10803407,
+          "duration": 520
+        },
+        "aoyi_banruozhang": {
+          "style": "slash",
+          "color": 14215923,
+          "duration": 520
+        },
+        "aoyi_hongzha": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "aoyi_long2": {
+          "style": "vortex",
+          "color": 10803407,
+          "duration": 520
+        },
+        "aoyi_bluelight": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "aoyi_dagoubang": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "aoyi_shengsifu": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "aoyi_baguajian": {
+          "style": "slash",
+          "color": 14215923,
+          "duration": 520
+        },
+        "aoyi_jinzhong": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "aoyi_long": {
+          "style": "vortex",
+          "color": 10803407,
+          "duration": 520
+        },
+        "aoyi_long3": {
+          "style": "vortex",
+          "color": 10803407,
+          "duration": 520
+        },
+        "aoyi_long4": {
+          "style": "vortex",
+          "color": 10803407,
+          "duration": 520
+        },
+        "aoyi_jianying": {
+          "style": "slash",
+          "color": 14215923,
+          "duration": 520
+        },
+        "aoyi_baguadao": {
+          "style": "slash",
+          "color": 14215923,
+          "duration": 520
+        },
+        "aoyi_jianguangblue": {
+          "style": "slash",
+          "color": 14215923,
+          "duration": 520
+        },
+        "aoyi_guangzhu": {
+          "style": "orb",
+          "color": 12376305,
+          "duration": 520
+        },
+        "aoyi_kuihua": {
+          "style": "petal",
+          "color": 14789064,
+          "duration": 520
+        },
+        "aoyi_gunzibaozha": {
+          "style": "burst",
+          "color": 14986382,
+          "duration": 520
+        },
+        "aoyi_quanpurple": {
+          "style": "strike",
+          "color": 15451774,
+          "duration": 520
+        },
+        "aoyi_huanrao": {
+          "style": "petal",
+          "color": 14789064,
+          "duration": 520
+        },
+        "guanghuan_yellow3": {
+          "style": "petal",
+          "color": 14789064,
+          "duration": 520
+        },
+        "guanghuan_blue2": {
+          "style": "petal",
+          "color": 14789064,
+          "duration": 520
+        },
+        "huozhu_jin": {
+          "style": "flame",
+          "color": 15967323,
+          "duration": 520
+        },
+        "guanghuan_white": {
+          "style": "petal",
+          "color": 14789064,
+          "duration": 520
+        }
+      },
+      "source": "Modern HTML5 vector presentation keyed by original animation IDs; original Unity particle timelines remain unverified."
+    }
   }
 }

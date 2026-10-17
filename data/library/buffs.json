@@ -1182,9 +1182,9 @@
           "timing": "BeforeDamageApplied",
           "effects": [
             {
-              "type": "modify_damage",
-              "op": "override",
-              "delta": 0
+              "type": "custom",
+              "effectId": "incoming_damage_immunity",
+              "parameters": {}
             }
           ],
           "conditions": [
@@ -1196,9 +1196,18 @@
               "type": "context_unit_relation",
               "role": "source",
               "relation": "enemy"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
             }
           ],
-          "priority": 0
+          "priority": 525
         },
         {
           "type": "hook",
@@ -1297,9 +1306,9 @@
           "timing": "BeforeDamageApplied",
           "effects": [
             {
-              "type": "modify_damage",
-              "op": "override",
-              "delta": 0
+              "type": "custom",
+              "effectId": "incoming_damage_immunity",
+              "parameters": {}
             }
           ],
           "conditions": [
@@ -1311,9 +1320,18 @@
               "type": "context_unit_relation",
               "role": "source",
               "relation": "enemy"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
             }
           ],
-          "priority": 0
+          "priority": 525
         },
         {
           "type": "hook",

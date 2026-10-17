@@ -149,7 +149,9 @@
           },
           "parameters": {}
         }
-      ]
+      ],
+      "useAttackPipeline": true,
+      "applyFinalDamageModifiers": true
     },
     "variants": [
       {
@@ -962,7 +964,9 @@
           },
           "parameters": {}
         }
-      ]
+      ],
+      "useAttackPipeline": true,
+      "applyFinalDamageModifiers": false
     },
     "variants": [
       {
@@ -1098,7 +1102,9 @@
             "permanentMaxHpCost": 10
           }
         }
-      ]
+      ],
+      "useAttackPipeline": true,
+      "applyFinalDamageModifiers": false
     },
     "variants": [
       {
@@ -1354,7 +1360,9 @@
           },
           "parameters": {}
         }
-      ]
+      ],
+      "useAttackPipeline": true,
+      "applyFinalDamageModifiers": true
     },
     "variants": [
       {
@@ -1461,7 +1469,9 @@
           },
           "parameters": {}
         }
-      ]
+      ],
+      "useAttackPipeline": true,
+      "applyFinalDamageModifiers": true
     },
     "variants": [
       {
@@ -1894,7 +1904,9 @@
           },
           "parameters": {}
         }
-      ]
+      ],
+      "useAttackPipeline": true,
+      "applyFinalDamageModifiers": false
     },
     "variants": [
       {
@@ -2001,7 +2013,9 @@
           },
           "parameters": {}
         }
-      ]
+      ],
+      "useAttackPipeline": true,
+      "applyFinalDamageModifiers": false
     },
     "variants": [
       {
@@ -2958,7 +2972,9 @@
           },
           "parameters": {}
         }
-      ]
+      ],
+      "useAttackPipeline": true,
+      "applyFinalDamageModifiers": false
     },
     "variants": [
       {
