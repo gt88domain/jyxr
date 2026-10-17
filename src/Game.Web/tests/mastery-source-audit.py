@@ -27,6 +27,11 @@ for text in ['num34 = 0.1f;', 'num34 = 0.2f;', 'num34 += 0.2f;', 'num34 += 0.15f
              'int num35 = (int)((float)attackResult.Hp * num34);', 'num35 /= 2;']:
     assert text in blood,text
 p=json.loads((WEB/'public/data/content-package.json').read_text());talents={t['id']:t for t in p['talents']}
+selectable_names={s['name'] for s in p['externalSkills']+p['specialSkills']+p['legendSkills']}
+selectable_names.update(f['name'] for s in p['externalSkills']+p['internalSkills'] for f in s.get('formSkills',[]))
+assert '太玄神功' not in selectable_names and '太玄神功.太玄真气' in selectable_names
+roles=source('Role.cs');available=roles[roles.index('public IEnumerable<SkillBox> GetAvaliableSkills()'):roles.index('public IEnumerable<Trigger> GetTriggers(')]
+assert 'yield return us2;' in available and 'yield return EquippedInternalSkill;' not in available
 assert all(talents[name]['affixes'] for name in MASTERY_TALENTS)
 assert talents['寸长寸强']['affixes'][0]['stage']=='AfterBlind'
 assert talents['吴钩霜雪']['affixes'][0]['skillName']=='太玄神功'
@@ -44,4 +49,4 @@ for name in ['嗜血狂魔','血海魔功','血魔刀法']:
     assert talents[name]['affixes'][0]['effects']==[BLOOD_FORMULA]
 b=next(s for s in p['externalSkills'] if s['id']=='血刀大法')
 assert b['affixes'][-1]['effect']['effects']==[BLOOD_FORMULA]
-print('PASS ten source mastery rules: ordered blindness, exact skill names, Yang/cooldown/defence/critical and float blood-drain constants')
+print('PASS ten source mastery rules and explicit Wugou activation mismatch: ordered blindness, exact names, Yang/cooldown/defence/critical and float blood-drain constants')

@@ -45,6 +45,7 @@ def audit_rules(package, repository):
     talent_partial = {name: ["confirmed normal hits apply original buff level/duration and probability; ordinary friendly-fire and 灵心慧质/legend exclusion configured; pre-hit RNG, full immunity and extra-strike/reaction ordering remain"]
                       for name in ["铁拳无双", *SEALS, "阴阳", "寒冰真气"]}
     talent_partial.update({
+        "吴钩霜雪": ["exact-name cast +3 branch preserved; baseline selectable form is 太玄神功.太玄真气 while source tests 太玄神功; no playable activation evidence, version reconciliation remains"],
         "金刚伏魔圈": ["日月神鞭 cast size 10 bypasses blindness; formation damage stacking, break/removal and movement remain"],
         "至空至明": ["15% target cooldown reset configured; full original hit/reaction and cosmetic RNG ordering remain"],
         "金刚": ["standalone defence *1.2 +10*level configured; sequential interactions with all other defence modifiers remain"],

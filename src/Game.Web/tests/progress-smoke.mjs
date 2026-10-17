@@ -17,6 +17,7 @@ try {
   assert.equal(await page.locator('.restoration-category progress').count(),6);
   assert.equal(await page.locator('[data-remaining-task]').count(),19);
   assert.equal(await page.locator('[data-remaining-group]').count(),7);
+  assert.match(await page.locator('[data-remaining-group]').nth(2).textContent(),/吴钩霜雪[\s\S]*尚无可玩触发依据/);
   pass('current generated structure and talent counts appear alongside six explicitly estimated categories');
   await closeModal();await click('[data-action="guide"]');await click('[data-action="progress"]');
   await visible('.restoration-report');pass('progress report is also reachable from the play guide');
