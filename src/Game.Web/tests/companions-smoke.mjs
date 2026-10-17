@@ -71,7 +71,7 @@ try{
   pass('real follower and source-JOIN exports are displayed as different placements');
   await closeModal();await click('[data-action="guide"]');await click('[data-action="progress"]');await visible('.restoration-report');
   assert.equal(await page.locator('[data-feature-id]').count(),8);
-  for(const [id,percentage] of Object.entries({battle:65,external:55,internal:60,special:70,legend:35,items:80,talents:55,companions:65}))
+  for(const [id,percentage] of Object.entries({battle:65,external:55,internal:60,special:70,legend:35,items:80,talents:60,companions:65}))
     assert.match(await page.locator(`[data-feature-id="${id}"] h4`).innerText(),new RegExp(`${percentage}%`));
   assert.match(await page.locator('[data-feature-id="battle"]').innerText(),/393.*391/);
   assert.match(await page.locator('[data-feature-id="companions"]').innerText(),/65.*80.*10/);

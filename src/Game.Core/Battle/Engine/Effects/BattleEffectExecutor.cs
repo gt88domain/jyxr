@@ -54,7 +54,7 @@ internal sealed class BattleEffectExecutor(BattleEngine engine)
         {
             case ModifyDamageBattleHookEffectDefinition modify:
                 RequireHook().DamageAmount = ApplyModifier(RequireHook().DamageAmount, RequireHook(), modify.Op,
-                    modify.Delta, modify.DeltaPerBuffLevel, modify.Rounding);
+                    ResolveDamageDelta(RequireHook(), modify), modify.DeltaPerBuffLevel, modify.Rounding);
                 break;
             case ModifyDamageContextBattleHookEffectDefinition modifyContext:
                 ApplyDamageContextModifier(RequireHook(), modifyContext);
@@ -178,6 +178,13 @@ internal sealed class BattleEffectExecutor(BattleEngine engine)
         if (effect.DeltaPowerBasePerBuffLevel is { } powerBase)
             delta *= Math.Pow(powerBase, context.Buff?.Level ?? 0);
         calculation.AddModifier(effect.Field, effect.Op, delta);
+    }
+
+    private static double ResolveDamageDelta(BattleHookContext context, ModifyDamageBattleHookEffectDefinition effect)
+    {
+        if (effect.DeltaMin is null || effect.DeltaMax is null) return effect.Delta;
+        if (context.IsPreview) return (effect.DeltaMin.Value + effect.DeltaMax.Value) / 2d;
+        return effect.DeltaMin.Value + (effect.DeltaMax.Value - effect.DeltaMin.Value) * context.Random.NextDouble();
     }
 
     private static double ResolveDelta(BattleHookContext context, ModifyDamageContextBattleHookEffectDefinition effect)

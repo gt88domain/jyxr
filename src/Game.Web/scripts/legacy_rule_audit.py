@@ -33,6 +33,9 @@ def audit_rules(package, repository):
         "精打细算": ["defensive cap and priority tested; offensive random multipliers remain"],
     }
     sections = {}
+    from legacy_school_rules import FAMILIES
+    for name, _, _, _ in FAMILIES:
+        partial[name] = ["source skill-name matching, damage multiplier range and ordered truncation configured; modern hit-check timing, cosmetic RNG sequence and AI valuation remain"]
     conditional = {
         "万年长春": "不老长春 enhanced activation probability",
         "我就是神": "无尽斗志 first successful revival guarantee",

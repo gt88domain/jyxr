@@ -276,6 +276,8 @@ def build(output: Path) -> None:
     report["combinationRuleEffects"] = apply_combination_rules(package)
     from legacy_survival_rules import apply_survival_rules
     report["survivalRuleEffects"] = apply_survival_rules(package)
+    from legacy_school_rules import apply_school_rules
+    report["schoolRuleEffects"] = apply_school_rules(package)
     from browser_packs import assemble_jyx
     package = assemble_jyx(package, source_maps, SOURCE, script)
     package["browser"]["chestMapId"] = "松鼠旅馆"

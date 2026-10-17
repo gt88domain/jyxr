@@ -234,7 +234,9 @@ public sealed record ModifyDamageBattleHookEffectDefinition(
     ModifierOp Op,
     double Delta = 0d,
     double DeltaPerBuffLevel = 0d,
-    BattleHookRounding Rounding = BattleHookRounding.Truncate) : BattleEffectDefinition;
+    BattleHookRounding Rounding = BattleHookRounding.Truncate,
+    double? DeltaMin = null,
+    double? DeltaMax = null) : BattleEffectDefinition;
 
 public sealed record ModifyDamageContextBattleHookEffectDefinition(
     BattleDamageContextField Field,

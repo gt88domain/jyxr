@@ -66,6 +66,15 @@ public sealed partial class BattleEngine
         var result = _damageCalculator.CalculateSkillDamage(damageCalculation);
         var damageMultiplier = BattleDamageRules.GetSkillDamageMultiplier(source, target);
         var resolvedDamageAmount = (int)Math.Floor(result.Amount * damageMultiplier);
+        var resultModifiers = TriggerHooks(state, HookTiming.AfterDamageCalculation, source, context =>
+        {
+            context.Source = source;
+            context.Target = target;
+            context.Skill = skill;
+            context.DamageAmount = resolvedDamageAmount;
+            context.IsCritical = result.IsCritical;
+        });
+        resolvedDamageAmount = Math.Max(0, resultModifiers.DamageAmount ?? resolvedDamageAmount);
         var damageApplication = _damageResolver.Apply(
             state,
             source,

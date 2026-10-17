@@ -102,4 +102,7 @@ for source_pool, current_pool in zip(manifest["lateBonusCompanions"]["pools"], c
     tickets = Counter(ticket % size for ticket in range(size + 1)) if size else Counter()
     assert current_pool["weights"] == [tickets[i] for i in range(size)]
 assert "白眉鹰王殷天正" in next(s["description"] for s in package["externalSkills"] if s["id"] == "鹰爪功")
+for key, groups in creation["roundItems"].items():
+    for group, weights in zip(groups, creation["roundItemWeights"][key]):
+        assert weights == [sum(ticket % len(group) == index for ticket in range(len(group) + 1)) for index in range(len(group))]
 print("PASS 43 late-version round-dependent starting candidates, 40 additional reference IDs and 10 preserved Lua files")

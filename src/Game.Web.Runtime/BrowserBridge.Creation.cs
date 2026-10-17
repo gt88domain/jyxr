@@ -1,6 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using Game.Application;
+using Game.Core;
 using Game.Core.Model;
 using Game.Core.Model.Character;
 
@@ -109,10 +110,14 @@ public static partial class BrowserBridge
         if (draft.Round == 1 && draft.Difficulty == GameDifficulty.Normal) AddItems(CreationProfile["normalItems"]);
         if (draft.Round > 1)
         {
-            var groups = CreationProfile["roundItems"]![draft.Round <= 3 ? draft.Round.ToString() : "later"]!.AsArray();
-            foreach (var group in groups)
+            var groupKey = draft.Round <= 3 ? draft.Round.ToString() : "later";
+            var groups = CreationProfile["roundItems"]![groupKey]!.AsArray();
+            for (var groupIndex = 0; groupIndex < groups.Count; groupIndex++)
             {
-                var pool = group!.AsArray(); var id = pool[Random.Shared.Next(pool.Count)]!.GetValue<string>();
+                var weights = CreationProfile["roundItemWeights"]?[groupKey]?[groupIndex]?.AsArray();
+                var pool = groups[groupIndex]!.AsArray().Select((id, index) =>
+                    (Id: id!.GetValue<string>(), Weight: weights?[index]?.GetValue<int>() ?? 1)).ToArray();
+                var id = WeightedRandomSelector.Select(pool, item => item.Weight, RequireSession().RandomService).Id;
                 items[id] = checked(items.GetValueOrDefault(id) + 1);
             }
         }

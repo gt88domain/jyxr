@@ -853,7 +853,18 @@ public sealed partial class JsonContentLoader
             ValidateBattleHookEffectTiming(hook.Timing, effect, ownerName);
             switch (effect)
             {
-                case ModifyDamageBattleHookEffectDefinition:
+                case ModifyDamageBattleHookEffectDefinition damageModifier:
+                    if (damageModifier.DeltaMin is not null || damageModifier.DeltaMax is not null)
+                    {
+                        Ensure(damageModifier.DeltaMin is not null && damageModifier.DeltaMax is not null,
+                            $"{ownerName} modify_damage effect must provide both deltaMin and deltaMax.");
+                        Ensure(Math.Abs(damageModifier.Delta) <= double.Epsilon,
+                            $"{ownerName} modify_damage effect cannot combine delta with a random range.");
+                        Ensure(double.IsFinite(damageModifier.DeltaMin!.Value) && double.IsFinite(damageModifier.DeltaMax!.Value)
+                            && damageModifier.DeltaMin <= damageModifier.DeltaMax,
+                            $"{ownerName} modify_damage effect has an invalid random range.");
+                    }
+                    break;
                 case ModifyMpCostBattleHookEffectDefinition:
                 case ModifyRecoveryBattleHookEffectDefinition:
                     break;

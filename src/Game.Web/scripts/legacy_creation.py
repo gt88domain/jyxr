@@ -79,6 +79,8 @@ def apply_legacy_creation(package: dict) -> dict:
         "randomRule": "GetRandomInt(0, Count) % Count; first candidate has two tickets, others one",
         "randomSource": "JyGame/RollRoleUI.cs:712; JyGame/Tools.cs:45-48",
         "aliasEvidence": "jyx-legacy-data/data-origin/skills.xml:492 · 鹰爪功说明：白眉鹰王殷天正的成名绝技"}
+    profile["roundItemWeights"] = {key: [[2, *([1] * (len(group) - 1))] for group in groups]
+                                   for key, groups in profile["roundItems"].items()}
     package["browser"]["creation"] = profile
     return {"source": profile["source"], "questions": len(questions), "portraits": len(heads),
             "startingCompanions": {"candidates": 43, "poolSizes": [0, 17, 10, 7, 9], "source": profile["startingCompanionSource"]},

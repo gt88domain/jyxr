@@ -35,6 +35,7 @@
     "audit:library": "python3 tests/original-library-audit.py",
     "test:library": "node tests/library-smoke.mjs",
     "test:starting-companions": "node tests/starting-companions-smoke.mjs",
+    "audit:schools": "python3 tests/school-source-audit.py",
     "assets:restore": "python3 scripts/art-bundle.py restore"
   },
   "dependencies": { "phaser": "3.90.0" },

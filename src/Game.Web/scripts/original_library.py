@@ -122,7 +122,7 @@ def build_library(package, source, companions, rule_audit, web):
             configs = [(f"开局问答{index + 1}", q["title"], q) for index, q in enumerate(creation["questions"])]
             configs += [("初始奖励", "初始银两与奖励", {k: creation[k] for k in ("baseSilver", "baseItems", "normalItems")}),
                         ("重摇与头像", "重摇属性与头像选项", {k: creation[k] for k in ("randomStats", "portraits")}),
-                        ("周目奖励", "周目与试炼奖励", {k: creation[k] for k in ("roundItems", "trialItems")}),
+                        ("周目奖励", "周目与试炼奖励", {k: creation[k] for k in ("roundItems", "roundItemWeights", "trialItems")}),
                         ("开局伙伴奖励", "分周目开局伙伴奖励", {k: creation[k] for k in ("startingCompanionPools", "startingCompanionSource")})]
             rows = [{"source": creation["source"]["file"], "node": {"tag": "creation", "key": rid, "name": name,
                      "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",

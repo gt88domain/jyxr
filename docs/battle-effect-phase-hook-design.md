@@ -63,6 +63,11 @@ Effect handler 通过窄接口申请能力：
 
 ## 5. Effect 链与保护
 
+`AfterDamageCalculation`在普通技能伤害公式与基础伤害倍率结算后，由攻击者执行，先于目标的
+`BeforeDamageApplied`减伤／伤害上限。`modify_damage`支持此时点及可选的成对`deltaMin/deltaMax`，
+每个修正分别按配置取整。用于旧版门派武学对已算出伤害的倍率，避免把乘法移到攻击力区间后改变减防结果。
+随机区间不得同时指定固定`delta`；确定性预览采用区间中点，不消耗随机数。
+
 `BattleExecutionScope` 覆盖技能步骤、Hook、周期效果和它们产生的后续 Effect，记录序号、父
 Effect、深度与规则来源。最大深度为 64；超过限制直接失败，以阻止追击、反伤等形成无限链。
 

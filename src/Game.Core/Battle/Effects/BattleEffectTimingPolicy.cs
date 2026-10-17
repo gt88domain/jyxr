@@ -9,7 +9,7 @@ public static class BattleEffectTimingPolicy
         ArgumentNullException.ThrowIfNull(effect);
         return effect switch
         {
-            ModifyDamageBattleHookEffectDefinition => timing == HookTiming.BeforeDamageApplied,
+            ModifyDamageBattleHookEffectDefinition => timing is HookTiming.BeforeDamageApplied or HookTiming.AfterDamageCalculation,
             ModifyDamageContextBattleHookEffectDefinition => timing == HookTiming.BeforeDamageCalculation,
             ModifyMpCostBattleHookEffectDefinition => timing == HookTiming.BeforeSkillCost,
             ModifyRecoveryBattleHookEffectDefinition => timing == HookTiming.BeforeRecoveryResolved,
