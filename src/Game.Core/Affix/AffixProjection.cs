@@ -60,7 +60,8 @@ public sealed class AffixProjection
         IReadOnlyDictionary<WeaponType, ModifierBucket> weaponModifierBuckets,
         IReadOnlyDictionary<SkillTargetingModifierKey, ModifierBucket> targetingModifierBuckets,
         IReadOnlyDictionary<string, ModifierBucket> legendChanceModifierBuckets,
-        IReadOnlyList<FinalStatMultiplierAffix>? finalStatMultipliers = null)
+        IReadOnlyList<FinalStatMultiplierAffix>? finalStatMultipliers = null,
+        IReadOnlyList<SourceSkillLegendChanceBonusAffix>? sourceSkillLegendBonuses = null)
     {
         Traits = traits;
         HooksByTiming = hooksByTiming;
@@ -69,6 +70,7 @@ public sealed class AffixProjection
         WeaponModifierBuckets = weaponModifierBuckets;
         TargetingModifierBuckets = targetingModifierBuckets;
         LegendChanceModifierBuckets = legendChanceModifierBuckets;
+        SourceSkillLegendBonuses = Array.AsReadOnly((sourceSkillLegendBonuses ?? []).ToArray());
         FinalStatMultipliers = Array.AsReadOnly((finalStatMultipliers ?? [])
             .OrderBy(static value => value.Order)
             .ThenBy(static value => value.SourceId, StringComparer.Ordinal)
@@ -84,6 +86,7 @@ public sealed class AffixProjection
     public IReadOnlyDictionary<SkillTargetingModifierKey, ModifierBucket> TargetingModifierBuckets { get; }
     public IReadOnlyDictionary<string, ModifierBucket> LegendChanceModifierBuckets { get; }
     public IReadOnlyList<FinalStatMultiplierAffix> FinalStatMultipliers { get; }
+    public IReadOnlyList<SourceSkillLegendChanceBonusAffix> SourceSkillLegendBonuses { get; }
 
     public double EvaluateSkillTargeting(string sourceId, SkillTargetingField field, double baseValue,
         string? name = null, SkillTargetingStage stage = SkillTargetingStage.BeforeBlind)

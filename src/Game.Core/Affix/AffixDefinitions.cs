@@ -22,6 +22,7 @@ public interface IAffixProvider
 [JsonDerivedType(typeof(SkillBonusModifierAffix), "skill_bonus_modifier")]
 [JsonDerivedType(typeof(WeaponBonusModifierAffix), "weapon_bonus_modifier")]
 [JsonDerivedType(typeof(LegendSkillChanceModifierAffix), "legend_skill_chance_modifier")]
+[JsonDerivedType(typeof(SourceSkillLegendChanceBonusAffix), "source_skill_legend_chance_bonus")]
 [JsonDerivedType(typeof(BuffLevelStatModifierAffix), "buff_level_stat_modifier")]
 [JsonDerivedType(typeof(SkillTargetingModifierAffix), "skill_targeting_modifier")]
 [JsonDerivedType(typeof(HookAffix), "hook")]
@@ -71,6 +72,15 @@ public sealed record SkillBonusModifierAffix(string SkillId, ModifierValue Value
 public sealed record WeaponBonusModifierAffix(WeaponType WeaponType, ModifierValue Value) : AffixDefinition;
 
 public sealed record LegendSkillChanceModifierAffix(string SkillId, ModifierValue Value) : AffixDefinition;
+
+public sealed record SourceSkillLegendChanceBonusAffix(string SkillName, double Bonus) : AffixDefinition
+{
+    public override void Resolve(IContentRepository contentRepository)
+    {
+        if (string.IsNullOrWhiteSpace(SkillName) || !double.IsFinite(Bonus))
+            throw new InvalidOperationException("Source skill legend bonus requires a name and finite bonus.");
+    }
+}
 
 public sealed record BuffLevelStatModifierAffix(
     StatType Stat,

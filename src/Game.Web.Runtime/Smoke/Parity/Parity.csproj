@@ -12,6 +12,7 @@
     <Compile Include="AttributeRules.cs" />
     <Compile Include="ControlRules.cs" />
     <Compile Include="MasteryRules.cs" />
+    <Compile Include="LegendRules.cs" />
     <Compile Include="../../BrowserLegacyRules.cs" Link="BrowserLegacyRules.cs" />
     <ProjectReference Include="../../../Game.Core/Game.Core.csproj" />
     <ProjectReference Include="../../../Game.Content/Game.Content.csproj" />

@@ -392,6 +392,7 @@ public static partial class BrowserBridge
         _engine = new BattleEngine(
             buffResolver: _content!.GetBuff,
             legendSkillsProvider: _content!.GetLegendSkillsFor,
+            legendSkillResolver: new LegendSkillResolver(_pack["legendResolution"]?.Deserialize<LegendSkillResolutionRules>(Json)),
             skillMaxLevelResolver: session.SkillMaxLevelPolicy.GetMaxLevel,
             characterGrowTemplateResolver: c => _content!.GetGrowTemplate(c.GrowTemplateId ?? CharacterExperienceProgression.DefaultGrowTemplateId),
             skillUseExperienceResolver: PackText("id") == "jyx" ? BrowserLegacyRules.ResolveSkillUseExperience : null,

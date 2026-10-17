@@ -52,7 +52,8 @@ internal static class AffixProjectionCombiner
             CombineBuckets(projections.Select(static value => value.WeaponModifierBuckets)),
             CombineBuckets(projections.Select(static value => value.TargetingModifierBuckets)),
             CombineBuckets(projections.Select(static value => value.LegendChanceModifierBuckets)),
-            projections.SelectMany(static value => value.FinalStatMultipliers).ToArray());
+            projections.SelectMany(static value => value.FinalStatMultipliers).ToArray(),
+            projections.SelectMany(static value => value.SourceSkillLegendBonuses).ToArray());
     }
 
     private static IReadOnlyDictionary<TKey, ModifierBucket> CombineBuckets<TKey>(
