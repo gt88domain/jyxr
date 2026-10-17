@@ -252,6 +252,21 @@
     ],
     "scope": "Explicit original preparation, recovery, internal-energy and survival rules; selected execution tests are not whole-game equivalence."
   },
+  "schoolRuleEffects": {
+    "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+    "file": "JyGame/AttackLogic.cs:449-528",
+    "talents": [
+      "峨眉宗师",
+      "刚柔并济",
+      "易筋伐髓",
+      "天龙.盖世英雄",
+      "铁剑掌门",
+      "射雕英雄",
+      "玲珑璇玑",
+      "大理世家"
+    ],
+    "scope": "matched weapon names, final-damage ranges and ordered integer truncation; hit/cosmetic RNG ordering remains"
+  },
   "legacyArt": {
     "source": {
       "archive": "X.rar",
@@ -373,8 +388,8 @@
       "states": {
         "referenced-behavior": 4,
         "configured": 74,
-        "partial": 13,
-        "metadata-only": 66,
+        "partial": 21,
+        "metadata-only": 58,
         "identity-only": 1
       }
     },

@@ -14091,7 +14091,7 @@
       "description": "0#黄蓉专属天赋，增强黄蓉相关武学。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14399,7 +14399,7 @@
       "description": "0#郭襄专属天赋，大幅度提高与峨眉派及郭襄相关武学威力。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14410,7 +14410,7 @@
       "description": "0#达摩菩提专属天赋，增加少林派武学威力。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14421,7 +14421,7 @@
       "description": "0#略微提高武当派所有武学威力。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14509,7 +14509,7 @@
       "description": "10#乔峰专属天赋，出手惊风雷，提升乔峰相关的武学威力。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14520,7 +14520,7 @@
       "description": "10#郭靖专属天赋，提升郭靖相关武学威力。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14564,7 +14564,7 @@
       "description": "10#大理世族的象征，相关武学威力提升。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14938,7 +14938,7 @@
       "description": "25#对铁剑门武学有深刻的了解，提升相应武学威力。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },

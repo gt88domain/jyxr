@@ -7,8 +7,8 @@
       "states": {
         "referenced-behavior": 4,
         "configured": 74,
-        "partial": 13,
-        "metadata-only": 66,
+        "partial": 21,
+        "metadata-only": 58,
         "identity-only": 1
       },
       "entries": [
@@ -153,11 +153,13 @@
         },
         {
           "id": "刚柔并济",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:459"
           ],
-          "remaining": [],
+          "remaining": [
+            "source skill-name matching, damage multiplier range and ordered truncation configured; modern hit-check timing, cosmetic RNG sequence and AI valuation remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -333,20 +335,24 @@
         },
         {
           "id": "大理世家",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:519"
           ],
-          "remaining": [],
+          "remaining": [
+            "source skill-name matching, damage multiplier range and ordered truncation configured; modern hit-check timing, cosmetic RNG sequence and AI valuation remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
           "id": "天龙.盖世英雄",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:479"
           ],
-          "remaining": [],
+          "remaining": [
+            "source skill-name matching, damage multiplier range and ordered truncation configured; modern hit-check timing, cosmetic RNG sequence and AI valuation remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -490,11 +496,13 @@
         },
         {
           "id": "射雕英雄",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:499"
           ],
-          "remaining": [],
+          "remaining": [
+            "source skill-name matching, damage multiplier range and ordered truncation configured; modern hit-check timing, cosmetic RNG sequence and AI valuation remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -508,11 +516,13 @@
         },
         {
           "id": "峨眉宗师",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:449"
           ],
-          "remaining": [],
+          "remaining": [
+            "source skill-name matching, damage multiplier range and ordered truncation configured; modern hit-check timing, cosmetic RNG sequence and AI valuation remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -741,11 +751,13 @@
         },
         {
           "id": "易筋伐髓",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:469"
           ],
-          "remaining": [],
+          "remaining": [
+            "source skill-name matching, damage multiplier range and ordered truncation configured; modern hit-check timing, cosmetic RNG sequence and AI valuation remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -926,11 +938,13 @@
         },
         {
           "id": "玲珑璇玑",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:509"
           ],
-          "remaining": [],
+          "remaining": [
+            "source skill-name matching, damage multiplier range and ordered truncation configured; modern hit-check timing, cosmetic RNG sequence and AI valuation remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -1334,11 +1348,13 @@
         },
         {
           "id": "铁剑掌门",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:489"
           ],
-          "remaining": [],
+          "remaining": [
+            "source skill-name matching, damage multiplier range and ordered truncation configured; modern hit-check timing, cosmetic RNG sequence and AI valuation remain"
+          ],
           "fullBehaviorVerified": false
         },
         {

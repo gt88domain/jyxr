@@ -116833,7 +116833,46 @@
       "id": "刚柔并济",
       "name": "刚柔并济",
       "point": 0,
-      "description": "略微提高武当派所有武学威力。"
+      "description": "略微提高武当派所有武学威力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterDamageCalculation",
+          "priority": 999,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "damage_positive"
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "太极拳",
+                "太极剑",
+                "绵掌",
+                "玄虚刀法",
+                "倚天屠龙笔法",
+                "柔云剑法",
+                "绕指柔剑",
+                "神门十三剑",
+                "虎爪绝户手"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage",
+              "op": "more",
+              "rounding": "Truncate",
+              "deltaMin": 1.1,
+              "deltaMax": 1.2
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "剑封印",
@@ -117260,13 +117299,79 @@
       "id": "大理世家",
       "name": "大理世家",
       "point": 10,
-      "description": "大理世族的象征，相关武学威力提升。"
+      "description": "大理世族的象征，相关武学威力提升。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterDamageCalculation",
+          "priority": 993,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "damage_positive"
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "六脉神剑",
+                "一阳指"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage",
+              "op": "more",
+              "rounding": "Truncate",
+              "deltaMin": 1.2,
+              "deltaMax": 1.5
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "天龙.盖世英雄",
       "name": "天龙.盖世英雄",
       "point": 10,
-      "description": "乔峰专属天赋，出手惊风雷，提升乔峰相关的武学威力。"
+      "description": "乔峰专属天赋，出手惊风雷，提升乔峰相关的武学威力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterDamageCalculation",
+          "priority": 997,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "damage_positive"
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "降龙十八掌",
+                "擒龙功",
+                "易筋经",
+                "打狗棒法"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage",
+              "op": "more",
+              "rounding": "Truncate",
+              "deltaMin": 1.2,
+              "deltaMax": 1.8
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "太极宗师",
@@ -117693,7 +117798,40 @@
       "id": "射雕英雄",
       "name": "射雕英雄",
       "point": 10,
-      "description": "郭靖专属天赋，提升郭靖相关武学威力。"
+      "description": "郭靖专属天赋，提升郭靖相关武学威力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterDamageCalculation",
+          "priority": 995,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "damage_positive"
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "降龙十八掌",
+                "打狗棒法",
+                "九阴神功"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage",
+              "op": "more",
+              "rounding": "Truncate",
+              "deltaMin": 1.2,
+              "deltaMax": 1.5
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "屌丝",
@@ -117705,7 +117843,49 @@
       "id": "峨眉宗师",
       "name": "峨眉宗师",
       "point": 0,
-      "description": "郭襄专属天赋，大幅度提高与峨眉派及郭襄相关武学威力。"
+      "description": "郭襄专属天赋，大幅度提高与峨眉派及郭襄相关武学威力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterDamageCalculation",
+          "priority": 1000,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "damage_positive"
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "飘雪穿云掌",
+                "四象掌",
+                "佛光普照",
+                "截手九式",
+                "峨眉剑法",
+                "回风拂柳剑",
+                "灭剑绝剑",
+                "九阴白骨爪",
+                "霹雳雷火弹",
+                "落英神剑掌",
+                "玉箫剑法",
+                "弹指神通"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage",
+              "op": "more",
+              "rounding": "Truncate",
+              "deltaMin": 1.5,
+              "deltaMax": 3.0
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "左右互搏",
@@ -118240,7 +118420,49 @@
       "id": "易筋伐髓",
       "name": "易筋伐髓",
       "point": 0,
-      "description": "达摩菩提专属天赋，增加少林派武学威力。"
+      "description": "达摩菩提专属天赋，增加少林派武学威力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterDamageCalculation",
+          "priority": 998,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "damage_positive"
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "罗汉拳",
+                "韦陀棍",
+                "般若掌",
+                "拈花指",
+                "伏魔棍",
+                "达摩剑法",
+                "大金刚掌",
+                "如来千叶手",
+                "天竺佛指",
+                "须弥山掌",
+                "燃木刀法",
+                "龙爪手"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage",
+              "op": "more",
+              "rounding": "Truncate",
+              "deltaMin": 1.2,
+              "deltaMax": 2.0
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "普照",
@@ -118589,7 +118811,39 @@
       "id": "玲珑璇玑",
       "name": "玲珑璇玑",
       "point": 0,
-      "description": "黄蓉专属天赋，增强黄蓉相关武学。"
+      "description": "黄蓉专属天赋，增强黄蓉相关武学。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterDamageCalculation",
+          "priority": 994,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "damage_positive"
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "打狗棒法",
+                "九阴神功"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage",
+              "op": "more",
+              "rounding": "Truncate",
+              "deltaMin": 1.2,
+              "deltaMax": 1.5
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "琴胆剑心",
@@ -119454,7 +119708,40 @@
       "id": "铁剑掌门",
       "name": "铁剑掌门",
       "point": 25,
-      "description": "对铁剑门武学有深刻的了解，提升相应武学威力。"
+      "description": "对铁剑门武学有深刻的了解，提升相应武学威力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterDamageCalculation",
+          "priority": 996,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "damage_positive"
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "铁剑剑法",
+                "漫天花雨",
+                "碧落苍穹",
+                "铁血大旗功"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage",
+              "op": "more",
+              "rounding": "Truncate",
+              "delta": 1.4
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "铁口直断",
@@ -226437,6 +226724,50 @@
         "randomRule": "GetRandomInt(0, Count) % Count; first candidate has two tickets, others one",
         "randomSource": "JyGame/RollRoleUI.cs:712; JyGame/Tools.cs:45-48",
         "aliasEvidence": "jyx-legacy-data/data-origin/skills.xml:492 · 鹰爪功说明：白眉鹰王殷天正的成名绝技"
+      },
+      "roundItemWeights": {
+        "2": [
+          [
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1,
+            1
+          ]
+        ],
+        "3": [
+          [
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1,
+            1
+          ]
+        ],
+        "later": [
+          [
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1,
+            1
+          ]
+        ]
       }
     },
     "companionRecruitmentStories": [

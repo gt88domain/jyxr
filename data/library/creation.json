@@ -2222,6 +2222,152 @@
               ]
             },
             {
+              "tag": "roundItemWeights",
+              "children": [
+                {
+                  "tag": "2",
+                  "children": [
+                    {
+                      "tag": "entry",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "2"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "entry",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "2"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "3",
+                  "children": [
+                    {
+                      "tag": "entry",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "2"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "entry",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "2"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "later",
+                  "children": [
+                    {
+                      "tag": "entry",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "2"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "entry",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "2"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "1"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "tag": "trialItems",
               "children": [
                 {
