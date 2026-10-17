@@ -1,5 +1,15 @@
 # Original artwork conversion
 
+Audio was also recovered from the same uploaded archive. `audio-manifest.json`
+locks the `StreamingAssets/audios` SHA-256 and maps 183 clips to browser MP3
+files, covering all 166 original music/effect resource IDs. Source paths use
+exact matching or an unambiguous filename, recorded per binding. Rebuild with
+`PYTHONPATH=... python3 scripts/extract-legacy-audio.py JYGAME_DATA_DIRECTORY`
+(UnityPy 1.24.2 and FFmpeg with libmp3lame). The source branch stores this index
+and extraction code; audio bytes belong to the locked media bundle/static site.
+The runtime loads only current music and requested effects. Music is unlocked
+by a user gesture and pauses in a hidden tab; volume settings persist locally.
+
 Source: the user-provided `X.rar`, labelled X1.0.0.1.
 SHA-256: `331d5df9e7867621fda2e42ca0fe0072591fd03df57a2b6bfe1162b319b4d995`.
 

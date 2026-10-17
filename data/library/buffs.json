@@ -1162,7 +1162,7 @@
     "description": "溜须拍马，跪地求饶，不受伤害。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -1175,7 +1175,57 @@
       "id": "溜须拍马",
       "name": "溜须拍马",
       "description": "溜须拍马，跪地求饶，不受伤害。",
-      "isDebuff": false
+      "isDebuff": false,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageApplied",
+          "effects": [
+            {
+              "type": "modify_damage",
+              "op": "override",
+              "delta": 0
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "source",
+              "relation": "enemy"
+            }
+          ],
+          "priority": 0
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "effects": [
+            {
+              "type": "remove_buff",
+              "target": {
+                "type": "self"
+              },
+              "buffId": "溜须拍马"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     "variants": [
       {
@@ -1227,7 +1277,7 @@
     "description": "易容改面，藏于暗处。伺机发动致命伤害。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -1240,7 +1290,63 @@
       "id": "易容",
       "name": "易容",
       "description": "易容改面，藏于暗处。伺机发动致命伤害。",
-      "isDebuff": false
+      "isDebuff": false,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageApplied",
+          "effects": [
+            {
+              "type": "modify_damage",
+              "op": "override",
+              "delta": 0
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "source",
+              "relation": "enemy"
+            }
+          ],
+          "priority": 0
+        },
+        {
+          "type": "hook",
+          "timing": "AfterDamageCalculation",
+          "effects": [
+            {
+              "type": "modify_damage",
+              "op": "more",
+              "deltaMin": 1.1,
+              "deltaMax": 1.3
+            },
+            {
+              "type": "remove_buff",
+              "target": {
+                "type": "self"
+              },
+              "buffId": "易容"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            }
+          ],
+          "priority": -500
+        }
+      ]
     },
     "variants": [
       {
@@ -1688,7 +1794,7 @@
     "description": "犹如魔神附体，所有攻击必定暴击，暴击伤害提高25%。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -1701,7 +1807,34 @@
       "id": "魔神降临",
       "name": "魔神降临",
       "description": "犹如魔神附体，所有攻击必定暴击，暴击伤害提高25%。",
-      "isDebuff": false
+      "isDebuff": false,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "critical_chance",
+              "op": "override",
+              "delta": 1
+            },
+            {
+              "type": "modify_damage_context",
+              "field": "critical_multiplier",
+              "op": "add",
+              "delta": 0.25
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "priority": -1000
+        }
+      ]
     },
     "variants": [
       {

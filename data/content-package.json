@@ -116245,7 +116245,63 @@
       "id": "易容",
       "name": "易容",
       "description": "易容改面，藏于暗处。伺机发动致命伤害。",
-      "isDebuff": false
+      "isDebuff": false,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageApplied",
+          "effects": [
+            {
+              "type": "modify_damage",
+              "op": "override",
+              "delta": 0
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "source",
+              "relation": "enemy"
+            }
+          ],
+          "priority": 0
+        },
+        {
+          "type": "hook",
+          "timing": "AfterDamageCalculation",
+          "effects": [
+            {
+              "type": "modify_damage",
+              "op": "more",
+              "deltaMin": 1.1,
+              "deltaMax": 1.3
+            },
+            {
+              "type": "remove_buff",
+              "target": {
+                "type": "self"
+              },
+              "buffId": "易容"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            }
+          ],
+          "priority": -500
+        }
+      ]
     },
     {
       "id": "晕眩",
@@ -116263,7 +116319,57 @@
       "id": "溜须拍马",
       "name": "溜须拍马",
       "description": "溜须拍马，跪地求饶，不受伤害。",
-      "isDebuff": false
+      "isDebuff": false,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageApplied",
+          "effects": [
+            {
+              "type": "modify_damage",
+              "op": "override",
+              "delta": 0
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "source",
+              "relation": "enemy"
+            }
+          ],
+          "priority": 0
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "effects": [
+            {
+              "type": "remove_buff",
+              "target": {
+                "type": "self"
+              },
+              "buffId": "溜须拍马"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     {
       "id": "狂战",
@@ -116590,7 +116696,34 @@
       "id": "魔神降临",
       "name": "魔神降临",
       "description": "犹如魔神附体，所有攻击必定暴击，暴击伤害提高25%。",
-      "isDebuff": false
+      "isDebuff": false,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "critical_chance",
+              "op": "override",
+              "delta": 1
+            },
+            {
+              "type": "modify_damage_context",
+              "field": "critical_multiplier",
+              "op": "add",
+              "delta": 0.25
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "priority": -1000
+        }
+      ]
     },
     {
       "id": "麻痹",
@@ -116843,7 +116976,24 @@
       "id": "光明圣火阵",
       "name": "光明圣火阵",
       "point": 10,
-      "description": "明教顶级阵法，置于阵法之中，几乎不受任何负面效果影响。"
+      "description": "明教顶级阵法，置于阵法之中，几乎不受任何负面效果影响。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeActionReadiness",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "bright_sacred_fire_formation",
+              "parameters": {
+                "rollPerVisitedUnit": true
+              }
+            }
+          ],
+          "conditions": [],
+          "priority": 0
+        }
+      ]
     },
     {
       "id": "八卦阵",
@@ -117565,7 +117715,58 @@
       "id": "墨家传人",
       "name": "墨家传人",
       "point": 0,
-      "description": "战国墨家的世代传人，使用墨家古武术附加随机不良状态。"
+      "description": "战国墨家的世代传人，使用墨家古武术附加随机不良状态。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "random_debuff",
+              "parameters": {
+                "buffIds": [
+                  "中毒",
+                  "内伤",
+                  "致盲",
+                  "缓速",
+                  "晕眩",
+                  "攻击弱化",
+                  "诸般封印",
+                  "剑封印",
+                  "刀封印",
+                  "拳掌封印",
+                  "奇门封印",
+                  "伤害加深",
+                  "重伤",
+                  "定身",
+                  "封穴",
+                  "点穴",
+                  "诅咒"
+                ],
+                "level": 3,
+                "duration": 3,
+                "allowAllies": true
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "墨拳",
+                "墨剑",
+                "缚星锁"
+              ]
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     {
       "id": "大小姐",
@@ -118825,7 +119026,36 @@
       "id": "我是疯子",
       "name": "我是疯子",
       "point": 0,
-      "description": "逆运自身内功，所有造成的不良状态随机增加0-2的不良状态程度和持续时间。"
+      "description": "逆运自身内功，所有造成的不良状态随机增加0-2的不良状态程度和持续时间。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeBuffApplied",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "random_strengthen_context_buff",
+              "parameters": {
+                "chance": 0.5,
+                "minimumLevelDelta": 0,
+                "maximumLevelDelta": 2,
+                "minimumTurnDelta": 0,
+                "maximumTurnDelta": 2
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_buff_negative"
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     {
       "id": "拳掌增益",
@@ -118981,7 +119211,35 @@
       "id": "攀云乘龙",
       "name": "攀云乘龙",
       "point": 50,
-      "description": "一定概率造成基于身法值的真实伤害，身法值越高，伤害越高。"
+      "description": "一定概率造成基于身法值的真实伤害，身法值越高，伤害越高。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterDamageCalculation",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "final_damage_formula",
+              "parameters": {
+                "formula": "AttributeRandomAddition",
+                "minimum": 1,
+                "maximum": 2
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "chance",
+              "value": 0.5
+            }
+          ],
+          "priority": 1900
+        }
+      ]
     },
     {
       "id": "救死扶伤",
@@ -119011,7 +119269,36 @@
       "id": "斗转星移",
       "name": "斗转星移",
       "point": 80,
-      "description": "武学奇才慕容龙城所领悟的借力打力的神奇招式，一定概率反弹一定伤害。"
+      "description": "武学奇才慕容龙城所领悟的借力打力的神奇招式，一定概率反弹一定伤害。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageApplied",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "shifting_stars_reflection",
+              "parameters": {
+                "familyTalentId": "慕容世家",
+                "chance": 0.1,
+                "familyChance": 0.2,
+                "damageFactor": 0.25,
+                "floatText": "斗转星移",
+                "speech": "以彼之道，还施彼身！",
+                "unreactive": true,
+                "singlePrecision": true
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            }
+          ],
+          "priority": 500
+        }
+      ]
     },
     {
       "id": "斗魂",
@@ -119054,7 +119341,37 @@
       "id": "无形剑气",
       "name": "无形剑气",
       "point": 0,
-      "description": "使用六脉神剑攻击时，附加基于敌我当前内力值差的真实伤害。"
+      "description": "使用六脉神剑攻击时，附加基于敌我当前内力值差的真实伤害。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterDamageCalculation",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "final_damage_formula",
+              "parameters": {
+                "formula": "AbsoluteMpDifference",
+                "minimum": 0.1,
+                "maximum": 0.25
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_skill_name_equals",
+              "values": [
+                "六脉神剑"
+              ]
+            }
+          ],
+          "priority": 180
+        }
+      ]
     },
     {
       "id": "无相",
@@ -119199,7 +119516,33 @@
       "id": "木婉清的眷恋",
       "name": "木婉清的眷恋",
       "point": 0,
-      "description": "木婉清出场的情况下，提升段誉所有武学的威力。"
+      "description": "木婉清出场的情况下，提升段誉所有武学的威力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterDamageCalculation",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "final_damage_formula",
+              "parameters": {
+                "formula": "NamedCompanionMultiplier",
+                "minimum": 1.2,
+                "maximum": 1.8,
+                "beneficiaryName": "段誉",
+                "companionName": "木婉清"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "priority": 200
+        }
+      ]
     },
     {
       "id": "武学奇才",
@@ -119217,13 +119560,208 @@
       "id": "死生茫茫",
       "name": "死生茫茫",
       "point": 25,
-      "description": "一定几率吸收气血上限转化为自己的气血。"
+      "description": "一定几率吸收气血上限转化为自己的气血。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageDistribution",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "maximum_hp_drain",
+              "parameters": {
+                "damageFactor": 0.05,
+                "maximumLossFactor": 0.1,
+                "recoveryFactor": 0.5
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "damage_positive"
+            },
+            {
+              "type": "chance",
+              "value": 0.1
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     {
       "id": "段王爷的电眼",
       "name": "段王爷的电眼",
       "point": 20,
-      "description": "风流潇洒中年大叔镇南王段正淳的无敌电眼，对女性及太监极有杀伤力。"
+      "description": "风流潇洒中年大叔镇南王段正淳的无敌电眼，对女性及太监极有杀伤力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "target"
+              },
+              "buffId": "晕眩",
+              "level": 0,
+              "duration": 2
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            },
+            {
+              "type": "context_unit_gender",
+              "role": "target",
+              "genders": [
+                "female"
+              ]
+            },
+            {
+              "type": "chance",
+              "value": 0.5
+            }
+          ],
+          "priority": 0
+        },
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "target"
+              },
+              "buffId": "晕眩",
+              "level": 0,
+              "duration": 2
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "role": "target",
+              "talentIds": [
+                "阉人"
+              ]
+            },
+            {
+              "type": "context_unit_gender",
+              "role": "target",
+              "genders": [
+                "male",
+                "neutral",
+                "animal",
+                "eunuch"
+              ]
+            },
+            {
+              "type": "chance",
+              "value": 0.5
+            }
+          ],
+          "priority": 0
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeHitResolved",
+          "effects": [
+            {
+              "type": "cancel_hit",
+              "suppressHitEffects": true
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "source",
+              "relation": "enemy"
+            },
+            {
+              "type": "context_unit_gender",
+              "role": "source",
+              "genders": [
+                "female"
+              ]
+            },
+            {
+              "type": "chance",
+              "value": 0.5
+            }
+          ],
+          "priority": 0
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeHitResolved",
+          "effects": [
+            {
+              "type": "cancel_hit",
+              "suppressHitEffects": true
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "source",
+              "relation": "enemy"
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "role": "source",
+              "talentIds": [
+                "阉人"
+              ]
+            },
+            {
+              "type": "context_unit_gender",
+              "role": "source",
+              "genders": [
+                "male",
+                "neutral",
+                "animal",
+                "eunuch"
+              ]
+            },
+            {
+              "type": "chance",
+              "value": 0.5
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     {
       "id": "毒圣",
@@ -119301,7 +119839,44 @@
       "id": "沾衣十八跌",
       "name": "沾衣十八跌",
       "point": 80,
-      "description": "高深玄妙的内家技巧，受到攻击时一定概率让攻击者晕眩。"
+      "description": "高深玄妙的内家技巧，受到攻击时一定概率让攻击者晕眩。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeHitResolved",
+          "effects": [
+            {
+              "type": "cancel_hit",
+              "suppressHitEffects": true
+            },
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "source"
+              },
+              "buffId": "晕眩",
+              "level": 0,
+              "duration": 2
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "source",
+              "relation": "enemy"
+            },
+            {
+              "type": "chance",
+              "value": 0.1
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     {
       "id": "浪子剑客",
@@ -119444,7 +120019,65 @@
       "id": "狗杂种",
       "name": "狗杂种",
       "point": 0,
-      "description": "石破天专属天赋，装备内功为罗汉伏魔神功或太玄神功时大幅度提高暴击概率及防御力。"
+      "description": "石破天专属天赋，装备内功为罗汉伏魔神功或太玄神功时大幅度提高暴击概率及防御力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "critical_chance",
+              "op": "add",
+              "delta": 0.3
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_equipped_internal_skill",
+              "internalSkillIds": [
+                "太玄神功",
+                "罗汉伏魔功"
+              ]
+            },
+            {
+              "type": "chance",
+              "value": 0.3
+            }
+          ],
+          "priority": 0
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "target_defence",
+              "op": "add",
+              "delta": 250
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_equipped_internal_skill",
+              "internalSkillIds": [
+                "太玄神功",
+                "罗汉伏魔功"
+              ]
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     {
       "id": "猎人",
@@ -119483,7 +120116,36 @@
       "id": "玄门罡气",
       "name": "玄门罡气",
       "point": 0,
-      "description": "装备内功为九阴真经时，攻击造成减少对手集气效果。"
+      "description": "装备内功为九阴真经时，攻击造成减少对手集气效果。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "action_gauge_rule",
+              "parameters": {
+                "minimum": 10,
+                "maximum": 40
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_equipped_internal_skill",
+              "internalSkillIds": [
+                "九阴神功"
+              ]
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     {
       "id": "玲珑璇玑",
@@ -119602,7 +120264,31 @@
       "id": "百变千幻",
       "name": "百变千幻",
       "point": 75,
-      "description": "每回合有一定概率自动易容，可以藏于暗处伏击对手。"
+      "description": "每回合有一定概率自动易容，可以藏于暗处伏击对手。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeActionReadiness",
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "self"
+              },
+              "buffId": "易容",
+              "level": 2,
+              "duration": 3
+            }
+          ],
+          "conditions": [
+            {
+              "type": "chance",
+              "value": 0.1
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     {
       "id": "百穴归一",
@@ -119694,13 +120380,79 @@
       "id": "破甲",
       "name": "破甲",
       "point": 40,
-      "description": "攻击有一定概率忽视对方一定数额护甲。"
+      "description": "攻击有一定概率忽视对方一定数额护甲。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "target_defence",
+              "op": "more",
+              "delta": 0.9
+            },
+            {
+              "type": "modify_damage_context",
+              "field": "target_defence",
+              "op": "post_add",
+              "delta": -70
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "chance",
+              "value": 0.3
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     {
       "id": "碎裂的怒吼",
       "name": "碎裂的怒吼",
       "point": 50,
-      "description": "惊天怒吼，施放奥义时一定概率造成周围敌人晕眩。"
+      "description": "惊天怒吼，施放奥义时一定概率造成周围敌人晕眩。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterSkillCast",
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "nearby_enemies",
+                "radius": 3
+              },
+              "buffId": "晕眩",
+              "level": 0,
+              "duration": 2
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "Legend"
+              ]
+            },
+            {
+              "type": "chance",
+              "value": 0.3
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     {
       "id": "神兵",
@@ -120142,7 +120894,91 @@
       "id": "臭蛤蟆",
       "name": "臭蛤蟆",
       "point": 10,
-      "description": "只有被称为臭蛤蟆的人才对蛤蟆功精要具有绝对的掌握。"
+      "description": "只有被称为臭蛤蟆的人才对蛤蟆功精要具有绝对的掌握。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "add",
+              "delta": 400
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "蛤蟆功"
+              ]
+            }
+          ],
+          "priority": 0
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "add",
+              "delta": 250
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_equipped_internal_skill",
+              "internalSkillIds": [
+                "蛤蟆功"
+              ]
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "蛤蟆功"
+              ],
+              "absent": true
+            }
+          ],
+          "priority": 0
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "target_defence",
+              "op": "more",
+              "delta": 1.3
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_equipped_internal_skill",
+              "internalSkillIds": [
+                "蛤蟆功"
+              ]
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     {
       "id": "至刚至阳",
@@ -120484,13 +121320,72 @@
       "id": "赵敏的眷念",
       "name": "赵敏的眷念",
       "point": 0,
-      "description": "蒙元郡主赵敏精通百家武学，提醒她的夫君敌之所长。（张无忌闪避+10%）"
+      "description": "蒙元郡主赵敏精通百家武学，提醒她的夫君敌之所长。（张无忌闪避+10%）",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeHitResolved",
+          "effects": [
+            {
+              "type": "cancel_hit",
+              "suppressHitEffects": true
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "chance",
+              "value": 0.1
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     {
       "id": "越女剑",
       "name": "越女剑",
       "point": 0,
-      "description": "越女剑法奥义发动时，全场所有敌人集气减少。"
+      "description": "越女剑法奥义发动时，全场所有敌人集气减少。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterSkillCast",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "action_gauge_rule",
+              "parameters": {
+                "minimum": 20,
+                "maximum": 20,
+                "capAllEnemies": true
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "Legend"
+              ]
+            },
+            {
+              "type": "context_skill_name_equals",
+              "values": [
+                "越女剑法奥义式"
+              ]
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     {
       "id": "软猬宝甲",
@@ -120530,7 +121425,37 @@
       "id": "追魂",
       "name": "追魂",
       "point": 30,
-      "description": "不将敌人打倒决不罢休，无道德可言。攻击造成伤害加深效果。"
+      "description": "不将敌人打倒决不罢休，无道德可言。攻击造成伤害加深效果。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "soul_chasing",
+              "parameters": {
+                "buffId": "伤害加深",
+                "speechChance": 0,
+                "speechLines": [],
+                "truncateQuotients": true
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     {
       "id": "金刚",
@@ -120580,6 +121505,10 @@
           },
           "skillName": "日月神鞭",
           "stage": "AfterBlind"
+        },
+        {
+          "type": "trait",
+          "traitId": "CannotMove"
         }
       ]
     },
@@ -121054,7 +121983,32 @@
       "id": "长平公主的眷恋",
       "name": "长平公主的眷恋",
       "point": 10,
-      "description": "长平公主阿九魂牵梦绕的眷恋，提升袁承志所有武学的威力。"
+      "description": "长平公主阿九魂牵梦绕的眷恋，提升袁承志所有武学的威力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterDamageCalculation",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "final_damage_formula",
+              "parameters": {
+                "formula": "NamedCompanionMultiplier",
+                "minimum": 1.2,
+                "maximum": 1.5,
+                "beneficiaryName": "袁承志"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "priority": 199
+        }
+      ]
     },
     {
       "id": "阉人",
@@ -121339,7 +122293,32 @@
       "id": "飞向天际",
       "name": "飞向天际",
       "point": 5,
-      "description": "神秘的绝学，攻击时一定概率吹飞对手。"
+      "description": "神秘的绝学，攻击时一定概率吹飞对手。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "flying_skyward",
+              "parameters": {}
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     {
       "id": "鬼魅",
@@ -121357,7 +122336,31 @@
       "id": "魔神降临",
       "name": "魔神降临",
       "point": 75,
-      "description": "每回合有一定概率变身为恐怖的魔神。"
+      "description": "每回合有一定概率变身为恐怖的魔神。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeActionReadiness",
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "self"
+              },
+              "buffId": "魔神降临",
+              "level": 2,
+              "duration": 3
+            }
+          ],
+          "conditions": [
+            {
+              "type": "chance",
+              "value": 0.12
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     {
       "id": "鲁莽",
@@ -121445,13 +122448,78 @@
       "id": "鹿鼎.一等鹿鼎公",
       "name": "鹿鼎.一等鹿鼎公",
       "point": 40,
-      "description": "功勋盖世的韦小宝，被攻击时一定几率胡言乱语念晕敌人。"
+      "description": "功勋盖世的韦小宝，被攻击时一定几率胡言乱语念晕敌人。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeHitResolved",
+          "effects": [
+            {
+              "type": "cancel_hit",
+              "suppressHitEffects": true
+            },
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "source"
+              },
+              "buffId": "晕眩",
+              "level": 0,
+              "duration": 3
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "source",
+              "relation": "enemy"
+            },
+            {
+              "type": "chance",
+              "value": 0.25
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     {
       "id": "黑天死炎",
       "name": "黑天死炎",
       "point": 25,
-      "description": "攻击一定几率自动触发“一刀两断”效果。"
+      "description": "攻击一定几率自动触发“一刀两断”效果。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterDamageCalculation",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "final_damage_formula",
+              "parameters": {
+                "formula": "CurrentHpMinimum",
+                "minimum": 0.25,
+                "maximum": 0.25
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "chance",
+              "value": 0.25
+            }
+          ],
+          "priority": 2000
+        }
+      ]
     },
     {
       "id": "黑衣",
@@ -226566,6 +227634,39 @@
       "drawAtZeroProbability": true,
       "supportSpecialSkillConditions": false
     },
+    "formationRules": {
+      "interceptTalentId": "真武七截阵",
+      "sharedDamageTalentId": "五行阵",
+      "transferTalentId": "八卦阵",
+      "groupAttackTalentId": "金刚伏魔圈",
+      "supportRadius": 5
+    },
+    "sourceRuleTalents": [
+      "光明圣火阵",
+      "死生茫茫",
+      "玄门罡气",
+      "越女剑",
+      "墨家传人",
+      "我是疯子",
+      "百变千幻",
+      "魔神降临",
+      "无形剑气",
+      "攀云乘龙",
+      "黑天死炎",
+      "木婉清的眷恋",
+      "长平公主的眷恋",
+      "赵敏的眷念",
+      "沾衣十八跌",
+      "鹿鼎.一等鹿鼎公",
+      "斗转星移",
+      "狗杂种",
+      "破甲",
+      "臭蛤蟆",
+      "追魂",
+      "飞向天际",
+      "碎裂的怒吼",
+      "段王爷的电眼"
+    ],
     "touchGames": {
       "测试": {
         "background": "touch.test",
@@ -227335,6 +228436,188 @@
       "maps": 162,
       "totalMaps": 162,
       "deferredStories": 2
+    },
+    "audio": {
+      "resources": {
+        "战斗音乐.1": "art/legacy/audio/f4910c9deadf2adbcf69.mp3",
+        "战斗音乐.2": "art/legacy/audio/7cb578ffcc87d5244621.mp3",
+        "战斗音乐.3": "art/legacy/audio/dc542a0022081796ff2d.mp3",
+        "战斗音乐.4": "art/legacy/audio/9c73220f9fc42a535003.mp3",
+        "战斗音乐.5": "art/legacy/audio/600a1f0d10fbf12a622e.mp3",
+        "战斗音乐.云狐之战": "art/legacy/audio/3b4fa811d3bb830e93c4.mp3",
+        "战斗音乐.山谷行进": "art/legacy/audio/76bb6d41dfbdf79d5acb.mp3",
+        "战斗音乐.山谷行进2": "art/legacy/audio/143a2c34c28c548a35f8.mp3",
+        "战斗音乐.暮云出击": "art/legacy/audio/f44059899451c25cbd19.mp3",
+        "音乐.七夕": "art/legacy/audio/ac3862bda254020224d4.mp3",
+        "音乐.七秀": "art/legacy/audio/e5e0e50ff46e8b4234bf.mp3",
+        "音乐.中原树林": "art/legacy/audio/f8f2014aa380cd34399e.mp3",
+        "音乐.仙剑奇缘": "art/legacy/audio/1480c3d87ac81245c4de.mp3",
+        "音乐.倚天.醉拳": "art/legacy/audio/ed9bbab8d806e07a98bf.mp3",
+        "音乐.全真教": "art/legacy/audio/c94dad3deb4a21bbde4e.mp3",
+        "音乐.刀间鼓": "art/legacy/audio/a566956b065404bedfbe.mp3",
+        "音乐.华山论剑": "art/legacy/audio/63d2de7d2b4a79faa7ab.mp3",
+        "音乐.圣火令": "art/legacy/audio/5065f00a850cdb5a1347.mp3",
+        "音乐.城市1": "art/legacy/audio/6621c7f2abfb238e8e2f.mp3",
+        "音乐.城市2": "art/legacy/audio/6621c7f2abfb238e8e2f.mp3",
+        "音乐.城市3": "art/legacy/audio/c2f5cbaea1b8ead5a323.mp3",
+        "音乐.城市4": "art/legacy/audio/d46a64155146d7135fd5.mp3",
+        "音乐.天外村": "art/legacy/audio/9284d45fb7d26e2d919d.mp3",
+        "音乐.天龙八部.佛音1": "art/legacy/audio/1a6155bffeba2331c157.mp3",
+        "音乐.天龙八部.佛音2": "art/legacy/audio/8c36e3637b0f5738967e.mp3",
+        "音乐.天龙八部.佛音3": "art/legacy/audio/fcdbba688d0f5e5fd2f3.mp3",
+        "音乐.天龙八部.佛音4": "art/legacy/audio/d5c6847932729f460e87.mp3",
+        "音乐.天龙八部.忧伤": "art/legacy/audio/2cd42f439de39d54e2b7.mp3",
+        "音乐.天龙八部.无量山洞": "art/legacy/audio/2db13be7ada48f4f1d4b.mp3",
+        "音乐.天龙八部.燕子坞": "art/legacy/audio/ec8e4371635cdbbcb05c.mp3",
+        "音乐.天龙八部.紧张感1": "art/legacy/audio/8279ad2e96ecd68ec079.mp3",
+        "音乐.天龙八部.紧张感2": "art/legacy/audio/8195e940c4d2589adceb.mp3",
+        "音乐.天龙八部.紧张感3": "art/legacy/audio/a377eaec1acc35e7f22a.mp3",
+        "音乐.天龙八部.紧张感4": "art/legacy/audio/deca17267c7cccf92409.mp3",
+        "音乐.天龙八部.紧张感5": "art/legacy/audio/51db1ba8534d1ef4bf56.mp3",
+        "音乐.天龙八部.逍遥派": "art/legacy/audio/f09db010ee9ed5a2147c.mp3",
+        "音乐.天龙八部.逍遥派抒情版": "art/legacy/audio/f2a665c572c17f51e51c.mp3",
+        "音乐.天龙八部1": "art/legacy/audio/f3c43c8a83ef68220095.mp3",
+        "音乐.天龙八部10": "art/legacy/audio/c004e377d76f6e3a0e3e.mp3",
+        "音乐.天龙八部11": "art/legacy/audio/9ae8891d0a6d6446ea41.mp3",
+        "音乐.天龙八部2": "art/legacy/audio/05034646d589481e13de.mp3",
+        "音乐.天龙八部3": "art/legacy/audio/87a013522cac1caa58e1.mp3",
+        "音乐.天龙八部4": "art/legacy/audio/0af4c6effb4b1ca32e7b.mp3",
+        "音乐.天龙八部5": "art/legacy/audio/af33d8d59594faef0f85.mp3",
+        "音乐.天龙八部6": "art/legacy/audio/d08891697a5051af5366.mp3",
+        "音乐.天龙八部7": "art/legacy/audio/0ac8e1b9ce3e7d5509b6.mp3",
+        "音乐.天龙八部8": "art/legacy/audio/0cfe2d2351fa9d78c18f.mp3",
+        "音乐.天龙八部9": "art/legacy/audio/d6efdaef17a396385179.mp3",
+        "音乐.太行八径": "art/legacy/audio/728f925e7c77be258440.mp3",
+        "音乐.如梦往事": "art/legacy/audio/bf130450dbbfc156b033.mp3",
+        "音乐.室内_世俗": "art/legacy/audio/5a3e305ee3eaf4b03d32.mp3",
+        "音乐.室内_安静": "art/legacy/audio/bc68077dd1a32a694333.mp3",
+        "音乐.室内_清新": "art/legacy/audio/3f4b674addcab76c23a1.mp3",
+        "音乐.宿命": "art/legacy/audio/e03110e7715ffb1d660e.mp3",
+        "音乐.少林山门": "art/legacy/audio/126bc82ee287d5c3a2f0.mp3",
+        "音乐.开场": "art/legacy/audio/83c0a4c11f2a7a61db76.mp3",
+        "音乐.欢乐": "art/legacy/audio/d193ed98d38d5a846abb.mp3",
+        "音乐.欢快工作": "art/legacy/audio/c9438e19b75da90e7dc7.mp3",
+        "音乐.武侠回忆": "art/legacy/audio/bbc795a375a50f2ea6f1.mp3",
+        "音乐.武侠流水": "art/legacy/audio/3ff8ff5a4d05877a0832.mp3",
+        "音乐.武侠进行": "art/legacy/audio/149ba6574e84e78959cd.mp3",
+        "音乐.武侠雄壮": "art/legacy/audio/25fc6fea267b56a27173.mp3",
+        "音乐.武当": "art/legacy/audio/20eaaac28f3a93d7825c.mp3",
+        "音乐.武林至尊": "art/legacy/audio/ae2fd21a7c57508d5163.mp3",
+        "音乐.游戏失败": "art/legacy/audio/7c34bdb7a4eb99dd6b23.mp3",
+        "音乐.琵琶语": "art/legacy/audio/1122e64474fc3aaf10c9.mp3",
+        "音乐.神秘山洞": "art/legacy/audio/f7437883da1a21ef134c.mp3",
+        "音乐.神雕.主题": "art/legacy/audio/c94dad3deb4a21bbde4e.mp3",
+        "音乐.神雕.歌泣": "art/legacy/audio/493fac473bcbe3d442a4.mp3",
+        "音乐.神雕.舒缓": "art/legacy/audio/fe772a5916c911bb8980.mp3",
+        "音乐.紧张感": "art/legacy/audio/62092ce0e862187680f9.mp3",
+        "音乐.纯阳": "art/legacy/audio/20eaaac28f3a93d7825c.mp3",
+        "音乐.纵横江湖": "art/legacy/audio/17bd313cd06213d79301.mp3",
+        "音乐.经典": "art/legacy/audio/92cb2185ceecc47ceb66.mp3",
+        "音乐.苦闷": "art/legacy/audio/4df3bf947ff05c92f36d.mp3",
+        "音乐.血刀门": "art/legacy/audio/8279ad2e96ecd68ec079.mp3",
+        "音乐.逍遥": "art/legacy/audio/920446836ef75344d362.mp3",
+        "音乐.逍遥1": "art/legacy/audio/0358310527e6308d59e6.mp3",
+        "音乐.逍遥2": "art/legacy/audio/3aa46504db217f43610a.mp3",
+        "音乐.逍遥3": "art/legacy/audio/176ce0b3afa1b2ec07b6.mp3",
+        "音乐.逍遥4": "art/legacy/audio/f3f0639408d76846c6ab.mp3",
+        "音乐.金庸群侠传4": "art/legacy/audio/92cb2185ceecc47ceb66.mp3",
+        "音乐.金庸群侠传5": "art/legacy/audio/5afff453b85076352b2f.mp3",
+        "音效.亲吻": "art/legacy/audio/cbad54d067d3ed058a25.mp3",
+        "音效.亲吻2": "art/legacy/audio/5f79bfbc078cc20a3fc5.mp3",
+        "音效.休息": "art/legacy/audio/ec4d546f303925e39d92.mp3",
+        "音效.内功攻击1": "art/legacy/audio/bde9f0c1b2c1bd84c932.mp3",
+        "音效.内功攻击2": "art/legacy/audio/99f9d0a6ffad2ce8e7c2.mp3",
+        "音效.内功攻击3": "art/legacy/audio/ad30b7dc27f29c2b24b6.mp3",
+        "音效.内功攻击4": "art/legacy/audio/8480ee1d721f9b830885.mp3",
+        "音效.内功攻击5": "art/legacy/audio/ecadae47a05dda6fad83.mp3",
+        "音效.内功攻击6": "art/legacy/audio/a8c32c78d02f610af856.mp3",
+        "音效.利器1": "art/legacy/audio/f4639038fedf862348c6.mp3",
+        "音效.利器2": "art/legacy/audio/5dc55ae0b448f8f0d816.mp3",
+        "音效.利器3": "art/legacy/audio/5dc55ae0b448f8f0d816.mp3",
+        "音效.利器4": "art/legacy/audio/6b5eb701f4201b523749.mp3",
+        "音效.利器5": "art/legacy/audio/ebe38586a005eee99ec4.mp3",
+        "音效.利器6": "art/legacy/audio/9e325beb606afb268152.mp3",
+        "音效.利器7": "art/legacy/audio/64fd53cbb56d8abeacc9.mp3",
+        "音效.刺伤": "art/legacy/audio/0ed7fa83f39460b3416b.mp3",
+        "音效.剑": "art/legacy/audio/637d6fe0b1a1e2a15b1d.mp3",
+        "音效.加点": "art/legacy/audio/f761c6917bd612b51b78.mp3",
+        "音效.升级": "art/legacy/audio/f2bbb8fcdb9982461266.mp3",
+        "音效.吸取内力": "art/legacy/audio/d0f0e2f2b86cab6aaf0a.mp3",
+        "音效.咆哮": "art/legacy/audio/002029ae6cfc500f5dc0.mp3",
+        "音效.奥义1": "art/legacy/audio/b47d5ea267c0883e1d14.mp3",
+        "音效.奥义2": "art/legacy/audio/95f461f58b2dcfbbbd4d.mp3",
+        "音效.奥义3": "art/legacy/audio/bde9f0c1b2c1bd84c932.mp3",
+        "音效.奥义4": "art/legacy/audio/1663b2e6bf63b11fef8b.mp3",
+        "音效.奥义5": "art/legacy/audio/172d68922d56253edf66.mp3",
+        "音效.奥义6": "art/legacy/audio/a8c32c78d02f610af856.mp3",
+        "音效.女": "art/legacy/audio/63c0c4c5eaa4129a74d3.mp3",
+        "音效.女2": "art/legacy/audio/95da48364cdaf2e88b9e.mp3",
+        "音效.女3": "art/legacy/audio/9a8c4a3cba66fb9c1a88.mp3",
+        "音效.女4": "art/legacy/audio/9c7ebf3ca7531f449bae.mp3",
+        "音效.女的奸笑": "art/legacy/audio/575178fd1da90cf790e1.mp3",
+        "音效.威猛利器": "art/legacy/audio/970ee9f834f9a1f0422b.mp3",
+        "音效.威猛利器2": "art/legacy/audio/e3f2b23fc1ba93bd5ae8.mp3",
+        "音效.威猛利器3": "art/legacy/audio/8a7c2f2f8a3a17b16265.mp3",
+        "音效.小奖励": "art/legacy/audio/093b3c93bd13b63ce4c2.mp3",
+        "音效.年轻男": "art/legacy/audio/7c3e5d22fbba2a62ff60.mp3",
+        "音效.恢复2": "art/legacy/audio/b63deaad99ec59404f2d.mp3",
+        "音效.恢复3": "art/legacy/audio/8aededac845abb0b19a3.mp3",
+        "音效.恢复类物品": "art/legacy/audio/ec4d546f303925e39d92.mp3",
+        "音效.手枪": "art/legacy/audio/d0507ecaeb9e76ff7900.mp3",
+        "音效.打破罐子": "art/legacy/audio/f47e2a8b07378d788133.mp3",
+        "音效.打雷": "art/legacy/audio/68253a1952ba10c72d31.mp3",
+        "音效.拳1": "art/legacy/audio/f102a0c8dcec7115602b.mp3",
+        "音效.拳2": "art/legacy/audio/f102a0c8dcec7115602b.mp3",
+        "音效.拳3": "art/legacy/audio/ee3d30f75e12f0321e01.mp3",
+        "音效.拳击": "art/legacy/audio/b29ddf156667e28df5bb.mp3",
+        "音效.指1": "art/legacy/audio/e6ff66829f5adc8ebf9e.mp3",
+        "音效.指2": "art/legacy/audio/c62a52f6e0f4fffb265b.mp3",
+        "音效.指法": "art/legacy/audio/c62a52f6e0f4fffb265b.mp3",
+        "音效.敢点老娘": "art/legacy/audio/0600705714b70cbea500.mp3",
+        "音效.暗器1": "art/legacy/audio/2ef7e12cbc29fcad170d.mp3",
+        "音效.暗器2": "art/legacy/audio/5427291437f72771b2cc.mp3",
+        "音效.暗器3": "art/legacy/audio/6c812bedaf8d75d3967a.mp3",
+        "音效.特别回复": "art/legacy/audio/b63deaad99ec59404f2d.mp3",
+        "音效.猛兽1": "art/legacy/audio/8f3f8ce130a71ad0fb27.mp3",
+        "音效.猛兽2": "art/legacy/audio/bed39b3fe34ed89ca032.mp3",
+        "音效.猛兽3": "art/legacy/audio/f120e087bbeb6d91723d.mp3",
+        "音效.猛男": "art/legacy/audio/9ee65039b15a160f45a9.mp3",
+        "音效.男": "art/legacy/audio/559c567288e89f508c80.mp3",
+        "音效.男-哼": "art/legacy/audio/3754adad95dbe0814a0a.mp3",
+        "音效.男2": "art/legacy/audio/ea0443db6b32d7fec992.mp3",
+        "音效.男3": "art/legacy/audio/792a9e3b891c465eec3d.mp3",
+        "音效.男4": "art/legacy/audio/78bd58d49839af146370.mp3",
+        "音效.男5": "art/legacy/audio/68f7392b14656d9781c6.mp3",
+        "音效.男惨叫": "art/legacy/audio/854235d461caabe1a8bd.mp3",
+        "音效.破空钝器": "art/legacy/audio/0e955c3cde4fec11113a.mp3",
+        "音效.蛤蟆叫": "art/legacy/audio/411b1f49d51340f885ab.mp3",
+        "音效.装备": "art/legacy/audio/68850518814fa3bbf5a0.mp3",
+        "音效.钝器1": "art/legacy/audio/3d90aad3c3bd3d657016.mp3",
+        "音效.钝器2": "art/legacy/audio/6e1085afa9792bb830eb.mp3",
+        "音效.钝器3": "art/legacy/audio/52adc370c145d92bc8de.mp3",
+        "音效.钝器4": "art/legacy/audio/31beba04d46d76b563da.mp3",
+        "音效.钝器5": "art/legacy/audio/68b3843a7eb1d5271858.mp3",
+        "音效.钝器6": "art/legacy/audio/1c9a2d533c977e2cfbf0.mp3",
+        "音效.钝器7": "art/legacy/audio/bbc2c6eb4eca67d124b3.mp3",
+        "音效.钝器8": "art/legacy/audio/4d4cdd0c27853c11cfc8.mp3",
+        "音效.长剑": "art/legacy/audio/93573ee7bfe243ff7c8a.mp3",
+        "音效.闷拳": "art/legacy/audio/f3766e8b6075c6ee1308.mp3",
+        "音效.飙血": "art/legacy/audio/2212c5f96b41e90ea544.mp3",
+        "音效.鸟啄": "art/legacy/audio/87e0b86a1793505ea04f.mp3",
+        "音效.龙吼": "art/legacy/audio/1ebfc1d7464156f206da.mp3"
+      },
+      "titleMusic": "音乐.武侠回忆",
+      "battleMusic": "战斗音乐.云狐之战",
+      "eventSounds": {
+        "ItemUsed": "音效.恢复类物品",
+        "CharacterLeveledUp": "音效.升级"
+      },
+      "source": {
+        "archive": "X.rar",
+        "versionLabel": "X1.0.0.1",
+        "bundle": "StreamingAssets/audios",
+        "sha256": "8a953753c0c5f6a267fce2001f3046c252b9fbbfce0f1cabd6c8f8f14728e90c"
+      }
     },
     "artSource": {
       "kind": "legacy",

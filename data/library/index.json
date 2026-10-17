@@ -13981,7 +13981,7 @@
       "description": "10#只有被称为臭蛤蟆的人才对蛤蟆功精要具有绝对的掌握。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -13992,7 +13992,7 @@
       "description": "40#攻击有一定概率忽视对方一定数额护甲。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14388,7 +14388,7 @@
       "description": "25#武当派镇派绝技，威力可敌六十四位当世高手！(50%几率为队友挡刀，一定几率增强攻击杀伤力)",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14465,7 +14465,7 @@
       "description": "80#武学奇才慕容龙城所领悟的借力打力的神奇招式，一定概率反弹一定伤害。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14487,7 +14487,7 @@
       "description": "30#不将敌人打倒决不罢休，无道德可言。攻击造成伤害加深效果。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14531,7 +14531,7 @@
       "description": "10#斗转星移反弹几率大幅提升。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "referenced-behavior",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14553,7 +14553,7 @@
       "description": "0#木婉清出场的情况下，提升段誉所有武学的威力。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14597,7 +14597,7 @@
       "description": "20#风流潇洒中年大叔镇南王段正淳的无敌电眼，对女性及太监极有杀伤力。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14619,7 +14619,7 @@
       "description": "10#长平公主阿九魂牵梦绕的眷恋，提升袁承志所有武学的威力。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14630,7 +14630,7 @@
       "description": "40#功勋盖世的韦小宝，被攻击时一定几率胡言乱语念晕敌人。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14641,7 +14641,7 @@
       "description": "50#惊天怒吼，施放奥义时一定概率造成周围敌人晕眩。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14652,7 +14652,7 @@
       "description": "80#高深玄妙的内家技巧，受到攻击时一定概率让攻击者晕眩。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14806,7 +14806,7 @@
       "description": "5#神秘的绝学，攻击时一定概率吹飞对手。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14828,7 +14828,7 @@
       "description": "0#蒙元郡主赵敏精通百家武学，提醒她的夫君敌之所长。（张无忌闪避+10%）",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14905,7 +14905,7 @@
       "description": "15#腾挪移遁的高明阵法，当周围有队友受伤时，发动阵法分担其所受伤害。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14916,7 +14916,7 @@
       "description": "15#腾挪移遁的高明阵法，当自己收到伤害时，将80%的伤害转移给范围内一名随机队友。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14949,7 +14949,7 @@
       "description": "10#明教顶级阵法，置于阵法之中，几乎不受任何负面效果影响。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14993,7 +14993,7 @@
       "description": "50#一定概率造成基于身法值的真实伤害，身法值越高，伤害越高。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -15015,7 +15015,7 @@
       "description": "25#一定几率吸收气血上限转化为自己的气血。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -15026,7 +15026,7 @@
       "description": "25#攻击一定几率自动触发“一刀两断”效果。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -15301,7 +15301,7 @@
       "description": "75#每回合有一定概率变身为恐怖的魔神。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -15312,7 +15312,7 @@
       "description": "75#每回合有一定概率自动易容，可以藏于暗处伏击对手。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -15323,7 +15323,7 @@
       "description": "0#石破天专属天赋，装备内功为罗汉伏魔神功或太玄神功时大幅度提高暴击概率及防御力。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -15422,7 +15422,7 @@
       "description": "0#装备内功为九阴真经时，攻击造成减少对手集气效果。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -15433,7 +15433,7 @@
       "description": "0#使用六脉神剑攻击时，附加基于敌我当前内力值差的真实伤害。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -15444,7 +15444,7 @@
       "description": "0#越女剑法奥义发动时，全场所有敌人集气减少。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -15477,7 +15477,7 @@
       "description": "0#战国墨家的世代传人，使用墨家古武术附加随机不良状态。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -15488,7 +15488,7 @@
       "description": "0#逆运自身内功，所有造成的不良状态随机增加0-2的不良状态程度和持续时间。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -15719,7 +15719,7 @@
       "description": "溜须拍马，跪地求饶，不受伤害。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -15730,7 +15730,7 @@
       "description": "易容改面，藏于暗处。伺机发动致命伤害。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -15807,7 +15807,7 @@
       "description": "犹如魔神附体，所有攻击必定暴击，暴击伤害提高25%。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },

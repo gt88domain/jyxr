@@ -339,6 +339,48 @@
     ],
     "scope": "trigger policy only; power, range, full reaction ordering and all live routes remain"
   },
+  "remainingRuleEffects": {
+    "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+    "formations": {
+      "interceptTalentId": "真武七截阵",
+      "sharedDamageTalentId": "五行阵",
+      "transferTalentId": "八卦阵",
+      "groupAttackTalentId": "金刚伏魔圈",
+      "supportRadius": 5
+    },
+    "talents": [
+      "光明圣火阵",
+      "死生茫茫",
+      "玄门罡气",
+      "越女剑",
+      "墨家传人",
+      "我是疯子",
+      "百变千幻",
+      "魔神降临",
+      "无形剑气",
+      "攀云乘龙",
+      "黑天死炎",
+      "木婉清的眷恋",
+      "长平公主的眷恋",
+      "赵敏的眷念",
+      "沾衣十八跌",
+      "鹿鼎.一等鹿鼎公",
+      "斗转星移",
+      "狗杂种",
+      "破甲",
+      "臭蛤蟆",
+      "追魂",
+      "飞向天际",
+      "碎裂的怒吼",
+      "段王爷的电眼"
+    ],
+    "buffs": [
+      "易容",
+      "溜须拍马",
+      "魔神降临"
+    ],
+    "remaining": "Full source cosmetic RNG, mixed modifiers, special reactions and normal acquisition require validation."
+  },
   "legacyArt": {
     "source": {
       "archive": "X.rar",
@@ -436,12 +478,12 @@
   "remainingChecklist": {
     "tasks": 19,
     "groups": {
-      "有旧C#同名引用、效果仍待接入的天赋": 28,
+      "有旧C#同名引用、效果仍待接入的天赋": 0,
       "未找到旧C#同名引用、需继续查证的天赋": 5,
-      "已有部分效果、尚未全部等价的天赋": 44,
-      "仅作为其他效果联动条件的天赋": 4,
-      "仅资料的Buff": 7,
-      "部分实现的Buff": 2,
+      "已有部分效果、尚未全部等价的天赋": 71,
+      "仅作为其他效果联动条件的天赋": 5,
+      "仅资料的Buff": 4,
+      "部分实现的Buff": 5,
       "仍有明确差异的特技": 11
     }
   },
@@ -470,10 +512,10 @@
     "talents": {
       "total": 158,
       "states": {
-        "referenced-behavior": 4,
+        "referenced-behavior": 5,
         "configured": 76,
-        "partial": 44,
-        "metadata-only": 33,
+        "partial": 71,
+        "metadata-only": 5,
         "identity-only": 1
       }
     },
@@ -482,8 +524,8 @@
       "states": {
         "engine-behavior": 16,
         "configured": 8,
-        "metadata-only": 7,
-        "partial": 2
+        "metadata-only": 4,
+        "partial": 5
       }
     },
     "specialSkills": {
@@ -556,7 +598,7 @@
     "scopedBattleEffects": 1,
     "itemTags": 0,
     "storyScripts": 1,
-    "browser": 27
+    "browser": 30
   },
   "limitations": [
     "The 14 verified opening/trainer segments remain unchanged; dependency-closed original stories/maps/events and nine sect entries are now exposed. Structural migration is not proof of full playthroughs.",

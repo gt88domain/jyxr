@@ -5,10 +5,10 @@
     "talents": {
       "total": 158,
       "states": {
-        "referenced-behavior": 4,
+        "referenced-behavior": 5,
         "configured": 76,
-        "partial": 44,
-        "metadata-only": 33,
+        "partial": 71,
+        "metadata-only": 5,
         "identity-only": 1
       },
       "entries": [
@@ -63,11 +63,13 @@
         },
         {
           "id": "五行阵",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:858"
           ],
-          "remaining": [],
+          "remaining": [
+            "ordered formation pipeline configured; full original cosmetic RNG and battle lifecycle ordering remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -106,20 +108,24 @@
         },
         {
           "id": "光明圣火阵",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/BattleField.cs:960"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
           "id": "八卦阵",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:871"
           ],
-          "remaining": [],
+          "remaining": [
+            "ordered formation pipeline configured; full original cosmetic RNG and battle lifecycle ordering remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -326,11 +332,13 @@
         },
         {
           "id": "墨家传人",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1093"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -643,11 +651,13 @@
         },
         {
           "id": "慕容世家",
-          "configurationState": "metadata-only",
+          "configurationState": "referenced-behavior",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:723"
           ],
-          "remaining": [],
+          "remaining": [
+            "Used as a secondary condition: 斗转星移 activation chance .1 to .2; full combinations remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -663,11 +673,13 @@
         },
         {
           "id": "我是疯子",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1171"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -712,11 +724,13 @@
         },
         {
           "id": "攀云乘龙",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:2162"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -730,12 +744,14 @@
         },
         {
           "id": "斗转星移",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:727",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:730"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -759,11 +775,13 @@
         },
         {
           "id": "无形剑气",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:567"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -808,11 +826,13 @@
         },
         {
           "id": "木婉清的眷恋",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:530"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -830,21 +850,25 @@
         },
         {
           "id": "死生茫茫",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:802"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
           "id": "段王爷的电眼",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:550",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:644"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -876,13 +900,15 @@
         },
         {
           "id": "沾衣十八跌",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:626",
             "jyx-legacy-dll/JyGame/RollRoleUI.cs:598",
             "jyx-legacy-dll/JyGame/RollRoleUI.cs:632"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -939,12 +965,14 @@
         },
         {
           "id": "狗杂种",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1914",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1919"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -958,11 +986,13 @@
         },
         {
           "id": "玄门罡气",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1043"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -1005,11 +1035,13 @@
         },
         {
           "id": "百变千幻",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/BattleField.cs:930"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -1032,7 +1064,7 @@
         },
         {
           "id": "真武七截阵",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:398",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:402",
@@ -1041,7 +1073,9 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:840",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:843"
           ],
-          "remaining": [],
+          "remaining": [
+            "ordered formation pipeline configured; full original cosmetic RNG and battle lifecycle ordering remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -1055,21 +1089,25 @@
         },
         {
           "id": "破甲",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1808"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
           "id": "碎裂的怒吼",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/BattleField.cs:1422",
             "jyx-legacy-dll/JyGame/RollRoleUI.cs:597"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -1190,12 +1228,14 @@
         },
         {
           "id": "臭蛤蟆",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1602",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1607"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -1285,20 +1325,24 @@
         },
         {
           "id": "赵敏的眷念",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:601"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
           "id": "越女剑",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/BattleField.cs:1446"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -1328,11 +1372,13 @@
         },
         {
           "id": "追魂",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1685"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -1359,7 +1405,7 @@
             "jyx-legacy-dll/JyGame/SkillBox.cs:372"
           ],
           "remaining": [
-            "日月神鞭 cast size 10 bypasses blindness; formation damage stacking, break/removal and movement remain"
+            "range, movement lock, three-member attack multiplier and break/removal configured; full legacy unit-removal lifecycle and equipment-granted talent behavior remain"
           ],
           "fullBehaviorVerified": false
         },
@@ -1441,11 +1487,13 @@
         },
         {
           "id": "长平公主的眷恋",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:540"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -1521,12 +1569,14 @@
         },
         {
           "id": "飞向天际",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:31",
             "jyx-legacy-dll/JyGame/RollRoleUI.cs:587"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -1542,14 +1592,16 @@
         },
         {
           "id": "魔神降临",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1123",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:2093",
             "jyx-legacy-dll/JyGame/BattleField.cs:914",
             "jyx-legacy-dll/JyGame/BattleField.cs:921"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -1575,20 +1627,24 @@
         },
         {
           "id": "鹿鼎.一等鹿鼎公",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:607"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
           "id": "黑天死炎",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:2145"
           ],
-          "remaining": [],
+          "remaining": [
+            "pinned source numeric behavior configured; full cosmetic RNG, friendly/special-hit, mixed modifiers and naturally acquired routes remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -1605,8 +1661,8 @@
       "states": {
         "engine-behavior": 16,
         "configured": 8,
-        "metadata-only": 7,
-        "partial": 2
+        "metadata-only": 4,
+        "partial": 5
       },
       "entries": [
         {
@@ -1780,7 +1836,7 @@
         },
         {
           "id": "易容",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:271",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:273",
@@ -1790,7 +1846,7 @@
             "jyx-legacy-dll/JyGame/BattleField.cs:936"
           ],
           "remaining": [
-            "ambush, immunity and consumption are not configured"
+            "incoming HP suppression and attack ambush/consumption configured; MP, special pipeline and original miss/target iteration remain"
           ],
           "fullBehaviorVerified": false
         },
@@ -1827,14 +1883,16 @@
         },
         {
           "id": "溜须拍马",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:23",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:27",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1335",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:2131"
           ],
-          "remaining": [],
+          "remaining": [
+            "source combat effect configured; special skills, MP and complete source reaction order remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -1965,14 +2023,16 @@
         },
         {
           "id": "魔神降临",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1123",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:2093",
             "jyx-legacy-dll/JyGame/BattleField.cs:914",
             "jyx-legacy-dll/JyGame/BattleField.cs:921"
           ],
-          "remaining": [],
+          "remaining": [
+            "source combat effect configured; special skills, MP and complete source reaction order remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -2146,7 +2206,7 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:267"
           ],
           "remaining": [
-            "易容: ambush, immunity and consumption are not configured"
+            "易容: incoming HP suppression and attack ambush/consumption configured; MP, special pipeline and original miss/target iteration remain"
           ],
           "fullBehaviorVerified": false
         },

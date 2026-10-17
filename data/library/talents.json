@@ -3101,7 +3101,7 @@
     "description": "10#只有被称为臭蛤蟆的人才对蛤蟆功精要具有绝对的掌握。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -3114,7 +3114,91 @@
       "id": "臭蛤蟆",
       "name": "臭蛤蟆",
       "point": 10,
-      "description": "只有被称为臭蛤蟆的人才对蛤蟆功精要具有绝对的掌握。"
+      "description": "只有被称为臭蛤蟆的人才对蛤蟆功精要具有绝对的掌握。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "add",
+              "delta": 400
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "蛤蟆功"
+              ]
+            }
+          ],
+          "priority": 0
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "add",
+              "delta": 250
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_equipped_internal_skill",
+              "internalSkillIds": [
+                "蛤蟆功"
+              ]
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "蛤蟆功"
+              ],
+              "absent": true
+            }
+          ],
+          "priority": 0
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "target_defence",
+              "op": "more",
+              "delta": 1.3
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_equipped_internal_skill",
+              "internalSkillIds": [
+                "蛤蟆功"
+              ]
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     "variants": [
       {
@@ -3160,7 +3244,7 @@
     "description": "40#攻击有一定概率忽视对方一定数额护甲。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -3173,7 +3257,38 @@
       "id": "破甲",
       "name": "破甲",
       "point": 40,
-      "description": "攻击有一定概率忽视对方一定数额护甲。"
+      "description": "攻击有一定概率忽视对方一定数额护甲。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "target_defence",
+              "op": "more",
+              "delta": 0.9
+            },
+            {
+              "type": "modify_damage_context",
+              "field": "target_defence",
+              "op": "post_add",
+              "delta": -70
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "chance",
+              "value": 0.3
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     "variants": [
       {
@@ -7441,7 +7556,7 @@
     "description": "25#武当派镇派绝技，威力可敌六十四位当世高手！(50%几率为队友挡刀，一定几率增强攻击杀伤力)",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -8058,7 +8173,7 @@
     "description": "80#武学奇才慕容龙城所领悟的借力打力的神奇招式，一定概率反弹一定伤害。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -8071,7 +8186,36 @@
       "id": "斗转星移",
       "name": "斗转星移",
       "point": 80,
-      "description": "武学奇才慕容龙城所领悟的借力打力的神奇招式，一定概率反弹一定伤害。"
+      "description": "武学奇才慕容龙城所领悟的借力打力的神奇招式，一定概率反弹一定伤害。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageApplied",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "shifting_stars_reflection",
+              "parameters": {
+                "familyTalentId": "慕容世家",
+                "chance": 0.1,
+                "familyChance": 0.2,
+                "damageFactor": 0.25,
+                "floatText": "斗转星移",
+                "speech": "以彼之道，还施彼身！",
+                "unreactive": true,
+                "singlePrecision": true
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            }
+          ],
+          "priority": 500
+        }
+      ]
     },
     "variants": [
       {
@@ -8321,7 +8465,7 @@
     "description": "30#不将敌人打倒决不罢休，无道德可言。攻击造成伤害加深效果。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -8334,7 +8478,37 @@
       "id": "追魂",
       "name": "追魂",
       "point": 30,
-      "description": "不将敌人打倒决不罢休，无道德可言。攻击造成伤害加深效果。"
+      "description": "不将敌人打倒决不罢休，无道德可言。攻击造成伤害加深效果。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "soul_chasing",
+              "parameters": {
+                "buffId": "伤害加深",
+                "speechChance": 0,
+                "speechLines": [],
+                "truncateQuotients": true
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     "variants": [
       {
@@ -8730,7 +8904,7 @@
     "description": "10#斗转星移反弹几率大幅提升。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "referenced-behavior",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -8889,7 +9063,7 @@
     "description": "0#木婉清出场的情况下，提升段誉所有武学的威力。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -8902,7 +9076,33 @@
       "id": "木婉清的眷恋",
       "name": "木婉清的眷恋",
       "point": 0,
-      "description": "木婉清出场的情况下，提升段誉所有武学的威力。"
+      "description": "木婉清出场的情况下，提升段誉所有武学的威力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterDamageCalculation",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "final_damage_formula",
+              "parameters": {
+                "formula": "NamedCompanionMultiplier",
+                "minimum": 1.2,
+                "maximum": 1.8,
+                "beneficiaryName": "段誉",
+                "companionName": "木婉清"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "priority": 200
+        }
+      ]
     },
     "variants": [
       {
@@ -9339,7 +9539,7 @@
     "description": "20#风流潇洒中年大叔镇南王段正淳的无敌电眼，对女性及太监极有杀伤力。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -9352,7 +9552,171 @@
       "id": "段王爷的电眼",
       "name": "段王爷的电眼",
       "point": 20,
-      "description": "风流潇洒中年大叔镇南王段正淳的无敌电眼，对女性及太监极有杀伤力。"
+      "description": "风流潇洒中年大叔镇南王段正淳的无敌电眼，对女性及太监极有杀伤力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "target"
+              },
+              "buffId": "晕眩",
+              "level": 0,
+              "duration": 2
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            },
+            {
+              "type": "context_unit_gender",
+              "role": "target",
+              "genders": [
+                "female"
+              ]
+            },
+            {
+              "type": "chance",
+              "value": 0.5
+            }
+          ],
+          "priority": 0
+        },
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "target"
+              },
+              "buffId": "晕眩",
+              "level": 0,
+              "duration": 2
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "role": "target",
+              "talentIds": [
+                "阉人"
+              ]
+            },
+            {
+              "type": "context_unit_gender",
+              "role": "target",
+              "genders": [
+                "male",
+                "neutral",
+                "animal",
+                "eunuch"
+              ]
+            },
+            {
+              "type": "chance",
+              "value": 0.5
+            }
+          ],
+          "priority": 0
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeHitResolved",
+          "effects": [
+            {
+              "type": "cancel_hit",
+              "suppressHitEffects": true
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "source",
+              "relation": "enemy"
+            },
+            {
+              "type": "context_unit_gender",
+              "role": "source",
+              "genders": [
+                "female"
+              ]
+            },
+            {
+              "type": "chance",
+              "value": 0.5
+            }
+          ],
+          "priority": 0
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeHitResolved",
+          "effects": [
+            {
+              "type": "cancel_hit",
+              "suppressHitEffects": true
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "source",
+              "relation": "enemy"
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "role": "source",
+              "talentIds": [
+                "阉人"
+              ]
+            },
+            {
+              "type": "context_unit_gender",
+              "role": "source",
+              "genders": [
+                "male",
+                "neutral",
+                "animal",
+                "eunuch"
+              ]
+            },
+            {
+              "type": "chance",
+              "value": 0.5
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     "variants": [
       {
@@ -9442,7 +9806,7 @@
     "description": "10#长平公主阿九魂牵梦绕的眷恋，提升袁承志所有武学的威力。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -9455,7 +9819,32 @@
       "id": "长平公主的眷恋",
       "name": "长平公主的眷恋",
       "point": 10,
-      "description": "长平公主阿九魂牵梦绕的眷恋，提升袁承志所有武学的威力。"
+      "description": "长平公主阿九魂牵梦绕的眷恋，提升袁承志所有武学的威力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterDamageCalculation",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "final_damage_formula",
+              "parameters": {
+                "formula": "NamedCompanionMultiplier",
+                "minimum": 1.2,
+                "maximum": 1.5,
+                "beneficiaryName": "袁承志"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "priority": 199
+        }
+      ]
     },
     "variants": [
       {
@@ -9486,7 +9875,7 @@
     "description": "40#功勋盖世的韦小宝，被攻击时一定几率胡言乱语念晕敌人。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -9499,7 +9888,44 @@
       "id": "鹿鼎.一等鹿鼎公",
       "name": "鹿鼎.一等鹿鼎公",
       "point": 40,
-      "description": "功勋盖世的韦小宝，被攻击时一定几率胡言乱语念晕敌人。"
+      "description": "功勋盖世的韦小宝，被攻击时一定几率胡言乱语念晕敌人。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeHitResolved",
+          "effects": [
+            {
+              "type": "cancel_hit",
+              "suppressHitEffects": true
+            },
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "source"
+              },
+              "buffId": "晕眩",
+              "level": 0,
+              "duration": 3
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "source",
+              "relation": "enemy"
+            },
+            {
+              "type": "chance",
+              "value": 0.25
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     "variants": [
       {
@@ -9535,7 +9961,7 @@
     "description": "50#惊天怒吼，施放奥义时一定概率造成周围敌人晕眩。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -9548,7 +9974,42 @@
       "id": "碎裂的怒吼",
       "name": "碎裂的怒吼",
       "point": 50,
-      "description": "惊天怒吼，施放奥义时一定概率造成周围敌人晕眩。"
+      "description": "惊天怒吼，施放奥义时一定概率造成周围敌人晕眩。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterSkillCast",
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "nearby_enemies",
+                "radius": 3
+              },
+              "buffId": "晕眩",
+              "level": 0,
+              "duration": 2
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "Legend"
+              ]
+            },
+            {
+              "type": "chance",
+              "value": 0.3
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     "variants": [
       {
@@ -9749,7 +10210,7 @@
     "description": "80#高深玄妙的内家技巧，受到攻击时一定概率让攻击者晕眩。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -9762,7 +10223,44 @@
       "id": "沾衣十八跌",
       "name": "沾衣十八跌",
       "point": 80,
-      "description": "高深玄妙的内家技巧，受到攻击时一定概率让攻击者晕眩。"
+      "description": "高深玄妙的内家技巧，受到攻击时一定概率让攻击者晕眩。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeHitResolved",
+          "effects": [
+            {
+              "type": "cancel_hit",
+              "suppressHitEffects": true
+            },
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "source"
+              },
+              "buffId": "晕眩",
+              "level": 0,
+              "duration": 2
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "source",
+              "relation": "enemy"
+            },
+            {
+              "type": "chance",
+              "value": 0.1
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     "variants": [
       {
@@ -11299,7 +11797,7 @@
     "description": "5#神秘的绝学，攻击时一定概率吹飞对手。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -11312,7 +11810,32 @@
       "id": "飞向天际",
       "name": "飞向天际",
       "point": 5,
-      "description": "神秘的绝学，攻击时一定概率吹飞对手。"
+      "description": "神秘的绝学，攻击时一定概率吹飞对手。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "flying_skyward",
+              "parameters": {}
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     "variants": [
       {
@@ -11443,7 +11966,7 @@
     "description": "0#蒙元郡主赵敏精通百家武学，提醒她的夫君敌之所长。（张无忌闪避+10%）",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -11456,7 +11979,30 @@
       "id": "赵敏的眷念",
       "name": "赵敏的眷念",
       "point": 0,
-      "description": "蒙元郡主赵敏精通百家武学，提醒她的夫君敌之所长。（张无忌闪避+10%）"
+      "description": "蒙元郡主赵敏精通百家武学，提醒她的夫君敌之所长。（张无忌闪避+10%）",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeHitResolved",
+          "effects": [
+            {
+              "type": "cancel_hit",
+              "suppressHitEffects": true
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "chance",
+              "value": 0.1
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     "variants": [
       {
@@ -11685,6 +12231,10 @@
           },
           "skillName": "日月神鞭",
           "stage": "AfterBlind"
+        },
+        {
+          "type": "trait",
+          "traitId": "CannotMove"
         }
       ]
     },
@@ -11997,7 +12547,7 @@
     "description": "15#腾挪移遁的高明阵法，当周围有队友受伤时，发动阵法分担其所受伤害。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -12061,7 +12611,7 @@
     "description": "15#腾挪移遁的高明阵法，当自己收到伤害时，将80%的伤害转移给范围内一名随机队友。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -12279,7 +12829,7 @@
     "description": "10#明教顶级阵法，置于阵法之中，几乎不受任何负面效果影响。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -12292,7 +12842,24 @@
       "id": "光明圣火阵",
       "name": "光明圣火阵",
       "point": 10,
-      "description": "明教顶级阵法，置于阵法之中，几乎不受任何负面效果影响。"
+      "description": "明教顶级阵法，置于阵法之中，几乎不受任何负面效果影响。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeActionReadiness",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "bright_sacred_fire_formation",
+              "parameters": {
+                "rollPerVisitedUnit": true
+              }
+            }
+          ],
+          "conditions": [],
+          "priority": 0
+        }
+      ]
     },
     "variants": [
       {
@@ -12659,7 +13226,7 @@
     "description": "50#一定概率造成基于身法值的真实伤害，身法值越高，伤害越高。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -12672,7 +13239,35 @@
       "id": "攀云乘龙",
       "name": "攀云乘龙",
       "point": 50,
-      "description": "一定概率造成基于身法值的真实伤害，身法值越高，伤害越高。"
+      "description": "一定概率造成基于身法值的真实伤害，身法值越高，伤害越高。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterDamageCalculation",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "final_damage_formula",
+              "parameters": {
+                "formula": "AttributeRandomAddition",
+                "minimum": 1,
+                "maximum": 2
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "chance",
+              "value": 0.5
+            }
+          ],
+          "priority": 1900
+        }
+      ]
     },
     "variants": [
       {
@@ -12741,7 +13336,7 @@
     "description": "25#一定几率吸收气血上限转化为自己的气血。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -12754,7 +13349,38 @@
       "id": "死生茫茫",
       "name": "死生茫茫",
       "point": 25,
-      "description": "一定几率吸收气血上限转化为自己的气血。"
+      "description": "一定几率吸收气血上限转化为自己的气血。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageDistribution",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "maximum_hp_drain",
+              "parameters": {
+                "damageFactor": 0.05,
+                "maximumLossFactor": 0.1,
+                "recoveryFactor": 0.5
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "damage_positive"
+            },
+            {
+              "type": "chance",
+              "value": 0.1
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     "variants": [
       {
@@ -12800,7 +13426,7 @@
     "description": "25#攻击一定几率自动触发“一刀两断”效果。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -12813,7 +13439,35 @@
       "id": "黑天死炎",
       "name": "黑天死炎",
       "point": 25,
-      "description": "攻击一定几率自动触发“一刀两断”效果。"
+      "description": "攻击一定几率自动触发“一刀两断”效果。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterDamageCalculation",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "final_damage_formula",
+              "parameters": {
+                "formula": "CurrentHpMinimum",
+                "minimum": 0.25,
+                "maximum": 0.25
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "chance",
+              "value": 0.25
+            }
+          ],
+          "priority": 2000
+        }
+      ]
     },
     "variants": [
       {
@@ -14727,7 +15381,7 @@
     "description": "75#每回合有一定概率变身为恐怖的魔神。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -14740,7 +15394,31 @@
       "id": "魔神降临",
       "name": "魔神降临",
       "point": 75,
-      "description": "每回合有一定概率变身为恐怖的魔神。"
+      "description": "每回合有一定概率变身为恐怖的魔神。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeActionReadiness",
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "self"
+              },
+              "buffId": "魔神降临",
+              "level": 2,
+              "duration": 3
+            }
+          ],
+          "conditions": [
+            {
+              "type": "chance",
+              "value": 0.12
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     "variants": [
       {
@@ -14781,7 +15459,7 @@
     "description": "75#每回合有一定概率自动易容，可以藏于暗处伏击对手。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -14794,7 +15472,31 @@
       "id": "百变千幻",
       "name": "百变千幻",
       "point": 75,
-      "description": "每回合有一定概率自动易容，可以藏于暗处伏击对手。"
+      "description": "每回合有一定概率自动易容，可以藏于暗处伏击对手。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeActionReadiness",
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "self"
+              },
+              "buffId": "易容",
+              "level": 2,
+              "duration": 3
+            }
+          ],
+          "conditions": [
+            {
+              "type": "chance",
+              "value": 0.1
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     "variants": [
       {
@@ -14835,7 +15537,7 @@
     "description": "0#石破天专属天赋，装备内功为罗汉伏魔神功或太玄神功时大幅度提高暴击概率及防御力。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -14848,7 +15550,65 @@
       "id": "狗杂种",
       "name": "狗杂种",
       "point": 0,
-      "description": "石破天专属天赋，装备内功为罗汉伏魔神功或太玄神功时大幅度提高暴击概率及防御力。"
+      "description": "石破天专属天赋，装备内功为罗汉伏魔神功或太玄神功时大幅度提高暴击概率及防御力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "critical_chance",
+              "op": "add",
+              "delta": 0.3
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_equipped_internal_skill",
+              "internalSkillIds": [
+                "太玄神功",
+                "罗汉伏魔功"
+              ]
+            },
+            {
+              "type": "chance",
+              "value": 0.3
+            }
+          ],
+          "priority": 0
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "target_defence",
+              "op": "add",
+              "delta": 250
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_equipped_internal_skill",
+              "internalSkillIds": [
+                "太玄神功",
+                "罗汉伏魔功"
+              ]
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     "variants": [
       {
@@ -15734,7 +16494,7 @@
     "description": "0#装备内功为九阴真经时，攻击造成减少对手集气效果。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -15747,7 +16507,36 @@
       "id": "玄门罡气",
       "name": "玄门罡气",
       "point": 0,
-      "description": "装备内功为九阴真经时，攻击造成减少对手集气效果。"
+      "description": "装备内功为九阴真经时，攻击造成减少对手集气效果。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "action_gauge_rule",
+              "parameters": {
+                "minimum": 10,
+                "maximum": 40
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_equipped_internal_skill",
+              "internalSkillIds": [
+                "九阴神功"
+              ]
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     "variants": [
       {
@@ -15808,7 +16597,7 @@
     "description": "0#使用六脉神剑攻击时，附加基于敌我当前内力值差的真实伤害。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -15821,7 +16610,37 @@
       "id": "无形剑气",
       "name": "无形剑气",
       "point": 0,
-      "description": "使用六脉神剑攻击时，附加基于敌我当前内力值差的真实伤害。"
+      "description": "使用六脉神剑攻击时，附加基于敌我当前内力值差的真实伤害。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterDamageCalculation",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "final_damage_formula",
+              "parameters": {
+                "formula": "AbsoluteMpDifference",
+                "minimum": 0.1,
+                "maximum": 0.25
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_skill_name_equals",
+              "values": [
+                "六脉神剑"
+              ]
+            }
+          ],
+          "priority": 180
+        }
+      ]
     },
     "variants": [
       {
@@ -15852,7 +16671,7 @@
     "description": "0#越女剑法奥义发动时，全场所有敌人集气减少。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -15865,7 +16684,43 @@
       "id": "越女剑",
       "name": "越女剑",
       "point": 0,
-      "description": "越女剑法奥义发动时，全场所有敌人集气减少。"
+      "description": "越女剑法奥义发动时，全场所有敌人集气减少。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterSkillCast",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "action_gauge_rule",
+              "parameters": {
+                "minimum": 20,
+                "maximum": 20,
+                "capAllEnemies": true
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "Legend"
+              ]
+            },
+            {
+              "type": "context_skill_name_equals",
+              "values": [
+                "越女剑法奥义式"
+              ]
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     "variants": [
       {
@@ -16021,7 +16876,7 @@
     "description": "0#战国墨家的世代传人，使用墨家古武术附加随机不良状态。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -16034,7 +16889,58 @@
       "id": "墨家传人",
       "name": "墨家传人",
       "point": 0,
-      "description": "战国墨家的世代传人，使用墨家古武术附加随机不良状态。"
+      "description": "战国墨家的世代传人，使用墨家古武术附加随机不良状态。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "random_debuff",
+              "parameters": {
+                "buffIds": [
+                  "中毒",
+                  "内伤",
+                  "致盲",
+                  "缓速",
+                  "晕眩",
+                  "攻击弱化",
+                  "诸般封印",
+                  "剑封印",
+                  "刀封印",
+                  "拳掌封印",
+                  "奇门封印",
+                  "伤害加深",
+                  "重伤",
+                  "定身",
+                  "封穴",
+                  "点穴",
+                  "诅咒"
+                ],
+                "level": 3,
+                "duration": 3,
+                "allowAllies": true
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_skill_name_contains",
+              "values": [
+                "墨拳",
+                "墨剑",
+                "缚星锁"
+              ]
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     "variants": [
       {
@@ -16065,7 +16971,7 @@
     "description": "0#逆运自身内功，所有造成的不良状态随机增加0-2的不良状态程度和持续时间。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -16078,7 +16984,36 @@
       "id": "我是疯子",
       "name": "我是疯子",
       "point": 0,
-      "description": "逆运自身内功，所有造成的不良状态随机增加0-2的不良状态程度和持续时间。"
+      "description": "逆运自身内功，所有造成的不良状态随机增加0-2的不良状态程度和持续时间。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeBuffApplied",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "random_strengthen_context_buff",
+              "parameters": {
+                "chance": 0.5,
+                "minimumLevelDelta": 0,
+                "maximumLevelDelta": 2,
+                "minimumTurnDelta": 0,
+                "maximumTurnDelta": 2
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_buff_negative"
+            }
+          ],
+          "priority": 0
+        }
+      ]
     },
     "variants": [
       {
