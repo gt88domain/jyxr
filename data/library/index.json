@@ -14113,7 +14113,7 @@
       "description": "20#令狐冲专属天赋，御剑技巧评估提高20%。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14927,7 +14927,7 @@
       "description": "40#对拳法的掌握达到入微的境界，提升拳法类伤害，并提升铁拳无双发动概率。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -15125,7 +15125,7 @@
       "description": "5#拳掌威力增加5%。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -15136,7 +15136,7 @@
       "description": "5#剑法威力增加5%。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -15147,7 +15147,7 @@
       "description": "5#刀法威力增加5%。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -15158,7 +15158,7 @@
       "description": "5#奇门威力增加5%。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },

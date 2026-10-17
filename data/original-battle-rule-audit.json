@@ -7,8 +7,8 @@
       "states": {
         "referenced-behavior": 4,
         "configured": 74,
-        "partial": 21,
-        "metadata-only": 58,
+        "partial": 27,
+        "metadata-only": 52,
         "identity-only": 1
       },
       "entries": [
@@ -135,11 +135,13 @@
         },
         {
           "id": "刀法增益",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttributeFinalHelper.cs:28"
           ],
-          "remaining": [],
+          "remaining": [
+            "final weapon aptitude multiplier and sequential truncation configured; earlier equipment/skill additions and battle buff layering still require source comparison"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -175,11 +177,13 @@
         },
         {
           "id": "剑法增益",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttributeFinalHelper.cs:24"
           ],
-          "remaining": [],
+          "remaining": [
+            "final weapon aptitude multiplier and sequential truncation configured; earlier equipment/skill additions and battle buff layering still require source comparison"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -389,11 +393,13 @@
         },
         {
           "id": "奇门增益",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttributeFinalHelper.cs:32"
           ],
-          "remaining": [],
+          "remaining": [
+            "final weapon aptitude multiplier and sequential truncation configured; earlier equipment/skill additions and battle buff layering still require source comparison"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -650,11 +656,13 @@
         },
         {
           "id": "拳掌增益",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttributeFinalHelper.cs:20"
           ],
-          "remaining": [],
+          "remaining": [
+            "final weapon aptitude multiplier and sequential truncation configured; earlier equipment/skill additions and battle buff layering still require source comparison"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -861,12 +869,15 @@
         },
         {
           "id": "浪子剑客",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1412",
             "jyx-legacy-dll/JyGame/AttributeFinalHelper.cs:12"
           ],
-          "remaining": [],
+          "remaining": [
+            "final weapon aptitude multiplier and sequential truncation configured; earlier equipment/skill additions and battle buff layering still require source comparison",
+            "original cosmetic speech RNG ordering remains"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -1054,13 +1065,16 @@
         },
         {
           "id": "神拳无敌",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1416",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1672",
             "jyx-legacy-dll/JyGame/AttributeFinalHelper.cs:16"
           ],
-          "remaining": [],
+          "remaining": [
+            "final weapon aptitude multiplier and sequential truncation configured; earlier equipment/skill additions and battle buff layering still require source comparison",
+            "铁拳无双 stun probability enhancement and cosmetic speech RNG remain"
+          ],
           "fullBehaviorVerified": false
         },
         {

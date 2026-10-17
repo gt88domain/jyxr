@@ -4522,7 +4522,7 @@
     "description": "20#令狐冲专属天赋，御剑技巧评估提高20%。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -4535,7 +4535,15 @@
       "id": "浪子剑客",
       "name": "浪子剑客",
       "point": 20,
-      "description": "令狐冲专属天赋，御剑技巧评估提高20%。"
+      "description": "令狐冲专属天赋，御剑技巧评估提高20%。",
+      "affixes": [
+        {
+          "type": "final_stat_multiplier",
+          "stat": "jianfa",
+          "multiplier": 1.2,
+          "order": 0
+        }
+      ]
     },
     "variants": [
       {
@@ -11057,7 +11065,7 @@
     "description": "40#对拳法的掌握达到入微的境界，提升拳法类伤害，并提升铁拳无双发动概率。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -11070,7 +11078,15 @@
       "id": "神拳无敌",
       "name": "神拳无敌",
       "point": 40,
-      "description": "对拳法的掌握达到入微的境界，提升拳法类伤害，并提升铁拳无双发动概率。"
+      "description": "对拳法的掌握达到入微的境界，提升拳法类伤害，并提升铁拳无双发动概率。",
+      "affixes": [
+        {
+          "type": "final_stat_multiplier",
+          "stat": "quanzhang",
+          "multiplier": 1.1,
+          "order": 1
+        }
+      ]
     },
     "variants": [
       {
@@ -12358,7 +12374,7 @@
     "description": "5#拳掌威力增加5%。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -12371,7 +12387,15 @@
       "id": "拳掌增益",
       "name": "拳掌增益",
       "point": 5,
-      "description": "拳掌威力增加5%。"
+      "description": "拳掌威力增加5%。",
+      "affixes": [
+        {
+          "type": "final_stat_multiplier",
+          "stat": "quanzhang",
+          "multiplier": 1.05,
+          "order": 2
+        }
+      ]
     },
     "variants": [
       {
@@ -12402,7 +12426,7 @@
     "description": "5#剑法威力增加5%。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -12415,7 +12439,15 @@
       "id": "剑法增益",
       "name": "剑法增益",
       "point": 5,
-      "description": "剑法威力增加5%。"
+      "description": "剑法威力增加5%。",
+      "affixes": [
+        {
+          "type": "final_stat_multiplier",
+          "stat": "jianfa",
+          "multiplier": 1.05,
+          "order": 3
+        }
+      ]
     },
     "variants": [
       {
@@ -12446,7 +12478,7 @@
     "description": "5#刀法威力增加5%。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -12459,7 +12491,15 @@
       "id": "刀法增益",
       "name": "刀法增益",
       "point": 5,
-      "description": "刀法威力增加5%。"
+      "description": "刀法威力增加5%。",
+      "affixes": [
+        {
+          "type": "final_stat_multiplier",
+          "stat": "daofa",
+          "multiplier": 1.05,
+          "order": 4
+        }
+      ]
     },
     "variants": [
       {
@@ -12490,7 +12530,7 @@
     "description": "5#奇门威力增加5%。",
     "state": "资料已接入",
     "source": "resource.xml",
-    "effect": "metadata-only",
+    "effect": "partial",
     "initialBonusRounds": [],
     "recruitment": null,
     "node": {
@@ -12503,7 +12543,15 @@
       "id": "奇门增益",
       "name": "奇门增益",
       "point": 5,
-      "description": "奇门威力增加5%。"
+      "description": "奇门威力增加5%。",
+      "affixes": [
+        {
+          "type": "final_stat_multiplier",
+          "stat": "qimen",
+          "multiplier": 1.05,
+          "order": 5
+        }
+      ]
     },
     "variants": [
       {

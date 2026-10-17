@@ -267,6 +267,19 @@
     ],
     "scope": "matched weapon names, final-damage ranges and ordered integer truncation; hit/cosmetic RNG ordering remains"
   },
+  "attributeRuleEffects": {
+    "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+    "file": "JyGame/AttributeFinalHelper.cs:11-35",
+    "talents": [
+      "浪子剑客",
+      "神拳无敌",
+      "拳掌增益",
+      "剑法增益",
+      "刀法增益",
+      "奇门增益"
+    ],
+    "scope": "final weapon aptitude multipliers and ordered truncation; earlier additions and 神拳无敌/铁拳无双 stun interaction remain"
+  },
   "legacyArt": {
     "source": {
       "archive": "X.rar",
@@ -388,8 +401,8 @@
       "states": {
         "referenced-behavior": 4,
         "configured": 74,
-        "partial": 21,
-        "metadata-only": 58,
+        "partial": 27,
+        "metadata-only": 52,
         "identity-only": 1
       }
     },
