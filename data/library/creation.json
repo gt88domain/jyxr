@@ -1,0 +1,2586 @@
+[
+  {
+    "id": "开局问答1",
+    "category": "creation",
+    "name": "你希望你在武侠小说中的出身是",
+    "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+    "state": "开局配置已接入 · Lua 覆盖待核对",
+    "source": "JyGame/RollRoleUI.cs",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "creation",
+      "key": "开局问答1",
+      "name": "你希望你在武侠小说中的出身是",
+      "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+      "children": [
+        {
+          "tag": "configuration",
+          "children": [
+            {
+              "tag": "title",
+              "value": "你希望你在武侠小说中的出身是"
+            },
+            {
+              "tag": "options",
+              "children": [
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "商人的儿子"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "bili",
+                          "value": "-5"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "silver",
+                      "value": "5000"
+                    },
+                    {
+                      "tag": "items",
+                      "children": [
+                        {
+                          "tag": "黑玉断续膏",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "九转熊蛇丸",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "金丝道袍",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "金头箍",
+                          "value": "1"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "model",
+                      "value": "zydx"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "大草原上长大的孩子"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "shenfa",
+                          "value": "15"
+                        },
+                        {
+                          "tag": "dingli",
+                          "value": "-2"
+                        },
+                        {
+                          "tag": "quanzhang",
+                          "value": "15"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "talents",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "猎人"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "model",
+                      "value": "caoyuan"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "名门世家"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "fuyuan",
+                          "value": "3"
+                        },
+                        {
+                          "tag": "bili",
+                          "value": "-3"
+                        },
+                        {
+                          "tag": "dingli",
+                          "value": "2"
+                        },
+                        {
+                          "tag": "wuxing",
+                          "value": "20"
+                        },
+                        {
+                          "tag": "jianfa",
+                          "value": "2"
+                        },
+                        {
+                          "tag": "gengu",
+                          "value": "2"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "items",
+                      "children": [
+                        {
+                          "tag": "银手镯",
+                          "value": "1"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "silver",
+                      "value": "100"
+                    },
+                    {
+                      "tag": "model",
+                      "value": "huodu"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "市井流浪的汉子"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "fuyuan",
+                          "value": "-5"
+                        },
+                        {
+                          "tag": "bili",
+                          "value": "12"
+                        },
+                        {
+                          "tag": "daofa",
+                          "value": "15"
+                        },
+                        {
+                          "tag": "qimen",
+                          "value": "12"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "items",
+                      "children": [
+                        {
+                          "tag": "草帽",
+                          "value": "1"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "silverSet",
+                      "value": "0"
+                    },
+                    {
+                      "tag": "model",
+                      "value": "shijing"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "疯子"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "wuxing",
+                          "value": "35"
+                        },
+                        {
+                          "tag": "dingli",
+                          "value": "10"
+                        },
+                        {
+                          "tag": "gengu",
+                          "value": "10"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "talents",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "神经病"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "model",
+                      "value": "fengzi"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "书香门第"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "wuxing",
+                          "value": "20"
+                        },
+                        {
+                          "tag": "bili",
+                          "value": "1"
+                        },
+                        {
+                          "tag": "shenfa",
+                          "value": "-10"
+                        },
+                        {
+                          "tag": "gengu",
+                          "value": "-5"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "model",
+                      "value": "xiake"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "animations",
+        "id": "fengzi",
+        "name": "fengzi"
+      },
+      {
+        "category": "items",
+        "id": "九转熊蛇丸",
+        "name": "九转熊蛇丸"
+      },
+      {
+        "category": "talents",
+        "id": "猎人",
+        "name": "猎人"
+      },
+      {
+        "category": "talents",
+        "id": "神经病",
+        "name": "神经病"
+      },
+      {
+        "category": "items",
+        "id": "草帽",
+        "name": "草帽"
+      },
+      {
+        "category": "items",
+        "id": "金丝道袍",
+        "name": "金丝道袍"
+      },
+      {
+        "category": "items",
+        "id": "金头箍",
+        "name": "金头箍"
+      },
+      {
+        "category": "items",
+        "id": "银手镯",
+        "name": "银手镯"
+      },
+      {
+        "category": "items",
+        "id": "黑玉断续膏",
+        "name": "黑玉断续膏"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "开局问答2",
+    "category": "creation",
+    "name": "以下你觉得最宝贵的是",
+    "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+    "state": "开局配置已接入 · Lua 覆盖待核对",
+    "source": "JyGame/RollRoleUI.cs",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "creation",
+      "key": "开局问答2",
+      "name": "以下你觉得最宝贵的是",
+      "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+      "children": [
+        {
+          "tag": "configuration",
+          "children": [
+            {
+              "tag": "title",
+              "value": "以下你觉得最宝贵的是"
+            },
+            {
+              "tag": "options",
+              "children": [
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "无尽的财宝"
+                    },
+                    {
+                      "tag": "silver",
+                      "value": "1000"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "永恒的爱情"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "fuyuan",
+                          "value": "15"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "坚强的意志"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "dingli",
+                          "value": "15"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "自由"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "shenfa",
+                          "value": "15"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "至高无上的权力"
+                    },
+                    {
+                      "tag": "talents",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "自我主义"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "talents",
+        "id": "自我主义",
+        "name": "自我主义"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "开局问答3",
+    "category": "creation",
+    "name": "以下你觉得最可恶的行为是",
+    "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+    "state": "开局配置已接入 · Lua 覆盖待核对",
+    "source": "JyGame/RollRoleUI.cs",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "creation",
+      "key": "开局问答3",
+      "name": "以下你觉得最可恶的行为是",
+      "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+      "children": [
+        {
+          "tag": "configuration",
+          "children": [
+            {
+              "tag": "title",
+              "value": "以下你觉得最可恶的行为是"
+            },
+            {
+              "tag": "options",
+              "children": [
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "调戏妇女"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "dingli",
+                          "value": "9"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "欺软怕硬"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "gengu",
+                          "value": "6"
+                        },
+                        {
+                          "tag": "bili",
+                          "value": "6"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "偷奸耍滑"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "wuxing",
+                          "value": "10"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "切JJ练神功"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "gengu",
+                          "value": "10"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "有美女不泡"
+                    },
+                    {
+                      "tag": "talents",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "好色"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "talents",
+        "id": "好色",
+        "name": "好色"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "开局问答4",
+    "category": "creation",
+    "name": "你最喜欢的兵刃是",
+    "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+    "state": "开局配置已接入 · Lua 覆盖待核对",
+    "source": "JyGame/RollRoleUI.cs",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "creation",
+      "key": "开局问答4",
+      "name": "你最喜欢的兵刃是",
+      "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+      "children": [
+        {
+          "tag": "configuration",
+          "children": [
+            {
+              "tag": "title",
+              "value": "你最喜欢的兵刃是"
+            },
+            {
+              "tag": "options",
+              "children": [
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "拳"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "quanzhang",
+                          "value": "10"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "剑"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "jianfa",
+                          "value": "10"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "刀"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "daofa",
+                          "value": "20"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "暗器"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "qimen",
+                          "value": "20"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": []
+  },
+  {
+    "id": "开局问答5",
+    "category": "creation",
+    "name": "以下女性角色你最喜欢的是",
+    "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+    "state": "开局配置已接入 · Lua 覆盖待核对",
+    "source": "JyGame/RollRoleUI.cs",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "creation",
+      "key": "开局问答5",
+      "name": "以下女性角色你最喜欢的是",
+      "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+      "children": [
+        {
+          "tag": "configuration",
+          "children": [
+            {
+              "tag": "title",
+              "value": "以下女性角色你最喜欢的是"
+            },
+            {
+              "tag": "options",
+              "children": [
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "黄蓉"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "wuxing",
+                          "value": "5"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "小龙女"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "dingli",
+                          "value": "5"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "郭襄"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "fuyuan",
+                          "value": "5"
+                        },
+                        {
+                          "tag": "gengu",
+                          "value": "5"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "梅超风"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "quanzhang",
+                          "value": "6"
+                        },
+                        {
+                          "tag": "bili",
+                          "value": "6"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "周芷若"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "dingli",
+                          "value": "10"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "characters",
+        "id": "周芷若",
+        "name": "周芷若"
+      },
+      {
+        "category": "characters",
+        "id": "小龙女",
+        "name": "小龙女"
+      },
+      {
+        "category": "growTemplates",
+        "id": "小龙女",
+        "name": "小龙女"
+      },
+      {
+        "category": "characters",
+        "id": "梅超风",
+        "name": "梅超风"
+      },
+      {
+        "category": "characters",
+        "id": "郭襄",
+        "name": "郭襄"
+      },
+      {
+        "category": "characters",
+        "id": "黄蓉",
+        "name": "黄蓉"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "开局问答6",
+    "category": "creation",
+    "name": "以下男性角色你最喜欢的是",
+    "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+    "state": "开局配置已接入 · Lua 覆盖待核对",
+    "source": "JyGame/RollRoleUI.cs",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "creation",
+      "key": "开局问答6",
+      "name": "以下男性角色你最喜欢的是",
+      "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+      "children": [
+        {
+          "tag": "configuration",
+          "children": [
+            {
+              "tag": "title",
+              "value": "以下男性角色你最喜欢的是"
+            },
+            {
+              "tag": "options",
+              "children": [
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "张无忌"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "wuxing",
+                          "value": "5"
+                        },
+                        {
+                          "tag": "gengu",
+                          "value": "10"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "郭靖"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "wuxing",
+                          "value": "-10"
+                        },
+                        {
+                          "tag": "fuyuan",
+                          "value": "15"
+                        },
+                        {
+                          "tag": "bili",
+                          "value": "5"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "杨过"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "wuxing",
+                          "value": "5"
+                        },
+                        {
+                          "tag": "dingli",
+                          "value": "5"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "令狐冲"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "wuxing",
+                          "value": "10"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "林平之"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "jianfa",
+                          "value": "10"
+                        },
+                        {
+                          "tag": "dingli",
+                          "value": "10"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "characters",
+        "id": "令狐冲",
+        "name": "令狐冲"
+      },
+      {
+        "category": "characters",
+        "id": "张无忌",
+        "name": "张无忌"
+      },
+      {
+        "category": "characters",
+        "id": "杨过",
+        "name": "杨过"
+      },
+      {
+        "category": "characters",
+        "id": "林平之",
+        "name": "林平之"
+      },
+      {
+        "category": "characters",
+        "id": "郭靖",
+        "name": "郭靖"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "开局问答7",
+    "category": "creation",
+    "name": "以下你觉得最牛逼的人是",
+    "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+    "state": "开局配置已接入 · Lua 覆盖待核对",
+    "source": "JyGame/RollRoleUI.cs",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "creation",
+      "key": "开局问答7",
+      "name": "以下你觉得最牛逼的人是",
+      "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+      "children": [
+        {
+          "tag": "configuration",
+          "children": [
+            {
+              "tag": "title",
+              "value": "以下你觉得最牛逼的人是"
+            },
+            {
+              "tag": "options",
+              "children": [
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "乔峰"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "bili",
+                          "value": "10"
+                        },
+                        {
+                          "tag": "quanzhang",
+                          "value": "9"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "韦小宝"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "fuyuan",
+                          "value": "30"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "金庸先生"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "wuxing",
+                          "value": "13"
+                        },
+                        {
+                          "tag": "jianfa",
+                          "value": "5"
+                        },
+                        {
+                          "tag": "daofa",
+                          "value": "5"
+                        },
+                        {
+                          "tag": "quanzhang",
+                          "value": "5"
+                        },
+                        {
+                          "tag": "qimen",
+                          "value": "5"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "东方不败"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "gengu",
+                          "value": "20"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "汉家松鼠"
+                    },
+                    {
+                      "tag": "stats",
+                      "children": [
+                        {
+                          "tag": "gengu",
+                          "value": "10"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "internalSkill",
+                      "children": [
+                        {
+                          "tag": "id",
+                          "value": "基本内功"
+                        },
+                        {
+                          "tag": "level",
+                          "value": "20"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "items",
+                      "children": [
+                        {
+                          "tag": "松果",
+                          "value": "3"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "text",
+                      "value": "半瓶神仙醋"
+                    },
+                    {
+                      "tag": "items",
+                      "children": [
+                        {
+                          "tag": "天王保命丹",
+                          "value": "6"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "characters",
+        "id": "东方不败",
+        "name": "东方不败"
+      },
+      {
+        "category": "characters",
+        "id": "乔峰",
+        "name": "乔峰"
+      },
+      {
+        "category": "internalSkills",
+        "id": "基本内功",
+        "name": "基本内功"
+      },
+      {
+        "category": "items",
+        "id": "天王保命丹",
+        "name": "天王保命丹"
+      },
+      {
+        "category": "items",
+        "id": "松果",
+        "name": "松果"
+      },
+      {
+        "category": "characters",
+        "id": "汉家松鼠",
+        "name": "汉家松鼠"
+      },
+      {
+        "category": "characters",
+        "id": "韦小宝",
+        "name": "韦小宝"
+      },
+      {
+        "category": "growTemplates",
+        "id": "韦小宝",
+        "name": "韦小宝"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "初始奖励",
+    "category": "creation",
+    "name": "初始银两与奖励",
+    "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+    "state": "开局配置已接入 · Lua 覆盖待核对",
+    "source": "JyGame/RollRoleUI.cs",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "creation",
+      "key": "初始奖励",
+      "name": "初始银两与奖励",
+      "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+      "children": [
+        {
+          "tag": "configuration",
+          "children": [
+            {
+              "tag": "baseSilver",
+              "value": "100"
+            },
+            {
+              "tag": "baseItems",
+              "children": [
+                {
+                  "tag": "小还丹",
+                  "value": "3"
+                }
+              ]
+            },
+            {
+              "tag": "normalItems",
+              "children": [
+                {
+                  "tag": "新手礼包-大蟠桃",
+                  "value": "5"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "items",
+        "id": "小还丹",
+        "name": "小还丹"
+      },
+      {
+        "category": "items",
+        "id": "新手礼包-大蟠桃",
+        "name": "新手礼包-大蟠桃"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "重摇与头像",
+    "category": "creation",
+    "name": "重摇属性与头像选项",
+    "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+    "state": "开局配置已接入 · Lua 覆盖待核对",
+    "source": "JyGame/RollRoleUI.cs",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "creation",
+      "key": "重摇与头像",
+      "name": "重摇属性与头像选项",
+      "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+      "children": [
+        {
+          "tag": "configuration",
+          "children": [
+            {
+              "tag": "randomStats",
+              "children": [
+                {
+                  "tag": "entry",
+                  "value": "gengu"
+                },
+                {
+                  "tag": "entry",
+                  "value": "bili"
+                },
+                {
+                  "tag": "entry",
+                  "value": "fuyuan"
+                },
+                {
+                  "tag": "entry",
+                  "value": "shenfa"
+                },
+                {
+                  "tag": "entry",
+                  "value": "dingli"
+                },
+                {
+                  "tag": "entry",
+                  "value": "wuxing"
+                },
+                {
+                  "tag": "entry",
+                  "value": "quanzhang"
+                },
+                {
+                  "tag": "entry",
+                  "value": "jianfa"
+                },
+                {
+                  "tag": "entry",
+                  "value": "daofa"
+                },
+                {
+                  "tag": "entry",
+                  "value": "qimen"
+                }
+              ]
+            },
+            {
+              "tag": "portraits",
+              "children": [
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.主角"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "主角"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/d2f7d590f159a4758339.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.主角3"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "主角3"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/5d59eedb50b5480b9784.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.主角4"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "主角4"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/80e6f7a89b672409167e.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.魔君"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "魔君"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/105be7a57b489e07f7f4.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.全冠清"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "全冠清"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/517350e3fe5b177e08ae.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.李白"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "李白"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/907e53bfd71abdc772af.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.林平之瞎"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "林平之瞎"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/18ea2302e51c0617cd02.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.侠客2"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "侠客2"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/d4937d3e7b442ec784ce.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.归辛树"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "归辛树"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/01054ae0c9754f0a2c08.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.狄云"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "狄云"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/f382f04e0c508eb24f1f.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.独孤求败"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "独孤求败"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/94da402d9c73403bc1e2.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.陈近南"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "陈近南"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/9e8bb77b28bce532a6ad.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.石中玉"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "石中玉"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/358e5a32fb35d6c68d6e.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.商宝震"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "商宝震"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/20a52a1f508c45e01683.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.尹志平"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "尹志平"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/562ca9b8cfc150a0821c.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.流浪汉"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "流浪汉"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/b9d338db2f0c3c604818.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.梁发"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "梁发"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/6c7182635a8a5c9b8e59.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.卓一航"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "卓一航"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/3d760cfc405ad9e0d15e.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.烟霞神龙"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "烟霞神龙"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/96c69eb6207c81fa31fd.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.双手开碑"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "双手开碑"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/0daaba202fb1f69ca576.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.流星赶月"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "流星赶月"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/4bb1f26947ebe247a746.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.盖七省"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "盖七省"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/8c77f1479362a233cf94.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.公子1"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "公子1"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/f4d3f68605fe76534560.png"
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "id",
+                      "value": "头像.主角2"
+                    },
+                    {
+                      "tag": "name",
+                      "value": "主角2"
+                    },
+                    {
+                      "tag": "image",
+                      "value": "art/legacy/images/7ac0c9dc2ae3c48a0ff8.png"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "characters",
+        "id": "主角",
+        "name": "小虾米"
+      },
+      {
+        "category": "growTemplates",
+        "id": "主角",
+        "name": "主角"
+      },
+      {
+        "category": "characters",
+        "id": "全冠清",
+        "name": "全冠清"
+      },
+      {
+        "category": "characters",
+        "id": "卓一航",
+        "name": "卓一航"
+      },
+      {
+        "category": "characters",
+        "id": "双手开碑",
+        "name": "双手开碑"
+      },
+      {
+        "category": "characters",
+        "id": "商宝震",
+        "name": "商宝震"
+      },
+      {
+        "category": "resources",
+        "id": "头像.主角",
+        "name": "头像.主角"
+      },
+      {
+        "category": "resources",
+        "id": "头像.主角2",
+        "name": "头像.主角2"
+      },
+      {
+        "category": "resources",
+        "id": "头像.主角3",
+        "name": "头像.主角3"
+      },
+      {
+        "category": "resources",
+        "id": "头像.主角4",
+        "name": "头像.主角4"
+      },
+      {
+        "category": "resources",
+        "id": "头像.侠客2",
+        "name": "头像.侠客2"
+      },
+      {
+        "category": "resources",
+        "id": "头像.全冠清",
+        "name": "头像.全冠清"
+      },
+      {
+        "category": "resources",
+        "id": "头像.公子1",
+        "name": "头像.公子1"
+      },
+      {
+        "category": "resources",
+        "id": "头像.卓一航",
+        "name": "头像.卓一航"
+      },
+      {
+        "category": "resources",
+        "id": "头像.双手开碑",
+        "name": "头像.双手开碑"
+      },
+      {
+        "category": "resources",
+        "id": "头像.商宝震",
+        "name": "头像.商宝震"
+      },
+      {
+        "category": "resources",
+        "id": "头像.尹志平",
+        "name": "头像.尹志平"
+      },
+      {
+        "category": "resources",
+        "id": "头像.归辛树",
+        "name": "头像.归辛树"
+      },
+      {
+        "category": "resources",
+        "id": "头像.李白",
+        "name": "头像.李白"
+      },
+      {
+        "category": "resources",
+        "id": "头像.林平之瞎",
+        "name": "头像.林平之瞎"
+      },
+      {
+        "category": "resources",
+        "id": "头像.梁发",
+        "name": "头像.梁发"
+      },
+      {
+        "category": "resources",
+        "id": "头像.流星赶月",
+        "name": "头像.流星赶月"
+      },
+      {
+        "category": "resources",
+        "id": "头像.流浪汉",
+        "name": "头像.流浪汉"
+      },
+      {
+        "category": "resources",
+        "id": "头像.烟霞神龙",
+        "name": "头像.烟霞神龙"
+      },
+      {
+        "category": "resources",
+        "id": "头像.狄云",
+        "name": "头像.狄云"
+      },
+      {
+        "category": "resources",
+        "id": "头像.独孤求败",
+        "name": "头像.独孤求败"
+      },
+      {
+        "category": "resources",
+        "id": "头像.盖七省",
+        "name": "头像.盖七省"
+      },
+      {
+        "category": "resources",
+        "id": "头像.石中玉",
+        "name": "头像.石中玉"
+      },
+      {
+        "category": "resources",
+        "id": "头像.陈近南",
+        "name": "头像.陈近南"
+      },
+      {
+        "category": "resources",
+        "id": "头像.魔君",
+        "name": "头像.魔君"
+      },
+      {
+        "category": "characters",
+        "id": "尹志平",
+        "name": "尹志平"
+      },
+      {
+        "category": "characters",
+        "id": "归辛树",
+        "name": "归辛树"
+      },
+      {
+        "category": "characters",
+        "id": "李白",
+        "name": "李白"
+      },
+      {
+        "category": "characters",
+        "id": "梁发",
+        "name": "梁发"
+      },
+      {
+        "category": "characters",
+        "id": "流星赶月",
+        "name": "流星赶月"
+      },
+      {
+        "category": "characters",
+        "id": "流浪汉",
+        "name": "流浪汉"
+      },
+      {
+        "category": "characters",
+        "id": "烟霞神龙",
+        "name": "烟霞神龙"
+      },
+      {
+        "category": "characters",
+        "id": "狄云",
+        "name": "狄云"
+      },
+      {
+        "category": "characters",
+        "id": "独孤求败",
+        "name": "独孤求败"
+      },
+      {
+        "category": "characters",
+        "id": "盖七省",
+        "name": "盖七省"
+      },
+      {
+        "category": "characters",
+        "id": "石中玉",
+        "name": "石中玉"
+      },
+      {
+        "category": "characters",
+        "id": "陈近南",
+        "name": "陈近南"
+      },
+      {
+        "category": "characters",
+        "id": "魔君",
+        "name": "魔君"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "周目奖励",
+    "category": "creation",
+    "name": "周目与试炼奖励",
+    "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+    "state": "开局配置已接入 · Lua 覆盖待核对",
+    "source": "JyGame/RollRoleUI.cs",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "creation",
+      "key": "周目奖励",
+      "name": "周目与试炼奖励",
+      "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+      "children": [
+        {
+          "tag": "configuration",
+          "children": [
+            {
+              "tag": "roundItems",
+              "children": [
+                {
+                  "tag": "2",
+                  "children": [
+                    {
+                      "tag": "entry",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "佛光普照"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "百变千幻云雾十三式秘籍"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "反两仪刀法"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "伏魔杖法"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "entry",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "灭仙爪"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "倚天剑"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "屠龙刀"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "打狗棒"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "3",
+                  "children": [
+                    {
+                      "tag": "entry",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "隔空取物"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "妙手仁心"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "飞向天际"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "血刀"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "entry",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "仙丽雅的项链"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "李延宗的项链"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "王语嫣的武学概要"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "神木王鼎"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "later",
+                  "children": [
+                    {
+                      "tag": "entry",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "碎裂的怒吼"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "沾衣十八跌"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "灵心慧质"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "不老长春功法"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "entry",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "仙丽雅的项链"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "李延宗的项链"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "王语嫣的武学概要"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "神木王鼎"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "trialItems",
+              "children": [
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "minimum",
+                      "value": "3"
+                    },
+                    {
+                      "tag": "items",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "王母蟠桃"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "道家仙丹"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "minimum",
+                      "value": "6"
+                    },
+                    {
+                      "tag": "items",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "灵心慧质"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "妙手仁心"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "minimum",
+                      "value": "9"
+                    },
+                    {
+                      "tag": "items",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "素心神剑心得"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "太极心得手抄本"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "乾坤大挪移心法"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "minimum",
+                      "value": "12"
+                    },
+                    {
+                      "tag": "items",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "沾衣十八跌"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "易筋经"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "厚黑学"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "minimum",
+                      "value": "15"
+                    },
+                    {
+                      "tag": "items",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "武穆遗书"
+                        },
+                        {
+                          "tag": "entry",
+                          "value": "笑傲江湖曲"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "entry",
+                  "children": [
+                    {
+                      "tag": "minimum",
+                      "value": "20"
+                    },
+                    {
+                      "tag": "items",
+                      "children": [
+                        {
+                          "tag": "entry",
+                          "value": "真葵花宝典"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "items",
+        "id": "不老长春功法",
+        "name": "不老长春功法"
+      },
+      {
+        "category": "items",
+        "id": "乾坤大挪移心法",
+        "name": "乾坤大挪移心法"
+      },
+      {
+        "category": "items",
+        "id": "仙丽雅的项链",
+        "name": "仙丽雅的项链"
+      },
+      {
+        "category": "externalSkills",
+        "id": "伏魔杖法",
+        "name": "伏魔杖法"
+      },
+      {
+        "category": "items",
+        "id": "伏魔杖法",
+        "name": "伏魔杖法"
+      },
+      {
+        "category": "externalSkills",
+        "id": "佛光普照",
+        "name": "佛光普照"
+      },
+      {
+        "category": "items",
+        "id": "佛光普照",
+        "name": "佛光普照"
+      },
+      {
+        "category": "items",
+        "id": "倚天剑",
+        "name": "倚天剑"
+      },
+      {
+        "category": "items",
+        "id": "厚黑学",
+        "name": "厚黑学"
+      },
+      {
+        "category": "externalSkills",
+        "id": "反两仪刀法",
+        "name": "反两仪刀法"
+      },
+      {
+        "category": "items",
+        "id": "反两仪刀法",
+        "name": "反两仪刀法"
+      },
+      {
+        "category": "items",
+        "id": "太极心得手抄本",
+        "name": "太极心得手抄本"
+      },
+      {
+        "category": "items",
+        "id": "妙手仁心",
+        "name": "妙手仁心"
+      },
+      {
+        "category": "talents",
+        "id": "妙手仁心",
+        "name": "妙手仁心"
+      },
+      {
+        "category": "items",
+        "id": "屠龙刀",
+        "name": "屠龙刀"
+      },
+      {
+        "category": "items",
+        "id": "打狗棒",
+        "name": "打狗棒"
+      },
+      {
+        "category": "internalSkills",
+        "id": "易筋经",
+        "name": "易筋经"
+      },
+      {
+        "category": "items",
+        "id": "易筋经",
+        "name": "易筋经"
+      },
+      {
+        "category": "items",
+        "id": "李延宗的项链",
+        "name": "李延宗的项链"
+      },
+      {
+        "category": "items",
+        "id": "武穆遗书",
+        "name": "武穆遗书"
+      },
+      {
+        "category": "items",
+        "id": "沾衣十八跌",
+        "name": "沾衣十八跌"
+      },
+      {
+        "category": "talents",
+        "id": "沾衣十八跌",
+        "name": "沾衣十八跌"
+      },
+      {
+        "category": "buffs",
+        "id": "沾衣十八跌",
+        "name": "沾衣十八跌"
+      },
+      {
+        "category": "items",
+        "id": "灭仙爪",
+        "name": "灭仙爪"
+      },
+      {
+        "category": "items",
+        "id": "灵心慧质",
+        "name": "灵心慧质"
+      },
+      {
+        "category": "talents",
+        "id": "灵心慧质",
+        "name": "灵心慧质"
+      },
+      {
+        "category": "items",
+        "id": "王母蟠桃",
+        "name": "王母蟠桃"
+      },
+      {
+        "category": "items",
+        "id": "王语嫣的武学概要",
+        "name": "王语嫣的武学概要"
+      },
+      {
+        "category": "items",
+        "id": "百变千幻云雾十三式秘籍",
+        "name": "百变千幻云雾十三式秘籍"
+      },
+      {
+        "category": "items",
+        "id": "真葵花宝典",
+        "name": "真葵花宝典"
+      },
+      {
+        "category": "items",
+        "id": "碎裂的怒吼",
+        "name": "碎裂的怒吼"
+      },
+      {
+        "category": "talents",
+        "id": "碎裂的怒吼",
+        "name": "碎裂的怒吼"
+      },
+      {
+        "category": "items",
+        "id": "神木王鼎",
+        "name": "神木王鼎"
+      },
+      {
+        "category": "specialSkills",
+        "id": "笑傲江湖曲",
+        "name": "笑傲江湖曲"
+      },
+      {
+        "category": "items",
+        "id": "笑傲江湖曲",
+        "name": "笑傲江湖曲"
+      },
+      {
+        "category": "items",
+        "id": "素心神剑心得",
+        "name": "素心神剑心得"
+      },
+      {
+        "category": "items",
+        "id": "血刀",
+        "name": "血刀"
+      },
+      {
+        "category": "items",
+        "id": "道家仙丹",
+        "name": "道家仙丹"
+      },
+      {
+        "category": "items",
+        "id": "隔空取物",
+        "name": "隔空取物"
+      },
+      {
+        "category": "talents",
+        "id": "隔空取物",
+        "name": "隔空取物"
+      },
+      {
+        "category": "items",
+        "id": "飞向天际",
+        "name": "飞向天际"
+      },
+      {
+        "category": "talents",
+        "id": "飞向天际",
+        "name": "飞向天际"
+      }
+    ],
+    "usedBy": []
+  }
+]

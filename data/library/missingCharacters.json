@@ -1,0 +1,84 @@
+[
+  {
+    "id": "双儿",
+    "category": "missingCharacters",
+    "name": "双儿",
+    "description": "有加入剧情，但四份参考的角色表均未找到双儿定义，不能补造属性。",
+    "state": "加入记录已归档 · 缺人物定义",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": "upload",
+    "node": {
+      "tag": "missing_character",
+      "key": "双儿",
+      "description": "有加入剧情，但四份参考的角色表均未找到双儿定义，不能补造属性。",
+      "children": [
+        {
+          "tag": "reference",
+          "story": "鹿鼎剧情4.4"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [],
+    "recruitmentStories": [
+      "鹿鼎剧情4.4"
+    ],
+    "related": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情4.4",
+        "name": "鹿鼎剧情4.4"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情4.4",
+        "name": "鹿鼎剧情4.4"
+      }
+    ]
+  },
+  {
+    "id": "白眉鹰王",
+    "category": "missingCharacters",
+    "name": "白眉鹰王",
+    "description": "奖励池使用了没有匹配定义的稳定ID。白眉鹰王可能对应殷天正，但未自动替换ID或补造数值。",
+    "state": "加入记录已归档 · 缺人物定义",
+    "source": "Assets/Resources/textassets/lua/jygame/rollrole.lua.lua",
+    "effect": null,
+    "initialBonusRounds": [
+      "第3周目"
+    ],
+    "recruitment": "late-bonus",
+    "node": {
+      "tag": "missing_character",
+      "key": "白眉鹰王",
+      "description": "奖励池使用了没有匹配定义的稳定ID。白眉鹰王可能对应殷天正，但未自动替换ID或补造数值。",
+      "children": [
+        {
+          "tag": "reference",
+          "candidate": "殷天正"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "characters",
+        "id": "殷天正",
+        "name": "殷天正"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "bonusCompanions",
+        "id": "后期开局伙伴池2",
+        "name": "第3周目 · 开局随机伙伴候选"
+      }
+    ]
+  }
+]
