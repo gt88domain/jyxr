@@ -45,7 +45,7 @@
 - [ ] **verify-branches · 扩大九派中后期、隐藏时限和正邪路线验收**（待验收（后置），最终验收）
   1885/1887段剧情结构闭合不代表逐条可玩；资料与规则补齐后再执行连续路线检查并记录失败分支。
 
-## 有旧C#同名引用、效果仍待接入的天赋（39项）
+## 有旧C#同名引用、效果仍待接入的天赋（29项）
 
 - **五行阵**：腾挪移遁的高明阵法，当周围有队友受伤时，发动阵法分担其所受伤害。
   待办：已有资料和旧C#同名引用，实际效果尚未接入现代内核。
@@ -56,24 +56,12 @@
 - **八卦阵**：腾挪移遁的高明阵法，当自己收到伤害时，将80%的伤害转移给范围内一名随机队友。
   待办：已有资料和旧C#同名引用，实际效果尚未接入现代内核。
   来源：jyx-legacy-dll/JyGame/AttackLogic.cs:871
-- **吴钩霜雪**：太玄神功施展范围+3。
-  待办：已有资料和旧C#同名引用，实际效果尚未接入现代内核。
-  来源：jyx-legacy-dll/JyGame/SkillBox.cs:368
-- **嗜血狂魔**：随着等级逐步提升，提高吸血效果。
-  待办：已有资料和旧C#同名引用，实际效果尚未接入现代内核。
-  来源：jyx-legacy-dll/JyGame/AttackLogic.cs:948
 - **墨家传人**：战国墨家的世代传人，使用墨家古武术附加随机不良状态。
   待办：已有资料和旧C#同名引用，实际效果尚未接入现代内核。
   来源：jyx-legacy-dll/JyGame/AttackLogic.cs:1093
-- **寸长寸强**：增加一格攻击距离。
-  待办：已有资料和旧C#同名引用，实际效果尚未接入现代内核。
-  来源：jyx-legacy-dll/JyGame/SkillBox.cs:358
 - **屌丝**：带上这个草帽就成为屌丝了，据说能增加屌丝逆袭的概率。
   待办：已有资料和旧C#同名引用，实际效果尚未接入现代内核。
   来源：jyx-legacy-dll/JyGame/AoyiLogic.cs:19
-- **御风**：随着等级逐步提升，降低受到暴击的概率。
-  待办：已有资料和旧C#同名引用，实际效果尚未接入现代内核。
-  来源：jyx-legacy-dll/JyGame/AttackLogic.cs:1849
 - **慕容世家**：斗转星移反弹几率大幅提升。
   待办：已有资料和旧C#同名引用，实际效果尚未接入现代内核。
   来源：jyx-legacy-dll/JyGame/AttackLogic.cs:723
@@ -122,18 +110,6 @@
 - **臭蛤蟆**：只有被称为臭蛤蟆的人才对蛤蟆功精要具有绝对的掌握。
   待办：已有资料和旧C#同名引用，实际效果尚未接入现代内核。
   来源：jyx-legacy-dll/JyGame/AttackLogic.cs:1602、jyx-legacy-dll/JyGame/AttackLogic.cs:1607
-- **至刚至阳**：大幅度增加内功阳性适性。
-  待办：已有资料和旧C#同名引用，实际效果尚未接入现代内核。
-  来源：jyx-legacy-dll/JyGame/InternalSkillInstance.cs:48
-- **至空至明**：被攻击时有一定概率冷却所有技能。
-  待办：已有资料和旧C#同名引用，实际效果尚未接入现代内核。
-  来源：jyx-legacy-dll/JyGame/AttackLogic.cs:561
-- **血海魔功**：使用血刀大法增加20%吸血能力。
-  待办：已有资料和旧C#同名引用，实际效果尚未接入现代内核。
-  来源：jyx-legacy-dll/JyGame/AttackLogic.cs:937
-- **血魔刀法**：使用血刀大法增加15%吸血能力。
-  待办：已有资料和旧C#同名引用，实际效果尚未接入现代内核。
-  来源：jyx-legacy-dll/JyGame/AttackLogic.cs:942
 - **赵敏的眷念**：蒙元郡主赵敏精通百家武学，提醒她的夫君敌之所长。（张无忌闪避+10%）
   待办：已有资料和旧C#同名引用，实际效果尚未接入现代内核。
   来源：jyx-legacy-dll/JyGame/AttackLogic.cs:601
@@ -143,12 +119,6 @@
 - **追魂**：不将敌人打倒决不罢休，无道德可言。攻击造成伤害加深效果。
   待办：已有资料和旧C#同名引用，实际效果尚未接入现代内核。
   来源：jyx-legacy-dll/JyGame/AttackLogic.cs:1685
-- **金刚**：随着等级逐步提升，提高防御效果。
-  待办：已有资料和旧C#同名引用，实际效果尚未接入现代内核。
-  来源：jyx-legacy-dll/JyGame/AttackLogic.cs:1505
-- **金刚伏魔圈**：少林三大神僧的组成的强力阵法。组阵时不能移动，但互相给予强大的攻击加成。
-  待办：已有资料和旧C#同名引用，实际效果尚未接入现代内核。
-  来源：jyx-legacy-dll/JyGame/AttackLogic.cs:414、jyx-legacy-dll/JyGame/AttackLogic.cs:419、jyx-legacy-dll/JyGame/AttackLogic.cs:429、jyx-legacy-dll/JyGame/AttackLogic.cs:440、jyx-legacy-dll/JyGame/AttackLogic.cs:443、jyx-legacy-dll/JyGame/BattleSprite.cs:228、jyx-legacy-dll/JyGame/SkillBox.cs:372
 - **长平公主的眷恋**：长平公主阿九魂牵梦绕的眷恋，提升袁承志所有武学的威力。
   待办：已有资料和旧C#同名引用，实际效果尚未接入现代内核。
   来源：jyx-legacy-dll/JyGame/AttackLogic.cs:540
@@ -183,7 +153,7 @@
   待办：继续查XML、Lua与其他版本的实际规则；未找到同名旧C#引用，暂不按描述猜写效果。
   来源：当前固定旧C#未找到同名字符串，继续查证XML/Lua及版本差异
 
-## 已有部分效果、尚未全部等价的天赋（35项）
+## 已有部分效果、尚未全部等价的天赋（42项）
 
 - **不老长春**：永葆青春的神奇功法，一定概率将受到的伤害转为气血。
   待办：选定概率与恢复已检查，原单精度舍入及取消恢复的先后仍待核对。
@@ -212,6 +182,9 @@
 - **吸星大法**：令江湖中人闻之色变的吸星大法，攻击时吸收一定内力，并造成封穴效果，使对方无法恢复内力。
   待办：吸内与封印已接入，重复封印替换和完整反应顺序仍待核对。
   来源：jyx-legacy-dll/JyGame/AttackLogic.cs:1008
+- **嗜血狂魔**：随着等级逐步提升，提高吸血效果。
+  待办：等级吸血、单精度与过量伤害计入已接入；逐装备浮点累加及完整反应顺序仍待核对。
+  来源：jyx-legacy-dll/JyGame/AttackLogic.cs:948
 - **大理世家**：大理世族的象征，相关武学威力提升。
   待办：武功匹配、最终伤害倍率和逐次取整已接入；原命中时点、随机调用与AI估值待补齐。
   来源：jyx-legacy-dll/JyGame/AttackLogic.cs:519
@@ -239,6 +212,9 @@
 - **幽居**：随着等级逐步提升，提高多重攻击的概率。
   待办：追加攻击已接入，负伤害、特技命中与原Buff结算时点仍有差异。
   来源：jyx-legacy-dll/JyGame/AttackLogic.cs:1211
+- **御风**：随着等级逐步提升，降低受到暴击的概率。
+  待办：已按原等级整数除以30降低暴击率，其余暴击覆盖与随机顺序仍待核对。
+  来源：jyx-legacy-dll/JyGame/AttackLogic.cs:1849
 - **拳掌增益**：拳掌威力增加5%。
   待办：最终属性倍率和逐次取整已接入；全部装备/武学加成与战斗Buff的前置层次、原随机顺序待核对。
   来源：jyx-legacy-dll/JyGame/AttributeFinalHelper.cs:20
@@ -269,9 +245,24 @@
 - **素心神剑**：小龙女由于机缘巧合所领悟的左右互搏之术，每回合攻击一定几率造成两次伤害。
   待办：追加攻击已接入，负伤害、特技命中与原Buff结算时点仍有差异。
   来源：jyx-legacy-dll/JyGame/AttackLogic.cs:1216
+- **至空至明**：被攻击时有一定概率冷却所有技能。
+  待办：15%概率清空冷却已接入，原命中、受击反应与表现随机顺序仍待核对。
+  来源：jyx-legacy-dll/JyGame/AttackLogic.cs:561
+- **血海魔功**：使用血刀大法增加20%吸血能力。
+  待办：血刀单精度吸血、过量伤害计入和重伤减半已接入；逐装备浮点累加及完整反应顺序仍待核对。
+  来源：jyx-legacy-dll/JyGame/AttackLogic.cs:937
+- **血魔刀法**：使用血刀大法增加15%吸血能力。
+  待办：血刀单精度吸血、过量伤害计入和重伤减半已接入；逐装备浮点累加及完整反应顺序仍待核对。
+  来源：jyx-legacy-dll/JyGame/AttackLogic.cs:942
 - **诸般封印**：精通奇经八脉，攻击一定概率造成诸般封印效果。
   待办：概率、Buff等级/时长与友军保护已接入；原命中、免疫、随机调用及连击/反应的完整顺序待核对。
   来源：jyx-legacy-dll/JyGame/AttackLogic.cs:1714、jyx-legacy-dll/JyGame/AttackLogic.cs:1717、jyx-legacy-dll/JyGame/SkillBox.cs:191
+- **金刚**：随着等级逐步提升，提高防御效果。
+  待办：单独防御×1.2再加10×等级已配置，与其他防御修正的完整顺序仍待核对。
+  来源：jyx-legacy-dll/JyGame/AttackLogic.cs:1505
+- **金刚伏魔圈**：少林三大神僧的组成的强力阵法。组阵时不能移动，但互相给予强大的攻击加成。
+  待办：日月神鞭距离10且不受致盲影响已接入；阵法叠伤、破阵移除及移动规则仍待补齐。
+  来源：jyx-legacy-dll/JyGame/AttackLogic.cs:414、jyx-legacy-dll/JyGame/AttackLogic.cs:419、jyx-legacy-dll/JyGame/AttackLogic.cs:429、jyx-legacy-dll/JyGame/AttackLogic.cs:440、jyx-legacy-dll/JyGame/AttackLogic.cs:443、jyx-legacy-dll/JyGame/BattleSprite.cs:228、jyx-legacy-dll/JyGame/SkillBox.cs:372
 - **铁剑掌门**：对铁剑门武学有深刻的了解，提升相应武学威力。
   待办：武功匹配、最终伤害倍率和逐次取整已接入；原命中时点、随机调用与AI估值待补齐。
   来源：jyx-legacy-dll/JyGame/AttackLogic.cs:489

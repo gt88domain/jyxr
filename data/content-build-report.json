@@ -295,6 +295,27 @@
     ],
     "scope": "confirmed normal hits, original buff levels/durations and probability formulas; friendly hits clear for 灵心慧质 and legends; full reaction/extra-strike and RNG timing remain"
   },
+  "masteryRuleEffects": {
+    "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+    "talents": [
+      "寸长寸强",
+      "吴钩霜雪",
+      "金刚伏魔圈",
+      "至刚至阳",
+      "至空至明",
+      "金刚",
+      "御风",
+      "血海魔功",
+      "血魔刀法",
+      "嗜血狂魔"
+    ],
+    "files": [
+      "JyGame/SkillBox.cs:341-390",
+      "JyGame/InternalSkillInstance.cs:43-53",
+      "JyGame/AttackLogic.cs:561-568,928-975,1505-1511,1849-1853"
+    ],
+    "scope": "blind-stage targeting, Yang affinity, cooldowns, selected defence/critical and blood drain; full formation, ordering and per-equipment float accumulation remain"
+  },
   "legacyArt": {
     "source": {
       "archive": "X.rar",
@@ -392,9 +413,9 @@
   "remainingChecklist": {
     "tasks": 19,
     "groups": {
-      "有旧C#同名引用、效果仍待接入的天赋": 39,
+      "有旧C#同名引用、效果仍待接入的天赋": 29,
       "未找到旧C#同名引用、需继续查证的天赋": 5,
-      "已有部分效果、尚未全部等价的天赋": 35,
+      "已有部分效果、尚未全部等价的天赋": 42,
       "仅作为其他效果联动条件的天赋": 4,
       "仅资料的Buff": 7,
       "部分实现的Buff": 2,
@@ -427,9 +448,9 @@
       "total": 158,
       "states": {
         "referenced-behavior": 4,
-        "configured": 74,
-        "partial": 35,
-        "metadata-only": 44,
+        "configured": 77,
+        "partial": 42,
+        "metadata-only": 34,
         "identity-only": 1
       }
     },

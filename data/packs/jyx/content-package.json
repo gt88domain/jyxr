@@ -65131,6 +65131,68 @@
             }
           },
           "minimumLevel": 20
+        },
+        {
+          "effect": {
+            "type": "hook",
+            "timing": "OnDamageDealt",
+            "conditions": [
+              {
+                "type": "context_unit_role",
+                "role": "source"
+              },
+              {
+                "type": "context_unit_effective_talent",
+                "talentIds": [
+                  "嗜血狂魔",
+                  "血海魔功",
+                  "血魔刀法"
+                ],
+                "absent": true
+              },
+              {
+                "type": "context_skill_name_equals",
+                "values": [
+                  "血刀大法",
+                  "血刀大法.吸"
+                ]
+              }
+            ],
+            "effects": [
+              {
+                "type": "custom",
+                "effectId": "single_precision_lifesteal",
+                "parameters": {
+                  "skillRates": [
+                    {
+                      "name": "血刀大法",
+                      "rate": 0.1
+                    },
+                    {
+                      "name": "血刀大法.吸",
+                      "rate": 0.2
+                    }
+                  ],
+                  "talentRates": [
+                    {
+                      "talentId": "血海魔功",
+                      "rate": 0.2
+                    },
+                    {
+                      "talentId": "血魔刀法",
+                      "rate": 0.15
+                    }
+                  ],
+                  "levelRate": {
+                    "talentId": "嗜血狂魔",
+                    "baseRate": 0.05,
+                    "ratePerLevel": 0.05,
+                    "divisor": 30
+                  }
+                }
+              }
+            ]
+          }
         }
       ]
     },
@@ -117338,7 +117400,20 @@
       "id": "吴钩霜雪",
       "name": "吴钩霜雪",
       "point": 0,
-      "description": "太玄神功施展范围+3。"
+      "description": "太玄神功施展范围+3。",
+      "affixes": [
+        {
+          "type": "skill_targeting_modifier",
+          "sourceSkillId": null,
+          "field": "cast_size",
+          "value": {
+            "op": "add",
+            "delta": 3
+          },
+          "skillName": "太玄神功",
+          "stage": "BeforeBlind"
+        }
+      ]
     },
     {
       "id": "吸星大法",
@@ -117408,7 +117483,53 @@
       "id": "嗜血狂魔",
       "name": "嗜血狂魔",
       "point": 5,
-      "description": "随着等级逐步提升，提高吸血效果。"
+      "description": "随着等级逐步提升，提高吸血效果。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnDamageDealt",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "single_precision_lifesteal",
+              "parameters": {
+                "skillRates": [
+                  {
+                    "name": "血刀大法",
+                    "rate": 0.1
+                  },
+                  {
+                    "name": "血刀大法.吸",
+                    "rate": 0.2
+                  }
+                ],
+                "talentRates": [
+                  {
+                    "talentId": "血海魔功",
+                    "rate": 0.2
+                  },
+                  {
+                    "talentId": "血魔刀法",
+                    "rate": 0.15
+                  }
+                ],
+                "levelRate": {
+                  "talentId": "嗜血狂魔",
+                  "baseRate": 0.05,
+                  "ratePerLevel": 0.05,
+                  "divisor": 30
+                }
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "嗜酒如命",
@@ -118196,7 +118317,20 @@
       "id": "寸长寸强",
       "name": "寸长寸强",
       "point": 30,
-      "description": "增加一格攻击距离。"
+      "description": "增加一格攻击距离。",
+      "affixes": [
+        {
+          "type": "skill_targeting_modifier",
+          "sourceSkillId": null,
+          "field": "impact_size",
+          "value": {
+            "op": "add",
+            "delta": 1
+          },
+          "skillName": null,
+          "stage": "AfterBlind"
+        }
+      ]
     },
     {
       "id": "射雕英雄",
@@ -118574,7 +118708,28 @@
       "id": "御风",
       "name": "御风",
       "point": 5,
-      "description": "随着等级逐步提升，降低受到暴击的概率。"
+      "description": "随着等级逐步提升，降低受到暴击的概率。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "critical_chance",
+              "op": "add",
+              "deltaPerUnitLevel": -0.3,
+              "unitLevelStep": 30
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "心眼通明",
@@ -119986,13 +120141,44 @@
       "id": "至刚至阳",
       "name": "至刚至阳",
       "point": 60,
-      "description": "大幅度增加内功阳性适性。"
+      "description": "大幅度增加内功阳性适性。",
+      "affixes": [
+        {
+          "type": "trait",
+          "traitId": "IncreaseInternalSkillYangAffinity"
+        }
+      ]
     },
     {
       "id": "至空至明",
       "name": "至空至明",
       "point": 10,
-      "description": "被攻击时有一定概率冷却所有技能。"
+      "description": "被攻击时有一定概率冷却所有技能。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeHitResolved",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "chance",
+              "value": 0.15
+            }
+          ],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "reset_skill_cooldowns",
+              "parameters": {
+                "talentId": "至空至明"
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "芷若的眷念",
@@ -120056,13 +120242,134 @@
       "id": "血海魔功",
       "name": "血海魔功",
       "point": 25,
-      "description": "使用血刀大法增加20%吸血能力。"
+      "description": "使用血刀大法增加20%吸血能力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnDamageDealt",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "嗜血狂魔"
+              ],
+              "absent": true
+            },
+            {
+              "type": "context_skill_name_equals",
+              "values": [
+                "血刀大法",
+                "血刀大法.吸"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "single_precision_lifesteal",
+              "parameters": {
+                "skillRates": [
+                  {
+                    "name": "血刀大法",
+                    "rate": 0.1
+                  },
+                  {
+                    "name": "血刀大法.吸",
+                    "rate": 0.2
+                  }
+                ],
+                "talentRates": [
+                  {
+                    "talentId": "血海魔功",
+                    "rate": 0.2
+                  },
+                  {
+                    "talentId": "血魔刀法",
+                    "rate": 0.15
+                  }
+                ],
+                "levelRate": {
+                  "talentId": "嗜血狂魔",
+                  "baseRate": 0.05,
+                  "ratePerLevel": 0.05,
+                  "divisor": 30
+                }
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "血魔刀法",
       "name": "血魔刀法",
       "point": 15,
-      "description": "使用血刀大法增加15%吸血能力。"
+      "description": "使用血刀大法增加15%吸血能力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnDamageDealt",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "嗜血狂魔",
+                "血海魔功"
+              ],
+              "absent": true
+            },
+            {
+              "type": "context_skill_name_equals",
+              "values": [
+                "血刀大法",
+                "血刀大法.吸"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "single_precision_lifesteal",
+              "parameters": {
+                "skillRates": [
+                  {
+                    "name": "血刀大法",
+                    "rate": 0.1
+                  },
+                  {
+                    "name": "血刀大法.吸",
+                    "rate": 0.2
+                  }
+                ],
+                "talentRates": [
+                  {
+                    "talentId": "血海魔功",
+                    "rate": 0.2
+                  },
+                  {
+                    "talentId": "血魔刀法",
+                    "rate": 0.15
+                  }
+                ],
+                "levelRate": {
+                  "talentId": "嗜血狂魔",
+                  "baseRate": 0.05,
+                  "ratePerLevel": 0.05,
+                  "divisor": 30
+                }
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "诸般封印",
@@ -120222,13 +120529,52 @@
       "id": "金刚",
       "name": "金刚",
       "point": 5,
-      "description": "随着等级逐步提升，提高防御效果。"
+      "description": "随着等级逐步提升，提高防御效果。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "target_defence",
+              "op": "more",
+              "delta": 1.2
+            },
+            {
+              "type": "modify_damage_context",
+              "field": "target_defence",
+              "op": "post_add",
+              "deltaPerUnitLevel": 10
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "金刚伏魔圈",
       "name": "金刚伏魔圈",
       "point": 30,
-      "description": "少林三大神僧的组成的强力阵法。组阵时不能移动，但互相给予强大的攻击加成。"
+      "description": "少林三大神僧的组成的强力阵法。组阵时不能移动，但互相给予强大的攻击加成。",
+      "affixes": [
+        {
+          "type": "skill_targeting_modifier",
+          "sourceSkillId": null,
+          "field": "cast_size",
+          "value": {
+            "op": "override",
+            "delta": 10
+          },
+          "skillName": "日月神鞭",
+          "stage": "AfterBlind"
+        }
+      ]
     },
     {
       "id": "金蛇狂舞",

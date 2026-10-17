@@ -169,24 +169,6 @@
           "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
         },
         {
-          "id": "吴钩霜雪",
-          "description": "太玄神功施展范围+3。",
-          "sourceReferences": [
-            "jyx-legacy-dll/JyGame/SkillBox.cs:368"
-          ],
-          "remainingEvidence": [],
-          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
-        },
-        {
-          "id": "嗜血狂魔",
-          "description": "随着等级逐步提升，提高吸血效果。",
-          "sourceReferences": [
-            "jyx-legacy-dll/JyGame/AttackLogic.cs:948"
-          ],
-          "remainingEvidence": [],
-          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
-        },
-        {
           "id": "墨家传人",
           "description": "战国墨家的世代传人，使用墨家古武术附加随机不良状态。",
           "sourceReferences": [
@@ -196,28 +178,10 @@
           "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
         },
         {
-          "id": "寸长寸强",
-          "description": "增加一格攻击距离。",
-          "sourceReferences": [
-            "jyx-legacy-dll/JyGame/SkillBox.cs:358"
-          ],
-          "remainingEvidence": [],
-          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
-        },
-        {
           "id": "屌丝",
           "description": "带上这个草帽就成为屌丝了，据说能增加屌丝逆袭的概率。",
           "sourceReferences": [
             "jyx-legacy-dll/JyGame/AoyiLogic.cs:19"
-          ],
-          "remainingEvidence": [],
-          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
-        },
-        {
-          "id": "御风",
-          "description": "随着等级逐步提升，降低受到暴击的概率。",
-          "sourceReferences": [
-            "jyx-legacy-dll/JyGame/AttackLogic.cs:1849"
           ],
           "remainingEvidence": [],
           "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
@@ -379,42 +343,6 @@
           "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
         },
         {
-          "id": "至刚至阳",
-          "description": "大幅度增加内功阳性适性。",
-          "sourceReferences": [
-            "jyx-legacy-dll/JyGame/InternalSkillInstance.cs:48"
-          ],
-          "remainingEvidence": [],
-          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
-        },
-        {
-          "id": "至空至明",
-          "description": "被攻击时有一定概率冷却所有技能。",
-          "sourceReferences": [
-            "jyx-legacy-dll/JyGame/AttackLogic.cs:561"
-          ],
-          "remainingEvidence": [],
-          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
-        },
-        {
-          "id": "血海魔功",
-          "description": "使用血刀大法增加20%吸血能力。",
-          "sourceReferences": [
-            "jyx-legacy-dll/JyGame/AttackLogic.cs:937"
-          ],
-          "remainingEvidence": [],
-          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
-        },
-        {
-          "id": "血魔刀法",
-          "description": "使用血刀大法增加15%吸血能力。",
-          "sourceReferences": [
-            "jyx-legacy-dll/JyGame/AttackLogic.cs:942"
-          ],
-          "remainingEvidence": [],
-          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
-        },
-        {
           "id": "赵敏的眷念",
           "description": "蒙元郡主赵敏精通百家武学，提醒她的夫君敌之所长。（张无忌闪避+10%）",
           "sourceReferences": [
@@ -437,30 +365,6 @@
           "description": "不将敌人打倒决不罢休，无道德可言。攻击造成伤害加深效果。",
           "sourceReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1685"
-          ],
-          "remainingEvidence": [],
-          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
-        },
-        {
-          "id": "金刚",
-          "description": "随着等级逐步提升，提高防御效果。",
-          "sourceReferences": [
-            "jyx-legacy-dll/JyGame/AttackLogic.cs:1505"
-          ],
-          "remainingEvidence": [],
-          "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
-        },
-        {
-          "id": "金刚伏魔圈",
-          "description": "少林三大神僧的组成的强力阵法。组阵时不能移动，但互相给予强大的攻击加成。",
-          "sourceReferences": [
-            "jyx-legacy-dll/JyGame/AttackLogic.cs:414",
-            "jyx-legacy-dll/JyGame/AttackLogic.cs:419",
-            "jyx-legacy-dll/JyGame/AttackLogic.cs:429",
-            "jyx-legacy-dll/JyGame/AttackLogic.cs:440",
-            "jyx-legacy-dll/JyGame/AttackLogic.cs:443",
-            "jyx-legacy-dll/JyGame/BattleSprite.cs:228",
-            "jyx-legacy-dll/JyGame/SkillBox.cs:372"
           ],
           "remainingEvidence": [],
           "remainingSummary": "已有资料和旧C#同名引用，实际效果尚未接入现代内核。"
@@ -667,6 +571,17 @@
           "remainingSummary": "吸内与封印已接入，重复封印替换和完整反应顺序仍待核对。"
         },
         {
+          "id": "嗜血狂魔",
+          "description": "随着等级逐步提升，提高吸血效果。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:948"
+          ],
+          "remainingEvidence": [
+            "single-precision named-skill/talent sum, incoming-damage overkill drain and wound recovery configured; per-equipment float accumulation and original reaction order remain"
+          ],
+          "remainingSummary": "等级吸血、单精度与过量伤害计入已接入；逐装备浮点累加及完整反应顺序仍待核对。"
+        },
+        {
           "id": "大理世家",
           "description": "大理世族的象征，相关武学威力提升。",
           "sourceReferences": [
@@ -766,6 +681,17 @@
             "combined positive-damage extra strikes tested; original negative damage and special-hit timing remain"
           ],
           "remainingSummary": "追加攻击已接入，负伤害、特技命中与原Buff结算时点仍有差异。"
+        },
+        {
+          "id": "御风",
+          "description": "随着等级逐步提升，降低受到暴击的概率。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1849"
+          ],
+          "remainingEvidence": [
+            "critical reduction uses original integer level/30 steps; full critical override/order and cosmetic RNG remain"
+          ],
+          "remainingSummary": "已按原等级整数除以30降低暴击率，其余暴击覆盖与随机顺序仍待核对。"
         },
         {
           "id": "拳掌增益",
@@ -889,6 +815,39 @@
           "remainingSummary": "追加攻击已接入，负伤害、特技命中与原Buff结算时点仍有差异。"
         },
         {
+          "id": "至空至明",
+          "description": "被攻击时有一定概率冷却所有技能。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:561"
+          ],
+          "remainingEvidence": [
+            "15% target cooldown reset configured; full original hit/reaction and cosmetic RNG ordering remain"
+          ],
+          "remainingSummary": "15%概率清空冷却已接入，原命中、受击反应与表现随机顺序仍待核对。"
+        },
+        {
+          "id": "血海魔功",
+          "description": "使用血刀大法增加20%吸血能力。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:937"
+          ],
+          "remainingEvidence": [
+            "single-precision named-skill/talent sum, incoming-damage overkill drain and wound recovery configured; per-equipment float accumulation and original reaction order remain"
+          ],
+          "remainingSummary": "血刀单精度吸血、过量伤害计入和重伤减半已接入；逐装备浮点累加及完整反应顺序仍待核对。"
+        },
+        {
+          "id": "血魔刀法",
+          "description": "使用血刀大法增加15%吸血能力。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:942"
+          ],
+          "remainingEvidence": [
+            "single-precision named-skill/talent sum, incoming-damage overkill drain and wound recovery configured; per-equipment float accumulation and original reaction order remain"
+          ],
+          "remainingSummary": "血刀单精度吸血、过量伤害计入和重伤减半已接入；逐装备浮点累加及完整反应顺序仍待核对。"
+        },
+        {
           "id": "诸般封印",
           "description": "精通奇经八脉，攻击一定概率造成诸般封印效果。",
           "sourceReferences": [
@@ -900,6 +859,34 @@
             "confirmed normal hits apply original buff level/duration and probability; ordinary friendly-fire and 灵心慧质/legend exclusion configured; pre-hit RNG, full immunity and extra-strike/reaction ordering remain"
           ],
           "remainingSummary": "概率、Buff等级/时长与友军保护已接入；原命中、免疫、随机调用及连击/反应的完整顺序待核对。"
+        },
+        {
+          "id": "金刚",
+          "description": "随着等级逐步提升，提高防御效果。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:1505"
+          ],
+          "remainingEvidence": [
+            "standalone defence *1.2 +10*level configured; sequential interactions with all other defence modifiers remain"
+          ],
+          "remainingSummary": "单独防御×1.2再加10×等级已配置，与其他防御修正的完整顺序仍待核对。"
+        },
+        {
+          "id": "金刚伏魔圈",
+          "description": "少林三大神僧的组成的强力阵法。组阵时不能移动，但互相给予强大的攻击加成。",
+          "sourceReferences": [
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:414",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:419",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:429",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:440",
+            "jyx-legacy-dll/JyGame/AttackLogic.cs:443",
+            "jyx-legacy-dll/JyGame/BattleSprite.cs:228",
+            "jyx-legacy-dll/JyGame/SkillBox.cs:372"
+          ],
+          "remainingEvidence": [
+            "日月神鞭 cast size 10 bypasses blindness; formation damage stacking, break/removal and movement remain"
+          ],
+          "remainingSummary": "日月神鞭距离10且不受致盲影响已接入；阵法叠伤、破阵移除及移动规则仍待补齐。"
         },
         {
           "id": "铁剑掌门",

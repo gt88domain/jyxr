@@ -26030,6 +26030,68 @@
             }
           },
           "minimumLevel": 20
+        },
+        {
+          "effect": {
+            "type": "hook",
+            "timing": "OnDamageDealt",
+            "conditions": [
+              {
+                "type": "context_unit_role",
+                "role": "source"
+              },
+              {
+                "type": "context_unit_effective_talent",
+                "talentIds": [
+                  "嗜血狂魔",
+                  "血海魔功",
+                  "血魔刀法"
+                ],
+                "absent": true
+              },
+              {
+                "type": "context_skill_name_equals",
+                "values": [
+                  "血刀大法",
+                  "血刀大法.吸"
+                ]
+              }
+            ],
+            "effects": [
+              {
+                "type": "custom",
+                "effectId": "single_precision_lifesteal",
+                "parameters": {
+                  "skillRates": [
+                    {
+                      "name": "血刀大法",
+                      "rate": 0.1
+                    },
+                    {
+                      "name": "血刀大法.吸",
+                      "rate": 0.2
+                    }
+                  ],
+                  "talentRates": [
+                    {
+                      "talentId": "血海魔功",
+                      "rate": 0.2
+                    },
+                    {
+                      "talentId": "血魔刀法",
+                      "rate": 0.15
+                    }
+                  ],
+                  "levelRate": {
+                    "talentId": "嗜血狂魔",
+                    "baseRate": 0.05,
+                    "ratePerLevel": 0.05,
+                    "divisor": 30
+                  }
+                }
+              }
+            ]
+          }
         }
       ]
     },

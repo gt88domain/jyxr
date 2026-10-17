@@ -14311,7 +14311,7 @@
       "description": "25#使用血刀大法增加20%吸血能力。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14322,7 +14322,7 @@
       "description": "15#使用血刀大法增加15%吸血能力。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14685,7 +14685,7 @@
       "description": "5#随着等级逐步提升，提高防御效果。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14696,7 +14696,7 @@
       "description": "5#随着等级逐步提升，提高吸血效果。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14718,7 +14718,7 @@
       "description": "5#随着等级逐步提升，降低受到暴击的概率。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14850,7 +14850,7 @@
       "description": "10#被攻击时有一定概率冷却所有技能。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -14861,7 +14861,7 @@
       "description": "30#少林三大神僧的组成的强力阵法。组阵时不能移动，但互相给予强大的攻击加成。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "partial",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -15279,7 +15279,7 @@
       "description": "30#增加一格攻击距离。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "configured",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -15334,7 +15334,7 @@
       "description": "0#太玄神功施展范围+3。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "configured",
       "initialBonusRounds": [],
       "recruitment": null
     },
@@ -15356,7 +15356,7 @@
       "description": "60#大幅度增加内功阳性适性。",
       "state": "资料已接入",
       "source": "resource.xml",
-      "effect": "metadata-only",
+      "effect": "configured",
       "initialBonusRounds": [],
       "recruitment": null
     },
