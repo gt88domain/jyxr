@@ -12,6 +12,7 @@ const segments = new Map(Object.values(content.storyScripts).flatMap(script => s
 const plain = text => text.replace(/\[\[[a-z]+:([^\]]*)\]\]/gi, '$1').replace(/<\/?color[^>]*>/g, '');
 const report = {baseURL, startedAt: new Date().toISOString(), passed: false, checks: [], dialogues: [], console: [], errors: [], expectedErrors: [], failedRequests: [], failedResponses: []};
 let browser, context, page;
+const releasedMedia = [];
 
 function pass(check, details) {
   report.checks.push({check, details});
@@ -329,6 +330,16 @@ try {
     args: ['--no-sandbox', '--disable-dev-shm-usage'],
   });
   context = await browser.newContext({viewport: {width: 1440, height: 900}});
+  await context.exposeBinding('recordReleasedMedia', (_, url) => releasedMedia.push({url, at: Date.now()}));
+  await context.addInitScript(() => {
+    const load = HTMLMediaElement.prototype.load;
+    HTMLMediaElement.prototype.load = function (...args) {
+      // GameAudio explicitly removes src and loads the empty element when it
+      // releases a track. Observe that operation; do not ignore arbitrary aborts.
+      if (this.currentSrc && !this.getAttribute('src')) void window.recordReleasedMedia(this.currentSrc);
+      return load.apply(this, args);
+    };
+  });
   await context.tracing.start({screenshots: true, snapshots: true});
   page = await context.newPage();
   page.setDefaultTimeout(20_000);
@@ -341,7 +352,7 @@ try {
   page.on('pageerror', error => report.errors.push({source: 'pageerror', message: error.message, stack: error.stack}));
   page.on('requestfailed', request => {
     if (new URL(request.url()).pathname === '/favicon.ico') return;
-    report.failedRequests.push({url: request.url(), error: request.failure()?.errorText});
+    report.failedRequests.push({url: request.url(), error: request.failure()?.errorText, resourceType: request.resourceType(), at: Date.now()});
   });
   page.on('response', response => {
     if (response.status() >= 400 && new URL(response.url()).pathname !== '/favicon.ico')
@@ -475,6 +486,11 @@ try {
   assert.deepEqual(await uiSnapshot(), before, 'Malformed JSON must not replace or corrupt the active game session');
   assert.deepEqual(managementState(await readRuntimeState()), trainedState, 'Malformed JSON must preserve equipment and cultivation too');
   pass('malformed JSON is rejected while preserving active session');
+  const originalAudio = new Set(Object.values(content.browser.audio.resources).map(path => new URL(path, baseURL).href));
+  report.expectedMediaCancellations = report.failedRequests.filter(request =>
+    request.resourceType === 'media' && request.error === 'net::ERR_ABORTED' && originalAudio.has(request.url) &&
+    releasedMedia.some(release => release.url === request.url && Math.abs(release.at - request.at) < 2000));
+  report.failedRequests = report.failedRequests.filter(request => !report.expectedMediaCancellations.includes(request));
   assert.deepEqual(report.errors, [], 'Browser console or page exceptions occurred');
   assert.deepEqual(report.failedRequests, [], 'Browser requests failed');
   assert.deepEqual(report.failedResponses, [], 'Browser received HTTP errors');

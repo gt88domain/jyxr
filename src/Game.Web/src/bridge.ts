@@ -42,7 +42,7 @@ export interface GameState {
   rename?: {defaultName: string} | null;
   gameOver?: boolean;
   managedCharacter?: GameState['hero'] | null;
-  roster?: (PartyMember & {placement: 'member' | 'follower' | 'reserve'; unspentStatPoints: number; canBench: boolean; canRejoin: boolean})[];
+  roster?: (PartyMember & {placement: 'member' | 'follower' | 'reserve'; formationStatus: 'active' | 'reserve' | 'following' | 'story-away'; unspentStatPoints: number; canBench: boolean; canRejoin: boolean})[];
   chest?: {capacity: number; stored: number; canManage: boolean; entries: ChestItem[]; inventory: ChestItem[]} | null;
   creation?: CreationState | null;
   sceneBackground?: string | null;

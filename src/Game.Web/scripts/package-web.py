@@ -11,6 +11,10 @@ output = web.parents[1] / "artifacts" / "jyxr-web-first-playable.zip"
 output.parent.mkdir(parents=True, exist_ok=True)
 instructions = """HTML5 RPG · 金庸新手章与灰烬边境试验章
 
+当前方向为原版内容的现代化重制，开发计划见源码 MODERNIZATION_PLAN.md。
+保留原剧情、基础数据、伙伴路线图与地图提示；队伍按参战、后备、剧情随行、剧情暂离分组。
+下文90%是历史迁移阶段估算，不是现代化版本完成度；逐个复刻旧Unity粒子不再作为发布前提。
+
 解压后，在本目录打开终端，运行：
   python3 -m http.server 5173 --directory game
 Windows 如只有 py 命令，可运行：

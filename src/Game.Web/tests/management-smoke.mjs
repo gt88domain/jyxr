@@ -30,8 +30,13 @@ try{
   await noOverflow('companion equipment at desktop');
   await page.screenshot({path:output+'companion-equipment-desktop.png',fullPage:true});
   await closeModal();await click('[data-action="party"]');
+  assert.equal(await page.locator('[data-roster-group="active"] [data-roster-id]').count(),2);
+  assert.equal(await page.locator('[data-roster-group="following"] [data-roster-id="女主"]').count(),1);
+  assert.equal(await page.locator('[data-roster-id="女主"] [data-action="party-placement"]').count(),0);
   await click('[data-action="party-placement"][data-id="钟灵"][data-placement="reserve"]');
   assert.equal((await state()).party.length,1);
+  assert.equal(await page.locator('[data-roster-group="reserve"] [data-roster-id="钟灵"]').count(),1);
+  assert.equal(await page.locator('[data-roster-id="钟灵"] [data-placement="reserve"]').count(),0);
   await page.setViewportSize({width:375,height:812});
   await noOverflow('full roster and reserve controls at 375px');
   await page.screenshot({path:output+'roster-reserves-mobile.png',fullPage:true});
@@ -86,5 +91,24 @@ try{
   await click('[data-action="leave-battle"]');await continueDialogue();
   assert.equal((await state()).phase,'world');
   pass('original inn conversation and paid arena lead through visible deployment, actual combat and map return');
+  await page.locator('#import-file').setInputFiles(output+'management-save.story-away.json');
+  await page.waitForFunction(()=>document.querySelector('#toast')?.textContent==='存档已导入。');await ready();
+  const departed=await state();
+  assert.equal(departed.roster.find(c=>c.id==='钟灵').formationStatus,'story-away');
+  await click('[data-action="party"]');
+  const away=page.locator('[data-roster-group="story-away"] [data-roster-id="钟灵"]');
+  assert.equal(await away.count(),1);assert.equal(await away.locator('[data-action="party-placement"]').count(),0);
+  assert.match(await page.locator('[data-roster-group="story-away"]').innerText(),/不能通过队伍编排直接召回/);
+  await noOverflow('four-state roster distinguishes actual story departure at 375px');
+  await page.screenshot({path:output+'modern-roster-story-away-mobile.png',fullPage:true});
+  await click('[data-action="manage-character"][data-id="钟灵"]');
+  assert.equal((await state()).managedCharacter.id,'钟灵');
+  assert.equal((await state()).managedCharacter.canManage,false);
+  await click('[data-action="equipment"]');
+  assert.match(await page.locator('.panel-notice').innerText(),/后续能否归队由剧情决定/);
+  await page.locator('#managed-character').selectOption(departed.managedCharacter.id);await ready();
+  await closeModal();
+  assert.deepEqual(await state(),departed);
+  pass('story departure has an explanatory group and read-only character access, with no recall action');
 }catch(e){failure=e;}
 await h.finish(failure);

@@ -16,7 +16,7 @@ import type {PanelName, InventoryFilter} from './panels';
 import {readSettings, writeSettings, applySettings} from './settings';
 import type {Settings} from './settings';
 import {GameAudio} from './audio';
-import {estimatedProgress, restorationProgressView} from './restoration-progress';
+import {restorationProgressView} from './restoration-progress';
 import {loadCompanionCatalog, mountCompanionCatalog} from './companions';
 import {inspectCompanionConditions} from './bridge';
 import {loadOriginalLibrary, mountOriginalLibrary} from './library';
@@ -66,7 +66,7 @@ function topbar(inGame = true) {
     <nav aria-label="游戏菜单">${inGame ? `<span class="chapter">${e(state.map?.name)}</span><button class="save-button" data-action="save" ${state.phase !== 'world' ? 'disabled' : ''}>${icon('save')}<span>保存进度</span></button>` : ''}<button class="icon-button" data-action="worlds" aria-label="切换世界">${icon('leaf')}</button><button class="icon-button" data-action="settings" aria-label="设置">${icon('settings')}</button><button class="icon-button" data-action="guide" aria-label="帮助">${icon('help')}</button></nav></header>${inGame ? `<nav class="system-nav" aria-label="角色与世界设置">${menus.map(([action,symbol,label]) => `<button data-action="${action}">${icon(symbol)}<span>${e(label)}</span></button>`).join('')}</nav>` : ''}`;
 }
 function title() {
-  const progress = state.pack.id === 'jyx' ? `<div class="restoration-callout"><button class="restoration-entry" data-action="library">原版资料馆 · 全量资料与版本对照<small>人物、武学、道具、初始配置、剧情和关联引用 →</small></button><button class="restoration-entry" data-action="companions">伙伴图鉴 · 剧情加入条件<small>剧情基线65个形态；后期另有43个开局候选，见资料馆 →</small></button><button class="restoration-entry" data-action="progress">原版复原 · 约 ${estimatedProgress}%<small>工程估算 · 查看分项进度、已知问题与改善建议 →</small></button></div>` : '';
+  const progress = state.pack.id === 'jyx' ? `<div class="restoration-callout"><button class="restoration-entry" data-action="library">原版资料馆 · 全量资料与版本对照<small>人物、武学、道具、初始配置、剧情和关联引用 →</small></button><button class="restoration-entry" data-action="companions">伙伴图鉴 · 剧情加入条件<small>剧情基线65个形态；后期另有43个开局候选，见资料馆 →</small></button><button class="restoration-entry" data-action="progress">现代化重制 · 开发记录<small>功能验收、原版对照与已知问题 →</small></button></div>` : '';
   return topbar(false) + progress + titleView(state, slot, packs, manualSlot);
 }
 function heroCard() {
@@ -170,7 +170,7 @@ function modal(titleText: string, content: string, wide = false) {
   if (screen === 'battle') updateBattle();
 }
 async function showRestorationProgress() {
-  modal('原版复原进度', '<div data-restoration-report aria-live="polite">正在读取进度记录…</div>', true);
+  modal('开发记录与原版对照', '<div data-restoration-report aria-live="polite">正在读取开发记录…</div>', true);
   const target = document.querySelector<HTMLElement>('[data-restoration-report]')!;
   try {
     const content = await restorationProgressView();

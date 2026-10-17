@@ -1,5 +1,7 @@
 # 双内容包 HTML5 RPG 原型
 
+当前开发方向已确定为[原版内容的现代化重制](MODERNIZATION_PLAN.md)：保留已接入内容、基础数值、伙伴图册和地图提示，优先改善队伍、装备修炼、战斗交互及流程可靠性。旧版逐行为复刻清单作为历史对照，不再要求每个旧实现细节完全一致；下文90%仅为此前迁移阶段估算。
+
 TypeScript / Phaser 显示界面，.NET 10 WebAssembly 运行现有的 `Game.Core`、`Game.Content`、`Game.Application` 与 `Game.Presentation`。战斗、AI、剧情执行和存档沿用 C# 内核，不在前端重复实现伤害公式。
 
 同一程序提供两个可切换的内容包，人物、地图、剧情、物品、目标、术语和美术由数据配置。两包共用战斗、AI、队伍、交易、装备、修炼和存档规则。
@@ -26,7 +28,7 @@ TypeScript / Phaser 显示界面，.NET 10 WebAssembly 运行现有的 `Game.Cor
 
 ## 开发
 
-后续目标及验收范围见[原版完整复原目标](ORIGINAL_RESTORATION_TARGET.md)。素材不再随源码提交；
+后续目标及验收范围见[现代化重制计划](MODERNIZATION_PLAN.md)，此前[完整复原标准](ORIGINAL_RESTORATION_TARGET.md)保留作对照。素材不再随源码提交；
 新 checkout 先恢复独立媒体包，现有本地素材保持不动：
 
 ```bash

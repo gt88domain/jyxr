@@ -67,6 +67,7 @@ internal static class ManagementSmoke
         await Cmd(new{type="renameHeroine",name="同路人"});await Continue();
         var followed=await Cmd(new{type="state"});
         Check(followed["roster"]!.AsArray().Single(c=>c!["id"]!.GetValue<string>()=="女主")!["placement"]!.GetValue<string>()=="follower","Story follow must add original heroine as follower.");
+        Check(followed["roster"]!.AsArray().Single(c=>c!["id"]!.GetValue<string>()=="女主")!["formationStatus"]!.GetValue<string>()=="following","Story follower must not be shown as a player reserve.");
         await Reject(new{type="setPartyPlacement",characterId="女主",placement="member"});
         await Cmd(new{type="playStory",storyId="tlbb.dy_钟灵"});await Continue();await Cmd(new{type="choose",index=0});await Continue();
         await Cmd(new{type="selectCharacter",characterId="钟灵"});
@@ -83,6 +84,7 @@ internal static class ManagementSmoke
         await Cmd(new{type="setPartyPlacement",characterId="钟灵",placement="reserve"});
         var reserved=await Cmd(new{type="state"});
         Check(reserved["party"]!.AsArray().Count==1,"Reserve must leave the active battle roster.");
+        Check(reserved["roster"]!.AsArray().Single(c=>c!["id"]!.GetValue<string>()=="钟灵")!["formationStatus"]!.GetValue<string>()=="reserve","Player bench must be shown as a recallable reserve.");
         var benchSave=BrowserBridge.ExportSave();State(BrowserBridge.ImportSave(benchSave));
         Check((await Cmd(new{type="state"}))["roster"]!.AsArray().Single(c=>c!["id"]!.GetValue<string>()=="钟灵")!["canRejoin"]!.GetValue<bool>(),"Player bench eligibility must survive save import.");
         await Cmd(new{type="selectCharacter",characterId="钟灵"});
@@ -111,6 +113,7 @@ internal static class ManagementSmoke
         Check((await Cmd(new{type="state"}))["managedCharacter"]!["cultivation"]!["itemId"]!.GetValue<string>()=="内功入门","Companion cultivation must survive import.");
         Directory.CreateDirectory(Path.GetDirectoryName(output)!);File.WriteAllText(output,saved);
         await Cmd(new{type="playStory",storyId="browser_结伴练习"});await Continue();
+        Check((await Cmd(new{type="state"}))["roster"]!.AsArray().Where(c=>c!["placement"]!.GetValue<string>()=="member").All(c=>c!["formationStatus"]!.GetValue<string>()=="active"),"Active status must remain stable while management is locked during battle.");
         await Reject(new{type="allocateStat",stat="bili"});
         var result=await Fight();
         Check(result["battle"]!["outcome"]!.GetValue<string>()=="win","Real trained duo should win wooden-dummy practice.");
@@ -119,7 +122,13 @@ internal static class ManagementSmoke
         await Cmd(new{type="setPartyPlacement",characterId="钟灵",placement="reserve"});
         await Cmd(new{type="playStory",storyId="fixture_release_companion"});await Continue();
         await Reject(new{type="setPartyPlacement",characterId="钟灵",placement="member"});
-        Check((await Cmd(new{type="state"}))["inventory"]!.AsArray().Any(i=>i!["id"]!.GetValue<string>()=="木刀"),"Story release of a benched role must return equipment and revoke player recall.");
+        var away=await Cmd(new{type="state"});
+        Check(away["inventory"]!.AsArray().Any(i=>i!["id"]!.GetValue<string>()=="木刀"),"Story release of a benched role must return equipment and revoke player recall.");
+        Check(away["roster"]!.AsArray().Single(c=>c!["id"]!.GetValue<string>()=="钟灵")!["formationStatus"]!.GetValue<string>()=="story-away","Story departure must be distinguished from a recallable reserve.");
+        var awaySave=BrowserBridge.ExportSave();
+        var awayLoaded=State(BrowserBridge.ImportSave(awaySave));
+        Check(awayLoaded["roster"]!.AsArray().Single(c=>c!["id"]!.GetValue<string>()=="钟灵")!["formationStatus"]!.GetValue<string>()=="story-away","Story departure must remain locked after save import.");
+        File.WriteAllText(Path.ChangeExtension(output,"story-away.json"),awaySave);
         Console.WriteLine("PASS original heroine naming/follow, companion equipment/manuals, roster reserves, chest conservation, save import and real team training");
     }
 }
