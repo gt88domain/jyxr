@@ -8,6 +8,7 @@ internal static class BattleHookEvaluator
         condition switch
         {
             ChanceBattleHookConditionDefinition chance => Probability.RollChance(context.Random, chance.Value),
+            StatDifferenceChanceBattleHookConditionDefinition chance => RollStatDifference(context, chance),
             BuffLevelChanceBattleHookConditionDefinition chance => context.Buff is not null && Probability.RollChance(
                 context.Random, Math.Clamp(chance.BaseValue + chance.ValuePerLevel * context.Buff.Level, 0d, chance.MaxValue)),
             UnitLevelChanceBattleHookConditionDefinition chance => Probability.RollChance(
@@ -55,6 +56,23 @@ internal static class BattleHookEvaluator
         unit.Character.GetInternalSkills()
             .FirstOrDefault(static skill => skill.IsEquipped)
             ?.Definition.Id;
+
+    private static bool RollStatDifference(BattleHookContext context, StatDifferenceChanceBattleHookConditionDefinition chance)
+    {
+        if (context.Source is null || context.Target is null) return false;
+        var source = context.Source.GetStat(chance.SourceStat) / chance.Divisor;
+        var target = context.Target.GetStat(chance.TargetStat) / chance.Divisor;
+        if (chance.TruncateQuotients)
+        {
+            source = Math.Truncate(source);
+            target = Math.Truncate(target);
+        }
+        var probability = Math.Max(0d, source - target);
+        // Inclusive comparison always draws. The strict variant draws at zero,
+        // but avoids a draw for a guaranteed success, preserving ordered rolls.
+        return chance.Inclusive ? context.Random.NextDouble() <= probability
+            : probability >= 1d || context.Random.NextDouble() < probability;
+    }
 
     private static bool IsContextUnitRole(BattleHookContext context, BattleHookContextUnitRole role) =>
         role switch

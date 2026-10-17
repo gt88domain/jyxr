@@ -697,6 +697,10 @@ public sealed partial class JsonContentLoader
                     break;
                 case DamagePositiveBattleHookConditionDefinition:
                     break;
+                case StatDifferenceChanceBattleHookConditionDefinition chance:
+                    Ensure(chance.Divisor > 0 && Enum.IsDefined(chance.SourceStat) && Enum.IsDefined(chance.TargetStat),
+                        $"{ownerName} has an invalid stat-difference chance condition.");
+                    break;
                 case ContextBuffIdBattleHookConditionDefinition buffCondition:
                     Ensure(!string.IsNullOrWhiteSpace(buffCondition.BuffId),
                         $"{ownerName} has battle hook '{hook.Timing}' condition with empty buffId.");

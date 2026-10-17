@@ -23,4 +23,4 @@ def apply_attribute_rules(package):
     return {"sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
             "file": "JyGame/AttributeFinalHelper.cs:11-35",
             "talents": [rule[0] for rule in ATTRIBUTE_RULES],
-            "scope": "final weapon aptitude multipliers and ordered truncation; earlier additions and 神拳无敌/铁拳无双 stun interaction remain"}
+            "scope": "final weapon aptitude multipliers and ordered truncation; earlier additions and battle-buff layering remain; 神拳无敌/铁拳无双 probability is configured separately"}

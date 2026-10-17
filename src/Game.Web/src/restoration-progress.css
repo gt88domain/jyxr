@@ -7,3 +7,4 @@
 .restoration-section{margin-top:24px}.restoration-section h3{font-size:17px}.restoration-section ul{padding-left:20px}.restoration-section li{margin:8px 0}
 .restoration-feature{padding:12px 0;border-bottom:1px solid #c7c5af}.restoration-feature h4{display:flex;gap:10px;justify-content:space-between;font-size:15px;margin:0}.restoration-feature p{margin:7px 0}.restoration-feature-count{color:#66744f;font-size:12px}.restoration-feature li{font-size:13px;margin:4px 0}.restoration-weighted{margin-top:24px}.restoration-weighted>summary{cursor:pointer}
 .restoration-callout{max-width:1280px;margin:auto;padding:0 24px}
+.restoration-checklist details{margin:12px 0;border:1px solid #c7c5af;border-radius:5px;padding:10px}.restoration-checklist summary{cursor:pointer}.restoration-checklist small{display:block;color:#766a53}.restoration-checklist li{padding:7px 0;border-bottom:1px solid #d5d1bf}.restoration-checklist li p{margin:5px 0}.restoration-checklist ol{padding-left:23px}

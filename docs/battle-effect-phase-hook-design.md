@@ -74,6 +74,12 @@ Effect handler 通过窄接口申请能力：
 每个修正分别按配置取整。用于旧版门派武学对已算出伤害的倍率，避免把乘法移到攻击力区间后改变减防结果。
 随机区间不得同时指定固定`delta`；确定性预览采用区间中点，不消耗随机数。
 
+`stat_difference_chance`条件分别读取sourceStat与targetStat，并各自除以正整数divisor；
+可选择逐项截断quotient后相减，概率下限为0。inclusive采用`随机值 <= 概率`，总是取样；
+严格比较采用`随机值 < 概率`，概率达到1时直接成功，概率为0仍取样。
+该条件与其他随机条件一样禁止确定性Hook预览。控制内容使用OnHitConfirmed，经统一Buff
+resolver应用等级和持续，不绕过圣战或抗性；源版命中与其他反应顺序仍需要后续比对。
+
 `BattleExecutionScope` 覆盖技能步骤、Hook、周期效果和它们产生的后续 Effect，记录序号、父
 Effect、深度与规则来源。最大深度为 64；超过限制直接失败，以阻止追击、反伤等形成无限链。
 

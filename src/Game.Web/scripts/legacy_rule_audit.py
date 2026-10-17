@@ -40,7 +40,10 @@ def audit_rules(package, repository):
     for name, *_ in ATTRIBUTE_RULES:
         partial[name] = ["final weapon aptitude multiplier and sequential truncation configured; earlier equipment/skill additions and battle buff layering still require source comparison"]
     partial["浪子剑客"].append("original cosmetic speech RNG ordering remains")
-    partial["神拳无敌"].append("铁拳无双 stun probability enhancement and cosmetic speech RNG remain")
+    partial["神拳无敌"].append("铁拳无双 stun chance .25→.37 configured; full hit/reaction and cosmetic speech RNG ordering remain")
+    from legacy_control_rules import SEALS
+    talent_partial = {name: ["confirmed normal hits apply original buff level/duration and probability; ordinary friendly-fire and 灵心慧质/legend exclusion configured; pre-hit RNG, full immunity and extra-strike/reaction ordering remain"]
+                      for name in ["铁拳无双", *SEALS, "阴阳", "寒冰真气"]}
     conditional = {
         "万年长春": "不老长春 enhanced activation probability",
         "我就是神": "无尽斗志 first successful revival guarantee",
@@ -52,6 +55,7 @@ def audit_rules(package, repository):
         for definition in package[collection]:
             name = definition["id"]
             remaining = list(partial.get(name, []))
+            if collection == "talents": remaining += talent_partial.get(name, [])
             if collection == "specialSkills":
                 buff_ids = [buff["id"] for buff in definition.get("buffs", [])]
                 buff_ids += [effect["buffId"] for effect in definition.get("effects", []) if effect.get("type") == "apply_buff"]

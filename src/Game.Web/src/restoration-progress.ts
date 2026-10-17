@@ -12,6 +12,12 @@ export async function restorationProgressView() {
   const data = await response.json() as {stories: {current: number; total: number}; events: {current: number; total: number}; talents: {configured: number; total: number; metadataOnly: number; conditional?: number}; features: {id: string; name: string; estimate: number; evidence: string; gaps: string[]; count: number; total?: number; countLabel: string; structurallyUsable?: number; instructions?: number; normalVerified?: number; startingRewardCandidates?: number}[]};
   if (![data.stories?.current, data.stories?.total, data.events?.current, data.events?.total, data.talents?.configured, data.talents?.total, data.talents?.metadataOnly].every(v => Number.isFinite(v) && v >= 0))
     throw new Error('进度记录格式不受支持。');
+  const checklistUrl = new URL(assetUrl('data/restoration-checklist.json'));
+  checklistUrl.searchParams.set('v', import.meta.env.VITE_GAME_VERSION);
+  const checklistResponse = await fetch(checklistUrl);
+  if (!checklistResponse.ok) throw new Error('剩余工作清单暂时无法读取，请稍后重试。');
+  const checklist = await checklistResponse.json() as {basis: string; tasks: {id: string; area: string; state: string; title: string; detail: string}[]; groups: {id: string; title: string; entries: {id: string; description: string; remainingSummary: string; sourceReferences: string[]}[]}[]};
+  if (!Array.isArray(checklist.tasks) || !Array.isArray(checklist.groups)) throw new Error('剩余工作清单格式不受支持。');
   const list = (title: string, items: string[]) => `<section class="restoration-section"><h3>${title}</h3><ul>${items.map(item => `<li>${e(item)}</li>`).join('')}</ul></section>`;
   return `<div class="restoration-report"><p class="restoration-total">约 <strong>${estimatedProgress}%</strong><span>工程估算 · 尚未完整复原</span></p><p>${e(estimate.basis)}</p>
     <div class="restoration-counts"><span>剧情结构 <b>${data.stories.current} / ${data.stories.total}</b></span><span>地图事件 <b>${data.events.current} / ${data.events.total}</b></span><span>天赋已有配置 <b>${data.talents.configured} / ${data.talents.total}</b></span></div>
@@ -21,6 +27,10 @@ export async function restorationProgressView() {
       <button class="button outline full-width" data-action="companions">打开独立伙伴图鉴 · 地点与加入条件</button></section>
     <details class="restoration-weighted"><summary>查看整体${estimatedProgress}%估算的六项权重依据</summary>${estimate.categories.map(item => `<section class="restoration-category"><h3>${e(item.name)} <span>约 ${item.estimate}%</span></h3><progress max="100" value="${item.estimate}" aria-label="${e(item.name)}工程估算"></progress><p>${e(item.evidence)}</p><p class="restoration-remaining">待完成：${e(item.remaining)}</p><small>估算权重 ${item.weight}%</small></section>`).join('')}</details>
     ${list('100%验收仍缺什么', estimate.completionBlockers)}
+    <section class="restoration-section restoration-checklist"><h3>剩余工作逐项清单</h3><p>${e(checklist.basis)}</p>
+      <details data-remaining-tasks><summary>查看 ${checklist.tasks.length} 项具体工作与处理顺序</summary><ol>${checklist.tasks.map(task=>`<li data-remaining-task="${e(task.id)}"><strong>${e(task.title)}</strong><small>${e(task.area)} · ${e(task.state)}</small><p>${e(task.detail)}</p></li>`).join('')}</ol></details>
+      ${checklist.groups.map(group=>`<details data-remaining-group="${e(group.id)}"><summary>${e(group.title)} · ${group.entries.length} 项</summary><ul>${group.entries.map(entry=>`<li><strong>${e(entry.id)}</strong>${entry.description?`<p>${e(entry.description)}</p>`:''}<p>待办：${e(entry.remainingSummary)}</p><small>${entry.sourceReferences.length?`旧 C#同名引用 ${entry.sourceReferences.length} 处；完整依据见下载清单。`:'当前旧 C#未找到同名引用，继续查证；不据此判定原版未使用。'}</small></li>`).join('')}</ul></details>`).join('')}
+      <p><a href="${e(assetUrl('data/original-remaining.md'))}" download="原版剩余工作清单.md">下载完整清单（含名称与来源）</a></p></section>
     ${list('原版值得保留的优点', estimate.strengths)}${list('当前问题与流程缺点', estimate.problems)}${list('改善想法与下一阶段建议', estimate.suggestions)}
     <p><a href="https://github.com/gt88domain/jyxr/blob/html5-web/src/Game.Web/NEXT_GAME_NOTES.md" target="_blank" rel="noopener noreferrer">下一版的阶段观察与设计建议</a> · 原版完整验收前暂停西方内容扩展。</p><button class="button outline full-width" data-action="close-modal">关闭进度页</button></div>`;
 }

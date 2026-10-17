@@ -129,6 +129,7 @@ public sealed record TraitAffix(TraitId TraitId) : AffixDefinition;
 [JsonPolymorphic(TypeDiscriminatorPropertyName = "type")]
 [JsonDerivedType(typeof(ChanceBattleHookConditionDefinition), "chance")]
 [JsonDerivedType(typeof(UnitLevelChanceBattleHookConditionDefinition), "unit_level_chance")]
+[JsonDerivedType(typeof(StatDifferenceChanceBattleHookConditionDefinition), "stat_difference_chance")]
 [JsonDerivedType(typeof(BuffLevelChanceBattleHookConditionDefinition), "buff_level_chance")]
 [JsonDerivedType(typeof(DamagePositiveBattleHookConditionDefinition), "damage_positive")]
 [JsonDerivedType(typeof(ContextBuffIdBattleHookConditionDefinition), "context_buff_id")]
@@ -156,6 +157,13 @@ public sealed record UnitLevelChanceBattleHookConditionDefinition(
     double BaseValue,
     double ValuePerLevel,
     double MaxValue = 1d) : BattleHookConditionDefinition;
+
+public sealed record StatDifferenceChanceBattleHookConditionDefinition(
+    StatType SourceStat,
+    StatType TargetStat,
+    int Divisor = 100,
+    bool TruncateQuotients = true,
+    bool Inclusive = false) : BattleHookConditionDefinition;
 
 public sealed record BuffLevelChanceBattleHookConditionDefinition(
     double BaseValue,

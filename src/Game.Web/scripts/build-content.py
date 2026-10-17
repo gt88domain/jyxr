@@ -280,6 +280,8 @@ def build(output: Path) -> None:
     report["schoolRuleEffects"] = apply_school_rules(package)
     from legacy_attribute_rules import apply_attribute_rules
     report["attributeRuleEffects"] = apply_attribute_rules(package)
+    from legacy_control_rules import apply_control_rules
+    report["controlRuleEffects"] = apply_control_rules(package)
     from browser_packs import assemble_jyx
     package = assemble_jyx(package, source_maps, SOURCE, script)
     package["browser"]["chestMapId"] = "松鼠旅馆"
@@ -297,10 +299,13 @@ def build(output: Path) -> None:
     from legacy_rule_audit import audit_rules
     rule_audit = audit_rules(package, REPO)
     write_json(output / "original-battle-rule-audit.json", rule_audit)
+    from restoration_progress import build_progress
+    progress = build_progress(original_audit, rule_audit, package, companions)
+    from restoration_checklist import write_checklist
+    report["remainingChecklist"] = write_checklist(rule_audit, package, output, progress["estimate"])
     from original_library import write_library
     report["originalLibrary"] = write_library(package, SOURCE, companions, rule_audit, WEB, output)
-    from restoration_progress import build_progress
-    write_json(output / "restoration-progress.json", build_progress(original_audit, rule_audit, package, companions))
+    write_json(output / "restoration-progress.json", progress)
     report["battleRuleConfiguration"] = {key: {"total": value["total"], "states": value["states"]} for key, value in rule_audit["sections"].items()}
     write_json(output / "original-migration-audit.json", original_audit)
     write_json(output / "original-story-source.json", {
