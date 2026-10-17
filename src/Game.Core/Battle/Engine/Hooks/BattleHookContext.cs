@@ -109,6 +109,16 @@ public sealed class BattleHookContext :
     bool IDamageTakenEffectContext.IsCritical => IsCritical;
     int IDamageDealtEffectContext.ActualDamageAmount =>
         DamageAmount ?? throw MissingCapability(nameof(IDamageDealtEffectContext));
+    int IDamageDealtEffectContext.IncomingDamageAmount =>
+        IncomingDamageAmount ?? throw MissingCapability(nameof(IDamageDealtEffectContext));
+    int IDamageDealtEffectContext.ApplyLifestealRecovery(int amount)
+    {
+        if (Timing != HookTiming.OnDamageDealt) throw MissingCapability(nameof(IDamageDealtEffectContext));
+        var actual = Engine.RecoveryResolver.Apply(State, Unit, Unit, BattleRecoveryKind.Hp, amount, BattleRecoveryReason.Lifesteal).ActualAmount;
+        if (actual > 0)
+            State.AddMessage(new BattleFact(BattleFactKind.Lifesteal, Unit.Id, Timing, lifesteal: new BattleLifestealEvent(actual)));
+        return actual;
+    }
     bool IDamageDealtEffectContext.IsCritical => IsCritical;
     double IDamageDealtEffectContext.LifestealRate
     {

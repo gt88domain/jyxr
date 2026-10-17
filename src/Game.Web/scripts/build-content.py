@@ -282,6 +282,8 @@ def build(output: Path) -> None:
     report["attributeRuleEffects"] = apply_attribute_rules(package)
     from legacy_control_rules import apply_control_rules
     report["controlRuleEffects"] = apply_control_rules(package)
+    from legacy_mastery_rules import apply_mastery_rules
+    report["masteryRuleEffects"] = apply_mastery_rules(package)
     from browser_packs import assemble_jyx
     package = assemble_jyx(package, source_maps, SOURCE, script)
     package["browser"]["chestMapId"] = "松鼠旅馆"

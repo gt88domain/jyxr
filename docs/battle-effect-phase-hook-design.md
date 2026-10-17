@@ -5,6 +5,11 @@
 
 ## 1. 执行边界
 
+技能范围词条可用`skillName`匹配当前招式的精确名称，`stage`选择BeforeBlind或AfterBlind。
+原有sourceSkillId词条仍默认在致盲前参与结算。当前施法与影响范围先算前段词条，再施加
+致盲，最后算后段词条；角色、独立单位、战场及AI使用相同投影。用于区分寸长寸强的后加范围
+与日月神鞭固定距离，不把派生招式误当成父武功的同名技能。
+
 角色属性先通过普通ModifierBucket结算，再执行`final_stat_multiplier`词条。
 该词条使用`stat`、`multiplier`和升序`order`，每一步乘法后向零取整，不合并倍率。
 同order以来源ID、来源类型和词条序号稳定排序。角色面板、独立战斗单位与战场组合投影
@@ -68,6 +73,13 @@ Effect handler 通过窄接口申请能力：
 实际变化量和消息。
 
 ## 5. Effect 链与保护
+
+`modify_damage_context.unitLevelStep`默认1；按整数等级/step计算DeltaPerUnitLevel，step必须大于0。
+`single_precision_lifesteal`在OnDamageDealt以内容配置的武功、天赋和等级贡献累加float，使用
+IncomingDamageAmount而非ActualDamageAmount；处理该次吸血后将默认LifestealRate清零。
+恢复仍经ApplyLifestealRecovery及统一恢复resolver，携带Lifesteal原因并只产生实际恢复量事实。
+该策略只在配置该Hook的内容生效；其他内容保持原吸血计算。完整旧词条逐次float累加及反应
+先后仍待核对，不用本策略存在代替全部吸血等价。
 
 `AfterDamageCalculation`在普通技能伤害公式与基础伤害倍率结算后，由攻击者执行，先于目标的
 `BeforeDamageApplied`减伤／伤害上限。`modify_damage`支持此时点及可选的成对`deltaMin/deltaMax`，

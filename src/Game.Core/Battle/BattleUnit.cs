@@ -287,13 +287,11 @@ public sealed class BattleUnit
             ? GetBucket(DetachedProjection.WeaponModifierBuckets, weaponType).Evaluate(baseValue)
             : Resolver.GetWeaponBonus(this, weaponType, baseValue);
 
-    public int GetSkillTargetingValue(string sourceSkillId, SkillTargetingField field, int baseValue) =>
+    public int GetSkillTargetingValue(string sourceSkillId, SkillTargetingField field, int baseValue,
+        string? skillName = null, SkillTargetingStage stage = SkillTargetingStage.BeforeBlind) =>
         _projectionResolver is null
-            ? (int)Math.Round(
-                GetBucket(DetachedProjection.TargetingModifierBuckets, new SkillTargetingModifierKey(null, field))
-                    .Combine(GetBucket(DetachedProjection.TargetingModifierBuckets, new SkillTargetingModifierKey(sourceSkillId, field)))
-                    .Evaluate(baseValue))
-            : Resolver.GetSkillTargeting(this, sourceSkillId, field, baseValue);
+            ? (int)Math.Round(DetachedProjection.EvaluateSkillTargeting(sourceSkillId, field, baseValue, skillName, stage))
+            : Resolver.GetSkillTargeting(this, sourceSkillId, field, baseValue, skillName, stage);
 
     public double GetActionSpeed()
     {

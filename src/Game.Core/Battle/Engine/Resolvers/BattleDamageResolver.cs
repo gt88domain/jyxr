@@ -153,6 +153,7 @@ internal sealed class BattleDamageResolver(BattleEngine engine)
                 context.DamageAmount = takenContext.ActualAmount;
                 context.IsCritical = takenContext.IsCritical;
                 context.LifestealRate = lifestealRate;
+                context.IncomingDamageAmount = takenContext.IncomingAmount;
             });
 
             ApplyLifesteal(state, takenContext, dealt.LifestealRate ?? lifestealRate);

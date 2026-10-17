@@ -66,7 +66,14 @@ public enum SkillTargetingField
     ImpactSize
 }
 
-public readonly record struct SkillTargetingModifierKey(string? SourceSkillId, SkillTargetingField Field);
+public enum SkillTargetingStage
+{
+    BeforeBlind,
+    AfterBlind
+}
+
+public readonly record struct SkillTargetingModifierKey(string? SourceSkillId, SkillTargetingField Field,
+    string? SkillName = null, SkillTargetingStage Stage = SkillTargetingStage.BeforeBlind);
 
 public enum BattleRecoveryKind
 {

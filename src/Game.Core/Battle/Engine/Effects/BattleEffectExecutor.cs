@@ -173,7 +173,7 @@ internal sealed class BattleEffectExecutor(BattleEngine engine)
     {
         var calculation = context.DamageCalculation
             ?? throw new InvalidOperationException("Battle effect requires a damage calculation context.");
-        var delta = ResolveDelta(context, effect) + effect.DeltaPerUnitLevel * context.Unit.Character.Level
+        var delta = ResolveDelta(context, effect) + effect.DeltaPerUnitLevel * (context.Unit.Character.Level / effect.UnitLevelStep)
             + effect.DeltaPerBuffLevel * (context.Buff?.Level ?? 0);
         if (effect.DeltaPowerBasePerBuffLevel is { } powerBase)
             delta *= Math.Pow(powerBase, context.Buff?.Level ?? 0);

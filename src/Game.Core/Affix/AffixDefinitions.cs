@@ -81,10 +81,14 @@ public sealed record BuffLevelStatModifierAffix(
 public sealed record SkillTargetingModifierAffix(
     string? SourceSkillId,
     SkillTargetingField Field,
-    ModifierValue Value) : AffixDefinition
+    ModifierValue Value,
+    string? SkillName = null,
+    SkillTargetingStage Stage = SkillTargetingStage.BeforeBlind) : AffixDefinition
 {
     public override void Resolve(IContentRepository contentRepository)
     {
+        if (!Enum.IsDefined(Stage) || SkillName is not null && string.IsNullOrWhiteSpace(SkillName))
+            throw new InvalidOperationException("Skill targeting modifier requires a valid stage and nonempty optional skill name.");
         if (SourceSkillId is null)
         {
             return;
@@ -259,7 +263,8 @@ public sealed record ModifyDamageContextBattleHookEffectDefinition(
     double DeltaPerBuffLevel = 0d,
     double? DeltaPowerBasePerBuffLevel = null,
     double? DeltaMin = null,
-    double? DeltaMax = null) : BattleEffectDefinition;
+    double? DeltaMax = null,
+    int UnitLevelStep = 1) : BattleEffectDefinition;
 
 public sealed record ModifyMpCostBattleHookEffectDefinition(
     ModifierOp Op,

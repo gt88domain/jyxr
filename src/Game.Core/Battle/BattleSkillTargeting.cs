@@ -15,8 +15,9 @@ public static class BattleSkillTargeting
         var castSize = source.GetSkillTargetingValue(
             skill.SourceSkillId,
             SkillTargetingField.CastSize,
-            skill.CastSize);
-        return ApplyBlindPenalty(source, castSize);
+            skill.CastSize, skill.Name);
+        return source.GetSkillTargetingValue(skill.SourceSkillId, SkillTargetingField.CastSize,
+            ApplyBlindPenalty(source, castSize), skill.Name, SkillTargetingStage.AfterBlind);
     }
 
     public static int ResolveEffectiveImpactSize(BattleUnit source, SkillInstance skill)
@@ -27,8 +28,9 @@ public static class BattleSkillTargeting
         var impactSize = source.GetSkillTargetingValue(
             skill.SourceSkillId,
             SkillTargetingField.ImpactSize,
-            skill.ImpactSize);
-        return ApplyBlindPenalty(source, impactSize);
+            skill.ImpactSize, skill.Name);
+        return source.GetSkillTargetingValue(skill.SourceSkillId, SkillTargetingField.ImpactSize,
+            ApplyBlindPenalty(source, impactSize), skill.Name, SkillTargetingStage.AfterBlind);
     }
 
     public static IReadOnlyList<BattleUnit> ResolveEffectiveTargets(

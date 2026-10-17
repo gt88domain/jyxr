@@ -44,6 +44,14 @@ def audit_rules(package, repository):
     from legacy_control_rules import SEALS
     talent_partial = {name: ["confirmed normal hits apply original buff level/duration and probability; ordinary friendly-fire and 灵心慧质/legend exclusion configured; pre-hit RNG, full immunity and extra-strike/reaction ordering remain"]
                       for name in ["铁拳无双", *SEALS, "阴阳", "寒冰真气"]}
+    talent_partial.update({
+        "金刚伏魔圈": ["日月神鞭 cast size 10 bypasses blindness; formation damage stacking, break/removal and movement remain"],
+        "至空至明": ["15% target cooldown reset configured; full original hit/reaction and cosmetic RNG ordering remain"],
+        "金刚": ["standalone defence *1.2 +10*level configured; sequential interactions with all other defence modifiers remain"],
+        "御风": ["critical reduction uses original integer level/30 steps; full critical override/order and cosmetic RNG remain"],
+        **{name: ["single-precision named-skill/talent sum, incoming-damage overkill drain and wound recovery configured; per-equipment float accumulation and original reaction order remain"]
+           for name in ["血海魔功", "血魔刀法", "嗜血狂魔"]},
+    })
     conditional = {
         "万年长春": "不老长春 enhanced activation probability",
         "我就是神": "无尽斗志 first successful revival guarantee",

@@ -938,6 +938,7 @@ public sealed partial class JsonContentLoader
         ModifyDamageContextBattleHookEffectDefinition effect,
         string ownerName)
     {
+        Ensure(effect.UnitLevelStep > 0, $"{ownerName} modify_damage_context requires a positive unitLevelStep.");
         var hasRange = effect.DeltaMin is not null || effect.DeltaMax is not null;
         if (effect.DeltaPowerBasePerBuffLevel is { } powerBase)
         {

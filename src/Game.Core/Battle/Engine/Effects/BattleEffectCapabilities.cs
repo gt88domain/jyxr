@@ -85,9 +85,11 @@ public interface IDamageTakenEffectContext : IBattleEffectContext
 
 public interface IDamageDealtEffectContext : IBattleEffectContext
 {
+    int IncomingDamageAmount { get; }
     int ActualDamageAmount { get; }
     bool IsCritical { get; }
     double LifestealRate { get; set; }
+    int ApplyLifestealRecovery(int amount);
 }
 
 public interface IDefeatPreventionEffectContext : IBattleEffectContext

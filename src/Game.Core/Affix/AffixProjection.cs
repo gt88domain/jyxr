@@ -85,6 +85,17 @@ public sealed class AffixProjection
     public IReadOnlyDictionary<string, ModifierBucket> LegendChanceModifierBuckets { get; }
     public IReadOnlyList<FinalStatMultiplierAffix> FinalStatMultipliers { get; }
 
+    public double EvaluateSkillTargeting(string sourceId, SkillTargetingField field, double baseValue,
+        string? name = null, SkillTargetingStage stage = SkillTargetingStage.BeforeBlind)
+    {
+        var bucket = TargetingModifierBuckets.GetValueOrDefault(new(null, field, Stage: stage), ModifierBucket.Empty)
+            .Combine(TargetingModifierBuckets.GetValueOrDefault(new(sourceId, field, Stage: stage), ModifierBucket.Empty));
+        if (name is not null)
+            bucket = bucket.Combine(TargetingModifierBuckets.GetValueOrDefault(new(null, field, name, stage), ModifierBucket.Empty))
+                .Combine(TargetingModifierBuckets.GetValueOrDefault(new(sourceId, field, name, stage), ModifierBucket.Empty));
+        return bucket.Evaluate(baseValue);
+    }
+
     public double EvaluateStat(StatType stat, double baseValue)
     {
         var result = StatModifierBuckets.GetValueOrDefault(stat, ModifierBucket.Empty).Evaluate(baseValue);

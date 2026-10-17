@@ -501,14 +501,9 @@ public sealed class CharacterInstance
     public double GetLegendChanceValue(string skillId, double baseValue) =>
         GetBucket(Projection.Affixes.LegendChanceModifierBuckets, skillId).Evaluate(baseValue);
 
-    public int GetSkillTargetingValue(string sourceSkillId, SkillTargetingField field, int baseValue)
-    {
-        var globalKey = new SkillTargetingModifierKey(null, field);
-        var sourceKey = new SkillTargetingModifierKey(sourceSkillId, field);
-        var bucket = GetBucket(Projection.Affixes.TargetingModifierBuckets, globalKey)
-            .Combine(GetBucket(Projection.Affixes.TargetingModifierBuckets, sourceKey));
-        return checked((int)bucket.Evaluate(baseValue));
-    }
+    public int GetSkillTargetingValue(string sourceSkillId, SkillTargetingField field, int baseValue,
+        string? skillName = null, SkillTargetingStage stage = SkillTargetingStage.BeforeBlind) =>
+        checked((int)Projection.Affixes.EvaluateSkillTargeting(sourceSkillId, field, baseValue, skillName, stage));
 
     public IReadOnlyList<ActiveHookEntry> GetHooks(HookTiming timing) =>
         Projection.Affixes.HooksByTiming.TryGetValue(timing, out var hooks) ? hooks : Array.Empty<ActiveHookEntry>();

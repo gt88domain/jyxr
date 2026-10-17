@@ -160,6 +160,7 @@ public sealed class CustomBattleEffectRegistry
         registry.Register("rage_damage", new RageDamageBattleEffectHandler());
         registry.Register("poisoned_target_level_damage", new PoisonedTargetLevelDamageBattleEffectHandler());
         registry.Register("reset_skill_cooldowns", new ResetSkillCooldownsBattleEffectHandler());
+        registry.Register("single_precision_lifesteal", new SinglePrecisionLifestealBattleEffectHandler());
         registry.Register("random_debuff", new RandomDebuffBattleEffectHandler());
         registry.Register("random_strengthen_context_buff", new RandomStrengthenContextBuffBattleEffectHandler());
         return registry;

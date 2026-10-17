@@ -25,6 +25,8 @@ if (scripts is not null)
     foreach (var entry in scripts)
         package.StoryScripts[entry.Key] = Game.Core.Story.StoryScriptJson.Parse(entry.Value!.ToJsonString(), entry.Key);
 var content = new JsonContentLoader().LoadFromPackage(package);
+MasteryRules.Run(content);
+if (args.Contains("--mastery-only")) return;
 ControlRules.Run(content);
 if (args.Contains("--controls-only")) return;
 AttributeRules.Run(content);

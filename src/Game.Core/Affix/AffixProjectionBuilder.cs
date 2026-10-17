@@ -66,7 +66,7 @@ public static class AffixProjectionBuilder
                 case WeaponBonusModifierAffix value: Apply(weapon, value.WeaponType, value.Value); break;
                 case LegendSkillChanceModifierAffix value: Apply(legend, value.SkillId, value.Value); break;
                 case SkillTargetingModifierAffix value:
-                    Apply(targeting, new SkillTargetingModifierKey(value.SourceSkillId, value.Field), value.Value);
+                    Apply(targeting, new SkillTargetingModifierKey(value.SourceSkillId, value.Field, value.SkillName, value.Stage), value.Value);
                     break;
                 case HookAffix hook:
                     if (!hooks.TryGetValue(hook.Timing, out var list)) hooks[hook.Timing] = list = [];
