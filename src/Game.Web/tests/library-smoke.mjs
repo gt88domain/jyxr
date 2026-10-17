@@ -23,10 +23,10 @@ try {
   await page.locator('[data-library-filter]').selectOption('bonusCompanions');
   await page.locator('[data-library-search]').fill('');
   await page.locator('.library-list [data-library-id="后期开局伙伴池2"]').click();await visible('[data-library-detail="后期开局伙伴池2"]');
-  assert.match(await page.locator('.library-reading').innerText(),/第3周目[\s\S]*白眉鹰王[\s\S]*缺人物定义/);
+  assert.match(await page.locator('.library-reading').innerText(),/第3周目[\s\S]*白眉鹰王[\s\S]*殷天正[\s\S]*称号引用已修正/);
   await page.locator('.library-reading [data-library-id="白眉鹰王"]').first().click();await visible('[data-library-detail="白眉鹰王"]');
-  assert.match(await page.locator('.library-reading').innerText(),/殷天正[\s\S]*未自动替换/);
-  pass('late starting companion pools retain exact round conditions and the unmatched White-browed Eagle King ID');
+  assert.match(await page.locator('.library-reading').innerText(),/引用已修正[\s\S]*原鹰爪功说明/);
+  pass('late starting companion pools retain exact round conditions and the source-backed Eagle King alias correction');
   await page.locator('[data-library-filter]').selectOption('legendGroups');
   await page.locator('[data-library-search]').fill('千噬万毒');
   assert.match(await page.locator('.library-count').innerText(),/找到 3 条/);

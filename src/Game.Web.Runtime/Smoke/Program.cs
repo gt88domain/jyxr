@@ -1,6 +1,12 @@
 using System.Text.Json;
 using Game.Web.Runtime;
 
+if (args.FirstOrDefault() == "--starting-companions")
+{
+    await StartingCompanionSmoke.Run(args[1], args[2]);
+    return;
+}
+
 if (args.FirstOrDefault() == "--companions")
 {
     await CompanionSmoke.Run(args[1],args[2],args[3]);

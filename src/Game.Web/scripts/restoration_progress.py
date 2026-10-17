@@ -26,6 +26,9 @@ def build_progress(world, rules, package, companions):
         elif row["id"] == "companions":
             row["count"] = companions["counts"]["characterForms"];row["countLabel"] = "图鉴角色形态"
             row["instructions"] = companions["counts"]["instructions"];row["normalVerified"] = companions["counts"]["normalVerified"]
+            pools = package["browser"]["creation"]["startingCompanionPools"]
+            row["startingRewardCandidates"] = sum(len(pool["characterIds"]) for pool in pools)
+            row["startingRewardPoolSizes"] = [len(pool["characterIds"]) for pool in pools]
         features.append(row)
     return {
         "estimate": round(weighted / 5) * 5, "weightedEstimate": weighted,

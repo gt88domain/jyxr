@@ -34,6 +34,7 @@
     "test:survival": "node tests/survival-smoke.mjs",
     "audit:library": "python3 tests/original-library-audit.py",
     "test:library": "node tests/library-smoke.mjs",
+    "test:starting-companions": "node tests/starting-companions-smoke.mjs",
     "assets:restore": "python3 scripts/art-bundle.py restore"
   },
   "dependencies": { "phaser": "3.90.0" },

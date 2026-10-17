@@ -1,5 +1,6 @@
 using System.Text.Json;
 using Game.Application;
+using Game.Core;
 using Game.Core.Model;
 using Game.Core.Story;
 
@@ -34,6 +35,10 @@ public static partial class BrowserBridge
         ValidateEnding(ending, session);
         if (!ReferenceEquals(session.State, draft.OriginState) || ending.TargetRound != draft.Round)
             throw new InvalidOperationException("人物预览已失效，请重新开始本次人物生成。");
+        // The legacy caller draws only on confirmation. Rerolling attributes
+        // and opening previews neither draw nor add a companion.
+        var companionPool = StartingCompanionPool(draft.Round);
+        var companionId = companionPool.Length == 0 ? null : WeightedRandomSelector.Select(companionPool, candidate => candidate.Weight, session.RandomService).Id;
         // The application owns the state reset, chest clone, profile and round.
         // The browser only supplies the confirmed original creation candidate.
         if (ending.Kind == "next") session.SessionFlowService.StartNextRound();
@@ -42,6 +47,7 @@ public static partial class BrowserBridge
         var state = session.State;
         state.Adventure.SetDifficulty(draft.Difficulty);
         var party = new Party(); party.AddMember(preview.Hero); state.SetParty(party);
+        if (companionId is not null) session.PartyService.Join(companionId);
         state.Currency.ChangeSilver(preview.Silver - state.Currency.Silver);
         foreach (var (id, quantity) in preview.Items) session.InventoryService.AddItem(id, quantity);
         ResetStory(replaceHost: false); // keep the host bound to this session's services
@@ -53,6 +59,7 @@ public static partial class BrowserBridge
         BindPartyEvents();
         session.MapService.EnterMap(PackText("initialMapId"));
         Log($"第 {state.Adventure.Round} 周目开始；仓库和玩家档案已继承。");
+        if (companionId is not null) Log($"周目开局伙伴：{session.ContentRepository.GetCharacter(companionId).Name}加入队伍。");
         if (PackText("initialStoryId").Length > 0) StartStory(PackText("initialStoryId"));
     }
 

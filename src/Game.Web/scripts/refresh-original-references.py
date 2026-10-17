@@ -193,7 +193,7 @@ def main():
                                   "declaredTalent": name in declared, "status": "MOD 模板脚本示例，暂不计入原版天赋"} for name in examples]},
         "lateBonusCompanions": {"source": roll_source, "caller": "JyGame/RollRoleUI.cs:664-708", "pools": bonus_pools,
                                 "uniqueIds": len(bonus_ids), "missingCharacterIds": sorted(bonus_ids - base_ids),
-                                "status": "后期 Lua 多周目开局随机奖励池，资料已收录，当前运行未接入"},
+                                "status": "后期 Lua 多周目开局随机奖励池；当前运行状态另见资料馆"},
         "legacyCodeComparison": code_comparison,
         "notes": ["XML 子节点顺序和字段结构不同，不等于新增玩法或数值改动。",
                   "同名资料的版本差异保留原记录；异名对照不改变运行中的稳定 ID。",

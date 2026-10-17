@@ -8,6 +8,7 @@ import xml.etree.ElementTree as ET
 CATEGORIES = [
     ("characters", "人物", "roles.xml", "characters"),
     ("missingCharacters", "缺定义伙伴", None, None),
+    ("referenceAliases", "角色引用修正", None, None),
     ("bonusCompanions", "后期开局伙伴池", None, None),
     ("externalSkills", "外功", "skills.xml", "externalSkills"),
     ("internalSkills", "内功", "internal_skills.xml", "internalSkills"),
@@ -76,11 +77,14 @@ def build_library(package, source, companions, rule_audit, web):
                 supplemental_recruits[a["value"]].append(row["node"]["name"])
     role_ids = {n.get("key") for n in ET.parse(source / "roles.xml").getroot()}
     bonus_config = manifest["lateBonusCompanions"]
+    creation = package["browser"]["creation"]
+    bonus_aliases = creation["startingCompanionSource"]["aliases"]
     bonus_rounds = defaultdict(list)
     for pool in bonus_config["pools"]:
-        for rid in pool["characterIds"]: bonus_rounds[rid].append(pool["roundLabel"])
+        for rid in pool["characterIds"]: bonus_rounds[bonus_aliases.get(rid, rid)].append(pool["roundLabel"])
     missing_recruits = {rid: stories for rid, stories in supplemental_recruits.items() if rid not in role_ids}
-    for rid in bonus_config["missingCharacterIds"]: missing_recruits.setdefault(rid, [])
+    for rid in bonus_rounds:
+        if rid not in role_ids: missing_recruits.setdefault(rid, [])
     effects = {section: {r["id"]: r["configurationState"] for r in data["entries"]}
                for section, data in rule_audit["sections"].items()}
     records, summaries = {}, []
@@ -105,17 +109,23 @@ def build_library(package, source, companions, rule_audit, web):
                          ([{"tag": "reference", "candidate": "殷天正"}] if rid == "白眉鹰王" else [])}} for rid, stories in missing_recruits.items()]
         elif category == "bonusCompanions":
             rows = [{"source": bonus_config["source"], "node": {"tag": "bonus_pool", "key": f"后期开局伙伴池{pool['index']}",
-                     "name": pool["roundLabel"] + " · 开局随机伙伴候选", "description": "由旧 C# 按周目调用；非空池随机抽取一名，当前网页运行尚未接入。",
-                     "children": [{"tag": "candidate", "character": rid, "definition": "已找到" if rid in role_ids else "缺人物定义"}
-                                  for rid in pool["characterIds"]]}} for pool in bonus_config["pools"]]
+                     "name": pool["roundLabel"] + " · 开局随机伙伴候选", "description": "已接入周目开局：确认人物后抽一名；摇点和预览不发放。沿用原权重，第一名两份，其余各一份。",
+                     "children": [{"tag": "candidate", "sourceId": rid, "character": bonus_aliases.get(rid, rid),
+                                   "definition": "称号引用已修正" if rid in bonus_aliases else "已找到", "weight": "2" if i == 0 else "1"}
+                                  for i, rid in enumerate(pool["characterIds"])]}} for pool in bonus_config["pools"]]
+        elif category == "referenceAliases":
+            rows = [{"source": bonus_config["source"], "node": {"tag": "alias_correction", "key": old, "character": new,
+                     "description": "原奖励池使用称号；根据原鹰爪功说明“白眉鹰王殷天正的成名绝技”，对应现有人物定义，不改角色属性。",
+                     "evidence": creation["startingCompanionSource"]["aliasEvidence"]}} for old, new in bonus_aliases.items()]
         elif category == "creation":
             creation = package["browser"]["creation"]
             configs = [(f"开局问答{index + 1}", q["title"], q) for index, q in enumerate(creation["questions"])]
             configs += [("初始奖励", "初始银两与奖励", {k: creation[k] for k in ("baseSilver", "baseItems", "normalItems")}),
                         ("重摇与头像", "重摇属性与头像选项", {k: creation[k] for k in ("randomStats", "portraits")}),
-                        ("周目奖励", "周目与试炼奖励", {k: creation[k] for k in ("roundItems", "trialItems")})]
+                        ("周目奖励", "周目与试炼奖励", {k: creation[k] for k in ("roundItems", "trialItems")}),
+                        ("开局伙伴奖励", "分周目开局伙伴奖励", {k: creation[k] for k in ("startingCompanionPools", "startingCompanionSource")})]
             rows = [{"source": creation["source"]["file"], "node": {"tag": "creation", "key": rid, "name": name,
-                     "description": "当前一周目开局配置，依据固定旧 C#；Lua 覆盖差异尚未套用。",
+                     "description": "问答依据固定旧 C#，周目伙伴另据后期 Lua；无悔模式尚未接入。",
                      "children": [config_node("configuration", config)]}} for rid, name, config in configs]
         runtime = {r.get("id", r.get("name")): r for r in package.get(runtime_key, [])} if runtime_key else {}
         group, occurrences = [], defaultdict(int)
@@ -133,8 +143,9 @@ def build_library(package, source, companions, rule_audit, web):
             if category == "stories": state = "剧情已接线 · 路线未全验" if rid in accepted else "原剧情已归档 · 已隔离"
             if category == "supplementStories": state = "补充资料 · 运行入口待接线"
             if category == "missingCharacters": state = "加入记录已归档 · 缺人物定义"
-            if category == "bonusCompanions": state = "后期奖励池已归档 · 运行未接入"
-            if category == "creation": state = "开局配置已接入 · Lua 覆盖待核对"
+            if category == "bonusCompanions": state = "周目开局奖励已接入 · 确认时随机一名"
+            if category == "referenceAliases": state = "引用已修正 · 使用现有人物定义"
+            if category == "creation": state = "开局配置已接入 · 无悔模式待补"
             effect = effects.get(category, {}).get(rid)
             if category == "characters" and rid in recruits: description = "原剧情含加入／随行记录。" + description
             if category == "characters" and rid in supplemental_recruits:
@@ -199,6 +210,7 @@ def build_library(package, source, companions, rule_audit, web):
                        "referenceCompanionForms": len(upload_join_forms), "referenceCompanionNames": len({role_names.get(c, c) for c in upload_join_forms}),
                        "missingCharacterDefinitions": sorted(missing_recruits),
                        "lateBonusForms": len(bonus_rounds), "lateBonusAdditionalForms": len(set(bonus_rounds) - set(recruits)),
+                       "startingCompanionRewardsImplemented": True, "correctedCharacterAliases": bonus_aliases,
                        "supplementStories": len(supplemental), "ludingStories": len(luding),
                        "ludingShared": sum(r["node"]["name"] in baseline_stories for r in luding), "runtimeLegendEntries": len(package["legendSkills"])},
             "referenceManifest": "references/manifest.json"}, records

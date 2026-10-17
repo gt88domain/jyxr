@@ -51,7 +51,7 @@ internal static class FlowSmoke
         Check(started["adventure"]!["round"]!.GetValue<int>()==2&&started["silver"]!.GetValue<int>()==6100,"Round two must use confirmed creation money without an extra service100.");
         var roundSave=JsonNode.Parse(BrowserBridge.ExportSave())!;
         Check(roundSave["game"]!["chest"]!.ToJsonString()==oldChest&&roundSave["profile"]!["yuanbao"]!.GetValue<int>()==7,"Round transition must preserve chest and premium profile.");
-        Check(started["party"]!.AsArray().Count==1&&started["hero"]!["cultivation"] is null&&started["profile"]!["completionCount"]!.GetValue<int>()==1,"Old companions/cultivation must reset without duplicate completion.");
+        Check(started["party"]!.AsArray().Count==2&&preview["creation"]!["startingCompanionCandidates"]!.AsArray().Any(c=>c!["id"]!.GetValue<string>()==started["party"]!.AsArray().Single(c=>!c!["isHero"]!.GetValue<bool>())!["definitionId"]!.GetValue<string>())&&started["hero"]!["cultivation"] is null&&started["profile"]!["completionCount"]!.GetValue<int>()==1,"Old companions/cultivation must reset and one round reward join without duplicate completion.");
         Check(roundSave["game"]!["equipmentInstanceFactory"]!["nextNumber"]!.GetValue<long>()>=before["game"]!["equipmentInstanceFactory"]!["nextNumber"]!.GetValue<long>(),"Round reset reused carried equipment identities.");
         Parse(BrowserBridge.ImportSave(roundSave.ToJsonString()));
         Console.WriteLine("PASS original next-round choice, saved pending ending, validated marker, round/trial rewards, chest/profile/identity carry and actual new opening");

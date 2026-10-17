@@ -30,6 +30,33 @@ public static partial class BrowserBridge
         foreach (var key in new[] { "initialStoryId", "trainingStoryId" })
             if (pack[key]?.GetValue<string>() is { Length: > 0 } story) content.GetStorySegment(story);
         if (pack["trainingMapId"]?.GetValue<string>() is { Length: > 0 } map) content.GetMap(map);
+        if (pack["creation"]?["startingCompanionPools"] is JsonArray pools)
+        {
+            if (pools.Count == 0) throw new InvalidOperationException("开局伙伴池不能为空。");
+            var previousRound = 0;
+            foreach (var pool in pools)
+            {
+                var minimumRound = pool!["minimumRound"]!.GetValue<int>();
+                if (minimumRound <= previousRound || previousRound == 0 && minimumRound != 1)
+                    throw new InvalidOperationException("开局伙伴池必须从第一周目开始并按周目递增。");
+                previousRound = minimumRound;
+                var ids = pool["characterIds"]!.AsArray().Select(id => id!.GetValue<string>()).ToArray();
+                if (pool["weights"] is JsonArray weights)
+                {
+                    if (weights.Count != ids.Length || weights.Any(weight => weight!.GetValue<int>() <= 0))
+                        throw new InvalidOperationException("开局伙伴权重须与候选一一对应且为正整数。");
+                    _ = weights.Aggregate(0, (total, weight) => checked(total + weight!.GetValue<int>()));
+                }
+                if (ids.Distinct(StringComparer.Ordinal).Count() != ids.Length)
+                    throw new InvalidOperationException("开局伙伴候选不能重复。");
+                foreach (var id in ids)
+                {
+                    if (id == Party.HeroCharacterId || id == pack["heroDefinitionId"]!.GetValue<string>())
+                        throw new InvalidOperationException("主角不能作为开局伙伴重复发放。");
+                    content.GetCharacter(id);
+                }
+            }
+        }
         foreach (var milestone in (pack["milestones"]?.AsArray() ?? []).OfType<JsonObject>())
         {
             content.GetStorySegment(milestone["storyId"]!.GetValue<string>());

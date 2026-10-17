@@ -4,6 +4,10 @@ Keep this data separate from both UI and the shared engine. The optional Lua
 override has a zero/one-based random-index discrepancy; use the pinned C#
 MakeRandomCondition's ten uniform attributes and document that baseline.
 """
+import json
+from pathlib import Path
+
+
 def apply_legacy_creation(package: dict) -> dict:
     def option(text, **effects):
         return {"text": text, **effects}
@@ -53,6 +57,29 @@ def apply_legacy_creation(package: dict) -> dict:
             assert set(o.get("items", {})) <= items, o
             assert set(o.get("talents", [])) <= talents, o
             assert not o.get("model") or o["model"] in media["models"], o
+    reference = json.loads((Path(__file__).resolve().parents[1] / "reference-materials/manifest.json").read_text())
+    bonus_source = reference["lateBonusCompanions"]
+    # The original Eagle Claw description explicitly identifies this title.
+    # Correct the pool reference; keep all original role statistics intact.
+    aliases = {"白眉鹰王": "殷天正"}
+    assert "白眉鹰王殷天正" in next(s["description"] for s in package["externalSkills"] if s["id"] == "鹰爪功")
+    role_ids = {c["id"] for c in package["characters"]}
+    profile["startingCompanionPools"] = [{"minimumRound": pool["round"], "characterIds": [aliases.get(rid, rid) for rid in pool["characterIds"]]}
+                                         for pool in bonus_source["pools"]]
+    # GetRandomInt(0, Count) includes Count, then % Count wraps it to the
+    # first candidate. Preserve those two tickets rather than flatten odds.
+    for pool in profile["startingCompanionPools"]:
+        pool["weights"] = [2, *([1] * (len(pool["characterIds"]) - 1))] if pool["characterIds"] else []
+    assert [len(p["characterIds"]) for p in profile["startingCompanionPools"]] == [0, 17, 10, 7, 9]
+    for pool in profile["startingCompanionPools"]:
+        assert len(pool["characterIds"]) == len(set(pool["characterIds"]))
+        assert set(pool["characterIds"]) <= role_ids
+    profile["startingCompanionSource"] = {"commit": "4acd2c718a8afc562f0d5a0cd38464fea6699453", "file": bonus_source["source"],
+        "caller": bonus_source["caller"], "drawAt": "confirmation", "aliases": aliases,
+        "randomRule": "GetRandomInt(0, Count) % Count; first candidate has two tickets, others one",
+        "randomSource": "JyGame/RollRoleUI.cs:712; JyGame/Tools.cs:45-48",
+        "aliasEvidence": "jyx-legacy-data/data-origin/skills.xml:492 · 鹰爪功说明：白眉鹰王殷天正的成名绝技"}
     package["browser"]["creation"] = profile
     return {"source": profile["source"], "questions": len(questions), "portraits": len(heads),
-            "deferred": ["无悔实时存档模式", "Lua覆盖中的随机初始伙伴", "Lua随机下标差异", "部分问答天赋的完整战斗效果"]}
+            "startingCompanions": {"candidates": 43, "poolSizes": [0, 17, 10, 7, 9], "source": profile["startingCompanionSource"]},
+            "deferred": ["无悔实时存档模式", "Lua随机下标差异", "部分问答天赋的完整战斗效果"]}

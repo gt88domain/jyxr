@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Check lossless source records, missing definitions and reference boundaries."""
 import json
+from collections import Counter
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
@@ -59,8 +60,11 @@ assert not baseline_ids & supplement_ids
 assert all(r["state"] == "补充资料 · 运行入口待接线" for r in groups["supplementStories"])
 join = next(r for r in groups["supplementStories"] if r["id"] == "鹿鼎剧情4.4")
 assert any(a.get("type") == "JOIN" and a.get("value") == "双儿" for a in join["node"]["children"])
-assert {r["id"] for r in groups["missingCharacters"]} == {"双儿", "白眉鹰王"}
-assert index["counts"]["missingCharacterDefinitions"] == ["双儿", "白眉鹰王"]
+assert {r["id"] for r in groups["missingCharacters"]} == {"双儿"}
+assert index["counts"]["missingCharacterDefinitions"] == ["双儿"]
+assert index["counts"]["correctedCharacterAliases"] == {"白眉鹰王": "殷天正"}
+assert index["counts"]["startingCompanionRewardsImplemented"]
+assert {r["id"] for r in groups["referenceAliases"]} == {"白眉鹰王"}
 assert index["counts"]["baselineCompanionForms"] == 65 and index["counts"]["baselineCompanionNames"] == 63
 assert len([r for r in index["entries"] if r["recruitment"]]) == 106
 package = read(DATA / "content-package.json")
@@ -80,7 +84,7 @@ assert all(not example["declaredTalent"] for example in manifest["lateLua"]["exa
 for filename in ["manifest.json", "original-upload.json", "late-template.json", "late-lua.json", "silverlight.json", "remake-workbooks.json"]:
     assert (LIBRARY / "references" / filename).read_bytes() == (WEB / "reference-materials" / filename).read_bytes()
 creation = package["browser"]["creation"]
-assert len(groups["creation"]) == len(creation["questions"]) + 3 == 10
+assert len(groups["creation"]) == len(creation["questions"]) + 4 == 11
 for row, question in zip(groups["creation"], creation["questions"]):
     assert row["name"] == question["title"]
     assert len(row["node"]["children"][0]["children"][1]["children"]) == len(question["options"])
@@ -91,4 +95,11 @@ assert index["counts"]["lateBonusForms"] == 43 and index["counts"]["lateBonusAdd
 assert len(groups["bonusCompanions"]) == 5
 assert all(len(r["node"]["children"]) == len(p["characterIds"]) for r, p in zip(groups["bonusCompanions"], manifest["lateBonusCompanions"]["pools"]))
 assert len(read(LIBRARY / "references/late-lua.json")["files"]) == 10
+assert [len(pool["characterIds"]) for pool in creation["startingCompanionPools"]] == [0, 17, 10, 7, 9]
+for source_pool, current_pool in zip(manifest["lateBonusCompanions"]["pools"], creation["startingCompanionPools"]):
+    assert [creation["startingCompanionSource"]["aliases"].get(rid, rid) for rid in source_pool["characterIds"]] == current_pool["characterIds"]
+    size = len(source_pool["characterIds"])
+    tickets = Counter(ticket % size for ticket in range(size + 1)) if size else Counter()
+    assert current_pool["weights"] == [tickets[i] for i in range(size)]
+assert "白眉鹰王殷天正" in next(s["description"] for s in package["externalSkills"] if s["id"] == "鹰爪功")
 print("PASS 43 late-version round-dependent starting candidates, 40 additional reference IDs and 10 preserved Lua files")

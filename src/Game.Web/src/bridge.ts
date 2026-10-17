@@ -25,6 +25,7 @@ export interface CreationState {
   name: string; difficulty: string; step: 'question' | 'portrait' | 'preview'; questionIndex: number; total: number; answers: number[]; roll: number;
   question: {title: string; options: {text: string}[]} | null;
   portraits: {id: string; name: string; image: string}[];
+  startingCompanionCandidates?: {id: string; name: string; weight: number}[];
   preview: {portrait: string; sprite: string; silver: number; randomBonus: Record<string, number>; attributes: {id: string; label: string; value: number}[]; talents: {id: string; name: string}[]; internalSkills: {id: string; name: string; level: number}[]; items: {id: string; name: string; quantity: number; icon?: string}[]} | null;
 }
 export interface GameState {

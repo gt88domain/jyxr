@@ -27,6 +27,15 @@ public static partial class BrowserBridge
     private static JsonArray CreationQuestions => CreationProfile["questions"]!.AsArray();
     private static CreationDraft RequireCreation() => _creation ?? throw new InvalidOperationException("请先开始人物生成。");
 
+    private static (string Id, int Weight)[] StartingCompanionPool(int round)
+    {
+        var pool = (CreationProfile["startingCompanionPools"]?.AsArray() ?? [])
+            .LastOrDefault(p => p!["minimumRound"]!.GetValue<int>() <= round);
+        if (pool is null) return [];
+        return pool["characterIds"]!.AsArray().Select((id, index) =>
+            (id!.GetValue<string>(), pool["weights"]?[index]?.GetValue<int>() ?? 1)).ToArray();
+    }
+
     private static void BeginCreation(JsonElement args)
     {
         if (_content is null || _session is not null) throw new InvalidOperationException("请返回标题后创建新人物。");
@@ -144,6 +153,12 @@ public static partial class BrowserBridge
             questionIndex = draft.Answers.Count, total = CreationQuestions.Count, answers = draft.Answers.ToArray(),
             question = draft.Answers.Count < CreationQuestions.Count ? CreationQuestions[draft.Answers.Count]!.DeepClone() : null,
             portraits = CreationProfile["portraits"]!.DeepClone(), roll = draft.Roll,
+            startingCompanionCandidates = StartingCompanionPool(draft.Round).Select(candidate =>
+            {
+                var id = candidate.Id;
+                var character = _content!.GetCharacter(id);
+                return new { id, name = character.Name, weight = candidate.Weight };
+            }).ToArray(),
             preview = preview is null ? null : new
             {
                 portrait = CharacterMedia(preview.Hero, "portraits"), sprite = CharacterMedia(preview.Hero, "characters"),

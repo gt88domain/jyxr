@@ -5,6 +5,7 @@
     <Compile Include="PackSmoke.cs" />
     <Compile Include="OriginalSmoke.cs" />
     <Compile Include="CreationSmoke.cs" />
+    <Compile Include="StartingCompanionSmoke.cs" />
     <Compile Include="ManagementSmoke.cs" />
     <Compile Include="SpecialSmoke.cs" />
     <Compile Include="MiniGameSmoke.cs" />

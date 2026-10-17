@@ -32,7 +32,7 @@ try{
   await page.screenshot({path:output+'original-round-two-creation-mobile.png',fullPage:true});
   await click('[data-action="creation-confirm"]');await continueDialogue();
   const round=await state();assert.equal(round.adventure.round,2);assert.equal(round.silver,6100);
-  assert.equal(round.party.length,1);assert.equal(round.chest.stored,1);assert.equal(round.yuanbao,7);assert.equal(round.profile.completionCount,1);
+  assert.equal(round.party.length,2);assert.ok(preview.startingCompanionCandidates.some(c=>c.id===round.party.find(c=>!c.isHero).definitionId));assert.equal(round.chest.stored,1);assert.equal(round.yuanbao,7);assert.equal(round.profile.completionCount,1);
   await click('[data-action="save"]');await page.waitForFunction(()=>document.querySelector('#toast')?.textContent==='当前世界的进度已保存。');await resume();
   assert.equal((await state()).adventure.round,2);assert.equal((await state()).chest.stored,1);
   pass('real round-two questions and original rewards rebuild the party, retain chest/profile and save the new opening');
