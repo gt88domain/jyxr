@@ -218,6 +218,40 @@
     ],
     "scope": "explicit combinations; negative damage, special-hit and global modifier ordering still require verification"
   },
+  "survivalRuleEffects": {
+    "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+    "talents": [
+      "普照",
+      "无相",
+      "琴胆剑心",
+      "医仙",
+      "救死扶伤",
+      "哀歌",
+      "悲酥清风",
+      "百穴归一",
+      "倚天屠龙",
+      "百足之虫",
+      "真气护体",
+      "无尽斗志",
+      "不老长春",
+      "北冥神功",
+      "鲲跃北溟",
+      "化功大法",
+      "吸星大法",
+      "清心",
+      "清风",
+      "乾坤大挪移奥义",
+      "乾坤大挪移",
+      "精打细算",
+      "精明",
+      "右臂有伤"
+    ],
+    "buffs": [
+      "封穴",
+      "重伤"
+    ],
+    "scope": "Explicit original preparation, recovery, internal-energy and survival rules; selected execution tests are not whole-game equivalence."
+  },
   "legacyArt": {
     "source": {
       "archive": "X.rar",
@@ -288,16 +322,17 @@
   "companionCatalog": {
     "characterForms": 65,
     "instructions": 80,
-    "normalVerified": 7,
+    "normalVerified": 10,
     "isolatedVerified": 2
   },
   "battleRuleConfiguration": {
     "talents": {
       "total": 158,
       "states": {
-        "metadata-only": 93,
-        "configured": 57,
-        "partial": 7,
+        "referenced-behavior": 4,
+        "configured": 74,
+        "partial": 13,
+        "metadata-only": 66,
         "identity-only": 1
       }
     },
@@ -305,8 +340,8 @@
       "total": 33,
       "states": {
         "engine-behavior": 16,
-        "configured": 6,
-        "metadata-only": 9,
+        "configured": 8,
+        "metadata-only": 7,
         "partial": 2
       }
     },

@@ -5,19 +5,22 @@
     "talents": {
       "total": 158,
       "states": {
-        "metadata-only": 93,
-        "configured": 57,
-        "partial": 7,
+        "referenced-behavior": 4,
+        "configured": 74,
+        "partial": 13,
+        "metadata-only": 66,
         "identity-only": 1
       },
       "entries": [
         {
           "id": "万年长春",
-          "configurationState": "metadata-only",
+          "configurationState": "referenced-behavior",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:774"
           ],
-          "remaining": [],
+          "remaining": [
+            "Used as a secondary condition: 不老长春 enhanced activation probability; full combinations remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -31,16 +34,18 @@
         },
         {
           "id": "不老长春",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:778"
           ],
-          "remaining": [],
+          "remaining": [
+            "selected probability and recovery checks; legacy single-precision rounding and cancellation ordering remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
           "id": "乾坤大挪移",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:2109"
           ],
@@ -49,7 +54,7 @@
         },
         {
           "id": "乾坤大挪移奥义",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:2104"
           ],
@@ -92,7 +97,7 @@
         },
         {
           "id": "倚天屠龙",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/BattleField.cs:945"
           ],
@@ -186,11 +191,13 @@
         },
         {
           "id": "化功大法",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:996"
           ],
-          "remaining": [],
+          "remaining": [
+            "integer formula and selected boundaries tested; full hit/reaction ordering remains"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -205,18 +212,20 @@
         },
         {
           "id": "北冥神功",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:970",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1860",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1865"
           ],
-          "remaining": [],
+          "remaining": [
+            "integer formula and selected boundaries tested; full hit/reaction ordering remains"
+          ],
           "fullBehaviorVerified": false
         },
         {
           "id": "医仙",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/BattleField.cs:797"
           ],
@@ -234,24 +243,24 @@
         },
         {
           "id": "右臂有伤",
-          "configurationState": "partial",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1886",
             "jyx-legacy-dll/JyGame/BattleField.cs:909"
           ],
-          "remaining": [
-            "extra rage behavior is not configured"
-          ],
+          "remaining": [],
           "fullBehaviorVerified": false
         },
         {
           "id": "吴侬软语",
-          "configurationState": "metadata-only",
+          "configurationState": "referenced-behavior",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:214",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:226"
           ],
-          "remaining": [],
+          "remaining": [
+            "Used as a secondary condition: 吴侬软语 special-skill stun gate; full combinations remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -265,16 +274,18 @@
         },
         {
           "id": "吸星大法",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1008"
           ],
-          "remaining": [],
+          "remaining": [
+            "integer formula and seal/recovery tested; original repeat-seal replacement and full ordering remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
           "id": "哀歌",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/BattleField.cs:831"
           ],
@@ -584,7 +595,7 @@
         },
         {
           "id": "悲酥清风",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/BattleField.cs:861"
           ],
@@ -609,11 +620,13 @@
         },
         {
           "id": "我就是神",
-          "configurationState": "metadata-only",
+          "configurationState": "referenced-behavior",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/BattleField.cs:1600"
           ],
-          "remaining": [],
+          "remaining": [
+            "Used as a secondary condition: 无尽斗志 first successful revival guarantee; full combinations remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -672,7 +685,7 @@
         },
         {
           "id": "救死扶伤",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/BattleField.cs:811"
           ],
@@ -701,7 +714,7 @@
         },
         {
           "id": "无尽斗志",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/BattleField.cs:1600"
           ],
@@ -719,7 +732,7 @@
         },
         {
           "id": "无相",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/BattleField.cs:754"
           ],
@@ -737,7 +750,7 @@
         },
         {
           "id": "普照",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/BattleField.cs:723"
           ],
@@ -856,7 +869,7 @@
         },
         {
           "id": "清心",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/BattleSprite.cs:731"
           ],
@@ -865,7 +878,7 @@
         },
         {
           "id": "清风",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/BattleSprite.cs:735"
           ],
@@ -922,7 +935,7 @@
         },
         {
           "id": "琴胆剑心",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/BattleField.cs:766"
           ],
@@ -958,7 +971,7 @@
         },
         {
           "id": "百穴归一",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/BattleField.cs:900"
           ],
@@ -967,7 +980,7 @@
         },
         {
           "id": "百足之虫",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/BattleField.cs:1587"
           ],
@@ -990,7 +1003,7 @@
         },
         {
           "id": "真气护体",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/BattleField.cs:1593"
           ],
@@ -1066,22 +1079,26 @@
         },
         {
           "id": "精打细算",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1649",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:2114"
           ],
-          "remaining": [],
+          "remaining": [
+            "defensive cap and priority tested; offensive random multipliers remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
           "id": "精明",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1656",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:2122"
           ],
-          "remaining": [],
+          "remaining": [
+            "defensive cap and overflow tested; offensive random multipliers remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -1173,12 +1190,14 @@
         },
         {
           "id": "草头百姓",
-          "configurationState": "metadata-only",
+          "configurationState": "referenced-behavior",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1447",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1462"
           ],
-          "remaining": [],
+          "remaining": [
+            "Used as a secondary condition: 异世人 extended HP window; full legend interaction remains; full combinations remain"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -1481,11 +1500,13 @@
         },
         {
           "id": "鲲跃北溟",
-          "configurationState": "metadata-only",
+          "configurationState": "partial",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:983"
           ],
-          "remaining": [],
+          "remaining": [
+            "integer formula and selected boundaries tested; full hit/reaction ordering remains"
+          ],
           "fullBehaviorVerified": false
         },
         {
@@ -1519,8 +1540,8 @@
       "total": 33,
       "states": {
         "engine-behavior": 16,
-        "configured": 6,
-        "metadata-only": 9,
+        "configured": 8,
+        "metadata-only": 7,
         "partial": 2
       },
       "entries": [
@@ -1625,7 +1646,7 @@
         },
         {
           "id": "封穴",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1020",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:1022",
@@ -1837,7 +1858,7 @@
         },
         {
           "id": "重伤",
-          "configurationState": "metadata-only",
+          "configurationState": "configured",
           "sourceLiteralReferences": [
             "jyx-legacy-dll/JyGame/AttackLogic.cs:782",
             "jyx-legacy-dll/JyGame/AttackLogic.cs:822",
@@ -1985,7 +2006,6 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:68"
           ],
           "remaining": [
-            "verify self-cost separately from preventable incoming damage",
             "verify special damage hit/reaction pipeline against original; currently direct damage"
           ],
           "fullBehaviorVerified": false
@@ -1997,7 +2017,7 @@
             "jyx-legacy-dll/JyGame/AttackLogic.cs:59"
           ],
           "remaining": [
-            "verify permanent max-HP cost and unblockable self-cost semantics",
+            "single-cast HP snapshot, unblockable cost and permanent max-HP loss tested; multi-target source iteration remains",
             "verify special damage hit/reaction pipeline against original; currently direct damage"
           ],
           "fullBehaviorVerified": false

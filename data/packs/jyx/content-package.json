@@ -102725,7 +102725,9 @@
           "target": {
             "type": "target"
           },
-          "parameters": {}
+          "parameters": {
+            "permanentMaxHpCost": 10
+          }
         }
       ]
     },
@@ -116072,7 +116074,38 @@
       "id": "封穴",
       "name": "封穴",
       "description": "穴道被封，无法恢复内力。",
-      "isDebuff": true
+      "isDebuff": true,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeRecoveryResolved",
+          "priority": 0,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_recovery_kind",
+              "kind": "mp"
+            },
+            {
+              "type": "context_recovery_reason",
+              "reasons": [
+                "Rest"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_recovery",
+              "op": "more",
+              "delta": 0,
+              "rounding": "Truncate"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "左右互搏",
@@ -116362,7 +116395,71 @@
       "id": "重伤",
       "name": "重伤",
       "description": "受到的任何回复效果减半。",
-      "isDebuff": true
+      "isDebuff": true,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeRecoveryResolved",
+          "priority": 0,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_recovery_kind",
+              "kind": "hp"
+            },
+            {
+              "type": "context_recovery_reason",
+              "reasons": [
+                "Rest",
+                "Item",
+                "Lifesteal",
+                "DamageConversion"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_recovery",
+              "op": "more",
+              "delta": 0.5,
+              "rounding": "Truncate"
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeRecoveryResolved",
+          "priority": 0,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_recovery_kind",
+              "kind": "mp"
+            },
+            {
+              "type": "context_recovery_reason",
+              "reasons": [
+                "Rest",
+                "Item"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_recovery",
+              "op": "more",
+              "delta": 0.5,
+              "rounding": "Truncate"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "防御强化",
@@ -116489,19 +116586,97 @@
       "id": "不老长春",
       "name": "不老长春",
       "point": 60,
-      "description": "永葆青春的神奇功法，一定概率将受到的伤害转为气血。"
+      "description": "永葆青春的神奇功法，一定概率将受到的伤害转为气血。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageApplied",
+          "priority": 190,
+          "conditions": [],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "eternal_spring",
+              "parameters": {
+                "enhancedTalentId": "万年长春",
+                "chance": 0.1,
+                "enhancedChance": 0.2,
+                "recoveryFactor": 0.35,
+                "floatText": "不老长春回血"
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "乾坤大挪移",
       "name": "乾坤大挪移",
       "point": 80,
-      "description": "防御圣品，一定概率伤害减半。"
+      "description": "防御圣品，一定概率伤害减半。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageApplied",
+          "priority": 600,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "乾坤大挪移奥义"
+              ],
+              "absent": true
+            },
+            {
+              "type": "chance",
+              "value": 0.5
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage",
+              "op": "more",
+              "delta": 0.5,
+              "rounding": "Truncate"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "乾坤大挪移奥义",
       "name": "乾坤大挪移奥义",
       "point": 80,
-      "description": "防御圣品，受到伤害减半。"
+      "description": "防御圣品，受到伤害减半。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageApplied",
+          "priority": 600,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "chance",
+              "value": 1
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage",
+              "op": "more",
+              "delta": 0.5,
+              "rounding": "Truncate"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "五行阵",
@@ -116576,7 +116751,31 @@
       "id": "倚天屠龙",
       "name": "倚天屠龙",
       "point": 75,
-      "description": "每回合有一定概率获得圣战状态。"
+      "description": "每回合有一定概率获得圣战状态。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeActionReadiness",
+          "priority": 840,
+          "conditions": [
+            {
+              "type": "chance",
+              "value": 0.2
+            }
+          ],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "self"
+              },
+              "buffId": "圣战",
+              "level": 2,
+              "duration": 2
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "光明圣火阵",
@@ -116680,7 +116879,38 @@
       "id": "化功大法",
       "name": "化功大法",
       "point": 40,
-      "description": "攻击可以有概率化去对方大量内力。"
+      "description": "攻击可以有概率化去对方大量内力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "priority": 400,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "chance",
+              "value": 0.5
+            }
+          ],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "internal_energy_attack",
+              "parameters": {
+                "power": 3,
+                "randomMinimum": 1,
+                "randomMaximum": 1,
+                "transfer": false,
+                "integerArithmetic": true,
+                "multiplyPowerBeforeDivision": false
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "北冥真气",
@@ -116742,13 +116972,61 @@
       "id": "北冥神功",
       "name": "北冥神功",
       "point": 0,
-      "description": "攻击带有吸取大量内力效果。"
+      "description": "攻击带有吸取大量内力效果。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "priority": 400,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "chance",
+              "value": 1
+            }
+          ],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "internal_energy_attack",
+              "parameters": {
+                "power": 2,
+                "randomMinimum": 1,
+                "randomMaximum": 1.5,
+                "transfer": true,
+                "integerArithmetic": true,
+                "multiplyPowerBeforeDivision": true
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "医仙",
       "name": "医仙",
       "point": 70,
-      "description": "医仙周围的队友每回合回复一定生命。"
+      "description": "医仙周围的队友每回合回复一定生命。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeActionReadiness",
+          "priority": 920,
+          "conditions": [],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "medical_immortal",
+              "parameters": {
+                "useBaseGengu": true
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "博览群书",
@@ -116785,6 +117063,21 @@
               "delta": 0.95
             }
           ]
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeActionReadiness",
+          "priority": 860,
+          "conditions": [],
+          "effects": [
+            {
+              "type": "add_rage",
+              "target": {
+                "type": "self"
+              },
+              "value": 1
+            }
+          ]
         }
       ]
     },
@@ -116804,13 +117097,65 @@
       "id": "吸星大法",
       "name": "吸星大法",
       "point": 50,
-      "description": "令江湖中人闻之色变的吸星大法，攻击时吸收一定内力，并造成封穴效果，使对方无法恢复内力。"
+      "description": "令江湖中人闻之色变的吸星大法，攻击时吸收一定内力，并造成封穴效果，使对方无法恢复内力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "priority": 400,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "chance",
+              "value": 1
+            }
+          ],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "internal_energy_attack",
+              "parameters": {
+                "power": 2,
+                "randomMinimum": 1,
+                "randomMaximum": 2,
+                "transfer": true,
+                "integerArithmetic": true,
+                "multiplyPowerBeforeDivision": true,
+                "appliedBuffId": "封穴"
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "哀歌",
       "name": "哀歌",
       "point": 70,
-      "description": "哀声四起，降低周围敌人的攻击力。"
+      "description": "哀声四起，降低周围敌人的攻击力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeActionReadiness",
+          "priority": 900,
+          "conditions": [],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "nearby_enemies",
+                "radius": 3
+              },
+              "buffId": "攻击弱化",
+              "level": 2,
+              "duration": 3
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "嗜血狂魔",
@@ -116827,7 +117172,7 @@
         {
           "type": "hook",
           "timing": "BeforeActionReadiness",
-          "priority": 0,
+          "priority": 880,
           "conditions": [
             {
               "type": "chance",
@@ -117690,7 +118035,27 @@
       "id": "悲酥清风",
       "name": "悲酥清风",
       "point": 70,
-      "description": "悲酥清风！三步之内敌人内力大减。"
+      "description": "悲酥清风！三步之内敌人内力大减。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeActionReadiness",
+          "priority": 890,
+          "conditions": [
+            {
+              "type": "chance",
+              "value": 0.3
+            }
+          ],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "grieving_breeze",
+              "parameters": {}
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "情花奇毒",
@@ -117772,7 +118137,25 @@
       "id": "救死扶伤",
       "name": "救死扶伤",
       "point": 30,
-      "description": "救死扶伤的高明医术，每回合对周围随机一名队友进行医治，不能对自己使用。"
+      "description": "救死扶伤的高明医术，每回合对周围随机一名队友进行医治，不能对自己使用。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeActionReadiness",
+          "priority": 910,
+          "conditions": [],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "heal_the_wounded",
+              "parameters": {
+                "includeSelf": true,
+                "useBaseGengu": true
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "斗转星移",
@@ -117796,7 +118179,26 @@
       "id": "无尽斗志",
       "name": "无尽斗志",
       "point": 50,
-      "description": "据说是由东瀛一个叫圣斗士星矢的小强最早领悟的天赋。"
+      "description": "据说是由东瀛一个叫圣斗士星矢的小强最早领悟的天赋。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDefeated",
+          "priority": 100,
+          "conditions": [],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "endless_fighting_spirit",
+              "parameters": {
+                "abilityId": "无尽斗志",
+                "guaranteedFirstTalentId": "我就是神",
+                "chance": 0.1
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "无形剑气",
@@ -117808,7 +118210,31 @@
       "id": "无相",
       "name": "无相",
       "point": 5,
-      "description": "战斗中每回合有一定概率恢复生命值。"
+      "description": "战斗中每回合有一定概率恢复生命值。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeActionReadiness",
+          "priority": 940,
+          "conditions": [
+            {
+              "type": "chance",
+              "value": 0.3
+            }
+          ],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "formless_healing",
+              "parameters": {
+                "baseValue": 50,
+                "valuePerLevel": 30,
+                "maximumInclusive": true
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "易筋伐髓",
@@ -117820,7 +118246,32 @@
       "id": "普照",
       "name": "普照",
       "point": 50,
-      "description": "由自身强大的佛法向自己及身边队友进行治疗。"
+      "description": "由自身强大的佛法向自己及身边队友进行治疗。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeActionReadiness",
+          "priority": 950,
+          "conditions": [
+            {
+              "type": "chance",
+              "value": 0.4
+            }
+          ],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "nearby_allies",
+                "radius": 2
+              },
+              "buffId": "恢复",
+              "level": 2,
+              "duration": 3
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "暴躁",
@@ -118026,13 +118477,56 @@
       "id": "清心",
       "name": "清心",
       "point": 50,
-      "description": "清心寡欲，每回合有50%概率解除不良状态。"
+      "description": "清心寡欲，每回合有50%概率解除不良状态。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterBuffRound",
+          "priority": 0,
+          "conditions": [
+            {
+              "type": "context_buff_negative"
+            },
+            {
+              "type": "chance",
+              "value": 0.5
+            }
+          ],
+          "effects": [
+            {
+              "type": "remove_context_buff"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "清风",
       "name": "清风",
       "point": 5,
-      "description": "随着等级逐步提升，提高每回合解除负面效果的概率。"
+      "description": "随着等级逐步提升，提高每回合解除负面效果的概率。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "AfterBuffRound",
+          "priority": 0,
+          "conditions": [
+            {
+              "type": "context_buff_negative"
+            },
+            {
+              "type": "unit_level_chance",
+              "baseValue": 0,
+              "valuePerLevel": 0.015
+            }
+          ],
+          "effects": [
+            {
+              "type": "remove_context_buff"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "灵心慧质",
@@ -118101,7 +118595,32 @@
       "id": "琴胆剑心",
       "name": "琴胆剑心",
       "point": 40,
-      "description": "笑傲江湖，一路高歌。每回合一定几率提高周围队友攻击力。"
+      "description": "笑傲江湖，一路高歌。每回合一定几率提高周围队友攻击力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeActionReadiness",
+          "priority": 930,
+          "conditions": [
+            {
+              "type": "chance",
+              "value": 0.4
+            }
+          ],
+          "effects": [
+            {
+              "type": "apply_buff",
+              "target": {
+                "type": "nearby_allies",
+                "radius": 2
+              },
+              "buffId": "攻击强化",
+              "level": 3,
+              "duration": 3
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "瘸子",
@@ -118157,13 +118676,56 @@
       "id": "百穴归一",
       "name": "百穴归一",
       "point": 50,
-      "description": "打通全身经脉，百穴归一，内力运转生生不息。每回合自动增加怒气和内力。"
+      "description": "打通全身经脉，百穴归一，内力运转生生不息。每回合自动增加怒气和内力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeActionReadiness",
+          "priority": 870,
+          "conditions": [],
+          "effects": [
+            {
+              "type": "add_rage",
+              "target": {
+                "type": "self"
+              },
+              "value": 1
+            },
+            {
+              "type": "custom",
+              "effectId": "random_mp_recovery",
+              "parameters": {
+                "minimum": 50,
+                "maximum": 200
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "百足之虫",
       "name": "百足之虫",
       "point": 50,
-      "description": "百足之虫，即使战至垂死也有概率毅立不倒。"
+      "description": "百足之虫，即使战至垂死也有概率毅立不倒。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDefeated",
+          "priority": 300,
+          "conditions": [],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "survive_at_one_hp",
+              "parameters": {
+                "abilityId": "百足之虫",
+                "chance": 0.2
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "真武七截阵",
@@ -118175,7 +118737,26 @@
       "id": "真气护体",
       "name": "真气护体",
       "point": 50,
-      "description": "真气充盈在身体四周，即使受到致命伤害也可化解。50%概率在濒死时将受到伤害转为扣减内力。"
+      "description": "真气充盈在身体四周，即使受到致命伤害也可化解。50%概率在濒死时将受到伤害转为扣减内力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDefeated",
+          "priority": 200,
+          "conditions": [],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "qi_shield_defeat_prevention",
+              "parameters": {
+                "abilityId": "真气护体",
+                "chance": 0.5,
+                "mpCostPerDamage": 2
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "破甲",
@@ -118365,13 +118946,83 @@
       "id": "精打细算",
       "name": "精打细算",
       "point": 50,
-      "description": "心思缜密，回避致命伤害。提升暴击概率，一定概率将受到的伤害强制降为200点。"
+      "description": "心思缜密，回避致命伤害。提升暴击概率，一定概率将受到的伤害强制降为200点。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageApplied",
+          "priority": 550,
+          "conditions": [],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "careful_defense",
+              "parameters": {
+                "mode": "careful",
+                "carefulTalentId": "精打细算",
+                "smartTalentId": "精明",
+                "carefulChance": 0.2,
+                "carefulDamageCap": 200,
+                "smartChance": 0.25,
+                "smartDamageCap": 500,
+                "carefulSpeech": {
+                  "lines": [
+                    "嘿嘿，你可伤不到我。"
+                  ],
+                  "chance": 1
+                },
+                "smartSpeech": {
+                  "lines": [
+                    "这一招太狠了，我得躲开一点。"
+                  ],
+                  "chance": 1
+                }
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "精明",
       "name": "精明",
       "point": 30,
-      "description": "心思缜密，回避致命伤害。提升暴击概率，一定概率将受到的伤害强制降为500点，多余伤害转化为内力伤害。"
+      "description": "心思缜密，回避致命伤害。提升暴击概率，一定概率将受到的伤害强制降为500点，多余伤害转化为内力伤害。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageApplied",
+          "priority": 550,
+          "conditions": [],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "careful_defense",
+              "parameters": {
+                "mode": "smart",
+                "carefulTalentId": "精打细算",
+                "smartTalentId": "精明",
+                "carefulChance": 0.2,
+                "carefulDamageCap": 200,
+                "smartChance": 0.25,
+                "smartDamageCap": 500,
+                "carefulSpeech": {
+                  "lines": [
+                    "嘿嘿，你可伤不到我。"
+                  ],
+                  "chance": 1
+                },
+                "smartSpeech": {
+                  "lines": [
+                    "这一招太狠了，我得躲开一点。"
+                  ],
+                  "chance": 1
+                }
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "素心神剑",
@@ -119179,7 +119830,38 @@
       "id": "鲲跃北溟",
       "name": "鲲跃北溟",
       "point": 50,
-      "description": "攻击有50%概率吸取对手内力。"
+      "description": "攻击有50%概率吸取对手内力。",
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "priority": 400,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "chance",
+              "value": 0.5
+            }
+          ],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "internal_energy_attack",
+              "parameters": {
+                "power": 1,
+                "randomMinimum": 1,
+                "randomMaximum": 1,
+                "transfer": true,
+                "integerArithmetic": true,
+                "multiplyPowerBeforeDivision": false
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "鹿鼎.一等鹿鼎公",
