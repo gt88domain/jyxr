@@ -1,0 +1,3674 @@
+{
+  "schemaVersion": 1,
+  "repository": "https://github.com/UnicomGamer/X-Heroes-of-Jin-Yong",
+  "commit": "4acd2c718a8afc562f0d5a0cd38464fea6699453",
+  "version": "X1.1.0.6 reverse-engineered reference",
+  "stage": {
+    "width": 1140,
+    "height": 640
+  },
+  "scope": "Read-only reconstruction from Unity RectTransforms and original images. Serialized sample labels are not player data; font, clipping, dynamic population, and original scripts are not emulated.",
+  "layouts": {
+    "map": {
+      "source": "Assets/Scenes/Map.unity",
+      "width": 1140,
+      "height": 640,
+      "nodes": [
+        {
+          "kind": "color",
+          "path": "/Canvas/RoleStatePanel/_bg",
+          "rect": [
+            0.0,
+            3.0,
+            1140.0,
+            46.0
+          ],
+          "image": null,
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.43529412
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RoleStatePanel/_bg",
+          "rect": [
+            0.0,
+            0.15,
+            1140.0,
+            60.0
+          ],
+          "image": "art/late-interface/dingbu.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RoleStatePanel/_headbg",
+          "rect": [
+            0.0,
+            2.3,
+            205.0,
+            206.0
+          ],
+          "image": "art/late-interface/touxiangdise.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RoleStatePanel/_headbgKuang",
+          "rect": [
+            0.0,
+            2.3,
+            205.0,
+            206.0
+          ],
+          "image": "art/late-interface/touxiangkuang.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RoleStatePanel/_mask",
+          "rect": [
+            0.0,
+            2.35,
+            205.0,
+            202.9
+          ],
+          "image": "art/late-interface/touxiangdise.png",
+          "color": {
+            "r": 0.98039216,
+            "g": 0.98039216,
+            "b": 0.98039216,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RoleStatePanel/_mask/HeadImage",
+          "rect": [
+            13.3,
+            13.1,
+            180.0,
+            180.0
+          ],
+          "image": "art/late-interface/zhujue2.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RoleStatePanel/HardIcon",
+          "rect": [
+            134.3,
+            135.4,
+            75.0,
+            75.0
+          ],
+          "image": "art/late-interface/nandu.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "color",
+          "path": "/Canvas/RoleStatePanel/HardIcon/_bg",
+          "rect": [
+            224.8,
+            132.9,
+            228.0,
+            100.0
+          ],
+          "image": null,
+          "color": {
+            "r": 0.1102941,
+            "g": 0.1102941,
+            "b": 0.1102941,
+            "a": 0.7019608
+          }
+        },
+        {
+          "kind": "text",
+          "path": "/Canvas/RoleStatePanel/HardIcon/NickText",
+          "rect": [
+            238.6,
+            135.4,
+            196.0,
+            43.3
+          ],
+          "text": "初出茅庐",
+          "fontSize": 30,
+          "alignment": 3,
+          "color": {
+            "r": 0.99607843,
+            "g": 0.2,
+            "b": 0,
+            "a": 1
+          }
+        },
+        {
+          "kind": "text",
+          "path": "/Canvas/RoleStatePanel/HardIcon/ZhoumuText",
+          "rect": [
+            238.55,
+            183.2,
+            201.1,
+            42.0
+          ],
+          "text": "简单：周目1",
+          "fontSize": 25,
+          "alignment": 3,
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "text",
+          "path": "/Canvas/InfoPanel/LocationText",
+          "rect": [
+            202.7,
+            11.2,
+            182.0,
+            31.6
+          ],
+          "text": "南贤居",
+          "fontSize": 18,
+          "alignment": 4,
+          "color": {
+            "r": 0.94482756,
+            "g": 1,
+            "b": 0,
+            "a": 1
+          }
+        },
+        {
+          "kind": "text",
+          "path": "/Canvas/InfoPanel/TimeText",
+          "rect": [
+            418.5,
+            11.2,
+            315.8,
+            31.6
+          ],
+          "text": "江湖一年 五月初五\t      午时 ",
+          "fontSize": 18,
+          "alignment": 4,
+          "color": {
+            "r": 0.94482756,
+            "g": 1,
+            "b": 0,
+            "a": 1
+          }
+        },
+        {
+          "kind": "text",
+          "path": "/Canvas/InfoPanel/MoneyText",
+          "rect": [
+            805.5,
+            11.0,
+            121.0,
+            32.0
+          ],
+          "text": "111",
+          "fontSize": 18,
+          "alignment": 4,
+          "color": {
+            "r": 0.94482756,
+            "g": 1,
+            "b": 0,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/InfoPanel/MoneyText/Image",
+          "rect": [
+            760.15,
+            -0.45,
+            43.7,
+            54.9
+          ],
+          "image": "art/late-interface/yuanbao_yin.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "text",
+          "path": "/Canvas/InfoPanel/YuanbaoText",
+          "rect": [
+            993.0,
+            11.0,
+            134.0,
+            32.0
+          ],
+          "text": "100",
+          "fontSize": 18,
+          "alignment": 4,
+          "color": {
+            "r": 0.94482756,
+            "g": 1,
+            "b": 0,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/InfoPanel/YuanbaoText/Image",
+          "rect": [
+            951.15,
+            -0.45,
+            43.7,
+            54.9
+          ],
+          "image": "art/late-interface/yuanbao.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/ButtonPanel/_buttonKuang",
+          "rect": [
+            907.5,
+            403.0,
+            228.0,
+            233.0
+          ],
+          "image": "art/late-interface/anniukuang.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/ButtonPanel/ButtonZhuangtai",
+          "rect": [
+            1043.1,
+            410.7,
+            84.0,
+            84.0
+          ],
+          "image": "art/late-interface/zhuangtai.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/ButtonPanel/ButtonWupin",
+          "rect": [
+            914.4,
+            545.1,
+            84.0,
+            84.0
+          ],
+          "image": "art/late-interface/daoju.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/ButtonPanel/ButtonRizhi",
+          "rect": [
+            942.0,
+            439.9,
+            84.0,
+            84.0
+          ],
+          "image": "art/late-interface/rizhi.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/ButtonPanel/CanvasGroup/_chilun",
+          "rect": [
+            966.4,
+            467.6,
+            173.0,
+            171.0
+          ],
+          "image": "art/late-interface/chilun.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/ButtonPanel/ButtonXitong",
+          "rect": [
+            1026.0,
+            521.4,
+            75.0,
+            75.0
+          ],
+          "image": "art/late-interface/xitong.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        }
+      ],
+      "background": "art/late-interface/daditu.png"
+    },
+    "character": {
+      "source": "Assets/Scenes/Map.unity",
+      "width": 1140,
+      "height": 640,
+      "nodes": [
+        {
+          "kind": "image",
+          "path": "/Canvas/RolePanel/_bg",
+          "rect": [
+            48.0,
+            58.0,
+            1030.0,
+            568.0
+          ],
+          "image": "art/late-interface/renwuzhuangtai_dise.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RolePanel/touxiangkuang/_dise",
+          "rect": [
+            58.5,
+            38.3,
+            304.0,
+            303.0
+          ],
+          "image": "art/late-interface/renwuzhuangtai_touxiangdise.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RolePanel/touxiangkuang/_kuang",
+          "rect": [
+            56.5,
+            34.8,
+            308.0,
+            310.0
+          ],
+          "image": "art/late-interface/touxiangbiankuang.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RolePanel/touxiangkuang/_mask",
+          "rect": [
+            83.5,
+            62.2,
+            254.0,
+            254.6
+          ],
+          "image": "art/late-interface/renwuzhuangtai_touxiangmengban.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RolePanel/touxiangkuang/_mask/RoleHeadImage",
+          "rect": [
+            100.5,
+            79.5,
+            220.0,
+            220.0
+          ],
+          "image": "art/late-interface/zhuoyihang.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RolePanel/xuetiao/hp/_dise",
+          "rect": [
+            28.5,
+            145.5,
+            93.0,
+            93.0
+          ],
+          "image": "art/late-interface/renwuzhuangtai_xuetiaodise.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RolePanel/xuetiao/hp/_mask",
+          "rect": [
+            29.5,
+            146.0,
+            92.0,
+            92.0
+          ],
+          "image": "art/late-interface/renwuzhuangtai_xuetiaomengban.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RolePanel/xuetiao/hp/_mask/Image",
+          "rect": [
+            28.0,
+            165.8,
+            95.0,
+            120.0
+          ],
+          "image": "art/late-interface/renwuzhuangtai_xuetiao.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RolePanel/xuetiao/hp/_kuang",
+          "rect": [
+            27.5,
+            144.5,
+            95.0,
+            95.0
+          ],
+          "image": "art/late-interface/renwuzhuangtai_xuetiaokuang.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RolePanel/xuetiao/mp/_dise",
+          "rect": [
+            296.8,
+            145.5,
+            93.0,
+            93.0
+          ],
+          "image": "art/late-interface/renwuzhuangtai_xuetiaodise.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RolePanel/xuetiao/mp/_mask",
+          "rect": [
+            297.8,
+            146.0,
+            92.0,
+            92.0
+          ],
+          "image": "art/late-interface/renwuzhuangtai_xuetiaomengban.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RolePanel/xuetiao/mp/_mask/Image",
+          "rect": [
+            296.3,
+            165.8,
+            95.0,
+            120.0
+          ],
+          "image": "art/late-interface/renwuzhuangtai_lantiao.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RolePanel/xuetiao/mp/_kuang",
+          "rect": [
+            295.8,
+            144.5,
+            95.0,
+            95.0
+          ],
+          "image": "art/late-interface/renwuzhuangtai_xuetiaokuang.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "text",
+          "path": "/Canvas/RolePanel/NameText",
+          "rect": [
+            104.0,
+            259.5,
+            246.0,
+            73.0
+          ],
+          "text": "林平之",
+          "fontSize": 40,
+          "alignment": 0,
+          "color": {
+            "r": 1,
+            "g": 0.96470594,
+            "b": 0.9686275,
+            "a": 1
+          }
+        },
+        {
+          "kind": "text",
+          "path": "/Canvas/RolePanel/TextRoleDetail",
+          "rect": [
+            97.05,
+            327.0,
+            240.9,
+            218.0
+          ],
+          "text": "等级 11\n生命 333600/333600\n内力 500/500\n经验 1502/1872\n攻击 124\n韧性 149",
+          "fontSize": 20,
+          "alignment": 0,
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RolePanel/CancelButton",
+          "rect": [
+            971.0,
+            29.0,
+            100.0,
+            100.0
+          ],
+          "image": "art/late-interface/btn_cross.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RolePanel/Buttons/ShuxingButton",
+          "rect": [
+            379.0,
+            73.0,
+            134.0,
+            132.0
+          ],
+          "image": "art/late-interface/renwuzhuangtai_shuxing.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RolePanel/Buttons/ZhuangbeiButton",
+          "rect": [
+            494.0,
+            116.0,
+            134.0,
+            132.0
+          ],
+          "image": "art/late-interface/renwuzhuangtai_zhuangbei.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RolePanel/Buttons/JinengButton",
+          "rect": [
+            615.0,
+            73.0,
+            134.0,
+            132.0
+          ],
+          "image": "art/late-interface/renwuzhuangtai_jineng.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RolePanel/Buttons/TianfuButton",
+          "rect": [
+            736.0,
+            116.0,
+            134.0,
+            132.0
+          ],
+          "image": "art/late-interface/renwuzhuangtai_tianfu.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/Canvas/RolePanel/Buttons/LiezhuanButton",
+          "rect": [
+            857.0,
+            73.0,
+            134.0,
+            132.0
+          ],
+          "image": "art/late-interface/renwuzhuangtai_liezhuang.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "color",
+          "path": "/Canvas/RolePanel/TabPanels/ItemPreviewPanel",
+          "rect": [
+            -12.0,
+            902.0,
+            362.0,
+            384.0
+          ],
+          "image": null,
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.7607843
+          }
+        },
+        {
+          "kind": "text",
+          "path": "/Canvas/RolePanel/TabPanels/ItemPreviewPanel/Text",
+          "rect": [
+            1.0,
+            916.0,
+            338.0,
+            348.0
+          ],
+          "text": "距离明教圣地光明顶很近的荒芜沙漠",
+          "fontSize": 12,
+          "alignment": 0,
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        }
+      ]
+    },
+    "battle": {
+      "source": "Assets/Scenes/Battle.unity",
+      "width": 1140,
+      "height": 640,
+      "nodes": [
+        {
+          "kind": "image",
+          "path": "/UICanvas/_buttomBg",
+          "rect": [
+            0.0,
+            505.0,
+            1140.0,
+            135.0
+          ],
+          "image": "art/late-interface/battle_shuimodi.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/LogPanel/Button",
+          "rect": [
+            -34.0,
+            97.0,
+            86.0,
+            212.0
+          ],
+          "image": "art/late-interface/battle_zhandoujilubiaoqian.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/TimeBar/_bg",
+          "rect": [
+            3.1,
+            3.5,
+            428.0,
+            93.0
+          ],
+          "image": "art/late-interface/battle_shijianxianzhi.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "text",
+          "path": "/UICanvas/TimeBar/TimeLabel",
+          "rect": [
+            26.0,
+            8.5,
+            360.0,
+            49.0
+          ],
+          "text": "时间限制",
+          "fontSize": 20,
+          "alignment": 1,
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/RoleActionMenu/_bg",
+          "rect": [
+            383.0,
+            313.0,
+            758.0,
+            326.0
+          ],
+          "image": "art/late-interface/battle_actionBarBg.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/RoleActionMenu/ItemButton",
+          "rect": [
+            1027.7,
+            440.0,
+            109.0,
+            101.0
+          ],
+          "image": "art/late-interface/battle_wupin-tubiao.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/RoleActionMenu/ItemButton/Image",
+          "rect": [
+            1032.7,
+            455.0,
+            104.0,
+            51.0
+          ],
+          "image": "art/late-interface/battle_wupin.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/RoleActionMenu/MoveButton",
+          "rect": [
+            856.8,
+            539.0,
+            113.0,
+            100.0
+          ],
+          "image": "art/late-interface/battle_yidong-tubiao.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/RoleActionMenu/MoveButton/Image",
+          "rect": [
+            818.6,
+            548.2,
+            101.0,
+            47.0
+          ],
+          "image": "art/late-interface/battle_yidong.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/RoleActionMenu/StatusButton",
+          "rect": [
+            942.5,
+            390.2,
+            114.0,
+            101.0
+          ],
+          "image": "art/late-interface/battle_zhuangtai-tubiao.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/RoleActionMenu/StatusButton/Image",
+          "rect": [
+            922.5,
+            389.7,
+            100.0,
+            51.0
+          ],
+          "image": "art/late-interface/battle_zhuangtai.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/RoleActionMenu/RestButton",
+          "rect": [
+            1027.7,
+            541.0,
+            109.0,
+            98.0
+          ],
+          "image": "art/late-interface/battle_xiuxi-tubiao.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/RoleActionMenu/RestButton/Image",
+          "rect": [
+            1027.7,
+            585.0,
+            107.0,
+            54.0
+          ],
+          "image": "art/late-interface/battle_xiuxi.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/RoleActionMenu/RoleHead/_mask",
+          "rect": [
+            942.8,
+            488.0,
+            114.0,
+            101.0
+          ],
+          "image": "art/late-interface/battle_touxiangdi.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/RoleActionMenu/RoleHead/_mask/HeadImage",
+          "rect": [
+            949.8,
+            488.5,
+            100.0,
+            100.0
+          ],
+          "image": "art/late-interface/zhujue2.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/RoleActionMenu/RoleHead/_bg",
+          "rect": [
+            935.3,
+            483.0,
+            129.0,
+            111.0
+          ],
+          "image": "art/late-interface/battle_touxiangkuang.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "color",
+          "path": "/UICanvas/RoleActionMenu/SkillSelectPanel/SelectPanel",
+          "rect": [
+            173.5,
+            525.5,
+            601.0,
+            111.0
+          ],
+          "image": null,
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 0
+          }
+        },
+        {
+          "kind": "color",
+          "path": "/UICanvas/RoleActionMenu/SkillSelectPanel/SelectMenuScrollBar",
+          "rect": [
+            139.0,
+            619.7,
+            608.0,
+            10.8
+          ],
+          "image": null,
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 0
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/RoleActionMenu/SkillSelectPanel/SelectMenuScrollBar/Sliding Area/Handle",
+          "rect": [
+            118.0,
+            600.5,
+            62.0,
+            38.2
+          ],
+          "image": "art/late-interface/yun.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/RoleActionMenu/SkillSelectPanel/CurrentSkillBg",
+          "rect": [
+            2.5,
+            479.2,
+            165.0,
+            167.0
+          ],
+          "image": "art/late-interface/xuandingjineng-dise.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/RoleActionMenu/SkillSelectPanel/CurrentSkillBg/CurrentSkillImage",
+          "rect": [
+            32.1,
+            520.0,
+            95.0,
+            95.0
+          ],
+          "image": "art/late-interface/icon_neigong_001.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "text",
+          "path": "/UICanvas/RoleActionMenu/SkillSelectPanel/CurrentSkillBg/CurrentSkillImage/Text",
+          "rect": [
+            28.6,
+            457.0,
+            26.0,
+            167.0
+          ],
+          "text": "降龙十八掌",
+          "fontSize": 22,
+          "alignment": 0,
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "text",
+          "path": "/UICanvas/RoleActionMenu/SkillSelectPanel/CurrentSkillBg/CurrentSkillImage/TextUnique",
+          "rect": [
+            54.6,
+            483.0,
+            25.0,
+            141.0
+          ],
+          "text": "飞龙在天",
+          "fontSize": 22,
+          "alignment": 0,
+          "color": {
+            "r": 1,
+            "g": 0,
+            "b": 0,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/RoleActionMenu/SuggestKeyText/q",
+          "rect": [
+            1029.2,
+            399.8,
+            23.0,
+            33.0
+          ],
+          "image": "art/late-interface/word_q.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/RoleActionMenu/SuggestKeyText/e",
+          "rect": [
+            1101.4,
+            500.0,
+            23.0,
+            33.0
+          ],
+          "image": "art/late-interface/word_e.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/RoleActionMenu/SuggestKeyText/r",
+          "rect": [
+            1105.9,
+            554.1,
+            23.0,
+            33.0
+          ],
+          "image": "art/late-interface/word_r.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/RoleActionMenu/SuggestKeyText/w",
+          "rect": [
+            927.2,
+            556.1,
+            26.0,
+            31.0
+          ],
+          "image": "art/late-interface/word_w.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/BattleConfig/AutoBattleToggle/Background",
+          "rect": [
+            909.1,
+            7.25,
+            80.0,
+            72.0
+          ],
+          "image": "art/late-interface/battle_zidong.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/BattleConfig/AutoBattleToggle/Background/Checkmark",
+          "rect": [
+            916.3,
+            14.85,
+            58.0,
+            52.0
+          ],
+          "image": "art/late-interface/battle_zidonghong.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/BattleConfig/SpeedUpToggle/Background",
+          "rect": [
+            1023.85,
+            5.35,
+            80.0,
+            72.0
+          ],
+          "image": "art/late-interface/battle_jiasu.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/BattleConfig/SpeedUpToggle/Background/Checkmark",
+          "rect": [
+            1026.05,
+            15.85,
+            68.0,
+            51.0
+          ],
+          "image": "art/late-interface/battle_jiasuhong.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "color",
+          "path": "/UICanvas/SkillSelectItem/Toggle/Background/Checkmark/Image",
+          "rect": [
+            -449.9,
+            331.2,
+            62.0,
+            62.0
+          ],
+          "image": null,
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/SkillSelectItem/IconImage",
+          "rect": [
+            -449.9,
+            331.2,
+            62.0,
+            62.0
+          ],
+          "image": "art/late-interface/icon_neigong_001.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/SkillSelectItem/IconImage/CoolDownImage",
+          "rect": [
+            -449.9,
+            331.2,
+            62.0,
+            62.0
+          ],
+          "image": "art/late-interface/black.png",
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.7607843
+          }
+        },
+        {
+          "kind": "image",
+          "path": "/UICanvas/SkillSelectItem/IconImage/SealTag",
+          "rect": [
+            -434.65,
+            304.0,
+            72.5,
+            53.2
+          ],
+          "image": "art/late-interface/fengying.png",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "text",
+          "path": "/UICanvas/SkillSelectItem/Text",
+          "rect": [
+            -464.975,
+            303.4,
+            21.75,
+            107.8
+          ],
+          "text": "降龙十八掌",
+          "fontSize": 18,
+          "alignment": 0,
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "kind": "text",
+          "path": "/UICanvas/SkillSelectItem/TextUnique",
+          "rect": [
+            -445.4,
+            311.2,
+            21.4,
+            106.6
+          ],
+          "text": "飞龙在天",
+          "fontSize": 18,
+          "alignment": 0,
+          "color": {
+            "r": 1,
+            "g": 0,
+            "b": 0,
+            "a": 1
+          }
+        },
+        {
+          "kind": "text",
+          "path": "/UICanvas/SuggestText",
+          "rect": [
+            465.0,
+            10.0,
+            408.0,
+            56.0
+          ],
+          "text": "战斗提示信息",
+          "fontSize": 22,
+          "alignment": 3,
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        }
+      ],
+      "background": "art/late-interface/zhulin.png"
+    }
+  },
+  "files": [
+    {
+      "path": "art/late-interface/anniukuang.png",
+      "source": "Assets/Texture2D/anniukuang.png",
+      "gitBlob": "5052982209602d2b45110505450f77cc55cae708",
+      "bytes": 36758,
+      "sha256": "c78638a85a6d78e05bbbd36f40df55bbd174d459c9c62d1d596b04f2b19d15e6"
+    },
+    {
+      "path": "art/late-interface/battle_actionBarBg.png",
+      "source": "Assets/Texture2D/battle_actionBarBg.png",
+      "gitBlob": "0000e90ae06302916d50855d2a8976076799d232",
+      "bytes": 155367,
+      "sha256": "99b75485061341a37b7145fb5afa395fe79568cf523f524ab0ef0d85bbd74695"
+    },
+    {
+      "path": "art/late-interface/battle_jiasu.png",
+      "source": "Assets/Texture2D/battle_jiasu.png",
+      "gitBlob": "ce2cfce8cad2d8d7f6d13df8a4043dc5692f3d00",
+      "bytes": 3787,
+      "sha256": "21c3280d662f10cb4c04679ce2c1000895e7d7f6d6df502d9b3aee934ae5c191"
+    },
+    {
+      "path": "art/late-interface/battle_jiasuhong.png",
+      "source": "Assets/Texture2D/battle_jiasuhong.png",
+      "gitBlob": "fc0e3b5b73884aa5f2513fdb2f88bb58c772b1c6",
+      "bytes": 3562,
+      "sha256": "95e01530d3f65a9b1e9f14a7004c36a12478f932cb0994a5d71f1cb689a43b0e"
+    },
+    {
+      "path": "art/late-interface/battle_shijianxianzhi.png",
+      "source": "Assets/Texture2D/battle_shijianxianzhi.png",
+      "gitBlob": "d79cbf3cb18f2b04837bdb6fe994b86aefb8e1be",
+      "bytes": 35236,
+      "sha256": "8549f4487534e14f469cd5d038608bc06b6a83dfe1d746a56cc114ae37695ea8"
+    },
+    {
+      "path": "art/late-interface/battle_shuimodi.png",
+      "source": "Assets/Texture2D/battle_shuimodi.png",
+      "gitBlob": "fd4d458882caf4acc94d0f0452073ea3c1f8c79f",
+      "bytes": 146882,
+      "sha256": "c520e9bcd1f365036be02c91db728941de6a156a65ac0c85346fad2f8230f20d"
+    },
+    {
+      "path": "art/late-interface/battle_touxiangdi.png",
+      "source": "Assets/Texture2D/battle_touxiangdi.png",
+      "gitBlob": "094eef01bfe29a5fdfa7a32bdef01a5f81e0f0e2",
+      "bytes": 2356,
+      "sha256": "6d909cf869f3f89d927701e59fee70ec41d9a76d21c1bdb58f8bc60eb8709f5f"
+    },
+    {
+      "path": "art/late-interface/battle_touxiangkuang.png",
+      "source": "Assets/Texture2D/battle_touxiangkuang.png",
+      "gitBlob": "fde0cf95ba1ed04119d3d71a5c9f6d94dd3f2db3",
+      "bytes": 10465,
+      "sha256": "b220f4bc282272dcae34e3b566c968cafaa67cf25e78462ed023f8ee33c4d2b2"
+    },
+    {
+      "path": "art/late-interface/battle_wupin-tubiao.png",
+      "source": "Assets/Texture2D/battle_wupin-tubiao.png",
+      "gitBlob": "cef73d0991b5d05e8c63c8e4825b265af9783b3d",
+      "bytes": 24289,
+      "sha256": "5a74261068e445e147b53aa9c692677acf38430e29bc2422d71273ecb3c4b4aa"
+    },
+    {
+      "path": "art/late-interface/battle_wupin.png",
+      "source": "Assets/Texture2D/battle_wupin.png",
+      "gitBlob": "4d4688f765a67adc13ce6e53979a81fd7abb681b",
+      "bytes": 1774,
+      "sha256": "e66addf63594677076cf321ce3c22ef35d6b5adc05266b0acf8b75618868fd93"
+    },
+    {
+      "path": "art/late-interface/battle_xiuxi-tubiao.png",
+      "source": "Assets/Texture2D/battle_xiuxi-tubiao.png",
+      "gitBlob": "53f3b18b5b259b77449305ec8fb444e087206ed3",
+      "bytes": 21832,
+      "sha256": "49a4cad9853395f48090fb9513becc6bc2927d8a38e880074095123b83385c56"
+    },
+    {
+      "path": "art/late-interface/battle_xiuxi.png",
+      "source": "Assets/Texture2D/battle_xiuxi.png",
+      "gitBlob": "9f189ca0e8abb16ced62be7d25855224e20f1a96",
+      "bytes": 1624,
+      "sha256": "2089078a38a2742a0f4b0de57f75a15b68a9babf81dc8e2781b2207b4a5c9b55"
+    },
+    {
+      "path": "art/late-interface/battle_yidong-tubiao.png",
+      "source": "Assets/Texture2D/battle_yidong-tubiao.png",
+      "gitBlob": "620e8ae7040adfbafcb663669a6ee2ed4ea8d0f6",
+      "bytes": 21993,
+      "sha256": "a0465a7db815fbece0665e0cec8e21b5226e152ef55543f53cbca1a63ab3b010"
+    },
+    {
+      "path": "art/late-interface/battle_yidong.png",
+      "source": "Assets/Texture2D/battle_yidong.png",
+      "gitBlob": "7df3e7d0caf9e25ad64e9c56e9f2eb4ecefdadda",
+      "bytes": 1650,
+      "sha256": "e891c15b1373e5cdd25ea069433541254affa54e8078282fb22b4d6332c2ab14"
+    },
+    {
+      "path": "art/late-interface/battle_zhandoujilubiaoqian.png",
+      "source": "Assets/Texture2D/battle_zhandoujilubiaoqian.png",
+      "gitBlob": "c36530ae6f3861cb002cabd8c635ef2052328802",
+      "bytes": 7156,
+      "sha256": "8980ec02b94665711786a18b9bb656129b02c06593e24a73862dd520f36755d1"
+    },
+    {
+      "path": "art/late-interface/battle_zhuangtai-tubiao.png",
+      "source": "Assets/Texture2D/battle_zhuangtai-tubiao.png",
+      "gitBlob": "074c6503e54324b4c5d3ab1d5faa0c4bdfeb9beb",
+      "bytes": 19012,
+      "sha256": "b5b02f3a4bb84b3e297faa4aecf9238cc20fdd65b75ab0ca6acc6a5f470e2add"
+    },
+    {
+      "path": "art/late-interface/battle_zhuangtai.png",
+      "source": "Assets/Texture2D/battle_zhuangtai.png",
+      "gitBlob": "5cc3cf996ca6817968e7690b522c0641bcdace7b",
+      "bytes": 1549,
+      "sha256": "e422133459ed32f25e4fd7afd10d4710196ecea87741bf55c0e5a3b9db6c1240"
+    },
+    {
+      "path": "art/late-interface/battle_zidong.png",
+      "source": "Assets/Texture2D/battle_zidong.png",
+      "gitBlob": "181fa67d29077dc19dba3117c4ae617dc9641dfb",
+      "bytes": 3357,
+      "sha256": "871ca3870d9fcfc6d5eeab0231d5ce59116c35af8a4bb0daa7dafacaa9342412"
+    },
+    {
+      "path": "art/late-interface/battle_zidonghong.png",
+      "source": "Assets/Texture2D/battle_zidonghong.png",
+      "gitBlob": "ad2c417721287e5b7488b7892767994108cfe736",
+      "bytes": 2830,
+      "sha256": "f905dc3afcbadef82e9662c3f3b0be7fbb282a25b1530a93959ef011a12be8e9"
+    },
+    {
+      "path": "art/late-interface/black.png",
+      "source": "Assets/Texture2D/black.png",
+      "gitBlob": "b3379f1c6d643a95bdff16a2f258a592762d7a77",
+      "bytes": 197,
+      "sha256": "2750d4de8d3dafc713832c16104297bd80f0e1e0677f85c5c2be38822c1b83fb"
+    },
+    {
+      "path": "art/late-interface/btn_cross.png",
+      "source": "Assets/Texture2D/btn_cross.png",
+      "gitBlob": "3434bda7b32b9c076dab6c89211a00bf06a21c37",
+      "bytes": 9390,
+      "sha256": "b9314374a956bfd75ed599264e3d3437b1363fcda2d158e919618bb57ffb3c11"
+    },
+    {
+      "path": "art/late-interface/chilun.png",
+      "source": "Assets/Texture2D/chilun.png",
+      "gitBlob": "e4ed2fd9107889294a1110ae9a5cc2f0f5d82f8d",
+      "bytes": 53573,
+      "sha256": "d3af7a0e386413eaedae84e60fd4b0fc1681674a7c363e69c9a89b7ad87d6b88"
+    },
+    {
+      "path": "art/late-interface/daditu.png",
+      "source": "Assets/Texture2D/daditu.png",
+      "gitBlob": "364785400f9394ee76f9b5601dc6b228a18e883e",
+      "bytes": 9839540,
+      "sha256": "d25ada46dbf50e2b5d0206c9ba9bd74dce36ec72bc12aeb646015d6c718cee53"
+    },
+    {
+      "path": "art/late-interface/daoju.png",
+      "source": "Assets/Texture2D/daoju.png",
+      "gitBlob": "40326a0c28a766b14268a69caa9f86fa6e8bc5ad",
+      "bytes": 12646,
+      "sha256": "c78b1546b7be56c12a8b87f57fbde4b5300cf3ba77f2593294220ad8a60fd600"
+    },
+    {
+      "path": "art/late-interface/dingbu.png",
+      "source": "Assets/Texture2D/dingbu.png",
+      "gitBlob": "2efb506d9171ca36889bb0cb0de58fcc96fde5b7",
+      "bytes": 17098,
+      "sha256": "92bebfc4ab1f1284a9399a4d9b8c1f56542344c2b119f1a717ddf0b091e714c1"
+    },
+    {
+      "path": "art/late-interface/fengying.png",
+      "source": "Assets/Texture2D/fengying.png",
+      "gitBlob": "69ff16a8d1c8f51b4562eb9611b95f205404f2da",
+      "bytes": 4062,
+      "sha256": "0c4d8056d17b36394528e7b524d8d79b58e481bda08382490af905fcffc339ae"
+    },
+    {
+      "path": "art/late-interface/icon_neigong_001.png",
+      "source": "Assets/Resources/icons/icon_neigong_001.png",
+      "gitBlob": "ca00c72546ef5d8114f2d7fcae6ff5dd454d42b0",
+      "bytes": 7128,
+      "sha256": "174291223cc7371115c03d15fa1640e483f1337067d6307c9df25cdfc12828c6"
+    },
+    {
+      "path": "art/late-interface/nandu.png",
+      "source": "Assets/Texture2D/nandu.png",
+      "gitBlob": "fb402f555e367042a22331335ca074c67028f016",
+      "bytes": 15015,
+      "sha256": "fc49de2a6c740efa6eaa6bb201fe5b0a7285b4a9f1515279027d3269fbaad2fe"
+    },
+    {
+      "path": "art/late-interface/renwuzhuangtai_dise.png",
+      "source": "Assets/Texture2D/renwuzhuangtai_dise.png",
+      "gitBlob": "62c547f86725727f6dba7f8869ff9f1805597857",
+      "bytes": 1202657,
+      "sha256": "0c7b731310eb72f9d63c53c4b8ecb2ab8367306d5751c7dd3b933b4de1ff3d89"
+    },
+    {
+      "path": "art/late-interface/renwuzhuangtai_jineng.png",
+      "source": "Assets/Texture2D/renwuzhuangtai_jineng.png",
+      "gitBlob": "afbeb73723b3f84101c31de1a73c10c86d9b26f2",
+      "bytes": 22885,
+      "sha256": "9a279c4d34fc0b7bc6847090c2bc6ae077ef4274c18c241a4fc74ae115dcd577"
+    },
+    {
+      "path": "art/late-interface/renwuzhuangtai_lantiao.png",
+      "source": "Assets/Texture2D/renwuzhuangtai_lantiao.png",
+      "gitBlob": "e816bef6f3809d4308e78f36eb9c325f6f235fd2",
+      "bytes": 13157,
+      "sha256": "2fe7b0514fba7c8f2bca8d202dc283a07ffa0996601d89f0f92078c41f185e6e"
+    },
+    {
+      "path": "art/late-interface/renwuzhuangtai_liezhuang.png",
+      "source": "Assets/Texture2D/renwuzhuangtai_liezhuang.png",
+      "gitBlob": "edf339ac15ea529958bf82f07495eecb88f86f54",
+      "bytes": 19949,
+      "sha256": "d4cf4e4f844af5c03e965fa29ece45eb405acd303d690bb82637f82a9cf70ff1"
+    },
+    {
+      "path": "art/late-interface/renwuzhuangtai_shuxing.png",
+      "source": "Assets/Texture2D/renwuzhuangtai_shuxing.png",
+      "gitBlob": "be4434d8beb7007840d4193f4d01655b9ad20f5a",
+      "bytes": 23311,
+      "sha256": "7f071d4b96cdff21b8d7a678887ce327de1c469be1554e9e479125f0b580e0e1"
+    },
+    {
+      "path": "art/late-interface/renwuzhuangtai_tianfu.png",
+      "source": "Assets/Texture2D/renwuzhuangtai_tianfu.png",
+      "gitBlob": "79b1e463b514767710bee08f123266e5c98f7300",
+      "bytes": 23738,
+      "sha256": "123e13252718e8e1f97517a0e2d02de135f4ed4df699a02f22be9b2bf407127d"
+    },
+    {
+      "path": "art/late-interface/renwuzhuangtai_touxiangdise.png",
+      "source": "Assets/Texture2D/renwuzhuangtai_touxiangdise.png",
+      "gitBlob": "3ca4fea09e988f17fadfedcd326dbc026646e756",
+      "bytes": 126696,
+      "sha256": "02f81ad4153a2f515668279496a1166a18e763877a8a615efc802a60aca8a643"
+    },
+    {
+      "path": "art/late-interface/renwuzhuangtai_touxiangmengban.png",
+      "source": "Assets/Texture2D/renwuzhuangtai_touxiangmengban.png",
+      "gitBlob": "5cdbd9cd656632db9b7c4d86a64184b6165cd5c8",
+      "bytes": 6307,
+      "sha256": "bdaa004ba2cd6a45809034c3dab5740531a877a979a448db7f5146bbf4de2ee7"
+    },
+    {
+      "path": "art/late-interface/renwuzhuangtai_xuetiao.png",
+      "source": "Assets/Texture2D/renwuzhuangtai_xuetiao.png",
+      "gitBlob": "9c992e055e4ea1c9a11e84daebf16009b994c264",
+      "bytes": 12746,
+      "sha256": "45d423e2fcdffdc613c4ca390cde1af5022273559f52ba920c2d94b79ec36294"
+    },
+    {
+      "path": "art/late-interface/renwuzhuangtai_xuetiaodise.png",
+      "source": "Assets/Texture2D/renwuzhuangtai_xuetiaodise.png",
+      "gitBlob": "ab744e7d73bc57783550bc3f25da69694f2f2b98",
+      "bytes": 1670,
+      "sha256": "97130bf6e6949e7e05424f31e47c4d991d3543c0574f8115ada36dcc4bfaed39"
+    },
+    {
+      "path": "art/late-interface/renwuzhuangtai_xuetiaokuang.png",
+      "source": "Assets/Texture2D/renwuzhuangtai_xuetiaokuang.png",
+      "gitBlob": "84cb0b2c59f66bd5345ab9d2c6de969aabae2e8a",
+      "bytes": 3529,
+      "sha256": "f26ccae2f9fd4ea90e676038836967346c830d2a202ce0c00232c9f8c0b2fd5c"
+    },
+    {
+      "path": "art/late-interface/renwuzhuangtai_xuetiaomengban.png",
+      "source": "Assets/Texture2D/renwuzhuangtai_xuetiaomengban.png",
+      "gitBlob": "bc18084821ae66f92572b7a6c96244886df0b12f",
+      "bytes": 1284,
+      "sha256": "80f4f05931e7da6800c975e36fd6295dd27df36e8cf5ad4082163d28c555eab3"
+    },
+    {
+      "path": "art/late-interface/renwuzhuangtai_zhuangbei.png",
+      "source": "Assets/Texture2D/renwuzhuangtai_zhuangbei.png",
+      "gitBlob": "6f67e620531edaf6a283b654e8e436b6165846c9",
+      "bytes": 19126,
+      "sha256": "fae20a0d75991b04cac2ebdd2e89ff2cce4faad0ab8b0ef9bf417e0c7c06744c"
+    },
+    {
+      "path": "art/late-interface/rizhi.png",
+      "source": "Assets/Texture2D/rizhi.png",
+      "gitBlob": "80e6bd0a67ccc84cb0fbf11d4bec939424442118",
+      "bytes": 11582,
+      "sha256": "cfaa68da4dd2c8a7ab291fe8536509bd21c051c7b971136d40b44ac998c8a58e"
+    },
+    {
+      "path": "art/late-interface/touxiangbiankuang.png",
+      "source": "Assets/Texture2D/touxiangbiankuang.png",
+      "gitBlob": "dfb205def1579ce66d8de7a8a224a14d33b78b04",
+      "bytes": 23910,
+      "sha256": "ba335f602f8fb3d4489931750cd51a59cc3cdd7b59e312033b3f6ffc40f27763"
+    },
+    {
+      "path": "art/late-interface/touxiangdise.png",
+      "source": "Assets/Texture2D/touxiangdise.png",
+      "gitBlob": "c25178462f667415384091ba4c2091acf819feb3",
+      "bytes": 79973,
+      "sha256": "f253aa8379027328a80f4468f2692dc632d879f7a87152302f9ce416d1fde208"
+    },
+    {
+      "path": "art/late-interface/touxiangkuang.png",
+      "source": "Assets/Texture2D/touxiangkuang.png",
+      "gitBlob": "35e89d2460f8be0e61bcf2fd570f6d485be503e1",
+      "bytes": 39448,
+      "sha256": "ed2683b0b60b543d13b6d3bfd55bd5a05ec3e66a6d02e295d4ec69201acbd531"
+    },
+    {
+      "path": "art/late-interface/word_e.png",
+      "source": "Assets/Texture2D/word_e.png",
+      "gitBlob": "833fa55fc52364f2cdb5a739020efb98ae9538c4",
+      "bytes": 488,
+      "sha256": "271a55fc3b2ee97882510ab114d7996434429cb1d3d060a27f9f615721519053"
+    },
+    {
+      "path": "art/late-interface/word_q.png",
+      "source": "Assets/Texture2D/word_q.png",
+      "gitBlob": "45594c1cbfc47356fa9f4d7db798a53b858c9739",
+      "bytes": 613,
+      "sha256": "4bfae1e03bf5c29e924f6a719949e2838bb8316925a4dea45973688241051f27"
+    },
+    {
+      "path": "art/late-interface/word_r.png",
+      "source": "Assets/Texture2D/word_r.png",
+      "gitBlob": "2e1dfebd676887152777ee4507edb9f8f2f7d9be",
+      "bytes": 611,
+      "sha256": "9635b9acfec563abb6a3905c7440825dba2f390a2dd92e6f4885d26567b26f13"
+    },
+    {
+      "path": "art/late-interface/word_w.png",
+      "source": "Assets/Texture2D/word_w.png",
+      "gitBlob": "8b4c99268a1bab598f3ed03194ecbecdd9dedc5d",
+      "bytes": 605,
+      "sha256": "6321776771d0ce6a4d37a0e34340f7077d46682a10172d5c0bf7ae33eef159ad"
+    },
+    {
+      "path": "art/late-interface/xitong.png",
+      "source": "Assets/Texture2D/xitong.png",
+      "gitBlob": "72bd40d45d5004748c0adc7a4893e6cee41bc95b",
+      "bytes": 14679,
+      "sha256": "486e55962a8de4d8cced36dfd4d397096c8467dc6b1123530aa884716fe131fa"
+    },
+    {
+      "path": "art/late-interface/xuandingjineng-dise.png",
+      "source": "Assets/Texture2D/xuandingjineng-dise.png",
+      "gitBlob": "66f13a2a45d57282392f05f8f915a933325fb383",
+      "bytes": 10884,
+      "sha256": "31aa3fb6f6e1a619a718627e210d32e48ba2d1216a987b860300fd8f1c514ab3"
+    },
+    {
+      "path": "art/late-interface/yuanbao.png",
+      "source": "Assets/Texture2D/yuanbao.png",
+      "gitBlob": "abca88cef2abddef7db51c22b3e40919190787c3",
+      "bytes": 3882,
+      "sha256": "3de3b8dde33118b744ace8bddf9fb0c7168b9b1822be6c007888b5f981194b91"
+    },
+    {
+      "path": "art/late-interface/yuanbao_yin.png",
+      "source": "Assets/Texture2D/yuanbao_yin.png",
+      "gitBlob": "53bbfeb402c6dacdb5f6800a40e403ed5537cc20",
+      "bytes": 2794,
+      "sha256": "5a6a1adc38bffc3e19ee5b0e5d67b4b5f3068a9a8d97814387d45e39f4f917e9"
+    },
+    {
+      "path": "art/late-interface/yun.png",
+      "source": "Assets/Texture2D/yun.png",
+      "gitBlob": "7f81b63d24100559d48312c5e0c1e9932b2282bc",
+      "bytes": 3448,
+      "sha256": "359027251738f3169a8054d66cc416689d852c7eb8023d64ef8034c092da974c"
+    },
+    {
+      "path": "art/late-interface/zhuangtai.png",
+      "source": "Assets/Texture2D/zhuangtai.png",
+      "gitBlob": "94e46dc54ce0aa28c72dd175c83561a3460036e4",
+      "bytes": 11549,
+      "sha256": "860576c8757f0cc7d89893a605a5f6046f7763eb28ddf8043cedf85b7c803f45"
+    },
+    {
+      "path": "art/late-interface/zhujue2.png",
+      "source": "Assets/Resources/heads/zhujue2.png",
+      "gitBlob": "97edba6e1d0764abffa9326031a8b5f6f72ee2ab",
+      "bytes": 28496,
+      "sha256": "95e7f84ab31952e360ec0aa3835bddd66478671d24b39fb54252bc71e098caef"
+    },
+    {
+      "path": "art/late-interface/zhulin.png",
+      "source": "Assets/Texture2D/zhulin.png",
+      "gitBlob": "962460d1390fe1ef352be96f5883d542eb114d43",
+      "bytes": 877924,
+      "sha256": "a3e92bd70c61afe6ec9da22dfa045c8564da661debe55aaa34be18841641bb21"
+    },
+    {
+      "path": "art/late-interface/zhuoyihang.png",
+      "source": "Assets/Resources/heads/zhuoyihang.png",
+      "gitBlob": "b881c3917eb12a30a6c12aa0dc845511b327ee1c",
+      "bytes": 23233,
+      "sha256": "aeddf92234b584334926aeea6bcb3bb77c3c4c92a871bcb587c03e13b1c71029"
+    }
+  ],
+  "unresolvedSpriteGuids": [],
+  "sources": [
+    {
+      "path": "Assets/Resources/heads/zhujue2.asset",
+      "gitBlob": "e41c9fba66c10cecefda64dfa245d49191671987",
+      "bytes": 1146,
+      "sha256": "e0389f1548a16a0d02f1f87e87ceef7d13e044f67568f5982d1dfd1ed2752e69"
+    },
+    {
+      "path": "Assets/Resources/heads/zhujue2.asset.meta",
+      "gitBlob": "2e15cf8495554554f1aab9b934a722ead3055bb1",
+      "bytes": 185,
+      "sha256": "ca9d013a0bb14f77f54188636fdfcaa0e5ff5bf42b645486f129ed3771f4998d"
+    },
+    {
+      "path": "Assets/Resources/heads/zhujue2.png",
+      "gitBlob": "97edba6e1d0764abffa9326031a8b5f6f72ee2ab",
+      "bytes": 28496,
+      "sha256": "95e7f84ab31952e360ec0aa3835bddd66478671d24b39fb54252bc71e098caef"
+    },
+    {
+      "path": "Assets/Resources/heads/zhujue2.png.meta",
+      "gitBlob": "e467cc4a1556fc0fe4cdc52beb90fbba72f6d47e",
+      "bytes": 3413,
+      "sha256": "4f806e847b9dde0b0d2a502ea4f802ce456f5e6482a5c10cde1f851a1f42f52a"
+    },
+    {
+      "path": "Assets/Resources/heads/zhuoyihang.asset",
+      "gitBlob": "56065e548eba1702f98ca6246847eccad6f22408",
+      "bytes": 1259,
+      "sha256": "de1aca109a9830795d6b989c32bb9d9a5313b8acc9f51cdbd420c046c5ca07a1"
+    },
+    {
+      "path": "Assets/Resources/heads/zhuoyihang.asset.meta",
+      "gitBlob": "31dff535ade8aca3e4d4990f95a32ceba064d058",
+      "bytes": 185,
+      "sha256": "444e4dc791800f40fb2533b6da0cad3ceddc46db436415e364e2e8f62dc33e10"
+    },
+    {
+      "path": "Assets/Resources/heads/zhuoyihang.png",
+      "gitBlob": "b881c3917eb12a30a6c12aa0dc845511b327ee1c",
+      "bytes": 23233,
+      "sha256": "aeddf92234b584334926aeea6bcb3bb77c3c4c92a871bcb587c03e13b1c71029"
+    },
+    {
+      "path": "Assets/Resources/heads/zhuoyihang.png.meta",
+      "gitBlob": "95ac2819ca300cf16b414d9dddfea52689ba81ce",
+      "bytes": 3413,
+      "sha256": "09366ebaaf3e2cf9ddb6bb17542078869b5e985acc7d050d93c816ec92312674"
+    },
+    {
+      "path": "Assets/Resources/icons/icon_neigong_001.asset",
+      "gitBlob": "20b3cf87f87510f2f1c4a037af4578cea00cc535",
+      "bytes": 1008,
+      "sha256": "a59feddf929940322ded1069919adfb50276f1c996dc554b7c1573062d5b11d2"
+    },
+    {
+      "path": "Assets/Resources/icons/icon_neigong_001.asset.meta",
+      "gitBlob": "0278177d1160162eec93bb0626e7c1cbad41be79",
+      "bytes": 185,
+      "sha256": "517c98618603f08ca3688f7a69ac1b5f600b4fb4fa8640bd805bc46681f6f4f3"
+    },
+    {
+      "path": "Assets/Resources/icons/icon_neigong_001.png",
+      "gitBlob": "ca00c72546ef5d8114f2d7fcae6ff5dd454d42b0",
+      "bytes": 7128,
+      "sha256": "174291223cc7371115c03d15fa1640e483f1337067d6307c9df25cdfc12828c6"
+    },
+    {
+      "path": "Assets/Resources/icons/icon_neigong_001.png.meta",
+      "gitBlob": "e23c94e0f59b1e804264003489ff53494b3f4e69",
+      "bytes": 3413,
+      "sha256": "91eb59e17acdcff1d60f2066753bf106a69d65782fab579816e6ad90bb91276a"
+    },
+    {
+      "path": "Assets/Scenes/Battle.unity",
+      "gitBlob": "955580d90f46f8ab609e024e6d080d12336efc6a",
+      "bytes": 955424,
+      "sha256": "8418448d18459d06143be3ff66d97beb657983f32615ea99159d30d32de101d3"
+    },
+    {
+      "path": "Assets/Scenes/Map.unity",
+      "gitBlob": "5f8e9f40d1e504a2c585ad6ea2b20184cdcfac79",
+      "bytes": 1628123,
+      "sha256": "4de5ebede4af4dfcf44c4bd09348df69ea7e1f1248ef6c2db2c1842e87a90eb9"
+    },
+    {
+      "path": "Assets/Sprite/anniukuang.asset",
+      "gitBlob": "305bc2ed8f4882d7a66632e2a7d4ec1903752041",
+      "bytes": 2949,
+      "sha256": "760ab3af68aa3ee68914ec012ef47c0f6a2a2c40470105ad44626ac9c3a71b06"
+    },
+    {
+      "path": "Assets/Sprite/anniukuang.asset.meta",
+      "gitBlob": "eee654847928e0d238ee1b9466565912fb0d847f",
+      "bytes": 185,
+      "sha256": "4060c2b13d9c00cba65bf54a64f3ee87261c64406b4da1441e55754961faf55b"
+    },
+    {
+      "path": "Assets/Sprite/arrow3.asset.meta",
+      "gitBlob": "55d3e9cb45c3e89acee5589ad81fb46d106f494c",
+      "bytes": 185,
+      "sha256": "49677ed9b0b66b1e97432dab5f921724454dc8b45e0de7dcc3a26bcbea430585"
+    },
+    {
+      "path": "Assets/Sprite/bar.asset.meta",
+      "gitBlob": "1b9b14e8ad46fa8682c301c7501a2846d73b970a",
+      "bytes": 185,
+      "sha256": "2034abcbde888c3e582fdef60ccc6ac4fbabfcf76d5c73c444f44e9a6d66d42c"
+    },
+    {
+      "path": "Assets/Sprite/battle_actionBarBg.asset",
+      "gitBlob": "c98018266071a7a44357c8f9d72b49596d4e70d4",
+      "bytes": 9674,
+      "sha256": "16e53cea39e60ccaf6e26de6dfadbd4a7e6d2e62c018109c010c4d98f46346c2"
+    },
+    {
+      "path": "Assets/Sprite/battle_actionBarBg.asset.meta",
+      "gitBlob": "fa0fe65dbd1ead7f74e0a6226ad359d3586c40b7",
+      "bytes": 185,
+      "sha256": "6cdddb6eaad99eef6ca5110eaf08f63b2d24afa12c7a234776a7d714f176ae60"
+    },
+    {
+      "path": "Assets/Sprite/battle_duihuakuang.asset.meta",
+      "gitBlob": "efab9296df9f312f92df424bc937971f4a9e6088",
+      "bytes": 185,
+      "sha256": "6c4e040c570594fae841b7cbf946c9204369c36f6b3c43b0744207570e1910b7"
+    },
+    {
+      "path": "Assets/Sprite/battle_jiasu.asset",
+      "gitBlob": "d422e78da413275b2f477fcf88dff25206a41fa9",
+      "bytes": 2132,
+      "sha256": "ce773f29e92755a8d1e79c024c4cee951a2830c132deb6214beeb014f410abb2"
+    },
+    {
+      "path": "Assets/Sprite/battle_jiasu.asset.meta",
+      "gitBlob": "13178fb58c45a52c98a0013936d1de5f9714ccad",
+      "bytes": 185,
+      "sha256": "fd6c18d4448934302468ff070fa39387ddeb8dddeb18bdb67a84eff4bb190312"
+    },
+    {
+      "path": "Assets/Sprite/battle_jiasuhong.asset",
+      "gitBlob": "a19585566e55f0fa506dfe7bbd7fffced2b2b58e",
+      "bytes": 1312,
+      "sha256": "f99d0038ede2d4b1dcd2df631bcf77cc63120cb1c95c71b8e23380551a69275d"
+    },
+    {
+      "path": "Assets/Sprite/battle_jiasuhong.asset.meta",
+      "gitBlob": "866b66316c8e0877851b897f21fab330eb15aeef",
+      "bytes": 185,
+      "sha256": "7baf0aac5bc66151bf8218de4a6f1de91ee1b163f70dab0107c3eb24b8e64c20"
+    },
+    {
+      "path": "Assets/Sprite/battle_shijianxianzhi.asset",
+      "gitBlob": "b715cefc4e0752c194b01e09ce2605696a08bd39",
+      "bytes": 14438,
+      "sha256": "355271cfd5095e2716c44645536f9c16d3204de9b561dc949ecef53e9024a999"
+    },
+    {
+      "path": "Assets/Sprite/battle_shijianxianzhi.asset.meta",
+      "gitBlob": "165b9b341c3e83228e9af2cddbdc421b592c7f0a",
+      "bytes": 185,
+      "sha256": "7430c43c5497ccd2266f17177e8f21a815c4071a6311b945f54068965f22076d"
+    },
+    {
+      "path": "Assets/Sprite/battle_shuimodi.asset",
+      "gitBlob": "f3419f6a0a9411037d62243809f07946bdf4e915",
+      "bytes": 22886,
+      "sha256": "3671c488f17614a53726f31f64e9664d94cf935593aaa85650c30af0a5d15219"
+    },
+    {
+      "path": "Assets/Sprite/battle_shuimodi.asset.meta",
+      "gitBlob": "7580cbfb24316bbc597d83d80ccc872e4eb4af2b",
+      "bytes": 185,
+      "sha256": "146296fc6800ba381d39f2366e50e086038fbce3ebd0147a2359e0aca3bd0ca5"
+    },
+    {
+      "path": "Assets/Sprite/battle_touxiangdi.asset",
+      "gitBlob": "886b1530a7e32542f07de3c9ae326728657e19c9",
+      "bytes": 1318,
+      "sha256": "c07f3ebb460cedc914401afec2913dae4b312f45ba675c5105896ce5b7568c71"
+    },
+    {
+      "path": "Assets/Sprite/battle_touxiangdi.asset.meta",
+      "gitBlob": "c19f96a7893931b2ea5f71e5ab6b4b17bc75051c",
+      "bytes": 185,
+      "sha256": "15cac5a49bbe3f834a6cc9fc5135b9cb9be9d3768b7873e14ff576b39bc6719a"
+    },
+    {
+      "path": "Assets/Sprite/battle_touxiangkuang.asset",
+      "gitBlob": "617b326a681949666b172991fb41496dfb8337c3",
+      "bytes": 1668,
+      "sha256": "6b13afb155d7755eba72f644743aca708acb0d5be1f8e04a149936aaf301fec5"
+    },
+    {
+      "path": "Assets/Sprite/battle_touxiangkuang.asset.meta",
+      "gitBlob": "535ae1a3ea5451d8fbd1604cbb6ade0847243f1f",
+      "bytes": 185,
+      "sha256": "23e9b8f0f8fd31495890272b64b691a1ae0f94d0063139d5e78487655d6b774e"
+    },
+    {
+      "path": "Assets/Sprite/battle_wupin-tubiao.asset",
+      "gitBlob": "56a03e120ffe5a97635036e672a7118030acd233",
+      "bytes": 1339,
+      "sha256": "0b9699ffb5e3cd8a098d76fe0a4631bcc1af3da7bfd21cd02d1d2858e3f353af"
+    },
+    {
+      "path": "Assets/Sprite/battle_wupin-tubiao.asset.meta",
+      "gitBlob": "92e5c3692e4ca952153c62d306cb3bb8d20580eb",
+      "bytes": 185,
+      "sha256": "ec0885788cf85edb6fd3184493e32f06ed65f2bf16d852acaa46e23567427b57"
+    },
+    {
+      "path": "Assets/Sprite/battle_wupin.asset",
+      "gitBlob": "88ac7409c020633930b789144b962e437974fd4e",
+      "bytes": 1873,
+      "sha256": "a3bf349a98e658d3fa1e894951db33e345eca0e198e3c38b48157e86fcd5f640"
+    },
+    {
+      "path": "Assets/Sprite/battle_wupin.asset.meta",
+      "gitBlob": "dfaba4a656bf63a6b9df2bcde7903718f87fc48d",
+      "bytes": 185,
+      "sha256": "c47c2d34d30260ba2f7c166983ab215d828e0128822ece491754eccb39d55213"
+    },
+    {
+      "path": "Assets/Sprite/battle_xiuxi-tubiao.asset",
+      "gitBlob": "02ddd07defc583c641664d93974f7eea8b686ef5",
+      "bytes": 1467,
+      "sha256": "4a93a0514145c490bfe30acd48b322192a61b279f7719e3bb3cc50c08a4d321a"
+    },
+    {
+      "path": "Assets/Sprite/battle_xiuxi-tubiao.asset.meta",
+      "gitBlob": "0161ef9ef0764558800a15845340f4bec3b596d9",
+      "bytes": 185,
+      "sha256": "bd0cb81e1a79f11eacb13f1bf70621f08a953cd64f035d47c581252281f43274"
+    },
+    {
+      "path": "Assets/Sprite/battle_xiuxi.asset",
+      "gitBlob": "bb6ed0a63c33f4091c65c0806fc553f7ed31ee7b",
+      "bytes": 1798,
+      "sha256": "6e4b2629bbfad2f7639fe943d4b6aa7365a89c588ae8d165c40b861a1532d4f4"
+    },
+    {
+      "path": "Assets/Sprite/battle_xiuxi.asset.meta",
+      "gitBlob": "562e2c2611828702f839894ab974ad1c924a8e37",
+      "bytes": 185,
+      "sha256": "5391b9c3807addecc33020de231dd39dcf50e561dc95913a72347e5552030049"
+    },
+    {
+      "path": "Assets/Sprite/battle_yidong-tubiao.asset",
+      "gitBlob": "e467a7132c8110853e4af94562088e48fde65f87",
+      "bytes": 1322,
+      "sha256": "7c3355bf0e22688fc8121fdb37463f00a70b162cecf3d83b84547f5ef4c61d50"
+    },
+    {
+      "path": "Assets/Sprite/battle_yidong-tubiao.asset.meta",
+      "gitBlob": "27dbe5edc07b2561daf001f880340f9ab6e17a0e",
+      "bytes": 185,
+      "sha256": "7d81b9c642370c02d4b79c3d5d793d4053249cda1358874008b1df0f54c8de55"
+    },
+    {
+      "path": "Assets/Sprite/battle_yidong.asset",
+      "gitBlob": "738e55b7101df55c58b5fea6e5af3b2871788d55",
+      "bytes": 1754,
+      "sha256": "dc1dd1d5bcc8ac492a76a25084cd0e0ee747ebab2b00b163a1ce612ff64c25b6"
+    },
+    {
+      "path": "Assets/Sprite/battle_yidong.asset.meta",
+      "gitBlob": "58f4bac69ecb807b5055e0ea557189132f02bd44",
+      "bytes": 185,
+      "sha256": "807b55f58d61375b56950cc95972d24c7e7d22ed2b6fa968ea070a42b95a56ba"
+    },
+    {
+      "path": "Assets/Sprite/battle_zhandoujilubiaoqian.asset",
+      "gitBlob": "4c69b87171054f9531fc6fa6d1b69fa0d5dd743e",
+      "bytes": 4068,
+      "sha256": "1abef3f2dedcff220328522f410ce2f9cbf84ca915339c2c588fe37d11d56a9f"
+    },
+    {
+      "path": "Assets/Sprite/battle_zhandoujilubiaoqian.asset.meta",
+      "gitBlob": "f5f80a4d1ef52b57e5d343b5a70512487bd0a899",
+      "bytes": 185,
+      "sha256": "66821af1c6a3b6e6161fd05cabe1c3d4227118e3a748822ed4d3033b6258d88d"
+    },
+    {
+      "path": "Assets/Sprite/battle_zhandoujilukuang.asset.meta",
+      "gitBlob": "fdd61f15eefd01771a9441711f6b144edebe1250",
+      "bytes": 185,
+      "sha256": "688586617875a0b56c5ac85d5585c55a5dbe1988e1b97d18e3211565c4429161"
+    },
+    {
+      "path": "Assets/Sprite/battle_zhuangtai-tubiao.asset",
+      "gitBlob": "1ffcd5338bd2f8f167520f71f4e8dcd37a8b40e8",
+      "bytes": 1324,
+      "sha256": "4d247400904747c2aa0f34eb51f69fe03f0b4460e6d4a3984a5cbdd24bf77fca"
+    },
+    {
+      "path": "Assets/Sprite/battle_zhuangtai-tubiao.asset.meta",
+      "gitBlob": "ef5d6c4647552265a0725505811ce94525046fc4",
+      "bytes": 185,
+      "sha256": "917507175ee607c59de261e8b0f909f45ed3c49020538116c424a3ca648bf6b3"
+    },
+    {
+      "path": "Assets/Sprite/battle_zhuangtai.asset",
+      "gitBlob": "dacda553ca314d57f0e05a5e113d342e2daadc6c",
+      "bytes": 2113,
+      "sha256": "c12fc8a7d099d5ab529de9437cad3a0a3e66ab69f9628d637dc67053e4d176fa"
+    },
+    {
+      "path": "Assets/Sprite/battle_zhuangtai.asset.meta",
+      "gitBlob": "90e6d17cc2c287b1f7fcabbfb4f7761dce01eb8c",
+      "bytes": 185,
+      "sha256": "835db1b20a843f4863548bdfe4a03bfbfb22aa106b6bcee33842f9d52bb840a2"
+    },
+    {
+      "path": "Assets/Sprite/battle_zidong.asset",
+      "gitBlob": "84f9733e37c97bebfb10251a60da545c78d4eeb0",
+      "bytes": 1772,
+      "sha256": "30147e6014f2562ed662ebb4431bbadacf9e17e878450b6696584d84106f89d0"
+    },
+    {
+      "path": "Assets/Sprite/battle_zidong.asset.meta",
+      "gitBlob": "3143cac84ee1fa06021d73a2066c861e85957672",
+      "bytes": 185,
+      "sha256": "e6045c8216d606ab8a9a5020bad81f79fee4f50010df0e33cfd1d9c6eaf42b9c"
+    },
+    {
+      "path": "Assets/Sprite/battle_zidonghong.asset",
+      "gitBlob": "8c23f6b40f310a2fb96df66ee4db4c3419f878c0",
+      "bytes": 1367,
+      "sha256": "46611cbdd44b5d779b7ac9c06b2dc42abc7a8c21237b4427a4b4d33ba0ccb49c"
+    },
+    {
+      "path": "Assets/Sprite/battle_zidonghong.asset.meta",
+      "gitBlob": "50e5fb0a00cb269f6e1ca4314cfcdcec5c5841e6",
+      "bytes": 185,
+      "sha256": "93bde91e00a6cdd6d986b9c8869829e511ffd9ec96ab7a77dc870b623f9ff8c1"
+    },
+    {
+      "path": "Assets/Sprite/biankuang.asset.meta",
+      "gitBlob": "60108bfea6cf848fa2ececa9458c055559072952",
+      "bytes": 185,
+      "sha256": "b840635be05fd057021f61b20d069ec34df36fc45a56c5550ae65522a3ca51ce"
+    },
+    {
+      "path": "Assets/Sprite/black.asset",
+      "gitBlob": "0a24d71cafe562448e5b758da4749f1197168f80",
+      "bytes": 1007,
+      "sha256": "acc0e83adda1f0f5d29d1b9d30d6116c979591e698d51fbc4ba20b415fcbd230"
+    },
+    {
+      "path": "Assets/Sprite/black.asset.meta",
+      "gitBlob": "9f54bcc58b3210cd712e8ddb88bd2f7bafb2f820",
+      "bytes": 185,
+      "sha256": "d80583ec628dc0cdaa86c34489f8e4c59341aa41c20995d6733af8af073501f8"
+    },
+    {
+      "path": "Assets/Sprite/block.asset.meta",
+      "gitBlob": "b3e8a443871f6cf3c89abdeb724c28b314514468",
+      "bytes": 185,
+      "sha256": "cc655464c0b1ec9ee3e55299d021fff38300d98b1d124ee2fdf803ee3d0af3e0"
+    },
+    {
+      "path": "Assets/Sprite/btn-cross.asset.meta",
+      "gitBlob": "5cd9dedc50cb8a62d014748fa7021d82294e3c17",
+      "bytes": 185,
+      "sha256": "8ff1e46c7ca9cd1376703490b088463e8d012903223e364339d8356ad4f7b7a7"
+    },
+    {
+      "path": "Assets/Sprite/btn_chenjiu.asset.meta",
+      "gitBlob": "556763070795c3cb90ebb1a06776dfdbafc5394f",
+      "bytes": 185,
+      "sha256": "f44083e52d6a53b1ea0fc3f0e9663c73bdc4d1e72000b54e460ea248bd9367c7"
+    },
+    {
+      "path": "Assets/Sprite/btn_cross.asset",
+      "gitBlob": "7d22a73f7e036bbf74f01a737dc7f7bfbe4e4a85",
+      "bytes": 3306,
+      "sha256": "b348bffceecd5706e1350c8ce03d44b638b7f0417201042379a7e8e0a0b5d7aa"
+    },
+    {
+      "path": "Assets/Sprite/btn_cross.asset.meta",
+      "gitBlob": "d52627c65f7f8cb0541ca43052a202ee9cfa05f6",
+      "bytes": 185,
+      "sha256": "2a310f9264074ff39750846ceb987212240816caf61c49b1362a0c46a7b2493c"
+    },
+    {
+      "path": "Assets/Sprite/btn_fang.asset.meta",
+      "gitBlob": "ebd069f265aae2a76beba8da5634fa8eeb1af7b0",
+      "bytes": 185,
+      "sha256": "d0f65eca2c4bd7a0d1cae10b6600c226e55a994e1dff6a872a2d8e9f58aac934"
+    },
+    {
+      "path": "Assets/Sprite/btn_heng.asset.meta",
+      "gitBlob": "0cac4395d921713baf38675b1a19ace05ac529fb",
+      "bytes": 185,
+      "sha256": "01bec5bbd216017bbdcec72cf3d4c6d771c73c48d66d0d0429b20d70245197d1"
+    },
+    {
+      "path": "Assets/Sprite/btn_jianghu.asset.meta",
+      "gitBlob": "11d7c8eaad388aa0f97a380d63b4b97bf01130d2",
+      "bytes": 185,
+      "sha256": "809986a9eca7cfe0c39e22a56702a61ffeb07412ac0e98754e4279a78abf32ff"
+    },
+    {
+      "path": "Assets/Sprite/btn_shi.asset.meta",
+      "gitBlob": "8f84e8a604badd50e78dfc0e8e635a0f7eba71c1",
+      "bytes": 185,
+      "sha256": "ce03dc3928cdab8df442d95f817dd01da0fdb9ed2b3f1c6b4cc41c24e1d4e2bf"
+    },
+    {
+      "path": "Assets/Sprite/btn_shu.asset.meta",
+      "gitBlob": "dc429d88c58a3bcb913f865f59896cc48988d0ed",
+      "bytes": 185,
+      "sha256": "cbedd22c9a948cc6ac97a8521ed93e53fc4bbfb578e81ac176a053afd07608e4"
+    },
+    {
+      "path": "Assets/Sprite/btn_wu.asset.meta",
+      "gitBlob": "193f81859619913b479892d8d63e9da6ccf6f0af",
+      "bytes": 185,
+      "sha256": "e5fde335098974647bf2733d9c9ae1b705983f028b15dfbae49ff212b6aeaaeb"
+    },
+    {
+      "path": "Assets/Sprite/btn_wuxue.asset.meta",
+      "gitBlob": "489a173719144b353253e9c5b89581053328e343",
+      "bytes": 185,
+      "sha256": "b0d88c7429c73f63eea3908ac9caca1c8962d74bad0f866b8c8e898f2bfc1f60"
+    },
+    {
+      "path": "Assets/Sprite/buttonbg.asset.meta",
+      "gitBlob": "e5820576c4eb17e445340c6138880b0e916b3dfa",
+      "bytes": 185,
+      "sha256": "79ca0c774e8e1f3b90305c309589ae5bc6eca92056187bd9d01c1f526d4460d5"
+    },
+    {
+      "path": "Assets/Sprite/camera.asset.meta",
+      "gitBlob": "3f498a1e60493d97a610f95b02fb367719238349",
+      "bytes": 185,
+      "sha256": "58cb892907fc1d4ca9ead74c9e6b908f5ed0cd90291f9056224d7ac5c3c26506"
+    },
+    {
+      "path": "Assets/Sprite/chilun.asset",
+      "gitBlob": "7e9adcfbcd6e7a062ccaf50fc10714e7e4125631",
+      "bytes": 4098,
+      "sha256": "5d67e0d854aee27923657da084543123a01853144b0250a4484025df51a73765"
+    },
+    {
+      "path": "Assets/Sprite/chilun.asset.meta",
+      "gitBlob": "f25ba456966204be38a5e4f0d66c3ae0a440ccaf",
+      "bytes": 185,
+      "sha256": "12072120159427dbd6fc629bba978d76d0d4b890880e3c307980c6924d1d72db"
+    },
+    {
+      "path": "Assets/Sprite/daditu.asset",
+      "gitBlob": "f3dd02c59733e9d5e0961912456e6f98d0ecb021",
+      "bytes": 1021,
+      "sha256": "a86d0b0ebd64037a3535eda66e909827ddb57b347f23d79ac93bcb2e05daf90a"
+    },
+    {
+      "path": "Assets/Sprite/daditu.asset.meta",
+      "gitBlob": "0630b0083413d6593c24736173f8ef67a502e9f1",
+      "bytes": 185,
+      "sha256": "5e49342a409dec55a669d7f61e9b5a5958812523f51c19653b9ec9b390272ec6"
+    },
+    {
+      "path": "Assets/Sprite/daoju.asset",
+      "gitBlob": "edcd7b8160fe5dde601aadf13be71e4ea81addde",
+      "bytes": 1285,
+      "sha256": "49d9da49bbb26518a279353d48acdad7891dfb1d88928682a137a1a3bcaa8af2"
+    },
+    {
+      "path": "Assets/Sprite/daoju.asset.meta",
+      "gitBlob": "ac70ab0a8eb9ef919121d1e12b6556451f2750c7",
+      "bytes": 185,
+      "sha256": "8be6dca4f71c10a25dfab2cdcd49bf12ba3571cb8b44d519f223f171d2a5268d"
+    },
+    {
+      "path": "Assets/Sprite/dibukuang.asset.meta",
+      "gitBlob": "525a8ef6f1241d3ba9cf1861e13827a7540f54e4",
+      "bytes": 185,
+      "sha256": "6a345297f2a98287b5ed90d78d062e4bf6d57352b5cc59f5d204dac9ec34526e"
+    },
+    {
+      "path": "Assets/Sprite/dikuang2.asset.meta",
+      "gitBlob": "bb97a27e2b57b3579f70707e0d44dc2196bb9e2e",
+      "bytes": 185,
+      "sha256": "9e766c41f815ad49fc0add97dbc08048e2d4d862902762eb59b1038b62a5987e"
+    },
+    {
+      "path": "Assets/Sprite/dingbu.asset",
+      "gitBlob": "f32c5f358c9b63600c37efca89b9dac08a6c4735",
+      "bytes": 2134,
+      "sha256": "9cee5fbf29c05690bf98663cf66e53ac03b87f32f2a3576349dcbaba2b81ebff"
+    },
+    {
+      "path": "Assets/Sprite/dingbu.asset.meta",
+      "gitBlob": "8b5d0a92f225bca63b7c80edc03ff1728c4f53df",
+      "bytes": 185,
+      "sha256": "e66622f89ada95a2b0de192ce9ddd928d8e5673fcbd76d1974e0bbd8eedd7871"
+    },
+    {
+      "path": "Assets/Sprite/dise.asset.meta",
+      "gitBlob": "69b2000de94a93f63b611b48efaa3b40ce52aa40",
+      "bytes": 185,
+      "sha256": "128c0d4ddbefd8f86980d4952bb12ad8712d31098492934848eacbccc276bf90"
+    },
+    {
+      "path": "Assets/Sprite/duihuakuang.asset.meta",
+      "gitBlob": "9f3f23981b08a2381c3d3595e2bdc8dd156e9b02",
+      "bytes": 185,
+      "sha256": "c7c6e36285997d693abb8213bb96521264dc0a62d277bf597ccaa113ceb6d2a7"
+    },
+    {
+      "path": "Assets/Sprite/duiwu_yidong.asset.meta",
+      "gitBlob": "048c26373c9c2ddcf305e59d735696c37af162db",
+      "bytes": 185,
+      "sha256": "82cf0155c67ad04ff14280bb25498e8b51f117f308079aab7a30d43acdcca36e"
+    },
+    {
+      "path": "Assets/Sprite/duiyoubiankuang.asset.meta",
+      "gitBlob": "e603a55953a242641a846a0756bf5c2b9f33b62f",
+      "bytes": 185,
+      "sha256": "d276b3beddef020eae74764afb9fd99db04d08ed9235a8a2d95b40f090fb3514"
+    },
+    {
+      "path": "Assets/Sprite/duiyoudise.asset.meta",
+      "gitBlob": "01539fd20f3ccd10ca9c300b784ca3e5ba109e4e",
+      "bytes": 185,
+      "sha256": "4243ed1f341566c0d7b56cd7d1e91e6189419aa5d224e42a0d6ed8a9ab2c60cf"
+    },
+    {
+      "path": "Assets/Sprite/fengying.asset",
+      "gitBlob": "ab141cdd75434ece344e5944d062a07a1a88c4c6",
+      "bytes": 1397,
+      "sha256": "5c90ecd962c76b4b8ee571f0a279a6b7c5c2b22c5eade34cfc87db486450069f"
+    },
+    {
+      "path": "Assets/Sprite/fengying.asset.meta",
+      "gitBlob": "31175159d46db34e1b804528ac3bfba933003ee9",
+      "bytes": 185,
+      "sha256": "89eeaa4279ce091b07e95482f6f87f9538e5d3ab1e1fee4f56b8b7fd5cd23b65"
+    },
+    {
+      "path": "Assets/Sprite/forum.asset.meta",
+      "gitBlob": "2686ffd9e42c4dcb09f1d4776f882abd70d4f372",
+      "bytes": 185,
+      "sha256": "06ece43f164859422a595ff0d3f4ce0e38e24c535ec68e671d1da971b946d512"
+    },
+    {
+      "path": "Assets/Sprite/gameover.asset.meta",
+      "gitBlob": "6cf4c71e9ff6108b8906b4e4d4b7692fb96188fa",
+      "bytes": 185,
+      "sha256": "39d238c982bcf8db3fd4d36d16661f669087e7e660ca535fdcba07c3924f549c"
+    },
+    {
+      "path": "Assets/Sprite/gezi2.asset.meta",
+      "gitBlob": "d52661105c896e38f5880ec6a67f984246bb1eae",
+      "bytes": 185,
+      "sha256": "494ff912845407016ecb7b242005fbcebe01b9faa3bfc0552323c19b24c125f4"
+    },
+    {
+      "path": "Assets/Sprite/huashan.asset.meta",
+      "gitBlob": "e7fd71914fb218a9c1c97203ca00748c0e47a96a",
+      "bytes": 185,
+      "sha256": "e929fe4296fb5c7ba0eaea3a83711a275e1615d04ca42cfbcb872aab58e38bcb"
+    },
+    {
+      "path": "Assets/Sprite/hudie.asset.meta",
+      "gitBlob": "352c247cd811b064c3e84d5c90ff77ae19e2ed49",
+      "bytes": 185,
+      "sha256": "47f86da2f7a444e92c1e5baf0f932239d244c34de5e48669c54c609b3b1143fb"
+    },
+    {
+      "path": "Assets/Sprite/jiahao.asset.meta",
+      "gitBlob": "dadd0d23ec29d7b632b65314b20414d4f27e2119",
+      "bytes": 185,
+      "sha256": "4d1eb0ff013a3efcb0e0e796c7fc385f0dcb1a8f7a5a98bdd44bf91c46172801"
+    },
+    {
+      "path": "Assets/Sprite/kezhan.asset.meta",
+      "gitBlob": "3f5ab0d94ef24f8569dc4002e86e8624b59bab87",
+      "bytes": 185,
+      "sha256": "8f8d4fcc557c98c1b66aa05d07614c827e80737032fbaf606f6ba188254cc7e5"
+    },
+    {
+      "path": "Assets/Sprite/kuang-bg.asset.meta",
+      "gitBlob": "505d8b136b8c66b23eb0801cba415579cb5fbf86",
+      "bytes": 185,
+      "sha256": "58c83eeb9dd0872c9d2596e449e981a6635349d82729611747345f5f3b9917ae"
+    },
+    {
+      "path": "Assets/Sprite/lantiao.asset.meta",
+      "gitBlob": "0ad196d4a2d719d3cfb71f9b28a4af64fc1d9aee",
+      "bytes": 185,
+      "sha256": "089ee47295b5e4ca2ca114f59ac63145f610d588bc1fe87580af77740480873f"
+    },
+    {
+      "path": "Assets/Sprite/line_wanjiashuju.asset.meta",
+      "gitBlob": "44d0c81fcb0d8985c6ac8fe61d170c7e4bd2f6b2",
+      "bytes": 185,
+      "sha256": "505f88c264a8089177bd0e4a5ba4a7ff13072da30f2ca8339c4ec9e18faee724"
+    },
+    {
+      "path": "Assets/Sprite/logo.asset.meta",
+      "gitBlob": "529d5ddb4a13b3528c521bcdf5ff3baa01aa2e8e",
+      "bytes": 185,
+      "sha256": "44972748884e4754c09d56b0dcb6d9d315fab154eaa693b3128a4c7e5c59dd6e"
+    },
+    {
+      "path": "Assets/Sprite/moji2.asset.meta",
+      "gitBlob": "d172ec644b1d3c6b6c0d8aa5ddb430a84b911e54",
+      "bytes": 185,
+      "sha256": "6fbce329405d25f9c8a047cc7b11f88768d2631b3ac36efec6120bae0593424b"
+    },
+    {
+      "path": "Assets/Sprite/moji3.asset.meta",
+      "gitBlob": "a2e660e0a4a1483c210111b417bc6a8d161b0089",
+      "bytes": 185,
+      "sha256": "41b1c2eaf8cc4946918b91b844a556ae0cadc6a3190d0e993592d7541089f956"
+    },
+    {
+      "path": "Assets/Sprite/moji4.asset.meta",
+      "gitBlob": "6719d4b6e030c06d2eaab6e081ea7c38ca1d943c",
+      "bytes": 185,
+      "sha256": "95b7b4623055fad9b46e4d9bdb2c90591b2a24d0f664458ce3a2a9e23d277104"
+    },
+    {
+      "path": "Assets/Sprite/nandu.asset",
+      "gitBlob": "3479ea817ac777d48e4ab79ac4083d7320691fb5",
+      "bytes": 1378,
+      "sha256": "2aeb88d72b2638ff2818ac32f4ba4f3552fd83667b67e1bdc296f39b36719aa3"
+    },
+    {
+      "path": "Assets/Sprite/nandu.asset.meta",
+      "gitBlob": "b3b6f873fcb4af460fd6784e7ac5eb6bd6b587f7",
+      "bytes": 185,
+      "sha256": "7f2f5c0ba466005cf8e9ad1f8a1ad1970d2bbc0edec17a9cd42515abe982e304"
+    },
+    {
+      "path": "Assets/Sprite/pbar.asset.meta",
+      "gitBlob": "79a611a87190f7a91375bc488bdc7389f7230d90",
+      "bytes": 185,
+      "sha256": "20dc6c1b1a104714c09a1598aa2ba243a2046bd8c1fde53095b80a3832b7b49a"
+    },
+    {
+      "path": "Assets/Sprite/plus.asset.meta",
+      "gitBlob": "f8e40b7b9442fce553184c09250a47e0bada5f4a",
+      "bytes": 185,
+      "sha256": "cb3aa135247afdd2c473324ab674bbde996df5590abb27793facadd26ceda9d5"
+    },
+    {
+      "path": "Assets/Sprite/red-juxing.asset.meta",
+      "gitBlob": "63a1045d3523171c2f83db908a077118ebe00721",
+      "bytes": 185,
+      "sha256": "81ea611191c9bd9b24e87c69b766cf25e63def2065269fe4329e3d1328487517"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_dise.asset",
+      "gitBlob": "ff3220f179d03a9e0c3e2aba7c857b7da6435361",
+      "bytes": 14739,
+      "sha256": "1f93c2eefda51321035fb3421e7f3ba72ccce3f1ef82725625b28a3e40575793"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_dise.asset.meta",
+      "gitBlob": "a32c1a5127d5f446dbbe483f7f706ee11102228e",
+      "bytes": 185,
+      "sha256": "6fc8808ff1666bc1b9b0dd9397163fcdf6a156d327fc00e2962be8877c495b11"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_jineng.asset",
+      "gitBlob": "01621e02f23edd5f609b32375ac605b10c0c5ff1",
+      "bytes": 1333,
+      "sha256": "7db511324d383f74fa72f93f8fd80e3b041446d6cd4d6378b6a1e4eeea22874d"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_jineng.asset.meta",
+      "gitBlob": "c8316fec111db65f8b6adcd71e3e044004d7649c",
+      "bytes": 185,
+      "sha256": "d775d5d417d40c8bf67349f0dc44420578ec56e453bb0b93890667b3a94d811b"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_lantiao.asset",
+      "gitBlob": "60a4d33f46515394d292d878ac7f43931cad71ca",
+      "bytes": 1852,
+      "sha256": "b4b2266ce378f081fb0c48ce5b08bfa68f2552128ea51e65075ed7b67c95af05"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_lantiao.asset.meta",
+      "gitBlob": "2cdab02bdfe4361eb6dc3964e3944304d8e4072b",
+      "bytes": 185,
+      "sha256": "4277c786fe140b92b0bf98089d96092bd116992103caa2cb62c0133efcf699b8"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_liezhuang.asset",
+      "gitBlob": "e0aa90f5b29f0dbb09e1aed681539d7c6a33d4af",
+      "bytes": 1415,
+      "sha256": "8cad912239e11560f5c0862462f8db9f6757baf89bede2c758b68cf44867e090"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_liezhuang.asset.meta",
+      "gitBlob": "d40d41a0d701e025c014a2166023c6c874b61e75",
+      "bytes": 185,
+      "sha256": "9a38c6a6f8c1af5fff136a5ab43c3f6eb7d25a33f6e7f6baf9e1700ad42a2559"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_shuxing.asset",
+      "gitBlob": "333a352fa6d32cdfe978327637bbe9684a088d32",
+      "bytes": 1413,
+      "sha256": "20c54f8005afe0809e52672e440c3d0ce536c055cf3f17875734ead55395234e"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_shuxing.asset.meta",
+      "gitBlob": "46c0c8ea26787a838cfa57d32c877e880f012817",
+      "bytes": 185,
+      "sha256": "1e5b9afeed4e7898c2bf4457736600f9427fefb24503bd846ab57a16e9aa6bd1"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_tianfu.asset",
+      "gitBlob": "cf435574d3bc22f9ce6873eb42248e618b8e356c",
+      "bytes": 1390,
+      "sha256": "68e6f34f6e082058b33005f439d58b0a67fa4b9870619c5eb5762f8dc602e194"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_tianfu.asset.meta",
+      "gitBlob": "e03157c282a4641695cdfd3b533d9688fdba44b7",
+      "bytes": 185,
+      "sha256": "12dbc5d91ae56d94b16e9c12bc6b91d9782693fd9fe38e167b67614929c71046"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_touxiangdise.asset",
+      "gitBlob": "8177e64b71dcb403368c9818ab1b29640a1957a4",
+      "bytes": 1863,
+      "sha256": "d23b1fe3d799b339955d9dfc21dafd6dd348f4bc643d5016033739055168fbfa"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_touxiangdise.asset.meta",
+      "gitBlob": "884d71b41b596820f1ca7d3eba6dbccc5f3f9079",
+      "bytes": 185,
+      "sha256": "31f1f07e0765f1f906f7661ec5e4af676706ef9978406e475ff9d76a9883358e"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_touxiangmengban.asset",
+      "gitBlob": "19819d80ee17efb265876aeafe4060122dbae6e1",
+      "bytes": 1563,
+      "sha256": "a0d527110e9735b07e99325f6532cba3eb1d663e121adf6ffbb9e5802fd88720"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_touxiangmengban.asset.meta",
+      "gitBlob": "f535862b9b28b77d37df1fbf6247a5ca8adc9211",
+      "bytes": 185,
+      "sha256": "c4c013ad7a34f86f19e5ba15397e526216f6bb13434ee26401413248935741ef"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_xuetiao.asset",
+      "gitBlob": "e7766a6dc7120ee389a39a35472497054251523f",
+      "bytes": 1174,
+      "sha256": "eb071a3b308dc31ea760c6383813be8bf63bd193f5ceb07eee442eba33ba81ad"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_xuetiao.asset.meta",
+      "gitBlob": "bbde25801d8b60171ffe7da97e3c61356f0f6729",
+      "bytes": 185,
+      "sha256": "a7d3ac3963d4d2286c168d9d2b6f083ee319634eb431e98764a42cb403c0720b"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_xuetiaodise.asset",
+      "gitBlob": "c62375a7f1dd2078b8cd225b8f0a2b7849331f0f",
+      "bytes": 1334,
+      "sha256": "78600d1c796303fe267e8b4b8b021285c9acee9bf2481c57e373b83980d506a1"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_xuetiaodise.asset.meta",
+      "gitBlob": "22b3d8ac7e5d74ef25f4aa9d18c7f8cf063fe920",
+      "bytes": 185,
+      "sha256": "afe483eae1ee756dd8b13a1110deca896ea84bf0caa5bc40f112b1ff882c80f1"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_xuetiaokuang.asset",
+      "gitBlob": "93dab73edbf6e10951d81616fd87361dc5e2b8ff",
+      "bytes": 1321,
+      "sha256": "b9d90a6682449a4b2d554f182b28da1f3e56c1f8df624065b9599789322c00ed"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_xuetiaokuang.asset.meta",
+      "gitBlob": "2d24b15858ef1a9c5e670035953d828c8f3487f0",
+      "bytes": 185,
+      "sha256": "4c77284cb1234cd4163033f716fa411fc40f5d3e49115ddf3cca97566558ac6c"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_xuetiaomengban.asset",
+      "gitBlob": "af56a3659c3560c1861e9ba084a66274b78c2f40",
+      "bytes": 1373,
+      "sha256": "d5956850153fefdfc5ea1412d456497a999829cfcedf56e6e2bd042cb92b50d6"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_xuetiaomengban.asset.meta",
+      "gitBlob": "70926a7c93f434bdaa73651ecb89eabc064f3e0a",
+      "bytes": 185,
+      "sha256": "afb4eda95e8dfd34b6d531604070b00e9af5f17ed30a3db40005f1f1f90e6fd3"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_zhuangbei.asset",
+      "gitBlob": "d7e6c4aa4b0becda4c4e7a791c17df468c4681f9",
+      "bytes": 1304,
+      "sha256": "a97efd6c67810ec33c41565cec6c3fa0c62b91fa2a970583548386a4ea3f22bc"
+    },
+    {
+      "path": "Assets/Sprite/renwuzhuangtai_zhuangbei.asset.meta",
+      "gitBlob": "765d82219e91e3b13c9b530cfd5ca4982e41eeee",
+      "bytes": 185,
+      "sha256": "24690c732ae27b12c778b18ed35aa05fe4373fe9dd1e3f6c1f343a9f7aadf00b"
+    },
+    {
+      "path": "Assets/Sprite/rizhi.asset",
+      "gitBlob": "62bee73e40e2ec58beb6c1cba3632ebd98129117",
+      "bytes": 1213,
+      "sha256": "4d16ae0fbb6e31520878c2011ed0833ffe8b5b2b2a8f65c7057be7c1df02d56b"
+    },
+    {
+      "path": "Assets/Sprite/rizhi.asset.meta",
+      "gitBlob": "fe3cf125dc910cb5afc61aa59362062571868b2e",
+      "bytes": 185,
+      "sha256": "01e437652120d80c93359f089d159b7001d90c3b10e1fe0cd0d6df33e59173c7"
+    },
+    {
+      "path": "Assets/Sprite/scrollbar.asset.meta",
+      "gitBlob": "c86916b3cf013a631fa5ab72d74738aa2fd0da61",
+      "bytes": 185,
+      "sha256": "fe34cebe992afdb8695b6d0edde49a3277bea6833459e5ed35cb4806174d0f86"
+    },
+    {
+      "path": "Assets/Sprite/scrollbar_red.asset.meta",
+      "gitBlob": "85c2cb4647da9dab541e0b99078d4696dcea6bfe",
+      "bytes": 185,
+      "sha256": "5b7bbf4c37396cbf45c0ec5b444beff499dc1b8047e47236bc05112b338c80bc"
+    },
+    {
+      "path": "Assets/Sprite/scrollbtn.asset.meta",
+      "gitBlob": "97b7bd12747421b2b3d4786eb0774f4690830fc9",
+      "bytes": 185,
+      "sha256": "94e4f00fe4c1f582aeee17e6e6daa30b1dd8e5a73152cd72e3105ed05fb69e6c"
+    },
+    {
+      "path": "Assets/Sprite/share.asset.meta",
+      "gitBlob": "d9ccc8d8052d1b3e6741c34f6f357cf29e791201",
+      "bytes": 185,
+      "sha256": "0c095f365e738e6166475b9f3f8d2f92ec8e119124d7397b3e76340c1222d0fe"
+    },
+    {
+      "path": "Assets/Sprite/share_0.asset.meta",
+      "gitBlob": "ca5517329c3fd38b17d01f53cb727be4aa2368b4",
+      "bytes": 185,
+      "sha256": "33a86e529079324019ecd5b448c99ceba4afa448ef652c737c1c224fc9413d85"
+    },
+    {
+      "path": "Assets/Sprite/shop.asset.meta",
+      "gitBlob": "fd924af67a08c4e4ea274cdc24702620755448bf",
+      "bytes": 185,
+      "sha256": "1165563d13c5173855d193e35fc028bd43fa44d05e3408c4103195a4c180d42d"
+    },
+    {
+      "path": "Assets/Sprite/shuxingbiaoqian.asset.meta",
+      "gitBlob": "207f221c536820d91db5e7e839e4317d5f0755eb",
+      "bytes": 185,
+      "sha256": "764d8e45cd8e4eb909a14ef107f934fbc735550fab508427319c6ae88abebfa6"
+    },
+    {
+      "path": "Assets/Sprite/shuxingfenpei.asset.meta",
+      "gitBlob": "71cd66d41470ecb62f26e41fa19a19ea6f099798",
+      "bytes": 185,
+      "sha256": "6244258b47dd75bda21cfa6a0283fa0dd1494e72d25c7daaf06ce43463d2e02c"
+    },
+    {
+      "path": "Assets/Sprite/tanhao.asset.meta",
+      "gitBlob": "422aa6eabd990efee0ed5d34551488649c4863b7",
+      "bytes": 185,
+      "sha256": "ff75b226c47ad611d0ff44129a2b2d33d538c10ecf9b1bc5e4010b7b7f1d8c26"
+    },
+    {
+      "path": "Assets/Sprite/title.asset.meta",
+      "gitBlob": "ffe8fe4d21a0ef1f711b77c82ce288acf7d37487",
+      "bytes": 185,
+      "sha256": "c5abe475ec764c4095b5e129b23fc6960e14157afba49b5cad6de7c89e3df6e6"
+    },
+    {
+      "path": "Assets/Sprite/touxiangbiankuang.asset",
+      "gitBlob": "808e2e44bbd504808f38f93ef13e28aa34022d29",
+      "bytes": 2942,
+      "sha256": "497b7fba6354a6b8db2ff8d3c4428224643add0b9f3862baeab0087a0a2453c5"
+    },
+    {
+      "path": "Assets/Sprite/touxiangbiankuang.asset.meta",
+      "gitBlob": "f83a032d80903aa6c38d5e4564113f447ccd1767",
+      "bytes": 185,
+      "sha256": "768af4e6e60bd63a0e5c09dbf4d6e4f64933fa7b94b1166b756127d5c4fefd46"
+    },
+    {
+      "path": "Assets/Sprite/touxiangdise.asset",
+      "gitBlob": "272f0c4e685393f60361329df100077d754e447c",
+      "bytes": 1537,
+      "sha256": "a6bbada6660cc75989aff728e03b12595582afa290f5833cc57fef2891d2b045"
+    },
+    {
+      "path": "Assets/Sprite/touxiangdise.asset.meta",
+      "gitBlob": "0364e22a8abe9e7fd189696116ff8e6e1dc63aa7",
+      "bytes": 185,
+      "sha256": "46360177c93447a10a89ff8349cb68d60290f0c514b86e001ad9f826ec36ed17"
+    },
+    {
+      "path": "Assets/Sprite/touxiangkuang.asset",
+      "gitBlob": "b2497f148682b50e2e0c6e1a78ffbf4592884eef",
+      "bytes": 1569,
+      "sha256": "2550a932c2c05e3e967c40c981f83739045e5bc9943478e0ff507bfb7cd2d59d"
+    },
+    {
+      "path": "Assets/Sprite/touxiangkuang.asset.meta",
+      "gitBlob": "c078a557a898c52095feda4e0e3d2d55f4680491",
+      "bytes": 185,
+      "sha256": "2519a73c47f9cf5c8844aaa1deb64f1627e9918b0acde2cb2e60db6774a601b1"
+    },
+    {
+      "path": "Assets/Sprite/website.asset.meta",
+      "gitBlob": "e3b744858870df452f395c01667b354edd8e2cda",
+      "bytes": 185,
+      "sha256": "2d8f7f41713479d694b6b83a46a937ecf87e6924fa7f3cab08b69a607c08d7dc"
+    },
+    {
+      "path": "Assets/Sprite/word_e.asset",
+      "gitBlob": "0c5bb47a120aad468d4c064f1154f6f6aadc1c12",
+      "bytes": 998,
+      "sha256": "d4dfba2262400cb5a91e3531011049446704f2588e92254b2a9a8cd4429a710e"
+    },
+    {
+      "path": "Assets/Sprite/word_e.asset.meta",
+      "gitBlob": "8b0e3c8cbb57c5d7f887a64430bce1df6fd0a388",
+      "bytes": 185,
+      "sha256": "b7477fe0bdee1998abb473670f91e40588f50de059039f4d7557d2feb66c1deb"
+    },
+    {
+      "path": "Assets/Sprite/word_q.asset",
+      "gitBlob": "f54493eeb64a8e621c908c823c19296fa4c16ed9",
+      "bytes": 1018,
+      "sha256": "c0d8c2d479bfe9e7fb2eb80d1d161848955b8c37c11cf2747cfc3bf429833459"
+    },
+    {
+      "path": "Assets/Sprite/word_q.asset.meta",
+      "gitBlob": "ffed57610c3fe8994d2ec8ef403afeedcc41e318",
+      "bytes": 185,
+      "sha256": "6709ab82581458a02256e53ab03c952b95c016722667d1b5cd409b10363d560d"
+    },
+    {
+      "path": "Assets/Sprite/word_r.asset",
+      "gitBlob": "ea46db17c72eba6b117e29ead25d6190b4c2f15f",
+      "bytes": 998,
+      "sha256": "8ca36e6fe2fa4779fc29d374b5dac7514cfa9331330b0e6dcb056337d6e4659a"
+    },
+    {
+      "path": "Assets/Sprite/word_r.asset.meta",
+      "gitBlob": "5fff641c19139fcf7192d4e10425d92b241057a7",
+      "bytes": 185,
+      "sha256": "f6fabc5656856dc53939ff6ce685a41683d1794469b78b9aba0f15029726c8f6"
+    },
+    {
+      "path": "Assets/Sprite/word_w.asset",
+      "gitBlob": "0cd0449f44081ba1c190b27bd500d6ca474bb6d5",
+      "bytes": 1008,
+      "sha256": "f0102708e01c9faae1c514988f858965f74fbcb98830f06c68de2c5048eda2df"
+    },
+    {
+      "path": "Assets/Sprite/word_w.asset.meta",
+      "gitBlob": "8675ce94048c8e8b8882d80239154faf32b1821b",
+      "bytes": 185,
+      "sha256": "9c270feef4dc85a3668323e57dfb8db06f3e564c8a3fcb8904bdf0076c2eee3f"
+    },
+    {
+      "path": "Assets/Sprite/xitong.asset",
+      "gitBlob": "46dcb8f039db581dc436abb2e81da05448bae5a7",
+      "bytes": 1322,
+      "sha256": "5f50ddf59441546b2e6e0019cc9d223e57fab08a849327a17043e445552741ba"
+    },
+    {
+      "path": "Assets/Sprite/xitong.asset.meta",
+      "gitBlob": "6ccd95cd083b8cb1328cb1db1fada01e44069b23",
+      "bytes": 185,
+      "sha256": "ff50979fa8b47f7890fe394ce0bc30b90cd396398413120d5c32035a39fbd066"
+    },
+    {
+      "path": "Assets/Sprite/xuandingjineng-dise.asset",
+      "gitBlob": "ae19b4c1fba28ed55e8d42c74f766ec19678597a",
+      "bytes": 2972,
+      "sha256": "ff784d6273c77f619d29d3db84c36659f7c4ff5b52387ea0bf65eb9c2234da1b"
+    },
+    {
+      "path": "Assets/Sprite/xuandingjineng-dise.asset.meta",
+      "gitBlob": "24830a4a99b56a610cbe1f67e21f6934d827fcdc",
+      "bytes": 185,
+      "sha256": "583ff8eedcb82ef8cb327ae8a461e5e56aa4d92737598da0dce49230622c0d39"
+    },
+    {
+      "path": "Assets/Sprite/xuetiao.asset.meta",
+      "gitBlob": "2b7798988f6a618442fea47db1792a4d23687b54",
+      "bytes": 185,
+      "sha256": "75f9bdf24d6debfe4fecf3a88370792ba27b192991eefd3f985f1be272c94818"
+    },
+    {
+      "path": "Assets/Sprite/ying.asset.meta",
+      "gitBlob": "fab265d418da0116c5e0eaf73424ca8a880481fe",
+      "bytes": 185,
+      "sha256": "5121d7ccb5b2c51b2a6d4665ddc9bc098bae8a194b1a695f8078b7b568245f8e"
+    },
+    {
+      "path": "Assets/Sprite/yinyingxiao.asset.meta",
+      "gitBlob": "98a803d6d949c58c3e980cfeea594c6a85aaacc0",
+      "bytes": 185,
+      "sha256": "b4a315a071d91aa0ea4927da4413cc7d11a42caed5323120927ca0f9be9693ea"
+    },
+    {
+      "path": "Assets/Sprite/yinyuanbao.asset.meta",
+      "gitBlob": "35c42043936e31c8c7a3eed94da466a8030592fb",
+      "bytes": 185,
+      "sha256": "bfad1fbb9315cfa946de59c0b54eb571d3bde1a9912df4ca8783d0200418a1f8"
+    },
+    {
+      "path": "Assets/Sprite/yuanbao.asset",
+      "gitBlob": "6bc05bed2d7e7a3be93b2aa521638cf93c7f3f7d",
+      "bytes": 999,
+      "sha256": "09b97d832ccaf219bd5ad75946d1a79a812274170a33325ef7a5769f5b1a4ab0"
+    },
+    {
+      "path": "Assets/Sprite/yuanbao.asset.meta",
+      "gitBlob": "d14dc4edb383c78877422af6584ecb249556b804",
+      "bytes": 185,
+      "sha256": "36855fe399d711cabf754f923f7ae3d93a10f3cc05bf334ec4c327c155a73f6c"
+    },
+    {
+      "path": "Assets/Sprite/yuanbao_yin.asset",
+      "gitBlob": "ac8b17820ddf9d2df6788da2219a0cf22ee95247",
+      "bytes": 1013,
+      "sha256": "e8538adf8f88c207550deedd6ecca45d974d223adbc69a6a58578a0dbb0a9bd7"
+    },
+    {
+      "path": "Assets/Sprite/yuanbao_yin.asset.meta",
+      "gitBlob": "944bc44101e9d2c59f6035d4ba2c0397b5e2d5f1",
+      "bytes": 185,
+      "sha256": "9a5ea3f455881fb37033bce2deb92ecd46005cced4c9efca7eb4ed98bb2cc42a"
+    },
+    {
+      "path": "Assets/Sprite/yun.asset",
+      "gitBlob": "200d6f2b5ff7b92d2d8ea32a90bc49380d7088a1",
+      "bytes": 1464,
+      "sha256": "25b7c5e8ea2bd90734a91dd3e0c594cfee7f3e8a8bc8689e29124c94d48cc4da"
+    },
+    {
+      "path": "Assets/Sprite/yun.asset.meta",
+      "gitBlob": "c67821ab5f3ce17c6d6ae362c5a092f3a1cfabc9",
+      "bytes": 185,
+      "sha256": "77c84744a0942ade4fce161e85986404e242ded25c0045ac67f0056c9cbec11d"
+    },
+    {
+      "path": "Assets/Sprite/zbk_fangju.asset.meta",
+      "gitBlob": "fbb0c0fb4af5fa385fd832e51d274b18bc6ded65",
+      "bytes": 185,
+      "sha256": "fdb84d37e1fea897cc21986369d4f41efce367f9cb3abbe9aef49ff7ad680757"
+    },
+    {
+      "path": "Assets/Sprite/zbk_jingshu.asset.meta",
+      "gitBlob": "247282203c9dd1b6c5b988cd29b836f4e3e203c4",
+      "bytes": 185,
+      "sha256": "137e3ffa1d3e8a4a85d2eac298638868193bcd07a63ffcc95280140eb5a24d66"
+    },
+    {
+      "path": "Assets/Sprite/zbk_shipin.asset.meta",
+      "gitBlob": "cdea3ff187075a58c79a4beb23df76aca1372d20",
+      "bytes": 185,
+      "sha256": "3115daa12976ad583c8771e16e7f1fde2d83329ca1e384379f47cf32e277ff56"
+    },
+    {
+      "path": "Assets/Sprite/zbk_wuqi.asset.meta",
+      "gitBlob": "508c12accea3e8529627f89f3088b2b32bb000b5",
+      "bytes": 185,
+      "sha256": "b110c9101a097dba33b14b49d3dc9744bb39807190a88062460ddde53319cf30"
+    },
+    {
+      "path": "Assets/Sprite/zhongguojie.asset.meta",
+      "gitBlob": "09a21fceee14bd40f3e0f3746ee56adf6d0428fc",
+      "bytes": 185,
+      "sha256": "70b7e733d051fef930d7f90099e0fc6ecbeae7fb4719d813f57a13be4ea7d5db"
+    },
+    {
+      "path": "Assets/Sprite/zhuangbeikuang-mengbang.asset.meta",
+      "gitBlob": "0cd7d55ae55b45d3f23f5b7c0e141b4897a704dc",
+      "bytes": 185,
+      "sha256": "a1c1c959f01ee0cb8623d569ce27f8723dd666230d909d803ee8a6d78a664a8d"
+    },
+    {
+      "path": "Assets/Sprite/zhuangbeikuang.asset.meta",
+      "gitBlob": "0bf921c562aba7d48a6f2a29aee445badca6ca40",
+      "bytes": 185,
+      "sha256": "193f5acefe6c8a5143913cea3b16cf2635e9c1294484bb4d0df2d2d84249ac2d"
+    },
+    {
+      "path": "Assets/Sprite/zhuangtai.asset",
+      "gitBlob": "3dbd350067069f34b0c06cdc20ddfe106fd4e269",
+      "bytes": 1360,
+      "sha256": "02f7d105a1b637d0b81def82377b2d54dad8d79708cbd0dd0997873f4edcc573"
+    },
+    {
+      "path": "Assets/Sprite/zhuangtai.asset.meta",
+      "gitBlob": "2913aeeda86afb0b85a1bf0af6ce094fd7878c8a",
+      "bytes": 185,
+      "sha256": "d1f74ff9ea4bc35bb1d78d84bc4b8c5823f649d49feddbd82400f997fe7ecf51"
+    },
+    {
+      "path": "Assets/Sprite/zhulin.asset",
+      "gitBlob": "a6999ff47e96ae3aba3c5db12ccd6d578a73c3c3",
+      "bytes": 1020,
+      "sha256": "8fef099f59e2e071150e3e6bcd46fca6f32b5d1b096fc5e5d61ee0228a6bd09d"
+    },
+    {
+      "path": "Assets/Sprite/zhulin.asset.meta",
+      "gitBlob": "aab6c1c278dff720e1303a622a822f67c784ba56",
+      "bytes": 185,
+      "sha256": "87b624e3cf52f5b1cc4d73d60cccf4cc38ab7d88812f97a663e4c558938f8084"
+    },
+    {
+      "path": "Assets/Texture2D/anniukuang.png",
+      "gitBlob": "5052982209602d2b45110505450f77cc55cae708",
+      "bytes": 36758,
+      "sha256": "c78638a85a6d78e05bbbd36f40df55bbd174d459c9c62d1d596b04f2b19d15e6"
+    },
+    {
+      "path": "Assets/Texture2D/anniukuang.png.meta",
+      "gitBlob": "0e53b38bda49d1f3fdea7e483f456549122f6c00",
+      "bytes": 3412,
+      "sha256": "7314eb25ae0868c85766827abea0de3b4a3fd7156f479c30d19ac53f3ba1bc59"
+    },
+    {
+      "path": "Assets/Texture2D/battle_actionBarBg.png",
+      "gitBlob": "0000e90ae06302916d50855d2a8976076799d232",
+      "bytes": 155367,
+      "sha256": "99b75485061341a37b7145fb5afa395fe79568cf523f524ab0ef0d85bbd74695"
+    },
+    {
+      "path": "Assets/Texture2D/battle_actionBarBg.png.meta",
+      "gitBlob": "a6bbf7a618bdff32db6caeb69c1547e3552e99d9",
+      "bytes": 3412,
+      "sha256": "ace29b5caa30eba660e77a95cb3348996d139333d40a9f721663060b193db9c4"
+    },
+    {
+      "path": "Assets/Texture2D/battle_jiasu.png",
+      "gitBlob": "ce2cfce8cad2d8d7f6d13df8a4043dc5692f3d00",
+      "bytes": 3787,
+      "sha256": "21c3280d662f10cb4c04679ce2c1000895e7d7f6d6df502d9b3aee934ae5c191"
+    },
+    {
+      "path": "Assets/Texture2D/battle_jiasu.png.meta",
+      "gitBlob": "84de64091cf21861d59e5bb111589d1fb18578f8",
+      "bytes": 3413,
+      "sha256": "cdbd9839bf7148d8cbcdcff514ceadb5741bafa7d1775c4bfef6005a401f5d2e"
+    },
+    {
+      "path": "Assets/Texture2D/battle_jiasuhong.png",
+      "gitBlob": "fc0e3b5b73884aa5f2513fdb2f88bb58c772b1c6",
+      "bytes": 3562,
+      "sha256": "95e01530d3f65a9b1e9f14a7004c36a12478f932cb0994a5d71f1cb689a43b0e"
+    },
+    {
+      "path": "Assets/Texture2D/battle_jiasuhong.png.meta",
+      "gitBlob": "9d7f5ec3fcf072e649dca942aa082239d8de7baa",
+      "bytes": 3412,
+      "sha256": "d889f19a48e8676531b8e44228891d8d7f805b3b740e1109df872c0c731bd7ea"
+    },
+    {
+      "path": "Assets/Texture2D/battle_shijianxianzhi.png",
+      "gitBlob": "d79cbf3cb18f2b04837bdb6fe994b86aefb8e1be",
+      "bytes": 35236,
+      "sha256": "8549f4487534e14f469cd5d038608bc06b6a83dfe1d746a56cc114ae37695ea8"
+    },
+    {
+      "path": "Assets/Texture2D/battle_shijianxianzhi.png.meta",
+      "gitBlob": "dd8c5eff32bce93f504d05dec259e5f4937a6b93",
+      "bytes": 3412,
+      "sha256": "bef61bcfe339980f2f69b8522d8f50e839cdef35b8c6c48835abf89aae150245"
+    },
+    {
+      "path": "Assets/Texture2D/battle_shuimodi.png",
+      "gitBlob": "fd4d458882caf4acc94d0f0452073ea3c1f8c79f",
+      "bytes": 146882,
+      "sha256": "c520e9bcd1f365036be02c91db728941de6a156a65ac0c85346fad2f8230f20d"
+    },
+    {
+      "path": "Assets/Texture2D/battle_shuimodi.png.meta",
+      "gitBlob": "3cccbb9aca67b71132e4f9b1b0b61762958dd10c",
+      "bytes": 3412,
+      "sha256": "8dc3684bcc9bb0bba45dad391df210ef58788548d9ada742404b61c440621823"
+    },
+    {
+      "path": "Assets/Texture2D/battle_touxiangdi.png",
+      "gitBlob": "094eef01bfe29a5fdfa7a32bdef01a5f81e0f0e2",
+      "bytes": 2356,
+      "sha256": "6d909cf869f3f89d927701e59fee70ec41d9a76d21c1bdb58f8bc60eb8709f5f"
+    },
+    {
+      "path": "Assets/Texture2D/battle_touxiangdi.png.meta",
+      "gitBlob": "11ee8eb5fd22cb0992c9d6f9c8c12e6079bd27ce",
+      "bytes": 3412,
+      "sha256": "32a0f293735e8740c904cdbb7867c52f8387b0c4803807f3c2780bb6b041dd31"
+    },
+    {
+      "path": "Assets/Texture2D/battle_touxiangkuang.png",
+      "gitBlob": "fde0cf95ba1ed04119d3d71a5c9f6d94dd3f2db3",
+      "bytes": 10465,
+      "sha256": "b220f4bc282272dcae34e3b566c968cafaa67cf25e78462ed023f8ee33c4d2b2"
+    },
+    {
+      "path": "Assets/Texture2D/battle_touxiangkuang.png.meta",
+      "gitBlob": "f795d466273f6f4282acaac986d1b953035ce021",
+      "bytes": 3412,
+      "sha256": "79fb19be323da0ac5a18b9f37925a70985b3107afcb214737f230cc53c9b46fd"
+    },
+    {
+      "path": "Assets/Texture2D/battle_wupin-tubiao.png",
+      "gitBlob": "cef73d0991b5d05e8c63c8e4825b265af9783b3d",
+      "bytes": 24289,
+      "sha256": "5a74261068e445e147b53aa9c692677acf38430e29bc2422d71273ecb3c4b4aa"
+    },
+    {
+      "path": "Assets/Texture2D/battle_wupin-tubiao.png.meta",
+      "gitBlob": "bec6238787ae4106b18e794cb7a9a11a0a4b41c9",
+      "bytes": 3412,
+      "sha256": "494f9f747381a20dfd2e73baba94fb5cbb12415a94c63b109d815ba009063d8b"
+    },
+    {
+      "path": "Assets/Texture2D/battle_wupin.png",
+      "gitBlob": "4d4688f765a67adc13ce6e53979a81fd7abb681b",
+      "bytes": 1774,
+      "sha256": "e66addf63594677076cf321ce3c22ef35d6b5adc05266b0acf8b75618868fd93"
+    },
+    {
+      "path": "Assets/Texture2D/battle_wupin.png.meta",
+      "gitBlob": "2ea4b139f560b07267ddfcfeb6ef2cbcd2250ec0",
+      "bytes": 3412,
+      "sha256": "0ee42ba815da558ac3dd6d0c0dc7324081cacc05e0cef739a7a279b4e7c8b1a9"
+    },
+    {
+      "path": "Assets/Texture2D/battle_xiuxi-tubiao.png",
+      "gitBlob": "53f3b18b5b259b77449305ec8fb444e087206ed3",
+      "bytes": 21832,
+      "sha256": "49a4cad9853395f48090fb9513becc6bc2927d8a38e880074095123b83385c56"
+    },
+    {
+      "path": "Assets/Texture2D/battle_xiuxi-tubiao.png.meta",
+      "gitBlob": "aeb3952e76a8f77e2def41206e46879a6f8a5c0e",
+      "bytes": 3412,
+      "sha256": "8bee354e7905f3394d4cf7bc1ac0ea220ce71bed2781eab9c9f2eb3eadafdd9b"
+    },
+    {
+      "path": "Assets/Texture2D/battle_xiuxi.png",
+      "gitBlob": "9f189ca0e8abb16ced62be7d25855224e20f1a96",
+      "bytes": 1624,
+      "sha256": "2089078a38a2742a0f4b0de57f75a15b68a9babf81dc8e2781b2207b4a5c9b55"
+    },
+    {
+      "path": "Assets/Texture2D/battle_xiuxi.png.meta",
+      "gitBlob": "f22156d961f79d1e382c0d26c3cc87ce5da89b18",
+      "bytes": 3412,
+      "sha256": "b8590f5d3953314e35ddef782308df630dd5284e4c2144a67193acd840376a54"
+    },
+    {
+      "path": "Assets/Texture2D/battle_yidong-tubiao.png",
+      "gitBlob": "620e8ae7040adfbafcb663669a6ee2ed4ea8d0f6",
+      "bytes": 21993,
+      "sha256": "a0465a7db815fbece0665e0cec8e21b5226e152ef55543f53cbca1a63ab3b010"
+    },
+    {
+      "path": "Assets/Texture2D/battle_yidong-tubiao.png.meta",
+      "gitBlob": "717cfbaadab29c38acf7b9b404a3d7176bc030f3",
+      "bytes": 3412,
+      "sha256": "b894a6a42ae00d766db29cdd051cae5fda115a555afe4acffab03fc51b13fc46"
+    },
+    {
+      "path": "Assets/Texture2D/battle_yidong.png",
+      "gitBlob": "7df3e7d0caf9e25ad64e9c56e9f2eb4ecefdadda",
+      "bytes": 1650,
+      "sha256": "e891c15b1373e5cdd25ea069433541254affa54e8078282fb22b4d6332c2ab14"
+    },
+    {
+      "path": "Assets/Texture2D/battle_yidong.png.meta",
+      "gitBlob": "69e0fe463b911e0736867dcda28d77385763bde3",
+      "bytes": 3412,
+      "sha256": "f16e08545fde0d73e31184c5013365beab3623237293d266e93a683c9ad6222e"
+    },
+    {
+      "path": "Assets/Texture2D/battle_zhandoujilubiaoqian.png",
+      "gitBlob": "c36530ae6f3861cb002cabd8c635ef2052328802",
+      "bytes": 7156,
+      "sha256": "8980ec02b94665711786a18b9bb656129b02c06593e24a73862dd520f36755d1"
+    },
+    {
+      "path": "Assets/Texture2D/battle_zhandoujilubiaoqian.png.meta",
+      "gitBlob": "bbccffdad3a1a3af4b0736bbe3b03f444f94cc23",
+      "bytes": 3412,
+      "sha256": "beaa7232ea640b757b85ab4d572a15cb07cfe6cbd56f2b902f65cb5a6c5c73b6"
+    },
+    {
+      "path": "Assets/Texture2D/battle_zhuangtai-tubiao.png",
+      "gitBlob": "074c6503e54324b4c5d3ab1d5faa0c4bdfeb9beb",
+      "bytes": 19012,
+      "sha256": "b5b02f3a4bb84b3e297faa4aecf9238cc20fdd65b75ab0ca6acc6a5f470e2add"
+    },
+    {
+      "path": "Assets/Texture2D/battle_zhuangtai-tubiao.png.meta",
+      "gitBlob": "98f61a59385abf07d6667ccbaf19b4be11d8dd4e",
+      "bytes": 3412,
+      "sha256": "a5c3a21a29cb45807490030ec23999d06c4d4f9a9f4cd34e9364e91453ff9ef9"
+    },
+    {
+      "path": "Assets/Texture2D/battle_zhuangtai.png",
+      "gitBlob": "5cc3cf996ca6817968e7690b522c0641bcdace7b",
+      "bytes": 1549,
+      "sha256": "e422133459ed32f25e4fd7afd10d4710196ecea87741bf55c0e5a3b9db6c1240"
+    },
+    {
+      "path": "Assets/Texture2D/battle_zhuangtai.png.meta",
+      "gitBlob": "5f0840296162edd2757090af7c99f0abcb0701e4",
+      "bytes": 3412,
+      "sha256": "f0e368e8e648ff3dd711302c44e2af6f8201a8f26b5a626b27442f60cc6a4ccc"
+    },
+    {
+      "path": "Assets/Texture2D/battle_zidong.png",
+      "gitBlob": "181fa67d29077dc19dba3117c4ae617dc9641dfb",
+      "bytes": 3357,
+      "sha256": "871ca3870d9fcfc6d5eeab0231d5ce59116c35af8a4bb0daa7dafacaa9342412"
+    },
+    {
+      "path": "Assets/Texture2D/battle_zidong.png.meta",
+      "gitBlob": "4b8173c92f43da1ecd42f7a631c2142c22c076e8",
+      "bytes": 3413,
+      "sha256": "5d580b63f571181c509ae45d86e9dc853edbb73d916c69688f474af16f08a38e"
+    },
+    {
+      "path": "Assets/Texture2D/battle_zidonghong.png",
+      "gitBlob": "ad2c417721287e5b7488b7892767994108cfe736",
+      "bytes": 2830,
+      "sha256": "f905dc3afcbadef82e9662c3f3b0be7fbb282a25b1530a93959ef011a12be8e9"
+    },
+    {
+      "path": "Assets/Texture2D/battle_zidonghong.png.meta",
+      "gitBlob": "755173c8a3ff3e16b24af48767917814393210eb",
+      "bytes": 3412,
+      "sha256": "439f0c7d728c36b2aef27bd182029ca3c585451380ddebc61889bb3d09153d90"
+    },
+    {
+      "path": "Assets/Texture2D/black.png",
+      "gitBlob": "b3379f1c6d643a95bdff16a2f258a592762d7a77",
+      "bytes": 197,
+      "sha256": "2750d4de8d3dafc713832c16104297bd80f0e1e0677f85c5c2be38822c1b83fb"
+    },
+    {
+      "path": "Assets/Texture2D/black.png.meta",
+      "gitBlob": "a044469aed44011cc0d041267a6393215c60e964",
+      "bytes": 3412,
+      "sha256": "5166b8ae2200e21d09f2636b1855bb2a5d0bd1306d34d9a007165bbded4ce938"
+    },
+    {
+      "path": "Assets/Texture2D/btn_cross.png",
+      "gitBlob": "3434bda7b32b9c076dab6c89211a00bf06a21c37",
+      "bytes": 9390,
+      "sha256": "b9314374a956bfd75ed599264e3d3437b1363fcda2d158e919618bb57ffb3c11"
+    },
+    {
+      "path": "Assets/Texture2D/btn_cross.png.meta",
+      "gitBlob": "f9978b4d8b0c2ca9bf2d9470704958f8c4846b2b",
+      "bytes": 3412,
+      "sha256": "78545422ba86d4bfcdd6d8680d6ab7e6967884f24782b5298c4a687f97c1eff8"
+    },
+    {
+      "path": "Assets/Texture2D/chilun.png",
+      "gitBlob": "e4ed2fd9107889294a1110ae9a5cc2f0f5d82f8d",
+      "bytes": 53573,
+      "sha256": "d3af7a0e386413eaedae84e60fd4b0fc1681674a7c363e69c9a89b7ad87d6b88"
+    },
+    {
+      "path": "Assets/Texture2D/chilun.png.meta",
+      "gitBlob": "51ea9da07e888b07d0a3ae34d48a6cb4298f5128",
+      "bytes": 3412,
+      "sha256": "34481c4719bbfb99461810cf61b97a36f30a50e0892ca0bc23b05c0d1a258245"
+    },
+    {
+      "path": "Assets/Texture2D/daditu.png",
+      "gitBlob": "364785400f9394ee76f9b5601dc6b228a18e883e",
+      "bytes": 9839540,
+      "sha256": "d25ada46dbf50e2b5d0206c9ba9bd74dce36ec72bc12aeb646015d6c718cee53"
+    },
+    {
+      "path": "Assets/Texture2D/daditu.png.meta",
+      "gitBlob": "b7529a9783a9983233c4c0332cff4a408cdd876e",
+      "bytes": 3413,
+      "sha256": "1d511bd88de1c8fd9fcd22b963029d1b8bcc5a2c737ca5a998148fefa1f59624"
+    },
+    {
+      "path": "Assets/Texture2D/daoju.png",
+      "gitBlob": "40326a0c28a766b14268a69caa9f86fa6e8bc5ad",
+      "bytes": 12646,
+      "sha256": "c78b1546b7be56c12a8b87f57fbde4b5300cf3ba77f2593294220ad8a60fd600"
+    },
+    {
+      "path": "Assets/Texture2D/daoju.png.meta",
+      "gitBlob": "19d223db15f15253a69c452b4ad718e862a86c67",
+      "bytes": 3413,
+      "sha256": "c8324ffeff873926337e7c74c772a1490256a7d4dfd5fd748a22d178bca1887c"
+    },
+    {
+      "path": "Assets/Texture2D/dingbu.png",
+      "gitBlob": "2efb506d9171ca36889bb0cb0de58fcc96fde5b7",
+      "bytes": 17098,
+      "sha256": "92bebfc4ab1f1284a9399a4d9b8c1f56542344c2b119f1a717ddf0b091e714c1"
+    },
+    {
+      "path": "Assets/Texture2D/dingbu.png.meta",
+      "gitBlob": "225007afac546d2e2d620e0dd09ad62997bd9014",
+      "bytes": 3413,
+      "sha256": "4f68ece1e960678181d1007b49ea5e05292766281ad56b33cd0d05636666649f"
+    },
+    {
+      "path": "Assets/Texture2D/fengying.png",
+      "gitBlob": "69ff16a8d1c8f51b4562eb9611b95f205404f2da",
+      "bytes": 4062,
+      "sha256": "0c4d8056d17b36394528e7b524d8d79b58e481bda08382490af905fcffc339ae"
+    },
+    {
+      "path": "Assets/Texture2D/fengying.png.meta",
+      "gitBlob": "fae18703dbe24a268df97bd1d9752a4574029c21",
+      "bytes": 3412,
+      "sha256": "848d7e843fcacc602d1fa25a4f6b6c7f7ca5f0f5de37cf240fc6d217375d62f9"
+    },
+    {
+      "path": "Assets/Texture2D/nandu.png",
+      "gitBlob": "fb402f555e367042a22331335ca074c67028f016",
+      "bytes": 15015,
+      "sha256": "fc49de2a6c740efa6eaa6bb201fe5b0a7285b4a9f1515279027d3269fbaad2fe"
+    },
+    {
+      "path": "Assets/Texture2D/nandu.png.meta",
+      "gitBlob": "a37696823de1ae5ea93b6e9870de0b1284b79156",
+      "bytes": 3412,
+      "sha256": "7dcc2302169097f75635a6eae04eec7ec0159d2a98fa66ae21b9a29b3c3a497f"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_dise.png",
+      "gitBlob": "62c547f86725727f6dba7f8869ff9f1805597857",
+      "bytes": 1202657,
+      "sha256": "0c7b731310eb72f9d63c53c4b8ecb2ab8367306d5751c7dd3b933b4de1ff3d89"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_dise.png.meta",
+      "gitBlob": "2a43170bfe43448d32665a3ccefd418e10f5b5e0",
+      "bytes": 3412,
+      "sha256": "8aef7adf09c2e2affb71cd36e230b27650fa4428e752c86aad7ca90fc74c7052"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_jineng.png",
+      "gitBlob": "afbeb73723b3f84101c31de1a73c10c86d9b26f2",
+      "bytes": 22885,
+      "sha256": "9a279c4d34fc0b7bc6847090c2bc6ae077ef4274c18c241a4fc74ae115dcd577"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_jineng.png.meta",
+      "gitBlob": "fac042479caf09ba4155a22941c44f4bea66a152",
+      "bytes": 3412,
+      "sha256": "b3ab9aeef88a4019a27582338f426171e9d73adcc34157ecd84883c2dba78169"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_lantiao.png",
+      "gitBlob": "e816bef6f3809d4308e78f36eb9c325f6f235fd2",
+      "bytes": 13157,
+      "sha256": "2fe7b0514fba7c8f2bca8d202dc283a07ffa0996601d89f0f92078c41f185e6e"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_lantiao.png.meta",
+      "gitBlob": "1f1f713d24fa12f5d2e528dd091df3c26a413fcb",
+      "bytes": 3412,
+      "sha256": "af9421ce35cc32c61daae1d42273aeaf42ef63a12dac1db11fecea44ea40966e"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_liezhuang.png",
+      "gitBlob": "edf339ac15ea529958bf82f07495eecb88f86f54",
+      "bytes": 19949,
+      "sha256": "d4cf4e4f844af5c03e965fa29ece45eb405acd303d690bb82637f82a9cf70ff1"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_liezhuang.png.meta",
+      "gitBlob": "6c207d6d61143c21c5952e8ee4c056bf7fad563c",
+      "bytes": 3412,
+      "sha256": "e2e9c5e96f07a7091ddfa4c1b98e603779798e41d9a257579732578b675b8963"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_shuxing.png",
+      "gitBlob": "be4434d8beb7007840d4193f4d01655b9ad20f5a",
+      "bytes": 23311,
+      "sha256": "7f071d4b96cdff21b8d7a678887ce327de1c469be1554e9e479125f0b580e0e1"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_shuxing.png.meta",
+      "gitBlob": "28f5d1e681bf0afb2604a63b40be35a7eea7c9e1",
+      "bytes": 3412,
+      "sha256": "cb79d914675822da84b542b639453bad600e71764f1a5dfb22c32c053689da3e"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_tianfu.png",
+      "gitBlob": "79b1e463b514767710bee08f123266e5c98f7300",
+      "bytes": 23738,
+      "sha256": "123e13252718e8e1f97517a0e2d02de135f4ed4df699a02f22be9b2bf407127d"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_tianfu.png.meta",
+      "gitBlob": "f8f13f97db62857e63f9b102c88058fead11dfbb",
+      "bytes": 3412,
+      "sha256": "9a231aca25c8ba136056eb7d40fdc9c7c228e97b08690d2419fe0844271fc20f"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_touxiangdise.png",
+      "gitBlob": "3ca4fea09e988f17fadfedcd326dbc026646e756",
+      "bytes": 126696,
+      "sha256": "02f81ad4153a2f515668279496a1166a18e763877a8a615efc802a60aca8a643"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_touxiangdise.png.meta",
+      "gitBlob": "cadf3d7d1e2aa6b4a63093d2721b5dbf9cb3c154",
+      "bytes": 3412,
+      "sha256": "9dce4c9436bdfbf18535904aa8074e4fde0a7a5d7a72ba3fe651d5affe232ceb"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_touxiangmengban.png",
+      "gitBlob": "5cdbd9cd656632db9b7c4d86a64184b6165cd5c8",
+      "bytes": 6307,
+      "sha256": "bdaa004ba2cd6a45809034c3dab5740531a877a979a448db7f5146bbf4de2ee7"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_touxiangmengban.png.meta",
+      "gitBlob": "4edf037ed81e30224159269ae8f73913c01dbf65",
+      "bytes": 3412,
+      "sha256": "c2e0b195709d4fb052de09144ec75a4998162cc798e1c36de2af9574fc4a2328"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_xuetiao.png",
+      "gitBlob": "9c992e055e4ea1c9a11e84daebf16009b994c264",
+      "bytes": 12746,
+      "sha256": "45d423e2fcdffdc613c4ca390cde1af5022273559f52ba920c2d94b79ec36294"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_xuetiao.png.meta",
+      "gitBlob": "7a0b42a9caf2c0c587a0cf02f877b0558b996696",
+      "bytes": 3412,
+      "sha256": "ce03b8bf33ed97157fb17b3e4df8b1e0102355121e3bc283772f7b0160b27235"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_xuetiaodise.png",
+      "gitBlob": "ab744e7d73bc57783550bc3f25da69694f2f2b98",
+      "bytes": 1670,
+      "sha256": "97130bf6e6949e7e05424f31e47c4d991d3543c0574f8115ada36dcc4bfaed39"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_xuetiaodise.png.meta",
+      "gitBlob": "884701170fef21791013303cbd018fbdb6d26eed",
+      "bytes": 3412,
+      "sha256": "1b36846ba955d02c377f0eafda2ec8fdb16a4a71e223b99bf39cb3d4c57ef54c"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_xuetiaokuang.png",
+      "gitBlob": "84cb0b2c59f66bd5345ab9d2c6de969aabae2e8a",
+      "bytes": 3529,
+      "sha256": "f26ccae2f9fd4ea90e676038836967346c830d2a202ce0c00232c9f8c0b2fd5c"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_xuetiaokuang.png.meta",
+      "gitBlob": "d339ad038ba3f6197c28601d8fe6be514011d457",
+      "bytes": 3412,
+      "sha256": "3426f57f151aff69217a46e5db71a8246e4aedfffd0d9d7085cdccf3c199be78"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_xuetiaomengban.png",
+      "gitBlob": "bc18084821ae66f92572b7a6c96244886df0b12f",
+      "bytes": 1284,
+      "sha256": "80f4f05931e7da6800c975e36fd6295dd27df36e8cf5ad4082163d28c555eab3"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_xuetiaomengban.png.meta",
+      "gitBlob": "25372442ce34519eac9842eee1f5f35cf164a0de",
+      "bytes": 3412,
+      "sha256": "cae4e518e397057484c481054cf2eea2aaeab86642d712b02f7bb2c385d6e792"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_zhuangbei.png",
+      "gitBlob": "6f67e620531edaf6a283b654e8e436b6165846c9",
+      "bytes": 19126,
+      "sha256": "fae20a0d75991b04cac2ebdd2e89ff2cce4faad0ab8b0ef9bf417e0c7c06744c"
+    },
+    {
+      "path": "Assets/Texture2D/renwuzhuangtai_zhuangbei.png.meta",
+      "gitBlob": "3620144e9dff6c4100ed70741a58fbafdff6e2f3",
+      "bytes": 3412,
+      "sha256": "12c39e7c9e53d71dbdba4923b9ba5dcaacb933f3bec7c1adeb65df2dad2a3f58"
+    },
+    {
+      "path": "Assets/Texture2D/rizhi.png",
+      "gitBlob": "80e6bd0a67ccc84cb0fbf11d4bec939424442118",
+      "bytes": 11582,
+      "sha256": "cfaa68da4dd2c8a7ab291fe8536509bd21c051c7b971136d40b44ac998c8a58e"
+    },
+    {
+      "path": "Assets/Texture2D/rizhi.png.meta",
+      "gitBlob": "de58d59129fd18981977d8a8ce122864bbea70c1",
+      "bytes": 3413,
+      "sha256": "c9ebd31c7e75d291cf6e87905f6b4bdd6d662da55e4c5057857258fff4d427ab"
+    },
+    {
+      "path": "Assets/Texture2D/touxiangbiankuang.png",
+      "gitBlob": "dfb205def1579ce66d8de7a8a224a14d33b78b04",
+      "bytes": 23910,
+      "sha256": "ba335f602f8fb3d4489931750cd51a59cc3cdd7b59e312033b3f6ffc40f27763"
+    },
+    {
+      "path": "Assets/Texture2D/touxiangbiankuang.png.meta",
+      "gitBlob": "e2077fc16c640c7884fd1e93f1f9296b76249e07",
+      "bytes": 3412,
+      "sha256": "01d61f457b601d2866a1219af82085bda3bc3c3b323a082232a67000cc4a0970"
+    },
+    {
+      "path": "Assets/Texture2D/touxiangdise.png",
+      "gitBlob": "c25178462f667415384091ba4c2091acf819feb3",
+      "bytes": 79973,
+      "sha256": "f253aa8379027328a80f4468f2692dc632d879f7a87152302f9ce416d1fde208"
+    },
+    {
+      "path": "Assets/Texture2D/touxiangdise.png.meta",
+      "gitBlob": "3be579ad1bee577cf2a1e1ddf7ebb8daceb12069",
+      "bytes": 3412,
+      "sha256": "5b84f3ec9daeacd1c976dcdb276789342131ddfbe26ede5478c5572976d02aea"
+    },
+    {
+      "path": "Assets/Texture2D/touxiangkuang.png",
+      "gitBlob": "35e89d2460f8be0e61bcf2fd570f6d485be503e1",
+      "bytes": 39448,
+      "sha256": "ed2683b0b60b543d13b6d3bfd55bd5a05ec3e66a6d02e295d4ec69201acbd531"
+    },
+    {
+      "path": "Assets/Texture2D/touxiangkuang.png.meta",
+      "gitBlob": "4a2b3a029efb1a3c764c09c6bb3bbc14f8d843f5",
+      "bytes": 3412,
+      "sha256": "09e1c857abd5b6f8e72d400ba50bdfa6298da4b6ceed73417f102f0f36723084"
+    },
+    {
+      "path": "Assets/Texture2D/word_e.png",
+      "gitBlob": "833fa55fc52364f2cdb5a739020efb98ae9538c4",
+      "bytes": 488,
+      "sha256": "271a55fc3b2ee97882510ab114d7996434429cb1d3d060a27f9f615721519053"
+    },
+    {
+      "path": "Assets/Texture2D/word_e.png.meta",
+      "gitBlob": "63de923e2b18551e9e4e87a612214ca702297a87",
+      "bytes": 3412,
+      "sha256": "3298ce982d868f3b984b51ed3da96adf81c317f943cc7eb5a38d99351d87c5e0"
+    },
+    {
+      "path": "Assets/Texture2D/word_q.png",
+      "gitBlob": "45594c1cbfc47356fa9f4d7db798a53b858c9739",
+      "bytes": 613,
+      "sha256": "4bfae1e03bf5c29e924f6a719949e2838bb8316925a4dea45973688241051f27"
+    },
+    {
+      "path": "Assets/Texture2D/word_q.png.meta",
+      "gitBlob": "eb760e7cfe9da0c67f5296fe345a1e21e0c797c1",
+      "bytes": 3412,
+      "sha256": "d34d91e61670dc7af065287451c3ef8d6c30824d45e57bb22b02233efe7baed3"
+    },
+    {
+      "path": "Assets/Texture2D/word_r.png",
+      "gitBlob": "2e1dfebd676887152777ee4507edb9f8f2f7d9be",
+      "bytes": 611,
+      "sha256": "9635b9acfec563abb6a3905c7440825dba2f390a2dd92e6f4885d26567b26f13"
+    },
+    {
+      "path": "Assets/Texture2D/word_r.png.meta",
+      "gitBlob": "1febf285eaeb9ecd2aab72f3e2f02601560e6cca",
+      "bytes": 3412,
+      "sha256": "ee83a70145bad00c65a0c323dd109d44d47060a8c2348a38d7a53fc4ac183b2b"
+    },
+    {
+      "path": "Assets/Texture2D/word_w.png",
+      "gitBlob": "8b4c99268a1bab598f3ed03194ecbecdd9dedc5d",
+      "bytes": 605,
+      "sha256": "6321776771d0ce6a4d37a0e34340f7077d46682a10172d5c0bf7ae33eef159ad"
+    },
+    {
+      "path": "Assets/Texture2D/word_w.png.meta",
+      "gitBlob": "4e4c27d83d2f1194f2361ab8a06e68f03bd42f00",
+      "bytes": 3412,
+      "sha256": "faba672f97835c54058875e945ed846e34519a3ba1d43eb0852714d989aaba61"
+    },
+    {
+      "path": "Assets/Texture2D/xitong.png",
+      "gitBlob": "72bd40d45d5004748c0adc7a4893e6cee41bc95b",
+      "bytes": 14679,
+      "sha256": "486e55962a8de4d8cced36dfd4d397096c8467dc6b1123530aa884716fe131fa"
+    },
+    {
+      "path": "Assets/Texture2D/xitong.png.meta",
+      "gitBlob": "210e1e8fcff701e244fe40d620c3cf611e333f7e",
+      "bytes": 3412,
+      "sha256": "dc25b3e81e34da43e7f12a1bdb4c4eb8b520c02919d80018b9f580fcfa55cdf1"
+    },
+    {
+      "path": "Assets/Texture2D/xuandingjineng-dise.png",
+      "gitBlob": "66f13a2a45d57282392f05f8f915a933325fb383",
+      "bytes": 10884,
+      "sha256": "31aa3fb6f6e1a619a718627e210d32e48ba2d1216a987b860300fd8f1c514ab3"
+    },
+    {
+      "path": "Assets/Texture2D/xuandingjineng-dise.png.meta",
+      "gitBlob": "162bfd1672339abe94be1e379bd0dbd80cc7bbde",
+      "bytes": 3412,
+      "sha256": "31f568f308bfe07cd95e6782553487524c22cd2dd1798e60ffa8f8394cca6a2d"
+    },
+    {
+      "path": "Assets/Texture2D/yuanbao.png",
+      "gitBlob": "abca88cef2abddef7db51c22b3e40919190787c3",
+      "bytes": 3882,
+      "sha256": "3de3b8dde33118b744ace8bddf9fb0c7168b9b1822be6c007888b5f981194b91"
+    },
+    {
+      "path": "Assets/Texture2D/yuanbao.png.meta",
+      "gitBlob": "11c6646a64253aea4aa5b6e2bdafe4387b550312",
+      "bytes": 3412,
+      "sha256": "6420af9cf75abbd38ab403e20f0fda7e052891ae2d0bbb50348dd5e807ffdcdd"
+    },
+    {
+      "path": "Assets/Texture2D/yuanbao_yin.png",
+      "gitBlob": "53bbfeb402c6dacdb5f6800a40e403ed5537cc20",
+      "bytes": 2794,
+      "sha256": "5a6a1adc38bffc3e19ee5b0e5d67b4b5f3068a9a8d97814387d45e39f4f917e9"
+    },
+    {
+      "path": "Assets/Texture2D/yuanbao_yin.png.meta",
+      "gitBlob": "7d85e01ec541cbd14da9993a8cce2b3f195a0a76",
+      "bytes": 3412,
+      "sha256": "4f961f9c19bf0de80992c68ea1479ab67dba4ce28d0d60d31ca413a57b11079d"
+    },
+    {
+      "path": "Assets/Texture2D/yun.png",
+      "gitBlob": "7f81b63d24100559d48312c5e0c1e9932b2282bc",
+      "bytes": 3448,
+      "sha256": "359027251738f3169a8054d66cc416689d852c7eb8023d64ef8034c092da974c"
+    },
+    {
+      "path": "Assets/Texture2D/yun.png.meta",
+      "gitBlob": "38c8f5d9d747810397fc22611153bc576dbb59e9",
+      "bytes": 3412,
+      "sha256": "4dc77dec3bd35d33b77e7f366f54a74a16d429511ffbe6fe9b51a21ab07a3c4b"
+    },
+    {
+      "path": "Assets/Texture2D/zhuangtai.png",
+      "gitBlob": "94e46dc54ce0aa28c72dd175c83561a3460036e4",
+      "bytes": 11549,
+      "sha256": "860576c8757f0cc7d89893a605a5f6046f7763eb28ddf8043cedf85b7c803f45"
+    },
+    {
+      "path": "Assets/Texture2D/zhuangtai.png.meta",
+      "gitBlob": "f1f89fa4ae2ed271d75856207ebfab1cdc71416e",
+      "bytes": 3413,
+      "sha256": "167ededd71ba38968414e35d4c85dde82547de55f2ffb382c7cc8e532d706835"
+    },
+    {
+      "path": "Assets/Texture2D/zhulin.png",
+      "gitBlob": "962460d1390fe1ef352be96f5883d542eb114d43",
+      "bytes": 877924,
+      "sha256": "a3e92bd70c61afe6ec9da22dfa045c8564da661debe55aaa34be18841641bb21"
+    },
+    {
+      "path": "Assets/Texture2D/zhulin.png.meta",
+      "gitBlob": "e5faefc3460d69ffc0434b383480dc105020159a",
+      "bytes": 3415,
+      "sha256": "71892244c467557dbf1046e8c28e06b1eeae431b2a4c84f5d3c69d37171ff1f0"
+    }
+  ],
+  "notices": [
+    "notices/x-heroes-README.md",
+    "notices/x-heroes-License"
+  ]
+}

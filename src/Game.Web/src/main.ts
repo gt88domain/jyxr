@@ -31,6 +31,7 @@ import type {UiMessage} from './activity';
 import {moreMenuView} from './navigation';
 import './modern-ui.css';
 import type {GameCommand} from './command-contract';
+import {mountLateReference} from './late-reference';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 let state: GameState, slot: SaveSlot | undefined, busy = false, board: Board | undefined;
@@ -238,6 +239,12 @@ async function showRestorationProgress() {
     if (target.isConnected && modalOpen()) target.textContent = error instanceof Error ? error.message : '进度记录暂时无法读取。';
   }
 }
+async function showLateReference(){
+  modal('X1.1.0.6 · 旧版界面与规则对照','<div data-late-reference aria-live="polite">正在读取后期场景与规则资料…</div>',true);
+  document.querySelector('#game-modal')?.classList.add('late-reference-modal');
+  const root=document.querySelector<HTMLElement>('[data-late-reference]')!;
+  try{await mountLateReference(root);}catch(error){if(root.isConnected)root.textContent=error instanceof Error?error.message:'对照资料暂不可用。';}
+}
 async function showEquipmentPreview(entryNumber: number) {
   const inspected = state;
   const characterId = (state.managedCharacter || state.hero).id;
@@ -413,6 +420,7 @@ document.addEventListener('click', event => {
   else if (action === 'history') {activitySeen=Math.max(0,...(state.activity||[]).map(a=>a.id));refreshActivityBadge();modal('通知与操作记录',activityView(state,uiMessages),true);}
   else if (action === 'interface-style') changeInterface(button.dataset.id);
   else if (action === 'original-interface-reference') {modal('原版界面对照',interfaceReferenceView(),true);reflectInterfaceChoice();}
+  else if (action === 'late-reference') void showLateReference();
   else if (action === 'save') void save();
   else if (action === 'load') void load();
   else if (action === 'load-manual') void load(manualSlot);
@@ -561,6 +569,7 @@ async function boot() {
     if(state.pack.id==='jyx'&&view==='companions')void showCompanions();
     if(state.pack.id==='jyx'&&view==='library')void showOriginalLibrary({category:new URLSearchParams(location.search).get('category')||undefined,id:new URLSearchParams(location.search).get('entry')||undefined});
     else if(state.pack.id==='jyx'&&view==='progress')void showRestorationProgress();
+    else if(state.pack.id==='jyx'&&view==='late-reference')void showLateReference();
   } catch (error) {
     console.error(error);
     app.innerHTML = '<main class="loading-screen"><span class="seal">旅</span><h1>世界暂未展开</h1><p>加载未能完成，请刷新后重试。</p><button class="button primary" onclick="location.reload()">重新载入</button></main>';

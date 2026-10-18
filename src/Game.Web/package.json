@@ -47,6 +47,8 @@
     "test:modern-m3": "node --test tests/board-input.test.mjs && node tests/modern-m3-mobile-smoke.mjs",
     "test:interface": "node tests/interface-smoke.mjs",
     "test:navigation": "node tests/navigation-smoke.mjs",
+    "audit:late-reference": "python3 tests/late-reference-source-audit.py",
+    "test:late-reference": "node tests/late-reference-smoke.mjs",
     "audit:remaining": "python3 tests/remaining-source-audit.py",
     "assets:restore": "python3 scripts/art-bundle.py restore"
   },

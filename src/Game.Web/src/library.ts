@@ -81,6 +81,7 @@ function renderRecord(record: Record,index: Index){
 async function referencesView(index: Index){
   const manifest=await fetchData<Manifest>(index.referenceManifest);
   return `<article class="library-references"><h3>四份仓库参考与上传原版</h3><p>先收齐资料，再补运行接线和规则，最后验证流程。这里保留版本依据，不把重制新增内容和脚本示例当作原版扩展。</p>
+    <p class="panel-notice">后期新增打包XML与原场景核对：107条奥义额外威力与现基线不同。下列旧差异表仅为MOD模板范围，完整后期对照另列。</p><button class="button outline full-width" data-action="late-reference">打开1.1.0.6旧版界面、天赋奥义与多周目对照</button>
     ${index.sources.map(s=>`<section><h4><a href="${e(s.repository+(s.commit?'/tree/'+s.commit:''))}" target="_blank" rel="noopener noreferrer">${e(s.name)}</a></h4><p>${e(s.version)} · ${e(s.role)}</p>${s.commit?`<small>固定版本 ${e(s.commit.slice(0,12))}</small>`:''}</section>`).join('')}
     <h4>已补入的缺失资料</h4><p>上传包《鹿鼎记》${index.counts.ludingStories} 段：${index.counts.ludingShared} 段与基线同名，${index.counts.supplementStories} 段为缺失的补充资料，包含双儿加入。双儿尚缺人物定义，入口也待接线；同名剧情保留对照，没有直接覆盖。</p>
     <button class="button outline" data-library-category="supplementStories" data-library-id="鹿鼎剧情4.4">查看双儿加入原记录</button>

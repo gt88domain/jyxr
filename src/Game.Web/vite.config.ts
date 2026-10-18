@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import {existsSync, readFileSync, readdirSync} from 'node:fs';
 
 const versionHash = createHash('sha256');
-for (const relative of ['public/runtime/_framework/dotnet.js', 'public/data/content-package.json', 'public/data/restoration-progress.json', 'public/data/restoration-checklist.json', 'public/data/original-remaining.md', 'public/data/companion-catalog.json', 'public/runtime-loader.js']) {
+for (const relative of ['public/runtime/_framework/dotnet.js', 'public/data/content-package.json', 'public/data/restoration-progress.json', 'public/data/restoration-checklist.json', 'public/data/original-remaining.md', 'public/data/companion-catalog.json', 'public/runtime-loader.js', 'public/late-ui-layout.json', 'public/late-version-comparison.json', 'public/late-version-details.json']) {
   const path = new URL(relative, import.meta.url);
   if (existsSync(path)) versionHash.update(readFileSync(path));
 }
