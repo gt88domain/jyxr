@@ -3,6 +3,7 @@ import {createHarness} from './ui-harness.mjs';
 const h=await createHarness(process.env.GAME_WEB_REPORT||'modern-m3-mobile-smoke',{viewport:{width:375,height:812},isMobile:true,hasTouch:true,deviceScaleFactor:1});
 const {page,output,report,pass,ready,state,continueDialogue,closeModal,noOverflow}=h;
 await page.addInitScript(()=>{HTMLMediaElement.prototype.play=function(){return Promise.resolve();};});
+if(process.env.GAME_WEB_INTERFACE==='classic')await page.addInitScript(()=>{const key='jyxr.preferences.v1';localStorage.setItem(key,JSON.stringify({...JSON.parse(localStorage.getItem(key)||'{}'),interfaceStyle:'classic'}));});
 let failure;
 async function tap(selector){await page.locator(selector).filter({visible:true}).first().tap();await ready();}
 async function cell(point){

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "repository": "https://github.com/hansquirrel/JyGameSilverlight",
+  "commit": "3fa22b12126bd1e7a3cc2645a4cb200216643175",
+  "version": "Official Silverlight 0.6.x reference",
+  "scope": "Original tutorial screenshot with its original annotations and UI image assets; not a screenshot of the browser remake or proof of Unity 1.0/1.1 layout.",
+  "ownership": "Original ownership, license and notices remain applicable. Images are copied byte-for-byte, not newly authored artwork.",
+  "license": "GPL-3.0; retain the upstream README copyright and noncommercial notice. No new license is granted to the original artwork.",
+  "files": [
+    {
+      "source": "JyGameSilverlight/JyGame/Resource/ui/help0.jpg",
+      "path": "art/legacy-interface/help0.jpg",
+      "bytes": 188286,
+      "sha256": "cf7c12f47f761d29d92bff9c93845998600cf129c97830d6fd13c5435c8785ec"
+    },
+    {
+      "source": "JyGameSilverlight/JyGame/Resource/ui/UI-kuang8.png",
+      "path": "art/legacy-interface/UI-kuang8.png",
+      "bytes": 11411,
+      "sha256": "660e267b8881a82b7fe52ac920dc557e441eda06fbc5b11ca915865ad98d65c0"
+    },
+    {
+      "source": "JyGameSilverlight/JyGame/Resource/ui/skillbox.png",
+      "path": "art/legacy-interface/skillbox.png",
+      "bytes": 105845,
+      "sha256": "2b23e620d1c586662f4d0cc7f5fb4d67ec47448a1a10be15bf0ff6d25c3baeeb"
+    },
+    {
+      "source": "JyGameSilverlight/JyGame/Resource/ui/button_zhuangtai.png",
+      "path": "art/legacy-interface/button_zhuangtai.png",
+      "bytes": 36846,
+      "sha256": "78dda0374d3054d0c8b3f8d8b32900328fb3b9b9c67b1cd73453a5a62413e6bd"
+    },
+    {
+      "source": "JyGameSilverlight/JyGame/Resource/ui/button_wupin.png",
+      "path": "art/legacy-interface/button_wupin.png",
+      "bytes": 39231,
+      "sha256": "d4742cbad2c3ec90e6fd7ee928a76f1b4e20cb8d01a934b2652265094096f9c9"
+    },
+    {
+      "source": "JyGameSilverlight/JyGame/Resource/ui/button_rizhi.png",
+      "path": "art/legacy-interface/button_rizhi.png",
+      "bytes": 36222,
+      "sha256": "01bacec7f65627a5f9a1d7f28927edf607e4da83b6738b11d7ac51f96f019d8e"
+    },
+    {
+      "source": "JyGameSilverlight/JyGame/Resource/ui/button_xitong.png",
+      "path": "art/legacy-interface/button_xitong.png",
+      "bytes": 27600,
+      "sha256": "3460d9a27b6f8e5f8089bb54401ea610780d57315f89fddc3ee1317f2d955771"
+    },
+    {
+      "source": "JyGameSilverlight/JyGame/Resource/ui/button_jineng.png",
+      "path": "art/legacy-interface/button_jineng.png",
+      "bytes": 33525,
+      "sha256": "e8256444decbd410a4fcb8744224e3e46aea04a642af623c64e4f11f2feeaba0"
+    }
+  ],
+  "notices": [
+    "notices/jygame-silverlight-LICENSE.txt",
+    "notices/jygame-silverlight-README.md"
+  ]
+}

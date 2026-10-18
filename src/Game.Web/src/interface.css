@@ -1,0 +1,63 @@
+/* The same controls and content remain mounted when their appearance changes. */
+.classic-menu-art{display:none}
+.interface-reference-entry{margin:18px 0;min-height:44px}
+.interface-choice{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0}.interface-choice button{flex:1;min-width:120px;min-height:48px}.interface-choice button[aria-pressed=true]{background:#47634c;color:#fff7dc;border-color:#80976e}
+.interface-reference-gallery{display:grid;gap:24px;margin:24px 0}.interface-reference-gallery figure{margin:0;min-width:0}.interface-reference-gallery img{display:block;width:100%;height:auto;object-fit:contain;border:1px solid #897e5e;background:#191919}.interface-reference-gallery figcaption{font-size:12px;line-height:1.8;margin-top:9px}.interface-reference-parts{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}.interface-reference-parts img{max-height:280px}
+
+:root[data-interface=classic]{--ink:#e8e4d4;--muted:#b9b5a1;--paper:#22221f;--gold:#e0c879;--line:#81785380;--world-header:56px;color:#e8e4d4;background:#171914;font-family:SimSun,"Songti SC",serif}
+:root[data-interface=classic] .app:before{background:linear-gradient(90deg,#10100fd9,#12141266 60%,#12141233)}
+:root[data-interface=classic] .topbar{height:56px;padding:0 24px;background:#181b17db;border-bottom:2px solid #84764a;gap:12px}
+:root[data-interface=classic] .wordmark{font-size:17px;letter-spacing:1px}
+:root[data-interface=classic] .wordmark small{line-height:1.4}
+:root[data-interface=classic] .wordmark .seal{width:26px;height:30px;font-size:21px;margin:0}
+:root[data-interface=classic] .wordmark small{font-size:9px;letter-spacing:1px;margin-top:2px;color:#c9bc88}
+:root[data-interface=classic] .topbar nav{gap:8px}
+:root[data-interface=classic] .battle-app{--world-header:126px}
+:root[data-interface=classic] :is(.paper,.duel-sidebar,.duel-result,.original-task){color:var(--ink);background:linear-gradient(115deg,#252522f7,#171916f7);border:12px solid #76766d;border-image:url('/art/legacy-interface/UI-kuang8.png') 30 12 8 12 stretch;border-radius:0;box-shadow:0 5px 24px #0008}
+:root[data-interface=classic] :is(h1,h2,h3,h4,.panel-heading,.sheet-heading,.inventory-silver strong,.hero-meta strong,.profile-stat strong,.duel-eyebrow,.duel-skill strong,.equipment-slot h3,.cultivation-focus strong,.item-requirements summary,.text-button,.shop-price strong){color:#e6d18c}
+:root[data-interface=classic] :is(.panel-intro,.panel-notice,.field-note,.muted,.empty-state,.settings-saved,.setting-row small,.managed-character-label,.profile-vitals,.profile-stat span,.equipment-slot p,.equipment-slot small,.skill-record p,.skill-record small,.party-member p,.party-member small,.inventory-list article p,.inventory-list article>span:last-child,.inventory-list .item-kind,.guide-text,.sheet-skills small,.duel-turn p,.duel-skill-description,.duel-skill small,.duel-panel-title>span,.duel-chronicle #battle-log,.battle-skill-card p,.battle-skill-card h3 small,.roster-controls article>span,.roster-group .panel-intro,.shop-products article p,.shop-sellables article small,.shop-wallet){color:#c7c6b4}
+:root[data-interface=classic] :is(.profile-stat,.equipment-slot,.skill-records>article,.roster-controls article,.roster-summary>span,.battle-skill-card,.creation-stats>div,.creation-portraits button,.combatant-card,.sect-options article,.panel-notice,.original-task,.cultivation-focus){background:#292a24;border-color:#777157;color:var(--ink)}
+:root[data-interface=classic] :is(.talent-tag,.party-skills span,.profile-portrait,.slot-symbol,.item-glyph,.shop-item-icon){background:#30342a;border-color:#8b845b;color:#e7d28c}
+:root[data-interface=classic] :is(.button,.item-action,.pack-choice,.inventory-filters button,.panel-tabs button,.duel-mode,.duel-mode button,.duel-pause,.duel-intent,.duel-intent button,.duel-speed button,.duel-rest){color:#ede1b5;background:linear-gradient(#474636,#26281f);border:1px solid #a28b52;border-radius:2px;text-shadow:0 1px #000;box-shadow:inset 0 0 0 1px #171b15}
+:root[data-interface=classic] :is(.button.primary,.primary-action,.duel-mode button.selected,.duel-intent button.selected,.duel-speed button.selected,.duel-skill.selected,.battle-skill-card.selected,.pack-choice.selected,.interface-choice button[aria-pressed=true],.panel-tabs button[aria-selected=true],.inventory-filters button.active){background:linear-gradient(#706139,#3c3b25);border-color:#e0c575;color:#fff2b9}
+:root[data-interface=classic] [data-requirement-met=true]{color:#b6db9d}
+:root[data-interface=classic] :is(.game-modal input,.game-modal select,.game-modal textarea,.destination-search input){background:#151a16;color:#f0eacb;border-color:#8c835f;color-scheme:dark}
+:root[data-interface=classic] :is(.dialogue-content>p,.creation-prompt,.creation-summary p,.character-summary,.battle-action-summary,.item-requirements,.training-overview,.training-overview a){color:#eee9d4}
+:root[data-interface=classic] :is(.duel-unavailable,[data-requirement-met=false]){color:#ffab8b!important}
+:root[data-interface=classic] .system-nav{position:fixed;inset:auto 18px 18px auto;z-index:16;max-width:calc(100% - 36px);justify-content:flex-start;gap:6px;padding:7px;background:#171b16f2;border:2px solid #86764f;border-radius:0;overflow-x:auto;overscroll-behavior-x:contain}
+:root[data-interface=classic] .system-nav button{position:relative;min-width:64px;width:64px;min-height:74px;padding:5px;flex:0 0 auto;flex-direction:column;gap:7px;border:2px ridge #a28c52;color:#f0dda5;background:linear-gradient(#4b4933,#2a2c21);font-size:12px;letter-spacing:0}
+:root[data-interface=classic] .system-nav button>svg{width:29px;height:29px}
+:root[data-interface=classic] .system-nav button:has(.classic-menu-art){padding:0;border:0;background:none;box-shadow:none}
+:root[data-interface=classic] .classic-menu-art{display:block;width:64px;height:80px;object-fit:fill}
+:root[data-interface=classic] .system-nav button:has(.classic-menu-art)>svg{display:none}
+:root[data-interface=classic] .system-nav button:has(.classic-menu-art)>span{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+:root[data-interface=classic] .battle-app .system-nav{position:relative;inset:auto;max-width:100%;height:70px;justify-content:center;gap:6px;padding:5px;border-width:0 0 1px}
+:root[data-interface=classic] .battle-app .system-nav button{width:auto;min-width:64px;min-height:56px;flex-direction:row;padding:5px 10px}
+:root[data-interface=classic] .battle-app .classic-menu-art{height:58px;width:46px}
+:root[data-interface=classic] .battle-app .system-nav button:has(.classic-menu-art){padding:0;min-width:46px}
+:root[data-interface=classic] .chapter-title{text-align:center;padding-top:6vh;padding-bottom:45px}
+:root[data-interface=classic] .chapter-title :is(.title-copy,.pack-picker,.pack-save-note){margin-left:auto;margin-right:auto}
+:root[data-interface=classic] .chapter-title :is(.title-actions,.title-overline){justify-content:center}
+:root[data-interface=classic] .chapter-title h1{color:#f6df8c;text-shadow:0 3px 8px #000,0 0 24px #000;font-size:clamp(36px,4.5vw,68px)}
+:root[data-interface=classic] .restoration-callout{background:#171b16d9;border-color:#8e7e50}
+:root[data-interface=classic] .chapter-progress{background:#222820df;border-color:#aa9660}
+:root[data-interface=classic] .chapter-locations .map-spot{background:#22251cd9;border-color:#8f845d;color:#e8e5c9}
+:root[data-interface=classic] .chapter-locations .map-spot :is(strong,small){color:#e8e5c9}
+:root[data-interface=classic] .world-app{padding-bottom:110px}
+:root[data-interface=classic] .duel-matchup{background:linear-gradient(90deg,#272d23,#1b211a);border-bottom:1px solid #96865c}
+:root[data-interface=classic] :is(.duel-arena-foot,.duel-footer,.battle-mobile-dock){background:#1e251af5;border-color:#a18c59}
+:root[data-interface=classic] .duel-skill{background:#303329;border-color:#777959}
+:root[data-interface=classic] .duel-skill-description{background:#10181180;border-color:#baa561}
+:root[data-interface=classic] .battle-mobile-dock button{background:#383d2c;border-color:#b29a60;color:#eee3bd}
+:root[data-interface=classic] .battle-mobile-dock button[aria-pressed=true]{background:#8d743f;color:#fff6ca}
+:root[data-interface=classic] .interface-reference-gallery a{color:#f3d77d}
+@media(max-width:760px),(max-height:600px) and (pointer:coarse){
+  .interface-reference-parts{grid-template-columns:1fr}.interface-reference-parts img{max-height:260px}
+  :root[data-interface=classic] .topbar{height:56px;padding:0 12px}
+  :root[data-interface=classic] .topbar .chapter{display:none}
+  :root[data-interface=classic] .system-nav{inset:auto 0 0;max-width:100%;padding:6px 10px calc(6px + env(safe-area-inset-bottom,0px));border-width:1px 0 0;justify-content:flex-start}
+  :root[data-interface=classic] .battle-app .system-nav{inset:auto;justify-content:flex-start;padding:5px 10px}
+  :root[data-interface=classic] .game-modal.system-modal.battle-skills-modal{border-width:10px;border-radius:0}
+  :root[data-interface=classic] .duel-sidebar{padding:15px}
+  :root[data-interface=classic] .world-app{padding-bottom:calc(110px + env(safe-area-inset-bottom,0px))}
+}

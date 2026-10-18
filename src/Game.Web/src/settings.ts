@@ -1,4 +1,5 @@
 export interface Settings {
+  interfaceStyle: 'modern' | 'classic';
   autoSave: boolean;
   battleMode: 'manual' | 'auto';
   battleSpeed: 1 | 2 | 4;
@@ -13,6 +14,7 @@ export interface Settings {
 
 const key = 'jyxr.preferences.v1';
 const defaults: Settings = {
+  interfaceStyle: 'modern',
   autoSave: true,
   battleMode: 'manual', battleSpeed: 1, showGrid: true, showDamage: true,
   battleLighting: true, reducedMotion: matchMedia('(prefers-reduced-motion: reduce)').matches,
@@ -23,6 +25,7 @@ const defaults: Settings = {
 function normalize(value: Partial<Settings>): Settings {
   const volume = (n: unknown, fallback: number) => typeof n === 'number' && Number.isFinite(n) ? Math.max(0, Math.min(1, n)) : fallback;
   return {
+    interfaceStyle: value.interfaceStyle === 'classic' ? 'classic' : 'modern',
     autoSave: typeof value.autoSave === 'boolean' ? value.autoSave : defaults.autoSave,
     battleMode: value.battleMode === 'auto' ? 'auto' : 'manual',
     battleSpeed: value.battleSpeed === 2 || value.battleSpeed === 4 ? value.battleSpeed : 1,
@@ -48,6 +51,7 @@ export function writeSettings(value: Settings): boolean {
 }
 
 export function applySettings(value: Settings) {
+  document.documentElement.dataset.interface = value.interfaceStyle;
   document.documentElement.classList.toggle('large-text', value.largeText);
   document.documentElement.classList.toggle('reduce-motion', value.reducedMotion);
 }

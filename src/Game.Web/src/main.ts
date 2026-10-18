@@ -24,6 +24,8 @@ import {inspectEquipment} from './bridge';
 import {equipmentPreviewView} from './equipment-preview';
 import type {InventorySort} from './panels';
 import {loadOriginalLibrary, mountOriginalLibrary} from './library';
+import {interfaceReferenceView,originalMenuArt,originalInterfaceAsset} from './interface-reference';
+import './interface.css';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 let state: GameState, slot: SaveSlot | undefined, busy = false, board: Board | undefined;
@@ -71,7 +73,7 @@ function topbar(inGame = true) {
   const menus = [['character', 'person', '人物'], ['equipment', 'sword', '装备'], ['cultivation', 'leaf', pack.terms?.cultivation || '功法修炼'], ['inventory', 'bag', '行囊'], ['party', 'person', '队伍'], ['quests', 'leaf', '目标'], ['settings', 'settings', '设置']];
   if(pack.id==='jyx')menus.splice(5,0,['library','person','资料']);
   return `<header class="topbar"><button class="wordmark" data-action="guide" aria-label="游玩指南"><span class="seal small">${e(pack.title.slice(0,1))}</span><span>${e(pack.title)}<small>${e(pack.subtitle)}</small></span></button>
-    <nav aria-label="游戏菜单">${inGame ? `<span class="chapter">${e(state.map?.name)}</span><button class="save-button" data-action="save" ${state.phase !== 'world' ? 'disabled' : ''}>${icon('save')}<span>保存进度</span></button>` : ''}<button class="icon-button" data-action="worlds" aria-label="切换世界">${icon('leaf')}</button><button class="icon-button" data-action="settings" aria-label="设置">${icon('settings')}</button><button class="icon-button" data-action="guide" aria-label="帮助">${icon('help')}</button></nav></header>${inGame ? `<nav class="system-nav" aria-label="角色与世界设置">${menus.map(([action,symbol,label]) => `<button data-action="${action}">${icon(symbol)}<span>${e(label)}</span></button>`).join('')}</nav>` : ''}`;
+    <nav aria-label="游戏菜单">${inGame ? `<span class="chapter">${e(state.map?.name)}</span><button class="save-button" data-action="save" ${state.phase !== 'world' ? 'disabled' : ''}>${icon('save')}<span>保存进度</span></button>` : ''}<button class="icon-button" data-action="worlds" aria-label="切换世界">${icon('leaf')}</button><button class="icon-button" data-action="settings" aria-label="设置">${icon('settings')}</button><button class="icon-button" data-action="guide" aria-label="帮助">${icon('help')}</button></nav></header>${inGame ? `<nav class="system-nav" aria-label="角色与世界设置">${menus.map(([action,symbol,label]) => `<button data-action="${action}">${originalMenuArt[action]?`<img class="classic-menu-art" src="${e(originalInterfaceAsset(originalMenuArt[action]))}" alt="" width="48" height="64" loading="lazy">`:''}${icon(symbol)}<span>${e(label)}</span></button>`).join('')}</nav>` : ''}`;
 }
 function title() {
   const progress = state.pack.id === 'jyx' ? `<div class="restoration-callout"><button class="restoration-entry" data-action="library">原版资料馆 · 全量资料与版本对照<small>人物、武学、道具、初始配置、剧情和关联引用 →</small></button><button class="restoration-entry" data-action="companions">伙伴图鉴 · 剧情加入条件<small>剧情基线65个形态；后期另有43个开局候选，见资料馆 →</small></button><button class="restoration-entry" data-action="progress">现代化重制 · 开发记录<small>功能验收、原版对照与已知问题 →</small></button></div>` : '';
@@ -100,6 +102,17 @@ function updateBattle() {
   }, board);
 }
 function modalOpen() {return !!document.querySelector('#game-modal[open]');}
+function reflectInterfaceChoice() {
+  document.querySelectorAll<HTMLElement>('[data-interface-label]').forEach(node=>node.textContent=settings.interfaceStyle==='classic'?'原版风格（参考复原）':'现代界面');
+  document.querySelectorAll<HTMLButtonElement>('[data-action="interface-style"]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.id===settings.interfaceStyle)));
+  document.querySelectorAll<HTMLSelectElement>('[name="interfaceStyle"]').forEach(control=>control.value=settings.interfaceStyle);
+}
+function changeInterface(style:string|undefined) {
+  if(style!=='modern'&&style!=='classic')return;
+  settings.interfaceStyle=style;
+  if(!writeSettings(settings))toast('界面已切换，但此浏览器暂不能保存设置。');
+  reflectInterfaceChoice();
+}
 function scheduleBattle() {
   clearTimeout(enemyTimer);
   if (busy || battlePaused || modalOpen() || state.phase !== 'battle' || !state.battle || ended()) return;
@@ -374,6 +387,8 @@ document.addEventListener('click', event => {
   else if (action === 'buy-item') {const quantity = shopQuantity(); if (quantity) void command({type:'buy',productId:button.dataset.id,quantity});}
   else if (action === 'sell-item') {const quantity = shopQuantity(); if (quantity) void command({type:'sell',entryNumber:Number(button.dataset.entryNumber),quantity});}
   else if (action === 'close-modal') document.querySelector<HTMLDialogElement>('#game-modal')?.close();
+  else if (action === 'interface-style') changeInterface(button.dataset.id);
+  else if (action === 'original-interface-reference') {modal('原版界面对照',interfaceReferenceView(),true);reflectInterfaceChoice();}
   else if (action === 'save') void save();
   else if (action === 'load') void load();
   else if (action === 'load-manual') void load(manualSlot);
@@ -443,8 +458,9 @@ document.addEventListener('change', event => {
     if (['original','name','count'].includes(control.value)) inventorySort=control.value as InventorySort;
     refreshInventoryResults();return;
   }
-  if (!(control instanceof HTMLInputElement || control instanceof HTMLSelectElement) || !control.closest('#game-settings, #audio-settings')) return;
+  if (!(control instanceof HTMLInputElement || control instanceof HTMLSelectElement) || !control.closest('#game-settings, #audio-settings, #interface-settings')) return;
   const name = control.name as keyof Settings;
+  if (name === 'interfaceStyle') {changeInterface(control.value);return;}
   if (name === 'battleMode' && (control.value === 'manual' || control.value === 'auto')) {
     settings.battleMode = control.value;
     if (screen === 'battle') {autoBattle = control.value === 'auto'; battlePaused = false;}
