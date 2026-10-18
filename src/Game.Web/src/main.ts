@@ -8,6 +8,7 @@ import {packIndex, assetUrl} from './content';
 import type {PackListing} from './content';
 import {titleView, worldView, shopView, sectView, currency} from './world';
 import {battleShell as battleMarkup, updateBattleView} from './battle-view';
+import {battleSkillsView, battleActionView} from './battle-controls';
 import {panelContent} from './panels';
 import {creationView} from './creation';
 import {interactionView} from './interactions';
@@ -39,6 +40,8 @@ applySettings(settings);
 let activePanel: PanelName | null = null, inventoryFilter: InventoryFilter = 'all';
 let inventoryQuery = '', inventorySort: InventorySort = 'original';
 let equipmentPreviewContext: {state: GameState; entryNumber: number} | undefined;
+let battleActionContext: {state: GameState; command: Record<string, unknown>} | undefined;
+let battleSkillsContext: GameState | undefined;
 const e = (value: unknown) => String(value ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]!));
 const plain = (text: string) => text.replace(/\[\[[a-z]+:([^\]]*)\]\]/gi, '$1').replace(/<\/?color[^>]*>/g, '');
 const icon = (name: string) => {
@@ -125,19 +128,35 @@ function render() {
   app.setAttribute('aria-busy', String(busy));
   if(state.phase==='minigame' && state.miniGame) training=new MiniGameController(app,state.miniGame,()=>command({type:'finishMiniGame'}),error=>{console.error(error);toast(error instanceof Error?error.message:'修炼未能完成。');});
   if (nextScreen === 'battle') {
-    board = new Board(document.querySelector('#board-viewport')!, (x, y) => {
+    board = new Board(document.querySelector('#board-viewport')!, (x, y, touch) => {
       if (busy || ended() || autoBattle || battlePaused || modalOpen()) return;
       const target = state.battle!.units.find(unit => unit.alive && unit.x === x && unit.y === y);
       const canTarget = state.battle!.targets?.some(point => point.skillId === selectedSkill && point.x === x && point.y === y);
       if (canTarget && (battleIntent === 'attack' || target && target.team !== 1)) {
-        void command({type: 'attack', skillId: selectedSkill, targetId: target?.id, x, y});
-        battleIntent = 'move';
+        boardAction({type: 'attack', skillId: selectedSkill, targetId: target?.id, x, y}, touch);
       }
-      else if (battleIntent === 'move' && state.battle!.reachable.some(point => point.x === x && point.y === y)) void command({type: 'move', x, y});
+      else if (battleIntent === 'move' && state.battle!.reachable.some(point => point.x === x && point.y === y)) boardAction({type: 'move', x, y}, touch);
       else toast('请点击高亮格移动，或选择武功后点击橙色目标格出招。');
     }, state.battle!);
     updateBattle();
   }
+}
+function boardAction(data: Record<string, unknown>, touch: boolean) {
+  if (touch) {
+    modal(data.type === 'move' ? '确认走位' : '确认出招', battleActionView(state, data));
+    battleActionContext = {state, command: data};
+    document.querySelector('#game-modal')?.classList.add('battle-action-modal');
+  } else {
+    if (data.type === 'attack') battleIntent = 'move';
+    void command(data);
+  }
+}
+function showBattleSkills() {
+  if (!state.battle || ended()) return;
+  const canSelect = !autoBattle && state.battle.units.find(u => u.id === state.battle!.activeUnitId)?.team === 1;
+  modal('选择招式', battleSkillsView(state, selectedSkill, canSelect), true);
+  battleSkillsContext = state;
+  document.querySelector('#game-modal')?.classList.add('battle-skills-modal');
 }
 function applyResult(result: Result) {
   if (!result.ok) throw new Error(result.error || '此次行动未能完成。');
@@ -163,6 +182,7 @@ async function command(data: Record<string, unknown>) {
   return success;
 }
 function modal(titleText: string, content: string, wide = false) {
+  battleActionContext = undefined; battleSkillsContext = undefined;
   clearTimeout(enemyTimer);
   training?.pause();
   if (!wide) activePanel = null;
@@ -363,10 +383,26 @@ document.addEventListener('click', event => {
   else if (action === 'interact') void command({type: 'interact', locationId: button.dataset.id});
   else if (action === 'next') void command({type: 'next'});
   else if (action === 'choice') void command({type: 'choose', index: Number(button.dataset.index)});
-  else if (action === 'rest') void command({type: 'rest'});
+  else if (action === 'rest' || action === 'mobile-rest') void command({type: 'rest'});
+  else if (action === 'battle-skills') showBattleSkills();
+  else if (action === 'mobile-inventory') openPanel('inventory');
+  else if (action === 'mobile-move') {battleIntent = 'move'; updateBattle();}
+  else if (action === 'choose-battle-skill') {
+    if (battleSkillsContext !== state || autoBattle || ended() || !state.battle?.skills.some(s => s.id === button.dataset.id && s.available !== false)) return;
+    selectedSkill = button.dataset.id!; battleIntent = 'attack';
+    document.querySelector<HTMLDialogElement>('#game-modal')?.close(); updateBattle();
+  }
+  else if (action === 'confirm-battle-action') {
+    const pending = battleActionContext;
+    if (!pending || pending.state !== state || autoBattle || battlePaused || ended()) return;
+    battleActionContext = undefined;
+    document.querySelector<HTMLDialogElement>('#game-modal')?.close();
+    if (pending.command.type === 'attack') battleIntent = 'move';
+    void command(pending.command);
+  }
   else if (action === 'auto') battleMode(autoBattle ? 'manual' : 'auto');
   else if (action === 'battle-mode' && (button.dataset.id === 'manual' || button.dataset.id === 'auto')) battleMode(button.dataset.id);
-  else if (action === 'battle-pause') {battlePaused = !battlePaused; clearTimeout(enemyTimer); updateBattle(); scheduleBattle();}
+  else if (action === 'battle-pause' || action === 'mobile-pause') {battlePaused = !battlePaused; clearTimeout(enemyTimer); updateBattle(); scheduleBattle();}
   else if (action === 'battle-speed') {const speed = Number(button.dataset.id); if (speed === 1 || speed === 2 || speed === 4) {settings.battleSpeed = speed; writeSettings(settings); updateBattle(); scheduleBattle();}}
   else if (action === 'leave-battle') void command({type: 'leaveBattle'});
   else if (action === 'skill') {selectedSkill = button.dataset.id!; battleIntent = 'attack'; updateBattle();}

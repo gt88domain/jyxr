@@ -3,6 +3,7 @@ import {assetUrl} from './content';
 import type {Battle, Unit} from './bridge';
 import {BattleLighting} from './battle-lighting';
 import {BattleSkillEffects} from './battle-effects';
+import {BoardTapGuard} from './board-input';
 
 export interface BoardOptions {selectedSkillId?: string; speed?: number; manual?: boolean; busy?: boolean; paused?: boolean; showGrid?: boolean; showDamage?: boolean; battleLighting?: boolean; reducedMotion?: boolean; intent?: 'move' | 'attack';}
 type VisualBattle = Battle & {targets?: {x: number; y: number; skillId: string}[]};
@@ -24,7 +25,8 @@ class BattleScene extends Phaser.Scene {
   private spriteKeys = new Map<string, string>();
   private lighting?: BattleLighting;
   private effects?: BattleSkillEffects;
-  constructor(private onCell: (x: number, y: number) => void, private parentElement: HTMLElement, initial: Battle) {
+  private tapGuard=new BoardTapGuard();
+  constructor(private onCell: (x: number, y: number, touch: boolean) => void, private parentElement: HTMLElement, initial: Battle) {
     super('battle'); this.battle = initial;
   }
   preload() {
@@ -68,10 +70,39 @@ class BattleScene extends Phaser.Scene {
       if (point) this.hover!.lineStyle(2, 0xffe1a5, .95).strokeRoundedRect(left + point.x * cell + 3, top + point.y * cell + 3, cell - 6, cell - 6, 7);
     });
     this.input.on('pointerout', () => this.hover?.clear());
-    this.input.on('pointerup', (pointer: Phaser.Input.Pointer) => {
-      if (!this.canAct()) return;
-      const point = this.cellAt(pointer);
-      if (point) this.onCell(point.x, point.y);
+    // Native pointer events preserve small movements before the browser's
+    // touch-scroll threshold. Phaser's touch events alone can miss that drag.
+    const canvas=this.game.canvas;
+    let approvedTap:{cell:{x:number;y:number};touch:boolean;context:string;at:number}|undefined;
+    const point=(event:PointerEvent)=>({id:event.pointerId,x:event.clientX,y:event.clientY});
+    const local=(event:PointerEvent)=>{const box=canvas.getBoundingClientRect();return {x:(event.clientX-box.left)*this.scale.width/box.width,y:(event.clientY-box.top)*this.scale.height/box.height};};
+    const start=(event:PointerEvent)=>{approvedTap=undefined;if(event.button===0)this.tapGuard.start(point(event),this.tapContext(local(event)),event.timeStamp);};
+    const move=(event:PointerEvent)=>{for(const sample of event.getCoalescedEvents?.()||[])this.tapGuard.move(point(sample));this.tapGuard.move(point(event));};
+    const finish=(event:PointerEvent)=>{
+      const context=this.tapContext(local(event));
+      const tapped=this.tapGuard.finish(point(event),context,event.timeStamp);
+      if(!tapped||!this.canAct())return;
+      const cell=this.cellAt(local(event));
+      if(cell)approvedTap={cell,touch:event.pointerType==='touch'||event.pointerType==='pen',context,at:event.timeStamp};
+    };
+    // Open dialogs from click: opening on pointerup can retarget the following
+    // compatibility click to the new backdrop and immediately close it.
+    const click=(event:MouseEvent)=>{
+      const approved=approvedTap;approvedTap=undefined;
+      if(!approved||!this.canAct()||event.timeStamp-approved.at>500||approved.context!==this.tapContext(local(event as PointerEvent)))return;
+      this.onCell(approved.cell.x,approved.cell.y,approved.touch);
+    };
+    const cancelled=()=>{approvedTap=undefined;this.tapGuard.reset();};
+    const leave=()=>this.tapGuard.reset();
+    canvas.addEventListener('pointerdown',start);
+    canvas.addEventListener('pointermove',move,{passive:true});
+    canvas.addEventListener('pointerup',finish);
+    canvas.addEventListener('click',click);
+    canvas.addEventListener('pointercancel',cancelled);
+    canvas.addEventListener('pointerleave',leave);
+    this.events.once(Phaser.Scenes.Events.SHUTDOWN,()=>{
+      canvas.removeEventListener('pointerdown',start);canvas.removeEventListener('pointermove',move);canvas.removeEventListener('pointerup',finish);
+      canvas.removeEventListener('click',click);canvas.removeEventListener('pointercancel',cancelled);canvas.removeEventListener('pointerleave',leave);cancelled();
     });
     this.draw(true);
   }
@@ -84,8 +115,12 @@ class BattleScene extends Phaser.Scene {
     }
   }
   private canAct() {return !!this.battle && !this.options.busy && this.options.manual !== false && this.battle.units.some(unit => unit.id === this.battle!.activeUnitId && unit.team === 1);}
+  private tapContext(pointer:{x:number;y:number}) {
+    const b=this.battle,active=b?.units.find(u=>u.id===b.activeUnitId),cell=this.cellAt(pointer);
+    return JSON.stringify([b?.id,b?.tick,b?.activeUnitId,active?.x,active?.y,this.options.selectedSkillId,this.options.intent,this.options.manual,this.options.busy,this.scale.width,this.scale.height,cell?.x,cell?.y]);
+  }
   private geometry() {return boardGeometry(this.scale.width, this.scale.height, this.battle!.width, this.battle!.height);}
-  private cellAt(pointer: Phaser.Input.Pointer) {
+  private cellAt(pointer: {x:number;y:number}) {
     if (!this.battle) return;
     const {cell, left, top} = this.geometry();
     const x = Math.floor((pointer.x - left) / cell), y = Math.floor((pointer.y - top) / cell);
@@ -249,9 +284,9 @@ class BattleScene extends Phaser.Scene {
 export class Board {
   private game: Phaser.Game;
   private scene: BattleScene;
-  constructor(parent: HTMLElement, onCell: (x: number, y: number) => void, battle: Battle) {
+  constructor(parent: HTMLElement, onCell: (x: number, y: number, touch: boolean) => void, battle: Battle) {
     this.scene = new BattleScene(onCell, parent, battle);
-    this.game = new Phaser.Game({type: Phaser.CANVAS, parent, transparent: true, audio: {noAudio: true}, banner: false,
+    this.game = new Phaser.Game({type: Phaser.CANVAS, parent, transparent: true, audio: {noAudio: true}, banner: false, disableContextMenu:true, input:{activePointers:2,touch:{capture:false}},
       scale: {mode: Phaser.Scale.RESIZE, width: parent.clientWidth, height: parent.clientHeight}, scene: [this.scene], render: {antialias: true, roundPixels: false}});
   }
   update(battle: Battle, options: BoardOptions = {}) {this.scene.updateBattle(battle, options);}

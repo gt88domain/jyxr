@@ -43,6 +43,7 @@
     "test:stage80": "node tests/stage80-smoke.mjs",
     "test:stage90": "node tests/stage90-smoke.mjs",
     "test:modern-m2": "node tests/modern-m2-smoke.mjs",
+    "test:modern-m3": "node --test tests/board-input.test.mjs && node tests/modern-m3-mobile-smoke.mjs",
     "audit:remaining": "python3 tests/remaining-source-audit.py",
     "assets:restore": "python3 scripts/art-bundle.py restore"
   },

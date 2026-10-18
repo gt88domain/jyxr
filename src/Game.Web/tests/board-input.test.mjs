@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {test} from 'node:test';
+import {BoardTapGuard} from '../src/board-input.ts';
+const p = (x=30,y=40,id=1) => ({x,y,id});
+test('a short stationary tap is accepted once',()=>{const g=new BoardTapGuard();g.start(p(),'turn',10);assert.ok(g.finish(p(33,41),'turn',150));assert.equal(g.finish(p(),'turn',151),false);});
+test('dragging away and back cannot become a tap',()=>{const g=new BoardTapGuard();g.start(p(),'turn',0);g.move(p(50));g.move(p());assert.equal(g.finish(p(),'turn',200),false);});
+test('release distance is checked even without move events',()=>{const g=new BoardTapGuard();g.start(p(),'turn',0);assert.equal(g.finish(p(45),'turn',200),false);});
+test('a long press is not a tap',()=>{const g=new BoardTapGuard();g.start(p(),'turn',0);assert.equal(g.finish(p(),'turn',800),false);});
+test('turn, skill, intent or tile context changes invalidate the tap',()=>{const g=new BoardTapGuard();g.start(p(),'old',0);assert.equal(g.finish(p(),'new',100),false);});
+test('two fingers reject both releases and the next tap still works',()=>{const g=new BoardTapGuard();g.start(p(),'turn',0);g.start(p(40,50,2),'turn',10);assert.equal(g.finish(p(40,50,2),'turn',50),false);assert.equal(g.finish(p(),'turn',100),false);g.start(p(),'turn',200);assert.ok(g.finish(p(),'turn',300));});
+test('a cancelled gesture cannot release an action',()=>{const g=new BoardTapGuard();g.start(p(),'turn',0);g.reset();assert.equal(g.finish(p(),'turn',100),false);});

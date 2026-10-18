@@ -1,0 +1,28 @@
+.battle-mobile-dock{display:none}
+.duel-board.board-viewport{touch-action:pan-y pinch-zoom}
+.duel-board canvas{touch-action:pan-y pinch-zoom!important;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+.battle-skill-sheet{display:grid;gap:12px}.battle-skill-card{padding:16px;border:1px solid #b3b39480;border-radius:8px;background:#fffaf080}.battle-skill-card.selected{border-color:#8a783e;background:#e7e2c570}.battle-skill-card h3{font:18px var(--serif);line-height:1.6}.battle-skill-card h3 small{font:12px sans-serif;color:#6e795f}.battle-skill-card p{font-size:13px;line-height:1.8;margin:8px 0;overflow-wrap:anywhere}.battle-skill-card .battle-skill-facts{color:#5d694c}.battle-skill-card button{min-height:44px;width:100%}.battle-skill-card:has(button:disabled){background:#e6e3d680}.battle-action-summary{font-size:14px;line-height:1.9;margin:22px 0}.battle-action-summary strong{display:block;font:20px var(--serif);margin:10px 0}.battle-confirm-actions{display:flex;gap:12px}.battle-confirm-actions button{flex:1;min-height:48px;padding:12px}
+@media(max-width:760px),(max-height:600px) and (pointer:coarse){
+  .battle-app{padding-bottom:calc(110px + env(safe-area-inset-bottom,0px))}
+  .battle-mobile-dock{display:block;position:fixed;z-index:24;bottom:0;left:0;right:0;padding:8px max(10px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(10px,env(safe-area-inset-left,0px));background:#17382df5;border-top:1px solid #c7af76;box-shadow:0 -8px 24px #102a2a50;backdrop-filter:blur(12px)}
+  .battle-mobile-dock>p{font-size:12px;line-height:1.5;color:#f1dbac;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:0 3px 7px}
+  .battle-mobile-dock>div{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}.battle-mobile-dock button{min-height:48px;min-width:44px;padding:8px 3px;font-size:14px;color:#f3e7c9;border:1px solid #bbaf7c66;border-radius:6px;background:#294c3e}.battle-mobile-dock button[aria-pressed=true]{background:#aa8b50;color:#fff9e9;border-color:#dec486}.battle-mobile-dock button:disabled{opacity:.45}
+  body:has(#game-modal[open]) .battle-mobile-dock,body:has(.duel-result-scrim) .battle-mobile-dock{display:none}
+  .duel-heading .duel-mode button,.duel-heading .duel-pause,.duel-intent>button,.duel-speed>button,.duel-rest{min-height:44px;min-width:44px}
+  .battle-app .topbar .icon-button{min-width:44px;min-height:44px}.duel-combatant p,.duel-combatant p small{font-size:10px}
+  .duel-turn h2{display:block;font-size:18px}.duel-turn p{display:block;font-size:12px}.duel-turn .duel-eyebrow{font-size:11px}
+  .game-modal{max-height:calc(100svh - 24px);overscroll-behavior:contain;scroll-padding:24px;padding-bottom:max(24px,env(safe-area-inset-bottom,0px))}
+  .game-modal .close-modal,.game-modal .item-action,.game-modal .button,.system-nav button{min-width:44px;min-height:44px}
+  .game-modal[open] input,.game-modal[open] select,.game-modal[open] textarea{font-size:16px;min-height:44px;max-width:100%}
+  .app .system-nav{justify-content:flex-start;overflow-x:auto;overscroll-behavior-x:contain}.app .system-nav button{flex:0 0 auto;min-width:44px;min-height:44px}
+  .game-modal.system-modal.battle-skills-modal{position:fixed;inset:auto 0 0;margin:0 auto;width:min(680px,100%);max-width:100%;max-height:88svh;border-radius:16px 16px 0 0;padding:24px 18px max(24px,env(safe-area-inset-bottom,0px));box-sizing:border-box}
+  .battle-skills-modal h2{padding-right:36px}.battle-skills-modal .close-modal{top:12px;right:12px}
+  .duel-skill{min-height:54px}.duel-skill strong{overflow-wrap:anywhere}
+}
+@media(max-height:600px) and (pointer:coarse){
+  .duel-screen{display:flex;flex-direction:column;height:auto;padding:16px;gap:14px}
+  .duel-arena{height:auto;min-height:0;width:100%}.duel-board.board-viewport{height:280px;min-height:280px;flex:0 0 280px}
+  .duel-sidebar{height:auto;max-height:none;width:100%;overflow:visible}.duel-heading{width:100%}.duel-footer{width:100%}
+  .battle-mobile-dock{left:auto;width:min(100%,560px);border-radius:12px 0 0 0}.game-modal.system-modal.battle-skills-modal{max-height:94svh}
+}
+@media(max-width:360px){.duel-heading{flex-direction:column}.duel-heading-controls{flex-direction:row;justify-content:space-between}.duel-heading h1{max-width:none}.duel-arts #skill-list{grid-template-columns:1fr}}

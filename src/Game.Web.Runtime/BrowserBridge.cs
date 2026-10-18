@@ -501,7 +501,7 @@ public static partial class BrowserBridge
     private static object SkillView(SkillInstance skill, BattleUnit? unit = null)
     {
         var available = unit is not null && _battle is not null ? _engine!.EvaluateSkillAvailability(_battle, unit.Id, skill) : null;
-        return new { id = skill.Id, name = skill.Name, description = skill.Description, level = skill.Level, mpCost = available?.MpCost ?? skill.MpCost, castSize = unit is null ? skill.CastSize : BattleSkillTargeting.ResolveEffectiveCastSize(unit, skill), impactSize = unit is null ? skill.ImpactSize : BattleSkillTargeting.ResolveEffectiveImpactSize(unit, skill), available = available?.IsAvailable ?? true, reason = SkillUnavailableReason(available) };
+        return new { id = skill.Id, name = skill.Name, description = skill.Description, level = skill.Level, mpCost = available?.MpCost ?? skill.MpCost, rageCost = skill.RageCost, cooldown = skill.Cooldown, remainingCooldown = available?.RemainingCooldown ?? skill.CurrentCooldown, castSize = unit is null ? skill.CastSize : BattleSkillTargeting.ResolveEffectiveCastSize(unit, skill), impactSize = unit is null ? skill.ImpactSize : BattleSkillTargeting.ResolveEffectiveImpactSize(unit, skill), available = available?.IsAvailable ?? true, reason = SkillUnavailableReason(available) };
     }
 
     private static string Snapshot()
@@ -560,7 +560,7 @@ public static partial class BrowserBridge
                         id = _request.BattleId, background = BattleMedia(_request.BattleId), music = _content!.GetBattle(_request.BattleId).Music,
                         activeUnitId = Active?.Id, tick = _battle.Tick, tickLimit = BattleTickLimit, timedOut = BattleTimedOut, outcome = outcome!.Kind == BattleOutcomeKind.Ongoing ? "ongoing" : outcome.WinningTeam == 1 ? "win" : "lose",
                         units = _battle.Units.Select(u => new { id = u.Id, definitionId = u.Character.Definition.Id, sprite = CharacterMedia(u.Character, "characters", u.Team), portrait = CharacterMedia(u.Character, "portraits", u.Team), name = u.Character.Name, animation = CharacterAnimation(u.Character), facing = u.Facing.ToString().ToLowerInvariant(), team = u.Team, x = u.Position.X, y = u.Position.Y, hp = u.Hp, maxHp = u.MaxHp, mp = u.Mp, maxMp = u.MaxMp, alive = u.IsAlive,
-                            buffs = u.ActiveBuffs.Select(b => new { id = b.Definition.Id, name = b.Definition.Name, description = b.Definition.Description, level = b.Level, remainingTurns = b.RemainingTurns, isDebuff = b.Definition.IsDebuff }) }),
+                            rage = u.Rage, buffs = u.ActiveBuffs.Select(b => new { id = b.Definition.Id, name = b.Definition.Name, description = b.Definition.Description, level = b.Level, remainingTurns = b.RemainingTurns, isDebuff = b.Definition.IsDebuff }) }),
                         skills = Active?.Team == 1 ? Skills(Active.Character).Select(s => SkillView(s, Active)).ToArray() : [],
                         reachable = Active?.Team == 1 && outcome.Kind == BattleOutcomeKind.Ongoing ? _engine!.GetReachablePositions(_battle, Active.Id).Keys.Select(p => new { x = p.X, y = p.Y }).ToArray() : [],
                         targets = TargetView(), events = BattleEvents.ToArray(), playerCanAct = Active?.Team == 1 && outcome.Kind == BattleOutcomeKind.Ongoing,

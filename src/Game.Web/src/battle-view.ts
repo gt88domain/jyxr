@@ -3,6 +3,7 @@ import './battle-status.css';
 import type {GameState, Skill, Unit} from './bridge';
 import type {Board} from './board';
 import {assetUrl} from './content';
+import './battle-mobile.css';
 
 export interface BattleViewOptions {
   state: GameState; busy: boolean; selectedSkill: string; autoBattle: boolean; battleSpeed: number;
@@ -18,7 +19,7 @@ export function battleShell(state: GameState): string {
   return `<main class="duel-screen"><header class="duel-heading"><div><span class="duel-eyebrow">遭遇 · 行动与战技</span><h1 id="battle-name">战斗</h1></div><div class="duel-heading-controls"><div class="duel-mode" aria-label="战斗操控方式"><button data-action="battle-mode" data-id="manual">手动出招</button><button data-action="battle-mode" data-id="auto">自动交手</button></div><button class="duel-pause" data-action="battle-pause" aria-pressed="false">Ⅱ 暂停</button></div></header>
     <section class="duel-arena"><div class="duel-matchup" id="battle-matchup"></div><div id="board-viewport" class="board-viewport duel-board" role="application" aria-label="战场：走位模式点击青色格移动，出招模式点击对手或橙色目标格施展武学"></div><div class="duel-arena-foot"><div class="duel-intent" aria-label="本次棋盘操作"><button data-action="battle-intent" data-id="move">走位</button><button data-action="battle-intent" data-id="attack">出招</button></div><span><i class="legend-move"></i>可移动 <i class="legend-target"></i>招式范围 <i class="legend-turn"></i>当前行动</span><span>${escape(state.map?.name || '野外')} · 战场</span></div></section>
     <aside class="duel-sidebar"><section id="active-unit" class="duel-turn"></section><section class="duel-arts"><div class="duel-panel-title"><h2>所学武艺</h2><span>择一招，见真章</span></div><div id="skill-list"></div><div id="skill-description" class="duel-skill-description"></div><button class="duel-rest" data-action="rest">◐ 休息调息 <small>恢复气血与${escape(state.pack.terms?.energy || '内力')}</small></button></section><section class="duel-chronicle"><div class="duel-panel-title"><h2>交手实录</h2><span>战况</span></div><div id="battle-log" role="log" aria-live="polite"></div></section></aside>
-    <footer class="duel-footer"><div id="battle-tip" class="duel-tip" aria-live="polite"></div><div class="duel-speed" aria-label="战斗速度"><span>交手节奏</span>${[1, 2, 4].map(speed => `<button data-action="battle-speed" data-id="${speed}">${speed}×</button>`).join('')}</div></footer><div id="battle-result"></div></main>`;
+    <footer class="duel-footer"><div id="battle-tip" class="duel-tip" aria-live="polite"></div><div class="duel-speed" aria-label="战斗速度"><span>交手节奏</span>${[1, 2, 4].map(speed => `<button data-action="battle-speed" data-id="${speed}">${speed}×</button>`).join('')}</div></footer><nav class="battle-mobile-dock" aria-label="便捷战斗操作"><p id="battle-mobile-status" aria-live="polite"></p><div><button data-action="mobile-move">走位</button><button data-action="battle-skills">选招</button><button data-action="mobile-inventory">行囊</button><button data-action="mobile-rest">调息</button><button data-action="mobile-pause">暂停</button></div></nav><div id="battle-result"></div></main>`;
 }
 
 function combatant(unit: Unit | undefined, friendly: boolean, energy: string, count: number): string {
@@ -49,6 +50,17 @@ export function updateBattleView(options: BattleViewOptions, board?: Board): str
   query<HTMLButtonElement>('[data-action="rest"]').disabled = !playerTurn || ended || busy || autoBattle || !!paused;
   const pause = query<HTMLButtonElement>('[data-action="battle-pause"]');
   pause.textContent = paused ? '▶ 继续' : 'Ⅱ 暂停'; pause.setAttribute('aria-pressed', String(!!paused)); pause.disabled = ended;
+  query('#battle-mobile-status').textContent = `${active?.name || '战场'} · ${ended ? '战斗结束' : paused ? '已暂停' : autoBattle ? '自动交手' : !playerTurn ? '对手行动' : intent === 'attack' ? `出招：${chosen?.name || '请选择招式'}` : '请选择走位格'} `;
+  const mobileMove = query<HTMLButtonElement>('[data-action="mobile-move"]');
+  mobileMove.disabled = !playerTurn || ended || busy || autoBattle || !!paused;
+  mobileMove.setAttribute('aria-pressed', String(intent === 'move'));
+  query<HTMLButtonElement>('[data-action="mobile-rest"]').disabled = mobileMove.disabled;
+  const mobileSkill = query<HTMLButtonElement>('[data-action="battle-skills"]');
+  mobileSkill.disabled = ended || busy; mobileSkill.setAttribute('aria-pressed', String(intent === 'attack'));
+  const mobilePause = query<HTMLButtonElement>('[data-action="mobile-pause"]');
+  mobilePause.textContent = paused ? '继续' : '暂停'; mobilePause.disabled = ended;
+  mobilePause.setAttribute('aria-pressed', String(!!paused));
+  query<HTMLButtonElement>('[data-action="mobile-inventory"]').disabled = busy;
   document.querySelectorAll<HTMLButtonElement>('[data-action="battle-intent"]').forEach(button => {
     const selected = button.dataset.id === intent;
     button.classList.toggle('selected', selected); button.setAttribute('aria-pressed', String(selected));

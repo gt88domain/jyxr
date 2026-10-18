@@ -4,14 +4,14 @@ import {fileURLToPath} from 'node:url';
 import {chromium} from 'playwright';
 
 // Only `state` is sent to the runtime. Gameplay changes must use visible controls.
-export async function createHarness(name) {
+export async function createHarness(name, contextOptions = {}) {
   const output = fileURLToPath(new URL('../test-results/', import.meta.url));
   await mkdir(output, {recursive: true});
   const report = {baseURL: process.env.GAME_WEB_URL || 'http://127.0.0.1:4173', startedAt: new Date().toISOString(),
     passed: false, checks: [], console: [], errors: [], expectedErrors: [], failedRequests: [], failedResponses: []};
   const browser = await chromium.launch({executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium',
     headless: true, args: ['--no-sandbox', '--disable-dev-shm-usage']});
-  const context = await browser.newContext({viewport: {width: 1440, height: 900}});
+  const context = await browser.newContext({viewport: {width: 1440, height: 900}, ...contextOptions});
   await context.tracing.start({screenshots: true, snapshots: true});
   const page = await context.newPage();
   page.setDefaultTimeout(20_000);
