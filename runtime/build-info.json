@@ -3,6 +3,6 @@
   "trimmed": false,
   "aot": false,
   "files": 558,
-  "bytes": 48043705,
+  "bytes": 48045363,
   "scope": "Release managed libraries; reflection retained. Framework payload size is measured, not an AOT or trimming claim."
 }
