@@ -5,6 +5,8 @@ import {assetUrl} from './content';
 
 export type PanelName = 'character' | 'equipment' | 'cultivation' | 'inventory' | 'settings' | 'party' | 'quests' | 'chest';
 export type InventoryFilter = 'all' | 'equipment' | 'skillBook' | 'consumable' | 'other';
+export type InventorySort = 'original' | 'name' | 'count';
+export interface InventoryViewOptions {query: string; sort: InventorySort;}
 const e = (value: unknown) => String(value ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]!));
 const plain = (text: string) => text.replace(/\[\[[a-z]+:([^\]]*)\]\]/gi, '$1').replace(/<\/?color[^>]*>/g, '');
 const kindName: Record<string, string> = {equipment: '装备', skillBook: '秘籍', consumable: '丹药', other: '杂物'};
@@ -29,7 +31,7 @@ function character(state: GameState, busy: boolean) {
 function itemActions(item: InventoryItem, state: GameState, busy: boolean) {
   const locked = busy || state.hero.canManage === false;
   const current = state.hero.cultivation?.itemId === item.id;
-  if (item.kind === 'equipment') return `<div class="item-actions"><button class="item-action primary-action" data-action="equip-item" data-entry-number="${item.entryNumber}" ${disabled(locked || !item.canEquip)} title="${e(item.reason)}">装备到人物</button></div>`;
+  if (item.kind === 'equipment') return `<div class="item-actions"><button class="item-action" data-action="preview-equipment" data-entry-number="${item.entryNumber}" ${disabled(locked)}>换装对比</button><button class="item-action primary-action" data-action="equip-item" data-entry-number="${item.entryNumber}" ${disabled(locked || !item.canEquip)} title="${e(item.reason)}">装备到人物</button></div>`;
   if (item.kind === 'skillBook') return `<div class="item-actions"><button class="item-action primary-action" data-action="cultivate" data-entry-number="${item.entryNumber}" ${disabled(locked || !item.canCultivate || current)} title="${e(item.reason)}">${current ? '正在修炼' : '选择修炼'}</button>${item.reason && !item.canCultivate ? `<span class="field-note">${e(item.reason)}</span>` : ''}</div>`;
   if (item.canUse || item.kind === 'consumable') {
     const first=item.battleTargets?.find(t=>t.canUse&&t.id===state.battle?.activeUnitId)?.id??item.battleTargets?.find(t=>t.canUse)?.id;
@@ -39,7 +41,13 @@ function itemActions(item: InventoryItem, state: GameState, busy: boolean) {
   return '';
 }
 function itemList(items: InventoryItem[], state: GameState, busy: boolean, empty: string) {
-  return `<div class="inventory-list">${items.map(item => `<article data-item-id="${e(item.id)}"><span class="item-glyph" aria-hidden="true">${item.icon ? `<img src="${e(assetUrl(item.icon))}" alt="">` : item.kind === 'skillBook' ? '书' : item.kind === 'equipment' ? slotSymbols[item.slot ?? ''] || '装' : item.kind === 'consumable' ? '丹' : '物'}</span><div><strong>${e(item.name)}</strong> <span class="item-kind">${e(kindName[item.kind] || item.itemType)}</span><p>${e(plain(item.description))}</p>${(item.affixes || []).map(line=>`<p class="gear-affix">${e(line)}</p>`).join('')}${itemActions(item, state, busy)}</div><span>× ${item.count}</span></article>`).join('') || `<p class="empty-state">${empty}</p>`}</div>`;
+  return `<div class="inventory-list">${items.map(item => `<article data-item-id="${e(item.id)}"><span class="item-glyph" aria-hidden="true">${item.icon ? `<img src="${e(assetUrl(item.icon))}" alt="">` : item.kind === 'skillBook' ? '书' : item.kind === 'equipment' ? slotSymbols[item.slot ?? ''] || '装' : item.kind === 'consumable' ? '丹' : '物'}</span><div><strong>${e(item.name)}</strong> <span class="item-kind">${e(kindName[item.kind] || item.itemType)}</span><p>${e(plain(item.description))}</p>${(item.affixes || []).map(line=>`<p class="gear-affix">${e(line)}</p>`).join('')}${itemRequirements(item)}${itemActions(item, state, busy)}</div><span>× ${item.count}</span></article>`).join('') || `<p class="empty-state">${empty}</p>`}</div>`;
+}
+function itemRequirements(item: InventoryItem) {
+  if (!['equipment','skillBook'].includes(item.kind)) return '';
+  const requirements=item.requirements||[];
+  const allocation=item.training?`<p class="field-note" data-manual-allocation>秘籍共 ${item.training.copies} 本 · 空闲 ${Math.max(0,item.training.copies-item.training.assignedTo.length)} 本${item.training.assignedTo.length?`<br>正在分配给：${item.training.assignedTo.map(c=>e(c.name)).join('、')}`:''}</p>`:'';
+  return `${requirements.length?`<details class="item-requirements" ${requirements.some(r=>!r.met)?'open':''}><summary>${item.kind==='skillBook'?'修炼':'穿戴'}门槛 · ${requirements.filter(r=>r.met).length}/${requirements.length} 已满足</summary><ul>${requirements.map(r=>`<li data-requirement-met="${r.met}"><span>${r.met?'✓':'○'} ${e(r.label)}</span><span>当前 ${e(r.current)} / 需要 ${e(r.required)}</span></li>`).join('')}</ul></details>`:'<p class="field-note">无额外属性或身份门槛。</p>'}${allocation}`;
 }
 function equipment(state: GameState, busy: boolean) {
   const slots = state.hero.equipment ?? [];
@@ -52,11 +60,21 @@ function skillRecord(skill: Skill, state: GameState, busy: boolean, internal: bo
 function cultivation(state: GameState, busy: boolean) {
   const c = state.hero.cultivation;
   const books = (state.inventory ?? []).filter(i => i.kind === 'skillBook');
-  return `${tabs('cultivation', state)}${notice(state)}<p class="panel-intro">选择一本秘籍修炼，战斗结束后获得修炼经验。主运流派单独选择，会影响实战效果。</p><section class="cultivation-focus" data-testid="cultivation-focus"><div class="eyebrow">${c ? '当前修炼秘籍' : '修炼尚未开始'}</div><h3>${e(c?.itemName || '先选一部功法')}</h3>${c ? `<p>${e(c.skillName)} · 第 ${c.level} 重 / ${c.maxLevel} 重</p>${progress(c.exp, c.nextExp)}<button class="text-button" data-action="clear-cultivation" ${disabled(busy || state.hero.canManage === false)}>暂停这部秘籍的修炼</button>` : '<p>在下方选择一本已有的研习手册，战斗结算后积累经验。</p>'}</section><h3 class="panel-heading">可修炼秘籍 <small>选择秘籍不会消耗物品</small></h3>${itemList(books, state, busy, '行囊中尚无秘籍。')}<h3 class="panel-heading">${e(state.pack.terms?.internalSkills || '内功')} <small>同时主运一门</small></h3><div class="skill-records">${(state.hero.internalSkills ?? []).map(s => skillRecord(s, state, busy, true)).join('') || '<p class="muted">尚未学会内功，先选择上方秘籍修炼。</p>'}</div><h3 class="panel-heading">${e(state.pack.terms?.externalSkills || '外功招式')} <small>启用后可在战斗中使用</small></h3><div class="skill-records">${(state.hero.externalSkills ?? []).map(s => skillRecord(s, state, busy, false)).join('') || '<p class="muted">尚未习得外功。</p>'}</div>`;
+  return `${tabs('cultivation', state)}${notice(state)}<p class="panel-intro">选择一本秘籍修炼，战斗结束后获得修炼经验。主运流派单独选择，会影响实战效果。</p>${trainingOverview(state,busy)}<section class="cultivation-focus" data-testid="cultivation-focus"><div class="eyebrow">${c ? '当前修炼秘籍' : '修炼尚未开始'}</div><h3>${e(c?.itemName || '先选一部功法')}</h3>${c ? `<p>${e(c.skillName)} · 第 ${c.level} 重 / ${c.maxLevel} 重</p>${progress(c.exp, c.level>=c.maxLevel?0:c.nextExp)}<button class="text-button" data-action="clear-cultivation" ${disabled(busy || state.hero.canManage === false)}>暂停这部秘籍的修炼</button>` : '<p>在下方选择一本已有的研习手册，战斗结算后积累经验。</p>'}</section><h3 class="panel-heading">可修炼秘籍 <small>选择秘籍不会消耗物品</small></h3>${itemList(books, state, busy, '行囊中尚无秘籍。')}<h3 class="panel-heading">${e(state.pack.terms?.internalSkills || '内功')} <small>同时主运一门</small></h3><div class="skill-records">${(state.hero.internalSkills ?? []).map(s => skillRecord(s, state, busy, true)).join('') || '<p class="muted">尚未学会内功，先选择上方秘籍修炼。</p>'}</div><h3 class="panel-heading">${e(state.pack.terms?.externalSkills || '外功招式')} <small>启用后可在战斗中使用</small></h3><div class="skill-records">${(state.hero.externalSkills ?? []).map(s => skillRecord(s, state, busy, false)).join('') || '<p class="muted">尚未习得外功。</p>'}</div>`;
 }
-function inventory(state: GameState, busy: boolean, filter: InventoryFilter) {
-  const items = (state.inventory ?? []).filter(i => filter === 'all' || i.kind === filter);
+function trainingOverview(state: GameState, busy: boolean) {
+  const labels={active:'参战',reserve:'后备休整',following:'剧情随行','story-away':'剧情安排'};
+  return `<details class="training-overview"><summary>伙伴修炼总览 · ${(state.roster||[]).filter(c=>c.cultivation).length} 人已选秘籍</summary><p class="panel-intro">仅实际参战人物在结算时获得本场秘籍经验；后备保留修炼选择。主运功法与秘籍修炼分别设置。</p><div class="skill-records">${(state.roster||[]).map(c=>`<article class="skill-record" data-training-character="${e(c.id)}"><div><h4>${e(c.name)} <small>${labels[c.formationStatus]}</small></h4><p>主运：${e(c.runningInternalName||'未设置')}</p><p>秘籍：${e(c.cultivation?.itemName||'未选择')}${c.cultivation?` · 第 ${c.cultivation.level}/${c.cultivation.maxLevel} 重`:''}</p>${c.cultivation?progress(c.cultivation.exp,c.cultivation.level>=c.cultivation.maxLevel?0:c.cultivation.nextExp):''}</div><button class="item-action" data-action="manage-character" data-panel="cultivation" data-id="${e(c.id)}" ${disabled(busy)}>查看修炼</button></article>`).join('')}</div></details>`;
+}
+function inventory(state: GameState, busy: boolean, filter: InventoryFilter, options: InventoryViewOptions) {
+  const query=options.query.trim().toLocaleLowerCase();
+  const items = (state.inventory ?? []).filter(i => (filter === 'all' || i.kind === filter) && i.name.toLocaleLowerCase().includes(query));
+  if(options.sort==='name')items.sort((a,b)=>a.name.localeCompare(b.name,'zh-CN')||a.entryNumber-b.entryNumber);
+  if(options.sort==='count')items.sort((a,b)=>b.count-a.count||a.entryNumber-b.entryNumber);
   return `${notice(state)}<div class="inventory-silver">${e(state.pack.currencyName || '钱币')} <strong>${state.silver.toLocaleString()} ${e(state.pack.currencyUnit || state.pack.currencyName || '')}</strong>${state.yuanbao || state.pack.id === 'jyx' ? `<span>元宝 ${state.yuanbao || 0}</span>` : ''}</div><nav class="inventory-filters" aria-label="行囊分类">${(['all', 'equipment', 'skillBook', 'consumable', 'other'] as const).map(id => `<button class="${filter === id ? 'active' : ''}" data-action="inventory-filter" data-id="${id}">${id === 'all' ? '全部' : kindName[id]}</button>`).join('')}</nav>${itemList(items, state, busy, '这个分类里暂时没有物品。')}<button class="button outline full-width" data-action="chest" ${disabled(!('chestMapId' in state.pack) || state.map.id !== state.pack.chestMapId)} title="前往松鼠旅馆使用储物箱">打开储物箱</button><button class="button outline full-width" data-action="download-save" ${disabled(state.phase !== 'world' || busy)}>导出存档备份</button>`;
+}
+function inventoryTools(options: InventoryViewOptions) {
+  return `<div class="inventory-tools"><label>查找物品<input id="inventory-search" type="text" value="${e(options.query)}" placeholder="输入物品名称" autocomplete="off"></label><label>排列方式<select id="inventory-sort"><option value="original" ${options.sort==='original'?'selected':''}>原始顺序</option><option value="name" ${options.sort==='name'?'selected':''}>按名称</option><option value="count" ${options.sort==='count'?'selected':''}>按数量从多到少</option></select></label></div>`;
 }
 function settingsPanel(settings: Settings) {
   const check = (id: keyof Settings, title: string, description: string) => `<label class="setting-row"><span>${title}<small>${description}</small></span><input type="checkbox" name="${id}" ${settings[id] ? 'checked' : ''}></label>`;
@@ -98,7 +116,7 @@ function questPanel(state: GameState) {
   const journal=state.journal?.length?`<details class="journey-journal"><summary>旅途记事 · 最近 ${state.journal.length} 条</summary><div class="skill-records">${state.journal.map(entry=>`<article data-journal-id="${entry.id}"><small>${e(entry.date)}</small><p>${e(plain(entry.text))}</p></article>`).join('')}</div></details>`:'';
   return `<p class="panel-intro">${e(state.pack.chapterTitle || state.pack.subtitle)} · 完成 ${done} / ${goals.length} 项。本章以完整游玩流程为目标，阅读与手动战斗时间因人而异。</p><ol class="objective-list">${goals.map((goal,index) => `<li class="${goal.completed ? 'done' : ''}" data-objective-id="${e(goal.id)}"><span class="objective-tick">${goal.completed ? '✓' : index + 1}</span><div><strong>${e(goal.title)}</strong>${goal.description ? `<p>${e(goal.description)}</p>` : ''}</div></li>`).join('')}</ol>${done === goals.length && goals.length ? `<p class="panel-notice">${state.milestones?.length ? '入门目标已完成，可以继续结识伙伴、修炼武学与探索江湖。' : '本章目标已全部达成，可保存此次旅程。'}</p>` : ''}${milestones}${journal}<button class="button outline full-width" data-action="save" ${state.phase !== 'world' ? 'disabled' : ''}>保存当前世界进度</button>`;
 }
-export function panelContent(name: PanelName, state: GameState, settings: Settings, busy = false, filter: InventoryFilter = 'all'): {title: string; content: string} {
+export function panelContent(name: PanelName, state: GameState, settings: Settings, busy = false, filter: InventoryFilter = 'all', inventoryOptions: InventoryViewOptions = {query:'',sort:'original'}): {title: string; content: string} {
   if (name === 'party') return {title: '同行队伍', content: (state.pack.id==='jyx'?'<button class="button outline full-width" data-action="companions">伙伴图鉴 · 查看所有伙伴与加入条件</button>':'') + rosterControls(state,busy) + `<details class="roster-details"><summary>参战队员详情 · 装备与武功</summary>${partyPanel(state)}</details>`};
   if (name === 'chest') return {title: '储物箱', content: chestPanel(state,busy)};
   if (name === 'quests') return {title: '章节目标与江湖成就', content: questPanel(state)+(state.achievements?.length?`<h3 class="panel-heading">已获称号</h3><div class="skill-records">${state.achievements.map(a=>`<article data-achievement-id="${e(a.id)}"><strong>${e(a.name)}</strong>${a.description?`<p>${e(a.description)}</p>`:''}</article>`).join('')}</div>`:'')};
@@ -108,5 +126,5 @@ export function panelContent(name: PanelName, state: GameState, settings: Settin
   if (name === 'character') return {title: state.hero.name, content: selector+character(state,busy)};
   if (name === 'equipment') return {title: '随身装备', content: selector+equipment(state, busy)};
   if (name === 'cultivation') return {title: state.pack.terms?.cultivation || '功法修炼', content: selector+cultivation(state, busy)};
-  return {title: '随身行囊', content: selector+inventory(state, busy, filter)};
+  return {title: '随身行囊', content: selector+inventoryTools(inventoryOptions)+inventory(state, busy, filter, inventoryOptions)};
 }

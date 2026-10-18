@@ -113,6 +113,12 @@ public static partial class BrowserBridge
             count = entry is StackInventoryEntry stack ? stack.Quantity : 1, quantity = entry is StackInventoryEntry stack2 ? stack2.Quantity : 1,
             description = entry.Definition.Description, kind = equipment is not null ? "equipment" : book is not null ? "skillBook" : entry.Definition.Type == ItemType.Consumable ? "consumable" : "other",
             affixes = entry is EquipmentInstanceInventoryEntry instanceEntry ? AffixFormatter.FormatEquipmentLinesCn(instanceEntry.Equipment.ExtraAffixes, _content!) : [],
+            requirements = _session.ItemUseService.DescribeRequirements(entry.Definition, Managed),
+            training = book is null ? null : new {
+                skillId = book.Value.SkillId,
+                copies = entry is StackInventoryEntry manualStack ? manualStack.Quantity : 1,
+                assignedTo = _session.State.Party.GetAllCharacters().Where(c => CultivationId(c) == entry.Definition.Id).Select(c => new { id = c.Id, name = c.Name }).ToArray(),
+            },
             battleTargets = targets,
             itemType = entry.Definition.Type.ToString(), slot = equipment?.SlotType.ToString(),
             canEquip = CanManage && _session.State.Party.ContainsMember(Managed.Id) && equipment is not null && analysis.CanUse,

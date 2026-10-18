@@ -117,7 +117,7 @@ try {
   assert.equal(baseline.browserSaveVersion, 2, 'Run the current browser-smoke before chapter-smoke');
   assert.equal(baseline.packId, 'jyx');
   await page.goto(report.baseURL, {waitUntil: 'networkidle'});
-  await visible('[data-action="new"]');
+  await page.locator('[data-action="new"]').waitFor({state:'visible',timeout:90_000});
   await importFile(legacyPath);
   const legacy = await state();
   assert.equal(legacy.pack.id, 'jyx');

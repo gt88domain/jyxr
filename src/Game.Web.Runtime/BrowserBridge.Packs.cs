@@ -178,6 +178,8 @@ public static partial class BrowserBridge
         id = c.Id, definitionId = c.Definition.Id, name = c.Name, level = c.Level, portrait = CharacterMedia(c, "portraits"),
         placement = _session.State.Party.ContainsMember(c.Id) ? "member" : _session.State.Party.ContainsFollower(c.Id) ? "follower" : "reserve",
         formationStatus = _session.State.Party.ContainsMember(c.Id) ? "active" : _session.State.Party.ContainsFollower(c.Id) ? "following" : FormationReserves.Contains(c.Id) ? "reserve" : "story-away",
+        cultivation = CultivationView(c),
+        runningInternalName = c.InternalSkills.FirstOrDefault(s => s.Id == c.EquippedInternalSkillId)?.Name,
         isHero = c.Id == Party.HeroCharacterId, equipment = EquipmentView(c),
         sprite = CharacterMedia(c, "characters"), skills = Skills(c).Select(s => SkillView(s)).ToArray(),
         hp = c.CurrentHp ?? (int)c.GetStat(StatType.MaxHp), maxHp = (int)c.GetStat(StatType.MaxHp),

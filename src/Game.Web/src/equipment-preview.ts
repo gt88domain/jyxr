@@ -1,0 +1,9 @@
+import type {EquipmentPreview} from './bridge';
+const e=(value: unknown)=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
+const number=new Intl.NumberFormat('zh-CN',{maximumFractionDigits:2});
+const percent=new Intl.NumberFormat('zh-CN',{style:'percent',maximumFractionDigits:2});
+const value=(id:string,n:number)=>id==='crit_chance'?percent.format(n):number.format(n);
+export function equipmentPreviewView(preview: EquipmentPreview): string {
+  const changes=preview.attributes.filter(a=>Math.abs(a.after-a.before)>1e-8);
+  return `<div class="equipment-comparison" data-preview-character="${e(preview.characterId)}"><p class="panel-intro">为${e(preview.characterName)}换上「${e(preview.itemName)}」，替换${preview.replacedItemName?`「${e(preview.replacedItemName)}」`:'当前空位'}。确认前不会穿戴或消耗物品。</p><table class="comparison-table"><caption>人物面板属性变化</caption><thead><tr><th>属性</th><th>当前</th><th>换装后</th><th>变化</th></tr></thead><tbody>${changes.map(a=>`<tr data-preview-stat="${e(a.id)}"><th>${e(a.label)}</th><td>${value(a.id,a.before)}</td><td>${value(a.id,a.after)}</td><td class="${a.after>a.before?'stat-gain':'stat-loss'}">${a.after>a.before?'+':''}${value(a.id,a.after-a.before)}</td></tr>`).join('')}</tbody></table>${changes.length?'':'<p class="panel-intro">基础面板属性没有变化，请结合装备说明和附加效果选择。</p>'}${preview.addedTalents.length?`<p>新增天赋：${preview.addedTalents.map(t=>e(t.name)).join('、')}</p>`:''}${preview.removedTalents.length?`<p>失去天赋：${preview.removedTalents.map(t=>e(t.name)).join('、')}</p>`:''}<p class="field-note">战斗中的条件触发、招式专属加成不全部体现在面板属性中。</p>${!preview.canEquip?`<p class="panel-notice">当前不能穿戴：${e(preview.reason)}</p>`:''}<button class="button primary full-width" data-action="confirm-equipment-preview" data-entry-number="${preview.entryNumber}" ${preview.canEquip?'':'disabled'}>确认装备到${e(preview.characterName)}</button><button class="button outline full-width" data-action="equipment">返回装备页</button></div>`;
+}

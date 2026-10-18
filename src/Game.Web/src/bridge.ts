@@ -1,7 +1,9 @@
 export interface Skill { id: string; name: string; level: number; mpCost: number; available?: boolean; reason?: string | null; description?: string; exp?: number; nextExp?: number; maxLevel?: number; active?: boolean; equipped?: boolean; kind?: string; castSize?: number; impactSize?: number; }
 export interface EquipmentSlot { slot: string; slotName: string; item: {id: string; name: string; instanceId: string; description: string; affixes?: string[]; icon?: string | null} | null; }
 export interface Cultivation { entryNumber: number; itemId: string; itemName: string; skillId: string; skillName: string; kind: string; level: number; exp: number; nextExp: number; maxLevel: number; }
-export interface InventoryItem { icon?: string | null; id: string; entryNumber: number; name: string; count: number; quantity: number; description: string; affixes?: string[]; battleTargets?: {id: string; name: string; hp: number; maxHp: number; canUse: boolean; reason: string}[] | null; kind: string; itemType: string; slot: string | null; canEquip: boolean; canUse: boolean; canCultivate: boolean; reason: string; }
+export interface ItemRequirement {label: string; current: string; required: string; met: boolean; failureReason: string;}
+export interface EquipmentPreview {characterId: string; characterName: string; entryNumber: number; itemId: string; itemName: string; slot: string; replacedItemName: string | null; canEquip: boolean; reason: string; attributes: {id: string; label: string; before: number; after: number}[]; addedTalents: {id: string; name: string}[]; removedTalents: {id: string; name: string}[];}
+export interface InventoryItem { icon?: string | null; id: string; entryNumber: number; name: string; count: number; quantity: number; description: string; affixes?: string[]; requirements?: ItemRequirement[]; training?: {skillId: string; copies: number; assignedTo: {id: string; name: string}[]} | null; battleTargets?: {id: string; name: string; hp: number; maxHp: number; canUse: boolean; reason: string}[] | null; kind: string; itemType: string; slot: string | null; canEquip: boolean; canUse: boolean; canCultivate: boolean; reason: string; }
 export interface BattleEffectVisual {style: 'slash' | 'strike' | 'flame' | 'ring' | 'vortex' | 'burst' | 'petal' | 'orb'; color: number; duration: number;}
 export interface BattleEvent { sequence: number; kind: string; unitId: string; amount: number | null; critical: boolean; sourceUnitId: string | null; skillId: string | null; skillName: string | null; text: string | null; audioId?: string | null; animationId?: string | null; isLegend?: boolean; visual?: BattleEffectVisual | null; targetPosition?: {x: number; y: number} | null; impactedPositions?: {x: number; y: number}[] | null; }
 export interface CharacterAnimation {id: string; texture: string; atlas: string; poster: string; baseHeight: number; clips: Record<string, {frames: string[]; frameRate: number}>;}
@@ -42,7 +44,7 @@ export interface GameState {
   rename?: {defaultName: string} | null;
   gameOver?: boolean;
   managedCharacter?: GameState['hero'] | null;
-  roster?: (PartyMember & {placement: 'member' | 'follower' | 'reserve'; formationStatus: 'active' | 'reserve' | 'following' | 'story-away'; unspentStatPoints: number; canBench: boolean; canRejoin: boolean})[];
+  roster?: (PartyMember & {placement: 'member' | 'follower' | 'reserve'; formationStatus: 'active' | 'reserve' | 'following' | 'story-away'; unspentStatPoints: number; canBench: boolean; canRejoin: boolean; cultivation: Cultivation | null; runningInternalName: string | null})[];
   chest?: {capacity: number; stored: number; canManage: boolean; entries: ChestItem[]; inventory: ChestItem[]} | null;
   creation?: CreationState | null;
   sceneBackground?: string | null;
@@ -76,8 +78,14 @@ interface Exports {
   ExportProfile: () => string | Promise<string>;
   InitializeProfile: (profile: string) => string | Promise<string>;
   InspectCompanionConditions: () => string | Promise<string>;
+  InspectEquipment: (request: string) => string | Promise<string>;
 }
 let api: Exports;
+export async function inspectEquipment(characterId: string, entryNumber: number): Promise<EquipmentPreview> {
+  const result = JSON.parse(await api.InspectEquipment(JSON.stringify({characterId, entryNumber}))) as {ok: boolean; error?: string; preview?: EquipmentPreview};
+  if (!result.ok || !result.preview) throw new Error(result.error || '装备对比暂不可用。');
+  return result.preview;
+}
 export async function inspectCompanionConditions(): Promise<Record<string, boolean | null>> {
   return JSON.parse(await api.InspectCompanionConditions());
 }

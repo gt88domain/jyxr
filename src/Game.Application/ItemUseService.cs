@@ -5,6 +5,8 @@ using Game.Application.Formatters;
 
 namespace Game.Application;
 
+public sealed record ItemRequirementStatus(string Label, string Current, string Required, bool Met, string FailureReason);
+
 public sealed class ItemUseService
 {
     public const string ItemTargetCharacterIdVariable = "item_target";
@@ -351,35 +353,39 @@ public sealed class ItemUseService
             ReduceMaxResourceRatioItemUseEffectDefinition or
             RunStoryItemUseEffectDefinition;
 
-    private string? ValidateRequirements(ItemDefinition item, CharacterInstance target)
+    public IReadOnlyList<ItemRequirementStatus> DescribeRequirements(ItemDefinition item, CharacterInstance target)
     {
+        ArgumentNullException.ThrowIfNull(item);
+        ArgumentNullException.ThrowIfNull(target);
+        if (item.Requirements.Count == 0) return [];
+        var statuses = new List<ItemRequirementStatus>();
         foreach (var requirement in item.Requirements)
         {
             switch (requirement)
             {
                 case StatItemRequirementDefinition stat:
-                    if (ResolveRequirementStatValue(target, stat.StatId) < stat.Value)
-                    {
-                        return $"需要{FormatStatName(stat.StatId)}达到{stat.Value}";
-                    }
+                    var value = ResolveRequirementStatValue(target, stat.StatId);
+                    statuses.Add(new($"{FormatStatName(stat.StatId)}（{(Config.ItemRequirementStatSource == ItemRequirementStatSource.Base ? "基础" : "面板")}）",
+                        value.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture), stat.Value.ToString(System.Globalization.CultureInfo.InvariantCulture),
+                        value >= stat.Value, $"需要{FormatStatName(stat.StatId)}达到{stat.Value}"));
                     break;
                 case TalentItemRequirementDefinition talent:
-                    if (!target.HasEffectiveTalent(talent.TalentId))
-                    {
-                        return $"需要天赋「{talent.TalentId}」";
-                    }
+                    var hasTalent = target.HasEffectiveTalent(talent.TalentId);
+                    statuses.Add(new("天赋", hasTalent ? "已具备" : "未具备", FormatterTextCn.ResolveTalentName(talent.TalentId, _session.ContentRepository), hasTalent, $"需要天赋「{talent.TalentId}」"));
                     break;
                 case GenderItemRequirementDefinition gender:
-                    if (!gender.Genders.Contains(target.Gender))
-                    {
-                        return $"仅限{string.Join("、", gender.Genders.Select(FormatterTextCn.GetGenderNameCn))}使用";
-                    }
+                    var genders = string.Join("、", gender.Genders.Select(FormatterTextCn.GetGenderNameCn));
+                    statuses.Add(new("身份", FormatterTextCn.GetGenderNameCn(target.Gender), genders, gender.Genders.Contains(target.Gender), $"仅限{genders}使用"));
                     break;
+                default: throw new InvalidOperationException("不支持的物品门槛类型。");
             }
         }
 
-        return null;
+        return statuses;
     }
+
+    private string? ValidateRequirements(ItemDefinition item, CharacterInstance target)
+        => DescribeRequirements(item, target).FirstOrDefault(status => !status.Met)?.FailureReason;
 
     private double ResolveRequirementStatValue(CharacterInstance target, StatType statType) =>
         Config.ItemRequirementStatSource switch

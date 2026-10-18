@@ -19,6 +19,9 @@ import {GameAudio} from './audio';
 import {restorationProgressView} from './restoration-progress';
 import {loadCompanionCatalog, mountCompanionCatalog} from './companions';
 import {inspectCompanionConditions} from './bridge';
+import {inspectEquipment} from './bridge';
+import {equipmentPreviewView} from './equipment-preview';
+import type {InventorySort} from './panels';
 import {loadOriginalLibrary, mountOriginalLibrary} from './library';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
@@ -34,6 +37,8 @@ const settings = readSettings();
 const audio = new GameAudio(settings);
 applySettings(settings);
 let activePanel: PanelName | null = null, inventoryFilter: InventoryFilter = 'all';
+let inventoryQuery = '', inventorySort: InventorySort = 'original';
+let equipmentPreviewContext: {state: GameState; entryNumber: number} | undefined;
 const e = (value: unknown) => String(value ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]!));
 const plain = (text: string) => text.replace(/\[\[[a-z]+:([^\]]*)\]\]/gi, '$1').replace(/<\/?color[^>]*>/g, '');
 const icon = (name: string) => {
@@ -179,6 +184,20 @@ async function showRestorationProgress() {
     if (target.isConnected && modalOpen()) target.textContent = error instanceof Error ? error.message : '进度记录暂时无法读取。';
   }
 }
+async function showEquipmentPreview(entryNumber: number) {
+  const inspected = state;
+  const characterId = (state.managedCharacter || state.hero).id;
+  equipmentPreviewContext = undefined; activePanel = null;
+  modal('换装属性对比', '<div data-equipment-preview aria-live="polite">正在比较装备…</div>', true);
+  const target = document.querySelector<HTMLElement>('[data-equipment-preview]')!;
+  try {
+    const preview = await inspectEquipment(characterId, entryNumber);
+    if (!target.isConnected || !modalOpen()) return;
+    if (state !== inspected) {target.textContent = '人物状态已变化，请重新打开装备对比。';return;}
+    equipmentPreviewContext = {state: inspected, entryNumber};
+    target.innerHTML = equipmentPreviewView(preview);
+  } catch (error) {if (target.isConnected) target.textContent = error instanceof Error ? error.message : '装备对比暂不可用。';}
+}
 async function showCompanions() {
   if(state.pack.id!=='jyx')return;
   modal('伙伴图鉴 · 加入条件', '<div data-companion-catalog aria-live="polite">正在整理伙伴线索…</div>', true);
@@ -246,17 +265,26 @@ async function load(selected=slot) {
 function openPanel(name: PanelName) {
   if (state.phase === 'title' && name !== 'settings') return;
   activePanel = name;
-  if (name === 'inventory') inventoryFilter = 'all';
-  const content = panelContent(name, state, settings, busy, inventoryFilter);
+  if (name === 'inventory') {inventoryFilter = 'all'; inventoryQuery = ''; inventorySort = 'original';}
+  const content = panelContent(name, state, settings, busy, inventoryFilter, {query: inventoryQuery, sort: inventorySort});
   modal(content.title, content.content, true);
 }
 function refreshPanel() {
   const node = document.querySelector<HTMLDialogElement>('#game-modal[open]');
   if (!node || !activePanel) return;
   const scroll = node.scrollTop;
-  const content = panelContent(activePanel, state, settings, busy, inventoryFilter);
+  const content = panelContent(activePanel, state, settings, busy, inventoryFilter, {query: inventoryQuery, sort: inventorySort});
   node.innerHTML = `<button class="icon-button close-modal" data-action="close-modal" aria-label="关闭">${icon('close')}</button><div class="eyebrow">旅途一页</div><h2>${e(content.title)}</h2>${content.content}`;
   node.scrollTop = scroll;
+}
+function refreshInventoryResults() {
+  if (activePanel !== 'inventory') return;
+  const current=document.querySelector('#game-modal[open] .inventory-list');
+  if (!current) return;
+  const template=document.createElement('template');
+  template.innerHTML=panelContent('inventory',state,settings,busy,inventoryFilter,{query:inventoryQuery,sort:inventorySort}).content;
+  const replacement=template.content.querySelector('.inventory-list');
+  if(replacement)current.replaceWith(replacement);
 }
 async function manage(data: Record<string, unknown>, message: string) {
   if (await command(data)) toast(commandWarning||message);
@@ -311,7 +339,7 @@ document.addEventListener('click', event => {
   else if (action === 'creation-confirm') void creationCommand({type: 'confirmCreation'});
   else if (action === 'begin-round-creation') void creationCommand({type:'beginRoundCreation'});
   else if (action === 'save-ending') void save();
-  else if (action === 'manage-character') void (async()=>{if(await command({type:'selectCharacter',characterId:button.dataset.id})) openPanel('character');})();
+  else if (action === 'manage-character') void (async()=>{if(await command({type:'selectCharacter',characterId:button.dataset.id})) openPanel(button.dataset.panel==='cultivation'?'cultivation':'character');})();
   else if (action === 'allocate-stat') void manage({type:'allocateStat',stat:button.dataset.stat},'属性点已分配。');
   else if (action === 'party-placement') void manage({type:'setPartyPlacement',characterId:button.dataset.id,placement:button.dataset.placement},'队伍已调整。');
   else if (action === 'party-order') void manage({type:'reorderParty',characterId:button.dataset.id,index:Number(button.dataset.index)},'队伍顺序已调整。');
@@ -345,6 +373,13 @@ document.addEventListener('click', event => {
   else if (action === 'battle-intent' && (button.dataset.id === 'move' || button.dataset.id === 'attack')) {battleIntent = button.dataset.id; updateBattle();}
   else if (action === 'character' || action === 'inventory' || action === 'equipment' || action === 'cultivation' || action === 'settings' || action === 'party' || action === 'quests') openPanel(action);
   else if (action === 'inventory-filter') {inventoryFilter = button.dataset.id as InventoryFilter; refreshPanel();}
+  else if (action === 'preview-equipment') void showEquipmentPreview(Number(button.dataset.entryNumber));
+  else if (action === 'confirm-equipment-preview') void (async()=>{
+    const preview=equipmentPreviewContext;
+    if (!preview || preview.state !== state || preview.entryNumber !== Number(button.dataset.entryNumber)) {toast('人物或物品状态已变化，请重新对比。');return;}
+    equipmentPreviewContext=undefined;
+    if(await command({type:'equipItem',entryNumber:preview.entryNumber})) {openPanel('equipment');toast(commandWarning||'装备已穿戴，人物属性已更新。');}
+  })();
   else if (action === 'equip-item') void manage({type: 'equipItem', entryNumber: Number(button.dataset.entryNumber)}, '装备已穿戴，人物属性已更新。');
   else if (action === 'unequip-item') void manage({type: 'unequipItem', slot: button.dataset.slot}, '装备已放回行囊。');
   else if (action === 'cultivate') void manage({type: 'setCultivation', entryNumber: Number(button.dataset.entryNumber)}, '已选择修炼秘籍，战斗结算后获得修炼经验。');
@@ -368,6 +403,10 @@ document.addEventListener('click', event => {
 document.addEventListener('change', event => {
   const control = event.target;
   if (control instanceof HTMLSelectElement && control.id === 'managed-character') {void command({type:'selectCharacter',characterId:control.value}); return;}
+  if (control instanceof HTMLSelectElement && control.id === 'inventory-sort') {
+    if (['original','name','count'].includes(control.value)) inventorySort=control.value as InventorySort;
+    refreshInventoryResults();return;
+  }
   if (!(control instanceof HTMLInputElement || control instanceof HTMLSelectElement) || !control.closest('#game-settings, #audio-settings')) return;
   const name = control.name as keyof Settings;
   if (name === 'battleMode' && (control.value === 'manual' || control.value === 'auto')) {
@@ -393,6 +432,9 @@ document.addEventListener('keydown', event => {
 });
 document.addEventListener('input', event => {
   const input = event.target;
+  if (input instanceof HTMLInputElement && input.id === 'inventory-search') {
+    inventoryQuery=input.value;refreshInventoryResults();return;
+  }
   if (!(input instanceof HTMLInputElement) || input.id !== 'destination-search') return;
   const text = input.value.trim().toLocaleLowerCase();
   document.querySelectorAll<HTMLElement>('.chapter-locations .map-spot').forEach(button => {

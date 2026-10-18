@@ -46,7 +46,7 @@ internal static class ManagementSmoke
         fixture["game"]!["currency"]!["silver"]=20000;
         var inventory=fixture["game"]!["inventory"]!;
         var next=inventory["nextEntryNumber"]!.GetValue<long>();
-        foreach(var (id,qty) in new[]{("木刀",1),("内功入门",2),("小还丹",4)}) inventory["entries"]!.AsArray().Add(new JsonObject{["kind"]="stack",["entryNumber"]=next++,["itemDefinitionId"]=id,["quantity"]=qty});
+        foreach(var (id,qty) in new[]{("木刀",1),("内功入门",2),("小还丹",4),("七弦无形琴谱",1)}) inventory["entries"]!.AsArray().Add(new JsonObject{["kind"]="stack",["entryNumber"]=next++,["itemDefinitionId"]=id,["quantity"]=qty});
         inventory["nextEntryNumber"]=next;
         State(BrowserBridge.ImportSave(fixture.ToJsonString()));
         var initial=await Cmd(new{type="state"});
@@ -72,13 +72,24 @@ internal static class ManagementSmoke
         await Cmd(new{type="playStory",storyId="tlbb.dy_钟灵"});await Continue();await Cmd(new{type="choose",index=0});await Continue();
         await Cmd(new{type="selectCharacter",characterId="钟灵"});
         var withGirl=await Cmd(new{type="state"});
+        var previewRequest=JsonSerializer.Serialize(new{characterId="钟灵",entryNumber=Item(withGirl,"木刀")["entryNumber"]!.GetValue<long>()});
+        var preview=JsonNode.Parse(BrowserBridge.InspectEquipment(previewRequest))!;
+        Check(preview["ok"]!.GetValue<bool>(),"Original wooden blade must have a valid typed comparison.");
+        Check((await Cmd(new{type="state"})).ToJsonString()==withGirl.ToJsonString(),"Equipment comparison must not change the selected role, inventory, resources or visible state.");
+        Check(JsonNode.DeepEquals(JsonNode.Parse(BrowserBridge.InspectEquipment(previewRequest)),preview),"Repeated comparison must return the same values.");
         await Cmd(new{type="equipItem",entryNumber=Item(withGirl,"木刀")["entryNumber"]!.GetValue<long>()});
+        var worn=await Cmd(new{type="state"});
+        foreach(var stat in preview["preview"]!["attributes"]!.AsArray())
+            Check(worn["managedCharacter"]!["attributes"]!.AsArray().Single(a=>a!["id"]!.GetValue<string>()==stat!["id"]!.GetValue<string>())!["value"]!.GetValue<double>()==stat!["after"]!.GetValue<double>(),"Preview must equal actual original equipment attributes.");
         await Cmd(new{type="setCultivation",entryNumber=Item(withGirl,"内功入门")["entryNumber"]!.GetValue<long>()});
         var girlSheet=(await Cmd(new{type="state"}))["managedCharacter"]!;
         var bladeId=girlSheet["equipment"]!.AsArray().Single(e=>e!["slot"]!.GetValue<string>()=="Weapon")!["item"]!["instanceId"]!.GetValue<string>();
         await Cmd(new{type="selectCharacter",characterId="主角"});
         await Cmd(new{type="setCultivation",entryNumber=Item(withGirl,"内功入门")["entryNumber"]!.GetValue<long>()});
         await Reject(new{type="setPartyPlacement",characterId="主角",placement="reserve"});
+        var training=await Cmd(new{type="state"});
+        Check(Item(training,"内功入门")["training"]!["assignedTo"]!.AsArray().Count==2,"Shared manual allocation must list both actual trainees.");
+        Check(training["roster"]!.AsArray().Where(c=>c!["id"]!.GetValue<string>() is "主角" or "钟灵").All(c=>c!["cultivation"] is not null),"Roster training overview must include both actual selections.");
         await Reject(new{type="setPartyPlacement",characterId="不存在的人",placement="member"});
         await Reject(new{type="chestDeposit",entryNumber=Item(withGirl,"内功入门")["entryNumber"]!.GetValue<long>()});
         await Cmd(new{type="setPartyPlacement",characterId="钟灵",placement="reserve"});

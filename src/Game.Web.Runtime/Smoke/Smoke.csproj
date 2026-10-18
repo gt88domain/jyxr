@@ -36,6 +36,7 @@
     <Compile Include="../BrowserBridge.Flow.cs" Link="BrowserBridge.Flow.cs" />
     <Compile Include="../BrowserBridge.Profile.cs" Link="BrowserBridge.Profile.cs" />
     <Compile Include="../BrowserBridge.Companions.cs" Link="BrowserBridge.Companions.cs" />
+    <Compile Include="../BrowserBridge.Equipment.cs" Link="BrowserBridge.Equipment.cs" />
     <Compile Include="../BrowserLegacyRules.cs" Link="BrowserLegacyRules.cs" />
     <Compile Include="../BrowserExperienceMigration.cs" Link="BrowserExperienceMigration.cs" />
     <ProjectReference Include="../../Game.Core/Game.Core.csproj" />

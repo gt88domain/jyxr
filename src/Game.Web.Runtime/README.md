@@ -1,5 +1,24 @@
 # Browser runtime
 
+## Shared loadout queries (modern remake M2)
+
+`InspectEquipment(requestJson)` accepts `{characterId, entryNumber}` and returns
+`{ok, preview}` or `{ok:false, error}` without dispatching an action or taking a
+game snapshot. Its per-session `EquipmentComparisonService` clones the current
+character and returns before/after attributes plus gained/lost talents. It never
+calls the live equipment factory, inventory mutation, events or RNG. The browser
+discards responses after its game context changes; confirmation still uses the
+normal, revalidated `equipItem` command. Comparison is available at a stable
+management boundary for an active member; it does not simulate battle-only effects.
+
+Inventory rows include `requirements` from `ItemUseService.DescribeRequirements`,
+the same statuses used by actual use validation, and optional `training` with
+manual copies and assigned character IDs/names. Roster rows expose actual
+`cultivation` and `runningInternalName` for the training overview. These are read
+models; the version-2 save format and authoritative item-use rules remain in use.
+Cultivation selections still live in the browser host; their complete session
+state migration remains planned under M5.
+
 ## Original management and challenge flows
 
 `selectCharacter {characterId}` changes only the viewed character; it does not
