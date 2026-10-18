@@ -4,11 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "contract": "python3 scripts/generate-contract.py",
     "content": "python3 scripts/build-content.py",
     "runtime": "node scripts/build-runtime.mjs",
     "prepare:game": "npm run content && npm run runtime",
     "dev": "vite --host 0.0.0.0",
-    "build": "npm run prepare:game && tsc --noEmit && vite build",
+    "build": "npm run contract && npm run prepare:game && tsc --noEmit && vite build",
     "package": "npm run build && python3 scripts/package-web.py",
     "preview": "vite preview --host 0.0.0.0",
     "test": "node tests/browser-smoke.mjs",
@@ -45,6 +46,7 @@
     "test:modern-m2": "node tests/modern-m2-smoke.mjs",
     "test:modern-m3": "node --test tests/board-input.test.mjs && node tests/modern-m3-mobile-smoke.mjs",
     "test:interface": "node tests/interface-smoke.mjs",
+    "test:navigation": "node tests/navigation-smoke.mjs",
     "audit:remaining": "python3 tests/remaining-source-audit.py",
     "assets:restore": "python3 scripts/art-bundle.py restore"
   },

@@ -20,7 +20,7 @@ async function dock(){
   const sizes=await page.locator('.battle-mobile-dock button').evaluateAll(nodes=>nodes.map(n=>({action:n.dataset.action,width:n.getBoundingClientRect().width,height:n.getBoundingClientRect().height,bottom:n.getBoundingClientRect().bottom,viewport:innerHeight})));
   assert.equal(sizes.length,5);for(const r of sizes)assert.ok(r.width>=44&&r.height>=44&&r.bottom<=r.viewport,JSON.stringify(r));
   assert.ok(await page.locator('.battle-mobile-dock').isVisible());
-  for(const size of await page.locator('.system-nav button').evaluateAll(nodes=>nodes.map(n=>({width:n.getBoundingClientRect().width,height:n.getBoundingClientRect().height}))))assert.ok(size.width>=44&&size.height>=44,JSON.stringify(size));
+  for(const size of await page.locator('.system-nav button').filter({visible:true}).evaluateAll(nodes=>nodes.map(n=>({width:n.getBoundingClientRect().width,height:n.getBoundingClientRect().height}))))assert.ok(size.width>=44&&size.height>=44,JSON.stringify(size));
 }
 try{
   await page.goto(report.baseURL,{waitUntil:'networkidle'});await page.locator('[data-action="new"]').waitFor({state:'visible',timeout:90_000});

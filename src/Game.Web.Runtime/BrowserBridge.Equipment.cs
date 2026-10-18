@@ -6,10 +6,9 @@ namespace Game.Web.Runtime;
 
 public sealed record EquipmentPreviewRequest(string CharacterId, long EntryNumber);
 
-public static partial class BrowserBridge
+internal sealed partial class BrowserRuntimeSession
 {
-    [JSExport]
-    public static string InspectEquipment(string requestJson)
+    public string InspectEquipment(string requestJson)
     {
         try
         {

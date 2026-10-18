@@ -9,16 +9,16 @@ using Game.Core.Affix;
 
 namespace Game.Web.Runtime;
 
-public static partial class BrowserBridge
+internal sealed partial class BrowserRuntimeSession
 {
-    private static string? _cultivationItemId;
-    private static readonly List<object> BattleEvents = [];
-    private static long _eventSequence;
+    private string? _cultivationItemId;
+    private readonly List<object> BattleEvents = [];
+    private long _eventSequence;
 
-    private static CharacterInstance Hero => RequireSession().State.Party.GetMember(Party.HeroCharacterId);
-    private static bool CanManage => _session is not null && _battle is null && _host.Dialogue is null && _host.Choice is null && !_host.SelectingSect && !_host.InteractionPending && _shopId is null;
+    private CharacterInstance Hero => RequireSession().State.Party.GetMember(Party.HeroCharacterId);
+    private bool CanManage => _session is not null && _battle is null && _host.Dialogue is null && _host.Choice is null && !_host.SelectingSect && !_host.InteractionPending && _shopId is null;
 
-    private static void RequireManagement()
+    private void RequireManagement()
     {
         RequireSession();
         if (_host.InteractionPending || _host.SelectingSect) throw new InvalidOperationException("请先完成当前剧情交互。");
@@ -27,10 +27,10 @@ public static partial class BrowserBridge
         if (_shopId is not null) throw new InvalidOperationException("请先离开商店。");
     }
 
-    private static InventoryEntry Entry(long entryNumber) => RequireSession().State.Inventory.Entries.FirstOrDefault(e => e.EntryNumber == entryNumber)
+    private InventoryEntry Entry(long entryNumber) => RequireSession().State.Inventory.Entries.FirstOrDefault(e => e.EntryNumber == entryNumber)
         ?? throw new InvalidOperationException("此物品已不在背包中。");
 
-    private static (string SkillId, bool Internal, int? Level)? BookSkill(ItemDefinition item) =>
+    private (string SkillId, bool Internal, int? Level)? BookSkill(ItemDefinition item) =>
         item.Type != ItemType.SkillBook ? null : item.UseEffects.Count == 1 ? item.UseEffects[0] switch
         {
             GrantInternalSkillItemUseEffectDefinition inner => (inner.SkillId, true, inner.Level),
@@ -38,20 +38,20 @@ public static partial class BrowserBridge
             _ => null
         } : null;
 
-    private static SkillInstance? CultivationSkill(CharacterInstance hero)
+    private SkillInstance? CultivationSkill(CharacterInstance hero)
     {
         if (CultivationId(hero) is not { } id || !_content!.TryGetItem(id, out var item) || BookSkill(item) is not { } book) return null;
         return book.Internal ? hero.InternalSkills.FirstOrDefault(s => s.Id == book.SkillId) : hero.ExternalSkills.FirstOrDefault(s => s.Id == book.SkillId);
     }
 
-    private static int BookMaxLevel(ItemDefinition item, SkillInstance skill)
+    private int BookMaxLevel(ItemDefinition item, SkillInstance skill)
     {
         var currentMax = RequireSession().SkillMaxLevelPolicy.GetMaxLevel(skill);
         var book = BookSkill(item)!.Value;
         return Math.Min(currentMax, book.Level ?? currentMax);
     }
 
-    private static void SetCultivation(long entryNumber)
+    private void SetCultivation(long entryNumber)
     {
         RequireCharacterManagement();
         var session = RequireSession();
@@ -66,12 +66,12 @@ public static partial class BrowserBridge
         Log($"已选择修炼秘籍「{entry.Definition.Name}」。秘籍保留在背包，战斗结算经验将用于此项修炼。");
     }
 
-    private static void ApplyCultivationExperience(int experience)
+    private void ApplyCultivationExperience(int experience)
     {
         foreach (var c in _battle!.Units.Where(u => u.Team == 1).Select(u => u.Character).DistinctBy(c => c.Id)) ApplyCultivationExperience(c, experience);
     }
 
-    private static void ApplyCultivationExperience(CharacterInstance c, int experience)
+    private void ApplyCultivationExperience(CharacterInstance c, int experience)
     {
         if (CultivationId(c) is not { } id || CultivationSkill(c) is not { } skill) return;
         var item = _content!.GetItem(id);
@@ -84,7 +84,7 @@ public static partial class BrowserBridge
         if (change is not null) Log($"秘籍修炼「{skill.Name}」经验 +{change.AddedExperience}" + (change.LeveledUp ? $"，提升至 {change.NewLevel} 级。" : "。"));
     }
 
-    private static object? CultivationView(CharacterInstance hero)
+    private object? CultivationView(CharacterInstance hero)
     {
         if (CultivationId(hero) is not { } id || CultivationSkill(hero) is not { } skill) return null;
         var entry = RequireSession().State.Inventory.Entries.FirstOrDefault(e => e.Definition.Id == id);
@@ -92,7 +92,7 @@ public static partial class BrowserBridge
         return new { entryNumber = entry.EntryNumber, itemId = entry.Definition.Id, itemName = entry.Definition.Name, skillId = skill.Id, skillName = skill.Name, kind = skill.SkillKind.ToString(), level = skill.Level, exp = skill.Exp, nextExp = SkillExperienceProgression.GetLevelUpExp(skill), maxLevel = BookMaxLevel(entry.Definition, skill) };
     }
 
-    private static object InventoryView(InventoryEntry entry)
+    private object InventoryView(InventoryEntry entry)
     {
         var analysis = _session!.ItemUseService.AnalyzeTarget(entry, Managed);
         var book = BookSkill(entry.Definition);
@@ -127,7 +127,7 @@ public static partial class BrowserBridge
         };
     }
 
-    private static string? SkillUnavailableReason(BattleSkillAvailability? availability) => availability?.Status switch
+    private string? SkillUnavailableReason(BattleSkillAvailability? availability) => availability?.Status switch
     {
         null or BattleSkillAvailabilityStatus.Available => null,
         BattleSkillAvailabilityStatus.Cooldown => $"招式冷却中，还需 {availability.RemainingCooldown} 回合。",
@@ -137,10 +137,10 @@ public static partial class BrowserBridge
         _ => "该招式当前无法使用。"
     };
 
-    private static string? BattleSelfItemUnavailableReason(ItemDefinition item)
+    private string? BattleSelfItemUnavailableReason(ItemDefinition item)
         => BattleItemUnavailableReason(item, Active);
 
-    private static string? BattleItemUnavailableReason(ItemDefinition item, BattleUnit? target)
+    private string? BattleItemUnavailableReason(ItemDefinition item, BattleUnit? target)
     {
         if (item.Type != ItemType.Consumable) return "战斗中只可使用战斗消耗品。";
         if (_battle is null || EvaluateBattleOutcome().Kind != BattleOutcomeKind.Ongoing) return "当前战斗已结束。";
@@ -160,7 +160,7 @@ public static partial class BrowserBridge
         return null;
     }
 
-    private static object LearnedSkillView(SkillInstance skill)
+    private object LearnedSkillView(SkillInstance skill)
     {
         var progressive = SkillExperienceProgression.NormalizeProgressionSkill(skill);
         return new
@@ -173,13 +173,13 @@ public static partial class BrowserBridge
         };
     }
 
-    private static object[] EquipmentView(CharacterInstance hero) => Enum.GetValues<EquipmentSlotType>().Select(slot =>
+    private object[] EquipmentView(CharacterInstance hero) => Enum.GetValues<EquipmentSlotType>().Select(slot =>
     {
         var instance = hero.GetEquipment(slot);
         return (object)new { slot = slot.ToString(), slotName = slot switch { EquipmentSlotType.Weapon => "武器", EquipmentSlotType.Armor => "防具", _ => "饰品" }, item = instance is null ? null : new { id = instance.Definition.Id, name = instance.Definition.Name, icon = ItemMedia(instance.Definition.Id), instanceId = instance.Id, description = instance.Definition.Description, affixes = AffixFormatter.FormatEquipmentLinesCn(instance.ExtraAffixes, _content!) } };
     }).ToArray();
 
-    private static object[] TargetView()
+    private object[] TargetView()
     {
         if (_battle is null || Active?.Team != 1 || _battle.CurrentAction!.HasCommittedMainAction || EvaluateBattleOutcome().Kind != BattleOutcomeKind.Ongoing) return [];
         return Skills(Active.Character).Where(s => _engine!.EvaluateSkillAvailability(_battle, Active.Id, s).IsAvailable)
@@ -187,7 +187,7 @@ public static partial class BrowserBridge
                 .Select(p => (object)new { skillId = s.Id, x = p.X, y = p.Y, targetId = _battle.GetUnitAt(p)?.Id })).ToArray();
     }
 
-    private static void CollectMessages(IReadOnlyList<BattleMessage> messages)
+    private void CollectMessages(IReadOnlyList<BattleMessage> messages)
     {
         foreach (var message in messages)
         {

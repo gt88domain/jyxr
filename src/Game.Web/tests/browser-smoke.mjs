@@ -3,6 +3,7 @@ import {completeCreation} from './creation-controls.mjs';
 import {mkdir, readFile, writeFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import {chromium} from 'playwright';
+import {clickMenu} from './menu-controls.mjs';
 
 const baseURL = process.env.GAME_WEB_URL || 'http://127.0.0.1:4173';
 const output = fileURLToPath(new URL('../test-results/', import.meta.url));
@@ -22,8 +23,7 @@ async function ready() {
   await page.waitForFunction(() => document.querySelector('#app')?.getAttribute('aria-busy') === 'false');
 }
 async function click(selector) {
-  const inDialog = page.locator('#game-modal[open]').locator(selector);
-  await (await inDialog.count() ? inDialog.first() : page.locator(selector).filter({visible: true}).first()).click();
+  await clickMenu(page,selector);
   await ready();
 }
 async function visible(selector) {

@@ -3,26 +3,26 @@ using Game.Core.Model.Character;
 
 namespace Game.Web.Runtime;
 
-public static partial class BrowserBridge
+internal sealed partial class BrowserRuntimeSession
 {
-    private static string? ResourceMedia(string? resourceId)
+    private string? ResourceMedia(string? resourceId)
     {
         if (string.IsNullOrEmpty(resourceId)) return null;
         return _pack["media"]?["resources"]?[resourceId]?.GetValue<string>() ??
                _pack["media"]?["paths"]?[resourceId.Replace('\\', '/').ToLowerInvariant()]?.GetValue<string>();
     }
 
-    private static JsonNode? CharacterAnimation(CharacterInstance character) =>
+    private JsonNode? CharacterAnimation(CharacterInstance character) =>
         _pack["media"]?["models"]?[character.ResolvedModelId ?? character.Model ?? character.Definition.Model ?? ""];
 
-    private static string? CharacterMedia(CharacterInstance character, string group, int team = 1)
+    private string? CharacterMedia(CharacterInstance character, string group, int team = 1)
     {
         if (group == "portraits" && ResourceMedia(character.Portrait ?? character.Definition.Portrait) is { } portrait) return portrait;
         if (group == "characters" && CharacterAnimation(character)?["poster"]?.GetValue<string>() is { } poster) return poster;
         return CharacterMedia(character.Definition.Id, group, team);
     }
 
-    private static string? SpeakerPortrait(string speaker)
+    private string? SpeakerPortrait(string speaker)
     {
         if (_session is not null && (speaker == "主角" || speaker == Hero.Name)) return CharacterMedia(Hero, "portraits");
         if (SpeakerCharacter(speaker) is { } current) return CharacterMedia(current, "portraits");
@@ -31,11 +31,11 @@ public static partial class BrowserBridge
         return character is null ? null : ResourceMedia(character.Portrait);
     }
 
-    private static CharacterInstance? SpeakerCharacter(string speaker) => _session?.State.Party.GetActiveMembers()
+    private CharacterInstance? SpeakerCharacter(string speaker) => _session?.State.Party.GetActiveMembers()
         .FirstOrDefault(c => c.Id == speaker || c.Name == speaker || c.Definition.Name == speaker)
         ?? _session?.State.Party.Reserves.FirstOrDefault(c => c.Id == speaker);
 
-    private static string SpeakerName(string speaker) => SpeakerCharacter(speaker)?.Name ?? speaker;
+    private string SpeakerName(string speaker) => SpeakerCharacter(speaker)?.Name ?? speaker;
 
-    private static string? ItemMedia(string itemId) => _pack["media"]?["items"]?[itemId]?.GetValue<string>();
+    private string? ItemMedia(string itemId) => _pack["media"]?["items"]?[itemId]?.GetValue<string>();
 }

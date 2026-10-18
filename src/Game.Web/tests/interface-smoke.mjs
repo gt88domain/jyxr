@@ -43,7 +43,7 @@ try{
   await click('[data-action="inventory"]');await noOverflow('classic mobile inventory');await closeModal();
   await style('modern');assert.deepEqual(await state(),world);await noOverflow('modern mobile world after switching');
   await style('classic');assert.deepEqual(await state(),world);await page.setViewportSize({width:320,height:740});await noOverflow('classic 320px world');
-  const targets=await page.locator('.system-nav button').evaluateAll(nodes=>nodes.map(n=>({w:n.getBoundingClientRect().width,h:n.getBoundingClientRect().height})));
+  const targets=await page.locator('.system-nav button').filter({visible:true}).evaluateAll(nodes=>nodes.map(n=>({w:n.getBoundingClientRect().width,h:n.getBoundingClientRect().height})));
   assert.ok(targets.every(t=>t.w>=44&&t.h>=44));
   pass('375px and 320px retain scrollable, reachable menu controls and one shared world state');
   await page.setViewportSize({width:1440,height:900});await closeModal();await importFile('battle-item-save.json');

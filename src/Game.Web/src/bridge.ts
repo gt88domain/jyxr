@@ -32,6 +32,8 @@ export interface CreationState {
   preview: {portrait: string; sprite: string; silver: number; randomBonus: Record<string, number>; attributes: {id: string; label: string; value: number}[]; talents: {id: string; name: string}[]; internalSkills: {id: string; name: string; level: number}[]; items: {id: string; name: string; quantity: number; icon?: string}[]} | null;
 }
 export interface GameState {
+  journeyId?:string;
+  activity?:import('./activity').ActivityEntry[];
   musicId?: string | null;
   companionJournal?: {completedRecruitmentStories: string[]; conditions?: Record<string, boolean | null>};
   milestones?: {id: string; title: string; requirements: string[]; completed: boolean}[];
@@ -66,7 +68,7 @@ export interface GameState {
   inventory?: InventoryItem[];
   logs: string[];
 }
-export interface Result { ok: boolean; error?: string; warning?: string; state: GameState; }
+export interface Result { protocolVersion?:number; ok: boolean; error?: string; warning?: string; state: GameState; }
 export interface ChestItem {id: string; entryNumber: number; name: string; icon?: string | null; quantity: number; canDeposit: boolean;}
 interface Exports {
   MiniGameInput: (input: string) => string | Promise<string>;
@@ -81,19 +83,25 @@ interface Exports {
   InspectEquipment: (request: string) => string | Promise<string>;
 }
 let api: Exports;
+let sessionEpoch=0;
+function current(epoch:number){if(epoch!==sessionEpoch)throw new Error('会话已切换，旧操作结果已忽略。');}
 export async function inspectEquipment(characterId: string, entryNumber: number): Promise<EquipmentPreview> {
+  const epoch=sessionEpoch;
   const result = JSON.parse(await api.InspectEquipment(JSON.stringify({characterId, entryNumber}))) as {ok: boolean; error?: string; preview?: EquipmentPreview};
+  current(epoch);
   if (!result.ok || !result.preview) throw new Error(result.error || '装备对比暂不可用。');
   return result.preview;
 }
 export async function inspectCompanionConditions(): Promise<Record<string, boolean | null>> {
-  return JSON.parse(await api.InspectCompanionConditions());
+  const epoch=sessionEpoch;
+  const result=JSON.parse(await api.InspectCompanionConditions());current(epoch);return result;
 }
 const profileCache = new Map<string, string>();
 const blockedProfiles = new Set<string>();
 declare global { interface Window { loadJyxrRuntime: () => Promise<{getConfig: () => {mainAssemblyName: string}; getAssemblyExports: (name: string) => Promise<any>}>; } }
 function decode(value: string): Result {
   const result = JSON.parse(value) as Result;
+  if(!result||typeof result.ok!=='boolean'||!result.state||typeof result.state.pack?.id!=='string'||typeof result.state.phase!=='string'||(result.state.phase!=='title'&&!Array.isArray(result.state.map?.locations)))throw new Error('游戏返回的数据结构无效。');
   const map = result.state?.map;
   if (map) {
     map.name ||= map.id;
@@ -112,13 +120,20 @@ export async function loadRuntime(progress: (message: string) => void, packId = 
   return initializePack(packId, content);
 }
 export async function initializePack(packId: string, prepared?: string): Promise<Result> {
-  const result = decode(await api.Initialize(prepared ?? await readPack(packId)));
+  const epoch=++sessionEpoch;
+  const result=await initializePackCore(packId,prepared,epoch);current(epoch);return result;
+}
+async function initializePackCore(packId:string,prepared:string|undefined,epoch:number):Promise<Result>{
+  const content=prepared??await readPack(packId);current(epoch);
+  const result = decode(await api.Initialize(content));current(epoch);
   if (!result.ok) return result;
   try {
     const stored = await readProfile(packId);
+    current(epoch);
     profileCache.delete(packId); blockedProfiles.delete(packId);
     if (stored) {
       const loaded = decode(await api.InitializeProfile(stored));
+      current(epoch);
       if (!loaded.ok) {
         blockedProfiles.add(packId);
         result.warning = '设备档案未能读取，原记录已保留，本次不会自动覆盖；可导入导出的完整存档恢复档案。';
@@ -127,12 +142,14 @@ export async function initializePack(packId: string, prepared?: string): Promise
       // Before independent profiles existed, the only copy lived in the journey
       // slot. Migrate it before allowing a new character, not just on Continue.
       const legacy = await readSlot(packId);
+      current(epoch);
       if (legacy) {
         const backup = JSON.parse(legacy.data);
         if (backup.browserSaveVersion === 1 || backup.browserSaveVersion === 2) {
           const owner = backup.browserSaveVersion === 2 ? backup.packId : 'jyx';
           if (owner !== packId || !backup.profile) throw new Error('Invalid legacy profile owner');
           const migrated = decode(await api.InitializeProfile(JSON.stringify({schemaVersion: 1, packId, profile: backup.profile})));
+          current(epoch);
           if (!migrated.ok) {
             blockedProfiles.add(packId);
             result.warning = '旧旅程档案未能迁移，原存档已保留且不会被自动覆盖；请导入有效完整备份恢复。';
@@ -140,38 +157,47 @@ export async function initializePack(packId: string, prepared?: string): Promise
           }
           try {
             const normalized = await api.ExportProfile();
-            await writeProfile(packId, normalized); profileCache.set(packId, normalized);
-          } catch {migrated.warning = '旧旅程档案已载入，但设备暂不能写入；请保留完整备份。';}
+            current(epoch);
+            await writeProfile(packId, normalized); current(epoch);profileCache.set(packId, normalized);
+          } catch {current(epoch);migrated.warning = '旧旅程档案已载入，但设备暂不能写入；请保留完整备份。';}
           return migrated;
         }
       }
     }
-  } catch {blockedProfiles.add(packId); result.warning = '此浏览器暂不能读取设备档案，原记录不会被覆盖；请保留导出的完整存档。';}
+  } catch {current(epoch);blockedProfiles.add(packId); result.warning = '此浏览器暂不能读取设备档案，原记录不会被覆盖；请保留导出的完整存档。';}
   return result;
 }
-export async function dispatch(command: Record<string, unknown>): Promise<Result> {
-  return persistProfile(decode(await api.Dispatch(JSON.stringify(command))));
+export async function dispatch(command: GameCommand): Promise<Result> {
+  assertCommand(command);const epoch=sessionEpoch;
+  const result=decode(await api.Dispatch(JSON.stringify(command)));current(epoch);
+  return persistProfile(result,epoch);
 }
-async function persistProfile(result: Result): Promise<Result> {
+async function persistProfile(result: Result,epoch=sessionEpoch): Promise<Result> {
+  current(epoch);
   if (!result.ok || blockedProfiles.has(result.state.pack.id)) return result;
   try {
     const profile = await api.ExportProfile();
+    current(epoch);
     if (JSON.parse(profile) === null) return result;
     if (profileCache.get(result.state.pack.id) !== profile) {
-      await writeProfile(result.state.pack.id, profile); profileCache.set(result.state.pack.id, profile);
+      await writeProfile(result.state.pack.id, profile); current(epoch);profileCache.set(result.state.pack.id, profile);
     }
-  } catch {result.warning = '行动已完成，但设备档案暂不能写入；请导出完整存档备份。';}
+  } catch {current(epoch);result.warning = '行动已完成，但设备档案暂不能写入；请导出完整存档备份。';}
   return result;
 }
 export async function exportSave(): Promise<string> {
+  const epoch=sessionEpoch;
   const data = await api.ExportSave();
-  if (!JSON.parse(data).error) await persistProfile(decode(await api.Dispatch('{"type":"state"}')));
+  current(epoch);
+  if (!JSON.parse(data).error) await persistProfile(decode(await api.Dispatch('{"type":"state"}')),epoch);
   return data;
 }
 export async function importSave(data: string, stored = false): Promise<Result> {
+  const epoch=++sessionEpoch;
   const result = decode(await (stored ? api.ImportStoredSave(data) : api.ImportSave(data)));
+  current(epoch);
   if (result.ok && !stored) {blockedProfiles.delete(result.state.pack.id); profileCache.delete(result.state.pack.id);}
-  return persistProfile(result);
+  return persistProfile(result,epoch);
 }
 export interface MiniGameConfig {id: string; title: string; heroPortrait?: string; portraits: Record<string, string>; itemIcons: Record<string, string>; background?: string | null; pointIcons?: Record<string, string | null>;}
 export interface MiniGameFrame {
@@ -181,9 +207,13 @@ export interface MiniGameFrame {
   targets: {id: string; x: number; y: number; visible: boolean; points: number; itemId: string | null; generation: number; age?: number | null; rating?: string | null}[];
 }
 export async function miniGameInput(input: Record<string, unknown>): Promise<MiniGameFrame> {
+  const epoch=sessionEpoch;
   const result = JSON.parse(await api.MiniGameInput(JSON.stringify(input)));
+  current(epoch);
   if (!result.ok) throw new Error(result.error || '修炼暂未完成。');
   return result.frame;
 }
 import {readPack} from './content';
+import {assertCommand} from './command-contract';
+import type {GameCommand} from './command-contract';
 import {readProfile, writeProfile, readSlot} from './storage';

@@ -14,27 +14,28 @@ using Game.Presentation.Battle;
 
 namespace Game.Web.Runtime;
 
-public static partial class BrowserBridge
+internal sealed partial class BrowserRuntimeSession
 {
-    private static readonly JsonSerializerOptions Json = new(GameJson.Default) { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
-    private static InMemoryContentRepository? _content;
-    private static GameSession? _session;
-    private static BattleState? _battle;
-    private static BattleEngine? _engine;
-    private static BasicEnemyBattleAgent? _ai;
-    private static SpecialBattleRequest? _request;
-    private static readonly List<string> Logs = [];
-    private static string? _error;
-    private static bool _settled;
-    private static bool _restoreResourcesWhenBackOnMap;
-    private static BrowserStoryHost _host = new();
-    private static Task? _storyTask;
-    private static CancellationTokenSource _storyCancellation = new();
-    private static string? _backgroundId;
-    private static string? _musicId;
+    private readonly JsonSerializerOptions Json = new(GameJson.Default) { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
+    private InMemoryContentRepository? _content;
+    private GameSession? _session;
+    private BattleState? _battle;
+    private BattleEngine? _engine;
+    private BasicEnemyBattleAgent? _ai;
+    private SpecialBattleRequest? _request;
+    private readonly List<string> Logs = [];
+    private string? _error;
+    private bool _settled;
+    private bool _restoreResourcesWhenBackOnMap;
+    private BrowserStoryHost _host;
 
-    [JSExport]
-    public static string Initialize(string contentJson)
+    public BrowserRuntimeSession() { _host = new BrowserStoryHost(this); }
+    private Task? _storyTask;
+    private CancellationTokenSource _storyCancellation = new();
+    private string? _backgroundId;
+    private string? _musicId;
+
+    public string Initialize(string contentJson)
     {
         try
         {
@@ -52,6 +53,7 @@ public static partial class BrowserBridge
             var companionConditions = ParseCompanionConditions(metadata);
             // Cancel the old flow only after the complete replacement is valid.
             ResetStory();
+            _activitySubscription?.Dispose();_activitySubscription=null;RestoreActivity(null);
             _content = candidate;
             _pack = metadata;
             _companionConditions = companionConditions;
@@ -77,16 +79,15 @@ public static partial class BrowserBridge
         return Snapshot();
     }
 
-    [JSExport]
-    public static async Task<string> Dispatch(string commandJson)
+    public async Task<string> Dispatch(string commandJson)
     {
-        var readOnly = false;
+        var readOnly = true;
         try
         {
             _error = null;
             using var command = JsonDocument.Parse(commandJson);
             var args = command.RootElement;
-            var type = Read(args, "type");
+            var type = BrowserCommandContract.Validate(args);
             readOnly = type is "state" or "selectCharacter";
             if (!readOnly) RestoreResourcesAtMapBoundary();
             switch (type)
@@ -114,7 +115,7 @@ public static partial class BrowserBridge
                     RequireCharacterManagement();
                     var equipmentEntry = Entry(args.GetProperty("entryNumber").GetInt64());
                     if (equipmentEntry.Definition is not EquipmentDefinition) throw new InvalidOperationException("请选择武器、防具或饰品。");
-                    var equipResult = await RequireSession().ItemUseService.UseAsync(equipmentEntry, Managed.Id);
+                    var equipResult = await UseManagedItemAsync(equipmentEntry);
                     if (!equipResult.Success) throw new InvalidOperationException(equipResult.Message);
                     Log(equipResult.Message);
                     break;
@@ -153,7 +154,7 @@ public static partial class BrowserBridge
                         RequireCharacterManagement();
                         if (BookSkill(useEntry.Definition) is not null) throw new InvalidOperationException("武学秘籍请通过修炼栏选择，逐步积累经验。");
                         if (useEntry.Definition.UseEffects.Any(e => e is RunStoryItemUseEffectDefinition)) throw new InvalidOperationException("此物品的剧情使用流程尚未迁移。");
-                        var useResult = await RequireSession().ItemUseService.UseAsync(useEntry, Managed.Id);
+                        var useResult = await UseManagedItemAsync(useEntry);
                         if (!useResult.Success) throw new InvalidOperationException(useResult.Message);
                         Log(useResult.Message);
                     }
@@ -221,14 +222,15 @@ public static partial class BrowserBridge
             if (!readOnly) PumpLegacyWorld();
             if (!readOnly && _session is not null) ClearUnavailableCultivations();
             if (_storyTask?.IsFaulted == true) throw _storyTask.Exception!.GetBaseException();
+            if(!readOnly&&type is not ("next" or "autoTurn" or "advance"))
+                AddActivity("operation",BrowserCommandContract.Label(type)+OperationDetail(args));
         }
         catch (Exception exception) { _error = exception.Message; }
         if (!readOnly) _mapView = null;
         return Snapshot();
     }
 
-    [JSExport]
-    public static string ExportSave()
+    public string ExportSave()
     {
         if (_battle is not null && EvaluateBattleOutcome().Kind == BattleOutcomeKind.Ongoing)
             return JsonSerializer.Serialize(new { error = "请在战斗结束后存档。" }, Json);
@@ -236,14 +238,13 @@ public static partial class BrowserBridge
         if (_host.Dialogue is not null || _host.Choice is not null) return JsonSerializer.Serialize(new { error = "请先结束当前对话。" }, Json);
         if (_shopId is not null || _storyTask is { IsCompleted: false } && _host.Ending is null) return JsonSerializer.Serialize(new { error = "请先结束当前交互。" }, Json);
         _hasSaved = true;
-        return JsonSerializer.Serialize(new { browserSaveVersion = 2, packId = PackText("id"), characterExperienceCurve = RuntimeConfig.CharacterExperienceCurve, game = session.SaveGameService.CreateSave(), profile = session.ProfileService.CreateProfileRecord(), cultivationItemId = _cultivationItemId, companionCultivations = CompanionCultivations, formationReserveIds = FormationReserves.ToArray(), ending = _host.Ending, hasSaved = true, wonBattles = WonBattles.ToArray() }, Json);
+        return JsonSerializer.Serialize(new { browserSaveVersion = 2, packId = PackText("id"), characterExperienceCurve = RuntimeConfig.CharacterExperienceCurve, game = session.SaveGameService.CreateSave(), profile = session.ProfileService.CreateProfileRecord(), cultivationItemId = _cultivationItemId, companionCultivations = CompanionCultivations, formationReserveIds = FormationReserves.ToArray(), ending = _host.Ending, hasSaved = true, wonBattles = WonBattles.ToArray(), activity = ActivitySave() }, Json);
     }
 
-    [JSExport]
-    public static string ImportSave(string saveJson)
+    public string ImportSave(string saveJson)
         => ImportSaveCore(saveJson, preserveDeviceProfile: false);
 
-    private static string ImportSaveCore(string saveJson, bool preserveDeviceProfile)
+    private string ImportSaveCore(string saveJson, bool preserveDeviceProfile)
     {
         try
         {
@@ -269,7 +270,7 @@ public static partial class BrowserBridge
                 save = save with { Characters = save.Characters.Select(BrowserExperienceMigration.ToLegacyCumulative).ToArray() };
             }
             // Validate into a fresh candidate before replacing a running session.
-            var candidateHost = new BrowserStoryHost();
+            var candidateHost = new BrowserStoryHost(this);
             var candidate = new GameSession(new GameState(), _content, candidateHost,
                 initialProfile: preserveDeviceProfile && _deviceProfileInitialized ? GameProfileRecord.Create(_deviceProfile).Restore() : null, config: RuntimeConfig);
             if (wrapped && (!preserveDeviceProfile || !_deviceProfileInitialized))
@@ -316,13 +317,16 @@ public static partial class BrowserBridge
             if (formation.Distinct(StringComparer.Ordinal).Count() != formation.Length || formation.Any(id => id == Party.HeroCharacterId || !candidate.State.Party.ContainsReserve(id))) throw new InvalidOperationException("存档中的编队后备配置无效。");
             var ending = wrapped && root.TryGetProperty("ending", out var endingNode) && endingNode.ValueKind != JsonValueKind.Null ? endingNode.Deserialize<EndingState>(Json) : null;
             if (ending is not null) { ValidateEnding(ending, candidate); candidateHost.RestoreEnding(ending); }
+            var activity=ReadActivity(root);
             ResetStory();
+            RestoreActivity(activity);
             FormationReserves.Clear(); FormationReserves.UnionWith(formation);
             CompanionCultivations.Clear();
             foreach (var (id, itemId) in companionBooks) CompanionCultivations[id] = itemId;
             _managedCharacterId = Party.HeroCharacterId;
             _host = candidateHost;
             _session = candidate;
+            BindActivity();
             _deviceProfile = candidate.Profile; _deviceProfileInitialized = true;
             _creation = null;
             _battle = null;
@@ -341,7 +345,7 @@ public static partial class BrowserBridge
         return Snapshot();
     }
 
-    private static GameConfig RuntimeConfig => new()
+    private GameConfig RuntimeConfig => new()
     {
         CharacterExperienceCurve = PackText("id") == "jyx" ? CharacterExperienceCurve.LegacyCumulative : CharacterExperienceCurve.PerLevel,
         MaximizeNewPartyCharacterSkills = false,
@@ -350,12 +354,20 @@ public static partial class BrowserBridge
         // otherwise .4 => 2, otherwise 1. These are conditional rolls.
         EquipmentRandomAffixCountWeights = [new(4, 100), new(3, 180), new(2, 288), new(1, 432)]
     };
-    private static GameSession RequireSession() => _session ?? throw new InvalidOperationException("请先创建角色。");
-    private static BattleUnit? Active => _battle?.CurrentAction is { } action ? _battle.TryGetUnit(action.ActingUnitId) : null;
-    private static IEnumerable<SkillInstance> Skills(CharacterInstance character) =>
+    private GameSession RequireSession() => _session ?? throw new InvalidOperationException("请先创建角色。");
+    private async Task<ItemUseResult> UseManagedItemAsync(InventoryEntry entry)
+    {
+        var session=RequireSession();var state=session.State;
+        var result=await session.ItemUseService.UseAsync(entry,Managed.Id,_storyCancellation.Token);
+        if(_disposed||!ReferenceEquals(_session,session)||!ReferenceEquals(session.State,state))
+            throw new OperationCanceledException("操作所属旅程已切换。");
+        return result;
+    }
+    private BattleUnit? Active => _battle?.CurrentAction is { } action ? _battle.TryGetUnit(action.ActingUnitId) : null;
+    private IEnumerable<SkillInstance> Skills(CharacterInstance character) =>
         character.ExternalSkills.Cast<SkillInstance>().Concat(character.GetFormSkills()).Concat(character.SpecialSkills).Where(s => s.IsActive);
 
-    private static void CreateCharacter(string name, string difficulty, CreationResult? prepared = null)
+    private void CreateCharacter(string name, string difficulty, CreationResult? prepared = null)
     {
         if (_content is null) throw new InvalidOperationException("请先加载内容包。");
         name = name.Trim();
@@ -364,6 +376,7 @@ public static partial class BrowserBridge
         if (Enum.TryParse<GameDifficulty>(difficulty, true, out var selectedDifficulty)) state.Adventure.SetDifficulty(selectedDifficulty);
         ResetStory();
         _session = new GameSession(state, _content, _host, initialProfile: _deviceProfile, config: RuntimeConfig);
+        RestoreActivity(null);BindActivity();
         _deviceProfileInitialized = true;
         var hero = prepared?.Hero ?? new InitialCharacterFactory(_content, RuntimeConfig).Create(Party.HeroCharacterId, PackText("heroDefinitionId"), state.EquipmentInstanceFactory);
         hero.Name = name;
@@ -389,10 +402,10 @@ public static partial class BrowserBridge
         if (PackText("initialStoryId").Length > 0) StartStory(PackText("initialStoryId"));
     }
 
-    private static void StartBattle(string id)
+    private void StartBattle(string id)
         => StartBattle(new OrdinaryBattleRequest(id, RequireSession().State.Party.Members.Select(c => c.Id).ToArray()));
 
-    private static void StartBattle(SpecialBattleRequest request)
+    private void StartBattle(SpecialBattleRequest request)
     {
         var session = RequireSession();
         if (_battle is not null && EvaluateBattleOutcome().Kind == BattleOutcomeKind.Ongoing)
@@ -416,9 +429,9 @@ public static partial class BrowserBridge
         AdvanceEnemies();
     }
 
-    private static int? BattleTickLimit => PackText("id") == "jyx" ? BrowserLegacyRules.MaxBattleTicks : null;
-    private static bool BattleTimedOut => _battle is not null && BattleTickLimit is { } limit && _battle.Tick > limit;
-    private static Game.Core.Battle.BattleOutcome EvaluateBattleOutcome()
+    private int? BattleTickLimit => PackText("id") == "jyx" ? BrowserLegacyRules.MaxBattleTicks : null;
+    private bool BattleTimedOut => _battle is not null && BattleTickLimit is { } limit && _battle.Tick > limit;
+    private Game.Core.Battle.BattleOutcome EvaluateBattleOutcome()
     {
         var state = _battle ?? throw new InvalidOperationException("尚未进入战斗。");
         // Legacy BattleTimeRun ends as Lose before allowing an action past
@@ -426,20 +439,20 @@ public static partial class BrowserBridge
         return BattleTimedOut ? new(Game.Core.Battle.BattleOutcomeKind.Winner, 2) : BattleOutcomeEvaluator.Evaluate(state);
     }
 
-    private static void EnsurePlayerAction()
+    private void EnsurePlayerAction()
     {
         if (_battle is null || _engine is null) throw new InvalidOperationException("尚未进入战斗。");
         if (EvaluateBattleOutcome().Kind != BattleOutcomeKind.Ongoing) throw new InvalidOperationException("战斗已经结束。");
         if (Active?.Team != 1) throw new InvalidOperationException("当前不是我方回合。");
     }
 
-    private static void FinishPlayerAction(string unitId)
+    private void FinishPlayerAction(string unitId)
     {
         if (_battle!.CurrentAction is not null) Check(_engine!.EndAction(_battle, unitId));
         AdvanceEnemies();
     }
 
-    private static void ExecuteAiTurn(string unitId)
+    private void ExecuteAiTurn(string unitId)
     {
         var plan = _ai!.Decide(_battle!, unitId);
         var unit = _battle!.GetUnit(unitId);
@@ -454,7 +467,7 @@ public static partial class BrowserBridge
         else { Check(_engine!.Rest(_battle, unitId)); Log($"{unit.Character.Name}休息调息。"); }
     }
 
-    private static void AdvanceEnemies()
+    private void AdvanceEnemies()
     {
         for (var turns = 0; turns < 100; turns++)
         {
@@ -473,7 +486,7 @@ public static partial class BrowserBridge
         throw new InvalidOperationException("敌方连续行动过多，请检查战斗速度配置。");
     }
 
-    private static void Settle(Game.Core.Battle.BattleOutcome outcome)
+    private void Settle(Game.Core.Battle.BattleOutcome outcome)
     {
         if (_settled) return;
         _settled = true;
@@ -492,19 +505,19 @@ public static partial class BrowserBridge
         else Log(BattleTimedOut ? "战斗超出原版时限，判为失败。" : "战斗结束。可返回地图重新切磋。");
     }
 
-    private static void Check<T>(BattleCommandResult<T> result)
+    private void Check<T>(BattleCommandResult<T> result)
     {
         if (!result.Success) throw new InvalidOperationException(result.Failure is { } failure ? BattleCommandFailurePresenter.Format(failure) : "此操作暂时无法执行。");
         CollectMessages(result.Messages);
     }
 
-    private static object SkillView(SkillInstance skill, BattleUnit? unit = null)
+    private object SkillView(SkillInstance skill, BattleUnit? unit = null)
     {
         var available = unit is not null && _battle is not null ? _engine!.EvaluateSkillAvailability(_battle, unit.Id, skill) : null;
         return new { id = skill.Id, name = skill.Name, description = skill.Description, level = skill.Level, mpCost = available?.MpCost ?? skill.MpCost, rageCost = skill.RageCost, cooldown = skill.Cooldown, remainingCooldown = available?.RemainingCooldown ?? skill.CurrentCooldown, castSize = unit is null ? skill.CastSize : BattleSkillTargeting.ResolveEffectiveCastSize(unit, skill), impactSize = unit is null ? skill.ImpactSize : BattleSkillTargeting.ResolveEffectiveImpactSize(unit, skill), available = available?.IsAvailable ?? true, reason = SkillUnavailableReason(available) };
     }
 
-    private static string Snapshot()
+    private string Snapshot()
     {
         try
         {
@@ -515,9 +528,10 @@ public static partial class BrowserBridge
             var outcome = _battle is null ? null : EvaluateBattleOutcome();
             var snapshot = new
             {
-                ok = _error is null, error = _error,
+                protocolVersion = 1, ok = _error is null, error = _error,
                 state = new
                 {
+                    journeyId = _journeyId, activity = _activity.ToArray(),
                     phase = _session is null ? "title" : _battle is not null ? "battle" : _host.Dialogue is not null ? "dialogue" : _host.Choice is not null ? "choice" : _shopId is not null ? "shop" : _host.SelectingSect ? "sect" : _host.Selection is not null ? "combatants" : _host.RenameDefault is not null ? "rename" : _host.GameOver ? "gameover" : _host.Ending is not null ? "ending" : _host.ChestOpen ? "chest" : _host.Training is not null ? "minigame" : "world",
                     pack = _pack,
                     creation = CreationSnapshot(),
@@ -576,11 +590,11 @@ public static partial class BrowserBridge
         catch (Exception exception) { return JsonSerializer.Serialize(new { ok = false, error = exception.Message }, Json); }
     }
 
-    private static string Read(JsonElement args, string key, string fallback = "") => args.TryGetProperty(key, out var value) ? value.GetString() ?? fallback : fallback;
-    private static GridPosition Position(JsonElement args) => new(args.GetProperty("x").GetInt32(), args.GetProperty("y").GetInt32());
-    private static void Log(string message) { Logs.Add(message); if (Logs.Count > 200) Logs.RemoveAt(0); }
+    private string Read(JsonElement args, string key, string fallback = "") => args.TryGetProperty(key, out var value) ? value.GetString() ?? fallback : fallback;
+    private GridPosition Position(JsonElement args) => new(args.GetProperty("x").GetInt32(), args.GetProperty("y").GetInt32());
+    private void Log(string message) { Logs.Add(message); if (Logs.Count > 200) Logs.RemoveAt(0); AddActivity(_battle is null?"story":"battle",message); }
 
-    private static void RestoreResourcesAtMapBoundary()
+    private void RestoreResourcesAtMapBoundary()
     {
         if (!_restoreResourcesWhenBackOnMap || !CanManage || _storyTask is { IsCompletedSuccessfully: false }) return;
         // Legacy GameEngine's map result calls ResetTeam. Returning to the
@@ -590,7 +604,7 @@ public static partial class BrowserBridge
         _restoreResourcesWhenBackOnMap = false;
     }
 
-    private static void ResetStory(bool replaceHost = true)
+    private void ResetStory(bool replaceHost = true)
     {
         _restoreResourcesWhenBackOnMap = false;
         ExpiredStories.Clear();
@@ -600,10 +614,10 @@ public static partial class BrowserBridge
         _storyCancellation.Dispose();
         _storyCancellation = new CancellationTokenSource();
         _storyTask = null;
-        if (replaceHost) _host = new BrowserStoryHost();
+        if (replaceHost) _host = new BrowserStoryHost(this);
     }
 
-    private static void StartStory(string storyId)
+    private void StartStory(string storyId)
     {
         var session = RequireSession();
         if (_storyTask is { IsCompleted: false }) throw new InvalidOperationException("请先结束当前剧情。");
@@ -616,14 +630,16 @@ public static partial class BrowserBridge
 
     private sealed partial class BrowserStoryHost : Game.Core.Story.IRuntimeHost
     {
+        private readonly BrowserRuntimeSession _owner;
+        public BrowserStoryHost(BrowserRuntimeSession owner) { _owner = owner; }
         [StoryCommand("story")]
-        public ValueTask ExecuteStory(string storyId, CancellationToken cancellationToken) => new(RequireSession().StoryService.ExecuteAsync(storyId, cancellationToken: cancellationToken));
+        public ValueTask ExecuteStory(string storyId, CancellationToken cancellationToken) => new(_owner.RequireSession().StoryService.ExecuteAsync(storyId, cancellationToken: cancellationToken));
 
         [StoryCommand("shop")]
         public ValueTask OpenShop(string shopId, CancellationToken cancellationToken)
         {
-            RequireSession().ShopService.Open(shopId);
-            _shopId = shopId;
+            _owner.RequireSession().ShopService.Open(shopId);
+            _owner._shopId = shopId;
             var pending = new TaskCompletionSource();
             ShopCompletion = pending;
             cancellationToken.Register(() => pending.TrySetCanceled(cancellationToken));
@@ -632,13 +648,13 @@ public static partial class BrowserBridge
         public TaskCompletionSource? ShopCompletion { get; set; }
 
         [StoryCommand("map", "set_map", "tutorial")]
-        public void EnterMap(string mapId) => RequireSession().MapService.EnterMap(mapId);
+        public void EnterMap(string mapId) => _owner.RequireSession().MapService.EnterMap(mapId);
 
         [StoryCommand("background")]
-        public void Background(string resourceId) => _backgroundId = resourceId;
+        public void Background(string resourceId) => _owner._backgroundId = resourceId;
 
         [StoryCommand("music")]
-        public void Music(string resourceId) => _musicId = resourceId;
+        public void Music(string resourceId) => _owner._musicId = resourceId;
 
         [StoryCommand("suggest")]
         public ValueTask Suggest(string text, CancellationToken cancellationToken) => DialogueAsync(new Game.Core.Story.DialogueContext("提示", text), cancellationToken);
@@ -655,6 +671,7 @@ public static partial class BrowserBridge
 
         public ValueTask DialogueAsync(Game.Core.Story.DialogueContext dialogue, CancellationToken cancellationToken)
         {
+            _owner.AddActivity("dialogue",$"{dialogue.Speaker}：{dialogue.Text}");
             Dialogue = dialogue;
             _dialogue = new TaskCompletionSource();
             cancellationToken.Register(() => _dialogue?.TrySetCanceled(cancellationToken));
@@ -671,7 +688,7 @@ public static partial class BrowserBridge
 
         public ValueTask<Game.Core.Story.BattleOutcome> ResolveBattleAsync(Game.Core.Story.BattleContext battle, CancellationToken cancellationToken)
         {
-            StartBattle(battle.BattleId);
+            _owner.StartBattle(battle.BattleId);
             _battleResult = new TaskCompletionSource<Game.Core.Story.BattleOutcome>();
             cancellationToken.Register(() => _battleResult?.TrySetCanceled(cancellationToken));
             return new ValueTask<Game.Core.Story.BattleOutcome>(_battleResult.Task);
@@ -700,9 +717,9 @@ public static partial class BrowserBridge
             if (CompleteSpecialBattle()) return;
             var pending = _battleResult;
             _battleResult = null;
-            pending?.SetResult(_lastBattleWinner == 1 ? Game.Core.Story.BattleOutcome.Win : Game.Core.Story.BattleOutcome.Lose);
+            pending?.SetResult(_owner._lastBattleWinner == 1 ? Game.Core.Story.BattleOutcome.Win : Game.Core.Story.BattleOutcome.Lose);
         }
     }
 
-    private static int? _lastBattleWinner;
+    private int? _lastBattleWinner;
 }

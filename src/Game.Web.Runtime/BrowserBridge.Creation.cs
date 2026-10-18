@@ -7,7 +7,7 @@ using Game.Core.Model.Character;
 
 namespace Game.Web.Runtime;
 
-public static partial class BrowserBridge
+internal sealed partial class BrowserRuntimeSession
 {
     private sealed class CreationDraft(string name, GameDifficulty difficulty)
     {
@@ -23,12 +23,12 @@ public static partial class BrowserBridge
     }
 
     private sealed record CreationResult(CharacterInstance Hero, int Silver, Dictionary<string, int> Items, Dictionary<string, int> RandomBonus);
-    private static CreationDraft? _creation;
-    private static JsonObject CreationProfile => _pack["creation"]?.AsObject() ?? throw new InvalidOperationException("此内容包没有开局问答。");
-    private static JsonArray CreationQuestions => CreationProfile["questions"]!.AsArray();
-    private static CreationDraft RequireCreation() => _creation ?? throw new InvalidOperationException("请先开始人物生成。");
+    private CreationDraft? _creation;
+    private JsonObject CreationProfile => _pack["creation"]?.AsObject() ?? throw new InvalidOperationException("此内容包没有开局问答。");
+    private JsonArray CreationQuestions => CreationProfile["questions"]!.AsArray();
+    private CreationDraft RequireCreation() => _creation ?? throw new InvalidOperationException("请先开始人物生成。");
 
-    private static (string Id, int Weight)[] StartingCompanionPool(int round)
+    private (string Id, int Weight)[] StartingCompanionPool(int round)
     {
         var pool = (CreationProfile["startingCompanionPools"]?.AsArray() ?? [])
             .LastOrDefault(p => p!["minimumRound"]!.GetValue<int>() <= round);
@@ -37,7 +37,7 @@ public static partial class BrowserBridge
             (id!.GetValue<string>(), pool["weights"]?[index]?.GetValue<int>() ?? 1)).ToArray();
     }
 
-    private static void BeginCreation(JsonElement args)
+    private void BeginCreation(JsonElement args)
     {
         if (_content is null || _session is not null) throw new InvalidOperationException("请返回标题后创建新人物。");
         _ = CreationProfile;
@@ -48,7 +48,7 @@ public static partial class BrowserBridge
         _creation = new(name, difficulty);
     }
 
-    private static void AnswerCreation(JsonElement args)
+    private void AnswerCreation(JsonElement args)
     {
         var draft = RequireCreation();
         if (draft.Preview is not null || draft.Answers.Count >= CreationQuestions.Count || args.GetProperty("questionIndex").GetInt32() != draft.Answers.Count)
@@ -58,7 +58,7 @@ public static partial class BrowserBridge
         draft.Answers.Add(index);
     }
 
-    private static void SelectCreationPortrait(string id)
+    private void SelectCreationPortrait(string id)
     {
         var draft = RequireCreation();
         if (draft.Answers.Count != CreationQuestions.Count || !CreationProfile["portraits"]!.AsArray().Any(p => p!["id"]!.GetValue<string>() == id))
@@ -67,14 +67,14 @@ public static partial class BrowserBridge
         RollCreation();
     }
 
-    private static void BackCreation()
+    private void BackCreation()
     {
         var draft = RequireCreation();
         if (draft.Preview is not null) draft.Preview = null;
         else if (draft.Answers.Count > 0) draft.Answers.RemoveAt(draft.Answers.Count - 1);
     }
 
-    private static void RollCreation()
+    private void RollCreation()
     {
         var draft = RequireCreation();
         if (draft.Answers.Count != CreationQuestions.Count) throw new InvalidOperationException("请先完成开局问答。");
@@ -139,7 +139,7 @@ public static partial class BrowserBridge
         draft.Roll++;
     }
 
-    private static void ConfirmCreation()
+    private void ConfirmCreation()
     {
         var draft = RequireCreation();
         var preview = draft.Preview ?? throw new InvalidOperationException("请先选择头像并查看人物属性。");
@@ -147,7 +147,7 @@ public static partial class BrowserBridge
         else CreateCharacter(draft.Name, draft.Difficulty.ToString(), preview);
     }
 
-    private static object? CreationSnapshot()
+    private object? CreationSnapshot()
     {
         if (_creation is not { } draft) return null;
         var preview = draft.Preview;

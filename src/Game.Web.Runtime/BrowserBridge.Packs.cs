@@ -6,13 +6,13 @@ using Game.Core.Model.Character;
 
 namespace Game.Web.Runtime;
 
-public static partial class BrowserBridge
+internal sealed partial class BrowserRuntimeSession
 {
-    private static JsonObject _pack = LegacyPack();
-    private static string? _shopId;
-    private static bool _hasSaved;
-    private static readonly HashSet<string> WonBattles = new(StringComparer.Ordinal);
-    private static string PackText(string key) => _pack[key]?.GetValue<string>() ?? "";
+    private JsonObject _pack = LegacyPack();
+    private string? _shopId;
+    private bool _hasSaved;
+    private readonly HashSet<string> WonBattles = new(StringComparer.Ordinal);
+    private string PackText(string key) => _pack[key]?.GetValue<string>() ?? "";
     private static JsonObject LegacyPack() => new()
     {
         ["id"] = "jyx", ["title"] = "金庸群侠传 X", ["heroDefinitionId"] = "主角",
@@ -20,7 +20,7 @@ public static partial class BrowserBridge
         ["trainingMapId"] = "小村", ["trainingStoryId"] = "新手村_武师7"
     };
 
-    private static void ValidatePack(JsonObject pack, InMemoryContentRepository content)
+    private void ValidatePack(JsonObject pack, InMemoryContentRepository content)
     {
         foreach (var key in new[] { "id", "title", "heroDefinitionId", "initialMapId" })
             if (pack[key] is not JsonValue value || !value.TryGetValue<string>(out var text) || string.IsNullOrWhiteSpace(text))
@@ -86,7 +86,7 @@ public static partial class BrowserBridge
         }
     }
 
-    private static void Interact(string locationId)
+    private void Interact(string locationId)
     {
         RequireManagement();
         if (_shopId is not null || _storyTask is { IsCompleted: false }) throw new InvalidOperationException("请先结束当前交互。");
@@ -98,7 +98,7 @@ public static partial class BrowserBridge
         if (_storyTask.IsFaulted) throw _storyTask.Exception!.GetBaseException();
     }
 
-    private static void Buy(JsonElement args)
+    private void Buy(JsonElement args)
     {
         RequireShop();
         var quantity = args.TryGetProperty("quantity", out var amount) ? amount.GetInt32() : 1;
@@ -107,7 +107,7 @@ public static partial class BrowserBridge
         Log(result.Message);
     }
 
-    private static void Sell(JsonElement args)
+    private void Sell(JsonElement args)
     {
         RequireShop();
         var quantity = args.TryGetProperty("quantity", out var amount) ? amount.GetInt32() : 1;
@@ -123,13 +123,13 @@ public static partial class BrowserBridge
         Log(result.Message);
     }
 
-    private static void RequireShop()
+    private void RequireShop()
     {
         RequireSession();
         if (_shopId is null || _battle is not null || _host.Dialogue is not null || _host.Choice is not null) throw new InvalidOperationException("请先进入商店。");
     }
 
-    private static void CloseShop()
+    private void CloseShop()
     {
         RequireShop();
         var pending = _host.ShopCompletion;
@@ -138,7 +138,7 @@ public static partial class BrowserBridge
         pending?.SetResult();
     }
 
-    private static object? ShopSnapshot()
+    private object? ShopSnapshot()
     {
         if (_session is null || _shopId is null) return null;
         var shop = _session.ShopService.Open(_shopId);
@@ -160,7 +160,7 @@ public static partial class BrowserBridge
         };
     }
 
-    private static object[] PartyView() => _session?.State.Party.Members.Select(c =>
+    private object[] PartyView() => _session?.State.Party.Members.Select(c =>
     {
         var battleUnit = _battle?.Units.FirstOrDefault(u => u.Team == 1 && u.Character.Id == c.Id);
         return (object)new
@@ -173,7 +173,7 @@ public static partial class BrowserBridge
         };
     }).ToArray() ?? [];
 
-    private static object[] RosterView() => _session?.State.Party.GetAllCharacters().Select(c => (object)new
+    private object[] RosterView() => _session?.State.Party.GetAllCharacters().Select(c => (object)new
     {
         id = c.Id, definitionId = c.Definition.Id, name = c.Name, level = c.Level, portrait = CharacterMedia(c, "portraits"),
         placement = _session.State.Party.ContainsMember(c.Id) ? "member" : _session.State.Party.ContainsFollower(c.Id) ? "follower" : "reserve",
@@ -188,7 +188,7 @@ public static partial class BrowserBridge
         ,canBench = CanManage && c.Id != Party.HeroCharacterId && _session.State.Party.ContainsMember(c.Id), canRejoin = CanManage && FormationReserves.Contains(c.Id) && _session.State.Party.ContainsReserve(c.Id)
     }).ToArray() ?? [];
 
-    private static object[] ObjectiveView() => (_pack["objectives"]?.AsArray() ?? []).OfType<JsonObject>().Select(o =>
+    private object[] ObjectiveView() => (_pack["objectives"]?.AsArray() ?? []).OfType<JsonObject>().Select(o =>
     {
         var kind = o["kind"]!.GetValue<string>();
         var target = o["target"]?.GetValue<string>() ?? "";
@@ -206,10 +206,10 @@ public static partial class BrowserBridge
         return (object)new { id = o["id"]!.GetValue<string>(), title = o["title"]!.GetValue<string>(), description = o["description"]?.GetValue<string>(), kind, target, completed };
     }).ToArray();
 
-    private static string? CharacterMedia(string definitionId, string group, int team = 1) =>
+    private string? CharacterMedia(string definitionId, string group, int team = 1) =>
         _pack["media"]?[group]?[definitionId]?.GetValue<string>() ??
         (group == "characters" ? _pack["media"]?[team == 1 ? "defaultFriendly" : "defaultEnemy"]?.GetValue<string>() : null);
 
-    private static string? MapMedia(string mapId) => _pack["media"]?["maps"]?[mapId]?.GetValue<string>() ?? _pack["media"]?["worldBackground"]?.GetValue<string>();
-    private static string? BattleMedia(string battleId) => _pack["media"]?["battles"]?[battleId]?.GetValue<string>() ?? _pack["media"]?["battleBackground"]?.GetValue<string>();
+    private string? MapMedia(string mapId) => _pack["media"]?["maps"]?[mapId]?.GetValue<string>() ?? _pack["media"]?["worldBackground"]?.GetValue<string>();
+    private string? BattleMedia(string battleId) => _pack["media"]?["battles"]?[battleId]?.GetValue<string>() ?? _pack["media"]?["battleBackground"]?.GetValue<string>();
 }

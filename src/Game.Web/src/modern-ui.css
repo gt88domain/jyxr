@@ -1,0 +1,87 @@
+.more-menu{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}.more-menu>button{position:relative;display:grid;text-align:left;gap:6px;padding:16px 34px 16px 14px;min-height:76px;border:1px solid var(--line);border-radius:7px;background:#71846a0d;color:var(--ink)}.more-menu strong{font-size:15px}.more-menu small{font-size:12px;line-height:1.6;color:var(--muted)}.more-menu button>span{position:absolute;right:12px;top:22px;font-size:24px}.more-menu>button:hover{border-color:var(--gold)}
+.notification-button{position:relative}.notification-button [data-notice-count]{position:absolute;right:-4px;top:-4px;border-radius:12px;min-width:18px;padding:2px 4px;color:white;background:#b65c42;font-size:10px;line-height:14px}
+.activity-tools{display:grid;grid-template-columns:2fr 1fr;gap:12px;margin:20px 0}.activity-tools label{display:grid;gap:8px;font-size:12px;min-width:0}.activity-list{display:grid;gap:10px}.activity-list article,.activity-ui-messages article{padding:12px;border:1px solid var(--line);border-radius:6px;min-width:0}.activity-list article header{display:flex;justify-content:space-between;gap:8px;font-size:12px}.activity-list time,.activity-ui-messages time,.activity-list small{font-size:11px;color:var(--muted)}.activity-list p,.activity-ui-messages p{font-size:14px;line-height:1.8;margin:8px 0;overflow-wrap:anywhere}.activity-ui-messages{margin-top:24px}.activity-list [hidden]{display:none}
+:root[data-interface=classic] .modern-only{display:none!important}
+:root[data-interface=modern]{--world-header:56px;--serif:"PingFang SC","Microsoft YaHei",sans-serif}
+:root[data-interface=modern] .topbar{height:56px;padding:0 24px;background:#15382fef;gap:10px}
+:root[data-interface=modern] .wordmark{font-size:17px;letter-spacing:0;gap:8px}
+:root[data-interface=modern] .wordmark .seal{width:25px;height:29px;font-size:20px;margin:0}
+:root[data-interface=modern] .wordmark small{font-size:9px;letter-spacing:1px;margin-top:2px}
+:root[data-interface=modern] .topbar nav{gap:8px}
+:root[data-interface=modern] .topbar .icon-button{min-width:44px;min-height:44px}
+:root[data-interface=modern] .save-button{min-width:44px;min-height:44px}
+:root[data-interface=modern] .save-button span{display:inline}
+:root[data-interface=modern] .dialogue-scrim,:root[data-interface=modern] .shop-scrim{bottom:84px}
+:root[data-interface=modern] .legacy-header-option,:root[data-interface=modern] [data-modern-secondary],:root[data-interface=modern] .restoration-callout{display:none!important}
+:root[data-interface=modern] .system-nav{position:fixed;z-index:18;left:50%;bottom:12px;transform:translateX(-50%);width:min(640px,calc(100% - 24px));display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px;padding:6px;background:#16382ff5;border:1px solid #bac4a455;border-radius:12px;box-shadow:0 6px 30px #0b2d2955;overflow:visible}
+:root[data-interface=modern] .system-nav button{min-width:0;width:100%;height:54px;min-height:44px;padding:5px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:12px;letter-spacing:0;border:0;border-radius:6px;background:transparent}
+:root[data-interface=modern] .system-nav button>svg{width:22px;height:22px}
+:root[data-interface=modern] .system-nav button>span{font-size:12px;white-space:nowrap}
+:root[data-interface=modern] .more-button b{font-size:26px;line-height:21px;letter-spacing:2px;font-weight:400}
+:root[data-interface=modern] .battle-app{--world-header:108px}
+:root[data-interface=modern] .battle-app .system-nav{position:relative;left:auto;bottom:auto;transform:none;width:100%;height:52px;border-width:0 0 1px;border-radius:0;box-shadow:none;padding:2px max(12px,calc((100% - 760px)/2));gap:3px}
+:root[data-interface=modern] .battle-app .system-nav button{height:46px;flex-direction:row;gap:6px}
+:root[data-interface=modern] .chapter-world{min-height:calc(100svh - 56px);padding:18px 24px 100px}
+:root[data-interface=modern] .location-heading{max-width:calc(100% - 300px);padding:0;min-height:150px}
+:root[data-interface=modern] .location-heading h1{font-size:30px;margin:5px 0;letter-spacing:1px}
+:root[data-interface=modern] .location-heading>p{font-size:13px;line-height:1.6;max-width:620px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+:root[data-interface=modern] .location-heading .eyebrow{font-size:10px;letter-spacing:1px}
+:root[data-interface=modern] .chapter-progress{margin-top:10px;padding:9px 12px;gap:4px 10px;min-height:44px;width:min(540px,100%)}
+:root[data-interface=modern] .chapter-progress>strong{font-size:13px}
+:root[data-interface=modern] .hero-card{top:18px;right:24px;width:270px;padding:14px;display:grid;grid-template-columns:1fr 1fr;gap:8px 12px}
+:root[data-interface=modern] .hero-card>.eyebrow{display:none}
+:root[data-interface=modern] .hero-heading{grid-column:1/-1;margin:0;gap:10px}
+:root[data-interface=modern] .hero-heading h2{font-size:18px}
+:root[data-interface=modern] .avatar{width:38px;height:38px}
+:root[data-interface=modern] .hero-card .vital{margin:0}
+:root[data-interface=modern] .hero-card .hero-meta{grid-column:1/-1;margin:0;padding-top:8px}
+:root[data-interface=modern] .hero-meta strong{font-size:17px}
+:root[data-interface=modern] .hero-card>.text-button{display:none}
+:root[data-interface=modern] .chapter-world .chapter-locations{margin:16px 0 0;padding:0;width:100%;max-width:none;height:auto;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:9px}
+:root[data-interface=modern] .chapter-locations .map-spot{min-height:66px;padding:10px;gap:9px;border-radius:6px;box-shadow:none}
+:root[data-interface=modern] .chapter-locations .map-spot .spot-glyph{width:38px;height:40px;flex:0 0 38px;font-size:20px}
+:root[data-interface=modern] .chapter-locations .map-spot>span:last-of-type{padding:0}
+:root[data-interface=modern] .chapter-locations .map-spot strong{font-size:15px;letter-spacing:0}
+:root[data-interface=modern] .chapter-locations .map-spot small{font-size:11px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+:root[data-interface=modern] .chapter-world .travel-panel{position:relative;inset:auto;min-height:0;width:100%;margin:12px 0 0;padding:8px;display:flex;background:#193a2fbd;box-shadow:none;border:1px solid #c2c69c44;border-radius:6px}
+:root[data-interface=modern] .travel-panel>div:first-child{display:none}
+:root[data-interface=modern] .travel-actions{display:flex;flex-direction:row;width:100%;gap:8px;margin:0}
+:root[data-interface=modern] .travel-actions .button{min-height:44px;flex:1;padding:8px 10px;letter-spacing:0;font-size:13px}
+:root[data-interface=modern] .travel-actions .button.outline{color:#f8f2df;background:#244d44;border-color:#bac4a480}
+:root[data-interface=modern] #toast{bottom:calc(90px + env(safe-area-inset-bottom,0px))}
+:root[data-interface=modern] .chapter-journal{display:none}
+:root[data-interface=modern] .original-task{padding:9px 12px;margin:8px 0;gap:4px}
+:root[data-interface=modern] .original-task strong{font-size:13px}
+:root[data-interface=modern] .chapter-title{padding-top:6vh;padding-bottom:30px}
+:root[data-interface=modern] .chapter-title h1{font-size:44px;letter-spacing:1px}
+:root[data-interface=modern] .chapter-title .title-copy{font-size:14px;margin-top:14px}
+:root[data-interface=modern] .pack-choice{padding:12px;border-radius:6px}
+@media(max-width:760px){
+  .more-menu{grid-template-columns:1fr}.more-menu>button{min-height:64px;padding:12px 30px 12px 12px}
+  .activity-tools{grid-template-columns:1fr}.activity-list article header{flex-wrap:wrap}
+  :root[data-interface=modern] .topbar{padding:0 12px;height:56px}
+  :root[data-interface=modern] .dialogue-scrim,:root[data-interface=modern] .shop-scrim{bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+  :root[data-interface=modern] .topbar .icon-button{min-width:44px;min-height:44px;padding:8px}
+  :root[data-interface=modern] .system-nav{inset:auto 0 0;transform:none;width:100%;padding:4px 6px calc(4px + env(safe-area-inset-bottom,0px));border-radius:0;gap:2px}
+  :root[data-interface=modern] .system-nav button{height:52px;min-width:44px;padding:4px 1px}
+  :root[data-interface=modern] .battle-app .system-nav{inset:auto;height:52px;padding:2px 6px;gap:2px}
+  :root[data-interface=modern] .battle-app .system-nav button{flex-direction:column;gap:1px}
+  :root[data-interface=modern] .battle-app .system-nav button>svg{width:19px;height:19px}
+  :root[data-interface=modern] .battle-app .system-nav button>span{font-size:11px}
+  :root[data-interface=modern] .chapter-world{padding:12px 12px calc(90px + env(safe-area-inset-bottom,0px))}
+  :root[data-interface=modern] .location-heading{max-width:100%;min-height:0}
+  :root[data-interface=modern] .location-heading h1{font-size:25px}
+  :root[data-interface=modern] .location-heading>p{width:100%;font-size:12px}
+  :root[data-interface=modern] .hero-card{position:relative;inset:auto;width:100%;margin:10px 0 0;padding:10px 12px;grid-template-columns:1fr 1fr;gap:6px 12px}
+  :root[data-interface=modern] .hero-heading{grid-column:1;grid-row:1/3}
+  :root[data-interface=modern] .hero-heading>div>span{font-size:10px}
+  :root[data-interface=modern] .hero-card .vital{grid-column:2}
+  :root[data-interface=modern] .hero-card .hero-meta{padding-top:6px;font-size:11px}
+  :root[data-interface=modern] .chapter-world .chapter-locations{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-top:10px}
+  :root[data-interface=modern] .chapter-locations .map-spot{padding:8px;gap:6px;min-height:70px}
+  :root[data-interface=modern] .chapter-locations .map-spot .spot-glyph{width:28px;height:32px;flex-basis:28px;font-size:17px}
+  :root[data-interface=modern] .chapter-locations .map-spot strong{font-size:13px}
+  :root[data-interface=modern] .chapter-locations .map-spot small{font-size:10px}
+  :root[data-interface=modern] .chapter-title{padding:6vh 20px 30px;min-height:calc(100svh - 120px)}
+  :root[data-interface=modern] .chapter-title h1{font-size:36px}
+}

@@ -6,9 +6,9 @@ using Game.Expressions;
 
 namespace Game.Web.Runtime;
 
-public static partial class BrowserBridge
+internal sealed partial class BrowserRuntimeSession
 {
-    private static object CompanionJournalView()
+    private object CompanionJournalView()
     {
         var tracked = (_pack["companionRecruitmentStories"]?.AsArray() ?? [])
             .Select(node => node!.GetValue<string>()).ToHashSet(StringComparer.Ordinal);
@@ -16,11 +16,11 @@ public static partial class BrowserBridge
             .Where(tracked.Contains).Order(StringComparer.Ordinal).ToArray() ?? [] };
     }
 
-    private static readonly Queue<string> ExpiredStories = new();
-    private static MapEnterResult? _mapView;
-    private static Game.Core.Model.GameState? _mapViewState;
+    private readonly Queue<string> ExpiredStories = new();
+    private MapEnterResult? _mapView;
+    private Game.Core.Model.GameState? _mapViewState;
 
-    private static MapEnterResult CurrentMapView()
+    private MapEnterResult CurrentMapView()
     {
         var session = RequireSession();
         if (_mapView is null || !ReferenceEquals(_mapViewState, session.State) || _mapView.Map.Id != session.State.Location.CurrentMapId)
@@ -31,26 +31,26 @@ public static partial class BrowserBridge
         return _mapView;
     }
 
-    private static bool TaskActive(JsonObject task) => _session is not null &&
+    private bool TaskActive(JsonObject task) => _session is not null &&
         _session.State.Story.TryGetVariable("newbie_" + task["id"]!.GetValue<string>(), out var flag) && flag.AsBoolean("legacy task flag");
 
-    private static JsonObject? ActiveTutorial() => (_pack["legacyTasks"]?.AsArray() ?? [])
+    private JsonObject? ActiveTutorial() => (_pack["legacyTasks"]?.AsArray() ?? [])
         .OfType<JsonObject>().FirstOrDefault(TaskActive);
 
-    private static object? TutorialView() => ActiveTutorial() is { } task ? new
+    private object? TutorialView() => ActiveTutorial() is { } task ? new
     {
         id = task["id"]!.GetValue<string>(), description = task["description"]?.GetValue<string>() ?? "",
         locations = task["locations"]?.DeepClone()
     } : null;
 
-    private static object[] SectView() => !_host.SelectingSect ? [] : _content!.Sects.Values.Select(s => (object)new
+    private object[] SectView() => !_host.SelectingSect ? [] : _content!.Sects.Values.Select(s => (object)new
     {
         id = s.Id, name = s.Name, description = s.Description, focus = s.PrimaryFocus,
         masters = s.MasterNames, skills = s.SignatureSkillNames, traits = s.TraitTags,
         available = _content.TryGetStorySegment(s.StoryId, out _)
     }).ToArray();
 
-    private static void PumpLegacyWorld()
+    private void PumpLegacyWorld()
     {
         if (PackText("id") != "jyx" || _session is null || !CanManage || _storyTask is { IsCompleted: false }) return;
         foreach (var expired in _session.StoryTimeKeyExpirationService.CheckExpired()) ExpiredStories.Enqueue(expired.TargetStoryId);
@@ -88,14 +88,15 @@ public static partial class BrowserBridge
             _sectChoice = pending;
             using var registration = cancellationToken.Register(() => pending.TrySetCanceled(cancellationToken));
             var target = await pending.Task;
+            cancellationToken.ThrowIfCancellationRequested();
             return StoryCommandResult.Jump(target);
         }
 
         public void ChooseSect(string sectId)
         {
             var pending = _sectChoice ?? throw new InvalidOperationException("当前不在拜师流程。");
-            var sect = _content!.GetSect(sectId);
-            if (!_content.TryGetStorySegment(sect.StoryId, out _)) throw new InvalidOperationException("此门派入口尚未迁移。");
+            var sect = _owner._content!.GetSect(sectId);
+            if (!_owner._content.TryGetStorySegment(sect.StoryId, out _)) throw new InvalidOperationException("此门派入口尚未迁移。");
             _sectChoice = null;
             pending.SetResult(sect.StoryId);
         }
@@ -103,10 +104,10 @@ public static partial class BrowserBridge
         [StoryCommand("legacy_newbie")]
         public void SetLegacyNewbie(string taskId)
         {
-            var tasks = (_pack["legacyTasks"]?.AsArray() ?? []).OfType<JsonObject>().ToArray();
+            var tasks = (_owner._pack["legacyTasks"]?.AsArray() ?? []).OfType<JsonObject>().ToArray();
             if (!tasks.Any(t => t["id"]?.GetValue<string>() == taskId)) throw new InvalidOperationException("教学任务未迁移。");
-            foreach (var task in tasks) RequireSession().State.Story.RemoveVariable("newbie_" + task["id"]!.GetValue<string>());
-            RequireSession().State.Story.SetVariable("newbie_" + taskId, ExpressionValue.FromBoolean(true));
+            foreach (var task in tasks) _owner.RequireSession().State.Story.RemoveVariable("newbie_" + task["id"]!.GetValue<string>());
+            _owner.RequireSession().State.Story.SetVariable("newbie_" + taskId, ExpressionValue.FromBoolean(true));
         }
 
         [StoryCommand("battle")]
@@ -116,12 +117,12 @@ public static partial class BrowserBridge
         }
 
         [StoryCommand("set_model")]
-        public void SetModel(string characterId, string modelId) => RequireSession().CharacterService.SetCharacterModel(characterId, modelId);
+        public void SetModel(string characterId, string modelId) => _owner.RequireSession().CharacterService.SetCharacterModel(characterId, modelId);
 
         [StoryCommand("set_portrait")]
-        public void SetPortrait(string characterId, string portraitId) => RequireSession().CharacterService.SetCharacterPortrait(characterId, portraitId);
+        public void SetPortrait(string characterId, string portraitId) => _owner.RequireSession().CharacterService.SetCharacterPortrait(characterId, portraitId);
 
         [StoryCommand("legacy_presentation")]
-        public void LegacyPresentation(string kind, string value) => Log($"演出提示：{kind} {value}");
+        public void LegacyPresentation(string kind, string value) => _owner.Log($"演出提示：{kind} {value}");
     }
 }

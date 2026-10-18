@@ -5,19 +5,17 @@ using Game.Core.Persistence;
 
 namespace Game.Web.Runtime;
 
-public static partial class BrowserBridge
+internal sealed partial class BrowserRuntimeSession
 {
-    private static GameProfile _deviceProfile = new();
-    private static bool _deviceProfileInitialized;
+    private GameProfile _deviceProfile = new();
+    private bool _deviceProfileInitialized;
 
-    [JSExport]
-    public static string ExportProfile() => _session is null && !_deviceProfileInitialized ? "null" : JsonSerializer.Serialize(new {
+    public string ExportProfile() => _session is null && !_deviceProfileInitialized ? "null" : JsonSerializer.Serialize(new {
         schemaVersion = 1, packId = PackText("id"),
         profile = GameProfileRecord.Create(_session?.Profile ?? _deviceProfile)
     }, Json);
 
-    [JSExport]
-    public static string InitializeProfile(string json)
+    public string InitializeProfile(string json)
     {
         try
         {
@@ -35,6 +33,5 @@ public static partial class BrowserBridge
         return Snapshot();
     }
 
-    [JSExport]
-    public static string ImportStoredSave(string saveJson) => ImportSaveCore(saveJson, preserveDeviceProfile: true);
+    public string ImportStoredSave(string saveJson) => ImportSaveCore(saveJson, preserveDeviceProfile: true);
 }

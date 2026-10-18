@@ -6,11 +6,11 @@ using Game.Expressions;
 
 namespace Game.Web.Runtime;
 
-public static partial class BrowserBridge
+internal sealed partial class BrowserRuntimeSession
 {
-    private static Dictionary<string, ParsedExpression?> _companionConditions = [];
+    private Dictionary<string, ParsedExpression?> _companionConditions = [];
 
-    private static Dictionary<string, ParsedExpression?> ParseCompanionConditions(JsonObject pack)
+    private Dictionary<string, ParsedExpression?> ParseCompanionConditions(JsonObject pack)
     {
         var result = new Dictionary<string, ParsedExpression?>(StringComparer.Ordinal);
         foreach (var node in pack["companionConditions"]?.AsArray() ?? [])
@@ -25,7 +25,7 @@ public static partial class BrowserBridge
 
     // Inspect the AST rather than trusting a metadata flag. Even a nested
     // probability must never draw random numbers when a guide is opened.
-    private static bool HasChance(ExpressionSyntax node) => node switch
+    private bool HasChance(ExpressionSyntax node) => node switch
     {
         CallExpressionSyntax call => call.Name == "chance" || call.Arguments.Any(HasChance),
         UnaryExpressionSyntax unary => HasChance(unary.Operand),
@@ -35,8 +35,7 @@ public static partial class BrowserBridge
         _ => false
     };
 
-    [JSExport]
-    public static string InspectCompanionConditions()
+    public string InspectCompanionConditions()
     {
         var values = new Dictionary<string, bool?>(StringComparer.Ordinal);
         var environment = _session is null ? null : new GameExpressionEnvironment(_session).Create();

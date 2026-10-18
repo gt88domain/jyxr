@@ -20,9 +20,9 @@ internal static class BrowserExperienceMigration
     }
 }
 
-public static partial class BrowserBridge
+internal sealed partial class BrowserRuntimeSession
 {
-    private static int NextCharacterLevelExperience(CharacterInstance character) =>
+    private int NextCharacterLevelExperience(CharacterInstance character) =>
         RequireSession().Config.CharacterExperienceCurve == CharacterExperienceCurve.LegacyCumulative
             ? CharacterLevelProgression.GetLevelUpExperience(character.Level) + 1
             : CharacterLevelProgression.GetTotalExperienceRequiredForLevel(character.Level + 1);

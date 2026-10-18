@@ -1,7 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup><OutputType>Exe</OutputType><EnableDefaultCompileItems>false</EnableDefaultCompileItems><AllowUnsafeBlocks>true</AllowUnsafeBlocks><NoWarn>$(NoWarn);CA1416</NoWarn></PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Include="../../Game.Web/contracts/commands.json" LogicalName="Jyxr.CommandContract" />
+    <Compile Include="../BrowserCommandContract.cs" Link="BrowserCommandContract.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="SessionIsolationSmoke.cs" />
     <Compile Include="ProfileSmoke.cs" />
     <Compile Include="PackSmoke.cs" />
     <Compile Include="OriginalSmoke.cs" />
@@ -25,6 +28,8 @@
     <Compile Include="AdvancedUiFixture.cs" />
     <Compile Include="CompanionSmoke.cs" />
     <Compile Include="../BrowserBridge.cs" Link="BrowserBridge.cs" />
+    <Compile Include="../BrowserBridge.Facade.cs" Link="BrowserBridge.Facade.cs" />
+    <Compile Include="../BrowserBridge.Activity.cs" Link="BrowserBridge.Activity.cs" />
     <Compile Include="../BrowserBridge.Systems.cs" Link="BrowserBridge.Systems.cs" />
     <Compile Include="../BrowserBridge.Packs.cs" Link="BrowserBridge.Packs.cs" />
     <Compile Include="../BrowserBridge.World.cs" Link="BrowserBridge.World.cs" />

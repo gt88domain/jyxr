@@ -1,6 +1,12 @@
 using System.Text.Json;
 using Game.Web.Runtime;
 
+if(args.FirstOrDefault()=="--session-isolation")
+{
+    await SessionIsolationSmoke.Run(args[1],args[2],args[3]);
+    return;
+}
+
 if (args.FirstOrDefault() == "--device-profile")
 {
     await ProfileSmoke.Run(args[1], args[2], args[3]);

@@ -5,13 +5,13 @@ using Game.Core.Model.Character;
 
 namespace Game.Web.Runtime;
 
-public static partial class BrowserBridge
+internal sealed partial class BrowserRuntimeSession
 {
-    private static string _managedCharacterId = Party.HeroCharacterId;
-    private static readonly Dictionary<string, string> CompanionCultivations = new(StringComparer.Ordinal);
-    private static readonly HashSet<string> FormationReserves = new(StringComparer.Ordinal);
-    private static IDisposable? _partySubscription;
-    private static void BindPartyEvents()
+    private string _managedCharacterId = Party.HeroCharacterId;
+    private readonly Dictionary<string, string> CompanionCultivations = new(StringComparer.Ordinal);
+    private readonly HashSet<string> FormationReserves = new(StringComparer.Ordinal);
+    private IDisposable? _partySubscription;
+    private void BindPartyEvents()
     {
         _partySubscription?.Dispose();
         var session = RequireSession();
@@ -30,31 +30,31 @@ public static partial class BrowserBridge
             }
         });
     }
-    private static CharacterInstance Managed => RequireSession().State.Party.TryGetCharacter(_managedCharacterId, out var c) ? c : Hero;
-    private static string? CultivationId(CharacterInstance c) => c.Id == Party.HeroCharacterId ? _cultivationItemId : CompanionCultivations.GetValueOrDefault(c.Id);
-    private static void SetCultivationId(CharacterInstance c, string? id)
+    private CharacterInstance Managed => RequireSession().State.Party.TryGetCharacter(_managedCharacterId, out var c) ? c : Hero;
+    private string? CultivationId(CharacterInstance c) => c.Id == Party.HeroCharacterId ? _cultivationItemId : CompanionCultivations.GetValueOrDefault(c.Id);
+    private void SetCultivationId(CharacterInstance c, string? id)
     {
         if (c.Id == Party.HeroCharacterId) _cultivationItemId = id;
         else if (id is null) CompanionCultivations.Remove(c.Id);
         else CompanionCultivations[c.Id] = id;
     }
 
-    private static int AssignedManuals(string itemId, string? exceptCharacterId = null) => RequireSession().State.Party.GetAllCharacters().Count(c => c.Id != exceptCharacterId && CultivationId(c) == itemId);
-    private static bool ManualAvailable(InventoryEntry entry, CharacterInstance c) => (entry is StackInventoryEntry stack ? stack.Quantity : 1) > AssignedManuals(entry.Definition.Id, c.Id);
+    private int AssignedManuals(string itemId, string? exceptCharacterId = null) => RequireSession().State.Party.GetAllCharacters().Count(c => c.Id != exceptCharacterId && CultivationId(c) == itemId);
+    private bool ManualAvailable(InventoryEntry entry, CharacterInstance c) => (entry is StackInventoryEntry stack ? stack.Quantity : 1) > AssignedManuals(entry.Definition.Id, c.Id);
 
-    private static void SelectManagedCharacter(string id)
+    private void SelectManagedCharacter(string id)
     {
         if (!RequireSession().State.Party.ContainsCharacter(id)) throw new InvalidOperationException("此人物不在当前队伍名册中。");
         _managedCharacterId = id;
     }
 
-    private static void RequireCharacterManagement()
+    private void RequireCharacterManagement()
     {
         RequireManagement();
         if (!RequireSession().State.Party.ContainsMember(Managed.Id)) throw new InvalidOperationException("请先在队伍编排中将此人物设为参战队员。");
     }
 
-    private static void AllocateCharacterStat(JsonElement args)
+    private void AllocateCharacterStat(JsonElement args)
     {
         RequireCharacterManagement();
         var stat = StatCatalog.Parse(Read(args, "stat"));
@@ -64,7 +64,7 @@ public static partial class BrowserBridge
         RequireSession().CharacterService.AllocateStat(Managed.Id, stat, points);
     }
 
-    private static void MovePartyCharacter(JsonElement args)
+    private void MovePartyCharacter(JsonElement args)
     {
         RequireManagement();
         var id = Read(args, "characterId");
@@ -90,7 +90,7 @@ public static partial class BrowserBridge
         }
     }
 
-    private static void MoveChestItem(JsonElement args, bool deposit)
+    private void MoveChestItem(JsonElement args, bool deposit)
     {
         if (!_host.ChestOpen) RequireManagement();
         var session = RequireSession();
@@ -107,7 +107,7 @@ public static partial class BrowserBridge
         Log(result.Message);
     }
 
-    private static void ClearUnavailableCultivations()
+    private void ClearUnavailableCultivations()
     {
         var available = RequireSession().State.Inventory.Entries.GroupBy(e => e.Definition.Id).ToDictionary(g => g.Key, g => g.Sum(e => e is StackInventoryEntry stack ? stack.Quantity : 1));
         foreach (var c in RequireSession().State.Party.GetAllCharacters().OrderBy(c => c.Id != Party.HeroCharacterId))
@@ -119,7 +119,7 @@ public static partial class BrowserBridge
         FormationReserves.RemoveWhere(id => !RequireSession().State.Party.ContainsReserve(id));
     }
 
-    private static object? ChestSnapshot()
+    private object? ChestSnapshot()
     {
         if (_session is null) return null;
         var session = _session;
@@ -128,7 +128,7 @@ public static partial class BrowserBridge
         return new { capacity = view.Capacity, stored = view.StoredItemCount, entries = view.Entries.Select(Describe).ToArray(), inventory = session.State.Inventory.Entries.Select(Describe).ToArray(), canManage = CanManage || _host.ChestOpen };
     }
 
-    private static object CharacterSheet(CharacterInstance c)
+    private object CharacterSheet(CharacterInstance c)
     {
         var u = _battle?.Units.FirstOrDefault(u => u.Character.Id == c.Id && u.Team == 1);
         var canManage = CanManage && RequireSession().State.Party.ContainsMember(c.Id);

@@ -5,9 +5,9 @@ using Game.Core.Story;
 
 namespace Game.Web.Runtime;
 
-public static partial class BrowserBridge
+internal sealed partial class BrowserRuntimeSession
 {
-    private static object? CombatantsSnapshot()
+    private object? CombatantsSnapshot()
     {
         if (_host.Selection is not { } request) return null;
         var battle = _content!.GetBattle(request.BattleId);
@@ -63,8 +63,8 @@ public static partial class BrowserBridge
         {
             var request = Selection ?? throw new InvalidOperationException("当前不在参战选择中。");
             var ids = args.GetProperty("characterIds").Deserialize<string[]>() ?? [];
-            var battle = _content!.GetBattle(request.BattleId);
-            var party = RequireSession().State.Party;
+            var battle = _owner._content!.GetBattle(request.BattleId);
+            var party = _owner.RequireSession().State.Party;
             var required = battle.RequiredCharacterIds.Where(party.ContainsMember).ToHashSet(StringComparer.Ordinal);
             var slots = battle.Participants.Count(p => p.Team == 1 && p.PartyIndex is not null && p.CharacterId is null);
             if (ids.Length < 1 || ids.Length > slots || ids.Distinct(StringComparer.Ordinal).Count() != ids.Length || ids.Any(id => !party.ContainsMember(id) || request.ForbiddenCharacterIds.Contains(id) && !required.Contains(id)) || required.Any(id => !ids.Contains(id)))
@@ -81,7 +81,7 @@ public static partial class BrowserBridge
             var pending = new TaskCompletionSource<bool>();
             _specialBattleResult = pending;
             cancellationToken.Register(() => pending.TrySetCanceled(cancellationToken));
-            StartBattle(request);
+            _owner.StartBattle(request);
             return new(pending.Task);
         }
 
@@ -89,7 +89,7 @@ public static partial class BrowserBridge
         {
             if (_specialBattleResult is not { } pending) return false;
             _specialBattleResult = null;
-            pending.SetResult(_lastBattleWinner == 1);
+            pending.SetResult(_owner._lastBattleWinner == 1);
             return true;
         }
 
@@ -97,6 +97,7 @@ public static partial class BrowserBridge
         {
             var options = entries.Select((e, i) => new ChoiceOptionView(i, e.Definition.Name)).Append(new(entries.Count, "取消洗练")).ToArray();
             var selected = await ChooseOptionAsync(new("洗练", "选择要洗练的装备", options), cancellationToken);
+            cancellationToken.ThrowIfCancellationRequested();
             return selected == entries.Count ? null : entries[selected];
         }
 
@@ -108,7 +109,8 @@ public static partial class BrowserBridge
             _renameResult = pending;
             using var registration = cancellationToken.Register(() => pending.TrySetCanceled(cancellationToken));
             var name = await pending.Task;
-            RequireSession().PartyService.RenameOrCreateReserve(Party.HeroineCharacterId, name);
+            cancellationToken.ThrowIfCancellationRequested();
+            _owner.RequireSession().PartyService.RenameOrCreateReserve(Party.HeroineCharacterId, name);
         }
 
         public void CompleteRename(string name)
@@ -124,9 +126,9 @@ public static partial class BrowserBridge
         public ValueTask GameOverAsync(CancellationToken cancellationToken)
         {
             if (Ending is not null) throw new InvalidOperationException("当前结局已经结束。");
-            RequireSession().ProfileService.AddDeaths();
+            _owner.RequireSession().ProfileService.AddDeaths();
             GameOver = true;
-            return WaitAtEnding(new("gameover", RequireSession().State.Adventure.Round, null), cancellationToken);
+            return WaitAtEnding(new("gameover", _owner.RequireSession().State.Adventure.Round, null), cancellationToken);
         }
     }
 }

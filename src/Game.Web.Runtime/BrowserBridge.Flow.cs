@@ -6,11 +6,11 @@ using Game.Core.Story;
 
 namespace Game.Web.Runtime;
 
-public static partial class BrowserBridge
+internal sealed partial class BrowserRuntimeSession
 {
     private sealed record EndingState(string Kind, int CompletedRound, int? TargetRound);
 
-    private static void ValidateEnding(EndingState ending, GameSession session)
+    private void ValidateEnding(EndingState ending, GameSession session)
     {
         if (PackText("id") != "jyx" || ending.CompletedRound != session.State.Adventure.Round ||
             ending.Kind is not ("restart" or "next" or "complete" or "gameover" or "title") ||
@@ -18,7 +18,7 @@ public static partial class BrowserBridge
             throw new InvalidOperationException("存档的结局或周目衔接无效。");
     }
 
-    private static void BeginRoundCreation()
+    private void BeginRoundCreation()
     {
         var session = RequireSession();
         var ending = _host.Ending ?? throw new InvalidOperationException("当前没有周目衔接。");
@@ -28,7 +28,7 @@ public static partial class BrowserBridge
             TrialCount = session.State.SpecialBattle.TrialCompletedCharacterIds.Count };
     }
 
-    private static void ConfirmRoundCreation(CreationDraft draft, CreationResult preview)
+    private void ConfirmRoundCreation(CreationDraft draft, CreationResult preview)
     {
         var session = RequireSession();
         var ending = _host.Ending ?? throw new InvalidOperationException("周目衔接已变化。");
@@ -68,9 +68,9 @@ public static partial class BrowserBridge
         [StoryCommand("legacy_nick")]
         public void UnlockOriginalAchievement(string id)
         {
-            if (!(_pack["achievements"]?.AsArray().Any(a => a?["id"]?.GetValue<string>() == id) ?? false))
+            if (!(_owner._pack["achievements"]?.AsArray().Any(a => a?["id"]?.GetValue<string>() == id) ?? false))
                 throw new InvalidOperationException("此称号不属于当前原版内容。");
-            RequireSession().ProfileService.UnlockAchievement(id);
+            _owner.RequireSession().ProfileService.UnlockAchievement(id);
         }
 
         public EndingState? Ending { get; private set; }
@@ -82,7 +82,7 @@ public static partial class BrowserBridge
             if (kind == "gameover") return GameOverAsync(cancellationToken);
             if (kind is not ("restart" or "next" or "complete" or "title")) throw new InvalidOperationException("结局类型无效。");
             if (Ending is not null) throw new InvalidOperationException("请先完成当前结局选择。");
-            var session = RequireSession(); var round = session.State.Adventure.Round;
+            var session = _owner.RequireSession(); var round = session.State.Adventure.Round;
             var ending = new EndingState(kind, round, kind == "next" ? checked(round + 1) : kind == "restart" ? round : null);
             if (kind != "title") session.ProfileService.RecordCompletion(round);
             return WaitAtEnding(ending, cancellationToken);
@@ -107,7 +107,7 @@ public static partial class BrowserBridge
         [StoryCommand("legacy_maxlevel")]
         public void LegacyMaxLevel(string skillId, int levels, string sourceKey)
         {
-            var session = RequireSession(); var round = session.State.Adventure.Round;
+            var session = _owner.RequireSession(); var round = session.State.Adventure.Round;
             // Before multi-round support, the browser's unscoped keys could
             // only have been earned in round one. Preserve those old claims.
             if (round == 1 && session.Profile.ConsumedSkillMaxLevelKeys.Contains(sourceKey)) return;

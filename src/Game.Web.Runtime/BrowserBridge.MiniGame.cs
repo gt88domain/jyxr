@@ -8,12 +8,11 @@ using Game.Presentation.MiniGame;
 
 namespace Game.Web.Runtime;
 
-public static partial class BrowserBridge
+internal sealed partial class BrowserRuntimeSession
 {
     // Frames return only the small training state, without serializing the
     // entire inventory/map/content package at animation frequency.
-    [JSExport]
-    public static string MiniGameInput(string inputJson)
+    public string MiniGameInput(string inputJson)
     {
         try
         {
@@ -25,7 +24,7 @@ public static partial class BrowserBridge
         catch (Exception e) { return JsonSerializer.Serialize(new { ok = false, error = e.Message }, Json); }
     }
 
-    private static object? MiniGameSnapshot() => _host.Training is not { } training ? null : new
+    private object? MiniGameSnapshot() => _host.Training is not { } training ? null : new
     {
         id = training.Id, title = training.Id == "qinggong" ? "轻功修炼" : training.Id == "touch" ? "点穴救治 · " + _host.TrainingTouchKey : "葵花点穴手",
         background = _host.TrainingTouchKey is { } key ? ResourceMedia(_pack["touchGames"]?[key]?["background"]?.GetValue<string>()) : null,
@@ -48,14 +47,14 @@ public static partial class BrowserBridge
         [StoryCommand("legacy_touch")]
         public async ValueTask RunOriginalTouch(string key, CancellationToken cancellationToken)
         {
-            var definition = _pack["touchGames"]?[key] ?? throw new InvalidOperationException("原版点穴配置不存在。");
+            var definition = _owner._pack["touchGames"]?[key] ?? throw new InvalidOperationException("原版点穴配置不存在。");
             var zones = definition["zones"]!.AsArray().Select(z => new TouchZone(z!["minX"]!.GetValue<int>(), z["maxX"]!.GetValue<int>(), z["minY"]!.GetValue<int>(), z["maxY"]!.GetValue<int>()));
             var simulation = new TouchTrainingSimulation(zones);
             TrainingTouchKey = key; TrainingItems = [];
             await RunTraining(simulation, cancellationToken);
-            RequireSession().State.Story.SetVariable("browser_touch_won", ExpressionValue.FromBoolean(simulation.Won));
+            _owner.RequireSession().State.Story.SetVariable("browser_touch_won", ExpressionValue.FromBoolean(simulation.Won));
             TrainingTouchKey = null;
-            Log($"点穴成绩 {simulation.Score} / 120，" + (simulation.Won ? "救治成功。" : "此次未能成功。"));
+            _owner.Log($"点穴成绩 {simulation.Score} / 120，" + (simulation.Won ? "救治成功。" : "此次未能成功。"));
         }
 
         private async ValueTask RunTraining(TrainingSimulation simulation, CancellationToken cancellationToken)
@@ -65,6 +64,7 @@ public static partial class BrowserBridge
             var pending = new TaskCompletionSource(); _trainingResult = pending;
             using var registration = cancellationToken.Register(() => pending.TrySetCanceled(cancellationToken));
             await pending.Task;
+            cancellationToken.ThrowIfCancellationRequested();
         }
 
         public async ValueTask<int> RunLightnessTrainingAsync(CancellationToken cancellationToken)
@@ -101,7 +101,7 @@ public static partial class BrowserBridge
         public void UpdateTraining(JsonElement args)
         {
             var t = Training ?? throw new InvalidOperationException("当前没有进行小游戏。");
-            var action = Read(args, "action", "frame");
+            var action = _owner.Read(args, "action", "frame");
             // Only elapsed host time is accepted. JavaScript cannot submit a
             // score, elapsed duration or reward inventory.
             var now = _trainingClock.Elapsed.TotalSeconds;
@@ -117,10 +117,10 @@ public static partial class BrowserBridge
                     if (!_trainingPaused) lightness.Move(args.GetProperty("x").GetDouble(), args.GetProperty("y").GetDouble());
                     break;
                 case "hit" when t is StrengthTrainingSimulation strength:
-                    if (!_trainingPaused) strength.Hit(Read(args, "id"), args.GetProperty("generation").GetInt32());
+                    if (!_trainingPaused) strength.Hit(_owner.Read(args, "id"), args.GetProperty("generation").GetInt32());
                     break;
                 case "hit" when t is TouchTrainingSimulation touch:
-                    if (!_trainingPaused) touch.Hit(Read(args, "id"), args.GetProperty("generation").GetInt32());
+                    if (!_trainingPaused) touch.Hit(_owner.Read(args, "id"), args.GetProperty("generation").GetInt32());
                     break;
                 case "quit": t.Finish(); break;
                 default: throw new InvalidOperationException("小游戏操作无效。");

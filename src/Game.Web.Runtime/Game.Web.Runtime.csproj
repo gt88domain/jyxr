@@ -9,6 +9,7 @@
     <JsonSerializerIsReflectionEnabledByDefault>true</JsonSerializerIsReflectionEnabledByDefault>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Include="../Game.Web/contracts/commands.json" LogicalName="Jyxr.CommandContract" />
     <Compile Remove="Smoke/**/*.cs" />
     <ProjectReference Include="../Game.Core/Game.Core.csproj" />
     <ProjectReference Include="../Game.Content/Game.Content.csproj" />

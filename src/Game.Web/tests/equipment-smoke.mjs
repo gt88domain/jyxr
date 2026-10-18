@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {mkdir, readFile, writeFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import {chromium} from 'playwright';
+import {clickMenu} from './menu-controls.mjs';
 
 const baseURL = process.env.GAME_WEB_URL || 'http://127.0.0.1:4173';
 const output = fileURLToPath(new URL('../test-results/', import.meta.url));
@@ -23,8 +24,7 @@ function pass(check, details) {report.checks.push({check, details}); console.log
 async function visible(selector) {await page.locator(selector).waitFor({state: 'visible'});}
 async function ready() {await page.waitForFunction(() => document.querySelector('#app')?.getAttribute('aria-busy') === 'false');}
 async function click(selector) {
-  const local = page.locator('#game-modal[open]').locator(selector);
-  await (await local.count() ? local.first() : page.locator(selector).filter({visible: true}).first()).click();
+  await clickMenu(page,selector);
   await ready();
 }
 async function state() {

@@ -26,6 +26,11 @@ import type {InventorySort} from './panels';
 import {loadOriginalLibrary, mountOriginalLibrary} from './library';
 import {interfaceReferenceView,originalMenuArt,originalInterfaceAsset} from './interface-reference';
 import './interface.css';
+import {activityView,filterActivity} from './activity';
+import type {UiMessage} from './activity';
+import {moreMenuView} from './navigation';
+import './modern-ui.css';
+import type {GameCommand} from './command-contract';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 let state: GameState, slot: SaveSlot | undefined, busy = false, board: Board | undefined;
@@ -42,12 +47,15 @@ applySettings(settings);
 let activePanel: PanelName | null = null, inventoryFilter: InventoryFilter = 'all';
 let inventoryQuery = '', inventorySort: InventorySort = 'original';
 let equipmentPreviewContext: {state: GameState; entryNumber: number} | undefined;
-let battleActionContext: {state: GameState; command: Record<string, unknown>} | undefined;
+let battleActionContext: {state: GameState; command: GameCommand} | undefined;
 let battleSkillsContext: GameState | undefined;
+const uiMessages:UiMessage[]=[];
+let activitySeen=0;
 const e = (value: unknown) => String(value ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]!));
 const plain = (text: string) => text.replace(/\[\[[a-z]+:([^\]]*)\]\]/gi, '$1').replace(/<\/?color[^>]*>/g, '');
 const icon = (name: string) => {
   const paths: Record<string, string> = {
+    bell:'<path d="M5 17h14l-2-3V9a5 5 0 0 0-10 0v5zM10 21h4"/>',
     save: '<path d="M5 3h12l4 4v14H3V3zM7 3v6h10V3M7 21v-9h10v9"/>',
     bag: '<path d="M8 3h8l-2 5c5 3 7 6 6 10-1 4-15 4-16 0-1-4 1-7 6-10zM9 8h6"/>',
     person: '<circle cx="12" cy="7" r="4"/><path d="M4 22v-3a8 8 0 0 1 16 0v3"/>',
@@ -63,17 +71,18 @@ const icon = (name: string) => {
   };
   return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] ?? paths.leaf}</svg>`;
 };
-function toast(message: string) {
+function toast(message: string,record=true) {
+  if(record){uiMessages.push({message,time:new Date().toISOString()});if(uiMessages.length>50)uiMessages.shift();}
   const node = document.querySelector<HTMLDivElement>('#toast')!;
   node.textContent = message; node.classList.add('visible');
   setTimeout(() => node.classList.remove('visible'), 3600);
 }
 function topbar(inGame = true) {
   const pack = state.pack;
-  const menus = [['character', 'person', '人物'], ['equipment', 'sword', '装备'], ['cultivation', 'leaf', pack.terms?.cultivation || '功法修炼'], ['inventory', 'bag', '行囊'], ['party', 'person', '队伍'], ['quests', 'leaf', '目标'], ['settings', 'settings', '设置']];
+  const menus = [['character', 'person', '人物'], ['equipment', 'sword', '装备'], ['cultivation', 'leaf', pack.terms?.cultivation || '修炼'], ['inventory', 'bag', '行囊'], ['party', 'person', '队伍'], ['quests', 'leaf', '目标'], ['settings', 'settings', '设置']];
   if(pack.id==='jyx')menus.splice(5,0,['library','person','资料']);
-  return `<header class="topbar"><button class="wordmark" data-action="guide" aria-label="游玩指南"><span class="seal small">${e(pack.title.slice(0,1))}</span><span>${e(pack.title)}<small>${e(pack.subtitle)}</small></span></button>
-    <nav aria-label="游戏菜单">${inGame ? `<span class="chapter">${e(state.map?.name)}</span><button class="save-button" data-action="save" ${state.phase !== 'world' ? 'disabled' : ''}>${icon('save')}<span>保存进度</span></button>` : ''}<button class="icon-button" data-action="worlds" aria-label="切换世界">${icon('leaf')}</button><button class="icon-button" data-action="settings" aria-label="设置">${icon('settings')}</button><button class="icon-button" data-action="guide" aria-label="帮助">${icon('help')}</button></nav></header>${inGame ? `<nav class="system-nav" aria-label="角色与世界设置">${menus.map(([action,symbol,label]) => `<button data-action="${action}">${originalMenuArt[action]?`<img class="classic-menu-art" src="${e(originalInterfaceAsset(originalMenuArt[action]))}" alt="" width="48" height="64" loading="lazy">`:''}${icon(symbol)}<span>${e(label)}</span></button>`).join('')}</nav>` : ''}`;
+  const menu=menus.map(([action,symbol,label])=>`<button data-action="${action}" ${['quests','settings','library'].includes(action)?'data-modern-secondary':''}>${originalMenuArt[action]?`<img class="classic-menu-art" src="${e(originalInterfaceAsset(originalMenuArt[action]))}" alt="" width="48" height="64" loading="lazy">`:''}${icon(symbol)}<span>${e(label)}</span></button>`).join('');
+  return `<header class="topbar"><button class="wordmark" data-action="guide" aria-label="游玩指南"><span class="seal small">${e(pack.title.slice(0,1))}</span><span>${e(pack.title)}<small>${e(pack.subtitle)}</small></span></button><nav aria-label="游戏菜单">${inGame?`<span class="chapter">${e(state.map?.name)}</span><button class="save-button" data-action="save" ${state.phase!=='world'?'disabled':''}>${icon('save')}<span>保存</span></button>`:''}<button class="icon-button modern-only notification-button" data-action="history" aria-label="通知与操作记录">${icon('bell')}<span data-notice-count hidden></span></button>${!inGame?'<button class="icon-button modern-only" data-action="more" aria-label="更多功能">⋯</button>':''}<button class="icon-button legacy-header-option" data-action="worlds" aria-label="切换世界">${icon('leaf')}</button><button class="icon-button legacy-header-option" data-action="settings" aria-label="设置">${icon('settings')}</button><button class="icon-button legacy-header-option" data-action="guide" aria-label="帮助">${icon('help')}</button></nav></header>${inGame?`<nav class="system-nav" aria-label="角色与世界设置">${menu}<button class="modern-only more-button" data-action="more"><b aria-hidden="true">⋯</b><span>更多</span></button></nav>`:''}`;
 }
 function title() {
   const progress = state.pack.id === 'jyx' ? `<div class="restoration-callout"><button class="restoration-entry" data-action="library">原版资料馆 · 全量资料与版本对照<small>人物、武学、道具、初始配置、剧情和关联引用 →</small></button><button class="restoration-entry" data-action="companions">伙伴图鉴 · 剧情加入条件<small>剧情基线65个形态；后期另有43个开局候选，见资料馆 →</small></button><button class="restoration-entry" data-action="progress">现代化重制 · 开发记录<small>功能验收、原版对照与已知问题 →</small></button></div>` : '';
@@ -154,7 +163,7 @@ function render() {
     updateBattle();
   }
 }
-function boardAction(data: Record<string, unknown>, touch: boolean) {
+function boardAction(data: GameCommand, touch: boolean) {
   if (touch) {
     modal(data.type === 'move' ? '确认走位' : '确认出招', battleActionView(state, data));
     battleActionContext = {state, command: data};
@@ -171,13 +180,25 @@ function showBattleSkills() {
   battleSkillsContext = state;
   document.querySelector('#game-modal')?.classList.add('battle-skills-modal');
 }
-function applyResult(result: Result) {
+function applyResult(result: Result,restored=false) {
   if (!result.ok) throw new Error(result.error || '此次行动未能完成。');
+  const previous=state;
   state = result.state;
+  if(previous&&previous.journeyId!==state.journeyId)uiMessages.length=0;
+  if(restored||!previous)activitySeen=Math.max(0,...(state.activity||[]).map(a=>a.id));
+  else if(previous.journeyId!==state.journeyId)activitySeen=0;
   render();
+  const lastId=previous?.journeyId===state.journeyId?Math.max(0,...(previous.activity||[]).map(a=>a.id)):0;
+  const notices=(state.activity||[]).filter(a=>a.notice&&a.id>lastId);
+  if(!restored&&previous&&notices.length)toast(notices.slice(-2).map(a=>plain(a.message)).join('；')+(notices.length>2?`，另有${notices.length-2}条，见通知。`:''),false);
+  refreshActivityBadge();
   if (result.warning) toast(result.warning);
 }
-async function command(data: Record<string, unknown>) {
+function refreshActivityBadge(){
+  const count=(state?.activity||[]).filter(a=>a.notice&&a.id>activitySeen).length;
+  document.querySelectorAll<HTMLElement>('[data-notice-count]').forEach(node=>{node.textContent=count>99?'99+':String(count);node.hidden=count===0;});
+}
+async function command(data: GameCommand) {
   if (busy) return false;
   clearTimeout(enemyTimer); busy = true; app.setAttribute('aria-busy', 'true');
   commandWarning=undefined;
@@ -203,7 +224,7 @@ function modal(titleText: string, content: string, wide = false) {
   const node = document.createElement('dialog'); node.id = 'game-modal'; node.className = `paper game-modal${wide ? ' system-modal' : ''}`;
   node.innerHTML = `<button class="icon-button close-modal" data-action="close-modal" aria-label="关闭">${icon('close')}</button><div class="eyebrow">旅途一页</div><h2>${e(titleText)}</h2>${content}`;
   document.body.append(node); node.showModal();
-  node.addEventListener('close', () => {activePanel = null; if (node.classList.contains('creation-modal') && state.creation && !busy) void command({type: 'cancelCreation'}); if (screen === 'battle') updateBattle(); scheduleBattle();});
+  node.addEventListener('close', () => {if(document.querySelector('#game-modal')!==node)return;node.remove();activePanel = null; if (node.classList.contains('creation-modal') && state.creation && !busy) void command({type: 'cancelCreation'}); if (screen === 'battle') updateBattle(); scheduleBattle();});
   node.addEventListener('click', event => {if (event.target === node) node.close();});
   if (screen === 'battle') updateBattle();
 }
@@ -256,7 +277,7 @@ async function showOriginalLibrary(initial?: {category?: string; id?: string}) {
 function createCharacter() {
   modal('为旅人命名', `<p class="modal-intro">${e(state.pack.title)}的故事，从你的名字开始。</p><form id="character-form"><label class="form-label" for="hero-name">角色姓名</label><input id="hero-name" name="name" value="${e(state.pack.defaultName || '旅人')}" minlength="1" maxlength="12" autocomplete="off" required autofocus><label class="form-label" for="difficulty">行走难度</label><select id="difficulty" name="difficulty"><option value="normal">普通 · 初次冒险</option><option value="hard">困难 · 迎接挑战</option><option value="crazy">炼狱 · 千锤百炼</option></select><p class="field-note">难度影响战斗规则与历练所得。</p><button class="button primary full-width" type="submit">开始旅程 ${icon('arrow')}</button></form>`);
 }
-async function creationCommand(data: Record<string, unknown>) {
+async function creationCommand(data: GameCommand) {
   if (!await command(data)) return;
   if (state.creation) {
     const view = creationView(state.creation);
@@ -292,7 +313,7 @@ async function autoSave() {
 }
 async function load(selected=slot) {
   if (!selected || busy) return;
-  try { applyResult(await importSave(selected.data, true)); toast('旧事续上，江湖如故。'); }
+  try { applyResult(await importSave(selected.data, true),true); toast('旧事续上，江湖如故。'); }
   catch (error) {console.error(error); toast('存档未能读取，请检查存档文件。');}
 }
 function openPanel(name: PanelName) {
@@ -319,7 +340,7 @@ function refreshInventoryResults() {
   const replacement=template.content.querySelector('.inventory-list');
   if(replacement)current.replaceWith(replacement);
 }
-async function manage(data: Record<string, unknown>, message: string) {
+async function manage(data: GameCommand, message: string) {
   if (await command(data)) toast(commandWarning||message);
 }
 function battleMode(mode: 'manual' | 'auto') {
@@ -350,7 +371,7 @@ async function selectPack(id: string) {
     document.querySelector('#game-modal')?.remove(); activePanel = null;
     slot = saved;
     manualSlot=manual;
-    applyResult(next);
+    applyResult(next,true);
     const url = new URL(location.href); url.searchParams.set('pack',id); history.replaceState(null,'',url);
   } catch (error) {console.error(error); toast(error instanceof Error ? error.message : '世界未能打开。');}
   finally {busy=false; app.setAttribute('aria-busy','false'); scheduleBattle();}
@@ -364,18 +385,19 @@ document.addEventListener('click', event => {
   const button = (event.target as HTMLElement).closest<HTMLElement>('[data-action]');
   if (!button || button.matches(':disabled')) return;
   const action = button.dataset.action;
+  if(button.closest('.more-menu')){document.querySelector('#game-modal')?.remove();activePanel=null;}
   if (action === 'new') createCharacter();
   else if (action === 'creation-answer') void creationCommand({type: 'answerCreation', index: Number(button.dataset.index), questionIndex: Number(button.dataset.question)});
-  else if (action === 'creation-portrait') void creationCommand({type: 'selectCreationPortrait', portraitId: button.dataset.id});
+  else if (action === 'creation-portrait') void creationCommand({type: 'selectCreationPortrait', portraitId: button.dataset.id!});
   else if (action === 'creation-back') void creationCommand({type: 'backCreation'});
   else if (action === 'creation-roll') void creationCommand({type: 'rollCreation'});
   else if (action === 'creation-confirm') void creationCommand({type: 'confirmCreation'});
   else if (action === 'begin-round-creation') void creationCommand({type:'beginRoundCreation'});
   else if (action === 'save-ending') void save();
-  else if (action === 'manage-character') void (async()=>{if(await command({type:'selectCharacter',characterId:button.dataset.id})) openPanel(button.dataset.panel==='cultivation'?'cultivation':'character');})();
-  else if (action === 'allocate-stat') void manage({type:'allocateStat',stat:button.dataset.stat},'属性点已分配。');
-  else if (action === 'party-placement') void manage({type:'setPartyPlacement',characterId:button.dataset.id,placement:button.dataset.placement},'队伍已调整。');
-  else if (action === 'party-order') void manage({type:'reorderParty',characterId:button.dataset.id,index:Number(button.dataset.index)},'队伍顺序已调整。');
+  else if (action === 'manage-character') void (async()=>{if(await command({type:'selectCharacter',characterId:button.dataset.id!})) openPanel(button.dataset.panel==='cultivation'?'cultivation':'character');})();
+  else if (action === 'allocate-stat') void manage({type:'allocateStat',stat:button.dataset.stat!},'属性点已分配。');
+  else if (action === 'party-placement') void manage({type:'setPartyPlacement',characterId:button.dataset.id!,placement:button.dataset.placement!},'队伍已调整。');
+  else if (action === 'party-order') void manage({type:'reorderParty',characterId:button.dataset.id!,index:Number(button.dataset.index)},'队伍顺序已调整。');
   else if (action === 'chest') openPanel('chest');
   else if (action === 'return-title') void selectPack(state.pack.id);
   else if (action === 'close-chest') void command({type:'closeChest'});
@@ -383,10 +405,12 @@ document.addEventListener('click', event => {
   else if (action === 'worlds') chooseWorld();
   else if (action === 'select-pack') void selectPack(button.dataset.id!);
   else if (action === 'close-shop') void command({type:'closeShop'});
-  else if (action === 'select-sect') void command({type:'selectSect',sectId:button.dataset.id});
-  else if (action === 'buy-item') {const quantity = shopQuantity(); if (quantity) void command({type:'buy',productId:button.dataset.id,quantity});}
+  else if (action === 'select-sect') void command({type:'selectSect',sectId:button.dataset.id!});
+  else if (action === 'buy-item') {const quantity = shopQuantity(); if (quantity) void command({type:'buy',productId:button.dataset.id!,quantity});}
   else if (action === 'sell-item') {const quantity = shopQuantity(); if (quantity) void command({type:'sell',entryNumber:Number(button.dataset.entryNumber),quantity});}
   else if (action === 'close-modal') document.querySelector<HTMLDialogElement>('#game-modal')?.close();
+  else if (action === 'more') modal('更多功能',moreMenuView(state),true);
+  else if (action === 'history') {activitySeen=Math.max(0,...(state.activity||[]).map(a=>a.id));refreshActivityBadge();modal('通知与操作记录',activityView(state,uiMessages),true);}
   else if (action === 'interface-style') changeInterface(button.dataset.id);
   else if (action === 'original-interface-reference') {modal('原版界面对照',interfaceReferenceView(),true);reflectInterfaceChoice();}
   else if (action === 'save') void save();
@@ -394,8 +418,8 @@ document.addEventListener('click', event => {
   else if (action === 'load-manual') void load(manualSlot);
   else if (action === 'import') document.querySelector<HTMLInputElement>('#import-file')!.click();
   else if (action === 'training') void command({type: 'startTraining'});
-  else if (action === 'talk') void command({type: 'talk', locationId: button.dataset.id});
-  else if (action === 'interact') void command({type: 'interact', locationId: button.dataset.id});
+  else if (action === 'talk') void command({type: 'talk', locationId: button.dataset.id!});
+  else if (action === 'interact') void command({type: 'interact', locationId: button.dataset.id!});
   else if (action === 'next') void command({type: 'next'});
   else if (action === 'choice') void command({type: 'choose', index: Number(button.dataset.index)});
   else if (action === 'rest' || action === 'mobile-rest') void command({type: 'rest'});
@@ -432,12 +456,12 @@ document.addEventListener('click', event => {
     if(await command({type:'equipItem',entryNumber:preview.entryNumber})) {openPanel('equipment');toast(commandWarning||'装备已穿戴，人物属性已更新。');}
   })();
   else if (action === 'equip-item') void manage({type: 'equipItem', entryNumber: Number(button.dataset.entryNumber)}, '装备已穿戴，人物属性已更新。');
-  else if (action === 'unequip-item') void manage({type: 'unequipItem', slot: button.dataset.slot}, '装备已放回行囊。');
+  else if (action === 'unequip-item') void manage({type: 'unequipItem', slot: button.dataset.slot!}, '装备已放回行囊。');
   else if (action === 'cultivate') void manage({type: 'setCultivation', entryNumber: Number(button.dataset.entryNumber)}, '已选择修炼秘籍，战斗结算后获得修炼经验。');
   else if (action === 'clear-cultivation') void manage({type: 'clearCultivation'}, '已暂停这部秘籍的修炼，已学武功和经验保留。');
-  else if (action === 'equip-internal') void manage({type: 'equipInternalSkill', skillId: button.dataset.id}, '已设为主运内功。');
+  else if (action === 'equip-internal') void manage({type: 'equipInternalSkill', skillId: button.dataset.id!}, '已设为主运内功。');
   else if (action === 'clear-internal') void manage({type: 'clearInternalSkill'}, '已停止主运内功。');
-  else if (action === 'toggle-skill') void manage({type: 'setExternalSkillActive', skillId: button.dataset.id, active: button.dataset.active === 'true'}, button.dataset.active === 'true' ? '招式已启用。' : '招式已停用。');
+  else if (action === 'toggle-skill') void manage({type: 'setExternalSkillActive', skillId: button.dataset.id!, active: button.dataset.active === 'true'}, button.dataset.active === 'true' ? '招式已启用。' : '招式已停用。');
   else if (action === 'use-item') {
     const target=document.querySelector<HTMLSelectElement>(`.battle-item-target[data-entry-number="${button.dataset.entryNumber}"]`);
     void manage({type:'useItem',entryNumber:Number(button.dataset.entryNumber),...(target?{targetId:target.value}:{})},'物品已使用。');
@@ -453,6 +477,7 @@ document.addEventListener('click', event => {
 });
 document.addEventListener('change', event => {
   const control = event.target;
+  if(control instanceof HTMLSelectElement&&control.matches('[data-activity-filter]')){filterActivity();return;}
   if (control instanceof HTMLSelectElement && control.id === 'managed-character') {void command({type:'selectCharacter',characterId:control.value}); return;}
   if (control instanceof HTMLSelectElement && control.id === 'inventory-sort') {
     if (['original','name','count'].includes(control.value)) inventorySort=control.value as InventorySort;
@@ -496,26 +521,27 @@ document.addEventListener('input', event => {
 document.addEventListener('submit', event => {
   if(event.target instanceof HTMLFormElement && event.target.id === 'combatants-form'){
     event.preventDefault();
-    void command({type:'selectCombatants',characterIds:new FormData(event.target).getAll('character')});return;
+    void command({type:'selectCombatants',characterIds:new FormData(event.target).getAll('character').filter((value):value is string=>typeof value==='string')});return;
   }
   if(event.target instanceof HTMLFormElement && event.target.id === 'heroine-name-form'){
     event.preventDefault();
-    void command({type:'renameHeroine',name:new FormData(event.target).get('name')});return;
+    void command({type:'renameHeroine',name:String(new FormData(event.target).get('name')||'')});return;
   }
   if (!(event.target instanceof HTMLFormElement) || event.target.id !== 'character-form') return;
   event.preventDefault();
   const form = new FormData(event.target), name = String(form.get('name') || '').trim();
   if (!name) return;
   document.querySelector<HTMLDialogElement>('#game-modal')!.close();
-  if ('creation' in state.pack) void creationCommand({type: 'beginCreation', name, difficulty: form.get('difficulty')});
-  else void command({type: 'createCharacter', name, difficulty: form.get('difficulty')});
+  if ('creation' in state.pack) void creationCommand({type: 'beginCreation', name, difficulty: String(form.get('difficulty')||'normal')});
+  else void command({type: 'createCharacter', name, difficulty: String(form.get('difficulty')||'normal')});
 });
+document.addEventListener('input',event=>{if(event.target instanceof HTMLInputElement&&event.target.matches('[data-activity-search]'))filterActivity();});
 document.querySelector<HTMLInputElement>('#import-file')!.addEventListener('change', async event => {
   const input = event.target as HTMLInputElement, file = input.files?.[0];
   if (!file) return;
   try {
     if (file.size > 5 * 1024 * 1024) throw new Error('存档文件过大。');
-    const data = await file.text(); applyResult(await importSave(data));
+    const data = await file.text(); applyResult(await importSave(data),true);
     slot = {version: 1, packId: state.pack.id, savedAt: new Date().toISOString(), name: state.hero.name, level: state.hero.level, map: state.map.name, data};
     await writeSlot(slot); toast('存档已导入。');
     manualSlot=slot;
@@ -530,7 +556,7 @@ async function boot() {
     slot = await readSlot(id).catch(() => undefined);
     manualSlot = await readManualSlot(id).catch(() => undefined);
     const result = await loadRuntime(message => {const text = document.querySelector('#loading-message'); if (text) text.textContent = message;}, id);
-    applyResult(result);
+    applyResult(result,true);
     const view=new URL(location.href).searchParams.get('view');
     if(state.pack.id==='jyx'&&view==='companions')void showCompanions();
     if(state.pack.id==='jyx'&&view==='library')void showOriginalLibrary({category:new URLSearchParams(location.search).get('category')||undefined,id:new URLSearchParams(location.search).get('entry')||undefined});
