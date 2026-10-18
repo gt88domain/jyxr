@@ -20,6 +20,9 @@ try{
   assert.match(await page.locator('[data-late-talent="御剑"]').innerText(),/天山剑法[\s\S]*12/);
   assert.match(await page.locator('[data-late-content]').innerText(),/71 项/);pass('all five talent questions and all71 partial talent names are available, with the exact level12 grant of御剑');
   await page.locator('[data-late-tab="legends"]').click();assert.equal(await page.locator('[data-late-legend]').count(),137);
+  assert.ok(await page.locator('.late-legends').getByText(/天赋；不检查等级/).count()>0);
+  const talentRecipe=await page.locator('[data-late-legend="潇湘夜雨.一剑落九雁-百变千幻云雾十三式"]').innerText();
+  assert.match(talentRecipe,/琴胆剑心（天赋；不检查等级）/);assert.doesNotMatch(talentRecipe,/琴胆剑心\s*≥\s*10级/);
   assert.match(await page.locator('[data-late-content]').innerText(),/107[\s\S]*缺省为0/);
   await page.locator('[data-late-search]').fill('万劫闪电貂');assert.equal(await page.locator('[data-late-legend]').filter({visible:true}).count(),1);
   await page.locator('[data-late-search]').fill('不存在的奥义');assert.ok(await page.locator('[data-late-no-match]').isVisible());pass('137 independent legend records remain searchable, including both known trigger issues and107 numeric differences');

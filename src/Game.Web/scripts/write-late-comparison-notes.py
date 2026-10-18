@@ -44,7 +44,7 @@ for row in d['legendPowerDifferences']:lines.append(f"| {row['occurrence']} | {r
 lines+=['','### 全部137条起手、等级与条件','',
 '| 序号 | 奥义／起手 | 起手等级 | 基础概率 | 附加条件 |','| ---: | --- | ---: | ---: | --- |']
 for i,l in enumerate(d['legends'],1):
- conditions='；'.join(c['targetId']+(('≥'+str(c['level'])+'级') if c.get('level') else '') for c in l['conditions']) or '无附加条件'
+ conditions='；'.join(c['targetId']+('（天赋，不检查等级）' if c['type']=='talent' else ('≥'+str(c['level'])+'级') if c.get('level') else '') for c in l['conditions']) or '无附加条件'
  lines.append(f"| {i} | {cell(l['name'])}／{cell(l['startSkill'])} | {l['requiredLevel']} | {l['probability']*100:g}% | {cell(conditions)} |")
 lines+=['','## 多周目实际改变什么','',
 '多周目主要复用同一套江湖，重新生成人物和队伍、继承仓库及玩家档案、改变开局随机奖励与成长边界，另有少量周目条件事件。不是每周目一套新世界。','',
