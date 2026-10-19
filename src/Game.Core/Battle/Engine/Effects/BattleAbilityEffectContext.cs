@@ -29,13 +29,13 @@ internal sealed class BattleAbilityEffectContext(
         engine.TryRelocateByEffect(state, target, destination);
 
     public bool ApplyBuff(BattleUnit target, string buffId, int level, int duration) =>
-        engine.ApplyBuffByEffect(state, Source, target, buffId, level, duration);
+        Source.IsAlive && target.IsAlive && engine.ApplyBuffByEffect(state, Source, target, buffId, level, duration);
 
     public int ApplyHpRecovery(BattleUnit target, int amount) =>
-        engine.ApplyDirectHpRecovery(state, Source, target, amount);
+        Source.IsAlive && target.IsAlive ? engine.ApplyDirectHpRecovery(state, Source, target, amount) : 0;
 
     public int ApplyDirectDamage(BattleUnit target, int amount, string? detail = null) =>
-        Skill is SpecialSkillInstance { Definition.UseAttackPipeline: true } special
+        !Source.IsAlive || !target.IsAlive ? 0 : Skill is SpecialSkillInstance { Definition.UseAttackPipeline: true } special
             ? engine.ApplyAbilityAttackDamage(state, Source, target, amount, special)
             : engine.ApplyDirectDamage(state, Source, target, amount, detail: detail);
 

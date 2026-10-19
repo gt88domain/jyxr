@@ -4902,6 +4902,80 @@ public sealed class BattleEngineTests
             message is BattleFact { Kind: BattleFactKind.Moved, UnitId: "target", Detail: "4,1" });
     }
 
+    [Theory]
+    [InlineData(false, false)]
+    [InlineData(false, true)]
+    [InlineData(true, false)]
+    [InlineData(true, true)]
+    public void CastSkill_AreaAttackStopsAfterReflectedDefeatButContinuesAfterProtection(bool specialAttack, bool protectedSource)
+    {
+        using var parameters = JsonDocument.Parse("""{"familyTalentId":"family","chance":1,"familyChance":1,"damageFactor":1,"floatText":"reflect","speech":"reflect"}""");
+        var reflection = new CustomBattleEffectDefinition("shifting_stars_reflection", parameters.RootElement.Clone());
+        var reflector = CreateDamageContextTalent("reflector", new HookAffix
+        {
+            Timing = HookTiming.BeforeDamageApplied, Effects = [reflection],
+        });
+        reflection.Resolve(TestContentFactory.CreateRepository(talents: [reflector]));
+        var protection = CreateDefeatPreventionTalent("survival", "survive_at_one_hp", 100,
+            """{"abilityId":"survival","chance":1}""");
+        var external = TestContentFactory.CreateExternalSkill("area", powerBase: 100, castSize: 3,
+            impactType: SkillImpactType.Square, impactSize: 3);
+        var special = CreateCustomSpecialSkill("area_special", "firearm_damage") with
+        {
+            Intent = SpecialSkillIntent.Offensive, UseAttackPipeline = true,
+            Targeting = new SkillTargetingDefinition(CastSize: 3, ImpactType: SkillImpactType.Square, ImpactSize: 3),
+        };
+        var source = CreateUnit("source", 1, new GridPosition(0, 0), maxHp: 1,
+            talents: protectedSource ? [protection] : [],
+            externalSkills: specialAttack ? [] : [new InitialExternalSkillEntryDefinition(external, 1)],
+            specialSkills: specialAttack ? [special] : []);
+        var first = CreateUnit("first", 2, new GridPosition(1, 0), maxHp: 10000, talents: [reflector]);
+        var later = CreateUnit("later", 2, new GridPosition(2, 0), maxHp: 10000);
+        var state = new BattleState(new BattleGrid(4, 3), [source, first, later]);
+        var engine = new BattleEngine(random: new FixedRandomService(0d));
+        source.ActionGauge = 100; Assert.True(engine.BeginAction(state, source.Id).Success);
+        SkillInstance skill = specialAttack ? source.Character.GetSpecialSkills().Single() : source.Character.GetExternalSkills().Single();
+
+        var result = engine.CastSkill(state, source.Id, skill, first.Position);
+
+        Assert.True(result.Success);
+        Assert.Equal(protectedSource, source.IsAlive);
+        Assert.Equal(10000, first.Hp);
+        if (protectedSource) Assert.True(later.Hp < later.MaxHp);
+        else
+        {
+            Assert.Equal(later.MaxHp, later.Hp);
+            Assert.DoesNotContain(result.Messages, m => m is BattleFact {Kind: BattleFactKind.Damaged, UnitId: "later"});
+            Assert.Single(result.Messages.OfType<BattleFact>().Where(m => m.Kind == BattleFactKind.UnitDefeated && m.UnitId == source.Id));
+        }
+    }
+
+    [Theory]
+    [InlineData(false)]
+    [InlineData(true)]
+    public void CastSkill_LethalHitDoesNotApplyDebuffToDefeatedTarget(bool talentEffect)
+    {
+        var poison = new BuffDefinition {Id = "test-poison", Name = "test-poison", IsDebuff = true};
+        var skill = TestContentFactory.CreateExternalSkill("lethal", powerBase: 100, castSize: 2,
+            buffs: talentEffect ? [] : [new SkillBuffDefinition(poison, 1, 3, 100)]);
+        var control = new ApplyBuffBattleEffectDefinition(new TargetBattleUnitSelectorDefinition(), poison.Id, 1, 3);
+        control.Resolve(TestContentFactory.CreateRepository(buffs: [poison]));
+        var talent = CreateDamageContextTalent("on-hit-poison", new HookAffix {Timing = HookTiming.OnHitConfirmed, Effects = [control]});
+        var source = CreateUnit("source", 1, new GridPosition(0, 0),
+            talents: talentEffect ? [talent] : [],
+            externalSkills: [new InitialExternalSkillEntryDefinition(skill, 1)]);
+        var target = CreateUnit("target", 2, new GridPosition(1, 0), maxHp: 1);
+        var state = new BattleState(new BattleGrid(3, 2), [source, target]);
+        var engine = new BattleEngine(random: new FixedRandomService(0d));source.ActionGauge = 100;
+        Assert.True(engine.BeginAction(state, source.Id).Success);
+
+        var result = engine.CastSkill(state, source.Id, source.Character.GetExternalSkills().Single(), target.Position);
+
+        Assert.True(result.Success);Assert.False(target.IsAlive);
+        Assert.False(target.HasBuff(poison.Id));
+        Assert.DoesNotContain(result.Messages, m => m is BattleFact {Kind: BattleFactKind.BuffApplied, UnitId: "target"});
+    }
+
     private static SpecialSkillDefinition CreateCustomSpecialSkill(string id, string effectId)
     {
         using var parameters = JsonDocument.Parse("{}");

@@ -86,6 +86,8 @@ Effect handler 通过窄接口申请能力：
 
 ## 5. Effect 链与保护
 
+现代行动链以每次命中为边界：完成受击反应、保命与死亡通知后，再判断施法者能否继续下一目标、连击或技能步骤。真正死亡的施法者不再触发新的命中/造成伤害后收益；保命成功则按存活状态继续。已死亡目标不重复受伤或附加负面技能Buff，击杀后的正面Buff仍以存活施法者为目标。技能HP代价与来袭伤害保持分离，已经发起的自伤特技仍支付自己的既定代价。这是明确的现代结算边界，不声称复现旧版延迟移除死亡单位的时点。
+
 `modify_damage_context.unitLevelStep`默认1；按整数等级/step计算DeltaPerUnitLevel，step必须大于0。
 `single_precision_lifesteal`在OnDamageDealt以内容配置的武功、天赋和等级贡献累加float，使用
 IncomingDamageAmount而非ActualDamageAmount；处理该次吸血后将默认LifestealRate清零。

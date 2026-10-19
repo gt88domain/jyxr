@@ -59,6 +59,8 @@ internal sealed class BattleDamageResolver(BattleEngine engine)
         ArgumentNullException.ThrowIfNull(target);
         ArgumentOutOfRangeException.ThrowIfNegative(amount);
 
+        if (!target.IsAlive) return new BattleDamageApplicationResult(target, 0, true);
+
         var applicationContext = new BattleDamageApplicationContext(
             source,
             target,
@@ -156,21 +158,24 @@ internal sealed class BattleDamageResolver(BattleEngine engine)
                 }
             }
 
-            var lifestealRate = Math.Max(
-                0d,
-                takenContext.Source.GetStat(StatType.Lifesteal) + lifestealRateBonus);
-            var dealt = engine.TriggerHooks(state, HookTiming.OnDamageDealt, takenContext.Source, context =>
+            if (takenContext.Source.IsAlive)
             {
-                context.Source = takenContext.Source;
-                context.Target = takenContext.Target;
-                context.Skill = takenContext.Skill;
-                context.DamageAmount = takenContext.ActualAmount;
-                context.IsCritical = takenContext.IsCritical;
-                context.LifestealRate = lifestealRate;
-                context.IncomingDamageAmount = takenContext.IncomingAmount;
-            });
+                var lifestealRate = Math.Max(
+                    0d,
+                    takenContext.Source.GetStat(StatType.Lifesteal) + lifestealRateBonus);
+                var dealt = engine.TriggerHooks(state, HookTiming.OnDamageDealt, takenContext.Source, context =>
+                {
+                    context.Source = takenContext.Source;
+                    context.Target = takenContext.Target;
+                    context.Skill = takenContext.Skill;
+                    context.DamageAmount = takenContext.ActualAmount;
+                    context.IsCritical = takenContext.IsCritical;
+                    context.LifestealRate = lifestealRate;
+                    context.IncomingDamageAmount = takenContext.IncomingAmount;
+                });
 
-            ApplyLifesteal(state, takenContext, dealt.LifestealRate ?? lifestealRate);
+                ApplyLifesteal(state, takenContext, dealt.LifestealRate ?? lifestealRate);
+            }
         }
 
         return new BattleDamageApplicationResult(

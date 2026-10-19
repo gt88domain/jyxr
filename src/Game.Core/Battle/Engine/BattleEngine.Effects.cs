@@ -22,6 +22,7 @@ public sealed partial class BattleEngine
     internal int ApplyAbilityAttackDamage(BattleState state, BattleUnit source, BattleUnit target, int amount, SpecialSkillInstance skill)
     {
         ArgumentOutOfRangeException.ThrowIfNegative(amount);
+        if (!source.IsAlive || !target.IsAlive) return 0;
         var hitCheck = ResolveSkillHit(state, source, target, skill);
         if (hitCheck.IsCancelled)
         {
@@ -37,7 +38,7 @@ public sealed partial class BattleEngine
             }).DamageAmount ?? amount);
         }
         var application = _damageResolver.Apply(state, source, target, amount, skill);
-        if (!application.SuppressHitEffects)
+        if (source.IsAlive && !application.SuppressHitEffects)
         {
             TriggerHooks(state, HookTiming.OnHitConfirmed, source, c =>
             {
@@ -56,8 +57,12 @@ public sealed partial class BattleEngine
     {
         foreach (var target in targets)
         {
+            // Each hit finishes its reactions and defeat protection before the
+            // next target. A defeated caster cannot start another hit.
+            if (!source.IsAlive) break;
+            if (!target.IsAlive) continue;
             var hit = ApplySkillDamage(state, source, target, skill);
-            if (hit.IsHitConfirmed)
+            if (source.IsAlive && hit.IsHitConfirmed)
             {
                 TriggerHooks(state, HookTiming.OnHitConfirmed, source, context =>
                 {
@@ -69,7 +74,7 @@ public sealed partial class BattleEngine
                 });
             }
 
-            if (!hit.SuppressHitEffects)
+            if (source.IsAlive && !hit.SuppressHitEffects)
             {
                 ApplySkillBuffs(state, source, hit.Target, skill.Buffs);
             }
@@ -212,13 +217,14 @@ public sealed partial class BattleEngine
     {
         foreach (var buff in buffs)
         {
+            var buffTarget = buff.Buff.IsDebuff ? target : source;
+            if (!source.IsAlive || !buffTarget.IsAlive) continue;
             var chance = BattleSkillBuffChanceResolver.Resolve(buff, source, target);
             if (!Probability.RollChance(_random, chance))
             {
                 continue;
             }
 
-            var buffTarget = buff.Buff.IsDebuff ? target : source;
             _battleBuffResolver.Apply(state, source, buffTarget, buff.Buff, buff.Level, buff.Duration);
         }
     }
@@ -232,7 +238,7 @@ public sealed partial class BattleEngine
         ArgumentNullException.ThrowIfNull(target);
         ArgumentNullException.ThrowIfNull(effect);
 
-        if (context.DamageAmount is not > 0 || !target.IsAlive)
+        if (context.DamageAmount is not > 0 || !target.IsAlive || !(context.Source ?? context.Unit).IsAlive)
         {
             return;
         }
@@ -272,7 +278,7 @@ public sealed partial class BattleEngine
 
         foreach (var factor in effect.DamageFactors.Take(maximumStrikes))
         {
-            if (!target.IsAlive)
+            if (!target.IsAlive || !(context.Source ?? context.Unit).IsAlive)
             {
                 return;
             }

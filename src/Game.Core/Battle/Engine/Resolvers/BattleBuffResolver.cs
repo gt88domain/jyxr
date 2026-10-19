@@ -23,6 +23,8 @@ internal sealed class BattleBuffResolver(
         int duration,
         HookTiming? timing = null)
     {
+        if (!target.IsAlive) return false;
+
         if (definition.Id == BattleContentIds.Blind && target.HasTrait(TraitId.MindEye))
         {
             return false;

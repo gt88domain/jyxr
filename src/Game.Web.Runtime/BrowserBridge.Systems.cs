@@ -106,6 +106,8 @@ internal sealed partial class BrowserRuntimeSession
         var itemBattleReason = _battle is not null ? targets?.Any(t => t.canUse) == true ? null : BattleSelfItemUnavailableReason(entry.Definition) : null;
         var battleConsumable = _battle is not null && itemBattleReason is null;
         var reason = _battle is not null ? itemBattleReason ?? "" : !CanManage ? "对话中暂不可调整。" : analysis.CanUse ? "" : analysis.Reason;
+        if (_battle is null && CanManage && !_session.State.Party.ContainsMember(Managed.Id))
+            reason = "此人物当前不在参战队伍；请先到队伍编排查看后备或剧情安排。";
         if (book is not null && !ManualAvailable(entry, Managed)) reason = "秘籍正由其他队友修炼。";
         return new
         {

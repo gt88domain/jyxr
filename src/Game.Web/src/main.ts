@@ -32,6 +32,7 @@ import {moreMenuView} from './navigation';
 import './modern-ui.css';
 import type {GameCommand} from './command-contract';
 import {mountLateReference} from './late-reference';
+import {mountRuleCoverage} from './rule-coverage';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 let state: GameState, slot: SaveSlot | undefined, busy = false, board: Board | undefined;
@@ -122,6 +123,7 @@ function changeInterface(style:string|undefined) {
   settings.interfaceStyle=style;
   if(!writeSettings(settings))toast('界面已切换，但此浏览器暂不能保存设置。');
   reflectInterfaceChoice();
+  refreshPanel();
 }
 function scheduleBattle() {
   clearTimeout(enemyTimer);
@@ -230,6 +232,7 @@ function modal(titleText: string, content: string, wide = false) {
   if (screen === 'battle') updateBattle();
 }
 async function showRestorationProgress() {
+  activePanel=null;
   modal('开发记录与原版对照', '<div data-restoration-report aria-live="polite">正在读取开发记录…</div>', true);
   const target = document.querySelector<HTMLElement>('[data-restoration-report]')!;
   try {
@@ -240,6 +243,7 @@ async function showRestorationProgress() {
   }
 }
 async function showLateReference(){
+  activePanel=null;
   modal('X1.1.0.6 · 旧版界面与规则对照','<div data-late-reference aria-live="polite">正在读取后期场景与规则资料…</div>',true);
   document.querySelector('#game-modal')?.classList.add('late-reference-modal');
   const root=document.querySelector<HTMLElement>('[data-late-reference]')!;
@@ -259,19 +263,21 @@ async function showEquipmentPreview(entryNumber: number) {
     target.innerHTML = equipmentPreviewView(preview);
   } catch (error) {if (target.isConnected) target.textContent = error instanceof Error ? error.message : '装备对比暂不可用。';}
 }
-async function showCompanions() {
+async function showCompanions(here = false) {
   if(state.pack.id!=='jyx')return;
+  activePanel=null;
   modal('伙伴图鉴 · 加入条件', '<div data-companion-catalog aria-live="polite">正在整理伙伴线索…</div>', true);
   const target=document.querySelector<HTMLElement>('[data-companion-catalog]')!;
   try {
     const [data,conditions]=await Promise.all([loadCompanionCatalog(),inspectCompanionConditions()]);
-    if(target.isConnected&&modalOpen())mountCompanionCatalog(target,data,{...state,companionJournal:{completedRecruitmentStories:state.companionJournal?.completedRecruitmentStories||[],conditions}});
+    if(target.isConnected&&modalOpen())mountCompanionCatalog(target,data,{...state,companionJournal:{completedRecruitmentStories:state.companionJournal?.completedRecruitmentStories||[],conditions}},here);
   } catch(error) {
     if(target.isConnected&&modalOpen())target.textContent=error instanceof Error?error.message:'伙伴图鉴暂时无法读取。';
   }
 }
 async function showOriginalLibrary(initial?: {category?: string; id?: string}) {
   if(state.pack.id!=='jyx')return;
+  activePanel=null;
   modal('原版资料馆', '<div data-original-library aria-live="polite">正在整理原版资料…</div>', true);
   const target=document.querySelector<HTMLElement>('[data-original-library]')!;
   try {
@@ -329,6 +335,12 @@ function openPanel(name: PanelName) {
   if (name === 'inventory') {inventoryFilter = 'all'; inventoryQuery = ''; inventorySort = 'original';}
   const content = panelContent(name, state, settings, busy, inventoryFilter, {query: inventoryQuery, sort: inventorySort});
   modal(content.title, content.content, true);
+  syncSheetAppearance();
+}
+function syncSheetAppearance() {
+  const node=document.querySelector('#game-modal[open]');
+  node?.classList.toggle('classic-sheet-modal',!!node.querySelector('[data-classic-sheet]'));
+  if(node instanceof HTMLElement)void mountRuleCoverage(node,state.pack.id);
 }
 function refreshPanel() {
   const node = document.querySelector<HTMLDialogElement>('#game-modal[open]');
@@ -336,6 +348,7 @@ function refreshPanel() {
   const scroll = node.scrollTop;
   const content = panelContent(activePanel, state, settings, busy, inventoryFilter, {query: inventoryQuery, sort: inventorySort});
   node.innerHTML = `<button class="icon-button close-modal" data-action="close-modal" aria-label="关闭">${icon('close')}</button><div class="eyebrow">旅途一页</div><h2>${e(content.title)}</h2>${content.content}`;
+  syncSheetAppearance();
   node.scrollTop = scroll;
 }
 function refreshInventoryResults() {
@@ -419,8 +432,9 @@ document.addEventListener('click', event => {
   else if (action === 'more') modal('更多功能',moreMenuView(state),true);
   else if (action === 'history') {activitySeen=Math.max(0,...(state.activity||[]).map(a=>a.id));refreshActivityBadge();modal('通知与操作记录',activityView(state,uiMessages),true);}
   else if (action === 'interface-style') changeInterface(button.dataset.id);
-  else if (action === 'original-interface-reference') {modal('原版界面对照',interfaceReferenceView(),true);reflectInterfaceChoice();}
+  else if (action === 'original-interface-reference') {activePanel=null;modal('原版界面对照',interfaceReferenceView(),true);reflectInterfaceChoice();}
   else if (action === 'late-reference') void showLateReference();
+  else if (action === 'companion-clues') void showCompanions(true);
   else if (action === 'save') void save();
   else if (action === 'load') void load();
   else if (action === 'load-manual') void load(manualSlot);

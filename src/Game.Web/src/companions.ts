@@ -89,13 +89,18 @@ function detail(companion: Companion, data: CompanionCatalog, state: GameState) 
     ${companion.departures.length?`<details class="companion-departures"><summary>原剧情还包含 ${companion.departures.length} 处离队／结束随行记录</summary><ul>${companion.departures.map(d=>`<li>${e(d.label)} · ${d.kind==='LEAVE_FOLLOW'?'结束随行':'离队'}</li>`).join('')}</ul></details>`:''}
     <button class="button outline full-width" data-action="close-modal">关闭伙伴图鉴</button></article>`;
 }
-export function mountCompanionCatalog(root: HTMLElement, data: CompanionCatalog, state: GameState) {
+export function mountCompanionCatalog(root: HTMLElement, data: CompanionCatalog, state: GameState, here = false) {
   root.removeAttribute('aria-live');
   let selected=data.characters[0]?.id||'';
   root.innerHTML=`<p class="panel-intro">收录原基线剧情中 ${new Set(data.characters.map(c=>c.name)).size} 个显示名、${data.counts.characterForms} 个可加入／随行角色形态、${data.counts.instructions} 条指令。普通连续流程已验证${data.counts.normalVerified}名；各伙伴的完整路线仍分别标注。后期另有43个多周目开局奖励候选，上传包还有双儿加入记录，见原版资料馆。</p><button class="button outline" data-action="library">原版资料馆 · 后期伙伴池与完整人物资料</button><a class="button outline" href="${e(assetUrl('data/companion-atlas.md'))}" download="原版伙伴招募路线图册.md">下载伙伴路线图册</a>
     <div class="companion-tools"><label>寻找伙伴<input type="search" data-companion-search placeholder="角色、地点或剧情关键词" autocomplete="off"></label><label>查看范围<select data-companion-filter><option value="all">全部角色形态</option><option value="current">当前队伍与后备</option><option value="absent">当前未在队伍</option><option value="unverified">招募路线待验证</option><option value="follow">有随行阶段</option></select></label></div>
     <p class="companion-result-count" aria-live="polite"></p><div class="companion-browser"><div class="companion-cards" aria-label="伙伴图鉴角色列表"></div><div class="companion-reading"></div></div>`;
   const search=root.querySelector<HTMLInputElement>('[data-companion-search]')!,filter=root.querySelector<HTMLSelectElement>('[data-companion-filter]')!;
+  if(state.phase!=='title') {
+    const option=document.createElement('option');option.value='here';option.textContent='当前地图有入口';filter.append(option);
+    if(here)filter.value='here';
+    const note=document.createElement('p');note.className='panel-notice';note.dataset.companionMapNotice='';note.textContent=`当前地图：${state.map.name}。地图筛选只列出此地的原剧情入口；是否触发仍取决于条件、时限、事件优先级和此前选择。`;root.querySelector('.companion-tools')!.after(note);
+  }
   const cards=root.querySelector<HTMLElement>('.companion-cards')!,reading=root.querySelector<HTMLElement>('.companion-reading')!;
   function render() {
     const query=search.value.trim().toLocaleLowerCase();
@@ -105,6 +110,7 @@ export function mountCompanionCatalog(root: HTMLElement, data: CompanionCatalog,
       if(filter.value==='absent'&&['member','follower','reserve'].includes(st))return false;
       if(filter.value==='unverified'&&c.verification!=='unverified')return false;
       if(filter.value==='follow'&&!c.routes.some(r=>r.kind==='FOLLOW'))return false;
+      if(filter.value==='here'&&!c.routes.some(r=>!r.debug&&r.paths.some(p=>p.entry.map===state.map.id)))return false;
       const terms=[c.id,c.name,...c.routes.flatMap(r=>[r.storyId,...r.paths.flatMap(p=>[p.entry.map,p.entry.location])])].join(' ').toLocaleLowerCase();
       return !query||terms.includes(query);
     }).sort((a,b)=>Number(b.id.toLocaleLowerCase()===query||b.name.toLocaleLowerCase()===query)-Number(a.id.toLocaleLowerCase()===query||a.name.toLocaleLowerCase()===query));

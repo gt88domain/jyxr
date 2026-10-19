@@ -14,6 +14,7 @@ internal sealed class BattleSkillExecutor(
     {
         foreach (var step in plan.Steps)
         {
+            if (!source.IsAlive) break;
             using var stepScope = state.EnterEffect($"skill-step:{plan.Skill.Id}:{step.GetType().Name}");
             switch (step)
             {
@@ -48,6 +49,7 @@ internal sealed class BattleSkillExecutor(
         if (effects is null) return;
         foreach (var effect in effects)
         {
+            if (!source.IsAlive) break;
             using var effectScope = state.EnterEffect($"skill:{effect.GetType().Name}");
             effectExecutor.ExecuteAbility(state, source, targets, effect, skill);
         }

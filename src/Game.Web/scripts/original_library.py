@@ -224,6 +224,9 @@ def write_library(package, source, companions, rule_audit, web, output):
         (folder / (name + ".json")).write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
     reference_target = folder / "references"
     reference_target.mkdir(exist_ok=True)
-    for path in (web / "reference-materials").glob("*.json"):
+    # The late-version viewer publishes its own snapshots. Do not copy its
+    # full runtime XML and scene audit into the unrelated library download.
+    for name in ("manifest.json", "original-upload.json", "silverlight.json", "remake-workbooks.json", "late-template.json", "late-lua.json"):
+        path = web / "reference-materials" / name
         (reference_target / path.name).write_bytes(path.read_bytes())
     return {"categories": len(index["categories"]), "entries": len(index["entries"]), **index["counts"]}
