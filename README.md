@@ -1,67 +1,39 @@
-# jyxr
+# 灰烬边境 · 现代 HTML5 佣兵冒险
 
-基于 .NET 10 与 Godot 4.7.2 C# 的 2D 半即时制战棋 RPG 内核原型。
+当前开发分支是 `modern-western`。基于 TypeScript / Phaser 前端与 .NET 10 WebAssembly 共用规则内核，先完成一个低魔佣兵试验章：营地、旧道、废塔，包含招募、装备、战技研习、交易、两场战斗和一次委托。
 
-项目已接通角色与技能、背包装备、商店、地图与剧情、MOD 启动器、存读档，以及战斗 AI、结算和演出链路。主要功能已完成，后续以功能完善、体验优化和问题修复为主；已知问题与后续计划见 [TODO](TODO.md)。
+原版保留在 [html5-web](https://github.com/gt88domain/jyxr/tree/html5-web)，冻结基线 `e5bcf716591569bfea4747a8b3b6f4c8a91f5e1c`。旧入口不变；新版独立入口为 `https://gt88domain.github.io/jyxr/western/`，浏览器存储也独立。
 
-## 开源协议与资源范围
+## 本地运行
 
-项目本体采用 [GNU GPLv3](LICENSE) 开源，可按协议使用、修改和分发。分发时请遵守 GPL 要求，保留作者 **虹乡俗人** 及其他贡献者的署名、版权和许可声明。
+需要Python3、Node24与.NET10的wasm-tools工作负载，不需要Godot或原版资料子模块。
 
-纹理、音频、字体、游戏数据等外部资产不在本仓库的授权范围内，需自行获取并确认使用与分发权限。第三方内容及子模块遵循各自许可。
-
-## 开发与运行
-
-准备 .NET 10 SDK 和 Godot 4.7.2 的 C#/.NET 版本，使用 Godot 打开 [src/Game.Godot/project.godot](src/Game.Godot/project.godot) 并运行。进入 MOD 启动器后，选择基础 MOD 或 addon 加载组合，再进入游戏主菜单。基础 MOD 需包含有效的 `mod.json` 和 `data` 目录。
-
-普通 .NET 测试：
-
-```powershell
-dotnet test engine-free-rpg.slnx
+```sh
+cd src/Game.Web
+npm ci
+npm run assets:restore
+npm run build
+npm run preview -- --port 4211
 ```
 
-Godot 节点、输入、动画和异步演出需在引擎内另行验证。
+资源恢复只下载4张既有原创PNG并核对固定SHA-256，已有正确文件直接复用。`npm run build`生成独立的`dist`；规则使用Release WebAssembly，不宣称已做AOT或裁剪。
 
-## 导出
+`npm run package`构建并核验独立离线服务包`artifacts/frontier-web.zip`，解压后的启动命令见包内说明。素材和内容仍须通过HTTP服务，不能直接双击HTML。
 
-本体、共享资源包和签名配置见 [导出与发布](docs/exporting.md)。主要支持 Windows 和 Android，项目已提供对应导出配置；其他平台也支持，但尚未配置导出流程。
+## 检查
 
-## 目录
+仓库根运行C#内容与招募检查：
 
-| 位置 | 用途 |
-| --- | --- |
-| `engine-free-rpg.slnx`、`Directory.Build.props` | .NET 解决方案与共享编译设置 |
-| `src/Game.Expressions` | 通用表达式解析与调用绑定 |
-| `src/Game.Core` | 领域定义、运行态、战斗规则、剧情解释器和存档记录 |
-| `src/Game.Content` | JSON 装配、引用解析与仓储校验；`SampleData` 为测试样例 |
-| `src/Game.Application` | 会话、业务用例、MOD 模型、存读档与会话事件 |
-| `src/Game.Presentation` | 不依赖 Godot 的展示流程与交互状态 |
-| `src/Game.Godot` | 独立 Godot 工程，包含宿主 csproj、代码、场景、资源与导出配置 |
-| `tests` | 普通 .NET 测试 |
-| `mods` | game/addon MOD；基础内容在 `mods/jyxr-base/data` |
-| `launcher`、`userdata` | 启动器设置与按主 MOD 隔离的玩家数据 |
-| `src/Game.Godot/{assets,scenes,autoload,addons}` | Godot 资源、场景与插件；运行时节点由 bootstrap 创建 |
-| `jyx-legacy-data`、`jyx-legacy-dll` | 原版与迁移参考，不是当前主运行路径 |
+```sh
+dotnet run --project src/Game.Web.Runtime/Smoke/Smoke.csproj -- --frontier src/Game.Web/public/data/packs/frontier/content-package.json
+```
 
-## MOD 与玩家数据
+保持静态服务运行，在`src/Game.Web`运行完整浏览器小章：
 
-内容从各 MOD 的 loose `data` 与 `patches` 装配，资源覆盖通过 PCK。加载顺序、补丁协议和存档影响声明见 [MOD 数据补丁](docs/mod-data-patching.md)。
+```sh
+GAME_WEB_URL=http://127.0.0.1:4211 npm run test:frontier
+```
 
-项目数据根在编辑器下为仓库根（Godot 工程根的 `../..`），PC 导出后为可执行文件目录，Android 为 `/storage/emulated/0/JYXR`。启动器配置位于 `launcher/settings.json`；存档、全局档案和设置位于 `userdata/<主MOD id>/`。`mods` 与玩家数据独立于 Godot 的 `res://`，迁移宿主目录不会移动玩家存档。
+检查使用隔离浏览器上下文，真正完成战斗和交易，不发测试奖励或强制胜利。需要Chromium；默认读取`/usr/bin/chromium`，其他位置可通过`CHROMIUM_PATH`指定。
 
-`autoload` 中的运行时节点并非项目设置中的 autoload。启动与存储边界见 [运行时架构](docs/runtime-architecture.md)。
-
-## 文档
-
-| 主题 | 文档 |
-| --- | --- |
-| 代理协作约定 | [AGENTS.md](AGENTS.md) |
-| 分层、会话、持久化、地图与全局事件 | [运行时架构](docs/runtime-architecture.md) |
-| 剧情、地图 action、条件与控制台 | [游戏内容 DSL v3](docs/game-dsl-v3.md) |
-| MOD 内容扩展、编辑与迁移 | [内容扩展与数据补丁](docs/mod-data-patching.md)、[原版 MOD 迁移](docs/legacy-mod-migration-guide.md) |
-| 战斗实现与状态效果 | [战斗运行时架构](docs/battle-runtime-architecture.md)、[Buff 指南](docs/buff-effects-guide.md) |
-| 战斗扩展设计 | [Effect 与 Phase Hook](docs/battle-effect-phase-hook-design.md)、[伤害 Timing 设计](docs/battle-damage-timing-design.md) |
-| 角色技能切换 | [技能切换](docs/character-skill-switching.md) |
-| 待办与设计草案 | [TODO](TODO.md)、[战斗后续议题](docs/battle-runtime-refactoring-backlog.md) |
-
-专题文档描述职责、协议和设计取舍；完整类型、字段和命令实现以对应源码及测试为准。
+模块边界、存档隔离与仍待完善部分见[模块架构](docs/MODULAR_GAME.md)。本体沿用[GPLv3](LICENSE)，保留原作者虹乡俗人及贡献者署名。四张生成素材的来源与摘要分别见素材说明和`content/frontier/manifest.json`。

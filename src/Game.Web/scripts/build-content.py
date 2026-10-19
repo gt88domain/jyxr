@@ -329,7 +329,7 @@ def build(output: Path) -> None:
         "stories": [{"source": filename, **xml_node(s)} for filename in ("storys.xml", "storysCG.xml", "storysPY.xml") for s in ET.parse(SOURCE / filename).getroot().findall("story")],
     })
     report["originalMigration"] = original_audit["structurallyMigrated"]
-    frontier_module_spec = importlib.util.spec_from_file_location("build_frontier", Path(__file__).with_name("build-frontier.py"))
+    frontier_module_spec = importlib.util.spec_from_file_location("build_frontier", WEB / "content/frontier/chapter.py")
     frontier_module = importlib.util.module_from_spec(frontier_module_spec)
     frontier_module_spec.loader.exec_module(frontier_module)
     frontier_package = frontier_module.build_frontier()

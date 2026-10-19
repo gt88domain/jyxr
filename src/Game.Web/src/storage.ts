@@ -1,3 +1,4 @@
+import {appConfig} from './app-config';
 export interface SaveSlot { version: 1; packId?: string; savedAt: string; name: string; level: number; map: string; data: string; }
 
 export async function readProfile(packId: string): Promise<string | undefined> {
@@ -24,7 +25,7 @@ export async function writeProfile(packId: string, data: string): Promise<void> 
 }
 function open(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
-    const request = indexedDB.open('jyxr-web', 1);
+    const request = indexedDB.open(appConfig.database, 1);
     request.onupgradeneeded = () => request.result.createObjectStore('saves');
     request.onsuccess = () => resolve(request.result);
     request.onerror = () => reject(request.error);

@@ -1,6 +1,8 @@
 # 项目协作约定
 
-这是基于 .NET 10 与 Godot 4.7.2 C# 的 2D 半即时制战棋 RPG。仓库根是 .NET 解决方案根；Godot 工程与宿主程序集位于 `src/Game.Godot`，其他类库与它平级。
+本分支 `modern-western` 以浏览器原生前端和 .NET 10 WebAssembly 共用规则内核开发西方佣兵冒险。开发入口是 `src/Game.Web`，内容模块在 `src/Game.Web/content/frontier`，架构与命令见根README及 `docs/MODULAR_GAME.md`。Godot宿主与旧内容保留历史参考，不是本分支默认构建目标。
+
+原版 `html5-web` 的 `e5bcf716591569bfea4747a8b3b6f4c8a91f5e1c` 已冻结作备份。新工作只提交本分支；部署只更新 `gh-pages` 的 `western/` 子目录，保留旧版根目录与所有原文件。不要把旧版数值、原素材或资料馆重新放入西方发布包。
 
 ## 工作方式
 

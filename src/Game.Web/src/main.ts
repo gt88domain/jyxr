@@ -1,3 +1,5 @@
+import {e,plain,icon} from './ui/format';
+import {topbar,heroCard,dialogueOverlay} from './ui/shell';
 import './style.css';
 import {loadRuntime, initializePack, dispatch, exportSave, importSave} from './bridge';
 import type {GameState, Result} from './bridge';
@@ -17,22 +19,14 @@ import type {PanelName, InventoryFilter} from './panels';
 import {readSettings, writeSettings, applySettings} from './settings';
 import type {Settings} from './settings';
 import {GameAudio} from './audio';
-import {restorationProgressView} from './restoration-progress';
-import {loadCompanionCatalog, mountCompanionCatalog} from './companions';
-import {inspectCompanionConditions} from './bridge';
 import {inspectEquipment} from './bridge';
 import {equipmentPreviewView} from './equipment-preview';
 import type {InventorySort} from './panels';
-import {loadOriginalLibrary, mountOriginalLibrary} from './library';
-import {interfaceReferenceView,originalMenuArt,originalInterfaceAsset} from './interface-reference';
-import './interface.css';
 import {activityView,filterActivity} from './activity';
 import type {UiMessage} from './activity';
 import {moreMenuView} from './navigation';
 import './modern-ui.css';
 import type {GameCommand} from './command-contract';
-import {mountLateReference} from './late-reference';
-import {mountRuleCoverage} from './rule-coverage';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 let state: GameState, slot: SaveSlot | undefined, busy = false, board: Board | undefined;
@@ -53,58 +47,19 @@ let battleActionContext: {state: GameState; command: GameCommand} | undefined;
 let battleSkillsContext: GameState | undefined;
 const uiMessages:UiMessage[]=[];
 let activitySeen=0;
-const e = (value: unknown) => String(value ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]!));
-const plain = (text: string) => text.replace(/\[\[[a-z]+:([^\]]*)\]\]/gi, '$1').replace(/<\/?color[^>]*>/g, '');
-const icon = (name: string) => {
-  const paths: Record<string, string> = {
-    bell:'<path d="M5 17h14l-2-3V9a5 5 0 0 0-10 0v5zM10 21h4"/>',
-    save: '<path d="M5 3h12l4 4v14H3V3zM7 3v6h10V3M7 21v-9h10v9"/>',
-    bag: '<path d="M8 3h8l-2 5c5 3 7 6 6 10-1 4-15 4-16 0-1-4 1-7 6-10zM9 8h6"/>',
-    person: '<circle cx="12" cy="7" r="4"/><path d="M4 22v-3a8 8 0 0 1 16 0v3"/>',
-    arrow: '<path d="m9 5 7 7-7 7M3 12h13"/>',
-    moon: '<path d="M20 14A8 8 0 0 1 10 4a9 9 0 1 0 10 10z"/>',
-    sword: '<path d="m5 20 4-4m-3-3 5 5M9 15 19 3l2 1-1 4-9 9"/>',
-    leaf: '<path d="M21 3C8 2 1 9 5 17c7 6 16-3 16-14ZM4 21 16 9"/>',
-    download: '<path d="M12 3v12m-5-5 5 5 5-5M4 15v6h16v-6"/>',
-    upload: '<path d="M12 16V4m-5 5 5-5 5 5M4 16v5h16v-5"/>',
-    close: '<path d="m6 6 12 12M6 18 18 6"/>',
-    help: '<circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-1 .4-1 1-1 2M12 17h.01"/>',
-    settings: '<path d="m9 3-1 3-3 1 1 3-2 2 2 2-1 3 3 1 1 3h6l1-3 3-1-1-3 2-2-2-2 1-3-3-1-1-3z"/><circle cx="12" cy="12" r="3"/>',
-  };
-  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] ?? paths.leaf}</svg>`;
-};
 function toast(message: string,record=true) {
   if(record){uiMessages.push({message,time:new Date().toISOString()});if(uiMessages.length>50)uiMessages.shift();}
   const node = document.querySelector<HTMLDivElement>('#toast')!;
   node.textContent = message; node.classList.add('visible');
   setTimeout(() => node.classList.remove('visible'), 3600);
 }
-function topbar(inGame = true) {
-  const pack = state.pack;
-  const menus = [['character', 'person', '人物'], ['equipment', 'sword', '装备'], ['cultivation', 'leaf', pack.terms?.cultivation || '修炼'], ['inventory', 'bag', '行囊'], ['party', 'person', '队伍'], ['quests', 'leaf', '目标'], ['settings', 'settings', '设置']];
-  if(pack.id==='jyx')menus.splice(5,0,['library','person','资料']);
-  const menu=menus.map(([action,symbol,label])=>`<button data-action="${action}" ${['quests','settings','library'].includes(action)?'data-modern-secondary':''}>${originalMenuArt[action]?`<img class="classic-menu-art" src="${e(originalInterfaceAsset(originalMenuArt[action]))}" alt="" width="48" height="64" loading="lazy">`:''}${icon(symbol)}<span>${e(label)}</span></button>`).join('');
-  return `<header class="topbar"><button class="wordmark" data-action="guide" aria-label="游玩指南"><span class="seal small">${e(pack.title.slice(0,1))}</span><span>${e(pack.title)}<small>${e(pack.subtitle)}</small></span></button><nav aria-label="游戏菜单">${inGame?`<span class="chapter">${e(state.map?.name)}</span><button class="save-button" data-action="save" ${state.phase!=='world'?'disabled':''}>${icon('save')}<span>保存</span></button>`:''}<button class="icon-button modern-only notification-button" data-action="history" aria-label="通知与操作记录">${icon('bell')}<span data-notice-count hidden></span></button>${!inGame?'<button class="icon-button modern-only" data-action="more" aria-label="更多功能">⋯</button>':''}<button class="icon-button legacy-header-option" data-action="worlds" aria-label="切换世界">${icon('leaf')}</button><button class="icon-button legacy-header-option" data-action="settings" aria-label="设置">${icon('settings')}</button><button class="icon-button legacy-header-option" data-action="guide" aria-label="帮助">${icon('help')}</button></nav></header>${inGame?`<nav class="system-nav" aria-label="角色与世界设置">${menu}<button class="modern-only more-button" data-action="more"><b aria-hidden="true">⋯</b><span>更多</span></button></nav>`:''}`;
-}
-function title() {
-  const progress = state.pack.id === 'jyx' ? `<div class="restoration-callout"><button class="restoration-entry" data-action="library">原版资料馆 · 全量资料与版本对照<small>人物、武学、道具、初始配置、剧情和关联引用 →</small></button><button class="restoration-entry" data-action="companions">伙伴图鉴 · 剧情加入条件<small>剧情基线65个形态；后期另有43个开局候选，见资料馆 →</small></button><button class="restoration-entry" data-action="progress">现代化重制 · 开发记录<small>功能验收、原版对照与已知问题 →</small></button></div>` : '';
-  return topbar(false) + progress + titleView(state, slot, packs, manualSlot);
-}
-function heroCard() {
-  const hero = state.hero;
-  return `<aside class="hero-card paper"><div class="eyebrow">旅途行者</div><div class="hero-heading"><div class="avatar">${hero.portrait ? `<img src="${e(assetUrl(hero.portrait))}" alt="">` : e(hero.name.slice(0, 1))}</div><div><h2>${e(hero.name)}</h2><span>旅程初始 · 第 ${hero.level} 级</span></div></div><div class="vital"><label>气血 <span>${hero.hp} <small>/ ${hero.maxHp}</small></span></label><div class="bar hp"><i style="width:${100 * hero.hp / hero.maxHp}%"></i></div></div><div class="vital"><label>${e(state.pack.terms?.energy || '内力')} <span>${hero.mp} <small>/ ${hero.maxMp}</small></span></label><div class="bar mp"><i style="width:${100 * hero.mp / hero.maxMp}%"></i></div></div><div class="hero-meta"><span>随身${e(state.pack.currencyName || '钱币')}</span><strong>${state.silver.toLocaleString()} <small>${e(currency(state))}</small></strong></div><button class="text-button" data-action="manage-character" data-id="${e(hero.id)}">查看人物 ${icon('arrow')}</button></aside>`;
-}
-function world() {return topbar() + worldView(state, heroCard()) + dialogueOverlay() + shopView(state) + sectView(state) + interactionView(state) + (state.phase === 'minigame' && state.miniGame ? miniGameView(state.miniGame) : '');}
-function dialogueOverlay() {
-  if (state.phase !== 'dialogue' && state.phase !== 'choice') return '';
-  const choice = state.phase === 'choice';
-  return `<div class="dialogue-scrim"><section class="dialogue-panel paper" aria-label="剧情对话" aria-live="polite">${state.dialogue?.portrait ? `<img class="dialogue-portrait" src="${e(assetUrl(state.dialogue.portrait))}" alt="">` : '<span class="dialogue-decoration">叙</span>'}<div class="dialogue-content"><span class="eyebrow">此间故事</span><h2>${e(state.dialogue?.speaker || '江湖')}</h2><p data-testid="dialogue-text">${e(plain(state.dialogue?.text || ''))}</p>${choice ? `<div class="story-choices">${(state.choices ?? []).map((item, index) => `<button class="button outline" data-action="choice" data-index="${typeof item === 'string' ? index : item.index ?? index}"><span>${String(index + 1).padStart(2, '0')}</span>${e(typeof item === 'string' ? item : item.text ?? item.label ?? item.id)}${icon('arrow')}</button>`).join('')}</div>` : '<button class="text-button dialogue-next" data-action="next">继续 ' + icon('arrow') + '</button>'}</div></section></div>`;
-}
+function title() {return topbar(state,false)+titleView(state,slot,packs,manualSlot);}
+function world() {return topbar(state) + worldView(state, heroCard(state)) + dialogueOverlay(state) + shopView(state) + sectView(state) + interactionView(state) + (state.phase === 'minigame' && state.miniGame ? miniGameView(state.miniGame) : '');}
 function ended() {
   const value = state.battle?.outcome;
   return !!value && !['none', 'ongoing', 'inprogress', 'unknown', 'notended'].includes(String(value).toLowerCase());
 }
-function battleShell() {return topbar() + battleMarkup(state);}
+function battleShell() {return topbar(state) + battleMarkup(state);}
 function updateBattle() {
   selectedSkill = updateBattleView({
     state, busy: busy || modalOpen(), selectedSkill, autoBattle, paused: battlePaused || modalOpen(), intent: battleIntent,
@@ -113,18 +68,6 @@ function updateBattle() {
   }, board);
 }
 function modalOpen() {return !!document.querySelector('#game-modal[open]');}
-function reflectInterfaceChoice() {
-  document.querySelectorAll<HTMLElement>('[data-interface-label]').forEach(node=>node.textContent=settings.interfaceStyle==='classic'?'原版风格（参考复原）':'现代界面');
-  document.querySelectorAll<HTMLButtonElement>('[data-action="interface-style"]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.id===settings.interfaceStyle)));
-  document.querySelectorAll<HTMLSelectElement>('[name="interfaceStyle"]').forEach(control=>control.value=settings.interfaceStyle);
-}
-function changeInterface(style:string|undefined) {
-  if(style!=='modern'&&style!=='classic')return;
-  settings.interfaceStyle=style;
-  if(!writeSettings(settings))toast('界面已切换，但此浏览器暂不能保存设置。');
-  reflectInterfaceChoice();
-  refreshPanel();
-}
 function scheduleBattle() {
   clearTimeout(enemyTimer);
   if (busy || battlePaused || modalOpen() || state.phase !== 'battle' || !state.battle || ended()) return;
@@ -231,24 +174,6 @@ function modal(titleText: string, content: string, wide = false) {
   node.addEventListener('click', event => {if (event.target === node) node.close();});
   if (screen === 'battle') updateBattle();
 }
-async function showRestorationProgress() {
-  activePanel=null;
-  modal('开发记录与原版对照', '<div data-restoration-report aria-live="polite">正在读取开发记录…</div>', true);
-  const target = document.querySelector<HTMLElement>('[data-restoration-report]')!;
-  try {
-    const content = await restorationProgressView();
-    if (target.isConnected && modalOpen()) target.innerHTML = content;
-  } catch (error) {
-    if (target.isConnected && modalOpen()) target.textContent = error instanceof Error ? error.message : '进度记录暂时无法读取。';
-  }
-}
-async function showLateReference(){
-  activePanel=null;
-  modal('X1.1.0.6 · 旧版界面与规则对照','<div data-late-reference aria-live="polite">正在读取后期场景与规则资料…</div>',true);
-  document.querySelector('#game-modal')?.classList.add('late-reference-modal');
-  const root=document.querySelector<HTMLElement>('[data-late-reference]')!;
-  try{await mountLateReference(root);}catch(error){if(root.isConnected)root.textContent=error instanceof Error?error.message:'对照资料暂不可用。';}
-}
 async function showEquipmentPreview(entryNumber: number) {
   const inspected = state;
   const characterId = (state.managedCharacter || state.hero).id;
@@ -260,32 +185,8 @@ async function showEquipmentPreview(entryNumber: number) {
     if (!target.isConnected || !modalOpen()) return;
     if (state !== inspected) {target.textContent = '人物状态已变化，请重新打开装备对比。';return;}
     equipmentPreviewContext = {state: inspected, entryNumber};
-    target.innerHTML = equipmentPreviewView(preview);
+    target.innerHTML = equipmentPreviewView(preview,state.pack.statLabels);
   } catch (error) {if (target.isConnected) target.textContent = error instanceof Error ? error.message : '装备对比暂不可用。';}
-}
-async function showCompanions(here = false) {
-  if(state.pack.id!=='jyx')return;
-  activePanel=null;
-  modal('伙伴图鉴 · 加入条件', '<div data-companion-catalog aria-live="polite">正在整理伙伴线索…</div>', true);
-  const target=document.querySelector<HTMLElement>('[data-companion-catalog]')!;
-  try {
-    const [data,conditions]=await Promise.all([loadCompanionCatalog(),inspectCompanionConditions()]);
-    if(target.isConnected&&modalOpen())mountCompanionCatalog(target,data,{...state,companionJournal:{completedRecruitmentStories:state.companionJournal?.completedRecruitmentStories||[],conditions}},here);
-  } catch(error) {
-    if(target.isConnected&&modalOpen())target.textContent=error instanceof Error?error.message:'伙伴图鉴暂时无法读取。';
-  }
-}
-async function showOriginalLibrary(initial?: {category?: string; id?: string}) {
-  if(state.pack.id!=='jyx')return;
-  activePanel=null;
-  modal('原版资料馆', '<div data-original-library aria-live="polite">正在整理原版资料…</div>', true);
-  const target=document.querySelector<HTMLElement>('[data-original-library]')!;
-  try {
-    const data=await loadOriginalLibrary();
-    if(target.isConnected&&modalOpen())mountOriginalLibrary(target,data,initial);
-  } catch(error) {
-    if(target.isConnected&&modalOpen())target.textContent=error instanceof Error?error.message:'资料暂时无法读取。';
-  }
 }
 function createCharacter() {
   modal('为旅人命名', `<p class="modal-intro">${e(state.pack.title)}的故事，从你的名字开始。</p><form id="character-form"><label class="form-label" for="hero-name">角色姓名</label><input id="hero-name" name="name" value="${e(state.pack.defaultName || '旅人')}" minlength="1" maxlength="12" autocomplete="off" required autofocus><label class="form-label" for="difficulty">行走难度</label><select id="difficulty" name="difficulty"><option value="normal">普通 · 初次冒险</option><option value="hard">困难 · 迎接挑战</option><option value="crazy">炼狱 · 千锤百炼</option></select><p class="field-note">难度影响战斗规则与历练所得。</p><button class="button primary full-width" type="submit">开始旅程 ${icon('arrow')}</button></form>`);
@@ -335,12 +236,6 @@ function openPanel(name: PanelName) {
   if (name === 'inventory') {inventoryFilter = 'all'; inventoryQuery = ''; inventorySort = 'original';}
   const content = panelContent(name, state, settings, busy, inventoryFilter, {query: inventoryQuery, sort: inventorySort});
   modal(content.title, content.content, true);
-  syncSheetAppearance();
-}
-function syncSheetAppearance() {
-  const node=document.querySelector('#game-modal[open]');
-  node?.classList.toggle('classic-sheet-modal',!!node.querySelector('[data-classic-sheet]'));
-  if(node instanceof HTMLElement)void mountRuleCoverage(node,state.pack.id);
 }
 function refreshPanel() {
   const node = document.querySelector<HTMLDialogElement>('#game-modal[open]');
@@ -348,7 +243,6 @@ function refreshPanel() {
   const scroll = node.scrollTop;
   const content = panelContent(activePanel, state, settings, busy, inventoryFilter, {query: inventoryQuery, sort: inventorySort});
   node.innerHTML = `<button class="icon-button close-modal" data-action="close-modal" aria-label="关闭">${icon('close')}</button><div class="eyebrow">旅途一页</div><h2>${e(content.title)}</h2>${content.content}`;
-  syncSheetAppearance();
   node.scrollTop = scroll;
 }
 function refreshInventoryResults() {
@@ -372,7 +266,7 @@ function battleMode(mode: 'manual' | 'auto') {
 }
 function chooseWorld() {
   activePanel = null;
-  modal('选择冒险世界', `<p class="panel-intro">两个世界分别保存进度。地图上的当前进度会在切换前保存；对话、商店和战斗中无法保存，请先结束当前流程再切换，以免丢失未保存进度。</p><section class="pack-picker">${packs.map(p => `<button class="pack-choice ${p.id === state.pack.id ? 'selected' : ''}" data-action="select-pack" data-id="${e(p.id)}"><strong>${e(p.title)}</strong><small>${e(p.description)}</small></button>`).join('')}</section>`, true);
+  modal('选择冒险世界', `<p class="panel-intro">各内容包分别保存进度。地图上的当前进度会在切换前保存；对话、商店和战斗中无法保存，请先结束当前流程再切换，以免丢失未保存进度。</p><section class="pack-picker">${packs.map(p => `<button class="pack-choice ${p.id === state.pack.id ? 'selected' : ''}" data-action="select-pack" data-id="${e(p.id)}"><strong>${e(p.title)}</strong><small>${e(p.description)}</small></button>`).join('')}</section>`, true);
 }
 async function selectPack(id: string) {
   if (busy || !packs.some(p => p.id === id)) return;
@@ -431,10 +325,6 @@ document.addEventListener('click', event => {
   else if (action === 'close-modal') document.querySelector<HTMLDialogElement>('#game-modal')?.close();
   else if (action === 'more') modal('更多功能',moreMenuView(state),true);
   else if (action === 'history') {activitySeen=Math.max(0,...(state.activity||[]).map(a=>a.id));refreshActivityBadge();modal('通知与操作记录',activityView(state,uiMessages),true);}
-  else if (action === 'interface-style') changeInterface(button.dataset.id);
-  else if (action === 'original-interface-reference') {activePanel=null;modal('原版界面对照',interfaceReferenceView(),true);reflectInterfaceChoice();}
-  else if (action === 'late-reference') void showLateReference();
-  else if (action === 'companion-clues') void showCompanions(true);
   else if (action === 'save') void save();
   else if (action === 'load') void load();
   else if (action === 'load-manual') void load(manualSlot);
@@ -481,17 +371,14 @@ document.addEventListener('click', event => {
   else if (action === 'unequip-item') void manage({type: 'unequipItem', slot: button.dataset.slot!}, '装备已放回行囊。');
   else if (action === 'cultivate') void manage({type: 'setCultivation', entryNumber: Number(button.dataset.entryNumber)}, '已选择修炼秘籍，战斗结算后获得修炼经验。');
   else if (action === 'clear-cultivation') void manage({type: 'clearCultivation'}, '已暂停这部秘籍的修炼，已学武功和经验保留。');
-  else if (action === 'equip-internal') void manage({type: 'equipInternalSkill', skillId: button.dataset.id!}, '已设为主运内功。');
-  else if (action === 'clear-internal') void manage({type: 'clearInternalSkill'}, '已停止主运内功。');
+  else if (action === 'equip-internal') void manage({type: 'equipInternalSkill', skillId: button.dataset.id!}, '已切换专注训练。');
+  else if (action === 'clear-internal') void manage({type: 'clearInternalSkill'}, '已停止专注训练。');
   else if (action === 'toggle-skill') void manage({type: 'setExternalSkillActive', skillId: button.dataset.id!, active: button.dataset.active === 'true'}, button.dataset.active === 'true' ? '招式已启用。' : '招式已停用。');
   else if (action === 'use-item') {
     const target=document.querySelector<HTMLSelectElement>(`.battle-item-target[data-entry-number="${button.dataset.entryNumber}"]`);
     void manage({type:'useItem',entryNumber:Number(button.dataset.entryNumber),...(target?{targetId:target.value}:{})},'物品已使用。');
   }
-  else if (action === 'companions') void showCompanions();
-  else if (action === 'library') void showOriginalLibrary();
-  else if (action === 'progress') void showRestorationProgress();
-  else if (action === 'guide') modal('行走指南', '<p class="guide-text">点击地图上的人物或地点继续剧情，在“目标”查看当前章节。获得修炼书后，在修炼面板选择；运行的心法与正在研习的书可分别调整。装备和补给可在行囊使用，伙伴可在队伍查看。<br><br>手动战斗时，青色格表示可移动的位置。选择战技，点击橙色目标格施展；有些招式可对自己使用。也可切换自动战斗、调整倍速，或暂停观察。<br><br>打开人物、设置等面板时战斗暂停。离开战斗、对话和商店后可保存进度。两套世界分别存档；清除网站数据前请在行囊导出备份。</p>' + (state.pack.id === 'jyx' ? '<button class="button outline full-width" data-action="progress">查看复原进度、问题与改善建议</button>' : ''));
+  else if (action === 'guide') modal('行走指南', '<p class="guide-text">点击地图上的人物或地点继续剧情，在“目标”查看当前章节。获得修炼书后，在修炼面板选择；正在运行的专注训练与正在研习的书可分别调整。装备和补给可在行囊使用，伙伴可在队伍查看。<br><br>手动战斗时，青色格表示可移动的位置。选择战技，点击橙色目标格施展；有些招式可对自己使用。也可切换自动战斗、调整倍速，或暂停观察。<br><br>打开人物、设置等面板时战斗暂停。离开战斗、对话和商店后可保存进度。不同内容包分别存档；清除网站数据前请在行囊导出备份。</p>');
   else if (action === 'download-save') void (async () => {
     try {const data = await exportSave(); const parsed = JSON.parse(data); if (parsed.error || parsed.ok === false) throw new Error(parsed.error || '无法导出当前进度。'); const href = URL.createObjectURL(new Blob([data], {type: 'application/json'})); const link = document.createElement('a'); link.href = href; link.download = `${state.pack.title}-${state.hero.name}.json`; link.click(); setTimeout(() => URL.revokeObjectURL(href), 1000);}
     catch (error) {console.error(error); toast('导出未能完成，请先离开战斗。');}
@@ -505,9 +392,8 @@ document.addEventListener('change', event => {
     if (['original','name','count'].includes(control.value)) inventorySort=control.value as InventorySort;
     refreshInventoryResults();return;
   }
-  if (!(control instanceof HTMLInputElement || control instanceof HTMLSelectElement) || !control.closest('#game-settings, #audio-settings, #interface-settings')) return;
+  if (!(control instanceof HTMLInputElement || control instanceof HTMLSelectElement) || !control.closest('#game-settings, #audio-settings')) return;
   const name = control.name as keyof Settings;
-  if (name === 'interfaceStyle') {changeInterface(control.value);return;}
   if (name === 'battleMode' && (control.value === 'manual' || control.value === 'auto')) {
     settings.battleMode = control.value;
     if (screen === 'battle') {autoBattle = control.value === 'auto'; battlePaused = false;}
@@ -579,11 +465,6 @@ async function boot() {
     manualSlot = await readManualSlot(id).catch(() => undefined);
     const result = await loadRuntime(message => {const text = document.querySelector('#loading-message'); if (text) text.textContent = message;}, id);
     applyResult(result,true);
-    const view=new URL(location.href).searchParams.get('view');
-    if(state.pack.id==='jyx'&&view==='companions')void showCompanions();
-    if(state.pack.id==='jyx'&&view==='library')void showOriginalLibrary({category:new URLSearchParams(location.search).get('category')||undefined,id:new URLSearchParams(location.search).get('entry')||undefined});
-    else if(state.pack.id==='jyx'&&view==='progress')void showRestorationProgress();
-    else if(state.pack.id==='jyx'&&view==='late-reference')void showLateReference();
   } catch (error) {
     console.error(error);
     app.innerHTML = '<main class="loading-screen"><span class="seal">旅</span><h1>世界暂未展开</h1><p>加载未能完成，请刷新后重试。</p><button class="button primary" onclick="location.reload()">重新载入</button></main>';

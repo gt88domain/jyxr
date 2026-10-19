@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Package the validated static site without redundant precompressed variants."""
+"""Package the standalone western build, without original-game files."""
+import json
 from pathlib import Path
 import zipfile
 
@@ -7,108 +8,41 @@ web = Path(__file__).resolve().parents[1]
 dist = web / "dist"
 if not (dist / "index.html").is_file():
     raise SystemExit("Run npm run build before packaging.")
-output = web.parents[1] / "artifacts" / "jyxr-web-first-playable.zip"
+index = json.loads((dist / "data/packs/index.json").read_text())
+if index["defaultPackId"] != "frontier" or len(index["packs"]) != 1:
+    raise SystemExit("Expected the standalone frontier content build.")
+output = web.parents[1] / "artifacts/frontier-web.zip"
 output.parent.mkdir(parents=True, exist_ok=True)
-instructions = """HTML5 RPG · 金庸新手章与灰烬边境试验章
+instructions = """灰烬边境 · 现代 HTML5 佣兵试验章
 
-当前方向为原版内容的现代化重制，开发计划见源码 MODERNIZATION_PLAN.md。
-本阶段保留原剧情、人物、武学、物品门槛与奖励数据，只完善操作、触发指引与现代结算。
-设置选原版风格：人物、装备、修炼已有后期原图与真实操作，手机可用。
-章节目标可查当前地图的伙伴入口；天赋说明可点开，未接入和部分效果分别提示。
-反弹致死后停止新的目标和追击，保命成功可继续；不是修改技能威力或覆盖后期数值。
-更多中新增“1.1.0.6旧版对照”，可查看地图/人物/战斗的原场景只读布局预览。
-58张后期原图及固定坐标有来源摘要；预设文字不是玩家数据，尚未接成完整旧版可玩界面。
-对照页列5项天赋疑点、71项部分天赋、137条奥义、107条额外威力版本差异和多周目变化。
-完整具名清单见late-version-comparison.md与源码X1106_COMPARISON.md，本批未覆盖现有战斗数值。
-M2：装备可先对比人物面板属性和天赋再确认；秘籍显示完整门槛与分配人数，伙伴修炼可总览。
-背包支持名称查找和排序，操作只调整显示；同一共用服务支持两套内容包。
-M3首批：手机底部战斗栏、可展开招式详情、触屏目标确认；拖动/长按/双指不消耗行动。
-支持窄屏与触屏横屏，菜单和面板可滚动；半自动策略与真机跨浏览器验收仍待继续。
-设置可即时切换现代／原版风格界面，共用存档；可查看官方早期原图，标明参考复原的版本与差异。
-现代界面首屏提供人物、装备、修炼、行囊、队伍、更多，保存与通知保持直达。
-设置、资料馆、图鉴、读档、选世界与开发记录在更多中；原版风格的完整布局仍待复原。
-最近300条真实事件与成功操作随存档保留，通知历史可分类查找，旧版未记录的操作不能补回。
-游戏状态已归属独立会话实例，46种请求使用共享契约；完整响应接口和地图任务统一仍待做。
-新增8个官方UI原文件，保留原项目署名、许可和说明，详见notices/及源码ORIGINAL_INTERFACE.md。
-保留原剧情、基础数据、伙伴路线图与地图提示；队伍按参战、后备、剧情随行、剧情暂离分组。
-下文90%是历史迁移阶段估算，不是现代化版本完成度；逐个复刻旧Unity粒子不再作为发布前提。
-
-解压后，在本目录打开终端，运行：
+解压后，在本目录运行：
   python3 -m http.server 5173 --directory game
-Windows 如只有 py 命令，可运行：
+Windows 如只有 py 命令：
   py -3 -m http.server 5173 --directory game
-然后在本地浏览器打开 http://127.0.0.1:5173
-请通过 HTTP 打开，不要直接双击 index.html。
+浏览器打开 http://127.0.0.1:5173，不要直接双击 index.html。
 
-支持：双内容包切换、命名与难度选择、原七组问答/头像/摇点/一周目初始奖励、
-原出生/南贤/武师剧情、木人训练、
-手动走位/出招、自动交手、暂停、1/2/4倍速、真实C#规则与结算、
-人物/装备/行囊/队伍/目标、真实招募与商店买卖、修炼、设置、
-按世界隔离的 IndexedDB 存档和 v2 JSON 导入导出。旧 v1 仅在金庸包导入。
-西方试验章包含营地、林道、岗哨探索、两场战斗和一次性委托报酬。
-当前优先原版：1,887段原始剧情已归档，1,885段通过结构迁移、2段隔离；
-162张地图、六阶段教学与九个门派入口已接入。结构迁移不是全路线通关证明。
-本批接入队友培养、升级加点、后备编队、松鼠旅馆仓库、女主命名、
-竞技场/天关/试炼/珍珑/洗练服务与参战选择；后期并未全量通关验收。
-同福客栈轻功和葵花点穴手可实际游玩，按原收费、冷却、成绩结算奖励与成长。
-华山连战、原结局、结局存读档、重开/下一周目人物生成与仓库/档案/试炼物品继承已接入。
-新增常用天赋/Buff、原称号与战斗队友用药；正常成长已验证22级八人队及前三段主线消息。
-显示真实剧情记事与原主线触发条件；战斗超过3000 tick时限按原版判负。
-原剧情点穴救治按五轮八穴、实际时机得分继续原胜负分支；同地图战败后可恢复并重试。
-人物成长改用原累计经验、严格门槛与升级经验重设，旧网页档保留等级及本级进度换算。
-正常路线已从22级推进至26级，紧急首战和三城救援四胜；最终战场仍未获胜。
-新增原特技效果、33项后续天赋配置、毒系强化、嗜酒与怪病触发；战斗显示真实状态等级和剩余回合。
-秘籍修炼沿用原悟性增量及外功/内功倍率，武学奇才不加倍人物经验。
-五毒圣地地图引用按上传源修正，两句无署名的武当对白保留原文并可继续。
-新增14项天赋配置与217项选定组合检查，覆盖队伍光环、夫妻同心及追加攻击的组合。
-新增23项治疗、回合、吸内与生存天赋；修复右臂怒气、封穴和重伤恢复规则。
-目前147/158项天赋有配置或部分配置，另5项为联动条件、5项仍查证；不代表完整等价。
-本阶段接入27项剩余天赋/阵法，含真武挡伤、五行等分、八卦转移、金刚伏魔圈移动/破阵及反击。
-新增183段原音频与166个音频资源ID，音乐/出招音效按需加载；设置中分别调节音乐与音效。
-玩家档案按世界独立保存，新旅程继承，继续旧旅程不回退称号、元宝和技能上限。
-显式导入完整备份会同时恢复备份的玩家档案；无悔实时战斗存档仍未完成。
-内容与WASM并行加载；临时网络/502/503/504错误限次重试，其他错误继续报告。
-已核对137条奥义与223个原条件，补原触发抽签、基础悟性、屌丝野球拳及名称概率词条。
-太玄奥义起手名及万劫闪电貂的原条件仍有版本疑点；完整阵法、威力范围和反应顺序尚未等价。
-进度页新增19项具体剩余工作及全部待办天赋/Buff/特技名称，可展开和下载完整清单。
-同归剑法与天地同寿支付独立HP代价，避免受伤反应／复活抵消；天地同寿永久扣10基础生命上限。
-支持可关闭的环境明暗、行动聚光与受击/治疗柔光；减少动态设置会关闭动态柔光。
-首页及帮助中可查看复原进度、已知问题、优点和流程建议。目前约90%是工程估算（加权88按5%取整），不是通关率。
-8个伤害特技接命中、反弹、阵法与反应；复杂效果AI、待结算MP和反弹保命已有检查。
-102个原动画ID有配置化HTML5矢量演出，真实命中格驱动，仍不是全部原Unity粒子的复刻。
-自动进度与手动存档分别保留；标题页可读取最近进度或手动存档，自动保存可在设置关闭。
-进度已按战斗、外功、内功、特技、奥义、道具、天赋和伙伴拆分，分别说明缺口。
-新增独立伙伴图鉴，记录65个角色形态、80条加入/随行指令及155条地图入口路径。
-可按角色或地点搜索，并区分当前参战、随行、后备、曾加入和待验证；图鉴不会直接发放伙伴。
-普通连续旅程已验证14名伙伴，本轮新增阿朱、郭襄、袁承志和韦小宝；其余仍保留待验证标记。
-图鉴增加219个当前条件、32处地图前置，可下载65形态/155幅独立路线图册。
-没有匹配原失败分支的剧情战败进入GameOver，显式失败路线及竞技场按各自原规则处理。
-新增原版资料馆：人物、武学、道具、开局配置、剧情与关联引用，可对照四份参考及上传包。
-原伙伴资料为63个显示名、65个形态；另归档双儿加入记录，但缺人物定义及运行入口。
-43个后期多周目开局候选已接入；第二／三／四周目候选17／10／7人，第五周目起9人，确认后随机加入一名。
-预览、取消和读档不发放；第一周目不送伙伴。白眉鹰王按原鹰爪功说明对应到现有殷天正定义。
-上传包鹿鼎记78段已归档，39段同名版本、39段缺失补充；补充资料尚未作为运行剧情接线。
-完整目标见源码 src/Game.Web/ORIGINAL_RESTORATION_TARGET.md；缺口见 ORIGINAL_MIGRATION.md、
-data/original-migration-audit.json 及 data/original-battle-rule-audit.json。规则审计不是完成率。
-浏览器存档按网站地址隔离；更换端口或清除网站数据前请导出备份。
+内容：营地、旧道、废塔、招募、装备、修炼、交易、两场战斗和一次委托。
+战斗支持手动走位、自动攻击、暂停与变速；使用真实 C# WebAssembly 规则。
+新版数据库 jyxr-modern-western 与旧版分开；不读取或修改旧版存档。
+更换网站地址或端口前请导出备份，浏览器数据不会自动迁移。
 
-范围：这不是完整游戏。新手章以约20分钟为设计目标，未测定实际时长。
-结伴练习为新编教学桥段。战斗尚未完全复原原版。无悔实时存档、全部原地图互动与剧情、
-剧情道具边界、部分组合/Buff/特技管线、完整技能特效与长期音画验收仍待完成。
-这一包使用保留反射元数据的 .NET 10 Release WebAssembly 发布，未启用裁剪/AOT。
-下载体积、AOT、性能和生产部署仍需后续优化，不要视为正式发行版。
-金庸包已接入用户上传包的原版地图、背景、头像、物品图标与基本角色动作。
-部分动作时序与缺失模型尚待补齐，来源见 art/legacy/README.md。
-西方包保留独立生成素材；所有游戏规则仍运行现代 C# WebAssembly 内核，未运行旧版程序。
-原代码、数据与剧情文本保留各自的许可及署名要求。
-
-重建源码位于仓库 src/Game.Web 与 src/Game.Web.Runtime；
-更多说明见 src/Game.Web/README.md。
+这是小型试验章，不是完整游戏或无缺陷承诺。四张现有原创图中，人物仍共用佣兵图，
+独立音频与更多战技尚待制作。采用 Release WebAssembly，尚未启用 AOT 或裁剪。
+源码：https://github.com/gt88domain/jyxr/tree/modern-western
+架构与构建说明：README.md、docs/MODULAR_GAME.md。
+本体沿用 GPLv3，保留原作者虹乡俗人及贡献者署名。素材来源及摘要见
+game/data/module-manifest.json；原版历史内容与素材不在此包。
 """
+files = [p for p in sorted(dist.rglob("*")) if p.is_file() and p.suffix not in {".gz", ".br"}]
 with zipfile.ZipFile(output, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
-    for path in sorted(dist.rglob("*")):
-        if path.is_file() and path.suffix not in {".gz", ".br"}:
-            archive.write(path, "game/" + path.relative_to(dist).as_posix())
+    for path in files:
+        archive.write(path, "game/" + path.relative_to(dist).as_posix())
     archive.writestr("开始试玩.txt", instructions)
     archive.write(web.parents[1] / "LICENSE", "LICENSE")
-print(f"Packaged {output} ({output.stat().st_size:,} bytes)")
+with zipfile.ZipFile(output) as archive:
+    if archive.testzip() is not None:
+        raise SystemExit("Archive verification failed.")
+    for path in files:
+        if archive.read("game/" + path.relative_to(dist).as_posix()) != path.read_bytes():
+            raise SystemExit(f"Archive mismatch: {path}")
+print(f"Packaged and verified {output} ({output.stat().st_size:,} bytes; {len(files)} game files)")

@@ -4,6 +4,7 @@
     <EmbeddedResource Include="../../Game.Web/contracts/commands.json" LogicalName="Jyxr.CommandContract" />
     <Compile Include="../BrowserCommandContract.cs" Link="BrowserCommandContract.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="FrontierSmoke.cs" />
     <Compile Include="SessionIsolationSmoke.cs" />
     <Compile Include="ProfileSmoke.cs" />
     <Compile Include="PackSmoke.cs" />

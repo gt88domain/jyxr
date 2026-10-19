@@ -1,3 +1,4 @@
+import {appConfig} from './app-config';
 export interface Settings {
   interfaceStyle: 'modern' | 'classic';
   autoSave: boolean;
@@ -12,7 +13,7 @@ export interface Settings {
   effectsVolume: number;
 }
 
-const key = 'jyxr.preferences.v1';
+const key = appConfig.preferencesKey;
 const defaults: Settings = {
   interfaceStyle: 'modern',
   autoSave: true,
@@ -25,7 +26,7 @@ const defaults: Settings = {
 function normalize(value: Partial<Settings>): Settings {
   const volume = (n: unknown, fallback: number) => typeof n === 'number' && Number.isFinite(n) ? Math.max(0, Math.min(1, n)) : fallback;
   return {
-    interfaceStyle: value.interfaceStyle === 'classic' ? 'classic' : 'modern',
+    interfaceStyle: 'modern',
     autoSave: typeof value.autoSave === 'boolean' ? value.autoSave : defaults.autoSave,
     battleMode: value.battleMode === 'auto' ? 'auto' : 'manual',
     battleSpeed: value.battleSpeed === 2 || value.battleSpeed === 4 ? value.battleSpeed : 1,

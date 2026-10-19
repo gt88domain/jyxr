@@ -1,0 +1,20 @@
+import type {GameState} from '../bridge';
+import {assetUrl} from '../content';
+import {currency} from '../world';
+import {e,plain,icon} from './format';
+
+export function topbar(state:GameState,inGame = true) {
+  const pack = state.pack;
+  const menus = [['character', 'person', '人物'], ['equipment', 'sword', '装备'], ['cultivation', 'leaf', pack.terms?.cultivation || '修炼'], ['inventory', 'bag', '行囊'], ['party', 'person', '队伍'], ['quests', 'leaf', '目标'], ['settings', 'settings', '设置']];
+  const menu=menus.map(([action,symbol,label])=>`<button data-action="${action}" ${['quests','settings','library'].includes(action)?'data-modern-secondary':''}>${icon(symbol)}<span>${e(label)}</span></button>`).join('');
+  return `<header class="topbar"><button class="wordmark" data-action="guide" aria-label="游玩指南"><span class="seal small">${e(pack.title.slice(0,1))}</span><span>${e(pack.title)}<small>${e(pack.subtitle)}</small></span></button><nav aria-label="游戏菜单">${inGame?`<span class="chapter">${e(state.map?.name)}</span><button class="save-button" data-action="save" ${state.phase!=='world'?'disabled':''}>${icon('save')}<span>保存</span></button>`:''}<button class="icon-button modern-only notification-button" data-action="history" aria-label="通知与操作记录">${icon('bell')}<span data-notice-count hidden></span></button>${!inGame?'<button class="icon-button modern-only" data-action="more" aria-label="更多功能">⋯</button>':''}<button class="icon-button legacy-header-option" data-action="worlds" aria-label="切换世界">${icon('leaf')}</button><button class="icon-button legacy-header-option" data-action="settings" aria-label="设置">${icon('settings')}</button><button class="icon-button legacy-header-option" data-action="guide" aria-label="帮助">${icon('help')}</button></nav></header>${inGame?`<nav class="system-nav" aria-label="角色与世界设置">${menu}<button class="modern-only more-button" data-action="more"><b aria-hidden="true">⋯</b><span>更多</span></button></nav>`:''}`;
+}
+export function heroCard(state:GameState) {
+  const hero = state.hero;
+  return `<aside class="hero-card paper"><div class="eyebrow">旅途行者</div><div class="hero-heading"><div class="avatar">${hero.portrait ? `<img src="${e(assetUrl(hero.portrait))}" alt="">` : e(hero.name.slice(0, 1))}</div><div><h2>${e(hero.name)}</h2><span>旅程初始 · 第 ${hero.level} 级</span></div></div><div class="vital"><label>气血 <span>${hero.hp} <small>/ ${hero.maxHp}</small></span></label><div class="bar hp"><i style="width:${100 * hero.hp / hero.maxHp}%"></i></div></div><div class="vital"><label>${e(state.pack.terms?.energy || '内力')} <span>${hero.mp} <small>/ ${hero.maxMp}</small></span></label><div class="bar mp"><i style="width:${100 * hero.mp / hero.maxMp}%"></i></div></div><div class="hero-meta"><span>随身${e(state.pack.currencyName || '钱币')}</span><strong>${state.silver.toLocaleString()} <small>${e(currency(state))}</small></strong></div><button class="text-button" data-action="manage-character" data-id="${e(hero.id)}">查看人物 ${icon('arrow')}</button></aside>`;
+}
+export function dialogueOverlay(state:GameState) {
+  if (state.phase !== 'dialogue' && state.phase !== 'choice') return '';
+  const choice = state.phase === 'choice';
+  return `<div class="dialogue-scrim"><section class="dialogue-panel paper" aria-label="剧情对话" aria-live="polite">${state.dialogue?.portrait ? `<img class="dialogue-portrait" src="${e(assetUrl(state.dialogue.portrait))}" alt="">` : '<span class="dialogue-decoration">叙</span>'}<div class="dialogue-content"><span class="eyebrow">此间故事</span><h2>${e(state.dialogue?.speaker || state.pack.title)}</h2><p data-testid="dialogue-text">${e(plain(state.dialogue?.text || ''))}</p>${choice ? `<div class="story-choices">${(state.choices ?? []).map((item, index) => `<button class="button outline" data-action="choice" data-index="${typeof item === 'string' ? index : item.index ?? index}"><span>${String(index + 1).padStart(2, '0')}</span>${e(typeof item === 'string' ? item : item.text ?? item.label ?? item.id)}${icon('arrow')}</button>`).join('')}</div>` : '<button class="text-button dialogue-next" data-action="next">继续 ' + icon('arrow') + '</button>'}</div></section></div>`;
+}

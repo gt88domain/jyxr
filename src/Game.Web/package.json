@@ -5,14 +5,14 @@
   "type": "module",
   "scripts": {
     "contract": "python3 scripts/generate-contract.py",
-    "content": "python3 scripts/build-content.py",
+    "content": "python3 scripts/build-frontier.py",
     "runtime": "node scripts/build-runtime.mjs",
     "prepare:game": "npm run content && npm run runtime",
     "dev": "vite --host 0.0.0.0",
     "build": "npm run contract && npm run prepare:game && tsc --noEmit && vite build",
     "package": "npm run build && python3 scripts/package-web.py",
     "preview": "vite preview --host 0.0.0.0",
-    "test": "node tests/browser-smoke.mjs",
+    "test": "node tests/frontier-smoke.mjs",
     "test:equipment": "node tests/equipment-smoke.mjs",
     "test:chapter": "node tests/chapter-smoke.mjs",
     "test:original": "node tests/original-world-smoke.mjs",
@@ -50,7 +50,8 @@
     "audit:late-reference": "python3 tests/late-reference-source-audit.py",
     "test:late-reference": "node tests/late-reference-smoke.mjs",
     "audit:remaining": "python3 tests/remaining-source-audit.py",
-    "assets:restore": "python3 scripts/art-bundle.py restore"
+    "assets:restore": "python3 scripts/frontier-assets.py",
+    "test:frontier": "node tests/frontier-smoke.mjs"
   },
   "dependencies": { "phaser": "3.90.0" },
   "devDependencies": {
