@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "defaultPackId": "frontier",
+  "packs": [
+    {
+      "id": "frontier",
+      "title": "灰烬边境",
+      "subtitle": "佣兵的第一份委托",
+      "description": "原创低魔佣兵冒险。一个营地、一段旧道、一座废塔，靠装备与战技活着回来。",
+      "url": "packs/frontier/content-package.json"
+    }
+  ]
+}

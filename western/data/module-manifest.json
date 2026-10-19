@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "frontier",
+  "version": "0.1.1",
+  "entry": "chapter.py",
+  "rules": "shared-modern-core",
+  "assets": [
+    {
+      "path": "art/frontier-camp.png",
+      "sha256": "26a8579b47f3827d709de9518d43d6de0928ff1a401fadcd42b356392f2d4383",
+      "bytes": 3184441,
+      "url": "https://gt88domain.github.io/jyxr/art/frontier-camp.png"
+    },
+    {
+      "path": "art/frontier-forest.png",
+      "sha256": "3fe686742748728eda16171d806a0158fa4ca8f04b75ea3920bd0673f8cb7727",
+      "bytes": 3913525,
+      "url": "https://gt88domain.github.io/jyxr/art/frontier-forest.png"
+    },
+    {
+      "path": "art/frontier-ruins.png",
+      "sha256": "50ba2b9f56fec130e22f961974984c0a360719e5f8a0071c1fa27f6a9f7ec778",
+      "bytes": 3655841,
+      "url": "https://gt88domain.github.io/jyxr/art/frontier-ruins.png"
+    },
+    {
+      "path": "art/mercenary.png",
+      "sha256": "4c4d33b3986995a855d7106375203409037a93340d34c547d3558b7b972c9deb",
+      "bytes": 987516,
+      "url": "https://gt88domain.github.io/jyxr/art/mercenary.png"
+    }
+  ]
+}
