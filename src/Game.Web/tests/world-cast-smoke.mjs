@@ -88,11 +88,11 @@ try{
  }
  await page.screenshot({path:output+'world-cast-mobile.png',fullPage:true});
  pass('name search stays on the first phone screen');
- const csv=await page.request.get(new URL('data/cast.csv',base).href);assert.equal(csv.status(),200);
- const csvBytes=await csv.body();assert.equal(csvBytes.subarray(0,3).toString('hex'),'efbbbf');
+ const csv=await page.evaluate(async url=>{const response=await fetch(url);return {status:response.status,bytes:Array.from(new Uint8Array(await response.arrayBuffer()))};},new URL('data/cast.csv',base).href);assert.equal(csv.status,200);
+ const csvBytes=Buffer.from(csv.bytes);assert.equal(csvBytes.subarray(0,3).toString('hex'),'efbbbf');
  assert.equal(csvBytes.toString('utf8').trim().split(/\r?\n/).length,514);
  pass('bilingual spreadsheet export contains all 513 original definitions');
- const served=await (await page.request.get(new URL('data/catalog.json',base).href)).json();
+ const served=await page.evaluate(async url=>(await fetch(url)).json(),new URL('data/catalog.json',base).href);
  assert.deepEqual(served.actors,data.actors);
  const storage=await page.evaluate(async()=>({marks:['jyxr-web','jyxr-modern-jyx','jyxr-modern-western'].map(id=>localStorage.getItem(id+'.test-sentinel')),databases:await indexedDB.databases()}));
  assert.deepEqual(storage.marks,['preserved','preserved','preserved']);assert.equal(storage.databases.length,0);
