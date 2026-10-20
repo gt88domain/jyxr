@@ -13,6 +13,17 @@ export async function createHarness(name, contextOptions = {}) {
   const browser = await chromium.launch({executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium',
     headless: true, args: ['--no-sandbox', '--disable-dev-shm-usage']});
   const context = await browser.newContext({viewport: {width: 1440, height: 900}, ...contextOptions});
+  const releasedMedia=[], knownMedia=new Set();
+  await context.exposeBinding('recordHarnessReleasedMedia',(_,url)=>releasedMedia.push({url,at:Date.now()}));
+  await context.addInitScript(()=>{
+    const load=HTMLMediaElement.prototype.load;
+    HTMLMediaElement.prototype.load=function(...args){
+      // Match GameAudio.stopMusic: it deliberately removes src then loads
+      // the empty element. Do not exempt navigation or arbitrary aborts.
+      if(this.currentSrc&&!this.getAttribute('src'))void window.recordHarnessReleasedMedia(this.currentSrc);
+      return load.apply(this,args);
+    };
+  });
   await context.tracing.start({screenshots: true, snapshots: true});
   const page = await context.newPage();
   page.setDefaultTimeout(20_000);
@@ -22,7 +33,8 @@ export async function createHarness(name, contextOptions = {}) {
     if (message.type() === 'error') report.errors.push(entry);
   });
   page.on('pageerror', error => report.errors.push({type: 'pageerror', message: error.message, stack: error.stack}));
-  page.on('requestfailed', request => report.failedRequests.push({url: request.url(), error: request.failure()?.errorText}));
+  page.on('requestfailed', request => report.failedRequests.push({url: request.url(), error: request.failure()?.errorText,
+    resourceType:request.resourceType(),at:Date.now()}));
   page.on('response', response => {
     if (response.status() >= 400) report.failedResponses.push({url: response.url(), status: response.status()});
   });
@@ -40,6 +52,7 @@ export async function createHarness(name, contextOptions = {}) {
       return JSON.parse(await assembly.Game.Web.Runtime.BrowserBridge.Dispatch('{"type":"state"}'));
     });
     assert.equal(result.ok, true, 'Read-only runtime state must succeed');
+    for(const path of Object.values(result.state.pack.audio?.resources||{}))knownMedia.add(new URL(path,report.baseURL).href);
     return result.state;
   }
   async function continueDialogue(limit = 80) {
@@ -77,6 +90,11 @@ export async function createHarness(name, contextOptions = {}) {
     pass(`${label}: no horizontal overflow`, dimensions);
   }
   async function finish(error) {
+    report.observedFailedRequests=[...report.failedRequests];
+    report.expectedMediaCancellations=report.failedRequests.filter(request=>
+      request.resourceType==='media'&&request.error==='net::ERR_ABORTED'&&knownMedia.has(request.url)&&
+      releasedMedia.some(release=>release.url===request.url&&Math.abs(release.at-request.at)<2000));
+    report.failedRequests=report.failedRequests.filter(request=>!report.expectedMediaCancellations.includes(request));
     if (!error) {
       try {
         assert.deepEqual(report.errors, [], 'Browser console and page errors');
