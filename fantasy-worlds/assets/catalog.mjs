@@ -36,6 +36,9 @@ try{
   const more=h('button',{type:'button',className:'more-button',id:'more'},t('more'));
   const s=catalog.summary;
   document.querySelector('#brand-title').textContent=t('brand');
+  const opening=document.querySelector('#opening-link');
+  opening.textContent=locale==='en'?"Preview Grimm's opening":'查看格林求助开场';
+  if(locale==='zh-CN')opening.href+='?lang=zh-CN';
   document.querySelector('#close-detail').setAttribute('aria-label',t('close'));
   root.replaceChildren(
     h('section',{},h('div',{className:'eyebrow'},t('eyebrow')),h('h1',{},t('title')),h('p',{className:'intro'},t('intro')),h('p',{className:'phase',dataset:{phase:'cast-preview'}},t('phase')),
