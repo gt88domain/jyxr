@@ -3,6 +3,7 @@
 import csv,hashlib,io,json,shutil,zipfile
 from pathlib import Path
 from world_cast import WEB,load,validate
+from opening_content import build_opening
 
 project,countries,figures,cast,index,locks=load()
 summary=validate(project,countries,figures,cast,index,locks)
@@ -31,6 +32,7 @@ for a in cast['actors']:
  f=by_figure.get(a['figureId'],{})
  for form in a['forms']:writer.writerow([form['legacyId'],a['legacyIdentity'],form['legacyName'],a['actorId'],a['kind'],a['primaryCountry'] or '',a['name']['zh-CN'],a['name']['en'],a['status'],f.get('sourceWork',''),f.get('recognition',''),a['traveler'],','.join(a['relatedCountries']),','.join(a['reviewFlags'])])
 (output/'data/cast.csv').write_text('\ufeff'+stream.getvalue(),newline='')
+opening=build_opening(WEB,output,cast)
 shutil.copyfile(WEB.parents[1]/'LICENSE',output/'LICENSE')
 archive=output.parent/'fantasy-worlds-cast.zip'
 with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
@@ -40,4 +42,4 @@ with zipfile.ZipFile(archive) as z:
  assert z.testzip() is None
  for path in output.rglob('*'):
   if path.is_file():assert z.read(path.relative_to(output).as_posix())==path.read_bytes()
-print(json.dumps({'site':str(output),'archive':str(archive),'archiveSha256':hashlib.sha256(archive.read_bytes()).hexdigest(),'summary':summary},ensure_ascii=False,indent=2))
+print(json.dumps({'site':str(output),'archive':str(archive),'archiveSha256':hashlib.sha256(archive.read_bytes()).hexdigest(),'summary':summary,'opening':opening},ensure_ascii=False,indent=2))

@@ -1,6 +1,9 @@
 # Thirteen Realms · 十三国幻想
 
-本分支 fantasy-worlds 从现代金庸基线 624f4e8 独立开发，先建立固定角色身份、十三国归属和中英对照。当前交付是全量角色对应草案与双语审阅工具；完整英文游戏、剧情改写、新美术和战斗特效尚未完成。
+本分支 fantasy-worlds 从现代金庸基线 624f4e8 独立开发，先建立固定角色身份、十三国归属和中英对照。当前有全量角色对应草案，以及配有新插图、对白选择和记录的格林求助开场。正式第一章、战斗接入、后续剧情翻译与全部素材替换尚未完成。
+
+- [English opening · Grimm's Request](https://gt88domain.github.io/jyxr/fantasy-worlds/opening/)
+- [开场中文文案对照](https://gt88domain.github.io/jyxr/fantasy-worlds/opening/?lang=zh-CN)；[中文原版游戏](https://gt88domain.github.io/jyxr/)
 
 - [English cast preview](https://gt88domain.github.io/jyxr/fantasy-worlds/en/)
 - [中文角色对照](https://gt88domain.github.io/jyxr/fantasy-worlds/zh/)
