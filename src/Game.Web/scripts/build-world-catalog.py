@@ -3,11 +3,14 @@
 import csv,hashlib,io,json,shutil,zipfile
 from pathlib import Path
 from world_cast import WEB,load,validate
-from opening_content import build_opening
 
 project,countries,figures,cast,index,locks=load()
 summary=validate(project,countries,figures,cast,index,locks)
 output=WEB.parents[1]/'artifacts/fantasy-worlds-site'
+game=WEB/'dist'
+if not (game/'data/module-manifest.json').exists() or json.loads((game/'data/module-manifest.json').read_text())['id']!='worlds':
+ raise SystemExit('Build the actual worlds game first: GAME_MODULE=worlds npm run content && GAME_MODULE=worlds npm run frontend (or npm run build:worlds).')
+if output.exists():shutil.rmtree(output)
 output.mkdir(parents=True,exist_ok=True)
 for name in ['assets','data','zh','en']:(output/name).mkdir(exist_ok=True)
 for name in ['catalog.css','catalog.mjs','favicon.svg']:shutil.copyfile(WEB/'cast'/name,output/'assets'/name)
@@ -32,7 +35,11 @@ for a in cast['actors']:
  f=by_figure.get(a['figureId'],{})
  for form in a['forms']:writer.writerow([form['legacyId'],a['legacyIdentity'],form['legacyName'],a['actorId'],a['kind'],a['primaryCountry'] or '',a['name']['zh-CN'],a['name']['en'],a['status'],f.get('sourceWork',''),f.get('recognition',''),a['traveler'],','.join(a['relatedCountries']),','.join(a['reviewFlags'])])
 (output/'data/cast.csv').write_text('\ufeff'+stream.getvalue(),newline='')
-opening=build_opening(WEB,output,cast)
+# The rejected standalone story viewer is replaced by the actual game. Keep
+# its old URL useful without introducing another dialogue runner.
+shutil.copytree(game,output/'game')
+(output/'opening').mkdir(exist_ok=True)
+(output/'opening/index.html').write_text('''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Grimm · Game</title></head><body><p><a id="game-link" href="../game/">Continue to the game / 进入游戏</a></p><script>const target=new URL('../game/',location.href);target.search=location.search;document.querySelector('#game-link').href=target.href;location.replace(target.href);</script></body></html>''',encoding='utf8')
 shutil.copyfile(WEB.parents[1]/'LICENSE',output/'LICENSE')
 archive=output.parent/'fantasy-worlds-cast.zip'
 with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
@@ -42,4 +49,4 @@ with zipfile.ZipFile(archive) as z:
  assert z.testzip() is None
  for path in output.rglob('*'):
   if path.is_file():assert z.read(path.relative_to(output).as_posix())==path.read_bytes()
-print(json.dumps({'site':str(output),'archive':str(archive),'archiveSha256':hashlib.sha256(archive.read_bytes()).hexdigest(),'summary':summary,'opening':opening},ensure_ascii=False,indent=2))
+print(json.dumps({'site':str(output),'archive':str(archive),'archiveSha256':hashlib.sha256(archive.read_bytes()).hexdigest(),'summary':summary,'game':'game/','opening':'Existing opening URL redirects to the actual game'},ensure_ascii=False,indent=2))

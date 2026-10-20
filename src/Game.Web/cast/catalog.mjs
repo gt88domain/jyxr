@@ -37,7 +37,7 @@ try{
   const s=catalog.summary;
   document.querySelector('#brand-title').textContent=t('brand');
   const opening=document.querySelector('#opening-link');
-  opening.textContent=locale==='en'?"Preview Grimm's opening":'查看格林求助开场';
+  opening.textContent=locale==='en'?"Play Grimm's in-game opening":'进入游戏，查看格林原位开场';
   if(locale==='zh-CN')opening.href+='?lang=zh-CN';
   document.querySelector('#close-detail').setAttribute('aria-label',t('close'));
   root.replaceChildren(

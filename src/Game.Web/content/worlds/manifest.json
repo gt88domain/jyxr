@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "worlds",
+  "runtimePackId": "jyx",
+  "version": "grimm-in-place-1",
+  "title": "Thirteen Realms · Grimm's Request",
+  "locale": "en",
+  "inventory": "../jyx/assets.json",
+  "rules": "shared-modern-core",
+  "app": {
+    "id": "jyxr-fantasy-worlds", "database": "jyxr-fantasy-worlds",
+    "preferencesKey": "jyxr-fantasy-worlds.preferences.v1", "features": [],
+    "externalLinks": [
+      {"label": "中文原版游戏", "url": "https://gt88domain.github.io/jyxr/"},
+      {"label": "新版中文文案", "url": "?lang=zh-CN"},
+      {"label": "English dialogue", "url": "?lang=en"}
+    ]
+  },
+  "localAssets": [
+    {"path": "art/worlds/grimm-portrait.png", "bytes": 2578580, "sha256": "9fe2cf45d8270c65363443f2cb40ba14fd106683bc59674ae3e479c76748616b", "localSource": "content/worlds/art/grimm-portrait.png"}
+  ],
+  "source": {
+    "sourceCommit": "624f4e87ae251f8e0162e90d1eda11a1ef386cd7",
+    "baseUrl": "https://raw.githubusercontent.com/gt88domain/jyxr/85462cbc226ea97cf02294e7e331d13396598300/",
+    "scope": "Presentation overlay of the frozen JYX game: same runtime rule identity, character IDs, map locations, story flow and numeric data. Independent app storage; only the Grimm opening is adapted so far."
+  }
+}

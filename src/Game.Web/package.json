@@ -11,6 +11,7 @@
     "dev": "npm run content && vite --host 0.0.0.0",
     "build": "node scripts/build-game.mjs",
     "build:frontier": "node scripts/build-game.mjs frontier",
+    "build:worlds": "node scripts/build-game.mjs worlds && python3 scripts/build-world-catalog.py",
     "frontend": "tsc --noEmit && vite build",
     "package": "npm run build && python3 scripts/package-web.py",
     "preview": "vite preview --host 0.0.0.0",
@@ -61,7 +62,7 @@
     "cast:check": "python3 scripts/world_cast.py",
     "cast:build": "python3 scripts/build-world-catalog.py",
     "test:cast": "python3 -m unittest discover -s tests -p test_world_cast.py && node tests/world-cast-smoke.mjs",
-    "test:opening": "node --test tests/opening-state.test.mjs && node tests/opening-smoke.mjs"
+    "test:opening": "python3 -m unittest discover -s tests -p test_grimm_skin.py && node tests/grimm-game-smoke.mjs"
   },
   "dependencies": { "phaser": "3.90.0" },
   "devDependencies": {

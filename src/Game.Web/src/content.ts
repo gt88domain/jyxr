@@ -1,4 +1,4 @@
-export interface PackListing {id: string; title: string; subtitle?: string; description?: string; url: string;}
+export interface PackListing {id: string; title: string; subtitle?: string; description?: string; url: string; localeUrls?:Record<string,string>;}
 interface PackIndex {schemaVersion: number; defaultPackId: string; packs: PackListing[];}
 let catalog: PackIndex | undefined;
 
@@ -35,6 +35,8 @@ export async function packIndex(): Promise<PackIndex> {
   for (const pack of candidate.packs) {
     if (!/^[a-z0-9-]+$/.test(pack.id) || ids.has(pack.id) || !pack.url.startsWith('packs/') || pack.url.includes('..'))
       throw new Error('内容目录含有无效或重复的内容包。');
+    if(Object.values(pack.localeUrls||{}).some(url=>!url.startsWith('packs/')||url.includes('..')||url.includes('\\')))
+      throw new Error('内容目录含有无效的语言路径。');
     ids.add(pack.id);
   }
   if (!ids.has(candidate.defaultPackId)) throw new Error('内容目录缺少默认世界。');
@@ -45,7 +47,9 @@ export async function readPack(id: string): Promise<string> {
   const index = await packIndex();
   const entry = index.packs.find(pack => pack.id === id);
   if (!entry) throw new Error('未找到这个世界。');
-  const url = new URL(assetUrl(`data/${entry.url}`));
+  const locale=new URL(location.href).searchParams.get('lang')==='zh-CN'?'zh-CN':'en';
+  if(entry.localeUrls)document.documentElement.lang=locale;
+  const url = new URL(assetUrl(`data/${entry.localeUrls?.[locale]||entry.url}`));
   url.searchParams.set('v', import.meta.env.VITE_GAME_VERSION);
   return readText(url, '世界内容');
 }

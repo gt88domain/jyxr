@@ -1,16 +1,16 @@
 # Thirteen Realms · 十三国幻想
 
-本分支 fantasy-worlds 从现代金庸基线 624f4e8 独立开发，先建立固定角色身份、十三国归属和中英对照。当前有全量角色对应草案，以及配有新插图、对白选择和记录的格林求助开场。正式第一章、战斗接入、后续剧情翻译与全部素材替换尚未完成。
+本分支 fantasy-worlds 从现代金庸基线 624f4e8 独立开发，在同一个真实游戏里替换人物、对白与美术。当前格林替换原位置上的南贤，原开场、小村介绍、修炼书奖励、装备、首战与存档继续执行原游戏流程。后续人物和界面文字仍有原版内容，完整英文版与十三国全量替换尚未完成。
 
-- [English opening · Grimm's Request](https://gt88domain.github.io/jyxr/fantasy-worlds/opening/)
-- [开场中文文案对照](https://gt88domain.github.io/jyxr/fantasy-worlds/opening/?lang=zh-CN)；[中文原版游戏](https://gt88domain.github.io/jyxr/)
+- [Game · Grimm's Request](https://gt88domain.github.io/jyxr/fantasy-worlds/game/)
+- [同一游戏的中文文案对照](https://gt88domain.github.io/jyxr/fantasy-worlds/game/?lang=zh-CN)；[中文原版游戏](https://gt88domain.github.io/jyxr/)
 
 - [English cast preview](https://gt88domain.github.io/jyxr/fantasy-worlds/en/)
 - [中文角色对照](https://gt88domain.github.io/jyxr/fantasy-worlds/zh/)
 - [范围、角色统计与迁移约定](docs/FANTASY_WORLDS.md)
 - [现代金庸冻结备份](https://github.com/gt88domain/jyxr/tree/legacy-jyx)；旧原版仍保留在 html5-web。
 
-角色工具只需 Python 3：进入 src/Game.Web，运行 python3 scripts/world_cast.py 和 python3 scripts/build-world-catalog.py。构建结果位于 artifacts/fantasy-worlds-site，可通过 python3 -m http.server 4214 --directory artifacts/fantasy-worlds-site 预览。浏览器检查另外需要 Node、Playwright 和 Chromium。
+构建需要 Python 3、Node、.NET 10 wasm-tools。进入 src/Game.Web，先运行 python3 scripts/restore-module.py --module worlds，再运行 npm run build:worlds。结果位于 artifacts/fantasy-worlds-site，包含 game/ 和人物审阅页，可在仓库根目录通过 python3 -m http.server 4214 --directory artifacts/fantasy-worlds-site 预览。npm run test:opening 检查真实开场、奖励、装备、修炼、首战和存档，浏览器检查另需 Playwright 与 Chromium。角色表本身仍可通过 python3 scripts/world_cast.py 单独校验。
 
 ## 保留的金庸 HTML5 宿主
 

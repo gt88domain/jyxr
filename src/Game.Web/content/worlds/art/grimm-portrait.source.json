@@ -1,0 +1,9 @@
+{
+  "id": "worlds.grimm-portrait",
+  "origin": "Generated with image_gen for this project on 2026-10-20",
+  "reference": "Original project illustration of Grimm in opening/art/grimm-study.png",
+  "usage": "Replaces Naxian in the existing map and dialogue portrait slots; does not replace the scene or interface",
+  "width": 1024, "height": 1536,
+  "bytes": 2578580,
+  "sha256": "9fe2cf45d8270c65363443f2cb40ba14fd106683bc59674ae3e479c76748616b"
+}

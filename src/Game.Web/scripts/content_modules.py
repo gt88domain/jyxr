@@ -13,7 +13,7 @@ WEB = Path(__file__).resolve().parents[1]
 
 def selected_module(value=None):
     module = value or os.environ.get('GAME_MODULE', 'jyx')
-    if module not in {'jyx', 'frontier'}:
+    if module not in {'jyx', 'frontier', 'worlds'}:
         raise ValueError(f'Unknown content module: {module}')
     return module
 
@@ -25,6 +25,7 @@ def manifest_for(module):
     entries = manifest.get('assets')
     if entries is None:
         entries = json.loads((folder / manifest['inventory']).read_text(encoding='utf-8'))['files']
+    entries = [*entries, *manifest.get('localAssets', [])]
     paths = set()
     for entry in entries:
         path = PurePosixPath(entry['path'])
@@ -51,7 +52,11 @@ def restore(module, source=None):
         target = WEB / 'public' / entry['path']
         if matches(target, entry):
             return
-        if source:
+        if entry.get('localSource'):
+            local = (WEB / entry['localSource']).resolve()
+            if not local.is_relative_to(WEB):raise ValueError('Local resource leaves the web project')
+            data = local.read_bytes()
+        elif source:
             data = (source / entry['path']).read_bytes()
         else:
             url = entry.get('url') or manifest['source']['baseUrl'] + urllib.parse.quote(entry['path'], safe='/')
@@ -79,7 +84,10 @@ def build(module):
     folder, manifest, _ = manifest_for(module)
     verify(module)
     output = WEB / 'public/data'
-    if module == 'frontier':
+    if module == 'worlds':
+        from grimm_skin import build_worlds
+        package = build_worlds(WEB, manifest)
+    elif module == 'frontier':
         spec = importlib.util.spec_from_file_location('frontier_chapter', folder / manifest['entry'])
         chapter = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(chapter)
@@ -96,11 +104,16 @@ def build(module):
         # story rewriting or version merging is performed during this build.
         package = json.loads((WEB / 'public' / manifest['entry']).read_text(encoding='utf-8'))
     browser = package['browser']
-    if browser['id'] != module:
+    pack_id = manifest.get('runtimePackId', module)
+    if browser['id'] != pack_id:
         raise ValueError('Runtime content identity differs from module manifest')
-    write(output / 'packs/index.json', {'schemaVersion': 1, 'defaultPackId': module, 'packs': [{
-        'id': module, 'title': browser['title'], 'subtitle': browser['subtitle'],
-        'description': browser['description'], 'url': f'packs/{module}/content-package.json'}]})
+    listing = {'id': pack_id, 'title': browser['title'], 'subtitle': browser['subtitle'],
+               'description': browser['description'], 'url': f'packs/{module}/content-package.json'}
+    if module == 'worlds':
+        skin = json.loads((folder / 'grimm-skin.json').read_text(encoding='utf8'))
+        listing.update(title=skin['title']['en'], subtitle=skin['subtitle']['en'], description=skin['description']['en'],
+                       url='packs/worlds/en/content-package.json', localeUrls={'en':'packs/worlds/en/content-package.json','zh-CN':'packs/worlds/zh-CN/content-package.json'})
+    write(output / 'packs/index.json', {'schemaVersion': 1, 'defaultPackId': pack_id, 'packs': [listing]})
     write(output / 'module-manifest.json', manifest)
     print(f"Built {module} {manifest['version']}: {len(package['maps'])} maps, "
           f"{sum(len(script['segments']) for script in package['storyScripts'].values())} story segments")
