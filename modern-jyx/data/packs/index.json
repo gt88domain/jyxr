@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "defaultPackId": "jyx",
+  "packs": [
+    {
+      "id": "jyx",
+      "title": "金庸群侠传 X",
+      "subtitle": "原版江湖",
+      "description": "原版剧情、地图事件和门派流程持续迁移；西方试验暂停扩展。",
+      "url": "packs/jyx/content-package.json"
+    }
+  ]
+}

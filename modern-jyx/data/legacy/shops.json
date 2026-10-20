@@ -1,0 +1,1521 @@
+[
+  {
+    "id": "新手村.杂货店",
+    "name": "新手村.杂货店",
+    "music": "音乐.城市3",
+    "background": "场景.商店",
+    "products": [
+      {
+        "id": "小还丹",
+        "reward": {
+          "kind": "item",
+          "itemId": "小还丹"
+        },
+        "price": 100
+      },
+      {
+        "id": "大还丹",
+        "reward": {
+          "kind": "item",
+          "itemId": "大还丹"
+        },
+        "price": 200
+      },
+      {
+        "id": "冬虫夏草",
+        "reward": {
+          "kind": "item",
+          "itemId": "冬虫夏草"
+        },
+        "price": 250
+      },
+      {
+        "id": "大蟠桃",
+        "reward": {
+          "kind": "item",
+          "itemId": "大蟠桃"
+        },
+        "price": 80
+      }
+    ]
+  },
+  {
+    "id": "洛阳.商店.新手",
+    "name": "洛阳.商店.新手",
+    "music": "音乐.城市3",
+    "background": "场景.商店",
+    "products": [
+      {
+        "id": "小还丹",
+        "reward": {
+          "kind": "item",
+          "itemId": "小还丹"
+        },
+        "price": 50
+      }
+    ]
+  },
+  {
+    "id": "洛阳.商店",
+    "name": "洛阳.商店",
+    "music": "音乐.城市3",
+    "background": "场景.商店",
+    "products": [
+      {
+        "id": "小还丹",
+        "reward": {
+          "kind": "item",
+          "itemId": "小还丹"
+        },
+        "price": 50
+      },
+      {
+        "id": "大还丹",
+        "reward": {
+          "kind": "item",
+          "itemId": "大还丹"
+        },
+        "price": 100
+      },
+      {
+        "id": "白酒",
+        "reward": {
+          "kind": "item",
+          "itemId": "白酒"
+        },
+        "price": 500
+      },
+      {
+        "id": "七星黄蜡丹",
+        "reward": {
+          "kind": "item",
+          "itemId": "七星黄蜡丹"
+        },
+        "price": 150
+      },
+      {
+        "id": "黄金重甲",
+        "reward": {
+          "kind": "item",
+          "itemId": "黄金重甲"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "粗布道袍",
+        "reward": {
+          "kind": "item",
+          "itemId": "粗布道袍"
+        }
+      },
+      {
+        "id": "木鱼",
+        "reward": {
+          "kind": "item",
+          "itemId": "木鱼"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "阔剑",
+        "reward": {
+          "kind": "item",
+          "itemId": "阔剑"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "柳叶刀",
+        "reward": {
+          "kind": "item",
+          "itemId": "柳叶刀"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "飘雪穿云掌法",
+        "reward": {
+          "kind": "item",
+          "itemId": "飘雪穿云掌法"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "华山剑法秘籍",
+        "reward": {
+          "kind": "item",
+          "itemId": "华山剑法秘籍"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "南山刀法谱",
+        "reward": {
+          "kind": "item",
+          "itemId": "南山刀法谱"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "蛇鹤八打",
+        "reward": {
+          "kind": "item",
+          "itemId": "蛇鹤八打"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "内功入门",
+        "reward": {
+          "kind": "item",
+          "itemId": "内功入门"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "刀",
+        "reward": {
+          "kind": "item",
+          "itemId": "刀"
+        },
+        "price": 10000
+      }
+    ]
+  },
+  {
+    "id": "洛阳.商店.神秘",
+    "name": "洛阳.商店.神秘",
+    "music": "音乐.城市3",
+    "background": "场景.商店",
+    "products": [
+      {
+        "id": "小还丹",
+        "reward": {
+          "kind": "item",
+          "itemId": "小还丹"
+        },
+        "price": 50
+      },
+      {
+        "id": "天王保命丹",
+        "reward": {
+          "kind": "item",
+          "itemId": "天王保命丹"
+        },
+        "price": 800
+      },
+      {
+        "id": "黑玉断续膏",
+        "reward": {
+          "kind": "item",
+          "itemId": "黑玉断续膏"
+        },
+        "price": 400
+      },
+      {
+        "id": "燃木刀法",
+        "reward": {
+          "kind": "item",
+          "itemId": "燃木刀法"
+        },
+        "maxClaims": 1,
+        "price": 800
+      },
+      {
+        "id": "石梁心法秘籍",
+        "reward": {
+          "kind": "item",
+          "itemId": "石梁心法秘籍"
+        },
+        "maxClaims": 1,
+        "price": 500
+      },
+      {
+        "id": "乌蚕衣",
+        "reward": {
+          "kind": "item",
+          "itemId": "乌蚕衣"
+        },
+        "maxClaims": 1,
+        "price": 2000
+      },
+      {
+        "id": "不二枪",
+        "reward": {
+          "kind": "item",
+          "itemId": "不二枪"
+        },
+        "maxClaims": 1,
+        "price": 2000
+      },
+      {
+        "id": "碧水剑",
+        "reward": {
+          "kind": "item",
+          "itemId": "碧水剑"
+        },
+        "maxClaims": 1,
+        "price": 2000
+      },
+      {
+        "id": "龙头拐杖",
+        "reward": {
+          "kind": "item",
+          "itemId": "龙头拐杖"
+        },
+        "maxClaims": 1,
+        "price": 2000
+      },
+      {
+        "id": "软鞭",
+        "reward": {
+          "kind": "item",
+          "itemId": "软鞭"
+        },
+        "maxClaims": 1,
+        "price": 2000
+      },
+      {
+        "id": "万劫指",
+        "reward": {
+          "kind": "item",
+          "itemId": "万劫指"
+        },
+        "maxClaims": 1,
+        "price": 2000
+      },
+      {
+        "id": "冷月宝刀",
+        "reward": {
+          "kind": "item",
+          "itemId": "冷月宝刀"
+        },
+        "maxClaims": 1,
+        "price": 2000
+      },
+      {
+        "id": "倚天剑",
+        "reward": {
+          "kind": "item",
+          "itemId": "倚天剑"
+        },
+        "maxClaims": 1,
+        "price": 4000
+      },
+      {
+        "id": "屠龙刀",
+        "reward": {
+          "kind": "item",
+          "itemId": "屠龙刀"
+        },
+        "maxClaims": 1,
+        "price": 4000
+      },
+      {
+        "id": "血刀",
+        "reward": {
+          "kind": "item",
+          "itemId": "血刀"
+        },
+        "maxClaims": 1,
+        "price": 3000
+      },
+      {
+        "id": "真武剑",
+        "reward": {
+          "kind": "item",
+          "itemId": "真武剑"
+        },
+        "maxClaims": 1,
+        "price": 3500
+      },
+      {
+        "id": "打狗棒",
+        "reward": {
+          "kind": "item",
+          "itemId": "打狗棒"
+        },
+        "maxClaims": 1,
+        "price": 4000
+      },
+      {
+        "id": "金蛇剑",
+        "reward": {
+          "kind": "item",
+          "itemId": "金蛇剑"
+        },
+        "maxClaims": 1,
+        "price": 2000
+      },
+      {
+        "id": "灭仙爪",
+        "reward": {
+          "kind": "item",
+          "itemId": "灭仙爪"
+        },
+        "maxClaims": 1,
+        "price": 2000
+      },
+      {
+        "id": "紫薇软剑",
+        "reward": {
+          "kind": "item",
+          "itemId": "紫薇软剑"
+        },
+        "maxClaims": 1,
+        "price": 2000
+      },
+      {
+        "id": "道家仙丹",
+        "reward": {
+          "kind": "item",
+          "itemId": "道家仙丹"
+        },
+        "maxClaims": 1,
+        "price": 1500
+      },
+      {
+        "id": "王母蟠桃",
+        "reward": {
+          "kind": "item",
+          "itemId": "王母蟠桃"
+        },
+        "maxClaims": 1,
+        "price": 1500
+      },
+      {
+        "id": "刀",
+        "reward": {
+          "kind": "item",
+          "itemId": "刀"
+        },
+        "price": 10000
+      },
+      {
+        "id": "洗练书",
+        "reward": {
+          "kind": "item",
+          "itemId": "洗练书"
+        },
+        "price": 15000
+      }
+    ]
+  },
+  {
+    "id": "长安.商店",
+    "name": "长安.商店",
+    "music": "音乐.武侠进行",
+    "background": "场景.商店",
+    "products": [
+      {
+        "id": "小还丹",
+        "reward": {
+          "kind": "item",
+          "itemId": "小还丹"
+        }
+      },
+      {
+        "id": "大还丹",
+        "reward": {
+          "kind": "item",
+          "itemId": "大还丹"
+        }
+      },
+      {
+        "id": "九花玉露丸",
+        "reward": {
+          "kind": "item",
+          "itemId": "九花玉露丸"
+        }
+      },
+      {
+        "id": "生生造化丹",
+        "reward": {
+          "kind": "item",
+          "itemId": "生生造化丹"
+        }
+      },
+      {
+        "id": "白酒",
+        "reward": {
+          "kind": "item",
+          "itemId": "白酒"
+        }
+      },
+      {
+        "id": "精钢拳套",
+        "reward": {
+          "kind": "item",
+          "itemId": "精钢拳套"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "金刚杵",
+        "reward": {
+          "kind": "item",
+          "itemId": "金刚杵"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "金丝道袍",
+        "reward": {
+          "kind": "item",
+          "itemId": "金丝道袍"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "木刀",
+        "reward": {
+          "kind": "item",
+          "itemId": "木刀"
+        }
+      },
+      {
+        "id": "银手镯",
+        "reward": {
+          "kind": "item",
+          "itemId": "银手镯"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "青莲诗集",
+        "reward": {
+          "kind": "item",
+          "itemId": "青莲诗集"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "八卦游身掌法",
+        "reward": {
+          "kind": "item",
+          "itemId": "八卦游身掌法"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "绕指柔剑剑谱",
+        "reward": {
+          "kind": "item",
+          "itemId": "绕指柔剑剑谱"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "草原刀法",
+        "reward": {
+          "kind": "item",
+          "itemId": "草原刀法"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "玉蜂针",
+        "reward": {
+          "kind": "item",
+          "itemId": "玉蜂针"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "全真心法秘籍",
+        "reward": {
+          "kind": "item",
+          "itemId": "全真心法秘籍"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "刀",
+        "reward": {
+          "kind": "item",
+          "itemId": "刀"
+        }
+      }
+    ]
+  },
+  {
+    "id": "武道大会.VIP1",
+    "name": "武道大会.VIP1",
+    "music": "音乐.武侠进行",
+    "background": "地图.比武场",
+    "products": [
+      {
+        "id": "烈焰黑枪秘本",
+        "reward": {
+          "kind": "item",
+          "itemId": "烈焰黑枪秘本"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 4
+      },
+      {
+        "id": "洗练书",
+        "reward": {
+          "kind": "item",
+          "itemId": "洗练书"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "降龙十八掌残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "external",
+          "skillId": "降龙十八掌"
+        },
+        "premiumPrice": 4
+      },
+      {
+        "id": "独孤九剑残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "external",
+          "skillId": "独孤九剑"
+        },
+        "premiumPrice": 4
+      },
+      {
+        "id": "辟邪剑法残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "external",
+          "skillId": "辟邪剑法"
+        },
+        "premiumPrice": 4
+      },
+      {
+        "id": "如来神掌残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "external",
+          "skillId": "如来神掌"
+        },
+        "premiumPrice": 4
+      },
+      {
+        "id": "九阴神功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "九阴神功"
+        },
+        "premiumPrice": 4
+      },
+      {
+        "id": "九阳神功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "九阳神功"
+        },
+        "premiumPrice": 4
+      },
+      {
+        "id": "野球拳残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "external",
+          "skillId": "野球拳"
+        },
+        "premiumPrice": 4
+      },
+      {
+        "id": "金蛇剑法残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "external",
+          "skillId": "金蛇剑法"
+        },
+        "premiumPrice": 4
+      },
+      {
+        "id": "打狗棒法残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "external",
+          "skillId": "打狗棒法"
+        },
+        "premiumPrice": 4
+      },
+      {
+        "id": "葵花宝典残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "葵花宝典"
+        },
+        "premiumPrice": 4
+      },
+      {
+        "id": "易筋经残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "易筋经"
+        },
+        "premiumPrice": 4
+      },
+      {
+        "id": "道家仙丹",
+        "reward": {
+          "kind": "item",
+          "itemId": "道家仙丹"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "王母蟠桃",
+        "reward": {
+          "kind": "item",
+          "itemId": "王母蟠桃"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "元宝",
+        "reward": {
+          "kind": "yuanbao"
+        },
+        "price": 15000
+      },
+      {
+        "id": "凌波微步图谱",
+        "reward": {
+          "kind": "item",
+          "itemId": "凌波微步图谱"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 4
+      },
+      {
+        "id": "黑暗遗篇之黑天死炎",
+        "reward": {
+          "kind": "item",
+          "itemId": "黑暗遗篇之黑天死炎"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 8
+      },
+      {
+        "id": "黑暗遗篇之死生茫茫",
+        "reward": {
+          "kind": "item",
+          "itemId": "黑暗遗篇之死生茫茫"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 8
+      },
+      {
+        "id": "斗转星移之法",
+        "reward": {
+          "kind": "item",
+          "itemId": "斗转星移之法"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 10
+      },
+      {
+        "id": "小无相功精要",
+        "reward": {
+          "kind": "item",
+          "itemId": "小无相功精要"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 10
+      },
+      {
+        "id": "华山拳法纲要",
+        "reward": {
+          "kind": "item",
+          "itemId": "华山拳法纲要"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 10
+      },
+      {
+        "id": "生意经",
+        "reward": {
+          "kind": "item",
+          "itemId": "生意经"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 12
+      },
+      {
+        "id": "纯阳无极功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "纯阳无极功"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "天外飞龙残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "external",
+          "skillId": "天外飞龙"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "碧落苍穹残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "external",
+          "skillId": "碧落苍穹"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "铁血大旗功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "铁血大旗功"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "混元功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "混元功"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "太极剑残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "external",
+          "skillId": "太极剑"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "太极拳残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "external",
+          "skillId": "太极拳"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "北冥神功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "北冥神功"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "胡家刀法残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "external",
+          "skillId": "胡家刀法"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "先天功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "先天功"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "血海魔功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "血海魔功"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "龙象般若功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "龙象般若功"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "神照功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "神照功"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "基本内功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "基本内功"
+        },
+        "premiumPrice": 1
+      },
+      {
+        "id": "千变魔女的披风",
+        "reward": {
+          "kind": "item",
+          "itemId": "千变魔女的披风"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 8
+      },
+      {
+        "id": "蚩尤的护甲",
+        "reward": {
+          "kind": "item",
+          "itemId": "蚩尤的护甲"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 8
+      },
+      {
+        "id": "姜子牙的道袍",
+        "reward": {
+          "kind": "item",
+          "itemId": "姜子牙的道袍"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 8
+      },
+      {
+        "id": "岳飞的重铠",
+        "reward": {
+          "kind": "item",
+          "itemId": "岳飞的重铠"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 8
+      },
+      {
+        "id": "独孤求败的草帽",
+        "reward": {
+          "kind": "item",
+          "itemId": "独孤求败的草帽"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 8
+      },
+      {
+        "id": "达摩祖师的木鱼",
+        "reward": {
+          "kind": "item",
+          "itemId": "达摩祖师的木鱼"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 8
+      },
+      {
+        "id": "孙悟空的紧箍咒",
+        "reward": {
+          "kind": "item",
+          "itemId": "孙悟空的紧箍咒"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 8
+      },
+      {
+        "id": "魔神信物",
+        "reward": {
+          "kind": "item",
+          "itemId": "魔神信物"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 8
+      }
+    ]
+  },
+  {
+    "id": "武道大会.VIP2",
+    "name": "武道大会.VIP2",
+    "music": "音乐.武侠进行",
+    "background": "地图.比武场",
+    "products": [
+      {
+        "id": "洗练书",
+        "reward": {
+          "kind": "item",
+          "itemId": "洗练书"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "纯阳无极功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "纯阳无极功"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "天外飞龙残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "external",
+          "skillId": "天外飞龙"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "碧落苍穹残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "external",
+          "skillId": "碧落苍穹"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "铁血大旗功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "铁血大旗功"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "混元功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "混元功"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "太极剑残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "external",
+          "skillId": "太极剑"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "太极拳残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "external",
+          "skillId": "太极拳"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "北冥神功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "北冥神功"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "胡家刀法残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "external",
+          "skillId": "胡家刀法"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "先天功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "先天功"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "血海魔功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "血海魔功"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "龙象般若功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "龙象般若功"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "神照功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "神照功"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "道家仙丹",
+        "reward": {
+          "kind": "item",
+          "itemId": "道家仙丹"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "王母蟠桃",
+        "reward": {
+          "kind": "item",
+          "itemId": "王母蟠桃"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "元宝",
+        "reward": {
+          "kind": "yuanbao"
+        },
+        "price": 15000
+      },
+      {
+        "id": "药王神篇",
+        "reward": {
+          "kind": "item",
+          "itemId": "药王神篇"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 5
+      },
+      {
+        "id": "神行百变秘籍",
+        "reward": {
+          "kind": "item",
+          "itemId": "神行百变秘籍"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 8
+      },
+      {
+        "id": "罗汉伏魔功秘本",
+        "reward": {
+          "kind": "item",
+          "itemId": "罗汉伏魔功秘本"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 5
+      },
+      {
+        "id": "蛇胆",
+        "reward": {
+          "kind": "item",
+          "itemId": "蛇胆"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 5
+      },
+      {
+        "id": "小无相功精要",
+        "reward": {
+          "kind": "item",
+          "itemId": "小无相功精要"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 10
+      },
+      {
+        "id": "基本内功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "基本内功"
+        },
+        "premiumPrice": 1
+      },
+      {
+        "id": "千变魔女的披风",
+        "reward": {
+          "kind": "item",
+          "itemId": "千变魔女的披风"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 8
+      },
+      {
+        "id": "蚩尤的护甲",
+        "reward": {
+          "kind": "item",
+          "itemId": "蚩尤的护甲"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 8
+      },
+      {
+        "id": "姜子牙的道袍",
+        "reward": {
+          "kind": "item",
+          "itemId": "姜子牙的道袍"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 8
+      },
+      {
+        "id": "岳飞的重铠",
+        "reward": {
+          "kind": "item",
+          "itemId": "岳飞的重铠"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 8
+      }
+    ]
+  },
+  {
+    "id": "武道大会.VIP3",
+    "name": "武道大会.VIP3",
+    "music": "音乐.武侠进行",
+    "background": "地图.比武场",
+    "products": [
+      {
+        "id": "北冥神功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "北冥神功"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "胡家刀法残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "external",
+          "skillId": "胡家刀法"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "先天功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "先天功"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "血海魔功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "血海魔功"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "龙象般若功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "龙象般若功"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "神照功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "神照功"
+        },
+        "premiumPrice": 3
+      },
+      {
+        "id": "道家仙丹",
+        "reward": {
+          "kind": "item",
+          "itemId": "道家仙丹"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "王母蟠桃",
+        "reward": {
+          "kind": "item",
+          "itemId": "王母蟠桃"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "元宝",
+        "reward": {
+          "kind": "yuanbao"
+        },
+        "price": 18000
+      },
+      {
+        "id": "飞向天际",
+        "reward": {
+          "kind": "item",
+          "itemId": "飞向天际"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 3
+      },
+      {
+        "id": "医术汇总",
+        "reward": {
+          "kind": "item",
+          "itemId": "医术汇总"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 5
+      },
+      {
+        "id": "黯然销魂掌谱",
+        "reward": {
+          "kind": "item",
+          "itemId": "黯然销魂掌谱"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 5
+      },
+      {
+        "id": "基本内功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "基本内功"
+        },
+        "premiumPrice": 1
+      },
+      {
+        "id": "幽梦衣",
+        "reward": {
+          "kind": "item",
+          "itemId": "幽梦衣"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "忍者服",
+        "reward": {
+          "kind": "item",
+          "itemId": "忍者服"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "月梦爪",
+        "reward": {
+          "kind": "item",
+          "itemId": "月梦爪"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "姜子牙的道袍",
+        "reward": {
+          "kind": "item",
+          "itemId": "姜子牙的道袍"
+        },
+        "maxClaims": 1,
+        "premiumPrice": 8
+      }
+    ]
+  },
+  {
+    "id": "武道大会.VIP4",
+    "name": "武道大会.VIP4",
+    "music": "音乐.武侠进行",
+    "background": "地图.比武场",
+    "products": [
+      {
+        "id": "元宝",
+        "reward": {
+          "kind": "yuanbao"
+        },
+        "price": 19000
+      },
+      {
+        "id": "道家仙丹",
+        "reward": {
+          "kind": "item",
+          "itemId": "道家仙丹"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "王母蟠桃",
+        "reward": {
+          "kind": "item",
+          "itemId": "王母蟠桃"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "天王保命丹",
+        "reward": {
+          "kind": "item",
+          "itemId": "天王保命丹"
+        }
+      },
+      {
+        "id": "黑玉断续膏",
+        "reward": {
+          "kind": "item",
+          "itemId": "黑玉断续膏"
+        }
+      },
+      {
+        "id": "基本内功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "基本内功"
+        },
+        "premiumPrice": 1
+      },
+      {
+        "id": "幽梦衣",
+        "reward": {
+          "kind": "item",
+          "itemId": "幽梦衣"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "忍者服",
+        "reward": {
+          "kind": "item",
+          "itemId": "忍者服"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "月梦爪",
+        "reward": {
+          "kind": "item",
+          "itemId": "月梦爪"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "回力跑鞋",
+        "reward": {
+          "kind": "item",
+          "itemId": "回力跑鞋"
+        },
+        "maxClaims": 1
+      }
+    ]
+  },
+  {
+    "id": "武道大会.VIP5",
+    "name": "武道大会.VIP5",
+    "music": "音乐.武侠进行",
+    "background": "地图.比武场",
+    "products": [
+      {
+        "id": "道家仙丹",
+        "reward": {
+          "kind": "item",
+          "itemId": "道家仙丹"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "王母蟠桃",
+        "reward": {
+          "kind": "item",
+          "itemId": "王母蟠桃"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "元宝",
+        "reward": {
+          "kind": "yuanbao"
+        },
+        "price": 20000
+      },
+      {
+        "id": "天王保命丹",
+        "reward": {
+          "kind": "item",
+          "itemId": "天王保命丹"
+        }
+      },
+      {
+        "id": "黑玉断续膏",
+        "reward": {
+          "kind": "item",
+          "itemId": "黑玉断续膏"
+        }
+      },
+      {
+        "id": "基本内功残章",
+        "reward": {
+          "kind": "skill_max_level",
+          "skillKind": "internal",
+          "skillId": "基本内功"
+        },
+        "premiumPrice": 1
+      },
+      {
+        "id": "幽梦衣",
+        "reward": {
+          "kind": "item",
+          "itemId": "幽梦衣"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "忍者服",
+        "reward": {
+          "kind": "item",
+          "itemId": "忍者服"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "月梦爪",
+        "reward": {
+          "kind": "item",
+          "itemId": "月梦爪"
+        },
+        "maxClaims": 1
+      },
+      {
+        "id": "回力跑鞋",
+        "reward": {
+          "kind": "item",
+          "itemId": "回力跑鞋"
+        },
+        "maxClaims": 1
+      }
+    ]
+  }
+]

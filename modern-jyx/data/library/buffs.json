@@ -1,0 +1,2351 @@
+[
+  {
+    "id": "恢复",
+    "category": "buffs",
+    "name": "恢复",
+    "description": "每回合回复生命值",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "engine-behavior",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "每回合回复生命值",
+      "icon": "",
+      "key": "buff.恢复"
+    },
+    "runtime": {
+      "id": "恢复",
+      "name": "恢复",
+      "description": "每回合回复生命值",
+      "isDebuff": false
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "每回合回复生命值",
+          "icon": "",
+          "key": "buff.恢复"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": []
+  },
+  {
+    "id": "集气",
+    "category": "buffs",
+    "name": "集气",
+    "description": "每回合增加蓄力值",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "engine-behavior",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "每回合增加蓄力值",
+      "icon": "",
+      "key": "buff.集气"
+    },
+    "runtime": {
+      "id": "集气",
+      "name": "集气",
+      "description": "每回合增加蓄力值",
+      "isDebuff": false
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "每回合增加蓄力值",
+          "icon": "",
+          "key": "buff.集气"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": []
+  },
+  {
+    "id": "攻击强化",
+    "category": "buffs",
+    "name": "攻击强化",
+    "description": "增加攻击力",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "configured",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "增加攻击力",
+      "icon": "",
+      "key": "buff.攻击强化"
+    },
+    "runtime": {
+      "id": "攻击强化",
+      "name": "攻击强化",
+      "description": "增加攻击力",
+      "isDebuff": false,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 1.0,
+              "deltaPerBuffLevel": 0.1
+            }
+          ]
+        }
+      ]
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "增加攻击力",
+          "icon": "",
+          "key": "buff.攻击强化"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": []
+  },
+  {
+    "id": "飘渺",
+    "category": "buffs",
+    "name": "飘渺",
+    "description": "一定概率躲避攻击",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "configured",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "一定概率躲避攻击",
+      "icon": "",
+      "key": "buff.飘渺"
+    },
+    "runtime": {
+      "id": "飘渺",
+      "name": "飘渺",
+      "description": "一定概率躲避攻击",
+      "isDebuff": false,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeHitResolved",
+          "priority": 0,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "buff_level_chance",
+              "baseValue": 0,
+              "valuePerLevel": 0.07,
+              "maxValue": 1
+            }
+          ],
+          "effects": [
+            {
+              "type": "cancel_hit"
+            }
+          ]
+        }
+      ]
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "一定概率躲避攻击",
+          "icon": "",
+          "key": "buff.飘渺"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "legendGroups",
+        "id": "辟邪剑法奥义式-辟邪剑法",
+        "name": "辟邪剑法奥义式"
+      },
+      {
+        "category": "legendGroups",
+        "id": "辟邪剑法奥义式-葵花宝典.真辟邪剑法",
+        "name": "辟邪剑法奥义式"
+      },
+      {
+        "category": "legendGroups",
+        "id": "辟邪剑法.阴凛玄煞.电光火石-辟邪剑法",
+        "name": "辟邪剑法.阴凛玄煞.电光火石"
+      }
+    ]
+  },
+  {
+    "id": "左右互搏",
+    "category": "buffs",
+    "name": "左右互搏",
+    "description": "一定概率出两次攻击",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "metadata-only",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "一定概率出两次攻击",
+      "icon": "",
+      "key": "buff.左右互搏"
+    },
+    "runtime": {
+      "id": "左右互搏",
+      "name": "左右互搏",
+      "description": "一定概率出两次攻击",
+      "isDebuff": false
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "一定概率出两次攻击",
+          "icon": "",
+          "key": "buff.左右互搏"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "characters",
+        "id": "周伯通",
+        "name": "周伯通"
+      },
+      {
+        "category": "characters",
+        "id": "炼狱周伯通",
+        "name": "周伯通"
+      },
+      {
+        "category": "characters",
+        "id": "左右互搏小虾米",
+        "name": "小虾米"
+      },
+      {
+        "category": "externalSkills",
+        "id": "空明拳",
+        "name": "空明拳"
+      },
+      {
+        "category": "legendGroups",
+        "id": "空明神拳-空明拳",
+        "name": "空明神拳"
+      },
+      {
+        "category": "items",
+        "id": "左右互搏术",
+        "name": "左右互搏术"
+      },
+      {
+        "category": "stories",
+        "id": "门派古墓_左右互搏胜",
+        "name": "门派古墓_左右互搏胜"
+      },
+      {
+        "category": "stories",
+        "id": "门派古墓_左右互搏负",
+        "name": "门派古墓_左右互搏负"
+      },
+      {
+        "category": "stories",
+        "id": "霹雳堂_小龙女",
+        "name": "霹雳堂_小龙女"
+      }
+    ]
+  },
+  {
+    "id": "神速攻击",
+    "category": "buffs",
+    "name": "神速攻击",
+    "description": "一定概率出三次攻击",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "partial",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "一定概率出三次攻击",
+      "icon": "",
+      "key": "buff.神速攻击"
+    },
+    "runtime": {
+      "id": "神速攻击",
+      "name": "神速攻击",
+      "description": "一定概率出三次攻击",
+      "isDebuff": false,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "conditions": [
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "幽居",
+                "素心神剑",
+                "左右互搏"
+              ],
+              "absent": true
+            },
+            {
+              "type": "context_unit_buff",
+              "buffIds": [
+                "醉酒"
+              ],
+              "absent": true
+            }
+          ],
+          "effects": [
+            {
+              "type": "extra_strike",
+              "target": {
+                "type": "target"
+              },
+              "damageFactors": [
+                0.6,
+                0.3
+              ],
+              "runDamageHooks": false,
+              "talentContributions": [
+                {
+                  "talentId": "幽居",
+                  "chancePerLevel": 0.005,
+                  "singlePrecision": true
+                },
+                {
+                  "talentId": "素心神剑",
+                  "randomMaximum": 0.2
+                },
+                {
+                  "talentId": "左右互搏",
+                  "randomMaximum": 0.6
+                }
+              ],
+              "buffContributions": [
+                {
+                  "buffId": "醉酒",
+                  "maximumStrikes": 1,
+                  "singlePrecision": true
+                },
+                {
+                  "buffId": "神速攻击",
+                  "maximumStrikes": 2,
+                  "singlePrecision": true,
+                  "stopAfterMatch": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "一定概率出三次攻击",
+          "icon": "",
+          "key": "buff.神速攻击"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": []
+  },
+  {
+    "id": "醉酒",
+    "category": "buffs",
+    "name": "醉酒",
+    "description": "20%概率因为醉酒不能行动，80%概率怒气全满，同时攻击有一定几率出两次攻击",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "partial",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "20%概率因为醉酒不能行动，80%概率怒气全满，同时攻击有一定几率出两次攻击",
+      "icon": "",
+      "key": "buff.醉酒"
+    },
+    "runtime": {
+      "id": "醉酒",
+      "name": "醉酒",
+      "description": "20%概率因为醉酒不能行动，80%概率怒气全满，同时攻击有一定几率出两次攻击",
+      "isDebuff": false,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeActionStart",
+          "priority": 0,
+          "conditions": [],
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "drunkenness",
+              "parameters": {
+                "skipChance": 0.2,
+                "rage": 6,
+                "skipReason": "醉酒"
+              }
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "OnHitConfirmed",
+          "conditions": [
+            {
+              "type": "context_unit_effective_talent",
+              "talentIds": [
+                "幽居",
+                "素心神剑",
+                "左右互搏"
+              ],
+              "absent": true
+            }
+          ],
+          "effects": [
+            {
+              "type": "extra_strike",
+              "target": {
+                "type": "target"
+              },
+              "damageFactors": [
+                0.6,
+                0.3
+              ],
+              "runDamageHooks": false,
+              "talentContributions": [
+                {
+                  "talentId": "幽居",
+                  "chancePerLevel": 0.005,
+                  "singlePrecision": true
+                },
+                {
+                  "talentId": "素心神剑",
+                  "randomMaximum": 0.2
+                },
+                {
+                  "talentId": "左右互搏",
+                  "randomMaximum": 0.6
+                }
+              ],
+              "buffContributions": [
+                {
+                  "buffId": "醉酒",
+                  "maximumStrikes": 1,
+                  "singlePrecision": true
+                },
+                {
+                  "buffId": "神速攻击",
+                  "maximumStrikes": 2,
+                  "singlePrecision": true,
+                  "stopAfterMatch": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "20%概率因为醉酒不能行动，80%概率怒气全满，同时攻击有一定几率出两次攻击",
+          "icon": "",
+          "key": "buff.醉酒"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": []
+  },
+  {
+    "id": "中毒",
+    "category": "buffs",
+    "name": "中毒",
+    "description": "每回合减少生命值",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "engine-behavior",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "每回合减少生命值",
+      "icon": "",
+      "key": "buff.中毒"
+    },
+    "runtime": {
+      "id": "中毒",
+      "name": "中毒",
+      "description": "每回合减少生命值",
+      "isDebuff": true
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "每回合减少生命值",
+          "icon": "",
+          "key": "buff.中毒"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": []
+  },
+  {
+    "id": "内伤",
+    "category": "buffs",
+    "name": "内伤",
+    "description": "每回合减少内力值，内力消耗增加",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "engine-behavior",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "每回合减少内力值，内力消耗增加",
+      "icon": "",
+      "key": "buff.内伤"
+    },
+    "runtime": {
+      "id": "内伤",
+      "name": "内伤",
+      "description": "每回合减少内力值，内力消耗增加",
+      "isDebuff": true
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "每回合减少内力值，内力消耗增加",
+          "icon": "",
+          "key": "buff.内伤"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "externalSkills",
+        "id": "三花聚顶掌",
+        "name": "三花聚顶掌"
+      },
+      {
+        "category": "externalSkills",
+        "id": "七伤拳",
+        "name": "七伤拳"
+      },
+      {
+        "category": "externalSkills",
+        "id": "玄铁剑法",
+        "name": "玄铁剑法"
+      }
+    ]
+  },
+  {
+    "id": "致盲",
+    "category": "buffs",
+    "name": "致盲",
+    "description": "减少技能攻击范围",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "engine-behavior",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "减少技能攻击范围",
+      "icon": "",
+      "key": "buff.致盲"
+    },
+    "runtime": {
+      "id": "致盲",
+      "name": "致盲",
+      "description": "减少技能攻击范围",
+      "isDebuff": true
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "减少技能攻击范围",
+          "icon": "",
+          "key": "buff.致盲"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "externalSkills",
+        "id": "袖箭",
+        "name": "袖箭"
+      },
+      {
+        "category": "externalSkills",
+        "id": "破玉拳",
+        "name": "破玉拳"
+      },
+      {
+        "category": "externalSkills",
+        "id": "七伤拳",
+        "name": "七伤拳"
+      }
+    ]
+  },
+  {
+    "id": "缓速",
+    "category": "buffs",
+    "name": "缓速",
+    "description": "减少移动范围",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "engine-behavior",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "减少移动范围",
+      "icon": "",
+      "key": "buff.缓速"
+    },
+    "runtime": {
+      "id": "缓速",
+      "name": "缓速",
+      "description": "减少移动范围",
+      "isDebuff": true
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "减少移动范围",
+          "icon": "",
+          "key": "buff.缓速"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "externalSkills",
+        "id": "三分剑法",
+        "name": "三分剑法"
+      },
+      {
+        "category": "externalSkills",
+        "id": "九阴白骨爪",
+        "name": "九阴白骨爪"
+      },
+      {
+        "category": "externalSkills",
+        "id": "七伤拳",
+        "name": "七伤拳"
+      }
+    ]
+  },
+  {
+    "id": "晕眩",
+    "category": "buffs",
+    "name": "晕眩",
+    "description": "无法行动",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "engine-behavior",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "无法行动",
+      "icon": "",
+      "key": "buff.晕眩"
+    },
+    "runtime": {
+      "id": "晕眩",
+      "name": "晕眩",
+      "description": "无法行动",
+      "isDebuff": true
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "无法行动",
+          "icon": "",
+          "key": "buff.晕眩"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "externalSkills",
+        "id": "七伤拳",
+        "name": "七伤拳"
+      }
+    ]
+  },
+  {
+    "id": "攻击弱化",
+    "category": "buffs",
+    "name": "攻击弱化",
+    "description": "减少攻击力",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "configured",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "减少攻击力",
+      "icon": "",
+      "key": "buff.攻击弱化"
+    },
+    "runtime": {
+      "id": "攻击弱化",
+      "name": "攻击弱化",
+      "description": "减少攻击力",
+      "isDebuff": true,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 1.0,
+              "deltaPerBuffLevel": -0.1
+            }
+          ]
+        }
+      ]
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "减少攻击力",
+          "icon": "",
+          "key": "buff.攻击弱化"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "externalSkills",
+        "id": "全真剑法",
+        "name": "全真剑法"
+      },
+      {
+        "category": "externalSkills",
+        "id": "五大夫剑法",
+        "name": "五大夫剑法"
+      },
+      {
+        "category": "externalSkills",
+        "id": "忘情剑",
+        "name": "忘情剑"
+      },
+      {
+        "category": "externalSkills",
+        "id": "庖丁解牛",
+        "name": "庖丁解牛"
+      },
+      {
+        "category": "externalSkills",
+        "id": "一阳指",
+        "name": "一阳指"
+      },
+      {
+        "category": "externalSkills",
+        "id": "破玉拳",
+        "name": "破玉拳"
+      }
+    ]
+  },
+  {
+    "id": "诸般封印",
+    "category": "buffs",
+    "name": "诸般封印",
+    "description": "无法施展拳、刀、剑、奇门外功，可以施展绝技",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "engine-behavior",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "无法施展拳、刀、剑、奇门外功，可以施展绝技",
+      "icon": "",
+      "key": "buff.诸般封印"
+    },
+    "runtime": {
+      "id": "诸般封印",
+      "name": "诸般封印",
+      "description": "无法施展拳、刀、剑、奇门外功，可以施展绝技",
+      "isDebuff": true
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "无法施展拳、刀、剑、奇门外功，可以施展绝技",
+          "icon": "",
+          "key": "buff.诸般封印"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "externalSkills",
+        "id": "破玉拳",
+        "name": "破玉拳"
+      },
+      {
+        "category": "externalSkills",
+        "id": "六脉神剑",
+        "name": "六脉神剑"
+      },
+      {
+        "category": "externalSkills",
+        "id": "天山折梅手",
+        "name": "天山折梅手"
+      },
+      {
+        "category": "externalSkills",
+        "id": "打狗棒法",
+        "name": "打狗棒法"
+      },
+      {
+        "category": "externalSkills",
+        "id": "斗转星移",
+        "name": "斗转星移"
+      },
+      {
+        "category": "internalSkills",
+        "id": "纯阳无极功",
+        "name": "纯阳无极功"
+      },
+      {
+        "category": "legendGroups",
+        "id": "全真绝学.三花聚顶.炼神返虚-三花聚顶掌",
+        "name": "全真绝学.三花聚顶.炼神返虚"
+      },
+      {
+        "category": "legendGroups",
+        "id": "丐帮绝学.打狗棒法奥义-打狗棒法",
+        "name": "丐帮绝学.打狗棒法奥义"
+      },
+      {
+        "category": "legendGroups",
+        "id": "丐帮绝学.打狗棒法奥义-打狗棒法-2",
+        "name": "丐帮绝学.打狗棒法奥义"
+      },
+      {
+        "category": "legendGroups",
+        "id": "丐帮绝学.打狗棒法奥义-打狗棒法-3",
+        "name": "丐帮绝学.打狗棒法奥义"
+      },
+      {
+        "category": "legendGroups",
+        "id": "慕容绝学.离合参商-斗转星移",
+        "name": "慕容绝学.离合参商"
+      },
+      {
+        "category": "legendGroups",
+        "id": "慕容绝学.离合参商-斗转星移-2",
+        "name": "慕容绝学.离合参商"
+      },
+      {
+        "category": "legendGroups",
+        "id": "绝学.刀剑归真-胡家刀法",
+        "name": "绝学.刀剑归真"
+      },
+      {
+        "category": "legendGroups",
+        "id": "绝学.刀剑归真-苗家剑法",
+        "name": "绝学.刀剑归真"
+      },
+      {
+        "category": "legendGroups",
+        "id": "如来神掌.万佛朝宗-如来神掌",
+        "name": "如来神掌.万佛朝宗"
+      },
+      {
+        "category": "stories",
+        "id": "黑衣_暗杀独孤求败奖励",
+        "name": "黑衣_暗杀独孤求败奖励"
+      }
+    ]
+  },
+  {
+    "id": "剑封印",
+    "category": "buffs",
+    "name": "剑封印",
+    "description": "无法施展剑系外功，无法施展相关绝技",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "engine-behavior",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "无法施展剑系外功，无法施展相关绝技",
+      "icon": "",
+      "key": "buff.剑封印"
+    },
+    "runtime": {
+      "id": "剑封印",
+      "name": "剑封印",
+      "description": "无法施展剑系外功，无法施展相关绝技",
+      "isDebuff": true
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "无法施展剑系外功，无法施展相关绝技",
+          "icon": "",
+          "key": "buff.剑封印"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "internalSkills",
+        "id": "武当九阳功",
+        "name": "武当九阳功"
+      }
+    ]
+  },
+  {
+    "id": "刀封印",
+    "category": "buffs",
+    "name": "刀封印",
+    "description": "无法施展刀系外功，无法施展相关绝技",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "engine-behavior",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "无法施展刀系外功，无法施展相关绝技",
+      "icon": "",
+      "key": "buff.刀封印"
+    },
+    "runtime": {
+      "id": "刀封印",
+      "name": "刀封印",
+      "description": "无法施展刀系外功，无法施展相关绝技",
+      "isDebuff": true
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "无法施展刀系外功，无法施展相关绝技",
+          "icon": "",
+          "key": "buff.刀封印"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "internalSkills",
+        "id": "峨眉九阳功",
+        "name": "峨眉九阳功"
+      }
+    ]
+  },
+  {
+    "id": "拳掌封印",
+    "category": "buffs",
+    "name": "拳掌封印",
+    "description": "无法施展拳系外功，无法施展相关绝技",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "engine-behavior",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "无法施展拳系外功，无法施展相关绝技",
+      "icon": "",
+      "key": "buff.拳掌封印"
+    },
+    "runtime": {
+      "id": "拳掌封印",
+      "name": "拳掌封印",
+      "description": "无法施展拳系外功，无法施展相关绝技",
+      "isDebuff": true
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "无法施展拳系外功，无法施展相关绝技",
+          "icon": "",
+          "key": "buff.拳掌封印"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "internalSkills",
+        "id": "少林九阳功",
+        "name": "少林九阳功"
+      },
+      {
+        "category": "internalSkills",
+        "id": "混元功",
+        "name": "混元功"
+      },
+      {
+        "category": "internalSkills",
+        "id": "寒冰真气",
+        "name": "寒冰真气"
+      },
+      {
+        "category": "internalSkills",
+        "id": "日月心经",
+        "name": "日月心经"
+      },
+      {
+        "category": "legendGroups",
+        "id": "拈花一指-拈花指",
+        "name": "拈花一指"
+      }
+    ]
+  },
+  {
+    "id": "奇门封印",
+    "category": "buffs",
+    "name": "奇门封印",
+    "description": "无法施展奇门外功，无法施展相关绝技",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "engine-behavior",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "无法施展奇门外功，无法施展相关绝技",
+      "icon": "",
+      "key": "buff.奇门封印"
+    },
+    "runtime": {
+      "id": "奇门封印",
+      "name": "奇门封印",
+      "description": "无法施展奇门外功，无法施展相关绝技",
+      "isDebuff": true
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "无法施展奇门外功，无法施展相关绝技",
+          "icon": "",
+          "key": "buff.奇门封印"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": []
+  },
+  {
+    "id": "溜须拍马",
+    "category": "buffs",
+    "name": "溜须拍马",
+    "description": "溜须拍马，跪地求饶，不受伤害。",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "partial",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "溜须拍马，跪地求饶，不受伤害。",
+      "icon": "",
+      "key": "buff.溜须拍马"
+    },
+    "runtime": {
+      "id": "溜须拍马",
+      "name": "溜须拍马",
+      "description": "溜须拍马，跪地求饶，不受伤害。",
+      "isDebuff": false,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageApplied",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "incoming_damage_immunity",
+              "parameters": {}
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "source",
+              "relation": "enemy"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
+            }
+          ],
+          "priority": 525
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "effects": [
+            {
+              "type": "remove_buff",
+              "target": {
+                "type": "self"
+              },
+              "buffId": "溜须拍马"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            }
+          ],
+          "priority": 0
+        }
+      ]
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "溜须拍马，跪地求饶，不受伤害。",
+          "icon": "",
+          "key": "buff.溜须拍马"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "specialSkills",
+        "id": "溜须拍马",
+        "name": "溜须拍马"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "characters",
+        "id": "韦小宝",
+        "name": "韦小宝"
+      },
+      {
+        "category": "specialSkills",
+        "id": "溜须拍马",
+        "name": "溜须拍马"
+      },
+      {
+        "category": "stories",
+        "id": "霹雳堂_韦小宝",
+        "name": "霹雳堂_韦小宝"
+      },
+      {
+        "category": "resources",
+        "id": "buff.溜须拍马",
+        "name": "buff.溜须拍马"
+      }
+    ]
+  },
+  {
+    "id": "易容",
+    "category": "buffs",
+    "name": "易容",
+    "description": "易容改面，藏于暗处。伺机发动致命伤害。",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "partial",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "易容改面，藏于暗处。伺机发动致命伤害。",
+      "icon": "",
+      "key": "buff.易容"
+    },
+    "runtime": {
+      "id": "易容",
+      "name": "易容",
+      "description": "易容改面，藏于暗处。伺机发动致命伤害。",
+      "isDebuff": false,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageApplied",
+          "effects": [
+            {
+              "type": "custom",
+              "effectId": "incoming_damage_immunity",
+              "parameters": {}
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "source",
+              "relation": "enemy"
+            },
+            {
+              "type": "context_skill_kind",
+              "kinds": [
+                "External",
+                "Internal",
+                "Form",
+                "Legend"
+              ]
+            }
+          ],
+          "priority": 525
+        },
+        {
+          "type": "hook",
+          "timing": "AfterDamageCalculation",
+          "effects": [
+            {
+              "type": "modify_damage",
+              "op": "more",
+              "deltaMin": 1.1,
+              "deltaMax": 1.3
+            },
+            {
+              "type": "remove_buff",
+              "target": {
+                "type": "self"
+              },
+              "buffId": "易容"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            },
+            {
+              "type": "context_unit_relation",
+              "role": "target",
+              "relation": "enemy"
+            }
+          ],
+          "priority": -500
+        }
+      ]
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "易容改面，藏于暗处。伺机发动致命伤害。",
+          "icon": "",
+          "key": "buff.易容"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": []
+  },
+  {
+    "id": "伤害加深",
+    "category": "buffs",
+    "name": "伤害加深",
+    "description": "伤害不停加深，受到与BUFF等级相关的额外伤害。",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "configured",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "伤害不停加深，受到与BUFF等级相关的额外伤害。",
+      "icon": "",
+      "key": "buff.伤害加深"
+    },
+    "runtime": {
+      "id": "伤害加深",
+      "name": "伤害加深",
+      "description": "伤害不停加深，受到与BUFF等级相关的额外伤害。",
+      "isDebuff": true,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "source_attack",
+              "op": "more",
+              "delta": 1.0,
+              "deltaPowerBasePerBuffLevel": 1.15
+            }
+          ]
+        }
+      ]
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "伤害不停加深，受到与BUFF等级相关的额外伤害。",
+          "icon": "",
+          "key": "buff.伤害加深"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": []
+  },
+  {
+    "id": "圣战",
+    "category": "buffs",
+    "name": "圣战",
+    "description": "不受任何不良状态影响。",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "engine-behavior",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "不受任何不良状态影响。",
+      "icon": "",
+      "key": "buff.圣战"
+    },
+    "runtime": {
+      "id": "圣战",
+      "name": "圣战",
+      "description": "不受任何不良状态影响。",
+      "isDebuff": false
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "不受任何不良状态影响。",
+          "icon": "",
+          "key": "buff.圣战"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": []
+  },
+  {
+    "id": "重伤",
+    "category": "buffs",
+    "name": "重伤",
+    "description": "受到的任何回复效果减半。",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "configured",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "受到的任何回复效果减半。",
+      "icon": "",
+      "key": "buff.重伤"
+    },
+    "runtime": {
+      "id": "重伤",
+      "name": "重伤",
+      "description": "受到的任何回复效果减半。",
+      "isDebuff": true,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeRecoveryResolved",
+          "priority": 0,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_recovery_kind",
+              "kind": "hp"
+            },
+            {
+              "type": "context_recovery_reason",
+              "reasons": [
+                "Rest",
+                "Item",
+                "Lifesteal",
+                "DamageConversion"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_recovery",
+              "op": "more",
+              "delta": 0.5,
+              "rounding": "Truncate"
+            }
+          ]
+        },
+        {
+          "type": "hook",
+          "timing": "BeforeRecoveryResolved",
+          "priority": 0,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_recovery_kind",
+              "kind": "mp"
+            },
+            {
+              "type": "context_recovery_reason",
+              "reasons": [
+                "Rest",
+                "Item"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_recovery",
+              "op": "more",
+              "delta": 0.5,
+              "rounding": "Truncate"
+            }
+          ]
+        }
+      ]
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "受到的任何回复效果减半。",
+          "icon": "",
+          "key": "buff.重伤"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "externalSkills",
+        "id": "雕啄",
+        "name": "雕啄"
+      },
+      {
+        "category": "externalSkills",
+        "id": "须弥山掌",
+        "name": "须弥山掌"
+      },
+      {
+        "category": "externalSkills",
+        "id": "伏魔杖法",
+        "name": "伏魔杖法"
+      },
+      {
+        "category": "externalSkills",
+        "id": "大力金刚指",
+        "name": "大力金刚指"
+      },
+      {
+        "category": "externalSkills",
+        "id": "七伤拳",
+        "name": "七伤拳"
+      },
+      {
+        "category": "externalSkills",
+        "id": "降龙十八掌",
+        "name": "降龙十八掌"
+      }
+    ]
+  },
+  {
+    "id": "定身",
+    "category": "buffs",
+    "name": "定身",
+    "description": "无法移动。",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "configured",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "无法移动。",
+      "icon": "",
+      "key": "buff.定身"
+    },
+    "runtime": {
+      "id": "定身",
+      "name": "定身",
+      "description": "无法移动。",
+      "isDebuff": true,
+      "affixes": [
+        {
+          "type": "trait",
+          "traitId": "CannotMove"
+        }
+      ]
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "无法移动。",
+          "icon": "",
+          "key": "buff.定身"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "externalSkills",
+        "id": "大剪刀",
+        "name": "大剪刀"
+      },
+      {
+        "category": "externalSkills",
+        "id": "神驼雪山掌",
+        "name": "神驼雪山掌"
+      },
+      {
+        "category": "externalSkills",
+        "id": "擒龙功",
+        "name": "擒龙功"
+      },
+      {
+        "category": "externalSkills",
+        "id": "破玉拳",
+        "name": "破玉拳"
+      },
+      {
+        "category": "externalSkills",
+        "id": "连城剑法",
+        "name": "连城剑法"
+      },
+      {
+        "category": "externalSkills",
+        "id": "七伤拳",
+        "name": "七伤拳"
+      },
+      {
+        "category": "externalSkills",
+        "id": "打狗棒法",
+        "name": "打狗棒法"
+      },
+      {
+        "category": "legendGroups",
+        "id": "如来神掌.万佛朝宗-如来神掌",
+        "name": "如来神掌.万佛朝宗"
+      }
+    ]
+  },
+  {
+    "id": "轻身",
+    "category": "buffs",
+    "name": "轻身",
+    "description": "增加移动能力。",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "engine-behavior",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "增加移动能力。",
+      "icon": "",
+      "key": "buff.轻身"
+    },
+    "runtime": {
+      "id": "轻身",
+      "name": "轻身",
+      "description": "增加移动能力。",
+      "isDebuff": false
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "增加移动能力。",
+          "icon": "",
+          "key": "buff.轻身"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": []
+  },
+  {
+    "id": "防御强化",
+    "category": "buffs",
+    "name": "防御强化",
+    "description": "提升防御力。",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "configured",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "提升防御力。",
+      "icon": "",
+      "key": "buff.防御强化"
+    },
+    "runtime": {
+      "id": "防御强化",
+      "name": "防御强化",
+      "description": "提升防御力。",
+      "isDebuff": false,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "target_defence",
+              "op": "add",
+              "delta": 20,
+              "deltaPerBuffLevel": 20
+            }
+          ]
+        }
+      ]
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "提升防御力。",
+          "icon": "",
+          "key": "buff.防御强化"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "externalSkills",
+        "id": "盾术",
+        "name": "盾术"
+      },
+      {
+        "category": "externalSkills",
+        "id": "太极拳",
+        "name": "太极拳"
+      }
+    ]
+  },
+  {
+    "id": "魔神降临",
+    "category": "buffs",
+    "name": "魔神降临",
+    "description": "犹如魔神附体，所有攻击必定暴击，暴击伤害提高25%。",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "partial",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "犹如魔神附体，所有攻击必定暴击，暴击伤害提高25%。",
+      "icon": "",
+      "key": "buff.魔神降临"
+    },
+    "runtime": {
+      "id": "魔神降临",
+      "name": "魔神降临",
+      "description": "犹如魔神附体，所有攻击必定暴击，暴击伤害提高25%。",
+      "isDebuff": false,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeDamageCalculation",
+          "effects": [
+            {
+              "type": "modify_damage_context",
+              "field": "critical_chance",
+              "op": "override",
+              "delta": 1
+            },
+            {
+              "type": "modify_damage_context",
+              "field": "critical_multiplier",
+              "op": "add",
+              "delta": 0.25
+            }
+          ],
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "source"
+            }
+          ],
+          "priority": -1000
+        }
+      ]
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "犹如魔神附体，所有攻击必定暴击，暴击伤害提高25%。",
+          "icon": "",
+          "key": "buff.魔神降临"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "internalSkills",
+        "id": "血海魔功",
+        "name": "血海魔功"
+      },
+      {
+        "category": "internalSkills",
+        "id": "黑炎心法",
+        "name": "黑炎心法"
+      },
+      {
+        "category": "items",
+        "id": "魔神信物",
+        "name": "魔神信物"
+      }
+    ]
+  },
+  {
+    "id": "封穴",
+    "category": "buffs",
+    "name": "封穴",
+    "description": "穴道被封，无法恢复内力。",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "configured",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "穴道被封，无法恢复内力。",
+      "icon": "",
+      "key": "buff.封穴"
+    },
+    "runtime": {
+      "id": "封穴",
+      "name": "封穴",
+      "description": "穴道被封，无法恢复内力。",
+      "isDebuff": true,
+      "affixes": [
+        {
+          "type": "hook",
+          "timing": "BeforeRecoveryResolved",
+          "priority": 0,
+          "conditions": [
+            {
+              "type": "context_unit_role",
+              "role": "target"
+            },
+            {
+              "type": "context_recovery_kind",
+              "kind": "mp"
+            },
+            {
+              "type": "context_recovery_reason",
+              "reasons": [
+                "Rest"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "type": "modify_recovery",
+              "op": "more",
+              "delta": 0,
+              "rounding": "Truncate"
+            }
+          ]
+        }
+      ]
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "穴道被封，无法恢复内力。",
+          "icon": "",
+          "key": "buff.封穴"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "externalSkills",
+        "id": "倚天屠龙笔法",
+        "name": "倚天屠龙笔法"
+      },
+      {
+        "category": "externalSkills",
+        "id": "弹指神通",
+        "name": "弹指神通"
+      },
+      {
+        "category": "externalSkills",
+        "id": "大力金刚指",
+        "name": "大力金刚指"
+      },
+      {
+        "category": "externalSkills",
+        "id": "六脉神剑",
+        "name": "六脉神剑"
+      }
+    ]
+  },
+  {
+    "id": "麻痹",
+    "category": "buffs",
+    "name": "麻痹",
+    "description": "降低战斗中的集气速度。",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "engine-behavior",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "降低战斗中的集气速度。",
+      "icon": "",
+      "key": "buff.麻痹"
+    },
+    "runtime": {
+      "id": "麻痹",
+      "name": "麻痹",
+      "description": "降低战斗中的集气速度。",
+      "isDebuff": true
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "降低战斗中的集气速度。",
+          "icon": "",
+          "key": "buff.麻痹"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "externalSkills",
+        "id": "百花错拳",
+        "name": "百花错拳"
+      },
+      {
+        "category": "externalSkills",
+        "id": "拈花指",
+        "name": "拈花指"
+      },
+      {
+        "category": "externalSkills",
+        "id": "日月神鞭",
+        "name": "日月神鞭"
+      },
+      {
+        "category": "externalSkills",
+        "id": "太极剑",
+        "name": "太极剑"
+      },
+      {
+        "category": "externalSkills",
+        "id": "七伤拳",
+        "name": "七伤拳"
+      },
+      {
+        "category": "legendGroups",
+        "id": "如来神掌.万佛朝宗-如来神掌",
+        "name": "如来神掌.万佛朝宗"
+      }
+    ]
+  },
+  {
+    "id": "神行",
+    "category": "buffs",
+    "name": "神行",
+    "description": "提高战斗中的集气速度。",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "engine-behavior",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "提高战斗中的集气速度。",
+      "icon": "",
+      "key": "buff.神行"
+    },
+    "runtime": {
+      "id": "神行",
+      "name": "神行",
+      "description": "提高战斗中的集气速度。",
+      "isDebuff": false
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "提高战斗中的集气速度。",
+          "icon": "",
+          "key": "buff.神行"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": []
+  },
+  {
+    "id": "狂战",
+    "category": "buffs",
+    "name": "狂战",
+    "description": "以受到更多伤害为代价，提升攻击力。",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "metadata-only",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "以受到更多伤害为代价，提升攻击力。",
+      "icon": "",
+      "key": "buff.狂战"
+    },
+    "runtime": {
+      "id": "狂战",
+      "name": "狂战",
+      "description": "以受到更多伤害为代价，提升攻击力。",
+      "isDebuff": false
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "以受到更多伤害为代价，提升攻击力。",
+          "icon": "",
+          "key": "buff.狂战"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": []
+  },
+  {
+    "id": "坚守",
+    "category": "buffs",
+    "name": "坚守",
+    "description": "以减少攻击输出为代价，减少所受伤害。",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "metadata-only",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "以减少攻击输出为代价，减少所受伤害。",
+      "icon": "",
+      "key": "buff.坚守"
+    },
+    "runtime": {
+      "id": "坚守",
+      "name": "坚守",
+      "description": "以减少攻击输出为代价，减少所受伤害。",
+      "isDebuff": false
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "以减少攻击输出为代价，减少所受伤害。",
+          "icon": "",
+          "key": "buff.坚守"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": []
+  },
+  {
+    "id": "沾衣十八跌",
+    "category": "buffs",
+    "name": "沾衣十八跌",
+    "description": "气劲充满全身，攻击命中的敌人有一定概率被气劲反伤晕眩。",
+    "state": "资料已接入",
+    "source": "resource.xml",
+    "effect": "metadata-only",
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "resource",
+      "value": "气劲充满全身，攻击命中的敌人有一定概率被气劲反伤晕眩。",
+      "icon": "",
+      "key": "buff.沾衣十八跌"
+    },
+    "runtime": {
+      "id": "沾衣十八跌",
+      "name": "沾衣十八跌",
+      "description": "气劲充满全身，攻击命中的敌人有一定概率被气劲反伤晕眩。",
+      "isDebuff": false
+    },
+    "variants": [
+      {
+        "source": "resource.txt",
+        "node": {
+          "tag": "resource",
+          "value": "气劲充满全身，攻击命中的敌人有一定概率被气劲反伤晕眩。",
+          "icon": "",
+          "key": "buff.沾衣十八跌"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "characters",
+        "id": "神级主角",
+        "name": "小虾米"
+      },
+      {
+        "category": "characters",
+        "id": "张无忌",
+        "name": "张无忌"
+      },
+      {
+        "category": "characters",
+        "id": "光明顶张无忌",
+        "name": "张无忌"
+      },
+      {
+        "category": "characters",
+        "id": "长青子",
+        "name": "长青子"
+      },
+      {
+        "category": "characters",
+        "id": "变身张无忌",
+        "name": "张无忌"
+      },
+      {
+        "category": "characters",
+        "id": "神级张无忌",
+        "name": "张无忌"
+      },
+      {
+        "category": "characters",
+        "id": "王重阳",
+        "name": "王重阳"
+      },
+      {
+        "category": "characters",
+        "id": "炼狱王重阳",
+        "name": "王重阳"
+      },
+      {
+        "category": "characters",
+        "id": "林朝英",
+        "name": "林朝英"
+      },
+      {
+        "category": "characters",
+        "id": "炼狱林朝英",
+        "name": "林朝英"
+      },
+      {
+        "category": "characters",
+        "id": "玄慈方丈",
+        "name": "玄慈方丈"
+      },
+      {
+        "category": "characters",
+        "id": "玄难",
+        "name": "玄难"
+      },
+      {
+        "category": "characters",
+        "id": "玄寂",
+        "name": "玄寂"
+      },
+      {
+        "category": "characters",
+        "id": "魔君",
+        "name": "魔君"
+      },
+      {
+        "category": "characters",
+        "id": "穆人清",
+        "name": "穆人清"
+      },
+      {
+        "category": "characters",
+        "id": "炼狱穆人清",
+        "name": "穆人清"
+      },
+      {
+        "category": "characters",
+        "id": "木桑道长",
+        "name": "木桑道长"
+      },
+      {
+        "category": "characters",
+        "id": "九难",
+        "name": "九难"
+      },
+      {
+        "category": "characters",
+        "id": "张三丰",
+        "name": "张三丰"
+      },
+      {
+        "category": "characters",
+        "id": "炼狱张三丰",
+        "name": "张三丰"
+      },
+      {
+        "category": "characters",
+        "id": "松鼠王重阳",
+        "name": "王重阳"
+      },
+      {
+        "category": "characters",
+        "id": "松鼠林朝英",
+        "name": "林朝英"
+      },
+      {
+        "category": "characters",
+        "id": "无名老僧",
+        "name": "无名老僧"
+      },
+      {
+        "category": "characters",
+        "id": "阿青",
+        "name": "阿青"
+      },
+      {
+        "category": "items",
+        "id": "沾衣十八跌",
+        "name": "沾衣十八跌"
+      },
+      {
+        "category": "stories",
+        "id": "霹雳堂_阎基",
+        "name": "霹雳堂_阎基"
+      },
+      {
+        "category": "stories",
+        "id": "霹雳堂_苏荃",
+        "name": "霹雳堂_苏荃"
+      },
+      {
+        "category": "stories",
+        "id": "一键变态",
+        "name": "一键变态"
+      },
+      {
+        "category": "creation",
+        "id": "周目奖励",
+        "name": "周目与试炼奖励"
+      },
+      {
+        "category": "towers",
+        "id": "炼狱",
+        "name": "炼狱"
+      }
+    ]
+  }
+]

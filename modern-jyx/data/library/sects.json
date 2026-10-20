@@ -1,0 +1,1235 @@
+[
+  {
+    "id": "古墓派",
+    "category": "sects",
+    "name": "古墓派",
+    "description": "“活死人墓”说的是一代人杰王重阳，在抗金失利后，愤而出家，自称“活死人”，在终南山扩建了一座古墓，住在里面，不肯出墓门一步，意思是“虽生犹死，不愿与金贼共居于青天之下”。后来，他将活死人墓让给了林朝英，林朝英创立古墓派。\n “天能覆盖万物而不能承载万物，地能承载万物而不能覆盖万物，大道能包容万物而不能分辨万物。”",
+    "state": "资料已接入",
+    "source": "menpai.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "menpai",
+      "story": "门派古墓_拜师",
+      "name": "古墓派",
+      "zhuxiu": "剑法",
+      "info": "“活死人墓”说的是一代人杰王重阳，在抗金失利后，愤而出家，自称“活死人”，在终南山扩建了一座古墓，住在里面，不肯出墓门一步，意思是“虽生犹死，不愿与金贼共居于青天之下”。后来，他将活死人墓让给了林朝英，林朝英创立古墓派。\n “天能覆盖万物而不能承载万物，地能承载万物而不能覆盖万物，大道能包容万物而不能分辨万物。”",
+      "pic": "头像.黄衫女子",
+      "wuxue": "玄铁剑法、玉女素心剑、左右互搏术",
+      "shifu": "黄衫女子",
+      "bg": "地图.古墓派",
+      "tedian": "高爆发、多重攻击"
+    },
+    "runtime": {
+      "id": "古墓派",
+      "name": "古墓派",
+      "storyId": "门派古墓_拜师",
+      "primaryFocus": "剑法",
+      "description": "“活死人墓”说的是一代人杰王重阳，在抗金失利后，愤而出家，自称“活死人”，在终南山扩建了一座古墓，住在里面，不肯出墓门一步，意思是“虽生犹死，不愿与金贼共居于青天之下”。后来，他将活死人墓让给了林朝英，林朝英创立古墓派。\n “天能覆盖万物而不能承载万物，地能承载万物而不能覆盖万物，大道能包容万物而不能分辨万物。”",
+      "portrait": "头像.黄衫女子",
+      "signatureSkillNames": [
+        "玄铁剑法",
+        "玉女素心剑",
+        "左右互搏术"
+      ],
+      "masterNames": [
+        "黄衫女子"
+      ],
+      "background": "地图.古墓派",
+      "traitTags": [
+        "高爆发",
+        "多重攻击"
+      ]
+    },
+    "variants": [
+      {
+        "source": "menpai.txt",
+        "node": {
+          "tag": "menpai",
+          "story": "门派古墓_拜师",
+          "name": "古墓派",
+          "zhuxiu": "剑法",
+          "info": "“活死人墓”说的是一代人杰王重阳，在抗金失利后，愤而出家，自称“活死人”，在终南山扩建了一座古墓，住在里面，不肯出墓门一步，意思是“虽生犹死，不愿与金贼共居于青天之下”。后来，他将活死人墓让给了林朝英，林朝英创立古墓派。\n “天能覆盖万物而不能承载万物，地能承载万物而不能覆盖万物，大道能包容万物而不能分辨万物。”",
+          "pic": "头像.黄衫女子",
+          "wuxue": "玄铁剑法、玉女素心剑、左右互搏术",
+          "shifu": "黄衫女子",
+          "bg": "地图.古墓派",
+          "tedian": "高爆发、多重攻击"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "maps",
+        "id": "古墓派",
+        "name": "古墓派"
+      },
+      {
+        "category": "resources",
+        "id": "地图.古墓派",
+        "name": "地图.古墓派"
+      },
+      {
+        "category": "resources",
+        "id": "头像.黄衫女子",
+        "name": "头像.黄衫女子"
+      },
+      {
+        "category": "items",
+        "id": "左右互搏术",
+        "name": "左右互搏术"
+      },
+      {
+        "category": "externalSkills",
+        "id": "玄铁剑法",
+        "name": "玄铁剑法"
+      },
+      {
+        "category": "externalSkills",
+        "id": "玉女素心剑",
+        "name": "玉女素心剑"
+      },
+      {
+        "category": "stories",
+        "id": "门派古墓_拜师",
+        "name": "门派古墓_拜师"
+      },
+      {
+        "category": "characters",
+        "id": "黄衫女子",
+        "name": "黄衫女子"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      },
+      {
+        "category": "maps",
+        "id": "古墓派",
+        "name": "古墓派"
+      }
+    ]
+  },
+  {
+    "id": "大轮寺",
+    "category": "sects",
+    "name": "大轮寺",
+    "description": "大雪山大轮寺源自西域密宗，武学讲究自外而内，故而练得一身刚硬的外功。\n          大轮寺主金轮法王乃当世武学之神人，自研出绝世内功龙象般若功，若有缘能学会，则必可独步江湖。",
+    "state": "资料已接入",
+    "source": "menpai.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "menpai",
+      "story": "门派大轮寺_拜师",
+      "name": "大轮寺",
+      "zhuxiu": "拳法",
+      "info": "大雪山大轮寺源自西域密宗，武学讲究自外而内，故而练得一身刚硬的外功。\n          大轮寺主金轮法王乃当世武学之神人，自研出绝世内功龙象般若功，若有缘能学会，则必可独步江湖。",
+      "pic": "头像.金轮法王",
+      "wuxue": "龙象般若功、火焰刀法",
+      "shifu": "金轮法王",
+      "bg": "地图.大轮寺正殿",
+      "tedian": "高防御"
+    },
+    "runtime": {
+      "id": "大轮寺",
+      "name": "大轮寺",
+      "storyId": "门派大轮寺_拜师",
+      "primaryFocus": "拳法",
+      "description": "大雪山大轮寺源自西域密宗，武学讲究自外而内，故而练得一身刚硬的外功。\n          大轮寺主金轮法王乃当世武学之神人，自研出绝世内功龙象般若功，若有缘能学会，则必可独步江湖。",
+      "portrait": "头像.金轮法王",
+      "signatureSkillNames": [
+        "龙象般若功",
+        "火焰刀法"
+      ],
+      "masterNames": [
+        "金轮法王"
+      ],
+      "background": "地图.大轮寺正殿",
+      "traitTags": [
+        "高防御"
+      ]
+    },
+    "variants": [
+      {
+        "source": "menpai.txt",
+        "node": {
+          "tag": "menpai",
+          "story": "门派大轮寺_拜师",
+          "name": "大轮寺",
+          "zhuxiu": "拳法",
+          "info": "大雪山大轮寺源自西域密宗，武学讲究自外而内，故而练得一身刚硬的外功。\n          大轮寺主金轮法王乃当世武学之神人，自研出绝世内功龙象般若功，若有缘能学会，则必可独步江湖。",
+          "pic": "头像.金轮法王",
+          "wuxue": "龙象般若功、火焰刀法",
+          "shifu": "金轮法王",
+          "bg": "地图.大轮寺正殿",
+          "tedian": "高防御"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "地图.大轮寺正殿",
+        "name": "地图.大轮寺正殿"
+      },
+      {
+        "category": "resources",
+        "id": "头像.金轮法王",
+        "name": "头像.金轮法王"
+      },
+      {
+        "category": "externalSkills",
+        "id": "火焰刀法",
+        "name": "火焰刀法"
+      },
+      {
+        "category": "characters",
+        "id": "金轮法王",
+        "name": "金轮法王"
+      },
+      {
+        "category": "stories",
+        "id": "门派大轮寺_拜师",
+        "name": "门派大轮寺_拜师"
+      },
+      {
+        "category": "internalSkills",
+        "id": "龙象般若功",
+        "name": "龙象般若功"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      },
+      {
+        "category": "maps",
+        "id": "大轮寺雪山",
+        "name": "大轮寺雪山"
+      },
+      {
+        "category": "stories",
+        "id": "门派大轮寺_拜师",
+        "name": "门派大轮寺_拜师"
+      }
+    ]
+  },
+  {
+    "id": "血刀门",
+    "category": "sects",
+    "name": "血刀门",
+    "description": "青海黑教，臭名昭著的江湖邪教，无恶不作。门内全部人都使用弯刀因刀上有条血红色弯条所以叫血刀。\n          血刀重杀伐屠戮，凡想入门者得血刀杀伐令，取令上人头，令上可能是江湖闻名之人，也可孤零柔弱挚友，天下无不可杀之人，相残，走过第一步的得令者需要自相残杀，最后能站立着方能入得血刀门。",
+    "state": "资料已接入",
+    "source": "menpai.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "menpai",
+      "story": "血刀门_进门",
+      "name": "血刀门",
+      "zhuxiu": "刀法",
+      "info": "青海黑教，臭名昭著的江湖邪教，无恶不作。门内全部人都使用弯刀因刀上有条血红色弯条所以叫血刀。\n          血刀重杀伐屠戮，凡想入门者得血刀杀伐令，取令上人头，令上可能是江湖闻名之人，也可孤零柔弱挚友，天下无不可杀之人，相残，走过第一步的得令者需要自相残杀，最后能站立着方能入得血刀门。",
+      "pic": "头像.血刀老祖",
+      "wuxue": "血刀大法、血海魔功",
+      "shifu": "血刀老祖",
+      "bg": "地图.血刀门",
+      "tedian": "群伤、吸血"
+    },
+    "runtime": {
+      "id": "血刀门",
+      "name": "血刀门",
+      "storyId": "血刀门_进门",
+      "primaryFocus": "刀法",
+      "description": "青海黑教，臭名昭著的江湖邪教，无恶不作。门内全部人都使用弯刀因刀上有条血红色弯条所以叫血刀。\n          血刀重杀伐屠戮，凡想入门者得血刀杀伐令，取令上人头，令上可能是江湖闻名之人，也可孤零柔弱挚友，天下无不可杀之人，相残，走过第一步的得令者需要自相残杀，最后能站立着方能入得血刀门。",
+      "portrait": "头像.血刀老祖",
+      "signatureSkillNames": [
+        "血刀大法",
+        "血海魔功"
+      ],
+      "masterNames": [
+        "血刀老祖"
+      ],
+      "background": "地图.血刀门",
+      "traitTags": [
+        "群伤",
+        "吸血"
+      ]
+    },
+    "variants": [
+      {
+        "source": "menpai.txt",
+        "node": {
+          "tag": "menpai",
+          "story": "血刀门_进门",
+          "name": "血刀门",
+          "zhuxiu": "刀法",
+          "info": "青海黑教，臭名昭著的江湖邪教，无恶不作。门内全部人都使用弯刀因刀上有条血红色弯条所以叫血刀。\n          血刀重杀伐屠戮，凡想入门者得血刀杀伐令，取令上人头，令上可能是江湖闻名之人，也可孤零柔弱挚友，天下无不可杀之人，相残，走过第一步的得令者需要自相残杀，最后能站立着方能入得血刀门。",
+          "pic": "头像.血刀老祖",
+          "wuxue": "血刀大法、血海魔功",
+          "shifu": "血刀老祖",
+          "bg": "地图.血刀门",
+          "tedian": "群伤、吸血"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "地图.血刀门",
+        "name": "地图.血刀门"
+      },
+      {
+        "category": "resources",
+        "id": "头像.血刀老祖",
+        "name": "头像.血刀老祖"
+      },
+      {
+        "category": "externalSkills",
+        "id": "血刀大法",
+        "name": "血刀大法"
+      },
+      {
+        "category": "characters",
+        "id": "血刀老祖",
+        "name": "血刀老祖"
+      },
+      {
+        "category": "maps",
+        "id": "血刀门",
+        "name": "血刀门"
+      },
+      {
+        "category": "stories",
+        "id": "血刀门_进门",
+        "name": "血刀门_进门"
+      },
+      {
+        "category": "internalSkills",
+        "id": "血海魔功",
+        "name": "血海魔功"
+      },
+      {
+        "category": "talents",
+        "id": "血海魔功",
+        "name": "血海魔功"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      },
+      {
+        "category": "maps",
+        "id": "血刀门",
+        "name": "血刀门"
+      },
+      {
+        "category": "maps",
+        "id": "昆仑山山洞2",
+        "name": "昆仑山山洞2"
+      },
+      {
+        "category": "maps",
+        "id": "唐诗山洞",
+        "name": "唐诗山洞"
+      },
+      {
+        "category": "stories",
+        "id": "血刀门_拜师2",
+        "name": "血刀门_拜师2"
+      },
+      {
+        "category": "stories",
+        "id": "血刀门_宝象问答OK",
+        "name": "血刀门_宝象问答OK"
+      },
+      {
+        "category": "worldTriggers",
+        "id": "trigger:5",
+        "name": "trigger:5"
+      },
+      {
+        "category": "worldTriggers",
+        "id": "trigger:6",
+        "name": "trigger:6"
+      }
+    ]
+  },
+  {
+    "id": "全真教",
+    "category": "sects",
+    "name": "全真教",
+    "description": "玄门正宗道教。以全老庄之真为宗旨，摒弃了前代迷信的色彩从更高的基础回归老庄，并逐渐包容合并了太一道、真大道和金丹南宗，虽提倡“三教合一”但从未敢离道，开启了道教浓墨重彩的新篇章。\n\n          “无心忘言，柔弱清静。正心诚意，少思寡欲。”——全真教教义",
+    "state": "资料已接入",
+    "source": "menpai.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "menpai",
+      "story": "全真教_加入全真",
+      "name": "全真教",
+      "zhuxiu": "剑/掌、内功",
+      "info": "玄门正宗道教。以全老庄之真为宗旨，摒弃了前代迷信的色彩从更高的基础回归老庄，并逐渐包容合并了太一道、真大道和金丹南宗，虽提倡“三教合一”但从未敢离道，开启了道教浓墨重彩的新篇章。\n\n          “无心忘言，柔弱清静。正心诚意，少思寡欲。”——全真教教义",
+      "pic": "头像.王重阳",
+      "wuxue": "九阴神功、重阳剑法、三花聚顶掌",
+      "shifu": "王重阳、全真七子",
+      "bg": "地图.全真教",
+      "tedian": "高攻、抵抗负面"
+    },
+    "runtime": {
+      "id": "全真教",
+      "name": "全真教",
+      "storyId": "全真教_加入全真",
+      "primaryFocus": "剑/掌、内功",
+      "description": "玄门正宗道教。以全老庄之真为宗旨，摒弃了前代迷信的色彩从更高的基础回归老庄，并逐渐包容合并了太一道、真大道和金丹南宗，虽提倡“三教合一”但从未敢离道，开启了道教浓墨重彩的新篇章。\n\n          “无心忘言，柔弱清静。正心诚意，少思寡欲。”——全真教教义",
+      "portrait": "头像.王重阳",
+      "signatureSkillNames": [
+        "九阴神功",
+        "重阳剑法",
+        "三花聚顶掌"
+      ],
+      "masterNames": [
+        "王重阳",
+        "全真七子"
+      ],
+      "background": "地图.全真教",
+      "traitTags": [
+        "高攻",
+        "抵抗负面"
+      ]
+    },
+    "variants": [
+      {
+        "source": "menpai.txt",
+        "node": {
+          "tag": "menpai",
+          "story": "全真教_加入全真",
+          "name": "全真教",
+          "zhuxiu": "剑/掌、内功",
+          "info": "玄门正宗道教。以全老庄之真为宗旨，摒弃了前代迷信的色彩从更高的基础回归老庄，并逐渐包容合并了太一道、真大道和金丹南宗，虽提倡“三教合一”但从未敢离道，开启了道教浓墨重彩的新篇章。\n\n          “无心忘言，柔弱清静。正心诚意，少思寡欲。”——全真教教义",
+          "pic": "头像.王重阳",
+          "wuxue": "九阴神功、重阳剑法、三花聚顶掌",
+          "shifu": "王重阳、全真七子",
+          "bg": "地图.全真教",
+          "tedian": "高攻、抵抗负面"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "externalSkills",
+        "id": "三花聚顶掌",
+        "name": "三花聚顶掌"
+      },
+      {
+        "category": "internalSkills",
+        "id": "九阴神功",
+        "name": "九阴神功"
+      },
+      {
+        "category": "maps",
+        "id": "全真教",
+        "name": "全真教"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_加入全真",
+        "name": "全真教_加入全真"
+      },
+      {
+        "category": "resources",
+        "id": "地图.全真教",
+        "name": "地图.全真教"
+      },
+      {
+        "category": "resources",
+        "id": "头像.王重阳",
+        "name": "头像.王重阳"
+      },
+      {
+        "category": "characters",
+        "id": "王重阳",
+        "name": "王重阳"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      },
+      {
+        "category": "maps",
+        "id": "全真教",
+        "name": "全真教"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_加入全真",
+        "name": "全真教_加入全真"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_烧香坊",
+        "name": "全真教_烧香坊"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_静念楼",
+        "name": "全真教_静念楼"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_苗守一练习胜利",
+        "name": "全真教_苗守一练习胜利"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_苗守一练习失败",
+        "name": "全真教_苗守一练习失败"
+      },
+      {
+        "category": "worldTriggers",
+        "id": "trigger:16",
+        "name": "trigger:16"
+      },
+      {
+        "category": "worldTriggers",
+        "id": "trigger:17",
+        "name": "trigger:17"
+      }
+    ]
+  },
+  {
+    "id": "灵鹫宫",
+    "category": "sects",
+    "name": "灵鹫宫",
+    "description": "灵鹫宫远在天山缥缈峰，经过几十年的经营，却悄悄控制着中原至东南沿海大多数江湖帮会。所以江湖上谈起天山灵鹫宫，不谈“天山”，往往用“宫里”代替。\n\n天山童姥是天山唯一的神，见过她面目的人少之又少，大多数人只是从血腥的江湖故事里听到过这个恐怖的名字。",
+    "state": "资料已接入",
+    "source": "menpai.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "menpai",
+      "story": "灵鹫宫_加入灵鹫宫",
+      "name": "灵鹫宫",
+      "zhuxiu": "掌法、内功",
+      "info": "灵鹫宫远在天山缥缈峰，经过几十年的经营，却悄悄控制着中原至东南沿海大多数江湖帮会。所以江湖上谈起天山灵鹫宫，不谈“天山”，往往用“宫里”代替。\n\n天山童姥是天山唯一的神，见过她面目的人少之又少，大多数人只是从血腥的江湖故事里听到过这个恐怖的名字。",
+      "pic": "头像.天山童姥",
+      "wuxue": "天山折梅手、北冥神功、八荒六合唯我独尊功、生死符",
+      "shifu": "秦婆婆，四大剑婢",
+      "bg": "地图.灵鹫宫",
+      "tedian": "抗暴击、控场、毒"
+    },
+    "runtime": {
+      "id": "灵鹫宫",
+      "name": "灵鹫宫",
+      "storyId": "灵鹫宫_加入灵鹫宫",
+      "primaryFocus": "掌法、内功",
+      "description": "灵鹫宫远在天山缥缈峰，经过几十年的经营，却悄悄控制着中原至东南沿海大多数江湖帮会。所以江湖上谈起天山灵鹫宫，不谈“天山”，往往用“宫里”代替。\n\n天山童姥是天山唯一的神，见过她面目的人少之又少，大多数人只是从血腥的江湖故事里听到过这个恐怖的名字。",
+      "portrait": "头像.天山童姥",
+      "signatureSkillNames": [
+        "天山折梅手",
+        "北冥神功",
+        "八荒六合唯我独尊功",
+        "生死符"
+      ],
+      "masterNames": [
+        "秦婆婆",
+        "四大剑婢"
+      ],
+      "background": "地图.灵鹫宫",
+      "traitTags": [
+        "抗暴击",
+        "控场",
+        "毒"
+      ]
+    },
+    "variants": [
+      {
+        "source": "menpai.txt",
+        "node": {
+          "tag": "menpai",
+          "story": "灵鹫宫_加入灵鹫宫",
+          "name": "灵鹫宫",
+          "zhuxiu": "掌法、内功",
+          "info": "灵鹫宫远在天山缥缈峰，经过几十年的经营，却悄悄控制着中原至东南沿海大多数江湖帮会。所以江湖上谈起天山灵鹫宫，不谈“天山”，往往用“宫里”代替。\n\n天山童姥是天山唯一的神，见过她面目的人少之又少，大多数人只是从血腥的江湖故事里听到过这个恐怖的名字。",
+          "pic": "头像.天山童姥",
+          "wuxue": "天山折梅手、北冥神功、八荒六合唯我独尊功、生死符",
+          "shifu": "秦婆婆，四大剑婢",
+          "bg": "地图.灵鹫宫",
+          "tedian": "抗暴击、控场、毒"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "internalSkills",
+        "id": "八荒六合唯我独尊功",
+        "name": "八荒六合唯我独尊功"
+      },
+      {
+        "category": "internalSkills",
+        "id": "北冥神功",
+        "name": "北冥神功"
+      },
+      {
+        "category": "talents",
+        "id": "北冥神功",
+        "name": "北冥神功"
+      },
+      {
+        "category": "resources",
+        "id": "地图.灵鹫宫",
+        "name": "地图.灵鹫宫"
+      },
+      {
+        "category": "externalSkills",
+        "id": "天山折梅手",
+        "name": "天山折梅手"
+      },
+      {
+        "category": "resources",
+        "id": "头像.天山童姥",
+        "name": "头像.天山童姥"
+      },
+      {
+        "category": "maps",
+        "id": "灵鹫宫",
+        "name": "灵鹫宫"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_加入灵鹫宫",
+        "name": "灵鹫宫_加入灵鹫宫"
+      },
+      {
+        "category": "characters",
+        "id": "秦婆婆",
+        "name": "秦婆婆"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      },
+      {
+        "category": "maps",
+        "id": "灵鹫宫",
+        "name": "灵鹫宫"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_加入灵鹫宫",
+        "name": "灵鹫宫_加入灵鹫宫"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫.御虚阁",
+        "name": "灵鹫宫.御虚阁"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼天山掌法1",
+        "name": "灵鹫宫_修炼天山掌法1"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼天山掌法2",
+        "name": "灵鹫宫_修炼天山掌法2"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫.九尊殿",
+        "name": "灵鹫宫.九尊殿"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼归藏剑",
+        "name": "灵鹫宫_修炼归藏剑"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼归藏剑1",
+        "name": "灵鹫宫_修炼归藏剑1"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼归藏剑2",
+        "name": "灵鹫宫_修炼归藏剑2"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼归藏剑3",
+        "name": "灵鹫宫_修炼归藏剑3"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼归藏剑4",
+        "name": "灵鹫宫_修炼归藏剑4"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼归藏剑5",
+        "name": "灵鹫宫_修炼归藏剑5"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼归藏剑6",
+        "name": "灵鹫宫_修炼归藏剑6"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼归藏剑7",
+        "name": "灵鹫宫_修炼归藏剑7"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼归藏剑8",
+        "name": "灵鹫宫_修炼归藏剑8"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼归藏剑9",
+        "name": "灵鹫宫_修炼归藏剑9"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_读书识字",
+        "name": "灵鹫宫_读书识字"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_踢毽子",
+        "name": "灵鹫宫_踢毽子"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_好好练功_胜利",
+        "name": "灵鹫宫_好好练功_胜利"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_好好练功_失败",
+        "name": "灵鹫宫_好好练功_失败"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_间谍2",
+        "name": "灵鹫宫_间谍2"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_委屈求全",
+        "name": "灵鹫宫_委屈求全"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_委屈求全1",
+        "name": "灵鹫宫_委屈求全1"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_密室武学1",
+        "name": "灵鹫宫_密室武学1"
+      },
+      {
+        "category": "worldTriggers",
+        "id": "trigger:7",
+        "name": "trigger:7"
+      },
+      {
+        "category": "worldTriggers",
+        "id": "trigger:8",
+        "name": "trigger:8"
+      },
+      {
+        "category": "worldTriggers",
+        "id": "trigger:9",
+        "name": "trigger:9"
+      }
+    ]
+  },
+  {
+    "id": "少林派",
+    "category": "sects",
+    "name": "少林派",
+    "description": "少林乃天下武学泰斗，以禅入武，习武修禅。佛曰慈悲，渡世人劫。少林武学实战威猛，也讲究因果循环、报应不爽。\n\n“安得世间双全法，不负如来不负卿”",
+    "state": "资料已接入",
+    "source": "menpai.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "menpai",
+      "story": "少林派_入门",
+      "name": "少林派",
+      "zhuxiu": "拳/棍、内功",
+      "info": "少林乃天下武学泰斗，以禅入武，习武修禅。佛曰慈悲，渡世人劫。少林武学实战威猛，也讲究因果循环、报应不爽。\n\n“安得世间双全法，不负如来不负卿”",
+      "pic": "头像.段王爷",
+      "wuxue": "易筋经、洗髓经",
+      "shifu": "方证大师",
+      "bg": "地图.少林寺内",
+      "tedian": "高伤、回复"
+    },
+    "runtime": {
+      "id": "少林派",
+      "name": "少林派",
+      "storyId": "少林派_入门",
+      "primaryFocus": "拳/棍、内功",
+      "description": "少林乃天下武学泰斗，以禅入武，习武修禅。佛曰慈悲，渡世人劫。少林武学实战威猛，也讲究因果循环、报应不爽。\n\n“安得世间双全法，不负如来不负卿”",
+      "portrait": "头像.段王爷",
+      "signatureSkillNames": [
+        "易筋经",
+        "洗髓经"
+      ],
+      "masterNames": [
+        "方证大师"
+      ],
+      "background": "地图.少林寺内",
+      "traitTags": [
+        "高伤",
+        "回复"
+      ]
+    },
+    "variants": [
+      {
+        "source": "menpai.txt",
+        "node": {
+          "tag": "menpai",
+          "story": "少林派_入门",
+          "name": "少林派",
+          "zhuxiu": "拳/棍、内功",
+          "info": "少林乃天下武学泰斗，以禅入武，习武修禅。佛曰慈悲，渡世人劫。少林武学实战威猛，也讲究因果循环、报应不爽。\n\n“安得世间双全法，不负如来不负卿”",
+          "pic": "头像.段王爷",
+          "wuxue": "易筋经、洗髓经",
+          "shifu": "方证大师",
+          "bg": "地图.少林寺内",
+          "tedian": "高伤、回复"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "地图.少林寺内",
+        "name": "地图.少林寺内"
+      },
+      {
+        "category": "resources",
+        "id": "头像.段王爷",
+        "name": "头像.段王爷"
+      },
+      {
+        "category": "stories",
+        "id": "少林派_入门",
+        "name": "少林派_入门"
+      },
+      {
+        "category": "characters",
+        "id": "方证大师",
+        "name": "方证大师"
+      },
+      {
+        "category": "internalSkills",
+        "id": "易筋经",
+        "name": "易筋经"
+      },
+      {
+        "category": "items",
+        "id": "易筋经",
+        "name": "易筋经"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "武当派",
+    "category": "sects",
+    "name": "武当派",
+    "description": "武当是张三丰所创名门正派。武当派的武功小部分是张真人得益于当年少林觉远大师自小所传《九阳真经》，而大部分是之后又从道教典籍及练气之术中领悟出。讲究以柔克刚，借力打力，以气息悠长见胜。武当派太极拳特点是形神合一，用意不用力；太极剑的妙谛是圆转如意，绵绵不绝。\n\n“这套拳术的诀窍是‘虚灵顶劲、含胸拔背、松腰垂臀，沉肩坠肘’十六个字，纯以意行，最忌用力。形神合一，是这路拳法的要旨。”——张三丰 ",
+    "state": "资料已接入",
+    "source": "menpai.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "menpai",
+      "story": "武当派_入门",
+      "name": "武当派",
+      "zhuxiu": "拳/剑、内功",
+      "info": "武当是张三丰所创名门正派。武当派的武功小部分是张真人得益于当年少林觉远大师自小所传《九阳真经》，而大部分是之后又从道教典籍及练气之术中领悟出。讲究以柔克刚，借力打力，以气息悠长见胜。武当派太极拳特点是形神合一，用意不用力；太极剑的妙谛是圆转如意，绵绵不绝。\n\n“这套拳术的诀窍是‘虚灵顶劲、含胸拔背、松腰垂臀，沉肩坠肘’十六个字，纯以意行，最忌用力。形神合一，是这路拳法的要旨。”——张三丰 ",
+      "pic": "头像.张三丰",
+      "wuxue": "纯阳无极功、太极拳/剑",
+      "shifu": "张三丰、武当七侠",
+      "bg": "地图.武当山门",
+      "tedian": "高奥义控场"
+    },
+    "runtime": {
+      "id": "武当派",
+      "name": "武当派",
+      "storyId": "武当派_入门",
+      "primaryFocus": "拳/剑、内功",
+      "description": "武当是张三丰所创名门正派。武当派的武功小部分是张真人得益于当年少林觉远大师自小所传《九阳真经》，而大部分是之后又从道教典籍及练气之术中领悟出。讲究以柔克刚，借力打力，以气息悠长见胜。武当派太极拳特点是形神合一，用意不用力；太极剑的妙谛是圆转如意，绵绵不绝。\n\n“这套拳术的诀窍是‘虚灵顶劲、含胸拔背、松腰垂臀，沉肩坠肘’十六个字，纯以意行，最忌用力。形神合一，是这路拳法的要旨。”——张三丰",
+      "portrait": "头像.张三丰",
+      "signatureSkillNames": [
+        "纯阳无极功",
+        "太极拳",
+        "剑"
+      ],
+      "masterNames": [
+        "张三丰",
+        "武当七侠"
+      ],
+      "background": "地图.武当山门",
+      "traitTags": [
+        "高奥义控场"
+      ]
+    },
+    "variants": [
+      {
+        "source": "menpai.txt",
+        "node": {
+          "tag": "menpai",
+          "story": "武当派_入门",
+          "name": "武当派",
+          "zhuxiu": "拳/剑、内功",
+          "info": "武当是张三丰所创名门正派。武当派的武功小部分是张真人得益于当年少林觉远大师自小所传《九阳真经》，而大部分是之后又从道教典籍及练气之术中领悟出。讲究以柔克刚，借力打力，以气息悠长见胜。武当派太极拳特点是形神合一，用意不用力；太极剑的妙谛是圆转如意，绵绵不绝。\n\n“这套拳术的诀窍是‘虚灵顶劲、涵胸拔背、松腰垂臀，沉肩坠肘’十六个字，纯以意行，最忌用力。形神合一，是这路拳法的要旨。”——张三丰 ",
+          "pic": "头像.张三丰",
+          "wuxue": "纯阳无极功、太极拳/剑",
+          "shifu": "张三丰、武当七侠",
+          "bg": "地图.武当山门",
+          "tedian": "高奥义控场"
+        },
+        "equalRecord": false
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "地图.武当山门",
+        "name": "地图.武当山门"
+      },
+      {
+        "category": "resources",
+        "id": "头像.张三丰",
+        "name": "头像.张三丰"
+      },
+      {
+        "category": "characters",
+        "id": "张三丰",
+        "name": "张三丰"
+      },
+      {
+        "category": "maps",
+        "id": "武当派",
+        "name": "武当派"
+      },
+      {
+        "category": "stories",
+        "id": "武当派_入门",
+        "name": "武当派_入门"
+      },
+      {
+        "category": "internalSkills",
+        "id": "纯阳无极功",
+        "name": "纯阳无极功"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      },
+      {
+        "category": "maps",
+        "id": "武当广场",
+        "name": "武当广场"
+      },
+      {
+        "category": "maps",
+        "id": "武当派",
+        "name": "武当派"
+      },
+      {
+        "category": "maps",
+        "id": "真武殿",
+        "name": "真武殿"
+      },
+      {
+        "category": "stories",
+        "id": "武当派_入门",
+        "name": "武当派_入门"
+      },
+      {
+        "category": "worldTriggers",
+        "id": "trigger:18",
+        "name": "trigger:18"
+      },
+      {
+        "category": "resources",
+        "id": "人物.任我行",
+        "name": "人物.任我行"
+      }
+    ]
+  },
+  {
+    "id": "星宿派",
+    "category": "sects",
+    "name": "星宿派",
+    "description": "星宿一派，源于北宋时期的逍遥派。星宿派的开山祖师丁春秋，师承是逍遥派。逍遥派的武功是道家的一派，讲究的是修身养性，延年益寿，但是丁春秋一生精于炼毒，已不同于道家的炼丹。\n星宿派的功夫基本都是丁春秋叛师后自创，主要在「毒」字上下的功夫。掌上带毒、暗器上带毒、以毒麻痹、化解他人内功，江湖上人提起，无不谈虎色变。",
+    "state": "资料已接入",
+    "source": "menpai.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "menpai",
+      "story": "门派星宿_入门",
+      "name": "星宿派",
+      "zhuxiu": "拳、毒功",
+      "info": "星宿一派，源于北宋时期的逍遥派。星宿派的开山祖师丁春秋，师承是逍遥派。逍遥派的武功是道家的一派，讲究的是修身养性，延年益寿，但是丁春秋一生精于炼毒，已不同于道家的炼丹。\n星宿派的功夫基本都是丁春秋叛师后自创，主要在「毒」字上下的功夫。掌上带毒、暗器上带毒、以毒麻痹、化解他人内功，江湖上人提起，无不谈虎色变。",
+      "pic": "头像.丁春秋",
+      "wuxue": "三阴蜈蚣爪、飞星术、化功大法",
+      "shifu": "丁春秋",
+      "bg": "地图.星宿派",
+      "tedian": "毒"
+    },
+    "runtime": {
+      "id": "星宿派",
+      "name": "星宿派",
+      "storyId": "门派星宿_入门",
+      "primaryFocus": "拳、毒功",
+      "description": "星宿一派，源于北宋时期的逍遥派。星宿派的开山祖师丁春秋，师承是逍遥派。逍遥派的武功是道家的一派，讲究的是修身养性，延年益寿，但是丁春秋一生精于炼毒，已不同于道家的炼丹。\n星宿派的功夫基本都是丁春秋叛师后自创，主要在「毒」字上下的功夫。掌上带毒、暗器上带毒、以毒麻痹、化解他人内功，江湖上人提起，无不谈虎色变。",
+      "portrait": "头像.丁春秋",
+      "signatureSkillNames": [
+        "三阴蜈蚣爪",
+        "飞星术",
+        "化功大法"
+      ],
+      "masterNames": [
+        "丁春秋"
+      ],
+      "background": "地图.星宿派",
+      "traitTags": [
+        "毒"
+      ]
+    },
+    "variants": [
+      {
+        "source": "menpai.txt",
+        "node": {
+          "tag": "menpai",
+          "story": "门派星宿_入门",
+          "name": "星宿派",
+          "zhuxiu": "拳、毒功",
+          "info": "星宿一派，源于北宋时期的逍遥派。星宿派的开山祖师丁春秋，师承是逍遥派。逍遥派的武功是道家的一派，讲究的是修身养性，延年益寿，但是丁春秋一生精于炼毒，已不同于道家的炼丹。\n星宿派的功夫基本都是丁春秋叛师后自创，主要在「毒」字上下的功夫。掌上带毒、暗器上带毒、以毒麻痹、化解他人内功，江湖上人提起，无不谈虎色变。",
+          "pic": "头像.丁春秋",
+          "wuxue": "三阴蜈蚣爪、飞星术、化功大法",
+          "shifu": "丁春秋",
+          "bg": "地图.星宿派",
+          "tedian": "毒"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "characters",
+        "id": "丁春秋",
+        "name": "丁春秋"
+      },
+      {
+        "category": "externalSkills",
+        "id": "三阴蜈蚣爪",
+        "name": "三阴蜈蚣爪"
+      },
+      {
+        "category": "internalSkills",
+        "id": "化功大法",
+        "name": "化功大法"
+      },
+      {
+        "category": "talents",
+        "id": "化功大法",
+        "name": "化功大法"
+      },
+      {
+        "category": "resources",
+        "id": "地图.星宿派",
+        "name": "地图.星宿派"
+      },
+      {
+        "category": "resources",
+        "id": "头像.丁春秋",
+        "name": "头像.丁春秋"
+      },
+      {
+        "category": "maps",
+        "id": "星宿派",
+        "name": "星宿派"
+      },
+      {
+        "category": "stories",
+        "id": "门派星宿_入门",
+        "name": "门派星宿_入门"
+      },
+      {
+        "category": "specialSkills",
+        "id": "飞星术",
+        "name": "飞星术"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      },
+      {
+        "category": "maps",
+        "id": "擂鼓山",
+        "name": "擂鼓山"
+      },
+      {
+        "category": "maps",
+        "id": "星宿派",
+        "name": "星宿派"
+      },
+      {
+        "category": "stories",
+        "id": "门派星宿_入门",
+        "name": "门派星宿_入门"
+      },
+      {
+        "category": "stories",
+        "id": "门派星宿_入门口号错",
+        "name": "门派星宿_入门口号错"
+      },
+      {
+        "category": "stories",
+        "id": "门派星宿_入门口号对",
+        "name": "门派星宿_入门口号对"
+      },
+      {
+        "category": "stories",
+        "id": "星宿派_三阴蜈蚣爪",
+        "name": "星宿派_三阴蜈蚣爪"
+      },
+      {
+        "category": "worldTriggers",
+        "id": "trigger:19",
+        "name": "trigger:19"
+      },
+      {
+        "category": "worldTriggers",
+        "id": "trigger:20",
+        "name": "trigger:20"
+      },
+      {
+        "category": "worldTriggers",
+        "id": "trigger:21",
+        "name": "trigger:21"
+      }
+    ]
+  },
+  {
+    "id": "无门派",
+    "category": "sects",
+    "name": "无门派",
+    "description": "不拜入任何门派，凭自己一己之力闯荡江湖！\n\n“天下风云出我辈，一入江湖岁月催； \n皇图霸业谈笑间，不胜人生一场醉。\n提剑跨骑挥鬼雨，白骨如山鸟惊飞; \n尘事如潮人如水，只叹江湖几人回。 ”",
+    "state": "资料已接入",
+    "source": "menpai.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "menpai",
+      "story": "门派_无门派",
+      "name": "无门派",
+      "zhuxiu": "?",
+      "info": "不拜入任何门派，凭自己一己之力闯荡江湖！\n\n“天下风云出我辈，一入江湖岁月催； \n皇图霸业谈笑间，不胜人生一场醉。\n提剑跨骑挥鬼雨，白骨如山鸟惊飞; \n尘事如潮人如水，只叹江湖几人回。 ”",
+      "pic": "",
+      "wuxue": "?",
+      "shifu": "无",
+      "bg": "地图.武林大会",
+      "tedian": "?"
+    },
+    "runtime": {
+      "id": "无门派",
+      "name": "无门派",
+      "storyId": "门派_无门派",
+      "primaryFocus": "?",
+      "description": "不拜入任何门派，凭自己一己之力闯荡江湖！\n\n“天下风云出我辈，一入江湖岁月催； \n皇图霸业谈笑间，不胜人生一场醉。\n提剑跨骑挥鬼雨，白骨如山鸟惊飞; \n尘事如潮人如水，只叹江湖几人回。 ”",
+      "portrait": null,
+      "signatureSkillNames": [],
+      "masterNames": [
+        "无"
+      ],
+      "background": "地图.武林大会",
+      "traitTags": []
+    },
+    "variants": [
+      {
+        "source": "menpai.txt",
+        "node": {
+          "tag": "menpai",
+          "story": "门派_无门派",
+          "name": "无门派",
+          "zhuxiu": "?",
+          "info": "不拜入任何门派，凭自己一己之力闯荡江湖！\n\n“天下风云出我辈， 一入江湖岁月催； \n皇图霸业谈笑间， 不胜人生一场醉。\n提剑跨骑挥鬼雨， 白骨如山鸟惊飞; \n尘事如潮人如水， 只叹江湖几人回。 ”",
+          "pic": "",
+          "wuxue": "?",
+          "shifu": "无",
+          "bg": "地图.武林大会",
+          "tedian": "?"
+        },
+        "equalRecord": false
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "地图.武林大会",
+        "name": "地图.武林大会"
+      },
+      {
+        "category": "stories",
+        "id": "门派_无门派",
+        "name": "门派_无门派"
+      }
+    ],
+    "usedBy": []
+  }
+]

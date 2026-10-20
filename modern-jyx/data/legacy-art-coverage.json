@@ -1,0 +1,52 @@
+{
+  "source": {
+    "archive": "X.rar",
+    "versionLabel": "X1.0.0.1",
+    "sha256": "331d5df9e7867621fda2e42ca0fe0072591fd03df57a2b6bfe1162b319b4d995"
+  },
+  "library": {
+    "resourcePaths": 638,
+    "models": 123,
+    "clips": 479,
+    "files": 942,
+    "bytes": 153471543
+  },
+  "animatedCharacters": 440,
+  "unresolvedModelIds": [
+    {
+      "characterId": "太极主角",
+      "model": "daxia"
+    },
+    {
+      "characterId": "逍遥子",
+      "model": "daxia"
+    },
+    {
+      "characterId": "无敌小虾米",
+      "model": "daxia"
+    },
+    {
+      "characterId": "左右互搏小虾米",
+      "model": "daxia"
+    }
+  ],
+  "mapped": {
+    "characters": 513,
+    "portraits": 513,
+    "maps": 162,
+    "battles": 394,
+    "items": 347
+  },
+  "missing": {
+    "characters": [],
+    "portraits": [],
+    "maps": [],
+    "battles": [],
+    "items": []
+  },
+  "notes": [
+    "Artwork comes from the uploaded X1.0.0.1 archive; rule/content definitions keep the pinned modern migration baseline.",
+    "Clip sample rates/order are recovered when available; numbered-frame fallbacks are identified in the model manifest.",
+    "No old executable, assembly or Lua code is run. Audio and skill visual effects are outside this artwork pass."
+  ]
+}

@@ -1,0 +1,4513 @@
+[
+  {
+    "id": "default",
+    "category": "growTemplates",
+    "name": "default",
+    "description": "",
+    "state": "资料已接入",
+    "source": "grow_templates.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "grow_template",
+      "shenfa": "1",
+      "hp": "120",
+      "qimen": "1",
+      "name": "default",
+      "mp": "80",
+      "bili": "1",
+      "dingli": "1",
+      "daofa": "1",
+      "quanzhang": "1",
+      "gengu": "1",
+      "wuxue": "8",
+      "fuyuan": "1",
+      "wuxing": "0",
+      "jianfa": "1"
+    },
+    "runtime": {
+      "id": "default",
+      "name": "default",
+      "statGrowth": {
+        "bili": 1,
+        "dingli": 1,
+        "fuyuan": 1,
+        "gengu": 1,
+        "jianfa": 1,
+        "daofa": 1,
+        "quanzhang": 1,
+        "qimen": 1,
+        "shenfa": 1,
+        "wuxing": 0,
+        "wuxue": 8,
+        "max_hp": 120,
+        "max_mp": 80
+      }
+    },
+    "variants": [
+      {
+        "source": "grow_templates.txt",
+        "node": {
+          "tag": "grow_template",
+          "shenfa": "1",
+          "hp": "120",
+          "qimen": "1",
+          "name": "default",
+          "mp": "80",
+          "bili": "1",
+          "dingli": "1",
+          "daofa": "1",
+          "quanzhang": "1",
+          "gengu": "1",
+          "wuxue": "8",
+          "fuyuan": "1",
+          "wuxing": "0",
+          "jianfa": "1"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": []
+  },
+  {
+    "id": "主角",
+    "category": "growTemplates",
+    "name": "主角",
+    "description": "",
+    "state": "资料已接入",
+    "source": "grow_templates.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "grow_template",
+      "shenfa": "2",
+      "hp": "120",
+      "qimen": "2",
+      "name": "主角",
+      "mp": "80",
+      "bili": "2",
+      "dingli": "2",
+      "daofa": "2",
+      "quanzhang": "2",
+      "gengu": "2",
+      "wuxue": "11",
+      "fuyuan": "2",
+      "wuxing": "0",
+      "jianfa": "2"
+    },
+    "runtime": {
+      "id": "主角",
+      "name": "主角",
+      "statGrowth": {
+        "bili": 2,
+        "dingli": 2,
+        "fuyuan": 2,
+        "gengu": 2,
+        "jianfa": 2,
+        "daofa": 2,
+        "quanzhang": 2,
+        "qimen": 2,
+        "shenfa": 2,
+        "wuxing": 0,
+        "wuxue": 11,
+        "max_hp": 120,
+        "max_mp": 80
+      }
+    },
+    "variants": [
+      {
+        "source": "grow_templates.txt",
+        "node": {
+          "tag": "grow_template",
+          "shenfa": "2",
+          "hp": "120",
+          "qimen": "2",
+          "name": "主角",
+          "mp": "80",
+          "bili": "2",
+          "dingli": "2",
+          "daofa": "2",
+          "quanzhang": "2",
+          "gengu": "2",
+          "wuxue": "11",
+          "fuyuan": "2",
+          "wuxing": "0",
+          "jianfa": "2"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "characters",
+        "id": "主角",
+        "name": "小虾米"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "characters",
+        "id": "主角",
+        "name": "小虾米"
+      },
+      {
+        "category": "characters",
+        "id": "神级主角",
+        "name": "小虾米"
+      },
+      {
+        "category": "characters",
+        "id": "太极主角",
+        "name": "小虾米"
+      },
+      {
+        "category": "characters",
+        "id": "华服女子",
+        "name": "华服女子"
+      },
+      {
+        "category": "characters",
+        "id": "女主",
+        "name": "铃兰"
+      },
+      {
+        "category": "characters",
+        "id": "无敌小虾米",
+        "name": "小虾米"
+      },
+      {
+        "category": "characters",
+        "id": "左右互搏小虾米",
+        "name": "小虾米"
+      },
+      {
+        "category": "maps",
+        "id": "全真教",
+        "name": "全真教"
+      },
+      {
+        "category": "maps",
+        "id": "武当广场",
+        "name": "武当广场"
+      },
+      {
+        "category": "maps",
+        "id": "三清殿",
+        "name": "三清殿"
+      },
+      {
+        "category": "maps",
+        "id": "南贤居",
+        "name": "南贤居"
+      },
+      {
+        "category": "maps",
+        "id": "星宿派",
+        "name": "星宿派"
+      },
+      {
+        "category": "stories",
+        "id": "破庙_梅超风_战斗结束_失败2",
+        "name": "破庙_梅超风_战斗结束_失败2"
+      },
+      {
+        "category": "stories",
+        "id": "破庙_梅超风_求饶",
+        "name": "破庙_梅超风_求饶"
+      },
+      {
+        "category": "stories",
+        "id": "破庙_少年袁承志_偷看",
+        "name": "破庙_少年袁承志_偷看"
+      },
+      {
+        "category": "stories",
+        "id": "破庙_佛像_打扫",
+        "name": "破庙_佛像_打扫"
+      },
+      {
+        "category": "stories",
+        "id": "破庙_佛像_拜佛",
+        "name": "破庙_佛像_拜佛"
+      },
+      {
+        "category": "stories",
+        "id": "新手村_武师7",
+        "name": "新手村_武师7"
+      },
+      {
+        "category": "stories",
+        "id": "mainStory_黑衣教入教",
+        "name": "mainStory_黑衣教入教"
+      },
+      {
+        "category": "stories",
+        "id": "黑衣_加血",
+        "name": "黑衣_加血"
+      },
+      {
+        "category": "stories",
+        "id": "黑衣_加蓝",
+        "name": "黑衣_加蓝"
+      },
+      {
+        "category": "stories",
+        "id": "黑衣_提升",
+        "name": "黑衣_提升"
+      },
+      {
+        "category": "stories",
+        "id": "黑衣_灭门武当奖励",
+        "name": "黑衣_灭门武当奖励"
+      },
+      {
+        "category": "stories",
+        "id": "黑衣_灭门少林奖励",
+        "name": "黑衣_灭门少林奖励"
+      },
+      {
+        "category": "stories",
+        "id": "黑衣_灭门日月奖励",
+        "name": "黑衣_灭门日月奖励"
+      },
+      {
+        "category": "stories",
+        "id": "黑衣_暗杀黄裳奖励",
+        "name": "黑衣_暗杀黄裳奖励"
+      },
+      {
+        "category": "stories",
+        "id": "黑衣_暗杀独孤求败奖励",
+        "name": "黑衣_暗杀独孤求败奖励"
+      },
+      {
+        "category": "stories",
+        "id": "黑衣_暗杀王重阳奖励",
+        "name": "黑衣_暗杀王重阳奖励"
+      },
+      {
+        "category": "stories",
+        "id": "黑衣_对战黑衣使者奖励",
+        "name": "黑衣_对战黑衣使者奖励"
+      },
+      {
+        "category": "stories",
+        "id": "黑衣_对战魔君胜利",
+        "name": "黑衣_对战魔君胜利"
+      },
+      {
+        "category": "stories",
+        "id": "黑衣_对战魔君失败",
+        "name": "黑衣_对战魔君失败"
+      },
+      {
+        "category": "stories",
+        "id": "门派_无门派",
+        "name": "门派_无门派"
+      },
+      {
+        "category": "stories",
+        "id": "original_少林.木人巷胜",
+        "name": "original_少林.木人巷胜"
+      },
+      {
+        "category": "stories",
+        "id": "original_少林.铜人巷胜",
+        "name": "original_少林.铜人巷胜"
+      },
+      {
+        "category": "stories",
+        "id": "original_武当.七截阵胜",
+        "name": "original_武当.七截阵胜"
+      },
+      {
+        "category": "stories",
+        "id": "original_武当.张三丰胜",
+        "name": "original_武当.张三丰胜"
+      },
+      {
+        "category": "stories",
+        "id": "original_武当.真武七截阵胜",
+        "name": "original_武当.真武七截阵胜"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.xz_擂鼓山3",
+        "name": "tlbb.xz_擂鼓山3"
+      },
+      {
+        "category": "stories",
+        "id": "笑傲江湖_黑木崖.辟邪剑谱交",
+        "name": "笑傲江湖_黑木崖.辟邪剑谱交"
+      },
+      {
+        "category": "stories",
+        "id": "连城诀_天宁寺毒习武",
+        "name": "连城诀_天宁寺毒习武"
+      },
+      {
+        "category": "stories",
+        "id": "鹿鼎记_阿九.邀请2",
+        "name": "鹿鼎记_阿九.邀请2"
+      },
+      {
+        "category": "stories",
+        "id": "鹿鼎记_台湾3",
+        "name": "鹿鼎记_台湾3"
+      },
+      {
+        "category": "stories",
+        "id": "门派古墓_拜师",
+        "name": "门派古墓_拜师"
+      },
+      {
+        "category": "stories",
+        "id": "门派古墓_天罗地网之间",
+        "name": "门派古墓_天罗地网之间"
+      },
+      {
+        "category": "stories",
+        "id": "门派古墓_寒玉之间",
+        "name": "门派古墓_寒玉之间"
+      },
+      {
+        "category": "stories",
+        "id": "门派古墓_祖师之间",
+        "name": "门派古墓_祖师之间"
+      },
+      {
+        "category": "stories",
+        "id": "门派古墓_绳床之间",
+        "name": "门派古墓_绳床之间"
+      },
+      {
+        "category": "stories",
+        "id": "门派古墓_玉蜂之间",
+        "name": "门派古墓_玉蜂之间"
+      },
+      {
+        "category": "stories",
+        "id": "门派古墓_回古墓.玄铁剑法1胜",
+        "name": "门派古墓_回古墓.玄铁剑法1胜"
+      },
+      {
+        "category": "stories",
+        "id": "门派古墓_回古墓.玄铁剑法2胜",
+        "name": "门派古墓_回古墓.玄铁剑法2胜"
+      },
+      {
+        "category": "stories",
+        "id": "门派古墓_回古墓.玄铁剑法3胜",
+        "name": "门派古墓_回古墓.玄铁剑法3胜"
+      },
+      {
+        "category": "stories",
+        "id": "门派古墓_左右互搏",
+        "name": "门派古墓_左右互搏"
+      },
+      {
+        "category": "stories",
+        "id": "门派古墓_再试左右互搏",
+        "name": "门派古墓_再试左右互搏"
+      },
+      {
+        "category": "stories",
+        "id": "门派古墓_左右互搏胜",
+        "name": "门派古墓_左右互搏胜"
+      },
+      {
+        "category": "stories",
+        "id": "门派古墓_左右互搏负",
+        "name": "门派古墓_左右互搏负"
+      },
+      {
+        "category": "stories",
+        "id": "门派大轮寺_拜师",
+        "name": "门派大轮寺_拜师"
+      },
+      {
+        "category": "stories",
+        "id": "门派大轮寺_雪山小路",
+        "name": "门派大轮寺_雪山小路"
+      },
+      {
+        "category": "stories",
+        "id": "门派大轮寺_密宗大手印",
+        "name": "门派大轮寺_密宗大手印"
+      },
+      {
+        "category": "stories",
+        "id": "门派大轮寺_无上大力杵",
+        "name": "门派大轮寺_无上大力杵"
+      },
+      {
+        "category": "stories",
+        "id": "门派大轮寺_漫天花雨",
+        "name": "门派大轮寺_漫天花雨"
+      },
+      {
+        "category": "stories",
+        "id": "门派大轮寺_参禅",
+        "name": "门派大轮寺_参禅"
+      },
+      {
+        "category": "stories",
+        "id": "门派大轮寺_回大轮寺.郭襄",
+        "name": "门派大轮寺_回大轮寺.郭襄"
+      },
+      {
+        "category": "stories",
+        "id": "门派大轮寺_回大轮寺.霍都",
+        "name": "门派大轮寺_回大轮寺.霍都"
+      },
+      {
+        "category": "stories",
+        "id": "血刀门_拜师2",
+        "name": "血刀门_拜师2"
+      },
+      {
+        "category": "stories",
+        "id": "血刀门_善勇2",
+        "name": "血刀门_善勇2"
+      },
+      {
+        "category": "stories",
+        "id": "血刀门_善勇3",
+        "name": "血刀门_善勇3"
+      },
+      {
+        "category": "stories",
+        "id": "血刀门_善勇4",
+        "name": "血刀门_善勇4"
+      },
+      {
+        "category": "stories",
+        "id": "血刀门_宝象问答OK",
+        "name": "血刀门_宝象问答OK"
+      },
+      {
+        "category": "stories",
+        "id": "血刀门_宝象雪遁步行2",
+        "name": "血刀门_宝象雪遁步行2"
+      },
+      {
+        "category": "stories",
+        "id": "血刀门_胜谛事后",
+        "name": "血刀门_胜谛事后"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_加入全真",
+        "name": "全真教_加入全真"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_烧香坊",
+        "name": "全真教_烧香坊"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_静念楼",
+        "name": "全真教_静念楼"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_尹志平内功学习",
+        "name": "全真教_尹志平内功学习"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_尹志平内功学习2",
+        "name": "全真教_尹志平内功学习2"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_尹志平_全真剑法",
+        "name": "全真教_尹志平_全真剑法"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_尹志平_全真剑法2",
+        "name": "全真教_尹志平_全真剑法2"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_尹志平_昊天掌",
+        "name": "全真教_尹志平_昊天掌"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_尹志平_昊天掌2",
+        "name": "全真教_尹志平_昊天掌2"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_尹志平_金雁功",
+        "name": "全真教_尹志平_金雁功"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_尹志平_金雁功2",
+        "name": "全真教_尹志平_金雁功2"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_讨好赵志敬开小灶",
+        "name": "全真教_讨好赵志敬开小灶"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_讨好赵志敬开小灶2",
+        "name": "全真教_讨好赵志敬开小灶2"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_古墓九阴",
+        "name": "全真教_古墓九阴"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_周伯通胜",
+        "name": "全真教_周伯通胜"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_真九阴胜利邪恶",
+        "name": "全真教_真九阴胜利邪恶"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_真九阴胜利正义",
+        "name": "全真教_真九阴胜利正义"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_孙不二完成任务",
+        "name": "全真教_孙不二完成任务"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_加入灵鹫宫",
+        "name": "灵鹫宫_加入灵鹫宫"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫.御虚阁",
+        "name": "灵鹫宫.御虚阁"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼天山掌法1",
+        "name": "灵鹫宫_修炼天山掌法1"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼天山掌法2",
+        "name": "灵鹫宫_修炼天山掌法2"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫.九尊殿",
+        "name": "灵鹫宫.九尊殿"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼归藏剑1",
+        "name": "灵鹫宫_修炼归藏剑1"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼归藏剑2",
+        "name": "灵鹫宫_修炼归藏剑2"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼归藏剑3",
+        "name": "灵鹫宫_修炼归藏剑3"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼归藏剑4",
+        "name": "灵鹫宫_修炼归藏剑4"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼归藏剑5",
+        "name": "灵鹫宫_修炼归藏剑5"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼归藏剑6",
+        "name": "灵鹫宫_修炼归藏剑6"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼归藏剑7",
+        "name": "灵鹫宫_修炼归藏剑7"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼归藏剑8",
+        "name": "灵鹫宫_修炼归藏剑8"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_修炼归藏剑9",
+        "name": "灵鹫宫_修炼归藏剑9"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_读书识字",
+        "name": "灵鹫宫_读书识字"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_踢毽子",
+        "name": "灵鹫宫_踢毽子"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_委屈求全1",
+        "name": "灵鹫宫_委屈求全1"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_山顶大战4",
+        "name": "灵鹫宫_山顶大战4"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_密室武学",
+        "name": "灵鹫宫_密室武学"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_肚子疼",
+        "name": "灵鹫宫_肚子疼"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_偶遇逍遥子",
+        "name": "灵鹫宫_偶遇逍遥子"
+      },
+      {
+        "category": "stories",
+        "id": "少林派_剃度",
+        "name": "少林派_剃度"
+      },
+      {
+        "category": "stories",
+        "id": "少林派_不剃度",
+        "name": "少林派_不剃度"
+      },
+      {
+        "category": "stories",
+        "id": "少林派_少林拳法",
+        "name": "少林派_少林拳法"
+      },
+      {
+        "category": "stories",
+        "id": "少林派_少林拳法1",
+        "name": "少林派_少林拳法1"
+      },
+      {
+        "category": "stories",
+        "id": "少林派_少林棍法",
+        "name": "少林派_少林棍法"
+      },
+      {
+        "category": "stories",
+        "id": "少林派_少林棍法1",
+        "name": "少林派_少林棍法1"
+      },
+      {
+        "category": "stories",
+        "id": "少林派_讲经殿",
+        "name": "少林派_讲经殿"
+      },
+      {
+        "category": "stories",
+        "id": "少林派_初祖庵",
+        "name": "少林派_初祖庵"
+      },
+      {
+        "category": "stories",
+        "id": "少林派_塔林",
+        "name": "少林派_塔林"
+      },
+      {
+        "category": "stories",
+        "id": "少林派_东汉三阙",
+        "name": "少林派_东汉三阙"
+      },
+      {
+        "category": "stories",
+        "id": "少林派_东汉三阙1",
+        "name": "少林派_东汉三阙1"
+      },
+      {
+        "category": "stories",
+        "id": "少林寺_福建南少林破败",
+        "name": "少林寺_福建南少林破败"
+      },
+      {
+        "category": "stories",
+        "id": "少林寺_福建南少林小洪拳",
+        "name": "少林寺_福建南少林小洪拳"
+      },
+      {
+        "category": "stories",
+        "id": "南少林_大洪拳胜利",
+        "name": "南少林_大洪拳胜利"
+      },
+      {
+        "category": "stories",
+        "id": "少林寺_重回塔林",
+        "name": "少林寺_重回塔林"
+      },
+      {
+        "category": "stories",
+        "id": "少林派_洗髓经胜利",
+        "name": "少林派_洗髓经胜利"
+      },
+      {
+        "category": "stories",
+        "id": "武当派_入门",
+        "name": "武当派_入门"
+      },
+      {
+        "category": "stories",
+        "id": "武当派_武当心法1",
+        "name": "武当派_武当心法1"
+      },
+      {
+        "category": "stories",
+        "id": "武当派_绵掌",
+        "name": "武当派_绵掌"
+      },
+      {
+        "category": "stories",
+        "id": "武当派_绕指柔剑",
+        "name": "武当派_绕指柔剑"
+      },
+      {
+        "category": "stories",
+        "id": "武当派_身法",
+        "name": "武当派_身法"
+      },
+      {
+        "category": "stories",
+        "id": "武当派_梯云纵",
+        "name": "武当派_梯云纵"
+      },
+      {
+        "category": "stories",
+        "id": "武当派_复真观",
+        "name": "武当派_复真观"
+      },
+      {
+        "category": "stories",
+        "id": "武当派_天柱峰",
+        "name": "武当派_天柱峰"
+      },
+      {
+        "category": "stories",
+        "id": "武当派_太和山",
+        "name": "武当派_太和山"
+      },
+      {
+        "category": "stories",
+        "id": "武当派_玉虚宫",
+        "name": "武当派_玉虚宫"
+      },
+      {
+        "category": "stories",
+        "id": "武当派_俞莲舟考校3",
+        "name": "武当派_俞莲舟考校3"
+      },
+      {
+        "category": "stories",
+        "id": "武当派_俞莲舟考校六合劲",
+        "name": "武当派_俞莲舟考校六合劲"
+      },
+      {
+        "category": "stories",
+        "id": "武当派_神门十三剑3",
+        "name": "武当派_神门十三剑3"
+      },
+      {
+        "category": "stories",
+        "id": "武当派_山顶悟道之战胜利",
+        "name": "武当派_山顶悟道之战胜利"
+      },
+      {
+        "category": "stories",
+        "id": "武当派_金陵怀古1",
+        "name": "武当派_金陵怀古1"
+      },
+      {
+        "category": "stories",
+        "id": "武当派_蛇形刁手之战胜利",
+        "name": "武当派_蛇形刁手之战胜利"
+      },
+      {
+        "category": "stories",
+        "id": "侠客行_侠客岛0",
+        "name": "侠客行_侠客岛0"
+      },
+      {
+        "category": "stories",
+        "id": "侠客行_主太玄神功",
+        "name": "侠客行_主太玄神功"
+      },
+      {
+        "category": "stories",
+        "id": "霹雳堂_段正淳",
+        "name": "霹雳堂_段正淳"
+      },
+      {
+        "category": "stories",
+        "id": "霹雳堂_阿朱",
+        "name": "霹雳堂_阿朱"
+      },
+      {
+        "category": "stories",
+        "id": "霹雳堂_钟灵",
+        "name": "霹雳堂_钟灵"
+      },
+      {
+        "category": "stories",
+        "id": "霹雳堂_韦小宝",
+        "name": "霹雳堂_韦小宝"
+      },
+      {
+        "category": "stories",
+        "id": "bixuejianShyou_得黄金",
+        "name": "bixuejianShyou_得黄金"
+      },
+      {
+        "category": "stories",
+        "id": "bixuejianShyou_包裹线end7",
+        "name": "bixuejianShyou_包裹线end7"
+      },
+      {
+        "category": "stories",
+        "id": "bixuejianShyou_神拳无敌1",
+        "name": "bixuejianShyou_神拳无敌1"
+      },
+      {
+        "category": "stories",
+        "id": "门派星宿_入门",
+        "name": "门派星宿_入门"
+      },
+      {
+        "category": "stories",
+        "id": "门派星宿_入门口号对",
+        "name": "门派星宿_入门口号对"
+      },
+      {
+        "category": "stories",
+        "id": "星宿派_天狼子学习武功",
+        "name": "星宿派_天狼子学习武功"
+      },
+      {
+        "category": "stories",
+        "id": "星宿派_天狼子学习内功",
+        "name": "星宿派_天狼子学习内功"
+      },
+      {
+        "category": "stories",
+        "id": "星宿派_毒物林1",
+        "name": "星宿派_毒物林1"
+      },
+      {
+        "category": "stories",
+        "id": "星宿派_毒物林2胜利",
+        "name": "星宿派_毒物林2胜利"
+      },
+      {
+        "category": "stories",
+        "id": "星宿派_狮吼子教",
+        "name": "星宿派_狮吼子教"
+      },
+      {
+        "category": "stories",
+        "id": "星宿派_阿紫介绍1",
+        "name": "星宿派_阿紫介绍1"
+      },
+      {
+        "category": "stories",
+        "id": "星宿派_阿紫胜利",
+        "name": "星宿派_阿紫胜利"
+      },
+      {
+        "category": "stories",
+        "id": "星宿派_阿紫失败",
+        "name": "星宿派_阿紫失败"
+      },
+      {
+        "category": "stories",
+        "id": "星宿派_阿紫偷鼎不去",
+        "name": "星宿派_阿紫偷鼎不去"
+      },
+      {
+        "category": "stories",
+        "id": "星宿派_星宿老仙考校3",
+        "name": "星宿派_星宿老仙考校3"
+      },
+      {
+        "category": "stories",
+        "id": "星宿派_擂鼓山胜利",
+        "name": "星宿派_擂鼓山胜利"
+      },
+      {
+        "category": "stories",
+        "id": "original_长安一梦.部落长老放牧",
+        "name": "original_长安一梦.部落长老放牧"
+      },
+      {
+        "category": "stories",
+        "id": "original_长安一梦.部落长老打水",
+        "name": "original_长安一梦.部落长老打水"
+      },
+      {
+        "category": "stories",
+        "id": "original_长安一梦.部落长老砍柴",
+        "name": "original_长安一梦.部落长老砍柴"
+      },
+      {
+        "category": "stories",
+        "id": "original_新手引导.买药完成",
+        "name": "original_新手引导.买药完成"
+      },
+      {
+        "category": "stories",
+        "id": "original_新手地图.送镖",
+        "name": "original_新手地图.送镖"
+      },
+      {
+        "category": "stories",
+        "id": "original_东海剑池升级剑",
+        "name": "original_东海剑池升级剑"
+      },
+      {
+        "category": "stories",
+        "id": "original_东海剑池升级剑结束",
+        "name": "original_东海剑池升级剑结束"
+      },
+      {
+        "category": "stories",
+        "id": "original_东海剑池升级拳",
+        "name": "original_东海剑池升级拳"
+      },
+      {
+        "category": "stories",
+        "id": "original_东海剑池升级拳结束",
+        "name": "original_东海剑池升级拳结束"
+      },
+      {
+        "category": "stories",
+        "id": "original_东海剑池升级刀",
+        "name": "original_东海剑池升级刀"
+      },
+      {
+        "category": "stories",
+        "id": "original_东海剑池升级刀结束",
+        "name": "original_东海剑池升级刀结束"
+      },
+      {
+        "category": "stories",
+        "id": "original_东海剑池升级奇门",
+        "name": "original_东海剑池升级奇门"
+      },
+      {
+        "category": "stories",
+        "id": "original_东海剑池升级奇门结束",
+        "name": "original_东海剑池升级奇门结束"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_木婉清.攻略成功",
+        "name": "tlbb.dy_木婉清.攻略成功"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_阿碧线李青萝.touch.成功",
+        "name": "tlbb.dy_阿碧线李青萝.touch.成功"
+      },
+      {
+        "category": "stories",
+        "id": "一键变态",
+        "name": "一键变态"
+      },
+      {
+        "category": "battles",
+        "id": "南贤居_木头人_战斗",
+        "name": "南贤居_木头人_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "破庙战田青文",
+        "name": "破庙战田青文"
+      },
+      {
+        "category": "battles",
+        "id": "新手任务小孩",
+        "name": "新手任务小孩"
+      },
+      {
+        "category": "battles",
+        "id": "新手任务黑老大",
+        "name": "新手任务黑老大"
+      },
+      {
+        "category": "battles",
+        "id": "商家堡.商宝震练功",
+        "name": "商家堡.商宝震练功"
+      },
+      {
+        "category": "battles",
+        "id": "商家堡.商家堡风波1",
+        "name": "商家堡.商家堡风波1"
+      },
+      {
+        "category": "battles",
+        "id": "商家堡.商家堡风波2",
+        "name": "商家堡.商家堡风波2"
+      },
+      {
+        "category": "battles",
+        "id": "商家堡.商家堡风波3",
+        "name": "商家堡.商家堡风波3"
+      },
+      {
+        "category": "battles",
+        "id": "胡斐居.战斗",
+        "name": "胡斐居.战斗"
+      },
+      {
+        "category": "battles",
+        "id": "阎基居.战斗",
+        "name": "阎基居.战斗"
+      },
+      {
+        "category": "battles",
+        "id": "阎基居.战斗.七星海棠",
+        "name": "阎基居.战斗.七星海棠"
+      },
+      {
+        "category": "battles",
+        "id": "药王庄.毒手药王.战斗",
+        "name": "药王庄.毒手药王.战斗"
+      },
+      {
+        "category": "battles",
+        "id": "绝情谷大厅_战斗1",
+        "name": "绝情谷大厅_战斗1"
+      },
+      {
+        "category": "battles",
+        "id": "风陵渡口.郭襄_战斗1",
+        "name": "风陵渡口.郭襄_战斗1"
+      },
+      {
+        "category": "battles",
+        "id": "鹿鼎记_神龙岛",
+        "name": "鹿鼎记_神龙岛"
+      },
+      {
+        "category": "battles",
+        "id": "剑魔荒冢_战斗.杨过",
+        "name": "剑魔荒冢_战斗.杨过"
+      },
+      {
+        "category": "battles",
+        "id": "剑魔荒冢_战斗.神雕",
+        "name": "剑魔荒冢_战斗.神雕"
+      },
+      {
+        "category": "battles",
+        "id": "剑魔荒冢_战斗.杀死杨过",
+        "name": "剑魔荒冢_战斗.杀死杨过"
+      },
+      {
+        "category": "battles",
+        "id": "绝情谷底_战斗1",
+        "name": "绝情谷底_战斗1"
+      },
+      {
+        "category": "battles",
+        "id": "刀白凤树林_战斗1",
+        "name": "刀白凤树林_战斗1"
+      },
+      {
+        "category": "battles",
+        "id": "岳老三树林_战斗1",
+        "name": "岳老三树林_战斗1"
+      },
+      {
+        "category": "battles",
+        "id": "木婉清树林_战斗",
+        "name": "木婉清树林_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "木婉清树林杀死_战斗",
+        "name": "木婉清树林杀死_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "再见木婉清_战斗",
+        "name": "再见木婉清_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "touch木婉清失败_战斗",
+        "name": "touch木婉清失败_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "镇南王府.身世_战斗",
+        "name": "镇南王府.身世_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "镇南王府.救木婉清_战斗",
+        "name": "镇南王府.救木婉清_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "田伯光居_战斗1",
+        "name": "田伯光居_战斗1"
+      },
+      {
+        "category": "battles",
+        "id": "血刀门_宝象雪遁步行",
+        "name": "血刀门_宝象雪遁步行"
+      },
+      {
+        "category": "battles",
+        "id": "血刀门_胜谛抢民女",
+        "name": "血刀门_胜谛抢民女"
+      },
+      {
+        "category": "battles",
+        "id": "血刀门_门内比武1",
+        "name": "血刀门_门内比武1"
+      },
+      {
+        "category": "battles",
+        "id": "血刀门_门内比武2",
+        "name": "血刀门_门内比武2"
+      },
+      {
+        "category": "battles",
+        "id": "血刀门_门内比武3",
+        "name": "血刀门_门内比武3"
+      },
+      {
+        "category": "battles",
+        "id": "血刀门_门内比武4",
+        "name": "血刀门_门内比武4"
+      },
+      {
+        "category": "battles",
+        "id": "血刀门_血刀老祖的试炼1",
+        "name": "血刀门_血刀老祖的试炼1"
+      },
+      {
+        "category": "battles",
+        "id": "血刀门_血刀老祖的试炼2",
+        "name": "血刀门_血刀老祖的试炼2"
+      },
+      {
+        "category": "battles",
+        "id": "血刀门_血刀老祖的试炼3",
+        "name": "血刀门_血刀老祖的试炼3"
+      },
+      {
+        "category": "battles",
+        "id": "灭门血刀1",
+        "name": "灭门血刀1"
+      },
+      {
+        "category": "battles",
+        "id": "灭门血刀2",
+        "name": "灭门血刀2"
+      },
+      {
+        "category": "battles",
+        "id": "赵志敬_战斗",
+        "name": "赵志敬_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "门派大比1_谭守诚",
+        "name": "门派大比1_谭守诚"
+      },
+      {
+        "category": "battles",
+        "id": "门派大比2_李志常",
+        "name": "门派大比2_李志常"
+      },
+      {
+        "category": "battles",
+        "id": "门派大比3_苗守一",
+        "name": "门派大比3_苗守一"
+      },
+      {
+        "category": "battles",
+        "id": "全真教大校_战斗1",
+        "name": "全真教大校_战斗1"
+      },
+      {
+        "category": "battles",
+        "id": "全真教大校_战斗2",
+        "name": "全真教大校_战斗2"
+      },
+      {
+        "category": "battles",
+        "id": "全真教大校_战斗3",
+        "name": "全真教大校_战斗3"
+      },
+      {
+        "category": "battles",
+        "id": "全真教大校_战斗4",
+        "name": "全真教大校_战斗4"
+      },
+      {
+        "category": "battles",
+        "id": "全真教_马钰",
+        "name": "全真教_马钰"
+      },
+      {
+        "category": "battles",
+        "id": "全真教_真九阴",
+        "name": "全真教_真九阴"
+      },
+      {
+        "category": "battles",
+        "id": "灭门全真1",
+        "name": "灭门全真1"
+      },
+      {
+        "category": "battles",
+        "id": "灭门全真2",
+        "name": "灭门全真2"
+      },
+      {
+        "category": "battles",
+        "id": "灭门全真超级战",
+        "name": "灭门全真超级战"
+      },
+      {
+        "category": "battles",
+        "id": "张无忌_战斗",
+        "name": "张无忌_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "汝阳王府_战斗",
+        "name": "汝阳王府_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "武当山_战斗",
+        "name": "武当山_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "金刚伏魔圈",
+        "name": "金刚伏魔圈"
+      },
+      {
+        "category": "battles",
+        "id": "金刚伏魔圈邪线",
+        "name": "金刚伏魔圈邪线"
+      },
+      {
+        "category": "battles",
+        "id": "华山坐忘峰_战斗",
+        "name": "华山坐忘峰_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "劝说青城张无忌_战斗",
+        "name": "劝说青城张无忌_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "天关战斗_鄱阳湖对陈友谅",
+        "name": "天关战斗_鄱阳湖对陈友谅"
+      },
+      {
+        "category": "battles",
+        "id": "光明圣火阵_战斗",
+        "name": "光明圣火阵_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "鄱阳湖张无忌_战斗",
+        "name": "鄱阳湖张无忌_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "天关战斗_邪线鄱阳湖",
+        "name": "天关战斗_邪线鄱阳湖"
+      },
+      {
+        "category": "battles",
+        "id": "杀康茂才_战斗",
+        "name": "杀康茂才_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "大理夺阵_战斗",
+        "name": "大理夺阵_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "灵鹫宫_阿猫阿狗之战",
+        "name": "灵鹫宫_阿猫阿狗之战"
+      },
+      {
+        "category": "battles",
+        "id": "灵鹫宫_李秋水之战",
+        "name": "灵鹫宫_李秋水之战"
+      },
+      {
+        "category": "battles",
+        "id": "灭门灵鹫1",
+        "name": "灭门灵鹫1"
+      },
+      {
+        "category": "battles",
+        "id": "灭门灵鹫2",
+        "name": "灭门灵鹫2"
+      },
+      {
+        "category": "battles",
+        "id": "灵鹫宫_童姥之死",
+        "name": "灵鹫宫_童姥之死"
+      },
+      {
+        "category": "battles",
+        "id": "灵鹫宫_慕容复",
+        "name": "灵鹫宫_慕容复"
+      },
+      {
+        "category": "battles",
+        "id": "天山_对战虚竹天山童姥",
+        "name": "天山_对战虚竹天山童姥"
+      },
+      {
+        "category": "battles",
+        "id": "黑木崖东方_战斗",
+        "name": "黑木崖东方_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "琴居东方_战斗",
+        "name": "琴居东方_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "风陵渡黑衣人_战斗",
+        "name": "风陵渡黑衣人_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "天关战斗_围攻黑木崖",
+        "name": "天关战斗_围攻黑木崖"
+      },
+      {
+        "category": "battles",
+        "id": "战东方不败_战斗",
+        "name": "战东方不败_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "鸳鸯刀_太岳四侠战斗",
+        "name": "鸳鸯刀_太岳四侠战斗"
+      },
+      {
+        "category": "battles",
+        "id": "鸳鸯刀风陵渡1_战斗",
+        "name": "鸳鸯刀风陵渡1_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "鸳鸯刀正风陵渡_战斗",
+        "name": "鸳鸯刀正风陵渡_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "笑傲邪华山_战斗",
+        "name": "笑傲邪华山_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "收服恒山_战斗",
+        "name": "收服恒山_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "笑傲邪_并派战斗",
+        "name": "笑傲邪_并派战斗"
+      },
+      {
+        "category": "battles",
+        "id": "笑傲邪_围攻黑木崖战斗2",
+        "name": "笑傲邪_围攻黑木崖战斗2"
+      },
+      {
+        "category": "battles",
+        "id": "笑傲邪_围攻黑木崖战斗3",
+        "name": "笑傲邪_围攻黑木崖战斗3"
+      },
+      {
+        "category": "battles",
+        "id": "笑傲江湖_杀死令狐冲",
+        "name": "笑傲江湖_杀死令狐冲"
+      },
+      {
+        "category": "battles",
+        "id": "少林寺_火头僧之战",
+        "name": "少林寺_火头僧之战"
+      },
+      {
+        "category": "battles",
+        "id": "少林寺_南少林之战",
+        "name": "少林寺_南少林之战"
+      },
+      {
+        "category": "battles",
+        "id": "少林寺_大比1",
+        "name": "少林寺_大比1"
+      },
+      {
+        "category": "battles",
+        "id": "少林寺_大比2",
+        "name": "少林寺_大比2"
+      },
+      {
+        "category": "battles",
+        "id": "少林寺_大比3",
+        "name": "少林寺_大比3"
+      },
+      {
+        "category": "battles",
+        "id": "少林寺_洗髓经",
+        "name": "少林寺_洗髓经"
+      },
+      {
+        "category": "battles",
+        "id": "少林寺_火工头陀之战",
+        "name": "少林寺_火工头陀之战"
+      },
+      {
+        "category": "battles",
+        "id": "武当派_宋青书之战",
+        "name": "武当派_宋青书之战"
+      },
+      {
+        "category": "battles",
+        "id": "武当派_黑风寨之战",
+        "name": "武当派_黑风寨之战"
+      },
+      {
+        "category": "battles",
+        "id": "武当派_黑白双煞之战",
+        "name": "武当派_黑白双煞之战"
+      },
+      {
+        "category": "battles",
+        "id": "武当派_玄冥二老之战",
+        "name": "武当派_玄冥二老之战"
+      },
+      {
+        "category": "battles",
+        "id": "武当派_余沧海之战",
+        "name": "武当派_余沧海之战"
+      },
+      {
+        "category": "battles",
+        "id": "武当派_殷梨亭考校",
+        "name": "武当派_殷梨亭考校"
+      },
+      {
+        "category": "battles",
+        "id": "武当派_山顶悟道之战",
+        "name": "武当派_山顶悟道之战"
+      },
+      {
+        "category": "battles",
+        "id": "武当派_蛇形刁手之战",
+        "name": "武当派_蛇形刁手之战"
+      },
+      {
+        "category": "battles",
+        "id": "武当派_火手判官之战",
+        "name": "武当派_火手判官之战"
+      },
+      {
+        "category": "battles",
+        "id": "武当派_玉罗刹之战",
+        "name": "武当派_玉罗刹之战"
+      },
+      {
+        "category": "battles",
+        "id": "武当派_玉罗刹之战2",
+        "name": "武当派_玉罗刹之战2"
+      },
+      {
+        "category": "battles",
+        "id": "武当派_天柱峰之战",
+        "name": "武当派_天柱峰之战"
+      },
+      {
+        "category": "battles",
+        "id": "武当派_天柱峰之战1",
+        "name": "武当派_天柱峰之战1"
+      },
+      {
+        "category": "battles",
+        "id": "黑暗的阴影_战斗",
+        "name": "黑暗的阴影_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "神秘剑客_战斗",
+        "name": "神秘剑客_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "襄阳_战斗",
+        "name": "襄阳_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "全真教_襄阳邪教人物",
+        "name": "全真教_襄阳邪教人物"
+      },
+      {
+        "category": "battles",
+        "id": "襄阳_战斗2",
+        "name": "襄阳_战斗2"
+      },
+      {
+        "category": "battles",
+        "id": "襄阳_战斗3",
+        "name": "襄阳_战斗3"
+      },
+      {
+        "category": "battles",
+        "id": "襄阳_战斗4",
+        "name": "襄阳_战斗4"
+      },
+      {
+        "category": "battles",
+        "id": "最终战场_战斗",
+        "name": "最终战场_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "华山论剑群殴战",
+        "name": "华山论剑群殴战"
+      },
+      {
+        "category": "battles",
+        "id": "华山论剑群殴战炼狱",
+        "name": "华山论剑群殴战炼狱"
+      },
+      {
+        "category": "battles",
+        "id": "真华山论剑",
+        "name": "真华山论剑"
+      },
+      {
+        "category": "battles",
+        "id": "梅超风_战斗",
+        "name": "梅超风_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "新手村梅超风_战斗",
+        "name": "新手村梅超风_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "渔樵耕读_战斗",
+        "name": "渔樵耕读_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "白驼山欧阳锋_战斗",
+        "name": "白驼山欧阳锋_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "桃花岛黄药师_战斗",
+        "name": "桃花岛黄药师_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "一灯居一灯大师_战斗",
+        "name": "一灯居一灯大师_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "长江岸边洪七公_战斗",
+        "name": "长江岸边洪七公_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "桃花岛招亲_战斗",
+        "name": "桃花岛招亲_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "全真教王重阳1_战斗",
+        "name": "全真教王重阳1_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "全真教王重阳2_战斗",
+        "name": "全真教王重阳2_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "襄阳城南_战斗",
+        "name": "襄阳城南_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "风陵渡口金针_战斗",
+        "name": "风陵渡口金针_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "天龙寺.战鸠摩智_战斗",
+        "name": "天龙寺.战鸠摩智_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "天龙寺.六脉神剑_战斗2",
+        "name": "天龙寺.六脉神剑_战斗2"
+      },
+      {
+        "category": "battles",
+        "id": "曼陀山庄_战斗",
+        "name": "曼陀山庄_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "初见王语嫣_战斗",
+        "name": "初见王语嫣_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "touch王语嫣_战斗",
+        "name": "touch王语嫣_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "江南郊野_战斗",
+        "name": "江南郊野_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "丐帮弟子_战斗",
+        "name": "丐帮弟子_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "丐帮大变1_战斗",
+        "name": "丐帮大变1_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "丐帮大变2_战斗",
+        "name": "丐帮大变2_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "少林寺乔峰_战斗",
+        "name": "少林寺乔峰_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "聚贤庄_战斗",
+        "name": "聚贤庄_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "雁门关_战斗",
+        "name": "雁门关_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "小镜湖阿朱王语嫣_战斗",
+        "name": "小镜湖阿朱王语嫣_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "少林萧远山1_战斗",
+        "name": "少林萧远山1_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "少林萧远山帮萧峰_战斗",
+        "name": "少林萧远山帮萧峰_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "少林萧远山帮慕容复_战斗",
+        "name": "少林萧远山帮慕容复_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "真曼陀山庄_战斗",
+        "name": "真曼陀山庄_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "马夫人_战斗",
+        "name": "马夫人_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "小镜湖阮星竹段延庆_战斗",
+        "name": "小镜湖阮星竹段延庆_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "小镜湖阮星竹慕容复_战斗",
+        "name": "小镜湖阮星竹慕容复_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "阿朱阿碧_战斗",
+        "name": "阿朱阿碧_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "阿朱阿碧屠杀_战斗",
+        "name": "阿朱阿碧屠杀_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "无量秘洞无崖子_战斗",
+        "name": "无量秘洞无崖子_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "曼陀山庄逍遥子_战斗",
+        "name": "曼陀山庄逍遥子_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "闪电貂_战斗",
+        "name": "闪电貂_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "擂鼓山神秘人_战斗",
+        "name": "擂鼓山神秘人_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "擂鼓山_战斗",
+        "name": "擂鼓山_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "何红药_战斗",
+        "name": "何红药_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "金蛇窟_战斗",
+        "name": "金蛇窟_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "平一指_战斗",
+        "name": "平一指_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "曲非烟_战斗",
+        "name": "曲非烟_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "岳灵珊_战斗",
+        "name": "岳灵珊_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "岳不群_战斗",
+        "name": "岳不群_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "西湖底_战斗林平之",
+        "name": "西湖底_战斗林平之"
+      },
+      {
+        "category": "battles",
+        "id": "西湖底_战斗封不平",
+        "name": "西湖底_战斗封不平"
+      },
+      {
+        "category": "battles",
+        "id": "华山山洞_战斗辟邪剑谱",
+        "name": "华山山洞_战斗辟邪剑谱"
+      },
+      {
+        "category": "battles",
+        "id": "黑木崖_战斗封不平3",
+        "name": "黑木崖_战斗封不平3"
+      },
+      {
+        "category": "battles",
+        "id": "黑木崖_辟邪剑谱",
+        "name": "黑木崖_辟邪剑谱"
+      },
+      {
+        "category": "battles",
+        "id": "黑木崖_战斗封不平林平之2",
+        "name": "黑木崖_战斗封不平林平之2"
+      },
+      {
+        "category": "battles",
+        "id": "黑木崖_战斗封不平林平之3",
+        "name": "黑木崖_战斗封不平林平之3"
+      },
+      {
+        "category": "battles",
+        "id": "黑木崖下_战斗",
+        "name": "黑木崖下_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "嵩山派1_战斗",
+        "name": "嵩山派1_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "嵩山派2_战斗",
+        "name": "嵩山派2_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "嵩山派3_战斗",
+        "name": "嵩山派3_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "华山后山剑宗1_战斗",
+        "name": "华山后山剑宗1_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "昆仑仙境_战斗",
+        "name": "昆仑仙境_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "昆仑山血刀老祖_战斗",
+        "name": "昆仑山血刀老祖_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "白马啸西风.沙漠_战斗",
+        "name": "白马啸西风.沙漠_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "白马啸西风.沙漠战华辉_战斗",
+        "name": "白马啸西风.沙漠战华辉_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "哈萨克部落_战斗",
+        "name": "哈萨克部落_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "哈萨克部落李文秀_战斗",
+        "name": "哈萨克部落李文秀_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "高昌迷宫_战斗",
+        "name": "高昌迷宫_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "高昌迷宫李文秀_战斗",
+        "name": "高昌迷宫李文秀_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "回族部落_战斗",
+        "name": "回族部落_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "六和塔_战斗",
+        "name": "六和塔_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "庖丁解牛_战斗",
+        "name": "庖丁解牛_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "御书房_战斗",
+        "name": "御书房_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "慈宁宫1_战斗",
+        "name": "慈宁宫1_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "慈宁宫2_战斗",
+        "name": "慈宁宫2_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "大理_战斗",
+        "name": "大理_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "鹿鼎记_吴三桂",
+        "name": "鹿鼎记_吴三桂"
+      },
+      {
+        "category": "battles",
+        "id": "洞中等级0_战斗",
+        "name": "洞中等级0_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "洞中等级1_战斗",
+        "name": "洞中等级1_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "洞中等级2_战斗",
+        "name": "洞中等级2_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "洞中等级3_战斗",
+        "name": "洞中等级3_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "长安一梦_战斗",
+        "name": "长安一梦_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "少林木人巷",
+        "name": "少林木人巷"
+      },
+      {
+        "category": "battles",
+        "id": "少林铜人巷",
+        "name": "少林铜人巷"
+      },
+      {
+        "category": "battles",
+        "id": "少林无名老僧",
+        "name": "少林无名老僧"
+      },
+      {
+        "category": "battles",
+        "id": "武当七截阵",
+        "name": "武当七截阵"
+      },
+      {
+        "category": "battles",
+        "id": "光明顶_战斗",
+        "name": "光明顶_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "古墓叛徒_战斗",
+        "name": "古墓叛徒_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "古墓世仇_战斗",
+        "name": "古墓世仇_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "古墓故友_战斗",
+        "name": "古墓故友_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "杨冰儿_战斗",
+        "name": "杨冰儿_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "古墓左右互搏_战斗",
+        "name": "古墓左右互搏_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "玄铁剑1_战斗",
+        "name": "玄铁剑1_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "玄铁剑2_战斗",
+        "name": "玄铁剑2_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "玄铁剑3_战斗",
+        "name": "玄铁剑3_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "灭门古墓黄衫女子1",
+        "name": "灭门古墓黄衫女子1"
+      },
+      {
+        "category": "battles",
+        "id": "灭门古墓黄衫女子2",
+        "name": "灭门古墓黄衫女子2"
+      },
+      {
+        "category": "battles",
+        "id": "灭门古墓超级战",
+        "name": "灭门古墓超级战"
+      },
+      {
+        "category": "battles",
+        "id": "桑结_战斗",
+        "name": "桑结_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "达尔巴_战斗",
+        "name": "达尔巴_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "灵智上人_战斗",
+        "name": "灵智上人_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "灭门大轮1",
+        "name": "灭门大轮1"
+      },
+      {
+        "category": "battles",
+        "id": "灭门大轮2",
+        "name": "灭门大轮2"
+      },
+      {
+        "category": "battles",
+        "id": "霍都_战斗",
+        "name": "霍都_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "鹿鼎记_台湾郑克爽1",
+        "name": "鹿鼎记_台湾郑克爽1"
+      },
+      {
+        "category": "battles",
+        "id": "鹿鼎记_鹿鼎山之战",
+        "name": "鹿鼎记_鹿鼎山之战"
+      },
+      {
+        "category": "battles",
+        "id": "马贼王_战斗",
+        "name": "马贼王_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "original_长安深夜怪事.初遇夜间人",
+        "name": "original_长安深夜怪事.初遇夜间人"
+      },
+      {
+        "category": "battles",
+        "id": "original_长安深夜怪事.再遇夜间人",
+        "name": "original_长安深夜怪事.再遇夜间人"
+      },
+      {
+        "category": "battles",
+        "id": "original_长安深夜怪事.三遇夜间人",
+        "name": "original_长安深夜怪事.三遇夜间人"
+      },
+      {
+        "category": "battles",
+        "id": "original_长安深夜怪事.重阳宫霓裳",
+        "name": "original_长安深夜怪事.重阳宫霓裳"
+      },
+      {
+        "category": "battles",
+        "id": "original_长安深夜怪事.重阳宫赵志诚",
+        "name": "original_长安深夜怪事.重阳宫赵志诚"
+      },
+      {
+        "category": "battles",
+        "id": "original_山庄风云神秘人",
+        "name": "original_山庄风云神秘人"
+      },
+      {
+        "category": "battles",
+        "id": "original_山庄风云疯狂贾飞",
+        "name": "original_山庄风云疯狂贾飞"
+      },
+      {
+        "category": "battles",
+        "id": "original_山庄风云疯狂贾飞女主",
+        "name": "original_山庄风云疯狂贾飞女主"
+      },
+      {
+        "category": "battles",
+        "id": "original_回纥男子.长安花市刺客",
+        "name": "original_回纥男子.长安花市刺客"
+      },
+      {
+        "category": "battles",
+        "id": "original_回纥男子.沙漠月夜乌护干",
+        "name": "original_回纥男子.沙漠月夜乌护干"
+      },
+      {
+        "category": "battles",
+        "id": "original_回纥男子.唐军营救人",
+        "name": "original_回纥男子.唐军营救人"
+      },
+      {
+        "category": "battles",
+        "id": "original_回纥男子.长安乌护干",
+        "name": "original_回纥男子.长安乌护干"
+      },
+      {
+        "category": "battles",
+        "id": "original_长安一梦.山洞阿玉",
+        "name": "original_长安一梦.山洞阿玉"
+      },
+      {
+        "category": "battles",
+        "id": "original_长安一梦.沙漠马贼王",
+        "name": "original_长安一梦.沙漠马贼王"
+      },
+      {
+        "category": "battles",
+        "id": "original_长安一梦.宝藏争夺",
+        "name": "original_长安一梦.宝藏争夺"
+      },
+      {
+        "category": "battles",
+        "id": "序章_战斗十大善人",
+        "name": "序章_战斗十大善人"
+      },
+      {
+        "category": "battles",
+        "id": "侠客行_石张家口",
+        "name": "侠客行_石张家口"
+      },
+      {
+        "category": "battles",
+        "id": "侠客行_破天太玄经",
+        "name": "侠客行_破天太玄经"
+      },
+      {
+        "category": "battles",
+        "id": "侠客行_主角大雪山",
+        "name": "侠客行_主角大雪山"
+      },
+      {
+        "category": "battles",
+        "id": "侠客行_主角太玄经",
+        "name": "侠客行_主角太玄经"
+      },
+      {
+        "category": "battles",
+        "id": "广州.战斗",
+        "name": "广州.战斗"
+      },
+      {
+        "category": "battles",
+        "id": "风陵渡口.袁承志",
+        "name": "风陵渡口.袁承志"
+      },
+      {
+        "category": "battles",
+        "id": "风陵渡口.龙游帮1",
+        "name": "风陵渡口.龙游帮1"
+      },
+      {
+        "category": "battles",
+        "id": "风陵渡口.龙游帮2",
+        "name": "风陵渡口.龙游帮2"
+      },
+      {
+        "category": "battles",
+        "id": "石梁派_战斗1",
+        "name": "石梁派_战斗1"
+      },
+      {
+        "category": "battles",
+        "id": "石梁派_战斗5",
+        "name": "石梁派_战斗5"
+      },
+      {
+        "category": "battles",
+        "id": "石梁派_战斗2",
+        "name": "石梁派_战斗2"
+      },
+      {
+        "category": "battles",
+        "id": "石梁派_战斗3",
+        "name": "石梁派_战斗3"
+      },
+      {
+        "category": "battles",
+        "id": "石梁派_战斗4",
+        "name": "石梁派_战斗4"
+      },
+      {
+        "category": "battles",
+        "id": "石梁派_战斗6",
+        "name": "石梁派_战斗6"
+      },
+      {
+        "category": "battles",
+        "id": "石梁派_战斗7",
+        "name": "石梁派_战斗7"
+      },
+      {
+        "category": "battles",
+        "id": "华山仙境_灭华山",
+        "name": "华山仙境_灭华山"
+      },
+      {
+        "category": "battles",
+        "id": "华山仙境_灭铁剑1",
+        "name": "华山仙境_灭铁剑1"
+      },
+      {
+        "category": "battles",
+        "id": "华山仙境_灭铁剑2",
+        "name": "华山仙境_灭铁剑2"
+      },
+      {
+        "category": "battles",
+        "id": "襄阳.战斗02",
+        "name": "襄阳.战斗02"
+      },
+      {
+        "category": "battles",
+        "id": "铁剑门_战斗1",
+        "name": "铁剑门_战斗1"
+      },
+      {
+        "category": "battles",
+        "id": "星宿派_灭门",
+        "name": "星宿派_灭门"
+      },
+      {
+        "category": "battles",
+        "id": "星宿派毒物1",
+        "name": "星宿派毒物1"
+      },
+      {
+        "category": "battles",
+        "id": "星宿派毒物2",
+        "name": "星宿派毒物2"
+      },
+      {
+        "category": "battles",
+        "id": "星宿派阿紫",
+        "name": "星宿派阿紫"
+      },
+      {
+        "category": "battles",
+        "id": "星宿派门比1",
+        "name": "星宿派门比1"
+      },
+      {
+        "category": "battles",
+        "id": "星宿派门比2",
+        "name": "星宿派门比2"
+      },
+      {
+        "category": "battles",
+        "id": "星宿派擂鼓山之战",
+        "name": "星宿派擂鼓山之战"
+      },
+      {
+        "category": "battles",
+        "id": "黑衣_灭门武当",
+        "name": "黑衣_灭门武当"
+      },
+      {
+        "category": "battles",
+        "id": "黑衣_灭门少林",
+        "name": "黑衣_灭门少林"
+      },
+      {
+        "category": "battles",
+        "id": "黑衣_灭门日月",
+        "name": "黑衣_灭门日月"
+      },
+      {
+        "category": "battles",
+        "id": "黑衣_暗杀黄裳",
+        "name": "黑衣_暗杀黄裳"
+      },
+      {
+        "category": "battles",
+        "id": "黑衣_暗杀独孤求败",
+        "name": "黑衣_暗杀独孤求败"
+      },
+      {
+        "category": "battles",
+        "id": "黑衣_暗杀王重阳",
+        "name": "黑衣_暗杀王重阳"
+      },
+      {
+        "category": "battles",
+        "id": "黑衣_对战黑衣使者",
+        "name": "黑衣_对战黑衣使者"
+      },
+      {
+        "category": "battles",
+        "id": "黑衣_对战魔君",
+        "name": "黑衣_对战魔君"
+      },
+      {
+        "category": "battles",
+        "id": "黑衣_华山",
+        "name": "黑衣_华山"
+      },
+      {
+        "category": "creation",
+        "id": "重摇与头像",
+        "name": "重摇属性与头像选项"
+      },
+      {
+        "category": "worldTriggers",
+        "id": "trigger:1",
+        "name": "trigger:1"
+      },
+      {
+        "category": "worldTriggers",
+        "id": "trigger:2",
+        "name": "trigger:2"
+      },
+      {
+        "category": "worldTriggers",
+        "id": "trigger:3",
+        "name": "trigger:3"
+      },
+      {
+        "category": "worldTriggers",
+        "id": "trigger:4",
+        "name": "trigger:4"
+      }
+    ]
+  },
+  {
+    "id": "无门派主角",
+    "category": "growTemplates",
+    "name": "无门派主角",
+    "description": "",
+    "state": "资料已接入",
+    "source": "grow_templates.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "grow_template",
+      "shenfa": "3",
+      "hp": "120",
+      "qimen": "2",
+      "name": "无门派主角",
+      "mp": "80",
+      "bili": "3",
+      "dingli": "3",
+      "daofa": "2",
+      "quanzhang": "2",
+      "gengu": "3",
+      "wuxue": "15",
+      "fuyuan": "3",
+      "wuxing": "2",
+      "jianfa": "2"
+    },
+    "runtime": {
+      "id": "无门派主角",
+      "name": "无门派主角",
+      "statGrowth": {
+        "bili": 3,
+        "dingli": 3,
+        "fuyuan": 3,
+        "gengu": 3,
+        "jianfa": 2,
+        "daofa": 2,
+        "quanzhang": 2,
+        "qimen": 2,
+        "shenfa": 3,
+        "wuxing": 2,
+        "wuxue": 15,
+        "max_hp": 120,
+        "max_mp": 80
+      }
+    },
+    "variants": [
+      {
+        "source": "grow_templates.txt",
+        "node": {
+          "tag": "grow_template",
+          "shenfa": "3",
+          "hp": "120",
+          "qimen": "2",
+          "name": "无门派主角",
+          "mp": "80",
+          "bili": "3",
+          "dingli": "3",
+          "daofa": "2",
+          "quanzhang": "2",
+          "gengu": "3",
+          "wuxue": "15",
+          "fuyuan": "3",
+          "wuxing": "2",
+          "jianfa": "2"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "stories",
+        "id": "门派_无门派",
+        "name": "门派_无门派"
+      }
+    ]
+  },
+  {
+    "id": "肉盾",
+    "category": "growTemplates",
+    "name": "肉盾",
+    "description": "",
+    "state": "资料已接入",
+    "source": "grow_templates.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "grow_template",
+      "shenfa": "1",
+      "hp": "200",
+      "qimen": "0",
+      "name": "肉盾",
+      "mp": "40",
+      "bili": "2",
+      "dingli": "3",
+      "daofa": "0",
+      "quanzhang": "2",
+      "gengu": "2",
+      "wuxue": "8",
+      "fuyuan": "0",
+      "wuxing": "0",
+      "jianfa": "0"
+    },
+    "runtime": {
+      "id": "肉盾",
+      "name": "肉盾",
+      "statGrowth": {
+        "bili": 2,
+        "dingli": 3,
+        "fuyuan": 0,
+        "gengu": 2,
+        "jianfa": 0,
+        "daofa": 0,
+        "quanzhang": 2,
+        "qimen": 0,
+        "shenfa": 1,
+        "wuxing": 0,
+        "wuxue": 8,
+        "max_hp": 200,
+        "max_mp": 40
+      }
+    },
+    "variants": [
+      {
+        "source": "grow_templates.txt",
+        "node": {
+          "tag": "grow_template",
+          "shenfa": "1",
+          "hp": "200",
+          "qimen": "0",
+          "name": "肉盾",
+          "mp": "40",
+          "bili": "2",
+          "dingli": "3",
+          "daofa": "0",
+          "quanzhang": "2",
+          "gengu": "2",
+          "wuxue": "8",
+          "fuyuan": "0",
+          "wuxing": "0",
+          "jianfa": "0"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "characters",
+        "id": "张无忌",
+        "name": "张无忌"
+      },
+      {
+        "category": "characters",
+        "id": "光明顶张无忌",
+        "name": "张无忌"
+      },
+      {
+        "category": "characters",
+        "id": "变身张无忌",
+        "name": "张无忌"
+      },
+      {
+        "category": "characters",
+        "id": "神级张无忌",
+        "name": "张无忌"
+      },
+      {
+        "category": "characters",
+        "id": "庄聚贤",
+        "name": "庄聚贤"
+      }
+    ]
+  },
+  {
+    "id": "剑侠",
+    "category": "growTemplates",
+    "name": "剑侠",
+    "description": "",
+    "state": "资料已接入",
+    "source": "grow_templates.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "grow_template",
+      "shenfa": "2",
+      "hp": "120",
+      "qimen": "0",
+      "name": "剑侠",
+      "mp": "60",
+      "bili": "1",
+      "dingli": "3",
+      "daofa": "0",
+      "quanzhang": "0",
+      "gengu": "1",
+      "wuxue": "8",
+      "fuyuan": "1",
+      "wuxing": "0",
+      "jianfa": "4"
+    },
+    "runtime": {
+      "id": "剑侠",
+      "name": "剑侠",
+      "statGrowth": {
+        "bili": 1,
+        "dingli": 3,
+        "fuyuan": 1,
+        "gengu": 1,
+        "jianfa": 4,
+        "daofa": 0,
+        "quanzhang": 0,
+        "qimen": 0,
+        "shenfa": 2,
+        "wuxing": 0,
+        "wuxue": 8,
+        "max_hp": 120,
+        "max_mp": 60
+      }
+    },
+    "variants": [
+      {
+        "source": "grow_templates.txt",
+        "node": {
+          "tag": "grow_template",
+          "shenfa": "2",
+          "hp": "120",
+          "qimen": "0",
+          "name": "剑侠",
+          "mp": "60",
+          "bili": "1",
+          "dingli": "3",
+          "daofa": "0",
+          "quanzhang": "0",
+          "gengu": "1",
+          "wuxue": "8",
+          "fuyuan": "1",
+          "wuxing": "0",
+          "jianfa": "4"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "characters",
+        "id": "苗人凤",
+        "name": "苗人凤"
+      },
+      {
+        "category": "characters",
+        "id": "炼狱苗人凤",
+        "name": "苗人凤"
+      },
+      {
+        "category": "characters",
+        "id": "卓一航",
+        "name": "卓一航"
+      },
+      {
+        "category": "characters",
+        "id": "忘情卓一航",
+        "name": "卓一航"
+      },
+      {
+        "category": "characters",
+        "id": "令狐冲",
+        "name": "令狐冲"
+      },
+      {
+        "category": "characters",
+        "id": "黑木崖超级令狐冲",
+        "name": "令狐冲"
+      },
+      {
+        "category": "characters",
+        "id": "岳不群",
+        "name": "岳不群"
+      },
+      {
+        "category": "characters",
+        "id": "林平之",
+        "name": "林平之"
+      },
+      {
+        "category": "characters",
+        "id": "神林平之",
+        "name": "林平之"
+      },
+      {
+        "category": "characters",
+        "id": "天关林平之",
+        "name": "林平之"
+      },
+      {
+        "category": "characters",
+        "id": "余沧海",
+        "name": "余沧海"
+      },
+      {
+        "category": "characters",
+        "id": "封不平",
+        "name": "封不平"
+      },
+      {
+        "category": "characters",
+        "id": "阉割封不平",
+        "name": "封不平"
+      },
+      {
+        "category": "characters",
+        "id": "疯狂封不平",
+        "name": "封不平"
+      },
+      {
+        "category": "characters",
+        "id": "超级疯狂封不平",
+        "name": "封不平"
+      },
+      {
+        "category": "characters",
+        "id": "炼狱超级疯狂封不平",
+        "name": "封不平"
+      }
+    ]
+  },
+  {
+    "id": "刀客",
+    "category": "growTemplates",
+    "name": "刀客",
+    "description": "",
+    "state": "资料已接入",
+    "source": "grow_templates.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "grow_template",
+      "shenfa": "3",
+      "hp": "120",
+      "qimen": "0",
+      "name": "刀客",
+      "mp": "60",
+      "bili": "2",
+      "dingli": "1",
+      "daofa": "4",
+      "quanzhang": "0",
+      "gengu": "1",
+      "wuxue": "8",
+      "fuyuan": "1",
+      "wuxing": "0",
+      "jianfa": "0"
+    },
+    "runtime": {
+      "id": "刀客",
+      "name": "刀客",
+      "statGrowth": {
+        "bili": 2,
+        "dingli": 1,
+        "fuyuan": 1,
+        "gengu": 1,
+        "jianfa": 0,
+        "daofa": 4,
+        "quanzhang": 0,
+        "qimen": 0,
+        "shenfa": 3,
+        "wuxing": 0,
+        "wuxue": 8,
+        "max_hp": 120,
+        "max_mp": 60
+      }
+    },
+    "variants": [
+      {
+        "source": "grow_templates.txt",
+        "node": {
+          "tag": "grow_template",
+          "shenfa": "3",
+          "hp": "120",
+          "qimen": "0",
+          "name": "刀客",
+          "mp": "60",
+          "bili": "2",
+          "dingli": "1",
+          "daofa": "4",
+          "quanzhang": "0",
+          "gengu": "1",
+          "wuxue": "8",
+          "fuyuan": "1",
+          "wuxing": "0",
+          "jianfa": "0"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "characters",
+        "id": "胡斐",
+        "name": "胡斐"
+      },
+      {
+        "category": "characters",
+        "id": "华山胡斐",
+        "name": "胡斐"
+      },
+      {
+        "category": "characters",
+        "id": "田伯光",
+        "name": "田伯光"
+      },
+      {
+        "category": "characters",
+        "id": "胡一刀",
+        "name": "胡一刀"
+      },
+      {
+        "category": "characters",
+        "id": "神秘胡一刀",
+        "name": "神秘胡一刀"
+      },
+      {
+        "category": "characters",
+        "id": "萧中慧",
+        "name": "萧中慧"
+      },
+      {
+        "category": "characters",
+        "id": "袁冠南",
+        "name": "袁冠南"
+      },
+      {
+        "category": "characters",
+        "id": "血刀老祖",
+        "name": "血刀老祖"
+      },
+      {
+        "category": "characters",
+        "id": "炼狱血刀老祖",
+        "name": "血刀老祖"
+      },
+      {
+        "category": "characters",
+        "id": "狄云",
+        "name": "狄云"
+      },
+      {
+        "category": "characters",
+        "id": "华山狄云",
+        "name": "狄云"
+      }
+    ]
+  },
+  {
+    "id": "宗师",
+    "category": "growTemplates",
+    "name": "宗师",
+    "description": "",
+    "state": "资料已接入",
+    "source": "grow_templates.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "grow_template",
+      "shenfa": "2",
+      "hp": "120",
+      "qimen": "2",
+      "name": "宗师",
+      "mp": "80",
+      "bili": "2",
+      "dingli": "3",
+      "daofa": "2",
+      "quanzhang": "2",
+      "gengu": "3",
+      "wuxue": "11",
+      "fuyuan": "3",
+      "wuxing": "0",
+      "jianfa": "2"
+    },
+    "runtime": {
+      "id": "宗师",
+      "name": "宗师",
+      "statGrowth": {
+        "bili": 2,
+        "dingli": 3,
+        "fuyuan": 3,
+        "gengu": 3,
+        "jianfa": 2,
+        "daofa": 2,
+        "quanzhang": 2,
+        "qimen": 2,
+        "shenfa": 2,
+        "wuxing": 0,
+        "wuxue": 11,
+        "max_hp": 120,
+        "max_mp": 80
+      }
+    },
+    "variants": [
+      {
+        "source": "grow_templates.txt",
+        "node": {
+          "tag": "grow_template",
+          "shenfa": "2",
+          "hp": "120",
+          "qimen": "2",
+          "name": "宗师",
+          "mp": "80",
+          "bili": "2",
+          "dingli": "3",
+          "daofa": "2",
+          "quanzhang": "2",
+          "gengu": "3",
+          "wuxue": "11",
+          "fuyuan": "3",
+          "wuxing": "0",
+          "jianfa": "2"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "characters",
+        "id": "郭襄",
+        "name": "郭襄"
+      },
+      {
+        "category": "characters",
+        "id": "华山郭襄",
+        "name": "郭襄"
+      },
+      {
+        "category": "characters",
+        "id": "黄蓉",
+        "name": "黄蓉"
+      },
+      {
+        "category": "characters",
+        "id": "任盈盈",
+        "name": "任盈盈"
+      },
+      {
+        "category": "characters",
+        "id": "九难",
+        "name": "九难"
+      },
+      {
+        "category": "characters",
+        "id": "松鼠黄蓉",
+        "name": "黄蓉"
+      }
+    ]
+  },
+  {
+    "id": "大侠",
+    "category": "growTemplates",
+    "name": "大侠",
+    "description": "",
+    "state": "资料已接入",
+    "source": "grow_templates.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "grow_template",
+      "shenfa": "2",
+      "hp": "200",
+      "qimen": "0",
+      "name": "大侠",
+      "mp": "50",
+      "bili": "2",
+      "dingli": "2",
+      "daofa": "0",
+      "quanzhang": "3",
+      "gengu": "3",
+      "wuxue": "9",
+      "fuyuan": "1",
+      "wuxing": "0",
+      "jianfa": "0"
+    },
+    "runtime": {
+      "id": "大侠",
+      "name": "大侠",
+      "statGrowth": {
+        "bili": 2,
+        "dingli": 2,
+        "fuyuan": 1,
+        "gengu": 3,
+        "jianfa": 0,
+        "daofa": 0,
+        "quanzhang": 3,
+        "qimen": 0,
+        "shenfa": 2,
+        "wuxing": 0,
+        "wuxue": 9,
+        "max_hp": 200,
+        "max_mp": 50
+      }
+    },
+    "variants": [
+      {
+        "source": "grow_templates.txt",
+        "node": {
+          "tag": "grow_template",
+          "shenfa": "2",
+          "hp": "200",
+          "qimen": "0",
+          "name": "大侠",
+          "mp": "50",
+          "bili": "2",
+          "dingli": "2",
+          "daofa": "0",
+          "quanzhang": "3",
+          "gengu": "3",
+          "wuxue": "9",
+          "fuyuan": "1",
+          "wuxing": "0",
+          "jianfa": "0"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "characters",
+        "id": "虚竹",
+        "name": "虚竹"
+      },
+      {
+        "category": "characters",
+        "id": "天关乔峰",
+        "name": "乔峰"
+      },
+      {
+        "category": "characters",
+        "id": "郭靖",
+        "name": "郭靖"
+      },
+      {
+        "category": "characters",
+        "id": "乔峰",
+        "name": "乔峰"
+      },
+      {
+        "category": "characters",
+        "id": "超级乔峰",
+        "name": "乔峰"
+      },
+      {
+        "category": "characters",
+        "id": "萧峰",
+        "name": "萧峰"
+      },
+      {
+        "category": "characters",
+        "id": "萧远山",
+        "name": "萧远山"
+      },
+      {
+        "category": "characters",
+        "id": "慕容博",
+        "name": "慕容博"
+      },
+      {
+        "category": "characters",
+        "id": "神秘萧远山",
+        "name": "另一名黑衣人"
+      },
+      {
+        "category": "characters",
+        "id": "神秘慕容博",
+        "name": "黑衣人"
+      },
+      {
+        "category": "characters",
+        "id": "陈家洛",
+        "name": "陈家洛"
+      },
+      {
+        "category": "characters",
+        "id": "松鼠乔峰",
+        "name": "乔峰"
+      }
+    ]
+  },
+  {
+    "id": "剑掌双修",
+    "category": "growTemplates",
+    "name": "剑掌双修",
+    "description": "",
+    "state": "资料已接入",
+    "source": "grow_templates.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "grow_template",
+      "shenfa": "1",
+      "hp": "150",
+      "qimen": "0",
+      "name": "剑掌双修",
+      "mp": "80",
+      "bili": "2",
+      "dingli": "2",
+      "daofa": "0",
+      "quanzhang": "3",
+      "gengu": "2",
+      "wuxue": "8",
+      "fuyuan": "1",
+      "wuxing": "0",
+      "jianfa": "3"
+    },
+    "runtime": {
+      "id": "剑掌双修",
+      "name": "剑掌双修",
+      "statGrowth": {
+        "bili": 2,
+        "dingli": 2,
+        "fuyuan": 1,
+        "gengu": 2,
+        "jianfa": 3,
+        "daofa": 0,
+        "quanzhang": 3,
+        "qimen": 0,
+        "shenfa": 1,
+        "wuxing": 0,
+        "wuxue": 8,
+        "max_hp": 150,
+        "max_mp": 80
+      }
+    },
+    "variants": [
+      {
+        "source": "grow_templates.txt",
+        "node": {
+          "tag": "grow_template",
+          "shenfa": "1",
+          "hp": "150",
+          "qimen": "0",
+          "name": "剑掌双修",
+          "mp": "80",
+          "bili": "2",
+          "dingli": "2",
+          "daofa": "0",
+          "quanzhang": "3",
+          "gengu": "2",
+          "wuxue": "8",
+          "fuyuan": "1",
+          "wuxing": "0",
+          "jianfa": "3"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "characters",
+        "id": "程英.初级",
+        "name": "程英"
+      },
+      {
+        "category": "characters",
+        "id": "程英.高级",
+        "name": "程英"
+      },
+      {
+        "category": "characters",
+        "id": "杨过",
+        "name": "杨过"
+      },
+      {
+        "category": "characters",
+        "id": "李延宗",
+        "name": "李延宗"
+      },
+      {
+        "category": "characters",
+        "id": "慕容复",
+        "name": "慕容复"
+      },
+      {
+        "category": "characters",
+        "id": "金蛇郎君",
+        "name": "金蛇郎君"
+      },
+      {
+        "category": "characters",
+        "id": "袁承志",
+        "name": "袁承志"
+      },
+      {
+        "category": "characters",
+        "id": "华山袁承志",
+        "name": "袁承志"
+      },
+      {
+        "category": "characters",
+        "id": "穆人清",
+        "name": "穆人清"
+      },
+      {
+        "category": "characters",
+        "id": "炼狱穆人清",
+        "name": "穆人清"
+      },
+      {
+        "category": "characters",
+        "id": "梅念笙",
+        "name": "梅念笙"
+      },
+      {
+        "category": "characters",
+        "id": "张召重",
+        "name": "张召重"
+      },
+      {
+        "category": "characters",
+        "id": "炼狱张召重",
+        "name": "张召重"
+      }
+    ]
+  },
+  {
+    "id": "小龙女",
+    "category": "growTemplates",
+    "name": "小龙女",
+    "description": "",
+    "state": "资料已接入",
+    "source": "grow_templates.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "grow_template",
+      "shenfa": "4",
+      "hp": "120",
+      "qimen": "3",
+      "name": "小龙女",
+      "mp": "80",
+      "bili": "2",
+      "dingli": "2",
+      "daofa": "0",
+      "quanzhang": "2",
+      "gengu": "2",
+      "wuxue": "10",
+      "fuyuan": "2",
+      "wuxing": "5",
+      "jianfa": "3"
+    },
+    "runtime": {
+      "id": "小龙女",
+      "name": "小龙女",
+      "statGrowth": {
+        "bili": 2,
+        "dingli": 2,
+        "fuyuan": 2,
+        "gengu": 2,
+        "jianfa": 3,
+        "daofa": 0,
+        "quanzhang": 2,
+        "qimen": 3,
+        "shenfa": 4,
+        "wuxing": 5,
+        "wuxue": 10,
+        "max_hp": 120,
+        "max_mp": 80
+      }
+    },
+    "variants": [
+      {
+        "source": "grow_templates.txt",
+        "node": {
+          "tag": "grow_template",
+          "shenfa": "4",
+          "hp": "120",
+          "qimen": "3",
+          "name": "小龙女",
+          "mp": "80",
+          "bili": "2",
+          "dingli": "2",
+          "daofa": "0",
+          "quanzhang": "2",
+          "gengu": "2",
+          "wuxue": "10",
+          "fuyuan": "2",
+          "wuxing": "5",
+          "jianfa": "3"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "characters",
+        "id": "小龙女",
+        "name": "小龙女"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "characters",
+        "id": "小龙女",
+        "name": "小龙女"
+      },
+      {
+        "category": "characters",
+        "id": "松鼠小龙女",
+        "name": "小龙女"
+      },
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      },
+      {
+        "category": "maps",
+        "id": "古墓派",
+        "name": "古墓派"
+      },
+      {
+        "category": "maps",
+        "id": "绝情谷",
+        "name": "绝情谷"
+      },
+      {
+        "category": "maps",
+        "id": "剑魔荒冢",
+        "name": "剑魔荒冢"
+      },
+      {
+        "category": "stories",
+        "id": "original_古墓王重阳胜简单模式",
+        "name": "original_古墓王重阳胜简单模式"
+      },
+      {
+        "category": "stories",
+        "id": "original_古墓王重阳胜",
+        "name": "original_古墓王重阳胜"
+      },
+      {
+        "category": "stories",
+        "id": "sdxl_绝情谷底.小龙女加入",
+        "name": "sdxl_绝情谷底.小龙女加入"
+      },
+      {
+        "category": "stories",
+        "id": "霹雳堂_小龙女",
+        "name": "霹雳堂_小龙女"
+      },
+      {
+        "category": "stories",
+        "id": "original_灭门古墓离开判断",
+        "name": "original_灭门古墓离开判断"
+      },
+      {
+        "category": "stories",
+        "id": "original_灭门古墓小龙女离开",
+        "name": "original_灭门古墓小龙女离开"
+      },
+      {
+        "category": "battles",
+        "id": "绝情谷底_战斗1",
+        "name": "绝情谷底_战斗1"
+      },
+      {
+        "category": "battles",
+        "id": "古墓王重阳_战斗",
+        "name": "古墓王重阳_战斗"
+      },
+      {
+        "category": "creation",
+        "id": "开局问答5",
+        "name": "以下女性角色你最喜欢的是"
+      },
+      {
+        "category": "resources",
+        "id": "人物.小龙女",
+        "name": "人物.小龙女"
+      }
+    ]
+  },
+  {
+    "id": "段誉",
+    "category": "growTemplates",
+    "name": "段誉",
+    "description": "",
+    "state": "资料已接入",
+    "source": "grow_templates.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "grow_template",
+      "shenfa": "3",
+      "hp": "120",
+      "qimen": "0",
+      "name": "段誉",
+      "mp": "120",
+      "bili": "2",
+      "dingli": "1",
+      "daofa": "0",
+      "quanzhang": "3",
+      "gengu": "3",
+      "wuxue": "10",
+      "fuyuan": "5",
+      "wuxing": "0",
+      "jianfa": "0"
+    },
+    "runtime": {
+      "id": "段誉",
+      "name": "段誉",
+      "statGrowth": {
+        "bili": 2,
+        "dingli": 1,
+        "fuyuan": 5,
+        "gengu": 3,
+        "jianfa": 0,
+        "daofa": 0,
+        "quanzhang": 3,
+        "qimen": 0,
+        "shenfa": 3,
+        "wuxing": 0,
+        "wuxue": 10,
+        "max_hp": 120,
+        "max_mp": 120
+      }
+    },
+    "variants": [
+      {
+        "source": "grow_templates.txt",
+        "node": {
+          "tag": "grow_template",
+          "shenfa": "3",
+          "hp": "120",
+          "qimen": "0",
+          "name": "段誉",
+          "mp": "120",
+          "bili": "2",
+          "dingli": "1",
+          "daofa": "0",
+          "quanzhang": "3",
+          "gengu": "3",
+          "wuxue": "10",
+          "fuyuan": "5",
+          "wuxing": "0",
+          "jianfa": "0"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "characters",
+        "id": "段誉",
+        "name": "段誉"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "characters",
+        "id": "段誉",
+        "name": "段誉"
+      },
+      {
+        "category": "characters",
+        "id": "华山段誉",
+        "name": "段誉"
+      },
+      {
+        "category": "characters",
+        "id": "天关段誉",
+        "name": "段誉"
+      },
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      },
+      {
+        "category": "maps",
+        "id": "长安酒楼",
+        "name": "长安酒楼"
+      },
+      {
+        "category": "maps",
+        "id": "西夏",
+        "name": "西夏"
+      },
+      {
+        "category": "maps",
+        "id": "西夏酒楼",
+        "name": "西夏酒楼"
+      },
+      {
+        "category": "maps",
+        "id": "大理",
+        "name": "大理"
+      },
+      {
+        "category": "maps",
+        "id": "无量山洞",
+        "name": "无量山洞"
+      },
+      {
+        "category": "maps",
+        "id": "无量秘洞",
+        "name": "无量秘洞"
+      },
+      {
+        "category": "maps",
+        "id": "嵩山",
+        "name": "嵩山"
+      },
+      {
+        "category": "maps",
+        "id": "杭州",
+        "name": "杭州"
+      },
+      {
+        "category": "maps",
+        "id": "杭州酒楼",
+        "name": "杭州酒楼"
+      },
+      {
+        "category": "maps",
+        "id": "湘江",
+        "name": "湘江"
+      },
+      {
+        "category": "maps",
+        "id": "丐帮",
+        "name": "丐帮"
+      },
+      {
+        "category": "maps",
+        "id": "雁门关",
+        "name": "雁门关"
+      },
+      {
+        "category": "stories",
+        "id": "original_无量山洞庄子胜简单模式",
+        "name": "original_无量山洞庄子胜简单模式"
+      },
+      {
+        "category": "stories",
+        "id": "original_无量山洞庄子胜",
+        "name": "original_无量山洞庄子胜"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_天龙寺.救段誉1",
+        "name": "tlbb.dy_天龙寺.救段誉1"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_天龙寺.六脉神剑胜简单模式",
+        "name": "tlbb.dy_天龙寺.六脉神剑胜简单模式"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_天龙寺.六脉神剑胜",
+        "name": "tlbb.dy_天龙寺.六脉神剑胜"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_曼陀山庄3",
+        "name": "tlbb.dy_曼陀山庄3"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_江南酒楼2胜",
+        "name": "tlbb.dy_江南酒楼2胜"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_江南酒楼2负",
+        "name": "tlbb.dy_江南酒楼2负"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_丐帮大变.王语嫣1负",
+        "name": "tlbb.dy_丐帮大变.王语嫣1负"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_西夏驸马段誉8",
+        "name": "tlbb.dy_西夏驸马段誉8"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_无量山洞段誉慕容复胜",
+        "name": "tlbb.dy_无量山洞段誉慕容复胜"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_无量山洞段誉慕容复胜简单模式",
+        "name": "tlbb.dy_无量山洞段誉慕容复胜简单模式"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_小镜湖阮星竹6",
+        "name": "tlbb.dy_小镜湖阮星竹6"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_湘江阿碧",
+        "name": "tlbb.dy_湘江阿碧"
+      },
+      {
+        "category": "stories",
+        "id": "武当派_金陵怀古1",
+        "name": "武当派_金陵怀古1"
+      },
+      {
+        "category": "stories",
+        "id": "霹雳堂_段誉",
+        "name": "霹雳堂_段誉"
+      },
+      {
+        "category": "battles",
+        "id": "天龙寺.战鸠摩智_战斗",
+        "name": "天龙寺.战鸠摩智_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "天龙寺.六脉神剑_战斗",
+        "name": "天龙寺.六脉神剑_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "天龙寺.六脉神剑_战斗2",
+        "name": "天龙寺.六脉神剑_战斗2"
+      },
+      {
+        "category": "battles",
+        "id": "曼陀山庄_战斗",
+        "name": "曼陀山庄_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "江南郊野_战斗",
+        "name": "江南郊野_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "丐帮大变1_战斗",
+        "name": "丐帮大变1_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "丐帮大变2_战斗",
+        "name": "丐帮大变2_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "丐帮屋内_战斗",
+        "name": "丐帮屋内_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "少林寺乔峰_战斗",
+        "name": "少林寺乔峰_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "聚贤庄_战斗",
+        "name": "聚贤庄_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "枯井底_战斗",
+        "name": "枯井底_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "少林萧远山1_战斗",
+        "name": "少林萧远山1_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "少林萧远山2_战斗",
+        "name": "少林萧远山2_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "无量山洞斗转星移_战斗",
+        "name": "无量山洞斗转星移_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "真曼陀山庄_战斗",
+        "name": "真曼陀山庄_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "马夫人_战斗",
+        "name": "马夫人_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "无量秘洞无崖子_战斗",
+        "name": "无量秘洞无崖子_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "曼陀山庄逍遥子_战斗",
+        "name": "曼陀山庄逍遥子_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "无量山洞庄子_战斗",
+        "name": "无量山洞庄子_战斗"
+      },
+      {
+        "category": "resources",
+        "id": "nick.地牢春情",
+        "name": "nick.地牢春情"
+      },
+      {
+        "category": "resources",
+        "id": "nick.结义金兰",
+        "name": "nick.结义金兰"
+      },
+      {
+        "category": "resources",
+        "id": "nick.无量逍遥",
+        "name": "nick.无量逍遥"
+      },
+      {
+        "category": "resources",
+        "id": "人物.段誉",
+        "name": "人物.段誉"
+      }
+    ]
+  },
+  {
+    "id": "女子",
+    "category": "growTemplates",
+    "name": "女子",
+    "description": "",
+    "state": "资料已接入",
+    "source": "grow_templates.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "grow_template",
+      "shenfa": "2",
+      "hp": "100",
+      "qimen": "1",
+      "name": "女子",
+      "mp": "80",
+      "bili": "1",
+      "dingli": "1",
+      "daofa": "1",
+      "quanzhang": "1",
+      "gengu": "1",
+      "wuxue": "8",
+      "fuyuan": "2",
+      "wuxing": "0",
+      "jianfa": "1"
+    },
+    "runtime": {
+      "id": "女子",
+      "name": "女子",
+      "statGrowth": {
+        "bili": 1,
+        "dingli": 1,
+        "fuyuan": 2,
+        "gengu": 1,
+        "jianfa": 1,
+        "daofa": 1,
+        "quanzhang": 1,
+        "qimen": 1,
+        "shenfa": 2,
+        "wuxing": 0,
+        "wuxue": 8,
+        "max_hp": 100,
+        "max_mp": 80
+      }
+    },
+    "variants": [
+      {
+        "source": "grow_templates.txt",
+        "node": {
+          "tag": "grow_template",
+          "shenfa": "2",
+          "hp": "100",
+          "qimen": "1",
+          "name": "女子",
+          "mp": "80",
+          "bili": "1",
+          "dingli": "1",
+          "daofa": "1",
+          "quanzhang": "1",
+          "gengu": "1",
+          "wuxue": "8",
+          "fuyuan": "2",
+          "wuxing": "0",
+          "jianfa": "1"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "characters",
+        "id": "阿朱",
+        "name": "阿朱"
+      },
+      {
+        "category": "characters",
+        "id": "阿碧",
+        "name": "阿碧"
+      },
+      {
+        "category": "characters",
+        "id": "钟灵",
+        "name": "钟灵"
+      },
+      {
+        "category": "characters",
+        "id": "温青青",
+        "name": "温青青"
+      },
+      {
+        "category": "characters",
+        "id": "水笙",
+        "name": "水笙"
+      },
+      {
+        "category": "characters",
+        "id": "霍青桐",
+        "name": "霍青桐"
+      },
+      {
+        "category": "characters",
+        "id": "阿珂",
+        "name": "阿珂"
+      },
+      {
+        "category": "characters",
+        "id": "苏荃",
+        "name": "苏荃"
+      },
+      {
+        "category": "characters",
+        "id": "阿九",
+        "name": "阿九"
+      }
+    ]
+  },
+  {
+    "id": "奇门",
+    "category": "growTemplates",
+    "name": "奇门",
+    "description": "",
+    "state": "资料已接入",
+    "source": "grow_templates.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "grow_template",
+      "shenfa": "3",
+      "hp": "120",
+      "qimen": "4",
+      "name": "奇门",
+      "mp": "80",
+      "bili": "1",
+      "dingli": "1",
+      "daofa": "0",
+      "quanzhang": "0",
+      "gengu": "1",
+      "wuxue": "8",
+      "fuyuan": "1",
+      "wuxing": "0",
+      "jianfa": "0"
+    },
+    "runtime": {
+      "id": "奇门",
+      "name": "奇门",
+      "statGrowth": {
+        "bili": 1,
+        "dingli": 1,
+        "fuyuan": 1,
+        "gengu": 1,
+        "jianfa": 0,
+        "daofa": 0,
+        "quanzhang": 0,
+        "qimen": 4,
+        "shenfa": 3,
+        "wuxing": 0,
+        "wuxue": 8,
+        "max_hp": 120,
+        "max_mp": 80
+      }
+    },
+    "variants": [
+      {
+        "source": "grow_templates.txt",
+        "node": {
+          "tag": "grow_template",
+          "shenfa": "3",
+          "hp": "120",
+          "qimen": "4",
+          "name": "奇门",
+          "mp": "80",
+          "bili": "1",
+          "dingli": "1",
+          "daofa": "0",
+          "quanzhang": "0",
+          "gengu": "1",
+          "wuxue": "8",
+          "fuyuan": "1",
+          "wuxing": "0",
+          "jianfa": "0"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "characters",
+        "id": "全冠清",
+        "name": "全冠清"
+      },
+      {
+        "category": "characters",
+        "id": "蓝凤凰",
+        "name": "蓝凤凰"
+      },
+      {
+        "category": "characters",
+        "id": "曲非烟",
+        "name": "曲非烟"
+      },
+      {
+        "category": "characters",
+        "id": "疯狂曲非烟",
+        "name": "曲非烟"
+      }
+    ]
+  },
+  {
+    "id": "韦小宝",
+    "category": "growTemplates",
+    "name": "韦小宝",
+    "description": "",
+    "state": "资料已接入",
+    "source": "grow_templates.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "grow_template",
+      "shenfa": "1",
+      "hp": "80",
+      "qimen": "1",
+      "name": "韦小宝",
+      "mp": "50",
+      "bili": "0",
+      "dingli": "1",
+      "daofa": "1",
+      "quanzhang": "1",
+      "gengu": "1",
+      "wuxue": "4",
+      "fuyuan": "5",
+      "wuxing": "0",
+      "jianfa": "1"
+    },
+    "runtime": {
+      "id": "韦小宝",
+      "name": "韦小宝",
+      "statGrowth": {
+        "bili": 0,
+        "dingli": 1,
+        "fuyuan": 5,
+        "gengu": 1,
+        "jianfa": 1,
+        "daofa": 1,
+        "quanzhang": 1,
+        "qimen": 1,
+        "shenfa": 1,
+        "wuxing": 0,
+        "wuxue": 4,
+        "max_hp": 80,
+        "max_mp": 50
+      }
+    },
+    "variants": [
+      {
+        "source": "grow_templates.txt",
+        "node": {
+          "tag": "grow_template",
+          "shenfa": "1",
+          "hp": "80",
+          "qimen": "1",
+          "name": "韦小宝",
+          "mp": "50",
+          "bili": "0",
+          "dingli": "1",
+          "daofa": "1",
+          "quanzhang": "1",
+          "gengu": "1",
+          "wuxue": "4",
+          "fuyuan": "5",
+          "wuxing": "0",
+          "jianfa": "1"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "characters",
+        "id": "韦小宝",
+        "name": "韦小宝"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "characters",
+        "id": "韦小宝",
+        "name": "韦小宝"
+      },
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      },
+      {
+        "category": "maps",
+        "id": "西夏酒楼",
+        "name": "西夏酒楼"
+      },
+      {
+        "category": "maps",
+        "id": "佛山镇",
+        "name": "佛山镇"
+      },
+      {
+        "category": "maps",
+        "id": "大理",
+        "name": "大理"
+      },
+      {
+        "category": "maps",
+        "id": "北京",
+        "name": "北京"
+      },
+      {
+        "category": "stories",
+        "id": "鹿鼎记_北京韦小宝加入",
+        "name": "鹿鼎记_北京韦小宝加入"
+      },
+      {
+        "category": "stories",
+        "id": "鹿鼎记_皇宫鳌拜4",
+        "name": "鹿鼎记_皇宫鳌拜4"
+      },
+      {
+        "category": "stories",
+        "id": "鹿鼎记_皇宫太后6",
+        "name": "鹿鼎记_皇宫太后6"
+      },
+      {
+        "category": "stories",
+        "id": "鹿鼎记_皇宫太后7",
+        "name": "鹿鼎记_皇宫太后7"
+      },
+      {
+        "category": "stories",
+        "id": "鹿鼎记_阿九.邀请2",
+        "name": "鹿鼎记_阿九.邀请2"
+      },
+      {
+        "category": "stories",
+        "id": "鹿鼎记_吴三桂4",
+        "name": "鹿鼎记_吴三桂4"
+      },
+      {
+        "category": "stories",
+        "id": "鹿鼎记_神龙岛4",
+        "name": "鹿鼎记_神龙岛4"
+      },
+      {
+        "category": "stories",
+        "id": "鹿鼎记_台湾3",
+        "name": "鹿鼎记_台湾3"
+      },
+      {
+        "category": "stories",
+        "id": "鹿鼎记_鹿鼎山2",
+        "name": "鹿鼎记_鹿鼎山2"
+      },
+      {
+        "category": "stories",
+        "id": "白马啸西风_初次见面",
+        "name": "白马啸西风_初次见面"
+      },
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情6",
+        "name": "鹿鼎剧情6"
+      },
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情13.1a",
+        "name": "鹿鼎剧情13.1a"
+      },
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情13.1b",
+        "name": "鹿鼎剧情13.1b"
+      },
+      {
+        "category": "battles",
+        "id": "鹿鼎记_神龙岛",
+        "name": "鹿鼎记_神龙岛"
+      },
+      {
+        "category": "battles",
+        "id": "御书房_战斗",
+        "name": "御书房_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "慈宁宫1_战斗",
+        "name": "慈宁宫1_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "慈宁宫2_战斗",
+        "name": "慈宁宫2_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "大理_战斗",
+        "name": "大理_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "鹿鼎记_吴三桂",
+        "name": "鹿鼎记_吴三桂"
+      },
+      {
+        "category": "battles",
+        "id": "鹿鼎记_台湾郑克爽1",
+        "name": "鹿鼎记_台湾郑克爽1"
+      },
+      {
+        "category": "battles",
+        "id": "鹿鼎记_台湾郑克爽2",
+        "name": "鹿鼎记_台湾郑克爽2"
+      },
+      {
+        "category": "battles",
+        "id": "鹿鼎记_鹿鼎山之战",
+        "name": "鹿鼎记_鹿鼎山之战"
+      },
+      {
+        "category": "creation",
+        "id": "开局问答7",
+        "name": "以下你觉得最牛逼的人是"
+      },
+      {
+        "category": "resources",
+        "id": "人物.韦小宝",
+        "name": "人物.韦小宝"
+      }
+    ]
+  },
+  {
+    "id": "内家",
+    "category": "growTemplates",
+    "name": "内家",
+    "description": "",
+    "state": "资料已接入",
+    "source": "grow_templates.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "grow_template",
+      "shenfa": "1",
+      "hp": "140",
+      "qimen": "1",
+      "name": "内家",
+      "mp": "100",
+      "bili": "1",
+      "dingli": "1",
+      "daofa": "1",
+      "quanzhang": "1",
+      "gengu": "2",
+      "wuxue": "8",
+      "fuyuan": "1",
+      "wuxing": "0",
+      "jianfa": "1"
+    },
+    "runtime": {
+      "id": "内家",
+      "name": "内家",
+      "statGrowth": {
+        "bili": 1,
+        "dingli": 1,
+        "fuyuan": 1,
+        "gengu": 2,
+        "jianfa": 1,
+        "daofa": 1,
+        "quanzhang": 1,
+        "qimen": 1,
+        "shenfa": 1,
+        "wuxing": 0,
+        "wuxue": 8,
+        "max_hp": 140,
+        "max_mp": 100
+      }
+    },
+    "variants": [
+      {
+        "source": "grow_templates.txt",
+        "node": {
+          "tag": "grow_template",
+          "shenfa": "1",
+          "hp": "140",
+          "qimen": "1",
+          "name": "内家",
+          "mp": "100",
+          "bili": "1",
+          "dingli": "1",
+          "daofa": "1",
+          "quanzhang": "1",
+          "gengu": "2",
+          "wuxue": "8",
+          "fuyuan": "1",
+          "wuxing": "0",
+          "jianfa": "1"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "characters",
+        "id": "俞莲舟",
+        "name": "俞莲舟"
+      },
+      {
+        "category": "characters",
+        "id": "俞岱岩",
+        "name": "俞岱岩"
+      },
+      {
+        "category": "characters",
+        "id": "张松溪",
+        "name": "张松溪"
+      },
+      {
+        "category": "characters",
+        "id": "张翠山",
+        "name": "张翠山"
+      },
+      {
+        "category": "characters",
+        "id": "殷梨亭",
+        "name": "殷梨亭"
+      },
+      {
+        "category": "characters",
+        "id": "莫声谷",
+        "name": "莫声谷"
+      },
+      {
+        "category": "characters",
+        "id": "马钰",
+        "name": "马钰"
+      },
+      {
+        "category": "characters",
+        "id": "孙不二",
+        "name": "孙不二"
+      },
+      {
+        "category": "characters",
+        "id": "丘处机",
+        "name": "丘处机"
+      }
+    ]
+  },
+  {
+    "id": "内功大师",
+    "category": "growTemplates",
+    "name": "内功大师",
+    "description": "",
+    "state": "资料已接入",
+    "source": "grow_templates.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "grow_template",
+      "shenfa": "1",
+      "hp": "180",
+      "qimen": "1",
+      "name": "内功大师",
+      "mp": "150",
+      "bili": "1",
+      "dingli": "3",
+      "daofa": "1",
+      "quanzhang": "1",
+      "gengu": "4",
+      "wuxue": "8",
+      "fuyuan": "2",
+      "wuxing": "0",
+      "jianfa": "1"
+    },
+    "runtime": {
+      "id": "内功大师",
+      "name": "内功大师",
+      "statGrowth": {
+        "bili": 1,
+        "dingli": 3,
+        "fuyuan": 2,
+        "gengu": 4,
+        "jianfa": 1,
+        "daofa": 1,
+        "quanzhang": 1,
+        "qimen": 1,
+        "shenfa": 1,
+        "wuxing": 0,
+        "wuxue": 8,
+        "max_hp": 180,
+        "max_mp": 150
+      }
+    },
+    "variants": [
+      {
+        "source": "grow_templates.txt",
+        "node": {
+          "tag": "grow_template",
+          "shenfa": "1",
+          "hp": "180",
+          "qimen": "1",
+          "name": "内功大师",
+          "mp": "150",
+          "bili": "1",
+          "dingli": "3",
+          "daofa": "1",
+          "quanzhang": "1",
+          "gengu": "4",
+          "wuxue": "8",
+          "fuyuan": "2",
+          "wuxing": "0",
+          "jianfa": "1"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "characters",
+        "id": "石破天",
+        "name": "石破天"
+      },
+      {
+        "category": "characters",
+        "id": "疯狂石破天",
+        "name": "石破天"
+      }
+    ]
+  },
+  {
+    "id": "医生",
+    "category": "growTemplates",
+    "name": "医生",
+    "description": "",
+    "state": "资料已接入",
+    "source": "grow_templates.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "grow_template",
+      "shenfa": "1",
+      "hp": "120",
+      "qimen": "0",
+      "name": "医生",
+      "mp": "80",
+      "bili": "1",
+      "dingli": "2",
+      "daofa": "0",
+      "quanzhang": "0",
+      "gengu": "4",
+      "wuxue": "5",
+      "fuyuan": "4",
+      "wuxing": "0",
+      "jianfa": "0"
+    },
+    "runtime": {
+      "id": "医生",
+      "name": "医生",
+      "statGrowth": {
+        "bili": 1,
+        "dingli": 2,
+        "fuyuan": 4,
+        "gengu": 4,
+        "jianfa": 0,
+        "daofa": 0,
+        "quanzhang": 0,
+        "qimen": 0,
+        "shenfa": 1,
+        "wuxing": 0,
+        "wuxue": 5,
+        "max_hp": 120,
+        "max_mp": 80
+      }
+    },
+    "variants": [
+      {
+        "source": "grow_templates.txt",
+        "node": {
+          "tag": "grow_template",
+          "shenfa": "1",
+          "hp": "120",
+          "qimen": "0",
+          "name": "医生",
+          "mp": "80",
+          "bili": "1",
+          "dingli": "2",
+          "daofa": "0",
+          "quanzhang": "0",
+          "gengu": "4",
+          "wuxue": "5",
+          "fuyuan": "4",
+          "wuxing": "0",
+          "jianfa": "0"
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "characters",
+        "id": "平一指",
+        "name": "平一指"
+      }
+    ]
+  }
+]

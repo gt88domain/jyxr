@@ -1,0 +1,43 @@
+[
+  {
+    "id": "双儿",
+    "category": "missingCharacters",
+    "name": "双儿",
+    "description": "有加入剧情，但四份参考的角色表均未找到双儿定义，不能补造属性。",
+    "state": "加入记录已归档 · 缺人物定义",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": "upload",
+    "node": {
+      "tag": "missing_character",
+      "key": "双儿",
+      "description": "有加入剧情，但四份参考的角色表均未找到双儿定义，不能补造属性。",
+      "children": [
+        {
+          "tag": "reference",
+          "story": "鹿鼎剧情4.4"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [],
+    "recruitmentStories": [
+      "鹿鼎剧情4.4"
+    ],
+    "related": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情4.4",
+        "name": "鹿鼎剧情4.4"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情4.4",
+        "name": "鹿鼎剧情4.4"
+      }
+    ]
+  }
+]

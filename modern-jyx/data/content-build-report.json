@@ -1,0 +1,611 @@
+{
+  "sourceCommit": "b41198219087858ece19d5484f5061e0289c47bc",
+  "ruleSources": [
+    {
+      "repository": "jyx-legacy-dll",
+      "commit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+      "files": [
+        "JyGame/ITTrigger.cs",
+        "JyGame/Item.cs",
+        "JyGame/Buff.cs"
+      ]
+    },
+    {
+      "repository": "X-Heroes-of-Jin-Yong",
+      "commit": "4acd2c718a8afc562f0d5a0cd38464fea6699453",
+      "files": [
+        "Assets/Resources/textassets/lua/jygame/main.lua.lua: BUFF_LIST"
+      ]
+    }
+  ],
+  "counts": {
+    "battles": 393,
+    "characters": 513,
+    "externalSkills": 158,
+    "gameTips": 89,
+    "growTemplates": 17,
+    "internalSkills": 43,
+    "legendSkills": 137,
+    "maps": 162,
+    "worldTriggers": 21,
+    "resources": 1091,
+    "sects": 9,
+    "shops": 10,
+    "specialSkills": 27,
+    "items": 347,
+    "randomAffixTables": 4,
+    "buffs": 33,
+    "talents": 157,
+    "towers": 7
+  },
+  "deferred": {
+    "maps": [],
+    "worldTriggers": [
+      "mainStory_黑暗的阴影",
+      "mainStory_神秘剑客",
+      "mainStory_组织1",
+      "mainStory_紧急",
+      "血刀门_出师",
+      "血刀门_门内比武",
+      "门派灵鹫宫_出师",
+      "灵鹫宫_攻打",
+      "灵鹫宫_攻打_完成珍珑棋局",
+      "少林寺_福建南少林",
+      "少林派_南少林出师",
+      "南少林_如来神掌",
+      "少林派_少林出师",
+      "少林派_门派大比",
+      "少林_金刚门",
+      "全真教_门派大比",
+      "全真教_大校",
+      "武当派_出师",
+      "星宿派_出师",
+      "星宿派_星宿老仙考校",
+      "星宿派_召回擂鼓山"
+    ],
+    "storyItems": []
+  },
+  "starterRuleEffects": {
+    "profile": "jyx-first-encounter",
+    "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+    "files": [
+      "JyGame/BattleSprite.cs",
+      "JyGame/AttackLogic.cs"
+    ],
+    "talents": [
+      "瘸子",
+      "异世人",
+      "草头百姓（异世人联动）"
+    ],
+    "buffs": [
+      "攻击强化"
+    ],
+    "specialSkills": [
+      "打鸡血"
+    ],
+    "deferred": [
+      "其余未显式装配的天赋及Buff效果"
+    ]
+  },
+  "commonRuleEffects": {
+    "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+    "files": [
+      "JyGame/AttackLogic.cs",
+      "JyGame/BattleSprite.cs",
+      "JyGame/BattleField.cs"
+    ],
+    "talents": [
+      "神兵",
+      "右臂有伤",
+      "左手剑",
+      "老江湖",
+      "神经病",
+      "鲁莽",
+      "宝甲",
+      "苦命儿",
+      "好色",
+      "猎人",
+      "暴躁",
+      "斗魂",
+      "心眼通明",
+      "隔空取物",
+      "妙手仁心"
+    ],
+    "buffs": [
+      "攻击弱化",
+      "防御强化"
+    ],
+    "scope": "explicit source-backed common rules; not full talent/Buff parity"
+  },
+  "advancedRuleEffects": {
+    "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+    "talents": [
+      "武学奇才",
+      "灵心慧质",
+      "毒素抗性",
+      "轻功高超",
+      "鬼魅",
+      "博览群书",
+      "轻功大师",
+      "毒圣",
+      "毒系精通",
+      "嗜酒如命",
+      "令狐冲的怪病",
+      "阴谋家",
+      "怒不可遏",
+      "不稳定的六脉神剑",
+      "神雕大侠",
+      "雪山飞狐",
+      "太极高手",
+      "太极宗师",
+      "混元一气",
+      "北冥真气",
+      "金蛇郎君",
+      "金蛇狂舞",
+      "铁骨墨萼",
+      "飘然",
+      "神行百变",
+      "奇门遁甲",
+      "白内障",
+      "锐眼",
+      "铁口直断",
+      "拳系装备",
+      "剑系装备",
+      "刀系装备",
+      "奇门装备"
+    ],
+    "buffs": [
+      "定身",
+      "伤害加深",
+      "飘渺",
+      "醉酒"
+    ],
+    "specialSkills": [
+      "华佗再世",
+      "一刀两断",
+      "沉鱼落雁",
+      "同归剑法",
+      "天地同寿",
+      "笑傲江湖曲",
+      "襄儿的心愿",
+      "火枪",
+      "过肩摔",
+      "神龙摆尾",
+      "清心普善咒",
+      "阿碧的歌声",
+      "吴侬软语",
+      "易容术",
+      "武穆兵法",
+      "解毒",
+      "六合劲",
+      "腐尸毒",
+      "飞星术",
+      "诗酒飘零",
+      "凌波微步",
+      "雪遁步行",
+      "溜须拍马",
+      "梯云纵"
+    ],
+    "scope": "configured effects; individual execution and cross-effect order require validation",
+    "remaining": [
+      "stat-specialist integer transforms",
+      "multi-strike timing",
+      "disguise ambush",
+      "special damage shared pipeline and self-cost semantics"
+    ]
+  },
+  "combinationRuleEffects": {
+    "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+    "talents": [
+      "大小姐",
+      "自我主义",
+      "夫妻同心",
+      "奋战",
+      "孤独求败",
+      "金钟罩",
+      "芷若的眷念",
+      "臭叫花",
+      "阉人",
+      "俗家弟子",
+      "阴毒",
+      "幽居",
+      "素心神剑",
+      "左右互搏"
+    ],
+    "buffs": [
+      "醉酒",
+      "神速攻击"
+    ],
+    "scope": "explicit combinations; negative damage, special-hit and global modifier ordering still require verification"
+  },
+  "survivalRuleEffects": {
+    "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+    "talents": [
+      "普照",
+      "无相",
+      "琴胆剑心",
+      "医仙",
+      "救死扶伤",
+      "哀歌",
+      "悲酥清风",
+      "百穴归一",
+      "倚天屠龙",
+      "百足之虫",
+      "真气护体",
+      "无尽斗志",
+      "不老长春",
+      "北冥神功",
+      "鲲跃北溟",
+      "化功大法",
+      "吸星大法",
+      "清心",
+      "清风",
+      "乾坤大挪移奥义",
+      "乾坤大挪移",
+      "精打细算",
+      "精明",
+      "右臂有伤"
+    ],
+    "buffs": [
+      "封穴",
+      "重伤"
+    ],
+    "scope": "Explicit original preparation, recovery, internal-energy and survival rules; selected execution tests are not whole-game equivalence."
+  },
+  "schoolRuleEffects": {
+    "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+    "file": "JyGame/AttackLogic.cs:449-528",
+    "talents": [
+      "峨眉宗师",
+      "刚柔并济",
+      "易筋伐髓",
+      "天龙.盖世英雄",
+      "铁剑掌门",
+      "射雕英雄",
+      "玲珑璇玑",
+      "大理世家"
+    ],
+    "scope": "matched weapon names, final-damage ranges and ordered integer truncation; hit/cosmetic RNG ordering remains"
+  },
+  "attributeRuleEffects": {
+    "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+    "file": "JyGame/AttributeFinalHelper.cs:11-35",
+    "talents": [
+      "浪子剑客",
+      "神拳无敌",
+      "拳掌增益",
+      "剑法增益",
+      "刀法增益",
+      "奇门增益"
+    ],
+    "scope": "final weapon aptitude multipliers and ordered truncation; earlier additions and battle-buff layering remain; 神拳无敌/铁拳无双 probability is configured separately"
+  },
+  "controlRuleEffects": {
+    "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+    "file": "JyGame/AttackLogic.cs:1671-1769",
+    "talents": [
+      "铁拳无双",
+      "诸般封印",
+      "剑封印",
+      "刀封印",
+      "拳掌封印",
+      "奇门封印",
+      "阴阳",
+      "寒冰真气"
+    ],
+    "scope": "confirmed normal hits, original buff levels/durations and probability formulas; friendly hits clear for 灵心慧质 and legends; full reaction/extra-strike and RNG timing remain"
+  },
+  "masteryRuleEffects": {
+    "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+    "talents": [
+      "寸长寸强",
+      "吴钩霜雪",
+      "金刚伏魔圈",
+      "至刚至阳",
+      "至空至明",
+      "金刚",
+      "御风",
+      "血海魔功",
+      "血魔刀法",
+      "嗜血狂魔"
+    ],
+    "files": [
+      "JyGame/SkillBox.cs:341-390",
+      "JyGame/InternalSkillInstance.cs:43-53",
+      "JyGame/AttackLogic.cs:561-568,928-975,1505-1511,1849-1853"
+    ],
+    "scope": "blind-stage targeting, Yang affinity, cooldowns, selected defence/critical and blood drain; full formation, ordering and per-equipment float accumulation remain"
+  },
+  "legendRuleEffects": {
+    "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+    "resolution": {
+      "rollBeforeConditions": true,
+      "useBaseWuxing": true,
+      "useSinglePrecisionProbability": true,
+      "matchBonusByName": true,
+      "drawAtZeroProbability": true,
+      "supportSpecialSkillConditions": false
+    },
+    "records": 137,
+    "unselectableStarts": [
+      {
+        "id": "太玄神功奥义式-太玄神功",
+        "name": "太玄神功奥义式",
+        "startSkill": "太玄神功"
+      }
+    ],
+    "unsupportedConditionRecords": [
+      "万劫闪电貂-万劫刀法"
+    ],
+    "scope": "trigger policy only; power, range, full reaction ordering and all live routes remain"
+  },
+  "remainingRuleEffects": {
+    "sourceCommit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+    "formations": {
+      "interceptTalentId": "真武七截阵",
+      "sharedDamageTalentId": "五行阵",
+      "transferTalentId": "八卦阵",
+      "groupAttackTalentId": "金刚伏魔圈",
+      "supportRadius": 5
+    },
+    "talents": [
+      "光明圣火阵",
+      "死生茫茫",
+      "玄门罡气",
+      "越女剑",
+      "墨家传人",
+      "我是疯子",
+      "百变千幻",
+      "魔神降临",
+      "无形剑气",
+      "攀云乘龙",
+      "黑天死炎",
+      "木婉清的眷恋",
+      "长平公主的眷恋",
+      "赵敏的眷念",
+      "沾衣十八跌",
+      "鹿鼎.一等鹿鼎公",
+      "斗转星移",
+      "狗杂种",
+      "破甲",
+      "臭蛤蟆",
+      "追魂",
+      "飞向天际",
+      "碎裂的怒吼",
+      "段王爷的电眼"
+    ],
+    "buffs": [
+      "易容",
+      "溜须拍马",
+      "魔神降临"
+    ],
+    "remaining": "Full source cosmetic RNG, mixed modifiers, special reactions and normal acquisition require validation."
+  },
+  "legacyArt": {
+    "source": {
+      "archive": "X.rar",
+      "versionLabel": "X1.0.0.1",
+      "sha256": "331d5df9e7867621fda2e42ca0fe0072591fd03df57a2b6bfe1162b319b4d995"
+    },
+    "library": {
+      "resourcePaths": 638,
+      "models": 123,
+      "clips": 479,
+      "files": 942,
+      "bytes": 153471543
+    },
+    "animatedCharacters": 440,
+    "unresolvedModelIds": [
+      {
+        "characterId": "太极主角",
+        "model": "daxia"
+      },
+      {
+        "characterId": "逍遥子",
+        "model": "daxia"
+      },
+      {
+        "characterId": "无敌小虾米",
+        "model": "daxia"
+      },
+      {
+        "characterId": "左右互搏小虾米",
+        "model": "daxia"
+      }
+    ],
+    "mapped": {
+      "characters": 513,
+      "portraits": 513,
+      "maps": 162,
+      "battles": 394,
+      "items": 347
+    },
+    "missing": {
+      "characters": [],
+      "portraits": [],
+      "maps": [],
+      "battles": [],
+      "items": []
+    },
+    "notes": [
+      "Artwork comes from the uploaded X1.0.0.1 archive; rule/content definitions keep the pinned modern migration baseline.",
+      "Clip sample rates/order are recovered when available; numbered-frame fallbacks are identified in the model manifest.",
+      "No old executable, assembly or Lua code is run. Audio and skill visual effects are outside this artwork pass."
+    ]
+  },
+  "legacyCreation": {
+    "source": {
+      "commit": "2c62a80de46c48e64e5647511a9c41e088293aff",
+      "file": "JyGame/RollRoleUI.cs",
+      "scope": "first round; pinned C# questions, rewards and uniform random-stat rules"
+    },
+    "questions": 7,
+    "portraits": 24,
+    "startingCompanions": {
+      "candidates": 43,
+      "poolSizes": [
+        0,
+        17,
+        10,
+        7,
+        9
+      ],
+      "source": {
+        "commit": "4acd2c718a8afc562f0d5a0cd38464fea6699453",
+        "file": "Assets/Resources/textassets/lua/jygame/rollrole.lua.lua",
+        "caller": "JyGame/RollRoleUI.cs:664-708",
+        "drawAt": "confirmation",
+        "aliases": {
+          "白眉鹰王": "殷天正"
+        },
+        "randomRule": "GetRandomInt(0, Count) % Count; first candidate has two tickets, others one",
+        "randomSource": "JyGame/RollRoleUI.cs:712; JyGame/Tools.cs:45-48",
+        "aliasEvidence": "jyx-legacy-data/data-origin/skills.xml:492 · 鹰爪功说明：白眉鹰王殷天正的成名绝技"
+      }
+    },
+    "deferred": [
+      "无悔实时存档模式",
+      "Lua随机下标差异",
+      "部分问答天赋的完整战斗效果"
+    ]
+  },
+  "companionCatalog": {
+    "characterForms": 65,
+    "instructions": 80,
+    "normalVerified": 14,
+    "isolatedVerified": 2
+  },
+  "remainingChecklist": {
+    "tasks": 19,
+    "groups": {
+      "有旧C#同名引用、效果仍待接入的天赋": 0,
+      "未找到旧C#同名引用、需继续查证的天赋": 5,
+      "已有部分效果、尚未全部等价的天赋": 71,
+      "仅作为其他效果联动条件的天赋": 5,
+      "仅资料的Buff": 4,
+      "部分实现的Buff": 5,
+      "仍有明确差异的特技": 11
+    }
+  },
+  "originalLibrary": {
+    "categories": 27,
+    "entries": 5551,
+    "baselineCompanionForms": 65,
+    "baselineCompanionNames": 63,
+    "referenceCompanionForms": 106,
+    "referenceCompanionNames": 101,
+    "missingCharacterDefinitions": [
+      "双儿"
+    ],
+    "lateBonusForms": 43,
+    "lateBonusAdditionalForms": 40,
+    "startingCompanionRewardsImplemented": true,
+    "correctedCharacterAliases": {
+      "白眉鹰王": "殷天正"
+    },
+    "supplementStories": 39,
+    "ludingStories": 78,
+    "ludingShared": 39,
+    "runtimeLegendEntries": 137
+  },
+  "battleRuleConfiguration": {
+    "talents": {
+      "total": 158,
+      "states": {
+        "referenced-behavior": 5,
+        "configured": 76,
+        "partial": 71,
+        "metadata-only": 5,
+        "identity-only": 1
+      }
+    },
+    "buffs": {
+      "total": 33,
+      "states": {
+        "engine-behavior": 16,
+        "configured": 8,
+        "metadata-only": 4,
+        "partial": 5
+      }
+    },
+    "specialSkills": {
+      "total": 27,
+      "states": {
+        "configured": 16,
+        "partial": 11
+      }
+    }
+  },
+  "originalMigration": {
+    "originalStories": 1885,
+    "maps": 162,
+    "mapEvents": 1118,
+    "worldTriggers": 21,
+    "newbieTasks": 6
+  },
+  "starterStories": 25,
+  "verifiedOpeningSegments": 14,
+  "migratedStorySegments": 1885,
+  "browserPacks": [
+    {
+      "id": "jyx",
+      "maps": 162,
+      "storySegments": 1887
+    },
+    {
+      "id": "frontier",
+      "maps": 3,
+      "storySegments": 9
+    }
+  ],
+  "chapterAdaptations": [
+    {
+      "id": "browser_结伴练习",
+      "reason": "Legacy battle references missing role 经验木头人; a separately named encounter uses the existing 木头人 definition and two party slots."
+    },
+    {
+      "id": "browser_新手章节回顾",
+      "reason": "New browser chapter boundary; does not finish or reward unported original sect/world stories."
+    },
+    {
+      "id": "昆仑派",
+      "reason": "Original map has no locations or exit event; a separately identified browser exit prevents trapping the player."
+    },
+    {
+      "id": "NEWBIE",
+      "reason": "All six stages from newbie.xml use a single active persisted flag and original finish expressions/result stories."
+    }
+  ],
+  "runtimeCounts": {
+    "battles": 394,
+    "characters": 513,
+    "externalSkills": 158,
+    "gameTips": 89,
+    "growTemplates": 17,
+    "internalSkills": 43,
+    "legendSkills": 137,
+    "maps": 162,
+    "worldTriggers": 21,
+    "resources": 1091,
+    "sects": 9,
+    "shops": 10,
+    "specialSkills": 27,
+    "items": 347,
+    "randomAffixTables": 4,
+    "buffs": 33,
+    "talents": 158,
+    "towers": 7,
+    "scopedBattleEffects": 1,
+    "itemTags": 0,
+    "storyScripts": 1,
+    "browser": 32
+  },
+  "limitations": [
+    "The 14 verified opening/trainer segments remain unchanged; dependency-closed original stories/maps/events and nine sect entries are now exposed. Structural migration is not proof of full playthroughs.",
+    "Original source and all deferred story/event reasons are archived separately. Six original newbie tasks, large-map distance/time and supported global triggers run through the current C# session.",
+    "The original four-enemy training battle references missing role 经验木头人. browser_结伴练习 is explicitly authored using the real 木头人 definition, not a claim that this missing role was recovered.",
+    "Converted talent/buff descriptions do not implement missing legacy battle hooks; this is an integration slice, not full original-rule parity.",
+    "Jin Yong media references resolve to the uploaded original archive; extraction and animation timing coverage are audited separately.",
+    "The separately uploaded X1.0.0.1 archive and its 78 Ludingji story records are not merged into the pinned baseline."
+  ]
+}
