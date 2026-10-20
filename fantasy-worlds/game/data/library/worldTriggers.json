@@ -1,0 +1,1571 @@
+[
+  {
+    "id": "trigger:1",
+    "category": "worldTriggers",
+    "name": "trigger:1",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "globaltrigger.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "trigger",
+      "story": "mainStory_黑暗的阴影",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "主角#10",
+          "type": "level_greater_than"
+        },
+        {
+          "tag": "condition",
+          "value": "4",
+          "type": "friendCount"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "globaltrigger.txt",
+        "node": {
+          "tag": "trigger",
+          "story": "mainStory_黑暗的阴影",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "主角#10",
+              "type": "level_greater_than"
+            },
+            {
+              "tag": "condition",
+              "value": "4",
+              "type": "friendCount"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "stories",
+        "id": "mainStory_黑暗的阴影",
+        "name": "mainStory_黑暗的阴影"
+      },
+      {
+        "category": "characters",
+        "id": "主角",
+        "name": "小虾米"
+      },
+      {
+        "category": "growTemplates",
+        "id": "主角",
+        "name": "主角"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "trigger:2",
+    "category": "worldTriggers",
+    "name": "trigger:2",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "globaltrigger.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "trigger",
+      "story": "mainStory_神秘剑客",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "主角#15",
+          "type": "level_greater_than"
+        },
+        {
+          "tag": "condition",
+          "value": "8",
+          "type": "friendCount"
+        },
+        {
+          "tag": "condition",
+          "value": "mainStory_黑暗的阴影1",
+          "type": "should_finish"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "globaltrigger.txt",
+        "node": {
+          "tag": "trigger",
+          "story": "mainStory_神秘剑客",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "主角#15",
+              "type": "level_greater_than"
+            },
+            {
+              "tag": "condition",
+              "value": "8",
+              "type": "friendCount"
+            },
+            {
+              "tag": "condition",
+              "value": "mainStory_黑暗的阴影1",
+              "type": "should_finish"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "stories",
+        "id": "mainStory_神秘剑客",
+        "name": "mainStory_神秘剑客"
+      },
+      {
+        "category": "stories",
+        "id": "mainStory_黑暗的阴影1",
+        "name": "mainStory_黑暗的阴影1"
+      },
+      {
+        "category": "characters",
+        "id": "主角",
+        "name": "小虾米"
+      },
+      {
+        "category": "growTemplates",
+        "id": "主角",
+        "name": "主角"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "trigger:3",
+    "category": "worldTriggers",
+    "name": "trigger:3",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "globaltrigger.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "trigger",
+      "story": "mainStory_组织1",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "主角#22",
+          "type": "level_greater_than"
+        },
+        {
+          "tag": "condition",
+          "value": "8",
+          "type": "friendCount"
+        },
+        {
+          "tag": "condition",
+          "value": "mainStory_神秘剑客1",
+          "type": "should_finish"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "globaltrigger.txt",
+        "node": {
+          "tag": "trigger",
+          "story": "mainStory_组织1",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "主角#22",
+              "type": "level_greater_than"
+            },
+            {
+              "tag": "condition",
+              "value": "8",
+              "type": "friendCount"
+            },
+            {
+              "tag": "condition",
+              "value": "mainStory_神秘剑客1",
+              "type": "should_finish"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "stories",
+        "id": "mainStory_神秘剑客1",
+        "name": "mainStory_神秘剑客1"
+      },
+      {
+        "category": "stories",
+        "id": "mainStory_组织1",
+        "name": "mainStory_组织1"
+      },
+      {
+        "category": "characters",
+        "id": "主角",
+        "name": "小虾米"
+      },
+      {
+        "category": "growTemplates",
+        "id": "主角",
+        "name": "主角"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "trigger:4",
+    "category": "worldTriggers",
+    "name": "trigger:4",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "globaltrigger.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "trigger",
+      "story": "mainStory_紧急",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "主角#25",
+          "type": "level_greater_than"
+        },
+        {
+          "tag": "condition",
+          "value": "8",
+          "type": "friendCount"
+        },
+        {
+          "tag": "condition",
+          "value": "mainStory_组织1",
+          "type": "should_finish"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "globaltrigger.txt",
+        "node": {
+          "tag": "trigger",
+          "story": "mainStory_紧急",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "主角#25",
+              "type": "level_greater_than"
+            },
+            {
+              "tag": "condition",
+              "value": "8",
+              "type": "friendCount"
+            },
+            {
+              "tag": "condition",
+              "value": "mainStory_组织1",
+              "type": "should_finish"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "stories",
+        "id": "mainStory_紧急",
+        "name": "mainStory_紧急"
+      },
+      {
+        "category": "stories",
+        "id": "mainStory_组织1",
+        "name": "mainStory_组织1"
+      },
+      {
+        "category": "characters",
+        "id": "主角",
+        "name": "小虾米"
+      },
+      {
+        "category": "growTemplates",
+        "id": "主角",
+        "name": "主角"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "trigger:5",
+    "category": "worldTriggers",
+    "name": "trigger:5",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "globaltrigger.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "trigger",
+      "story": "血刀门_出师",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "40",
+          "type": "exceed_day"
+        },
+        {
+          "tag": "condition",
+          "value": "血刀门",
+          "type": "in_menpai"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "globaltrigger.txt",
+        "node": {
+          "tag": "trigger",
+          "story": "血刀门_出师",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "40",
+              "type": "exceed_day"
+            },
+            {
+              "tag": "condition",
+              "value": "血刀门",
+              "type": "in_menpai"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "maps",
+        "id": "血刀门",
+        "name": "血刀门"
+      },
+      {
+        "category": "sects",
+        "id": "血刀门",
+        "name": "血刀门"
+      },
+      {
+        "category": "stories",
+        "id": "血刀门_出师",
+        "name": "血刀门_出师"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "trigger:6",
+    "category": "worldTriggers",
+    "name": "trigger:6",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "globaltrigger.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "trigger",
+      "story": "血刀门_门内比武",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "85",
+          "type": "exceed_day"
+        },
+        {
+          "tag": "condition",
+          "value": "血刀门",
+          "type": "in_menpai"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "globaltrigger.txt",
+        "node": {
+          "tag": "trigger",
+          "story": "血刀门_门内比武",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "85",
+              "type": "exceed_day"
+            },
+            {
+              "tag": "condition",
+              "value": "血刀门",
+              "type": "in_menpai"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "maps",
+        "id": "血刀门",
+        "name": "血刀门"
+      },
+      {
+        "category": "sects",
+        "id": "血刀门",
+        "name": "血刀门"
+      },
+      {
+        "category": "stories",
+        "id": "血刀门_门内比武",
+        "name": "血刀门_门内比武"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "trigger:7",
+    "category": "worldTriggers",
+    "name": "trigger:7",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "globaltrigger.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "trigger",
+      "story": "门派灵鹫宫_出师",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "50",
+          "type": "exceed_day"
+        },
+        {
+          "tag": "condition",
+          "value": "灵鹫宫",
+          "type": "in_menpai"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "globaltrigger.txt",
+        "node": {
+          "tag": "trigger",
+          "story": "门派灵鹫宫_出师",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "50",
+              "type": "exceed_day"
+            },
+            {
+              "tag": "condition",
+              "value": "灵鹫宫",
+              "type": "in_menpai"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "maps",
+        "id": "灵鹫宫",
+        "name": "灵鹫宫"
+      },
+      {
+        "category": "sects",
+        "id": "灵鹫宫",
+        "name": "灵鹫宫"
+      },
+      {
+        "category": "stories",
+        "id": "门派灵鹫宫_出师",
+        "name": "门派灵鹫宫_出师"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "trigger:8",
+    "category": "worldTriggers",
+    "name": "trigger:8",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "globaltrigger.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "trigger",
+      "story": "灵鹫宫_攻打",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "240",
+          "type": "exceed_day"
+        },
+        {
+          "tag": "condition",
+          "value": "灵鹫宫",
+          "type": "in_menpai"
+        },
+        {
+          "tag": "condition",
+          "value": "灵鹫宫_委屈求全",
+          "type": "should_not_finish"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "globaltrigger.txt",
+        "node": {
+          "tag": "trigger",
+          "story": "灵鹫宫_攻打",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "240",
+              "type": "exceed_day"
+            },
+            {
+              "tag": "condition",
+              "value": "灵鹫宫",
+              "type": "in_menpai"
+            },
+            {
+              "tag": "condition",
+              "value": "灵鹫宫_委屈求全",
+              "type": "should_not_finish"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "maps",
+        "id": "灵鹫宫",
+        "name": "灵鹫宫"
+      },
+      {
+        "category": "sects",
+        "id": "灵鹫宫",
+        "name": "灵鹫宫"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_委屈求全",
+        "name": "灵鹫宫_委屈求全"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_攻打",
+        "name": "灵鹫宫_攻打"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "trigger:9",
+    "category": "worldTriggers",
+    "name": "trigger:9",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "globaltrigger.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "trigger",
+      "story": "灵鹫宫_攻打_完成珍珑棋局",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "360",
+          "type": "exceed_day"
+        },
+        {
+          "tag": "condition",
+          "value": "灵鹫宫",
+          "type": "in_menpai"
+        },
+        {
+          "tag": "condition",
+          "value": "灵鹫宫_委屈求全",
+          "type": "should_finish"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "globaltrigger.txt",
+        "node": {
+          "tag": "trigger",
+          "story": "灵鹫宫_攻打_完成珍珑棋局",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "360",
+              "type": "exceed_day"
+            },
+            {
+              "tag": "condition",
+              "value": "灵鹫宫",
+              "type": "in_menpai"
+            },
+            {
+              "tag": "condition",
+              "value": "灵鹫宫_委屈求全",
+              "type": "should_finish"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "maps",
+        "id": "灵鹫宫",
+        "name": "灵鹫宫"
+      },
+      {
+        "category": "sects",
+        "id": "灵鹫宫",
+        "name": "灵鹫宫"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_委屈求全",
+        "name": "灵鹫宫_委屈求全"
+      },
+      {
+        "category": "stories",
+        "id": "灵鹫宫_攻打_完成珍珑棋局",
+        "name": "灵鹫宫_攻打_完成珍珑棋局"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "trigger:10",
+    "category": "worldTriggers",
+    "name": "trigger:10",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "globaltrigger.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "trigger",
+      "story": "少林寺_福建南少林",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "40",
+          "type": "exceed_day"
+        },
+        {
+          "tag": "condition",
+          "value": "少林寺",
+          "type": "in_menpai"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "globaltrigger.txt",
+        "node": {
+          "tag": "trigger",
+          "story": "少林寺_福建南少林",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "40",
+              "type": "exceed_day"
+            },
+            {
+              "tag": "condition",
+              "value": "少林寺",
+              "type": "in_menpai"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "maps",
+        "id": "少林寺",
+        "name": "少林寺"
+      },
+      {
+        "category": "stories",
+        "id": "少林寺_福建南少林",
+        "name": "少林寺_福建南少林"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "trigger:11",
+    "category": "worldTriggers",
+    "name": "trigger:11",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "globaltrigger.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "trigger",
+      "story": "少林派_南少林出师",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "75",
+          "type": "exceed_day"
+        },
+        {
+          "tag": "condition",
+          "value": "少林寺",
+          "type": "in_menpai"
+        },
+        {
+          "tag": "condition",
+          "value": "少林寺_福建南少林破败",
+          "type": "should_finish"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "globaltrigger.txt",
+        "node": {
+          "tag": "trigger",
+          "story": "少林派_南少林出师",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "75",
+              "type": "exceed_day"
+            },
+            {
+              "tag": "condition",
+              "value": "少林寺",
+              "type": "in_menpai"
+            },
+            {
+              "tag": "condition",
+              "value": "少林寺_福建南少林破败",
+              "type": "should_finish"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "maps",
+        "id": "少林寺",
+        "name": "少林寺"
+      },
+      {
+        "category": "stories",
+        "id": "少林寺_福建南少林破败",
+        "name": "少林寺_福建南少林破败"
+      },
+      {
+        "category": "stories",
+        "id": "少林派_南少林出师",
+        "name": "少林派_南少林出师"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "trigger:12",
+    "category": "worldTriggers",
+    "name": "trigger:12",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "globaltrigger.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "trigger",
+      "story": "南少林_如来神掌",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "390",
+          "type": "exceed_day"
+        },
+        {
+          "tag": "condition",
+          "value": "少林寺",
+          "type": "in_menpai"
+        },
+        {
+          "tag": "condition",
+          "value": "少林派_南少林出师",
+          "type": "should_finish"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "globaltrigger.txt",
+        "node": {
+          "tag": "trigger",
+          "story": "南少林_如来神掌",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "390",
+              "type": "exceed_day"
+            },
+            {
+              "tag": "condition",
+              "value": "少林寺",
+              "type": "in_menpai"
+            },
+            {
+              "tag": "condition",
+              "value": "少林派_南少林出师",
+              "type": "should_finish"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "stories",
+        "id": "南少林_如来神掌",
+        "name": "南少林_如来神掌"
+      },
+      {
+        "category": "maps",
+        "id": "少林寺",
+        "name": "少林寺"
+      },
+      {
+        "category": "stories",
+        "id": "少林派_南少林出师",
+        "name": "少林派_南少林出师"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "trigger:13",
+    "category": "worldTriggers",
+    "name": "trigger:13",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "globaltrigger.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "trigger",
+      "story": "少林派_少林出师",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "75",
+          "type": "exceed_day"
+        },
+        {
+          "tag": "condition",
+          "value": "少林寺",
+          "type": "in_menpai"
+        },
+        {
+          "tag": "condition",
+          "value": "少林寺_福建南少林破败",
+          "type": "should_not_finish"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "globaltrigger.txt",
+        "node": {
+          "tag": "trigger",
+          "story": "少林派_少林出师",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "75",
+              "type": "exceed_day"
+            },
+            {
+              "tag": "condition",
+              "value": "少林寺",
+              "type": "in_menpai"
+            },
+            {
+              "tag": "condition",
+              "value": "少林寺_福建南少林破败",
+              "type": "should_not_finish"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "maps",
+        "id": "少林寺",
+        "name": "少林寺"
+      },
+      {
+        "category": "stories",
+        "id": "少林寺_福建南少林破败",
+        "name": "少林寺_福建南少林破败"
+      },
+      {
+        "category": "stories",
+        "id": "少林派_少林出师",
+        "name": "少林派_少林出师"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "trigger:14",
+    "category": "worldTriggers",
+    "name": "trigger:14",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "globaltrigger.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "trigger",
+      "story": "少林派_门派大比",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "150",
+          "type": "exceed_day"
+        },
+        {
+          "tag": "condition",
+          "value": "少林寺",
+          "type": "in_menpai"
+        },
+        {
+          "tag": "condition",
+          "value": "少林寺_福建南少林破败",
+          "type": "should_not_finish"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "globaltrigger.txt",
+        "node": {
+          "tag": "trigger",
+          "story": "少林派_门派大比",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "150",
+              "type": "exceed_day"
+            },
+            {
+              "tag": "condition",
+              "value": "少林寺",
+              "type": "in_menpai"
+            },
+            {
+              "tag": "condition",
+              "value": "少林寺_福建南少林破败",
+              "type": "should_not_finish"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "maps",
+        "id": "少林寺",
+        "name": "少林寺"
+      },
+      {
+        "category": "stories",
+        "id": "少林寺_福建南少林破败",
+        "name": "少林寺_福建南少林破败"
+      },
+      {
+        "category": "stories",
+        "id": "少林派_门派大比",
+        "name": "少林派_门派大比"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "trigger:15",
+    "category": "worldTriggers",
+    "name": "trigger:15",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "globaltrigger.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "trigger",
+      "story": "少林_金刚门",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "400",
+          "type": "exceed_day"
+        },
+        {
+          "tag": "condition",
+          "value": "少林寺",
+          "type": "in_menpai"
+        },
+        {
+          "tag": "condition",
+          "value": "少林寺_南北之争",
+          "type": "should_not_finish"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "globaltrigger.txt",
+        "node": {
+          "tag": "trigger",
+          "story": "少林_金刚门",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "400",
+              "type": "exceed_day"
+            },
+            {
+              "tag": "condition",
+              "value": "少林寺",
+              "type": "in_menpai"
+            },
+            {
+              "tag": "condition",
+              "value": "少林寺_南北之争",
+              "type": "should_not_finish"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "stories",
+        "id": "少林_金刚门",
+        "name": "少林_金刚门"
+      },
+      {
+        "category": "maps",
+        "id": "少林寺",
+        "name": "少林寺"
+      },
+      {
+        "category": "stories",
+        "id": "少林寺_南北之争",
+        "name": "少林寺_南北之争"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "trigger:16",
+    "category": "worldTriggers",
+    "name": "trigger:16",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "globaltrigger.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "trigger",
+      "story": "全真教_门派大比",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "50",
+          "type": "exceed_day"
+        },
+        {
+          "tag": "condition",
+          "value": "全真教",
+          "type": "in_menpai"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "globaltrigger.txt",
+        "node": {
+          "tag": "trigger",
+          "story": "全真教_门派大比",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "50",
+              "type": "exceed_day"
+            },
+            {
+              "tag": "condition",
+              "value": "全真教",
+              "type": "in_menpai"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "maps",
+        "id": "全真教",
+        "name": "全真教"
+      },
+      {
+        "category": "sects",
+        "id": "全真教",
+        "name": "全真教"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_门派大比",
+        "name": "全真教_门派大比"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "trigger:17",
+    "category": "worldTriggers",
+    "name": "trigger:17",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "globaltrigger.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "trigger",
+      "story": "全真教_大校",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "90",
+          "type": "exceed_day"
+        },
+        {
+          "tag": "condition",
+          "value": "全真教",
+          "type": "in_menpai"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "globaltrigger.txt",
+        "node": {
+          "tag": "trigger",
+          "story": "全真教_大校",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "90",
+              "type": "exceed_day"
+            },
+            {
+              "tag": "condition",
+              "value": "全真教",
+              "type": "in_menpai"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "maps",
+        "id": "全真教",
+        "name": "全真教"
+      },
+      {
+        "category": "sects",
+        "id": "全真教",
+        "name": "全真教"
+      },
+      {
+        "category": "stories",
+        "id": "全真教_大校",
+        "name": "全真教_大校"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "trigger:18",
+    "category": "worldTriggers",
+    "name": "trigger:18",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "globaltrigger.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "trigger",
+      "story": "武当派_出师",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "65",
+          "type": "exceed_day"
+        },
+        {
+          "tag": "condition",
+          "value": "武当派",
+          "type": "in_menpai"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "globaltrigger.txt",
+        "node": {
+          "tag": "trigger",
+          "story": "武当派_出师",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "65",
+              "type": "exceed_day"
+            },
+            {
+              "tag": "condition",
+              "value": "武当派",
+              "type": "in_menpai"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "maps",
+        "id": "武当派",
+        "name": "武当派"
+      },
+      {
+        "category": "sects",
+        "id": "武当派",
+        "name": "武当派"
+      },
+      {
+        "category": "stories",
+        "id": "武当派_出师",
+        "name": "武当派_出师"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "trigger:19",
+    "category": "worldTriggers",
+    "name": "trigger:19",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "globaltrigger.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "trigger",
+      "story": "星宿派_出师",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "40",
+          "type": "exceed_day"
+        },
+        {
+          "tag": "condition",
+          "value": "星宿派",
+          "type": "in_menpai"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "globaltrigger.txt",
+        "node": {
+          "tag": "trigger",
+          "story": "星宿派_出师",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "40",
+              "type": "exceed_day"
+            },
+            {
+              "tag": "condition",
+              "value": "星宿派",
+              "type": "in_menpai"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "maps",
+        "id": "星宿派",
+        "name": "星宿派"
+      },
+      {
+        "category": "sects",
+        "id": "星宿派",
+        "name": "星宿派"
+      },
+      {
+        "category": "stories",
+        "id": "星宿派_出师",
+        "name": "星宿派_出师"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "trigger:20",
+    "category": "worldTriggers",
+    "name": "trigger:20",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "globaltrigger.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "trigger",
+      "story": "星宿派_星宿老仙考校",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "90",
+          "type": "exceed_day"
+        },
+        {
+          "tag": "condition",
+          "value": "星宿派",
+          "type": "in_menpai"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "globaltrigger.txt",
+        "node": {
+          "tag": "trigger",
+          "story": "星宿派_星宿老仙考校",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "90",
+              "type": "exceed_day"
+            },
+            {
+              "tag": "condition",
+              "value": "星宿派",
+              "type": "in_menpai"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "maps",
+        "id": "星宿派",
+        "name": "星宿派"
+      },
+      {
+        "category": "sects",
+        "id": "星宿派",
+        "name": "星宿派"
+      },
+      {
+        "category": "stories",
+        "id": "星宿派_星宿老仙考校",
+        "name": "星宿派_星宿老仙考校"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "trigger:21",
+    "category": "worldTriggers",
+    "name": "trigger:21",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "globaltrigger.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "trigger",
+      "story": "星宿派_召回擂鼓山",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "150",
+          "type": "exceed_day"
+        },
+        {
+          "tag": "condition",
+          "value": "星宿派",
+          "type": "in_menpai"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "globaltrigger.txt",
+        "node": {
+          "tag": "trigger",
+          "story": "星宿派_召回擂鼓山",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "150",
+              "type": "exceed_day"
+            },
+            {
+              "tag": "condition",
+              "value": "星宿派",
+              "type": "in_menpai"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "maps",
+        "id": "星宿派",
+        "name": "星宿派"
+      },
+      {
+        "category": "sects",
+        "id": "星宿派",
+        "name": "星宿派"
+      },
+      {
+        "category": "stories",
+        "id": "星宿派_召回擂鼓山",
+        "name": "星宿派_召回擂鼓山"
+      }
+    ],
+    "usedBy": []
+  }
+]

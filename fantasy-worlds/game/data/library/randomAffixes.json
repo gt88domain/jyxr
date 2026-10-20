@@ -1,0 +1,1200 @@
+[
+  {
+    "id": "item_trigger:1",
+    "category": "randomAffixes",
+    "name": "item_trigger:1",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "item_triggers.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "item_trigger",
+      "minlevel": "1",
+      "maxlevel": "3",
+      "children": [
+        {
+          "tag": "trigger",
+          "name": "attack",
+          "w": "30"
+        },
+        {
+          "tag": "trigger",
+          "name": "defence",
+          "w": "30",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "3",
+              "max": "10"
+            },
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "0",
+              "max": "5"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "attribute",
+          "w": "100"
+        },
+        {
+          "tag": "trigger",
+          "name": "talent",
+          "w": "20",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "暴躁,老江湖,左手剑,神兵,宝甲,鲁莽,锐眼",
+              "min": "-1",
+              "max": "-1"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "mingzhong",
+          "w": "10",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "5",
+              "max": "10"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "powerup_skill",
+          "w": "20"
+        },
+        {
+          "tag": "trigger",
+          "name": "powerup_internalskill",
+          "w": "20"
+        },
+        {
+          "tag": "trigger",
+          "name": "powerup_uniqueskill",
+          "w": "20"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "item_triggers.txt",
+        "node": {
+          "tag": "item_trigger",
+          "minlevel": "1",
+          "maxlevel": "3",
+          "children": [
+            {
+              "tag": "trigger",
+              "name": "attack",
+              "w": "30"
+            },
+            {
+              "tag": "trigger",
+              "name": "defence",
+              "w": "30",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "3",
+                  "max": "10"
+                },
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "0",
+                  "max": "5"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "attribute",
+              "w": "100"
+            },
+            {
+              "tag": "trigger",
+              "name": "talent",
+              "w": "20",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "暴躁,老江湖,左手剑,神兵,宝甲,鲁莽,锐眼",
+                  "min": "-1",
+                  "max": "-1"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "mingzhong",
+              "w": "10",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "5",
+                  "max": "10"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "powerup_skill",
+              "w": "20"
+            },
+            {
+              "tag": "trigger",
+              "name": "powerup_internalskill",
+              "w": "20"
+            },
+            {
+              "tag": "trigger",
+              "name": "powerup_uniqueskill",
+              "w": "20"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "talents",
+        "id": "宝甲",
+        "name": "宝甲"
+      },
+      {
+        "category": "talents",
+        "id": "左手剑",
+        "name": "左手剑"
+      },
+      {
+        "category": "talents",
+        "id": "暴躁",
+        "name": "暴躁"
+      },
+      {
+        "category": "talents",
+        "id": "神兵",
+        "name": "神兵"
+      },
+      {
+        "category": "talents",
+        "id": "老江湖",
+        "name": "老江湖"
+      },
+      {
+        "category": "talents",
+        "id": "锐眼",
+        "name": "锐眼"
+      },
+      {
+        "category": "talents",
+        "id": "鲁莽",
+        "name": "鲁莽"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "item_trigger:2",
+    "category": "randomAffixes",
+    "name": "item_trigger:2",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "item_triggers.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "item_trigger",
+      "minlevel": "4",
+      "maxlevel": "5",
+      "children": [
+        {
+          "tag": "trigger",
+          "name": "criticalp",
+          "w": "10"
+        },
+        {
+          "tag": "trigger",
+          "name": "attack",
+          "w": "30",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "8",
+              "max": "15"
+            },
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "0",
+              "max": "5"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "defence",
+          "w": "30",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "8",
+              "max": "15"
+            },
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "0",
+              "max": "5"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "attribute",
+          "w": "100"
+        },
+        {
+          "tag": "trigger",
+          "name": "talent",
+          "w": "20",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "暴躁,老江湖,左手剑,神兵,宝甲,鲁莽,锐眼",
+              "min": "-1",
+              "max": "-1"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "xi",
+          "w": "20",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "1",
+              "max": "3"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "critical",
+          "w": "20",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "1",
+              "max": "5"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "powerup_quanzhang",
+          "w": "5",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "3",
+              "max": "5"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "powerup_jianfa",
+          "w": "5",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "3",
+              "max": "5"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "powerup_daofa",
+          "w": "5",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "3",
+              "max": "5"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "powerup_qimen",
+          "w": "5",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "3",
+              "max": "5"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "powerup_aoyi",
+          "w": "100"
+        },
+        {
+          "tag": "trigger",
+          "name": "mingzhong",
+          "w": "20",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "7",
+              "max": "14"
+            }
+          ]
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "item_triggers.txt",
+        "node": {
+          "tag": "item_trigger",
+          "minlevel": "4",
+          "maxlevel": "5",
+          "children": [
+            {
+              "tag": "trigger",
+              "name": "criticalp",
+              "w": "10"
+            },
+            {
+              "tag": "trigger",
+              "name": "attack",
+              "w": "30",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "8",
+                  "max": "15"
+                },
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "0",
+                  "max": "5"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "defence",
+              "w": "30",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "8",
+                  "max": "15"
+                },
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "0",
+                  "max": "5"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "attribute",
+              "w": "100"
+            },
+            {
+              "tag": "trigger",
+              "name": "talent",
+              "w": "20",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "暴躁,老江湖,左手剑,神兵,宝甲,鲁莽,锐眼",
+                  "min": "-1",
+                  "max": "-1"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "xi",
+              "w": "20",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "1",
+                  "max": "3"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "critical",
+              "w": "20",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "1",
+                  "max": "5"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "powerup_quanzhang",
+              "w": "5",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "3",
+                  "max": "5"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "powerup_jianfa",
+              "w": "5",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "3",
+                  "max": "5"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "powerup_daofa",
+              "w": "5",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "3",
+                  "max": "5"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "powerup_qimen",
+              "w": "5",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "3",
+                  "max": "5"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "powerup_aoyi",
+              "w": "100"
+            },
+            {
+              "tag": "trigger",
+              "name": "mingzhong",
+              "w": "20",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "7",
+                  "max": "14"
+                }
+              ]
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "talents",
+        "id": "宝甲",
+        "name": "宝甲"
+      },
+      {
+        "category": "talents",
+        "id": "左手剑",
+        "name": "左手剑"
+      },
+      {
+        "category": "talents",
+        "id": "暴躁",
+        "name": "暴躁"
+      },
+      {
+        "category": "talents",
+        "id": "神兵",
+        "name": "神兵"
+      },
+      {
+        "category": "talents",
+        "id": "老江湖",
+        "name": "老江湖"
+      },
+      {
+        "category": "talents",
+        "id": "锐眼",
+        "name": "锐眼"
+      },
+      {
+        "category": "talents",
+        "id": "鲁莽",
+        "name": "鲁莽"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "item_trigger:3",
+    "category": "randomAffixes",
+    "name": "item_trigger:3",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "item_triggers.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "item_trigger",
+      "minlevel": "6",
+      "maxlevel": "7",
+      "children": [
+        {
+          "tag": "trigger",
+          "name": "criticalp",
+          "w": "10"
+        },
+        {
+          "tag": "trigger",
+          "name": "attack",
+          "w": "30"
+        },
+        {
+          "tag": "trigger",
+          "name": "defence",
+          "w": "30",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "10",
+              "max": "30"
+            },
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "3",
+              "max": "10"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "attribute",
+          "w": "100"
+        },
+        {
+          "tag": "trigger",
+          "name": "talent",
+          "w": "50",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "心眼通明,拳掌增益,剑法增益,刀法增益,奇门增益,奋战,真气护体",
+              "min": "-1",
+              "max": "-1"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "xi",
+          "w": "20",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "1",
+              "max": "5"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "critical",
+          "w": "20",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "5",
+              "max": "10"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "mingzhong",
+          "w": "20",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "5",
+              "max": "15"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "powerup_quanzhang",
+          "w": "5",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "3",
+              "max": "10"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "powerup_jianfa",
+          "w": "5",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "3",
+              "max": "10"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "powerup_daofa",
+          "w": "5",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "3",
+              "max": "10"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "powerup_qimen",
+          "w": "5",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "3",
+              "max": "10"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "powerup_aoyi",
+          "w": "20"
+        },
+        {
+          "tag": "trigger",
+          "name": "powerup_skill",
+          "w": "20"
+        },
+        {
+          "tag": "trigger",
+          "name": "powerup_internalskill",
+          "w": "20"
+        },
+        {
+          "tag": "trigger",
+          "name": "powerup_uniqueskill",
+          "w": "20"
+        },
+        {
+          "tag": "trigger",
+          "name": "sp",
+          "w": "20",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "0.1,0.15",
+              "min": "-1",
+              "max": "-1"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "anti_debuff",
+          "w": "20",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "3",
+              "max": "6"
+            }
+          ]
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "item_triggers.txt",
+        "node": {
+          "tag": "item_trigger",
+          "minlevel": "6",
+          "maxlevel": "7",
+          "children": [
+            {
+              "tag": "trigger",
+              "name": "criticalp",
+              "w": "10"
+            },
+            {
+              "tag": "trigger",
+              "name": "attack",
+              "w": "30"
+            },
+            {
+              "tag": "trigger",
+              "name": "defence",
+              "w": "30",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "10",
+                  "max": "30"
+                },
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "3",
+                  "max": "10"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "attribute",
+              "w": "100"
+            },
+            {
+              "tag": "trigger",
+              "name": "talent",
+              "w": "50",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "心眼通明,拳掌增益,剑法增益,刀法增益,奇门增益,奋战,真气护体",
+                  "min": "-1",
+                  "max": "-1"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "xi",
+              "w": "20",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "1",
+                  "max": "5"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "critical",
+              "w": "20",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "5",
+                  "max": "10"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "mingzhong",
+              "w": "20",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "5",
+                  "max": "15"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "powerup_quanzhang",
+              "w": "5",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "3",
+                  "max": "10"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "powerup_jianfa",
+              "w": "5",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "3",
+                  "max": "10"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "powerup_daofa",
+              "w": "5",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "3",
+                  "max": "10"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "powerup_qimen",
+              "w": "5",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "3",
+                  "max": "10"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "powerup_aoyi",
+              "w": "20"
+            },
+            {
+              "tag": "trigger",
+              "name": "powerup_skill",
+              "w": "20"
+            },
+            {
+              "tag": "trigger",
+              "name": "powerup_internalskill",
+              "w": "20"
+            },
+            {
+              "tag": "trigger",
+              "name": "powerup_uniqueskill",
+              "w": "20"
+            },
+            {
+              "tag": "trigger",
+              "name": "sp",
+              "w": "20",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "0.1,0.15",
+                  "min": "-1",
+                  "max": "-1"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "anti_debuff",
+              "w": "20",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "3",
+                  "max": "6"
+                }
+              ]
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "talents",
+        "id": "刀法增益",
+        "name": "刀法增益"
+      },
+      {
+        "category": "talents",
+        "id": "剑法增益",
+        "name": "剑法增益"
+      },
+      {
+        "category": "talents",
+        "id": "奇门增益",
+        "name": "奇门增益"
+      },
+      {
+        "category": "talents",
+        "id": "奋战",
+        "name": "奋战"
+      },
+      {
+        "category": "talents",
+        "id": "心眼通明",
+        "name": "心眼通明"
+      },
+      {
+        "category": "talents",
+        "id": "拳掌增益",
+        "name": "拳掌增益"
+      },
+      {
+        "category": "talents",
+        "id": "真气护体",
+        "name": "真气护体"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "item_trigger:4",
+    "category": "randomAffixes",
+    "name": "item_trigger:4",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "item_triggers.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "item_trigger",
+      "minlevel": "7",
+      "maxlevel": "7",
+      "children": [
+        {
+          "tag": "trigger",
+          "name": "powerup_aoyi",
+          "w": "100"
+        },
+        {
+          "tag": "trigger",
+          "name": "powerup_skill",
+          "w": "20"
+        },
+        {
+          "tag": "trigger",
+          "name": "powerup_internalskill",
+          "w": "20"
+        },
+        {
+          "tag": "trigger",
+          "name": "powerup_uniqueskill",
+          "w": "20"
+        },
+        {
+          "tag": "trigger",
+          "name": "criticalp",
+          "w": "10"
+        },
+        {
+          "tag": "trigger",
+          "name": "xi",
+          "w": "20",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "2",
+              "max": "6"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "sp",
+          "w": "20",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "0.1,0.15,0.2,0.25,0.3",
+              "min": "-1",
+              "max": "-1"
+            }
+          ]
+        },
+        {
+          "tag": "trigger",
+          "name": "anti_debuff",
+          "w": "20",
+          "children": [
+            {
+              "tag": "param",
+              "pool": "",
+              "min": "5",
+              "max": "12"
+            }
+          ]
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "item_triggers.txt",
+        "node": {
+          "tag": "item_trigger",
+          "minlevel": "7",
+          "maxlevel": "7",
+          "children": [
+            {
+              "tag": "trigger",
+              "name": "powerup_aoyi",
+              "w": "100"
+            },
+            {
+              "tag": "trigger",
+              "name": "powerup_skill",
+              "w": "20"
+            },
+            {
+              "tag": "trigger",
+              "name": "powerup_internalskill",
+              "w": "20"
+            },
+            {
+              "tag": "trigger",
+              "name": "powerup_uniqueskill",
+              "w": "20"
+            },
+            {
+              "tag": "trigger",
+              "name": "criticalp",
+              "w": "10"
+            },
+            {
+              "tag": "trigger",
+              "name": "xi",
+              "w": "20",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "2",
+                  "max": "6"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "sp",
+              "w": "20",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "0.1,0.15,0.2,0.25,0.3",
+                  "min": "-1",
+                  "max": "-1"
+                }
+              ]
+            },
+            {
+              "tag": "trigger",
+              "name": "anti_debuff",
+              "w": "20",
+              "children": [
+                {
+                  "tag": "param",
+                  "pool": "",
+                  "min": "5",
+                  "max": "12"
+                }
+              ]
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": []
+  }
+]

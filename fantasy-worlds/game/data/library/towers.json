@@ -1,0 +1,4992 @@
+[
+  {
+    "id": "江湖异人",
+    "category": "towers",
+    "name": "江湖异人",
+    "description": "与江湖上各种奇人异士一争高下。",
+    "state": "资料已接入",
+    "source": "towers.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "tower",
+      "desc": "与江湖上各种奇人异士一争高下。",
+      "key": "江湖异人",
+      "children": [
+        {
+          "tag": "map",
+          "key": "天关.江湖异人.渔樵耕读",
+          "index": "0",
+          "children": [
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "大还丹"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "特制鸡腿"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "罗汉拳谱"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "飘雪穿云掌法"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "松风剑法秘籍"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "华山剑法秘籍"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "三分剑术"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "南山刀法谱"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "万劫刀法谱"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "蛇鹤八打"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "拂尘秘诀"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "疯魔杖法秘诀"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "将军头盔"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "粗布披风"
+            }
+          ]
+        },
+        {
+          "tag": "map",
+          "key": "天关.江湖异人.高手来了！",
+          "index": "1",
+          "children": [
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "黑玉断续膏"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "九花玉露丸"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "四象掌掌谱"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "寒冰绵掌谱"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "百花错拳谱"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "八卦游身掌法"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "五毒神掌掌谱"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "无量剑法秘籍"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "绕指柔剑剑谱"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "峨眉剑法秘籍"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "嵩山剑法秘籍"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "全真剑法秘籍"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "铁剑剑法秘籍"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "草原刀法"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "玄虚刀法"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "玉蜂针"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "流星锤法"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "精制匕首"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "铲刀"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "飞轮"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "拳击手套"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "檀香佛珠"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "金丝护腕"
+            }
+          ]
+        },
+        {
+          "tag": "map",
+          "key": "天关.江湖异人.四个和尚",
+          "index": "2",
+          "children": [
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "黑玉断续膏"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "生生造化丹"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "佛光普照"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "铁掌掌谱"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "幻阴指指法精要"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "百变千幻云雾十三式秘籍"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "达摩剑法"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "两仪剑法"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "反两仪刀法"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "燃木刀法"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "黑血神针秘籍"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "伏魔杖法"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "海叟钓法"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "橙色灯戒"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "华裳"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "月梦爪"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "戒刀"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "古铜匕首"
+            }
+          ]
+        },
+        {
+          "tag": "map",
+          "key": "天关.江湖异人.雁门关的雪？血？",
+          "index": "3",
+          "children": [
+            {
+              "tag": "item",
+              "probability": "0.2",
+              "number": "3",
+              "key": "灭仙爪"
+            },
+            {
+              "tag": "item",
+              "probability": "0.2",
+              "number": "3",
+              "key": "倚天剑"
+            },
+            {
+              "tag": "item",
+              "probability": "0.2",
+              "number": "3",
+              "key": "屠龙刀"
+            },
+            {
+              "tag": "item",
+              "probability": "0.2",
+              "number": "3",
+              "key": "打狗棒"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "天王保命丹"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "续命八丸"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "松果"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "锯齿刀"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "龙泉剑"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "忍者服"
+            },
+            {
+              "tag": "item",
+              "probability": "0.15",
+              "number": "1",
+              "key": "天关.决战光明顶之证"
+            },
+            {
+              "tag": "item",
+              "probability": "0.15",
+              "number": "1",
+              "key": "天关.林平之的复仇"
+            },
+            {
+              "tag": "item",
+              "probability": "0.15",
+              "number": "1",
+              "key": "天关.血战少室山"
+            }
+          ]
+        },
+        {
+          "tag": "map",
+          "key": "天关.江湖异人.终章",
+          "index": "4",
+          "children": [
+            {
+              "tag": "item",
+              "probability": "1",
+              "number": "1",
+              "key": "天关.炼狱之证"
+            },
+            {
+              "tag": "item",
+              "probability": "0.5",
+              "number": "1",
+              "key": "降龙十八掌谱"
+            },
+            {
+              "tag": "item",
+              "probability": "0.5",
+              "number": "1",
+              "key": "独孤九剑剑谱"
+            },
+            {
+              "tag": "item",
+              "probability": "0.5",
+              "number": "1",
+              "key": "一阳指书"
+            },
+            {
+              "tag": "item",
+              "probability": "0.5",
+              "number": "1",
+              "key": "鸳鸯刀"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "3",
+              "key": "笑傲江湖曲"
+            },
+            {
+              "tag": "item",
+              "probability": "0.2",
+              "number": "3",
+              "key": "天下轻功总诀"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "3",
+              "key": "青莲诗集"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "3",
+              "key": "天地同寿"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "1",
+              "key": "隔空取物"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "1",
+              "key": "妙手仁心"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "1",
+              "key": "灵心慧质"
+            },
+            {
+              "tag": "item",
+              "probability": "0.5",
+              "number": "3",
+              "key": "王母蟠桃"
+            },
+            {
+              "tag": "item",
+              "probability": "0.5",
+              "number": "3",
+              "key": "道家仙丹"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "霓裳羽衣"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "幽梦衣"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "蓝宝戒指"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "水晶护符"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "流星锤"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "搏击爪套"
+            }
+          ]
+        }
+      ]
+    },
+    "runtime": {
+      "id": "江湖异人",
+      "name": "江湖异人",
+      "description": "与江湖上各种奇人异士一争高下。",
+      "stages": [
+        {
+          "id": "天关.江湖异人.渔樵耕读",
+          "name": "天关.江湖异人.渔樵耕读",
+          "battleId": "天关.江湖异人.渔樵耕读",
+          "index": 0,
+          "rewards": [
+            {
+              "id": "大还丹",
+              "reward": {
+                "kind": "item",
+                "itemId": "大还丹"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "特制鸡腿",
+              "reward": {
+                "kind": "item",
+                "itemId": "特制鸡腿"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "罗汉拳谱",
+              "reward": {
+                "kind": "item",
+                "itemId": "罗汉拳谱"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "飘雪穿云掌法",
+              "reward": {
+                "kind": "item",
+                "itemId": "飘雪穿云掌法"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "松风剑法秘籍",
+              "reward": {
+                "kind": "item",
+                "itemId": "松风剑法秘籍"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "华山剑法秘籍",
+              "reward": {
+                "kind": "item",
+                "itemId": "华山剑法秘籍"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "三分剑术",
+              "reward": {
+                "kind": "item",
+                "itemId": "三分剑术"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "南山刀法谱",
+              "reward": {
+                "kind": "item",
+                "itemId": "南山刀法谱"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "万劫刀法谱",
+              "reward": {
+                "kind": "item",
+                "itemId": "万劫刀法谱"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "蛇鹤八打",
+              "reward": {
+                "kind": "item",
+                "itemId": "蛇鹤八打"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "拂尘秘诀",
+              "reward": {
+                "kind": "item",
+                "itemId": "拂尘秘诀"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "疯魔杖法秘诀",
+              "reward": {
+                "kind": "item",
+                "itemId": "疯魔杖法秘诀"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "将军头盔",
+              "reward": {
+                "kind": "item",
+                "itemId": "将军头盔"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "粗布披风",
+              "reward": {
+                "kind": "item",
+                "itemId": "粗布披风"
+              },
+              "weight": 1.0
+            }
+          ],
+          "achievementIds": []
+        },
+        {
+          "id": "天关.江湖异人.高手来了！",
+          "name": "天关.江湖异人.高手来了！",
+          "battleId": "天关.江湖异人.高手来了！",
+          "index": 1,
+          "rewards": [
+            {
+              "id": "黑玉断续膏",
+              "reward": {
+                "kind": "item",
+                "itemId": "黑玉断续膏"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "九花玉露丸",
+              "reward": {
+                "kind": "item",
+                "itemId": "九花玉露丸"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "四象掌掌谱",
+              "reward": {
+                "kind": "item",
+                "itemId": "四象掌掌谱"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "寒冰绵掌谱",
+              "reward": {
+                "kind": "item",
+                "itemId": "寒冰绵掌谱"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "百花错拳谱",
+              "reward": {
+                "kind": "item",
+                "itemId": "百花错拳谱"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "八卦游身掌法",
+              "reward": {
+                "kind": "item",
+                "itemId": "八卦游身掌法"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "五毒神掌掌谱",
+              "reward": {
+                "kind": "item",
+                "itemId": "五毒神掌掌谱"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "无量剑法秘籍",
+              "reward": {
+                "kind": "item",
+                "itemId": "无量剑法秘籍"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "绕指柔剑剑谱",
+              "reward": {
+                "kind": "item",
+                "itemId": "绕指柔剑剑谱"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "峨眉剑法秘籍",
+              "reward": {
+                "kind": "item",
+                "itemId": "峨眉剑法秘籍"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "嵩山剑法秘籍",
+              "reward": {
+                "kind": "item",
+                "itemId": "嵩山剑法秘籍"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "全真剑法秘籍",
+              "reward": {
+                "kind": "item",
+                "itemId": "全真剑法秘籍"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "铁剑剑法秘籍",
+              "reward": {
+                "kind": "item",
+                "itemId": "铁剑剑法秘籍"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "草原刀法",
+              "reward": {
+                "kind": "item",
+                "itemId": "草原刀法"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "玄虚刀法",
+              "reward": {
+                "kind": "item",
+                "itemId": "玄虚刀法"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "玉蜂针",
+              "reward": {
+                "kind": "item",
+                "itemId": "玉蜂针"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "流星锤法",
+              "reward": {
+                "kind": "item",
+                "itemId": "流星锤法"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "精制匕首",
+              "reward": {
+                "kind": "item",
+                "itemId": "精制匕首"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "铲刀",
+              "reward": {
+                "kind": "item",
+                "itemId": "铲刀"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "飞轮",
+              "reward": {
+                "kind": "item",
+                "itemId": "飞轮"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "拳击手套",
+              "reward": {
+                "kind": "item",
+                "itemId": "拳击手套"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "檀香佛珠",
+              "reward": {
+                "kind": "item",
+                "itemId": "檀香佛珠"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "金丝护腕",
+              "reward": {
+                "kind": "item",
+                "itemId": "金丝护腕"
+              },
+              "weight": 1.0
+            }
+          ],
+          "achievementIds": []
+        },
+        {
+          "id": "天关.江湖异人.四个和尚",
+          "name": "天关.江湖异人.四个和尚",
+          "battleId": "天关.江湖异人.四个和尚",
+          "index": 2,
+          "rewards": [
+            {
+              "id": "黑玉断续膏",
+              "reward": {
+                "kind": "item",
+                "itemId": "黑玉断续膏"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "生生造化丹",
+              "reward": {
+                "kind": "item",
+                "itemId": "生生造化丹"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "佛光普照",
+              "reward": {
+                "kind": "item",
+                "itemId": "佛光普照"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "铁掌掌谱",
+              "reward": {
+                "kind": "item",
+                "itemId": "铁掌掌谱"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "幻阴指指法精要",
+              "reward": {
+                "kind": "item",
+                "itemId": "幻阴指指法精要"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "百变千幻云雾十三式秘籍",
+              "reward": {
+                "kind": "item",
+                "itemId": "百变千幻云雾十三式秘籍"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "达摩剑法",
+              "reward": {
+                "kind": "item",
+                "itemId": "达摩剑法"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "两仪剑法",
+              "reward": {
+                "kind": "item",
+                "itemId": "两仪剑法"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "反两仪刀法",
+              "reward": {
+                "kind": "item",
+                "itemId": "反两仪刀法"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "燃木刀法",
+              "reward": {
+                "kind": "item",
+                "itemId": "燃木刀法"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "黑血神针秘籍",
+              "reward": {
+                "kind": "item",
+                "itemId": "黑血神针秘籍"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "伏魔杖法",
+              "reward": {
+                "kind": "item",
+                "itemId": "伏魔杖法"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "海叟钓法",
+              "reward": {
+                "kind": "item",
+                "itemId": "海叟钓法"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "橙色灯戒",
+              "reward": {
+                "kind": "item",
+                "itemId": "橙色灯戒"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "华裳",
+              "reward": {
+                "kind": "item",
+                "itemId": "华裳"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "月梦爪",
+              "reward": {
+                "kind": "item",
+                "itemId": "月梦爪"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "戒刀",
+              "reward": {
+                "kind": "item",
+                "itemId": "戒刀"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "古铜匕首",
+              "reward": {
+                "kind": "item",
+                "itemId": "古铜匕首"
+              },
+              "weight": 1.0
+            }
+          ],
+          "achievementIds": []
+        },
+        {
+          "id": "天关.江湖异人.雁门关的雪？血？",
+          "name": "天关.江湖异人.雁门关的雪？血？",
+          "battleId": "天关.江湖异人.雁门关的雪？血？",
+          "index": 3,
+          "rewards": [
+            {
+              "id": "灭仙爪",
+              "reward": {
+                "kind": "item",
+                "itemId": "灭仙爪"
+              },
+              "weight": 0.2,
+              "maxClaims": 3
+            },
+            {
+              "id": "倚天剑",
+              "reward": {
+                "kind": "item",
+                "itemId": "倚天剑"
+              },
+              "weight": 0.2,
+              "maxClaims": 3
+            },
+            {
+              "id": "屠龙刀",
+              "reward": {
+                "kind": "item",
+                "itemId": "屠龙刀"
+              },
+              "weight": 0.2,
+              "maxClaims": 3
+            },
+            {
+              "id": "打狗棒",
+              "reward": {
+                "kind": "item",
+                "itemId": "打狗棒"
+              },
+              "weight": 0.2,
+              "maxClaims": 3
+            },
+            {
+              "id": "天王保命丹",
+              "reward": {
+                "kind": "item",
+                "itemId": "天王保命丹"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "续命八丸",
+              "reward": {
+                "kind": "item",
+                "itemId": "续命八丸"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "松果",
+              "reward": {
+                "kind": "item",
+                "itemId": "松果"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "锯齿刀",
+              "reward": {
+                "kind": "item",
+                "itemId": "锯齿刀"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "龙泉剑",
+              "reward": {
+                "kind": "item",
+                "itemId": "龙泉剑"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "忍者服",
+              "reward": {
+                "kind": "item",
+                "itemId": "忍者服"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "天关.决战光明顶之证",
+              "reward": {
+                "kind": "item",
+                "itemId": "天关.决战光明顶之证"
+              },
+              "weight": 0.15,
+              "maxClaims": 1
+            },
+            {
+              "id": "天关.林平之的复仇",
+              "reward": {
+                "kind": "item",
+                "itemId": "天关.林平之的复仇"
+              },
+              "weight": 0.15,
+              "maxClaims": 1
+            },
+            {
+              "id": "天关.血战少室山",
+              "reward": {
+                "kind": "item",
+                "itemId": "天关.血战少室山"
+              },
+              "weight": 0.15,
+              "maxClaims": 1
+            }
+          ],
+          "achievementIds": []
+        },
+        {
+          "id": "天关.江湖异人.终章",
+          "name": "天关.江湖异人.终章",
+          "battleId": "天关.江湖异人.终章",
+          "index": 4,
+          "rewards": [
+            {
+              "id": "天关.炼狱之证",
+              "reward": {
+                "kind": "item",
+                "itemId": "天关.炼狱之证"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "降龙十八掌谱",
+              "reward": {
+                "kind": "item",
+                "itemId": "降龙十八掌谱"
+              },
+              "weight": 0.5,
+              "maxClaims": 1
+            },
+            {
+              "id": "独孤九剑剑谱",
+              "reward": {
+                "kind": "item",
+                "itemId": "独孤九剑剑谱"
+              },
+              "weight": 0.5,
+              "maxClaims": 1
+            },
+            {
+              "id": "一阳指书",
+              "reward": {
+                "kind": "item",
+                "itemId": "一阳指书"
+              },
+              "weight": 0.5,
+              "maxClaims": 1
+            },
+            {
+              "id": "鸳鸯刀",
+              "reward": {
+                "kind": "item",
+                "itemId": "鸳鸯刀"
+              },
+              "weight": 0.5,
+              "maxClaims": 1
+            },
+            {
+              "id": "笑傲江湖曲",
+              "reward": {
+                "kind": "item",
+                "itemId": "笑傲江湖曲"
+              },
+              "weight": 0.3,
+              "maxClaims": 3
+            },
+            {
+              "id": "天下轻功总诀",
+              "reward": {
+                "kind": "item",
+                "itemId": "天下轻功总诀"
+              },
+              "weight": 0.2,
+              "maxClaims": 3
+            },
+            {
+              "id": "青莲诗集",
+              "reward": {
+                "kind": "item",
+                "itemId": "青莲诗集"
+              },
+              "weight": 0.3,
+              "maxClaims": 3
+            },
+            {
+              "id": "天地同寿",
+              "reward": {
+                "kind": "item",
+                "itemId": "天地同寿"
+              },
+              "weight": 0.3,
+              "maxClaims": 3
+            },
+            {
+              "id": "隔空取物",
+              "reward": {
+                "kind": "item",
+                "itemId": "隔空取物"
+              },
+              "weight": 0.3,
+              "maxClaims": 1
+            },
+            {
+              "id": "妙手仁心",
+              "reward": {
+                "kind": "item",
+                "itemId": "妙手仁心"
+              },
+              "weight": 0.3,
+              "maxClaims": 1
+            },
+            {
+              "id": "灵心慧质",
+              "reward": {
+                "kind": "item",
+                "itemId": "灵心慧质"
+              },
+              "weight": 0.3,
+              "maxClaims": 1
+            },
+            {
+              "id": "王母蟠桃",
+              "reward": {
+                "kind": "item",
+                "itemId": "王母蟠桃"
+              },
+              "weight": 0.5,
+              "maxClaims": 3
+            },
+            {
+              "id": "道家仙丹",
+              "reward": {
+                "kind": "item",
+                "itemId": "道家仙丹"
+              },
+              "weight": 0.5,
+              "maxClaims": 3
+            },
+            {
+              "id": "霓裳羽衣",
+              "reward": {
+                "kind": "item",
+                "itemId": "霓裳羽衣"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "幽梦衣",
+              "reward": {
+                "kind": "item",
+                "itemId": "幽梦衣"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "蓝宝戒指",
+              "reward": {
+                "kind": "item",
+                "itemId": "蓝宝戒指"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "水晶护符",
+              "reward": {
+                "kind": "item",
+                "itemId": "水晶护符"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "流星锤",
+              "reward": {
+                "kind": "item",
+                "itemId": "流星锤"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "搏击爪套",
+              "reward": {
+                "kind": "item",
+                "itemId": "搏击爪套"
+              },
+              "weight": 1.0
+            }
+          ],
+          "achievementIds": []
+        }
+      ]
+    },
+    "variants": [
+      {
+        "source": "towers.txt",
+        "node": {
+          "tag": "tower",
+          "desc": "与江湖上各种奇人异士一争高下。",
+          "key": "江湖异人",
+          "children": [
+            {
+              "tag": "map",
+              "key": "天关.江湖异人.渔樵耕读",
+              "index": "0",
+              "children": [
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "大还丹"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "特制鸡腿"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "罗汉拳谱"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "飘雪穿云掌法"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "松风剑法秘籍"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "华山剑法秘籍"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "三分剑术"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "南山刀法谱"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "万劫刀法谱"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "蛇鹤八打"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "拂尘秘诀"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "疯魔杖法秘诀"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "将军头盔"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "粗布披风"
+                }
+              ]
+            },
+            {
+              "tag": "map",
+              "key": "天关.江湖异人.高手来了！",
+              "index": "1",
+              "children": [
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "黑玉断续膏"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "九花玉露丸"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "四象掌掌谱"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "寒冰绵掌谱"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "百花错拳谱"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "八卦游身掌法"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "五毒神掌掌谱"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "无量剑法秘籍"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "绕指柔剑剑谱"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "峨眉剑法秘籍"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "嵩山剑法秘籍"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "全真剑法秘籍"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "铁剑剑法秘籍"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "草原刀法"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "玄虚刀法"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "玉蜂针"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "流星锤法"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "精制匕首"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "铲刀"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "飞轮"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "拳击手套"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "檀香佛珠"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "金丝护腕"
+                }
+              ]
+            },
+            {
+              "tag": "map",
+              "key": "天关.江湖异人.四个和尚",
+              "index": "2",
+              "children": [
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "黑玉断续膏"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "生生造化丹"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "佛光普照"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "铁掌掌谱"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "幻阴指指法精要"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "百变千幻云雾十三式秘籍"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "达摩剑法"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "两仪剑法"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "反两仪刀法"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "燃木刀法"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "黑血神针秘籍"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "伏魔杖法"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "海叟钓法"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "橙色灯戒"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "华裳"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "月梦爪"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "戒刀"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "古铜匕首"
+                }
+              ]
+            },
+            {
+              "tag": "map",
+              "key": "天关.江湖异人.雁门关的雪？血？",
+              "index": "3",
+              "children": [
+                {
+                  "tag": "item",
+                  "probability": "0.2",
+                  "number": "3",
+                  "key": "灭仙爪"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.2",
+                  "number": "3",
+                  "key": "倚天剑"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.2",
+                  "number": "3",
+                  "key": "屠龙刀"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.2",
+                  "number": "3",
+                  "key": "打狗棒"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "天王保命丹"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "续命八丸"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "松果"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "锯齿刀"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "龙泉剑"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "忍者服"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.15",
+                  "number": "1",
+                  "key": "天关.决战光明顶之证"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.15",
+                  "number": "1",
+                  "key": "天关.林平之的复仇"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.15",
+                  "number": "1",
+                  "key": "天关.血战少室山"
+                }
+              ]
+            },
+            {
+              "tag": "map",
+              "key": "天关.江湖异人.终章",
+              "index": "4",
+              "children": [
+                {
+                  "tag": "item",
+                  "probability": "1",
+                  "number": "1",
+                  "key": "天关.炼狱之证"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.5",
+                  "number": "1",
+                  "key": "降龙十八掌谱"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.5",
+                  "number": "1",
+                  "key": "独孤九剑剑谱"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.5",
+                  "number": "1",
+                  "key": "一阳指书"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.5",
+                  "number": "1",
+                  "key": "鸳鸯刀"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "3",
+                  "key": "笑傲江湖曲"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.2",
+                  "number": "3",
+                  "key": "天下轻功总决"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "3",
+                  "key": "青莲诗集"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "3",
+                  "key": "天地同寿"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "1",
+                  "key": "隔空取物"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "1",
+                  "key": "妙手仁心"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "1",
+                  "key": "灵心慧质"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.5",
+                  "number": "3",
+                  "key": "王母蟠桃"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.5",
+                  "number": "3",
+                  "key": "道家仙丹"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "霓裳羽衣"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "幽梦衣"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "蓝宝戒指"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "水晶护符"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "流星锤"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "搏击爪套"
+                }
+              ]
+            }
+          ]
+        },
+        "equalRecord": false
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "items",
+        "id": "一阳指书",
+        "name": "一阳指书"
+      },
+      {
+        "category": "items",
+        "id": "万劫刀法谱",
+        "name": "万劫刀法谱"
+      },
+      {
+        "category": "items",
+        "id": "三分剑术",
+        "name": "三分剑术"
+      },
+      {
+        "category": "externalSkills",
+        "id": "两仪剑法",
+        "name": "两仪剑法"
+      },
+      {
+        "category": "items",
+        "id": "两仪剑法",
+        "name": "两仪剑法"
+      },
+      {
+        "category": "items",
+        "id": "九花玉露丸",
+        "name": "九花玉露丸"
+      },
+      {
+        "category": "items",
+        "id": "五毒神掌掌谱",
+        "name": "五毒神掌掌谱"
+      },
+      {
+        "category": "externalSkills",
+        "id": "伏魔杖法",
+        "name": "伏魔杖法"
+      },
+      {
+        "category": "items",
+        "id": "伏魔杖法",
+        "name": "伏魔杖法"
+      },
+      {
+        "category": "externalSkills",
+        "id": "佛光普照",
+        "name": "佛光普照"
+      },
+      {
+        "category": "items",
+        "id": "佛光普照",
+        "name": "佛光普照"
+      },
+      {
+        "category": "items",
+        "id": "倚天剑",
+        "name": "倚天剑"
+      },
+      {
+        "category": "items",
+        "id": "全真剑法秘籍",
+        "name": "全真剑法秘籍"
+      },
+      {
+        "category": "items",
+        "id": "八卦游身掌法",
+        "name": "八卦游身掌法"
+      },
+      {
+        "category": "items",
+        "id": "华山剑法秘籍",
+        "name": "华山剑法秘籍"
+      },
+      {
+        "category": "items",
+        "id": "华裳",
+        "name": "华裳"
+      },
+      {
+        "category": "items",
+        "id": "南山刀法谱",
+        "name": "南山刀法谱"
+      },
+      {
+        "category": "externalSkills",
+        "id": "反两仪刀法",
+        "name": "反两仪刀法"
+      },
+      {
+        "category": "items",
+        "id": "反两仪刀法",
+        "name": "反两仪刀法"
+      },
+      {
+        "category": "items",
+        "id": "古铜匕首",
+        "name": "古铜匕首"
+      },
+      {
+        "category": "items",
+        "id": "四象掌掌谱",
+        "name": "四象掌掌谱"
+      },
+      {
+        "category": "items",
+        "id": "大还丹",
+        "name": "大还丹"
+      },
+      {
+        "category": "items",
+        "id": "天下轻功总诀",
+        "name": "天下轻功总诀"
+      },
+      {
+        "category": "items",
+        "id": "天关.决战光明顶之证",
+        "name": "天关.决战光明顶之证"
+      },
+      {
+        "category": "items",
+        "id": "天关.林平之的复仇",
+        "name": "天关.林平之的复仇"
+      },
+      {
+        "category": "battles",
+        "id": "天关.林平之的复仇",
+        "name": "天关.林平之的复仇"
+      },
+      {
+        "category": "battles",
+        "id": "天关.江湖异人.四个和尚",
+        "name": "天关.江湖异人.四个和尚"
+      },
+      {
+        "category": "battles",
+        "id": "天关.江湖异人.渔樵耕读",
+        "name": "天关.江湖异人.渔樵耕读"
+      },
+      {
+        "category": "battles",
+        "id": "天关.江湖异人.终章",
+        "name": "天关.江湖异人.终章"
+      },
+      {
+        "category": "battles",
+        "id": "天关.江湖异人.雁门关的雪？血？",
+        "name": "天关.江湖异人.雁门关的雪？血？"
+      },
+      {
+        "category": "battles",
+        "id": "天关.江湖异人.高手来了！",
+        "name": "天关.江湖异人.高手来了！"
+      },
+      {
+        "category": "items",
+        "id": "天关.炼狱之证",
+        "name": "天关.炼狱之证"
+      },
+      {
+        "category": "items",
+        "id": "天关.血战少室山",
+        "name": "天关.血战少室山"
+      },
+      {
+        "category": "battles",
+        "id": "天关.血战少室山",
+        "name": "天关.血战少室山"
+      },
+      {
+        "category": "specialSkills",
+        "id": "天地同寿",
+        "name": "天地同寿"
+      },
+      {
+        "category": "items",
+        "id": "天地同寿",
+        "name": "天地同寿"
+      },
+      {
+        "category": "items",
+        "id": "天王保命丹",
+        "name": "天王保命丹"
+      },
+      {
+        "category": "items",
+        "id": "妙手仁心",
+        "name": "妙手仁心"
+      },
+      {
+        "category": "talents",
+        "id": "妙手仁心",
+        "name": "妙手仁心"
+      },
+      {
+        "category": "items",
+        "id": "寒冰绵掌谱",
+        "name": "寒冰绵掌谱"
+      },
+      {
+        "category": "items",
+        "id": "将军头盔",
+        "name": "将军头盔"
+      },
+      {
+        "category": "items",
+        "id": "屠龙刀",
+        "name": "屠龙刀"
+      },
+      {
+        "category": "items",
+        "id": "峨眉剑法秘籍",
+        "name": "峨眉剑法秘籍"
+      },
+      {
+        "category": "items",
+        "id": "嵩山剑法秘籍",
+        "name": "嵩山剑法秘籍"
+      },
+      {
+        "category": "items",
+        "id": "幻阴指指法精要",
+        "name": "幻阴指指法精要"
+      },
+      {
+        "category": "items",
+        "id": "幽梦衣",
+        "name": "幽梦衣"
+      },
+      {
+        "category": "items",
+        "id": "忍者服",
+        "name": "忍者服"
+      },
+      {
+        "category": "items",
+        "id": "戒刀",
+        "name": "戒刀"
+      },
+      {
+        "category": "items",
+        "id": "打狗棒",
+        "name": "打狗棒"
+      },
+      {
+        "category": "items",
+        "id": "拂尘秘诀",
+        "name": "拂尘秘诀"
+      },
+      {
+        "category": "items",
+        "id": "拳击手套",
+        "name": "拳击手套"
+      },
+      {
+        "category": "items",
+        "id": "搏击爪套",
+        "name": "搏击爪套"
+      },
+      {
+        "category": "items",
+        "id": "无量剑法秘籍",
+        "name": "无量剑法秘籍"
+      },
+      {
+        "category": "items",
+        "id": "月梦爪",
+        "name": "月梦爪"
+      },
+      {
+        "category": "items",
+        "id": "松果",
+        "name": "松果"
+      },
+      {
+        "category": "items",
+        "id": "松风剑法秘籍",
+        "name": "松风剑法秘籍"
+      },
+      {
+        "category": "items",
+        "id": "橙色灯戒",
+        "name": "橙色灯戒"
+      },
+      {
+        "category": "items",
+        "id": "檀香佛珠",
+        "name": "檀香佛珠"
+      },
+      {
+        "category": "items",
+        "id": "水晶护符",
+        "name": "水晶护符"
+      },
+      {
+        "category": "externalSkills",
+        "id": "流星锤",
+        "name": "流星锤"
+      },
+      {
+        "category": "items",
+        "id": "流星锤",
+        "name": "流星锤"
+      },
+      {
+        "category": "items",
+        "id": "流星锤法",
+        "name": "流星锤法"
+      },
+      {
+        "category": "externalSkills",
+        "id": "海叟钓法",
+        "name": "海叟钓法"
+      },
+      {
+        "category": "items",
+        "id": "海叟钓法",
+        "name": "海叟钓法"
+      },
+      {
+        "category": "items",
+        "id": "灭仙爪",
+        "name": "灭仙爪"
+      },
+      {
+        "category": "items",
+        "id": "灵心慧质",
+        "name": "灵心慧质"
+      },
+      {
+        "category": "talents",
+        "id": "灵心慧质",
+        "name": "灵心慧质"
+      },
+      {
+        "category": "externalSkills",
+        "id": "燃木刀法",
+        "name": "燃木刀法"
+      },
+      {
+        "category": "items",
+        "id": "燃木刀法",
+        "name": "燃木刀法"
+      },
+      {
+        "category": "items",
+        "id": "特制鸡腿",
+        "name": "特制鸡腿"
+      },
+      {
+        "category": "items",
+        "id": "独孤九剑剑谱",
+        "name": "独孤九剑剑谱"
+      },
+      {
+        "category": "externalSkills",
+        "id": "玄虚刀法",
+        "name": "玄虚刀法"
+      },
+      {
+        "category": "items",
+        "id": "玄虚刀法",
+        "name": "玄虚刀法"
+      },
+      {
+        "category": "externalSkills",
+        "id": "玉蜂针",
+        "name": "玉蜂针"
+      },
+      {
+        "category": "items",
+        "id": "玉蜂针",
+        "name": "玉蜂针"
+      },
+      {
+        "category": "items",
+        "id": "王母蟠桃",
+        "name": "王母蟠桃"
+      },
+      {
+        "category": "items",
+        "id": "生生造化丹",
+        "name": "生生造化丹"
+      },
+      {
+        "category": "items",
+        "id": "疯魔杖法秘诀",
+        "name": "疯魔杖法秘诀"
+      },
+      {
+        "category": "items",
+        "id": "百变千幻云雾十三式秘籍",
+        "name": "百变千幻云雾十三式秘籍"
+      },
+      {
+        "category": "items",
+        "id": "百花错拳谱",
+        "name": "百花错拳谱"
+      },
+      {
+        "category": "specialSkills",
+        "id": "笑傲江湖曲",
+        "name": "笑傲江湖曲"
+      },
+      {
+        "category": "items",
+        "id": "笑傲江湖曲",
+        "name": "笑傲江湖曲"
+      },
+      {
+        "category": "items",
+        "id": "粗布披风",
+        "name": "粗布披风"
+      },
+      {
+        "category": "items",
+        "id": "精制匕首",
+        "name": "精制匕首"
+      },
+      {
+        "category": "items",
+        "id": "绕指柔剑剑谱",
+        "name": "绕指柔剑剑谱"
+      },
+      {
+        "category": "items",
+        "id": "续命八丸",
+        "name": "续命八丸"
+      },
+      {
+        "category": "items",
+        "id": "罗汉拳谱",
+        "name": "罗汉拳谱"
+      },
+      {
+        "category": "externalSkills",
+        "id": "草原刀法",
+        "name": "草原刀法"
+      },
+      {
+        "category": "items",
+        "id": "草原刀法",
+        "name": "草原刀法"
+      },
+      {
+        "category": "items",
+        "id": "蓝宝戒指",
+        "name": "蓝宝戒指"
+      },
+      {
+        "category": "externalSkills",
+        "id": "蛇鹤八打",
+        "name": "蛇鹤八打"
+      },
+      {
+        "category": "items",
+        "id": "蛇鹤八打",
+        "name": "蛇鹤八打"
+      },
+      {
+        "category": "externalSkills",
+        "id": "达摩剑法",
+        "name": "达摩剑法"
+      },
+      {
+        "category": "items",
+        "id": "达摩剑法",
+        "name": "达摩剑法"
+      },
+      {
+        "category": "items",
+        "id": "道家仙丹",
+        "name": "道家仙丹"
+      },
+      {
+        "category": "items",
+        "id": "金丝护腕",
+        "name": "金丝护腕"
+      },
+      {
+        "category": "items",
+        "id": "铁剑剑法秘籍",
+        "name": "铁剑剑法秘籍"
+      },
+      {
+        "category": "items",
+        "id": "铁掌掌谱",
+        "name": "铁掌掌谱"
+      },
+      {
+        "category": "items",
+        "id": "铲刀",
+        "name": "铲刀"
+      },
+      {
+        "category": "items",
+        "id": "锯齿刀",
+        "name": "锯齿刀"
+      },
+      {
+        "category": "items",
+        "id": "降龙十八掌谱",
+        "name": "降龙十八掌谱"
+      },
+      {
+        "category": "items",
+        "id": "隔空取物",
+        "name": "隔空取物"
+      },
+      {
+        "category": "talents",
+        "id": "隔空取物",
+        "name": "隔空取物"
+      },
+      {
+        "category": "items",
+        "id": "霓裳羽衣",
+        "name": "霓裳羽衣"
+      },
+      {
+        "category": "items",
+        "id": "青莲诗集",
+        "name": "青莲诗集"
+      },
+      {
+        "category": "items",
+        "id": "飘雪穿云掌法",
+        "name": "飘雪穿云掌法"
+      },
+      {
+        "category": "items",
+        "id": "飞轮",
+        "name": "飞轮"
+      },
+      {
+        "category": "items",
+        "id": "鸳鸯刀",
+        "name": "鸳鸯刀"
+      },
+      {
+        "category": "items",
+        "id": "黑玉断续膏",
+        "name": "黑玉断续膏"
+      },
+      {
+        "category": "items",
+        "id": "黑血神针秘籍",
+        "name": "黑血神针秘籍"
+      },
+      {
+        "category": "items",
+        "id": "龙泉剑",
+        "name": "龙泉剑"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "决战光明顶",
+    "category": "towers",
+    "name": "决战光明顶",
+    "description": "你将扮演六大派高手，围剿明教光明顶。",
+    "state": "资料已接入",
+    "source": "towers.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "tower",
+      "desc": "你将扮演六大派高手，围剿明教光明顶。",
+      "key": "决战光明顶",
+      "children": [
+        {
+          "tag": "map",
+          "key": "天关.决战光明顶",
+          "index": "0",
+          "children": [
+            {
+              "tag": "item",
+              "probability": "0.4",
+              "number": "1",
+              "key": "乾坤大挪移心法"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "2",
+              "key": "洗练书"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "生生造化丹"
+            }
+          ]
+        },
+        {
+          "tag": "condition",
+          "value": "天关.决战光明顶之证",
+          "type": "have_item"
+        }
+      ]
+    },
+    "runtime": {
+      "id": "决战光明顶",
+      "name": "决战光明顶",
+      "description": "你将扮演六大派高手，围剿明教光明顶。",
+      "stages": [
+        {
+          "id": "天关.决战光明顶",
+          "name": "天关.决战光明顶",
+          "battleId": "天关.决战光明顶",
+          "index": 0,
+          "rewards": [
+            {
+              "id": "乾坤大挪移心法",
+              "reward": {
+                "kind": "item",
+                "itemId": "乾坤大挪移心法"
+              },
+              "weight": 0.4,
+              "maxClaims": 1
+            },
+            {
+              "id": "洗练书",
+              "reward": {
+                "kind": "item",
+                "itemId": "洗练书"
+              },
+              "weight": 1.0,
+              "maxClaims": 2
+            },
+            {
+              "id": "生生造化丹",
+              "reward": {
+                "kind": "item",
+                "itemId": "生生造化丹"
+              },
+              "weight": 1.0
+            }
+          ],
+          "achievementIds": []
+        }
+      ],
+      "when": "item_count('天关.决战光明顶之证') >= 1"
+    },
+    "variants": [
+      {
+        "source": "towers.txt",
+        "node": {
+          "tag": "tower",
+          "desc": "你将扮演六大派高手，围剿明教光明顶。",
+          "key": "决战光明顶",
+          "children": [
+            {
+              "tag": "map",
+              "key": "天关.决战光明顶",
+              "index": "0",
+              "children": [
+                {
+                  "tag": "item",
+                  "probability": "0.4",
+                  "number": "1",
+                  "key": "乾坤大挪移心法"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "2",
+                  "key": "洗练书"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "生生造化丹"
+                }
+              ]
+            },
+            {
+              "tag": "condition",
+              "value": "天关.决战光明顶之证",
+              "type": "have_item"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "items",
+        "id": "乾坤大挪移心法",
+        "name": "乾坤大挪移心法"
+      },
+      {
+        "category": "battles",
+        "id": "天关.决战光明顶",
+        "name": "天关.决战光明顶"
+      },
+      {
+        "category": "items",
+        "id": "天关.决战光明顶之证",
+        "name": "天关.决战光明顶之证"
+      },
+      {
+        "category": "items",
+        "id": "洗练书",
+        "name": "洗练书"
+      },
+      {
+        "category": "items",
+        "id": "生生造化丹",
+        "name": "生生造化丹"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "林平之的复仇",
+    "category": "towers",
+    "name": "林平之的复仇",
+    "description": "你将扮演林平之，完成对木高峰、余沧海的复仇。",
+    "state": "资料已接入",
+    "source": "towers.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "tower",
+      "desc": "你将扮演林平之，完成对木高峰、余沧海的复仇。",
+      "key": "林平之的复仇",
+      "children": [
+        {
+          "tag": "map",
+          "key": "天关.林平之的复仇",
+          "index": "0",
+          "children": [
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "渡元禅师的木鱼"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "生生造化丹"
+            }
+          ]
+        },
+        {
+          "tag": "condition",
+          "value": "天关.林平之的复仇",
+          "type": "have_item"
+        }
+      ]
+    },
+    "runtime": {
+      "id": "林平之的复仇",
+      "name": "林平之的复仇",
+      "description": "你将扮演林平之，完成对木高峰、余沧海的复仇。",
+      "stages": [
+        {
+          "id": "天关.林平之的复仇",
+          "name": "天关.林平之的复仇",
+          "battleId": "天关.林平之的复仇",
+          "index": 0,
+          "rewards": [
+            {
+              "id": "渡元禅师的木鱼",
+              "reward": {
+                "kind": "item",
+                "itemId": "渡元禅师的木鱼"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "生生造化丹",
+              "reward": {
+                "kind": "item",
+                "itemId": "生生造化丹"
+              },
+              "weight": 1.0
+            }
+          ],
+          "achievementIds": []
+        }
+      ],
+      "when": "item_count('天关.林平之的复仇') >= 1"
+    },
+    "variants": [
+      {
+        "source": "towers.txt",
+        "node": {
+          "tag": "tower",
+          "desc": "你将扮演林平之，完成对木高峰、余沧海的复仇。",
+          "key": "林平之的复仇",
+          "children": [
+            {
+              "tag": "map",
+              "key": "天关.林平之的复仇",
+              "index": "0",
+              "children": [
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "渡元禅师的木鱼"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "生生造化丹"
+                }
+              ]
+            },
+            {
+              "tag": "condition",
+              "value": "天关.林平之的复仇",
+              "type": "have_item"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "items",
+        "id": "天关.林平之的复仇",
+        "name": "天关.林平之的复仇"
+      },
+      {
+        "category": "battles",
+        "id": "天关.林平之的复仇",
+        "name": "天关.林平之的复仇"
+      },
+      {
+        "category": "items",
+        "id": "渡元禅师的木鱼",
+        "name": "渡元禅师的木鱼"
+      },
+      {
+        "category": "items",
+        "id": "生生造化丹",
+        "name": "生生造化丹"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "血战少室山",
+    "category": "towers",
+    "name": "血战少室山",
+    "description": "你将扮演庄聚贤，慕容复，丁春秋对战天龙三兄弟",
+    "state": "资料已接入",
+    "source": "towers.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "tower",
+      "desc": "你将扮演庄聚贤，慕容复，丁春秋对战天龙三兄弟",
+      "key": "血战少室山",
+      "children": [
+        {
+          "tag": "map",
+          "key": "天关.血战少室山",
+          "index": "0",
+          "children": [
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "罗汉伏魔功秘本"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "生生造化丹"
+            }
+          ]
+        },
+        {
+          "tag": "condition",
+          "value": "天关.血战少室山",
+          "type": "have_item"
+        }
+      ]
+    },
+    "runtime": {
+      "id": "血战少室山",
+      "name": "血战少室山",
+      "description": "你将扮演庄聚贤，慕容复，丁春秋对战天龙三兄弟",
+      "stages": [
+        {
+          "id": "天关.血战少室山",
+          "name": "天关.血战少室山",
+          "battleId": "天关.血战少室山",
+          "index": 0,
+          "rewards": [
+            {
+              "id": "罗汉伏魔功秘本",
+              "reward": {
+                "kind": "item",
+                "itemId": "罗汉伏魔功秘本"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "生生造化丹",
+              "reward": {
+                "kind": "item",
+                "itemId": "生生造化丹"
+              },
+              "weight": 1.0
+            }
+          ],
+          "achievementIds": []
+        }
+      ],
+      "when": "item_count('天关.血战少室山') >= 1"
+    },
+    "variants": [
+      {
+        "source": "towers.txt",
+        "node": {
+          "tag": "tower",
+          "desc": "你将扮演庄聚贤，慕容复，丁春秋对战天龙三兄弟",
+          "key": "血战少室山",
+          "children": [
+            {
+              "tag": "map",
+              "key": "天关.血战少室山",
+              "index": "0",
+              "children": [
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "罗汉伏魔功秘本"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "生生造化丹"
+                }
+              ]
+            },
+            {
+              "tag": "condition",
+              "value": "天关.血战少室山",
+              "type": "have_item"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "items",
+        "id": "天关.血战少室山",
+        "name": "天关.血战少室山"
+      },
+      {
+        "category": "battles",
+        "id": "天关.血战少室山",
+        "name": "天关.血战少室山"
+      },
+      {
+        "category": "items",
+        "id": "生生造化丹",
+        "name": "生生造化丹"
+      },
+      {
+        "category": "items",
+        "id": "罗汉伏魔功秘本",
+        "name": "罗汉伏魔功秘本"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "越女剑",
+    "category": "towers",
+    "name": "越女剑",
+    "description": "挑战《越女剑》顶级BOSS 阿青",
+    "state": "资料已接入",
+    "source": "towers.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "tower",
+      "desc": "挑战《越女剑》顶级BOSS 阿青",
+      "key": "越女剑",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "天关.越女剑",
+          "type": "have_item"
+        },
+        {
+          "tag": "map",
+          "key": "天关.越女剑",
+          "index": "0",
+          "children": [
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "1",
+              "key": "越女剑法秘籍"
+            },
+            {
+              "tag": "item",
+              "probability": "0.05",
+              "number": "1",
+              "key": "越女神剑"
+            },
+            {
+              "tag": "item",
+              "probability": "0.1",
+              "number": "1",
+              "key": "小人物的逆袭"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "仙灵琼露"
+            }
+          ]
+        }
+      ]
+    },
+    "runtime": {
+      "id": "越女剑",
+      "name": "越女剑",
+      "description": "挑战《越女剑》顶级BOSS 阿青",
+      "stages": [
+        {
+          "id": "天关.越女剑",
+          "name": "天关.越女剑",
+          "battleId": "天关.越女剑",
+          "index": 0,
+          "rewards": [
+            {
+              "id": "越女剑法秘籍",
+              "reward": {
+                "kind": "item",
+                "itemId": "越女剑法秘籍"
+              },
+              "weight": 1.0,
+              "maxClaims": 1
+            },
+            {
+              "id": "越女神剑",
+              "reward": {
+                "kind": "item",
+                "itemId": "越女神剑"
+              },
+              "weight": 0.05,
+              "maxClaims": 1
+            },
+            {
+              "id": "小人物的逆袭",
+              "reward": {
+                "kind": "item",
+                "itemId": "小人物的逆袭"
+              },
+              "weight": 0.1,
+              "maxClaims": 1
+            },
+            {
+              "id": "仙灵琼露",
+              "reward": {
+                "kind": "item",
+                "itemId": "仙灵琼露"
+              },
+              "weight": 1.0
+            }
+          ],
+          "achievementIds": []
+        }
+      ],
+      "when": "item_count('天关.越女剑') >= 1"
+    },
+    "variants": [
+      {
+        "source": "towers.txt",
+        "node": {
+          "tag": "tower",
+          "desc": "挑战《越女剑》顶级BOSS 阿青",
+          "key": "越女剑",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "天关.越女剑",
+              "type": "have_item"
+            },
+            {
+              "tag": "map",
+              "key": "天关.越女剑",
+              "index": "0",
+              "children": [
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "1",
+                  "key": "越女剑法秘籍"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.05",
+                  "number": "1",
+                  "key": "越女神剑"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.1",
+                  "number": "1",
+                  "key": "小人物的逆袭"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "仙灵琼露"
+                }
+              ]
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "items",
+        "id": "仙灵琼露",
+        "name": "仙灵琼露"
+      },
+      {
+        "category": "items",
+        "id": "天关.越女剑",
+        "name": "天关.越女剑"
+      },
+      {
+        "category": "battles",
+        "id": "天关.越女剑",
+        "name": "天关.越女剑"
+      },
+      {
+        "category": "items",
+        "id": "小人物的逆袭",
+        "name": "小人物的逆袭"
+      },
+      {
+        "category": "talents",
+        "id": "越女剑",
+        "name": "越女剑"
+      },
+      {
+        "category": "items",
+        "id": "越女剑法秘籍",
+        "name": "越女剑法秘籍"
+      },
+      {
+        "category": "items",
+        "id": "越女神剑",
+        "name": "越女神剑"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "externalSkills",
+        "id": "越女剑法",
+        "name": "越女剑法"
+      }
+    ]
+  },
+  {
+    "id": "炼狱",
+    "category": "towers",
+    "name": "炼狱",
+    "description": "炼狱级天关，挑战各个绝顶高手，获取丰厚的奖励。",
+    "state": "资料已接入",
+    "source": "towers.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "tower",
+      "desc": "炼狱级天关，挑战各个绝顶高手，获取丰厚的奖励。",
+      "key": "炼狱",
+      "children": [
+        {
+          "tag": "map",
+          "key": "天关.炼狱.作为炼狱，一开始就应该很难",
+          "index": "0",
+          "children": [
+            {
+              "tag": "item",
+              "probability": "0.2",
+              "number": "3",
+              "key": "灭仙爪"
+            },
+            {
+              "tag": "item",
+              "probability": "0.2",
+              "number": "3",
+              "key": "倚天剑"
+            },
+            {
+              "tag": "item",
+              "probability": "0.2",
+              "number": "3",
+              "key": "屠龙刀"
+            },
+            {
+              "tag": "item",
+              "probability": "0.2",
+              "number": "3",
+              "key": "打狗棒"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "天王保命丹"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "续命八丸"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "松果"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "霓裳羽衣"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "幽梦衣"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "仙灵琼露"
+            }
+          ]
+        },
+        {
+          "tag": "map",
+          "key": "天关.炼狱.来吧，小规模的华山论剑",
+          "index": "1",
+          "children": [
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "仙灵琼露"
+            },
+            {
+              "tag": "item",
+              "probability": "0.5",
+              "number": "1",
+              "key": "降龙十八掌谱"
+            },
+            {
+              "tag": "item",
+              "probability": "0.5",
+              "number": "1",
+              "key": "独孤九剑剑谱"
+            },
+            {
+              "tag": "item",
+              "probability": "0.5",
+              "number": "1",
+              "key": "鸳鸯刀"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "2",
+              "key": "笑傲江湖曲"
+            },
+            {
+              "tag": "item",
+              "probability": "0.2",
+              "number": "3",
+              "key": "天下轻功总诀"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "3",
+              "key": "青莲诗集"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "3",
+              "key": "天地同寿"
+            },
+            {
+              "tag": "item",
+              "probability": "0.5",
+              "number": "3",
+              "key": "王母蟠桃"
+            },
+            {
+              "tag": "item",
+              "probability": "0.5",
+              "number": "3",
+              "key": "道家仙丹"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "蓝宝戒指"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "水晶护符"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "龙泉剑"
+            }
+          ]
+        },
+        {
+          "tag": "map",
+          "key": "天关.炼狱.谁才是高手高手高高手",
+          "index": "2",
+          "children": [
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "仙灵琼露"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "圣战之药"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "1",
+              "key": "黑暗遗篇之黑天死炎"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "2",
+              "key": "乾坤大挪移心法"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "3",
+              "key": "素心神剑心得"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "3",
+              "key": "太极心得手抄本"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "1",
+              "key": "华佗遗篇"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "3",
+              "key": "凌波微步图谱"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "3",
+              "key": "无尽斗志"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "3",
+              "key": "神行百变秘籍"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "3",
+              "key": "厚黑学"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "1",
+              "key": "碎裂的怒吼"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "1",
+              "key": "沾衣十八跌"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "1",
+              "key": "万年长春"
+            }
+          ]
+        },
+        {
+          "tag": "map",
+          "key": "天关.炼狱.又见血战重阳宫！",
+          "index": "3",
+          "children": [
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "3",
+              "key": "独孤求败的草帽"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "3",
+              "key": "达摩祖师的木鱼"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "3",
+              "key": "孙悟空的紧箍咒"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "3",
+              "key": "蚩尤的护甲"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "3",
+              "key": "姜子牙的道袍"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "3",
+              "key": "岳飞的重铠"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "3",
+              "key": "被诅咒的木刀"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "3",
+              "key": "真.倚天剑"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "3",
+              "key": "真.屠龙刀"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "3",
+              "key": "真.打狗棒"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "3",
+              "key": "真.灭仙爪"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "1",
+              "key": "魔神信物"
+            },
+            {
+              "tag": "item",
+              "probability": "0.3",
+              "number": "1",
+              "key": "千变魔女的披风"
+            },
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "圣战之药"
+            }
+          ]
+        },
+        {
+          "tag": "condition",
+          "value": "天关.炼狱之证",
+          "type": "have_item"
+        },
+        {
+          "tag": "condition",
+          "value": "crazy",
+          "type": "game_mode"
+        }
+      ]
+    },
+    "runtime": {
+      "id": "炼狱",
+      "name": "炼狱",
+      "description": "炼狱级天关，挑战各个绝顶高手，获取丰厚的奖励。",
+      "stages": [
+        {
+          "id": "天关.炼狱.作为炼狱，一开始就应该很难",
+          "name": "天关.炼狱.作为炼狱，一开始就应该很难",
+          "battleId": "天关.炼狱.作为炼狱，一开始就应该很难",
+          "index": 0,
+          "rewards": [
+            {
+              "id": "灭仙爪",
+              "reward": {
+                "kind": "item",
+                "itemId": "灭仙爪"
+              },
+              "weight": 0.2,
+              "maxClaims": 3
+            },
+            {
+              "id": "倚天剑",
+              "reward": {
+                "kind": "item",
+                "itemId": "倚天剑"
+              },
+              "weight": 0.2,
+              "maxClaims": 3
+            },
+            {
+              "id": "屠龙刀",
+              "reward": {
+                "kind": "item",
+                "itemId": "屠龙刀"
+              },
+              "weight": 0.2,
+              "maxClaims": 3
+            },
+            {
+              "id": "打狗棒",
+              "reward": {
+                "kind": "item",
+                "itemId": "打狗棒"
+              },
+              "weight": 0.2,
+              "maxClaims": 3
+            },
+            {
+              "id": "天王保命丹",
+              "reward": {
+                "kind": "item",
+                "itemId": "天王保命丹"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "续命八丸",
+              "reward": {
+                "kind": "item",
+                "itemId": "续命八丸"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "松果",
+              "reward": {
+                "kind": "item",
+                "itemId": "松果"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "霓裳羽衣",
+              "reward": {
+                "kind": "item",
+                "itemId": "霓裳羽衣"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "幽梦衣",
+              "reward": {
+                "kind": "item",
+                "itemId": "幽梦衣"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "仙灵琼露",
+              "reward": {
+                "kind": "item",
+                "itemId": "仙灵琼露"
+              },
+              "weight": 1.0
+            }
+          ],
+          "achievementIds": []
+        },
+        {
+          "id": "天关.炼狱.来吧，小规模的华山论剑",
+          "name": "天关.炼狱.来吧，小规模的华山论剑",
+          "battleId": "天关.炼狱.来吧，小规模的华山论剑",
+          "index": 1,
+          "rewards": [
+            {
+              "id": "仙灵琼露",
+              "reward": {
+                "kind": "item",
+                "itemId": "仙灵琼露"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "降龙十八掌谱",
+              "reward": {
+                "kind": "item",
+                "itemId": "降龙十八掌谱"
+              },
+              "weight": 0.5,
+              "maxClaims": 1
+            },
+            {
+              "id": "独孤九剑剑谱",
+              "reward": {
+                "kind": "item",
+                "itemId": "独孤九剑剑谱"
+              },
+              "weight": 0.5,
+              "maxClaims": 1
+            },
+            {
+              "id": "鸳鸯刀",
+              "reward": {
+                "kind": "item",
+                "itemId": "鸳鸯刀"
+              },
+              "weight": 0.5,
+              "maxClaims": 1
+            },
+            {
+              "id": "笑傲江湖曲",
+              "reward": {
+                "kind": "item",
+                "itemId": "笑傲江湖曲"
+              },
+              "weight": 0.3,
+              "maxClaims": 2
+            },
+            {
+              "id": "天下轻功总诀",
+              "reward": {
+                "kind": "item",
+                "itemId": "天下轻功总诀"
+              },
+              "weight": 0.2,
+              "maxClaims": 3
+            },
+            {
+              "id": "青莲诗集",
+              "reward": {
+                "kind": "item",
+                "itemId": "青莲诗集"
+              },
+              "weight": 0.3,
+              "maxClaims": 3
+            },
+            {
+              "id": "天地同寿",
+              "reward": {
+                "kind": "item",
+                "itemId": "天地同寿"
+              },
+              "weight": 0.3,
+              "maxClaims": 3
+            },
+            {
+              "id": "王母蟠桃",
+              "reward": {
+                "kind": "item",
+                "itemId": "王母蟠桃"
+              },
+              "weight": 0.5,
+              "maxClaims": 3
+            },
+            {
+              "id": "道家仙丹",
+              "reward": {
+                "kind": "item",
+                "itemId": "道家仙丹"
+              },
+              "weight": 0.5,
+              "maxClaims": 3
+            },
+            {
+              "id": "蓝宝戒指",
+              "reward": {
+                "kind": "item",
+                "itemId": "蓝宝戒指"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "水晶护符",
+              "reward": {
+                "kind": "item",
+                "itemId": "水晶护符"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "龙泉剑",
+              "reward": {
+                "kind": "item",
+                "itemId": "龙泉剑"
+              },
+              "weight": 1.0
+            }
+          ],
+          "achievementIds": []
+        },
+        {
+          "id": "天关.炼狱.谁才是高手高手高高手",
+          "name": "天关.炼狱.谁才是高手高手高高手",
+          "battleId": "天关.炼狱.谁才是高手高手高高手",
+          "index": 2,
+          "rewards": [
+            {
+              "id": "仙灵琼露",
+              "reward": {
+                "kind": "item",
+                "itemId": "仙灵琼露"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "圣战之药",
+              "reward": {
+                "kind": "item",
+                "itemId": "圣战之药"
+              },
+              "weight": 1.0
+            },
+            {
+              "id": "黑暗遗篇之黑天死炎",
+              "reward": {
+                "kind": "item",
+                "itemId": "黑暗遗篇之黑天死炎"
+              },
+              "weight": 0.3,
+              "maxClaims": 1
+            },
+            {
+              "id": "乾坤大挪移心法",
+              "reward": {
+                "kind": "item",
+                "itemId": "乾坤大挪移心法"
+              },
+              "weight": 0.3,
+              "maxClaims": 2
+            },
+            {
+              "id": "素心神剑心得",
+              "reward": {
+                "kind": "item",
+                "itemId": "素心神剑心得"
+              },
+              "weight": 0.3,
+              "maxClaims": 3
+            },
+            {
+              "id": "太极心得手抄本",
+              "reward": {
+                "kind": "item",
+                "itemId": "太极心得手抄本"
+              },
+              "weight": 0.3,
+              "maxClaims": 3
+            },
+            {
+              "id": "华佗遗篇",
+              "reward": {
+                "kind": "item",
+                "itemId": "华佗遗篇"
+              },
+              "weight": 0.3,
+              "maxClaims": 1
+            },
+            {
+              "id": "凌波微步图谱",
+              "reward": {
+                "kind": "item",
+                "itemId": "凌波微步图谱"
+              },
+              "weight": 0.3,
+              "maxClaims": 3
+            },
+            {
+              "id": "无尽斗志",
+              "reward": {
+                "kind": "item",
+                "itemId": "无尽斗志"
+              },
+              "weight": 0.3,
+              "maxClaims": 3
+            },
+            {
+              "id": "神行百变秘籍",
+              "reward": {
+                "kind": "item",
+                "itemId": "神行百变秘籍"
+              },
+              "weight": 0.3,
+              "maxClaims": 3
+            },
+            {
+              "id": "厚黑学",
+              "reward": {
+                "kind": "item",
+                "itemId": "厚黑学"
+              },
+              "weight": 0.3,
+              "maxClaims": 3
+            },
+            {
+              "id": "碎裂的怒吼",
+              "reward": {
+                "kind": "item",
+                "itemId": "碎裂的怒吼"
+              },
+              "weight": 0.3,
+              "maxClaims": 1
+            },
+            {
+              "id": "沾衣十八跌",
+              "reward": {
+                "kind": "item",
+                "itemId": "沾衣十八跌"
+              },
+              "weight": 0.3,
+              "maxClaims": 1
+            },
+            {
+              "id": "万年长春",
+              "reward": {
+                "kind": "item",
+                "itemId": "万年长春"
+              },
+              "weight": 0.3,
+              "maxClaims": 1
+            }
+          ],
+          "achievementIds": []
+        },
+        {
+          "id": "天关.炼狱.又见血战重阳宫！",
+          "name": "天关.炼狱.又见血战重阳宫！",
+          "battleId": "天关.炼狱.又见血战重阳宫！",
+          "index": 3,
+          "rewards": [
+            {
+              "id": "独孤求败的草帽",
+              "reward": {
+                "kind": "item",
+                "itemId": "独孤求败的草帽"
+              },
+              "weight": 0.3,
+              "maxClaims": 3
+            },
+            {
+              "id": "达摩祖师的木鱼",
+              "reward": {
+                "kind": "item",
+                "itemId": "达摩祖师的木鱼"
+              },
+              "weight": 0.3,
+              "maxClaims": 3
+            },
+            {
+              "id": "孙悟空的紧箍咒",
+              "reward": {
+                "kind": "item",
+                "itemId": "孙悟空的紧箍咒"
+              },
+              "weight": 0.3,
+              "maxClaims": 3
+            },
+            {
+              "id": "蚩尤的护甲",
+              "reward": {
+                "kind": "item",
+                "itemId": "蚩尤的护甲"
+              },
+              "weight": 0.3,
+              "maxClaims": 3
+            },
+            {
+              "id": "姜子牙的道袍",
+              "reward": {
+                "kind": "item",
+                "itemId": "姜子牙的道袍"
+              },
+              "weight": 0.3,
+              "maxClaims": 3
+            },
+            {
+              "id": "岳飞的重铠",
+              "reward": {
+                "kind": "item",
+                "itemId": "岳飞的重铠"
+              },
+              "weight": 0.3,
+              "maxClaims": 3
+            },
+            {
+              "id": "被诅咒的木刀",
+              "reward": {
+                "kind": "item",
+                "itemId": "被诅咒的木刀"
+              },
+              "weight": 0.3,
+              "maxClaims": 3
+            },
+            {
+              "id": "真.倚天剑",
+              "reward": {
+                "kind": "item",
+                "itemId": "真.倚天剑"
+              },
+              "weight": 0.3,
+              "maxClaims": 3
+            },
+            {
+              "id": "真.屠龙刀",
+              "reward": {
+                "kind": "item",
+                "itemId": "真.屠龙刀"
+              },
+              "weight": 0.3,
+              "maxClaims": 3
+            },
+            {
+              "id": "真.打狗棒",
+              "reward": {
+                "kind": "item",
+                "itemId": "真.打狗棒"
+              },
+              "weight": 0.3,
+              "maxClaims": 3
+            },
+            {
+              "id": "真.灭仙爪",
+              "reward": {
+                "kind": "item",
+                "itemId": "真.灭仙爪"
+              },
+              "weight": 0.3,
+              "maxClaims": 3
+            },
+            {
+              "id": "魔神信物",
+              "reward": {
+                "kind": "item",
+                "itemId": "魔神信物"
+              },
+              "weight": 0.3,
+              "maxClaims": 1
+            },
+            {
+              "id": "千变魔女的披风",
+              "reward": {
+                "kind": "item",
+                "itemId": "千变魔女的披风"
+              },
+              "weight": 0.3,
+              "maxClaims": 1
+            },
+            {
+              "id": "圣战之药",
+              "reward": {
+                "kind": "item",
+                "itemId": "圣战之药"
+              },
+              "weight": 1.0
+            }
+          ],
+          "achievementIds": []
+        }
+      ],
+      "when": "item_count('天关.炼狱之证') >= 1 && difficulty == 'crazy'"
+    },
+    "variants": [
+      {
+        "source": "towers.txt",
+        "node": {
+          "tag": "tower",
+          "desc": "炼狱级天关，挑战各个绝顶高手，获取丰厚的奖励。",
+          "key": "炼狱",
+          "children": [
+            {
+              "tag": "map",
+              "key": "天关.炼狱.作为炼狱，一开始就应该很难",
+              "index": "0",
+              "children": [
+                {
+                  "tag": "item",
+                  "probability": "0.2",
+                  "number": "3",
+                  "key": "灭仙爪"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.2",
+                  "number": "3",
+                  "key": "倚天剑"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.2",
+                  "number": "3",
+                  "key": "屠龙刀"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.2",
+                  "number": "3",
+                  "key": "打狗棒"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "天王保命丹"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "续命八丸"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "松果"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "霓裳羽衣"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "幽梦衣"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "仙灵琼露"
+                }
+              ]
+            },
+            {
+              "tag": "map",
+              "key": "天关.炼狱.来吧，小规模的华山论剑",
+              "index": "1",
+              "children": [
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "仙灵琼露"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.5",
+                  "number": "1",
+                  "key": "降龙十八掌谱"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.5",
+                  "number": "1",
+                  "key": "独孤九剑剑谱"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.5",
+                  "number": "1",
+                  "key": "鸳鸯刀"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "2",
+                  "key": "笑傲江湖曲"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.2",
+                  "number": "3",
+                  "key": "天下轻功总决"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "3",
+                  "key": "青莲诗集"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "3",
+                  "key": "天地同寿"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.5",
+                  "number": "3",
+                  "key": "王母蟠桃"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.5",
+                  "number": "3",
+                  "key": "道家仙丹"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "蓝宝戒指"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "水晶护符"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "龙泉剑"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "仙灵琼露"
+                }
+              ]
+            },
+            {
+              "tag": "map",
+              "key": "天关.炼狱.谁才是高手高手高高手",
+              "index": "2",
+              "children": [
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "仙灵琼露"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "圣战之药"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "1",
+                  "key": "黑暗遗篇之黑天死炎"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "2",
+                  "key": "乾坤大挪移心法"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "3",
+                  "key": "素心神剑心得"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "3",
+                  "key": "太极心得手抄本"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "1",
+                  "key": "华佗遗篇"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "3",
+                  "key": "凌波微步图谱"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "3",
+                  "key": "无尽斗志"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "3",
+                  "key": "神行百变秘籍"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "3",
+                  "key": "厚黑学"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "1",
+                  "key": "碎裂的怒吼"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "1",
+                  "key": "沾衣十八跌"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "1",
+                  "key": "万年长春"
+                }
+              ]
+            },
+            {
+              "tag": "map",
+              "key": "天关.炼狱.又见血战重阳宫！",
+              "index": "3",
+              "children": [
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "3",
+                  "key": "独孤求败的草帽"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "3",
+                  "key": "达摩祖师的木鱼"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "3",
+                  "key": "孙悟空的紧箍咒"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "3",
+                  "key": "蚩尤的护甲"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "3",
+                  "key": "姜子牙的道袍"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "3",
+                  "key": "岳飞的重铠"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "3",
+                  "key": "被诅咒的木刀"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "3",
+                  "key": "真.倚天剑"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "3",
+                  "key": "真.屠龙刀"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "3",
+                  "key": "真.打狗棒"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "3",
+                  "key": "真.灭仙爪"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "1",
+                  "key": "魔神信物"
+                },
+                {
+                  "tag": "item",
+                  "probability": "0.3",
+                  "number": "1",
+                  "key": "千变魔女的披风"
+                },
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "圣战之药"
+                }
+              ]
+            },
+            {
+              "tag": "condition",
+              "value": "天关.炼狱之证",
+              "type": "have_item"
+            },
+            {
+              "tag": "condition",
+              "value": "crazy",
+              "type": "game_mode"
+            }
+          ]
+        },
+        "equalRecord": false
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "items",
+        "id": "万年长春",
+        "name": "万年长春"
+      },
+      {
+        "category": "talents",
+        "id": "万年长春",
+        "name": "万年长春"
+      },
+      {
+        "category": "items",
+        "id": "乾坤大挪移心法",
+        "name": "乾坤大挪移心法"
+      },
+      {
+        "category": "items",
+        "id": "仙灵琼露",
+        "name": "仙灵琼露"
+      },
+      {
+        "category": "items",
+        "id": "倚天剑",
+        "name": "倚天剑"
+      },
+      {
+        "category": "items",
+        "id": "凌波微步图谱",
+        "name": "凌波微步图谱"
+      },
+      {
+        "category": "items",
+        "id": "千变魔女的披风",
+        "name": "千变魔女的披风"
+      },
+      {
+        "category": "items",
+        "id": "华佗遗篇",
+        "name": "华佗遗篇"
+      },
+      {
+        "category": "items",
+        "id": "厚黑学",
+        "name": "厚黑学"
+      },
+      {
+        "category": "items",
+        "id": "圣战之药",
+        "name": "圣战之药"
+      },
+      {
+        "category": "items",
+        "id": "天下轻功总诀",
+        "name": "天下轻功总诀"
+      },
+      {
+        "category": "battles",
+        "id": "天关.炼狱.作为炼狱，一开始就应该很难",
+        "name": "天关.炼狱.作为炼狱，一开始就应该很难"
+      },
+      {
+        "category": "battles",
+        "id": "天关.炼狱.又见血战重阳宫！",
+        "name": "天关.炼狱.又见血战重阳宫！"
+      },
+      {
+        "category": "battles",
+        "id": "天关.炼狱.来吧，小规模的华山论剑",
+        "name": "天关.炼狱.来吧，小规模的华山论剑"
+      },
+      {
+        "category": "battles",
+        "id": "天关.炼狱.谁才是高手高手高高手",
+        "name": "天关.炼狱.谁才是高手高手高高手"
+      },
+      {
+        "category": "items",
+        "id": "天关.炼狱之证",
+        "name": "天关.炼狱之证"
+      },
+      {
+        "category": "specialSkills",
+        "id": "天地同寿",
+        "name": "天地同寿"
+      },
+      {
+        "category": "items",
+        "id": "天地同寿",
+        "name": "天地同寿"
+      },
+      {
+        "category": "items",
+        "id": "天王保命丹",
+        "name": "天王保命丹"
+      },
+      {
+        "category": "items",
+        "id": "太极心得手抄本",
+        "name": "太极心得手抄本"
+      },
+      {
+        "category": "items",
+        "id": "姜子牙的道袍",
+        "name": "姜子牙的道袍"
+      },
+      {
+        "category": "items",
+        "id": "孙悟空的紧箍咒",
+        "name": "孙悟空的紧箍咒"
+      },
+      {
+        "category": "items",
+        "id": "屠龙刀",
+        "name": "屠龙刀"
+      },
+      {
+        "category": "items",
+        "id": "岳飞的重铠",
+        "name": "岳飞的重铠"
+      },
+      {
+        "category": "items",
+        "id": "幽梦衣",
+        "name": "幽梦衣"
+      },
+      {
+        "category": "items",
+        "id": "打狗棒",
+        "name": "打狗棒"
+      },
+      {
+        "category": "items",
+        "id": "无尽斗志",
+        "name": "无尽斗志"
+      },
+      {
+        "category": "talents",
+        "id": "无尽斗志",
+        "name": "无尽斗志"
+      },
+      {
+        "category": "items",
+        "id": "松果",
+        "name": "松果"
+      },
+      {
+        "category": "items",
+        "id": "水晶护符",
+        "name": "水晶护符"
+      },
+      {
+        "category": "items",
+        "id": "沾衣十八跌",
+        "name": "沾衣十八跌"
+      },
+      {
+        "category": "talents",
+        "id": "沾衣十八跌",
+        "name": "沾衣十八跌"
+      },
+      {
+        "category": "buffs",
+        "id": "沾衣十八跌",
+        "name": "沾衣十八跌"
+      },
+      {
+        "category": "items",
+        "id": "灭仙爪",
+        "name": "灭仙爪"
+      },
+      {
+        "category": "items",
+        "id": "独孤九剑剑谱",
+        "name": "独孤九剑剑谱"
+      },
+      {
+        "category": "items",
+        "id": "独孤求败的草帽",
+        "name": "独孤求败的草帽"
+      },
+      {
+        "category": "items",
+        "id": "王母蟠桃",
+        "name": "王母蟠桃"
+      },
+      {
+        "category": "items",
+        "id": "真.倚天剑",
+        "name": "真.倚天剑"
+      },
+      {
+        "category": "items",
+        "id": "真.屠龙刀",
+        "name": "真.屠龙刀"
+      },
+      {
+        "category": "items",
+        "id": "真.打狗棒",
+        "name": "真.打狗棒"
+      },
+      {
+        "category": "items",
+        "id": "真.灭仙爪",
+        "name": "真.灭仙爪"
+      },
+      {
+        "category": "items",
+        "id": "碎裂的怒吼",
+        "name": "碎裂的怒吼"
+      },
+      {
+        "category": "talents",
+        "id": "碎裂的怒吼",
+        "name": "碎裂的怒吼"
+      },
+      {
+        "category": "items",
+        "id": "神行百变秘籍",
+        "name": "神行百变秘籍"
+      },
+      {
+        "category": "specialSkills",
+        "id": "笑傲江湖曲",
+        "name": "笑傲江湖曲"
+      },
+      {
+        "category": "items",
+        "id": "笑傲江湖曲",
+        "name": "笑傲江湖曲"
+      },
+      {
+        "category": "items",
+        "id": "素心神剑心得",
+        "name": "素心神剑心得"
+      },
+      {
+        "category": "items",
+        "id": "续命八丸",
+        "name": "续命八丸"
+      },
+      {
+        "category": "items",
+        "id": "蓝宝戒指",
+        "name": "蓝宝戒指"
+      },
+      {
+        "category": "items",
+        "id": "蚩尤的护甲",
+        "name": "蚩尤的护甲"
+      },
+      {
+        "category": "items",
+        "id": "被诅咒的木刀",
+        "name": "被诅咒的木刀"
+      },
+      {
+        "category": "items",
+        "id": "达摩祖师的木鱼",
+        "name": "达摩祖师的木鱼"
+      },
+      {
+        "category": "items",
+        "id": "道家仙丹",
+        "name": "道家仙丹"
+      },
+      {
+        "category": "items",
+        "id": "降龙十八掌谱",
+        "name": "降龙十八掌谱"
+      },
+      {
+        "category": "items",
+        "id": "霓裳羽衣",
+        "name": "霓裳羽衣"
+      },
+      {
+        "category": "items",
+        "id": "青莲诗集",
+        "name": "青莲诗集"
+      },
+      {
+        "category": "items",
+        "id": "魔神信物",
+        "name": "魔神信物"
+      },
+      {
+        "category": "items",
+        "id": "鸳鸯刀",
+        "name": "鸳鸯刀"
+      },
+      {
+        "category": "items",
+        "id": "黑暗遗篇之黑天死炎",
+        "name": "黑暗遗篇之黑天死炎"
+      },
+      {
+        "category": "items",
+        "id": "龙泉剑",
+        "name": "龙泉剑"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "华山论剑",
+    "category": "towers",
+    "name": "华山论剑",
+    "description": "最终华山论剑",
+    "state": "资料已接入",
+    "source": "towers.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "tower",
+      "desc": "最终华山论剑",
+      "key": "华山论剑",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "天关.华山论剑之证",
+          "type": "have_item"
+        },
+        {
+          "tag": "map",
+          "key": "华山论剑.不服输的高手们",
+          "index": "0",
+          "children": [
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "仙灵琼露"
+            }
+          ]
+        },
+        {
+          "tag": "map",
+          "key": "华山论剑.来吧，把你们统统打倒",
+          "index": "1",
+          "children": [
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "仙灵琼露"
+            }
+          ]
+        },
+        {
+          "tag": "map",
+          "key": "华山论剑.不怕死的就上吧",
+          "index": "2",
+          "children": [
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "仙灵琼露"
+            }
+          ]
+        },
+        {
+          "tag": "map",
+          "key": "华山论剑.天下第一战",
+          "index": "3",
+          "children": [
+            {
+              "tag": "item",
+              "probability": "1.0",
+              "number": "-1",
+              "key": "仙灵琼露"
+            }
+          ]
+        }
+      ]
+    },
+    "runtime": {
+      "id": "华山论剑",
+      "name": "华山论剑",
+      "description": "最终华山论剑",
+      "stages": [
+        {
+          "id": "华山论剑.不服输的高手们",
+          "name": "华山论剑.不服输的高手们",
+          "battleId": "华山论剑.不服输的高手们",
+          "index": 0,
+          "rewards": [
+            {
+              "id": "仙灵琼露",
+              "reward": {
+                "kind": "item",
+                "itemId": "仙灵琼露"
+              },
+              "weight": 1.0
+            }
+          ],
+          "achievementIds": []
+        },
+        {
+          "id": "华山论剑.来吧，把你们统统打倒",
+          "name": "华山论剑.来吧，把你们统统打倒",
+          "battleId": "华山论剑.来吧，把你们统统打倒",
+          "index": 1,
+          "rewards": [
+            {
+              "id": "仙灵琼露",
+              "reward": {
+                "kind": "item",
+                "itemId": "仙灵琼露"
+              },
+              "weight": 1.0
+            }
+          ],
+          "achievementIds": []
+        },
+        {
+          "id": "华山论剑.不怕死的就上吧",
+          "name": "华山论剑.不怕死的就上吧",
+          "battleId": "华山论剑.不怕死的就上吧",
+          "index": 2,
+          "rewards": [
+            {
+              "id": "仙灵琼露",
+              "reward": {
+                "kind": "item",
+                "itemId": "仙灵琼露"
+              },
+              "weight": 1.0
+            }
+          ],
+          "achievementIds": []
+        },
+        {
+          "id": "华山论剑.天下第一战",
+          "name": "华山论剑.天下第一战",
+          "battleId": "华山论剑.天下第一战",
+          "index": 3,
+          "rewards": [
+            {
+              "id": "仙灵琼露",
+              "reward": {
+                "kind": "item",
+                "itemId": "仙灵琼露"
+              },
+              "weight": 1.0
+            }
+          ],
+          "achievementIds": []
+        }
+      ],
+      "when": "item_count('天关.华山论剑之证') >= 1"
+    },
+    "variants": [
+      {
+        "source": "towers.txt",
+        "node": {
+          "tag": "tower",
+          "desc": "最终华山论剑",
+          "key": "华山论剑",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "天关.华山论剑之证",
+              "type": "have_item"
+            },
+            {
+              "tag": "map",
+              "key": "华山论剑.不服输的高手们",
+              "index": "0",
+              "children": [
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "仙灵琼露"
+                }
+              ]
+            },
+            {
+              "tag": "map",
+              "key": "华山论剑.来吧，把你们统统打倒",
+              "index": "1",
+              "children": [
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "仙灵琼露"
+                }
+              ]
+            },
+            {
+              "tag": "map",
+              "key": "华山论剑.不怕死的就上吧",
+              "index": "2",
+              "children": [
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "仙灵琼露"
+                }
+              ]
+            },
+            {
+              "tag": "map",
+              "key": "华山论剑.天下第一战",
+              "index": "3",
+              "children": [
+                {
+                  "tag": "item",
+                  "probability": "1.0",
+                  "number": "-1",
+                  "key": "仙灵琼露"
+                }
+              ]
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "items",
+        "id": "仙灵琼露",
+        "name": "仙灵琼露"
+      },
+      {
+        "category": "battles",
+        "id": "华山论剑.不怕死的就上吧",
+        "name": "华山论剑.不怕死的就上吧"
+      },
+      {
+        "category": "battles",
+        "id": "华山论剑.不服输的高手们",
+        "name": "华山论剑.不服输的高手们"
+      },
+      {
+        "category": "battles",
+        "id": "华山论剑.天下第一战",
+        "name": "华山论剑.天下第一战"
+      },
+      {
+        "category": "battles",
+        "id": "华山论剑.来吧，把你们统统打倒",
+        "name": "华山论剑.来吧，把你们统统打倒"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "江湖生死战",
+    "category": "towers",
+    "name": "江湖生死战",
+    "description": " ",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "towers.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "tower",
+      "desc": " ",
+      "key": "江湖生死战",
+      "children": [
+        {
+          "tag": "condition",
+          "value": "天关.不可能之证",
+          "type": "have_item"
+        },
+        {
+          "tag": "map",
+          "key": "江湖生死战.之一",
+          "index": "0"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "towers.txt",
+        "node": {
+          "tag": "tower",
+          "desc": " ",
+          "key": "江湖生死战",
+          "children": [
+            {
+              "tag": "condition",
+              "value": "天关.不可能之证",
+              "type": "have_item"
+            },
+            {
+              "tag": "map",
+              "key": "江湖生死战.之一",
+              "index": "0"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": []
+  }
+]

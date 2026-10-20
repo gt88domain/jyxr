@@ -1,0 +1,231 @@
+{
+  "baseline": {
+    "stories": 1887,
+    "maps": 162,
+    "mapEvents": 1120,
+    "battles": 393,
+    "characters": 513,
+    "items": 347,
+    "sects": 9,
+    "worldTriggers": 21
+  },
+  "previous": {
+    "originalStories": 35,
+    "maps": 6
+  },
+  "structurallyMigrated": {
+    "originalStories": 1885,
+    "maps": 162,
+    "mapEvents": 1118,
+    "worldTriggers": 21,
+    "newbieTasks": 6
+  },
+  "deferredStories": {
+    "original_主角之家.殴打木头人": {
+      "source": "storys.xml",
+      "reason": "battle 南贤居_经验木头人_战斗 missing characters: 经验木头人"
+    },
+    "original_主角之家.殴打练功木头人": {
+      "source": "storys.xml",
+      "reason": "battle 南贤居_练功木头人_战斗 missing characters: 练功木头人"
+    }
+  },
+  "directStoryFailures": {
+    "original_主角之家.殴打木头人": {
+      "source": "storys.xml",
+      "reason": "battle 南贤居_经验木头人_战斗 missing characters: 经验木头人"
+    },
+    "original_主角之家.殴打练功木头人": {
+      "source": "storys.xml",
+      "reason": "battle 南贤居_练功木头人_战斗 missing characters: 练功木头人"
+    }
+  },
+  "achievementTextFallbacks": [
+    "侠客行",
+    "全真高手",
+    "画地为牢",
+    "血刀高手",
+    "血海魔功",
+    "重阳祖师",
+    "金刚伏魔圈"
+  ],
+  "talentMetadataFallbacks": [
+    "黑衣"
+  ],
+  "preservedEmptyDialogues": [
+    {
+      "story": "original_女主.李白.诗话",
+      "speaker": "女主"
+    }
+  ],
+  "preservedUnattributedDialogues": [
+    {
+      "story": "武当派_卓一航1",
+      "text": "师伯，我来祝你们一臂之力！",
+      "speaker": null,
+      "presentation": "verbatim unattributed dialogue; no actor or portrait inferred"
+    },
+    {
+      "story": "武当派_卓一航2",
+      "text": "唉，一航师兄，我来祝你一臂之力！",
+      "speaker": null,
+      "presentation": "verbatim unattributed dialogue; no actor or portrait inferred"
+    }
+  ],
+  "instructionEvidence": {
+    "MINUS_MAXPOINTS": {
+      "source": "uploaded X1.0.0.1 Assembly-CSharp.dll / MapUI.ExecuteAction",
+      "sha256": "a9d1456b1fa5e09f9e39a18c66564612da2aa4c7c83db6ff34430d436b872b4a",
+      "ilRange": "0x153b..0x16eb",
+      "argumentUnit": "tenths retained, not percent deducted"
+    },
+    "TOUCH": {
+      "source": "same uploaded assembly / TouchUI and TouchPoint",
+      "rounds": 5,
+      "pointsPerRound": 8,
+      "pointLifetimeSeconds": 3,
+      "aimAgeSeconds": 1.5,
+      "startIntervalSeconds": [
+        0.3,
+        0.5
+      ],
+      "successScore": 100,
+      "configuration": "pinned touch.xml matches the uploaded touch.txt for all five definitions"
+    },
+    "Role.AddExp": {
+      "source": "pinned Role/CommonSettings and uploaded Role.AddExp/set_level",
+      "curve": "LegacyCumulative",
+      "comparison": "strict greater-than",
+      "overflow": "reset to previous threshold; at most one level per award",
+      "atMaxLevel": "reset EXP to zero"
+    },
+    "StoryFinished": {
+      "source": "uploaded MapUI.StoryFinished RVA 0x2af64 IL 0x100..0x11f",
+      "unmatchedLose": "GameOver",
+      "timeout": "lose",
+      "explicitResult": "first matching source result wins"
+    }
+  },
+  "sourceCorrections": [
+    {
+      "story": "霹雳堂_小龙女",
+      "originalType": "UPGRADE……SKILL",
+      "value": "小龙女#玉女素心剑#5",
+      "normalizedType": "UPGRADE.SKILL"
+    },
+    {
+      "story": "霹雳堂_达尔巴",
+      "originalType": "UPGRADE.SKILLL",
+      "value": "达尔巴#火焰刀法#5",
+      "normalizedType": "UPGRADE.SKILL"
+    },
+    {
+      "story": "original_山庄风云.贾飞女主2",
+      "originalType": "DIALog",
+      "value": "主角#他这把佩剑不错，我就收下了。",
+      "normalizedType": "DIALOG"
+    }
+  ],
+  "sourceResultCorrections": [
+    {
+      "story": "碧血剑_五毒教圣地2",
+      "type": "map",
+      "originalValue": "五毒教森林",
+      "normalizedValue": "五毒教森林1",
+      "evidence": "uploaded X1.0.0.1 storys.txt",
+      "sha256": "180e341e1fde8660c2216f951c8330216c035082a78348d4cb813ad134585bd8"
+    }
+  ],
+  "deferredMapEvents": [
+    {
+      "map": "黑龙潭",
+      "location": "周伯通",
+      "eventId": "source-3",
+      "reason": "invalid legacy event action type: not_has_time_key"
+    },
+    {
+      "map": "南贤居",
+      "location": "木头人",
+      "eventId": "1",
+      "reason": "story deferred: original_主角之家.殴打木头人"
+    }
+  ],
+  "deferredWorldTriggers": [],
+  "brokenBattleReferences": {
+    "南贤居_经验木头人_战斗": [
+      "经验木头人"
+    ],
+    "南贤居_练功木头人_战斗": [
+      "练功木头人"
+    ]
+  },
+  "actionCounts": {
+    "YUANBAO": 1,
+    "MUSIC": 778,
+    "BACKGROUND": 751,
+    "DIALOG": 8578,
+    "SUGGEST": 8,
+    "NICK": 124,
+    "LOG": 186,
+    "ITEM": 340,
+    "SELECT": 192,
+    "DAODE": 77,
+    "BATTLE": 377,
+    "MAXLEVEL": 190,
+    "UPGRADE.定力": 30,
+    "UPGRADE.福缘": 10,
+    "LEARN.SKILL": 89,
+    "TOUCH": 4,
+    "JOIN": 77,
+    "GET_MONEY": 12,
+    "UPGRADE.MAXHP": 111,
+    "UPGRADE.MAXMP": 114,
+    "SHOP": 1,
+    "LEAVE_ALL": 1,
+    "LEARN.TALENT": 109,
+    "MENPAI": 9,
+    "SET_TIME_KEY": 6,
+    "SET_FLAG": 2,
+    "COST_DAY": 133,
+    "GET_POINT": 104,
+    "CLEAR_FLAG": 2,
+    "MINUS_MAXPOINTS": 1,
+    "EFFECT": 14,
+    "SHAKE": 15,
+    "CHANGE_FEMALE_NAME": 1,
+    "FOLLOW": 3,
+    "LEAVE_FOLLOW": 3,
+    "HAOGAN": 35,
+    "UPGRADE.拳掌": 67,
+    "UPGRADE.奇门": 39,
+    "UPGRADE.剑法": 65,
+    "LEARN.SPECIALSKILL": 21,
+    "SELECT_MENPAI": 1,
+    "GROWTEMPLATE": 1,
+    "COST_MONEY": 10,
+    "SET_MAP": 2,
+    "COST_ITEM": 2,
+    "UPGRADE.刀法": 31,
+    "LEARN.INTERNALSKILL": 24,
+    "UPGRADE.臂力": 24,
+    "LEAVE": 24,
+    "UPGRADE.悟性": 15,
+    "UPGRADE.根骨": 25,
+    "UPGRADE.身法": 21,
+    "REMOVE.TALENT": 2,
+    "UPGRADE.SKILL": 75,
+    "UPGRADE.INTERNALSKILL": 20,
+    "ANIMATION": 1,
+    "HEAD": 1,
+    "UPGRADE……SKILL": 1,
+    "UPGRADE.SKILLL": 1,
+    "DIALog": 1,
+    "NEWBIE": 6
+  },
+  "notes": [
+    "Structural compilation and dependency closure do not prove full playability or original-rule equivalence.",
+    "All 14 verified opening segments remain unchanged. Browser-authored practice IDs remain for existing saves.",
+    "All original destinations use Core large-map distance and time progression; media resolution is a separate build step.",
+    "Unsupported commands, malformed source and missing references are quarantined with their callers; no successful no-op completion."
+  ]
+}

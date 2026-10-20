@@ -1,0 +1,646 @@
+[
+  {
+    "id": "后期开局伙伴池0",
+    "category": "bonusCompanions",
+    "name": "第1周目 · 开局随机伙伴候选",
+    "description": "已接入周目开局：确认人物后抽一名；摇点和预览不发放。沿用原权重，第一名两份，其余各一份。",
+    "state": "周目开局奖励已接入 · 确认时随机一名",
+    "source": "Assets/Resources/textassets/lua/jygame/rollrole.lua.lua",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "bonus_pool",
+      "key": "后期开局伙伴池0",
+      "name": "第1周目 · 开局随机伙伴候选",
+      "description": "已接入周目开局：确认人物后抽一名；摇点和预览不发放。沿用原权重，第一名两份，其余各一份。",
+      "children": []
+    },
+    "runtime": null,
+    "variants": [],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": []
+  },
+  {
+    "id": "后期开局伙伴池1",
+    "category": "bonusCompanions",
+    "name": "第2周目 · 开局随机伙伴候选",
+    "description": "已接入周目开局：确认人物后抽一名；摇点和预览不发放。沿用原权重，第一名两份，其余各一份。",
+    "state": "周目开局奖励已接入 · 确认时随机一名",
+    "source": "Assets/Resources/textassets/lua/jygame/rollrole.lua.lua",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "bonus_pool",
+      "key": "后期开局伙伴池1",
+      "name": "第2周目 · 开局随机伙伴候选",
+      "description": "已接入周目开局：确认人物后抽一名；摇点和预览不发放。沿用原权重，第一名两份，其余各一份。",
+      "children": [
+        {
+          "tag": "candidate",
+          "sourceId": "鲁连荣",
+          "character": "鲁连荣",
+          "definition": "已找到",
+          "weight": "2"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "冲虚道长",
+          "character": "冲虚道长",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "方证大师",
+          "character": "方证大师",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "灭绝师太",
+          "character": "灭绝师太",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "张翠山",
+          "character": "张翠山",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "宋远桥",
+          "character": "宋远桥",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "韦一笑",
+          "character": "韦一笑",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "仪清",
+          "character": "仪清",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "何太冲",
+          "character": "何太冲",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "哑仆",
+          "character": "哑仆",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "温方达",
+          "character": "温方达",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "温方义",
+          "character": "温方义",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "温方山",
+          "character": "温方山",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "温方施",
+          "character": "温方施",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "温方悟",
+          "character": "温方悟",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "安小慧",
+          "character": "安小慧",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "阿九",
+          "character": "阿九",
+          "definition": "已找到",
+          "weight": "1"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "characters",
+        "id": "仪清",
+        "name": "仪清"
+      },
+      {
+        "category": "characters",
+        "id": "何太冲",
+        "name": "何太冲"
+      },
+      {
+        "category": "characters",
+        "id": "冲虚道长",
+        "name": "冲虚道长"
+      },
+      {
+        "category": "characters",
+        "id": "哑仆",
+        "name": "哑仆"
+      },
+      {
+        "category": "characters",
+        "id": "安小慧",
+        "name": "安小慧"
+      },
+      {
+        "category": "characters",
+        "id": "宋远桥",
+        "name": "宋远桥"
+      },
+      {
+        "category": "characters",
+        "id": "张翠山",
+        "name": "张翠山"
+      },
+      {
+        "category": "characters",
+        "id": "方证大师",
+        "name": "方证大师"
+      },
+      {
+        "category": "characters",
+        "id": "温方义",
+        "name": "温方义"
+      },
+      {
+        "category": "characters",
+        "id": "温方山",
+        "name": "温方义"
+      },
+      {
+        "category": "characters",
+        "id": "温方悟",
+        "name": "温方义"
+      },
+      {
+        "category": "characters",
+        "id": "温方施",
+        "name": "温方义"
+      },
+      {
+        "category": "characters",
+        "id": "温方达",
+        "name": "温方达"
+      },
+      {
+        "category": "characters",
+        "id": "灭绝师太",
+        "name": "灭绝师太"
+      },
+      {
+        "category": "characters",
+        "id": "阿九",
+        "name": "阿九"
+      },
+      {
+        "category": "characters",
+        "id": "韦一笑",
+        "name": "韦一笑"
+      },
+      {
+        "category": "characters",
+        "id": "鲁连荣",
+        "name": "鲁连荣"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "后期开局伙伴池2",
+    "category": "bonusCompanions",
+    "name": "第3周目 · 开局随机伙伴候选",
+    "description": "已接入周目开局：确认人物后抽一名；摇点和预览不发放。沿用原权重，第一名两份，其余各一份。",
+    "state": "周目开局奖励已接入 · 确认时随机一名",
+    "source": "Assets/Resources/textassets/lua/jygame/rollrole.lua.lua",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "bonus_pool",
+      "key": "后期开局伙伴池2",
+      "name": "第3周目 · 开局随机伙伴候选",
+      "description": "已接入周目开局：确认人物后抽一名；摇点和预览不发放。沿用原权重，第一名两份，其余各一份。",
+      "children": [
+        {
+          "tag": "candidate",
+          "sourceId": "紫衫龙王",
+          "character": "紫衫龙王",
+          "definition": "已找到",
+          "weight": "2"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "白眉鹰王",
+          "character": "殷天正",
+          "definition": "称号引用已修正",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "商剑鸣",
+          "character": "商剑鸣",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "杨逍",
+          "character": "杨逍",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "范遥",
+          "character": "范遥",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "霍都",
+          "character": "霍都",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "孙不二",
+          "character": "孙不二",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "龙岛主",
+          "character": "龙岛主",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "木岛主",
+          "character": "木岛主",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "善勇",
+          "character": "善勇",
+          "definition": "已找到",
+          "weight": "1"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "characters",
+        "id": "商剑鸣",
+        "name": "商剑鸣"
+      },
+      {
+        "category": "characters",
+        "id": "善勇",
+        "name": "善勇"
+      },
+      {
+        "category": "characters",
+        "id": "孙不二",
+        "name": "孙不二"
+      },
+      {
+        "category": "characters",
+        "id": "木岛主",
+        "name": "木岛主"
+      },
+      {
+        "category": "characters",
+        "id": "杨逍",
+        "name": "杨逍"
+      },
+      {
+        "category": "characters",
+        "id": "殷天正",
+        "name": "殷天正"
+      },
+      {
+        "category": "referenceAliases",
+        "id": "白眉鹰王",
+        "name": "白眉鹰王"
+      },
+      {
+        "category": "characters",
+        "id": "紫衫龙王",
+        "name": "紫衫龙王"
+      },
+      {
+        "category": "characters",
+        "id": "范遥",
+        "name": "范遥"
+      },
+      {
+        "category": "characters",
+        "id": "霍都",
+        "name": "霍都"
+      },
+      {
+        "category": "characters",
+        "id": "龙岛主",
+        "name": "龙岛主"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "后期开局伙伴池3",
+    "category": "bonusCompanions",
+    "name": "第4周目 · 开局随机伙伴候选",
+    "description": "已接入周目开局：确认人物后抽一名；摇点和预览不发放。沿用原权重，第一名两份，其余各一份。",
+    "state": "周目开局奖励已接入 · 确认时随机一名",
+    "source": "Assets/Resources/textassets/lua/jygame/rollrole.lua.lua",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "bonus_pool",
+      "key": "后期开局伙伴池3",
+      "name": "第4周目 · 开局随机伙伴候选",
+      "description": "已接入周目开局：确认人物后抽一名；摇点和预览不发放。沿用原权重，第一名两份，其余各一份。",
+      "children": [
+        {
+          "tag": "candidate",
+          "sourceId": "白自在",
+          "character": "白自在",
+          "definition": "已找到",
+          "weight": "2"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "向问天",
+          "character": "向问天",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "丁春秋",
+          "character": "丁春秋",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "成昆",
+          "character": "成昆",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "段延庆",
+          "character": "段延庆",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "丘处机",
+          "character": "丘处机",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "欧阳锋",
+          "character": "欧阳锋",
+          "definition": "已找到",
+          "weight": "1"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "characters",
+        "id": "丁春秋",
+        "name": "丁春秋"
+      },
+      {
+        "category": "characters",
+        "id": "丘处机",
+        "name": "丘处机"
+      },
+      {
+        "category": "characters",
+        "id": "向问天",
+        "name": "向问天"
+      },
+      {
+        "category": "characters",
+        "id": "成昆",
+        "name": "成昆"
+      },
+      {
+        "category": "characters",
+        "id": "欧阳锋",
+        "name": "欧阳锋"
+      },
+      {
+        "category": "characters",
+        "id": "段延庆",
+        "name": "段延庆"
+      },
+      {
+        "category": "characters",
+        "id": "白自在",
+        "name": "白自在"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "后期开局伙伴池4",
+    "category": "bonusCompanions",
+    "name": "第五周目起 · 开局随机伙伴候选",
+    "description": "已接入周目开局：确认人物后抽一名；摇点和预览不发放。沿用原权重，第一名两份，其余各一份。",
+    "state": "周目开局奖励已接入 · 确认时随机一名",
+    "source": "Assets/Resources/textassets/lua/jygame/rollrole.lua.lua",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "bonus_pool",
+      "key": "后期开局伙伴池4",
+      "name": "第五周目起 · 开局随机伙伴候选",
+      "description": "已接入周目开局：确认人物后抽一名；摇点和预览不发放。沿用原权重，第一名两份，其余各一份。",
+      "children": [
+        {
+          "tag": "candidate",
+          "sourceId": "任我行",
+          "character": "任我行",
+          "definition": "已找到",
+          "weight": "2"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "王重阳",
+          "character": "王重阳",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "林朝英",
+          "character": "林朝英",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "归辛树",
+          "character": "归辛树",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "玉真子",
+          "character": "玉真子",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "慕容博",
+          "character": "慕容博",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "卓一航",
+          "character": "卓一航",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "谢逊",
+          "character": "谢逊",
+          "definition": "已找到",
+          "weight": "1"
+        },
+        {
+          "tag": "candidate",
+          "sourceId": "虚竹",
+          "character": "虚竹",
+          "definition": "已找到",
+          "weight": "1"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "characters",
+        "id": "任我行",
+        "name": "任我行"
+      },
+      {
+        "category": "characters",
+        "id": "卓一航",
+        "name": "卓一航"
+      },
+      {
+        "category": "characters",
+        "id": "归辛树",
+        "name": "归辛树"
+      },
+      {
+        "category": "characters",
+        "id": "慕容博",
+        "name": "慕容博"
+      },
+      {
+        "category": "characters",
+        "id": "林朝英",
+        "name": "林朝英"
+      },
+      {
+        "category": "characters",
+        "id": "玉真子",
+        "name": "玉真子"
+      },
+      {
+        "category": "characters",
+        "id": "王重阳",
+        "name": "王重阳"
+      },
+      {
+        "category": "characters",
+        "id": "虚竹",
+        "name": "虚竹"
+      },
+      {
+        "category": "characters",
+        "id": "谢逊",
+        "name": "谢逊"
+      }
+    ],
+    "usedBy": []
+  }
+]

@@ -1,0 +1,4916 @@
+[
+  {
+    "id": "鹿鼎剧情1",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情1",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情1",
+      "children": [
+        {
+          "tag": "action",
+          "value": "地图.扬州",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "茅十八#狗鞑子！尽管放马过来!",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#好像前面这条汉子有点麻烦，怎么办？#好汉，我来助你！#还是不管这种闲事的好。",
+          "type": "SELECT"
+        },
+        {
+          "tag": "result",
+          "value": "鹿鼎记1.1.1战斗",
+          "type": "story",
+          "ret": "0"
+        },
+        {
+          "tag": "result",
+          "value": "大地图",
+          "type": "map",
+          "ret": "1"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情1",
+          "children": [
+            {
+              "tag": "action",
+              "value": "地图.扬州",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "茅十八#狗鞑子！尽管放马过来!",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#好像前面这条汉子有点麻烦，怎么办？#好汉，我来助你！#还是不管这种闲事的好。",
+              "type": "SELECT"
+            },
+            {
+              "tag": "result",
+              "value": "鹿鼎记1.1.1战斗",
+              "type": "story",
+              "ret": "0"
+            },
+            {
+              "tag": "result",
+              "value": "大地图",
+              "type": "map",
+              "ret": "1"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      },
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎记1.1.1战斗",
+        "name": "鹿鼎记1.1.1战斗"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "鹿鼎记1.1.1战斗",
+    "category": "supplementStories",
+    "name": "鹿鼎记1.1.1战斗",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎记1.1.1战斗",
+      "children": [
+        {
+          "tag": "action",
+          "value": "主角#好汉，我来助你！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "鹿鼎记_救援茅十八",
+          "type": "BATTLE"
+        },
+        {
+          "tag": "result",
+          "value": "鹿鼎记_救援茅十八_胜",
+          "type": "story",
+          "ret": "win"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎记1.1.1战斗",
+          "children": [
+            {
+              "tag": "action",
+              "value": "主角#好汉，我来助你！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "鹿鼎记_救援茅十八",
+              "type": "BATTLE"
+            },
+            {
+              "tag": "result",
+              "value": "鹿鼎记_救援茅十八_胜",
+              "type": "story",
+              "ret": "win"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎记_救援茅十八_胜",
+        "name": "鹿鼎记_救援茅十八_胜"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情1",
+        "name": "鹿鼎剧情1"
+      }
+    ]
+  },
+  {
+    "id": "鹿鼎记_救援茅十八_胜",
+    "category": "supplementStories",
+    "name": "鹿鼎记_救援茅十八_胜",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎记_救援茅十八_胜",
+      "children": [
+        {
+          "tag": "action",
+          "value": "2",
+          "type": "DAODE"
+        },
+        {
+          "tag": "action",
+          "value": "茅十八#在下茅十八，刚才多谢阁下相救，请教尊姓大名？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#无名小卒，何足挂齿！英雄无恙，小子告辞。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "result",
+          "value": "大地图",
+          "type": "map",
+          "ret": "0"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎记_救援茅十八_胜",
+          "children": [
+            {
+              "tag": "action",
+              "value": "2",
+              "type": "DAODE"
+            },
+            {
+              "tag": "action",
+              "value": "茅十八#在下茅十八，刚才多谢阁下相救，请教尊姓大名？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#无名小卒，何足挂齿！英雄无恙，小子告辞。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "result",
+              "value": "大地图",
+              "type": "map",
+              "ret": "0"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎记1.1.1战斗",
+        "name": "鹿鼎记1.1.1战斗"
+      }
+    ]
+  },
+  {
+    "id": "鹿鼎剧情1.1.2",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情1.1.2",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情1.1.2",
+      "children": [
+        {
+          "tag": "result",
+          "value": "鹿鼎剧情1.1.3",
+          "type": "story",
+          "ret": "0"
+        },
+        {
+          "tag": "result",
+          "value": "大地图",
+          "type": "map",
+          "ret": "1"
+        },
+        {
+          "tag": "action",
+          "value": "地图.长安",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "太监#庄家撰写《明史》，乃是蛊惑人心，意图谋反，罪大恶极，满门抄斩！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "鳌拜#行刑！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#这文字狱真是草菅人命呐，庄家一家老小未免也太惨了。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#怎么办？#这一家人太可怜了，出手救他们#别管了，天下这么多可怜人管得过来么",
+          "type": "SELECT"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情1.1.2",
+          "children": [
+            {
+              "tag": "result",
+              "value": "鹿鼎剧情1.1.3",
+              "type": "story",
+              "ret": "0"
+            },
+            {
+              "tag": "result",
+              "value": "大地图",
+              "type": "map",
+              "ret": "1"
+            },
+            {
+              "tag": "action",
+              "value": "地图.长安",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "太监#庄家撰写《明史》，乃是蛊惑人心，意图谋反，罪大恶极，满门抄斩！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "鳌拜#行刑！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#这文字狱真是草菅人命呐，庄家一家老小未免也太惨了。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#怎么办？#这一家人太可怜了，出手救他们#别管了，天下这么多可怜人管得过来么",
+              "type": "SELECT"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "地图.长安",
+        "name": "地图.长安"
+      },
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      },
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情1.1.3",
+        "name": "鹿鼎剧情1.1.3"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "鹿鼎剧情1.1.3",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情1.1.3",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情1.1.3",
+      "children": [
+        {
+          "tag": "action",
+          "value": "陈近南#天父地母，反清复明！陈近南在此！鳌拜，纳命来！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "鳌拜#上！别让天地会的反贼跑了!",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#（不好，是个陷阱。既然这样，只能上了。）",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#陈总舵主！我来帮你！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "鹿鼎记_助陈近南",
+          "type": "BATTLE"
+        },
+        {
+          "tag": "result",
+          "value": "鹿鼎记_助陈近南_胜",
+          "type": "story",
+          "ret": "win"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情1.1.3",
+          "children": [
+            {
+              "tag": "action",
+              "value": "陈近南#天父地母，反清复明！陈近南在此！鳌拜，纳命来！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "鳌拜#上！别让天地会的反贼跑了!",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#（不好，是个陷阱。既然这样，只能上了。）",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#陈总舵主！我来帮你！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "鹿鼎记_助陈近南",
+              "type": "BATTLE"
+            },
+            {
+              "tag": "result",
+              "value": "鹿鼎记_助陈近南_胜",
+              "type": "story",
+              "ret": "win"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎记_助陈近南_胜",
+        "name": "鹿鼎记_助陈近南_胜"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情1.1.2",
+        "name": "鹿鼎剧情1.1.2"
+      }
+    ]
+  },
+  {
+    "id": "鹿鼎记_助陈近南_胜",
+    "category": "supplementStories",
+    "name": "鹿鼎记_助陈近南_胜",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎记_助陈近南_胜",
+      "children": [
+        {
+          "tag": "action",
+          "value": "陈近南#多谢少侠，敢问少侠如何称呼？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#无名小卒，何足挂齿！英雄无恙，小子告辞。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "result",
+          "value": "大地图",
+          "type": "map",
+          "ret": "0"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎记_助陈近南_胜",
+          "children": [
+            {
+              "tag": "action",
+              "value": "陈近南#多谢少侠，敢问少侠如何称呼？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#无名小卒，何足挂齿！英雄无恙，小子告辞。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "result",
+              "value": "大地图",
+              "type": "map",
+              "ret": "0"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情1.1.3",
+        "name": "鹿鼎剧情1.1.3"
+      }
+    ]
+  },
+  {
+    "id": "鹿鼎剧情1.2",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情1.2",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情1.2",
+      "children": [
+        {
+          "tag": "result",
+          "value": "鹿鼎记_救人",
+          "type": "story",
+          "ret": "0"
+        },
+        {
+          "tag": "result",
+          "value": "大地图",
+          "type": "map",
+          "ret": "1"
+        },
+        {
+          "tag": "action",
+          "value": "地图.长安",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "主角#（茅十八？跟他绑一块的小孩儿是谁？他们怎么被几个太监押进皇宫了？）",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#怎么办？#（先救人）#（皇宫里动手肯定会很麻烦，算了）",
+          "type": "SELECT"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情1.2",
+          "children": [
+            {
+              "tag": "result",
+              "value": "鹿鼎记_救人",
+              "type": "story",
+              "ret": "0"
+            },
+            {
+              "tag": "result",
+              "value": "大地图",
+              "type": "map",
+              "ret": "1"
+            },
+            {
+              "tag": "action",
+              "value": "地图.长安",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "主角#（茅十八？跟他绑一块的小孩儿是谁？他们怎么被几个太监押进皇宫了？）",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#怎么办？#（先救人）#（皇宫里动手肯定会很麻烦，算了）",
+              "type": "SELECT"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "地图.长安",
+        "name": "地图.长安"
+      },
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      },
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎记_救人",
+        "name": "鹿鼎记_救人"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "鹿鼎记_救人",
+    "category": "supplementStories",
+    "name": "鹿鼎记_救人",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎记_救人",
+      "children": [
+        {
+          "tag": "result",
+          "value": "鹿鼎记_救人_胜",
+          "type": "story",
+          "ret": "win"
+        },
+        {
+          "tag": "action",
+          "value": "鹿鼎记_救人",
+          "type": "BATTLE"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎记_救人",
+          "children": [
+            {
+              "tag": "result",
+              "value": "鹿鼎记_救人_胜",
+              "type": "story",
+              "ret": "win"
+            },
+            {
+              "tag": "action",
+              "value": "鹿鼎记_救人",
+              "type": "BATTLE"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎记_救人_胜",
+        "name": "鹿鼎记_救人_胜"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情1.2",
+        "name": "鹿鼎剧情1.2"
+      }
+    ]
+  },
+  {
+    "id": "鹿鼎记_救人_胜",
+    "category": "supplementStories",
+    "name": "鹿鼎记_救人_胜",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎记_救人_胜",
+      "children": [
+        {
+          "tag": "action",
+          "value": "地图.长安",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "太监#有刺客！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#走！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "茅十八#不能丢下小宝！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#今天没机会了，我们先出去。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "result",
+          "value": "鹿鼎记_救人_胜a",
+          "type": "story",
+          "ret": "0"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎记_救人_胜",
+          "children": [
+            {
+              "tag": "action",
+              "value": "地图.长安",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "太监#有刺客！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#走！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "茅十八#不能丢下小宝！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#今天没机会了，我们先出去。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "result",
+              "value": "鹿鼎记_救人_胜a",
+              "type": "story",
+              "ret": "0"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "地图.长安",
+        "name": "地图.长安"
+      },
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎记_救人_胜a",
+        "name": "鹿鼎记_救人_胜a"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎记_救人",
+        "name": "鹿鼎记_救人"
+      }
+    ]
+  },
+  {
+    "id": "鹿鼎记_救人_胜a",
+    "category": "supplementStories",
+    "name": "鹿鼎记_救人_胜a",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎记_救人_胜a",
+      "children": [
+        {
+          "tag": "action",
+          "value": "地图.大地图",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "茅十八#大恩不言谢，阁下两次救我茅十八的性命。日后如有吩咐，茅十八赴汤蹈火！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#客气，我会去救小宝，先告辞了。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "result",
+          "value": "大地图",
+          "type": "map",
+          "ret": "0"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎记_救人_胜a",
+          "children": [
+            {
+              "tag": "action",
+              "value": "地图.大地图",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "茅十八#大恩不言谢，阁下两次救我茅十八的性命。日后如有吩咐，茅十八赴汤蹈火！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#客气，我会去救小宝，先告辞了。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "result",
+              "value": "大地图",
+              "type": "map",
+              "ret": "0"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "地图.大地图",
+        "name": "地图.大地图"
+      },
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎记_救人_胜",
+        "name": "鹿鼎记_救人_胜"
+      }
+    ]
+  },
+  {
+    "id": "鹿鼎剧情1.3",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情1.3",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情1.3",
+      "children": [
+        {
+          "tag": "result",
+          "value": "大地图",
+          "type": "map",
+          "ret": "0"
+        },
+        {
+          "tag": "action",
+          "value": "地图.长安",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "主角#看看韦小宝在不在皇宫。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#（找了半天也没找到）唉，这也找不到了，下回再来吧。",
+          "type": "DIALOG"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情1.3",
+          "children": [
+            {
+              "tag": "result",
+              "value": "大地图",
+              "type": "map",
+              "ret": "0"
+            },
+            {
+              "tag": "action",
+              "value": "地图.长安",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "主角#看看韦小宝在不在皇宫。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#（找了半天也没找到）唉，这也找不到了，下回再来吧。",
+              "type": "DIALOG"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "地图.长安",
+        "name": "地图.长安"
+      },
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "鹿鼎剧情4",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情4",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情4",
+      "children": [
+        {
+          "tag": "result",
+          "value": "大地图",
+          "type": "map",
+          "ret": "0"
+        },
+        {
+          "tag": "action",
+          "value": "张康年#韦大人，皇上要见您。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#知道了，走吧。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "地图.宫殿",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "康熙#小桂子，上次我们联手制服了鳌拜的时候，我捅了他一刀，以为他命不久矣。谁知道他身子骨那么硬朗，还在康亲王府胡言乱语，唉。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#小玄子你别担心，我这就去让他闭嘴。嘿嘿嘿，看来康亲王府今天要省顿饭了。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "地图.地牢",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "音乐.紧张感",
+          "type": "MUSIC"
+        },
+        {
+          "tag": "action",
+          "value": "康亲王#韦兄弟，等你多时了。这鳌拜。。。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#不用说，带我进去。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "康亲王#韦兄弟，你小心点，他可不好应付啊。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#不用担心，我小宝一出马，什么事情搞不定？对了 ，鳌拜今天吃了晚饭没有？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "康亲王#正准备给他送去。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#给我吧。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "康亲王#麻烦韦兄弟了，小王就在此恭候韦兄弟的佳音。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#（在饭菜里下药）鳌拜！皇上让我问候问候你。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "鳌拜#啊！！你个小杂种！皇上就是听你的话才会误入歧途！我要杀了你！！！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#你。。。你。。。你过来。。。先吃东西。。。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "鳌拜#哼！（镇定自若的吃完下过药的饭菜）",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#鳌拜，刚才的饭菜好吃么？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "鳌拜#恩？你！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "徐天川#杀鳌拜！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "旁白#天地会的人要杀鳌拜，闯入康亲王府。一时间场面混乱，韦小宝伸出匕首无意间杀了鳌拜。",
+          "type": "SUGGEST"
+        },
+        {
+          "tag": "action",
+          "value": "",
+          "type": "SHAKE"
+        },
+        {
+          "tag": "action",
+          "value": "音效.男惨叫",
+          "type": "EFFECT"
+        },
+        {
+          "tag": "action",
+          "value": "玄贞道长#（挟持住韦小宝）走！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "地图.长安",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "音乐.天龙八部1",
+          "type": "MUSIC"
+        },
+        {
+          "tag": "action",
+          "value": "玄贞道长#尹香主，我们今天给你报仇了！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "风际中#不，杀鳌拜的是这个小太监。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "徐天川#先不管他了，我们现在来推选新的香主。我推举玄贞道长！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "风际中#当日大家在尹香主灵前立过的誓不算了么？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "徐天川#当然算，但是现在杀鳌拜的是这个小太监，难道让他来当我门香主？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#（快溜）",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "徐天川#想溜？快说！为什么要当鞑子的走狗？！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#我不是鞑子走狗啊，我是被海大富抓进宫的！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "徐天川#我们凭什么相信你。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#茅十八，茅十八听过吧，他和我一起来的。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "徐天川#你认识茅十八？带他进去。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "茅十八#小宝！一定是天地会的英雄救你出来的。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#是啊，天地会的英雄真是厉害呀，一个打二十个。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "徐天川#（想找个地缝钻进去）……",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#现在说清楚了吧。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "陈近南#小宝，你跟我来。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "徐天川#总舵主。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#你就是平生不见陈近南，就称英雄也枉然的陈近南？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "陈近南#那都是江湖谣传，我没那么大本事。小宝，你愿意做我徒弟么？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#（大喜）师父在上，受小宝一拜！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "陈近南#恩，很好。做了我的徒弟就要加入天地会，你敢么？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#当然，天地会都是大英雄，做的都是惊天动地的大事，我当然愿意了。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "陈近南#好，那从今日起，你就是青木堂的香主了。你现在马上回皇宫，以后就在宫中卧底，有事情钱老本通知你。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#知道啦师父。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝成为青木堂香主",
+          "type": "LOG"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情4",
+          "children": [
+            {
+              "tag": "result",
+              "value": "大地图",
+              "type": "map",
+              "ret": "0"
+            },
+            {
+              "tag": "action",
+              "value": "张康年#韦大人，皇上要见您。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#知道了，走吧。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "地图.宫殿",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "康熙#小桂子，上次我们联手制服了鳌拜的时候，我捅了他一刀，以为他命不久矣。谁知道他身子骨那么硬朗，还在康亲王府胡言乱语，唉。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#小玄子你别担心，我这就去让他闭嘴。嘿嘿嘿，看来康亲王府今天要省顿饭了。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "地图.地牢",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "音乐.紧张感",
+              "type": "MUSIC"
+            },
+            {
+              "tag": "action",
+              "value": "康亲王#韦兄弟，等你多时了。这鳌拜。。。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#不用说，带我进去。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "康亲王#韦兄弟，你小心点，他可不好应付啊。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#不用担心，我小宝一出马，什么事情搞不定？对了 ，鳌拜今天吃了晚饭没有？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "康亲王#正准备给他送去。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#给我吧。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "康亲王#麻烦韦兄弟了，小王就在此恭候韦兄弟的佳音。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#（在饭菜里下药）鳌拜！皇上让我问候问候你。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "鳌拜#啊！！你个小杂种！皇上就是听你的话才会误入歧途！我要杀了你！！！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#你。。。你。。。你过来。。。先吃东西。。。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "鳌拜#哼！（镇定自若的吃完下过药的饭菜）",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#鳌拜，刚才的饭菜好吃么？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "鳌拜#恩？你！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "徐天川#杀鳌拜！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "旁白#天地会的人要杀鳌拜，闯入康亲王府。一时间场面混乱，韦小宝伸出匕首无意间杀了鳌拜。",
+              "type": "SUGGEST"
+            },
+            {
+              "tag": "action",
+              "value": "",
+              "type": "SHAKE"
+            },
+            {
+              "tag": "action",
+              "value": "音效.男惨叫",
+              "type": "EFFECT"
+            },
+            {
+              "tag": "action",
+              "value": "玄贞道长#（挟持住韦小宝）走！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "地图.长安",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "音乐.天龙八部1",
+              "type": "MUSIC"
+            },
+            {
+              "tag": "action",
+              "value": "玄贞道长#尹香主，我们今天给你报仇了！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "风际中#不，杀鳌拜的是这个小太监。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "徐天川#先不管他了，我们现在来推选新的香主。我推举玄贞道长！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "风际中#当日大家在尹香主灵前立过的誓不算了么？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "徐天川#当然算，但是现在杀鳌拜的是这个小太监，难道让他来当我门香主？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#（快溜）",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "徐天川#想溜？快说！为什么要当鞑子的走狗？！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#我不是鞑子走狗啊，我是被海大富抓进宫的！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "徐天川#我们凭什么相信你。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#茅十八，茅十八听过吧，他和我一起来的。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "徐天川#你认识茅十八？带他进去。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "茅十八#小宝！一定是天地会的英雄救你出来的。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#是啊，天地会的英雄真是厉害呀，一个打二十个。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "徐天川#（想找个地缝钻进去）……",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#现在说清楚了吧。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "陈近南#小宝，你跟我来。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "徐天川#总舵主。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#你就是平生不见陈近南，就称英雄也枉然的陈近南？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "陈近南#那都是江湖谣传，我没那么大本事。小宝，你愿意做我徒弟么？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#（大喜）师父在上，受小宝一拜！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "陈近南#恩，很好。做了我的徒弟就要加入天地会，你敢么？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#当然，天地会都是大英雄，做的都是惊天动地的大事，我当然愿意了。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "陈近南#好，那从今日起，你就是青木堂的香主了。你现在马上回皇宫，以后就在宫中卧底，有事情钱老本通知你。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#知道啦师父。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝成为青木堂香主",
+              "type": "LOG"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "地图.地牢",
+        "name": "地图.地牢"
+      },
+      {
+        "category": "resources",
+        "id": "地图.长安",
+        "name": "地图.长安"
+      },
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      },
+      {
+        "category": "resources",
+        "id": "音乐.天龙八部1",
+        "name": "音乐.天龙八部1"
+      },
+      {
+        "category": "resources",
+        "id": "音乐.紧张感",
+        "name": "音乐.紧张感"
+      },
+      {
+        "category": "resources",
+        "id": "音效.男惨叫",
+        "name": "音效.男惨叫"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "鹿鼎剧情4.2",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情4.2",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情4.2",
+      "children": [
+        {
+          "tag": "result",
+          "value": "大地图",
+          "type": "map",
+          "ret": "0"
+        },
+        {
+          "tag": "action",
+          "value": "地图.宫殿",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "康熙#小桂子，你吓死我了。康亲王说你给乱党抓去，我还以为你。。。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#哈哈，小桂子福大命大，哪有那么容易死。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "康熙#上回你说先皇尚在人世，只是隐在少林寺出家，我想让你去替我看看父皇。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#遵命！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "地图.长安",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "主角#出来啦？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#顺手牵羊，拿了本书，你看看！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#四十二章经！这东西可要收好了……",
+          "type": "DIALOG"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情4.2",
+          "children": [
+            {
+              "tag": "result",
+              "value": "大地图",
+              "type": "map",
+              "ret": "0"
+            },
+            {
+              "tag": "action",
+              "value": "地图.宫殿",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "康熙#小桂子，你吓死我了。康亲王说你给乱党抓去，我还以为你。。。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#哈哈，小桂子福大命大，哪有那么容易死。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "康熙#上回你说先皇尚在人世，只是隐在少林寺出家，我想让你去替我看看父皇。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#遵命！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "地图.长安",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "主角#出来啦？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#顺手牵羊，拿了本书，你看看！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#四十二章经！这东西可要收好了……",
+              "type": "DIALOG"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "地图.长安",
+        "name": "地图.长安"
+      },
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "鹿鼎剧情4.4",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情4.4",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情4.4",
+      "children": [
+        {
+          "tag": "action",
+          "value": "地图.风陵渡口",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "主角#下雨了，到前面屋子避避雨吧。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#这屋子里头阴风阵阵，东西放得乱七八糟，到处挂着蜘蛛网，一看就知道许久都没人住了。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#（打冷战）这里会不会有鬼啊。。。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#小宝别怕，有我在呢。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "鬼#韦~小~宝~你为什么杀鳌拜。。。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#鬼啊！！！别杀我，别杀我。。。（不知是鳌拜亲鬼还是仇鬼，管他的，押大！）鳌拜杀我汉人，兴文字狱，该杀！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "庄家少奶奶#韦相公，对不住，吓着你了。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#庄家少奶奶。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "庄家少奶奶#啊，恩公，是你。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#唉，可惜我武功不济，鳌拜奸猾，你们一家受苦了。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "庄家少奶奶#不必客气。如今鳌拜已被韦相公所杀，我们的仇也算报了。双儿~",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "双儿#三少奶奶。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "庄家少奶奶#两位恩公，我没有别的东西送给你们。这个丫头聪明伶俐，又听话，就送给二位吧。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#哇！这么漂亮！爽翻了！。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "双儿",
+          "type": "JOIN"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情4.4",
+          "children": [
+            {
+              "tag": "action",
+              "value": "地图.风陵渡口",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "主角#下雨了，到前面屋子避避雨吧。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#这屋子里头阴风阵阵，东西放得乱七八糟，到处挂着蜘蛛网，一看就知道许久都没人住了。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#（打冷战）这里会不会有鬼啊。。。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#小宝别怕，有我在呢。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "鬼#韦~小~宝~你为什么杀鳌拜。。。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#鬼啊！！！别杀我，别杀我。。。（不知是鳌拜亲鬼还是仇鬼，管他的，押大！）鳌拜杀我汉人，兴文字狱，该杀！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "庄家少奶奶#韦相公，对不住，吓着你了。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#庄家少奶奶。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "庄家少奶奶#啊，恩公，是你。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#唉，可惜我武功不济，鳌拜奸猾，你们一家受苦了。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "庄家少奶奶#不必客气。如今鳌拜已被韦相公所杀，我们的仇也算报了。双儿~",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "双儿#三少奶奶。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "庄家少奶奶#两位恩公，我没有别的东西送给你们。这个丫头聪明伶俐，又听话，就送给二位吧。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#哇！这么漂亮！爽翻了！。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "双儿",
+              "type": "JOIN"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "missingCharacters",
+        "id": "双儿",
+        "name": "双儿"
+      },
+      {
+        "category": "resources",
+        "id": "地图.风陵渡口",
+        "name": "地图.风陵渡口"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "missingCharacters",
+        "id": "双儿",
+        "name": "双儿"
+      }
+    ]
+  },
+  {
+    "id": "鹿鼎剧情4.5",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情4.5",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情4.5",
+      "children": [
+        {
+          "tag": "action",
+          "value": "行痴#施主何事。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#老皇上，皇上叫我来看看你。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "行痴#既如此，你就帮我把这本书带给皇上吧。叫他记住四个字“永不加赋” ",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#是，老皇上。",
+          "type": "DIALOG"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情4.5",
+          "children": [
+            {
+              "tag": "action",
+              "value": "行痴#施主何事。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#老皇上，皇上叫我来看看你。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "行痴#既如此，你就帮我把这本书带给皇上吧。叫他记住四个字“永不加赋” ",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#是，老皇上。",
+              "type": "DIALOG"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": []
+  },
+  {
+    "id": "鹿鼎剧情4.6",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情4.6",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情4.6",
+      "children": [
+        {
+          "tag": "action",
+          "value": "地图.宫殿",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "康熙#小桂子，见到父皇了么？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#见到了，老皇上好的很呐，可真是阿弥陀佛、佛法无边。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "康熙#辛苦你了，下去吧。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#喳。",
+          "type": "DIALOG"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情4.6",
+          "children": [
+            {
+              "tag": "action",
+              "value": "地图.宫殿",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "康熙#小桂子，见到父皇了么？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#见到了，老皇上好的很呐，可真是阿弥陀佛、佛法无边。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "康熙#辛苦你了，下去吧。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#喳。",
+              "type": "DIALOG"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": []
+  },
+  {
+    "id": "鹿鼎剧情4.7",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情4.7",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情4.7",
+      "children": [
+        {
+          "tag": "result",
+          "value": "鹿鼎剧情4.8c",
+          "type": "story",
+          "ret": "0"
+        },
+        {
+          "tag": "result",
+          "value": "鹿鼎剧情4.8_拒绝",
+          "type": "story",
+          "ret": "1"
+        },
+        {
+          "tag": "action",
+          "value": "康熙#$MALE$大侠留步。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "康熙#集齐十四天书，打穿金庸群侠传的$MALE$大侠。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#你说窜了。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "康熙#管他呢。现在反政府武装火力太猛，弄得我头疼。大侠武功高强，可愿意为我分忧？荣华富贵，包你享之不尽。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#如何回答#当然愿意（皇上罩啊）#（反清复明的都是英雄好汉，我怎能帮皇帝和他们为难）",
+          "type": "SELECT"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情4.7",
+          "children": [
+            {
+              "tag": "result",
+              "value": "鹿鼎剧情4.8c",
+              "type": "story",
+              "ret": "0"
+            },
+            {
+              "tag": "result",
+              "value": "鹿鼎剧情4.8_拒绝",
+              "type": "story",
+              "ret": "1"
+            },
+            {
+              "tag": "action",
+              "value": "康熙#$MALE$大侠留步。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "康熙#集齐十四天书，打穿金庸群侠传的$MALE$大侠。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#你说窜了。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "康熙#管他呢。现在反政府武装火力太猛，弄得我头疼。大侠武功高强，可愿意为我分忧？荣华富贵，包你享之不尽。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#如何回答#当然愿意（皇上罩啊）#（反清复明的都是英雄好汉，我怎能帮皇帝和他们为难）",
+              "type": "SELECT"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情4.8_拒绝",
+        "name": "鹿鼎剧情4.8_拒绝"
+      },
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情4.8c",
+        "name": "鹿鼎剧情4.8c"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "鹿鼎剧情4.8_拒绝",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情4.8_拒绝",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情4.8_拒绝",
+      "children": [
+        {
+          "tag": "result",
+          "value": "大地图",
+          "type": "map",
+          "ret": "0"
+        },
+        {
+          "tag": "action",
+          "value": "主角#谢谢皇上好意，可惜我是江湖人士，闲散惯了，请恕无法答应。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#告辞！",
+          "type": "DIALOG"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情4.8_拒绝",
+          "children": [
+            {
+              "tag": "result",
+              "value": "大地图",
+              "type": "map",
+              "ret": "0"
+            },
+            {
+              "tag": "action",
+              "value": "主角#谢谢皇上好意，可惜我是江湖人士，闲散惯了，请恕无法答应。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#告辞！",
+              "type": "DIALOG"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情4.7",
+        "name": "鹿鼎剧情4.7"
+      }
+    ]
+  },
+  {
+    "id": "鹿鼎剧情4.8b",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情4.8b",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情4.8b",
+      "children": [
+        {
+          "tag": "action",
+          "value": "主角#谢谢皇上好意了，告辞了！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "地图.长安",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "双儿#恩公不为高官厚禄所动，真是难能可贵。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#虽然我不帮康熙，但是我却也认为康熙是个好皇帝。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "双儿#可是。。。可是他杀了庄家。。。（眼泪慢慢开始在眼眶中滴溜溜的打转）",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#当时鳌拜独掌大权，康熙想拦也没拦住。坏人是鳌拜，现在仇人已经死了，仇也就算报了，别哭了。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "双儿#是，我一切都听两位恩公的。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "result",
+          "value": "大地图",
+          "type": "map",
+          "ret": "0"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情4.8b",
+          "children": [
+            {
+              "tag": "action",
+              "value": "主角#谢谢皇上好意了，告辞了！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "地图.长安",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "双儿#恩公不为高官厚禄所动，真是难能可贵。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#虽然我不帮康熙，但是我却也认为康熙是个好皇帝。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "双儿#可是。。。可是他杀了庄家。。。（眼泪慢慢开始在眼眶中滴溜溜的打转）",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#当时鳌拜独掌大权，康熙想拦也没拦住。坏人是鳌拜，现在仇人已经死了，仇也就算报了，别哭了。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "双儿#是，我一切都听两位恩公的。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "result",
+              "value": "大地图",
+              "type": "map",
+              "ret": "0"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "地图.长安",
+        "name": "地图.长安"
+      },
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "鹿鼎剧情4.8c",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情4.8c",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情4.8c",
+      "children": [
+        {
+          "tag": "action",
+          "value": "-2",
+          "type": "DAODE"
+        },
+        {
+          "tag": "action",
+          "value": "康熙#这是风际中，在天地会卧底。以后你们就是我的左膀右臂，一同为我去对付天地会的反贼！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "风际中#呵呵，少侠请多多提携啊！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#（贼眉鼠眼的，一看就是个坏家伙）嘿嘿，必须的！",
+          "type": "DIALOG"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情4.8c",
+          "children": [
+            {
+              "tag": "action",
+              "value": "-2",
+              "type": "DAODE"
+            },
+            {
+              "tag": "action",
+              "value": "康熙#这是风际中，在天地会卧底。以后你们就是我的左膀右臂，一同为我去对付天地会的反贼！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "风际中#呵呵，少侠请多多提携啊！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#（贼眉鼠眼的，一看就是个坏家伙）嘿嘿，必须的！",
+              "type": "DIALOG"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情4.7",
+        "name": "鹿鼎剧情4.7"
+      }
+    ]
+  },
+  {
+    "id": "鹿鼎剧情5",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情5",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情5",
+      "children": [
+        {
+          "tag": "action",
+          "value": "康熙#小桂子，我想念父皇想念的紧。真想去少林寺去看看父皇。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#小玄子，我再替你去问候问候老皇上。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "康熙#恩，小桂子，你替我到少林寺出家。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#啊？要我当和尚？这……",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "康熙#替我服侍父皇，也算我尽的一点孝心。你放心，不会让你一直当和尚的。回头可以还俗嘛！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#遵旨！（吓死我了……）",
+          "type": "DIALOG"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情5",
+          "children": [
+            {
+              "tag": "action",
+              "value": "康熙#小桂子，我想念父皇想念的紧。真想去少林寺去看看父皇。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#小玄子，我再替你去问候问候老皇上。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "康熙#恩，小桂子，你替我到少林寺出家。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#啊？要我当和尚？这……",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "康熙#替我服侍父皇，也算我尽的一点孝心。你放心，不会让你一直当和尚的。回头可以还俗嘛！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#遵旨！（吓死我了……）",
+              "type": "DIALOG"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": []
+  },
+  {
+    "id": "鹿鼎剧情6",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情6",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情6",
+      "children": [
+        {
+          "tag": "action",
+          "value": "悔聪#韦大人代帝出家，非同小可。老衲不敢做你师父，便带先师收你做师弟，法名晦明。本寺上下，除了老衲便是师弟辈分最高。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "悔聪#师弟，佛家五大戒“杀生，偷盗，淫邪，妄语，饮酒”。师弟必须要受，其余小戒可守可不守。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#戒不戒赌？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "悔聪#赌什么？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#赌钱啊。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "悔聪#五大戒中并无赌戒，旁人要守，师弟自便。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#（辣块儿妈妈，别人都守，我一个人怎么赌？左手跟右手赌？对了，小玄子要我来少林寺一定是要我学少林武功保护老皇上，可是找谁学呢？）",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "澄观#师叔，以后你要学功夫就到藏经阁找我来。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#好吧，看你这呆头鹅的样子，应该属于好欺负型的……",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "10",
+          "type": "COST_DAY"
+        },
+        {
+          "tag": "action",
+          "value": "悔聪#皇上有旨，师弟即日回京，不必留守。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#皇上圣明！！！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "悔聪#。。。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#5",
+          "type": "UPGRADE.拳掌"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#如来千手法#1",
+          "type": "LEARN.SKILL"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情6",
+          "children": [
+            {
+              "tag": "action",
+              "value": "悔聪#韦大人代帝出家，非同小可。老衲不敢做你师父，便带先师收你做师弟，法名晦明。本寺上下，除了老衲便是师弟辈分最高。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "悔聪#师弟，佛家五大戒“杀生，偷盗，淫邪，妄语，饮酒”。师弟必须要受，其余小戒可守可不守。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#戒不戒赌？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "悔聪#赌什么？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#赌钱啊。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "悔聪#五大戒中并无赌戒，旁人要守，师弟自便。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#（辣块儿妈妈，别人都守，我一个人怎么赌？左手跟右手赌？对了，小玄子要我来少林寺一定是要我学少林武功保护老皇上，可是找谁学呢？）",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "澄观#师叔，以后你要学功夫就到藏经阁找我来。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#好吧，看你这呆头鹅的样子，应该属于好欺负型的……",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "10",
+              "type": "COST_DAY"
+            },
+            {
+              "tag": "action",
+              "value": "悔聪#皇上有旨，师弟即日回京，不必留守。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#皇上圣明！！！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "悔聪#。。。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#5",
+              "type": "UPGRADE.拳掌"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#如来千手法#1",
+              "type": "LEARN.SKILL"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "externalSkills",
+        "id": "如来千手法",
+        "name": "如来千手法"
+      },
+      {
+        "category": "items",
+        "id": "如来千手法",
+        "name": "如来千手法"
+      },
+      {
+        "category": "characters",
+        "id": "韦小宝",
+        "name": "韦小宝"
+      },
+      {
+        "category": "growTemplates",
+        "id": "韦小宝",
+        "name": "韦小宝"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "鹿鼎剧情7",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情7",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情7",
+      "children": [
+        {
+          "tag": "result",
+          "value": "偷看太后",
+          "type": "story",
+          "ret": "0"
+        },
+        {
+          "tag": "action",
+          "value": "地图.长安",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#（悄悄的）这回再看看太后洗澡怎么样？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#别。喂，回来，喂。。。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#这家伙真是个不折不扣的色丕，唉，还是跟着去吧。。。",
+          "type": "DIALOG"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情7",
+          "children": [
+            {
+              "tag": "result",
+              "value": "偷看太后",
+              "type": "story",
+              "ret": "0"
+            },
+            {
+              "tag": "action",
+              "value": "地图.长安",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#（悄悄的）这回再看看太后洗澡怎么样？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#别。喂，回来，喂。。。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#这家伙真是个不折不扣的色丕，唉，还是跟着去吧。。。",
+              "type": "DIALOG"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "supplementStories",
+        "id": "偷看太后",
+        "name": "偷看太后"
+      },
+      {
+        "category": "resources",
+        "id": "地图.长安",
+        "name": "地图.长安"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "偷看太后",
+    "category": "supplementStories",
+    "name": "偷看太后",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "偷看太后",
+      "children": [
+        {
+          "tag": "action",
+          "value": "地图.慈宁宫",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "太后#是谁？好大胆子！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#唉，剧情若干定律之偷看女生洗澡必被发现。没办法，打吧。。。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "鹿鼎记战斗7",
+          "type": "BATTLE"
+        },
+        {
+          "tag": "result",
+          "value": "鹿鼎记战斗7_胜",
+          "type": "story",
+          "ret": "win"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "偷看太后",
+          "children": [
+            {
+              "tag": "action",
+              "value": "地图.慈宁宫",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "太后#是谁？好大胆子！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#唉，剧情若干定律之偷看女生洗澡必被发现。没办法，打吧。。。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "鹿鼎记战斗7",
+              "type": "BATTLE"
+            },
+            {
+              "tag": "result",
+              "value": "鹿鼎记战斗7_胜",
+              "type": "story",
+              "ret": "win"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "地图.慈宁宫",
+        "name": "地图.慈宁宫"
+      },
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎记战斗7_胜",
+        "name": "鹿鼎记战斗7_胜"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情7",
+        "name": "鹿鼎剧情7"
+      }
+    ]
+  },
+  {
+    "id": "鹿鼎记战斗7_胜",
+    "category": "supplementStories",
+    "name": "鹿鼎记战斗7_胜",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎记战斗7_胜",
+      "children": [
+        {
+          "tag": "action",
+          "value": "韦小宝#嘿嘿，你以为我真是来偷看洗澡的，看！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#四十二章经！好样的，快走。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "result",
+          "value": "大地图",
+          "type": "map",
+          "ret": "0"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎记战斗7_胜",
+          "children": [
+            {
+              "tag": "action",
+              "value": "韦小宝#嘿嘿，你以为我真是来偷看洗澡的，看！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#四十二章经！好样的，快走。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "result",
+              "value": "大地图",
+              "type": "map",
+              "ret": "0"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "偷看太后",
+        "name": "偷看太后"
+      }
+    ]
+  },
+  {
+    "id": "鹿鼎剧情9",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情9",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情9",
+      "children": [
+        {
+          "tag": "action",
+          "value": "地图.长安",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#唉，集齐了四十二章经也不知道有什么用。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#我知道，割开封皮。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "双儿#哇，有碎羊皮！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#神了。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#没什么。。。（偷偷翻了下鹿鼎记而已）",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#这些碎羊皮上面画的好像就是龙脉！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#是的。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#但是这么多碎羊皮，怎么拼起来呢？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#双儿，看你的了。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "双儿#是，恩公。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "双儿#（花了一夜，拼好地图）",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#哇，双儿，这么厉害！这个红圈圈应该就是龙脉所在，这上面写的是什么地方？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "双儿#这是满人的文字，我也看不懂。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#别想了，这写的就是鹿鼎山。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#那还等什么，赶紧去吧！ ",
+          "type": "DIALOG"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情9",
+          "children": [
+            {
+              "tag": "action",
+              "value": "地图.长安",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#唉，集齐了四十二章经也不知道有什么用。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#我知道，割开封皮。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "双儿#哇，有碎羊皮！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#神了。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#没什么。。。（偷偷翻了下鹿鼎记而已）",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#这些碎羊皮上面画的好像就是龙脉！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#是的。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#但是这么多碎羊皮，怎么拼起来呢？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#双儿，看你的了。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "双儿#是，恩公。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "双儿#（花了一夜，拼好地图）",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#哇，双儿，这么厉害！这个红圈圈应该就是龙脉所在，这上面写的是什么地方？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "双儿#这是满人的文字，我也看不懂。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#别想了，这写的就是鹿鼎山。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#那还等什么，赶紧去吧！ ",
+              "type": "DIALOG"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "地图.长安",
+        "name": "地图.长安"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "鹿鼎剧情13",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情13",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情13",
+      "children": [
+        {
+          "tag": "result",
+          "value": "鹿鼎剧情13.1a",
+          "type": "story",
+          "ret": "win"
+        },
+        {
+          "tag": "result",
+          "value": "鹿鼎剧情13.1b",
+          "type": "story",
+          "ret": "lose"
+        },
+        {
+          "tag": "action",
+          "value": "地图.嵩山",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "胖头陀#韦小宝！四十二章经拿来！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#没有！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "胖头陀#编剧说有！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#编剧骗你的！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "胖头陀#编剧从来不骗人！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#我身上没有，不信你搜啊！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#挖靠，你们还真搜啊，这不能忍了！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "鹿鼎记战斗10",
+          "type": "BATTLE"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情13",
+          "children": [
+            {
+              "tag": "result",
+              "value": "鹿鼎剧情13.1a",
+              "type": "story",
+              "ret": "win"
+            },
+            {
+              "tag": "result",
+              "value": "鹿鼎剧情13.1b",
+              "type": "story",
+              "ret": "lose"
+            },
+            {
+              "tag": "action",
+              "value": "地图.嵩山",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "胖头陀#韦小宝！四十二章经拿来！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#没有！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "胖头陀#编剧说有！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#编剧骗你的！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "胖头陀#编剧从来不骗人！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#我身上没有，不信你搜啊！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#挖靠，你们还真搜啊，这不能忍了！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "鹿鼎记战斗10",
+              "type": "BATTLE"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "地图.嵩山",
+        "name": "地图.嵩山"
+      },
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情13.1a",
+        "name": "鹿鼎剧情13.1a"
+      },
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情13.1b",
+        "name": "鹿鼎剧情13.1b"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "鹿鼎剧情13.1a",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情13.1a",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情13.1a",
+      "children": [
+        {
+          "tag": "action",
+          "value": "地图.嵩山",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#这么无耻的剧情也难不住老子，老子厉不厉害！嗯？谁在叫我？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "方怡#相公！我是方怡！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#大老婆？！你想死我啦！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#真特么天生一对。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "方怡#师妹在神龙岛等着我们呢，我带你去见她。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#哇，小老婆在等我！走吧！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝",
+          "type": "LEAVE"
+        },
+        {
+          "tag": "action",
+          "value": "主角#喂喂，花了我1000大洋雇来的，就这么跑了？",
+          "type": "DIALOG"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情13.1a",
+          "children": [
+            {
+              "tag": "action",
+              "value": "地图.嵩山",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#这么无耻的剧情也难不住老子，老子厉不厉害！嗯？谁在叫我？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "方怡#相公！我是方怡！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#大老婆？！你想死我啦！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#真特么天生一对。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "方怡#师妹在神龙岛等着我们呢，我带你去见她。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#哇，小老婆在等我！走吧！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝",
+              "type": "LEAVE"
+            },
+            {
+              "tag": "action",
+              "value": "主角#喂喂，花了我1000大洋雇来的，就这么跑了？",
+              "type": "DIALOG"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "地图.嵩山",
+        "name": "地图.嵩山"
+      },
+      {
+        "category": "characters",
+        "id": "韦小宝",
+        "name": "韦小宝"
+      },
+      {
+        "category": "growTemplates",
+        "id": "韦小宝",
+        "name": "韦小宝"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情13",
+        "name": "鹿鼎剧情13"
+      }
+    ]
+  },
+  {
+    "id": "鹿鼎剧情13.1b",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情13.1b",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情13.1b",
+      "children": [
+        {
+          "tag": "action",
+          "value": "地图.嵩山",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "胖头陀#韦小宝，跟我去神龙岛！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#救命啊！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#追！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝",
+          "type": "LEAVE"
+        },
+        {
+          "tag": "action",
+          "value": "主角#喂喂，花了我1000大洋雇来的，就这么跑了？",
+          "type": "DIALOG"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情13.1b",
+          "children": [
+            {
+              "tag": "action",
+              "value": "地图.嵩山",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "胖头陀#韦小宝，跟我去神龙岛！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#救命啊！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#追！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝",
+              "type": "LEAVE"
+            },
+            {
+              "tag": "action",
+              "value": "主角#喂喂，花了我1000大洋雇来的，就这么跑了？",
+              "type": "DIALOG"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "地图.嵩山",
+        "name": "地图.嵩山"
+      },
+      {
+        "category": "characters",
+        "id": "韦小宝",
+        "name": "韦小宝"
+      },
+      {
+        "category": "growTemplates",
+        "id": "韦小宝",
+        "name": "韦小宝"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情13",
+        "name": "鹿鼎剧情13"
+      }
+    ]
+  },
+  {
+    "id": "鹿鼎剧情14",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情14",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情14",
+      "children": [
+        {
+          "tag": "result",
+          "value": "鹿鼎剧情14.1a",
+          "type": "story",
+          "ret": "0"
+        },
+        {
+          "tag": "result",
+          "value": "鹿鼎剧情14.1b",
+          "type": "story",
+          "ret": "1"
+        },
+        {
+          "tag": "action",
+          "value": "地图.神龙岛",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "主角#这是哪儿？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "陆高轩#小兄弟这是神龙岛。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#咦？你什么时候出现的。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "神龙教众#所有教众集合！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "陆高轩#先别说了，去大殿吧",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#（躲在一旁角落里。）",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "钟志灵#教主，你近些年只顾提拔年轻后辈。我们这帮老功臣一个个被你除掉，今日为求自保，对不住了！（放毒）",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "洪教主#哼！老子吃毒大米，喝地沟油长大的，怕你放毒气？化骨绵掌！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "",
+          "type": "SHAKE"
+        },
+        {
+          "tag": "action",
+          "value": "钟志灵#呃啊！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "洪教主#（全身瘫软）靠，这个毒，这么屌。。。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "苏荃#（向韦小宝抛媚眼）小朋友，帮我们解毒怎么样？往我身上泼水就行了，湿身诱惑哦。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "陆高轩#别听她的，你救了她，她会杀你的！杀教主！我们让你当教主！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#（看向主角）你说救不救？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "沐剑屏#不能杀教主，他死了我们都没解药！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#小老婆！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#这。。。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "苏荃#（对你使出淫荡勾魂眼）小兄弟，你看我美吗？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#怎么办？#休想诱惑我，照杀！#教主夫人芳华绝代，我来帮您老人家解解毒。",
+          "type": "SELECT"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情14",
+          "children": [
+            {
+              "tag": "result",
+              "value": "鹿鼎剧情14.1a",
+              "type": "story",
+              "ret": "0"
+            },
+            {
+              "tag": "result",
+              "value": "鹿鼎剧情14.1b",
+              "type": "story",
+              "ret": "1"
+            },
+            {
+              "tag": "action",
+              "value": "地图.神龙岛",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "主角#这是哪儿？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "陆高轩#小兄弟这是神龙岛。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#咦？你什么时候出现的。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "神龙教众#所有教众集合！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "陆高轩#先别说了，去大殿吧",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#（躲在一旁角落里。）",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "钟志灵#教主，你近些年只顾提拔年轻后辈。我们这帮老功臣一个个被你除掉，今日为求自保，对不住了！（放毒）",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "洪教主#哼！老子吃毒大米，喝地沟油长大的，怕你放毒气？化骨绵掌！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "",
+              "type": "SHAKE"
+            },
+            {
+              "tag": "action",
+              "value": "钟志灵#呃啊！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "洪教主#（全身瘫软）靠，这个毒，这么屌。。。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "苏荃#（向韦小宝抛媚眼）小朋友，帮我们解毒怎么样？往我身上泼水就行了，湿身诱惑哦。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "陆高轩#别听她的，你救了她，她会杀你的！杀教主！我们让你当教主！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#（看向主角）你说救不救？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "沐剑屏#不能杀教主，他死了我们都没解药！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#小老婆！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#这。。。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "苏荃#（对你使出淫荡勾魂眼）小兄弟，你看我美吗？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#怎么办？#休想诱惑我，照杀！#教主夫人芳华绝代，我来帮您老人家解解毒。",
+              "type": "SELECT"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "地图.神龙岛",
+        "name": "地图.神龙岛"
+      },
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情14.1a",
+        "name": "鹿鼎剧情14.1a"
+      },
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情14.1b",
+        "name": "鹿鼎剧情14.1b"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "鹿鼎剧情14.1a",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情14.1a",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情14.1a",
+      "children": [
+        {
+          "tag": "result",
+          "value": "鹿鼎剧情14.1a_win",
+          "type": "story",
+          "ret": "win"
+        },
+        {
+          "tag": "action",
+          "value": "洪教主#哇啊啊啊啊啊，这么点毒能难倒我吗？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "洪教主#（用尽全力摸出一颗药吃下）",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#你吃的什么？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "洪教主#速效豹胎易筋丸！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "鹿鼎记战斗13",
+          "type": "BATTLE"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情14.1a",
+          "children": [
+            {
+              "tag": "result",
+              "value": "鹿鼎剧情14.1a_win",
+              "type": "story",
+              "ret": "win"
+            },
+            {
+              "tag": "action",
+              "value": "洪教主#哇啊啊啊啊啊，这么点毒能难倒我吗？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "洪教主#（用尽全力摸出一颗药吃下）",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#你吃的什么？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "洪教主#速效豹胎易筋丸！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "鹿鼎记战斗13",
+              "type": "BATTLE"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情14.1a_win",
+        "name": "鹿鼎剧情14.1a_win"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情14",
+        "name": "鹿鼎剧情14"
+      },
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情14.1b",
+        "name": "鹿鼎剧情14.1b"
+      }
+    ]
+  },
+  {
+    "id": "鹿鼎剧情14.1a_win",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情14.1a_win",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情14.1a_win",
+      "children": [
+        {
+          "tag": "action",
+          "value": "陆高轩#少侠武功高强，今日除掉这江湖一害。现在我们信守承诺，愿意奉你当教主！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#如何回答？#我只是为江湖除害#却之不恭，我就来执掌神龙教！",
+          "type": "SELECT"
+        },
+        {
+          "tag": "result",
+          "value": "鹿鼎记_神龙教不当教主",
+          "type": "story",
+          "ret": "0"
+        },
+        {
+          "tag": "result",
+          "value": "鹿鼎记_神龙教当教主",
+          "type": "story",
+          "ret": "1"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情14.1a_win",
+          "children": [
+            {
+              "tag": "action",
+              "value": "陆高轩#少侠武功高强，今日除掉这江湖一害。现在我们信守承诺，愿意奉你当教主！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#如何回答？#我只是为江湖除害#却之不恭，我就来执掌神龙教！",
+              "type": "SELECT"
+            },
+            {
+              "tag": "result",
+              "value": "鹿鼎记_神龙教不当教主",
+              "type": "story",
+              "ret": "0"
+            },
+            {
+              "tag": "result",
+              "value": "鹿鼎记_神龙教当教主",
+              "type": "story",
+              "ret": "1"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎记_神龙教不当教主",
+        "name": "鹿鼎记_神龙教不当教主"
+      },
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎记_神龙教当教主",
+        "name": "鹿鼎记_神龙教当教主"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情14.1a",
+        "name": "鹿鼎剧情14.1a"
+      }
+    ]
+  },
+  {
+    "id": "鹿鼎记_神龙教不当教主",
+    "category": "supplementStories",
+    "name": "鹿鼎记_神龙教不当教主",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎记_神龙教不当教主",
+      "children": [
+        {
+          "tag": "action",
+          "value": "主角#我只是伸张正义，为江湖除害。至于神龙教主一职，你们还是另请高就吧！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "陆高轩#少侠果然高风亮节！那么我们神龙教自己的事我们自家处理吧。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "2",
+          "type": "DAODE"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎记_神龙教不当教主",
+          "children": [
+            {
+              "tag": "action",
+              "value": "主角#我只是伸张正义，为江湖除害。至于神龙教主一职，你们还是另请高就吧！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "陆高轩#少侠果然高风亮节！那么我们神龙教自己的事我们自家处理吧。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "2",
+              "type": "DAODE"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情14.1a_win",
+        "name": "鹿鼎剧情14.1a_win"
+      }
+    ]
+  },
+  {
+    "id": "鹿鼎记_神龙教当教主",
+    "category": "supplementStories",
+    "name": "鹿鼎记_神龙教当教主",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎记_神龙教当教主",
+      "children": [
+        {
+          "tag": "action",
+          "value": "陆高轩#$MALE$教主仙福永享，寿与天齐！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#（哇，原来当教主这么爽。）好，好！",
+          "type": "DIALOG"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎记_神龙教当教主",
+          "children": [
+            {
+              "tag": "action",
+              "value": "陆高轩#$MALE$教主仙福永享，寿与天齐！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#（哇，原来当教主这么爽。）好，好！",
+              "type": "DIALOG"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情14.1a_win",
+        "name": "鹿鼎剧情14.1a_win"
+      }
+    ]
+  },
+  {
+    "id": "鹿鼎剧情14.1b",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情14.1b",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情14.1b",
+      "children": [
+        {
+          "tag": "action",
+          "value": "主角#夫人，我来帮你解毒啦！哈哈，来个湿身诱惑吧！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "苏荃",
+          "type": "TOUCH"
+        },
+        {
+          "tag": "action",
+          "value": "鹿鼎剧情14.1b_win",
+          "type": "story"
+        },
+        {
+          "tag": "action",
+          "value": "鹿鼎剧情14.1a",
+          "type": "story"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情14.1b",
+          "children": [
+            {
+              "tag": "action",
+              "value": "主角#夫人，我来帮你解毒啦！哈哈，来个湿身诱惑吧！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "苏荃",
+              "type": "TOUCH"
+            },
+            {
+              "tag": "action",
+              "value": "鹿鼎剧情14.1b_win",
+              "type": "story"
+            },
+            {
+              "tag": "action",
+              "value": "鹿鼎剧情14.1a",
+              "type": "story"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "characters",
+        "id": "苏荃",
+        "name": "苏荃"
+      },
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情14.1a",
+        "name": "鹿鼎剧情14.1a"
+      },
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情14.1b_win",
+        "name": "鹿鼎剧情14.1b_win"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情14",
+        "name": "鹿鼎剧情14"
+      }
+    ]
+  },
+  {
+    "id": "鹿鼎剧情14.1b_win",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情14.1b_win",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情14.1b_win",
+      "children": [
+        {
+          "tag": "result",
+          "value": "鹿鼎剧情14.2",
+          "type": "story",
+          "ret": "0"
+        },
+        {
+          "tag": "action",
+          "value": "苏荃#谢谢你。（我居然一点也不生气？！什么情况？？？）",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "苏荃#2",
+          "type": "HAOGAN"
+        },
+        {
+          "tag": "action",
+          "value": "主角#夫人，你好些了吧？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "苏荃#快给教主他们解毒吧。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "洪安通#赶紧给众人解毒吧，韦小宝，你跟我进来一下。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#啊？好……",
+          "type": "DIALOG"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情14.1b_win",
+          "children": [
+            {
+              "tag": "result",
+              "value": "鹿鼎剧情14.2",
+              "type": "story",
+              "ret": "0"
+            },
+            {
+              "tag": "action",
+              "value": "苏荃#谢谢你。（我居然一点也不生气？！什么情况？？？）",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "苏荃#2",
+              "type": "HAOGAN"
+            },
+            {
+              "tag": "action",
+              "value": "主角#夫人，你好些了吧？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "苏荃#快给教主他们解毒吧。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "洪安通#赶紧给众人解毒吧，韦小宝，你跟我进来一下。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#啊？好……",
+              "type": "DIALOG"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "characters",
+        "id": "苏荃",
+        "name": "苏荃"
+      },
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情14.2",
+        "name": "鹿鼎剧情14.2"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情14.1b",
+        "name": "鹿鼎剧情14.1b"
+      }
+    ]
+  },
+  {
+    "id": "鹿鼎剧情14.2",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情14.2",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情14.2",
+      "children": [
+        {
+          "tag": "action",
+          "value": "地图.神龙岛",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "女主#（笑嘻嘻望着你）我看见了。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#看见什么了？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "女主#坏蛋！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#啊？#你是不是也想试试啊？#我只是给她解毒啊……",
+          "type": "SELECT"
+        },
+        {
+          "tag": "result",
+          "value": "鹿鼎剧情14.2.2a",
+          "type": "story",
+          "ret": "0"
+        },
+        {
+          "tag": "result",
+          "value": "鹿鼎剧情14.2.1a",
+          "type": "story",
+          "ret": "1"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情14.2",
+          "children": [
+            {
+              "tag": "action",
+              "value": "地图.神龙岛",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "女主#（笑嘻嘻望着你）我看见了。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#看见什么了？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "女主#坏蛋！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#啊？#你是不是也想试试啊？#我只是给她解毒啊……",
+              "type": "SELECT"
+            },
+            {
+              "tag": "result",
+              "value": "鹿鼎剧情14.2.2a",
+              "type": "story",
+              "ret": "0"
+            },
+            {
+              "tag": "result",
+              "value": "鹿鼎剧情14.2.1a",
+              "type": "story",
+              "ret": "1"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "地图.神龙岛",
+        "name": "地图.神龙岛"
+      },
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情14.2.1a",
+        "name": "鹿鼎剧情14.2.1a"
+      },
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情14.2.2a",
+        "name": "鹿鼎剧情14.2.2a"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情14.1b_win",
+        "name": "鹿鼎剧情14.1b_win"
+      }
+    ]
+  },
+  {
+    "id": "鹿鼎剧情14.2.1a",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情14.2.1a",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情14.2.1a",
+      "children": [
+        {
+          "tag": "action",
+          "value": "地图.神龙岛",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "主角#我只是……给她擦擦脸上的水而已。她不是中毒么。。这样才能解毒。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "女主#呸！还装！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "主角#真的没有。。。",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "女主#哼，解释就是掩饰！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "女主#1",
+          "type": "HAOGAN"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情14.2.1a",
+          "children": [
+            {
+              "tag": "action",
+              "value": "地图.神龙岛",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "主角#我只是……给她擦擦脸上的水而已。她不是中毒么。。这样才能解毒。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "女主#呸！还装！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "主角#真的没有。。。",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "女主#哼，解释就是掩饰！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "女主#1",
+              "type": "HAOGAN"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "地图.神龙岛",
+        "name": "地图.神龙岛"
+      },
+      {
+        "category": "characters",
+        "id": "女主",
+        "name": "铃兰"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情14.2",
+        "name": "鹿鼎剧情14.2"
+      }
+    ]
+  },
+  {
+    "id": "鹿鼎剧情14.2.2a",
+    "category": "supplementStories",
+    "name": "鹿鼎剧情14.2.2a",
+    "description": "",
+    "state": "补充资料 · 运行入口待接线",
+    "source": "storysLudingji.txt",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "story",
+      "name": "鹿鼎剧情14.2.2a",
+      "children": [
+        {
+          "tag": "action",
+          "value": "地图.神龙岛",
+          "type": "BACKGROUND"
+        },
+        {
+          "tag": "action",
+          "value": "主角#那你是不是也想试试啊？",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "韦小宝#诶哟，兄弟我看好你哟。加油！加油！",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "女主#讨厌！臭流氓！（红着脸跑了）",
+          "type": "DIALOG"
+        },
+        {
+          "tag": "action",
+          "value": "女主#2",
+          "type": "HAOGAN"
+        },
+        {
+          "tag": "action",
+          "value": "-2",
+          "type": "DAODE"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "storysLudingji.txt",
+        "node": {
+          "tag": "story",
+          "name": "鹿鼎剧情14.2.2a",
+          "children": [
+            {
+              "tag": "action",
+              "value": "地图.神龙岛",
+              "type": "BACKGROUND"
+            },
+            {
+              "tag": "action",
+              "value": "主角#那你是不是也想试试啊？",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "韦小宝#诶哟，兄弟我看好你哟。加油！加油！",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "女主#讨厌！臭流氓！（红着脸跑了）",
+              "type": "DIALOG"
+            },
+            {
+              "tag": "action",
+              "value": "女主#2",
+              "type": "HAOGAN"
+            },
+            {
+              "tag": "action",
+              "value": "-2",
+              "type": "DAODE"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "地图.神龙岛",
+        "name": "地图.神龙岛"
+      },
+      {
+        "category": "characters",
+        "id": "女主",
+        "name": "铃兰"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "supplementStories",
+        "id": "鹿鼎剧情14.2",
+        "name": "鹿鼎剧情14.2"
+      }
+    ]
+  }
+]

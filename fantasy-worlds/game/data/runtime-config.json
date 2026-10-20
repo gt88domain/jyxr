@@ -1,0 +1,21 @@
+{
+  "equipmentRandomAffixCountWeights": [
+    {
+      "count": 4,
+      "weight": 100
+    },
+    {
+      "count": 3,
+      "weight": 180
+    },
+    {
+      "count": 2,
+      "weight": 288
+    },
+    {
+      "count": 1,
+      "weight": 432
+    }
+  ],
+  "source": "jyx-legacy-dll/JyGame/Item.cs Generate(bool): conditional .1/.2/.4/else"
+}

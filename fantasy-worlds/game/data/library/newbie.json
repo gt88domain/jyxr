@@ -1,0 +1,704 @@
+[
+  {
+    "id": "购买物品",
+    "category": "newbie",
+    "name": "购买物品",
+    "description": "前往洛阳的商店购买五颗小还丹",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "newbie.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "task",
+      "name": "购买物品",
+      "description": "前往洛阳的商店购买五颗小还丹",
+      "next": "",
+      "children": [
+        {
+          "tag": "location",
+          "name": "洛阳"
+        },
+        {
+          "tag": "location",
+          "name": "商店"
+        },
+        {
+          "tag": "finish",
+          "children": [
+            {
+              "tag": "condition",
+              "type": "should_finish",
+              "value": "original_新手引导.买药继续"
+            }
+          ]
+        },
+        {
+          "tag": "result",
+          "ret": "0",
+          "type": "story",
+          "value": "original_新手引导.买到药了"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "newbie.txt",
+        "node": {
+          "tag": "task",
+          "name": "购买物品",
+          "description": "前往洛阳的商店购买五颗小还丹",
+          "next": "",
+          "children": [
+            {
+              "tag": "location",
+              "name": "洛阳"
+            },
+            {
+              "tag": "location",
+              "name": "商店"
+            },
+            {
+              "tag": "finish",
+              "children": [
+                {
+                  "tag": "condition",
+                  "type": "should_finish",
+                  "value": "original_新手引导.买药继续"
+                }
+              ]
+            },
+            {
+              "tag": "result",
+              "ret": "0",
+              "type": "story",
+              "value": "original_新手引导.买到药了"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "stories",
+        "id": "original_新手引导.买到药了",
+        "name": "original_新手引导.买到药了"
+      },
+      {
+        "category": "stories",
+        "id": "original_新手引导.买药继续",
+        "name": "original_新手引导.买药继续"
+      },
+      {
+        "category": "maps",
+        "id": "洛阳",
+        "name": "洛阳"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "maps",
+        "id": "洛阳",
+        "name": "洛阳"
+      },
+      {
+        "category": "maps",
+        "id": "南贤居",
+        "name": "南贤居"
+      },
+      {
+        "category": "stories",
+        "id": "original_新手引导.任务买药",
+        "name": "original_新手引导.任务买药"
+      }
+    ]
+  },
+  {
+    "id": "购买药品完成",
+    "category": "newbie",
+    "name": "购买药品完成",
+    "description": "购买药品后，回到南贤居，和南贤对话",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "newbie.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "task",
+      "name": "购买药品完成",
+      "description": "购买药品后，回到南贤居，和南贤对话",
+      "children": [
+        {
+          "tag": "location",
+          "name": "南贤居"
+        },
+        {
+          "tag": "location",
+          "name": "南贤"
+        },
+        {
+          "tag": "finish",
+          "children": [
+            {
+              "tag": "condition",
+              "type": "should_finish",
+              "value": "original_新手引导.买药完成"
+            }
+          ]
+        },
+        {
+          "tag": "result",
+          "ret": "0",
+          "type": "story",
+          "value": "original_新手引导.任务打人"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "newbie.txt",
+        "node": {
+          "tag": "task",
+          "name": "购买药品完成",
+          "description": "购买药品后，回到南贤居，和南贤对话",
+          "children": [
+            {
+              "tag": "location",
+              "name": "南贤居"
+            },
+            {
+              "tag": "location",
+              "name": "南贤"
+            },
+            {
+              "tag": "finish",
+              "children": [
+                {
+                  "tag": "condition",
+                  "type": "should_finish",
+                  "value": "original_新手引导.买药完成"
+                }
+              ]
+            },
+            {
+              "tag": "result",
+              "ret": "0",
+              "type": "story",
+              "value": "original_新手引导.任务打人"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "stories",
+        "id": "original_新手引导.买药完成",
+        "name": "original_新手引导.买药完成"
+      },
+      {
+        "category": "stories",
+        "id": "original_新手引导.任务打人",
+        "name": "original_新手引导.任务打人"
+      },
+      {
+        "category": "characters",
+        "id": "南贤",
+        "name": "南贤"
+      },
+      {
+        "category": "maps",
+        "id": "南贤居",
+        "name": "南贤居"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "maps",
+        "id": "南贤居",
+        "name": "南贤居"
+      },
+      {
+        "category": "stories",
+        "id": "original_新手引导.买到药了",
+        "name": "original_新手引导.买到药了"
+      }
+    ]
+  },
+  {
+    "id": "教训小孩",
+    "category": "newbie",
+    "name": "教训小孩",
+    "description": "前往洛阳，教训街上不听话的小孩",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "newbie.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "task",
+      "name": "教训小孩",
+      "description": "前往洛阳，教训街上不听话的小孩",
+      "children": [
+        {
+          "tag": "location",
+          "name": "洛阳"
+        },
+        {
+          "tag": "location",
+          "name": "小孩"
+        },
+        {
+          "tag": "finish",
+          "children": [
+            {
+              "tag": "condition",
+              "type": "should_finish",
+              "value": "original_新手引导.教训小孩成功"
+            }
+          ]
+        },
+        {
+          "tag": "result",
+          "ret": "0",
+          "type": "story",
+          "value": "original_新手引导.教训小孩复命"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "newbie.txt",
+        "node": {
+          "tag": "task",
+          "name": "教训小孩",
+          "description": "前往洛阳，教训街上不听话的小孩",
+          "children": [
+            {
+              "tag": "location",
+              "name": "洛阳"
+            },
+            {
+              "tag": "location",
+              "name": "小孩"
+            },
+            {
+              "tag": "finish",
+              "children": [
+                {
+                  "tag": "condition",
+                  "type": "should_finish",
+                  "value": "original_新手引导.教训小孩成功"
+                }
+              ]
+            },
+            {
+              "tag": "result",
+              "ret": "0",
+              "type": "story",
+              "value": "original_新手引导.教训小孩复命"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "stories",
+        "id": "original_新手引导.教训小孩复命",
+        "name": "original_新手引导.教训小孩复命"
+      },
+      {
+        "category": "stories",
+        "id": "original_新手引导.教训小孩成功",
+        "name": "original_新手引导.教训小孩成功"
+      },
+      {
+        "category": "characters",
+        "id": "小孩",
+        "name": "小孩"
+      },
+      {
+        "category": "maps",
+        "id": "洛阳",
+        "name": "洛阳"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "maps",
+        "id": "洛阳",
+        "name": "洛阳"
+      },
+      {
+        "category": "maps",
+        "id": "南贤居",
+        "name": "南贤居"
+      },
+      {
+        "category": "stories",
+        "id": "original_新手引导.任务打人小孩",
+        "name": "original_新手引导.任务打人小孩"
+      }
+    ]
+  },
+  {
+    "id": "教训小孩完成",
+    "category": "newbie",
+    "name": "教训小孩完成",
+    "description": "教训完了小孩，回去找南贤吧",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "newbie.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "task",
+      "name": "教训小孩完成",
+      "description": "教训完了小孩，回去找南贤吧",
+      "children": [
+        {
+          "tag": "location",
+          "name": "南贤居"
+        },
+        {
+          "tag": "location",
+          "name": "南贤"
+        },
+        {
+          "tag": "finish",
+          "children": [
+            {
+              "tag": "condition",
+              "type": "should_finish",
+              "value": "original_新手引导.教训小孩完成"
+            }
+          ]
+        },
+        {
+          "tag": "result",
+          "ret": "0",
+          "type": "story",
+          "value": "original_新手引导结束"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "newbie.txt",
+        "node": {
+          "tag": "task",
+          "name": "教训小孩完成",
+          "description": "教训完了小孩，回去找南贤吧",
+          "children": [
+            {
+              "tag": "location",
+              "name": "南贤居"
+            },
+            {
+              "tag": "location",
+              "name": "南贤"
+            },
+            {
+              "tag": "finish",
+              "children": [
+                {
+                  "tag": "condition",
+                  "type": "should_finish",
+                  "value": "original_新手引导.教训小孩完成"
+                }
+              ]
+            },
+            {
+              "tag": "result",
+              "ret": "0",
+              "type": "story",
+              "value": "original_新手引导结束"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "stories",
+        "id": "original_新手引导.教训小孩完成",
+        "name": "original_新手引导.教训小孩完成"
+      },
+      {
+        "category": "stories",
+        "id": "original_新手引导结束",
+        "name": "original_新手引导结束"
+      },
+      {
+        "category": "characters",
+        "id": "南贤",
+        "name": "南贤"
+      },
+      {
+        "category": "maps",
+        "id": "南贤居",
+        "name": "南贤居"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "maps",
+        "id": "南贤居",
+        "name": "南贤居"
+      },
+      {
+        "category": "stories",
+        "id": "original_新手引导.教训小孩复命",
+        "name": "original_新手引导.教训小孩复命"
+      }
+    ]
+  },
+  {
+    "id": "教训黑老大",
+    "category": "newbie",
+    "name": "教训黑老大",
+    "description": "前往衡阳，教训衡阳城里的黑老大",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "newbie.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "task",
+      "name": "教训黑老大",
+      "description": "前往衡阳，教训衡阳城里的黑老大",
+      "children": [
+        {
+          "tag": "location",
+          "name": "衡阳"
+        },
+        {
+          "tag": "location",
+          "name": "黑老大"
+        },
+        {
+          "tag": "finish",
+          "children": [
+            {
+              "tag": "condition",
+              "type": "should_finish",
+              "value": "original_新手引导.教训黑老大负"
+            }
+          ]
+        },
+        {
+          "tag": "result",
+          "ret": "0",
+          "type": "story",
+          "value": "original_新手引导.教训黑老大复命"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "newbie.txt",
+        "node": {
+          "tag": "task",
+          "name": "教训黑老大",
+          "description": "前往衡阳，教训衡阳城里的黑老大",
+          "children": [
+            {
+              "tag": "location",
+              "name": "衡阳"
+            },
+            {
+              "tag": "location",
+              "name": "黑老大"
+            },
+            {
+              "tag": "finish",
+              "children": [
+                {
+                  "tag": "condition",
+                  "type": "should_finish",
+                  "value": "original_新手引导.教训黑老大负"
+                }
+              ]
+            },
+            {
+              "tag": "result",
+              "ret": "0",
+              "type": "story",
+              "value": "original_新手引导.教训黑老大复命"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "stories",
+        "id": "original_新手引导.教训黑老大复命",
+        "name": "original_新手引导.教训黑老大复命"
+      },
+      {
+        "category": "stories",
+        "id": "original_新手引导.教训黑老大负",
+        "name": "original_新手引导.教训黑老大负"
+      },
+      {
+        "category": "maps",
+        "id": "衡阳",
+        "name": "衡阳"
+      },
+      {
+        "category": "characters",
+        "id": "黑老大",
+        "name": "黑老大"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "maps",
+        "id": "衡阳",
+        "name": "衡阳"
+      },
+      {
+        "category": "maps",
+        "id": "南贤居",
+        "name": "南贤居"
+      },
+      {
+        "category": "stories",
+        "id": "original_新手引导.任务打人黑帮",
+        "name": "original_新手引导.任务打人黑帮"
+      }
+    ]
+  },
+  {
+    "id": "教训黑老大完成",
+    "category": "newbie",
+    "name": "教训黑老大完成",
+    "description": "衡阳黑老大的事情告一段落了，回去找南贤吧",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "newbie.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "task",
+      "name": "教训黑老大完成",
+      "description": "衡阳黑老大的事情告一段落了，回去找南贤吧",
+      "children": [
+        {
+          "tag": "location",
+          "name": "南贤居"
+        },
+        {
+          "tag": "location",
+          "name": "南贤"
+        },
+        {
+          "tag": "finish",
+          "children": [
+            {
+              "tag": "condition",
+              "type": "should_finish",
+              "value": "original_新手引导.教训黑老大完成"
+            }
+          ]
+        },
+        {
+          "tag": "result",
+          "ret": "0",
+          "type": "story",
+          "value": "original_新手引导结束"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "newbie.txt",
+        "node": {
+          "tag": "task",
+          "name": "教训黑老大完成",
+          "description": "衡阳黑老大的事情告一段落了，回去找南贤吧",
+          "children": [
+            {
+              "tag": "location",
+              "name": "南贤居"
+            },
+            {
+              "tag": "location",
+              "name": "南贤"
+            },
+            {
+              "tag": "finish",
+              "children": [
+                {
+                  "tag": "condition",
+                  "type": "should_finish",
+                  "value": "original_新手引导.教训黑老大完成"
+                }
+              ]
+            },
+            {
+              "tag": "result",
+              "ret": "0",
+              "type": "story",
+              "value": "original_新手引导结束"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "stories",
+        "id": "original_新手引导.教训黑老大完成",
+        "name": "original_新手引导.教训黑老大完成"
+      },
+      {
+        "category": "stories",
+        "id": "original_新手引导结束",
+        "name": "original_新手引导结束"
+      },
+      {
+        "category": "characters",
+        "id": "南贤",
+        "name": "南贤"
+      },
+      {
+        "category": "maps",
+        "id": "南贤居",
+        "name": "南贤居"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "maps",
+        "id": "南贤居",
+        "name": "南贤居"
+      },
+      {
+        "category": "stories",
+        "id": "original_新手引导.教训黑老大复命",
+        "name": "original_新手引导.教训黑老大复命"
+      }
+    ]
+  }
+]

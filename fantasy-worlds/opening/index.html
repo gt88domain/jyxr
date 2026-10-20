@@ -1,16 +1,1 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#162721">
-  <title>Grimm's Request · Thirteen Realms</title>
-  <link rel="icon" href="../assets/favicon.svg">
-  <link rel="stylesheet" href="../assets/opening.css?v=0a8c3678376d">
-</head>
-<body>
-  <main id="opening" aria-busy="true"><p class="loading">Loading Grimm's request…</p></main>
-  <dialog id="history"><div class="dialog-heading"><h2 id="history-title"></h2><button id="close-history" type="button">×</button></div><div id="transcript"></div></dialog>
-  <script type="module" src="../assets/opening.mjs?v=0a8c3678376d"></script>
-</body>
-</html>
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Grimm · Game</title></head><body><p><a id="game-link" href="../game/">Continue to the game / 进入游戏</a></p><script>const target=new URL('../game/',location.href);target.search=location.search;document.querySelector('#game-link').href=target.href;location.replace(target.href);</script></body></html>

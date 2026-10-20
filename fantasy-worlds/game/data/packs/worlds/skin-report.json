@@ -1,0 +1,38 @@
+[
+  {
+    "locale": "en",
+    "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+    "guideId": "南贤",
+    "displayName": "Grimm",
+    "translatedSegments": [
+      "新手村_出生",
+      "新手村_南贤开场",
+      "新手村_小村介绍",
+      "新手村_南贤_出村",
+      "新手村_南贤_善恶之分",
+      "新手村_南贤_募集队友",
+      "新手村_南贤_DOS版",
+      "新手村_南贤_目标",
+      "新手村_南贤_打一架"
+    ],
+    "sameGameplayFlow": true
+  },
+  {
+    "locale": "zh-CN",
+    "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+    "guideId": "南贤",
+    "displayName": "格林",
+    "translatedSegments": [
+      "新手村_出生",
+      "新手村_南贤开场",
+      "新手村_小村介绍",
+      "新手村_南贤_出村",
+      "新手村_南贤_善恶之分",
+      "新手村_南贤_募集队友",
+      "新手村_南贤_DOS版",
+      "新手村_南贤_目标",
+      "新手村_南贤_打一架"
+    ],
+    "sameGameplayFlow": true
+  }
+]

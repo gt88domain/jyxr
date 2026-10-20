@@ -1,0 +1,42 @@
+[
+  {
+    "id": "白眉鹰王",
+    "category": "referenceAliases",
+    "name": "白眉鹰王",
+    "description": "原奖励池使用称号；根据原鹰爪功说明“白眉鹰王殷天正的成名绝技”，对应现有人物定义，不改角色属性。",
+    "state": "引用已修正 · 使用现有人物定义",
+    "source": "Assets/Resources/textassets/lua/jygame/rollrole.lua.lua",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "alias_correction",
+      "key": "白眉鹰王",
+      "character": "殷天正",
+      "description": "原奖励池使用称号；根据原鹰爪功说明“白眉鹰王殷天正的成名绝技”，对应现有人物定义，不改角色属性。",
+      "evidence": "jyx-legacy-data/data-origin/skills.xml:492 · 鹰爪功说明：白眉鹰王殷天正的成名绝技"
+    },
+    "runtime": null,
+    "variants": [],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "characters",
+        "id": "殷天正",
+        "name": "殷天正"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "bonusCompanions",
+        "id": "后期开局伙伴池2",
+        "name": "第3周目 · 开局随机伙伴候选"
+      },
+      {
+        "category": "creation",
+        "id": "开局伙伴奖励",
+        "name": "分周目开局伙伴奖励"
+      }
+    ]
+  }
+]

@@ -1,0 +1,645 @@
+[
+  {
+    "id": "测试",
+    "category": "touch",
+    "name": "测试",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "touch.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "touch",
+      "key": "测试",
+      "pic": "touch.test",
+      "children": [
+        {
+          "tag": "zone",
+          "y1": "338",
+          "y2": "-89",
+          "x1": "-8",
+          "x2": "131"
+        },
+        {
+          "tag": "zone",
+          "y1": "-26",
+          "y2": "-83",
+          "x1": "-247",
+          "x2": "203"
+        },
+        {
+          "tag": "zone",
+          "y1": "150",
+          "y2": "6",
+          "x1": "-49",
+          "x2": "186"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "touch.txt",
+        "node": {
+          "tag": "touch",
+          "key": "测试",
+          "pic": "touch.test",
+          "children": [
+            {
+              "tag": "zone",
+              "y1": "338",
+              "y2": "-89",
+              "x1": "-8",
+              "x2": "131"
+            },
+            {
+              "tag": "zone",
+              "y1": "-26",
+              "y2": "-83",
+              "x1": "-247",
+              "x2": "203"
+            },
+            {
+              "tag": "zone",
+              "y1": "150",
+              "y2": "6",
+              "x1": "-49",
+              "x2": "186"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "touch.test",
+        "name": "touch.test"
+      }
+    ],
+    "usedBy": []
+  },
+  {
+    "id": "田青文",
+    "category": "touch",
+    "name": "田青文",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "touch.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "touch",
+      "key": "田青文",
+      "pic": "touch.tianqingwen",
+      "children": [
+        {
+          "tag": "zone",
+          "y1": "184",
+          "y2": "-16",
+          "x1": "-145",
+          "x2": "75"
+        },
+        {
+          "tag": "zone",
+          "y1": "-74",
+          "y2": "-293",
+          "x1": "-28",
+          "x2": "165"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "touch.txt",
+        "node": {
+          "tag": "touch",
+          "key": "田青文",
+          "pic": "touch.tianqingwen",
+          "children": [
+            {
+              "tag": "zone",
+              "y1": "184",
+              "y2": "-16",
+              "x1": "-145",
+              "x2": "75"
+            },
+            {
+              "tag": "zone",
+              "y1": "-74",
+              "y2": "-293",
+              "x1": "-28",
+              "x2": "165"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "touch.tianqingwen",
+        "name": "touch.tianqingwen"
+      },
+      {
+        "category": "characters",
+        "id": "田青文",
+        "name": "田青文"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "characters",
+        "id": "田青文",
+        "name": "田青文"
+      },
+      {
+        "category": "maps",
+        "id": "破庙",
+        "name": "破庙"
+      },
+      {
+        "category": "stories",
+        "id": "破庙_田青文_调戏胜利",
+        "name": "破庙_田青文_调戏胜利"
+      },
+      {
+        "category": "stories",
+        "id": "破庙_田青文_TOUCH_win",
+        "name": "破庙_田青文_TOUCH_win"
+      },
+      {
+        "category": "battles",
+        "id": "破庙战田青文",
+        "name": "破庙战田青文"
+      }
+    ]
+  },
+  {
+    "id": "王语嫣",
+    "category": "touch",
+    "name": "王语嫣",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "touch.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "touch",
+      "key": "王语嫣",
+      "pic": "touch.wangyuyan",
+      "children": [
+        {
+          "tag": "zone",
+          "y1": "224",
+          "y2": "-274",
+          "x1": "-116",
+          "x2": "72"
+        },
+        {
+          "tag": "zone",
+          "y1": "-72",
+          "y2": "-267",
+          "x1": "-158",
+          "x2": "218"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "touch.txt",
+        "node": {
+          "tag": "touch",
+          "key": "王语嫣",
+          "pic": "touch.wangyuyan",
+          "children": [
+            {
+              "tag": "zone",
+              "y1": "224",
+              "y2": "-274",
+              "x1": "-116",
+              "x2": "72"
+            },
+            {
+              "tag": "zone",
+              "y1": "-72",
+              "y2": "-267",
+              "x1": "-158",
+              "x2": "218"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "touch.wangyuyan",
+        "name": "touch.wangyuyan"
+      },
+      {
+        "category": "characters",
+        "id": "王语嫣",
+        "name": "王语嫣"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "characters",
+        "id": "王语嫣",
+        "name": "王语嫣"
+      },
+      {
+        "category": "maps",
+        "id": "西夏",
+        "name": "西夏"
+      },
+      {
+        "category": "maps",
+        "id": "杭州酒楼",
+        "name": "杭州酒楼"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_西夏驸马段誉6",
+        "name": "tlbb.dy_西夏驸马段誉6"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_燕子坞慕容复",
+        "name": "tlbb.dy_燕子坞慕容复"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_琴韵小筑阿碧2",
+        "name": "tlbb.dy_琴韵小筑阿碧2"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_曼陀山庄初见王语嫣2",
+        "name": "tlbb.dy_曼陀山庄初见王语嫣2"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_曼陀山庄初见王语嫣3",
+        "name": "tlbb.dy_曼陀山庄初见王语嫣3"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_曼陀山庄阿朱王语嫣",
+        "name": "tlbb.dy_曼陀山庄阿朱王语嫣"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_阿碧线王语嫣touch3",
+        "name": "tlbb.dy_阿碧线王语嫣touch3"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_阿碧线李青萝.touch.成功",
+        "name": "tlbb.dy_阿碧线李青萝.touch.成功"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_阿碧线李青萝.touch.不成功2",
+        "name": "tlbb.dy_阿碧线李青萝.touch.不成功2"
+      },
+      {
+        "category": "resources",
+        "id": "人物.王语嫣",
+        "name": "人物.王语嫣"
+      }
+    ]
+  },
+  {
+    "id": "木婉清",
+    "category": "touch",
+    "name": "木婉清",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "touch.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "touch",
+      "key": "木婉清",
+      "pic": "touch.muwanqing",
+      "children": [
+        {
+          "tag": "zone",
+          "y1": "304",
+          "y2": "-236",
+          "x1": "23",
+          "x2": "114"
+        },
+        {
+          "tag": "zone",
+          "y1": "147",
+          "y2": "-97",
+          "x1": "-29",
+          "x2": "187"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "touch.txt",
+        "node": {
+          "tag": "touch",
+          "key": "木婉清",
+          "pic": "touch.muwanqing",
+          "children": [
+            {
+              "tag": "zone",
+              "y1": "304",
+              "y2": "-236",
+              "x1": "23",
+              "x2": "114"
+            },
+            {
+              "tag": "zone",
+              "y1": "147",
+              "y2": "-97",
+              "x1": "-29",
+              "x2": "187"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "touch.muwanqing",
+        "name": "touch.muwanqing"
+      },
+      {
+        "category": "characters",
+        "id": "木婉清",
+        "name": "木婉清"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "characters",
+        "id": "木婉清(蒙面)",
+        "name": "木婉清"
+      },
+      {
+        "category": "characters",
+        "id": "木婉清.蒙面",
+        "name": "木婉清"
+      },
+      {
+        "category": "characters",
+        "id": "木婉清",
+        "name": "木婉清"
+      },
+      {
+        "category": "maps",
+        "id": "大地图",
+        "name": "大地图"
+      },
+      {
+        "category": "maps",
+        "id": "大理",
+        "name": "大理"
+      },
+      {
+        "category": "maps",
+        "id": "大理树林",
+        "name": "大理树林"
+      },
+      {
+        "category": "maps",
+        "id": "无量山洞",
+        "name": "无量山洞"
+      },
+      {
+        "category": "maps",
+        "id": "无量秘洞",
+        "name": "无量秘洞"
+      },
+      {
+        "category": "maps",
+        "id": "万劫谷",
+        "name": "万劫谷"
+      },
+      {
+        "category": "maps",
+        "id": "湘江",
+        "name": "湘江"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_镇南王府.救木婉清1",
+        "name": "tlbb.dy_镇南王府.救木婉清1"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_天龙寺.救段誉1",
+        "name": "tlbb.dy_天龙寺.救段誉1"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_天龙寺.六脉神剑胜简单模式",
+        "name": "tlbb.dy_天龙寺.六脉神剑胜简单模式"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_天龙寺.六脉神剑胜",
+        "name": "tlbb.dy_天龙寺.六脉神剑胜"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_小镜湖阮星竹6",
+        "name": "tlbb.dy_小镜湖阮星竹6"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_琴韵小筑阿碧2",
+        "name": "tlbb.dy_琴韵小筑阿碧2"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_闪电貂2",
+        "name": "tlbb.dy_闪电貂2"
+      },
+      {
+        "category": "stories",
+        "id": "霹雳堂_木婉清",
+        "name": "霹雳堂_木婉清"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_木婉清.touch.前奏",
+        "name": "tlbb.dy_木婉清.touch.前奏"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_木婉清.攻略成功",
+        "name": "tlbb.dy_木婉清.攻略成功"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_再见木婉清.仇恨",
+        "name": "tlbb.dy_再见木婉清.仇恨"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_再见木婉清.好感",
+        "name": "tlbb.dy_再见木婉清.好感"
+      },
+      {
+        "category": "battles",
+        "id": "再见木婉清_战斗",
+        "name": "再见木婉清_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "天龙寺.六脉神剑_战斗",
+        "name": "天龙寺.六脉神剑_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "天龙寺.六脉神剑_战斗2",
+        "name": "天龙寺.六脉神剑_战斗2"
+      },
+      {
+        "category": "battles",
+        "id": "真曼陀山庄_战斗",
+        "name": "真曼陀山庄_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "马夫人_战斗",
+        "name": "马夫人_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "无量秘洞无崖子_战斗",
+        "name": "无量秘洞无崖子_战斗"
+      },
+      {
+        "category": "battles",
+        "id": "曼陀山庄逍遥子_战斗",
+        "name": "曼陀山庄逍遥子_战斗"
+      },
+      {
+        "category": "resources",
+        "id": "人物.段誉",
+        "name": "人物.段誉"
+      },
+      {
+        "category": "resources",
+        "id": "人物.木婉清",
+        "name": "人物.木婉清"
+      }
+    ]
+  },
+  {
+    "id": "李青萝",
+    "category": "touch",
+    "name": "李青萝",
+    "description": "",
+    "state": "资料已归档 · 运行状态待核对",
+    "source": "touch.xml",
+    "effect": null,
+    "initialBonusRounds": [],
+    "recruitment": null,
+    "node": {
+      "tag": "touch",
+      "key": "李青萝",
+      "pic": "touch.liqingluo",
+      "children": [
+        {
+          "tag": "zone",
+          "y1": "255",
+          "y2": "-274",
+          "x1": "-60",
+          "x2": "104"
+        },
+        {
+          "tag": "zone",
+          "y1": "-75",
+          "y2": "-277",
+          "x1": "-140",
+          "x2": "180"
+        }
+      ]
+    },
+    "runtime": null,
+    "variants": [
+      {
+        "source": "touch.txt",
+        "node": {
+          "tag": "touch",
+          "key": "李青萝",
+          "pic": "touch.liqingluo",
+          "children": [
+            {
+              "tag": "zone",
+              "y1": "255",
+              "y2": "-274",
+              "x1": "-60",
+              "x2": "104"
+            },
+            {
+              "tag": "zone",
+              "y1": "-75",
+              "y2": "-277",
+              "x1": "-140",
+              "x2": "180"
+            }
+          ]
+        },
+        "equalRecord": true
+      }
+    ],
+    "recruitmentStories": [],
+    "related": [
+      {
+        "category": "resources",
+        "id": "touch.liqingluo",
+        "name": "touch.liqingluo"
+      },
+      {
+        "category": "characters",
+        "id": "李青萝",
+        "name": "李青萝"
+      }
+    ],
+    "usedBy": [
+      {
+        "category": "characters",
+        "id": "李青萝",
+        "name": "李青萝"
+      },
+      {
+        "category": "stories",
+        "id": "tlbb.dy_阿碧线王语嫣.touch.成功",
+        "name": "tlbb.dy_阿碧线王语嫣.touch.成功"
+      },
+      {
+        "category": "battles",
+        "id": "真曼陀山庄_战斗",
+        "name": "真曼陀山庄_战斗"
+      }
+    ]
+  }
+]
