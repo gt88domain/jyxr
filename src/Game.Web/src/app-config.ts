@@ -1,2 +1,7 @@
-/** Browser storage belongs to this application, then to each content pack. */
-export const appConfig={id:'jyxr-modern-western',database:'jyxr-modern-western',preferencesKey:'jyxr-modern-western.preferences.v1'} as const;
+/** Selected at build time from the content module, never from a save file. */
+interface AppConfig {
+  id:string; database:string; preferencesKey:string;
+  features:{id:string;title:string;description:string}[];
+}
+declare const __GAME_APP__:AppConfig;
+export const appConfig=__GAME_APP__;

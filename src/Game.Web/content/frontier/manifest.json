@@ -4,6 +4,10 @@
   "version": "0.1.1",
   "entry": "chapter.py",
   "rules": "shared-modern-core",
+  "app": {
+    "id": "jyxr-modern-western", "database": "jyxr-modern-western",
+    "preferencesKey": "jyxr-modern-western.preferences.v1", "features": []
+  },
   "assets": [
     {
       "path": "art/frontier-camp.png",

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "jyx",
+  "version": "modern-baseline-1",
+  "title": "金庸群侠传 X · 模块化新版",
+  "entry": "data/packs/jyx/content-package.json",
+  "inventory": "assets.json",
+  "rules": "shared-modern-core",
+  "app": {
+    "id": "jyxr-modern-jyx", "database": "jyxr-modern-jyx",
+    "preferencesKey": "jyxr-modern-jyx.preferences.v1",
+    "features": [
+      {"id": "companions", "title": "伙伴图鉴与加入条件", "description": "原有伙伴路线与当前条件，不直接发放伙伴"},
+      {"id": "library", "title": "原版资料馆", "description": "人物、武学、物品、剧情与关联引用"}
+    ]
+  },
+  "source": {
+    "sourceCommit": "e5bcf716591569bfea4747a8b3b6f4c8a91f5e1c",
+    "pagesCommit": "85462cbc226ea97cf02294e7e331d13396598300",
+    "baseUrl": "https://raw.githubusercontent.com/gt88domain/jyxr/85462cbc226ea97cf02294e7e331d13396598300/",
+    "scope": "Frozen existing HTML5 migration baseline, including documented gaps and browser adaptations; not a claim of complete official-version parity. Runtime data and media remain byte-identical."
+  }
+}

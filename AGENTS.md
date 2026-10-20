@@ -1,8 +1,8 @@
 # 项目协作约定
 
-本分支 `modern-western` 以浏览器原生前端和 .NET 10 WebAssembly 共用规则内核开发西方佣兵冒险。开发入口是 `src/Game.Web`，内容模块在 `src/Game.Web/content/frontier`，架构与命令见根README及 `docs/MODULAR_GAME.md`。Godot宿主与旧内容保留历史参考，不是本分支默认构建目标。
+本分支 `modern-jyx` 优先用既有金庸数据验证模块化浏览器宿主。开发入口是 `src/Game.Web`；内容模块为 `content/jyx` 与 `content/frontier`，共用同一套规则、构建、界面与存储实现，默认构建金庸。架构与命令见根README及 `docs/MODULAR_GAME.md`。
 
-原版 `html5-web` 的 `e5bcf716591569bfea4747a8b3b6f4c8a91f5e1c` 已冻结作备份。新工作只提交本分支；部署只更新 `gh-pages` 的 `western/` 子目录，保留旧版根目录与所有原文件。不要把旧版数值、原素材或资料馆重新放入西方发布包。
+原版 `html5-web` 的 `e5bcf716591569bfea4747a8b3b6f4c8a91f5e1c` 已冻结作备份。新工作只提交本分支；本轮部署只更新 `gh-pages` 的 `modern-jyx/`，保留根目录旧版及 `western/` 全部原文件。金庸数据与素材按模块清单逐文件校验，不混入不同版本数值；西方包继续独立。
 
 ## 工作方式
 

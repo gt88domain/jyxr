@@ -1,11 +1,12 @@
-# 现代浏览器宿主 · 西方内容模块
+# 现代浏览器宿主
 
-本分支默认只构建`content/frontier`。运行、检查和原版备份说明见[根README](../../README.md)，模块边界见[架构](../../docs/MODULAR_GAME.md)。历史迁移文档继续保留，但其中的原版完成百分比不适用于本项目。
+本分支默认构建金庸模块`content/jyx`，用冻结旧数据验证现代化宿主。完整命令见[根README](../../README.md)，模块职责和边界见[架构](../../docs/MODULAR_GAME.md)。
 
-- `npm run assets:restore`：恢复4张原创图片并校验SHA-256。
-- `npm run content`：生成独立西方内容包，不读取原版子模块。
-- `npm run build`：内容、Release WebAssembly、类型检查及静态站点。
-- `npm run test:frontier`：从新游戏完成真实小章，含拒绝后重新招募和保存刷新。
-- 浏览器进度和设置使用独立应用命名空间；部署在`western/`，原版根入口不改。
+- `npm run assets:restore`：从固定提交恢复并校验金庸数据与素材。
+- `npm run build`：共用契约、独立金庸内容、Release WASM和前端。
+- `npm run audit:module`：核对原数据与素材未变。
+- `npm test`：真实开局、首战和完整新手流程；需先启动静态服务。
+- `npm run assets:frontier && npm run build:frontier`：用同一程序构建西方小章。
+- `npm run package`：构建并核验独立金庸ZIP。
 
-`Game.Core`与`Game.Application`继续处理真实规则与用例；前端不替代结算。内容包用稳定ID引用人物、战技、地图和物品。当前不是运行任意旧MOD脚本的插件平台。
+新金庸、冻结旧版和西方应用分别使用独立存储与网址。可选伙伴条件/资料馆延迟加载，游戏规则始终由共用C#会话执行。资料完整性与路线可玩性分别验证，不用历史迁移百分比代替测试证据。

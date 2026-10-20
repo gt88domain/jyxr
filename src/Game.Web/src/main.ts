@@ -27,6 +27,7 @@ import type {UiMessage} from './activity';
 import {moreMenuView} from './navigation';
 import './modern-ui.css';
 import type {GameCommand} from './command-contract';
+import {appConfig} from './app-config';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 let state: GameState, slot: SaveSlot | undefined, busy = false, board: Board | undefined;
@@ -190,6 +191,18 @@ async function showEquipmentPreview(entryNumber: number) {
 }
 function createCharacter() {
   modal('为旅人命名', `<p class="modal-intro">${e(state.pack.title)}的故事，从你的名字开始。</p><form id="character-form"><label class="form-label" for="hero-name">角色姓名</label><input id="hero-name" name="name" value="${e(state.pack.defaultName || '旅人')}" minlength="1" maxlength="12" autocomplete="off" required autofocus><label class="form-label" for="difficulty">行走难度</label><select id="difficulty" name="difficulty"><option value="normal">普通 · 初次冒险</option><option value="hard">困难 · 迎接挑战</option><option value="crazy">炼狱 · 千锤百炼</option></select><p class="field-note">难度影响战斗规则与历练所得。</p><button class="button primary full-width" type="submit">开始旅程 ${icon('arrow')}</button></form>`);
+}
+async function showModulePanel(action:string) {
+  const feature=appConfig.features.find(item=>item.id===action);
+  if(!feature)return;
+  activePanel=null;
+  modal(feature.title,'<div data-module-panel aria-live="polite">正在整理资料…</div>',true);
+  const target=document.querySelector<HTMLElement>('[data-module-panel]')!;
+  const snapshot=state;
+  try{
+    const module=await import('./modules/jyx-panels');
+    if(target.isConnected&&state===snapshot)await module.mountJyxPanel(action,target,snapshot);
+  }catch(error){if(target.isConnected)target.textContent=error instanceof Error?error.message:'资料暂时无法读取。';}
 }
 async function creationCommand(data: GameCommand) {
   if (!await command(data)) return;
@@ -371,14 +384,15 @@ document.addEventListener('click', event => {
   else if (action === 'unequip-item') void manage({type: 'unequipItem', slot: button.dataset.slot!}, '装备已放回行囊。');
   else if (action === 'cultivate') void manage({type: 'setCultivation', entryNumber: Number(button.dataset.entryNumber)}, '已选择修炼秘籍，战斗结算后获得修炼经验。');
   else if (action === 'clear-cultivation') void manage({type: 'clearCultivation'}, '已暂停这部秘籍的修炼，已学武功和经验保留。');
-  else if (action === 'equip-internal') void manage({type: 'equipInternalSkill', skillId: button.dataset.id!}, '已切换专注训练。');
-  else if (action === 'clear-internal') void manage({type: 'clearInternalSkill'}, '已停止专注训练。');
+  else if (action === 'equip-internal') void manage({type: 'equipInternalSkill', skillId: button.dataset.id!}, `已切换${state.pack.terms?.internalSkills||'当前运行心法'}。`);
+  else if (action === 'clear-internal') void manage({type: 'clearInternalSkill'}, `已停止${state.pack.terms?.internalSkills||'当前运行心法'}。`);
   else if (action === 'toggle-skill') void manage({type: 'setExternalSkillActive', skillId: button.dataset.id!, active: button.dataset.active === 'true'}, button.dataset.active === 'true' ? '招式已启用。' : '招式已停用。');
   else if (action === 'use-item') {
     const target=document.querySelector<HTMLSelectElement>(`.battle-item-target[data-entry-number="${button.dataset.entryNumber}"]`);
     void manage({type:'useItem',entryNumber:Number(button.dataset.entryNumber),...(target?{targetId:target.value}:{})},'物品已使用。');
   }
-  else if (action === 'guide') modal('行走指南', '<p class="guide-text">点击地图上的人物或地点继续剧情，在“目标”查看当前章节。获得修炼书后，在修炼面板选择；正在运行的专注训练与正在研习的书可分别调整。装备和补给可在行囊使用，伙伴可在队伍查看。<br><br>手动战斗时，青色格表示可移动的位置。选择战技，点击橙色目标格施展；有些招式可对自己使用。也可切换自动战斗、调整倍速，或暂停观察。<br><br>打开人物、设置等面板时战斗暂停。离开战斗、对话和商店后可保存进度。不同内容包分别存档；清除网站数据前请在行囊导出备份。</p>');
+  else if (action && appConfig.features.some(feature=>feature.id===action)) void showModulePanel(action);
+  else if (action === 'guide') modal('行走指南', `<p class="guide-text">点击地图上的人物或地点继续剧情，在“目标”查看当前章节。获得修炼书后，在修炼面板选择；正在运行的${e(state.pack.terms?.internalSkills||'心法')}与正在研习的书可分别调整。装备和补给可在行囊使用，伙伴可在队伍查看。<br><br>手动战斗时，青色格表示可移动的位置。选择招式，点击橙色目标格施展；有些招式可对自己使用。也可切换自动战斗、调整倍速，或暂停观察。<br><br>打开人物、设置等面板时战斗暂停。离开战斗、对话和商店后可保存进度。不同应用及内容包分别存档；清除网站数据前请在行囊导出备份。</p>`);
   else if (action === 'download-save') void (async () => {
     try {const data = await exportSave(); const parsed = JSON.parse(data); if (parsed.error || parsed.ok === false) throw new Error(parsed.error || '无法导出当前进度。'); const href = URL.createObjectURL(new Blob([data], {type: 'application/json'})); const link = document.createElement('a'); link.href = href; link.download = `${state.pack.title}-${state.hero.name}.json`; link.click(); setTimeout(() => URL.revokeObjectURL(href), 1000);}
     catch (error) {console.error(error); toast('导出未能完成，请先离开战斗。');}
