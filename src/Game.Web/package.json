@@ -55,7 +55,9 @@
     "assets:restore": "python3 scripts/restore-module.py",
     "assets:frontier": "python3 scripts/restore-module.py --module frontier",
     "audit:module": "python3 scripts/audit-module.py",
-    "test:frontier": "node tests/frontier-smoke.mjs"
+    "test:frontier": "node tests/frontier-smoke.mjs",
+    "prepare:midgame": "python3 tests/prepare-midgame.py",
+    "test:midgame": "node tests/midgame-smoke.mjs"
   },
   "dependencies": { "phaser": "3.90.0" },
   "devDependencies": {

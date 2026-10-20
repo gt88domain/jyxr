@@ -192,7 +192,7 @@ async function showEquipmentPreview(entryNumber: number) {
 function createCharacter() {
   modal('为旅人命名', `<p class="modal-intro">${e(state.pack.title)}的故事，从你的名字开始。</p><form id="character-form"><label class="form-label" for="hero-name">角色姓名</label><input id="hero-name" name="name" value="${e(state.pack.defaultName || '旅人')}" minlength="1" maxlength="12" autocomplete="off" required autofocus><label class="form-label" for="difficulty">行走难度</label><select id="difficulty" name="difficulty"><option value="normal">普通 · 初次冒险</option><option value="hard">困难 · 迎接挑战</option><option value="crazy">炼狱 · 千锤百炼</option></select><p class="field-note">难度影响战斗规则与历练所得。</p><button class="button primary full-width" type="submit">开始旅程 ${icon('arrow')}</button></form>`);
 }
-async function showModulePanel(action:string) {
+async function showModulePanel(action:string,options:{here?:boolean}={}) {
   const feature=appConfig.features.find(item=>item.id===action);
   if(!feature)return;
   activePanel=null;
@@ -201,7 +201,7 @@ async function showModulePanel(action:string) {
   const snapshot=state;
   try{
     const module=await import('./modules/jyx-panels');
-    if(target.isConnected&&state===snapshot)await module.mountJyxPanel(action,target,snapshot);
+    if(target.isConnected&&state===snapshot)await module.mountJyxPanel(action,target,snapshot,options);
   }catch(error){if(target.isConnected)target.textContent=error instanceof Error?error.message:'资料暂时无法读取。';}
 }
 async function creationCommand(data: GameCommand) {
@@ -391,6 +391,7 @@ document.addEventListener('click', event => {
     const target=document.querySelector<HTMLSelectElement>(`.battle-item-target[data-entry-number="${button.dataset.entryNumber}"]`);
     void manage({type:'useItem',entryNumber:Number(button.dataset.entryNumber),...(target?{targetId:target.value}:{})},'物品已使用。');
   }
+  else if (action==='companion-clues'&&state.phase!=='title') void showModulePanel('companions',{here:true});
   else if (action && appConfig.features.some(feature=>feature.id===action)) void showModulePanel(action);
   else if (action === 'guide') modal('行走指南', `<p class="guide-text">点击地图上的人物或地点继续剧情，在“目标”查看当前章节。获得修炼书后，在修炼面板选择；正在运行的${e(state.pack.terms?.internalSkills||'心法')}与正在研习的书可分别调整。装备和补给可在行囊使用，伙伴可在队伍查看。<br><br>手动战斗时，青色格表示可移动的位置。选择招式，点击橙色目标格施展；有些招式可对自己使用。也可切换自动战斗、调整倍速，或暂停观察。<br><br>打开人物、设置等面板时战斗暂停。离开战斗、对话和商店后可保存进度。不同应用及内容包分别存档；清除网站数据前请在行囊导出备份。</p>`);
   else if (action === 'download-save') void (async () => {

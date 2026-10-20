@@ -101,6 +101,14 @@ async Task<bool> Step(string id)
     var s=await Resolve();if(Phase(s)!="world")throw new InvalidOperationException("Not on map: "+Phase(s));
     var loc=s["map"]!["locations"]!.AsArray().FirstOrDefault(l=>l!["id"]!.GetValue<string>()==id);
     if(loc?["action"] is null)return false;
+    // Preserve a real stable checkpoint before a potentially fatal action.
+    // This observes normal saving; it never edits a character or the outcome.
+    var checkpoint=BrowserBridge.ExportSave();
+    if(JsonNode.Parse(checkpoint)?["error"] is null)
+    {
+        File.WriteAllText(directory+"/last-stable-save.json",checkpoint);
+        File.WriteAllText(directory+"/last-action.json",JsonSerializer.Serialize(new{mapId=s["map"]!["id"]!.GetValue<string>(),locationId=id}));
+    }
     await Cmd(new{type="interact",locationId=id});await Resolve();return true;
 }
 async Task World()
