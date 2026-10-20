@@ -1,6 +1,17 @@
-# 金庸群侠传 X · 模块化 HTML5 新版
+# Thirteen Realms · 十三国幻想
 
-当前主线为 `modern-jyx`：先用旧版同一批数据验证现代宿主，再继续西方内容。TypeScript / Phaser 负责显示和触屏操作，.NET 10 WebAssembly 继续执行共用的真实战斗、装备、修炼和存档规则。
+本分支 fantasy-worlds 从现代金庸基线 624f4e8 独立开发，先建立固定角色身份、十三国归属和中英对照。当前交付是全量角色对应草案与双语审阅工具；完整英文游戏、剧情改写、新美术和战斗特效尚未完成。
+
+- [English cast preview](https://gt88domain.github.io/jyxr/fantasy-worlds/en/)
+- [中文角色对照](https://gt88domain.github.io/jyxr/fantasy-worlds/zh/)
+- [范围、角色统计与迁移约定](docs/FANTASY_WORLDS.md)
+- [现代金庸冻结备份](https://github.com/gt88domain/jyxr/tree/legacy-jyx)；旧原版仍保留在 html5-web。
+
+角色工具只需 Python 3：进入 src/Game.Web，运行 python3 scripts/world_cast.py 和 python3 scripts/build-world-catalog.py。构建结果位于 artifacts/fantasy-worlds-site，可通过 python3 -m http.server 4214 --directory artifacts/fantasy-worlds-site 预览。浏览器检查另外需要 Node、Playwright 和 Chromium。
+
+## 保留的金庸 HTML5 宿主
+
+以下旧命令构建保留的金庸游戏，不会生成完整十三国游戏。TypeScript / Phaser 负责显示和触屏操作，.NET 10 WebAssembly 执行战斗、装备、修炼和存档规则。新角色表不改动其剧情、数值和存档编号。
 
 - 新版金庸入口：https://gt88domain.github.io/jyxr/modern-jyx/
 - 冻结旧版：[html5-web](https://github.com/gt88domain/jyxr/tree/html5-web)，基线 `e5bcf716591569bfea4747a8b3b6f4c8a91f5e1c`；根网址不变。

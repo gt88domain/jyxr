@@ -57,7 +57,10 @@
     "audit:module": "python3 scripts/audit-module.py",
     "test:frontier": "node tests/frontier-smoke.mjs",
     "prepare:midgame": "python3 tests/prepare-midgame.py",
-    "test:midgame": "node tests/midgame-smoke.mjs"
+    "test:midgame": "node tests/midgame-smoke.mjs",
+    "cast:check": "python3 scripts/world_cast.py",
+    "cast:build": "python3 scripts/build-world-catalog.py",
+    "test:cast": "python3 -m unittest discover -s tests -p test_world_cast.py && node tests/world-cast-smoke.mjs"
   },
   "dependencies": { "phaser": "3.90.0" },
   "devDependencies": {

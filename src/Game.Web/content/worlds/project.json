@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "thirteen-worlds",
+  "title": {"zh-CN": "十三国幻想 · 角色对应", "en": "Thirteen Realms · Cast Mapping"},
+  "defaultLocale": "en",
+  "locales": ["zh-CN", "en"],
+  "phase": "cast-and-localization-foundation",
+  "gameReady": false,
+  "baseline": {
+    "sourceCommit": "624f4e87ae251f8e0162e90d1eda11a1ef386cd7",
+    "originalBackupCommit": "e5bcf716591569bfea4747a8b3b6f4c8a91f5e1c",
+    "pagesCommit": "f29f2b8da8e84f0994a17af68f9cf804ed5165a1",
+    "contentSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3"
+  },
+  "policy": {
+    "keepLegacyDefinitionIds": true,
+    "keepNumericRulesAndConditions": true,
+    "preferExistingFigures": true,
+    "originalNamedFiguresRequireReason": true,
+    "fixedPrimaryCountry": true,
+    "sharedIdentityAcrossCountriesAndForms": true,
+    "countryDoesNotRestrictPartyOrTraining": true,
+    "difficultyScope": "Core story targets only; optional training challenges are separate.",
+    "usCoreDifficultyCeiling": "medium",
+    "untranslatedGameplayIsNotEnglishRelease": true
+  },
+  "preservedSites": ["/", "/modern-jyx/", "/western/"],
+  "backups": {
+    "branch": "legacy-jyx",
+    "sourceTag": "legacy-jyx-before-worlds-2026-10-20",
+    "siteTag": "legacy-sites-before-worlds-2026-10-20"
+  }
+}

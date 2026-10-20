@@ -1,0 +1,20 @@
+[
+  {
+    "legacyIdentity":"阿九",
+    "legacyIds":["阿九","九难"],
+    "reason":{"zh-CN":"原剧情中阿九拜师后获得法号九难，属于同一个人的不同阶段，不能换成两名不同人物。","en":"The source story gives Ah Jiu the religious name Jiu Nan after initiation. These are stages of one person, not two different cast identities."},
+    "sourceStoryIds":["bixuejianShyou_华山派","bixuejianShyou_铁剑门0"]
+  },
+  {
+    "legacyIdentity":"霓裳",
+    "legacyIds":["霓裳","长安深夜神秘女子","长安深夜神秘女子2","长安深夜神秘女子3"],
+    "reason":{"zh-CN":"夜间来客在后续剧情揭示姓名为霓裳；三个战斗阶段与显名阶段共用身份，不与另一个定义“练霓裳”仅凭同音合并。","en":"Later dialogue identifies the night visitor as Nishang. Her three encounter stages and revealed name share one identity; the separate Lian Nishang definition is not merged just because the names resemble each other."},
+    "sourceStoryIds":["original_长安深夜怪事.三遇夜间人.不杀","original_长安深夜怪事.重阳宫2"]
+  },
+  {
+    "legacyIdentity":"温家五兄弟",
+    "legacyIds":["温方达","温方义","温方施","温方山","温方悟"],
+    "reason":{"zh-CN":"五个独立定义，其中几个错误共用温方义显示名；保持五份身份，不按显示名合并。","en":"Five separate definitions include several incorrectly repeated display names. Keep five identities rather than merging them by the display label."},
+    "sourceStoryIds":["bixuejianShyou_包裹线end"]
+  }
+]

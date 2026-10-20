@@ -1,0 +1,15 @@
+[
+  {"id":"ES","flag":"🇪🇸","name":{"zh-CN":"西班牙","en":"Spain"},"theme":{"zh-CN":"游侠、风车与荒诞旅程","en":"Wandering knights, windmills and absurd adventures"},"legacyStories":["白马啸西风"],"scope":"compact","coreDifficulty":"early"},
+  {"id":"FR","flag":"🇫🇷","name":{"zh-CN":"法国","en":"France"},"theme":{"zh-CN":"剑客组织与宫廷","en":"Musketeers, secret societies and court intrigue"},"legacyStories":["书剑恩仇录"],"scope":"medium","coreDifficulty":"early-medium"},
+  {"id":"IT","flag":"🇮🇹","name":{"zh-CN":"意大利","en":"Italy"},"theme":{"zh-CN":"木偶、双信物与机关","en":"Puppets, paired tokens and clockwork secrets"},"legacyStories":["鸳鸯刀"],"scope":"compact","coreDifficulty":"branch-dependent"},
+  {"id":"DK","flag":"🇩🇰","name":{"zh-CN":"丹麦","en":"Denmark"},"theme":{"zh-CN":"冰雪、寻人与解咒","en":"Snow, lost companions and broken enchantments"},"legacyStories":["飞狐外传","雪山飞狐"],"scope":"shared-story-line","coreDifficulty":"medium"},
+  {"id":"US","flag":"🇺🇸","name":{"zh-CN":"美国","en":"United States"},"theme":{"zh-CN":"奥兹伙伴群、西部与奇异城镇","en":"The company of Oz, frontier towns and strange journeys"},"legacyStories":["鹿鼎记"],"scope":"large","coreDifficulty":"medium"},
+  {"id":"GB","flag":"🇬🇧","name":{"zh-CN":"英国","en":"United Kingdom"},"theme":{"zh-CN":"圣剑、仙境与骑士传承","en":"Legendary swords, Wonderland and knightly legacies"},"legacyStories":["神雕侠侣"],"scope":"large","coreDifficulty":"medium-late"},
+  {"id":"DE","flag":"🇩🇪","name":{"zh-CN":"德国","en":"Germany"},"theme":{"zh-CN":"童话森林与多位导师","en":"Fairy-tale forests and a circle of mentors"},"legacyStories":["射雕英雄传"],"scope":"large","coreDifficulty":"medium-late"},
+  {"id":"RO","flag":"🇷🇴","name":{"zh-CN":"罗马尼亚","en":"Romania"},"theme":{"zh-CN":"古堡、囚禁、诅咒与恢复秘术","en":"Castles, captivity, curses and forbidden restoration"},"legacyStories":["连城诀"],"scope":"medium","coreDifficulty":"late"},
+  {"id":"JP","flag":"🇯🇵","name":{"zh-CN":"日本","en":"Japan"},"theme":{"zh-CN":"剑豪、流派与禁典","en":"Wandering swordsmen, rival schools and forbidden manuals"},"legacyStories":["笑傲江湖"],"scope":"large","coreDifficulty":"late"},
+  {"id":"CN","flag":"🇨🇳","name":{"zh-CN":"中国","en":"China"},"theme":{"zh-CN":"法宝、阵营与阵法","en":"Mythic relics, rival factions and battle formations"},"legacyStories":["倚天屠龙记"],"scope":"large","coreDifficulty":"late"},
+  {"id":"EG","flag":"🇪🇬","name":{"zh-CN":"埃及","en":"Egypt"},"theme":{"zh-CN":"遗藏、神庙与王室旧案","en":"Lost treasures, temples and royal mysteries"},"legacyStories":["碧血剑"],"scope":"large","coreDifficulty":"late"},
+  {"id":"GR","flag":"🇬🇷","name":{"zh-CN":"希腊","en":"Greece"},"theme":{"zh-CN":"海岛、神谕与英雄试炼","en":"Islands, oracles and heroic trials"},"legacyStories":["侠客行"],"scope":"medium","coreDifficulty":"late"},
+  {"id":"NO","flag":"🇳🇴","name":{"zh-CN":"挪威／北欧","en":"Norway / Norse realms"},"theme":{"zh-CN":"多阵营、多伙伴与神话冲突","en":"Interwoven companions, rival powers and mythic conflicts"},"legacyStories":["天龙八部"],"scope":"large","coreDifficulty":"late"}
+]
