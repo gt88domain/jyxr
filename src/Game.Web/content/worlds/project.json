@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "thirteen-worlds",
-  "title": {"zh-CN": "十三国幻想 · 角色对应", "en": "Thirteen Realms · Cast Mapping"},
+  "title": {"zh-CN": "童话旅人 · 角色对应", "en": "Storybound · Cast Mapping"},
   "defaultLocale": "en",
   "locales": ["zh-CN", "en"],
   "phase": "cast-and-localization-foundation",

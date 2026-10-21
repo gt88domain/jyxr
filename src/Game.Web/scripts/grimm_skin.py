@@ -26,6 +26,19 @@ def apply_skin(raw,skin,locale):
         segment=scripts[id];dialogues=[step for step in segment['steps'] if step['kind']=='dialogue']
         if len(dialogues)!=len(lines[locale]):raise ValueError('Dialogue slot count changed: '+id)
         for step,text in zip(dialogues,lines[locale]):step['text']=text
+    # Only contiguous dialogue runs may be shortened. Commands, conditions,
+    # choices and jumps between those runs retain their original order.
+    for id,edits in skin.get('dialogueEdits',{}).items():
+        steps=scripts[id]['steps'];previous_end=0
+        for edit in sorted(edits,key=lambda item:item['start']):
+            start,count=edit['start'],edit['expectedCount']
+            if start<previous_end or count<1 or len(steps[start:start+count])!=count or any(step['kind']!='dialogue' for step in steps[start:start+count]) or (start>0 and steps[start-1]['kind']=='dialogue') or (start+count<len(steps) and steps[start+count]['kind']=='dialogue'):
+                raise ValueError('Original dialogue run changed: '+id)
+            if not edit['lines'] or any(line['speaker'] not in [guide,'主角'] or not line['text'].get(locale) for line in edit['lines']):
+                raise ValueError('Invalid compressed dialogue: '+id)
+            previous_end=start+count
+        for edit in sorted(edits,key=lambda item:item['start'],reverse=True):
+            steps[edit['start']:edit['start']+edit['expectedCount']]=[{'kind':'dialogue','speaker':line['speaker'],'text':line['text'][locale]} for line in edit['lines']]
     choice=scripts['新手村_南贤']['steps'][0]
     choice['prompt']['text']=skin['choicePrompt'][locale]
     options=choice['blocks'][0]['options']
@@ -48,7 +61,7 @@ def apply_skin(raw,skin,locale):
     browser=package['browser']
     for key in ['title','subtitle','description']:browser[key]=skin[key][locale]
     browser['chapterTitle']=skin['subtitle'][locale]
-    browser['contentVersion']='grimm-in-place-1'
+    browser['contentVersion']='grimm-brief-2'
     for objective in browser['objectives']:
         if objective['id'] in skin['objectives']:objective['title']=skin['objectives'][objective['id']][locale]
     for group in ['characters','portraits']:browser['media'][group][guide]=skin['portrait']
@@ -57,7 +70,7 @@ def apply_skin(raw,skin,locale):
     # selection depends on this identity. App-level storage is separately scoped.
     if browser['id']!='jyx':raise ValueError('The source rule identity must stay jyx')
     assert_same_flow(original,package)
-    return package,{'locale':locale,'sourceSha256':skin['sourceSha256'],'guideId':guide,'displayName':name,'translatedSegments':list(skin['segments']),'sameGameplayFlow':True}
+    return package,{'locale':locale,'sourceSha256':skin['sourceSha256'],'guideId':guide,'displayName':name,'translatedSegments':list(skin['segments'])+list(skin.get('dialogueEdits',{})),'sameGameplayFlow':True}
 
 def assert_same_flow(original,adapted):
     for key in original:
@@ -67,7 +80,7 @@ def assert_same_flow(original,adapted):
         if before['id']=='南贤':before.pop('name',None);after.pop('name',None)
         if before!=after:raise ValueError('A reskin changed character rules')
     def stripped(value,category=None):
-        if isinstance(value,list):return [stripped(v,category) for v in value]
+        if isinstance(value,list):return [stripped(v,category) for v in value if not (isinstance(v,dict) and v.get('kind')=='dialogue')]
         if not isinstance(value,dict):return value
         result={}
         for key,item in value.items():

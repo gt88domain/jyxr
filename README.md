@@ -1,6 +1,6 @@
-# Thirteen Realms · 十三国幻想
+# Storybound · 童话旅人（暂名）
 
-本分支 fantasy-worlds 从现代金庸基线 624f4e8 独立开发，在同一个真实游戏里替换人物、对白与美术。当前格林替换原位置上的南贤，原开场、小村介绍、修炼书奖励、装备、首战与存档继续执行原游戏流程。后续人物和界面文字仍有原版内容，完整英文版与十三国全量替换尚未完成。
+本分支 fantasy-worlds 从现代金庸基线 624f4e8 独立开发，在同一个真实游戏里替换人物、对白与美术。当前格林替换原位置上的南贤，用六句说明收集各国童话、故事失序和召唤玩家求助。小村说明也压缩，修炼书奖励、装备、首战与存档继续执行原游戏流程。国家线数量是内部规划，不用作游戏名或开场设定。后续人物和界面文字仍有原版内容，完整英文版与全部内容替换尚未完成。
 
 - [Game · Grimm's Request](https://gt88domain.github.io/jyxr/fantasy-worlds/game/)
 - [同一游戏的中文文案对照](https://gt88domain.github.io/jyxr/fantasy-worlds/game/?lang=zh-CN)；[中文原版游戏](https://gt88domain.github.io/jyxr/)
@@ -14,7 +14,7 @@
 
 ## 保留的金庸 HTML5 宿主
 
-以下旧命令构建保留的金庸游戏，不会生成完整十三国游戏。TypeScript / Phaser 负责显示和触屏操作，.NET 10 WebAssembly 执行战斗、装备、修炼和存档规则。新角色表不改动其剧情、数值和存档编号。
+以下旧命令构建保留的金庸游戏，不会生成完整童话新版。TypeScript / Phaser 负责显示和触屏操作，.NET 10 WebAssembly 执行战斗、装备、修炼和存档规则。新角色表不改动其剧情、数值和存档编号。
 
 - 新版金庸入口：https://gt88domain.github.io/jyxr/modern-jyx/
 - 冻结旧版：[html5-web](https://github.com/gt88domain/jyxr/tree/html5-web)，基线 `e5bcf716591569bfea4747a8b3b6f4c8a91f5e1c`；根网址不变。

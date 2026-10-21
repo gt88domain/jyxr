@@ -3,51 +3,271 @@
   "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
   "characterId": "南贤",
   "figureId": "de.jacob-grimm",
-  "name": {"en": "Grimm", "zh-CN": "格林"},
-  "portrait": "art/worlds/grimm-portrait.png",
-  "title": {"en": "Thirteen Realms", "zh-CN": "十三国幻想"},
-  "subtitle": {"en": "Grimm's Request", "zh-CN": "格林的求助"},
-  "description": {"en": "Grimm needs your help. Begin in his house, learn the village's skills, and find companions. This first adaptation keeps the original adventure; later content still uses original names.", "zh-CN": "格林正在收集各地故事，需要你的帮助。从他的屋内出发，在村中学习本领、结识伙伴。当前先替换格林开场，后续内容暂沿用原版。"},
-  "maps": {
-    "南贤屋内": {"name": {"en": "Grimm's house", "zh-CN": "格林屋内"}, "description": {"en": "Grimm sits with a book, thinking over the stories he has collected.", "zh-CN": "格林坐在屋内，翻看着收集来的故事，似乎正在思索什么。"}},
-    "南贤居": {"name": {"en": "Grimm's home", "zh-CN": "格林居所"}, "description": {"en": "Grimm is still reading where you left him. There is always another story to discuss.", "zh-CN": "你回到格林的居所。他仍在翻阅故事册，等着听你旅途上的见闻。"}}
+  "name": {
+    "en": "Grimm",
+    "zh-CN": "格林"
   },
-  "guideLocation": {"en": "The collector of stories needs your help.", "zh-CN": "收集故事的格林有事想请你帮忙。"},
-  "houseLocation": {"en": "Grimm's home. Speak with him or continue your preparations.", "zh-CN": "格林的居所，可以向他请教，或继续准备旅程。"},
+  "portrait": "art/worlds/grimm-portrait.png",
+  "title": {
+    "en": "Storybound",
+    "zh-CN": "童话旅人"
+  },
+  "subtitle": {
+    "en": "Grimm's Request",
+    "zh-CN": "格林的求助"
+  },
+  "description": {
+    "en": "Grimm collects the fairy tales people grow up with. He has summoned you to help when their stories go wrong. Learn skills, find companions, and set out. Later content still uses original names.",
+    "zh-CN": "格林收集着各国陪伴人们长大的童话。故事出了乱子，他召唤你前来帮忙。学习本领、结识伙伴，再出发。后续内容暂沿用原版。"
+  },
+  "maps": {
+    "南贤屋内": {
+      "name": {
+        "en": "Grimm's house",
+        "zh-CN": "格林屋内"
+      },
+      "description": {
+        "en": "Grimm sits with a book, thinking over the stories he has collected.",
+        "zh-CN": "格林坐在屋内，翻看着收集来的故事，似乎正在思索什么。"
+      }
+    },
+    "南贤居": {
+      "name": {
+        "en": "Grimm's home",
+        "zh-CN": "格林居所"
+      },
+      "description": {
+        "en": "Grimm is still reading where you left him. There is always another story to discuss.",
+        "zh-CN": "你回到格林的居所。他仍在翻阅故事册，等着听你旅途上的见闻。"
+      }
+    }
+  },
+  "guideLocation": {
+    "en": "The collector of stories needs your help.",
+    "zh-CN": "收集故事的格林有事想请你帮忙。"
+  },
+  "houseLocation": {
+    "en": "Grimm's home. Speak with him or continue your preparations.",
+    "zh-CN": "格林的居所，可以向他请教，或继续准备旅程。"
+  },
   "objectives": {
-    "opening": {"en": "Listen to Grimm's request", "zh-CN": "听格林说明他的求助"},
-    "tutorial": {"en": "Ask Grimm about leaving the village", "zh-CN": "找格林出村，接下买药教学"},
-    "team": {"en": "Return to Grimm's home for team practice", "zh-CN": "回格林居所完成结伴练习"}
+    "opening": {
+      "en": "Listen to Grimm's request",
+      "zh-CN": "听格林说明他的求助"
+    },
+    "tutorial": {
+      "en": "Ask Grimm about leaving the village",
+      "zh-CN": "找格林出村，接下买药教学"
+    },
+    "team": {
+      "en": "Return to Grimm's home for team practice",
+      "zh-CN": "回格林居所完成结伴练习"
+    }
   },
   "segments": {
     "新手村_出生": {
-      "en": ["Where am I? Someone is reading over there."],
-      "zh-CN": ["这是哪里？那边好像有人在看书。"]
+      "en": [
+        "Where am I?"
+      ],
+      "zh-CN": [
+        "这是哪里？"
+      ]
     },
-    "新手村_南贤开场": {
-      "en": ["You're awake. I'm Grimm, and I need your help.", "Where am I?", "A world woven from stories from thirteen countries.", "Thirteen countries, all in one world?", "Yes. I've collected their stories for years.", "Then why do you need me?", "Their pages are out of order. Some stories can no longer continue.", "What happened to them?", "That is what we must find out. I can gather the pages, but I cannot mend every story alone.", "So you want me to walk into them?", "With a little preparation.", "What exactly should I do?", "Meet the people inside. Listen to what stands in their way, and help them take the next step.", "That sounds like a long journey.", "It may be. Begin with one story; the others can wait until you are ready.", "But I don't know how to fight.", "The village instructor will teach you the basics. Practise before you take the road.", "And if I cannot manage alone?", "Find companions. Many people will join you once you have earned their trust.", "Their skills and yours can grow together. Choose your company carefully.", "All right. Show me where to begin.", "Thank you.", "Come outside. I will help you prepare for your first journey."],
-      "zh-CN": ["你醒了。我是格林，有件事想请你帮忙。", "这里是哪里？", "这里，是十三个国家的故事交织成的世界。", "十三个国家的故事，都在同一个世界里？", "是啊。我已经收集这些故事很多年了。", "那你为什么需要我帮忙？", "故事的篇页乱了，有些人的故事，已经没法继续。", "出了什么事？", "这正是我们要查清楚的。我能收集篇页，却没法独自修复所有故事。", "所以，你希望我走进这些故事里？", "先做些准备再去。", "具体要做什么？", "找到故事里的人，听听他们遇到了什么，再帮他们往前走。", "听起来，要走很远的路。", "慢慢来。先走通一段故事，其他的可以等你准备好了再去。", "可是我还不会战斗。", "村里的武师会教你基础本领。先练一练，再上路。", "我一个人应付不来怎么办？", "你可以结识伙伴。只要赢得信任，很多人都愿意与你同行。", "他们的本领能和你一起成长。选好同伴，也别忘了培养自己。", "好吧。你先带我看看从哪里开始。", "谢谢你。", "来，到外面看看。我先帮你准备第一段旅程。"]
+    "新手村_南贤_出村": {
+      "en": [
+        "You have learned the basics. Let us see what awaits beyond the village."
+      ],
+      "zh-CN": [
+        "基础学得差不多了。来，看看村外的旅程吧。"
+      ]
     },
-    "新手村_小村介绍": {
-      "en": ["So this is where I learn to survive a story?", "Yes. Learn the basics here before you face the dangers beyond the village.", "What should I prepare first?", "Speak with the instructor and explore the village. Take this beginner's manual, 内功入门, and select it for training.", "A beginner's manual? You really are starting me from the first page.", "Every good story needs a beginning. Learn it well."],
-      "zh-CN": ["这里就是让我先学会本领的地方？", "是啊。先在村里学好基础，再去面对外面的险境。", "那我应该先准备什么？", "找武师练练，也到村里各处看看。这本内功入门给你，先选入修炼栏，好好练起来。", "还真是从第一页开始学啊。", "故事总得有个开头。基础练扎实，以后才走得远。"]
+    "新手村_南贤_善恶之分": {
+      "en": [
+        "Your choices matter. The way you treat people changes how this world sees you.",
+        "You can help, deceive, forgive or fight. Choose carefully; the people in these stories will remember."
+      ],
+      "zh-CN": [
+        "你的选择会影响这个世界对你的看法。怎样对待别人，就会留下怎样的评价。",
+        "帮助、欺骗、原谅或战斗，都由你来选。故事里的人，会记得你的决定。"
+      ]
     },
-    "新手村_南贤_出村": {"en": ["You have learned the basics. Let us see what awaits beyond the village."], "zh-CN": ["基础学得差不多了。来，看看村外的旅程吧。"]},
-    "新手村_南贤_善恶之分": {"en": ["Your choices matter. The way you treat people changes how this world sees you.", "You can help, deceive, forgive or fight. Choose carefully; the people in these stories will remember."], "zh-CN": ["你的选择会影响这个世界对你的看法。怎样对待别人，就会留下怎样的评价。", "帮助、欺骗、原谅或战斗，都由你来选。故事里的人，会记得你的决定。"]},
-    "新手村_南贤_募集队友": {"en": ["Most companions join after you help them through their own story.", "The route you choose can change who will travel with you.", "Finishing a journey may also reveal a companion for the next round.", "You can look for experienced travellers at the inn, too.", "Explore, listen, and earn people's trust. You will not have to travel alone."], "zh-CN": ["大多数伙伴，需要你帮助他们走过一段故事，才愿意加入。", "不同的选择，也会影响谁愿意与你同行。", "完成一个周目后，下一段旅程还可能遇到特别的开局伙伴。", "旅馆里也有一些经验丰富的旅人，可以去看看。", "多走走，多听听，赢得别人的信任，就能结识可靠的同行者。"]},
-    "新手村_南贤_DOS版": {"en": ["I have collected stories of travellers who began with very little.", "They learned, found companions, and eventually chose a road of their own.", "Their journeys are worth remembering, but they do not decide yours.", "You need not repeat anyone else's story. Let us see what you make of this one.", "That sounds better than being told my ending in advance."], "zh-CN": ["我收集过不少旅人的故事。他们出发时，也未必比你准备得更多。", "他们学习本领、结识伙伴，最后选了自己的路。", "那些故事值得记下，但不能替你决定这一回的旅程。", "你不必照着谁的结局走。这次，看看你会怎样写下去。", "那还不错，至少不用一开始就被安排好结局。"]},
-    "新手村_南贤_目标": {"en": ["What should I keep in mind on this journey?", "Help the people whose stories have stopped. Learn their skills, earn their trust, and return when you have something to tell me.", "One story at a time. I can do that."], "zh-CN": ["这趟旅程，我最该记住什么？", "帮助那些故事停在半途的人。学习本领，赢得信任，有了新的见闻，再回来讲给我听。", "一段一段来。我记住了。"]},
-    "新手村_南贤_打一架": {"en": ["Could I practise by challenging you?", "Start with the village instructor. My books are not much use as shields.", "Fair enough. I will find the instructor."], "zh-CN": ["要不，先找你练练手？", "还是先去找武师吧。我这些书，可不适合拿来当盾牌。", "好吧，我找武师去。"]}
+    "新手村_南贤_募集队友": {
+      "en": [
+        "Most companions join after you help them through their own story.",
+        "The route you choose can change who will travel with you.",
+        "Finishing a journey may also reveal a companion for the next round.",
+        "You can look for experienced travellers at the inn, too.",
+        "Explore, listen, and earn people's trust. You will not have to travel alone."
+      ],
+      "zh-CN": [
+        "大多数伙伴，需要你帮助他们走过一段故事，才愿意加入。",
+        "不同的选择，也会影响谁愿意与你同行。",
+        "完成一个周目后，下一段旅程还可能遇到特别的开局伙伴。",
+        "旅馆里也有一些经验丰富的旅人，可以去看看。",
+        "多走走，多听听，赢得别人的信任，就能结识可靠的同行者。"
+      ]
+    },
+    "新手村_南贤_DOS版": {
+      "en": [
+        "I have collected stories of travellers who began with very little.",
+        "They learned, found companions, and eventually chose a road of their own.",
+        "Their journeys are worth remembering, but they do not decide yours.",
+        "You need not repeat anyone else's story. Let us see what you make of this one.",
+        "That sounds better than being told my ending in advance."
+      ],
+      "zh-CN": [
+        "我收集过不少旅人的故事。他们出发时，也未必比你准备得更多。",
+        "他们学习本领、结识伙伴，最后选了自己的路。",
+        "那些故事值得记下，但不能替你决定这一回的旅程。",
+        "你不必照着谁的结局走。这次，看看你会怎样写下去。",
+        "那还不错，至少不用一开始就被安排好结局。"
+      ]
+    },
+    "新手村_南贤_目标": {
+      "en": [
+        "What should I keep in mind on this journey?",
+        "Help the people whose stories have stopped. Learn their skills, earn their trust, and return when you have something to tell me.",
+        "One story at a time. I can do that."
+      ],
+      "zh-CN": [
+        "这趟旅程，我最该记住什么？",
+        "帮助那些故事停在半途的人。学习本领，赢得信任，有了新的见闻，再回来讲给我听。",
+        "一段一段来。我记住了。"
+      ]
+    },
+    "新手村_南贤_打一架": {
+      "en": [
+        "Could I practise by challenging you?",
+        "Start with the village instructor. My books are not much use as shields.",
+        "Fair enough. I will find the instructor."
+      ],
+      "zh-CN": [
+        "要不，先找你练练手？",
+        "还是先去找武师吧。我这些书，可不适合拿来当盾牌。",
+        "好吧，我找武师去。"
+      ]
+    }
   },
-  "choicePrompt": {"en": "What would you like to know?", "zh-CN": "还有什么想问的吗？"},
+  "choicePrompt": {
+    "en": "What would you like to know?",
+    "zh-CN": "还有什么想问的吗？"
+  },
   "choices": {
-    "en": ["[Leave the village] I am ready for the road.", "[Leave] Nothing else for now.", "[Ask] Do my choices matter?", "[Ask] How can I recruit companions?", "[Ask] Tell me about the travellers before me.", "[Ask] What is my goal?", "[Challenge] Can I practise with you?"],
-    "zh-CN": ["【结束新手村】我准备好了，出村吧。", "【离开】暂时没事了。", "【询问】我的选择会有什么影响？", "【询问】怎样结识同行的伙伴？", "【询问】你还收集过哪些旅人的故事？", "【询问】我这次旅程的目标是什么？", "【挑战】能找你练练手吗？"]
+    "en": [
+      "[Leave the village] I am ready for the road.",
+      "[Leave] Nothing else for now.",
+      "[Ask] Do my choices matter?",
+      "[Ask] How can I recruit companions?",
+      "[Ask] Tell me about the travellers before me.",
+      "[Ask] What is my goal?",
+      "[Challenge] Can I practise with you?"
+    ],
+    "zh-CN": [
+      "【结束新手村】我准备好了，出村吧。",
+      "【离开】暂时没事了。",
+      "【询问】我的选择会有什么影响？",
+      "【询问】怎样结识同行的伙伴？",
+      "【询问】你还收集过哪些旅人的故事？",
+      "【询问】我这次旅程的目标是什么？",
+      "【挑战】能找你练练手吗？"
+    ]
   },
   "commandText": {
-    "点击人物头像，即可触发与人物交互。": {"en": "Select Grimm's portrait to speak with him.", "zh-CN": "点击格林的头像，就能与他交谈。"},
-    "再次来到金庸十四天书的世界。": {"en": "Grimm has asked me to help the people whose stories cannot continue.", "zh-CN": "格林请我帮助那些故事停在半途的人。"},
-    "点击人物状态栏，点击修炼，可以装备内功入门。": {"en": "Open 修炼 (Cultivation) and select 内功入门 to begin training.", "zh-CN": "打开人物状态栏的修炼，选择内功入门，开始练习。"},
-    "装备上的武学经书，在战斗结束后能将获得的经验快速分配到该项武学上，可以迅速提升武学等级。": {"en": "A selected training manual receives experience after battle and improves its skill.", "zh-CN": "选入修炼栏的秘籍，会在战斗结束后获得经验，提升对应本领。"}
+    "点击人物头像，即可触发与人物交互。": {
+      "en": "Select Grimm's portrait to speak with him.",
+      "zh-CN": "点击格林的头像，就能与他交谈。"
+    },
+    "再次来到金庸十四天书的世界。": {
+      "en": "Grimm summoned me to help the people whose fairy tales have come to a halt.",
+      "zh-CN": "格林召唤我前来，帮助那些童话停在半途的人。"
+    },
+    "点击人物状态栏，点击修炼，可以装备内功入门。": {
+      "en": "Open 修炼 (Cultivation) and select 内功入门 to begin training.",
+      "zh-CN": "打开人物状态栏的修炼，选择内功入门，开始练习。"
+    },
+    "装备上的武学经书，在战斗结束后能将获得的经验快速分配到该项武学上，可以迅速提升武学等级。": {
+      "en": "A selected training manual receives experience after battle and improves its skill.",
+      "zh-CN": "选入修炼栏的秘籍，会在战斗结束后获得经验，提升对应本领。"
+    }
+  },
+  "dialogueEdits": {
+    "新手村_南贤开场": [
+      {
+        "start": 0,
+        "expectedCount": 23,
+        "lines": [
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "I'm Grimm. I collect the fairy tales people grow up with, from lands around the world.",
+              "zh-CN": "我是格林，一直在收集各国那些陪伴人们长大的童话。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Did you summon me here?",
+              "zh-CN": "是你把我召唤到这里的？"
+            }
+          },
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Yes. Something has gone wrong, and some of their stories have come to a halt.",
+              "zh-CN": "是的。故事出了乱子，有些人的故事停在了半途。"
+            }
+          },
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Will you enter the tales, find those people, and help their stories continue?",
+              "zh-CN": "我想请你走进童话，找到他们，帮他们把故事继续下去。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I'll help. Where do I start?",
+              "zh-CN": "好，我来帮你。从哪里开始？"
+            }
+          },
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Learn the basics in the village. Then set out and find companions.",
+              "zh-CN": "先在村里学些本领，出村后再结识伙伴，一起上路吧。"
+            }
+          }
+        ]
+      }
+    ],
+    "新手村_小村介绍": [
+      {
+        "start": 1,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Take this beginner's manual, 内功入门. Select it for training, then practise with the village instructor.",
+              "zh-CN": "这本内功入门给你，先选入修炼栏，再找村里的武师练练。"
+            }
+          }
+        ]
+      },
+      {
+        "start": 6,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Understood. I'll get ready before I set out.",
+              "zh-CN": "明白，我先做好准备再上路。"
+            }
+          }
+        ]
+      }
+    ]
   }
 }

@@ -45,8 +45,8 @@ try{
       h('div',{className:'stats'},[[13,'countries'],[s.kinds.named,'storyRoles'],[s.locked,'locked'],[s.proposed,'proposed']].map(([n,key])=>h('div',{className:'stat'},h('strong',{},n),h('span',{},t(key)))))),
     h('section',{'aria-label':t('search')},h('div',{className:'filters'},field('search',search),field('country',country),field('kind',kind)),
       h('details',{className:'more-filters'},h('summary',{},t('moreFilters')),h('div',{className:'more-filter-body'},field('status',status),
-        h('a',{className:'download',href:new URL('../data/cast.csv',import.meta.url).href,download:'thirteen-worlds-cast.csv'},t('csv')),
-        h('a',{className:'download',href:new URL('../data/catalog.json',import.meta.url).href,download:'thirteen-worlds-cast.json'},t('json'))),
+        h('a',{className:'download',href:new URL('../data/cast.csv',import.meta.url).href,download:'storybound-cast.csv'},t('csv')),
+        h('a',{className:'download',href:new URL('../data/catalog.json',import.meta.url).href,download:'storybound-cast.json'},t('json'))),
         h('div',{className:'notes'},h('p',{},t('scope',{definitions:s.sourceDefinitions,names:s.sourceDisplayNames,recruitmentForms:s.recruitmentForms,recruitmentIdentities:s.recruitmentIdentities})),h('p',{},t('identityNote'))))),
     h('section',{},h('div',{className:'results-heading'},resultCount),cards,more),
     h('section',{className:'notes'},['policy','countryNote','recognitionNote','sourceOnly'].map(key=>h('p',{},t(key))))

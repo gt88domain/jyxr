@@ -21,7 +21,7 @@ async function firstGrimm(locale,name){
  assert.equal(await page.locator('[data-action="interact"][data-id="南贤"]').count(),1);
  await click('[data-action="interact"][data-id="南贤"]');
  const talking=await state();assert.equal(talking.phase,'dialogue');assert.equal(talking.map.id,'南贤屋内');
- assert.equal(talking.dialogue.speaker,skin.name[locale]);assert.equal(talking.dialogue.text,skin.segments['新手村_南贤开场'][locale][0]);
+ assert.equal(talking.dialogue.speaker,skin.name[locale]);assert.equal(talking.dialogue.text,skin.dialogueEdits['新手村_南贤开场'][0].lines[0].text[locale]);
  assert.equal(talking.dialogue.portrait,skin.portrait);
  await page.locator('.dialogue-portrait').evaluate(img=>img.decode());
  assert.equal(await page.locator('.dialogue-portrait').evaluate(img=>img.naturalWidth),1024);
@@ -34,7 +34,7 @@ async function firstGrimm(locale,name){
 let failure;
 try{
  await page.goto(report.baseURL);await page.locator('[data-action="new"]').waitFor({state:'visible',timeout:120000});
- let current=await state();assert.equal(current.pack.id,'jyx');assert.equal(current.pack.title,'Thirteen Realms');
+ let current=await state();assert.equal(current.pack.id,'jyx');assert.equal(current.pack.title,skin.title.en);
  assert.equal(await page.locator('[data-action="load"]').isDisabled(),true);
  pass('actual shared C# game boots in an isolated fantasy app, with original rule identity');
  await start('测试旅人');await firstGrimm('en','测试旅人');
@@ -42,13 +42,13 @@ try{
  await page.setViewportSize({width:375,height:812});await noOverflow('mobile original gameplay and Grimm dialogue');
  await page.screenshot({path:output+'grimm-game-mobile.png',fullPage:true});
  await page.setViewportSize({width:1440,height:900});
- for(const text of skin.segments['新手村_南贤开场'].en){
-  assert.equal((await state()).dialogue.text,text);await click('[data-action="next"]');
+ for(const line of skin.dialogueEdits['新手村_南贤开场'][0].lines){
+  assert.equal((await state()).dialogue.text,line.text.en);await click('[data-action="next"]');
  }
  await continueDialogue();current=await state();assert.equal(current.phase,'world');assert.equal(current.map.id,'小村');
  assert.equal(current.inventory.find(i=>i.id==='内功入门').count,1);assert.equal(current.silver,0);
  assert.ok(current.objectives.find(o=>o.id==='opening').completed);
- pass('all 23 adapted lines retain the original jump, one manual reward and no invented money');
+ pass('the brief opening retains the original jump, one manual reward and no invented money');
  await click('[data-action="cultivation"]');const book=current.inventory.find(i=>i.id==='内功入门');
  await click('[data-action="cultivate"][data-entry-number="'+book.entryNumber+'"]');
  assert.equal((await state()).hero.cultivation.itemId,'内功入门');await closeModal();

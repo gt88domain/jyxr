@@ -18,12 +18,18 @@ class GrimmSkinTests(unittest.TestCase):
    self.assertEqual([l['id'] for l in m['locations']],[l['id'] for l in old['locations']])
    for a,b in zip(m['locations'],old['locations']):self.assertEqual(a.get('position'),b.get('position'));self.assertEqual(a['events'],b['events'])
    character=next(c for c in game['characters'] if c['id']=='南贤');self.assertEqual(character['name'],self.skin['name'][locale])
- def test_each_original_dialogue_slot_and_story_id_is_retained(self):
+ def test_six_line_opening_retains_story_ids_and_non_dialogue_steps(self):
   game,_=apply_skin(self.raw,self.skin,'en')
   old=[s for f in self.source['storyScripts'].values() for s in f['segments']]
   new=[s for f in game['storyScripts'].values() for s in f['segments']]
   self.assertEqual([s['name'] for s in old],[s['name'] for s in new])
-  for before,after in zip(old,new):self.assertEqual(len(before['steps']),len(after['steps']))
+  for before,after in zip(old,new):
+   if before['name'] not in self.skin['dialogueEdits']:self.assertEqual(len(before['steps']),len(after['steps']))
+   self.assertEqual([s['kind'] for s in before['steps'] if s['kind']!='dialogue'],[s['kind'] for s in after['steps'] if s['kind']!='dialogue'])
+  opening=next(s for s in new if s['name']=='新手村_南贤开场')
+  self.assertEqual(sum(s['kind']=='dialogue' for s in opening['steps']),6)
+  self.assertEqual(opening['steps'][-1],{'kind':'jump','target':'新手村_小村介绍'})
+  self.assertEqual(next(s for s in new if s['name']=='新手村_小村介绍')['steps'][2],{'kind':'command','call':"item('内功入门', 1)"})
  def test_changed_damage_or_reward_is_rejected(self):
   game,_=apply_skin(self.raw,self.skin,'en');game['externalSkills'][0]['powerBase']=999
   with self.assertRaisesRegex(ValueError,'gameplay definitions'):assert_same_flow(self.source,game)
@@ -39,7 +45,10 @@ class GrimmSkinTests(unittest.TestCase):
   with self.assertRaisesRegex(ValueError,'flow'):assert_same_flow(self.source,game)
  def test_wrong_source_and_wrong_dialogue_count_fail(self):
   with self.assertRaisesRegex(ValueError,'fingerprint'):apply_skin(self.raw+b' ',self.skin,'en')
-  self.skin['segments']['新手村_南贤开场']['en'].pop()
+  self.skin['segments']['新手村_南贤_出村']['en'].pop()
   with self.assertRaisesRegex(ValueError,'slot count'):apply_skin(self.raw,self.skin,'en')
+ def test_incomplete_dialogue_run_cannot_leave_hidden_old_lines(self):
+  self.skin['dialogueEdits']['新手村_南贤开场'][0]['expectedCount']=22
+  with self.assertRaisesRegex(ValueError,'run changed'):apply_skin(self.raw,self.skin,'en')
 
 if __name__=='__main__':unittest.main()

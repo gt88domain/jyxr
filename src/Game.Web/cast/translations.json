@@ -1,6 +1,6 @@
 {
   "en": {
-    "brand":"Thirteen Realms","eyebrow":"Thirteen countries · One shared cast","title":"Meet the new cast",
+    "brand":"Storybound","eyebrow":"Familiar tales · One shared cast","title":"Meet the new cast",
     "intro":"Familiar figures first. One identity across countries and growth forms. Compare every role with its legacy reference.",
     "phase":"Cast proposal preview · Gameplay translation and new art are still pending.",
     "countries":"Countries","storyRoles":"Story roles","locked":"Fixed identities","proposed":"Candidates",
@@ -18,7 +18,7 @@
     "error":"The cast could not be loaded. Please refresh or try again later."
   },
   "zh-CN": {
-    "brand":"十三国幻想","eyebrow":"十三个国家 · 一份统一角色表","title":"认识新的伙伴与对手",
+    "brand":"童话旅人","eyebrow":"各国熟悉的故事 · 一份统一角色表","title":"认识新的伙伴与对手",
     "intro":"优先选择熟悉人物。同一角色跨国、成长后仍保持一个身份，每项都可查看原角色对应。",
     "phase":"角色方案预览｜剧情翻译与新美术尚未接入。",
     "countries":"国家","storyRoles":"独立剧情角色","locked":"固定身份","proposed":"待审候选",
