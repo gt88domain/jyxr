@@ -10,7 +10,7 @@ from pathlib import Path
 
 WEB = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(WEB / 'scripts'))
-from grimm_skin import apply_skin
+from grimm_skin import apply_skin,load_skin
 from world_review import COPY_FIELDS, csv_bytes, get_at, make_copy_rows, make_flow_rows
 
 
@@ -20,7 +20,7 @@ class WorldReviewTests(unittest.TestCase):
         cls.raw = (WEB / 'public/data/packs/jyx/content-package.json').read_bytes()
         cls.source = json.loads(cls.raw)
         cls.sha = hashlib.sha256(cls.raw).hexdigest()
-        skin = json.loads((WEB / 'content/worlds/grimm-skin.json').read_text())
+        skin = load_skin(WEB)
         cls.localized = {lang: apply_skin(cls.raw, skin, lang)[0] for lang in ['zh-CN', 'en']}
         cast = json.loads((WEB / 'content/worlds/cast-map.json').read_text())
         cls.before = copy.deepcopy(cls.source)
@@ -119,7 +119,7 @@ class WorldReviewTests(unittest.TestCase):
         self.assertEqual(actual['row_id'], row['row_id'])
 
     def test_renaming_a_speaker_alone_does_not_claim_a_route_is_rewritten(self):
-        rows = [r for r in self.texts if r['segment_id'] == 'original_新手引导.任务买药' and r['kind'] == 'dialogue_run']
+        rows = [r for r in self.texts if r['segment_id'] == '倚天屠龙_张无忌' and r['kind'] == 'dialogue_run']
         self.assertTrue(rows)
         self.assertTrue(all(r['status'] == 'pending' and not r['new_en'] for r in rows))
 

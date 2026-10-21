@@ -17,8 +17,8 @@
     "zh-CN": "格林的求助"
   },
   "description": {
-    "en": "Grimm collects the fairy tales people grow up with. He has summoned you to help when their stories go wrong. Learn skills, find companions, and set out. Later content still uses original names.",
-    "zh-CN": "格林收集着各国陪伴人们长大的童话。故事出了乱子，他召唤你前来帮忙。学习本领、结识伙伴，再出发。后续内容暂沿用原版。"
+    "en": "Grimm collects the fairy tales people grow up with. He has summoned you to help when their stories go wrong. Explore the village, run supplies, train and meet Eir. Later stories still contain original Chinese dialogue and artwork.",
+    "zh-CN": "格林收集着各国陪伴人们长大的童话。故事出了乱子，他召唤你前来帮忙。先在村中准备、出村补给、训练，再结识埃尔。中后期故事仍有原版对白和美术，正在逐批改写。"
   },
   "maps": {
     "南贤屋内": {
@@ -110,7 +110,7 @@
       "zh-CN": "格林请我帮助那些停在半途的童话。首先，学点本领，别让自己的故事停在开头。"
     },
     "点击人物状态栏，点击修炼，可以装备内功入门。": {
-      "en": "Open 修炼 (Training) and select Breathing Primer.",
+      "en": "Open Training and select Breathing Primer.",
       "zh-CN": "打开人物状态栏的“修炼”，选入《呼吸入门》。"
     },
     "装备上的武学经书，在战斗结束后能将获得的经验快速分配到该项武学上，可以迅速提升武学等级。": {
@@ -653,7 +653,8 @@
       }
     ]
   },
-  "version": "village-humor-1",
+  "version": "bulk-chapter-1",
+  "chapters": ["chapter-start.json"],
   "speakerNames": {
     "武师": {
       "en": "Instructor",

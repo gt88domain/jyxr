@@ -4,7 +4,7 @@
 
 ## 保留与分支
 
-- 新工作分支：fantasy-worlds，从现代金庸提交 624f4e87ae251f8e0162e90d1eda11a1ef386cd7 建立。
+- 内容主线：fantasy-worlds，从现代金庸提交 624f4e87ae251f8e0162e90d1eda11a1ef386cd7 建立；本批次在 feat/storybound-bulk-chapter 提交 PR。
 - 现代金庸备份：legacy-jyx；标签 legacy-jyx-before-worlds-2026-10-20 指向同一提交。
 - 旧原版：html5-web，提交 e5bcf716591569bfea4747a8b3b6f4c8a91f5e1c。
 - 部署备份标签：legacy-sites-before-worlds-2026-10-20，指向 f29f2b8da8e84f0994a17af68f9cf804ed5165a1。
@@ -67,7 +67,7 @@
 - legacy-index.json：所有 513 个原定义到身份的索引。
 - locked-identities.json：25 组固定身份注册表。
 - identity-notes.json：别名与合并证据。
-- grimm-skin.json：格林开场、村中问答、教官教学、首战提示与首次商店介绍；只覆盖显示名、说明和对白，角色编号仍为南贤等原编号。真实游戏入口 game/，中文对照通过 lang=zh-CN 查看。
+- grimm-skin.json、chapter-start.json：格林开场、村中教学、出村买药与训练分支、埃尔招募和寻宠对白、九个门派入口。合计 78 段、220 句新版对白，角色编号仍为南贤等原编号。真实游戏入口 game/，中文对照通过 lang=zh-CN 查看。[本批次范围与回溯](STORYBOUND_BULK_CHAPTER.md)。
 - WRITING.md：角色口吻、幽默方式、原著基础及教学说明的边界。
 - manifest.json：同一 jyx 游戏的显示覆盖模块，使用独立存储和版本；原数据与本地格林头像均校验 SHA-256。
 
@@ -96,7 +96,9 @@ seed-world-cast.py 只用于首次建立草案，不是普通构建步骤；不�
 
 dialogueEdits 只替换经校验的连续纯对白段落。构建比较非对白节点，保护原命令、条件、奖励和跳转的顺序；不以保留旧句数为目标，也不通过隐藏空白对白凑数。
 
-新手村对白按新角色重新创作，格林的书卷气、教官的务实和店主的算账习惯形成不同的幽默。`choiceText` 只替换提示与选项文字，`definitions` 仅允许物品、内外功、商店的顶层名称／说明，`locations` 仅改地点显示名和说明。物品要求、价格、效果、技能数值与 ID 仍逐项核对原值。训练假人、教官和店主同步使用实际显示名；仅换了说话人标签的后期旧对白，审阅表仍标为待改写。
+新手村对白按新角色重新创作，格林的书卷气、教官的务实和店主的算账习惯形成不同的幽默。`choiceText` 只替换提示与选项文字，`definitions` 只允许明确列出的定义类别的顶层名称／说明，`locations` 仅改地点显示名和说明。物品要求、价格、效果、技能数值与 ID 仍逐项核对原值。训练假人、教官和店主同步使用实际显示名；仅换了说话人标签的后期旧对白，审阅表仍标为待改写。
+
+编辑显示包不直接交给 C#。运行包保留所有规则定义的名称与说明，新名称存入 `browser.displayCatalog`，由 TypeScript 只在明确的显示字段上投影。原规则按技能名称匹配奥义／天赋的路径因此继续使用原名称。存档、命令、条件和 ID 不翻译。常用界面使用英文 UI 字典与动态模板；正文仍必须人工改写，不把原文按词拼装成英文。
 
 模块身份 worlds、存储 jyxr-fantasy-worlds 与原版隔离，但运行态 packId 保留 jyx。因为宿主按该身份选择原版累计经验、教学任务与战斗规则，不能为了换题材把这些规则改变。中英显示包分别在 packs/worlds/en 和 packs/worlds/zh-CN，内容索引仍指向同一原始规则身份；条件、人物、物品、地图和存档内编号不变。
 

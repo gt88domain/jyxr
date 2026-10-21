@@ -2,17 +2,17 @@
 import copy,json,sys,unittest
 from pathlib import Path
 WEB=Path(__file__).resolve().parents[1];sys.path.insert(0,str(WEB/'scripts'))
-from grimm_skin import apply_skin,assert_same_flow
+from grimm_skin import apply_skin,assert_same_flow,compile_runtime_package,load_skin
 
 class GrimmSkinTests(unittest.TestCase):
  def setUp(self):
   self.raw=(WEB/'public/data/packs/jyx/content-package.json').read_bytes()
-  self.source=json.loads(self.raw);self.skin=json.loads((WEB/'content/worlds/grimm-skin.json').read_text())
+  self.source=json.loads(self.raw);self.skin=load_skin(WEB)
  def test_both_languages_keep_same_locations_rules_and_first_battle(self):
   for locale in ['en','zh-CN']:
    game,report=apply_skin(self.raw,self.skin,locale)
-   self.assertTrue(report['sameGameplayFlow']);self.assertEqual(game['battles'],self.source['battles'])
-   for category in ['items','externalSkills','internalSkills','shops']:
+   self.assertTrue(report['sameGameplayFlow'])
+   for category in ['items','externalSkills','internalSkills','shops','battles']:
     rules=lambda definitions:[{key:value for key,value in d.items() if key not in ['name','description']} for d in definitions]
     self.assertEqual(rules(game[category]),rules(self.source[category]))
    assert_same_flow(self.source,game)
@@ -66,5 +66,31 @@ class GrimmSkinTests(unittest.TestCase):
   self.skin['choiceText']['新手村_武师选择']['options']['en'].pop()
   self.skin['dialogueEdits']['新手村_武师7'][0]['lines'][0]['speaker']='爱丽丝'
   with self.assertRaisesRegex(ValueError,'compressed dialogue'):apply_skin(self.raw,self.skin,'en')
+
+ def test_runtime_preserves_every_rule_definition_and_name_based_combo(self):
+  for locale in ['en','zh-CN']:
+   display,_=apply_skin(self.raw,self.skin,locale)
+   runtime=compile_runtime_package(self.source,display,self.skin.get('uiLabels',{}).get(locale,{}))
+   for key,value in self.source.items():
+    if key not in ['browser','storyScripts']:self.assertEqual(runtime[key],value,key)
+   self.assertEqual(runtime['browser']['creation']['questions'],display['browser']['creation']['questions'])
+   catalog=runtime['browser']['displayCatalog']
+   skill=next(s for s in runtime['externalSkills'] if s['id']=='野球拳')
+   self.assertEqual(skill['name'],'野球拳')
+   talent=next(t for t in runtime['talents'] if t['id']=='屌丝')
+   bonus=next(a for a in talent['affixes'] if a['type']=='source_skill_legend_chance_bonus')
+   self.assertEqual(bonus['skillName'],skill['name'])
+   self.assertEqual(bonus['bonus'],0.1)
+   self.assertNotEqual(catalog['byId']['野球拳']['name'],skill['name'])
+   self.assertEqual(next(c for c in runtime['characters'] if c['id']=='南贤')['name'],'南贤')
+
+ def test_creation_changes_only_question_and_answer_copy(self):
+  display,_=apply_skin(self.raw,self.skin,'en')
+  for old,new in zip(self.source['browser']['creation']['questions'],display['browser']['creation']['questions']):
+   self.assertNotEqual(old['title'],new['title'])
+   self.assertEqual({k:v for k,v in old.items() if k not in ['title','options']},{k:v for k,v in new.items() if k not in ['title','options']})
+   self.assertEqual(len(old['options']),len(new['options']))
+   for a,b in zip(old['options'],new['options']):
+    self.assertEqual({k:v for k,v in a.items() if k!='text'},{k:v for k,v in b.items() if k!='text'})
 
 if __name__=='__main__':unittest.main()

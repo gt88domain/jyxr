@@ -1,0 +1,5109 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "dialogueEdits": {
+    "original_新手引导.开始": [
+      {
+        "start": 0,
+        "expectedCount": 5,
+        "lines": [
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "One last thing. Stories tend to skip the part where the hero remembers to pack bandages.",
+              "zh-CN": "还有件事。故事往往省掉英雄出门前，想起来带绷带的那一段。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "That sounds suspiciously like an errand.",
+              "zh-CN": "这话听着，很像要让我跑腿。"
+            }
+          },
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "A short one, with supplies and lessons attached. Or you may choose a school and set out at once.",
+              "zh-CN": "一趟短差，附带补给和几堂课。你也可以直接选择门派，独自上路。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_新手引导.任务买药": [
+      {
+        "start": 0,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "All right. What does a properly packed hero need?",
+              "zh-CN": "好吧，一个准备充分的英雄需要什么？"
+            }
+          },
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Start with 300 silver. Try not to mistake the budget for a reward.",
+              "zh-CN": "先给你三百银币。别急着高兴，这是经费，不是奖金。"
+            }
+          }
+        ]
+      },
+      {
+        "start": 3,
+        "expectedCount": 7,
+        "lines": [
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Go to Crossroads, then the Supply Shop. Bring back five Restorative Tonics.",
+              "zh-CN": "去十字镇的补给铺，带回五份恢复药剂。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Five? Are you expecting a particularly educational afternoon?",
+              "zh-CN": "五份？你预料我今天能学到不少惨痛教训？"
+            }
+          },
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "I prefer to call it preparation. Ask the shopkeeper about beginner supplies before spending anything.",
+              "zh-CN": "我更愿意称之为有备无患。掏钱之前，先问问店主有没有新手补给。"
+            }
+          }
+        ]
+      },
+      {
+        "start": 11,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Your journal keeps the task and destination. Consult it whenever a dramatic speech drives out the useful details.",
+              "zh-CN": "任务和目的地都记在日志里。听完豪言壮语，忘了正事的时候，就翻翻。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Crossroads, Supply Shop, five tonics. I even remembered the useful part.",
+              "zh-CN": "十字镇，补给铺，五份药剂。我竟然记住重点了。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_新手引导.买药": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "商人",
+            "text": {
+              "en": "Grimm sent you? Excellent. I have a beginner's manual for you. Choose a fighting style before you choose a heroic pose.",
+              "zh-CN": "格林让你来的？正好，我这里有本新手读本送你。先选打法，再选英雄的站姿。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_新手引导.买药继续": [
+      {
+        "start": 0,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "A free lesson? I was warned shops were dangerous.",
+              "zh-CN": "免费送读本？我还听说，商店是很危险的地方。"
+            }
+          },
+          {
+            "speaker": "商人",
+            "text": {
+              "en": "Only for your purse. Take five Restorative Tonics as well; this batch is part of the starter allowance.",
+              "zh-CN": "主要是对钱袋危险。这五份恢复药剂也拿着，算在新手补给里。"
+            }
+          }
+        ]
+      },
+      {
+        "start": 5,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "商人",
+            "text": {
+              "en": "There. Grimm gets his proof of preparation, you keep the travel money, and I gain a customer who might come back alive.",
+              "zh-CN": "这样，格林知道你准备过了，你留下路费，我多一个有机会活着回头的顾客。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "At last, a business plan with my interests in it.",
+              "zh-CN": "终于，有份生意计划考虑到我的利益了。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_新手引导.买到药了": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Five tonics, all accounted for. Back to Grimm's home before I spend the budget on a magnificent hat.",
+              "zh-CN": "五份药剂齐了。回格林居所复命，免得我把经费花在一顶气派的帽子上。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_新手引导.买药完成": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Supplies secured. Good. Being prepared gives an adventure a much better chance of reaching its second chapter.",
+              "zh-CN": "补给齐了，很好。准备充分，故事才更有机会写到第二章。"
+            }
+          }
+        ]
+      },
+      {
+        "start": 3,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Keep recovery items close and check their effects before using them. Pride is a poor substitute for medicine.",
+              "zh-CN": "恢复用品别放太远，用前看清效果。自尊心可代替不了药。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I had noticed its disappointing medical properties.",
+              "zh-CN": "我已经发现，自尊心的药效不太理想了。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_新手引导.任务打人": [
+      {
+        "start": 0,
+        "expectedCount": 3,
+        "lines": [
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Now, a practical choice: a friendly bout with the young apprentice in Crossroads, or a confrontation with the road bully in Rainmarket.",
+              "zh-CN": "接下来选一项实地练习：去十字镇和小学徒友好切磋，或去雨集镇挑战拦路的恶霸。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I suspect those are not equally difficult.",
+              "zh-CN": "我怀疑，这两项的难度不太一样。"
+            }
+          },
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Correct. The apprentice teaches timing. The bully teaches the value of returning later.",
+              "zh-CN": "没错。学徒教你掌握时机，恶霸教你明白什么叫改日再来。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_新手引导.任务打人小孩": [
+      {
+        "start": 0,
+        "expectedCount": 3,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "The apprentice, please. I would like a lesson with fewer teeth involved.",
+              "zh-CN": "我选学徒。我希望这堂课，尽量不涉及牙齿的损失。"
+            }
+          },
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "A sensible choice. Agree on a practice bout, then report back.",
+              "zh-CN": "稳妥。约好切磋的规矩，结束后回来找我。"
+            }
+          }
+        ]
+      },
+      {
+        "start": 4,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "You will find the young apprentice in Crossroads. A practice bout, remember. We are training a traveller, not a menace.",
+              "zh-CN": "小学徒就在十字镇。记住，是友好切磋。我在培养旅人，不是制造麻烦。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_新手引导.教训小孩开始": [
+      {
+        "start": 0,
+        "expectedCount": 6,
+        "lines": [
+          {
+            "speaker": "小孩",
+            "text": {
+              "en": "You must be Grimm's traveller. Ready for a practice bout? We stop when someone yields.",
+              "zh-CN": "你就是格林说的旅人？来练一场吧，谁认输就停。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Agreed. I shall attempt to look experienced.",
+              "zh-CN": "同意。我会努力表现得很有经验。"
+            }
+          },
+          {
+            "speaker": "小孩",
+            "text": {
+              "en": "Save your effort for your footwork.",
+              "zh-CN": "那份力气，还是留着挪脚吧。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_教训小孩负": [
+      {
+        "start": 1,
+        "expectedCount": 5,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "You have rather thoroughly answered the question of who needs practice.",
+              "zh-CN": "关于谁更需要练习，你已经回答得很充分了。"
+            }
+          },
+          {
+            "speaker": "小孩",
+            "text": {
+              "en": "One more exchange. Try a feint instead of announcing the attack with your shoulders.",
+              "zh-CN": "再走一招。试试佯攻，别肩膀一动，就把打算全告诉我。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Like this?",
+              "zh-CN": "这样？"
+            }
+          },
+          {
+            "speaker": "小孩",
+            "text": {
+              "en": "Yes! That is the point. Now stop looking so surprised that you learned something.",
+              "zh-CN": "对，就是这个意思！别那么吃惊，你确实学会了一点东西。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_新手引导.教训小孩成功": [
+      {
+        "start": 1,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "A friendly bout, and a very unfriendly discovery about my balance.",
+              "zh-CN": "切磋很友好，暴露出来的平衡感问题就不怎么友好了。"
+            }
+          },
+          {
+            "speaker": "小孩",
+            "text": {
+              "en": "Come back when you have another trick. I enjoy being properly surprised.",
+              "zh-CN": "练会新招再来。我也想遇上一次像样的惊喜。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_新手引导.教训小孩复命": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Practice finished. I should return to Grimm before the apprentice invents homework.",
+              "zh-CN": "切磋结束，先回格林那里吧，免得学徒顺手再给我布置功课。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_新手引导.教训小孩完成": [
+      {
+        "start": 0,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "You kept the bout friendly and learned from it. That is a useful beginning.",
+              "zh-CN": "懂得友好切磋，也肯从中学东西。这个开头不错。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Does losing my dignity count as tuition?",
+              "zh-CN": "丢掉的面子，能算学费吗？"
+            }
+          },
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Consider it a contribution. This lesson also raises Steady Breath's level limit through mastery.",
+              "zh-CN": "算是赞助吧。这堂课也会通过专精，提高稳息法的等级上限。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_新手引导.任务打人黑帮": [
+      {
+        "start": 0,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I will try the bully. Somebody ought to object to his tolls.",
+              "zh-CN": "我去试试恶霸。总该有人反对他那套拦路收费。"
+            }
+          },
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Object from a safe distance if necessary. A difficult enemy is not an instruction to keep losing to him.",
+              "zh-CN": "必要时，站远一点反对。碰上强敌，可不代表非得一直输给他。"
+            }
+          }
+        ]
+      },
+      {
+        "start": 3,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Rainmarket is south of here. Challenge the road bully, then come back and tell me what you learned.",
+              "zh-CN": "雨集镇在南边。挑战那里的拦路恶霸，再回来告诉我你学到了什么。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_新手引导.教训黑老大开始": [
+      {
+        "start": 0,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "黑老大",
+            "text": {
+              "en": "A new traveller! The road toll is whatever you look nervous enough to pay.",
+              "zh-CN": "新来的旅人！过路费嘛，就看你紧张得愿意掏多少。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I was hoping to negotiate it down to nothing.",
+              "zh-CN": "我希望，把它谈到零。"
+            }
+          },
+          {
+            "speaker": "黑老大",
+            "text": {
+              "en": "Then we shall have a very brief negotiation.",
+              "zh-CN": "那这场谈判，会非常简短。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_新手引导.教训黑老大胜": [
+      {
+        "start": 1,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "黑老大",
+            "text": {
+              "en": "Not bad. Unfortunately, that was the introductory demonstration.",
+              "zh-CN": "有两下子。可惜，刚才只是入门演示。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "There is an advanced demonstration? I would like to withdraw my application.",
+              "zh-CN": "还有进阶演示？我申请撤回报名。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_新手引导.教训黑老大负": [
+      {
+        "start": 1,
+        "expectedCount": 5,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I believe I have learned the principal lesson.",
+              "zh-CN": "我想，主要的教训我已经学到了。"
+            }
+          },
+          {
+            "speaker": "黑老大",
+            "text": {
+              "en": "Which is?",
+              "zh-CN": "说来听听？"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "That confidence is not armour. I will leave you to admire your own importance.",
+              "zh-CN": "自信不是铠甲。我先走，不耽误你继续欣赏自己的威风。"
+            }
+          },
+          {
+            "speaker": "黑老大",
+            "text": {
+              "en": "Keep walking. I charge extra for a last word.",
+              "zh-CN": "继续走。想多说最后一句，得加钱。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_新手引导.教训黑老大复命": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "An educational defeat. Back to Grimm's home, with my conclusions and most of my pride.",
+              "zh-CN": "很有教育意义的一败。带着结论，还有大半自尊，回格林居所吧。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_新手引导.教训黑老大完成": [
+      {
+        "start": 0,
+        "expectedCount": 8,
+        "lines": [
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "The bully is still standing, I take it?",
+              "zh-CN": "看来，恶霸还站着？"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Very firmly. I tested the matter.",
+              "zh-CN": "站得很稳。我亲自确认过。"
+            }
+          },
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "An open road contains enemies you cannot beat yet. Train, recruit companions, improve your equipment, and return when you are ready.",
+              "zh-CN": "路上的敌人，并不都等着让你现在击败。先修炼、结识伙伴、改善装备，准备好了再回来。"
+            }
+          },
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Knowing when to leave is a skill too. This lesson raises Steady Breath's level limit through mastery.",
+              "zh-CN": "知道何时离开，也是一门本领。这堂课会通过专精，提高稳息法的等级上限。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_新手引导.买药去啊": [
+      {
+        "start": 0,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Crossroads, Supply Shop, five Restorative Tonics. Ask about beginner supplies before opening your purse.",
+              "zh-CN": "十字镇，补给铺，五份恢复药剂。打开钱袋之前，先问问新手补给。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_新手引导.教训小孩去啊": [
+      {
+        "start": 0,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "The young apprentice is in Crossroads. Arrange a friendly practice bout, then come back.",
+              "zh-CN": "小学徒在十字镇。约好友好切磋，结束后回来找我。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_新手引导.教训黑老大去啊": [
+      {
+        "start": 0,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "The road bully is in Rainmarket. Remember: returning with a lesson is better than refusing to return at all.",
+              "zh-CN": "拦路恶霸在雨集镇。记住，带着教训回来，总比赌气不回来好。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_新手引导结束": [
+      {
+        "start": 0,
+        "expectedCount": 3,
+        "lines": [
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "You can prepare, trade, train, and judge a difficult fight. A promising collection of survival habits.",
+              "zh-CN": "准备补给、交易、练习、判断难敌——生存的好习惯，已经攒起几样了。"
+            }
+          },
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Choose a school if you wish, or make your own way. Neither road comes with a guarantee.",
+              "zh-CN": "接下来可以选个门派，也可以走自己的路。两条路，都不附送成功保证。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I suppose I shall have to supply the ending myself.",
+              "zh-CN": "看来，结局还得我自己准备。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_门派选择": [
+      {
+        "start": 0,
+        "expectedCount": 3,
+        "lines": [
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Each school has its own lessons, duties and peculiar habits. Read what it offers before joining.",
+              "zh-CN": "各个门派都有自己的课业、责任，还有些古怪习惯。加入之前，先看清楚教什么。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "And if I prefer to remain independent?",
+              "zh-CN": "我想独自闯荡，也可以？"
+            }
+          },
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Certainly. Nobody has exclusive rights to learning from your mistakes.",
+              "zh-CN": "当然。靠吃亏长见识，可没有谁家独占经营权。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_主角之家.回家": [
+      {
+        "start": 2,
+        "expectedCount": 7,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I am back. The road has opinions about beginners.",
+              "zh-CN": "我回来了。外面的路，对新手颇有意见。"
+            }
+          },
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "And you are here to argue with them?",
+              "zh-CN": "所以，你回来准备反驳它？"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "With better preparation this time, if possible.",
+              "zh-CN": "如果可能，希望这次靠更充分的准备。"
+            }
+          },
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Then take a mastery increase for Steady Breath. Strong foundations are less glamorous than swords, but harder to lose.",
+              "zh-CN": "那就给稳息法增加一项专精。基础没有宝剑风光，倒也没那么容易弄丢。"
+            }
+          }
+        ]
+      },
+      {
+        "start": 10,
+        "expectedCount": 5,
+        "lines": [
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Mastery raises the skill's level limit across your saves and later rounds. This particular reward can be claimed only once per profile.",
+              "zh-CN": "专精会提高技能等级上限，对同一档案下的存档和后续周目有效。这份奖励，每个档案只能领取一次。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "You have anticipated my plan to return wearing a false moustache.",
+              "zh-CN": "你已经防住了，我粘着假胡子再来一次的打算。"
+            }
+          },
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "I collect stories. I am familiar with that one.",
+              "zh-CN": "我是收集故事的。这种故事，我熟。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_洛阳.小孩1": [
+      {
+        "start": 0,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "小孩",
+            "text": {
+              "en": "I can tell you are new. You are looking at the sign instead of the shortcuts.",
+              "zh-CN": "看得出来你刚来。你在看路牌，还没开始找近道。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I had planned to learn the sensible route first.",
+              "zh-CN": "我本来打算，先认识一条靠谱的路。"
+            }
+          },
+          {
+            "speaker": "小孩",
+            "text": {
+              "en": "How unusual. You may do rather well here.",
+              "zh-CN": "挺新鲜的想法。说不定，你在这里真能混得不错。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_洛阳奇闻.阿福1": [
+      {
+        "start": 0,
+        "expectedCount": 6,
+        "lines": [
+          {
+            "speaker": "王家老爷",
+            "text": {
+              "en": "I have consulted the stars, the runes, and three very unhelpful birds. My dog is still out walking.",
+              "zh-CN": "我问过星辰，问过符文，还问过三只毫无帮助的鸟。我的狗，依旧在外头散步。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Have you tried calling him?",
+              "zh-CN": "你试过，直接喊它的名字吗？"
+            }
+          },
+          {
+            "speaker": "王家老爷",
+            "text": {
+              "en": "Naturally. He appears to regard his name as a suggestion.",
+              "zh-CN": "当然试过。它似乎觉得，自己的名字只是一项建议。"
+            }
+          }
+        ]
+      }
+    ],
+    "tlbb.dy_钟灵": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "钟灵",
+            "text": {
+              "en": "I am Eir. My little stoat carries medicines between patients. He has gone missing, and I would rather find him before someone mistakes him for lunch.",
+              "zh-CN": "我是埃尔。我的小白鼬负责在病人之间送药。它走丢了，我想赶在人家把它误认成午饭之前，找到它。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "An assistant with teeth. I can see the appeal.",
+              "zh-CN": "一位自带牙齿的助手。我能理解，你为什么看重它。"
+            }
+          }
+        ]
+      }
+    ],
+    "tlbb.dy_钟灵找": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "钟灵",
+            "text": {
+              "en": "Thank you. I will travel with you. Keep your hands away from unknown mouths; I prefer my new companions unbitten.",
+              "zh-CN": "谢谢，我和你同行。手别随便往不认识的嘴边放，我希望新伙伴先保持完整。"
+            }
+          }
+        ]
+      }
+    ],
+    "tlbb.dy_钟灵不找": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "钟灵",
+            "text": {
+              "en": "Then we part here. I have a small, urgent search, and worry does not shorten the road.",
+              "zh-CN": "那就在这里分别吧。我还得赶紧找它，担心，可不会让路变短。"
+            }
+          }
+        ]
+      }
+    ],
+    "tlbb.dy_钟灵不找2": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "钟灵",
+            "text": {
+              "en": "My offer still stands if your plans have changed. He is small, quick, and remarkably confident about biting strangers.",
+              "zh-CN": "你改变主意的话，我的邀请还在。它个头小，跑得快，对咬陌生人这件事，颇有自信。"
+            }
+          }
+        ]
+      }
+    ],
+    "tlbb.dy_闪电貂": [
+      {
+        "start": 0,
+        "expectedCount": 10,
+        "lines": [
+          {
+            "speaker": "云中鹤",
+            "text": {
+              "en": "My hand is swelling. Something small in the forest objected to being picked up.",
+              "zh-CN": "我的手肿起来了。林子里一个小东西，不太同意让我把它抱起来。"
+            }
+          },
+          {
+            "speaker": "岳老三",
+            "text": {
+              "en": "Did it object before or after you grabbed it?",
+              "zh-CN": "它是在你抓它之前，还是之后，表示不同意的？"
+            }
+          },
+          {
+            "speaker": "云中鹤",
+            "text": {
+              "en": "I concede that I may have missed an important warning.",
+              "zh-CN": "我承认，我可能漏掉了一项重要警告。"
+            }
+          },
+          {
+            "speaker": "岳老三",
+            "text": {
+              "en": "Find Eir. You need a healer, not another explanation.",
+              "zh-CN": "找埃尔去。你需要的是医师，不是再想一套解释。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "A swift animal, a bitten hand, and Eir's missing assistant. That is at least a lead.",
+              "zh-CN": "小兽跑得快，有人被咬了手，还提到埃尔的助手。至少，是一条线索。"
+            }
+          }
+        ]
+      }
+    ],
+    "tlbb.dy_闪电貂2": [
+      {
+        "start": 0,
+        "expectedCount": 3,
+        "lines": [
+          {
+            "speaker": "段延庆",
+            "text": {
+              "en": "A creature with a venomous bite. A convenient weapon, if one ignores its temper.",
+              "zh-CN": "一只牙上带毒的小兽。倘若不考虑它的脾气，倒是件方便的武器。"
+            }
+          },
+          {
+            "speaker": "云中鹤",
+            "text": {
+              "en": "I recommend considering its temper.",
+              "zh-CN": "我建议，把它的脾气考虑进去。"
+            }
+          },
+          {
+            "speaker": "钟灵",
+            "text": {
+              "en": "He is not a weapon. Put him down.",
+              "zh-CN": "它不是武器。把它放下。"
+            }
+          }
+        ]
+      }
+    ],
+    "tlbb.dy_闪电貂死": [
+      {
+        "start": 0,
+        "expectedCount": 3,
+        "lines": [
+          {
+            "speaker": "段延庆",
+            "text": {
+              "en": "You have cost me the plan. You will not take the creature as well.",
+              "zh-CN": "你毁了我的计划，别想再把小兽也带走。"
+            }
+          },
+          {
+            "speaker": "钟灵",
+            "text": {
+              "en": "Stop—!",
+              "zh-CN": "住手——！"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Too late. He has killed the stoat.",
+              "zh-CN": "太迟了。他杀了那只白鼬。"
+            }
+          }
+        ]
+      }
+    ],
+    "tlbb.dy_闪电貂死2": [
+      {
+        "start": 0,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "段延庆",
+            "text": {
+              "en": "The scheme is exposed. We are leaving.",
+              "zh-CN": "计划暴露，撤退。"
+            }
+          },
+          {
+            "speaker": "钟灵",
+            "text": {
+              "en": "He trusted people who needed help. I should have found him sooner.",
+              "zh-CN": "它一直信任需要帮助的人。我本该早点找到它。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "We will give him a quiet place. I am sorry, Eir.",
+              "zh-CN": "我们给它找个安静的地方吧。对不起，埃尔。"
+            }
+          },
+          {
+            "speaker": "钟灵",
+            "text": {
+              "en": "Stay a moment. Some things deserve more than hurrying on.",
+              "zh-CN": "陪我待一会儿。有些事，不该急着翻过去。"
+            }
+          }
+        ]
+      }
+    ],
+    "tlbb.dy_闪电貂不死": [
+      {
+        "start": 0,
+        "expectedCount": 3,
+        "lines": [
+          {
+            "speaker": "段延庆",
+            "text": {
+              "en": "You have spoiled enough. I can still make certain you leave empty-handed.",
+              "zh-CN": "你们坏的事已经够多了。至少，我还能让你们空手而归。"
+            }
+          },
+          {
+            "speaker": "木婉清",
+            "text": {
+              "en": "No. Step away from the animal.",
+              "zh-CN": "不。离那只小兽远点。"
+            }
+          },
+          {
+            "speaker": "段延庆",
+            "text": {
+              "en": "Withdraw!",
+              "zh-CN": "撤退！"
+            }
+          }
+        ]
+      }
+    ],
+    "tlbb.dy_闪电貂不死2": [
+      {
+        "start": 0,
+        "expectedCount": 5,
+        "lines": [
+          {
+            "speaker": "木婉清",
+            "text": {
+              "en": "Here he is, Eir. Held gently, for once.",
+              "zh-CN": "给你，埃尔。这回，总算有人轻轻抱着它了。"
+            }
+          },
+          {
+            "speaker": "钟灵",
+            "text": {
+              "en": "Thank you. Everyone, keep your fingers clear while I check him.",
+              "zh-CN": "谢谢。各位先把手指收远点，让我检查它的伤。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I had an excellent victory speech prepared.",
+              "zh-CN": "我本来准备了一段很出色的胜利演说。"
+            }
+          },
+          {
+            "speaker": "钟灵",
+            "text": {
+              "en": "Save it for later. He has had enough excitement. I can teach you how to direct his bite safely.",
+              "zh-CN": "留着晚点说吧，它受的惊吓已经够多。我可以教你，怎样安全地指挥它配合作战。"
+            }
+          }
+        ]
+      }
+    ],
+    "tlbb.dy_闪电貂带路": [
+      {
+        "start": 0,
+        "expectedCount": 3,
+        "lines": [
+          {
+            "speaker": "段誉",
+            "text": {
+              "en": "Something small has just made off down that path. Quite rude of it not to leave directions.",
+              "zh-CN": "有个小东西，顺着那条路跑了。竟然不留下路标，实在有点不客气。"
+            }
+          },
+          {
+            "speaker": "阿碧",
+            "text": {
+              "en": "I saw it too. Faster than a rumour.",
+              "zh-CN": "我也看见了。比闲话跑得还快。"
+            }
+          },
+          {
+            "speaker": "木婉清",
+            "text": {
+              "en": "Then follow quietly. We do not need to frighten it farther away.",
+              "zh-CN": "那就安静跟上，别把它吓得更远。"
+            }
+          }
+        ]
+      }
+    ],
+    "tlbb.dy_闪电貂带路2": [
+      {
+        "start": 2,
+        "expectedCount": 8,
+        "lines": [
+          {
+            "speaker": "段誉",
+            "text": {
+              "en": "A hidden chamber. I should pretend I intended to find this.",
+              "zh-CN": "一间密室。我应该假装，自己原本就打算找到这里。"
+            }
+          },
+          {
+            "speaker": "木婉清",
+            "text": {
+              "en": "Save the performance. There is something moving beside the wall.",
+              "zh-CN": "省省吧，墙边有东西在动。"
+            }
+          },
+          {
+            "speaker": "阿碧",
+            "text": {
+              "en": "A stoat. Eir's little assistant, unless another one has stolen its manners.",
+              "zh-CN": "一只白鼬。应该是埃尔的小助手，除非另有一只，学走了它的派头。"
+            }
+          },
+          {
+            "speaker": "段誉",
+            "text": {
+              "en": "Then we have found someone who actually needs our cleverness.",
+              "zh-CN": "看来，我们找到真正需要我们聪明才智的对象了。"
+            }
+          },
+          {
+            "speaker": "木婉清",
+            "text": {
+              "en": "Pick it up gently. We are returning him to Eir.",
+              "zh-CN": "轻点抱好。把它送回埃尔那里。"
+            }
+          }
+        ]
+      }
+    ],
+    "tlbb.dy_闪电貂还钟灵": [
+      {
+        "start": 0,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "木婉清",
+            "text": {
+              "en": "Your missing assistant. Rather less lost now.",
+              "zh-CN": "你走丢的小助手，现在总算不算走丢了。"
+            }
+          },
+          {
+            "speaker": "钟灵",
+            "text": {
+              "en": "Thank you. I owe you both a great deal—and he owes me an explanation.",
+              "zh-CN": "谢谢，欠你们一个大人情。至于它，欠我一个解释。"
+            }
+          }
+        ]
+      }
+    ],
+    "门派古墓_拜师": [
+      {
+        "start": 2,
+        "expectedCount": 17,
+        "lines": [
+          {
+            "speaker": "黄衫女子",
+            "text": {
+              "en": "Grimm's recommendation? Then you are welcome at the House of Mists. Keep your voice down; concentration is easier without a fanfare.",
+              "zh-CN": "格林介绍来的？那就欢迎加入迷雾学舍。小点声，专心练习不需要吹号助兴。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I have brought no trumpet. A promising start.",
+              "zh-CN": "我没带喇叭。看来，开头还不错。"
+            }
+          },
+          {
+            "speaker": "黄衫女子",
+            "text": {
+              "en": "We study patience, precision and follow-up strikes. Respect the house, practise properly, and earn the next lesson.",
+              "zh-CN": "这里讲究耐心、精准和后续连招。尊重学舍，认真练习，再来学下一课。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Agreed. Quietly agreed.",
+              "zh-CN": "我同意。小声同意。"
+            }
+          }
+        ]
+      }
+    ],
+    "门派古墓_练功": [
+      {
+        "start": 2,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Training first. The atmosphere is impressive, but it has not improved my footwork yet.",
+              "zh-CN": "先练习。这里的气氛很有深意，可它还没改善我的步法。"
+            }
+          }
+        ]
+      }
+    ],
+    "门派大轮寺_拜师": [
+      {
+        "start": 2,
+        "expectedCount": 15,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Grimm mentioned a school. He did not mention quite this much snow.",
+              "zh-CN": "格林说过有个门派，倒没说会有这么多雪。"
+            }
+          },
+          {
+            "speaker": "金轮法王",
+            "text": {
+              "en": "Percival. Welcome to the Grail Lodge. You seek training, I assume, rather than a warmer view.",
+              "zh-CN": "我是珀西瓦尔。欢迎来到圣杯山舍。想来，你是求学的，不是来欣赏更冷的风景。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Both, if one of them includes a roof.",
+              "zh-CN": "两样都行，只要其中一样包括屋顶。"
+            }
+          },
+          {
+            "speaker": "金轮法王",
+            "text": {
+              "en": "Shelter first, then practice. Strength is learned in stages; it is not issued with a grand title.",
+              "zh-CN": "先避风，再练习。力量要分阶段学，不是取个响亮名号，就能领到的。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I had suspected there might be a catch.",
+              "zh-CN": "我就怀疑，事情没有那么便宜。"
+            }
+          }
+        ]
+      }
+    ],
+    "门派大轮寺_练功": [
+      {
+        "start": 2,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Warm up, then practise. At last, advice that works in both senses.",
+              "zh-CN": "先热身，再练习。总算，有条建议字面上也很实用。"
+            }
+          }
+        ]
+      }
+    ],
+    "血刀门_进门": [
+      {
+        "start": 2,
+        "expectedCount": 3,
+        "lines": [
+          {
+            "speaker": "胜谛",
+            "text": {
+              "en": "The Dawn Hunters do not admit sightseers. State your business.",
+              "zh-CN": "破晓猎团不接待看热闹的。说明来意。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Grimm sent me to learn how to survive dangerous company.",
+              "zh-CN": "格林让我来学学，怎样在危险的同伴身边生存。"
+            }
+          },
+          {
+            "speaker": "胜谛",
+            "text": {
+              "en": "Then you have certainly found the right door. Van Helsing is inside.",
+              "zh-CN": "那你找对门了。范海辛在里面。"
+            }
+          }
+        ]
+      }
+    ],
+    "血刀门_拜师2": [
+      {
+        "start": 1,
+        "expectedCount": 8,
+        "lines": [
+          {
+            "speaker": "胜谛",
+            "text": {
+              "en": "Professor, a new recruit. Apparently not frightened enough by the gate.",
+              "zh-CN": "教授，新来的求学者。看来，门口的气氛还不够吓人。"
+            }
+          },
+          {
+            "speaker": "血刀老祖",
+            "text": {
+              "en": "Van Helsing. We pursue monsters, but our blood arts are dangerous to their users as well. Read the price before admiring the power.",
+              "zh-CN": "我是范海辛。我们追猎怪物，但血术对使用者也有危险。欣赏威力之前，先看清代价。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "An unusually honest welcome.",
+              "zh-CN": "这欢迎词，诚实得有点少见。"
+            }
+          },
+          {
+            "speaker": "血刀老祖",
+            "text": {
+              "en": "Stay alive, study carefully, and do not mistake a thirst for blood for a calling.",
+              "zh-CN": "活下来，仔细学。别把嗜血的冲动，当成了什么神圣使命。"
+            }
+          },
+          {
+            "speaker": "胜谛",
+            "text": {
+              "en": "Your gear is ready. The first lesson is inside.",
+              "zh-CN": "行装准备好了，第一堂课在里面。"
+            }
+          }
+        ]
+      }
+    ],
+    "全真教_加入全真": [
+      {
+        "start": 2,
+        "expectedCount": 5,
+        "lines": [
+          {
+            "speaker": "马钰",
+            "text": {
+              "en": "Welcome to the Bremen Watch. One voice warns the others; together we stand our ground.",
+              "zh-CN": "欢迎加入不来梅守望队。一声鸣叫提醒同伴，大家一起守住阵地。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Is the first lesson singing?",
+              "zh-CN": "第一堂课，是唱歌吗？"
+            }
+          },
+          {
+            "speaker": "马钰",
+            "text": {
+              "en": "Keeping your promises. The singing improves with confidence. Protect ordinary folk, practise, and earn your place.",
+              "zh-CN": "是守信。唱得好不好，自信一点，总会进步。保护普通人，认真练习，凭本领取得位置。"
+            }
+          }
+        ]
+      }
+    ],
+    "灵鹫宫_加入灵鹫宫": [
+      {
+        "start": 2,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "秦婆婆",
+            "text": {
+              "en": "Urd. Welcome to Threadhall. Before asking what fate intends, notice what your own hands are doing.",
+              "zh-CN": "我是兀儿德。欢迎来到织线厅。追问命运打算做什么之前，先看看你自己的手在做什么。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "At present, trying not to fidget.",
+              "zh-CN": "目前，在努力不乱动。"
+            }
+          },
+          {
+            "speaker": "秦婆婆",
+            "text": {
+              "en": "A beginning. Study patterns, practise movement, and read between lessons. A clever fighter sees more than one possible next step.",
+              "zh-CN": "也是个开头。研究规律，练习身法，课间读书。聪明的武者，看得见不止一种下一步。"
+            }
+          }
+        ]
+      }
+    ],
+    "少林派_入门": [
+      {
+        "start": 2,
+        "expectedCount": 3,
+        "lines": [
+          {
+            "speaker": "方证大师",
+            "text": {
+              "en": "I am Sanzang. Grimm's letter says you wish to learn. Will you take our vows, or train as a visiting student?",
+              "zh-CN": "我是三藏。格林信里说，你想来学习。你愿意立誓常住，还是以在外行走的弟子身份修习？"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I appreciate a choice that comes before the haircut.",
+              "zh-CN": "很感谢，选择的机会放在剃头之前。"
+            }
+          },
+          {
+            "speaker": "方证大师",
+            "text": {
+              "en": "A vow deserves thought. So does a journey. Neither is improved by being rushed.",
+              "zh-CN": "誓言需要想清楚，旅程也一样。两者，都不是越仓促越好。"
+            }
+          }
+        ]
+      }
+    ],
+    "少林派_剃度": [
+      {
+        "start": 1,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "方证大师",
+            "text": {
+              "en": "Then let us mark your new beginning. The haircut is the easy part; keeping a calm mind takes longer.",
+              "zh-CN": "那就为新的开始作个标记。剃头是容易的一步，心静下来，可要久得多。"
+            }
+          }
+        ]
+      }
+    ],
+    "少林派_不剃度": [
+      {
+        "start": 1,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "方证大师",
+            "text": {
+              "en": "A travelling student, then. Learn here, practise on the road, and use your strength to protect others.",
+              "zh-CN": "那就作为在外弟子吧。在此求学，在路上练习，把力量用来保护别人。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I shall try to return with better habits, and the same amount of hair.",
+              "zh-CN": "我会努力带着更好的习惯回来，头发的数量尽量保持原样。"
+            }
+          }
+        ]
+      }
+    ],
+    "武当派_入门": [
+      {
+        "start": 2,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "冲虚道长",
+            "text": {
+              "en": "Sha Wujing. The River Wardens teach balance: yield where you must, stand firm where it matters.",
+              "zh-CN": "我是沙悟净。河流守卫讲究平衡：该让时让，该站稳的地方，不能退。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "It sounds less exhausting than meeting every blow with my forehead.",
+              "zh-CN": "听着，比每一招都用额头接，要省力一些。"
+            }
+          },
+          {
+            "speaker": "冲虚道长",
+            "text": {
+              "en": "It is. Practise with your fellow students, and remember that patience is a form of strength.",
+              "zh-CN": "确实。和同门好好练习，记住，耐心也是力量的一种。"
+            }
+          }
+        ]
+      }
+    ],
+    "门派星宿_入门": [
+      {
+        "start": 4,
+        "expectedCount": 5,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "This must be the Bridge Watch. Everybody looks as though they can hear me thinking.",
+              "zh-CN": "这里就是虹桥守望吧。每个人看着，都像能听见我在想什么。"
+            }
+          },
+          {
+            "speaker": "丁春秋",
+            "text": {
+              "en": "Heimdall. We keep watch, so others may sleep. Learn the watchword before your first duty.",
+              "zh-CN": "我是海姆达尔。我们守望，是为了让别人能安睡。第一次值守之前，先记住口令。"
+            }
+          },
+          {
+            "speaker": "摘星子",
+            "text": {
+              "en": "Eyes on the road—",
+              "zh-CN": "目视来路——"
+            }
+          },
+          {
+            "speaker": "天狼子",
+            "text": {
+              "en": "Ears to the wind—",
+              "zh-CN": "耳听风声——"
+            }
+          },
+          {
+            "speaker": "出尘子",
+            "text": {
+              "en": "Keep the bridge—",
+              "zh-CN": "守住虹桥——"
+            }
+          }
+        ]
+      }
+    ],
+    "门派星宿_入门口号对": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "丁春秋",
+            "text": {
+              "en": "Correct. Attention is a useful beginning. Now earn the right to rely on it.",
+              "zh-CN": "不错。留心，是个有用的开头。接下来，把它练成真正靠得住的本领。"
+            }
+          }
+        ]
+      }
+    ],
+    "门派星宿_入门口号错": [
+      {
+        "start": 0,
+        "expectedCount": 6,
+        "lines": [
+          {
+            "speaker": "丁春秋",
+            "text": {
+              "en": "That will not keep the bridge.",
+              "zh-CN": "那可守不住桥。"
+            }
+          },
+          {
+            "speaker": "狮吼子",
+            "text": {
+              "en": "The answer is 'Let none pass unseen'. I wrote it down six times. Perhaps seven. Repetition is wonderfully persuasive.",
+              "zh-CN": "要接“不许漏过一人”。我抄了六遍，也许七遍。重复，实在很有说服力。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Let none pass unseen. I shall begin with the words directly in front of me.",
+              "zh-CN": "不许漏过一人。我先从留意眼前这行字开始吧。"
+            }
+          }
+        ]
+      }
+    ],
+    "门派_无门派": [
+      {
+        "start": 0,
+        "expectedCount": 3,
+        "lines": [
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "An independent traveller? Good. The road has no shortage of teachers.",
+              "zh-CN": "独自闯荡？很好。路上从来不缺老师。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Most of them charge in bruises.",
+              "zh-CN": "其中大多数，拿淤青收学费。"
+            }
+          },
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Take the Common Folk talent. It will work with your Otherworlder potential when your health is low.",
+              "zh-CN": "送你“平民之志”天赋。生命较低时，它能和你“异乡来客”的潜力配合。"
+            }
+          }
+        ]
+      },
+      {
+        "start": 5,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "That is a surprisingly practical parting gift.",
+              "zh-CN": "这份临别礼物，实用得有点出乎意料。"
+            }
+          },
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "I occasionally manage one. Find Eir in Healer's Vale when you want company, and bring me a good story.",
+              "zh-CN": "偶尔，我也能送对东西。想找伙伴，就去药师谷见埃尔。记得回来，带个好故事。"
+            }
+          }
+        ]
+      }
+    ],
+    "霹雳堂_钟灵": [
+      {
+        "start": 2,
+        "expectedCount": 5,
+        "lines": [
+          {
+            "speaker": "钟灵",
+            "text": {
+              "en": "He is healthy again. I can show you how to work with him now—carefully, and without putting your fingers in the way.",
+              "zh-CN": "它恢复得不错。现在，可以教你怎样和它配合作战了——小心一点，别让手指挡着它的路。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "A lesson I shall remember rather vividly.",
+              "zh-CN": "这堂课，我应该会记得相当深刻。"
+            }
+          },
+          {
+            "speaker": "钟灵",
+            "text": {
+              "en": "He stays with us. Trust is not something to hand over like a spare belt.",
+              "zh-CN": "它仍和我们一起。信任，可不能像一根多余的腰带，随便转手。"
+            }
+          }
+        ]
+      }
+    ],
+    "tlbb.dy_描述.钟灵": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Eir watches the road like a healer: first the injured, then the danger, and only then her own tired feet.",
+              "zh-CN": "埃尔以医师的目光观察道路：先看伤者，再看危险，最后才轮到自己疲惫的双脚。"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "choiceText": {
+    "original_新手引导.开始": {
+      "prompt": {
+        "en": "Take Grimm's practical lessons?",
+        "zh-CN": "要接受格林的实地教学吗？"
+      },
+      "options": {
+        "en": [
+          "Take the lessons. I am fond of surviving.",
+          "Choose a school and set out."
+        ],
+        "zh-CN": [
+          "接受教学。我还挺想平安回来的。",
+          "直接选择门派，出发。"
+        ]
+      }
+    },
+    "original_新手引导.买药": {
+      "prompt": {
+        "en": "Which manual would you like?",
+        "zh-CN": "想要哪一种读本？"
+      },
+      "options": {
+        "en": [
+          "Unarmed — Hearthguard Fist",
+          "Sword — Green Serpent",
+          "Blade — Valley Cut",
+          "Staff — Wayward Staff"
+        ],
+        "zh-CN": [
+          "拳掌：护炉拳",
+          "剑法：青蛇剑术",
+          "刀法：谷地刀术",
+          "奇门：游杖术"
+        ]
+      }
+    },
+    "original_新手引导.任务打人": {
+      "prompt": {
+        "en": "Which lesson will you try?",
+        "zh-CN": "选择哪一堂实践课？"
+      },
+      "options": {
+        "en": [
+          "Friendly practice in Crossroads.",
+          "Challenge the Rainmarket bully."
+        ],
+        "zh-CN": [
+          "去十字镇友好切磋。",
+          "去雨集镇挑战恶霸。"
+        ]
+      }
+    },
+    "tlbb.dy_钟灵": {
+      "prompt": {
+        "en": "Help Eir find her stoat?",
+        "zh-CN": "帮助埃尔寻找小白鼬吗？"
+      },
+      "options": {
+        "en": [
+          "Help her. Travel together.",
+          "Not now. I have another task."
+        ],
+        "zh-CN": [
+          "帮忙，结伴寻找。",
+          "暂时不行，我还有别的事。"
+        ]
+      }
+    },
+    "少林派_入门": {
+      "prompt": {
+        "en": "How will you study?",
+        "zh-CN": "以何种身份修习？"
+      },
+      "options": {
+        "en": [
+          "Take the vows and become a resident.",
+          "Remain a travelling student."
+        ],
+        "zh-CN": [
+          "立誓，成为常住弟子。",
+          "保持行旅身份，作为在外弟子修习。"
+        ]
+      }
+    },
+    "门派星宿_入门": {
+      "prompt": {
+        "en": "Finish the watchword.",
+        "zh-CN": "接上守望口令。"
+      },
+      "options": {
+        "en": [
+          "And take a nap!",
+          "Let none pass unseen!",
+          "And praise our boots!",
+          "And order supper!"
+        ],
+        "zh-CN": [
+          "然后睡个好觉！",
+          "不许漏过一人！",
+          "赞美我们的靴子！",
+          "顺便订份晚饭！"
+        ]
+      }
+    }
+  },
+  "speakerNames": {
+    "小孩": {
+      "en": "Young Apprentice",
+      "zh-CN": "小学徒"
+    },
+    "黑老大": {
+      "en": "Road Bully",
+      "zh-CN": "拦路恶霸"
+    },
+    "王家老爷": {
+      "zh-CN": "梅林",
+      "en": "Merlin"
+    },
+    "钟灵": {
+      "zh-CN": "埃尔",
+      "en": "Eir"
+    },
+    "云中鹤": {
+      "zh-CN": "霍德尔",
+      "en": "Hodr"
+    },
+    "岳老三": {
+      "zh-CN": "赫尔吉",
+      "en": "Helgi Hundingsbane"
+    },
+    "段延庆": {
+      "zh-CN": "奥拉夫·特里格瓦松",
+      "en": "Olaf Tryggvason"
+    },
+    "木婉清": {
+      "zh-CN": "格芙琼",
+      "en": "Gefjon"
+    },
+    "段誉": {
+      "zh-CN": "洛基",
+      "en": "Loki"
+    },
+    "阿碧": {
+      "zh-CN": "南娜",
+      "en": "Nanna"
+    },
+    "黄衫女子": {
+      "en": "Mist Tutor",
+      "zh-CN": "迷雾导师"
+    },
+    "金轮法王": {
+      "zh-CN": "珀西瓦尔",
+      "en": "Percival"
+    },
+    "胜谛": {
+      "zh-CN": "格雷乌切亚努",
+      "en": "Greuceanu"
+    },
+    "血刀老祖": {
+      "zh-CN": "亚伯拉罕·范海辛",
+      "en": "Abraham Van Helsing"
+    },
+    "马钰": {
+      "zh-CN": "不来梅的公鸡",
+      "en": "The Bremen Rooster"
+    },
+    "秦婆婆": {
+      "zh-CN": "乌尔德",
+      "en": "Urd"
+    },
+    "方证大师": {
+      "zh-CN": "唐三藏",
+      "en": "Tang Sanzang"
+    },
+    "冲虚道长": {
+      "zh-CN": "沙悟净",
+      "en": "Sha Wujing"
+    },
+    "丁春秋": {
+      "zh-CN": "海姆达尔",
+      "en": "Heimdall"
+    },
+    "摘星子": {
+      "zh-CN": "哈拉尔·哈德拉达",
+      "en": "Harald Hardrada"
+    },
+    "天狼子": {
+      "zh-CN": "比约恩",
+      "en": "Bjorn Ironside"
+    },
+    "出尘子": {
+      "zh-CN": "乌勒尔",
+      "en": "Ullr"
+    },
+    "狮吼子": {
+      "zh-CN": "伦菲尔德",
+      "en": "Renfield"
+    }
+  },
+  "definitions": {
+    "sects": {
+      "古墓派": {
+        "name": {
+          "en": "House of Mists",
+          "zh-CN": "迷雾学舍"
+        },
+        "description": {
+          "en": "Precision, patient footwork and follow-up attacks.",
+          "zh-CN": "精准、耐心的步法，以及后续连击。"
+        }
+      },
+      "大轮寺": {
+        "name": {
+          "en": "Grail Lodge",
+          "zh-CN": "圣杯山舍"
+        },
+        "description": {
+          "en": "A snowbound school of disciplined strength and defence.",
+          "zh-CN": "雪中的学舍，注重力量、自律与防御。"
+        }
+      },
+      "血刀门": {
+        "name": {
+          "en": "Dawn Hunters",
+          "zh-CN": "破晓猎团"
+        },
+        "description": {
+          "en": "Dangerous blood arts, resilient fighters, and difficult choices.",
+          "zh-CN": "危险的血术、顽强的斗士，以及不容易的选择。"
+        }
+      },
+      "全真教": {
+        "name": {
+          "en": "Bremen Watch",
+          "zh-CN": "不来梅守望"
+        },
+        "description": {
+          "en": "Protect ordinary folk and learn courage in company.",
+          "zh-CN": "守护普通人，与同伴一起练出勇气。"
+        }
+      },
+      "灵鹫宫": {
+        "name": {
+          "en": "Threadhall",
+          "zh-CN": "织线厅"
+        },
+        "description": {
+          "en": "Urd's school of movement and insight.",
+          "zh-CN": "兀儿德研习身法与领悟的学舍。"
+        }
+      },
+      "少林派": {
+        "name": {
+          "en": "Dharma Courtyard",
+          "zh-CN": "明心庭院"
+        },
+        "description": {
+          "en": "Sanzang accepts both resident and travelling students.",
+          "zh-CN": "三藏接纳常住弟子，也接纳在外行走的弟子。"
+        }
+      },
+      "武当派": {
+        "name": {
+          "en": "River Wardens",
+          "zh-CN": "河流守卫"
+        },
+        "description": {
+          "en": "Sha Wujing teaches balance and timely replies.",
+          "zh-CN": "沙悟净传授平衡之道与恰当的还击时机。"
+        }
+      },
+      "星宿派": {
+        "name": {
+          "en": "Bridge Watch",
+          "zh-CN": "虹桥守望"
+        },
+        "description": {
+          "en": "Heimdall's watch, with training in unusual and poisonous techniques.",
+          "zh-CN": "海姆达尔的守望之地，也研习奇门与毒术。"
+        }
+      },
+      "无门派": {
+        "name": {
+          "en": "Unaffiliated",
+          "zh-CN": "独行道路"
+        },
+        "description": {
+          "en": "Keep your independence and develop your own combination of skills.",
+          "zh-CN": "保持独立，搭配属于自己的本领。"
+        }
+      }
+    },
+    "externalSkills": {
+      "罗汉拳": {
+        "name": {
+          "en": "Hearthguard Fist",
+          "zh-CN": "护炉拳"
+        },
+        "description": {
+          "en": "Foundational unarmed training: direct, disciplined strikes.",
+          "zh-CN": "基础拳掌训练，讲究直接而有节制的发力。"
+        }
+      },
+      "青蟒剑法": {
+        "name": {
+          "en": "Green Serpent",
+          "zh-CN": "青蛇剑术"
+        },
+        "description": {
+          "en": "A winding sword style that rewards steady practice.",
+          "zh-CN": "剑路曲折，适合沉下心来反复练习。"
+        }
+      },
+      "万劫刀法": {
+        "name": {
+          "en": "Valley Cut",
+          "zh-CN": "谷地刀术"
+        },
+        "description": {
+          "en": "A simple valley blade style. Good habits are worth more than a grand name.",
+          "zh-CN": "朴素的谷地刀术，好习惯比响亮的名字更值钱。"
+        }
+      },
+      "疯魔杖法": {
+        "name": {
+          "en": "Wayward Staff",
+          "zh-CN": "游杖术"
+        },
+        "description": {
+          "en": "An energetic staff style for fighters who dislike standing still.",
+          "zh-CN": "适合不愿站着挨打的人，一套活跃的杖法。"
+        }
+      },
+      "猴抓": {
+        "name": {
+          "en": "Raking Swipe",
+          "zh-CN": "扫掠爪"
+        },
+        "description": {
+          "en": "A quick raking attack. Even a practice dummy can make a point with it.",
+          "zh-CN": "迅速的扫掠攻击。训练假人，也能靠它提醒你保持警惕。"
+        }
+      },
+      "华山剑法": {
+        "name": {
+          "en": "Cranepeak Sword",
+          "zh-CN": "鹤峰剑术"
+        }
+      },
+      "南山刀法": {
+        "name": {
+          "en": "Hillguard Blade",
+          "zh-CN": "守丘刀术"
+        }
+      },
+      "飘雪穿云掌": {
+        "name": {
+          "en": "Cloudfall Palm",
+          "zh-CN": "落云掌"
+        }
+      },
+      "蛇鹤八打": {
+        "name": {
+          "en": "Serpent and Crane",
+          "zh-CN": "蛇鹤八式"
+        }
+      },
+      "燃木刀法": {
+        "name": {
+          "en": "Ember Blade",
+          "zh-CN": "烬火刀术"
+        }
+      }
+    },
+    "internalSkills": {
+      "石梁心法": {
+        "name": {
+          "en": "Stonebridge Discipline",
+          "zh-CN": "石桥心法"
+        }
+      }
+    },
+    "specialSkills": {
+      "打鸡血": {
+        "name": {
+          "en": "Rallying Cry",
+          "zh-CN": "振作战吼"
+        },
+        "description": {
+          "en": "A self-targeted rally: gains 2 rage and Attack Up III for 5 turns. Costs 100 energy; cooldown 4.",
+          "zh-CN": "对自己使用：获得2点怒气，以及持续5回合的三级攻击强化。消耗100内力，冷却4回合。"
+        }
+      },
+      "闪电貂": {
+        "name": {
+          "en": "Stoat's Bite",
+          "zh-CN": "白鼬噬咬"
+        },
+        "description": {
+          "en": "Direct Eir's stoat at one target within 5 tiles, applying level-20 poison for 3 turns. Costs 100 energy and 2 rage; cooldown 5.",
+          "zh-CN": "指挥埃尔的小白鼬攻击5格内的单个目标，施加持续3回合的二十级中毒。消耗100内力和2怒气，冷却5回合。"
+        }
+      }
+    },
+    "talents": {
+      "异世人": {
+        "name": {
+          "en": "Otherworlder",
+          "zh-CN": "异乡来客"
+        },
+        "description": {
+          "en": "At low health, greatly increases attack, critical chance and defence. Common Folk raises its health threshold.",
+          "zh-CN": "生命较低时，大幅提高攻击、暴击率与防御；平民之志会提高它的触发血线。"
+        }
+      },
+      "屌丝": {
+        "name": {
+          "en": "Smallfolk's Luck",
+          "zh-CN": "小人物的运气"
+        },
+        "description": {
+          "en": "Adds 0.1 to the legacy legendary-combo chance multiplier for Scrapper's Fist.",
+          "zh-CN": "为街头拳法的奥义触发倍率额外增加0.1。"
+        }
+      },
+      "草头百姓": {
+        "name": {
+          "en": "Common Folk",
+          "zh-CN": "平民之志"
+        },
+        "description": {
+          "en": "Enables Scrapper's Fist combinations and raises Otherworlder's low-health activation threshold.",
+          "zh-CN": "帮助触发街头拳法奥义，并提高异乡来客的触发血线。"
+        }
+      },
+      "猎人": {
+        "name": {
+          "en": "Hunter",
+          "zh-CN": "猎手"
+        },
+        "description": {
+          "en": "Attack is multiplied by 1.5 against animals.",
+          "zh-CN": "对动物目标的攻击力乘以1.5。"
+        }
+      },
+      "神经病": {
+        "name": {
+          "en": "Reckless Spirit",
+          "zh-CN": "冒进之心"
+        },
+        "description": {
+          "en": "Attack's upper bound increases by 10%; incoming technique damage also increases by 10%.",
+          "zh-CN": "攻击上限提高10%，承受的技能伤害也提高10%。"
+        }
+      },
+      "自我主义": {
+        "name": {
+          "en": "Self-Interest",
+          "zh-CN": "利己之心"
+        },
+        "description": {
+          "en": "Gains attack from the number of allied units while reducing other allies' fighting strength.",
+          "zh-CN": "根据己方人数提高自身攻击，同时削弱其他队友的战斗能力。"
+        }
+      },
+      "好色": {
+        "name": {
+          "en": "Distractible Charmer",
+          "zh-CN": "分心的风流客"
+        },
+        "description": {
+          "en": "Against female opponents: attack is multiplied by 1.2; defence against them by 0.8.",
+          "zh-CN": "面对女性对手时，攻击乘以1.2；承受其攻击时，防御乘以0.8。"
+        }
+      },
+      "幽居": {
+        "name": {
+          "en": "Quiet Practice",
+          "zh-CN": "静修"
+        },
+        "description": {
+          "en": "The chance of additional strikes improves with level.",
+          "zh-CN": "随等级提高，增加多重攻击的触发概率。"
+        }
+      },
+      "金刚": {
+        "name": {
+          "en": "Iron Resolve",
+          "zh-CN": "坚毅"
+        },
+        "description": {
+          "en": "Defensive benefits improve with level.",
+          "zh-CN": "防御收益随等级提高。"
+        }
+      },
+      "清风": {
+        "name": {
+          "en": "Fresh Wind",
+          "zh-CN": "清风"
+        },
+        "description": {
+          "en": "The chance to remove negative effects each turn improves with level.",
+          "zh-CN": "随等级提高，增加每回合解除负面状态的概率。"
+        }
+      },
+      "御风": {
+        "name": {
+          "en": "Windstep",
+          "zh-CN": "御风步"
+        },
+        "description": {
+          "en": "Reduces the chance of receiving critical hits as level increases.",
+          "zh-CN": "随等级提高，降低受到暴击的概率。"
+        }
+      },
+      "阴毒": {
+        "name": {
+          "en": "Venomcraft",
+          "zh-CN": "毒术"
+        },
+        "description": {
+          "en": "Damage against poisoned enemies improves with level.",
+          "zh-CN": "随等级提高，增加对中毒敌人的伤害。"
+        }
+      },
+      "阴阳": {
+        "name": {
+          "en": "Flow and Force",
+          "zh-CN": "刚柔并用"
+        },
+        "description": {
+          "en": "Attacks can inflict paralysis; the chance improves with level.",
+          "zh-CN": "攻击有概率附加麻痹，收益随等级提高。"
+        }
+      },
+      "嗜血狂魔": {
+        "name": {
+          "en": "Blood Hunger",
+          "zh-CN": "血之饥渴"
+        },
+        "description": {
+          "en": "Lifesteal improves with level.",
+          "zh-CN": "吸血效果随等级提高。"
+        }
+      },
+      "无相": {
+        "name": {
+          "en": "Still Mind",
+          "zh-CN": "静心"
+        },
+        "description": {
+          "en": "May recover health each turn during combat.",
+          "zh-CN": "战斗中，每回合有概率恢复生命。"
+        }
+      },
+      "俗家弟子": {
+        "name": {
+          "en": "Travelling Student",
+          "zh-CN": "行旅弟子"
+        },
+        "description": {
+          "en": "May ignore part of an opponent's defence, with benefits increasing by level.",
+          "zh-CN": "有概率忽略对手部分防御，收益随等级提高。"
+        }
+      },
+      "心眼通明": {
+        "name": {
+          "en": "Inner Sight",
+          "zh-CN": "心眼"
+        },
+        "description": {
+          "en": "Immune to blindness.",
+          "zh-CN": "免疫致盲。"
+        }
+      },
+      "锐眼": {
+        "name": {
+          "en": "Keen Eye",
+          "zh-CN": "锐目"
+        },
+        "description": {
+          "en": "Improves accuracy.",
+          "zh-CN": "提高命中率。"
+        }
+      },
+      "瘸子": {
+        "name": {
+          "en": "Limited Stride",
+          "zh-CN": "短步"
+        },
+        "description": {
+          "en": "Movement range is reduced by 1.",
+          "zh-CN": "移动距离减少1。"
+        }
+      }
+    },
+    "buffs": {
+      "中毒": {
+        "name": {
+          "en": "Poison",
+          "zh-CN": "中毒"
+        },
+        "description": {
+          "en": "Loses health each turn.",
+          "zh-CN": "每回合失去生命。"
+        }
+      },
+      "攻击强化": {
+        "name": {
+          "en": "Attack Up",
+          "zh-CN": "攻击强化"
+        },
+        "description": {
+          "en": "Increases attack.",
+          "zh-CN": "提高攻击力。"
+        }
+      }
+    },
+    "legendSkills": {
+      "小人物的愤怒-罗汉拳": {
+        "name": {
+          "en": "Smallfolk's Fury",
+          "zh-CN": "小人物之怒"
+        }
+      }
+    },
+    "battles": {
+      "南贤居_木头人_战斗": {
+        "name": {
+          "en": "First Practice",
+          "zh-CN": "初次练习"
+        }
+      },
+      "新手任务小孩": {
+        "name": {
+          "en": "Friendly Bout",
+          "zh-CN": "友好切磋"
+        }
+      },
+      "新手任务黑老大": {
+        "name": {
+          "en": "The Road Bully",
+          "zh-CN": "拦路恶霸"
+        }
+      },
+      "闪电貂_战斗": {
+        "name": {
+          "en": "The Missing Stoat",
+          "zh-CN": "走失的白鼬"
+        }
+      },
+      "browser_结伴练习": {
+        "name": {
+          "en": "Team Practice",
+          "zh-CN": "结伴练习"
+        }
+      }
+    },
+    "shops": {
+      "洛阳.商店": {
+        "name": {
+          "en": "Crossroads Supply Shop",
+          "zh-CN": "十字镇补给铺"
+        }
+      },
+      "洛阳.商店.神秘": {
+        "name": {
+          "en": "Crossroads Night Market",
+          "zh-CN": "十字镇夜市"
+        }
+      }
+    },
+    "items": {
+      "新手礼包-大蟠桃": {
+        "name": {"en": "Traveller's Welcome Fruit", "zh-CN": "旅人迎新果"},
+        "description": {"en": "Permanently adds 100 maximum Health and 100 maximum Energy.", "zh-CN": "永久增加100点生命上限和100点能量上限。"}
+      },
+      "九转熊蛇丸": {
+        "name": {
+          "en": "Deepwell Draught",
+          "zh-CN": "深井灵饮"
+        },
+        "description": {
+          "en": "Restores 1000 energy. Restores 30% of maximum energy.",
+          "zh-CN": "恢复1000点内力。恢复最大内力的30%。"
+        }
+      },
+      "白酒": {
+        "name": {
+          "en": "Strong Spirits",
+          "zh-CN": "烈酒"
+        },
+        "description": {
+          "en": "Adds 2 rage and Drunk for 3 turns.",
+          "zh-CN": "增加2点怒气，并获得持续3回合的醉酒状态。"
+        }
+      },
+      "黑玉断续膏": {
+        "name": {
+          "en": "Blackstone Salve",
+          "zh-CN": "黑石药膏"
+        },
+        "description": {
+          "en": "Restores 3000 HP. Restores 30% of maximum HP.",
+          "zh-CN": "恢复3000点生命。恢复最大生命的30%。"
+        }
+      },
+      "七星黄蜡丹": {
+        "name": {
+          "en": "Sevenstar Pill",
+          "zh-CN": "七星药丸"
+        },
+        "description": {
+          "en": "Removes poison according to the listed cleansing limits.",
+          "zh-CN": "按列出的净化上限解除中毒。"
+        }
+      },
+      "天王保命丹": {
+        "name": {
+          "en": "Last-Light Remedy",
+          "zh-CN": "余光灵药"
+        },
+        "description": {
+          "en": "Restores 2500 HP. Restores 2500 energy. Removes poison according to the listed cleansing limits.",
+          "zh-CN": "恢复2500点生命。恢复2500点内力。按列出的净化上限解除中毒。"
+        }
+      },
+      "阔剑": {
+        "name": {
+          "en": "Broadsword",
+          "zh-CN": "阔刃剑"
+        },
+        "description": {
+          "en": "Attack +40. Critical chance +2%. Requires Swords 25. Requires Agility 25. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "柳叶刀": {
+        "name": {
+          "en": "Willow Blade",
+          "zh-CN": "柳叶刀"
+        },
+        "description": {
+          "en": "Attack +50. Critical chance +2%. Requires Blades 25. Requires Agility 25. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "软鞭": {
+        "name": {
+          "en": "Flexible Whip",
+          "zh-CN": "软鞭"
+        },
+        "description": {
+          "en": "Attack +80. Critical chance +8%. Requires Unusual weapons 50. Requires Strength 50. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "金蛇剑": {
+        "name": {
+          "en": "Serpent-Gold Sword",
+          "zh-CN": "金蛇剑"
+        },
+        "description": {
+          "en": "Attack +100. Critical chance +5%. Requires Swords 55. Requires Agility 55. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "万劫指": {
+        "name": {
+          "en": "Valley Ring",
+          "zh-CN": "谷地指环"
+        },
+        "description": {
+          "en": "Attack +120. Critical chance +10%. Requires Unarmed 60. Requires Strength 60. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "碧水剑": {
+        "name": {
+          "en": "Stillwater Sword",
+          "zh-CN": "静水剑"
+        },
+        "description": {
+          "en": "Attack +100. Critical chance +10%. Requires Swords 60. Requires Agility 60. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "龙头拐杖": {
+        "name": {
+          "en": "Dragonhead Cane",
+          "zh-CN": "龙首杖"
+        },
+        "description": {
+          "en": "Attack +80. Critical chance +10%. Requires Unusual weapons 60. Requires Strength 60. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "不二枪": {
+        "name": {
+          "en": "Truepoint Spear",
+          "zh-CN": "真锋枪"
+        },
+        "description": {
+          "en": "Attack +100. Critical chance +10%. Requires Unusual weapons 80. Requires Strength 80. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "灭仙爪": {
+        "name": {
+          "en": "Spellbreaker Claws",
+          "zh-CN": "破法爪"
+        },
+        "description": {
+          "en": "Attack +150. Critical chance +7%. Requires Unarmed 60. Requires Agility 60. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "紫薇软剑": {
+        "name": {
+          "en": "Violet Ribbonblade",
+          "zh-CN": "紫绶软剑"
+        },
+        "description": {
+          "en": "Attack +150. Critical chance +8%. Requires Swords 60. Requires Agility 60. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "倚天剑": {
+        "name": {
+          "en": "Starfall Sword",
+          "zh-CN": "坠星剑"
+        },
+        "description": {
+          "en": "Attack +200. Critical chance +8%. Requires Swords 70. Requires Resolve 70. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "屠龙刀": {
+        "name": {
+          "en": "Wyrmbane Blade",
+          "zh-CN": "斩龙刃"
+        },
+        "description": {
+          "en": "Attack +200. Critical chance +8%. Requires Blades 70. Requires Strength 70. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "真武剑": {
+        "name": {
+          "en": "Riverwarden Sword",
+          "zh-CN": "河卫剑"
+        },
+        "description": {
+          "en": "Attack +170. Critical chance +6%. Requires Swords 70. Requires Resolve 70. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "打狗棒": {
+        "name": {
+          "en": "Waywatch Staff",
+          "zh-CN": "守路杖"
+        },
+        "description": {
+          "en": "Attack +150. Critical chance +8%. Requires Unusual weapons 70. Requires Agility 70. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "血刀": {
+        "name": {
+          "en": "Crimson Fang",
+          "zh-CN": "赤牙刃"
+        },
+        "description": {
+          "en": "Attack +120. Critical chance +8%. Requires Agility 60. Requires Fortune 70. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "冷月宝刀": {
+        "name": {
+          "en": "Coldmoon Blade",
+          "zh-CN": "冷月刃"
+        },
+        "description": {
+          "en": "Attack +200. Critical chance +10%. Requires Blades 70. Requires Strength 70. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "粗布道袍": {
+        "name": {
+          "en": "Traveller's Robe",
+          "zh-CN": "旅人布袍"
+        },
+        "description": {
+          "en": "Defence +5. Critical resistance +1%. Insight +10. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "金丝道袍": {
+        "name": {
+          "en": "Goldthread Robe",
+          "zh-CN": "金线长袍"
+        },
+        "description": {
+          "en": "Defence +15. Constitution +15. Requires Agility 30. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "血刀门门装": {
+        "name": {
+          "en": "Dawn Hunter's Coat",
+          "zh-CN": "破晓猎衣"
+        },
+        "description": {
+          "en": "Defence +5. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "全真教道服": {
+        "name": {
+          "en": "Bremen Watch Uniform",
+          "zh-CN": "不来梅守望制服"
+        },
+        "description": {
+          "en": "Defence +5. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "大轮寺装束": {
+        "name": {
+          "en": "Grail Lodge Garb",
+          "zh-CN": "圣杯山舍服"
+        },
+        "description": {
+          "en": "Defence +5. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "古墓派装束": {
+        "name": {
+          "en": "Mist House Garb",
+          "zh-CN": "迷雾学舍服"
+        },
+        "description": {
+          "en": "Defence +5. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "灵鹫宫装束": {
+        "name": {
+          "en": "Threadhall Garb",
+          "zh-CN": "织线厅服"
+        },
+        "description": {
+          "en": "Defence +5. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "黄金重甲": {
+        "name": {
+          "en": "Gilded Heavy Armour",
+          "zh-CN": "鎏金重甲"
+        },
+        "description": {
+          "en": "Defence +80. Critical resistance +15%. Grants Limited Stride. Requires Strength 55. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "乌蚕衣": {
+        "name": {
+          "en": "Black Silk Vest",
+          "zh-CN": "乌丝背心"
+        },
+        "description": {
+          "en": "Defence +80. Critical resistance +5%. Resolve +5. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "金头箍": {
+        "name": {
+          "en": "Gold Circlet",
+          "zh-CN": "金冠环"
+        },
+        "description": {
+          "en": "Attack +8. Defence +8. Grants Keen Eye. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "银手镯": {
+        "name": {
+          "en": "Silver Bracelet",
+          "zh-CN": "银手镯"
+        },
+        "description": {
+          "en": "Attack +3. Defence +3. Grants Inner Sight. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "木鱼": {
+        "name": {
+          "en": "Prayer Block",
+          "zh-CN": "木祷鱼"
+        },
+        "description": {
+          "en": "Attack +3. Defence +10. Other modifiers are listed with the item.",
+          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+        }
+      },
+      "罗汉拳谱": {
+        "name": {
+          "en": "Hearthguard Manual",
+          "zh-CN": "护炉拳读本"
+        },
+        "description": {
+          "en": "Training manual for Hearthguard Fist.",
+          "zh-CN": "护炉拳的修炼读本。"
+        }
+      },
+      "飘雪穿云掌法": {
+        "name": {
+          "en": "Cloudfall Manual",
+          "zh-CN": "落云掌读本"
+        },
+        "description": {
+          "en": "Training manual for Cloudfall Palm.",
+          "zh-CN": "落云掌的修炼读本。"
+        }
+      },
+      "华山剑法秘籍": {
+        "name": {
+          "en": "Cranepeak Sword Manual",
+          "zh-CN": "鹤峰剑术读本"
+        },
+        "description": {
+          "en": "Training manual for Cranepeak Sword.",
+          "zh-CN": "鹤峰剑术的修炼读本。"
+        }
+      },
+      "青蟒剑法秘籍": {
+        "name": {
+          "en": "Green Serpent Manual",
+          "zh-CN": "青蛇剑术读本"
+        },
+        "description": {
+          "en": "Training manual for Green Serpent.",
+          "zh-CN": "青蛇剑术的修炼读本。"
+        }
+      },
+      "南山刀法谱": {
+        "name": {
+          "en": "Hillguard Blade Manual",
+          "zh-CN": "守丘刀术读本"
+        },
+        "description": {
+          "en": "Training manual for Hillguard Blade.",
+          "zh-CN": "守丘刀术的修炼读本。"
+        }
+      },
+      "万劫刀法谱": {
+        "name": {
+          "en": "Valley Blade Manual",
+          "zh-CN": "谷地刀术读本"
+        },
+        "description": {
+          "en": "Training manual for Valley Cut.",
+          "zh-CN": "谷地刀术的修炼读本。"
+        }
+      },
+      "疯魔杖法秘诀": {
+        "name": {
+          "en": "Wayward Staff Manual",
+          "zh-CN": "游杖术读本"
+        },
+        "description": {
+          "en": "Training manual for Wayward Staff.",
+          "zh-CN": "游杖术的修炼读本。"
+        }
+      },
+      "蛇鹤八打": {
+        "name": {
+          "en": "Serpent and Crane",
+          "zh-CN": "蛇鹤八式"
+        },
+        "description": {
+          "en": "Training manual for Serpent and Crane.",
+          "zh-CN": "蛇鹤八式的修炼读本。"
+        }
+      },
+      "石梁心法秘籍": {
+        "name": {
+          "en": "Stonebridge Manual",
+          "zh-CN": "石桥心法读本"
+        },
+        "description": {
+          "en": "Training manual for Stonebridge Discipline.",
+          "zh-CN": "石桥心法的修炼读本。"
+        }
+      },
+      "燃木刀法": {
+        "name": {
+          "en": "Ember Blade",
+          "zh-CN": "烬火刀术"
+        },
+        "description": {
+          "en": "Training manual for Ember Blade.",
+          "zh-CN": "烬火刀术的修炼读本。"
+        }
+      },
+      "松果": {
+        "name": {
+          "en": "Pine Cone",
+          "zh-CN": "松果"
+        },
+        "description": {
+          "en": "A pine cone. Valuable to exactly the sort of person who pays people in pine cones.",
+          "zh-CN": "旅途中留存的物件。"
+        }
+      },
+      "王母蟠桃": {
+        "name": {
+          "en": "Orchardkeeper's Peach",
+          "zh-CN": "守园人的蜜桃"
+        },
+        "description": {
+          "en": "Permanently increases maximum HP and maximum energy by 300 each.",
+          "zh-CN": "永久提高300点最大生命和300点最大内力。"
+        }
+      },
+      "道家仙丹": {
+        "name": {
+          "en": "Hermit's Elixir",
+          "zh-CN": "隐士灵丹"
+        },
+        "description": {
+          "en": "Permanently increases maximum HP by 500.",
+          "zh-CN": "永久提高500点最大生命。"
+        }
+      },
+      "刀": {
+        "name": {
+          "en": "Plain Blade",
+          "zh-CN": "普通单刀"
+        },
+        "description": {
+          "en": "Notes for reforging an eligible item's random modifiers. Use the reforging panel to inspect the item and its requirements.",
+          "zh-CN": "为符合条件的物品重新洗练随机词条。请在洗练面板核对物品和要求。"
+        }
+      },
+      "洗练书": {
+        "name": {
+          "en": "Reforging Notes",
+          "zh-CN": "洗练笔记"
+        },
+        "description": {
+          "en": "Notes on reforging random item modifiers. Not a combat consumable.",
+          "zh-CN": "记载随机词条洗练的笔记，不能作为战斗消耗品使用。"
+        }
+      }
+    }
+  },
+  "maps": {
+    "昆仑山": {
+      "name": {
+        "en": "Cloudpeak",
+        "zh-CN": "云冠山"
+      },
+      "description": {
+        "en": "A high mountain where narrow paths reward patient travellers.",
+        "zh-CN": "高山上的小径，只肯善待耐心的旅人。"
+      }
+    },
+    "黑木崖": {
+      "name": {
+        "en": "Black Pine Cliff",
+        "zh-CN": "黑松崖"
+      },
+      "description": {
+        "en": "A sheer cliff and a fortress with little room for a careless step.",
+        "zh-CN": "峭壁上的堡垒，容不下多少大意。"
+      }
+    },
+    "灵鹫宫": {
+      "name": {
+        "en": "Threadhall",
+        "zh-CN": "织线厅"
+      },
+      "description": {
+        "en": "Urd's secluded hall, where movement and attention are studied together.",
+        "zh-CN": "兀儿德隐居的厅堂，把身法与留心看作一门课。"
+      }
+    },
+    "松鼠旅馆": {
+      "name": {
+        "en": "Wayfarers' Inn",
+        "zh-CN": "旅人客栈"
+      },
+      "description": {
+        "en": "An inn where travellers compare scars, stories, and the price of supper.",
+        "zh-CN": "旅人在这里比伤疤，比故事，也比晚饭价格。"
+      }
+    },
+    "大轮寺": {
+      "name": {
+        "en": "Grail Lodge",
+        "zh-CN": "圣杯山舍"
+      },
+      "description": {
+        "en": "A snowbound school. Only its students know which doors stay warm.",
+        "zh-CN": "雪中的学舍，弟子才知道哪些门后还留着暖意。"
+      }
+    },
+    "血刀门": {
+      "name": {
+        "en": "Dawn Hunters' Lodge",
+        "zh-CN": "破晓猎馆"
+      },
+      "description": {
+        "en": "A guarded lodge for hunters willing to study dangerous arts.",
+        "zh-CN": "戒备森严的猎馆，接纳愿意研习危险技艺的人。"
+      }
+    },
+    "香格里拉": {
+      "name": {
+        "en": "Hidden Orchard",
+        "zh-CN": "隐秘果园"
+      },
+      "description": {
+        "en": "A quiet refuge beyond the busiest roads.",
+        "zh-CN": "远离大路喧闹的一处安静避所。"
+      }
+    },
+    "沙漠": {
+      "name": {
+        "en": "Glass Dunes",
+        "zh-CN": "琉璃沙丘"
+      },
+      "description": {
+        "en": "The dunes shift; their stories have a habit of doing the same.",
+        "zh-CN": "沙丘会移动，这里的故事也有同样的习惯。"
+      }
+    },
+    "唐军营": {
+      "name": {
+        "en": "Sunward Camp",
+        "zh-CN": "向阳营地"
+      },
+      "description": {
+        "en": "A military camp whose sentries prefer introductions to surprises.",
+        "zh-CN": "军营的哨兵，喜欢先说明来意，不喜欢惊喜。"
+      }
+    },
+    "光明顶": {
+      "name": {
+        "en": "Jade Summit",
+        "zh-CN": "玉冠顶"
+      },
+      "description": {
+        "en": "A stronghold above the clouds, and a meeting place for rival ambitions.",
+        "zh-CN": "云上的堡垒，也是各方野心交汇的地方。"
+      }
+    },
+    "雁门关": {
+      "name": {
+        "en": "Storm Pass",
+        "zh-CN": "风暴关"
+      },
+      "description": {
+        "en": "A northern pass where news arrives with the weather.",
+        "zh-CN": "北方的关隘，消息常和坏天气一起到达。"
+      }
+    },
+    "哈萨克部落": {
+      "name": {
+        "en": "Windrider Camp",
+        "zh-CN": "逐风营地"
+      },
+      "description": {
+        "en": "A horse camp beside the open grasslands.",
+        "zh-CN": "开阔草原旁的一处牧马营地。"
+      }
+    },
+    "高昌迷宫": {
+      "name": {
+        "en": "Windmill Warrens",
+        "zh-CN": "风车迷窟"
+      },
+      "description": {
+        "en": "Old passages beneath the dry plains. Follow landmarks, not confidence.",
+        "zh-CN": "旱原下的古老通道。跟着路标走，别只靠自信。"
+      }
+    },
+    "回族部落": {
+      "name": {
+        "en": "Rose Caravan",
+        "zh-CN": "蔷薇商队"
+      },
+      "description": {
+        "en": "A caravan settlement, rich in rumours and carefully guarded bargains.",
+        "zh-CN": "商队驻地，不缺传闻，也不缺严守秘密的交易。"
+      }
+    },
+    "青城派": {
+      "name": {
+        "en": "Pineblade School",
+        "zh-CN": "松刃学派"
+      },
+      "description": {
+        "en": "A modest mountain school, with a reputation it would like to improve.",
+        "zh-CN": "山间的小门派，正盼着改善自己的名声。"
+      }
+    },
+    "峨眉山": {
+      "name": {
+        "en": "White Cloud Peak",
+        "zh-CN": "白云峰"
+      },
+      "description": {
+        "en": "Quiet paths climb into the clouds.",
+        "zh-CN": "安静的小路，一直通向云里。"
+      }
+    },
+    "恒山": {
+      "name": {
+        "en": "Northwind Peak",
+        "zh-CN": "北风峰"
+      },
+      "description": {
+        "en": "A high retreat overlooking the northern roads.",
+        "zh-CN": "俯瞰北方道路的一处高山居所。"
+      }
+    },
+    "星宿海": {
+      "name": {
+        "en": "Starwater",
+        "zh-CN": "星水泽"
+      },
+      "description": {
+        "en": "A cold shore beneath an unusually clear sky.",
+        "zh-CN": "冷冽的岸边，头顶的星空格外清晰。"
+      }
+    },
+    "秦红棉居": {
+      "name": {
+        "en": "Ashgrove Cottage",
+        "zh-CN": "梣林小屋"
+      },
+      "description": {
+        "en": "A sheltered cottage among the ash trees.",
+        "zh-CN": "梣树之间，一座避风的小屋。"
+      }
+    },
+    "大理": {
+      "name": {
+        "en": "Fjordhaven",
+        "zh-CN": "峡湾城"
+      },
+      "description": {
+        "en": "A busy court town with more family arguments than its streets can hold.",
+        "zh-CN": "热闹的宫城，家族纷争多得几条街都装不下。"
+      }
+    },
+    "大理树林": {
+      "name": {
+        "en": "Birchwood",
+        "zh-CN": "白桦林"
+      },
+      "description": {
+        "en": "A forest of swift paths, sharp leaves, and quicker visitors.",
+        "zh-CN": "林间的路很快，偶尔路过的小东西更快。"
+      }
+    },
+    "无量山洞": {
+      "name": {
+        "en": "Moonwell Cavern",
+        "zh-CN": "月井洞窟"
+      },
+      "description": {
+        "en": "A hidden cavern where a quiet search can reveal more than a loud expedition.",
+        "zh-CN": "隐秘的洞窟，轻声细找，可能比大张旗鼓更有收获。"
+      }
+    },
+    "万劫谷": {
+      "name": {
+        "en": "Healer's Vale",
+        "zh-CN": "药师谷"
+      },
+      "description": {
+        "en": "Eir's home ground, among steep rocks and medicinal plants.",
+        "zh-CN": "埃尔熟悉的山谷，峭石之间生着药草。"
+      }
+    },
+    "天龙寺": {
+      "name": {
+        "en": "Nine Winds Sanctuary",
+        "zh-CN": "九风圣所"
+      },
+      "description": {
+        "en": "A sanctuary where discipline matters as much as strength.",
+        "zh-CN": "力量与自律同样重要的一处圣所。"
+      }
+    },
+    "西夏": {
+      "name": {
+        "en": "Amber Court",
+        "zh-CN": "琥珀王庭"
+      },
+      "description": {
+        "en": "A distant court where an invitation may carry several meanings.",
+        "zh-CN": "遥远的王庭，一封邀请往往不止一层意思。"
+      }
+    },
+    "擂鼓山": {
+      "name": {
+        "en": "Drumstone Hill",
+        "zh-CN": "鼓石丘"
+      },
+      "description": {
+        "en": "A hill of old challenges and unfinished conversations.",
+        "zh-CN": "留下过往挑战，也留下未尽之言的山丘。"
+      }
+    },
+    "武道大会": {
+      "name": {
+        "en": "Tournament Grounds",
+        "zh-CN": "大会场"
+      },
+      "description": {
+        "en": "A meeting place for fighters who prefer an audience.",
+        "zh-CN": "希望有人观看的武者，都愿意来这里。"
+      }
+    },
+    "华山": {
+      "name": {
+        "en": "Crane Peak",
+        "zh-CN": "鹤峰"
+      },
+      "description": {
+        "en": "A sword school above a steep mountain road.",
+        "zh-CN": "陡峭山路上方的一处剑术学派。"
+      }
+    },
+    "小镜湖": {
+      "name": {
+        "en": "Mirrorwater",
+        "zh-CN": "镜水湖"
+      },
+      "description": {
+        "en": "A small lake with a large talent for keeping secrets.",
+        "zh-CN": "一片小湖，却很擅长藏住秘密。"
+      }
+    },
+    "古墓派": {
+      "name": {
+        "en": "House of Mists",
+        "zh-CN": "迷雾学舍"
+      },
+      "description": {
+        "en": "A quiet school of precise footwork and patient follow-up strikes.",
+        "zh-CN": "安静的学舍，研习精准步法与耐心的后续连招。"
+      }
+    },
+    "绝情谷": {
+      "name": {
+        "en": "Briar Hollow",
+        "zh-CN": "荆棘谷"
+      },
+      "description": {
+        "en": "A sheltered valley. Beautiful gardens do not make every visitor welcome.",
+        "zh-CN": "幽深山谷，花园再美，也不代表欢迎每位来客。"
+      }
+    },
+    "程英居": {
+      "name": {
+        "en": "Willow Cottage",
+        "zh-CN": "柳下小屋"
+      },
+      "description": {
+        "en": "A modest home beyond the busiest roads.",
+        "zh-CN": "离开喧闹大路后的一处朴素居所。"
+      }
+    },
+    "风陵渡口": {
+      "name": {
+        "en": "Windsong Ferry",
+        "zh-CN": "风歌渡口"
+      },
+      "description": {
+        "en": "Travellers meet where the river makes them wait.",
+        "zh-CN": "河水让人停下的地方，旅人就会相遇。"
+      }
+    },
+    "剑魔荒冢": {
+      "name": {
+        "en": "Old King's Barrow",
+        "zh-CN": "古王荒冢"
+      },
+      "description": {
+        "en": "An old burial ground with lessons for anyone who knows how to listen.",
+        "zh-CN": "古老的墓地，懂得倾听的人，或许也能在此求学。"
+      }
+    },
+    "北京": {
+      "name": {
+        "en": "Liberty Crossing",
+        "zh-CN": "自由渡城"
+      },
+      "description": {
+        "en": "A crowded frontier capital where opportunity and trouble share an address.",
+        "zh-CN": "拥挤的边地都城，机会与麻烦往往住在同一扇门后。"
+      }
+    },
+    "丐帮总舵": {
+      "name": {
+        "en": "Lantern Guild",
+        "zh-CN": "提灯公会"
+      },
+      "description": {
+        "en": "A guild hall for the well-travelled and the badly underestimated.",
+        "zh-CN": "走过远路、也被人小看过的旅人，常在这里聚首。"
+      }
+    },
+    "聚贤庄": {
+      "name": {
+        "en": "Oakshield Hall",
+        "zh-CN": "橡盾庄园"
+      },
+      "description": {
+        "en": "A gathering hall where a public welcome need not mean a friendly one.",
+        "zh-CN": "聚会的厅堂，公开欢迎，可不一定真心友善。"
+      }
+    },
+    "龙门镖局": {
+      "name": {
+        "en": "Waywatch Caravan",
+        "zh-CN": "守路商行"
+      },
+      "description": {
+        "en": "A caravan company that values safe arrivals over magnificent excuses.",
+        "zh-CN": "比起漂亮借口，这家商行更看重平安抵达。"
+      }
+    },
+    "洛阳": {
+      "name": {
+        "en": "Crossroads",
+        "zh-CN": "十字镇"
+      },
+      "description": {
+        "en": "A lively market town. Its supplies are useful; its apprentice is formidable.",
+        "zh-CN": "热闹的集镇。补给实用，学徒也颇有本事。"
+      }
+    },
+    "襄阳": {
+      "name": {
+        "en": "Highbridge",
+        "zh-CN": "高桥城"
+      },
+      "description": {
+        "en": "A fortified town guarding an important crossing.",
+        "zh-CN": "守着要道渡口的一座坚城。"
+      }
+    },
+    "嵩山": {
+      "name": {
+        "en": "Iron Pine Peak",
+        "zh-CN": "铁松峰"
+      },
+      "description": {
+        "en": "A stern school on a stony mountain ridge.",
+        "zh-CN": "石岭上一处规矩严厉的学派。"
+      }
+    },
+    "武当派": {
+      "name": {
+        "en": "River Wardens",
+        "zh-CN": "河流守卫"
+      },
+      "description": {
+        "en": "A school of balance, patience, and well-timed replies.",
+        "zh-CN": "讲究平衡、耐心和恰当还击时机的门派。"
+      }
+    },
+    "长安": {
+      "name": {
+        "en": "Storymarket",
+        "zh-CN": "故事集市"
+      },
+      "description": {
+        "en": "A great city where old roads bring unfamiliar company.",
+        "zh-CN": "大城里的老路，总会带来陌生的同伴。"
+      }
+    },
+    "苗人凤居": {
+      "name": {
+        "en": "Winter Cottage",
+        "zh-CN": "冬日小屋"
+      },
+      "description": {
+        "en": "A quiet house in the colder country.",
+        "zh-CN": "寒冷乡野里的一处安静居所。"
+      }
+    },
+    "田伯光居": {
+      "name": {
+        "en": "Vagabond's Shelter",
+        "zh-CN": "浪客居所"
+      },
+      "description": {
+        "en": "A traveller's home, seldom improved by polite introductions.",
+        "zh-CN": "旅人的住处，客套往往起不了多少作用。"
+      }
+    },
+    "衡阳": {
+      "name": {
+        "en": "Rainmarket",
+        "zh-CN": "雨集镇"
+      },
+      "description": {
+        "en": "Rain beads on the paving stones. Somewhere ahead, a bully is charging for dry passage.",
+        "zh-CN": "雨水落在石板上，前面有位恶霸，正为不淋雨的路段收钱。"
+      }
+    },
+    "杭州": {
+      "name": {
+        "en": "Canalward",
+        "zh-CN": "运河城"
+      },
+      "description": {
+        "en": "A canal town full of traders, inns, and very confident directions.",
+        "zh-CN": "商人和客栈遍地，给你指路的人也总是很有把握。"
+      }
+    },
+    "东海剑池": {
+      "name": {
+        "en": "Echoing Swordpool",
+        "zh-CN": "回声剑池"
+      },
+      "description": {
+        "en": "A strange pool where old techniques leave more than reflections.",
+        "zh-CN": "奇异的水池，旧时招式留下的，不只是倒影。"
+      }
+    },
+    "商家堡": {
+      "name": {
+        "en": "Frostgate Keep",
+        "zh-CN": "霜门堡"
+      },
+      "description": {
+        "en": "A guarded keep on the winter roads.",
+        "zh-CN": "冬日道路旁，戒备森严的一座堡垒。"
+      }
+    },
+    "阎基居": {
+      "name": {
+        "en": "Apothecary's Hut",
+        "zh-CN": "药师小舍"
+      },
+      "description": {
+        "en": "A small house with an unusually well-stocked medicine cabinet.",
+        "zh-CN": "屋子不大，药柜里的东西却格外齐全。"
+      }
+    },
+    "江陵": {
+      "name": {
+        "en": "Nightwater",
+        "zh-CN": "夜水城"
+      },
+      "description": {
+        "en": "A riverside city whose quiet corners deserve a second look.",
+        "zh-CN": "临河的城镇，安静角落尤其值得多看一眼。"
+      }
+    },
+    "佛山镇": {
+      "name": {
+        "en": "Snowmelt Town",
+        "zh-CN": "融雪镇"
+      },
+      "description": {
+        "en": "A market town where travellers pause between harder journeys.",
+        "zh-CN": "旅人在两段艰难路程之间，歇脚的一处集镇。"
+      }
+    },
+    "鄱阳湖": {
+      "name": {
+        "en": "Dragonwater Lake",
+        "zh-CN": "龙水湖"
+      },
+      "description": {
+        "en": "A broad lake whose shores can hold more than a peaceful view.",
+        "zh-CN": "辽阔的湖面，岸边留下的未必都是好风景。"
+      }
+    },
+    "福建少林寺": {
+      "name": {
+        "en": "Southern Sanctuary",
+        "zh-CN": "南方圣所"
+      },
+      "description": {
+        "en": "A southern branch of the sanctuary schools.",
+        "zh-CN": "圣所诸学派在南方的一处分支。"
+      }
+    },
+    "胡斐居": {
+      "name": {
+        "en": "Kai's Cottage",
+        "zh-CN": "凯的小屋"
+      },
+      "description": {
+        "en": "Kai's home, away from the busiest roads.",
+        "zh-CN": "凯的居所，远离大路的喧闹。"
+      }
+    },
+    "帐篷": {
+      "name": {
+        "en": "Roadside Camp",
+        "zh-CN": "路边营地"
+      },
+      "description": {
+        "en": "A temporary camp, with stories still warm beside the fire.",
+        "zh-CN": "临时扎起的营地，火旁的故事还带着温度。"
+      }
+    },
+    "白驼山庄": {
+      "name": {
+        "en": "Thornrose Manor",
+        "zh-CN": "刺玫庄园"
+      },
+      "description": {
+        "en": "A secluded manor behind a very deliberate welcome.",
+        "zh-CN": "偏僻的庄园，连欢迎辞都像是仔细安排过的。"
+      }
+    },
+    "张家口": {
+      "name": {
+        "en": "Northgate Market",
+        "zh-CN": "北门集市"
+      },
+      "description": {
+        "en": "A northern market for travellers preparing for a longer road.",
+        "zh-CN": "准备走远路的旅人，常来这里补齐行装。"
+      }
+    },
+    "一灯居": {
+      "name": {
+        "en": "Hermit's Light",
+        "zh-CN": "隐士灯舍"
+      },
+      "description": {
+        "en": "A quiet retreat where a patient visitor may find guidance.",
+        "zh-CN": "安静的居处，耐心的来客，或能获得指点。"
+      }
+    },
+    "桃花岛": {
+      "name": {
+        "en": "Appleblossom Isle",
+        "zh-CN": "苹果花岛"
+      },
+      "description": {
+        "en": "An island of flowering trees and carefully guarded paths.",
+        "zh-CN": "花树遍地，也处处有人留心守着道路的岛屿。"
+      }
+    },
+    "黑龙潭": {
+      "name": {
+        "en": "Black Dragon Pool",
+        "zh-CN": "黑龙潭"
+      },
+      "description": {
+        "en": "Dark water beside an uneasy stretch of road.",
+        "zh-CN": "暗水旁的这段路，走起来并不让人放心。"
+      }
+    },
+    "长江岸边": {
+      "name": {
+        "en": "Great Riverbank",
+        "zh-CN": "大河岸"
+      },
+      "description": {
+        "en": "A place to stop, listen, and decide which road comes next.",
+        "zh-CN": "适合停下来，听一听，再决定下一步的地方。"
+      }
+    },
+    "同福客栈": {
+      "name": {
+        "en": "Crosswind Inn",
+        "zh-CN": "穿风客栈"
+      },
+      "description": {
+        "en": "An inn where a quiet meal is never quite guaranteed.",
+        "zh-CN": "想安静吃顿饭？这里可不敢保证。"
+      }
+    },
+    "全真教": {
+      "name": {
+        "en": "Bremen Watch",
+        "zh-CN": "不来梅守望"
+      },
+      "description": {
+        "en": "A school where courage is practised in company.",
+        "zh-CN": "在同伴之间，练出勇气的一处学舍。"
+      }
+    },
+    "太湖": {
+      "name": {
+        "en": "Reedmere",
+        "zh-CN": "苇泽湖"
+      },
+      "description": {
+        "en": "A broad lake edged with reeds and old routes.",
+        "zh-CN": "芦苇与旧路环绕的一片大湖。"
+      }
+    },
+    "勃泥岛": {
+      "name": {
+        "en": "Coral Island",
+        "zh-CN": "珊瑚岛"
+      },
+      "description": {
+        "en": "An island reached by travellers with reasons to leave the mainland.",
+        "zh-CN": "总有些人，带着离开大陆的理由，来到这里。"
+      }
+    },
+    "神龙岛": {
+      "name": {
+        "en": "Serpent Isle",
+        "zh-CN": "盘蛇岛"
+      },
+      "description": {
+        "en": "A guarded island with an ambitious name and watchful residents.",
+        "zh-CN": "名字里有野心，居民也格外警觉的一座岛。"
+      }
+    },
+    "台湾": {
+      "name": {
+        "en": "Far Harbour",
+        "zh-CN": "远港"
+      },
+      "description": {
+        "en": "A distant harbour where an arrival can become a new beginning.",
+        "zh-CN": "遥远的港湾，一次抵达，或许就是新的开始。"
+      }
+    },
+    "鹿鼎山": {
+      "name": {
+        "en": "Crownridge",
+        "zh-CN": "冠岭"
+      },
+      "description": {
+        "en": "A remote ridge with more claims upon it than open paths.",
+        "zh-CN": "偏远的山岭，想占有它的人，比上山的路还多。"
+      }
+    },
+    "霹雳堂": {
+      "name": {
+        "en": "Thunderworks",
+        "zh-CN": "雷鸣工坊"
+      },
+      "description": {
+        "en": "A workshop of unusual tools and practical discoveries.",
+        "zh-CN": "不寻常的工具，与实用的新发现，都能在这里遇上。"
+      }
+    },
+    "大地图": {
+      "name": {
+        "en": "The Story Roads",
+        "zh-CN": "故事之路"
+      },
+      "description": {
+        "en": "Roads cross between the tales. Begin with Grimm's errands in Crossroads, or look for Eir in Healer's Vale.",
+        "zh-CN": "各个故事之间，路在这里交汇。先去十字镇完成格林的差事，或去药师谷结识埃尔。"
+      }
+    },
+    "星宿派": {
+      "name": {
+        "en": "Bridge Watch",
+        "zh-CN": "虹桥守望"
+      },
+      "description": {
+        "en": "Heimdall's watch, where attention is a duty rather than a suggestion.",
+        "zh-CN": "海姆达尔的守望之地。留心，是职责，不是建议。"
+      }
+    },
+    "门派古墓": {
+      "name": {
+        "en": "House of Mists",
+        "zh-CN": "迷雾学舍"
+      },
+      "description": {
+        "en": "A quiet school of precise footwork and patient follow-up strikes.",
+        "zh-CN": "安静的学舍，研习精准步法与耐心的后续连招。"
+      }
+    },
+    "门派大轮寺": {
+      "name": {
+        "en": "Grail Lodge",
+        "zh-CN": "圣杯山舍"
+      },
+      "description": {
+        "en": "A snowbound school. Only its students know which doors stay warm.",
+        "zh-CN": "雪中的学舍，弟子才知道哪些门后还留着暖意。"
+      }
+    },
+    "少林寺内": {
+      "name": {
+        "en": "Dharma Courtyard",
+        "zh-CN": "明心庭院"
+      },
+      "description": {
+        "en": "A southern branch of the sanctuary schools.",
+        "zh-CN": "圣所诸学派在南方的一处分支。"
+      }
+    },
+    "武当广场": {
+      "name": {
+        "en": "River Warden Courtyard",
+        "zh-CN": "河流守卫广场"
+      },
+      "description": {
+        "en": "A school of balance, patience, and well-timed replies.",
+        "zh-CN": "讲究平衡、耐心和恰当还击时机的门派。"
+      }
+    }
+  },
+  "locations": {
+    "大地图": {
+      "昆仑山": {
+        "name": {
+          "en": "Cloudpeak",
+          "zh-CN": "云冠山"
+        },
+        "description": {
+          "en": "A high mountain where narrow paths reward patient travellers.",
+          "zh-CN": "高山上的小径，只肯善待耐心的旅人。"
+        }
+      },
+      "黑木崖": {
+        "name": {
+          "en": "Black Pine Cliff",
+          "zh-CN": "黑松崖"
+        },
+        "description": {
+          "en": "A sheer cliff and a fortress with little room for a careless step.",
+          "zh-CN": "峭壁上的堡垒，容不下多少大意。"
+        }
+      },
+      "灵鹫宫": {
+        "name": {
+          "en": "Threadhall",
+          "zh-CN": "织线厅"
+        },
+        "description": {
+          "en": "Urd's secluded hall, where movement and attention are studied together.",
+          "zh-CN": "兀儿德隐居的厅堂，把身法与留心看作一门课。"
+        }
+      },
+      "松鼠旅馆": {
+        "name": {
+          "en": "Wayfarers' Inn",
+          "zh-CN": "旅人客栈"
+        },
+        "description": {
+          "en": "An inn where travellers compare scars, stories, and the price of supper.",
+          "zh-CN": "旅人在这里比伤疤，比故事，也比晚饭价格。"
+        }
+      },
+      "大轮寺": {
+        "name": {
+          "en": "Grail Lodge",
+          "zh-CN": "圣杯山舍"
+        },
+        "description": {
+          "en": "A snowbound school. Only its students know which doors stay warm.",
+          "zh-CN": "雪中的学舍，弟子才知道哪些门后还留着暖意。"
+        }
+      },
+      "血刀门": {
+        "name": {
+          "en": "Dawn Hunters' Lodge",
+          "zh-CN": "破晓猎馆"
+        },
+        "description": {
+          "en": "A guarded lodge for hunters willing to study dangerous arts.",
+          "zh-CN": "戒备森严的猎馆，接纳愿意研习危险技艺的人。"
+        }
+      },
+      "香格里拉": {
+        "name": {
+          "en": "Hidden Orchard",
+          "zh-CN": "隐秘果园"
+        },
+        "description": {
+          "en": "A quiet refuge beyond the busiest roads.",
+          "zh-CN": "远离大路喧闹的一处安静避所。"
+        }
+      },
+      "沙漠": {
+        "name": {
+          "en": "Glass Dunes",
+          "zh-CN": "琉璃沙丘"
+        },
+        "description": {
+          "en": "The dunes shift; their stories have a habit of doing the same.",
+          "zh-CN": "沙丘会移动，这里的故事也有同样的习惯。"
+        }
+      },
+      "唐军营": {
+        "name": {
+          "en": "Sunward Camp",
+          "zh-CN": "向阳营地"
+        },
+        "description": {
+          "en": "A military camp whose sentries prefer introductions to surprises.",
+          "zh-CN": "军营的哨兵，喜欢先说明来意，不喜欢惊喜。"
+        }
+      },
+      "光明顶": {
+        "name": {
+          "en": "Jade Summit",
+          "zh-CN": "玉冠顶"
+        },
+        "description": {
+          "en": "A stronghold above the clouds, and a meeting place for rival ambitions.",
+          "zh-CN": "云上的堡垒，也是各方野心交汇的地方。"
+        }
+      },
+      "雁门关": {
+        "name": {
+          "en": "Storm Pass",
+          "zh-CN": "风暴关"
+        },
+        "description": {
+          "en": "A northern pass where news arrives with the weather.",
+          "zh-CN": "北方的关隘，消息常和坏天气一起到达。"
+        }
+      },
+      "哈萨克部落": {
+        "name": {
+          "en": "Windrider Camp",
+          "zh-CN": "逐风营地"
+        },
+        "description": {
+          "en": "A horse camp beside the open grasslands.",
+          "zh-CN": "开阔草原旁的一处牧马营地。"
+        }
+      },
+      "高昌迷宫": {
+        "name": {
+          "en": "Windmill Warrens",
+          "zh-CN": "风车迷窟"
+        },
+        "description": {
+          "en": "Old passages beneath the dry plains. Follow landmarks, not confidence.",
+          "zh-CN": "旱原下的古老通道。跟着路标走，别只靠自信。"
+        }
+      },
+      "回族部落": {
+        "name": {
+          "en": "Rose Caravan",
+          "zh-CN": "蔷薇商队"
+        },
+        "description": {
+          "en": "A caravan settlement, rich in rumours and carefully guarded bargains.",
+          "zh-CN": "商队驻地，不缺传闻，也不缺严守秘密的交易。"
+        }
+      },
+      "青城派": {
+        "name": {
+          "en": "Pineblade School",
+          "zh-CN": "松刃学派"
+        },
+        "description": {
+          "en": "A modest mountain school, with a reputation it would like to improve.",
+          "zh-CN": "山间的小门派，正盼着改善自己的名声。"
+        }
+      },
+      "峨眉山": {
+        "name": {
+          "en": "White Cloud Peak",
+          "zh-CN": "白云峰"
+        },
+        "description": {
+          "en": "Quiet paths climb into the clouds.",
+          "zh-CN": "安静的小路，一直通向云里。"
+        }
+      },
+      "恒山": {
+        "name": {
+          "en": "Northwind Peak",
+          "zh-CN": "北风峰"
+        },
+        "description": {
+          "en": "A high retreat overlooking the northern roads.",
+          "zh-CN": "俯瞰北方道路的一处高山居所。"
+        }
+      },
+      "星宿海": {
+        "name": {
+          "en": "Starwater",
+          "zh-CN": "星水泽"
+        },
+        "description": {
+          "en": "A cold shore beneath an unusually clear sky.",
+          "zh-CN": "冷冽的岸边，头顶的星空格外清晰。"
+        }
+      },
+      "秦红棉居": {
+        "name": {
+          "en": "Ashgrove Cottage",
+          "zh-CN": "梣林小屋"
+        },
+        "description": {
+          "en": "A sheltered cottage among the ash trees.",
+          "zh-CN": "梣树之间，一座避风的小屋。"
+        }
+      },
+      "大理": {
+        "name": {
+          "en": "Fjordhaven",
+          "zh-CN": "峡湾城"
+        },
+        "description": {
+          "en": "A busy court town with more family arguments than its streets can hold.",
+          "zh-CN": "热闹的宫城，家族纷争多得几条街都装不下。"
+        }
+      },
+      "大理树林": {
+        "name": {
+          "en": "Birchwood",
+          "zh-CN": "白桦林"
+        },
+        "description": {
+          "en": "A forest of swift paths, sharp leaves, and quicker visitors.",
+          "zh-CN": "林间的路很快，偶尔路过的小东西更快。"
+        }
+      },
+      "无量山洞": {
+        "name": {
+          "en": "Moonwell Cavern",
+          "zh-CN": "月井洞窟"
+        },
+        "description": {
+          "en": "A hidden cavern where a quiet search can reveal more than a loud expedition.",
+          "zh-CN": "隐秘的洞窟，轻声细找，可能比大张旗鼓更有收获。"
+        }
+      },
+      "万劫谷": {
+        "name": {
+          "en": "Healer's Vale",
+          "zh-CN": "药师谷"
+        },
+        "description": {
+          "en": "Eir's home ground, among steep rocks and medicinal plants.",
+          "zh-CN": "埃尔熟悉的山谷，峭石之间生着药草。"
+        }
+      },
+      "天龙寺": {
+        "name": {
+          "en": "Nine Winds Sanctuary",
+          "zh-CN": "九风圣所"
+        },
+        "description": {
+          "en": "A sanctuary where discipline matters as much as strength.",
+          "zh-CN": "力量与自律同样重要的一处圣所。"
+        }
+      },
+      "西夏": {
+        "name": {
+          "en": "Amber Court",
+          "zh-CN": "琥珀王庭"
+        },
+        "description": {
+          "en": "A distant court where an invitation may carry several meanings.",
+          "zh-CN": "遥远的王庭，一封邀请往往不止一层意思。"
+        }
+      },
+      "擂鼓山": {
+        "name": {
+          "en": "Drumstone Hill",
+          "zh-CN": "鼓石丘"
+        },
+        "description": {
+          "en": "A hill of old challenges and unfinished conversations.",
+          "zh-CN": "留下过往挑战，也留下未尽之言的山丘。"
+        }
+      },
+      "武道大会": {
+        "name": {
+          "en": "Tournament Grounds",
+          "zh-CN": "大会场"
+        },
+        "description": {
+          "en": "A meeting place for fighters who prefer an audience.",
+          "zh-CN": "希望有人观看的武者，都愿意来这里。"
+        }
+      },
+      "华山": {
+        "name": {
+          "en": "Crane Peak",
+          "zh-CN": "鹤峰"
+        },
+        "description": {
+          "en": "A sword school above a steep mountain road.",
+          "zh-CN": "陡峭山路上方的一处剑术学派。"
+        }
+      },
+      "小镜湖": {
+        "name": {
+          "en": "Mirrorwater",
+          "zh-CN": "镜水湖"
+        },
+        "description": {
+          "en": "A small lake with a large talent for keeping secrets.",
+          "zh-CN": "一片小湖，却很擅长藏住秘密。"
+        }
+      },
+      "古墓派": {
+        "name": {
+          "en": "House of Mists",
+          "zh-CN": "迷雾学舍"
+        },
+        "description": {
+          "en": "A quiet school of precise footwork and patient follow-up strikes.",
+          "zh-CN": "安静的学舍，研习精准步法与耐心的后续连招。"
+        }
+      },
+      "绝情谷": {
+        "name": {
+          "en": "Briar Hollow",
+          "zh-CN": "荆棘谷"
+        },
+        "description": {
+          "en": "A sheltered valley. Beautiful gardens do not make every visitor welcome.",
+          "zh-CN": "幽深山谷，花园再美，也不代表欢迎每位来客。"
+        }
+      },
+      "程英居": {
+        "name": {
+          "en": "Willow Cottage",
+          "zh-CN": "柳下小屋"
+        },
+        "description": {
+          "en": "A modest home beyond the busiest roads.",
+          "zh-CN": "离开喧闹大路后的一处朴素居所。"
+        }
+      },
+      "风陵渡口": {
+        "name": {
+          "en": "Windsong Ferry",
+          "zh-CN": "风歌渡口"
+        },
+        "description": {
+          "en": "Travellers meet where the river makes them wait.",
+          "zh-CN": "河水让人停下的地方，旅人就会相遇。"
+        }
+      },
+      "剑魔荒冢": {
+        "name": {
+          "en": "Old King's Barrow",
+          "zh-CN": "古王荒冢"
+        },
+        "description": {
+          "en": "An old burial ground with lessons for anyone who knows how to listen.",
+          "zh-CN": "古老的墓地，懂得倾听的人，或许也能在此求学。"
+        }
+      },
+      "北京": {
+        "name": {
+          "en": "Liberty Crossing",
+          "zh-CN": "自由渡城"
+        },
+        "description": {
+          "en": "A crowded frontier capital where opportunity and trouble share an address.",
+          "zh-CN": "拥挤的边地都城，机会与麻烦往往住在同一扇门后。"
+        }
+      },
+      "丐帮总舵": {
+        "name": {
+          "en": "Lantern Guild",
+          "zh-CN": "提灯公会"
+        },
+        "description": {
+          "en": "A guild hall for the well-travelled and the badly underestimated.",
+          "zh-CN": "走过远路、也被人小看过的旅人，常在这里聚首。"
+        }
+      },
+      "聚贤庄": {
+        "name": {
+          "en": "Oakshield Hall",
+          "zh-CN": "橡盾庄园"
+        },
+        "description": {
+          "en": "A gathering hall where a public welcome need not mean a friendly one.",
+          "zh-CN": "聚会的厅堂，公开欢迎，可不一定真心友善。"
+        }
+      },
+      "龙门镖局": {
+        "name": {
+          "en": "Waywatch Caravan",
+          "zh-CN": "守路商行"
+        },
+        "description": {
+          "en": "A caravan company that values safe arrivals over magnificent excuses.",
+          "zh-CN": "比起漂亮借口，这家商行更看重平安抵达。"
+        }
+      },
+      "洛阳": {
+        "name": {
+          "en": "Crossroads",
+          "zh-CN": "十字镇"
+        },
+        "description": {
+          "en": "A lively market town. Its supplies are useful; its apprentice is formidable.",
+          "zh-CN": "热闹的集镇。补给实用，学徒也颇有本事。"
+        }
+      },
+      "襄阳": {
+        "name": {
+          "en": "Highbridge",
+          "zh-CN": "高桥城"
+        },
+        "description": {
+          "en": "A fortified town guarding an important crossing.",
+          "zh-CN": "守着要道渡口的一座坚城。"
+        }
+      },
+      "嵩山": {
+        "name": {
+          "en": "Iron Pine Peak",
+          "zh-CN": "铁松峰"
+        },
+        "description": {
+          "en": "A stern school on a stony mountain ridge.",
+          "zh-CN": "石岭上一处规矩严厉的学派。"
+        }
+      },
+      "武当派": {
+        "name": {
+          "en": "River Wardens",
+          "zh-CN": "河流守卫"
+        },
+        "description": {
+          "en": "A school of balance, patience, and well-timed replies.",
+          "zh-CN": "讲究平衡、耐心和恰当还击时机的门派。"
+        }
+      },
+      "长安": {
+        "name": {
+          "en": "Storymarket",
+          "zh-CN": "故事集市"
+        },
+        "description": {
+          "en": "A great city where old roads bring unfamiliar company.",
+          "zh-CN": "大城里的老路，总会带来陌生的同伴。"
+        }
+      },
+      "苗人凤居": {
+        "name": {
+          "en": "Winter Cottage",
+          "zh-CN": "冬日小屋"
+        },
+        "description": {
+          "en": "A quiet house in the colder country.",
+          "zh-CN": "寒冷乡野里的一处安静居所。"
+        }
+      },
+      "田伯光居": {
+        "name": {
+          "en": "Vagabond's Shelter",
+          "zh-CN": "浪客居所"
+        },
+        "description": {
+          "en": "A traveller's home, seldom improved by polite introductions.",
+          "zh-CN": "旅人的住处，客套往往起不了多少作用。"
+        }
+      },
+      "衡阳": {
+        "name": {
+          "en": "Rainmarket",
+          "zh-CN": "雨集镇"
+        },
+        "description": {
+          "en": "Rain beads on the paving stones. Somewhere ahead, a bully is charging for dry passage.",
+          "zh-CN": "雨水落在石板上，前面有位恶霸，正为不淋雨的路段收钱。"
+        }
+      },
+      "杭州": {
+        "name": {
+          "en": "Canalward",
+          "zh-CN": "运河城"
+        },
+        "description": {
+          "en": "A canal town full of traders, inns, and very confident directions.",
+          "zh-CN": "商人和客栈遍地，给你指路的人也总是很有把握。"
+        }
+      },
+      "东海剑池": {
+        "name": {
+          "en": "Echoing Swordpool",
+          "zh-CN": "回声剑池"
+        },
+        "description": {
+          "en": "A strange pool where old techniques leave more than reflections.",
+          "zh-CN": "奇异的水池，旧时招式留下的，不只是倒影。"
+        }
+      },
+      "商家堡": {
+        "name": {
+          "en": "Frostgate Keep",
+          "zh-CN": "霜门堡"
+        },
+        "description": {
+          "en": "A guarded keep on the winter roads.",
+          "zh-CN": "冬日道路旁，戒备森严的一座堡垒。"
+        }
+      },
+      "阎基居": {
+        "name": {
+          "en": "Apothecary's Hut",
+          "zh-CN": "药师小舍"
+        },
+        "description": {
+          "en": "A small house with an unusually well-stocked medicine cabinet.",
+          "zh-CN": "屋子不大，药柜里的东西却格外齐全。"
+        }
+      },
+      "江陵": {
+        "name": {
+          "en": "Nightwater",
+          "zh-CN": "夜水城"
+        },
+        "description": {
+          "en": "A riverside city whose quiet corners deserve a second look.",
+          "zh-CN": "临河的城镇，安静角落尤其值得多看一眼。"
+        }
+      },
+      "佛山镇": {
+        "name": {
+          "en": "Snowmelt Town",
+          "zh-CN": "融雪镇"
+        },
+        "description": {
+          "en": "A market town where travellers pause between harder journeys.",
+          "zh-CN": "旅人在两段艰难路程之间，歇脚的一处集镇。"
+        }
+      },
+      "鄱阳湖": {
+        "name": {
+          "en": "Dragonwater Lake",
+          "zh-CN": "龙水湖"
+        },
+        "description": {
+          "en": "A broad lake whose shores can hold more than a peaceful view.",
+          "zh-CN": "辽阔的湖面，岸边留下的未必都是好风景。"
+        }
+      },
+      "福建少林寺": {
+        "name": {
+          "en": "Southern Sanctuary",
+          "zh-CN": "南方圣所"
+        },
+        "description": {
+          "en": "A southern branch of the sanctuary schools.",
+          "zh-CN": "圣所诸学派在南方的一处分支。"
+        }
+      },
+      "胡斐居": {
+        "name": {
+          "en": "Kai's Cottage",
+          "zh-CN": "凯的小屋"
+        },
+        "description": {
+          "en": "Kai's home, away from the busiest roads.",
+          "zh-CN": "凯的居所，远离大路的喧闹。"
+        }
+      },
+      "帐篷": {
+        "name": {
+          "en": "Roadside Camp",
+          "zh-CN": "路边营地"
+        },
+        "description": {
+          "en": "A temporary camp, with stories still warm beside the fire.",
+          "zh-CN": "临时扎起的营地，火旁的故事还带着温度。"
+        }
+      },
+      "白驼山庄": {
+        "name": {
+          "en": "Thornrose Manor",
+          "zh-CN": "刺玫庄园"
+        },
+        "description": {
+          "en": "A secluded manor behind a very deliberate welcome.",
+          "zh-CN": "偏僻的庄园，连欢迎辞都像是仔细安排过的。"
+        }
+      },
+      "张家口": {
+        "name": {
+          "en": "Northgate Market",
+          "zh-CN": "北门集市"
+        },
+        "description": {
+          "en": "A northern market for travellers preparing for a longer road.",
+          "zh-CN": "准备走远路的旅人，常来这里补齐行装。"
+        }
+      },
+      "一灯居": {
+        "name": {
+          "en": "Hermit's Light",
+          "zh-CN": "隐士灯舍"
+        },
+        "description": {
+          "en": "A quiet retreat where a patient visitor may find guidance.",
+          "zh-CN": "安静的居处，耐心的来客，或能获得指点。"
+        }
+      },
+      "桃花岛": {
+        "name": {
+          "en": "Appleblossom Isle",
+          "zh-CN": "苹果花岛"
+        },
+        "description": {
+          "en": "An island of flowering trees and carefully guarded paths.",
+          "zh-CN": "花树遍地，也处处有人留心守着道路的岛屿。"
+        }
+      },
+      "黑龙潭": {
+        "name": {
+          "en": "Black Dragon Pool",
+          "zh-CN": "黑龙潭"
+        },
+        "description": {
+          "en": "Dark water beside an uneasy stretch of road.",
+          "zh-CN": "暗水旁的这段路，走起来并不让人放心。"
+        }
+      },
+      "长江岸边": {
+        "name": {
+          "en": "Great Riverbank",
+          "zh-CN": "大河岸"
+        },
+        "description": {
+          "en": "A place to stop, listen, and decide which road comes next.",
+          "zh-CN": "适合停下来，听一听，再决定下一步的地方。"
+        }
+      },
+      "同福客栈": {
+        "name": {
+          "en": "Crosswind Inn",
+          "zh-CN": "穿风客栈"
+        },
+        "description": {
+          "en": "An inn where a quiet meal is never quite guaranteed.",
+          "zh-CN": "想安静吃顿饭？这里可不敢保证。"
+        }
+      },
+      "全真教": {
+        "name": {
+          "en": "Bremen Watch",
+          "zh-CN": "不来梅守望"
+        },
+        "description": {
+          "en": "A school where courage is practised in company.",
+          "zh-CN": "在同伴之间，练出勇气的一处学舍。"
+        }
+      },
+      "太湖": {
+        "name": {
+          "en": "Reedmere",
+          "zh-CN": "苇泽湖"
+        },
+        "description": {
+          "en": "A broad lake edged with reeds and old routes.",
+          "zh-CN": "芦苇与旧路环绕的一片大湖。"
+        }
+      },
+      "勃泥岛": {
+        "name": {
+          "en": "Coral Island",
+          "zh-CN": "珊瑚岛"
+        },
+        "description": {
+          "en": "An island reached by travellers with reasons to leave the mainland.",
+          "zh-CN": "总有些人，带着离开大陆的理由，来到这里。"
+        }
+      },
+      "神龙岛": {
+        "name": {
+          "en": "Serpent Isle",
+          "zh-CN": "盘蛇岛"
+        },
+        "description": {
+          "en": "A guarded island with an ambitious name and watchful residents.",
+          "zh-CN": "名字里有野心，居民也格外警觉的一座岛。"
+        }
+      },
+      "台湾": {
+        "name": {
+          "en": "Far Harbour",
+          "zh-CN": "远港"
+        },
+        "description": {
+          "en": "A distant harbour where an arrival can become a new beginning.",
+          "zh-CN": "遥远的港湾，一次抵达，或许就是新的开始。"
+        }
+      },
+      "鹿鼎山": {
+        "name": {
+          "en": "Crownridge",
+          "zh-CN": "冠岭"
+        },
+        "description": {
+          "en": "A remote ridge with more claims upon it than open paths.",
+          "zh-CN": "偏远的山岭，想占有它的人，比上山的路还多。"
+        }
+      },
+      "霹雳堂": {
+        "name": {
+          "en": "Thunderworks",
+          "zh-CN": "雷鸣工坊"
+        },
+        "description": {
+          "en": "A workshop of unusual tools and practical discoveries.",
+          "zh-CN": "不寻常的工具，与实用的新发现，都能在这里遇上。"
+        }
+      }
+    },
+    "洛阳": {
+      "小孩": {
+        "name": {
+          "en": "Young Apprentice",
+          "zh-CN": "小学徒"
+        },
+        "description": {
+          "en": "An apprentice who enjoys a fair bout and a well-earned surprise.",
+          "zh-CN": "喜欢公平切磋，也盼着遇到一次像样惊喜的学徒。"
+        }
+      },
+      "王家老爷": {
+        "name": {
+          "en": "Merlin",
+          "zh-CN": "梅林"
+        },
+        "description": {
+          "en": "A wizard whose dog has temporarily declined all advice.",
+          "zh-CN": "一位巫师。他的狗，暂时拒绝听取任何意见。"
+        }
+      },
+      "平一指居": {
+        "name": {
+          "en": "Healer's House",
+          "zh-CN": "医师居所"
+        },
+        "description": {
+          "en": "The local physician receives visitors here.",
+          "zh-CN": "当地医师在这里接待访客。"
+        }
+      },
+      "商店": {
+        "name": {
+          "en": "Supply Shop",
+          "zh-CN": "补给铺"
+        },
+        "description": {
+          "en": "Tonics, equipment and training manuals. Ask before paying.",
+          "zh-CN": "药剂、装备和读本。掏钱之前，先问问。"
+        }
+      },
+      "返回": {
+        "name": {
+          "en": "World Map",
+          "zh-CN": "世界地图"
+        },
+        "description": {
+          "en": "Return to the world map.",
+          "zh-CN": "返回世界地图。"
+        }
+      }
+    },
+    "衡阳": {
+      "黑老大": {
+        "name": {
+          "en": "Road Bully",
+          "zh-CN": "拦路恶霸"
+        },
+        "description": {
+          "en": "A powerful bully. The training task accepts the lesson learned from a defeat.",
+          "zh-CN": "实力不俗的恶霸。这项教学任务，也接受落败带回的教训。"
+        }
+      },
+      "衡阳琴舍": {
+        "name": {
+          "en": "Musician's House",
+          "zh-CN": "乐师小屋"
+        },
+        "description": {
+          "en": "A quiet room for a less quiet history.",
+          "zh-CN": "屋子清静，往事却未必清静。"
+        }
+      },
+      "潇湘古林": {
+        "name": {
+          "en": "Rainwood",
+          "zh-CN": "雨林古道"
+        },
+        "description": {
+          "en": "An old woodland road.",
+          "zh-CN": "古老的林间道路。"
+        }
+      },
+      "湘妃庙": {
+        "name": {
+          "en": "Rain Shrine",
+          "zh-CN": "雨中祠堂"
+        },
+        "description": {
+          "en": "A weathered shrine.",
+          "zh-CN": "一座被风雨磨旧的祠堂。"
+        }
+      },
+      "返回": {
+        "name": {
+          "en": "World Map",
+          "zh-CN": "世界地图"
+        },
+        "description": {
+          "en": "Return to the world map.",
+          "zh-CN": "返回世界地图。"
+        }
+      }
+    },
+    "万劫谷": {
+      "钟灵": {
+        "name": {
+          "en": "Eir",
+          "zh-CN": "埃尔"
+        },
+        "description": {
+          "en": "A healer searching for her missing stoat.",
+          "zh-CN": "正在寻找小白鼬的医师。"
+        }
+      },
+      "返回": {
+        "name": {
+          "en": "World Map",
+          "zh-CN": "世界地图"
+        },
+        "description": {
+          "en": "Return to the world map.",
+          "zh-CN": "返回世界地图。"
+        }
+      }
+    }
+  },
+  "uiLabels": {
+    "终南山全真教": {"en": "The Bremen Watch keeps its training grounds on a wooded mountain.", "zh-CN": "不来梅守望的训练场坐落在林间山上。"},
+    "王重阳": {"en": "Iron John", "zh-CN": "铁汉斯"},
+    "张三丰": {"en": "Taiyi Zhenren", "zh-CN": "太乙真人"},
+    "全真七子": {"en": "The Watch Elders", "zh-CN": "守望长老"},
+    "武当七侠": {"en": "The Seven Wardens", "zh-CN": "七位守护者"},
+    "四大剑婢": {"en": "The Four Threadkeepers", "zh-CN": "四位守线人"},
+    "玄铁剑法": {"en": "Ironweight Sword", "zh-CN": "沉铁剑术"},
+    "玉女素心剑": {"en": "Twin Hearts Sword", "zh-CN": "双心剑术"},
+    "左右互搏术": {"en": "Ambidexterity", "zh-CN": "双手协同"},
+    "龙象般若功": {"en": "Giant's Resolve", "zh-CN": "巨人之志"},
+    "火焰刀法": {"en": "Flame Edge", "zh-CN": "焰锋"},
+    "血刀大法": {"en": "Crimson Fang Technique", "zh-CN": "赤牙刀术"},
+    "血海魔功": {"en": "Bloodtide Discipline", "zh-CN": "血潮心法"},
+    "九阴神功": {"en": "Ninefold Moon Discipline", "zh-CN": "九重月心法"},
+    "重阳剑法": {"en": "Wildwood Sword", "zh-CN": "荒林剑术"},
+    "三花聚顶掌": {"en": "Threefold Bloom", "zh-CN": "三重花掌"},
+    "天山折梅手": {"en": "Winter Branch Hands", "zh-CN": "冬枝手"},
+    "北冥神功": {"en": "Deepwell Discipline", "zh-CN": "深井心法"},
+    "八荒六合唯我独尊功": {"en": "Sovereign Thread", "zh-CN": "统御之线"},
+    "生死符": {"en": "Thread of Fate", "zh-CN": "命运丝印"},
+    "易筋经": {"en": "Body Tempering", "zh-CN": "锻体经"},
+    "洗髓经": {"en": "Inner Renewal", "zh-CN": "内息更新"},
+    "纯阳无极功": {"en": "Sunwell Discipline", "zh-CN": "日泉心法"},
+    "太极拳": {"en": "Turning Tide Fist", "zh-CN": "回潮拳"},
+    "剑": {"en": "Swordcraft", "zh-CN": "基础剑术"},
+    "三阴蜈蚣爪": {"en": "Venom Claw", "zh-CN": "毒爪"},
+    "飞星术": {"en": "Shooting Star", "zh-CN": "飞星"},
+    "化功大法": {"en": "Withering Touch", "zh-CN": "凋零之触"},
+    "昆仑山": {
+      "en": "Cloudpeak",
+      "zh-CN": "云冠山"
+    },
+    "黑木崖": {
+      "en": "Black Pine Cliff",
+      "zh-CN": "黑松崖"
+    },
+    "灵鹫宫": {
+      "en": "Threadhall",
+      "zh-CN": "织线厅"
+    },
+    "松鼠旅馆": {
+      "en": "Wayfarers' Inn",
+      "zh-CN": "旅人客栈"
+    },
+    "大轮寺": {
+      "en": "Grail Lodge",
+      "zh-CN": "圣杯山舍"
+    },
+    "血刀门": {
+      "en": "Dawn Hunters' Lodge",
+      "zh-CN": "破晓猎馆"
+    },
+    "香格里拉": {
+      "en": "Hidden Orchard",
+      "zh-CN": "隐秘果园"
+    },
+    "沙漠": {
+      "en": "Glass Dunes",
+      "zh-CN": "琉璃沙丘"
+    },
+    "唐军营": {
+      "en": "Sunward Camp",
+      "zh-CN": "向阳营地"
+    },
+    "光明顶": {
+      "en": "Jade Summit",
+      "zh-CN": "玉冠顶"
+    },
+    "雁门关": {
+      "en": "Storm Pass",
+      "zh-CN": "风暴关"
+    },
+    "哈萨克部落": {
+      "en": "Windrider Camp",
+      "zh-CN": "逐风营地"
+    },
+    "高昌迷宫": {
+      "en": "Windmill Warrens",
+      "zh-CN": "风车迷窟"
+    },
+    "回族部落": {
+      "en": "Rose Caravan",
+      "zh-CN": "蔷薇商队"
+    },
+    "青城派": {
+      "en": "Pineblade School",
+      "zh-CN": "松刃学派"
+    },
+    "峨眉山": {
+      "en": "White Cloud Peak",
+      "zh-CN": "白云峰"
+    },
+    "恒山": {
+      "en": "Northwind Peak",
+      "zh-CN": "北风峰"
+    },
+    "星宿海": {
+      "en": "Starwater",
+      "zh-CN": "星水泽"
+    },
+    "秦红棉居": {
+      "en": "Ashgrove Cottage",
+      "zh-CN": "梣林小屋"
+    },
+    "大理": {
+      "en": "Fjordhaven",
+      "zh-CN": "峡湾城"
+    },
+    "大理树林": {
+      "en": "Birchwood",
+      "zh-CN": "白桦林"
+    },
+    "无量山洞": {
+      "en": "Moonwell Cavern",
+      "zh-CN": "月井洞窟"
+    },
+    "万劫谷": {
+      "en": "Healer's Vale",
+      "zh-CN": "药师谷"
+    },
+    "天龙寺": {
+      "en": "Nine Winds Sanctuary",
+      "zh-CN": "九风圣所"
+    },
+    "西夏": {
+      "en": "Amber Court",
+      "zh-CN": "琥珀王庭"
+    },
+    "擂鼓山": {
+      "en": "Drumstone Hill",
+      "zh-CN": "鼓石丘"
+    },
+    "武道大会": {
+      "en": "Tournament Grounds",
+      "zh-CN": "大会场"
+    },
+    "华山": {
+      "en": "Crane Peak",
+      "zh-CN": "鹤峰"
+    },
+    "小镜湖": {
+      "en": "Mirrorwater",
+      "zh-CN": "镜水湖"
+    },
+    "古墓派": {
+      "en": "House of Mists",
+      "zh-CN": "迷雾学舍"
+    },
+    "绝情谷": {
+      "en": "Briar Hollow",
+      "zh-CN": "荆棘谷"
+    },
+    "程英居": {
+      "en": "Willow Cottage",
+      "zh-CN": "柳下小屋"
+    },
+    "风陵渡口": {
+      "en": "Windsong Ferry",
+      "zh-CN": "风歌渡口"
+    },
+    "剑魔荒冢": {
+      "en": "Old King's Barrow",
+      "zh-CN": "古王荒冢"
+    },
+    "北京": {
+      "en": "Liberty Crossing",
+      "zh-CN": "自由渡城"
+    },
+    "丐帮总舵": {
+      "en": "Lantern Guild",
+      "zh-CN": "提灯公会"
+    },
+    "聚贤庄": {
+      "en": "Oakshield Hall",
+      "zh-CN": "橡盾庄园"
+    },
+    "龙门镖局": {
+      "en": "Waywatch Caravan",
+      "zh-CN": "守路商行"
+    },
+    "洛阳": {
+      "en": "Crossroads",
+      "zh-CN": "十字镇"
+    },
+    "襄阳": {
+      "en": "Highbridge",
+      "zh-CN": "高桥城"
+    },
+    "嵩山": {
+      "en": "Iron Pine Peak",
+      "zh-CN": "铁松峰"
+    },
+    "武当派": {
+      "en": "River Wardens",
+      "zh-CN": "河流守卫"
+    },
+    "长安": {
+      "en": "Storymarket",
+      "zh-CN": "故事集市"
+    },
+    "苗人凤居": {
+      "en": "Winter Cottage",
+      "zh-CN": "冬日小屋"
+    },
+    "田伯光居": {
+      "en": "Vagabond's Shelter",
+      "zh-CN": "浪客居所"
+    },
+    "衡阳": {
+      "en": "Rainmarket",
+      "zh-CN": "雨集镇"
+    },
+    "杭州": {
+      "en": "Canalward",
+      "zh-CN": "运河城"
+    },
+    "东海剑池": {
+      "en": "Echoing Swordpool",
+      "zh-CN": "回声剑池"
+    },
+    "商家堡": {
+      "en": "Frostgate Keep",
+      "zh-CN": "霜门堡"
+    },
+    "阎基居": {
+      "en": "Apothecary's Hut",
+      "zh-CN": "药师小舍"
+    },
+    "江陵": {
+      "en": "Nightwater",
+      "zh-CN": "夜水城"
+    },
+    "佛山镇": {
+      "en": "Snowmelt Town",
+      "zh-CN": "融雪镇"
+    },
+    "鄱阳湖": {
+      "en": "Dragonwater Lake",
+      "zh-CN": "龙水湖"
+    },
+    "福建少林寺": {
+      "en": "Southern Sanctuary",
+      "zh-CN": "南方圣所"
+    },
+    "胡斐居": {
+      "en": "Kai's Cottage",
+      "zh-CN": "凯的小屋"
+    },
+    "帐篷": {
+      "en": "Roadside Camp",
+      "zh-CN": "路边营地"
+    },
+    "白驼山庄": {
+      "en": "Thornrose Manor",
+      "zh-CN": "刺玫庄园"
+    },
+    "张家口": {
+      "en": "Northgate Market",
+      "zh-CN": "北门集市"
+    },
+    "一灯居": {
+      "en": "Hermit's Light",
+      "zh-CN": "隐士灯舍"
+    },
+    "桃花岛": {
+      "en": "Appleblossom Isle",
+      "zh-CN": "苹果花岛"
+    },
+    "黑龙潭": {
+      "en": "Black Dragon Pool",
+      "zh-CN": "黑龙潭"
+    },
+    "长江岸边": {
+      "en": "Great Riverbank",
+      "zh-CN": "大河岸"
+    },
+    "同福客栈": {
+      "en": "Crosswind Inn",
+      "zh-CN": "穿风客栈"
+    },
+    "全真教": {
+      "en": "Bremen Watch",
+      "zh-CN": "不来梅守望"
+    },
+    "太湖": {
+      "en": "Reedmere",
+      "zh-CN": "苇泽湖"
+    },
+    "勃泥岛": {
+      "en": "Coral Island",
+      "zh-CN": "珊瑚岛"
+    },
+    "神龙岛": {
+      "en": "Serpent Isle",
+      "zh-CN": "盘蛇岛"
+    },
+    "台湾": {
+      "en": "Far Harbour",
+      "zh-CN": "远港"
+    },
+    "鹿鼎山": {
+      "en": "Crownridge",
+      "zh-CN": "冠岭"
+    },
+    "霹雳堂": {
+      "en": "Thunderworks",
+      "zh-CN": "雷鸣工坊"
+    },
+    "购买物品": {
+      "en": "Beginner supplies",
+      "zh-CN": "取得新手补给"
+    },
+    "购买药品完成": {
+      "en": "Supplies secured",
+      "zh-CN": "补给齐备"
+    },
+    "教训小孩": {
+      "en": "Friendly practice",
+      "zh-CN": "友好切磋"
+    },
+    "教训小孩完成": {
+      "en": "Practice complete",
+      "zh-CN": "切磋完成"
+    },
+    "教训黑老大": {
+      "en": "A difficult opponent",
+      "zh-CN": "难敌教学"
+    },
+    "教训黑老大完成": {
+      "en": "Lessons from defeat",
+      "zh-CN": "落败的教训"
+    },
+    "初出茅庐": {
+      "en": "First Steps",
+      "zh-CN": "初次上路"
+    },
+    "无门派": {
+      "en": "Unaffiliated",
+      "zh-CN": "无门派"
+    },
+    "古墓": {
+      "en": "House of Mists",
+      "zh-CN": "迷雾学舍"
+    },
+    "少林寺": {
+      "en": "Dharma Courtyard",
+      "zh-CN": "明心庭院"
+    },
+    "南贤居": {
+      "en": "Grimm's home",
+      "zh-CN": "格林居所"
+    },
+    "南贤": {
+      "en": "Grimm",
+      "zh-CN": "格林"
+    },
+    "返回": {
+      "en": "Back",
+      "zh-CN": "返回"
+    },
+    "商店": {
+      "en": "Supply Shop",
+      "zh-CN": "补给铺"
+    },
+    "木头人": {
+      "en": "Training Dummy",
+      "zh-CN": "训练假人"
+    },
+    "基本内功": {
+      "en": "Steady Breath",
+      "zh-CN": "稳息法"
+    },
+    "野球拳": {
+      "en": "Scrapper's Fist",
+      "zh-CN": "街头拳法"
+    },
+    "内功入门": {
+      "en": "Breathing Primer",
+      "zh-CN": "呼吸入门"
+    },
+    "古墓弟子": {
+      "en": "Mist Student",
+      "zh-CN": "迷雾学徒"
+    },
+    "大轮弟子": {
+      "en": "Grail Student",
+      "zh-CN": "圣杯学徒"
+    },
+    "血刀门人": {
+      "en": "Dawn Hunter",
+      "zh-CN": "破晓猎手"
+    },
+    "全真弟子": {
+      "en": "Bremen Watcher",
+      "zh-CN": "不来梅守望者"
+    },
+    "灵鹫弟子": {
+      "en": "Threadhall Student",
+      "zh-CN": "织线厅学徒"
+    },
+    "看破红尘": {
+      "en": "Vowed Scholar",
+      "zh-CN": "立誓修行"
+    },
+    "星宿门人": {
+      "en": "Bridge Watcher",
+      "zh-CN": "虹桥守望者"
+    },
+    "主角之家": {
+      "en": "Grimm's home",
+      "zh-CN": "格林居所"
+    },
+    "碧水": {
+      "en": "Stillwater",
+      "zh-CN": "静水"
+    },
+    "醉酒": {
+      "en": "Drunk",
+      "zh-CN": "醉酒"
+    }
+  },
+  "creationText": [
+    {
+      "title": {
+        "en": "What kind of childhood shaped you?",
+        "zh-CN": "怎样的童年塑造了你？"
+      },
+      "options": {
+        "en": [
+          "A merchant household",
+          "An open steppe",
+          "A respected family",
+          "City streets and borrowed beds",
+          "An adventurous eccentric",
+          "A house full of books"
+        ],
+        "zh-CN": [
+          "商人家庭",
+          "开阔草原",
+          "体面家族",
+          "街头和借来的床铺",
+          "爱冒险的怪人家庭",
+          "堆满书的家"
+        ]
+      }
+    },
+    {
+      "title": {
+        "en": "What would you protect most fiercely?",
+        "zh-CN": "你最想守住什么？"
+      },
+      "options": {
+        "en": [
+          "A well-filled purse",
+          "A lasting bond",
+          "An unbroken resolve",
+          "My freedom",
+          "A crown of my own"
+        ],
+        "zh-CN": [
+          "充实的钱袋",
+          "长久的牵绊",
+          "不屈的意志",
+          "自己的自由",
+          "属于自己的王冠"
+        ]
+      }
+    },
+    {
+      "title": {
+        "en": "Which fault irritates you most?",
+        "zh-CN": "你最看不惯哪种毛病？"
+      },
+      "options": {
+        "en": [
+          "Cruelty towards the vulnerable",
+          "A bully's borrowed courage",
+          "Deceiving one's friends",
+          "Power bought at any cost",
+          "Being distracted by every pretty face"
+        ],
+        "zh-CN": [
+          "欺凌无力反抗的人",
+          "恃强凌弱的胆量",
+          "欺骗自己的朋友",
+          "为力量不计代价",
+          "见到漂亮面孔就走神"
+        ]
+      }
+    },
+    {
+      "title": {
+        "en": "What feels right in your hands?",
+        "zh-CN": "哪种本领使着最顺手？"
+      },
+      "options": {
+        "en": [
+          "My fists",
+          "A sword",
+          "A blade",
+          "Thrown or unusual weapons"
+        ],
+        "zh-CN": [
+          "拳头",
+          "长剑",
+          "单刀",
+          "投掷与奇门兵器"
+        ]
+      }
+    },
+    {
+      "title": {
+        "en": "What sort of companion do you admire?",
+        "zh-CN": "你欣赏怎样的伙伴？"
+      },
+      "options": {
+        "en": [
+          "A patient planner",
+          "A quiet guardian",
+          "A curious traveller",
+          "A fearless brawler",
+          "A disciplined captain"
+        ],
+        "zh-CN": [
+          "耐心谋划的人",
+          "安静可靠的守护者",
+          "充满好奇的旅人",
+          "无所畏惧的斗士",
+          "严守纪律的队长"
+        ]
+      }
+    },
+    {
+      "title": {
+        "en": "When the plan falls apart, what do you do?",
+        "zh-CN": "计划乱了套，你会怎么办？"
+      },
+      "options": {
+        "en": [
+          "Study what went wrong",
+          "Keep going, even stubbornly",
+          "Protect someone close",
+          "Improvise a better idea",
+          "Trust my sword drills"
+        ],
+        "zh-CN": [
+          "研究哪里出了问题",
+          "哪怕固执也坚持下去",
+          "保护身边重要的人",
+          "临场想个更好的主意",
+          "相信平日练过的剑招"
+        ]
+      }
+    },
+    {
+      "title": {
+        "en": "Who taught you your most useful lesson?",
+        "zh-CN": "谁教给你最有用的一课？"
+      },
+      "options": {
+        "en": [
+          "An old guard",
+          "A suspiciously lucky wanderer",
+          "A book with too many footnotes",
+          "A relentless mentor",
+          "A hermit who paid in pine cones",
+          "An excessively cautious apothecary"
+        ],
+        "zh-CN": [
+          "一位老守卫",
+          "一位运气好得可疑的旅人",
+          "一本脚注多得离谱的书",
+          "一位不肯放松要求的导师",
+          "用松果付酬的隐士",
+          "一位过分谨慎的药师"
+        ]
+      }
+    }
+  ],
+  "browserText": {
+    "defaultName": {
+      "en": "Wayfarer",
+      "zh-CN": "旅人"
+    },
+    "currencyName": {
+      "en": "Silver",
+      "zh-CN": "银币"
+    },
+    "currencyUnit": {
+      "en": "silver",
+      "zh-CN": "银币"
+    }
+  },
+  "terms": {
+    "cultivation": {
+      "en": "Training",
+      "zh-CN": "修炼"
+    },
+    "internalSkills": {
+      "en": "Inner disciplines",
+      "zh-CN": "内功"
+    },
+    "externalSkills": {
+      "en": "Attack techniques",
+      "zh-CN": "外功招式"
+    },
+    "energy": {
+      "en": "Energy",
+      "zh-CN": "内力"
+    },
+    "adventure": {
+      "en": "Journey",
+      "zh-CN": "旅程"
+    },
+    "affiliation": {
+      "en": "Independent traveller",
+      "zh-CN": "独行旅人"
+    },
+    "missions": {
+      "en": "Quests & journal",
+      "zh-CN": "任务与旅途记录"
+    }
+  },
+  "taskDescriptions": {
+    "购买物品": {
+      "en": "Visit the Supply Shop in Crossroads and obtain five Restorative Tonics. Ask about beginner supplies first.",
+      "zh-CN": "去十字镇补给铺取得五份恢复药剂，先问店主的新手补给。"
+    },
+    "购买药品完成": {
+      "en": "Return to Grimm's home with your tonics.",
+      "zh-CN": "带着药剂回格林居所复命。"
+    },
+    "教训小孩": {
+      "en": "Arrange a friendly practice bout with the young apprentice in Crossroads.",
+      "zh-CN": "在十字镇和小学徒友好切磋。"
+    },
+    "教训小孩完成": {
+      "en": "Return to Grimm's home after the practice bout.",
+      "zh-CN": "切磋后回格林居所。"
+    },
+    "教训黑老大": {
+      "en": "Challenge the road bully in Rainmarket. A defeat can still teach you something.",
+      "zh-CN": "挑战雨集镇的拦路恶霸，落败也可以带回教训。"
+    },
+    "教训黑老大完成": {
+      "en": "Tell Grimm what you learned from the Rainmarket bully.",
+      "zh-CN": "向格林报告挑战雨集恶霸的结果。"
+    }
+  },
+  "commandText": {
+    "点击左上角玩家头像，可以查看已经获得的武学精通。": {
+      "en": "Open Character to inspect your mastery increases and skill level limits.",
+      "zh-CN": "打开人物面板，查看已获得的专精和技能等级上限。"
+    },
+    "替钟灵寻回闪电貂。": {
+      "en": "Returned Eir's missing stoat.",
+      "zh-CN": "替埃尔找回了小白鼬。"
+    },
+    "找寻闪电貂失败。": {
+      "en": "Eir's missing stoat did not survive.",
+      "zh-CN": "埃尔走失的小白鼬没能活下来。"
+    },
+    "寻回闪电貂。": {
+      "en": "Rescued Eir's stoat.",
+      "zh-CN": "救回了埃尔的小白鼬。"
+    }
+  },
+  "objectives": {
+    "shopping": {
+      "en": "Trade at the Crossroads Supply Shop",
+      "zh-CN": "在十字镇补给铺完成交易"
+    },
+    "companion": {
+      "en": "Meet Eir in Healer's Vale",
+      "zh-CN": "去药师谷邀请埃尔同行"
+    }
+  }
+}

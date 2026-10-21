@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "worlds",
   "runtimePackId": "jyx",
-  "version": "village-humor-1",
+  "version": "bulk-chapter-1",
   "title": "Storybound · Grimm's Request",
   "locale": "en",
   "inventory": "../jyx/assets.json",
@@ -22,6 +22,6 @@
   "source": {
     "sourceCommit": "624f4e87ae251f8e0162e90d1eda11a1ef386cd7",
     "baseUrl": "https://raw.githubusercontent.com/gt88domain/jyxr/85462cbc226ea97cf02294e7e331d13396598300/",
-    "scope": "Presentation overlay of the frozen JYX game: same rule identity, stable IDs, map locations, story flow and numeric data. Independent storage. Grimm and the village lessons / first shop visit are rewritten; later country routes are pending."
+    "scope": "Canonical frozen JYX rules with a view-only display catalog and independent storage. Rewritten village, supplies/tutorial branches, Eir recruitment/pet dialogue and nine school entries; seven-question creation and core English UI. Later country stories and school lessons remain pending. Pet follow-up keeps its original midgame prerequisites."
   }
 }
