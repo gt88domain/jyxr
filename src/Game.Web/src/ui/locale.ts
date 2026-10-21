@@ -1,16 +1,28 @@
-import english from './ui-en.json';
+import english from './ui-en.json' with {type:'json'};
 
 const dictionary:Record<string,string>=english;
 const cjk=/[\u3400-\u9fff]/;
 let contentLabels:Record<string,string>={};
+let activeLanguage='en';
+const fantasyChinese:Record<string,string>={'外功招式':'魔法与战技','武功':'技艺','武学':'技艺','功法':'技艺','内功':'呼吸法','内力':'能量','秘籍':'卷轴','修炼':'研习','拳掌':'施法','奇门':'魔杖','刀法':'刃术','门派':'学派','江湖':'故事世界','师父':'导师'};
 let contentTerms:Array<[string,string]>=[];
 export function setUiDisplayLabels(labels:Record<string,string>={}){
   contentLabels=labels;
   contentTerms=Object.entries(labels).filter(([source])=>cjk.test(source)&&source.length<48).sort((a,b)=>b[0].length-a[0].length);
 }
 const patterns:Array<[RegExp,(...parts:string[])=>string]>=[
+  [/^天赋「([^」]+)」(?:\n([\s\S]*))?$/,(name,description)=>`Talent: ${translateUiText(name)}${description?`\n${translateUiText(description)}`:''}`],
+  [/^(拳掌|剑|刀|奇门)系技能加成\s*([+−-][\d.]+%?)$/,(kind,amount)=>`${({'拳掌':'Spellcraft','剑':'Swordsmanship','刀':'Bladework','奇门':'Wandcraft'} as Record<string,string>)[kind]} technique bonus ${amount}`],
+  [/^奥义「([^」]+)」触发率\s*([+−-][\d.]+%?)$/,(name,amount)=>`Combo ${translateUiText(name)} trigger chance ${amount}`],
+  [/^使用「([^」]+)」时奥义触发倍率增加([\d.]+)$/,(name,amount)=>`${translateUiText(name)} combo chance multiplier +${amount}`],
+  [/^技能「(.*?)」威力\s*([+−-][\d.]+%?)$/,(name,amount)=>`${translateUiText(name)} power ${amount}`],
+  [/^(.*?)\s*→$/,(label)=>`${translateUiText(label.trim())} →`],
+  [/^(\d+)轮$/,(n)=>`${n} turns`],
+  [/^(自动交手|手动出招)\s*·\s*(.*)$/,(mode,speed)=>`${mode==='自动交手'?'Auto':'Manual'} · ${speed}`],
+  [/^秘籍修炼「(.*?)」经验\s*\+(\d+)(?:，提升至\s*(\d+)\s*级)?。$/,(name,xp,level)=>`Scroll study: ${translateUiText(name)} · XP +${xp}${level?` · Rank ${level}`:''}.`],
   [/^随身(.*?)$/,(currency)=>`Carried ${translateUiText(currency)}`],
   [/^【(.*?)】装备【(.*?)】$/,(name,item)=>`${translateUiText(name)} equipped ${translateUiText(item)}.`],
+  [/^【(.*?)】使用【(.*?)】$/,(name,item)=>`${translateUiText(name)} used ${translateUiText(item)}.`],
   [/^恢复气血与(?:内力|Energy)$/ ,()=>`Recover Health and Energy`],
   [/^为(.*?)换上「(.*?)」，替换(.*?)。确认前不会穿戴或消耗物品。$/,(name,item,old)=>`Equip ${translateUiText(item)} on ${name}, replacing ${translateUiText(old)}. Nothing changes before confirmation.`],
   [/^确认装备到(.*)$/,(name)=>`Equip on ${name}`],
@@ -24,17 +36,17 @@ const patterns:Array<[RegExp,(...parts:string[])=>string]>=[
   [/^(.*?)从(\d+)级升至(\d+)级。$/,(name,a,b)=>`${translateUiText(name)} levels up: ${a} → ${b}.`],
   [/^(.*?)加入队伍（(.*?)）。$/,(name,placement)=>`${translateUiText(name)} joins the party (${translateUiText(placement)}).`],
   [/^(.*?)离开队伍。$/,(name)=>`${translateUiText(name)} leaves the party.`],
-  [/^已选择修炼秘籍「(.*?)」。秘籍保留在背包，战斗结算经验将用于此项修炼。$/,(name)=>`Training with ${translateUiText(name)}. The manual remains in inventory; combat settlement awards its training XP.`],
+  [/^已选择修炼秘籍「(.*?)」。秘籍保留在背包，战斗结算经验将用于此项修炼。$/,(name)=>`Studying ${translateUiText(name)}. The scroll remains in inventory; combat settlement awards study XP.`],
   [/^(.*?)\s*·\s*路程与交互\s*(\d+)\s*时辰$/,(description,n)=>`${translateUiText(description)} · Travel and interaction: ${n} time slots`],
   [/^第\s*(\d+)\s*级\s*·\s*(.*)$/,(n,role)=>`Level ${n} · ${translateUiText(role)}`],
   [/^(.*?)\s*·\s*第\s*(\d+)\s*级$/,(role,n)=>`${translateUiText(role)} · Level ${n}`],
   [/^人物经验\s*(.*)$/,(n)=>`Character XP ${n}`],
   [/^伙伴修炼总览\s*·\s*(\d+)\s*人已选秘籍$/,(n)=>`Party training overview · ${n} assigned`],
-  [/^秘籍：\s*(.*)$/,(n)=>`Manual: ${translateUiText(n)}`],
+  [/^秘籍：\s*(.*)$/,(n)=>`Scroll: ${translateUiText(n)}`],
   [/^(修炼|穿戴)门槛\s*·\s*(\d+)\/(\d+)\s*已满足$/,(kind,a,b)=>`${kind==='修炼'?'Training':'Equipment'} requirements · ${a}/${b} met`],
   [/^([✓○])\s*(.*?)（面板）$/,(mark,stat)=>`${mark} ${translateUiText(stat)} (character sheet)`],
   [/^当前\s*(.*?)\s*\/\s*需要\s*(.*)$/,(a,b)=>`Current ${a} / Required ${b}`],
-  [/^秘籍共\s*(\d+)\s*本\s*·\s*空闲\s*(\d+)\s*本$/,(a,b)=>`Manuals: ${a} · Available: ${b}`],
+  [/^秘籍共\s*(\d+)\s*本\s*·\s*空闲\s*(\d+)\s*本$/,(a,b)=>`Scrolls: ${a} · Available: ${b}`],
   [/^第\s*(\d+)\s*重\s*\/\s*(\d+)\s*重(.*)$/,(a,b,tail)=>`Rank ${a}/${b}${translateUiText(tail)}`],
   [/^第\s*(\d+)\s*重\s*·\s*耗(.*?)\s+(\d+)$/,(n,energy,cost)=>`Rank ${n} · ${translateUiText(energy)} ${cost}`],
   [/^第\s*(\d+)\s*重$/,(n)=>`Rank ${n}`],
@@ -65,6 +77,7 @@ const patterns:Array<[RegExp,(...parts:string[])=>string]>=[
   [/^入江湖\s*·\s*(\d+)\s*\/\s*(\d+)$/,(a,b)=>`Your background · ${a}/${b}`],
   [/^(.*?)，以怎样的面貌踏入江湖？$/,(name)=>`${name}, choose your appearance.`],
   [/^随机\s*\+(\d+)$/,(n)=>`Random +${n}`],
+  [/^(.+?)([+−-][\d.]+%?)$/,(stat,amount)=>`${translateUiText(stat.trim())} ${amount}`],
   [/^第\s*(\d+)\s*次生成。重摇重新分配随机属性，保留问答、头像和由问答决定的奖励。$/,(n)=>`Roll ${n}. Reroll random attributes while keeping your answers, portrait and background rewards.`],
   [/^天赋[：:]\s*(.*)$/,(names)=>`Talents: ${translateUiText(names)}`],
   [/^心法[：:]\s*(.*)$/,(names)=>`Inner disciplines: ${translateUiText(names)}`],
@@ -92,9 +105,25 @@ const terms=['银两','元宝','气血','内力','伤害','命中','暴击','防
   .filter(key=>dictionary[key]).sort((a,b)=>b.length-a.length);
 
 export function translateUiText(value:string):string {
+  if(activeLanguage==='zh-CN'){
+    let result=contentLabels[value.trim()]??value;
+    result=result.replace(/([「【])([^」】]+)([」】])/g,(_,left,name,right)=>left+(contentLabels[name]??name)+right);
+    result=result.replace(/^([^：]+)：/,(_,name)=>(contentLabels[name]??name)+'：');
+    result=result.replace(/^(.*?)(休息调息。|施展「.*|受到 .+|加入队伍.*|离开队伍.*|从\d+级.*)$/,(_,name,action)=>(contentLabels[name]??name)+action);
+    for(const [source,target] of contentTerms){
+      const escaped=source.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+      result=result.replace(new RegExp(`(?<![\\u3400-\\u9fff])${escaped}(?![\\u3400-\\u9fff])`,'g'),()=>target);
+    }
+    for(const [source,target] of Object.entries(fantasyChinese))result=result.split(source).join(target);
+    return result;
+  }
   const text=value.trim();
   if(!cjk.test(text))return value;
   let translated=dictionary[text]??contentLabels[text];
+  if(translated===undefined&&text.includes('，')){
+    const parts=text.split('，');
+    if(parts.every(part=>/^[^，]+[+−-][\d.]+%?$/.test(part.trim())))translated=parts.map(part=>translateUiText(part.trim())).join('; ');
+  }
   if(translated===undefined){
     for(const [pattern,format] of patterns){
       const match=text.match(pattern);
@@ -130,7 +159,8 @@ export function translateUiText(value:string):string {
 
 export function startUiLocale(appId:string):void {
   const language=new URL(location.href).searchParams.get('lang')||'en';
-  if(appId!=='jyxr-fantasy-worlds'||language!=='en')return;
+  if(appId!=='jyxr-fantasy-worlds')return;
+  activeLanguage=language==='zh-CN'?'zh-CN':'en';
   const excluded='script,style,code,pre,textarea,[data-testid="dialogue-text"],.story-choices,.hero-heading h2,.dialogue-content h2';
   const attributes=['aria-label','title','placeholder','alt'];
   let observer:MutationObserver;
@@ -139,8 +169,8 @@ export function startUiLocale(appId:string):void {
     // These are appearance choices, not a promise that the player becomes
     // the source portrait's named character. Keep the asset IDs untouched.
     document.querySelectorAll<HTMLElement>('.creation-portraits button').forEach((button,index)=>{
-      button.setAttribute('aria-label',`Choose portrait ${index+1}`);
-      const label=button.querySelector('span');if(label)label.textContent=`Portrait ${index+1}`;
+      button.setAttribute('aria-label',activeLanguage==='en'?`Choose portrait ${index+1}`:`选择外貌 ${index+1}`);
+      const label=button.querySelector('span');if(label)label.textContent=activeLanguage==='en'?`Portrait ${index+1}`:`外貌 ${index+1}`;
     });
     const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
     while(walker.nextNode()){

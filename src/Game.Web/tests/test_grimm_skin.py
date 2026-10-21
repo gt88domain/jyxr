@@ -93,4 +93,17 @@ class GrimmSkinTests(unittest.TestCase):
    for a,b in zip(old['options'],new['options']):
     self.assertEqual({k:v for k,v in a.items() if k!='text'},{k:v for k,v in b.items() if k!='text'})
 
+ def test_practice_participation_is_not_a_fabricated_battle_victory(self):
+  game,_=apply_skin(self.raw,self.skin,'en')
+  goal=next(o for o in game['browser']['objectives'] if o['id']=='training')
+  self.assertEqual((goal['kind'],goal['target']),('story','新手村_武师木头人'))
+  self.assertEqual(next(o for o in game['browser']['objectives'] if o['id']=='team')['kind'],'battle')
+  self.assertEqual([{k:v for k,v in b.items() if k!='name'} for b in game['battles']],[{k:v for k,v in b.items() if k!='name'} for b in self.source['battles']])
+  self.skin['practiceLesson']['storyId']='新手村_南贤开场'
+  with self.assertRaisesRegex(ValueError,'practice lesson'):apply_skin(self.raw,self.skin,'en')
+
+ def test_directions_cannot_reference_a_missing_map_location(self):
+  self.skin['chapterGuide']['steps'][0]['route'][0]['locationId']='missing'
+  with self.assertRaisesRegex(ValueError,'guide location'):apply_skin(self.raw,self.skin,'en')
+
 if __name__=='__main__':unittest.main()

@@ -74,12 +74,12 @@
       "zh-CN": "回格林居所完成结伴练习"
     },
     "cultivation": {
-      "en": "Select a manual for training",
-      "zh-CN": "选择一本读本修炼"
+      "en": "Select a scroll for training",
+      "zh-CN": "选择一本卷轴修炼"
     },
     "training": {
-      "en": "Complete your first spar with the instructor",
-      "zh-CN": "在教官处完成第一场练习"
+      "en": "Finish an introductory practice bout",
+      "zh-CN": "完成一次入门实战练习"
     },
     "equipment": {
       "en": "Put on a piece of equipment",
@@ -110,16 +110,16 @@
       "zh-CN": "格林请我帮助那些停在半途的童话。首先，学点本领，别让自己的故事停在开头。"
     },
     "点击人物状态栏，点击修炼，可以装备内功入门。": {
-      "en": "Open Training and select Breathing Primer.",
-      "zh-CN": "打开人物状态栏的“修炼”，选入《呼吸入门》。"
+      "en": "Open Training and select Steady Breath Scroll.",
+      "zh-CN": "打开人物状态栏的“修炼”，选入《稳息呼吸卷轴》。"
     },
     "装备上的武学经书，在战斗结束后能将获得的经验快速分配到该项武学上，可以迅速提升武学等级。": {
-      "en": "A selected training manual receives battle experience. Reading alone will not frighten the dummy.",
-      "zh-CN": "选入修炼栏的读本会获得战斗经验。只捧着书看，可吓不倒训练假人。"
+      "en": "A selected training scroll receives battle experience. Reading alone will not frighten the dummy.",
+      "zh-CN": "选入修炼栏的卷轴会获得战斗经验。只捧着书看，可吓不倒训练假人。"
     },
     "入门体验告一段落。原版买药教学、门派选择和其他江湖地点已逐步接入；可继续完成南贤的原版任务。尚未迁移的特殊流程不会被当作已完成。": {
-      "en": "First lessons complete. Review your equipment, training and companions, then save before setting out.",
-      "zh-CN": "入门练习暂告一段落。检查装备、修炼和同行伙伴，保存好进度，再继续上路。"
+      "en": "That is how two travellers become a team. Review your opening-chapter goals and save your journey. More stories await beyond this field trial; those later chapters are still being rewritten.",
+      "zh-CN": "两个旅人就这样成为了搭档。检查前期章节目标，再保存这段旅程。实地委托之外还有更多故事，后续章节仍在逐批改写。"
     }
   },
   "dialogueEdits": {
@@ -166,8 +166,8 @@
           {
             "speaker": "南贤",
             "text": {
-              "en": "A beginner's manual. Learn here first; I would hate to file you under 'cautionary tale'.",
-              "zh-CN": "配一本入门读本。先在村里学点本领，我可不想把你的事迹编进《前车之鉴》。"
+              "en": "A beginner's scroll. Learn here first; I would hate to file you under 'cautionary tale'.",
+              "zh-CN": "配一本入门卷轴。先在村里学点本领，我可不想把你的事迹编进《前车之鉴》。"
             }
           }
         ]
@@ -181,8 +181,8 @@
           {
             "speaker": "南贤",
             "text": {
-              "en": "Take this Breathing Primer. Start with steady breathing. Most heroes find it useful to keep doing that.",
-              "zh-CN": "这本《呼吸入门》给你。先学着稳住气息——大多数英雄都觉得，持续呼吸是个好习惯。"
+              "en": "Take this Steady Breath Scroll. Start with steady breathing. Most heroes find it useful to keep doing that.",
+              "zh-CN": "这本《稳息呼吸卷轴》给你。先学着稳住气息——大多数英雄都觉得，持续呼吸是个好习惯。"
             }
           }
         ]
@@ -399,14 +399,14 @@
             "speaker": "武师",
             "text": {
               "en": "Attacks are the techniques you use on the field. Learn a useful mix; ten answers to the same problem are still one answer.",
-              "zh-CN": "外功招式是战场上主动使出的本领。搭配要实用，十招都解决同一个问题，遇上别的问题还是没辙。"
+              "zh-CN": "魔法与战技是战场上主动使出的本领。搭配要实用，十招都解决同一个问题，遇上别的问题还是没辙。"
             }
           },
           {
             "speaker": "武师",
             "text": {
-              "en": "Inner disciplines strengthen your fighting. You can learn several, but only one is equipped at a time.",
-              "zh-CN": "内功影响你的战斗能力。可以学会多种，但同一时间只能装备一种。"
+              "en": "breathing methods strengthen your fighting. You can learn several, but only one is equipped at a time.",
+              "zh-CN": "呼吸法影响你的战斗能力。可以学会多种，但同一时间只能装备一种。"
             }
           },
           {
@@ -420,7 +420,7 @@
             "speaker": "武师",
             "text": {
               "en": "Fists, swords, blades and unusual weapons reward different training. Pick a direction before collecting one of everything.",
-              "zh-CN": "拳掌、剑法、刀法和奇门各有专长。先想好怎么打，再考虑把每样兵器都背在身上。"
+              "zh-CN": "施法、剑法、刃术和魔杖各有专长。先想好怎么打，再考虑把每样兵器都背在身上。"
             }
           }
         ]
@@ -464,7 +464,7 @@
             "speaker": "武师",
             "text": {
               "en": "Schools teach advanced techniques through their own tasks. Earn their trust, and the better lessons follow.",
-              "zh-CN": "门派通常会通过任务传授高深本领。先赢得信任，才有后面的课。"
+              "zh-CN": "学派通常会通过任务传授高深本领。先赢得信任，才有后面的课。"
             }
           },
           {
@@ -485,22 +485,22 @@
           {
             "speaker": "武师",
             "text": {
-              "en": "Attacks can favour Yin or Yang. Your equipped inner discipline supplies those affinities, so check the pairing.",
-              "zh-CN": "招式有阴、阳适性之分。当前装备的内功提供对应加成，搭配之前先看看数值。"
+              "en": "Attacks can favour Radiant or Umbral affinity. Your active breathing method supplies those affinities, so check the pairing.",
+              "zh-CN": "攻击分为光辉与幽影亲和。当前运用的呼吸法提供对应加成，搭配之前先看看数值。"
             }
           },
           {
             "speaker": "武师",
             "text": {
-              "en": "Yang attacks use its Yang affinity; Yin attacks use its Yin affinity. Harmonious attacks use whichever value is higher.",
-              "zh-CN": "阳性招式取阳适性，阴性招式取阴适性；调和招式取两者中较高的值。"
+              "en": "Radiant attacks use Radiant affinity; Umbral attacks use Umbral affinity. Balanced attacks use whichever value is higher.",
+              "zh-CN": "光辉攻击取光辉亲和，幽影攻击取幽影亲和；平衡攻击取两者中较高的值。"
             }
           },
           {
             "speaker": "武师",
             "text": {
               "en": "A fine technique with the wrong discipline is a fine technique having a disappointing afternoon.",
-              "zh-CN": "招式再漂亮，内功没配好，也只能漂亮地吃亏。"
+              "zh-CN": "招式再漂亮，呼吸法没配好，也只能漂亮地吃亏。"
             }
           }
         ]
@@ -653,8 +653,11 @@
       }
     ]
   },
-  "version": "bulk-chapter-1",
-  "chapters": ["chapter-start.json"],
+  "version": "first-loop-1",
+  "chapters": [
+    "chapter-start.json",
+    "chapter-guide.json"
+  ],
   "speakerNames": {
     "武师": {
       "en": "Instructor",
@@ -708,17 +711,17 @@
           "How do attacks and disciplines work?",
           "What do talents actually do?",
           "Where can I learn advanced techniques?",
-          "How do Yin and Yang affect my attacks?",
+          "How do Radiant and Umbral affinities work?",
           "What should I do when a fight gets difficult?",
           "How do I raise a skill's level limit?"
         ],
         "zh-CN": [
           "【练习】让我试试训练假人。",
           "【离开】今天先少挨几下。",
-          "招式和内功该怎么搭配？",
+          "招式和呼吸法该怎么搭配？",
           "天赋究竟有什么用？",
           "去哪里学更高深的本领？",
-          "阴阳适性怎样影响招式？",
+          "光辉和幽影亲和怎样影响攻击？",
           "碰上难打的敌人怎么办？",
           "怎样提高技能等级上限？"
         ]
@@ -827,12 +830,12 @@
     "items": {
       "内功入门": {
         "name": {
-          "en": "Breathing Primer",
-          "zh-CN": "呼吸入门"
+          "en": "Steady Breath Scroll",
+          "zh-CN": "稳息呼吸卷轴"
         },
         "description": {
           "en": "A beginner's guide to Steady Breath. Select it for training to build the skill through battle experience. Breathing remains strongly recommended.",
-          "zh-CN": "稳息法的入门读本。选入修炼栏后，通过战斗经验提升对应技能。呼吸本身也请继续保持。"
+          "zh-CN": "稳息呼吸法的入门卷轴。选入修炼栏后，通过战斗经验提升对应技能。呼吸本身也请继续保持。"
         }
       },
       "草帽": {
@@ -882,19 +885,19 @@
         },
         "description": {
           "en": "Restores 300 HP and 300 energy. Finally, a remedy that belongs in a picnic basket.",
-          "zh-CN": "恢复300点生命和300点内力。总算有一样补给适合放进野餐篮了。"
+          "zh-CN": "恢复300点生命和300点能量。总算有一样补给适合放进野餐篮了。"
         }
       }
     },
     "externalSkills": {
       "野球拳": {
         "name": {
-          "en": "Scrapper's Fist",
-          "zh-CN": "街头拳法"
+          "en": "Wayfarer's Arcane Strike",
+          "zh-CN": "旅人奥术击"
         },
         "description": {
-          "en": "An unpolished fighting style with considerable room to grow. Graceful? Rarely. Persistent? Absolutely.",
-          "zh-CN": "招式不算体面，成长余地却很大。优雅谈不上，纠缠到底倒是在行。"
+          "en": "A beginner's force spell with considerable room to grow. Graceful? Rarely. Persistent? Absolutely.",
+          "zh-CN": "成长余地很大的基础力场魔法。优雅谈不上，纠缠到底倒是在行。"
         }
       }
     },
@@ -902,11 +905,11 @@
       "基本内功": {
         "name": {
           "en": "Steady Breath",
-          "zh-CN": "稳息法"
+          "zh-CN": "稳息呼吸法"
         },
         "description": {
-          "en": "A foundational inner discipline with balanced Yin and Yang. An excellent place to begin staying on your feet.",
-          "zh-CN": "阴阳均衡的基础内功。学会稳住气息，再考虑怎样惊艳全场。"
+      "en": "A steady breathing rhythm that balances effort and recovery. Learn to stay on your feet before attempting a dramatic entrance.",
+      "zh-CN": "协调发力与恢复的基础呼吸法。先学会站稳，再考虑怎样惊艳全场。"
         }
       }
     },

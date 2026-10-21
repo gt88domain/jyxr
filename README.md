@@ -4,6 +4,8 @@
 
 [本批次范围、备份与回溯](docs/STORYBOUND_BULK_CHAPTER.md)。源码备份标签 `storybound-before-bulk-2026-10-21`，部署备份标签 `storybound-pages-before-bulk-2026-10-21`；本批次分支 `feat/storybound-bulk-chapter`，以 PR 对照 fantasy-worlds。
 
+前期闭环的推荐测试路线见 [FIRST_LOOP.md](src/Game.Web/content/worlds/FIRST_LOOP.md)，采用独行道路，完成装备、卷轴、战斗、交易、招募、两人配合与存读档9项目标。首屏指引来自内容配置；训练课记录实际参与，结伴练习仍要求真实获胜。前期技能与道具统一使用魔法、呼吸法、剑术、卷轴和药剂等名称，示例见 [TERMINOLOGY.md](src/Game.Web/content/worlds/TERMINOLOGY.md)。本轮开始前的源码与部署另存 `storybound-before-first-loop-2026-10-21`、`storybound-pages-before-first-loop-2026-10-21` 标签。
+
 - [Game · Grimm's Request](https://gt88domain.github.io/jyxr/fantasy-worlds/game/)
 - [同一游戏的中文文案对照](https://gt88domain.github.io/jyxr/fantasy-worlds/game/?lang=zh-CN)；[中文原版游戏](https://gt88domain.github.io/jyxr/)
 

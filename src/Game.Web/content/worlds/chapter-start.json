@@ -24,7 +24,7 @@
             "speaker": "南贤",
             "text": {
               "en": "A short one, with supplies and lessons attached. Or you may choose a school and set out at once.",
-              "zh-CN": "一趟短差，附带补给和几堂课。你也可以直接选择门派，独自上路。"
+              "zh-CN": "一趟短差，附带补给和几堂课。你也可以直接选择学派，独自上路。"
             }
           }
         ]
@@ -107,8 +107,8 @@
           {
             "speaker": "商人",
             "text": {
-              "en": "Grimm sent you? Excellent. I have a beginner's manual for you. Choose a fighting style before you choose a heroic pose.",
-              "zh-CN": "格林让你来的？正好，我这里有本新手读本送你。先选打法，再选英雄的站姿。"
+              "en": "Grimm sent you? Excellent. I have a beginner's scroll for you. Choose a fighting style before you choose a heroic pose.",
+              "zh-CN": "格林让你来的？正好，我这里有本新手卷轴送你。先选打法，再选英雄的站姿。"
             }
           }
         ]
@@ -123,7 +123,7 @@
             "speaker": "主角",
             "text": {
               "en": "A free lesson? I was warned shops were dangerous.",
-              "zh-CN": "免费送读本？我还听说，商店是很危险的地方。"
+              "zh-CN": "免费送卷轴？我还听说，商店是很危险的地方。"
             }
           },
           {
@@ -395,7 +395,7 @@
             "speaker": "南贤",
             "text": {
               "en": "Consider it a contribution. This lesson also raises Steady Breath's level limit through mastery.",
-              "zh-CN": "算是赞助吧。这堂课也会通过专精，提高稳息法的等级上限。"
+              "zh-CN": "算是赞助吧。这堂课也会通过专精，提高稳息呼吸法的等级上限。"
             }
           }
         ]
@@ -568,7 +568,7 @@
             "speaker": "南贤",
             "text": {
               "en": "Knowing when to leave is a skill too. This lesson raises Steady Breath's level limit through mastery.",
-              "zh-CN": "知道何时离开，也是一门本领。这堂课会通过专精，提高稳息法的等级上限。"
+              "zh-CN": "知道何时离开，也是一门本领。这堂课会通过专精，提高稳息呼吸法的等级上限。"
             }
           }
         ]
@@ -635,7 +635,7 @@
             "speaker": "南贤",
             "text": {
               "en": "Choose a school if you wish, or make your own way. Neither road comes with a guarantee.",
-              "zh-CN": "接下来可以选个门派，也可以走自己的路。两条路，都不附送成功保证。"
+              "zh-CN": "接下来可以选个学派，也可以走自己的路。两条路，都不附送成功保证。"
             }
           },
           {
@@ -657,7 +657,7 @@
             "speaker": "南贤",
             "text": {
               "en": "Each school has its own lessons, duties and peculiar habits. Read what it offers before joining.",
-              "zh-CN": "各个门派都有自己的课业、责任，还有些古怪习惯。加入之前，先看清楚教什么。"
+              "zh-CN": "各个学派都有自己的课业、责任，还有些古怪习惯。加入之前，先看清楚教什么。"
             }
           },
           {
@@ -707,7 +707,7 @@
             "speaker": "南贤",
             "text": {
               "en": "Then take a mastery increase for Steady Breath. Strong foundations are less glamorous than swords, but harder to lose.",
-              "zh-CN": "那就给稳息法增加一项专精。基础没有宝剑风光，倒也没那么容易弄丢。"
+              "zh-CN": "那就给稳息呼吸法增加一项专精。基础没有宝剑风光，倒也没那么容易弄丢。"
             }
           }
         ]
@@ -1221,7 +1221,7 @@
             "speaker": "主角",
             "text": {
               "en": "Grimm mentioned a school. He did not mention quite this much snow.",
-              "zh-CN": "格林说过有个门派，倒没说会有这么多雪。"
+              "zh-CN": "格林说过有个学派，倒没说会有这么多雪。"
             }
           },
           {
@@ -1689,27 +1689,27 @@
         ],
         "zh-CN": [
           "接受教学。我还挺想平安回来的。",
-          "直接选择门派，出发。"
+          "直接选择学派，出发。"
         ]
       }
     },
     "original_新手引导.买药": {
       "prompt": {
-        "en": "Which manual would you like?",
-        "zh-CN": "想要哪一种读本？"
+        "en": "Which scroll would you like?",
+        "zh-CN": "想要哪一种卷轴？"
       },
       "options": {
         "en": [
-          "Unarmed — Hearthguard Fist",
-          "Sword — Green Serpent",
-          "Blade — Valley Cut",
-          "Staff — Wayward Staff"
+          "Magic — Hearthward Sigil",
+          "Sword — Serpent Swordplay",
+          "Blade — Thornblade Arts",
+          "Wand — Wandering Wandcraft"
         ],
         "zh-CN": [
-          "拳掌：护炉拳",
+          "魔法：护炉符术",
           "剑法：青蛇剑术",
-          "刀法：谷地刀术",
-          "奇门：游杖术"
+          "刃术：荆刃战技",
+          "魔杖：游杖魔法"
         ]
       }
     },
@@ -1955,12 +1955,12 @@
         },
         "description": {
           "en": "Heimdall's watch, with training in unusual and poisonous techniques.",
-          "zh-CN": "海姆达尔的守望之地，也研习奇门与毒术。"
+          "zh-CN": "海姆达尔的守望之地，也研习魔杖与毒术。"
         }
       },
       "无门派": {
         "name": {
-          "en": "Unaffiliated",
+          "en": "Independent Traveller",
           "zh-CN": "独行道路"
         },
         "description": {
@@ -1972,17 +1972,17 @@
     "externalSkills": {
       "罗汉拳": {
         "name": {
-          "en": "Hearthguard Fist",
-          "zh-CN": "护炉拳"
+          "en": "Hearthward Sigil",
+          "zh-CN": "护炉符术"
         },
         "description": {
-          "en": "Foundational unarmed training: direct, disciplined strikes.",
-          "zh-CN": "基础拳掌训练，讲究直接而有节制的发力。"
+          "en": "A foundational attack sigil. Its power, cost and reach are shown in the technique panel.",
+          "zh-CN": "基础攻击符术。威力、消耗和距离可在技能面板查看。"
         }
       },
       "青蟒剑法": {
         "name": {
-          "en": "Green Serpent",
+          "en": "Serpent Swordplay",
           "zh-CN": "青蛇剑术"
         },
         "description": {
@@ -1992,18 +1992,18 @@
       },
       "万劫刀法": {
         "name": {
-          "en": "Valley Cut",
-          "zh-CN": "谷地刀术"
+          "en": "Thornblade Arts",
+          "zh-CN": "荆刃战技"
         },
         "description": {
           "en": "A simple valley blade style. Good habits are worth more than a grand name.",
-          "zh-CN": "朴素的谷地刀术，好习惯比响亮的名字更值钱。"
+          "zh-CN": "朴素的荆刃战技，好习惯比响亮的名字更值钱。"
         }
       },
       "疯魔杖法": {
         "name": {
-          "en": "Wayward Staff",
-          "zh-CN": "游杖术"
+          "en": "Wandering Wandcraft",
+          "zh-CN": "游杖魔法"
         },
         "description": {
           "en": "An energetic staff style for fighters who dislike standing still.",
@@ -2012,8 +2012,8 @@
       },
       "猴抓": {
         "name": {
-          "en": "Raking Swipe",
-          "zh-CN": "扫掠爪"
+          "en": "Clockwork Swipe",
+          "zh-CN": "机关扫击"
         },
         "description": {
           "en": "A quick raking attack. Even a practice dummy can make a point with it.",
@@ -2022,40 +2022,40 @@
       },
       "华山剑法": {
         "name": {
-          "en": "Cranepeak Sword",
-          "zh-CN": "鹤峰剑术"
+          "en": "Crane-wing Swordplay",
+          "zh-CN": "鹤翼剑术"
         }
       },
       "南山刀法": {
         "name": {
-          "en": "Hillguard Blade",
-          "zh-CN": "守丘刀术"
+          "en": "Highland Cleave",
+          "zh-CN": "高地劈斩"
         }
       },
       "飘雪穿云掌": {
         "name": {
-          "en": "Cloudfall Palm",
-          "zh-CN": "落云掌"
+          "en": "Cloudburst Spell",
+          "zh-CN": "云涌魔法"
         }
       },
       "蛇鹤八打": {
         "name": {
-          "en": "Serpent and Crane",
-          "zh-CN": "蛇鹤八式"
+          "en": "Twin-Form Sigil",
+          "zh-CN": "双形符术"
         }
       },
       "燃木刀法": {
         "name": {
-          "en": "Ember Blade",
-          "zh-CN": "烬火刀术"
+          "en": "Emberblade Swordplay",
+          "zh-CN": "烬刃剑术"
         }
       }
     },
     "internalSkills": {
       "石梁心法": {
         "name": {
-          "en": "Stonebridge Discipline",
-          "zh-CN": "石桥心法"
+          "en": "Stonebridge Breathing",
+          "zh-CN": "石桥呼吸法"
         }
       }
     },
@@ -2067,7 +2067,7 @@
         },
         "description": {
           "en": "A self-targeted rally: gains 2 rage and Attack Up III for 5 turns. Costs 100 energy; cooldown 4.",
-          "zh-CN": "对自己使用：获得2点怒气，以及持续5回合的三级攻击强化。消耗100内力，冷却4回合。"
+          "zh-CN": "对自己使用：获得2点怒气，以及持续5回合的三级攻击强化。消耗100能量，冷却4回合。"
         }
       },
       "闪电貂": {
@@ -2077,7 +2077,7 @@
         },
         "description": {
           "en": "Direct Eir's stoat at one target within 5 tiles, applying level-20 poison for 3 turns. Costs 100 energy and 2 rage; cooldown 5.",
-          "zh-CN": "指挥埃尔的小白鼬攻击5格内的单个目标，施加持续3回合的二十级中毒。消耗100内力和2怒气，冷却5回合。"
+          "zh-CN": "指挥埃尔的小白鼬攻击5格内的单个目标，施加持续3回合的二十级中毒。消耗100能量和2怒气，冷却5回合。"
         }
       }
     },
@@ -2098,8 +2098,8 @@
           "zh-CN": "小人物的运气"
         },
         "description": {
-          "en": "Adds 0.1 to the legacy legendary-combo chance multiplier for Scrapper's Fist.",
-          "zh-CN": "为街头拳法的奥义触发倍率额外增加0.1。"
+          "en": "Adds 0.1 to the legacy legendary-combo chance multiplier for Wayfarer's Arcane Strike.",
+          "zh-CN": "为旅人奥术击的奥义触发倍率额外增加0.1。"
         }
       },
       "草头百姓": {
@@ -2108,8 +2108,8 @@
           "zh-CN": "平民之志"
         },
         "description": {
-          "en": "Enables Scrapper's Fist combinations and raises Otherworlder's low-health activation threshold.",
-          "zh-CN": "帮助触发街头拳法奥义，并提高异乡来客的触发血线。"
+          "en": "Enables Wayfarer's Arcane Strike combinations and raises Otherworlder's low-health activation threshold.",
+          "zh-CN": "帮助触发旅人奥术击奥义，并提高异乡来客的触发血线。"
         }
       },
       "猎人": {
@@ -2351,8 +2351,14 @@
     },
     "items": {
       "新手礼包-大蟠桃": {
-        "name": {"en": "Traveller's Welcome Fruit", "zh-CN": "旅人迎新果"},
-        "description": {"en": "Permanently adds 100 maximum Health and 100 maximum Energy.", "zh-CN": "永久增加100点生命上限和100点能量上限。"}
+        "name": {
+          "en": "Wayfarer's Welcome Elixir",
+          "zh-CN": "旅人启程药剂"
+        },
+        "description": {
+          "en": "Permanently adds 100 maximum Health and 100 maximum Energy.",
+          "zh-CN": "永久增加100点生命上限和100点能量上限。"
+        }
       },
       "九转熊蛇丸": {
         "name": {
@@ -2361,7 +2367,7 @@
         },
         "description": {
           "en": "Restores 1000 energy. Restores 30% of maximum energy.",
-          "zh-CN": "恢复1000点内力。恢复最大内力的30%。"
+          "zh-CN": "恢复1000点能量。恢复最大能量的30%。"
         }
       },
       "白酒": {
@@ -2386,8 +2392,8 @@
       },
       "七星黄蜡丹": {
         "name": {
-          "en": "Sevenstar Pill",
-          "zh-CN": "七星药丸"
+          "en": "Starlight Draught",
+          "zh-CN": "星光药剂"
         },
         "description": {
           "en": "Removes poison according to the listed cleansing limits.",
@@ -2401,7 +2407,7 @@
         },
         "description": {
           "en": "Restores 2500 HP. Restores 2500 energy. Removes poison according to the listed cleansing limits.",
-          "zh-CN": "恢复2500点生命。恢复2500点内力。按列出的净化上限解除中毒。"
+          "zh-CN": "恢复2500点生命。恢复2500点能量。按列出的净化上限解除中毒。"
         }
       },
       "阔剑": {
@@ -2416,8 +2422,8 @@
       },
       "柳叶刀": {
         "name": {
-          "en": "Willow Blade",
-          "zh-CN": "柳叶刀"
+          "en": "Ranger's Sabre",
+          "zh-CN": "游侠弯刀"
         },
         "description": {
           "en": "Attack +50. Critical chance +2%. Requires Blades 25. Requires Agility 25. Other modifiers are listed with the item.",
@@ -2437,7 +2443,7 @@
       "金蛇剑": {
         "name": {
           "en": "Serpent-Gold Sword",
-          "zh-CN": "金蛇剑"
+          "zh-CN": "蛇纹金剑"
         },
         "description": {
           "en": "Attack +100. Critical chance +5%. Requires Swords 55. Requires Agility 55. Other modifiers are listed with the item.",
@@ -2676,8 +2682,8 @@
       },
       "木鱼": {
         "name": {
-          "en": "Prayer Block",
-          "zh-CN": "木祷鱼"
+          "en": "Focus Talisman",
+          "zh-CN": "凝神护符"
         },
         "description": {
           "en": "Attack +3. Defence +10. Other modifiers are listed with the item.",
@@ -2686,102 +2692,102 @@
       },
       "罗汉拳谱": {
         "name": {
-          "en": "Hearthguard Manual",
-          "zh-CN": "护炉拳读本"
+          "en": "Hearthward Sigil Scroll",
+          "zh-CN": "护炉符术卷轴"
         },
         "description": {
-          "en": "Training manual for Hearthguard Fist.",
-          "zh-CN": "护炉拳的修炼读本。"
+          "en": "Training scroll for Hearthward Sigil.",
+          "zh-CN": "护炉符术的修炼卷轴。"
         }
       },
       "飘雪穿云掌法": {
         "name": {
-          "en": "Cloudfall Manual",
-          "zh-CN": "落云掌读本"
+          "en": "Cloudburst Spell Scroll",
+          "zh-CN": "云涌魔法卷轴"
         },
         "description": {
-          "en": "Training manual for Cloudfall Palm.",
-          "zh-CN": "落云掌的修炼读本。"
+          "en": "Training scroll for Cloudburst Spell.",
+          "zh-CN": "云涌魔法的修炼卷轴。"
         }
       },
       "华山剑法秘籍": {
         "name": {
-          "en": "Cranepeak Sword Manual",
-          "zh-CN": "鹤峰剑术读本"
+          "en": "Crane-wing Swordplay Scroll",
+          "zh-CN": "鹤翼剑术卷轴"
         },
         "description": {
-          "en": "Training manual for Cranepeak Sword.",
-          "zh-CN": "鹤峰剑术的修炼读本。"
+          "en": "Training scroll for Crane-wing Swordplay.",
+          "zh-CN": "鹤翼剑术的修炼卷轴。"
         }
       },
       "青蟒剑法秘籍": {
         "name": {
-          "en": "Green Serpent Manual",
-          "zh-CN": "青蛇剑术读本"
+          "en": "Serpent Swordplay Scroll",
+          "zh-CN": "青蛇剑术卷轴"
         },
         "description": {
-          "en": "Training manual for Green Serpent.",
-          "zh-CN": "青蛇剑术的修炼读本。"
+          "en": "Training scroll for Serpent Swordplay.",
+          "zh-CN": "青蛇剑术的修炼卷轴。"
         }
       },
       "南山刀法谱": {
         "name": {
-          "en": "Hillguard Blade Manual",
-          "zh-CN": "守丘刀术读本"
+          "en": "Highland Cleave Scroll",
+          "zh-CN": "高地劈斩卷轴"
         },
         "description": {
-          "en": "Training manual for Hillguard Blade.",
-          "zh-CN": "守丘刀术的修炼读本。"
+          "en": "Training scroll for Highland Cleave.",
+          "zh-CN": "高地劈斩的修炼卷轴。"
         }
       },
       "万劫刀法谱": {
         "name": {
-          "en": "Valley Blade Manual",
-          "zh-CN": "谷地刀术读本"
+          "en": "Thornblade Scroll",
+          "zh-CN": "荆刃战技卷轴"
         },
         "description": {
-          "en": "Training manual for Valley Cut.",
-          "zh-CN": "谷地刀术的修炼读本。"
+          "en": "Training scroll for Thornblade Arts.",
+          "zh-CN": "荆刃战技的修炼卷轴。"
         }
       },
       "疯魔杖法秘诀": {
         "name": {
-          "en": "Wayward Staff Manual",
-          "zh-CN": "游杖术读本"
+          "en": "Wandering Wand Scroll",
+          "zh-CN": "游杖魔法卷轴"
         },
         "description": {
-          "en": "Training manual for Wayward Staff.",
-          "zh-CN": "游杖术的修炼读本。"
+          "en": "Training scroll for Wandering Wandcraft.",
+          "zh-CN": "游杖魔法的修炼卷轴。"
         }
       },
       "蛇鹤八打": {
         "name": {
-          "en": "Serpent and Crane",
-          "zh-CN": "蛇鹤八式"
+          "en": "Twin-Form Sigil",
+          "zh-CN": "双形符术"
         },
         "description": {
-          "en": "Training manual for Serpent and Crane.",
-          "zh-CN": "蛇鹤八式的修炼读本。"
+          "en": "Training scroll for Twin-Form Sigil.",
+          "zh-CN": "双形符术的修炼卷轴。"
         }
       },
       "石梁心法秘籍": {
         "name": {
-          "en": "Stonebridge Manual",
-          "zh-CN": "石桥心法读本"
+          "en": "Stonebridge Breathing Scroll",
+          "zh-CN": "石桥呼吸卷轴"
         },
         "description": {
-          "en": "Training manual for Stonebridge Discipline.",
-          "zh-CN": "石桥心法的修炼读本。"
+          "en": "Training scroll for Stonebridge Breathing.",
+          "zh-CN": "石桥呼吸法的修炼卷轴。"
         }
       },
       "燃木刀法": {
         "name": {
-          "en": "Ember Blade",
-          "zh-CN": "烬火刀术"
+          "en": "Emberblade Swordplay",
+          "zh-CN": "烬刃剑术"
         },
         "description": {
-          "en": "Training manual for Ember Blade.",
-          "zh-CN": "烬火刀术的修炼读本。"
+          "en": "Training scroll for Emberblade Swordplay.",
+          "zh-CN": "烬刃剑术的修炼卷轴。"
         }
       },
       "松果": {
@@ -2801,13 +2807,13 @@
         },
         "description": {
           "en": "Permanently increases maximum HP and maximum energy by 300 each.",
-          "zh-CN": "永久提高300点最大生命和300点最大内力。"
+          "zh-CN": "永久提高300点最大生命和300点最大能量。"
         }
       },
       "道家仙丹": {
         "name": {
           "en": "Hermit's Elixir",
-          "zh-CN": "隐士灵丹"
+          "zh-CN": "隐士灵药"
         },
         "description": {
           "en": "Permanently increases maximum HP by 500.",
@@ -2826,8 +2832,8 @@
       },
       "洗练书": {
         "name": {
-          "en": "Reforging Notes",
-          "zh-CN": "洗练笔记"
+          "en": "Reforging Scroll",
+          "zh-CN": "重铸卷轴"
         },
         "description": {
           "en": "Notes on reforging random item modifiers. Not a combat consumable.",
@@ -2984,7 +2990,7 @@
       },
       "description": {
         "en": "A modest mountain school, with a reputation it would like to improve.",
-        "zh-CN": "山间的小门派，正盼着改善自己的名声。"
+        "zh-CN": "山间的小学派，正盼着改善自己的名声。"
       }
     },
     "峨眉山": {
@@ -3254,7 +3260,7 @@
       },
       "description": {
         "en": "A school of balance, patience, and well-timed replies.",
-        "zh-CN": "讲究平衡、耐心和恰当还击时机的门派。"
+        "zh-CN": "讲究平衡、耐心和恰当还击时机的学派。"
       }
     },
     "长安": {
@@ -3594,7 +3600,7 @@
       },
       "description": {
         "en": "A school of balance, patience, and well-timed replies.",
-        "zh-CN": "讲究平衡、耐心和恰当还击时机的门派。"
+        "zh-CN": "讲究平衡、耐心和恰当还击时机的学派。"
       }
     }
   },
@@ -3747,7 +3753,7 @@
         },
         "description": {
           "en": "A modest mountain school, with a reputation it would like to improve.",
-          "zh-CN": "山间的小门派，正盼着改善自己的名声。"
+          "zh-CN": "山间的小学派，正盼着改善自己的名声。"
         }
       },
       "峨眉山": {
@@ -4017,7 +4023,7 @@
         },
         "description": {
           "en": "A school of balance, patience, and well-timed replies.",
-          "zh-CN": "讲究平衡、耐心和恰当还击时机的门派。"
+          "zh-CN": "讲究平衡、耐心和恰当还击时机的学派。"
         }
       },
       "长安": {
@@ -4338,8 +4344,8 @@
           "zh-CN": "补给铺"
         },
         "description": {
-          "en": "Tonics, equipment and training manuals. Ask before paying.",
-          "zh-CN": "药剂、装备和读本。掏钱之前，先问问。"
+          "en": "Tonics, equipment and training scrolls. Ask before paying.",
+          "zh-CN": "药剂、装备和卷轴。掏钱之前，先问问。"
         }
       },
       "返回": {
@@ -4429,34 +4435,118 @@
     }
   },
   "uiLabels": {
-    "终南山全真教": {"en": "The Bremen Watch keeps its training grounds on a wooded mountain.", "zh-CN": "不来梅守望的训练场坐落在林间山上。"},
-    "王重阳": {"en": "Iron John", "zh-CN": "铁汉斯"},
-    "张三丰": {"en": "Taiyi Zhenren", "zh-CN": "太乙真人"},
-    "全真七子": {"en": "The Watch Elders", "zh-CN": "守望长老"},
-    "武当七侠": {"en": "The Seven Wardens", "zh-CN": "七位守护者"},
-    "四大剑婢": {"en": "The Four Threadkeepers", "zh-CN": "四位守线人"},
-    "玄铁剑法": {"en": "Ironweight Sword", "zh-CN": "沉铁剑术"},
-    "玉女素心剑": {"en": "Twin Hearts Sword", "zh-CN": "双心剑术"},
-    "左右互搏术": {"en": "Ambidexterity", "zh-CN": "双手协同"},
-    "龙象般若功": {"en": "Giant's Resolve", "zh-CN": "巨人之志"},
-    "火焰刀法": {"en": "Flame Edge", "zh-CN": "焰锋"},
-    "血刀大法": {"en": "Crimson Fang Technique", "zh-CN": "赤牙刀术"},
-    "血海魔功": {"en": "Bloodtide Discipline", "zh-CN": "血潮心法"},
-    "九阴神功": {"en": "Ninefold Moon Discipline", "zh-CN": "九重月心法"},
-    "重阳剑法": {"en": "Wildwood Sword", "zh-CN": "荒林剑术"},
-    "三花聚顶掌": {"en": "Threefold Bloom", "zh-CN": "三重花掌"},
-    "天山折梅手": {"en": "Winter Branch Hands", "zh-CN": "冬枝手"},
-    "北冥神功": {"en": "Deepwell Discipline", "zh-CN": "深井心法"},
-    "八荒六合唯我独尊功": {"en": "Sovereign Thread", "zh-CN": "统御之线"},
-    "生死符": {"en": "Thread of Fate", "zh-CN": "命运丝印"},
-    "易筋经": {"en": "Body Tempering", "zh-CN": "锻体经"},
-    "洗髓经": {"en": "Inner Renewal", "zh-CN": "内息更新"},
-    "纯阳无极功": {"en": "Sunwell Discipline", "zh-CN": "日泉心法"},
-    "太极拳": {"en": "Turning Tide Fist", "zh-CN": "回潮拳"},
-    "剑": {"en": "Swordcraft", "zh-CN": "基础剑术"},
-    "三阴蜈蚣爪": {"en": "Venom Claw", "zh-CN": "毒爪"},
-    "飞星术": {"en": "Shooting Star", "zh-CN": "飞星"},
-    "化功大法": {"en": "Withering Touch", "zh-CN": "凋零之触"},
+    "终南山全真教": {
+      "en": "The Bremen Watch keeps its training grounds on a wooded mountain.",
+      "zh-CN": "不来梅守望的训练场坐落在林间山上。"
+    },
+    "王重阳": {
+      "en": "Iron John",
+      "zh-CN": "铁汉斯"
+    },
+    "张三丰": {
+      "en": "Taiyi Zhenren",
+      "zh-CN": "太乙真人"
+    },
+    "全真七子": {
+      "en": "The Watch Elders",
+      "zh-CN": "守望长老"
+    },
+    "武当七侠": {
+      "en": "The Seven Wardens",
+      "zh-CN": "七位守护者"
+    },
+    "四大剑婢": {
+      "en": "The Four Threadkeepers",
+      "zh-CN": "四位守线人"
+    },
+    "玄铁剑法": {
+      "en": "Ironweight Sword",
+      "zh-CN": "沉铁剑术"
+    },
+    "玉女素心剑": {
+      "en": "Twin Hearts Sword",
+      "zh-CN": "双心剑术"
+    },
+    "左右互搏术": {
+      "en": "Ambidexterity",
+      "zh-CN": "双手协同"
+    },
+    "龙象般若功": {
+      "en": "Giant's Resolve",
+      "zh-CN": "巨人之志"
+    },
+    "火焰刀法": {
+      "en": "Flame Edge",
+      "zh-CN": "焰锋"
+    },
+    "血刀大法": {
+      "en": "Crimson Fang Technique",
+      "zh-CN": "赤牙刀术"
+    },
+    "血海魔功": {
+      "en": "Bloodtide Discipline",
+      "zh-CN": "血潮心法"
+    },
+    "九阴神功": {
+      "en": "Ninefold Moon Discipline",
+      "zh-CN": "月相呼吸法"
+    },
+    "重阳剑法": {
+      "en": "Wildwood Sword",
+      "zh-CN": "荒林剑术"
+    },
+    "三花聚顶掌": {
+      "en": "Threefold Bloom",
+      "zh-CN": "三重花掌"
+    },
+    "天山折梅手": {
+      "en": "Winter Branch Hands",
+      "zh-CN": "冬枝手"
+    },
+    "北冥神功": {
+      "en": "Deepwell Discipline",
+      "zh-CN": "深井心法"
+    },
+    "八荒六合唯我独尊功": {
+      "en": "Sovereign Thread",
+      "zh-CN": "统御之线"
+    },
+    "生死符": {
+      "en": "Thread of Fate",
+      "zh-CN": "命运丝印"
+    },
+    "易筋经": {
+      "en": "Body Tempering",
+      "zh-CN": "强身呼吸法"
+    },
+    "洗髓经": {
+      "en": "Inner Renewal",
+      "zh-CN": "复苏呼吸法"
+    },
+    "纯阳无极功": {
+      "en": "Sunwell Discipline",
+      "zh-CN": "日泉心法"
+    },
+    "太极拳": {
+      "en": "Turning Tide Fist",
+      "zh-CN": "回潮拳"
+    },
+    "剑": {
+      "en": "Swordcraft",
+      "zh-CN": "基础剑术"
+    },
+    "三阴蜈蚣爪": {
+      "en": "Venom Claw",
+      "zh-CN": "毒爪"
+    },
+    "飞星术": {
+      "en": "Shooting Star",
+      "zh-CN": "飞星"
+    },
+    "化功大法": {
+      "en": "Withering Touch",
+      "zh-CN": "凋零之触"
+    },
     "昆仑山": {
       "en": "Cloudpeak",
       "zh-CN": "云冠山"
@@ -4767,7 +4857,7 @@
     },
     "无门派": {
       "en": "Unaffiliated",
-      "zh-CN": "无门派"
+      "zh-CN": "无学派"
     },
     "古墓": {
       "en": "House of Mists",
@@ -4799,15 +4889,15 @@
     },
     "基本内功": {
       "en": "Steady Breath",
-      "zh-CN": "稳息法"
+      "zh-CN": "稳息呼吸法"
     },
     "野球拳": {
-      "en": "Scrapper's Fist",
-      "zh-CN": "街头拳法"
+      "en": "Wayfarer's Arcane Strike",
+      "zh-CN": "旅人奥术击"
     },
     "内功入门": {
-      "en": "Breathing Primer",
-      "zh-CN": "呼吸入门"
+      "en": "Steady Breath Scroll",
+      "zh-CN": "稳息呼吸卷轴"
     },
     "古墓弟子": {
       "en": "Mist Student",
@@ -4935,7 +5025,7 @@
           "拳头",
           "长剑",
           "单刀",
-          "投掷与奇门兵器"
+          "投掷与魔杖兵器"
         ]
       }
     },
@@ -5028,16 +5118,16 @@
       "zh-CN": "修炼"
     },
     "internalSkills": {
-      "en": "Inner disciplines",
-      "zh-CN": "内功"
+      "en": "breathing methods",
+      "zh-CN": "呼吸法"
     },
     "externalSkills": {
       "en": "Attack techniques",
-      "zh-CN": "外功招式"
+      "zh-CN": "魔法与战技"
     },
     "energy": {
       "en": "Energy",
-      "zh-CN": "内力"
+      "zh-CN": "能量"
     },
     "adventure": {
       "en": "Journey",

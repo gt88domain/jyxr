@@ -30,6 +30,15 @@ class ChapterTests(unittest.TestCase):
   self.assertGreater(len(expected),15)
   self.assertFalse(expected-self.skin['dialogueEdits'].keys())
 
+ def test_all_early_drop_items_and_basic_skills_have_fantasy_copy(self):
+  for item in self.source['items']:
+   if item.get('canDrop') and item.get('level',0)<=3:
+    self.assertIn(item['id'],self.skin['definitions']['items'])
+  for category in ['externalSkills','internalSkills']:
+   for skill in self.source[category]:
+    if skill.get('hard',999)<=3:
+     self.assertIn(skill['id'],self.skin['definitions'][category])
+
  def test_all_nine_school_entries_include_their_choice_closures(self):
   pending=[s['storyId'] for s in self.source['sects']];seen=set()
   def jumps(value):

@@ -100,6 +100,30 @@ def apply_skin(raw,skin,locale):
     browser['contentVersion']=skin['version']
     for objective in browser['objectives']:
         if objective['id'] in skin['objectives']:objective['title']=skin['objectives'][objective['id']][locale]
+    # A lesson is completed by taking part, while battle wins and rewards
+    # retain their original independent records. This never invents a victory.
+    if skin.get('practiceLesson'):
+        lesson=skin['practiceLesson']
+        if lesson!={'objectiveId':'training','storyId':'新手村_武师木头人','battleId':'南贤居_木头人_战斗'}:raise ValueError('Unsupported practice lesson')
+        objective=next(o for o in browser['objectives'] if o['id']==lesson['objectiveId'])
+        if objective['kind']!='battle' or objective['target']!=lesson['battleId']:raise ValueError('Practice objective changed')
+        if not any(step.get('battleId')==lesson['battleId'] for step in scripts[lesson['storyId']]['steps']):raise ValueError('Practice story no longer runs its battle')
+        objective.update(kind='story',target=lesson['storyId'])
+    def localize(value):
+        if isinstance(value,dict):return value[locale] if set(value)=={'en','zh-CN'} else {k:localize(v) for k,v in value.items()}
+        if isinstance(value,list):return [localize(v) for v in value]
+        return value
+    if 'chapterGuide' in skin:
+        chapter_guide=localize(skin['chapterGuide']);goal_ids={o['id'] for o in browser['objectives']}
+        if set(chapter_guide['stepOrder'])!=goal_ids or len(chapter_guide['stepOrder'])!=len(goal_ids) or {s['id'] for s in chapter_guide['steps']}!=goal_ids or len(chapter_guide['steps'])!=len(goal_ids):raise ValueError('Chapter guide goals do not match')
+        if any(s.get('panel') not in [None,'equipment','cultivation','save'] for s in chapter_guide['steps']):raise ValueError('Chapter guide panel unsupported')
+        maps={m['id']:{l['id'] for l in m.get('locations',[])} for m in package['maps']}
+        routes=[s.get('route',[]) for s in chapter_guide['steps']]+list(chapter_guide['taskRoutes'].values())
+        for route in routes:
+            for hop in route:
+                if hop['locationId'] not in maps.get(hop['mapId'],set()):raise ValueError('Chapter guide location missing')
+        if chapter_guide['recommendedSectId'] not in {s['id'] for s in package['sects']}:raise ValueError('Chapter guide school missing')
+        browser['chapterGuide']=chapter_guide
     for key,text in skin.get('browserText',{}).items():
         if key not in ['defaultName','currencyName','currencyUnit']:raise ValueError('Invalid browser text field')
         browser[key]=text[locale]
@@ -188,8 +212,10 @@ def assert_same_flow(original,adapted):
     # except the explicit presentation allowlist.
     def browser_rules(browser):
         browser=copy.deepcopy(browser)
-        for key in ['title','subtitle','description','chapterTitle','contentVersion','media','defaultName','currencyName','currencyUnit','terms']:browser.pop(key,None)
-        for objective in browser['objectives']:objective.pop('title',None)
+        for key in ['title','subtitle','description','chapterTitle','contentVersion','media','defaultName','currencyName','currencyUnit','terms','chapterGuide']:browser.pop(key,None)
+        for objective in browser['objectives']:
+            objective.pop('title',None)
+            if objective['id']=='training' and objective['kind']=='story' and objective.get('target')=='新手村_武师木头人':objective.update(kind='battle',target='南贤居_木头人_战斗')
         for task in browser.get('legacyTasks',[]):task.pop('description',None)
         for question in browser.get('creation',{}).get('questions',[]):
             question.pop('title',None)
