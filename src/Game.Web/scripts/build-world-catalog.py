@@ -3,6 +3,7 @@
 import csv,hashlib,io,json,shutil,zipfile
 from pathlib import Path
 from world_cast import WEB,load,validate
+from world_review import build_review
 
 project,countries,figures,cast,index,locks=load()
 summary=validate(project,countries,figures,cast,index,locks)
@@ -35,6 +36,13 @@ for a in cast['actors']:
  f=by_figure.get(a['figureId'],{})
  for form in a['forms']:writer.writerow([form['legacyId'],a['legacyIdentity'],form['legacyName'],a['actorId'],a['kind'],a['primaryCountry'] or '',a['name']['zh-CN'],a['name']['en'],a['status'],f.get('sourceWork',''),f.get('recognition',''),a['traveler'],','.join(a['relatedCountries']),','.join(a['reviewFlags'])])
 (output/'data/cast.csv').write_text('\ufeff'+stream.getvalue(),newline='')
+review_output=output/'review'
+review_summary=build_review(review_output/'data')
+review_sources=[WEB/'review'/name for name in ['index.html','review.css','review.mjs']]
+review_version=hashlib.sha256(b''.join(path.read_bytes() for path in review_sources)+(review_output/'data/manifest.json').read_bytes()).hexdigest()[:12]
+review_output.mkdir(exist_ok=True)
+for path in review_sources:
+ (review_output/path.name).write_text(path.read_text().replace('{{VERSION}}',review_version),encoding='utf8')
 # The rejected standalone story viewer is replaced by the actual game. Keep
 # its old URL useful without introducing another dialogue runner.
 shutil.copytree(game,output/'game')
@@ -49,4 +57,4 @@ with zipfile.ZipFile(archive) as z:
  assert z.testzip() is None
  for path in output.rglob('*'):
   if path.is_file():assert z.read(path.relative_to(output).as_posix())==path.read_bytes()
-print(json.dumps({'site':str(output),'archive':str(archive),'archiveSha256':hashlib.sha256(archive.read_bytes()).hexdigest(),'summary':summary,'game':'game/','opening':'Existing opening URL redirects to the actual game'},ensure_ascii=False,indent=2))
+print(json.dumps({'site':str(output),'archive':str(archive),'archiveSha256':hashlib.sha256(archive.read_bytes()).hexdigest(),'summary':summary,'review':review_summary,'game':'game/','opening':'Existing opening URL redirects to the actual game'},ensure_ascii=False,indent=2))

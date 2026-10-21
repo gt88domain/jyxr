@@ -7,6 +7,7 @@
 
 - [English cast preview](https://gt88domain.github.io/jyxr/fantasy-worlds/en/)
 - [中文角色对照](https://gt88domain.github.io/jyxr/fantasy-worlds/zh/)
+- [文案与剧情流程对照、CSV 下载](https://gt88domain.github.io/jyxr/fantasy-worlds/review/)
 - [范围、角色统计与迁移约定](docs/FANTASY_WORLDS.md)
 - [现代金庸冻结备份](https://github.com/gt88domain/jyxr/tree/legacy-jyx)；旧原版仍保留在 html5-web。
 

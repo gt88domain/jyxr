@@ -60,6 +60,8 @@
     "prepare:midgame": "python3 tests/prepare-midgame.py",
     "test:midgame": "node tests/midgame-smoke.mjs",
     "cast:check": "python3 scripts/world_cast.py",
+    "review:export": "python3 scripts/world_review.py",
+    "test:review": "python3 -m unittest discover -s tests -p test_world_review.py && node tests/world-review-smoke.mjs",
     "cast:build": "python3 scripts/build-world-catalog.py",
     "test:cast": "python3 -m unittest discover -s tests -p test_world_cast.py && node tests/world-cast-smoke.mjs",
     "test:opening": "python3 -m unittest discover -s tests -p test_grimm_skin.py && node tests/grimm-game-smoke.mjs",
