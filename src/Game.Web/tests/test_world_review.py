@@ -118,6 +118,11 @@ class WorldReviewTests(unittest.TestCase):
         self.assertEqual(actual['new_en'], "'" + row['new_en'])
         self.assertEqual(actual['row_id'], row['row_id'])
 
+    def test_renaming_a_speaker_alone_does_not_claim_a_route_is_rewritten(self):
+        rows = [r for r in self.texts if r['segment_id'] == 'original_新手引导.任务买药' and r['kind'] == 'dialogue_run']
+        self.assertTrue(rows)
+        self.assertTrue(all(r['status'] == 'pending' and not r['new_en'] for r in rows))
+
 
 if __name__ == '__main__':
     unittest.main()

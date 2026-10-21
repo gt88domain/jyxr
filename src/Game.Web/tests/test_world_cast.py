@@ -43,5 +43,9 @@ class CastIdentityTests(unittest.TestCase):
   translations=json.loads((WEB/'cast/translations.json').read_text(encoding='utf8'))
   self.assertEqual(set(translations['en']),set(translations['zh-CN']))
   self.assertTrue(all(isinstance(v,str) and v.strip() for lang in translations.values() for v in lang.values()))
+ def test_training_prop_does_not_consume_a_named_legendary_figure(self):
+  actor=next(a for a in self.data[3]['actors'] if a['legacyIdentity']=='木头人')
+  self.assertEqual(actor['kind'],'archetype');self.assertIsNone(actor['figureId'])
+  self.assertEqual(actor['name']['en'],'Training Dummy')
 
 if __name__=='__main__':unittest.main()

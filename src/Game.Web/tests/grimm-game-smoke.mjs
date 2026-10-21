@@ -49,6 +49,16 @@ try{
  assert.equal(current.inventory.find(i=>i.id==='内功入门').count,1);assert.equal(current.silver,0);
  assert.ok(current.objectives.find(o=>o.id==='opening').completed);
  pass('the brief opening retains the original jump, one manual reward and no invented money');
+ await click('[data-action="interact"][data-id="南贤居"]');
+ await click('[data-action="interact"][data-id="南贤"]');
+ for(const index of [2,3,4,5,6]){
+  await click('[data-action="choice"][data-index="'+index+'"]');await continueDialogue();
+  assert.equal((await state()).phase,'choice');
+ }
+ await click('[data-action="choice"][data-index="1"]');await continueDialogue();
+ await click('[data-action="interact"][data-id="小村"]');
+ assert.equal((await state()).inventory.find(i=>i.id==='内功入门').count,1);
+ pass('all five rewritten Grimm questions return to the same menu without duplicating rewards');
  await click('[data-action="cultivation"]');const book=current.inventory.find(i=>i.id==='内功入门');
  await click('[data-action="cultivate"][data-entry-number="'+book.entryNumber+'"]');
  assert.equal((await state()).hero.cultivation.itemId,'内功入门');await closeModal();
@@ -56,10 +66,28 @@ try{
  await click('[data-action="equip-item"][data-entry-number="'+hat.entryNumber+'"]');
  assert.ok((await state()).hero.equipment.some(s=>s.item?.id==='草帽'));await closeModal();
  pass('existing cultivation and equipment operations remain functional after the reskin');
+ await click('[data-action="interact"][data-id="杂货店"]');
+ current=await state();assert.equal(current.dialogue.speaker,skin.speakerNames['商人'].en);
+ assert.equal(current.dialogue.text,skin.dialogueEdits['杂货店_商店教程'][0].lines[0].text.en);
+ await continueDialogue();current=await state();assert.equal(current.phase,'shop');
+ assert.equal(current.shop.name,skin.definitions.shops['新手村.杂货店'].name.en);
+ assert.equal(current.shop.products.find(p=>p.itemId==='小还丹').price,100);
+ assert.equal(current.shop.products.find(p=>p.itemId==='小还丹').name,skin.definitions.items['小还丹'].name.en);
+ await click('[data-action="close-shop"]');
+ pass('rewritten shopkeeper opens the original shop with localized names and the original price');
  await click('[data-action="interact"][data-id="武师"]');await continueDialogue();
+ for(const [index,segment] of [[2,'新手村_武师1'],[3,'新手村_武师2'],[4,'新手村_武师3'],[5,'新手村_武师4'],[6,'新手村_武师5'],[7,'新手村_武师6']]){
+  await click('[data-action="choice"][data-index="'+index+'"]');
+  for(const line of skin.dialogueEdits[segment][0].lines){
+   current=await state();assert.equal(current.dialogue.text,line.text.en);assert.equal(current.dialogue.speaker,skin.speakerNames['武师'].en);
+   await click('[data-action="next"]');
+  }
+  assert.equal((await state()).phase,'choice');
+ }
+ pass('all six instructor lessons execute new dialogue and preserve the original choice destinations');
  await click('[data-action="choice"][data-index="0"]');await continueDialogue();current=await state();
  assert.equal(current.phase,'battle');assert.equal(current.battle.units.length,2);
- assert.equal(current.battle.units.find(u=>u.team===2).name,'木头人');
+ assert.equal(current.battle.units.find(u=>u.team===2).name,skin.speakerNames['木头人'].en);
  if(current.battle.outcome==='ongoing')await click('[data-action="battle-mode"][data-id="auto"]');
  await page.locator('[data-action="leave-battle"]').waitFor({state:'visible',timeout:180000});
  // Random character rolls and the unchanged AI do not guarantee victory.

@@ -14597,8 +14597,8 @@
       "status": "classified",
       "figureId": null,
       "name": {
-        "zh-CN": "当地居民",
-        "en": "Town resident"
+        "zh-CN": "店主",
+        "en": "Shopkeeper"
       },
       "primaryCountry": "GB",
       "relatedCountries": [
@@ -18097,23 +18097,18 @@
       "legacyNames": [
         "木头人"
       ],
-      "kind": "named",
-      "status": "proposed",
-      "figureId": "gb.uther-pendragon",
+      "kind": "archetype",
+      "status": "classified",
+      "figureId": null,
       "name": {
-        "zh-CN": "尤瑟·潘德拉贡",
-        "en": "Uther Pendragon"
+        "zh-CN": "训练假人",
+        "en": "Training Dummy"
       },
-      "primaryCountry": "GB",
-      "relatedCountries": [
-        "GB"
-      ],
+      "primaryCountry": null,
+      "relatedCountries": [],
       "traveler": false,
-      "reviewFlags": [
-        "presentation-and-relationship-review",
-        "story-role-review"
-      ],
-      "selectionReason": "existing-figure-candidate",
+      "reviewFlags": [],
+      "selectionReason": "training-prop-not-a-literary-person",
       "originalReason": null,
       "forms": [
         {
@@ -19086,8 +19081,8 @@
       "status": "classified",
       "figureId": null,
       "name": {
-        "zh-CN": "当地居民",
-        "en": "Town resident"
+        "zh-CN": "教官",
+        "en": "Instructor"
       },
       "primaryCountry": "GB",
       "relatedCountries": [

@@ -124,8 +124,11 @@ def make_copy_rows(original, localized, cast, source_sha):
                 if any(units[position]['kind'] != unit['kind'] for units in after.values()):
                     raise ValueError('Display unit kind changed: ' + segment['name'])
                 speakers = [node.get('speaker', '') for node in unit['nodes']] or [unit.get('speaker', '')]
-                rows.append(make_row(unit['path'], 'storyScripts', segment['name'], unit['text'],
-                                     {lang: units[position]['text'] for lang, units in after.items()},
+                # A translated speaker label alone is not rewritten dialogue.
+                current = {lang: units[position]['text'] if unit['kind'] != 'dialogue_run' or
+                           [n['text'] for n in unit['nodes']] != [n['text'] for n in units[position]['nodes']]
+                           else unit['text'] for lang, units in after.items()}
+                rows.append(make_row(unit['path'], 'storyScripts', segment['name'], unit['text'], current,
                                      unit['kind'], [s for s in speakers if s], script_id, segment['name'], len(unit['nodes'])))
     for category, collection in original.items():
         if category in {'storyScripts', 'resources'}:
@@ -140,6 +143,14 @@ def make_copy_rows(original, localized, cast, source_sha):
             rows.append(make_row(path, category, owner, source,
                                  {lang: get_at(package, path) for lang, package in localized.items()},
                                  str(path[-1]), speakers))
+    # Locations often display their stable ID until an explicit label is added.
+    # Point the comparison at that existing ID, never treat it as editable data.
+    for i, game_map in enumerate(original['maps']):
+        for j, location in enumerate(game_map.get('locations', [])):
+            names = {lang: package['maps'][i]['locations'][j].get('name', location['id']) for lang,package in localized.items()}
+            if 'name' not in location and any(name != location['id'] for name in names.values()):
+                rows.append(make_row(('maps',i,'locations',j,'id'), 'maps', game_map['id']+'/'+location['id'],
+                                     location['id'], names, 'display_label'))
     ids = [row['row_id'] for row in rows]
     if len(set(ids)) != len(ids):
         raise ValueError('Duplicate copy row identity')

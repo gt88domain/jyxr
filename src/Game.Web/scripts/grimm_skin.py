@@ -2,6 +2,8 @@
 import copy,hashlib,json,re
 from pathlib import Path
 
+COPY_CATEGORIES={'items','externalSkills','internalSkills','shops'}
+
 def apply_skin(raw,skin,locale):
     if locale not in ['en','zh-CN']:raise ValueError('Unsupported skin locale')
     if hashlib.sha256(raw).hexdigest()!=skin['sourceSha256']:raise ValueError('Original content fingerprint changed')
@@ -11,6 +13,16 @@ def apply_skin(raw,skin,locale):
         if obj.get(key)!=value:obj[key]=value;changed.append(path)
     character=next(c for c in package['characters'] if c['id']==guide)
     set_value(character,'name',name,'characters/南贤/name')
+    aliases={guide:name,**{id:text[locale] for id,text in skin.get('speakerNames',{}).items()}}
+    for character in package['characters']:
+        if character['id'] in aliases:character['name']=aliases[character['id']]
+    for category,definitions in skin.get('definitions',{}).items():
+        if category not in COPY_CATEGORIES:raise ValueError('Unsupported copy category: '+category)
+        by_id={definition['id']:definition for definition in package[category]}
+        for id,fields in definitions.items():
+            for field,text in fields.items():
+                if field not in ['name','description'] or not isinstance(by_id[id].get(field),str):raise ValueError('Invalid display field')
+                set_value(by_id[id],field,text[locale],category+'/'+id+'/'+field)
     for m in package['maps']:
         labels=skin['maps'].get(m['id'])
         if labels:
@@ -21,6 +33,9 @@ def apply_skin(raw,skin,locale):
                 location['picture']='头像.南贤'
             elif location['id']=='南贤居':
                 location['name']=skin['maps']['南贤居']['name'][locale];location['description']=skin['houseLocation'][locale]
+            for field,text in skin.get('locations',{}).get(m['id'],{}).get(location['id'],{}).items():
+                if field not in ['name','description']:raise ValueError('Invalid location display field')
+                location[field]=text[locale]
     scripts={s['name']:s for script in package['storyScripts'].values() for s in script['segments']}
     for id,lines in skin['segments'].items():
         segment=scripts[id];dialogues=[step for step in segment['steps'] if step['kind']=='dialogue']
@@ -34,20 +49,23 @@ def apply_skin(raw,skin,locale):
             start,count=edit['start'],edit['expectedCount']
             if start<previous_end or count<1 or len(steps[start:start+count])!=count or any(step['kind']!='dialogue' for step in steps[start:start+count]) or (start>0 and steps[start-1]['kind']=='dialogue') or (start+count<len(steps) and steps[start+count]['kind']=='dialogue'):
                 raise ValueError('Original dialogue run changed: '+id)
-            if not edit['lines'] or any(line['speaker'] not in [guide,'主角'] or not line['text'].get(locale) for line in edit['lines']):
+            allowed_speakers={guide,'主角',*[step['speaker'] for step in steps[start:start+count]]}
+            if not edit['lines'] or any(line['speaker'] not in allowed_speakers or not line['text'].get(locale) for line in edit['lines']):
                 raise ValueError('Invalid compressed dialogue: '+id)
             previous_end=start+count
         for edit in sorted(edits,key=lambda item:item['start'],reverse=True):
             steps[edit['start']:edit['start']+edit['expectedCount']]=[{'kind':'dialogue','speaker':line['speaker'],'text':line['text'][locale]} for line in edit['lines']]
-    choice=scripts['新手村_南贤']['steps'][0]
-    choice['prompt']['text']=skin['choicePrompt'][locale]
-    options=choice['blocks'][0]['options']
-    if len(options)!=len(skin['choices'][locale]):raise ValueError('Choice slot count changed')
-    for option,text in zip(options,skin['choices'][locale]):option['text']=text
+    for id,texts in skin['choiceText'].items():
+        choices=[step for step in scripts[id]['steps'] if step['kind']=='choice']
+        if len(choices)!=1 or len(choices[0]['blocks'])!=1 or choices[0]['blocks'][0]['kind']!='options':raise ValueError('Choice structure changed: '+id)
+        choice=choices[0];choice['prompt']['text']=texts['prompt'][locale]
+        options=choice['blocks'][0]['options']
+        if len(options)!=len(texts['options'][locale]):raise ValueError('Choice slot count changed: '+id)
+        for option,text in zip(options,texts['options'][locale]):option['text']=text
     text_command=re.compile(r"^(journal|suggest)\('([^']*)'\)$")
     def walk(value):
         if isinstance(value,dict):
-            if value.get('speaker')==guide:value['speaker']=name
+            if value.get('speaker') in aliases:value['speaker']=aliases[value['speaker']]
             if value.get('kind')=='command' and (match:=text_command.fullmatch(value['call'])):
                 replacement=skin['commandText'].get(match[2])
                 if replacement:
@@ -61,7 +79,7 @@ def apply_skin(raw,skin,locale):
     browser=package['browser']
     for key in ['title','subtitle','description']:browser[key]=skin[key][locale]
     browser['chapterTitle']=skin['subtitle'][locale]
-    browser['contentVersion']='grimm-brief-2'
+    browser['contentVersion']=skin['version']
     for objective in browser['objectives']:
         if objective['id'] in skin['objectives']:objective['title']=skin['objectives'][objective['id']][locale]
     for group in ['characters','portraits']:browser['media'][group][guide]=skin['portrait']
@@ -74,10 +92,16 @@ def apply_skin(raw,skin,locale):
 
 def assert_same_flow(original,adapted):
     for key in original:
-        if key not in ['browser','maps','characters','storyScripts'] and original[key]!=adapted[key]:raise ValueError('A reskin changed original gameplay definitions: '+key)
+        if key not in ['browser','maps','characters','storyScripts']:
+            before=copy.deepcopy(original[key]);after=copy.deepcopy(adapted[key])
+            if key in COPY_CATEGORIES:
+                for definitions in [before,after]:
+                    for definition in definitions:
+                        definition.pop('name',None);definition.pop('description',None)
+            if before!=after:raise ValueError('A reskin changed original gameplay definitions: '+key)
     for before,after in zip(original['characters'],adapted['characters'],strict=True):
         before=copy.deepcopy(before);after=copy.deepcopy(after)
-        if before['id']=='南贤':before.pop('name',None);after.pop('name',None)
+        before.pop('name',None);after.pop('name',None)
         if before!=after:raise ValueError('A reskin changed character rules')
     def stripped(value,category=None):
         if isinstance(value,list):return [stripped(v,category) for v in value if not (isinstance(v,dict) and v.get('kind')=='dialogue')]

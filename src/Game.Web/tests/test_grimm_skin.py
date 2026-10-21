@@ -12,7 +12,10 @@ class GrimmSkinTests(unittest.TestCase):
   for locale in ['en','zh-CN']:
    game,report=apply_skin(self.raw,self.skin,locale)
    self.assertTrue(report['sameGameplayFlow']);self.assertEqual(game['battles'],self.source['battles'])
-   self.assertEqual(game['items'],self.source['items']);self.assertEqual(game['externalSkills'],self.source['externalSkills'])
+   for category in ['items','externalSkills','internalSkills','shops']:
+    rules=lambda definitions:[{key:value for key,value in d.items() if key not in ['name','description']} for d in definitions]
+    self.assertEqual(rules(game[category]),rules(self.source[category]))
+   assert_same_flow(self.source,game)
    self.assertEqual(game['browser']['initialMapId'],'南贤屋内');self.assertEqual(game['browser']['id'],'jyx')
    m=next(m for m in game['maps'] if m['id']=='南贤屋内');old=next(source_map for source_map in self.source['maps'] if source_map['id']==m['id'])
    self.assertEqual([l['id'] for l in m['locations']],[l['id'] for l in old['locations']])
@@ -45,10 +48,23 @@ class GrimmSkinTests(unittest.TestCase):
   with self.assertRaisesRegex(ValueError,'flow'):assert_same_flow(self.source,game)
  def test_wrong_source_and_wrong_dialogue_count_fail(self):
   with self.assertRaisesRegex(ValueError,'fingerprint'):apply_skin(self.raw+b' ',self.skin,'en')
-  self.skin['segments']['新手村_南贤_出村']['en'].pop()
+  self.skin['segments']['新手村_出生']['en'].pop()
   with self.assertRaisesRegex(ValueError,'slot count'):apply_skin(self.raw,self.skin,'en')
  def test_incomplete_dialogue_run_cannot_leave_hidden_old_lines(self):
   self.skin['dialogueEdits']['新手村_南贤开场'][0]['expectedCount']=22
   with self.assertRaisesRegex(ValueError,'run changed'):apply_skin(self.raw,self.skin,'en')
+ def test_display_copy_cannot_change_prices_requirements_or_choice_targets(self):
+  for field,value in [('price',99999),('requirements',[])]:
+   game,_=apply_skin(self.raw,self.skin,'en')
+   next(item for item in game['items'] if item['id']=='内功入门')[field]=value
+   with self.assertRaisesRegex(ValueError,'gameplay definitions'):assert_same_flow(self.source,game)
+  self.skin['definitions']['items']['内功入门']['price']={'en':'Free','zh-CN':'免费'}
+  with self.assertRaisesRegex(ValueError,'display field'):apply_skin(self.raw,self.skin,'en')
+ def test_instructor_cannot_gain_a_new_choice_or_unrelated_speaker(self):
+  self.skin['choiceText']['新手村_武师选择']['options']['en'].append('Invented reward')
+  with self.assertRaisesRegex(ValueError,'Choice slot'):apply_skin(self.raw,self.skin,'en')
+  self.skin['choiceText']['新手村_武师选择']['options']['en'].pop()
+  self.skin['dialogueEdits']['新手村_武师7'][0]['lines'][0]['speaker']='爱丽丝'
+  with self.assertRaisesRegex(ValueError,'compressed dialogue'):apply_skin(self.raw,self.skin,'en')
 
 if __name__=='__main__':unittest.main()

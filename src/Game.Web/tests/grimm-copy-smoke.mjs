@@ -32,6 +32,22 @@ try{
   assert.equal(current.phase,'world');assert.equal(current.map.id,'小村');assert.equal(current.inventory.find(i=>i.id==='内功入门').count,1);assert.equal(current.silver,0);
   assert.ok(current.objectives.find(o=>o.id==='opening').completed);
   pass(locale+': compressed village explanation keeps the original manual reward and exit');
+  await click('[data-action="interact"][data-id="武师"]');
+  current=await state();assert.equal(current.dialogue.speaker,skin.speakerNames['武师'][locale]);
+  assert.equal(current.dialogue.text,skin.dialogueEdits['新手村_武师'][0].lines[0].text[locale]);
+  await continueDialogue();assert.equal((await state()).phase,'choice');
+  await click('[data-action="choice"][data-index="6"]');
+  for(const line of skin.dialogueEdits['新手村_武师5'][0].lines){
+   assert.equal((await state()).dialogue.text,line.text[locale]);await click('[data-action="next"]');
+  }
+  await noOverflow(locale+' instructor lesson and choices on phone');
+  await click('[data-action="choice"][data-index="1"]');await continueDialogue();
+  await click('[data-action="interact"][data-id="杂货店"]');
+  assert.equal((await state()).dialogue.speaker,skin.speakerNames['商人'][locale]);
+  await continueDialogue();current=await state();assert.equal(current.phase,'shop');
+  assert.equal(current.shop.name,skin.definitions.shops['新手村.杂货店'].name[locale]);
+  await noOverflow(locale+' localized village shop on phone');
+  pass(locale+': new instructor and shopkeeper copy use the actual bilingual game route');
  }
 }catch(error){failure=error;}
 await finish(failure);
