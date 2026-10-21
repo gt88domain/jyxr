@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>文案与流程对照 · Storybound</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="review.css?v=68eaa69501d2">
+</head>
+<body>
+  <header><a href="../zh/">人物对照</a><strong>文案与流程对照</strong><a href="../game/">进入游戏</a></header>
+  <main id="review" aria-busy="true">
+    <nav aria-label="对照内容"><button id="copy-tab" type="button" aria-pressed="true">文案</button><button id="flow-tab" type="button" aria-pressed="false">流程与条件</button></nav>
+    <section class="filters" aria-label="查找资料">
+      <label class="search">搜索原文、新文或编号<input id="search" type="search" placeholder="例如：张无忌、格林、九阳、入队" autocomplete="off"></label>
+      <label>范围<select id="category"><option value="">全部类别</option></select></label>
+      <label id="status-field">改写状态<select id="status"><option value="">全部</option><option value="implemented">已接入改写</option><option value="pending">待改写</option></select></label>
+    </section>
+    <details id="tools"><summary>下载 CSV · 指定剧情 · 使用说明</summary>
+      <div class="tools-body">
+        <label>剧情编号<input id="segment" list="segments" placeholder="输入或选择剧情；清空查看全部"><datalist id="segments"></datalist></label>
+        <div class="downloads"><a id="copy-download" href="data/copy.csv" download="storybound-copy.csv">文案 CSV</a><a id="flow-download" href="data/flow.csv" download="storybound-flow.csv">流程 CSV</a><a href="../data/cast.csv" download="storybound-cast.csv">人物 CSV</a></div>
+        <p>CSV 可用 Excel 打开。new_zh_CN 和 new_en 是改写栏，空白表示沿用原文、尚未改写。人物候选仅作审阅参考。连续对白合成一行，允许新旧句数不同。</p>
+        <p>这是只读审阅工具。编辑 CSV 不会自动修改游戏；回填功能尚未实现。条件、奖励、跳转和原编号作为核对依据保留。这里列出静态引用，未证明每条路线都可通关，也不包含写在界面代码里的全部文字。</p>
+        <p id="source-info"></p>
+      </div>
+    </details>
+    <p id="summary" class="summary" role="status">正在读取完整资料…</p>
+    <section id="results" aria-label="对照结果"></section>
+    <button id="more" type="button" hidden>再显示 40 条</button>
+  </main>
+  <footer>在 gt88domain/jyxr 的 fantasy-worlds 分支开发。中文原版与游戏存档保留。<a href="https://github.com/gt88domain/jyxr/tree/fantasy-worlds">查看源码</a></footer>
+  <script type="module" src="review.mjs?v=68eaa69501d2"></script>
+</body>
+</html>
