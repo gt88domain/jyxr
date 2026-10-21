@@ -57,7 +57,7 @@ copy-55e34934d07cfef5b0e4,storyScripts,新手村_南贤开场,legacy,新手村_�
 
 主角：好吧。这份差事，配剑吗？
 
-南贤：配一本入门读本。先在村里学点本领，我可不想把你的事迹编进《前车之鉴》。","南贤：I'm Grimm. I collect the fairy tales people grow up with. Usually, they stay on the page.
+南贤：配一本入门卷轴。先在村里学点本领，我可不想把你的事迹编进《前车之鉴》。","南贤：I'm Grimm. I collect the fairy tales people grow up with. Usually, they stay on the page.
 
 主角：You summoned me? I was having such an ordinary day.
 
@@ -67,7 +67,7 @@ copy-55e34934d07cfef5b0e4,storyScripts,新手村_南贤开场,legacy,新手村_�
 
 主角：All right. Does the job come with a sword?
 
-南贤：A beginner's manual. Learn here first; I would hate to file you under 'cautionary tale'.",implemented,,/storyScripts/legacy/segments/2/steps/0,23,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：A beginner's scroll. Learn here first; I would hate to file you under 'cautionary tale'.",implemented,,/storyScripts/legacy/segments/2/steps/0,23,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3a08148b8cd47e7f84f8,storyScripts,新手村_南贤开场,legacy,新手村_南贤开场,journal,,,,再次来到金庸十四天书的世界。,格林请我帮助那些停在半途的童话。首先，学点本领，别让自己的故事停在开头。,Grimm needs help with tales that have stalled. First: learn enough to survive my own first chapter.,implemented,,/storyScripts/legacy/segments/2/steps/24/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5a02dacff3e4a5a10a73,storyScripts,新手村_小村介绍,legacy,新手村_小村介绍,dialogue_run,"主角
 南贤","主角 → 玩家角色 / Player character [classified]
@@ -77,14 +77,14 @@ copy-5a02dacff3e4a5a10a73,storyScripts,新手村_小村介绍,legacy,新手村_�
 
 主角：那我现在应该做些什么？
 
-南贤：村里有许多去处，你可以跟大伙学学基本的技能。我这里有一本记载了[[yellow:基本内功]]的心法，你拿去好好修炼吧。",南贤：这本《呼吸入门》给你。先学着稳住气息——大多数英雄都觉得，持续呼吸是个好习惯。,南贤：Take this Breathing Primer. Start with steady breathing. Most heroes find it useful to keep doing that.,implemented,,/storyScripts/legacy/segments/3/steps/1,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：村里有许多去处，你可以跟大伙学学基本的技能。我这里有一本记载了[[yellow:基本内功]]的心法，你拿去好好修炼吧。",南贤：这本《稳息呼吸卷轴》给你。先学着稳住气息——大多数英雄都觉得，持续呼吸是个好习惯。,南贤：Take this Steady Breath Scroll. Start with steady breathing. Most heroes find it useful to keep doing that.,implemented,,/storyScripts/legacy/segments/3/steps/1,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-64bf9ad9e8c31ed0b426,storyScripts,新手村_小村介绍,legacy,新手村_小村介绍,dialogue_run,"主角
 南贤","主角 → 玩家角色 / Player character [classified]
 南贤 → 雅各布·格林 / Jacob Grimm [locked]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：我靠，这是什么？内功入门？！至少拿点像样的东西嘛。
 
 南贤：老朽这儿也只有这点货了……你就将就着学着吧。",主角：挺好，至少慌起来的时候，我也能顺便练练。,主角：Good. Something I can practise while panicking.,implemented,,/storyScripts/legacy/segments/3/steps/6,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-b165c3f562830485c7d5,storyScripts,新手村_小村介绍,legacy,新手村_小村介绍,suggest,,,,点击人物状态栏，点击修炼，可以装备内功入门。,打开人物状态栏的“修炼”，选入《呼吸入门》。,Open Training and select Breathing Primer.,implemented,,/storyScripts/legacy/segments/3/steps/8/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-b5da0d3115bea915b13c,storyScripts,新手村_小村介绍,legacy,新手村_小村介绍,suggest,,,,装备上的武学经书，在战斗结束后能将获得的经验快速分配到该项武学上，可以迅速提升武学等级。,选入修炼栏的读本会获得战斗经验。只捧着书看，可吓不倒训练假人。,A selected training manual receives battle experience. Reading alone will not frighten the dummy.,implemented,,/storyScripts/legacy/segments/3/steps/9/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b165c3f562830485c7d5,storyScripts,新手村_小村介绍,legacy,新手村_小村介绍,suggest,,,,点击人物状态栏，点击修炼，可以装备内功入门。,打开人物状态栏的“修炼”，选入《稳息呼吸卷轴》。,Open Training and select Steady Breath Scroll.,implemented,,/storyScripts/legacy/segments/3/steps/8/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b5da0d3115bea915b13c,storyScripts,新手村_小村介绍,legacy,新手村_小村介绍,suggest,,,,装备上的武学经书，在战斗结束后能将获得的经验快速分配到该项武学上，可以迅速提升武学等级。,选入修炼栏的卷轴会获得战斗经验。只捧着书看，可吓不倒训练假人。,A selected training scroll receives battle experience. Reading alone will not frighten the dummy.,implemented,,/storyScripts/legacy/segments/3/steps/9/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d85ee9d19f4e65b8a01f,storyScripts,新手村_南贤,legacy,新手村_南贤,text,南贤,南贤 → 雅各布·格林 / Jacob Grimm [locked],DE,有什么事吗？,出发前还有什么想问？提问免费，答案可能附带功课。,Before you go: questions are free. Answers may involve homework.,implemented,,/storyScripts/legacy/segments/4/steps/0/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-332b0073e8c77bfc943f,storyScripts,新手村_南贤,legacy,新手村_南贤,text,,,,[[yellow:【结束新手村】放我出村吧！]],【出发】我准备好了，上路吧。,[Set out] I am ready for the road.,implemented,,/storyScripts/legacy/segments/4/steps/0/blocks/0/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8a2aa0e9016538467e9e,storyScripts,新手村_南贤,legacy,新手村_南贤,text,,,,【离开】没事了,【离开】我先四处看看。,[Leave] I will look around first.,implemented,,/storyScripts/legacy/segments/4/steps/0/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -364,10 +364,10 @@ copy-df641977377097dbc704,storyScripts,新手村_武师,legacy,新手村_武师,
 copy-aed8f755a4cad1c2db81,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,武师,武师 → 教官 / Instructor [classified],GB,你有什么问题？,想练哪样：招式、战术，还是你那份自信？,"What needs work: your technique, your tactics, or your confidence?",implemented,,/storyScripts/legacy/segments/33/steps/1/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8ddb894e403047ed2b08,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,[[yellow:【战斗】请让我实战练习一下吧]],【练习】让我试试训练假人。,[Spar] Let me try the training dummy.,implemented,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-922c03c9222e7bb7c611,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,【离开】没事了,【离开】今天先少挨几下。,[Leave] That is enough bruises for now.,implemented,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-4f68634b9d47c9facdf9,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,武功都怎么分类的？,招式和内功该怎么搭配？,How do attacks and disciplines work?,implemented,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/2/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-4f68634b9d47c9facdf9,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,武功都怎么分类的？,招式和呼吸法该怎么搭配？,How do attacks and disciplines work?,implemented,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/2/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8670b6b02f24451eb870,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,天赋有什么用？,天赋究竟有什么用？,What do talents actually do?,implemented,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/3/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-752a7d91b0ab251cc032,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,如何获取顶级武学？,去哪里学更高深的本领？,Where can I learn advanced techniques?,implemented,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/4/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-83bce7d9d05b0c8d9ed5,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,武功的适性有什么用？,阴阳适性怎样影响招式？,How do Yin and Yang affect my attacks?,implemented,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/5/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-83bce7d9d05b0c8d9ed5,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,武功的适性有什么用？,光辉和幽影亲和怎样影响攻击？,How do Radiant and Umbral affinities work?,implemented,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/5/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-06a3d5c9134004a0e548,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,如何打败难缠的对手？,碰上难打的敌人怎么办？,What should I do when a fight gets difficult?,implemented,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/6/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0b098020f29430eb19af,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,如何提升武学等级上限？,怎样提高技能等级上限？,How do I raise a skill's level limit?,implemented,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/7/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-cf3d367310d21b172f5f,storyScripts,新手村_武师1,legacy,新手村_武师1,dialogue_run,武师,武师 → 教官 / Instructor [classified],GB,"武师：从技能本身来说，分四大类：[[red:外功、内功、绝技、特殊技能。]]
@@ -382,15 +382,15 @@ copy-cf3d367310d21b172f5f,storyScripts,新手村_武师1,legacy,新手村_武师
 
 武师：从武学分类来说，武学又分四种：[[red:拳法、剑法、刀法、奇门。]]
 
-武师：所以，选择你想要学习的技能，搭配不同种类的技能才能在战斗中致胜。","武师：外功招式是战场上主动使出的本领。搭配要实用，十招都解决同一个问题，遇上别的问题还是没辙。
+武师：所以，选择你想要学习的技能，搭配不同种类的技能才能在战斗中致胜。","武师：魔法与战技是战场上主动使出的本领。搭配要实用，十招都解决同一个问题，遇上别的问题还是没辙。
 
-武师：内功影响你的战斗能力。可以学会多种，但同一时间只能装备一种。
+武师：呼吸法影响你的战斗能力。可以学会多种，但同一时间只能装备一种。
 
 武师：有些技能练到一定程度会解锁绝技，往往需要怒气。角色特有的特殊技能，则提供不同的战术效果。
 
-武师：拳掌、剑法、刀法和奇门各有专长。先想好怎么打，再考虑把每样兵器都背在身上。","武师：Attacks are the techniques you use on the field. Learn a useful mix; ten answers to the same problem are still one answer.
+武师：施法、剑法、刃术和魔杖各有专长。先想好怎么打，再考虑把每样兵器都背在身上。","武师：Attacks are the techniques you use on the field. Learn a useful mix; ten answers to the same problem are still one answer.
 
-武师：Inner disciplines strengthen your fighting. You can learn several, but only one is equipped at a time.
+武师：breathing methods strengthen your fighting. You can learn several, but only one is equipped at a time.
 
 武师：Some trained skills unlock finishers, often powered by rage. Personal special abilities offer other tactical effects.
 
@@ -410,7 +410,7 @@ copy-33a8b630abae8c6f6114,storyScripts,新手村_武师2,legacy,新手村_武师
 武师：Not every talent is helpful. An impressive title is not the same as a recommendation.",implemented,,/storyScripts/legacy/segments/35/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e639b6673a65c62c2aea,storyScripts,新手村_武师3,legacy,新手村_武师3,dialogue_run,武师,武师 → 教官 / Instructor [classified],GB,"武师：如果你加入一个门派的话，大部分顶级武学都是通过门派任务来获得的。
 
-武师：当然，江湖上也有许多绝顶高手，机缘巧合的话，也许会教你个一招半式。如果有机会认识的话，赶紧和他们处好关系吧！","武师：门派通常会通过任务传授高深本领。先赢得信任，才有后面的课。
+武师：当然，江湖上也有许多绝顶高手，机缘巧合的话，也许会教你个一招半式。如果有机会认识的话，赶紧和他们处好关系吧！","武师：学派通常会通过任务传授高深本领。先赢得信任，才有后面的课。
 
 武师：旅途中的高手也可能指点你。先好好说话，别一见面就上手试人家的胡子是真是假。","武师：Schools teach advanced techniques through their own tasks. Earn their trust, and the better lessons follow.
 
@@ -425,13 +425,13 @@ copy-67d8d636d6a44018a24b,storyScripts,新手村_武师4,legacy,新手村_武师
 
 武师：阳性武功加成取决于当前内功的阳适性，阴性武功加成取决于当前内功的阴适性，调和型武功加成取决于当前内功阴阳适性中较大的那个。
 
-武师：简而言之，就是你如果要使用阳性的外功，就带阳属性的内功；阴性亦然。如果是调和型外功，就无所谓了。","武师：招式有阴、阳适性之分。当前装备的内功提供对应加成，搭配之前先看看数值。
+武师：简而言之，就是你如果要使用阳性的外功，就带阳属性的内功；阴性亦然。如果是调和型外功，就无所谓了。","武师：攻击分为光辉与幽影亲和。当前运用的呼吸法提供对应加成，搭配之前先看看数值。
 
-武师：阳性招式取阳适性，阴性招式取阴适性；调和招式取两者中较高的值。
+武师：光辉攻击取光辉亲和，幽影攻击取幽影亲和；平衡攻击取两者中较高的值。
 
-武师：招式再漂亮，内功没配好，也只能漂亮地吃亏。","武师：Attacks can favour Yin or Yang. Your equipped inner discipline supplies those affinities, so check the pairing.
+武师：招式再漂亮，呼吸法没配好，也只能漂亮地吃亏。","武师：Attacks can favour Radiant or Umbral affinity. Your active breathing method supplies those affinities, so check the pairing.
 
-武师：Yang attacks use its Yang affinity; Yin attacks use its Yin affinity. Harmonious attacks use whichever value is higher.
+武师：Radiant attacks use Radiant affinity; Umbral attacks use Umbral affinity. Balanced attacks use whichever value is higher.
 
 武师：A fine technique with the wrong discipline is a fine technique having a disappointing afternoon.",implemented,,/storyScripts/legacy/segments/37/steps/0,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-61b4dfee763709a74c6f,storyScripts,新手村_武师5,legacy,新手村_武师5,dialogue_run,武师,武师 → 教官 / Instructor [classified],GB,"武师：在江湖中闯荡，你将会遇到很多难缠的对手和艰难的战斗。那么如何在这种战斗中取胜呢？
@@ -2899,7 +2899,7 @@ copy-d8675928e6c6ee27f22b,storyScripts,original_门派选择,legacy,original_门
 
 主角：哇！太棒了！
 
-南贤：要去哪个门派拜师，就自己选择吧！","南贤：各个门派都有自己的课业、责任，还有些古怪习惯。加入之前，先看清楚教什么。
+南贤：要去哪个门派拜师，就自己选择吧！","南贤：各个学派都有自己的课业、责任，还有些古怪习惯。加入之前，先看清楚教什么。
 
 主角：我想独自闯荡，也可以？
 
@@ -2956,7 +2956,7 @@ copy-3c098f80ff4ecfcf5e34,storyScripts,original_主角之家.回家,legacy,origi
 
 主角：如果可能，希望这次靠更充分的准备。
 
-南贤：那就给稳息法增加一项专精。基础没有宝剑风光，倒也没那么容易弄丢。","主角：I am back. The road has opinions about beginners.
+南贤：那就给稳息呼吸法增加一项专精。基础没有宝剑风光，倒也没那么容易弄丢。","主角：I am back. The road has opinions about beginners.
 
 南贤：And you are here to argue with them?
 
@@ -11727,7 +11727,7 @@ copy-1a2bea0ba1f4fe780fe7,storyScripts,门派大轮寺_拜师,legacy,门派大�
 
 金轮法王：开玩笑，那可是我的看家本领，怎么能随便教给你呢。
 
-主角：呜呜……（先自己练习吧）","主角：格林说过有个门派，倒没说会有这么多雪。
+主角：呜呜……（先自己练习吧）","主角：格林说过有个学派，倒没说会有这么多雪。
 
 金轮法王：我是珀西瓦尔。欢迎来到圣杯山舍。想来，你是求学的，不是来欣赏更冷的风景。
 
@@ -18624,14 +18624,14 @@ copy-86a525eb1bcaa47e1822,storyScripts,original_新手引导.开始,legacy,origi
 
 主角：这话听着，很像要让我跑腿。
 
-南贤：一趟短差，附带补给和几堂课。你也可以直接选择门派，独自上路。","南贤：One last thing. Stories tend to skip the part where the hero remembers to pack bandages.
+南贤：一趟短差，附带补给和几堂课。你也可以直接选择学派，独自上路。","南贤：One last thing. Stories tend to skip the part where the hero remembers to pack bandages.
 
 主角：That sounds suspiciously like an errand.
 
 南贤：A short one, with supplies and lessons attached. Or you may choose a school and set out at once.",implemented,,/storyScripts/legacy/segments/1711/steps/0,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2359cf4243b1d0c48c93,storyScripts,original_新手引导.开始,legacy,original_新手引导.开始,text,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",要不要做新手任务？,要接受格林的实地教学吗？,Take Grimm's practical lessons?,implemented,,/storyScripts/legacy/segments/1711/steps/5/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-440cf398dc0ef0c80f2e,storyScripts,original_新手引导.开始,legacy,original_新手引导.开始,text,,,,还是做一做吧。,接受教学。我还挺想平安回来的。,Take the lessons. I am fond of surviving.,implemented,,/storyScripts/legacy/segments/1711/steps/5/blocks/0/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-829d5736f6cfaa126aaa,storyScripts,original_新手引导.开始,legacy,original_新手引导.开始,text,,,,做啥新手任务，我要闯江湖！,直接选择门派，出发。,Choose a school and set out.,implemented,,/storyScripts/legacy/segments/1711/steps/5/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-829d5736f6cfaa126aaa,storyScripts,original_新手引导.开始,legacy,original_新手引导.开始,text,,,,做啥新手任务，我要闯江湖！,直接选择学派，出发。,Choose a school and set out.,implemented,,/storyScripts/legacy/segments/1711/steps/5/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0b736013a48b4472c2b9,storyScripts,original_新手引导.任务买药,legacy,original_新手引导.任务买药,dialogue_run,"主角
 南贤","主角 → 玩家角色 / Player character [classified]
 南贤 → 雅各布·格林 / Jacob Grimm [locked]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：……好吧，你赢了。
@@ -18673,12 +18673,12 @@ copy-6a4b6722d78d021a6a2c,storyScripts,original_新手引导.任务买药,legacy
 主角：十字镇，补给铺，五份药剂。我竟然记住重点了。","南贤：Your journal keeps the task and destination. Consult it whenever a dramatic speech drives out the useful details.
 
 主角：Crossroads, Supply Shop, five tonics. I even remembered the useful part.",implemented,,/storyScripts/legacy/segments/1712/steps/11,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-38c20ad128641074bfb4,storyScripts,original_新手引导.买药,legacy,original_新手引导.买药,dialogue_run,商人,商人 → 店主 / Shopkeeper [classified],GB,商人：哎呀，小兄弟来买药的？欢迎光临！看你是新手，我送你一本武功秘籍！你要什么类型的？,商人：格林让你来的？正好，我这里有本新手读本送你。先选打法，再选英雄的站姿。,商人：Grimm sent you? Excellent. I have a beginner's manual for you. Choose a fighting style before you choose a heroic pose.,implemented,,/storyScripts/legacy/segments/1713/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-c329be6cd2e1fc4d7cdc,storyScripts,original_新手引导.买药,legacy,original_新手引导.买药,text,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",要什么类型的秘籍呢？,想要哪一种读本？,Which manual would you like?,implemented,,/storyScripts/legacy/segments/1713/steps/1/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-c387401c7d68f81c2b23,storyScripts,original_新手引导.买药,legacy,original_新手引导.买药,text,,,,拳掌,拳掌：护炉拳,Unarmed — Hearthguard Fist,implemented,,/storyScripts/legacy/segments/1713/steps/1/blocks/0/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-ad088e5116e7cc1e42ba,storyScripts,original_新手引导.买药,legacy,original_新手引导.买药,text,,,,剑法,剑法：青蛇剑术,Sword — Green Serpent,implemented,,/storyScripts/legacy/segments/1713/steps/1/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-377d74f7afbf6f5a8d5f,storyScripts,original_新手引导.买药,legacy,original_新手引导.买药,text,,,,刀法,刀法：谷地刀术,Blade — Valley Cut,implemented,,/storyScripts/legacy/segments/1713/steps/1/blocks/0/options/2/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-7ce4e2ac887253cd3fc6,storyScripts,original_新手引导.买药,legacy,original_新手引导.买药,text,,,,奇门,奇门：游杖术,Staff — Wayward Staff,implemented,,/storyScripts/legacy/segments/1713/steps/1/blocks/0/options/3/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-38c20ad128641074bfb4,storyScripts,original_新手引导.买药,legacy,original_新手引导.买药,dialogue_run,商人,商人 → 店主 / Shopkeeper [classified],GB,商人：哎呀，小兄弟来买药的？欢迎光临！看你是新手，我送你一本武功秘籍！你要什么类型的？,商人：格林让你来的？正好，我这里有本新手卷轴送你。先选打法，再选英雄的站姿。,商人：Grimm sent you? Excellent. I have a beginner's scroll for you. Choose a fighting style before you choose a heroic pose.,implemented,,/storyScripts/legacy/segments/1713/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-c329be6cd2e1fc4d7cdc,storyScripts,original_新手引导.买药,legacy,original_新手引导.买药,text,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",要什么类型的秘籍呢？,想要哪一种卷轴？,Which scroll would you like?,implemented,,/storyScripts/legacy/segments/1713/steps/1/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-c387401c7d68f81c2b23,storyScripts,original_新手引导.买药,legacy,original_新手引导.买药,text,,,,拳掌,魔法：护炉符术,Magic — Hearthward Sigil,implemented,,/storyScripts/legacy/segments/1713/steps/1/blocks/0/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-ad088e5116e7cc1e42ba,storyScripts,original_新手引导.买药,legacy,original_新手引导.买药,text,,,,剑法,剑法：青蛇剑术,Sword — Serpent Swordplay,implemented,,/storyScripts/legacy/segments/1713/steps/1/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-377d74f7afbf6f5a8d5f,storyScripts,original_新手引导.买药,legacy,original_新手引导.买药,text,,,,刀法,刃术：荆刃战技,Blade — Thornblade Arts,implemented,,/storyScripts/legacy/segments/1713/steps/1/blocks/0/options/2/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-7ce4e2ac887253cd3fc6,storyScripts,original_新手引导.买药,legacy,original_新手引导.买药,text,,,,奇门,魔杖：游杖魔法,Wand — Wandering Wandcraft,implemented,,/storyScripts/legacy/segments/1713/steps/1/blocks/0/options/3/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6f56f1e93fa884066a7a,storyScripts,original_新手引导.买药继续,legacy,original_新手引导.买药继续,dialogue_run,"主角
 商人","主角 → 玩家角色 / Player character [classified]
 商人 → 店主 / Shopkeeper [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：谢谢掌柜！
@@ -18687,7 +18687,7 @@ copy-6f56f1e93fa884066a7a,storyScripts,original_新手引导.买药继续,legacy
 
 商人：我再送你五颗小还丹！你不用花钱买了！
 
-主角：哇！慷慨啊！","主角：免费送读本？我还听说，商店是很危险的地方。
+主角：哇！慷慨啊！","主角：免费送卷轴？我还听说，商店是很危险的地方。
 
 商人：主要是对钱袋危险。这五份恢复药剂也拿着，算在新手补给里。","主角：A free lesson? I was warned shops were dangerous.
 
@@ -18808,7 +18808,7 @@ copy-4db723ac870a0d1f102d,storyScripts,original_新手引导.教训小孩完成,
 
 主角：丢掉的面子，能算学费吗？
 
-南贤：算是赞助吧。这堂课也会通过专精，提高稳息法的等级上限。","南贤：You kept the bout friendly and learned from it. That is a useful beginning.
+南贤：算是赞助吧。这堂课也会通过专精，提高稳息呼吸法的等级上限。","南贤：You kept the bout friendly and learned from it. That is a useful beginning.
 
 主角：Does losing my dignity count as tuition?
 
@@ -18895,7 +18895,7 @@ copy-83bcfd992c7adf54812c,storyScripts,original_新手引导.教训黑老大完�
 
 南贤：路上的敌人，并不都等着让你现在击败。先修炼、结识伙伴、改善装备，准备好了再回来。
 
-南贤：知道何时离开，也是一门本领。这堂课会通过专精，提高稳息法的等级上限。","南贤：The bully is still standing, I take it?
+南贤：知道何时离开，也是一门本领。这堂课会通过专精，提高稳息呼吸法的等级上限。","南贤：The bully is still standing, I take it?
 
 主角：Very firmly. I tested the matter.
 
@@ -18925,7 +18925,7 @@ copy-f27d844a8f680980131b,storyScripts,original_新手引导结束,legacy,origin
 
 主角：没问题！","南贤：准备补给、交易、练习、判断难敌——生存的好习惯，已经攒起几样了。
 
-南贤：接下来可以选个门派，也可以走自己的路。两条路，都不附送成功保证。
+南贤：接下来可以选个学派，也可以走自己的路。两条路，都不附送成功保证。
 
 主角：看来，结局还得我自己准备。","南贤：You can prepare, trade, train, and judge a difficult fight. A promising collection of survival habits.
 
@@ -20254,7 +20254,7 @@ copy-2d045f40c415135c8925,storyScripts,捐款,legacy,捐款,dialogue_run,"支付
 
 支付宝二维码：一定要捐哦！真的要饿死了……饿死了看谁给你们做游戏玩，哼哼……",,,pending,,/storyScripts/legacy/segments/1884/steps/0,25,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8087463d869ce623c601,storyScripts,browser_结伴练习,legacy,browser_结伴练习,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：先和伙伴配合一下，再继续闯荡江湖。,主角：该一起练练了。就算两个人都喊“交给我”，也总得有一个记得看侧翼。,"主角：Time to practise together. If we both shout 'I've got this', one of us still needs to watch the flank.",implemented,,/storyScripts/legacy/segments/1885/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-21c78c6025056b1dd864,storyScripts,browser_新手章节回顾,legacy,browser_新手章节回顾,suggest,,,,入门体验告一段落。原版买药教学、门派选择和其他江湖地点已逐步接入；可继续完成南贤的原版任务。尚未迁移的特殊流程不会被当作已完成。,入门练习暂告一段落。检查装备、修炼和同行伙伴，保存好进度，再继续上路。,"First lessons complete. Review your equipment, training and companions, then save before setting out.",implemented,,/storyScripts/legacy/segments/1886/steps/0/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-21c78c6025056b1dd864,storyScripts,browser_新手章节回顾,legacy,browser_新手章节回顾,suggest,,,,入门体验告一段落。原版买药教学、门派选择和其他江湖地点已逐步接入；可继续完成南贤的原版任务。尚未迁移的特殊流程不会被当作已完成。,两个旅人就这样成为了搭档。检查前期章节目标，再保存这段旅程。实地委托之外还有更多故事，后续章节仍在逐批改写。,That is how two travellers become a team. Review your opening-chapter goals and save your journey. More stories await beyond this field trial; those later chapters are still being rewritten.,implemented,,/storyScripts/legacy/segments/1886/steps/0/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f7cedc6d07e790bbd0c4,battles,测试战斗,,,name,,,,测试战斗,,,pending,,/battles/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2328461b37630b754b1e,battles,南贤居_木头人_战斗,,,name,,,,南贤居_木头人_战斗,初次练习,First Practice,implemented,,/battles/1/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-15f124c0fd8c644c14c6,battles,南贤居_经验木头人_战斗,,,name,,,,南贤居_经验木头人_战斗,,,pending,,/battles/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21613,94 +21613,94 @@ copy-ba6067fa1e07f743810c,characters,血刀老祖2,,,name,血刀老祖2,血刀�
 copy-9875b13b2683937fc418,characters,血刀老祖3,,,name,血刀老祖3,血刀老祖3 → 亚伯拉罕·范海辛 / Abraham Van Helsing [proposed],RO,血刀老祖,,,pending,,/characters/510/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c61ad5d5d47ebd443b60,characters,阿青,,,name,阿青,阿青 → 雅典娜 / Athena [proposed],GR,阿青,,,pending,,/characters/511/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a42676942302d23a1a0f,characters,凤姐,,,name,凤姐,凤姐 → 露西·韦斯特娜 / Lucy Westenra [proposed],RO,凤姐,,,pending,,/characters/512/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-86fafa39ae5318a9b8ce,externalSkills,猴抓,,,name,,,,猴抓,扫掠爪,Raking Swipe,implemented,,/externalSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-86fafa39ae5318a9b8ce,externalSkills,猴抓,,,name,,,,猴抓,机关扫击,Clockwork Swipe,implemented,,/externalSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-bae56ca9f30b7487e94b,externalSkills,猴抓,,,description,,,,猴子挠人,迅速的扫掠攻击。训练假人，也能靠它提醒你保持警惕。,A quick raking attack. Even a practice dummy can make a point with it.,implemented,,/externalSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e58986538f8969d33242,externalSkills,猴抓,,,name,,,,猴子偷桃,,,pending,,/externalSkills/0/formSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-14096e092ac5417fc16e,externalSkills,猴抓,,,description,,,,猴子专用的阴毒招数,,,pending,,/externalSkills/0/formSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-0e310021140e49d43701,externalSkills,雕啄,,,name,,,,雕啄,,,pending,,/externalSkills/1/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-9301888c08641f484ec7,externalSkills,雕啄,,,description,,,,大雕啄人,,,pending,,/externalSkills/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-0e310021140e49d43701,externalSkills,雕啄,,,name,,,,雕啄,鹰啄,Eagle Peck,implemented,,/externalSkills/1/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-9301888c08641f484ec7,externalSkills,雕啄,,,description,,,,大雕啄人,用尖喙迅速攻击。,A swift attack with a sharp beak.,implemented,,/externalSkills/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-4e9bbb378c7e99b07e70,externalSkills,雕啄,,,name,,,,大鹏展翅,,,pending,,/externalSkills/1/formSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c09e0c103395f4983dfe,externalSkills,雕啄,,,description,,,,大鹏展翅,,,pending,,/externalSkills/1/formSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-3bd7582e3d52e876af1a,externalSkills,松风剑法,,,name,,,,松风剑法,,,pending,,/externalSkills/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-80d1f4cee1cf13e15aa8,externalSkills,松风剑法,,,description,,,,入门剑法,,,pending,,/externalSkills/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-3bd7582e3d52e876af1a,externalSkills,松风剑法,,,name,,,,松风剑法,风歌剑术,Wind-song Swordplay,implemented,,/externalSkills/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-80d1f4cee1cf13e15aa8,externalSkills,松风剑法,,,description,,,,入门剑法,节奏分明的剑术。威力、消耗和距离见技能面板。,"Measured sword strokes. Check the skill panel for power, cost and reach.",implemented,,/externalSkills/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8aeb7f1ba37aa88ee4e8,externalSkills,松风剑法,,,name,,,,屁股向后.平沙落雁式,,,pending,,/externalSkills/2/formSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ec50caa6fb70e9fa3c3f,externalSkills,松风剑法,,,description,,,,撅着屁股，发挥出松风剑法最大的威力,,,pending,,/externalSkills/2/formSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-53de7d626bb18412b669,externalSkills,罗汉拳,,,name,,,,罗汉拳,护炉拳,Hearthguard Fist,implemented,,/externalSkills/3/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a2685761884605fbfcf5,externalSkills,罗汉拳,,,description,,,,少林派入门拳法,基础拳掌训练，讲究直接而有节制的发力。,"Foundational unarmed training: direct, disciplined strikes.",implemented,,/externalSkills/3/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-4ddf017b82d10631f8ab,externalSkills,太祖长拳,,,name,,,,太祖长拳,,,pending,,/externalSkills/4/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-c025aad2aa8a50409a94,externalSkills,太祖长拳,,,description,,,,丐帮入门拳法,,,pending,,/externalSkills/4/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-faf01f18cd8cf3a86110,externalSkills,南山刀法,,,name,,,,南山刀法,守丘刀术,Hillguard Blade,implemented,,/externalSkills/5/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-53de7d626bb18412b669,externalSkills,罗汉拳,,,name,,,,罗汉拳,护炉符术,Hearthward Sigil,implemented,,/externalSkills/3/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a2685761884605fbfcf5,externalSkills,罗汉拳,,,description,,,,少林派入门拳法,基础攻击符术。威力、消耗和距离可在技能面板查看。,"A foundational attack sigil. Its power, cost and reach are shown in the technique panel.",implemented,,/externalSkills/3/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-4ddf017b82d10631f8ab,externalSkills,太祖长拳,,,name,,,,太祖长拳,炉石冲击,Hearthstone Force,implemented,,/externalSkills/4/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-c025aad2aa8a50409a94,externalSkills,太祖长拳,,,description,,,,丐帮入门拳法,直接的力场魔法。威力、消耗和距离见技能面板。,"A direct force spell. Check the skill panel for power, cost and reach.",implemented,,/externalSkills/4/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-faf01f18cd8cf3a86110,externalSkills,南山刀法,,,name,,,,南山刀法,高地劈斩,Highland Cleave,implemented,,/externalSkills/5/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0ff02886182eef6a01ce,externalSkills,南山刀法,,,description,,,,水水的刀法,,,pending,,/externalSkills/5/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a1271a73aedc1d6fa146,externalSkills,万劫刀法,,,name,,,,万劫刀法,谷地刀术,Valley Cut,implemented,,/externalSkills/6/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-468f65475b49839e1653,externalSkills,万劫刀法,,,description,,,,万劫谷的水货刀法,朴素的谷地刀术，好习惯比响亮的名字更值钱。,A simple valley blade style. Good habits are worth more than a grand name.,implemented,,/externalSkills/6/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-602441576379c48e7239,externalSkills,疯魔杖法,,,name,,,,疯魔杖法,游杖术,Wayward Staff,implemented,,/externalSkills/7/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a1271a73aedc1d6fa146,externalSkills,万劫刀法,,,name,,,,万劫刀法,荆刃战技,Thornblade Arts,implemented,,/externalSkills/6/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-468f65475b49839e1653,externalSkills,万劫刀法,,,description,,,,万劫谷的水货刀法,朴素的荆刃战技，好习惯比响亮的名字更值钱。,A simple valley blade style. Good habits are worth more than a grand name.,implemented,,/externalSkills/6/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-602441576379c48e7239,externalSkills,疯魔杖法,,,name,,,,疯魔杖法,游杖魔法,Wandering Wandcraft,implemented,,/externalSkills/7/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5fb2cd2fdc32a09f47e4,externalSkills,疯魔杖法,,,description,,,,丐帮入门杖法,适合不愿站着挨打的人，一套活跃的杖法。,An energetic staff style for fighters who dislike standing still.,implemented,,/externalSkills/7/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-18760d62cc31c978d9a0,externalSkills,柴山十八路,,,name,,,,柴山十八路,,,pending,,/externalSkills/8/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-433933bb31b6695d6e10,externalSkills,柴山十八路,,,description,,,,十两买来的刀法,,,pending,,/externalSkills/8/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-b7711496474f8fb7a270,externalSkills,青蟒剑法,,,name,,,,青蟒剑法,青蛇剑术,Green Serpent,implemented,,/externalSkills/9/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-18760d62cc31c978d9a0,externalSkills,柴山十八路,,,name,,,,柴山十八路,开径斩,Trailblazer Cleave,implemented,,/externalSkills/8/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-433933bb31b6695d6e10,externalSkills,柴山十八路,,,description,,,,十两买来的刀法,适合在险路上开道的实用刃术。,Practical bladework for an unwelcoming road.,implemented,,/externalSkills/8/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b7711496474f8fb7a270,externalSkills,青蟒剑法,,,name,,,,青蟒剑法,青蛇剑术,Serpent Swordplay,implemented,,/externalSkills/9/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-26591088eff9ed596882,externalSkills,青蟒剑法,,,description,,,,青蟒剑法,剑路曲折，适合沉下心来反复练习。,A winding sword style that rewards steady practice.,implemented,,/externalSkills/9/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-db700b2ca06808426c68,externalSkills,三分剑法,,,name,,,,三分剑法,,,pending,,/externalSkills/10/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-792bd580bc4bf086e537,externalSkills,三分剑法,,,description,,,,每一招只使出三分之一，故此称为三分剑法,,,pending,,/externalSkills/10/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-db700b2ca06808426c68,externalSkills,三分剑法,,,name,,,,三分剑法,三段剑术,Threefold Swordplay,implemented,,/externalSkills/10/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-792bd580bc4bf086e537,externalSkills,三分剑法,,,description,,,,每一招只使出三分之一，故此称为三分剑法,围绕角度变化展开的剑术，实际效果见技能面板。,Swordplay built around changes of angle. See the skill panel for its actual effect.,implemented,,/externalSkills/10/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d9f95b939aa1be63875f,externalSkills,三分剑法,,,name,,,,三分剑法.天山飞雪,,,pending,,/externalSkills/10/formSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a476c418c2561b5e8d51,externalSkills,三分剑法,,,description,,,,三分剑法的精髓,,,pending,,/externalSkills/10/formSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-0f8db3cc2f8f40340040,externalSkills,草原刀法,,,name,,,,草原刀法,,,pending,,/externalSkills/11/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-770932e370c0ae69552c,externalSkills,草原刀法,,,description,,,,游牧民族的刀法精髓,,,pending,,/externalSkills/11/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-dc80e23913d8e9249281,externalSkills,天山掌法,,,name,,,,天山掌法,,,pending,,/externalSkills/12/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-83cad5f096bd6c01decf,externalSkills,天山掌法,,,description,,,,灵鹫宫的入门掌法,,,pending,,/externalSkills/12/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-0f8db3cc2f8f40340040,externalSkills,草原刀法,,,name,,,,草原刀法,草原弯刀术,Prairie Sabre Arts,implemented,,/externalSkills/11/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-770932e370c0ae69552c,externalSkills,草原刀法,,,description,,,,游牧民族的刀法精髓,草原旅人讲求实用的弯刀技艺。,Open-country bladework with a traveller's sense of economy.,implemented,,/externalSkills/11/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-dc80e23913d8e9249281,externalSkills,天山掌法,,,name,,,,天山掌法,霜掌符术,Frostpalm Sigil,implemented,,/externalSkills/12/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-83cad5f096bd6c01decf,externalSkills,天山掌法,,,description,,,,灵鹫宫的入门掌法,来自山间学派的符术，实际参数见技能面板。,A mountain-school spellcraft technique. Its live parameters are shown in the skill panel.,implemented,,/externalSkills/12/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9c8e1a7bc1f009b3845a,externalSkills,天山掌法,,,name,,,,伪生死符,,,pending,,/externalSkills/12/formSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-da723ba798745dd82b24,externalSkills,天山掌法,,,description,,,,灵鹫宫普通弟子行走江湖吓唬人的,,,pending,,/externalSkills/12/formSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-98fbcc7d4fdc4c6e0e0f,externalSkills,飘雪穿云掌,,,name,,,,飘雪穿云掌,落云掌,Cloudfall Palm,implemented,,/externalSkills/13/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-98fbcc7d4fdc4c6e0e0f,externalSkills,飘雪穿云掌,,,name,,,,飘雪穿云掌,云涌魔法,Cloudburst Spell,implemented,,/externalSkills/13/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2e660217fcb95ca108dc,externalSkills,飘雪穿云掌,,,description,,,,峨眉派轻灵飘逸的掌法,,,pending,,/externalSkills/13/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1dfbbe4ce41b1bf3a393,externalSkills,飘雪穿云掌,,,name,,,,飘雪穿云掌.雪漫金山,,,pending,,/externalSkills/13/formSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fbad8e70b5286b4f4550,externalSkills,飘雪穿云掌,,,description,,,,飘雪穿云，雪漫金山,,,pending,,/externalSkills/13/formSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-886910f00407d24bcd4b,externalSkills,天罗地网掌,,,name,,,,天罗地网掌,,,pending,,/externalSkills/14/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-b1414e4d2b339b14a19f,externalSkills,天罗地网掌,,,description,,,,古墓派轻灵飘逸的掌法,,,pending,,/externalSkills/14/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-886910f00407d24bcd4b,externalSkills,天罗地网掌,,,name,,,,天罗地网掌,束网咒法,Binding Loom,implemented,,/externalSkills/14/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b1414e4d2b339b14a19f,externalSkills,天罗地网掌,,,description,,,,古墓派轻灵飘逸的掌法,以交织手法施展的攻击咒法，距离和消耗见面板。,A woven pattern of spellcraft strikes. Check the panel for range and cost.,implemented,,/externalSkills/14/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c1c719564c693d0c751f,externalSkills,天罗地网掌,,,name,,,,天罗地网掌.彩翼双飞,,,pending,,/externalSkills/14/formSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-83a5de641b09b5440e46,externalSkills,天罗地网掌,,,description,,,,杨过、小龙女自由发挥的天罗地网绝技,,,pending,,/externalSkills/14/formSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-9e3685404734a3d3fcb7,externalSkills,华山剑法,,,name,,,,华山剑法,鹤峰剑术,Cranepeak Sword,implemented,,/externalSkills/15/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-9e3685404734a3d3fcb7,externalSkills,华山剑法,,,name,,,,华山剑法,鹤翼剑术,Crane-wing Swordplay,implemented,,/externalSkills/15/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-4f60012d54ebc2bc51da,externalSkills,华山剑法,,,description,,,,华山派剑法,,,pending,,/externalSkills/15/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-01f12e83bafc7d9c66bd,externalSkills,华山剑法,,,name,,,,华山剑法.苍松迎客,,,pending,,/externalSkills/15/formSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e99021d12649d5aa0bac,externalSkills,华山剑法,,,description,,,,苍松迎客,,,pending,,/externalSkills/15/formSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-5b572351f45de5c9af43,externalSkills,恒山剑法,,,name,,,,恒山剑法,,,pending,,/externalSkills/16/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-b7b568bc0ebcc635ba72,externalSkills,恒山剑法,,,description,,,,恒山派剑法,,,pending,,/externalSkills/16/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-0cafd3f3c5c6bec5e6d0,externalSkills,袖箭,,,name,,,,袖箭,,,pending,,/externalSkills/17/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d32c41fa95dcc1820261,externalSkills,袖箭,,,description,,,,出其不意的袖箭,,,pending,,/externalSkills/17/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-5b572351f45de5c9af43,externalSkills,恒山剑法,,,name,,,,恒山剑法,山巅守望剑术,Mountainwatch Swordplay,implemented,,/externalSkills/16/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b7b568bc0ebcc635ba72,externalSkills,恒山剑法,,,description,,,,恒山派剑法,在山道之上修习的沉稳剑术。,Patient swordplay taught above the mountain roads.,implemented,,/externalSkills/16/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-0cafd3f3c5c6bec5e6d0,externalSkills,袖箭,,,name,,,,袖箭,腕弩术,Wristbolt,implemented,,/externalSkills/17/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d32c41fa95dcc1820261,externalSkills,袖箭,,,description,,,,出其不意的袖箭,隐蔽的投射战技，选择目标前查看技能面板。,A concealed projectile technique. Consult the panel before selecting a target.,implemented,,/externalSkills/17/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d3bc573806a63a25eb5f,externalSkills,袖箭,,,name,,,,连环箭,,,pending,,/externalSkills/17/formSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b9de4b98b68cbbc786cd,externalSkills,袖箭,,,description,,,,情急之下，一顿乱射。绝招由此而来。,,,pending,,/externalSkills/17/formSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-e9330e8c0df10cd527bd,externalSkills,拂尘,,,name,,,,拂尘,,,pending,,/externalSkills/18/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a2330047e13da2749c73,externalSkills,拂尘,,,description,,,,拂尘也可以是武器!,,,pending,,/externalSkills/18/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-0625e68c00f7ac7b2b47,externalSkills,蛇鹤八打,,,name,,,,蛇鹤八打,蛇鹤八式,Serpent and Crane,implemented,,/externalSkills/19/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-e9330e8c0df10cd527bd,externalSkills,拂尘,,,name,,,,拂尘,低语杖法,Whispering Wand,implemented,,/externalSkills/18/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a2330047e13da2749c73,externalSkills,拂尘,,,description,,,,拂尘也可以是武器!,讲究精准操控的轻巧魔杖技艺。,A light wandcraft technique with precise handling.,implemented,,/externalSkills/18/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-0625e68c00f7ac7b2b47,externalSkills,蛇鹤八打,,,name,,,,蛇鹤八打,双形符术,Twin-Form Sigil,implemented,,/externalSkills/19/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ec676afbb5530a8548f4,externalSkills,蛇鹤八打,,,description,,,,云中鹤的诡异武功,,,pending,,/externalSkills/19/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-443662914f0bcf72d9d0,externalSkills,雷震剑法,,,name,,,,雷震剑法,,,pending,,/externalSkills/20/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-19378c66078b44452c63,externalSkills,雷震剑法,,,description,,,,雷震剑法,,,pending,,/externalSkills/20/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-0bca38576593b9af1e84,externalSkills,大嵩阳手,,,name,,,,大嵩阳手,,,pending,,/externalSkills/21/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-2cfb601c25334fd1e9d1,externalSkills,大嵩阳手,,,description,,,,嵩山派武功,,,pending,,/externalSkills/21/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-443662914f0bcf72d9d0,externalSkills,雷震剑法,,,name,,,,雷震剑法,雷锋剑术,Thunderedge Swordplay,implemented,,/externalSkills/20/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-19378c66078b44452c63,externalSkills,雷震剑法,,,description,,,,雷震剑法,果断迅捷的剑术，实际伤害参数见技能面板。,Decisive sword strokes. The skill panel shows the actual damage parameters.,implemented,,/externalSkills/20/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-0bca38576593b9af1e84,externalSkills,大嵩阳手,,,name,,,,大嵩阳手,晨光术,Sunwake Spell,implemented,,/externalSkills/21/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-2cfb601c25334fd1e9d1,externalSkills,大嵩阳手,,,description,,,,嵩山派武功,有力的符术，施展前查看亲和与消耗。,A forceful spellcraft technique. Check its affinity and cost before casting.,implemented,,/externalSkills/21/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-36fd61224d68076a9b69,externalSkills,大嵩阳手,,,name,,,,大嵩阳手.嵩阳神掌,,,pending,,/externalSkills/21/formSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9e2a971f2f3ba3916ccd,externalSkills,大嵩阳手,,,description,,,,亡命的一击,,,pending,,/externalSkills/21/formSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-8b947b6d4726cc5beb6e,externalSkills,百花错拳,,,name,,,,百花错拳,,,pending,,/externalSkills/22/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-0956d24ea7ed8a8ee87e,externalSkills,百花错拳,,,description,,,,百花错拳,,,pending,,/externalSkills/22/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-8b947b6d4726cc5beb6e,externalSkills,百花错拳,,,name,,,,百花错拳,花雨符术,Petalstorm Sigil,implemented,,/externalSkills/22/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-0956d24ea7ed8a8ee87e,externalSkills,百花错拳,,,description,,,,百花错拳,通过实战和卷轴研习提高的符术。,A spell pattern practised through combat and scroll study.,implemented,,/externalSkills/22/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-30544ab1cac43d6d71c2,externalSkills,百花错拳,,,name,,,,百花错拳.百花缭乱,,,pending,,/externalSkills/22/formSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a986672623a86bf5226e,externalSkills,百花错拳,,,description,,,,百花错拳绝技,,,pending,,/externalSkills/22/formSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-6b1eb6290c61f3e68132,externalSkills,嵩山剑法,,,name,,,,嵩山剑法,,,pending,,/externalSkills/23/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-df7464114f30e2ad513a,externalSkills,嵩山剑法,,,description,,,,嵩山派武功,,,pending,,/externalSkills/23/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-5827a201704d72c477c1,externalSkills,玄虚刀法,,,name,,,,玄虚刀法,,,pending,,/externalSkills/24/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-ba50ac855450dec27248,externalSkills,玄虚刀法,,,description,,,,武当派刀法,,,pending,,/externalSkills/24/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-fca21a78ebd65b69264a,externalSkills,毒龙鞭法,,,name,,,,毒龙鞭法,,,pending,,/externalSkills/25/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-75fb9248bb8306deade7,externalSkills,毒龙鞭法,,,description,,,,毒龙鞭法,,,pending,,/externalSkills/25/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-6b1eb6290c61f3e68132,externalSkills,嵩山剑法,,,name,,,,嵩山剑法,岭卫剑术,Ridgeguard Swordplay,implemented,,/externalSkills/23/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-df7464114f30e2ad513a,externalSkills,嵩山剑法,,,description,,,,嵩山派武功,带有山岭守卫严整风格的剑术。,Swordplay with a mountain guard's discipline.,implemented,,/externalSkills/23/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-5827a201704d72c477c1,externalSkills,玄虚刀法,,,name,,,,玄虚刀法,虚刃战技,Hollowblade Arts,implemented,,/externalSkills/24/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-ba50ac855450dec27248,externalSkills,玄虚刀法,,,description,,,,武当派刀法,细腻的刃术，实际参数见技能面板。,Subtle bladework. Consult the live skill panel for its parameters.,implemented,,/externalSkills/24/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-fca21a78ebd65b69264a,externalSkills,毒龙鞭法,,,name,,,,毒龙鞭法,蝰鞭战技,Viperwhip Arts,implemented,,/externalSkills/25/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-75fb9248bb8306deade7,externalSkills,毒龙鞭法,,,description,,,,毒龙鞭法,属于魔杖熟练类别的鞭术，具体效果见技能面板。,Wandcraft-class weapon handling with a whip's reach. Consult the skill panel for effects.,implemented,,/externalSkills/25/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-df97182f96df9f6b6944,externalSkills,毒龙鞭法,,,name,,,,毒龙鞭法.银龙毒鞭,,,pending,,/externalSkills/25/formSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-4fa209507e90188f0aaa,externalSkills,毒龙鞭法,,,description,,,,歹毒的鞭法,,,pending,,/externalSkills/25/formSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-1068b9b339dc81bfe510,externalSkills,流星锤,,,name,,,,流星锤,,,pending,,/externalSkills/26/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-9a9f4a78565d0a8c8d4c,externalSkills,流星锤,,,description,,,,流星锤,,,pending,,/externalSkills/26/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-4b418a54ec99ec777e58,externalSkills,伏虎掌,,,name,,,,伏虎掌,,,pending,,/externalSkills/27/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-f54a07e20690137ac921,externalSkills,伏虎掌,,,description,,,,华山派粗浅的拳掌功夫,,,pending,,/externalSkills/27/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a83ba18e1f9a14e02308,externalSkills,韦陀棍,,,name,,,,韦陀棍,,,pending,,/externalSkills/28/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-ec59dae7f2cc96d7ce0a,externalSkills,韦陀棍,,,description,,,,少林十三棍，威震天下,,,pending,,/externalSkills/28/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-3aac2d05b12acd30ff3e,externalSkills,小洪拳,,,name,,,,小洪拳,,,pending,,/externalSkills/29/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-c493d2195ec5cf0e8dfd,externalSkills,小洪拳,,,description,,,,南少林武功和洪熙官有什么关系？,,,pending,,/externalSkills/29/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-1231f955247144ad32bd,externalSkills,绵掌,,,name,,,,绵掌,,,pending,,/externalSkills/30/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d287d293b2229e615ab6,externalSkills,绵掌,,,description,,,,武当派扎实的基本武功，柔中带刚,,,pending,,/externalSkills/30/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-019d6a3025d886511bd8,externalSkills,参合指,,,name,,,,参合指,,,pending,,/externalSkills/31/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-9edda4ef2f404faee85a,externalSkills,参合指,,,description,,,,姑苏慕容氏的指法,,,pending,,/externalSkills/31/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-1068b9b339dc81bfe510,externalSkills,流星锤,,,name,,,,流星锤,陨星链枷,Meteor Flail,implemented,,/externalSkills/26/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-9a9f4a78565d0a8c8d4c,externalSkills,流星锤,,,description,,,,流星锤,重物挥击战技，消耗和距离见技能面板。,A weighted weapon technique. Its cost and reach are shown in the skill panel.,implemented,,/externalSkills/26/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-4b418a54ec99ec777e58,externalSkills,伏虎掌,,,name,,,,伏虎掌,岩爪术,Stoneclaw Spell,implemented,,/externalSkills/27/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-f54a07e20690137ac921,externalSkills,伏虎掌,,,description,,,,华山派粗浅的拳掌功夫,发力沉稳的攻击符术。,Firmly grounded spellcraft strikes.,implemented,,/externalSkills/27/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a83ba18e1f9a14e02308,externalSkills,韦陀棍,,,name,,,,韦陀棍,守门杖法,Gatekeeper Staff,implemented,,/externalSkills/28/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-ec59dae7f2cc96d7ce0a,externalSkills,韦陀棍,,,description,,,,少林十三棍，威震天下,传授给守望者的长杖战技。,Staff handling taught to watchkeepers.,implemented,,/externalSkills/28/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-3aac2d05b12acd30ff3e,externalSkills,小洪拳,,,name,,,,小洪拳,学徒火花,Apprentice Spark,implemented,,/externalSkills/29/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-c493d2195ec5cf0e8dfd,externalSkills,小洪拳,,,description,,,,南少林武功和洪熙官有什么关系？,入门符术，实际威力和消耗见技能面板。,A beginner's spellcraft technique. Consult the panel for its actual power and cost.,implemented,,/externalSkills/29/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-1231f955247144ad32bd,externalSkills,绵掌,,,name,,,,绵掌,柔风符术,Softwind Sigil,implemented,,/externalSkills/30/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d287d293b2229e615ab6,externalSkills,绵掌,,,description,,,,武当派扎实的基本武功，柔中带刚,经由反复练习掌握的流动符术。,Flowing spellcraft practised through careful repetition.,implemented,,/externalSkills/30/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-019d6a3025d886511bd8,externalSkills,参合指,,,name,,,,参合指,光针术,Needlelight Spell,implemented,,/externalSkills/31/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-9edda4ef2f404faee85a,externalSkills,参合指,,,description,,,,姑苏慕容氏的指法,凝聚力量的符术攻击，施展前查看目标距离。,A concentrated spellcraft strike. Check its target range before casting.,implemented,,/externalSkills/31/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f9aea0c3cc093f555d14,externalSkills,八卦游身掌,,,name,,,,八卦游身掌,,,pending,,/externalSkills/32/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2c9f7dc428e1b7d56611,externalSkills,八卦游身掌,,,description,,,,八卦门的掌系绝学。,,,pending,,/externalSkills/32/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5c313f48190042ffb6eb,externalSkills,八卦刀法,,,name,,,,八卦刀法,,,pending,,/externalSkills/33/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21917,7 +21917,7 @@ copy-e3db711853361d59ed28,externalSkills,空明拳,,,name,,,,空明拳,,,pending
 copy-621ec79b2722415aae06,externalSkills,空明拳,,,description,,,,会得了空明拳，也不见得能学会左右互搏,,,pending,,/externalSkills/116/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-23f73acd391196b58994,externalSkills,空明拳,,,name,,,,空明拳.空空如也,,,pending,,/externalSkills/116/formSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2a163bbd06790d74c7ce,externalSkills,空明拳,,,description,,,,空空如也，空手套白狼,,,pending,,/externalSkills/116/formSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-22758b31ef5acc390294,externalSkills,燃木刀法,,,name,,,,燃木刀法,烬火刀术,Ember Blade,implemented,,/externalSkills/117/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-22758b31ef5acc390294,externalSkills,燃木刀法,,,name,,,,燃木刀法,烬刃剑术,Emberblade Swordplay,implemented,,/externalSkills/117/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2a8d6663bd7db967d11a,externalSkills,燃木刀法,,,description,,,,少林寺七十二绝技之一,,,pending,,/externalSkills/117/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-cfdfac986d14bb02364f,externalSkills,日月神掌,,,name,,,,日月神掌,,,pending,,/externalSkills/118/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-50590b7eba899b6800b7,externalSkills,日月神掌,,,description,,,,日月神教教主独步江湖的掌法,,,pending,,/externalSkills/118/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -22077,8 +22077,8 @@ copy-5e53e100c3dadd8b8fea,externalSkills,烈焰黑剑,,,name,,,,烈焰黑剑,,,p
 copy-673734e76f440d73ce96,externalSkills,烈焰黑剑,,,description,,,,神秘的黑暗武学,,,pending,,/externalSkills/152/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3b9115dec100482a3b1a,externalSkills,烈焰黑剑,,,name,,,,烈焰黑剑.幽垠,,,pending,,/externalSkills/152/formSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b6137d275dcd14f4ffa6,externalSkills,烈焰黑剑,,,description,,,,黑色火焰笼罩世界,,,pending,,/externalSkills/152/formSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-f5597a31d29a0b14f467,externalSkills,野球拳,,,name,,,,野球拳,街头拳法,Scrapper's Fist,implemented,,/externalSkills/153/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-21408e469f8b8946585b,externalSkills,野球拳,,,description,,,,江湖混混与人胡搅蛮缠的拳法,招式不算体面，成长余地却很大。优雅谈不上，纠缠到底倒是在行。,An unpolished fighting style with considerable room to grow. Graceful? Rarely. Persistent? Absolutely.,implemented,,/externalSkills/153/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-f5597a31d29a0b14f467,externalSkills,野球拳,,,name,,,,野球拳,旅人奥术击,Wayfarer's Arcane Strike,implemented,,/externalSkills/153/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-21408e469f8b8946585b,externalSkills,野球拳,,,description,,,,江湖混混与人胡搅蛮缠的拳法,成长余地很大的基础力场魔法。优雅谈不上，纠缠到底倒是在行。,A beginner's force spell with considerable room to grow. Graceful? Rarely. Persistent? Absolutely.,implemented,,/externalSkills/153/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-64631f445a9a42b2c27c,externalSkills,野球拳,,,name,,,,野球拳.市井流氓,,,pending,,/externalSkills/153/formSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-276568d86863843650d6,externalSkills,野球拳,,,description,,,,我是流氓我怕谁！,,,pending,,/externalSkills/153/formSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5c1da7ec6208452310da,externalSkills,野球拳,,,name,,,,野球拳.胡搅蛮缠,,,pending,,/externalSkills/153/formSkills/1/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -22199,28 +22199,28 @@ copy-542fe4e05cb76b853413,growTemplates,韦小宝,,,name,,,,韦小宝,,,pending,
 copy-b6ced8ec56b73752b584,growTemplates,内家,,,name,,,,内家,,,pending,,/growTemplates/14/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5d5637d4ea34a3c1267e,growTemplates,内功大师,,,name,,,,内功大师,,,pending,,/growTemplates/15/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6191618958b7504882c0,growTemplates,医生,,,name,,,,医生,,,pending,,/growTemplates/16/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-ef502dc6031d9616773c,internalSkills,基本内功,,,name,,,,基本内功,稳息法,Steady Breath,implemented,,/internalSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-4850dd3984e146e08a08,internalSkills,基本内功,,,description,,,,天下内功的根基,阴阳均衡的基础内功。学会稳住气息，再考虑怎样惊艳全场。,A foundational inner discipline with balanced Yin and Yang. An excellent place to begin staying on your feet.,implemented,,/internalSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-6d2393a0ac54a6a71fd2,internalSkills,血刀心法,,,name,,,,血刀心法,,,pending,,/internalSkills/1/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-e22709cc519c816f68dd,internalSkills,血刀心法,,,description,,,,血刀门的入门心法，只重攻不重防,,,pending,,/internalSkills/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-cd8e851271ea493308fa,internalSkills,全真心法,,,name,,,,全真心法,,,pending,,/internalSkills/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-237c0951cbdd03f94183,internalSkills,全真心法,,,description,,,,全真派的内功心法,,,pending,,/internalSkills/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-65339cda6577b9e22889,internalSkills,天山心法,,,name,,,,天山心法,,,pending,,/internalSkills/3/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-22a5f1fbe96275495a7e,internalSkills,天山心法,,,description,,,,灵鹫宫的内功心法，据说藏着很大秘密,,,pending,,/internalSkills/3/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-08bb79e19aa86db91b29,internalSkills,武当心法,,,name,,,,武当心法,,,pending,,/internalSkills/4/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-7da4ef300a6ebaa6f00c,internalSkills,武当心法,,,description,,,,武当派的内功心法,,,pending,,/internalSkills/4/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-921ce81390af2c30a57c,internalSkills,青城内功,,,name,,,,青城内功,,,pending,,/internalSkills/5/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-fda393b3967a3b870b2f,internalSkills,青城内功,,,description,,,,青城内功青山重重,,,pending,,/internalSkills/5/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-bea4c1cba71d2cd319d8,internalSkills,星宿心法,,,name,,,,星宿心法,,,pending,,/internalSkills/6/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-732e8b2a56f2302b6bb4,internalSkills,星宿心法,,,description,,,,星宿派的入门内功,,,pending,,/internalSkills/6/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-b651d56fb7dc59dfee14,internalSkills,石梁心法,,,name,,,,石梁心法,石桥心法,Stonebridge Discipline,implemented,,/internalSkills/7/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-ef502dc6031d9616773c,internalSkills,基本内功,,,name,,,,基本内功,稳息呼吸法,Steady Breath,implemented,,/internalSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-4850dd3984e146e08a08,internalSkills,基本内功,,,description,,,,天下内功的根基,协调发力与恢复的基础呼吸法。先学会站稳，再考虑怎样惊艳全场。,A steady breathing rhythm that balances effort and recovery. Learn to stay on your feet before attempting a dramatic entrance.,implemented,,/internalSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-6d2393a0ac54a6a71fd2,internalSkills,血刀心法,,,name,,,,血刀心法,猎人呼吸法,Hunter's Breathing,implemented,,/internalSkills/1/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-e22709cc519c816f68dd,internalSkills,血刀心法,,,description,,,,血刀门的入门心法，只重攻不重防,猎人研习的呼吸法，当前运用与卷轴研习分别设置。,A hunter's breathing method. Active use and scroll study are set separately.,implemented,,/internalSkills/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-cd8e851271ea493308fa,internalSkills,全真心法,,,name,,,,全真心法,林地呼吸法,Woodland Breathing,implemented,,/internalSkills/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-237c0951cbdd03f94183,internalSkills,全真心法,,,description,,,,全真派的内功心法,林地学派的呼吸法，实际效果见技能面板。,A woodland school's breathing method. Consult the skill panel for its actual effects.,implemented,,/internalSkills/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-65339cda6577b9e22889,internalSkills,天山心法,,,name,,,,天山心法,冬线呼吸法,Winterthread Breathing,implemented,,/internalSkills/3/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-22a5f1fbe96275495a7e,internalSkills,天山心法,,,description,,,,灵鹫宫的内功心法，据说藏着很大秘密,织线厅的呼吸法，实际效果见技能面板。,A Threadhall breathing method. Consult the skill panel for its actual effects.,implemented,,/internalSkills/3/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-08bb79e19aa86db91b29,internalSkills,武当心法,,,name,,,,武当心法,河流呼吸法,Riverflow Breathing,implemented,,/internalSkills/4/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-7da4ef300a6ebaa6f00c,internalSkills,武当心法,,,description,,,,武当派的内功心法,河流守卫的呼吸法，当前运用与卷轴研习分别设置。,A river warden's breathing method. Active use and scroll study are set separately.,implemented,,/internalSkills/4/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-921ce81390af2c30a57c,internalSkills,青城内功,,,name,,,,青城内功,幽林呼吸法,Quiet Grove Breathing,implemented,,/internalSkills/5/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-fda393b3967a3b870b2f,internalSkills,青城内功,,,description,,,,青城内功青山重重,通过卷轴研习的幽静呼吸法。,A quiet breathing method studied through its scroll.,implemented,,/internalSkills/5/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-bea4c1cba71d2cd319d8,internalSkills,星宿心法,,,name,,,,星宿心法,星光呼吸法,Starlit Breathing,implemented,,/internalSkills/6/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-732e8b2a56f2302b6bb4,internalSkills,星宿心法,,,description,,,,星宿派的入门内功,守望者的呼吸法，实际效果见技能面板。,A watchkeeper's breathing method. Consult the skill panel for its actual effects.,implemented,,/internalSkills/6/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b651d56fb7dc59dfee14,internalSkills,石梁心法,,,name,,,,石梁心法,石桥呼吸法,Stonebridge Breathing,implemented,,/internalSkills/7/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f07181cb48e1ec902aa8,internalSkills,石梁心法,,,description,,,,石梁派心法,,,pending,,/internalSkills/7/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-90df9ce777fd473d876a,internalSkills,少林心法,,,name,,,,少林心法,,,pending,,/internalSkills/8/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-481381c8eb4fa1183442,internalSkills,少林心法,,,description,,,,少林派早课,,,pending,,/internalSkills/8/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-683c4aca5c9dacdff983,internalSkills,段氏心法,,,name,,,,段氏心法,,,pending,,/internalSkills/9/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d5f809b27b989438b482,internalSkills,段氏心法,,,description,,,,大理段氏的内功心法,,,pending,,/internalSkills/9/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-273e899b86b9db18d1e2,internalSkills,紫霞神功,,,name,,,,紫霞神功,,,pending,,/internalSkills/10/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-8344075ac11bd063a7c4,internalSkills,紫霞神功,,,description,,,,华山派心法,,,pending,,/internalSkills/10/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-90df9ce777fd473d876a,internalSkills,少林心法,,,name,,,,少林心法,静石呼吸法,Stillstone Breathing,implemented,,/internalSkills/8/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-481381c8eb4fa1183442,internalSkills,少林心法,,,description,,,,少林派早课,明心庭院的呼吸法，当前运用与卷轴研习分别设置。,A courtyard breathing method. Active use and scroll study are set separately.,implemented,,/internalSkills/8/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-683c4aca5c9dacdff983,internalSkills,段氏心法,,,name,,,,段氏心法,峡湾风息法,Fjordwind Breathing,implemented,,/internalSkills/9/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d5f809b27b989438b482,internalSkills,段氏心法,,,description,,,,大理段氏的内功心法,来自峡湾地区的呼吸法，实际效果见技能面板。,A breathing method from the fjordlands. Consult the skill panel for its actual effects.,implemented,,/internalSkills/9/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-273e899b86b9db18d1e2,internalSkills,紫霞神功,,,name,,,,紫霞神功,暮光呼吸法,Dusklight Breathing,implemented,,/internalSkills/10/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-8344075ac11bd063a7c4,internalSkills,紫霞神功,,,description,,,,华山派心法,具有独特亲和平衡的呼吸法，搭配技能前查看面板。,A breathing method with its own affinity balance. Consult the panel before pairing it with a technique.,implemented,,/internalSkills/10/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f141ee1766db4074cea8,internalSkills,化功大法,,,name,,,,化功大法,,,pending,,/internalSkills/11/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6562aaeb5f85bbc9e007,internalSkills,化功大法,,,description,,,,星宿老仙丁春秋为武林所不齿的内功绝技,,,pending,,/internalSkills/11/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ee30463ab4f0732b2304,internalSkills,化功大法,,,name,,,,化功大法.腐尸毒,,,pending,,/internalSkills/11/formSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -22352,7 +22352,7 @@ copy-c0c4be718f253c0fe007,legendSkills,金蛇郎君.金蛇剑法奥义-金蛇剑
 copy-554fd564eaa3e15c36e7,legendSkills,云意-柔云剑法,,,name,,,,云意,,,pending,,/legendSkills/30/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c4bd732ac5e8f8ea83da,legendSkills,两仪反转-两仪剑法,,,name,,,,两仪反转,,,pending,,/legendSkills/31/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b8d241a19d80b7a672b0,legendSkills,狂风-狂风快剑,,,name,,,,狂风,,,pending,,/legendSkills/32/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d3adc583f48c4c3aff18,legendSkills,万劫闪电貂-万劫刀法,,,name,,,,万劫闪电貂,,,pending,,/legendSkills/33/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d3adc583f48c4c3aff18,legendSkills,万劫闪电貂-万劫刀法,,,name,,,,万劫闪电貂,荆刃与獠牙,Thorn and Fang,implemented,,/legendSkills/33/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-76450bb9510cc442d58b,legendSkills,狂风-狂风刀法,,,name,,,,狂风,,,pending,,/legendSkills/34/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a7322757db3e30d75e6a,legendSkills,天山雪-草原刀法,,,name,,,,天山雪,,,pending,,/legendSkills/35/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1371c8a9301e6993d43b,legendSkills,两仪反转-反两仪刀法,,,name,,,,两仪反转,,,pending,,/legendSkills/36/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -22423,8 +22423,8 @@ copy-c17fe65e3b749908d719,legendSkills,绝学.刀剑归真-苗家剑法,,,name,,
 copy-8517208f5da47a8c2f28,legendSkills,胡家刀法奥义.穿手藏刀-胡家刀法,,,name,,,,胡家刀法奥义.穿手藏刀,,,pending,,/legendSkills/101/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f9d390d7d9e61661ae51,legendSkills,胡家刀法奥义.鹞子翻身刀-胡家刀法,,,name,,,,胡家刀法奥义.鹞子翻身刀,,,pending,,/legendSkills/102/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-dbe3aa54dbf4b4946665,legendSkills,胡家刀法奥义.怀中抱月-胡家刀法,,,name,,,,胡家刀法奥义.怀中抱月,,,pending,,/legendSkills/103/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-7f8cddcbcb5ea6f39d72,legendSkills,草头百姓的逆袭.百姓也有春天-野球拳,,,name,,,,草头百姓的逆袭.百姓也有春天,,,pending,,/legendSkills/104/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-6f802e2ced13f7a63b2a,legendSkills,草头百姓的逆袭.这下子逆天了-野球拳,,,name,,,,草头百姓的逆袭.这下子逆天了,,,pending,,/legendSkills/105/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-7f8cddcbcb5ea6f39d72,legendSkills,草头百姓的逆袭.百姓也有春天-野球拳,,,name,,,,草头百姓的逆袭.百姓也有春天,平民觉醒,Commoner's Awakening,implemented,,/legendSkills/104/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-6f802e2ced13f7a63b2a,legendSkills,草头百姓的逆袭.这下子逆天了-野球拳,,,name,,,,草头百姓的逆袭.这下子逆天了,平民升华,Commoner's Ascendance,implemented,,/legendSkills/105/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e6c600733cbcb6541700,legendSkills,黯然销魂.左手帝-黯然销魂掌,,,name,,,,黯然销魂.左手帝,,,pending,,/legendSkills/106/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-03eda0e1ef4dac255c03,legendSkills,黯然销魂掌奥义式-黯然销魂掌,,,name,,,,黯然销魂掌奥义式,,,pending,,/legendSkills/107/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d77e538e22e451265a34,legendSkills,辟邪剑法奥义式-辟邪剑法,,,name,,,,辟邪剑法奥义式,,,pending,,/legendSkills/108/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -22432,7 +22432,7 @@ copy-a89875a798b849243b96,legendSkills,辟邪剑法奥义式-葵花宝典.真辟
 copy-455ede963e424ea34567,legendSkills,辟邪剑法.阴凛玄煞.电光火石-辟邪剑法,,,name,,,,辟邪剑法.阴凛玄煞.电光火石,,,pending,,/legendSkills/110/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d9fc9fd4020e3d5d90f2,legendSkills,绝学.形意八卦掌-八卦游身掌,,,name,,,,绝学.形意八卦掌,,,pending,,/legendSkills/111/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-253e1183e9517c9b36dc,legendSkills,绝学.八卦无双-八卦刀法,,,name,,,,绝学.八卦无双,,,pending,,/legendSkills/112/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-b9e37d8bcf1cca8b5af8,legendSkills,奥义.缠丝擒拿手-太祖长拳,,,name,,,,奥义.缠丝擒拿手,,,pending,,/legendSkills/113/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b9e37d8bcf1cca8b5af8,legendSkills,奥义.缠丝擒拿手-太祖长拳,,,name,,,,奥义.缠丝擒拿手,缚线术,Binding Threads,implemented,,/legendSkills/113/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7c8af887dc2917ff24e3,legendSkills,混元掌奥义.劈石破玉拳-混元掌,,,name,,,,混元掌奥义.劈石破玉拳,,,pending,,/legendSkills/114/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f90d8bd1d3e492e8c0fe,legendSkills,血刀大法奥义.血海无边-血刀大法,,,name,,,,血刀大法奥义.血海无边,,,pending,,/legendSkills/115/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9ede42125c9560b55625,legendSkills,血刀大法奥义.血海无边-血刀大法-2,,,name,,,,血刀大法奥义.血海无边,,,pending,,/legendSkills/116/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -22447,7 +22447,7 @@ copy-d6bfbb9a34257b90c88d,legendSkills,太玄神功奥义式-太玄神功,,,name
 copy-f90ea991efe3f3f9b59a,legendSkills,奥义.逍遥无极剑-上清剑法,,,name,,,,奥义.逍遥无极剑,,,pending,,/legendSkills/125/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d42016b60826c0ab8bf5,legendSkills,少林.观照般若-般若掌,,,name,,,,少林.观照般若,,,pending,,/legendSkills/126/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-153fcdfcfa224843858a,legendSkills,少林.横扫千军-韦陀棍,,,name,,,,少林.横扫千军,,,pending,,/legendSkills/127/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-78b105b53c22840f94be,legendSkills,少林.醉梦罗汉拳-罗汉拳,,,name,,,,少林.醉梦罗汉拳,,,pending,,/legendSkills/128/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-78b105b53c22840f94be,legendSkills,少林.醉梦罗汉拳-罗汉拳,,,name,,,,少林.醉梦罗汉拳,梦火符术,Dreamfire Sigil,implemented,,/legendSkills/128/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3a463ed554facb59a145,legendSkills,少林.韦陀伏魔-伏魔棍,,,name,,,,少林.韦陀伏魔,,,pending,,/legendSkills/129/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e334bd70e494ab9ebb2c,legendSkills,少林.伏魔禅杖-伏魔棍,,,name,,,,少林.伏魔禅杖,,,pending,,/legendSkills/130/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2e1bbef5effe605ba68c,legendSkills,福建少林.工字伏虎-小洪拳,,,name,,,,福建少林.工字伏虎,,,pending,,/legendSkills/131/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -22472,7 +22472,7 @@ copy-423d531450ae2e6e6540,maps,大地图,,,description,,,,中原北方的重要�
 copy-abf15a7e65e7f0514a11,maps,大地图,,,description,,,,哈萨克部落。,开阔草原旁的一处牧马营地。,A horse camp beside the open grasslands.,implemented,,/maps/0/locations/11/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6543d490e71bf2b60b18,maps,大地图,,,description,,,,高昌迷宫。,旱原下的古老通道。跟着路标走，别只靠自信。,"Old passages beneath the dry plains. Follow landmarks, not confidence.",implemented,,/maps/0/locations/12/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f317e4cde89b21cfa17d,maps,大地图,,,description,,,,回族部落。,商队驻地，不缺传闻，也不缺严守秘密的交易。,"A caravan settlement, rich in rumours and carefully guarded bargains.",implemented,,/maps/0/locations/13/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-e86b609dc3b252b1817c,maps,大地图,,,description,,,,传说中武林最弱的门派。,山间的小门派，正盼着改善自己的名声。,"A modest mountain school, with a reputation it would like to improve.",implemented,,/maps/0/locations/14/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-e86b609dc3b252b1817c,maps,大地图,,,description,,,,传说中武林最弱的门派。,山间的小学派，正盼着改善自己的名声。,"A modest mountain school, with a reputation it would like to improve.",implemented,,/maps/0/locations/14/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-444e7a0c2b43268ece20,maps,大地图,,,description,,,,四川峨眉山,安静的小路，一直通向云里。,Quiet paths climb into the clouds.,implemented,,/maps/0/locations/15/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-39b5ae065d7b3a8159a6,maps,大地图,,,description,,,,恒山派,俯瞰北方道路的一处高山居所。,A high retreat overlooking the northern roads.,implemented,,/maps/0/locations/16/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6214d4a9ab52320d1493,maps,大地图,,,description,,,,星宿老仙丁春秋一手创办的门派，以毒功为主。,冷冽的岸边，头顶的星空格外清晰。,A cold shore beneath an unusually clear sky.,implemented,,/maps/0/locations/17/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -22520,7 +22520,7 @@ copy-c9e0b06ebe4303cd144b,maps,大地图,,,description,,,,蒙古人年年南下�
 copy-a8440f6d75f10a12e7e7,maps,大地图,,,description,,,,最后的战场！,,,pending,,/maps/0/locations/39/events/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-119fc122a79b4b4bb4d2,maps,大地图,,,description,,,,战火纷飞的襄阳城,,,pending,,/maps/0/locations/39/events/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c18b81359a621f7573ea,maps,大地图,,,description,,,,中岳嵩山，卓然立于中原大地。,石岭上一处规矩严厉的学派。,A stern school on a stony mountain ridge.,implemented,,/maps/0/locations/40/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-ab0604a20071087c57c5,maps,大地图,,,description,,,,武林各门派中的泰山北斗,讲究平衡、耐心和恰当还击时机的门派。,"A school of balance, patience, and well-timed replies.",implemented,,/maps/0/locations/41/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-ab0604a20071087c57c5,maps,大地图,,,description,,,,武林各门派中的泰山北斗,讲究平衡、耐心和恰当还击时机的学派。,"A school of balance, patience, and well-timed replies.",implemented,,/maps/0/locations/41/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-4e110938c1d8e2a44288,maps,大地图,,,description,,,,都城长安,大城里的老路，总会带来陌生的同伴。,A great city where old roads bring unfamiliar company.,implemented,,/maps/0/locations/42/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-01d227a0d21e1b22109b,maps,大地图,,,description,,,,打遍天下无敌手金面佛苗人凤的居所,寒冷乡野里的一处安静居所。,A quiet house in the colder country.,implemented,,/maps/0/locations/43/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a5d499e76c5dfac85ff5,maps,大地图,,,description,,,,南贤的简陋居室，现在也是你在这个世界的家,格林的居所，可以向他请教，或继续准备旅程。,Grimm's home. Speak with him or continue your preparations.,implemented,,/maps/0/locations/44/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -22605,7 +22605,7 @@ copy-acecaf4f2b7f406ea327,maps,洛阳,,,description,,,,洛阳王家的有钱大�
 copy-f15c943d23284489821b,maps,洛阳,,,description,,,,王家老爷的阿福似乎走丢了……,,,pending,,/maps/2/locations/1/events/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ff7a389acaca44e12440,maps,洛阳,,,description,,,,移居洛阳的平一指居,当地医师在这里接待访客。,The local physician receives visitors here.,implemented,,/maps/2/locations/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7d0d0e82016c2de3c60d,maps,洛阳,,,description,,,,移居洛阳的平一指居,,,pending,,/maps/2/locations/2/events/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-ef96eb5184e666cbbba1,maps,洛阳,,,description,,,,洛阳城的杂货店，专卖各种杂货药品,药剂、装备和读本。掏钱之前，先问问。,"Tonics, equipment and training manuals. Ask before paying.",implemented,,/maps/2/locations/3/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-ef96eb5184e666cbbba1,maps,洛阳,,,description,,,,洛阳城的杂货店，专卖各种杂货药品,药剂、装备和卷轴。掏钱之前，先问问。,"Tonics, equipment and training scrolls. Ask before paying.",implemented,,/maps/2/locations/3/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-95fa874de3043db366af,maps,洛阳,,,description,,,,杂货店本应该关门的，但这个时间不知道为什么在神秘的卖东西,,,pending,,/maps/2/locations/3/events/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c46a67a130454bba958d,maps,洛阳,,,description,,,,夜晚关闭城门，禁止出城,返回世界地图。,Return to the world map.,implemented,,/maps/2/locations/4/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b2bab1b88bfdd3848d83,maps,洛阳,,,description,,,,返回大地图,,,pending,,/maps/2/locations/4/events/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -22862,7 +22862,7 @@ copy-f5e2cbe30a5306156124,maps,昆仑派,,,description,,,,这里是昆仑派。,
 copy-98ef79135bf970e3ee0c,maps,昆仑派,,,name,,,,返回大地图,,,pending,,/maps/45/locations/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d10ee40d211c17813d52,maps,昆仑派,,,description,,,,原始地图没有配置事件，可返回继续探索。,,,pending,,/maps/45/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-16407020146a2e0e5a4b,maps,武当广场,,,name,,,,武当广场,河流守卫广场,River Warden Courtyard,implemented,,/maps/46/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-f379016a4f32cd5b3726,maps,武当广场,,,description,,,,这里是武当派的门户，龟蛇二兽镇守山门，再往上就是武当派的斗拱接连的殿宇了。,讲究平衡、耐心和恰当还击时机的门派。,"A school of balance, patience, and well-timed replies.",implemented,,/maps/46/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-f379016a4f32cd5b3726,maps,武当广场,,,description,,,,这里是武当派的门户，龟蛇二兽镇守山门，再往上就是武当派的斗拱接连的殿宇了。,讲究平衡、耐心和恰当还击时机的学派。,"A school of balance, patience, and well-timed replies.",implemented,,/maps/46/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-36b265eedcfbc41c15f5,maps,武当广场,,,description,,,,武当派贡放真武大帝的地方,,,pending,,/maps/46/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-03379359ba417cb92c58,maps,武当广场,,,description,,,,武当侠客宋远桥的儿子，青年一代武当弟子中的佼佼者,,,pending,,/maps/46/locations/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9b4434fd3b938f874cb7,maps,武当广场,,,description,,,,听宋青书为武当派新人做介绍。,,,pending,,/maps/46/locations/1/events/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -23123,7 +23123,7 @@ copy-d521c8125eef16975077,maps,桃花岛,,,description,,,,跟郭襄说说话吧�
 copy-5c223798ebf2b701efa0,maps,桃花岛,,,description,,,,桃花岛岛主黄药师,,,pending,,/maps/84/locations/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e6624262369fada03635,maps,桃花岛,,,description,,,,返回大地图,,,pending,,/maps/84/locations/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1c48641f7d64dc93eddc,maps,武当派,,,name,,,,武当派,河流守卫,River Wardens,implemented,,/maps/85/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-be73d4206db5165fade3,maps,武当派,,,description,,,,你随着上山的众多香客一起来到了武当山顶。武当地处中原南北分野，云气纵横，气象万千。开派宗师张三丰在此悟出太极圆通之道，以柔克刚，成就武当数百年的威名。,讲究平衡、耐心和恰当还击时机的门派。,"A school of balance, patience, and well-timed replies.",implemented,,/maps/85/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-be73d4206db5165fade3,maps,武当派,,,description,,,,你随着上山的众多香客一起来到了武当山顶。武当地处中原南北分野，云气纵横，气象万千。开派宗师张三丰在此悟出太极圆通之道，以柔克刚，成就武当数百年的威名。,讲究平衡、耐心和恰当还击时机的学派。,"A school of balance, patience, and well-timed replies.",implemented,,/maps/85/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-32eaf22f29ae42d2f216,maps,武当派,,,description,,,,武当派冲虚道长,,,pending,,/maps/85/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-52245c5dc5ee95e2f4ea,maps,武当派,,,description,,,,挑战武当七截阵,,,pending,,/maps/85/locations/0/events/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e9d2fc81d70b61a482ee,maps,武当派,,,description,,,,武当派冲虚道长,,,pending,,/maps/85/locations/0/events/3/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -23620,8 +23620,8 @@ copy-d220fcf6ffb3e40a5f9c,sects,武当派,,,description,,,,"武当是张三丰�
 copy-5e4e5c2e6522d04a4bd6,sects,星宿派,,,name,,,,星宿派,虹桥守望,Bridge Watch,implemented,,/sects/7/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2dcdc1168a74d265298f,sects,星宿派,,,primaryFocus,,,,拳、毒功,,,pending,,/sects/7/primaryFocus,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ed68af86a88d74b68f44,sects,星宿派,,,description,,,,"星宿一派，源于北宋时期的逍遥派。星宿派的开山祖师丁春秋，师承是逍遥派。逍遥派的武功是道家的一派，讲究的是修身养性，延年益寿，但是丁春秋一生精于炼毒，已不同于道家的炼丹。
-星宿派的功夫基本都是丁春秋叛师后自创，主要在「毒」字上下的功夫。掌上带毒、暗器上带毒、以毒麻痹、化解他人内功，江湖上人提起，无不谈虎色变。",海姆达尔的守望之地，也研习奇门与毒术。,"Heimdall's watch, with training in unusual and poisonous techniques.",implemented,,/sects/7/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-6459344e5a6a89696d32,sects,无门派,,,name,,,,无门派,独行道路,Unaffiliated,implemented,,/sects/8/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+星宿派的功夫基本都是丁春秋叛师后自创，主要在「毒」字上下的功夫。掌上带毒、暗器上带毒、以毒麻痹、化解他人内功，江湖上人提起，无不谈虎色变。",海姆达尔的守望之地，也研习魔杖与毒术。,"Heimdall's watch, with training in unusual and poisonous techniques.",implemented,,/sects/7/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-6459344e5a6a89696d32,sects,无门派,,,name,,,,无门派,独行道路,Independent Traveller,implemented,,/sects/8/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-04cde02518375afacc35,sects,无门派,,,primaryFocus,,,,?,,,pending,,/sects/8/primaryFocus,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-cce552c0746aaddf3e5f,sects,无门派,,,description,,,,"不拜入任何门派，凭自己一己之力闯荡江湖！
 
@@ -23646,7 +23646,7 @@ copy-8d72021399771ee42829,specialSkills,一刀两断,,,description,,,,威力无�
 copy-04680923f412ea9da812,specialSkills,沉鱼落雁,,,name,,,,沉鱼落雁,,,pending,,/specialSkills/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-77995dc481ef9b24c856,specialSkills,沉鱼落雁,,,description,,,,美人顾盼，消除对方的怒气。,,,pending,,/specialSkills/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3375bfa956a5a8a1dd47,specialSkills,打鸡血,,,name,,,,打鸡血,振作战吼,Rallying Cry,implemented,,/specialSkills/3/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-376c28ffaced67b30eee,specialSkills,打鸡血,,,description,,,,通过自我激励，增加自身怒气值和攻击力。,对自己使用：获得2点怒气，以及持续5回合的三级攻击强化。消耗100内力，冷却4回合。,A self-targeted rally: gains 2 rage and Attack Up III for 5 turns. Costs 100 energy; cooldown 4.,implemented,,/specialSkills/3/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-376c28ffaced67b30eee,specialSkills,打鸡血,,,description,,,,通过自我激励，增加自身怒气值和攻击力。,对自己使用：获得2点怒气，以及持续5回合的三级攻击强化。消耗100能量，冷却4回合。,A self-targeted rally: gains 2 rage and Attack Up III for 5 turns. Costs 100 energy; cooldown 4.,implemented,,/specialSkills/3/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-42f9a1b876f20ad789cc,specialSkills,诗酒飘零,,,name,,,,诗酒飘零,,,pending,,/specialSkills/4/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9bc1686ae1561f617a36,specialSkills,诗酒飘零,,,description,,,,进入醉酒模式，攻击变得不可理喻。,,,pending,,/specialSkills/4/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1fa8c490ea16fa7ffeeb,specialSkills,凌波微步,,,name,,,,凌波微步,,,pending,,/specialSkills/5/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -23674,7 +23674,7 @@ copy-7a78a1b691a7a90ed69c,specialSkills,过肩摔,,,description,,,,将对手摔�
 copy-c10ba907d1d0032c4f22,specialSkills,神龙摆尾,,,name,,,,神龙摆尾,,,pending,,/specialSkills/16/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d7e35a782dcbcb4e2523,specialSkills,神龙摆尾,,,description,,,,一脚将对手踢开并定身、麻痹，造成基于移动距离的真实伤害。,,,pending,,/specialSkills/16/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1ea64f494602234e4de5,specialSkills,闪电貂,,,name,,,,闪电貂,白鼬噬咬,Stoat's Bite,implemented,,/specialSkills/17/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-5ae50233ab6d1f83b758,specialSkills,闪电貂,,,description,,,,钟灵所饲养的毒性极强的闪电貂。,指挥埃尔的小白鼬攻击5格内的单个目标，施加持续3回合的二十级中毒。消耗100内力和2怒气，冷却5回合。,"Direct Eir's stoat at one target within 5 tiles, applying level-20 poison for 3 turns. Costs 100 energy and 2 rage; cooldown 5.",implemented,,/specialSkills/17/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-5ae50233ab6d1f83b758,specialSkills,闪电貂,,,description,,,,钟灵所饲养的毒性极强的闪电貂。,指挥埃尔的小白鼬攻击5格内的单个目标，施加持续3回合的二十级中毒。消耗100能量和2怒气，冷却5回合。,"Direct Eir's stoat at one target within 5 tiles, applying level-20 poison for 3 turns. Costs 100 energy and 2 rage; cooldown 5.",implemented,,/specialSkills/17/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b0daeff40370f4e5d647,specialSkills,清心普善咒,,,name,,,,清心普善咒,,,pending,,/specialSkills/18/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-4202dfeae928f9e7b2c7,specialSkills,清心普善咒,,,description,,,,清雅脱俗，宁神静气。解除全体队友异常状态。,,,pending,,/specialSkills/18/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e774dff3c46f35bbe2de,specialSkills,阿碧的歌声,,,name,,,,阿碧的歌声,,,pending,,/specialSkills/19/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -23693,72 +23693,72 @@ copy-5e0b37efd29b7eb17ca5,specialSkills,腐尸毒,,,name,,,,腐尸毒,,,pending,
 copy-a584f62b7cc8cc3911a4,specialSkills,腐尸毒,,,description,,,,立即清算敌人的中毒，造成真实伤害。,,,pending,,/specialSkills/25/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5ab24b6edd237050037c,specialSkills,飞星术,,,name,,,,飞星术,,,pending,,/specialSkills/26/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0e2dcd760c64c5ca3d9a,specialSkills,飞星术,,,description,,,,星宿派狠毒的招数，不管敌我，全场随机中毒。,,,pending,,/specialSkills/26/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-6a2812e6452023fb8bb3,items,止血草,,,name,,,,止血草,,,pending,,/items/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-7ea5eb7bb8eb35788be0,items,止血草,,,description,,,,常见的草药，有止血之功效,,,pending,,/items/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-6a2812e6452023fb8bb3,items,止血草,,,name,,,,止血草,止血叶,Woundleaf,implemented,,/items/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-7ea5eb7bb8eb35788be0,items,止血草,,,description,,,,常见的草药，有止血之功效,恢复360点生命。常见可靠的野外药草。,Restores 360 Health. A dependable field herb.,implemented,,/items/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-4b3f524930310247a49c,items,小还丹,,,name,,,,小还丹,恢复药剂,Restorative Tonic,implemented,,/items/1/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-209ca77602d4634bd2bf,items,小还丹,,,description,,,,活血化瘀的丹药，闯江湖必备,恢复600点生命。治疗伤势，至于受伤的自尊，可能还得缓一缓。,Restores 600 HP. For injuries; wounded pride may take longer.,implemented,,/items/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a9420c8ddc76c99107bf,items,道口烧鸡,,,name,,,,道口烧鸡,,,pending,,/items/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-b77d7aa7485f63533552,items,道口烧鸡,,,description,,,,五道口产的烧鸡，肥得流油,,,pending,,/items/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-ba0f96e4f28e8309d227,items,红药,,,name,,,,红药,,,pending,,/items/3/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-248afda30b35191c8c6b,items,红药,,,description,,,,用小红花制成的伤药,,,pending,,/items/3/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-26d353c0db549f6ee4cf,items,鸡腿,,,name,,,,鸡腿,,,pending,,/items/4/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a0bf8504b6427c6e4d9a,items,鸡腿,,,description,,,,新奥尔良烤鸡腿，8块钱一只,,,pending,,/items/4/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-3f3699f342d83ee93325,items,月饼,,,name,,,,月饼,,,pending,,/items/5/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-035077e5845b8b65597c,items,月饼,,,description,,,,八月十五吃掉绝没有奇效！,,,pending,,/items/5/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-31be279b601f7b6e6483,items,牛黄解毒片,,,name,,,,牛黄解毒片,,,pending,,/items/6/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-56a188e13ca300ddb027,items,牛黄解毒片,,,description,,,,初级的解毒药品,,,pending,,/items/6/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a9420c8ddc76c99107bf,items,道口烧鸡,,,name,,,,道口烧鸡,炉火烤鸡,Hearth-roast Chicken,implemented,,/items/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b77d7aa7485f63533552,items,道口烧鸡,,,description,,,,五道口产的烧鸡，肥得流油,恢复320点生命。记得带块餐巾。,Restores 320 Health. Pack a napkin.,implemented,,/items/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-ba0f96e4f28e8309d227,items,红药,,,name,,,,红药,红瓣药剂,Redpetal Tonic,implemented,,/items/3/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-248afda30b35191c8c6b,items,红药,,,description,,,,用小红花制成的伤药,恢复220点生命。,Restores 220 Health.,implemented,,/items/3/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-26d353c0db549f6ee4cf,items,鸡腿,,,name,,,,鸡腿,烤鸡腿,Roast Drumstick,implemented,,/items/4/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a0bf8504b6427c6e4d9a,items,鸡腿,,,description,,,,新奥尔良烤鸡腿，8块钱一只,恢复320点生命。,Restores 320 Health.,implemented,,/items/4/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-3f3699f342d83ee93325,items,月饼,,,name,,,,月饼,月圆糕,Mooncake,implemented,,/items/5/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-035077e5845b8b65597c,items,月饼,,,description,,,,八月十五吃掉绝没有奇效！,恢复130点生命和130点能量。,Restores 130 Health and 130 Energy.,implemented,,/items/5/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-31be279b601f7b6e6483,items,牛黄解毒片,,,name,,,,牛黄解毒片,解毒酊,Antidote Tincture,implemented,,/items/6/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-56a188e13ca300ddb027,items,牛黄解毒片,,,description,,,,初级的解毒药品,降低5级中毒强度，并缩短5回合持续时间。,Reduces poison severity by 5 levels and duration by 5 turns.,implemented,,/items/6/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-64799cc0ce85ac40e4c9,items,大还丹,,,name,,,,大还丹,强效恢复药剂,Strong Restorative,implemented,,/items/7/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d1703e8c00f31448eb3e,items,大还丹,,,description,,,,活血化瘀的丹药，闯江湖必备,恢复1000点生命，并额外恢复最大生命的10%。有冷却时间，使用前请留意。,"Restores 1,000 HP plus 10% of maximum HP. It has a cooldown; plan before using it.",implemented,,/items/7/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-53e76ad5a0fa9667df74,items,大蟠桃,,,name,,,,大蟠桃,熟透的蜜桃,Sun-ripened Peach,implemented,,/items/8/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-db3ae8566786efedcfa7,items,大蟠桃,,,description,,,,又大又甜的蟠桃，猴子的最爱,恢复300点生命和300点内力。总算有一样补给适合放进野餐篮了。,"Restores 300 HP and 300 energy. Finally, a remedy that belongs in a picnic basket.",implemented,,/items/8/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-db3ae8566786efedcfa7,items,大蟠桃,,,description,,,,又大又甜的蟠桃，猴子的最爱,恢复300点生命和300点能量。总算有一样补给适合放进野餐篮了。,"Restores 300 HP and 300 energy. Finally, a remedy that belongs in a picnic basket.",implemented,,/items/8/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-41c8441d86b84067092a,items,冬虫夏草,,,name,,,,冬虫夏草,山野灵药,Mountain Remedy,implemented,,/items/9/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b48a12c13759e24d005d,items,冬虫夏草,,,description,,,,具有巨大补效的罕见灵药,恢复1600点生命。药材珍贵，药效充足，味道不值得期待。,"Restores 1,600 HP. Rare herbs, a strong dose, and no interesting flavour.",implemented,,/items/9/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-47644479033163abaa18,items,特制鸡腿,,,name,,,,特制鸡腿,,,pending,,/items/10/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-2428ab9074e22ce4938a,items,特制鸡腿,,,description,,,,七侠镇特产，李大嘴特制，超级无敌肥腻鸡腿,,,pending,,/items/10/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-47644479033163abaa18,items,特制鸡腿,,,name,,,,特制鸡腿,宴会大师烤鸡腿,Feastmaster's Drumstick,implemented,,/items/10/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-2428ab9074e22ce4938a,items,特制鸡腿,,,description,,,,七侠镇特产，李大嘴特制，超级无敌肥腻鸡腿,恢复550点生命。连这顿饭也想成就一番大事。,Restores 550 Health. A meal with heroic ambitions.,implemented,,/items/10/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c094f6c6aa1456666c7b,items,九转熊蛇丸,,,name,,,,九转熊蛇丸,深井灵饮,Deepwell Draught,implemented,,/items/11/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-b9a53470f2e4569108ec,items,九转熊蛇丸,,,description,,,,用熊和蛇胆炼制的丹药，可以恢复大量内力,恢复1000点内力。恢复最大内力的30%。,Restores 1000 energy. Restores 30% of maximum energy.,implemented,,/items/11/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a380aed0ff2a0962e585,items,九花玉露丸,,,name,,,,九花玉露丸,,,pending,,/items/12/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-6984c0b57f17803788b0,items,九花玉露丸,,,description,,,,桃花岛名药，恢复生命和内力,,,pending,,/items/12/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b9a53470f2e4569108ec,items,九转熊蛇丸,,,description,,,,用熊和蛇胆炼制的丹药，可以恢复大量内力,恢复1000点能量。恢复最大能量的30%。,Restores 1000 energy. Restores 30% of maximum energy.,implemented,,/items/11/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a380aed0ff2a0962e585,items,九花玉露丸,,,name,,,,九花玉露丸,九瓣花露药剂,Ninepetal Elixir,implemented,,/items/12/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-6984c0b57f17803788b0,items,九花玉露丸,,,description,,,,桃花岛名药，恢复生命和内力,恢复600点生命和300点能量。,Restores 600 Health and 300 Energy.,implemented,,/items/12/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1ca3cae33c04b4e07c49,items,白酒,,,name,,,,白酒,烈酒,Strong Spirits,implemented,,/items/13/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-cac9a568e61826d5a7e7,items,白酒,,,description,,,,火气攻心，增加怒气值。,增加2点怒气，并获得持续3回合的醉酒状态。,Adds 2 rage and Drunk for 3 turns.,implemented,,/items/13/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-156ca348f36835125ab7,items,黑玉断续膏,,,name,,,,黑玉断续膏,黑石药膏,Blackstone Salve,implemented,,/items/14/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b772aa8a4f660f8733bd,items,黑玉断续膏,,,description,,,,西域少林的特殊灵药，活筋接骨,恢复3000点生命。恢复最大生命的30%。,Restores 3000 HP. Restores 30% of maximum HP.,implemented,,/items/14/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-90c793637092b7815593,items,生生造化丹,,,name,,,,生生造化丹,,,pending,,/items/15/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d81fcf218c32c80fb2f8,items,生生造化丹,,,description,,,,药如其名，能得到它是你的造化,,,pending,,/items/15/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-bad2b524a1ee229edd78,items,七星黄蜡丹,,,name,,,,七星黄蜡丹,七星药丸,Sevenstar Pill,implemented,,/items/16/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-bad2b524a1ee229edd78,items,七星黄蜡丹,,,name,,,,七星黄蜡丹,星光药剂,Starlight Draught,implemented,,/items/16/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-4bfd3803f6c72f0a86c0,items,七星黄蜡丹,,,description,,,,解毒神药,按列出的净化上限解除中毒。,Removes poison according to the listed cleansing limits.,implemented,,/items/16/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ec761fa8d61cb402b2b8,items,天王保命丹,,,name,,,,天王保命丹,余光灵药,Last-Light Remedy,implemented,,/items/17/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-0f2499f09948bd89d8bb,items,天王保命丹,,,description,,,,具有起死回生之效,恢复2500点生命。恢复2500点内力。按列出的净化上限解除中毒。,Restores 2500 HP. Restores 2500 energy. Removes poison according to the listed cleansing limits.,implemented,,/items/17/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-0f2499f09948bd89d8bb,items,天王保命丹,,,description,,,,具有起死回生之效,恢复2500点生命。恢复2500点能量。按列出的净化上限解除中毒。,Restores 2500 HP. Restores 2500 energy. Removes poison according to the listed cleansing limits.,implemented,,/items/17/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e03a2dbbf06f3c6ec1d7,items,续命八丸,,,name,,,,续命八丸,,,pending,,/items/18/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-396bbfeae97480b72318,items,续命八丸,,,description,,,,由八种奇葩原料制成的能续命用的神奇药物,,,pending,,/items/18/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-4cbe3f0faf3ec97fe30f,items,仙灵琼露,,,name,,,,仙灵琼露,,,pending,,/items/19/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a0dde5633f66177a79a0,items,仙灵琼露,,,description,,,,此物只应天上有，恢复极大生命,,,pending,,/items/19/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-4ccf00ea78770e79e5f8,items,圣战之药,,,name,,,,圣战之药,,,pending,,/items/20/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-83e60a6613f595fcfbed,items,圣战之药,,,description,,,,不应当存在于人世间之物,,,pending,,/items/20/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-331ca629e8a5cbbcfd6f,items,木刀,,,name,,,,木刀,,,pending,,/items/21/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-7aac51c541e60b5a5e4f,items,木刀,,,description,,,,小孩子用来过家家的木质刀,,,pending,,/items/21/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-f78179b3893272ce0f25,items,精钢拳套,,,name,,,,精钢拳套,,,pending,,/items/22/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-7e17bc1ed3ea23c7e959,items,精钢拳套,,,description,,,,精钢打造的全套，有一定的杀伤力,,,pending,,/items/22/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-331ca629e8a5cbbcfd6f,items,木刀,,,name,,,,木刀,木质训练刃,Wooden Practice Blade,implemented,,/items/21/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-7aac51c541e60b5a5e4f,items,木刀,,,description,,,,小孩子用来过家家的木质刀,攻击+8，暴击率+1%。用于刃术训练的媒介。,Attack +8; critical chance +1%. A bladed training focus.,implemented,,/items/21/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-f78179b3893272ce0f25,items,精钢拳套,,,name,,,,精钢拳套,钢制导能手套,Steel Channeling Gloves,implemented,,/items/22/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-7e17bc1ed3ea23c7e959,items,精钢拳套,,,description,,,,精钢打造的全套，有一定的杀伤力,攻击+50，暴击率+2%。符术媒介，需要施法熟练35、力量35。,Attack +50; critical chance +2%. Spellcraft focus. Requires Spellcraft 35 and Strength 35.,implemented,,/items/22/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b1838be47e68020c88d1,items,阔剑,,,name,,,,阔剑,阔刃剑,Broadsword,implemented,,/items/23/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ba0a065bdc0bdee9d4f0,items,阔剑,,,description,,,,趟子手用的趁手武器,穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。,Attack +40. Critical chance +2%. Requires Swords 25. Requires Agility 25. Other modifiers are listed with the item.,implemented,,/items/23/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9578f4389bb2c79dd7f5,items,赵志敬的剑,,,name,,,,赵志敬的剑,,,pending,,/items/24/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-260b7a1f38e0db050232,items,赵志敬的剑,,,description,,,,全真教道士赵志敬的配剑,,,pending,,/items/24/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-b942069d7fdfc2a65635,items,柳叶刀,,,name,,,,柳叶刀,,Willow Blade,implemented,,/items/25/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b942069d7fdfc2a65635,items,柳叶刀,,,name,,,,柳叶刀,游侠弯刀,Ranger's Sabre,implemented,,/items/25/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-86b45d3689d1c2175538,items,柳叶刀,,,description,,,,刀如柳叶，轻盈而锋快,穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。,Attack +50. Critical chance +2%. Requires Blades 25. Requires Agility 25. Other modifiers are listed with the item.,implemented,,/items/25/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-6657d6a717a89d16dc96,items,精制匕首,,,name,,,,精制匕首,,,pending,,/items/26/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-2ff38a576a1955288b37,items,精制匕首,,,description,,,,一把锋利的匕首,,,pending,,/items/26/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-bcd977ea2ced8e3de54a,items,铲刀,,,name,,,,铲刀,,,pending,,/items/27/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-0aa6331a171e1984b0ea,items,铲刀,,,description,,,,长得象铲子的刀,,,pending,,/items/27/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-af8098e5e46dabc1f2d7,items,金刚杵,,,name,,,,金刚杵,,,pending,,/items/28/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-c73a14dc123cebb71af9,items,金刚杵,,,description,,,,少林掌棍僧人常用武器,,,pending,,/items/28/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-6657d6a717a89d16dc96,items,精制匕首,,,name,,,,精制匕首,决斗匕首,Duelist's Dagger,implemented,,/items/26/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-2ff38a576a1955288b37,items,精制匕首,,,description,,,,一把锋利的匕首,攻击+40，暴击率+3%。剑术媒介，需要敏捷35。,Attack +40; critical chance +3%. Sword focus. Requires Agility 35.,implemented,,/items/26/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-bcd977ea2ced8e3de54a,items,铲刀,,,name,,,,铲刀,行旅劈刀,Cleaver of the Road,implemented,,/items/27/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-0aa6331a171e1984b0ea,items,铲刀,,,description,,,,长得象铲子的刀,攻击+40，暴击率+3%，暴击伤害+12%。刃术媒介，需要敏捷40、力量40。,Attack +40; critical chance +3%; critical damage +12%. Bladework focus. Requires Agility 40 and Strength 40.,implemented,,/items/27/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-af8098e5e46dabc1f2d7,items,金刚杵,,,name,,,,金刚杵,青铜聚能杖,Bronze Focus Rod,implemented,,/items/28/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-c73a14dc123cebb71af9,items,金刚杵,,,description,,,,少林掌棍僧人常用武器,攻击+50，暴击率+3%。魔杖媒介，需要魔杖熟练40、力量50。,Attack +50; critical chance +3%. Wandcraft focus. Requires Wandcraft 40 and Strength 50.,implemented,,/items/28/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e9b0f6fb71424d9232ca,items,黄金棒,,,name,,,,黄金棒,,,pending,,/items/29/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7e2e5ab6512bbe6b4035,items,黄金棒,,,description,,,,一根用黄金铸造成的棍棒，略显奢华,,,pending,,/items/29/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ac84d02616030cbe9009,items,金龙鞭,,,name,,,,金龙鞭,,,pending,,/items/30/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ef52cdcde0f0692a3d38,items,金龙鞭,,,description,,,,金龙帮信物，全鞭金色有如黄龙,,,pending,,/items/30/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d9541901d1e3cd60736f,items,飞轮,,,name,,,,飞轮,,,pending,,/items/31/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-908975153e46579e82b0,items,飞轮,,,description,,,,可以甩出去的暗器,,,pending,,/items/31/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a33a9a677912e37597ad,items,拳击手套,,,name,,,,拳击手套,,,pending,,/items/32/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-aad65ba71de929111027,items,拳击手套,,,description,,,,拳击手使用的手套。,,,pending,,/items/32/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d9541901d1e3cd60736f,items,飞轮,,,name,,,,飞轮,符文投环,Runed Throwing Ring,implemented,,/items/31/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-908975153e46579e82b0,items,飞轮,,,description,,,,可以甩出去的暗器,攻击+60，暴击率+3%，魔杖战技加成+10%。需要敏捷65、意志55。,Attack +60; critical chance +3%; Wandcraft technique bonus +10%. Requires Agility 65 and Resolve 55.,implemented,,/items/31/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a33a9a677912e37597ad,items,拳击手套,,,name,,,,拳击手套,软垫施法手套,Padded Casting Gloves,implemented,,/items/32/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-aad65ba71de929111027,items,拳击手套,,,description,,,,拳击手使用的手套。,攻击+60，暴击率+3%。符术媒介，需要力量60、体质55。,Attack +60; critical chance +3%. Spellcraft focus. Requires Strength 60 and Constitution 55.,implemented,,/items/32/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8878d78c97dfe3a2ee2b,items,软鞭,,,name,,,,软鞭,,Flexible Whip,implemented,,/items/33/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-bc640316698fbb7bf5f9,items,软鞭,,,description,,,,钢制软鞭,穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。,Attack +80. Critical chance +8%. Requires Unusual weapons 50. Requires Strength 50. Other modifiers are listed with the item.,implemented,,/items/33/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ca67be3c8251841501ce,items,天龙宝剑,,,name,,,,天龙宝剑,,,pending,,/items/34/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -23771,7 +23771,7 @@ copy-903d719db4579846c07a,items,淑女剑,,,name,,,,淑女剑,,,pending,,/items/
 copy-59ba86374dd87c913710,items,淑女剑,,,description,,,,与君子剑一对，绝情谷藏物,,,pending,,/items/37/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e490d0f820ffc36dcd52,items,马钰佩剑,,,name,,,,马钰佩剑,,,pending,,/items/38/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9a291c184d89186dbe33,items,马钰佩剑,,,description,,,,全真教掌门马钰的佩剑,,,pending,,/items/38/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-ffbff7b7c7679852a103,items,金蛇剑,,,name,,,,金蛇剑,,Serpent-Gold Sword,implemented,,/items/39/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-ffbff7b7c7679852a103,items,金蛇剑,,,name,,,,金蛇剑,蛇纹金剑,Serpent-Gold Sword,implemented,,/items/39/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8709ed54c5e9c38515fc,items,金蛇剑,,,description,,,,一柄蛇形的奇异宝剑,穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。,Attack +100. Critical chance +5%. Requires Swords 55. Requires Agility 55. Other modifiers are listed with the item.,implemented,,/items/39/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0182aa87b50c608347ef,items,玄铁匕首,,,name,,,,玄铁匕首,,,pending,,/items/40/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e134b0148d36884b30cf,items,玄铁匕首,,,description,,,,玄铁所制匕首，锋利无比,,,pending,,/items/40/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -23860,8 +23860,8 @@ copy-7193651ae1a627dba4d1,items,古墓派装束,,,description,,,,古墓派弟子
 copy-67a749a7e71d11b0ce43,items,灵鹫宫装束,,,name,,,,灵鹫宫装束,织线厅服,Threadhall Garb,implemented,,/items/80/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0db003b1ca2cc03bcbd7,items,灵鹫宫装束,,,description,,,,灵鹫宫弟子的装束,穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。,Defence +5. Other modifiers are listed with the item.,implemented,,/items/80/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e3f59c6ad15401d7261c,items,灵鹫宫装束,,,description,,,,灵鹫宫弟子,,,pending,,/items/80/affixes/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-f666cbb41ce955a92b52,items,粗布披风,,,name,,,,粗布披风,,,pending,,/items/81/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-ca179a6348692781cb31,items,粗布披风,,,description,,,,很平常的粗布制造的披风,,,pending,,/items/81/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-f666cbb41ce955a92b52,items,粗布披风,,,name,,,,粗布披风,旅人斗篷,Wayfarer's Cloak,implemented,,/items/81/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-ca179a6348692781cb31,items,粗布披风,,,description,,,,很平常的粗布制造的披风,防御+40，抗暴率+5%。需要敏捷35、意志35。,Defence +40; critical resistance +5%. Requires Agility 35 and Resolve 35.,implemented,,/items/81/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9f2662ed3c7ae2f7c26b,items,黄金重甲,,,name,,,,黄金重甲,鎏金重甲,Gilded Heavy Armour,implemented,,/items/82/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-06aee60f5eb7996ff531,items,黄金重甲,,,description,,,,将军穿的宝甲，沉重而坚厚，能有效防止受到致命一击,穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。,Defence +80. Critical resistance +15%. Grants Limited Stride. Requires Strength 55. Other modifiers are listed with the item.,implemented,,/items/82/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0a4adecc58225575cb34,items,金丝袈裟,,,name,,,,金丝袈裟,,,pending,,/items/83/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -23896,18 +23896,18 @@ copy-49d5cb162ba6d987e13b,items,草帽,,,description,,,,你是屌丝么？是就
 copy-2c103e4b1cc0ace2f6f9,items,木人,,,name,,,,木人,,,pending,,/items/97/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-349d9df258375f705a9b,items,木人,,,description,,,,商家堡娘俩用于诅咒某人的木头玩偶,,,pending,,/items/97/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2800a76983b5f3c3ffca,items,木人,,,description,,,,变身为一个木头人,,,pending,,/items/97/affixes/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-c9d03771339b0c5d02f8,items,黄金项链,,,name,,,,黄金项链,,,pending,,/items/98/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-038dbbce53731be7dcad,items,黄金项链,,,description,,,,黄金打造的项链，透着珠光宝气,,,pending,,/items/98/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-e659a9357140abb8bc46,items,回力跑鞋,,,name,,,,回力跑鞋,,,pending,,/items/99/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-8a8f06a131e48a27240e,items,回力跑鞋,,,description,,,,回力牌跑鞋，经久耐用、便宜实惠,,,pending,,/items/99/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d8fca804067b5ef4af97,items,木鱼,,,name,,,,木鱼,木祷鱼,Prayer Block,implemented,,/items/100/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-c9d03771339b0c5d02f8,items,黄金项链,,,name,,,,黄金项链,鎏金聚能坠,Gilded Focus Pendant,implemented,,/items/98/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-038dbbce53731be7dcad,items,黄金项链,,,description,,,,黄金打造的项链，透着珠光宝气,防御+15，暴击率+5%，魔杖熟练乘以1.05。,Defence +15; critical chance +5%; Wandcraft ×1.05.,implemented,,/items/98/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-e659a9357140abb8bc46,items,回力跑鞋,,,name,,,,回力跑鞋,疾步靴,Fleetfoot Boots,implemented,,/items/99/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-8a8f06a131e48a27240e,items,回力跑鞋,,,description,,,,回力牌跑鞋，经久耐用、便宜实惠,攻击+15，防御+15，移动距离+1格。,Attack +15; Defence +15; movement +1 tile.,implemented,,/items/99/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d8fca804067b5ef4af97,items,木鱼,,,name,,,,木鱼,凝神护符,Focus Talisman,implemented,,/items/100/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d3fb045372f9287bc78f,items,木鱼,,,description,,,,少林和尚随身之物,穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。,Attack +3. Defence +10. Other modifiers are listed with the item.,implemented,,/items/100/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-aafb9e29976f944d0273,items,将军头盔,,,name,,,,将军头盔,,,pending,,/items/101/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-ac9f6e1f1f38edbc720a,items,将军头盔,,,description,,,,冲锋陷阵的有用头盔。,,,pending,,/items/101/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-501eae4abb6740f05a2f,items,檀香佛珠,,,name,,,,檀香佛珠,,,pending,,/items/102/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-8e69418d6c74ce5e96d4,items,檀香佛珠,,,description,,,,散发着檀香的怡人芬芳的佛珠。,,,pending,,/items/102/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-ac5a62b5ce9b561d4004,items,金丝护腕,,,name,,,,金丝护腕,,,pending,,/items/103/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-4b881444242ad37f2b54,items,金丝护腕,,,description,,,,金丝纺织而成的护腕。,,,pending,,/items/103/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-aafb9e29976f944d0273,items,将军头盔,,,name,,,,将军头盔,队长头盔,Captain's Helm,implemented,,/items/101/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-ac9f6e1f1f38edbc720a,items,将军头盔,,,description,,,,冲锋陷阵的有用头盔。,幸运+5。,Fortune +5.,implemented,,/items/101/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-501eae4abb6740f05a2f,items,檀香佛珠,,,name,,,,檀香佛珠,琥珀祈愿珠,Amber Prayer Beads,implemented,,/items/102/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-8e69418d6c74ce5e96d4,items,檀香佛珠,,,description,,,,散发着檀香的怡人芬芳的佛珠。,幸运+5。,Fortune +5.,implemented,,/items/102/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-ac5a62b5ce9b561d4004,items,金丝护腕,,,name,,,,金丝护腕,金线护腕,Goldthread Bracers,implemented,,/items/103/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-4b881444242ad37f2b54,items,金丝护腕,,,description,,,,金丝纺织而成的护腕。,力量+8。,Strength +8.,implemented,,/items/103/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6a0dae2849a969c7e7ce,items,橙色灯戒,,,name,,,,橙色灯戒,,,pending,,/items/104/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a0d7ee6c0aaa39a3e188,items,橙色灯戒,,,description,,,,橙色发光的戒指。,,,pending,,/items/104/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-58b0655999d4da5f90a5,items,铂金戒指,,,name,,,,铂金戒指,,,pending,,/items/105/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -23952,34 +23952,34 @@ copy-a18497e762602f8be18e,items,渡元禅师的木鱼,,,name,,,,渡元禅师的�
 copy-3317fc60400969adfb69,items,渡元禅师的木鱼,,,description,,,,【神器】渡元禅师林远图当年使用的木鱼,,,pending,,/items/123/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6ac0d9f7a600e8c0e577,items,火工头陀的秘本,,,name,,,,火工头陀的秘本,,,pending,,/items/124/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b5d028e898206a914992,items,火工头陀的秘本,,,description,,,,【神器】火工头陀记录他毕生绝学的笔记,,,pending,,/items/124/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-b3c70004e6e782ae3e2b,items,罗汉拳谱,,,name,,,,罗汉拳谱,护炉拳读本,Hearthguard Manual,implemented,,/items/125/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-9f1d630850dac919c2ae,items,罗汉拳谱,,,description,,,,罗汉拳,护炉拳的修炼读本。,Training manual for Hearthguard Fist.,implemented,,/items/125/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-f24707b3f58b5ff2119f,items,飘雪穿云掌法,,,name,,,,飘雪穿云掌法,落云掌读本,Cloudfall Manual,implemented,,/items/126/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-0d758f9bd31b4770d5b7,items,飘雪穿云掌法,,,description,,,,峨眉派轻灵飘逸的掌法,落云掌的修炼读本。,Training manual for Cloudfall Palm.,implemented,,/items/126/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b3c70004e6e782ae3e2b,items,罗汉拳谱,,,name,,,,罗汉拳谱,护炉符术卷轴,Hearthward Sigil Scroll,implemented,,/items/125/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-9f1d630850dac919c2ae,items,罗汉拳谱,,,description,,,,罗汉拳,护炉符术的修炼卷轴。,Training scroll for Hearthward Sigil.,implemented,,/items/125/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-f24707b3f58b5ff2119f,items,飘雪穿云掌法,,,name,,,,飘雪穿云掌法,云涌魔法卷轴,Cloudburst Spell Scroll,implemented,,/items/126/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-0d758f9bd31b4770d5b7,items,飘雪穿云掌法,,,description,,,,峨眉派轻灵飘逸的掌法,云涌魔法的修炼卷轴。,Training scroll for Cloudburst Spell.,implemented,,/items/126/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ebfa721d13b4da9f86a6,items,天山掌法谱,,,name,,,,天山掌法谱,,,pending,,/items/127/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7135f5dade5c259541be,items,天山掌法谱,,,description,,,,逍遥派入门武功,,,pending,,/items/127/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0d0671c5f78736bf95bd,items,松风剑法秘籍,,,name,,,,松风剑法秘籍,,,pending,,/items/128/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2be2f676e19b0e75eecf,items,松风剑法秘籍,,,description,,,,松风剑法秘籍,,,pending,,/items/128/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d36bca685bb4c3150b5d,items,华山剑法秘籍,,,name,,,,华山剑法秘籍,鹤峰剑术读本,Cranepeak Sword Manual,implemented,,/items/129/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-40dd1803fd5736ea08cf,items,华山剑法秘籍,,,description,,,,华山剑法秘籍,鹤峰剑术的修炼读本。,Training manual for Cranepeak Sword.,implemented,,/items/129/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d36bca685bb4c3150b5d,items,华山剑法秘籍,,,name,,,,华山剑法秘籍,鹤翼剑术卷轴,Crane-wing Swordplay Scroll,implemented,,/items/129/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-40dd1803fd5736ea08cf,items,华山剑法秘籍,,,description,,,,华山剑法秘籍,鹤翼剑术的修炼卷轴。,Training scroll for Crane-wing Swordplay.,implemented,,/items/129/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-00508221765bb9df063b,items,三分剑术,,,name,,,,三分剑术,,,pending,,/items/130/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6b0cb718dfed75f6d99d,items,三分剑术,,,description,,,,天山派的三分剑法,,,pending,,/items/130/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-c5f85318d75c2f8fb439,items,青蟒剑法秘籍,,,name,,,,青蟒剑法秘籍,青蛇剑术读本,Green Serpent Manual,implemented,,/items/131/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a9b36c81de5a2bb35784,items,青蟒剑法秘籍,,,description,,,,青蟒剑法秘籍,青蛇剑术的修炼读本。,Training manual for Green Serpent.,implemented,,/items/131/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-c5f85318d75c2f8fb439,items,青蟒剑法秘籍,,,name,,,,青蟒剑法秘籍,青蛇剑术卷轴,Serpent Swordplay Scroll,implemented,,/items/131/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a9b36c81de5a2bb35784,items,青蟒剑法秘籍,,,description,,,,青蟒剑法秘籍,青蛇剑术的修炼卷轴。,Training scroll for Serpent Swordplay.,implemented,,/items/131/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8d3549b53462e5433fd7,items,雷震剑法秘籍,,,name,,,,雷震剑法秘籍,,,pending,,/items/132/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e2e96219fcc5937bae55,items,雷震剑法秘籍,,,description,,,,雷震剑法秘籍,,,pending,,/items/132/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-aa7f910552f23c2730f9,items,南山刀法谱,,,name,,,,南山刀法谱,守丘刀术读本,Hillguard Blade Manual,implemented,,/items/133/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-cc8678bd5895335f7153,items,南山刀法谱,,,description,,,,江南七怪所传授的水水刀法,守丘刀术的修炼读本。,Training manual for Hillguard Blade.,implemented,,/items/133/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-3cb3ec591b8f89dfb98a,items,万劫刀法谱,,,name,,,,万劫刀法谱,谷地刀术读本,Valley Blade Manual,implemented,,/items/134/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-6396af7e486ce323609c,items,万劫刀法谱,,,description,,,,万劫谷的水货刀法,谷地刀术的修炼读本。,Training manual for Valley Cut.,implemented,,/items/134/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-aa7f910552f23c2730f9,items,南山刀法谱,,,name,,,,南山刀法谱,高地劈斩卷轴,Highland Cleave Scroll,implemented,,/items/133/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-cc8678bd5895335f7153,items,南山刀法谱,,,description,,,,江南七怪所传授的水水刀法,高地劈斩的修炼卷轴。,Training scroll for Highland Cleave.,implemented,,/items/133/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-3cb3ec591b8f89dfb98a,items,万劫刀法谱,,,name,,,,万劫刀法谱,荆刃战技卷轴,Thornblade Scroll,implemented,,/items/134/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-6396af7e486ce323609c,items,万劫刀法谱,,,description,,,,万劫谷的水货刀法,荆刃战技的修炼卷轴。,Training scroll for Thornblade Arts.,implemented,,/items/134/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1dce60ae8797a26943ea,items,袖箭秘诀,,,name,,,,袖箭秘诀,,,pending,,/items/135/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-aeec11d001a656e36bc6,items,袖箭秘诀,,,description,,,,阴险的袖箭,,,pending,,/items/135/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b1cb3234e43cba0e463a,items,拂尘秘诀,,,name,,,,拂尘秘诀,,,pending,,/items/136/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-731db08f07bf27a5e017,items,拂尘秘诀,,,description,,,,拂尘也可以是武器！,,,pending,,/items/136/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-987067ff7175a575d67b,items,疯魔杖法秘诀,,,name,,,,疯魔杖法秘诀,游杖术读本,Wayward Staff Manual,implemented,,/items/137/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-84f3f7bcdfd5bbe3d734,items,疯魔杖法秘诀,,,description,,,,丐帮疯魔杖法,游杖术的修炼读本。,Training manual for Wayward Staff.,implemented,,/items/137/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-8dda32f2ca4dd8228bf7,items,蛇鹤八打,,,name,,,,蛇鹤八打,蛇鹤八式,Serpent and Crane,implemented,,/items/138/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-e67c76096a6881a56346,items,蛇鹤八打,,,description,,,,云中鹤的独门武功，但是威力不咋地……,蛇鹤八式的修炼读本。,Training manual for Serpent and Crane.,implemented,,/items/138/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-987067ff7175a575d67b,items,疯魔杖法秘诀,,,name,,,,疯魔杖法秘诀,游杖魔法卷轴,Wandering Wand Scroll,implemented,,/items/137/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-84f3f7bcdfd5bbe3d734,items,疯魔杖法秘诀,,,description,,,,丐帮疯魔杖法,游杖魔法的修炼卷轴。,Training scroll for Wandering Wandcraft.,implemented,,/items/137/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-8dda32f2ca4dd8228bf7,items,蛇鹤八打,,,name,,,,蛇鹤八打,双形符术,Twin-Form Sigil,implemented,,/items/138/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-e67c76096a6881a56346,items,蛇鹤八打,,,description,,,,云中鹤的独门武功，但是威力不咋地……,双形符术的修炼卷轴。,Training scroll for Twin-Form Sigil.,implemented,,/items/138/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-bbc6ca60f6e25ee290ca,items,七弦无形琴谱,,,name,,,,七弦无形琴谱,,,pending,,/items/139/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7ff024762667d48a0097,items,七弦无形琴谱,,,description,,,,黄钟公自创的绝技，在琴音中灌注上乘内力扰敌心神,,,pending,,/items/139/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a2794e913c61fe3a4c32,items,如来千手法,,,name,,,,如来千手法,,,pending,,/items/140/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24042,8 +24042,8 @@ copy-ad5139c1ccc40a604702,items,柴山十八路秘籍,,,name,,,,柴山十八路�
 copy-d4371ec97c7bc6979eb7,items,柴山十八路秘籍,,,description,,,,砍柴时发明的刀法,,,pending,,/items/168/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d4f14be1fba3ad01a067,items,雁行刀秘录,,,name,,,,雁行刀秘录,,,pending,,/items/169/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-672244c42504f2293ff1,items,雁行刀秘录,,,description,,,,雁去雁归雁不散，潮起潮落潮无眠。,,,pending,,/items/169/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-dd2a8772ff0304ece721,items,石梁心法秘籍,,,name,,,,石梁心法秘籍,石桥心法读本,Stonebridge Manual,implemented,,/items/170/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-94708e6f3e062eb53b41,items,石梁心法秘籍,,,description,,,,石梁派粗浅的内功秘籍,石桥心法的修炼读本。,Training manual for Stonebridge Discipline.,implemented,,/items/170/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-dd2a8772ff0304ece721,items,石梁心法秘籍,,,name,,,,石梁心法秘籍,石桥呼吸卷轴,Stonebridge Breathing Scroll,implemented,,/items/170/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-94708e6f3e062eb53b41,items,石梁心法秘籍,,,description,,,,石梁派粗浅的内功秘籍,石桥呼吸法的修炼卷轴。,Training scroll for Stonebridge Breathing.,implemented,,/items/170/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c5e9adc8a358a3458610,items,参合指书,,,name,,,,参合指书,,,pending,,/items/171/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-49e5a184cc40e38f673d,items,参合指书,,,description,,,,姑苏慕容氏的武功,,,pending,,/items/171/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-44a3bed4caf18ef1e760,items,佛光普照,,,name,,,,佛光普照,,,pending,,/items/172/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24102,8 +24102,8 @@ copy-c004bac50470d481dbe2,items,太极剑法谱,,,name,,,,太极剑法谱,,,pend
 copy-c939b95c062ef550c7d6,items,太极剑法谱,,,description,,,,张三丰领悟的太极真意,,,pending,,/items/198/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-418d302709734694971a,items,反两仪刀法,,,name,,,,反两仪刀法,,,pending,,/items/199/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6cb83d1344198dd86f5d,items,反两仪刀法,,,description,,,,华山派失传已久的绝学,,,pending,,/items/199/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-4b3afb98348a70968b04,items,燃木刀法,,,name,,,,燃木刀法,烬火刀术,Ember Blade,implemented,,/items/200/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-984793ec81d162eb277d,items,燃木刀法,,,description,,,,少林寺七十二绝技之一,烬火刀术的修炼读本。,Training manual for Ember Blade.,implemented,,/items/200/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-4b3afb98348a70968b04,items,燃木刀法,,,name,,,,燃木刀法,烬刃剑术,Emberblade Swordplay,implemented,,/items/200/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-984793ec81d162eb277d,items,燃木刀法,,,description,,,,少林寺七十二绝技之一,烬刃剑术的修炼卷轴。,Training scroll for Emberblade Swordplay.,implemented,,/items/200/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-484c09645fb984bad3c8,items,血刀经,,,name,,,,血刀经,,,pending,,/items/201/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-42a04eec0d694274a68c,items,血刀经,,,description,,,,血刀经,,,pending,,/items/201/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-52cc8a6579ce63e943d2,items,血刀经真本,,,name,,,,血刀经真本,,,pending,,/items/202/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24196,8 +24196,8 @@ copy-597c911466d8ce545c3e,items,连城剑法精要,,,name,,,,连城剑法精要,
 copy-ff7791158c21ed523327,items,连城剑法精要,,,description,,,,铁骨墨萼梅念笙大侠所创剑法，又称唐诗剑法,,,pending,,/items/245/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-32064589972a22be8837,items,打狗棒法,,,name,,,,打狗棒法,,,pending,,/items/246/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a9f5b0dcbb4ea2b376b0,items,打狗棒法,,,description,,,,丐帮不外传的神奇武功,,,pending,,/items/246/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-bb4f0068d2a6bd5a516f,items,内功入门,,,name,,,,内功入门,呼吸入门,Breathing Primer,implemented,,/items/247/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-febadfdd43f6c2e77681,items,内功入门,,,description,,,,记载最基本的内功入门常识,稳息法的入门读本。选入修炼栏后，通过战斗经验提升对应技能。呼吸本身也请继续保持。,A beginner's guide to Steady Breath. Select it for training to build the skill through battle experience. Breathing remains strongly recommended.,implemented,,/items/247/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-bb4f0068d2a6bd5a516f,items,内功入门,,,name,,,,内功入门,稳息呼吸卷轴,Steady Breath Scroll,implemented,,/items/247/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-febadfdd43f6c2e77681,items,内功入门,,,description,,,,记载最基本的内功入门常识,稳息呼吸法的入门卷轴。选入修炼栏后，通过战斗经验提升对应技能。呼吸本身也请继续保持。,A beginner's guide to Steady Breath. Select it for training to build the skill through battle experience. Breathing remains strongly recommended.,implemented,,/items/247/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a93e8f1b3607adee4dfe,items,血刀心法秘籍,,,name,,,,血刀心法秘籍,,,pending,,/items/248/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-897fbc35aae570fdd26b,items,血刀心法秘籍,,,description,,,,记载血刀门的入门心法,,,pending,,/items/248/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b6c84b7b902fdcbd04b2,items,全真心法秘籍,,,name,,,,全真心法秘籍,,,pending,,/items/249/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24382,19 +24382,19 @@ copy-d05365772554efcd427b,items,医术汇总,,,name,,,,医术汇总,,,pending,,/
 copy-2e0483933e23b63db1be,items,医术汇总,,,description,,,,安小慧的悲天悯人，能感化你吗？,,,pending,,/items/338/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-89b84c3424434550f5f9,items,华山拳法纲要,,,name,,,,华山拳法纲要,,,pending,,/items/339/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5538a1c36531b6602795,items,华山拳法纲要,,,description,,,,归辛树40年拳法苦修的精髓，浓浓的都是爱,,,pending,,/items/339/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-29e5d2dc3009563e8382,items,新手礼包-大蟠桃,,,name,,,,新手礼包-大蟠桃,旅人迎新果,Traveller's Welcome Fruit,implemented,,/items/340/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-29e5d2dc3009563e8382,items,新手礼包-大蟠桃,,,name,,,,新手礼包-大蟠桃,旅人启程药剂,Wayfarer's Welcome Elixir,implemented,,/items/340/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ec3417ddcadcbb868bd4,items,新手礼包-大蟠桃,,,description,,,,简单难度下，送给新手的礼包,永久增加100点生命上限和100点能量上限。,Permanently adds 100 maximum Health and 100 maximum Energy.,implemented,,/items/340/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-748d5dc419fa3ea397cc,items,玉蜂浆,,,name,,,,玉蜂浆,,,pending,,/items/341/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-4666399be2da542f0b49,items,玉蜂浆,,,description,,,,古墓玉蜂蜂蜜酿造，对武功修为大有好处。,,,pending,,/items/341/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-912c77dc1c6643ced8e0,items,王母蟠桃,,,name,,,,王母蟠桃,守园人的蜜桃,Orchardkeeper's Peach,implemented,,/items/342/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-44ff8a13af4926765b1e,items,王母蟠桃,,,description,,,,人间罕见之物，增加气血内力上限,永久提高300点最大生命和300点最大内力。,Permanently increases maximum HP and maximum energy by 300 each.,implemented,,/items/342/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-44ff8a13af4926765b1e,items,王母蟠桃,,,description,,,,人间罕见之物，增加气血内力上限,永久提高300点最大生命和300点最大能量。,Permanently increases maximum HP and maximum energy by 300 each.,implemented,,/items/342/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e9fb8bde947c083e3821,items,蛇胆,,,name,,,,蛇胆,,,pending,,/items/343/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-97e89afa5132053b4f52,items,蛇胆,,,description,,,,人间罕见之物，能够大幅提高内力上限,,,pending,,/items/343/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-9d36edd1722b4104c249,items,道家仙丹,,,name,,,,道家仙丹,隐士灵丹,Hermit's Elixir,implemented,,/items/344/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-9d36edd1722b4104c249,items,道家仙丹,,,name,,,,道家仙丹,隐士灵药,Hermit's Elixir,implemented,,/items/344/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c9caada29ba6d849180d,items,道家仙丹,,,description,,,,道家不传之秘，增加生命上限,永久提高500点最大生命。,Permanently increases maximum HP by 500.,implemented,,/items/344/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2ab5a844c3e182b9d642,items,刀,,,name,,,,刀,普通单刀,Plain Blade,implemented,,/items/345/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ea12129998d2b0edce09,items,刀,,,description,,,,因为切了可以自动粘合伤口，一刀不见血，无痛切割，所以要一万两。,为符合条件的物品重新洗练随机词条。请在洗练面板核对物品和要求。,Notes for reforging an eligible item's random modifiers. Use the reforging panel to inspect the item and its requirements.,implemented,,/items/345/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-ca6d77b404b330e743a5,items,洗练书,,,name,,,,洗练书,洗练笔记,Reforging Notes,implemented,,/items/346/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-ca6d77b404b330e743a5,items,洗练书,,,name,,,,洗练书,重铸卷轴,Reforging Scroll,implemented,,/items/346/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2501824cc1b326be50e7,items,洗练书,,,description,,,,可以忘却外功或内功技能的神秘书本。,记载随机词条洗练的笔记，不能作为战斗消耗品使用。,Notes on reforging random item modifiers. Not a combat consumable.,implemented,,/items/346/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b1e87a8de35ded801693,buffs,中毒,,,name,,,,中毒,,Poison,implemented,,/buffs/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fbb616127ff83464327d,buffs,中毒,,,description,,,,每回合减少生命值,每回合失去生命。,Loses health each turn.,implemented,,/buffs/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24490,16 +24490,16 @@ copy-bc2bae9028c253c85592,talents,刀封印,,,name,,,,刀封印,,,pending,,/tale
 copy-94c86168a2355945515a,talents,刀封印,,,description,,,,攻击一定概率造成刀封印效果。,,,pending,,/talents/12/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-43870baf903a988efb66,talents,刀法增益,,,name,,,,刀法增益,,,pending,,/talents/13/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b7f846e9fdeadff14186,talents,刀法增益,,,description,,,,刀法威力增加5%。,,,pending,,/talents/13/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a00372edd5f677dfe987,talents,刀系装备,,,name,,,,刀系装备,,,pending,,/talents/14/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-1ea12a3d11a57fcd5c84,talents,刀系装备,,,description,,,,使用刀法以外的武功，有伤害减益。,,,pending,,/talents/14/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a00372edd5f677dfe987,talents,刀系装备,,,name,,,,刀系装备,刃术媒介,Bladework Focus,implemented,,/talents/14/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-1ea12a3d11a57fcd5c84,talents,刀系装备,,,description,,,,使用刀法以外的武功，有伤害减益。,使用此媒介时，非刃术技能造成90%的伤害。,Non-Bladework techniques deal 90% damage while using this focus.,implemented,,/talents/14/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b54af83f0a0ff21cb7a4,talents,刚柔并济,,,name,,,,刚柔并济,,,pending,,/talents/15/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-cb0c3dba9a088ace3ab9,talents,刚柔并济,,,description,,,,略微提高武当派所有武学威力。,,,pending,,/talents/15/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-424fa8521c6261cac971,talents,剑封印,,,name,,,,剑封印,,,pending,,/talents/16/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-95e46f9f4334241cf40b,talents,剑封印,,,description,,,,攻击一定概率造成剑封印效果。,,,pending,,/talents/16/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-dd4989dc588b31c636d6,talents,剑法增益,,,name,,,,剑法增益,,,pending,,/talents/17/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b15cd4cbeb2d02f7bbea,talents,剑法增益,,,description,,,,剑法威力增加5%。,,,pending,,/talents/17/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-0b5b729091bc7a17b224,talents,剑系装备,,,name,,,,剑系装备,,,pending,,/talents/18/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-c16ac7d4c45e00ab386b,talents,剑系装备,,,description,,,,使用剑法以外的武功，有伤害减益。,,,pending,,/talents/18/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-0b5b729091bc7a17b224,talents,剑系装备,,,name,,,,剑系装备,剑术媒介,Sword Focus,implemented,,/talents/18/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-c16ac7d4c45e00ab386b,talents,剑系装备,,,description,,,,使用剑法以外的武功，有伤害减益。,使用此媒介时，非剑术技能造成90%的伤害。,Non-Swordsmanship techniques deal 90% damage while using this focus.,implemented,,/talents/18/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2e009a30fc5c95017bff,talents,化功大法,,,name,,,,化功大法,,,pending,,/talents/19/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-53dea1b79174a8f075c8,talents,化功大法,,,description,,,,攻击可以有概率化去对方大量内力。,,,pending,,/talents/19/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a1dd0014efe76caf2c93,talents,北冥真气,,,name,,,,北冥真气,,,pending,,/talents/20/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24540,12 +24540,12 @@ copy-ea115970d21fb68ddf6f,talents,太极高手,,,name,,,,太极高手,,,pending,
 copy-3fde0931c42a295ec1f0,talents,太极高手,,,description,,,,精通太极，太极剑、太极拳暴击概率增加25%。,,,pending,,/talents/36/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-169e2ab2bdc7eb4a9c9b,talents,夫妻同心,,,name,,,,夫妻同心,,,pending,,/talents/37/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2db61cef2df26626fbf5,talents,夫妻同心,,,description,,,,场上若己方有一男一女同时拥有【夫妻同心】天赋，则两人攻防提高随机20%到100%。,,,pending,,/talents/37/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-8570e2c387b98387d01c,talents,奇门增益,,,name,,,,奇门增益,,,pending,,/talents/38/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-5ce02df750f169ffd467,talents,奇门增益,,,description,,,,奇门威力增加5%。,,,pending,,/talents/38/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-8570e2c387b98387d01c,talents,奇门增益,,,name,,,,奇门增益,魔杖亲和,Wand Affinity,implemented,,/talents/38/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-5ce02df750f169ffd467,talents,奇门增益,,,description,,,,奇门威力增加5%。,魔杖熟练乘以1.05。,Wandcraft ×1.05.,implemented,,/talents/38/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a3a5ff4505bd0f02ec0f,talents,奇门封印,,,name,,,,奇门封印,,,pending,,/talents/39/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e75fe6dd2ef5a28252bd,talents,奇门封印,,,description,,,,攻击一定概率造成奇门封印效果。,,,pending,,/talents/39/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-068a481e451f398eab36,talents,奇门装备,,,name,,,,奇门装备,,,pending,,/talents/40/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-eef9c43406417b114154,talents,奇门装备,,,description,,,,使用奇门以外的武功，有伤害减益。,,,pending,,/talents/40/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-068a481e451f398eab36,talents,奇门装备,,,name,,,,奇门装备,魔杖媒介,Wandcraft Focus,implemented,,/talents/40/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-eef9c43406417b114154,talents,奇门装备,,,description,,,,使用奇门以外的武功，有伤害减益。,使用此媒介时，非魔杖技能造成90%的伤害。,Non-Wandcraft techniques deal 90% damage while using this focus.,implemented,,/talents/40/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c837dbdf45c822246b12,talents,奇门遁甲,,,name,,,,奇门遁甲,,,pending,,/talents/41/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-58c7f75188182d034436,talents,奇门遁甲,,,description,,,,擅长奇门五行之术，增加9%的闪避概率，极大的增加自己的攻击命中率。,,,pending,,/talents/41/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6ecf2f20619fd402bda6,talents,奋战,,,name,,,,奋战,,,pending,,/talents/42/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24565,7 +24565,7 @@ copy-cff42480e089e9784570,talents,寸长寸强,,,description,,,,增加一格攻�
 copy-bf099edd87a9e2a8af61,talents,射雕英雄,,,name,,,,射雕英雄,,,pending,,/talents/49/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-747840bc0f54cda5fc68,talents,射雕英雄,,,description,,,,郭靖专属天赋，提升郭靖相关武学威力。,,,pending,,/talents/49/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c54598c74376b83fe271,talents,屌丝,,,name,,,,屌丝,小人物的运气,Smallfolk's Luck,implemented,,/talents/50/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-25c2ab159956b2f98585,talents,屌丝,,,description,,,,带上这个草帽就成为屌丝了，据说能增加屌丝逆袭的概率。,为街头拳法的奥义触发倍率额外增加0.1。,Adds 0.1 to the legacy legendary-combo chance multiplier for Scrapper's Fist.,implemented,,/talents/50/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-25c2ab159956b2f98585,talents,屌丝,,,description,,,,带上这个草帽就成为屌丝了，据说能增加屌丝逆袭的概率。,为旅人奥术击的奥义触发倍率额外增加0.1。,Adds 0.1 to the legacy legendary-combo chance multiplier for Wayfarer's Arcane Strike.,implemented,,/talents/50/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-4a98ae1860e79222f26d,talents,峨眉宗师,,,name,,,,峨眉宗师,,,pending,,/talents/51/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-98cb0799755fc7921466,talents,峨眉宗师,,,description,,,,郭襄专属天赋，大幅度提高与峨眉派及郭襄相关武学威力。,,,pending,,/talents/51/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-39503512d5914f793178,talents,左右互搏,,,name,,,,左右互搏,,,pending,,/talents/52/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24598,8 +24598,8 @@ copy-c2b9473f0b72d6f69cef,talents,拳掌增益,,,name,,,,拳掌增益,,,pending,
 copy-3ca840103c40dd29bb75,talents,拳掌增益,,,description,,,,拳掌威力增加5%。,,,pending,,/talents/65/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-4a60823a68ab9f2f849e,talents,拳掌封印,,,name,,,,拳掌封印,,,pending,,/talents/66/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-bc9c61c3f63b724f2e42,talents,拳掌封印,,,description,,,,攻击一定概率造成拳掌封印效果。,,,pending,,/talents/66/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-6bf58ad8406a51c98f58,talents,拳系装备,,,name,,,,拳系装备,,,pending,,/talents/67/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-bc01391f55269a88fe8e,talents,拳系装备,,,description,,,,使用拳法以外的武功，有伤害减益。,,,pending,,/talents/67/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-6bf58ad8406a51c98f58,talents,拳系装备,,,name,,,,拳系装备,符术媒介,Spellcraft Focus,implemented,,/talents/67/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-bc01391f55269a88fe8e,talents,拳系装备,,,description,,,,使用拳法以外的武功，有伤害减益。,使用此媒介时，非符术技能造成90%的伤害。,Non-Spellcraft techniques deal 90% damage while using this focus.,implemented,,/talents/67/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3ecdb94cb5d66f21f03a,talents,摧筋破骨,,,name,,,,摧筋破骨,,,pending,,/talents/68/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-637b98dcf126331f4bb5,talents,摧筋破骨,,,description,,,,力大无穷的猛击直至筋骨深处，直接对气血上限造成打击。,,,pending,,/talents/68/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e9cded4f540d59bb7d63,talents,攀云乘龙,,,name,,,,攀云乘龙,,,pending,,/talents/69/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24709,7 +24709,7 @@ copy-568a675b5550bd559fba,talents,芷若的眷念,,,description,,,,峨眉掌门�
 copy-6499cb685a5dcd1649ba,talents,苦命儿,,,name,,,,苦命儿,,,pending,,/talents/121/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e4b9f65c533fd0d6904e,talents,苦命儿,,,description,,,,他生来便是为了受苦，而受苦会让他更坚强。防御力增加30。,,,pending,,/talents/121/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-972a162c7e0a0a9e4bfa,talents,草头百姓,,,name,,,,草头百姓,平民之志,Common Folk,implemented,,/talents/122/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-e76527c80afec89370b6,talents,草头百姓,,,description,,,,证明你是无门无派的草头小百姓，据说有着神秘的意义。（触发野球拳奥义，提高异世人触发血线比例）,帮助触发街头拳法奥义，并提高异乡来客的触发血线。,Enables Scrapper's Fist combinations and raises Otherworlder's low-health activation threshold.,implemented,,/talents/122/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-e76527c80afec89370b6,talents,草头百姓,,,description,,,,证明你是无门无派的草头小百姓，据说有着神秘的意义。（触发野球拳奥义，提高异世人触发血线比例）,帮助触发旅人奥术击奥义，并提高异乡来客的触发血线。,Enables Wayfarer's Arcane Strike combinations and raises Otherworlder's low-health activation threshold.,implemented,,/talents/122/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-631ad9baf729a0a32aee,talents,血海魔功,,,name,,,,血海魔功,,,pending,,/talents/123/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e99362ec96604a972173,talents,血海魔功,,,description,,,,使用血刀大法增加20%吸血能力。,,,pending,,/talents/123/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-51dd6e502bf95baf8d23,talents,血海魔功,,,name,,,,血刀大法,,,pending,,/talents/123/affixes/0/effects/0/parameters/skillRates/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24728,8 +24728,8 @@ copy-8d09b1499eed25d02843,talents,软猬宝甲,,,name,,,,软猬宝甲,,,pending,
 copy-61ea409de642cd45d47f,talents,软猬宝甲,,,description,,,,软猬甲护身，直接对周遭敌人造成伤害。,,,pending,,/talents/128/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9548a85770edbccaf70a,talents,轻功大师,,,name,,,,轻功大师,,,pending,,/talents/129/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-411347e6cb7bc563400c,talents,轻功大师,,,description,,,,精通轻功，可以在战场上来去无踪，无视敌方阵型对行动的阻碍。,,,pending,,/talents/129/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-fe5bd2cc26ea5e074cf2,talents,轻功高超,,,name,,,,轻功高超,,,pending,,/talents/130/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-dfaae7cef5383a361016,talents,轻功高超,,,description,,,,这人曾下苦功练习轻功。移动格子增加1。,,,pending,,/talents/130/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-fe5bd2cc26ea5e074cf2,talents,轻功高超,,,name,,,,轻功高超,轻盈步法,Lightfooted,implemented,,/talents/130/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-dfaae7cef5383a361016,talents,轻功高超,,,description,,,,这人曾下苦功练习轻功。移动格子增加1。,移动距离+1格。,Movement +1 tile.,implemented,,/talents/130/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1d166b619da7e2b514a3,talents,追魂,,,name,,,,追魂,,,pending,,/talents/131/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2f00be45fdbd4f0bd6a3,talents,追魂,,,description,,,,不将敌人打倒决不罢休，无道德可言。攻击造成伤害加深效果。,,,pending,,/talents/131/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c44dfe2771b39110f5bd,talents,金刚,,,name,,,,金刚,坚毅,Iron Resolve,implemented,,/talents/132/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24823,12 +24823,12 @@ copy-b2f71265dd8f25a8e4e0,browser,browser,,,defaultName,,,,小虾米,旅人,Wayf
 copy-e1796e06d2706fbb0aad,browser,browser,,,currencyName,,,,银两,银币,Silver,implemented,,/browser/currencyName,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6227498af4789b4d93bf,browser,browser,,,currencyUnit,,,,两,银币,silver,implemented,,/browser/currencyUnit,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a57f3e1d5b8d64dfd79e,browser,browser,,,cultivation,,,,功法修炼,修炼,Training,implemented,,/browser/terms/cultivation,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-cfbc842c9c142019eb51,browser,browser,,,internalSkills,,,,内功,,Inner disciplines,implemented,,/browser/terms/internalSkills,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a319b140e4f830bdb30e,browser,browser,,,externalSkills,,,,外功招式,,Attack techniques,implemented,,/browser/terms/externalSkills,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-fa0db5042dd01e96afe0,browser,browser,,,energy,,,,内力,,Energy,implemented,,/browser/terms/energy,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-cfbc842c9c142019eb51,browser,browser,,,internalSkills,,,,内功,呼吸法,breathing methods,implemented,,/browser/terms/internalSkills,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a319b140e4f830bdb30e,browser,browser,,,externalSkills,,,,外功招式,魔法与战技,Attack techniques,implemented,,/browser/terms/externalSkills,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-fa0db5042dd01e96afe0,browser,browser,,,energy,,,,内力,能量,Energy,implemented,,/browser/terms/energy,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ad6ee388c26bffaa90f2,browser,browser,,,title,,,,听南贤说说这个江湖,听格林说明他的求助,Listen to Grimm's request,implemented,,/browser/objectives/0/title,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-ffe960fe7530070e810f,browser,browser,,,title,,,,选择一本秘籍修炼,选择一本读本修炼,Select a manual for training,implemented,,/browser/objectives/1/title,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-7149327cb11e104071f3,browser,browser,,,title,,,,在武师处完成第一场练习,在教官处完成第一场练习,Complete your first spar with the instructor,implemented,,/browser/objectives/2/title,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-ffe960fe7530070e810f,browser,browser,,,title,,,,选择一本秘籍修炼,选择一本卷轴修炼,Select a scroll for training,implemented,,/browser/objectives/1/title,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-7149327cb11e104071f3,browser,browser,,,title,,,,在武师处完成第一场练习,完成一次入门实战练习,Finish an introductory practice bout,implemented,,/browser/objectives/2/title,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-de2f30b9bf51fc209abb,browser,browser,,,title,,,,找南贤出村，接下买药教学,找格林出村，接下买药教学,Ask Grimm about leaving the village,implemented,,/browser/objectives/3/title,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a82220660eff78a93a07,browser,browser,,,title,,,,到洛阳商店完成一次交易,在十字镇补给铺完成交易,Trade at the Crossroads Supply Shop,implemented,,/browser/objectives/4/title,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-cedeb7b499094296b616,browser,browser,,,title,,,,穿上一件装备,,Put on a piece of equipment,implemented,,/browser/objectives/5/title,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -25094,7 +25094,7 @@ copy-761c9d855fc3d425871c,browser,browser,,,title,,,,你最喜欢的兵刃是,�
 copy-95d68ba082ddde909789,browser,browser,,,text,,,,拳,拳头,My fists,implemented,,/browser/creation/questions/3/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3484ab733ebb5e8c64a8,browser,browser,,,text,,,,剑,长剑,A sword,implemented,,/browser/creation/questions/3/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-56472605586093236b87,browser,browser,,,text,,,,刀,单刀,A blade,implemented,,/browser/creation/questions/3/options/2/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-f8b1c5f256c0b414aad3,browser,browser,,,text,,,,暗器,投掷与奇门兵器,Thrown or unusual weapons,implemented,,/browser/creation/questions/3/options/3/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-f8b1c5f256c0b414aad3,browser,browser,,,text,,,,暗器,投掷与魔杖兵器,Thrown or unusual weapons,implemented,,/browser/creation/questions/3/options/3/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e8f3b63c42337df065af,browser,browser,,,title,,,,以下女性角色你最喜欢的是,你欣赏怎样的伙伴？,What sort of companion do you admire?,implemented,,/browser/creation/questions/4/title,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9a774be61929d554e49e,browser,browser,,,text,,,,黄蓉,耐心谋划的人,A patient planner,implemented,,/browser/creation/questions/4/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-cb5ff32369438ff30aa0,browser,browser,,,text,,,,小龙女,安静可靠的守护者,A quiet guardian,implemented,,/browser/creation/questions/4/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
