@@ -3,6 +3,7 @@ import {mkdir, writeFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import {chromium} from 'playwright';
 import {clickMenu} from './menu-controls.mjs';
+import {projectPresentation} from '../src/presentation.ts';
 
 // Only `state` is sent to the runtime. Gameplay changes must use visible controls.
 export async function createHarness(name, contextOptions = {}) {
@@ -53,7 +54,7 @@ export async function createHarness(name, contextOptions = {}) {
     });
     assert.equal(result.ok, true, 'Read-only runtime state must succeed');
     for(const path of Object.values(result.state.pack.audio?.resources||{}))knownMedia.add(new URL(path,report.baseURL).href);
-    return result.state;
+    return projectPresentation(result.state,result.state.pack.displayCatalog);
   }
   async function continueDialogue(limit = 80) {
     for (let count = 0; count < limit; count++) {

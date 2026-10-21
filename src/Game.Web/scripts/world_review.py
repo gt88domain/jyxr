@@ -12,7 +12,7 @@ import json
 import re
 from pathlib import Path
 
-from grimm_skin import apply_skin
+from grimm_skin import apply_skin,load_skin
 
 WEB = Path(__file__).resolve().parents[1]
 TEXT_KEYS = {'name', 'description', 'text', 'title', 'subtitle', 'chapterTitle',
@@ -263,7 +263,7 @@ def csv_bytes(rows, fields):
 def build_review(output, web=WEB):
     raw = (web / 'public/data/packs/jyx/content-package.json').read_bytes()
     source_sha = hashlib.sha256(raw).hexdigest()
-    skin = json.loads((web / 'content/worlds/grimm-skin.json').read_text())
+    skin = load_skin(web)
     localized = {locale: apply_skin(raw, skin, locale)[0] for locale in ['zh-CN', 'en']}
     original = json.loads(raw)
     cast = json.loads((web / 'content/worlds/cast-map.json').read_text())

@@ -28,6 +28,9 @@ import {moreMenuView} from './navigation';
 import './modern-ui.css';
 import type {GameCommand} from './command-contract';
 import {appConfig} from './app-config';
+import {startUiLocale,setUiDisplayLabels} from './ui/locale';
+
+startUiLocale(appConfig.id);
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 let state: GameState, slot: SaveSlot | undefined, busy = false, board: Board | undefined;
@@ -131,6 +134,7 @@ function applyResult(result: Result,restored=false) {
   if (!result.ok) throw new Error(result.error || '此次行动未能完成。');
   const previous=state;
   state = result.state;
+  setUiDisplayLabels(state.pack.displayCatalog?.text);
   if(previous&&previous.journeyId!==state.journeyId)uiMessages.length=0;
   if(restored||!previous)activitySeen=Math.max(0,...(state.activity||[]).map(a=>a.id));
   else if(previous.journeyId!==state.journeyId)activitySeen=0;
@@ -182,7 +186,7 @@ async function showEquipmentPreview(entryNumber: number) {
   modal('换装属性对比', '<div data-equipment-preview aria-live="polite">正在比较装备…</div>', true);
   const target = document.querySelector<HTMLElement>('[data-equipment-preview]')!;
   try {
-    const preview = await inspectEquipment(characterId, entryNumber);
+    const preview = await inspectEquipment(characterId, entryNumber,inspected.pack.displayCatalog);
     if (!target.isConnected || !modalOpen()) return;
     if (state !== inspected) {target.textContent = '人物状态已变化，请重新打开装备对比。';return;}
     equipmentPreviewContext = {state: inspected, entryNumber};
