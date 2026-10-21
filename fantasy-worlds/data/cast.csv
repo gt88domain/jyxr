@@ -292,7 +292,7 @@ home,home,home,actor-4ea140588150,system,,home,Home marker,classified,,,False,,
 向左走,向左走,向左走,actor-0616be071cfd,system,,向左走,Move left,classified,,,False,,
 吕文德,吕文德,吕文德,actor-f05fa7d93790,named,GB,约翰·华生,John Watson,proposed,Sherlock Holmes / Arthur Conan Doyle,wide,False,GB,story-role-review
 哑仆,哑仆,哑仆,actor-f5c17ffcaae6,named,EG,盖布,Geb,proposed,Ancient Egyptian mythology,genre,False,EG,story-role-review
-商人,商人,商人,actor-3f1784ce8b75,archetype,GB,当地居民,Town resident,classified,,,False,GB,
+商人,商人,商人,actor-3f1784ce8b75,archetype,GB,店主,Shopkeeper,classified,,,False,GB,
 商家堡成员,商家堡成员,商家堡成员,actor-b782a035c4df,archetype,GR,荒野匪徒,Outlaw,classified,,,False,GR,
 善勇,善勇,善勇,actor-8736f0c9c7d3,named,RO,法特弗鲁莫斯,Fat-Frumos,proposed,Romanian folklore,regional,False,RO,"regional-familiarity-review,story-role-review"
 回纥男子刺客,回纥男子刺客,神秘人,actor-645cb9db304c,named,GB,罗宾汉,Robin Hood,proposed,Robin Hood legend,wide,False,GB,"legacy-form-label-review,story-role-review"
@@ -363,7 +363,7 @@ home,home,home,actor-4ea140588150,system,,home,Home marker,classified,,,False,,
 普通杀手,普通杀手,普通杀手,actor-205b7340419b,archetype,GB,蒙面刺客,Masked assassin,classified,,,False,GB,
 曼陀山庄神秘人,曼陀山庄神秘人,神秘人,actor-ef4dbfb3b7db,named,NO,金发哈拉尔,Harald Fairhair,proposed,Norse history,genre,False,NO,"legacy-form-label-review,story-role-review"
 朝廷走狗,朝廷走狗,朝廷走狗,actor-ec48a921b422,named,FR,波尔托斯,Porthos,proposed,The Three Musketeers / Alexandre Dumas,wide,False,FR,story-role-review
-木头人,木头人,木头人,actor-dad1c1cbb4bd,named,GB,尤瑟·潘德拉贡,Uther Pendragon,proposed,Arthurian legend,genre,False,GB,"presentation-and-relationship-review,story-role-review"
+木头人,木头人,木头人,actor-dad1c1cbb4bd,archetype,,训练假人,Training Dummy,classified,,,False,,
 木婉清(蒙面),木婉清,木婉清,actor-a78b0b16de32,named,NO,格芙琼,Gefjon,proposed,Norse mythology,regional,False,NO,"regional-familiarity-review,legacy-form-label-review,story-role-review"
 木婉清.蒙面,木婉清,木婉清,actor-a78b0b16de32,named,NO,格芙琼,Gefjon,proposed,Norse mythology,regional,False,NO,"regional-familiarity-review,legacy-form-label-review,story-role-review"
 木婉清,木婉清,木婉清,actor-a78b0b16de32,named,NO,格芙琼,Gefjon,proposed,Norse mythology,regional,False,NO,"regional-familiarity-review,legacy-form-label-review,story-role-review"
@@ -383,7 +383,7 @@ home,home,home,actor-4ea140588150,system,,home,Home marker,classified,,,False,,
 樵,樵,樵夫,actor-ebd13f7fdd46,named,DE,哈根,Hagen,proposed,Germanic heroic legend,genre,False,DE,"legacy-form-label-review,story-role-review"
 樵夫,樵夫,樵夫,actor-206dd383f796,named,GB,特威德尔迪,Tweedledee,proposed,Alice books / Lewis Carroll,genre,False,GB,story-role-review
 欧阳克,欧阳克,欧阳克,actor-a1309a79b0ea,named,DE,贡特尔,Gunther,proposed,Germanic heroic legend,genre,False,DE,story-role-review
-武师,武师,武师,actor-30b7fd06e6d1,archetype,GB,当地居民,Town resident,classified,,,False,GB,
+武师,武师,武师,actor-30b7fd06e6d1,archetype,GB,教官,Instructor,classified,,,False,GB,
 武当高手,武当高手,武当高手,actor-25f6ffcd6d49,archetype,CN,组织成员,Guild member,classified,,,False,CN,
 段延庆,段延庆,段延庆,actor-32f6907c71f6,named,NO,奥拉夫·特里格瓦松,Olaf Tryggvason,proposed,Norse history,regional,False,NO,"regional-familiarity-review,story-role-review"
 殷梨亭,殷梨亭,殷梨亭,actor-001a92f4d07c,named,CN,纣王,King Zhou,proposed,Chinese myth and Investiture of the Gods,genre,False,CN,story-role-review

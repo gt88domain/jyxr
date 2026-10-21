@@ -1,5 +1,5 @@
 ﻿row_id,category,owner_id,script_id,segment_id,kind,speaker_ids,proposed_speakers,countries,source_text,new_zh_CN,new_en,status,notes,source_pointer,source_line_count,source_sha256
-copy-a4207588129ead50b71a,storyScripts,新手村_出生,legacy,新手村_出生,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：咦，这是哪里？,主角：这是哪里？,主角：Where am I?,implemented,,/storyScripts/legacy/segments/1/steps/2,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a4207588129ead50b71a,storyScripts,新手村_出生,legacy,新手村_出生,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：咦，这是哪里？,主角：一间堆满书的屋子。我这是得救了，还是要交读书报告？,"主角：A cottage full of books. Am I safe, or about to be assigned reading?",implemented,,/storyScripts/legacy/segments/1/steps/2,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-53f70bd921fd0e49097a,storyScripts,新手村_出生,legacy,新手村_出生,suggest,,,,点击人物头像，即可触发与人物交互。,点击格林的头像，就能与他交谈。,Select Grimm’s portrait to speak with him.,implemented,,/storyScripts/legacy/segments/1/steps/3/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-55e34934d07cfef5b0e4,storyScripts,新手村_南贤开场,legacy,新手村_南贤开场,dialogue_run,"南贤
 主角","南贤 → 雅各布·格林 / Jacob Grimm [locked]
@@ -47,28 +47,28 @@ copy-55e34934d07cfef5b0e4,storyScripts,新手村_南贤开场,legacy,新手村_�
 
 南贤：……
 
-南贤：好了，时间不早了，来，我带你到外头看看吧！","格林：我是格林，一直在收集各国那些陪伴人们长大的童话。
+南贤：好了，时间不早了，来，我带你到外头看看吧！","格林：我是格林，收集各国陪伴人们长大的童话。通常，它们会乖乖待在书里。
 
-主角：是你把我召唤到这里的？
+主角：是你把我召唤来的？我今天本来过得挺普通的。
 
-格林：是的。故事出了乱子，有些人的故事停在了半途。
+格林：是的。有些故事停在半途，里面的人需要帮助。我整理笔记很在行，挥剑就差远了。
 
-格林：我想请你走进童话，找到他们，帮他们把故事继续下去。
+格林：你愿意走进这些故事，结识伙伴，帮他们找到接下来的路吗？
 
-主角：好，我来帮你。从哪里开始？
+主角：好吧。这份差事，配剑吗？
 
-格林：先在村里学些本领，出村后再结识伙伴，一起上路吧。","Grimm：I'm Grimm. I collect the fairy tales people grow up with, from lands around the world.
+格林：配一本入门读本。先在村里学点本领，我可不想把你的事迹编进《前车之鉴》。","Grimm：I'm Grimm. I collect the fairy tales people grow up with. Usually, they stay on the page.
 
-主角：Did you summon me here?
+主角：You summoned me? I was having such an ordinary day.
 
-Grimm：Yes. Something has gone wrong, and some of their stories have come to a halt.
+Grimm：Yes. Some tales have stalled, and their people need help. My notes are excellent; my swordplay is not.
 
-Grimm：Will you enter the tales, find those people, and help their stories continue?
+Grimm：Will you enter their stories, find companions, and help them find a way forward?
 
-主角：I'll help. Where do I start?
+主角：All right. Does the job come with a sword?
 
-Grimm：Learn the basics in the village. Then set out and find companions.",implemented,,/storyScripts/legacy/segments/2/steps/0,23,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-3a08148b8cd47e7f84f8,storyScripts,新手村_南贤开场,legacy,新手村_南贤开场,journal,,,,再次来到金庸十四天书的世界。,格林召唤我前来，帮助那些童话停在半途的人。,Grimm summoned me to help the people whose fairy tales have come to a halt.,implemented,,/storyScripts/legacy/segments/2/steps/24/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+Grimm：A beginner's manual. Learn here first; I would hate to file you under 'cautionary tale'.",implemented,,/storyScripts/legacy/segments/2/steps/0,23,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-3a08148b8cd47e7f84f8,storyScripts,新手村_南贤开场,legacy,新手村_南贤开场,journal,,,,再次来到金庸十四天书的世界。,格林请我帮助那些停在半途的童话。首先，学点本领，别让自己的故事停在开头。,Grimm needs help with tales that have stalled. First: learn enough to survive my own first chapter.,implemented,,/storyScripts/legacy/segments/2/steps/24/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5a02dacff3e4a5a10a73,storyScripts,新手村_小村介绍,legacy,新手村_小村介绍,dialogue_run,"主角
 南贤","主角 → 玩家角色 / Player character [classified]
 南贤 → 雅各布·格林 / Jacob Grimm [locked]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：不是这么老土吧？这就是这个游戏的新手村？
@@ -77,30 +77,34 @@ copy-5a02dacff3e4a5a10a73,storyScripts,新手村_小村介绍,legacy,新手村_�
 
 主角：那我现在应该做些什么？
 
-南贤：村里有许多去处，你可以跟大伙学学基本的技能。我这里有一本记载了[[yellow:基本内功]]的心法，你拿去好好修炼吧。",格林：这本内功入门给你，先选入修炼栏，再找村里的武师练练。,"Grimm：Take this beginner's manual, 内功入门. Select it for training, then practise with the village instructor.",implemented,,/storyScripts/legacy/segments/3/steps/1,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：村里有许多去处，你可以跟大伙学学基本的技能。我这里有一本记载了[[yellow:基本内功]]的心法，你拿去好好修炼吧。",格林：这本《呼吸入门》给你。先学着稳住气息——大多数英雄都觉得，持续呼吸是个好习惯。,Grimm：Take this Breathing Primer. Start with steady breathing. Most heroes find it useful to keep doing that.,implemented,,/storyScripts/legacy/segments/3/steps/1,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-64bf9ad9e8c31ed0b426,storyScripts,新手村_小村介绍,legacy,新手村_小村介绍,dialogue_run,"主角
 南贤","主角 → 玩家角色 / Player character [classified]
 南贤 → 雅各布·格林 / Jacob Grimm [locked]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：我靠，这是什么？内功入门？！至少拿点像样的东西嘛。
 
-南贤：老朽这儿也只有这点货了……你就将就着学着吧。",主角：明白，我先做好准备再上路。,主角：Understood. I'll get ready before I set out.,implemented,,/storyScripts/legacy/segments/3/steps/6,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-b165c3f562830485c7d5,storyScripts,新手村_小村介绍,legacy,新手村_小村介绍,suggest,,,,点击人物状态栏，点击修炼，可以装备内功入门。,打开人物状态栏的修炼，选择内功入门，开始练习。,Open 修炼 (Cultivation) and select 内功入门 to begin training.,implemented,,/storyScripts/legacy/segments/3/steps/8/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-b5da0d3115bea915b13c,storyScripts,新手村_小村介绍,legacy,新手村_小村介绍,suggest,,,,装备上的武学经书，在战斗结束后能将获得的经验快速分配到该项武学上，可以迅速提升武学等级。,选入修炼栏的秘籍，会在战斗结束后获得经验，提升对应本领。,A selected training manual receives experience after battle and improves its skill.,implemented,,/storyScripts/legacy/segments/3/steps/9/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d85ee9d19f4e65b8a01f,storyScripts,新手村_南贤,legacy,新手村_南贤,text,南贤,南贤 → 雅各布·格林 / Jacob Grimm [locked],DE,有什么事吗？,还有什么想问的吗？,What would you like to know?,implemented,,/storyScripts/legacy/segments/4/steps/0/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-332b0073e8c77bfc943f,storyScripts,新手村_南贤,legacy,新手村_南贤,text,,,,[[yellow:【结束新手村】放我出村吧！]],【结束新手村】我准备好了，出村吧。,[Leave the village] I am ready for the road.,implemented,,/storyScripts/legacy/segments/4/steps/0/blocks/0/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-8a2aa0e9016538467e9e,storyScripts,新手村_南贤,legacy,新手村_南贤,text,,,,【离开】没事了,【离开】暂时没事了。,[Leave] Nothing else for now.,implemented,,/storyScripts/legacy/segments/4/steps/0/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-b73f828b0b97747f2e58,storyScripts,新手村_南贤,legacy,新手村_南贤,text,,,,【询问】这个世界有善恶之分吗？,【询问】我的选择会有什么影响？,[Ask] Do my choices matter?,implemented,,/storyScripts/legacy/segments/4/steps/0/blocks/0/options/2/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-dede9faa1f5a9a63cecc,storyScripts,新手村_南贤,legacy,新手村_南贤,text,,,,【询问】我要如何募集队友？,【询问】怎样结识同行的伙伴？,[Ask] How can I recruit companions?,implemented,,/storyScripts/legacy/segments/4/steps/0/blocks/0/options/3/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-735725b6c4529496505f,storyScripts,新手村_南贤,legacy,新手村_南贤,text,,,,【询问】我上次来这个世界都做了什么？,【询问】你还收集过哪些旅人的故事？,[Ask] Tell me about the travellers before me.,implemented,,/storyScripts/legacy/segments/4/steps/0/blocks/0/options/4/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-1ddb11ea5eaeae6cc460,storyScripts,新手村_南贤,legacy,新手村_南贤,text,,,,【询问】我需要在这个世界做什么？,【询问】我这次旅程的目标是什么？,[Ask] What is my goal?,implemented,,/storyScripts/legacy/segments/4/steps/0/blocks/0/options/5/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-758b6b7df9ce636ed80e,storyScripts,新手村_南贤,legacy,新手村_南贤,text,,,,【挑战】我想跟你打一架,【挑战】能找你练练手吗？,[Challenge] Can I practise with you?,implemented,,/storyScripts/legacy/segments/4/steps/0/blocks/0/options/6/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-4db52185052172bbc52a,storyScripts,新手村_南贤_出村,legacy,新手村_南贤_出村,dialogue_run,南贤,南贤 → 雅各布·格林 / Jacob Grimm [locked],DE,南贤：好了，看来你也学得差不多了。那么现在就送你出村！,格林：基础学得差不多了。来，看看村外的旅程吧。,Grimm：You have learned the basics. Let us see what awaits beyond the village.,implemented,,/storyScripts/legacy/segments/5/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：老朽这儿也只有这点货了……你就将就着学着吧。",主角：挺好，至少慌起来的时候，我也能顺便练练。,主角：Good. Something I can practise while panicking.,implemented,,/storyScripts/legacy/segments/3/steps/6,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b165c3f562830485c7d5,storyScripts,新手村_小村介绍,legacy,新手村_小村介绍,suggest,,,,点击人物状态栏，点击修炼，可以装备内功入门。,打开人物状态栏的“修炼”，选入《呼吸入门》。,Open 修炼 (Training) and select Breathing Primer.,implemented,,/storyScripts/legacy/segments/3/steps/8/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b5da0d3115bea915b13c,storyScripts,新手村_小村介绍,legacy,新手村_小村介绍,suggest,,,,装备上的武学经书，在战斗结束后能将获得的经验快速分配到该项武学上，可以迅速提升武学等级。,选入修炼栏的读本会获得战斗经验。只捧着书看，可吓不倒训练假人。,A selected training manual receives battle experience. Reading alone will not frighten the dummy.,implemented,,/storyScripts/legacy/segments/3/steps/9/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d85ee9d19f4e65b8a01f,storyScripts,新手村_南贤,legacy,新手村_南贤,text,南贤,南贤 → 雅各布·格林 / Jacob Grimm [locked],DE,有什么事吗？,出发前还有什么想问？提问免费，答案可能附带功课。,Before you go: questions are free. Answers may involve homework.,implemented,,/storyScripts/legacy/segments/4/steps/0/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-332b0073e8c77bfc943f,storyScripts,新手村_南贤,legacy,新手村_南贤,text,,,,[[yellow:【结束新手村】放我出村吧！]],【出发】我准备好了，上路吧。,[Set out] I am ready for the road.,implemented,,/storyScripts/legacy/segments/4/steps/0/blocks/0/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-8a2aa0e9016538467e9e,storyScripts,新手村_南贤,legacy,新手村_南贤,text,,,,【离开】没事了,【离开】我先四处看看。,[Leave] I will look around first.,implemented,,/storyScripts/legacy/segments/4/steps/0/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b73f828b0b97747f2e58,storyScripts,新手村_南贤,legacy,新手村_南贤,text,,,,【询问】这个世界有善恶之分吗？,【询问】我的选择会有什么影响？,[Ask] How much do my choices matter?,implemented,,/storyScripts/legacy/segments/4/steps/0/blocks/0/options/2/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-dede9faa1f5a9a63cecc,storyScripts,新手村_南贤,legacy,新手村_南贤,text,,,,【询问】我要如何募集队友？,【询问】谁会愿意和我同行？,[Ask] Who might travel with me?,implemented,,/storyScripts/legacy/segments/4/steps/0/blocks/0/options/3/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-735725b6c4529496505f,storyScripts,新手村_南贤,legacy,新手村_南贤,text,,,,【询问】我上次来这个世界都做了什么？,【询问】你以前遇到的旅人，后来怎样了？,[Ask] What became of your other travellers?,implemented,,/storyScripts/legacy/segments/4/steps/0/blocks/0/options/4/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-1ddb11ea5eaeae6cc460,storyScripts,新手村_南贤,legacy,新手村_南贤,text,,,,【询问】我需要在这个世界做什么？,【询问】再说说我该帮什么忙？,[Ask] Remind me what I am here to do.,implemented,,/storyScripts/legacy/segments/4/steps/0/blocks/0/options/5/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-758b6b7df9ce636ed80e,storyScripts,新手村_南贤,legacy,新手村_南贤,text,,,,【挑战】我想跟你打一架,【切磋】写故事的人，应该也有两招吧？,[Spar] Surely a writer knows a few sharp moves.,implemented,,/storyScripts/legacy/segments/4/steps/0/blocks/0/options/6/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-4db52185052172bbc52a,storyScripts,新手村_南贤_出村,legacy,新手村_南贤_出村,dialogue_run,南贤,南贤 → 雅各布·格林 / Jacob Grimm [locked],DE,南贤：好了，看来你也学得差不多了。那么现在就送你出村！,格林：去吧。多听别人说话，也多看看脚下。记得回来讲故事，最好是本人回来。,"Grimm：Off you go. Listen to people, watch your footing, and do come back with a story. Preferably in person.",implemented,,/storyScripts/legacy/segments/5/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-50c8e135c7cdf384ab20,storyScripts,新手村_南贤_善恶之分,legacy,新手村_南贤_善恶之分,dialogue_run,南贤,南贤 → 雅各布·格林 / Jacob Grimm [locked],DE,"南贤：当然，惩恶扬善是我辈本分。你的道德评价将直接和你在这个世界中的一举一动关联。
 
-南贤：究竟是要做一个大侠，还是一个坏蛋，完全取决于你自己！所以请慎重选择在这个江湖中的每一步吧！","格林：你的选择会影响这个世界对你的看法。怎样对待别人，就会留下怎样的评价。
+南贤：究竟是要做一个大侠，还是一个坏蛋，完全取决于你自己！所以请慎重选择在这个江湖中的每一步吧！","格林：人们会记住你的行为。帮过谁，会留下好名声；伤过谁，消息也一样传得开。
 
-格林：帮助、欺骗、原谅或战斗，都由你来选。故事里的人，会记得你的决定。","Grimm：Your choices matter. The way you treat people changes how this world sees you.
+主角：要是坏人说得特别有道理呢？
 
-Grimm：You can help, deceive, forgive or fight. Choose carefully; the people in these stories will remember.",implemented,,/storyScripts/legacy/segments/6/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+格林：那就更得仔细听了。尤其是他开始解释，偷走你的靴子其实是为你好。","Grimm：People remember what you do. Help them, and your reputation grows. Hurt them, and that travels too.
+
+主角：What if the villain gives a very convincing speech?
+
+Grimm：Listen carefully. Especially when he explains why stealing your boots is for your own good.",implemented,,/storyScripts/legacy/segments/6/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1a6afdb578e7c244094f,storyScripts,新手村_南贤_募集队友,legacy,新手村_南贤_募集队友,dialogue_run,南贤,南贤 → 雅各布·格林 / Jacob Grimm [locked],DE,"南贤：大多数队友都是需要你完成固定剧情才能加入你。
 
 南贤：当然，剧情走向和你的每一步选择相关！
@@ -109,23 +113,15 @@ copy-1a6afdb578e7c244094f,storyScripts,新手村_南贤_募集队友,legacy,新�
 
 南贤：另外，还有松鼠旅馆，也是可以招募到强大的江湖侠士。
 
-南贤：总之，多到处逛逛，总是能让一些得力助手加入你的队伍的！","格林：大多数伙伴，需要你帮助他们走过一段故事，才愿意加入。
+南贤：总之，多到处逛逛，总是能让一些得力助手加入你的队伍的！","格林：伙伴也有自己的难处。帮他们走过那段故事，有些人才愿意与你同行。
 
-格林：不同的选择，也会影响谁愿意与你同行。
+格林：你的选择很要紧。刚卖掉人家的传家宝，再谈信任，通常有点晚。
 
-格林：完成一个周目后，下一段旅程还可能遇到特别的开局伙伴。
+格林：旅馆也值得逛逛。完成一轮旅程后，下一周目还可能解锁特别的开局伙伴。","Grimm：Companions have troubles of their own. Help them through those, and some will join you.
 
-格林：旅馆里也有一些经验丰富的旅人，可以去看看。
+Grimm：Your choices matter. It is hard to earn someone's trust after selling their family heirloom.
 
-格林：多走走，多听听，赢得别人的信任，就能结识可靠的同行者。","Grimm：Most companions join after you help them through their own story.
-
-Grimm：The route you choose can change who will travel with you.
-
-Grimm：Finishing a journey may also reveal a companion for the next round.
-
-Grimm：You can look for experienced travellers at the inn, too.
-
-Grimm：Explore, listen, and earn people's trust. You will not have to travel alone.",implemented,,/storyScripts/legacy/segments/7/steps/0,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+Grimm：Look in inns as well. Completing a journey can also unlock starting companions for a later round.",implemented,,/storyScripts/legacy/segments/7/steps/0,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b875f04741031000ccf7,storyScripts,新手村_南贤_DOS版,legacy,新手村_南贤_DOS版,dialogue_run,"南贤
 主角","南贤 → 雅各布·格林 / Jacob Grimm [locked]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","南贤：十多年前，你来到了这个世界。以江湖最常见的野球拳，打败了当世所有绝顶高手。
@@ -136,53 +132,45 @@ copy-b875f04741031000ccf7,storyScripts,新手村_南贤_DOS版,legacy,新手村_
 
 南贤：如今，你又是新的你，这个世界却不曾记得你来过，你是否还能谱写神话——我们拭目以待！
 
-主角：哎，听你说得鸭梨好大，但貌似很有激情的样子……","格林：我收集过不少旅人的故事。他们出发时，也未必比你准备得更多。
+主角：哎，听你说得鸭梨好大，但貌似很有激情的样子……","格林：有的找到了志向，有的找到了朋友。还有一位，把大半旅程花在整理行李上。
 
-格林：他们学习本领、结识伙伴，最后选了自己的路。
+主角：他们最后都成英雄了吗？
 
-格林：那些故事值得记下，但不能替你决定这一回的旅程。
+格林：有些后来是。谁出门的时候，也不是扛着自己的雕像走的。你还有时间。","Grimm：Some found a calling. Some found friends. One spent an alarming amount of time sorting his luggage.
 
-格林：你不必照着谁的结局走。这次，看看你会怎样写下去。
+主角：Were they all heroes?
 
-主角：那还不错，至少不用一开始就被安排好结局。","Grimm：I have collected stories of travellers who began with very little.
-
-Grimm：They learned, found companions, and eventually chose a road of their own.
-
-Grimm：Their journeys are worth remembering, but they do not decide yours.
-
-Grimm：You need not repeat anyone else's story. Let us see what you make of this one.
-
-主角：That sounds better than being told my ending in advance.",implemented,,/storyScripts/legacy/segments/8/steps/0,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+Grimm：Eventually, some of them. Nobody starts with a statue. You have time.",implemented,,/storyScripts/legacy/segments/8/steps/0,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7d3da06f810eb96bf4be,storyScripts,新手村_南贤_目标,legacy,新手村_南贤_目标,dialogue_run,"主角
 南贤","主角 → 玩家角色 / Player character [classified]
 南贤 → 雅各布·格林 / Jacob Grimm [locked]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：那么我到底来这个世界是为了什么？
 
 南贤：刚才我已经说了，这个世界中，邪恶气息降临……送你回来，冥冥中也印证了你一定会要再续写一个武林传奇。
 
-主角：问你等于没问……","主角：这趟旅程，我最该记住什么？
+主角：问你等于没问……","主角：所以，我到底该收集什么？
 
-格林：帮助那些故事停在半途的人。学习本领，赢得信任，有了新的见闻，再回来讲给我听。
+格林：各国陪伴人们长大的那些童话。找到被困在故事里的人，帮他们把故事继续下去。
 
-主角：一段一段来。我记住了。","主角：What should I keep in mind on this journey?
+格林：结识伙伴，学习本领，把见闻带回来。人家的银餐具，就留在人家家里。","主角：And what, exactly, am I collecting?
 
-Grimm：Help the people whose stories have stopped. Learn their skills, earn their trust, and return when you have something to tell me.
+Grimm：The tales people grew up with, from different lands. Find the people caught in them and help their stories continue.
 
-主角：One story at a time. I can do that.",implemented,,/storyScripts/legacy/segments/9/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+Grimm：Make friends, learn their skills, and bring me your adventures. Leave their silverware where it is.",implemented,,/storyScripts/legacy/segments/9/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b1fdf05a9cb260bd2fe3,storyScripts,新手村_南贤_打一架,legacy,新手村_南贤_打一架,dialogue_run,"主角
 南贤","主角 → 玩家角色 / Player character [classified]
 南贤 → 雅各布·格林 / Jacob Grimm [locked]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：你这么欠扁，请问我可以扁你吗？
 
 南贤：年轻人火气不要这么大，尊老爱幼是基本道德……来瓶凉茶降降火吧。
 
-主角：……","主角：要不，先找你练练手？
+主角：……","主角：写故事的人，总该有几招厉害的吧？
 
-格林：还是先去找武师吧。我这些书，可不适合拿来当盾牌。
+格林：我最狠的一招是删稿。你想练实用的，还是去找教官。
 
-主角：好吧，我找武师去。","主角：Could I practise by challenging you?
+主角：懂了。我暂时还想留在故事里。","主角：A writer must know a few sharp moves.
 
-Grimm：Start with the village instructor. My books are not much use as shields.
+Grimm：My strongest blow is a revision. The instructor offers a more practical demonstration.
 
-主角：Fair enough. I will find the instructor.",implemented,,/storyScripts/legacy/segments/10/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：Right. I would prefer to remain in the story.",implemented,,/storyScripts/legacy/segments/10/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5f7b0dcc0c824a26a2de,storyScripts,破庙_梅超风,legacy,破庙_梅超风,dialogue_run,"主角
 梅超风","主角 → 玩家角色 / Player character [classified]
 梅超风 → 莴苣姑娘 / Rapunzel [proposed]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：啊，什么人？
@@ -359,22 +347,30 @@ copy-3e5cb631fb1070d07b73,storyScripts,破庙_佛像,legacy,破庙_佛像,text,,
 copy-623256efd4f66e7c79b6,storyScripts,破庙_佛像_打扫,legacy,破庙_佛像_打扫,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：佛呀佛呀，你这么多灰尘，自己都保佑不了，怎么能保佑人们呢，我就来给你打扫一下吧。,,,pending,,/storyScripts/legacy/segments/30/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-89bf0f708f11cf1f502b,storyScripts,破庙_佛像_拜佛,legacy,破庙_佛像_拜佛,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：上帝保佑，如来佛保佑，玉皇大帝保佑，观音菩萨保佑……,,,pending,,/storyScripts/legacy/segments/31/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-df641977377097dbc704,storyScripts,新手村_武师,legacy,新手村_武师,dialogue_run,"武师
-主角","武师 → 当地居民 / Town resident [classified]
+主角","武师 → 教官 / Instructor [classified]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","武师：哈喽，小兄弟，你是新来的吧？
 
 主角：看你这装扮，就一定是教人打架的武师了。
 
-武师：完全正确，关于打架，有什么问题就找我来问吧，我会尽量给你解答的。",,,pending,,/storyScripts/legacy/segments/32/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-aed8f755a4cad1c2db81,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,武师,武师 → 当地居民 / Town resident [classified],GB,你有什么问题？,,,pending,,/storyScripts/legacy/segments/33/steps/1/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-8ddb894e403047ed2b08,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,[[yellow:【战斗】请让我实战练习一下吧]],,,pending,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-922c03c9222e7bb7c611,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,【离开】没事了,,,pending,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-4f68634b9d47c9facdf9,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,武功都怎么分类的？,,,pending,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/2/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-8670b6b02f24451eb870,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,天赋有什么用？,,,pending,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/3/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-752a7d91b0ab251cc032,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,如何获取顶级武学？,,,pending,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/4/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-83bce7d9d05b0c8d9ed5,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,武功的适性有什么用？,,,pending,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/5/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-06a3d5c9134004a0e548,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,如何打败难缠的对手？,,,pending,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/6/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-0b098020f29430eb19af,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,如何提升武学等级上限？,,,pending,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/7/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-cf3d367310d21b172f5f,storyScripts,新手村_武师1,legacy,新手村_武师1,dialogue_run,武师,武师 → 当地居民 / Town resident [classified],GB,"武师：从技能本身来说，分四大类：[[red:外功、内功、绝技、特殊技能。]]
+武师：完全正确，关于打架，有什么问题就找我来问吧，我会尽量给你解答的。","教官：格林新找来的旅人？好，把脚站稳。对，两只脚都得站稳。
+
+主角：我看起来有那么生疏吗？
+
+教官：你进练武场的时候还带着笑。没关系，咱们慢慢教。","Instructor：Grimm's new traveller? Good. Put your feet there. No, both of them.
+
+主角：Do I look that inexperienced?
+
+Instructor：You walked into the practice yard smiling. We can work on that.",implemented,,/storyScripts/legacy/segments/32/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-aed8f755a4cad1c2db81,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,武师,武师 → 教官 / Instructor [classified],GB,你有什么问题？,想练哪样：招式、战术，还是你那份自信？,"What needs work: your technique, your tactics, or your confidence?",implemented,,/storyScripts/legacy/segments/33/steps/1/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-8ddb894e403047ed2b08,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,[[yellow:【战斗】请让我实战练习一下吧]],【练习】让我试试训练假人。,[Spar] Let me try the training dummy.,implemented,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-922c03c9222e7bb7c611,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,【离开】没事了,【离开】今天先少挨几下。,[Leave] That is enough bruises for now.,implemented,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-4f68634b9d47c9facdf9,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,武功都怎么分类的？,招式和内功该怎么搭配？,How do attacks and disciplines work?,implemented,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/2/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-8670b6b02f24451eb870,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,天赋有什么用？,天赋究竟有什么用？,What do talents actually do?,implemented,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/3/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-752a7d91b0ab251cc032,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,如何获取顶级武学？,去哪里学更高深的本领？,Where can I learn advanced techniques?,implemented,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/4/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-83bce7d9d05b0c8d9ed5,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,武功的适性有什么用？,阴阳适性怎样影响招式？,How do Yin and Yang affect my attacks?,implemented,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/5/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-06a3d5c9134004a0e548,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,如何打败难缠的对手？,碰上难打的敌人怎么办？,What should I do when a fight gets difficult?,implemented,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/6/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-0b098020f29430eb19af,storyScripts,新手村_武师选择,legacy,新手村_武师选择,text,,,,如何提升武学等级上限？,怎样提高技能等级上限？,How do I raise a skill's level limit?,implemented,,/storyScripts/legacy/segments/33/steps/1/blocks/0/options/7/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-cf3d367310d21b172f5f,storyScripts,新手村_武师1,legacy,新手村_武师1,dialogue_run,武师,武师 → 教官 / Instructor [classified],GB,"武师：从技能本身来说，分四大类：[[red:外功、内功、绝技、特殊技能。]]
 
 武师：外功就是战斗中可以直接使用的技能，也就是白色的技能。每个角色可以学习十种外功。
 
@@ -386,16 +382,40 @@ copy-cf3d367310d21b172f5f,storyScripts,新手村_武师1,legacy,新手村_武师
 
 武师：从武学分类来说，武学又分四种：[[red:拳法、剑法、刀法、奇门。]]
 
-武师：所以，选择你想要学习的技能，搭配不同种类的技能才能在战斗中致胜。",,,pending,,/storyScripts/legacy/segments/34/steps/0,7,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-33a8b630abae8c6f6114,storyScripts,新手村_武师2,legacy,新手村_武师2,dialogue_run,武师,武师 → 当地居民 / Town resident [classified],GB,"武师：每个人物都可以学习若干天赋，也有一些人物自带天赋。
+武师：所以，选择你想要学习的技能，搭配不同种类的技能才能在战斗中致胜。","教官：外功招式是战场上主动使出的本领。搭配要实用，十招都解决同一个问题，遇上别的问题还是没辙。
+
+教官：内功影响你的战斗能力。可以学会多种，但同一时间只能装备一种。
+
+教官：有些技能练到一定程度会解锁绝技，往往需要怒气。角色特有的特殊技能，则提供不同的战术效果。
+
+教官：拳掌、剑法、刀法和奇门各有专长。先想好怎么打，再考虑把每样兵器都背在身上。","Instructor：Attacks are the techniques you use on the field. Learn a useful mix; ten answers to the same problem are still one answer.
+
+Instructor：Inner disciplines strengthen your fighting. You can learn several, but only one is equipped at a time.
+
+Instructor：Some trained skills unlock finishers, often powered by rage. Personal special abilities offer other tactical effects.
+
+Instructor：Fists, swords, blades and unusual weapons reward different training. Pick a direction before collecting one of everything.",implemented,,/storyScripts/legacy/segments/34/steps/0,7,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-33a8b630abae8c6f6114,storyScripts,新手村_武师2,legacy,新手村_武师2,dialogue_run,武师,武师 → 教官 / Instructor [classified],GB,"武师：每个人物都可以学习若干天赋，也有一些人物自带天赋。
 
 武师：天赋给每个人物赋予了独特的属性，大部分是提供被动技能。可以在战斗中发挥特殊作用，如减少伤害、提高命中率等等。
 
-武师：当然并不是每个天赋都是有益的，也有一些人物出场就自带坑爹天赋。甚至还有一些天赋会坑队友喔，这个需要你自己来把握。",,,pending,,/storyScripts/legacy/segments/35/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-e639b6673a65c62c2aea,storyScripts,新手村_武师3,legacy,新手村_武师3,dialogue_run,武师,武师 → 当地居民 / Town resident [classified],GB,"武师：如果你加入一个门派的话，大部分顶级武学都是通过门派任务来获得的。
+武师：当然并不是每个天赋都是有益的，也有一些人物出场就自带坑爹天赋。甚至还有一些天赋会坑队友喔，这个需要你自己来把握。","教官：天赋决定每个人的独特长处。有些生来就有，有些可以后天学会。
 
-武师：当然，江湖上也有许多绝顶高手，机缘巧合的话，也许会教你个一招半式。如果有机会认识的话，赶紧和他们处好关系吧！",,,pending,,/storyScripts/legacy/segments/36/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-67d8d636d6a44018a24b,storyScripts,新手村_武师4,legacy,新手村_武师4,dialogue_run,武师,武师 → 当地居民 / Town resident [classified],GB,"武师：外功分三种，[[red:阴性、阳性以及阴阳调和。]]
+教官：仔细看实际效果。它可能提高命中、减少伤害，也可能改变全队的打法。
+
+教官：也不是每个天赋都有好处。名字听着威风，并不代表值得夸奖。","Instructor：Talents give people their particular strengths. Some are born with them; some can be learned.
+
+Instructor：Read the effects. A talent can improve accuracy, reduce damage, or change how a whole team fights.
+
+Instructor：Not every talent is helpful. An impressive title is not the same as a recommendation.",implemented,,/storyScripts/legacy/segments/35/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-e639b6673a65c62c2aea,storyScripts,新手村_武师3,legacy,新手村_武师3,dialogue_run,武师,武师 → 教官 / Instructor [classified],GB,"武师：如果你加入一个门派的话，大部分顶级武学都是通过门派任务来获得的。
+
+武师：当然，江湖上也有许多绝顶高手，机缘巧合的话，也许会教你个一招半式。如果有机会认识的话，赶紧和他们处好关系吧！","教官：门派通常会通过任务传授高深本领。先赢得信任，才有后面的课。
+
+教官：旅途中的高手也可能指点你。先好好说话，别一见面就上手试人家的胡子是真是假。","Instructor：Schools teach advanced techniques through their own tasks. Earn their trust, and the better lessons follow.
+
+Instructor：Experienced travellers can teach you too. Try speaking to them before testing whether their beard is real.",implemented,,/storyScripts/legacy/segments/36/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-67d8d636d6a44018a24b,storyScripts,新手村_武师4,legacy,新手村_武师4,dialogue_run,武师,武师 → 教官 / Instructor [classified],GB,"武师：外功分三种，[[red:阴性、阳性以及阴阳调和。]]
 
 武师：例如丐帮洪老帮主的降龙十八掌，就是典型的阳性武功；而西毒欧阳前辈的灵蛇拳，就是典型的阴性武功……
 
@@ -405,8 +425,16 @@ copy-67d8d636d6a44018a24b,storyScripts,新手村_武师4,legacy,新手村_武师
 
 武师：阳性武功加成取决于当前内功的阳适性，阴性武功加成取决于当前内功的阴适性，调和型武功加成取决于当前内功阴阳适性中较大的那个。
 
-武师：简而言之，就是你如果要使用阳性的外功，就带阳属性的内功；阴性亦然。如果是调和型外功，就无所谓了。",,,pending,,/storyScripts/legacy/segments/37/steps/0,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-61b4dfee763709a74c6f,storyScripts,新手村_武师5,legacy,新手村_武师5,dialogue_run,武师,武师 → 当地居民 / Town resident [classified],GB,"武师：在江湖中闯荡，你将会遇到很多难缠的对手和艰难的战斗。那么如何在这种战斗中取胜呢？
+武师：简而言之，就是你如果要使用阳性的外功，就带阳属性的内功；阴性亦然。如果是调和型外功，就无所谓了。","教官：招式有阴、阳适性之分。当前装备的内功提供对应加成，搭配之前先看看数值。
+
+教官：阳性招式取阳适性，阴性招式取阴适性；调和招式取两者中较高的值。
+
+教官：招式再漂亮，内功没配好，也只能漂亮地吃亏。","Instructor：Attacks can favour Yin or Yang. Your equipped inner discipline supplies those affinities, so check the pairing.
+
+Instructor：Yang attacks use its Yang affinity; Yin attacks use its Yin affinity. Harmonious attacks use whichever value is higher.
+
+Instructor：A fine technique with the wrong discipline is a fine technique having a disappointing afternoon.",implemented,,/storyScripts/legacy/segments/37/steps/0,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-61b4dfee763709a74c6f,storyScripts,新手村_武师5,legacy,新手村_武师5,dialogue_run,武师,武师 → 教官 / Instructor [classified],GB,"武师：在江湖中闯荡，你将会遇到很多难缠的对手和艰难的战斗。那么如何在这种战斗中取胜呢？
 
 武师：决定一场战斗的因素很多，主要包含以下几个方面：
 
@@ -418,17 +446,41 @@ copy-61b4dfee763709a74c6f,storyScripts,新手村_武师5,legacy,新手村_武师
 
 武师：4、运气——由于奥义、攻击力等各方面因素的随机性都很强，在实力满足的情况下，你可能还需要一些运气！
 
-武师：最后，补充说一下，可能很多自动无法打过的战斗，由您亲手操作可以打过！所以艰难的战斗，不妨想象成一盘棋，当一个棋手去赢得胜利吧！",,,pending,,/storyScripts/legacy/segments/38/steps/0,7,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-153a779f84907347bde5,storyScripts,新手村_武师6,legacy,新手村_武师6,dialogue_run,武师,武师 → 当地居民 / Town resident [classified],GB,"武师：俗话说，师傅带进门，修行靠个人。即使遇到再好的老师，你也很难从他那儿修行到一门武艺的顶峰。
+武师：最后，补充说一下，可能很多自动无法打过的战斗，由您亲手操作可以打过！所以艰难的战斗，不妨想象成一盘棋，当一个棋手去赢得胜利吧！","教官：移动前先看敌人的攻击范围。适当分散，别让一招把全队都扫进去。
+
+教官：看清技能消耗，再决定该进攻、防守、治疗，还是先削弱对手。
+
+教官：带上能互补的伙伴。四个人都有同一个破绽，那叫排队挨打。
+
+教官：简单战斗可以交给自动。难打时就接手，自己选走位和招式。运气有用，想好怎么打更有用。","Instructor：Check the enemy's reach before moving. Spreading out can keep one attack from hitting your whole party.
+
+Instructor：Watch skill costs and choose the right moment to attack, defend, heal, or weaken an opponent.
+
+Instructor：Bring companions who cover one another's weaknesses. Four people with the same blind spot are a queue.
+
+Instructor：Auto can handle routine fights. When things get difficult, take over and choose your moves yourself. Luck helps; a plan helps more.",implemented,,/storyScripts/legacy/segments/38/steps/0,7,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-153a779f84907347bde5,storyScripts,新手村_武师6,legacy,新手村_武师6,dialogue_run,武师,武师 → 教官 / Instructor [classified],GB,"武师：俗话说，师傅带进门，修行靠个人。即使遇到再好的老师，你也很难从他那儿修行到一门武艺的顶峰。
 
 武师：如果你想要突破武学上限，目前有几种方法：
 
 武师：1、在一些战斗中，会掉落武学残章，将会自动解锁该项武学的专精。
 
-武师：2、完成一些江湖奇遇，可能也会解锁武学的专精喔！但这些往往只能解锁一次，也就是说重复完成这项任务是没法反复获得奖励的。",,,pending,,/storyScripts/legacy/segments/39/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-e92aaf27a9ccf5714114,storyScripts,新手村_武师7,legacy,新手村_武师7,dialogue_run,武师,武师 → 当地居民 / Town resident [classified],GB,武师：好嘞，那边有个木头人，你可以去练习一下！,,,pending,,/storyScripts/legacy/segments/40/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-7a3d8c012c253512363d,storyScripts,新手村_武师不能打木头人,legacy,新手村_武师不能打木头人,dialogue_run,武师,武师 → 当地居民 / Town resident [classified],GB,武师：额，你等级已经太高了，打木头人已经提高不了了，赶紧到江湖上去闯荡吧~,,,pending,,/storyScripts/legacy/segments/41/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-715cf456cdcf24fe959f,storyScripts,杂货店_商店教程,legacy,杂货店_商店教程,dialogue_run,商人,商人 → 当地居民 / Town resident [classified],GB,"商人：欢迎光临！第一次来商店吧，我来介绍一下。
+武师：2、完成一些江湖奇遇，可能也会解锁武学的专精喔！但这些往往只能解锁一次，也就是说重复完成这项任务是没法反复获得奖励的。","教官：修炼能把技能练到当前上限。想突破上限，还得有额外的收获。
+
+教官：有些战斗会掉落残章，有些奇遇会给予突破。先看清奖励究竟提升哪项技能。
+
+教官：一次性的奖励，就只能领一次。换顶帽子再来，也不能算新学生。","Instructor：Training raises a skill to its current limit. Raising that limit takes something extra.
+
+Instructor：Certain battles drop fragments, and some encounters grant breakthroughs. Check which skill a reward actually improves.
+
+Instructor：A one-time reward stays one-time. Asking again with a different hat does not make you a new pupil.",implemented,,/storyScripts/legacy/segments/39/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-e92aaf27a9ccf5714114,storyScripts,新手村_武师7,legacy,新手村_武师7,dialogue_run,武师,武师 → 教官 / Instructor [classified],GB,武师：好嘞，那边有个木头人，你可以去练习一下！,"教官：护好自己。那假人是木头做的，可它照样会还手。
+
+主角：幸好你先说了，我差点过去跟它握手。","Instructor：Keep your guard up. The dummy is wooden, but it still hits back.
+
+主角：Useful information before I try shaking its hand.",implemented,,/storyScripts/legacy/segments/40/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-7a3d8c012c253512363d,storyScripts,新手村_武师不能打木头人,legacy,新手村_武师不能打木头人,dialogue_run,武师,武师 → 教官 / Instructor [classified],GB,武师：额，你等级已经太高了，打木头人已经提高不了了，赶紧到江湖上去闯荡吧~,教官：到了五级，就该找更强的对手练了。这个留给新人，也让村里的木匠安稳两天。,"Instructor：At level five and beyond, you need tougher practice. Leave this one for beginners. And for the carpenter's peace of mind.",implemented,,/storyScripts/legacy/segments/41/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-715cf456cdcf24fe959f,storyScripts,杂货店_商店教程,legacy,杂货店_商店教程,dialogue_run,商人,商人 → 店主 / Shopkeeper [classified],GB,"商人：欢迎光临！第一次来商店吧，我来介绍一下。
 
 商人：在许多城市，都有这样的店铺，你可以购买或者卖出东西。
 
@@ -436,7 +488,15 @@ copy-715cf456cdcf24fe959f,storyScripts,杂货店_商店教程,legacy,杂货店_�
 
 商人：值得一提的是，所有的东西我们回收，也就是你卖的时候，是半价的。
 
-商人：同样一个物品，在不同的商店也可能价格不一样。另外，据说有时候深夜的时候一些商店还开辟[[red:黑市]]喔，所以有时晚上可以去碰碰运气！",,,pending,,/storyScripts/legacy/segments/43/steps/1,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+商人：同样一个物品，在不同的商店也可能价格不一样。另外，据说有时候深夜的时候一些商店还开辟[[red:黑市]]喔，所以有时晚上可以去碰碰运气！","店主：欢迎。补给在货架上，豪言壮语请到门外说。我还得盘货。
+
+店主：买之前先看价格和效果。你肩负多大的命运，都不能拿来抵账。
+
+店主：多余的东西我也收。先看回收价——至于你对它的感情，这边实在折不了现。","Shopkeeper：Welcome. Supplies on the shelves; heroic speeches outside. I have stock to count.
+
+Shopkeeper：Choose an item to check its price and effects before buying. A dramatic destiny is not accepted currency.
+
+Shopkeeper：I buy spare items too. Check the sale price first; fond memories are sadly non-refundable.",implemented,,/storyScripts/legacy/segments/43/steps/1,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-dff6187e5f49742cd710,storyScripts,aboutus_main,legacy,aboutus_main,dialogue_run,"汉家松鼠
 南贤
 北丑","汉家松鼠 → 汉家松鼠 / Original creator credit [classified]
@@ -447,19 +507,7 @@ copy-dff6187e5f49742cd710,storyScripts,aboutus_main,legacy,aboutus_main,dialogue
 
 北丑：又不想让人点，又想让人点，真是闷骚啊……
 
-汉家松鼠：……咳咳，总之！我们感谢以下制作人员和粉丝们的辛勤努力，为大家奉献了这一部神奇的作品。","汉家松鼠：哇！居然点进来了，一般人都不会在意制作组这些事情的吧……
-
-格林：谁让你把这么大的图标放在启动界面上……
-
-北丑：又不想让人点，又想让人点，真是闷骚啊……
-
-汉家松鼠：……咳咳，总之！我们感谢以下制作人员和粉丝们的辛勤努力，为大家奉献了这一部神奇的作品。","汉家松鼠：哇！居然点进来了，一般人都不会在意制作组这些事情的吧……
-
-Grimm：谁让你把这么大的图标放在启动界面上……
-
-北丑：又不想让人点，又想让人点，真是闷骚啊……
-
-汉家松鼠：……咳咳，总之！我们感谢以下制作人员和粉丝们的辛勤努力，为大家奉献了这一部神奇的作品。",implemented,,/storyScripts/legacy/segments/44/steps/1,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+汉家松鼠：……咳咳，总之！我们感谢以下制作人员和粉丝们的辛勤努力，为大家奉献了这一部神奇的作品。",,,pending,,/storyScripts/legacy/segments/44/steps/1,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-4c1ec3c0c0ee4c9e7ba7,storyScripts,about_1,legacy,about_1,dialogue_run,汉家松鼠,汉家松鼠 → 汉家松鼠 / Original creator credit [classified],ES,"汉家松鼠：制作人：[[yellow:cg]]以及[[yellow:子尹]]
 
 汉家松鼠：美术：[[yellow:文艺吕布]]
@@ -484,19 +532,7 @@ copy-4abd1a0fc3e84ae510ad,storyScripts,mainStory_黑暗的阴影,legacy,mainStor
 
 主角：……真是简短，回去看看吧。
 
-汉家松鼠：松鼠提示，回去见南贤就回开启下一章节剧情，当前一些未触发任务可能会[[red:【永久关闭】]]！请慎重！","主角：咦？这是南贤老头子的书信？
-
-格林：“回来看我！”
-
-主角：……真是简短，回去看看吧。
-
-汉家松鼠：松鼠提示，回去见南贤就回开启下一章节剧情，当前一些未触发任务可能会[[red:【永久关闭】]]！请慎重！","主角：咦？这是南贤老头子的书信？
-
-Grimm：“回来看我！”
-
-主角：……真是简短，回去看看吧。
-
-汉家松鼠：松鼠提示，回去见南贤就回开启下一章节剧情，当前一些未触发任务可能会[[red:【永久关闭】]]！请慎重！",implemented,,/storyScripts/legacy/segments/47/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+汉家松鼠：松鼠提示，回去见南贤就回开启下一章节剧情，当前一些未触发任务可能会[[red:【永久关闭】]]！请慎重！",,,pending,,/storyScripts/legacy/segments/47/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fe85cd656a76292e979b,storyScripts,mainStory_黑暗的阴影1,legacy,mainStory_黑暗的阴影1,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：喂，老头，我回来看看你。
 
 主角：！",,,pending,,/storyScripts/legacy/segments/48/steps/2,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -535,43 +571,7 @@ copy-a75e0e7e3db584502e91,storyScripts,mainStory_黑暗的阴影3,legacy,mainSto
 
 主角：哈哈，想到有这么厉害的人可以扁，我的热血都沸腾了！
 
-南贤：……好吧，你加油……","主角：搞什么飞机啊，不会说人话么，就知道毛骨悚然地笑啊笑……
-
-格林：……恐怕，这不过是一个来搜集情报的小兵罢了。
-
-主角：小兵？什么小兵？这么厉害的小兵？
-
-格林：还记得我跟你说过的邪恶的阴影的事情吧？
-
-主角：有这么一回事？
-
-格林：……不信的话，你从头开始游戏，一开始的对话里我就提到了……
-
-主角：好吧……（那时候我武功都被你废了，还会关心这些……）
-
-格林：咳咳，总之，敌人已经露面了。你也看到了，这个刺客会的烈焰黑枪不过是入门级别而已。
-
-主角：哈哈，想到有这么厉害的人可以扁，我的热血都沸腾了！
-
-格林：……好吧，你加油……","主角：搞什么飞机啊，不会说人话么，就知道毛骨悚然地笑啊笑……
-
-Grimm：……恐怕，这不过是一个来搜集情报的小兵罢了。
-
-主角：小兵？什么小兵？这么厉害的小兵？
-
-Grimm：还记得我跟你说过的邪恶的阴影的事情吧？
-
-主角：有这么一回事？
-
-Grimm：……不信的话，你从头开始游戏，一开始的对话里我就提到了……
-
-主角：好吧……（那时候我武功都被你废了，还会关心这些……）
-
-Grimm：咳咳，总之，敌人已经露面了。你也看到了，这个刺客会的烈焰黑枪不过是入门级别而已。
-
-主角：哈哈，想到有这么厉害的人可以扁，我的热血都沸腾了！
-
-Grimm：……好吧，你加油……",implemented,,/storyScripts/legacy/segments/52/steps/2,10,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：……好吧，你加油……",,,pending,,/storyScripts/legacy/segments/52/steps/2,10,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c0f570cef69167a53d72,storyScripts,mainStory_黑暗的阴影3,legacy,mainStory_黑暗的阴影3,journal,,,,南贤居出现了神秘的刺客，黑暗中的阴影逐渐逼近了。,,,pending,,/storyScripts/legacy/segments/52/steps/12/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-eaca0657d79dc6530ac7,storyScripts,mainStory_神秘剑客,legacy,mainStory_神秘剑客,dialogue_run,"主角
 南贤","主角 → 玩家角色 / Player character [classified]
@@ -579,15 +579,7 @@ copy-eaca0657d79dc6530ac7,storyScripts,mainStory_神秘剑客,legacy,mainStory_�
 
 南贤：“快回来吧！”
 
-主角：……就不能写长一点么……回去看看吧。","主角：咦？飞鸽传书？又是南贤老头子的？
-
-格林：“快回来吧！”
-
-主角：……就不能写长一点么……回去看看吧。","主角：咦？飞鸽传书？又是南贤老头子的？
-
-Grimm：“快回来吧！”
-
-主角：……就不能写长一点么……回去看看吧。",implemented,,/storyScripts/legacy/segments/53/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：……就不能写长一点么……回去看看吧。",,,pending,,/storyScripts/legacy/segments/53/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7a48e07e6c957ece9b8d,storyScripts,mainStory_神秘剑客1,legacy,mainStory_神秘剑客1,dialogue_run,"主角
 南贤","主角 → 玩家角色 / Player character [classified]
 南贤 → 雅各布·格林 / Jacob Grimm [locked]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：老头子，我收到你的飞鸽传书，所以就赶回来了。什么事情啊？
@@ -610,56 +602,12 @@ copy-7a48e07e6c957ece9b8d,storyScripts,mainStory_神秘剑客1,legacy,mainStory_
 
 主角：……你可不可以不要这么直白。
 
-南贤：唉，算了，我送你过去。妈咪妈咪哄！","主角：老头子，我收到你的飞鸽传书，所以就赶回来了。什么事情啊？
-
-格林：我最近接到密报，说在[[yellow:四川青城山]]一带有神秘剑客活动，你去看一下吧！
-
-主角：……你找我回来就只有这么一句话？
-
-格林：是啊。
-
-主角：你把绑在鸽子身上的信写长一点会死啊……
-
-格林：因为好久没见你了嘛。
-
-主角：……
-
-主角：话说，四川，好~远~啊~
-
-格林：……不就是回到大地图上，然后点一下鼠标就到了么……
-
-主角：……你可不可以不要这么直白。
-
-格林：唉，算了，我送你过去。妈咪妈咪哄！","主角：老头子，我收到你的飞鸽传书，所以就赶回来了。什么事情啊？
-
-Grimm：我最近接到密报，说在[[yellow:四川青城山]]一带有神秘剑客活动，你去看一下吧！
-
-主角：……你找我回来就只有这么一句话？
-
-Grimm：是啊。
-
-主角：你把绑在鸽子身上的信写长一点会死啊……
-
-Grimm：因为好久没见你了嘛。
-
-主角：……
-
-主角：话说，四川，好~远~啊~
-
-Grimm：……不就是回到大地图上，然后点一下鼠标就到了么……
-
-主角：……你可不可以不要这么直白。
-
-Grimm：唉，算了，我送你过去。妈咪妈咪哄！",implemented,,/storyScripts/legacy/segments/54/steps/2,11,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：唉，算了，我送你过去。妈咪妈咪哄！",,,pending,,/storyScripts/legacy/segments/54/steps/2,11,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7d06525ad5a3c55326d4,storyScripts,mainStory_神秘剑客3,legacy,mainStory_神秘剑客3,dialogue_run,"主角
 南贤","主角 → 玩家角色 / Player character [classified]
 南贤 → 雅各布·格林 / Jacob Grimm [locked]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：真是快啊……
 
-南贤：别感叹了，你看前面！","主角：真是快啊……
-
-格林：别感叹了，你看前面！","主角：真是快啊……
-
-Grimm：别感叹了，你看前面！",implemented,,/storyScripts/legacy/segments/55/steps/2,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：别感叹了，你看前面！",,,pending,,/storyScripts/legacy/segments/55/steps/2,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3cca578ae639638c6549,storyScripts,mainStory_神秘剑客4,legacy,mainStory_神秘剑客4,dialogue_run,"神秘剑客
 主角
 南贤","神秘剑客 → 佐罗 / Zorro [proposed]
@@ -678,35 +626,7 @@ copy-3cca578ae639638c6549,storyScripts,mainStory_神秘剑客4,legacy,mainStory_
 
 神秘剑客：你们在叽里呱啦什么？杀！
 
-主角：喂！到底是哪个邪教啊？ ","神秘剑客：你们是什么人？！
-
-主角：喂，这是我们的问题才对吧……
-
-神秘剑客：魔君有令，凡阻挡我圣教者，杀无赦！
-
-主角：喂，你们又是哪个邪教的啊？话说，为什么是大魔王这么老套的剧情啊？
-
-格林：据说，是这个游戏的编剧实在想不出什么新剧情了，只好整个大魔王的。
-
-主角：……
-
-神秘剑客：你们在叽里呱啦什么？杀！
-
-主角：喂！到底是哪个邪教啊？ ","神秘剑客：你们是什么人？！
-
-主角：喂，这是我们的问题才对吧……
-
-神秘剑客：魔君有令，凡阻挡我圣教者，杀无赦！
-
-主角：喂，你们又是哪个邪教的啊？话说，为什么是大魔王这么老套的剧情啊？
-
-Grimm：据说，是这个游戏的编剧实在想不出什么新剧情了，只好整个大魔王的。
-
-主角：……
-
-神秘剑客：你们在叽里呱啦什么？杀！
-
-主角：喂！到底是哪个邪教啊？ ",implemented,,/storyScripts/legacy/segments/56/steps/2,8,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：喂！到底是哪个邪教啊？ ",,,pending,,/storyScripts/legacy/segments/56/steps/2,8,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f8fc3ca034222c9f8e84,storyScripts,mainStory_神秘剑客5,legacy,mainStory_神秘剑客5,dialogue_run,"神秘剑客
 主角
 南贤","神秘剑客 → 佐罗 / Zorro [proposed]
@@ -719,23 +639,7 @@ copy-f8fc3ca034222c9f8e84,storyScripts,mainStory_神秘剑客5,legacy,mainStory_
 
 主角：……神经病。
 
-南贤：……算了，我们走吧。","神秘剑客：很厉害，不错。少年，再会了。
-
-主角：喂！到底是哪个邪教啊？
-
-神秘剑客：（嘴角浮现一丝诡异的微笑）待到我圣教血洗九州之日，一切自将大白。少年，保重吧，哈哈哈哈。
-
-主角：……神经病。
-
-格林：……算了，我们走吧。","神秘剑客：很厉害，不错。少年，再会了。
-
-主角：喂！到底是哪个邪教啊？
-
-神秘剑客：（嘴角浮现一丝诡异的微笑）待到我圣教血洗九州之日，一切自将大白。少年，保重吧，哈哈哈哈。
-
-主角：……神经病。
-
-Grimm：……算了，我们走吧。",implemented,,/storyScripts/legacy/segments/57/steps/2,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：……算了，我们走吧。",,,pending,,/storyScripts/legacy/segments/57/steps/2,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-92b201944a735945f45d,storyScripts,mainStory_神秘剑客5,legacy,mainStory_神秘剑客5,journal,,,,青城山上，与神秘的剑客展开了厮杀。,,,pending,,/storyScripts/legacy/segments/57/steps/8/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7341b875581860ea411a,storyScripts,mainStory_组织1,legacy,mainStory_组织1,dialogue_run,"南贤
 主角","南贤 → 雅各布·格林 / Jacob Grimm [locked]
@@ -767,78 +671,14 @@ copy-7341b875581860ea411a,storyScripts,mainStory_组织1,legacy,mainStory_组织
 
 主角：……再见。
 
-南贤：真的，很神秘……也，很可怕的样子……","格林：嗯……我想，应该不会错了……
-
-主角：什么不会错了？为什么一回来就听到你碎碎念？
-
-格林：上次在青城山，还有上上次在这屋子里袭击我们的，应该是一伙人，这不会错了。
-
-主角：……废话。
-
-格林：然后，他们应该都属于一个邪教组织……
-
-主角：虽然你是老头子，但是再说废话我也挺想给你两记野球拳了……
-
-格林：然后，这个邪教组织的名字……
-
-主角：嗯？是什么？
-
-格林：不知道。
-
-主角：……你是在考验我的耐心么……
-
-格林：至少这说明一点。
-
-主角：什么？
-
-格林：我查了这么久都没有他们的记录，说明他们真的很神秘。
-
-主角：……再见。
-
-格林：真的，很神秘……也，很可怕的样子……","Grimm：嗯……我想，应该不会错了……
-
-主角：什么不会错了？为什么一回来就听到你碎碎念？
-
-Grimm：上次在青城山，还有上上次在这屋子里袭击我们的，应该是一伙人，这不会错了。
-
-主角：……废话。
-
-Grimm：然后，他们应该都属于一个邪教组织……
-
-主角：虽然你是老头子，但是再说废话我也挺想给你两记野球拳了……
-
-Grimm：然后，这个邪教组织的名字……
-
-主角：嗯？是什么？
-
-Grimm：不知道。
-
-主角：……你是在考验我的耐心么……
-
-Grimm：至少这说明一点。
-
-主角：什么？
-
-Grimm：我查了这么久都没有他们的记录，说明他们真的很神秘。
-
-主角：……再见。
-
-Grimm：真的，很神秘……也，很可怕的样子……",implemented,,/storyScripts/legacy/segments/58/steps/2,15,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：真的，很神秘……也，很可怕的样子……",,,pending,,/storyScripts/legacy/segments/58/steps/2,15,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8d6e69a98c8d5cf8ad41,storyScripts,mainStory_紧急,legacy,mainStory_紧急,dialogue_run,"主角
 南贤","主角 → 玩家角色 / Player character [classified]
 南贤 → 雅各布·格林 / Jacob Grimm [locked]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：咦？飞鸽传书？肯定又是南贤那个糟老头子。
 
 南贤：“……总之回来跟你说。”
 
-主角：……只能回去看看了。","主角：咦？飞鸽传书？肯定又是南贤那个糟老头子。
-
-格林：“……总之回来跟你说。”
-
-主角：……只能回去看看了。","主角：咦？飞鸽传书？肯定又是南贤那个糟老头子。
-
-Grimm：“……总之回来跟你说。”
-
-主角：……只能回去看看了。",implemented,,/storyScripts/legacy/segments/59/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：……只能回去看看了。",,,pending,,/storyScripts/legacy/segments/59/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-94bc4239902b91d7ffe3,storyScripts,mainStory_紧急1,legacy,mainStory_紧急1,dialogue_run,"南贤
 主角","南贤 → 雅各布·格林 / Jacob Grimm [locked]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","南贤：你回来的正是时候！
@@ -869,63 +709,7 @@ copy-94bc4239902b91d7ffe3,storyScripts,mainStory_紧急1,legacy,mainStory_紧急
 
 主角：那怎么办？
 
-南贤：我们一起去看看吧。","格林：你回来的正是时候！
-
-主角：又怎么了？
-
-格林：我收到快报，蒙古大军正进攻[[red:襄阳]]，城破在即！
-
-主角：这么厉害？
-
-格林：襄阳一破，长江流域再无险可依，蒙古铁骑饮马长江，直逼临安，不过数日之时！
-
-主角：为什么襄阳守军如此不堪一击？
-
-格林：他们已经尽力了，但是，据回报，许多神秘人掺杂在蒙古大军中，相貌与我们所见过的无异！
-
-主角：你说的是上次袭击我们的那伙人？
-
-格林：不错。
-
-主角：数目多少？
-
-格林：至少数百，上千也有可能。
-
-主角：不会吧？这么大个邪教组织，你居然还查不到名字啊。
-
-格林：咳咳……编剧不告诉我名字……总之，真的很危险了。
-
-主角：那怎么办？
-
-格林：我们一起去看看吧。","Grimm：你回来的正是时候！
-
-主角：又怎么了？
-
-Grimm：我收到快报，蒙古大军正进攻[[red:襄阳]]，城破在即！
-
-主角：这么厉害？
-
-Grimm：襄阳一破，长江流域再无险可依，蒙古铁骑饮马长江，直逼临安，不过数日之时！
-
-主角：为什么襄阳守军如此不堪一击？
-
-Grimm：他们已经尽力了，但是，据回报，许多神秘人掺杂在蒙古大军中，相貌与我们所见过的无异！
-
-主角：你说的是上次袭击我们的那伙人？
-
-Grimm：不错。
-
-主角：数目多少？
-
-Grimm：至少数百，上千也有可能。
-
-主角：不会吧？这么大个邪教组织，你居然还查不到名字啊。
-
-Grimm：咳咳……编剧不告诉我名字……总之，真的很危险了。
-
-主角：那怎么办？
-
-Grimm：我们一起去看看吧。",implemented,,/storyScripts/legacy/segments/60/steps/2,15,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：我们一起去看看吧。",,,pending,,/storyScripts/legacy/segments/60/steps/2,15,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f5e80ff42f9ccb81e749,storyScripts,mainStory_紧急2,legacy,mainStory_紧急2,dialogue_run,"吕文德
 主角
 南贤","吕文德 → 约翰·华生 / John Watson [proposed]
@@ -934,15 +718,7 @@ copy-f5e80ff42f9ccb81e749,storyScripts,mainStory_紧急2,legacy,mainStory_紧急
 
 主角：襄阳以东，再无城可依，不可退！
 
-南贤：有敌人过来了！","吕文德：哎呀，各位英雄豪杰，襄阳城完了，我们一起撤吧……
-
-主角：襄阳以东，再无城可依，不可退！
-
-格林：有敌人过来了！","吕文德：哎呀，各位英雄豪杰，襄阳城完了，我们一起撤吧……
-
-主角：襄阳以东，再无城可依，不可退！
-
-Grimm：有敌人过来了！",implemented,,/storyScripts/legacy/segments/61/steps/2,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：有敌人过来了！",,,pending,,/storyScripts/legacy/segments/61/steps/2,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0420cdc0eb57fbf25516,storyScripts,mainStory_紧急3,legacy,mainStory_紧急3,dialogue_run,"神秘剑客
 主角
 南贤
@@ -975,59 +751,7 @@ copy-0420cdc0eb57fbf25516,storyScripts,mainStory_紧急3,legacy,mainStory_紧急
 
 南贤：你们企图灭亡华夏，又有什么好处？
 
-神秘剑客：恨意！只因为对你们这些龌龊之人无尽的恨意！","神秘剑客：哈哈，少年，我们又见面了。
-
-主角：额……冒昧问一句，你是哪个？
-
-神秘剑客：……
-
-格林：……
-
-吕文德：……
-
-神秘剑客：咳咳……哈哈哈哈，总之，蒙古大军南下，汉人就要灭亡了！
-
-主角：你跟中原人这么仇大苦深么？
-
-神秘剑客：哼，魔君有令，汉人格杀勿论！
-
-主角：你们魔君到底是何方神圣啊？
-
-神秘剑客：编剧说了，都告诉你了，还玩毛啊。
-
-主角：……玩毛这两个字用得太妙了。
-
-神秘剑客：……
-
-格林：你们企图灭亡华夏，又有什么好处？
-
-神秘剑客：恨意！只因为对你们这些龌龊之人无尽的恨意！","神秘剑客：哈哈，少年，我们又见面了。
-
-主角：额……冒昧问一句，你是哪个？
-
-神秘剑客：……
-
-Grimm：……
-
-吕文德：……
-
-神秘剑客：咳咳……哈哈哈哈，总之，蒙古大军南下，汉人就要灭亡了！
-
-主角：你跟中原人这么仇大苦深么？
-
-神秘剑客：哼，魔君有令，汉人格杀勿论！
-
-主角：你们魔君到底是何方神圣啊？
-
-神秘剑客：编剧说了，都告诉你了，还玩毛啊。
-
-主角：……玩毛这两个字用得太妙了。
-
-神秘剑客：……
-
-Grimm：你们企图灭亡华夏，又有什么好处？
-
-神秘剑客：恨意！只因为对你们这些龌龊之人无尽的恨意！",implemented,,/storyScripts/legacy/segments/62/steps/2,14,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+神秘剑客：恨意！只因为对你们这些龌龊之人无尽的恨意！",,,pending,,/storyScripts/legacy/segments/62/steps/2,14,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5ae92bc383377380ac44,storyScripts,mainStory_紧急4,legacy,mainStory_紧急4,dialogue_run,"神秘剑客
 主角
 南贤","神秘剑客 → 佐罗 / Zorro [proposed]
@@ -1040,23 +764,7 @@ copy-5ae92bc383377380ac44,storyScripts,mainStory_紧急4,legacy,mainStory_紧急
 
 主角：怎么办？
 
-南贤：我们先集结武林豪杰，解了各地的围困再图后计！","神秘剑客：哼，厉害，暂时撤退！
-
-主角：呼呼……累趴下了。
-
-格林：现在各地都告急，恐怕我们是没有什么时间休息了。
-
-主角：怎么办？
-
-格林：我们先集结武林豪杰，解了各地的围困再图后计！","神秘剑客：哼，厉害，暂时撤退！
-
-主角：呼呼……累趴下了。
-
-Grimm：现在各地都告急，恐怕我们是没有什么时间休息了。
-
-主角：怎么办？
-
-Grimm：我们先集结武林豪杰，解了各地的围困再图后计！",implemented,,/storyScripts/legacy/segments/63/steps/2,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：我们先集结武林豪杰，解了各地的围困再图后计！",,,pending,,/storyScripts/legacy/segments/63/steps/2,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-58a271f11776be144855,storyScripts,mainStory_紧急4,legacy,mainStory_紧急4,journal,,,,蒙古大军南下，各地告急！,,,pending,,/storyScripts/legacy/segments/63/steps/8/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6e67841c529996eec3dc,storyScripts,mainStory_紧急.洛阳,legacy,mainStory_紧急.洛阳,dialogue_run,"酒楼老板
 神秘刺客
@@ -1093,23 +801,7 @@ copy-7cc2bc2bc933eef39442,storyScripts,mainStory_紧急.杭州胜,legacy,mainSto
 
 南贤：先别慌，过去一定是一场恶战。把武功练好，装备补齐，再准备上阵杀敌吧！
 
-主角：好！","主角：总算都杀退了，现在该怎么办？
-
-格林：探子回报，襄阳城又陷入了苦战！
-
-主角：那我们赶紧赶过去！
-
-格林：先别慌，过去一定是一场恶战。把武功练好，装备补齐，再准备上阵杀敌吧！
-
-主角：好！","主角：总算都杀退了，现在该怎么办？
-
-Grimm：探子回报，襄阳城又陷入了苦战！
-
-主角：那我们赶紧赶过去！
-
-Grimm：先别慌，过去一定是一场恶战。把武功练好，装备补齐，再准备上阵杀敌吧！
-
-主角：好！",implemented,,/storyScripts/legacy/segments/69/steps/2,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：好！",,,pending,,/storyScripts/legacy/segments/69/steps/2,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ecdb1276bb486e3b680b,storyScripts,mainStory_紧急.杭州胜,legacy,mainStory_紧急.杭州胜,journal,,,,解蒙古大军之围。,,,pending,,/storyScripts/legacy/segments/69/steps/8/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c230cc11c582a4bdabdc,storyScripts,mainStory_襄阳1,legacy,mainStory_襄阳1,dialogue_run,"主角
 吕文德","主角 → 玩家角色 / Player character [classified]
@@ -1133,15 +825,7 @@ copy-45cc657c553b38159a3f,storyScripts,mainStory_襄阳5,legacy,mainStory_襄阳
 
 南贤：擒贼先擒王！你看那边，那个人很可疑！
 
-主角：那上啊！","主角：呼呼，杀不完的敌人，怎么办？！
-
-格林：擒贼先擒王！你看那边，那个人很可疑！
-
-主角：那上啊！","主角：呼呼，杀不完的敌人，怎么办？！
-
-Grimm：擒贼先擒王！你看那边，那个人很可疑！
-
-主角：那上啊！",implemented,,/storyScripts/legacy/segments/74/steps/2,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：那上啊！",,,pending,,/storyScripts/legacy/segments/74/steps/2,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fec208e0576097b7cc70,storyScripts,mainStory_黑衣人的邀请,legacy,mainStory_黑衣人的邀请,dialogue_run,"神秘使者
 主角
 吕文德","神秘使者 → 莫里亚蒂教授 / Professor Moriarty [proposed]
@@ -1427,42 +1111,14 @@ copy-cc2e58ffeb6e9910bf01,storyScripts,黑衣_南贤,legacy,黑衣_南贤,dialog
 
 南贤：正是！来吧，和被你抛弃的小伙伴们来一场相爱相杀吧！我先去华山等你了。
 
-主角：……","格林：你居然活着走出了黑衣教！
-
-主角：……在我这里，没有不可能！
-
-格林：好吧，在这个世界上，你还有最后一个挑战！
-
-主角：华山论剑？
-
-格林：正是！来吧，和被你抛弃的小伙伴们来一场相爱相杀吧！我先去华山等你了。
-
-主角：……","Grimm：你居然活着走出了黑衣教！
-
-主角：……在我这里，没有不可能！
-
-Grimm：好吧，在这个世界上，你还有最后一个挑战！
-
-主角：华山论剑？
-
-Grimm：正是！来吧，和被你抛弃的小伙伴们来一场相爱相杀吧！我先去华山等你了。
-
-主角：……",implemented,,/storyScripts/legacy/segments/104/steps/0,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：……",,,pending,,/storyScripts/legacy/segments/104/steps/0,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-00f240986f5d6e82263e,storyScripts,黑衣_华山论剑,legacy,黑衣_华山论剑,dialogue_run,"南贤
 主角","南贤 → 雅各布·格林 / Jacob Grimm [locked]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","南贤：你来了！那我们开始吧！
 
 主角：黑衣教主都被我虐翻了，这华山论剑的杂鱼我怕什么。
 
-南贤：哼，杂鱼？让被你卖掉的队友们来教育你杂鱼的愤怒吧！","格林：你来了！那我们开始吧！
-
-主角：黑衣教主都被我虐翻了，这华山论剑的杂鱼我怕什么。
-
-格林：哼，杂鱼？让被你卖掉的队友们来教育你杂鱼的愤怒吧！","Grimm：你来了！那我们开始吧！
-
-主角：黑衣教主都被我虐翻了，这华山论剑的杂鱼我怕什么。
-
-Grimm：哼，杂鱼？让被你卖掉的队友们来教育你杂鱼的愤怒吧！",implemented,,/storyScripts/legacy/segments/105/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：哼，杂鱼？让被你卖掉的队友们来教育你杂鱼的愤怒吧！",,,pending,,/storyScripts/legacy/segments/105/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-13d8211f47a52f6695c7,storyScripts,黑衣_华山胜利,legacy,黑衣_华山胜利,dialogue_run,"南贤
 主角","南贤 → 雅各布·格林 / Jacob Grimm [locked]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","南贤：恭喜你通关邪线剧情！这个坏人你做得够彻底啊！
@@ -1471,19 +1127,7 @@ copy-13d8211f47a52f6695c7,storyScripts,黑衣_华山胜利,legacy,黑衣_华山�
 
 南贤：想继续？没问题啊！快快进入下一周目，做出不同的选择，体验不同的武林人生吧！
 
-主角：走起！","格林：恭喜你通关邪线剧情！这个坏人你做得够彻底啊！
-
-主角：小意思啦，那我可以再继续玩？
-
-格林：想继续？没问题啊！快快进入下一周目，做出不同的选择，体验不同的武林人生吧！
-
-主角：走起！","Grimm：恭喜你通关邪线剧情！这个坏人你做得够彻底啊！
-
-主角：小意思啦，那我可以再继续玩？
-
-Grimm：想继续？没问题啊！快快进入下一周目，做出不同的选择，体验不同的武林人生吧！
-
-主角：走起！",implemented,,/storyScripts/legacy/segments/106/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：走起！",,,pending,,/storyScripts/legacy/segments/106/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2793a2f72663f59840f1,storyScripts,黑衣_对战魔君失败,legacy,黑衣_对战魔君失败,dialogue_run,"魔君
 主角","魔君 → 苏尔特 / Surtr [proposed]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","魔君：无用之人，给你几个月时间学我黑衣神功，居然还是如此无用！滚吧。
@@ -1592,75 +1236,7 @@ copy-87b6a52fed68985638fc,storyScripts,mainStory_最终决战3,legacy,mainStory_
 
 主角：……
 
-南贤：走吧，我们一起去华山！","主角：这就，结束了么……
-
-格林：一定累坏了吧……
-
-主角：不，总觉得还不太过瘾……
-
-格林：……
-
-主角：难道就在这里，故事就结束了么？
-
-格林：……
-
-主角：总觉得，还有很多很多的遗憾，很多很多的地方想去，秘籍想得到，美女想泡……
-
-格林：……好吧
-
-主角：？
-
-格林：为了完成你的夙愿，请重新再打一遍游戏吧。
-
-主角：……
-
-格林：哦对了。
-
-主角：？
-
-格林：在你回到现实世界之前，一如既往，还有最后一关。
-
-主角：又是华山论剑？
-
-格林：不错，作为金庸群侠传的游戏，怎么能没有华山论剑呢！
-
-主角：……
-
-格林：走吧，我们一起去华山！","主角：这就，结束了么……
-
-Grimm：一定累坏了吧……
-
-主角：不，总觉得还不太过瘾……
-
-Grimm：……
-
-主角：难道就在这里，故事就结束了么？
-
-Grimm：……
-
-主角：总觉得，还有很多很多的遗憾，很多很多的地方想去，秘籍想得到，美女想泡……
-
-Grimm：……好吧
-
-主角：？
-
-Grimm：为了完成你的夙愿，请重新再打一遍游戏吧。
-
-主角：……
-
-Grimm：哦对了。
-
-主角：？
-
-Grimm：在你回到现实世界之前，一如既往，还有最后一关。
-
-主角：又是华山论剑？
-
-Grimm：不错，作为金庸群侠传的游戏，怎么能没有华山论剑呢！
-
-主角：……
-
-Grimm：走吧，我们一起去华山！",implemented,,/storyScripts/legacy/segments/112/steps/2,18,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：走吧，我们一起去华山！",,,pending,,/storyScripts/legacy/segments/112/steps/2,18,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-081b7d089bb96e94e65f,storyScripts,mainStory_最终决战3,legacy,mainStory_最终决战3,journal,,,,蒙古大军败退。,,,pending,,/storyScripts/legacy/segments/112/steps/21/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f9801b4b1c84fb5e4919,storyScripts,mainStory_online,legacy,mainStory_online,dialogue_run,"主角
 南贤","主角 → 玩家角色 / Player character [classified]
@@ -1674,27 +1250,7 @@ copy-f9801b4b1c84fb5e4919,storyScripts,mainStory_online,legacy,mainStory_online,
 
 主角：我还想玩啊……
 
-南贤：想体验更多剧情，请等待0.4正式版。","主角：怎么就把我叫回来了……
-
-格林：现在是联机内测版……不是让你来体验剧情的。
-
-主角：那？
-
-格林：赶紧去联机大厅体验一下PK吧！看看你练的咋样！
-
-主角：我还想玩啊……
-
-格林：想体验更多剧情，请等待0.4正式版。","主角：怎么就把我叫回来了……
-
-Grimm：现在是联机内测版……不是让你来体验剧情的。
-
-主角：那？
-
-Grimm：赶紧去联机大厅体验一下PK吧！看看你练的咋样！
-
-主角：我还想玩啊……
-
-Grimm：想体验更多剧情，请等待0.4正式版。",implemented,,/storyScripts/legacy/segments/113/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：想体验更多剧情，请等待0.4正式版。",,,pending,,/storyScripts/legacy/segments/113/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-91f76a93d8ab1e893b3c,storyScripts,original_序章,legacy,original_序章,dialogue_run,汉家松鼠,汉家松鼠 → 汉家松鼠 / Original creator credit [classified],ES,汉家松鼠：亲爱的玩家，汉家松鼠为您倾情奉献一场江湖风云盛宴，ENJOY！,,,pending,,/storyScripts/legacy/segments/114/steps/1,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-bcaf88350a3f9dbe01e5,storyScripts,original_序章01,legacy,original_序章01,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：时间回到一九九六年，那个夏天，我穿越了……
 
@@ -2735,15 +2291,7 @@ copy-531c36ef9d1479720fa4,storyScripts,original_女主.襄阳受重伤结束.南
 
 主角：也只好如此了。
 
-主角：（先返回南贤居吧。）","格林：这姑娘的伤太重了，我先给她喂食一粒续命八丸，咱们回屋想想办法吧。
-
-主角：也只好如此了。
-
-主角：（先返回南贤居吧。）","Grimm：这姑娘的伤太重了，我先给她喂食一粒续命八丸，咱们回屋想想办法吧。
-
-主角：也只好如此了。
-
-主角：（先返回南贤居吧。）",implemented,,/storyScripts/legacy/segments/168/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：（先返回南贤居吧。）",,,pending,,/storyScripts/legacy/segments/168/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d88289f59e690673417d,storyScripts,original_女主.重伤.南贤居,legacy,original_女主.重伤.南贤居,dialogue_run,"主角
 女主","主角 → 玩家角色 / Player character [classified]
 女主 → 克里姆希尔德 / Kriemhild [proposed]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：终于回来了，你快躺下吧。
@@ -2852,31 +2400,7 @@ copy-38ebb99df13ffc535d65,storyScripts,original_女主.重伤.南贤居结束,le
 
 南贤：你在这里安心陪她吧。我再想想还有什么办法没有。
 
-主角：嗯……","主角：唉。
-
-格林：所谓人各有命，不能强求……
-
-主角：你这个安慰词，太早了点吧。
-
-格林：她奇经八脉都受到了极强的冲击，武功高强如你都没有什么办法，唉。
-
-主角：……
-
-格林：你在这里安心陪她吧。我再想想还有什么办法没有。
-
-主角：嗯……","主角：唉。
-
-Grimm：所谓人各有命，不能强求……
-
-主角：你这个安慰词，太早了点吧。
-
-Grimm：她奇经八脉都受到了极强的冲击，武功高强如你都没有什么办法，唉。
-
-主角：……
-
-Grimm：你在这里安心陪她吧。我再想想还有什么办法没有。
-
-主角：嗯……",implemented,,/storyScripts/legacy/segments/172/steps/0,7,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：嗯……",,,pending,,/storyScripts/legacy/segments/172/steps/0,7,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-37226f0eea38f7bc2c4a,storyScripts,original_女主.重伤.长夜,legacy,original_女主.重伤.长夜,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：这也许是我经过的最长的一个晚上。
 
 主角：如同在长安的那个月夜下一般，今晚我又失眠了。
@@ -3040,55 +2564,7 @@ copy-2fe79233d4b8868f961d,storyScripts,original_女主.重伤.trueEnding.结束,
 
 主角：哦……
 
-女主：……","格林：咳咳，终于好了啊。
-
-主角：是啊。怎么你又这么不合时宜地出现了……？
-
-格林：呃，我也不想打扰你们，不过因为忽然横生这一件事情，华山论剑已经拖了太久了……
-
-主角：虾米？还要华山论剑？……
-
-格林：那当然喽，不论剑，你怎么回到你的世界中去。
-
-女主：……回去？
-
-格林：嗯，人各有自己的路要走，不是么？
-
-主角：去论就去论呗，反正都是些手下败将。
-
-女主：可是你……要离开？
-
-主角：我……
-
-格林：别你啊我啊的了，天下高手都等着你呢，先去论了再说。
-
-主角：哦……
-
-女主：……","Grimm：咳咳，终于好了啊。
-
-主角：是啊。怎么你又这么不合时宜地出现了……？
-
-Grimm：呃，我也不想打扰你们，不过因为忽然横生这一件事情，华山论剑已经拖了太久了……
-
-主角：虾米？还要华山论剑？……
-
-Grimm：那当然喽，不论剑，你怎么回到你的世界中去。
-
-女主：……回去？
-
-Grimm：嗯，人各有自己的路要走，不是么？
-
-主角：去论就去论呗，反正都是些手下败将。
-
-女主：可是你……要离开？
-
-主角：我……
-
-Grimm：别你啊我啊的了，天下高手都等着你呢，先去论了再说。
-
-主角：哦……
-
-女主：……",implemented,,/storyScripts/legacy/segments/178/steps/0,13,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+女主：……",,,pending,,/storyScripts/legacy/segments/178/steps/0,13,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-bc731dd7d11b3a788847,storyScripts,original_女主.重伤.trueEnding2,legacy,original_女主.重伤.trueEnding2,dialogue_run,"主角
 女主","主角 → 玩家角色 / Player character [classified]
 女主 → 克里姆希尔德 / Kriemhild [proposed]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：醒来了就好，如果你出了什么事，我真不知道如何向你父亲交代。
@@ -3138,55 +2614,7 @@ copy-059cefaba16c7d0c0ef2,storyScripts,original_女主.重伤.trueEnding2.结束
 
 主角：哦……
 
-女主：……（有些话，终究没有能说出来。有些人，也许终究不属于你……）","格林：咳咳，终于好了啊。
-
-主角：是啊。怎么你又这么不合时宜地出现了……？
-
-格林：呃，我也不想打扰你们，不过因为忽然横生这一件事情，华山论剑已经拖了太久了……
-
-主角：虾米？还要华山论剑？……
-
-格林：那当然喽，不论剑，你怎么回到你的世界中去。
-
-女主：……回去？
-
-格林：嗯，人各有自己的路要走，不是么？
-
-主角：去论就去论呗，反正都是些手下败将。
-
-女主：可是你……要离开？
-
-主角：我……
-
-格林：别你啊我啊的了，天下高手都等着你呢，先去论了再说。
-
-主角：哦……
-
-女主：……（有些话，终究没有能说出来。有些人，也许终究不属于你……）","Grimm：咳咳，终于好了啊。
-
-主角：是啊。怎么你又这么不合时宜地出现了……？
-
-Grimm：呃，我也不想打扰你们，不过因为忽然横生这一件事情，华山论剑已经拖了太久了……
-
-主角：虾米？还要华山论剑？……
-
-Grimm：那当然喽，不论剑，你怎么回到你的世界中去。
-
-女主：……回去？
-
-Grimm：嗯，人各有自己的路要走，不是么？
-
-主角：去论就去论呗，反正都是些手下败将。
-
-女主：可是你……要离开？
-
-主角：我……
-
-Grimm：别你啊我啊的了，天下高手都等着你呢，先去论了再说。
-
-主角：哦……
-
-女主：……（有些话，终究没有能说出来。有些人，也许终究不属于你……）",implemented,,/storyScripts/legacy/segments/180/steps/0,13,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+女主：……（有些话，终究没有能说出来。有些人，也许终究不属于你……）",,,pending,,/storyScripts/legacy/segments/180/steps/0,13,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d35ef37c26edf0ddd270,storyScripts,original_女主.重伤.死去,legacy,original_女主.重伤.死去,dialogue_run,"主角
 汉家松鼠","主角 → 玩家角色 / Player character [classified]
 汉家松鼠 → 汉家松鼠 / Original creator credit [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：三天后，因无法救治，她离开了我们。
@@ -3337,19 +2765,7 @@ copy-6a0bc3e3dc0de4da68cd,storyScripts,original_女主.华山论剑.trueEnding2.
 
 女主：……再见！
 
-主角：再见！你也不要忘记，曾经这个世界上，有一个天不怕地不怕的$MALE$！","格林：时辰到了，你该走了……
-
-主角：喂，老头子，这次回来的感觉不错！
-
-女主：……再见！
-
-主角：再见！你也不要忘记，曾经这个世界上，有一个天不怕地不怕的$MALE$！","Grimm：时辰到了，你该走了……
-
-主角：喂，老头子，这次回来的感觉不错！
-
-女主：……再见！
-
-主角：再见！你也不要忘记，曾经这个世界上，有一个天不怕地不怕的$MALE$！",implemented,,/storyScripts/legacy/segments/187/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：再见！你也不要忘记，曾经这个世界上，有一个天不怕地不怕的$MALE$！",,,pending,,/storyScripts/legacy/segments/187/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5be12e4d85dce4828fa4,storyScripts,original_女主.华山论剑.trueEnding2.选择,legacy,original_女主.华山论剑.trueEnding2.选择,dialogue_run,汉家松鼠,汉家松鼠 → 汉家松鼠 / Original creator credit [classified],ES,"汉家松鼠：亲爱的玩家，恭喜你历经千难万苦，终于通关了！
 
 汉家松鼠：这个结局……说好不算好，说坏也不算坏吧。
@@ -3474,175 +2890,23 @@ copy-7c14b9665ba903cc52d9,storyScripts,original_主角之家.开场2,legacy,orig
 
 主角：……我出门了，拜拜。
 
-南贤：这个游戏里空挥野球拳不会升级的，别太用力！并且最多只能学习10种外功，5种内功，请做好规划！","格林：年轻人，你醒了。
-
-主角：这里是哪里？
-
-格林：这里是十四天书的世界。
-
-主角：我不是当了武林盟主，坐上时光机回去了吗？
-
-格林：是这样子……但是又不是这样子……总之你就把这里理解成一个平行的世界就对了。
-
-主角：……你真的懂得你自己说的话么……
-
-格林：这里是哪里并不重要，重要的你要来这里做什么。
-
-主角：那我要来这里做什么？
-
-格林：我也不知道。
-
-主角：……
-
-格林：我只能告诉你，我感觉到有邪恶的气息在逼近，这个世界正在呼唤英雄。
-
-主角：为什么我的武功都使不出来了？我的十级野球拳呢？当年对空气挥拳挥到我胃痛才学会的啊！
-
-格林：此情可待成追忆，现在你只有一级，什么武功都不会了。似乎都被封印了。
-
-主角：太残忍了……
-
-格林：出去打打怪，练练级，很快的……
-
-主角：我这次怎么才能回到现实世界？
-
-格林：你不是觉得那个世界很无聊么？
-
-主角：那这个游戏总得有个游戏目标吧？告诉我，这回要去扁谁？
-
-格林：我隐约觉得，邪恶气息降临的时候，就是你回去的机缘了。你现在能做的，就是出去游历游历，找找伙伴。
-
-主角：我的威猛的哥们呢？尤其是一开始就巨猛的田伯光之类的？
-
-格林：你还是可以去找他们，不过因为未知的原因，他们都不记得你了。
-
-主角：我忽然很想知道这个游戏编剧的工资是谁发的。
-
-格林：……
-
-主角：最后一个问题。
-
-格林：说。
-
-主角：为什么你的头像都换全新的了，我的还是这么老土。
-
-格林：编剧说了，你这个头像太深入人心了，丑得极有亲和力。
-
-主角：……
-
-格林：好了，时间不早了，出去历险吧！
-
-主角：可是我什么武功都不会了！
-
-格林：别急，我早已经呕血半升，为你解开了野球拳第一级的封印！
-
-主角：你居然会为我呕血半升，不会吧？
-
-格林：真的，血还摆在那边的脸盆里，等你检查，不信你自己去看。
-
-主角：……我出门了，拜拜。
-
-格林：这个游戏里空挥野球拳不会升级的，别太用力！并且最多只能学习10种外功，5种内功，请做好规划！","Grimm：年轻人，你醒了。
-
-主角：这里是哪里？
-
-Grimm：这里是十四天书的世界。
-
-主角：我不是当了武林盟主，坐上时光机回去了吗？
-
-Grimm：是这样子……但是又不是这样子……总之你就把这里理解成一个平行的世界就对了。
-
-主角：……你真的懂得你自己说的话么……
-
-Grimm：这里是哪里并不重要，重要的你要来这里做什么。
-
-主角：那我要来这里做什么？
-
-Grimm：我也不知道。
-
-主角：……
-
-Grimm：我只能告诉你，我感觉到有邪恶的气息在逼近，这个世界正在呼唤英雄。
-
-主角：为什么我的武功都使不出来了？我的十级野球拳呢？当年对空气挥拳挥到我胃痛才学会的啊！
-
-Grimm：此情可待成追忆，现在你只有一级，什么武功都不会了。似乎都被封印了。
-
-主角：太残忍了……
-
-Grimm：出去打打怪，练练级，很快的……
-
-主角：我这次怎么才能回到现实世界？
-
-Grimm：你不是觉得那个世界很无聊么？
-
-主角：那这个游戏总得有个游戏目标吧？告诉我，这回要去扁谁？
-
-Grimm：我隐约觉得，邪恶气息降临的时候，就是你回去的机缘了。你现在能做的，就是出去游历游历，找找伙伴。
-
-主角：我的威猛的哥们呢？尤其是一开始就巨猛的田伯光之类的？
-
-Grimm：你还是可以去找他们，不过因为未知的原因，他们都不记得你了。
-
-主角：我忽然很想知道这个游戏编剧的工资是谁发的。
-
-Grimm：……
-
-主角：最后一个问题。
-
-Grimm：说。
-
-主角：为什么你的头像都换全新的了，我的还是这么老土。
-
-Grimm：编剧说了，你这个头像太深入人心了，丑得极有亲和力。
-
-主角：……
-
-Grimm：好了，时间不早了，出去历险吧！
-
-主角：可是我什么武功都不会了！
-
-Grimm：别急，我早已经呕血半升，为你解开了野球拳第一级的封印！
-
-主角：你居然会为我呕血半升，不会吧？
-
-Grimm：真的，血还摆在那边的脸盆里，等你检查，不信你自己去看。
-
-主角：……我出门了，拜拜。
-
-Grimm：这个游戏里空挥野球拳不会升级的，别太用力！并且最多只能学习10种外功，5种内功，请做好规划！",implemented,,/storyScripts/legacy/segments/192/steps/0,35,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-0466fef33923feb10de4,storyScripts,original_主角之家.开场2,legacy,original_主角之家.开场2,journal,,,,再次来到金庸十四天书的世界。,格林召唤我前来，帮助那些童话停在半途的人。,Grimm summoned me to help the people whose fairy tales have come to a halt.,implemented,,/storyScripts/legacy/segments/192/steps/35/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-714dd9a68d6c0aefea10,storyScripts,original_主角之家.开场.跳过,legacy,original_主角之家.开场.跳过,journal,,,,再次来到金庸十四天书的世界。,格林召唤我前来，帮助那些童话停在半途的人。,Grimm summoned me to help the people whose fairy tales have come to a halt.,implemented,,/storyScripts/legacy/segments/194/steps/3/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：这个游戏里空挥野球拳不会升级的，别太用力！并且最多只能学习10种外功，5种内功，请做好规划！",,,pending,,/storyScripts/legacy/segments/192/steps/0,35,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-0466fef33923feb10de4,storyScripts,original_主角之家.开场2,legacy,original_主角之家.开场2,journal,,,,再次来到金庸十四天书的世界。,格林请我帮助那些停在半途的童话。首先，学点本领，别让自己的故事停在开头。,Grimm needs help with tales that have stalled. First: learn enough to survive my own first chapter.,implemented,,/storyScripts/legacy/segments/192/steps/35/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-714dd9a68d6c0aefea10,storyScripts,original_主角之家.开场.跳过,legacy,original_主角之家.开场.跳过,journal,,,,再次来到金庸十四天书的世界。,格林请我帮助那些停在半途的童话。首先，学点本领，别让自己的故事停在开头。,Grimm needs help with tales that have stalled. First: learn enough to survive my own first chapter.,implemented,,/storyScripts/legacy/segments/194/steps/3/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d8675928e6c6ee27f22b,storyScripts,original_门派选择,legacy,original_门派选择,dialogue_run,"南贤
 主角","南贤 → 雅各布·格林 / Jacob Grimm [locked]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","南贤：最后！为了让你更简单地上手，我可以让你先加入一些门派修炼武功！
 
 主角：哇！太棒了！
 
-南贤：要去哪个门派拜师，就自己选择吧！","格林：最后！为了让你更简单地上手，我可以让你先加入一些门派修炼武功！
-
-主角：哇！太棒了！
-
-格林：要去哪个门派拜师，就自己选择吧！","Grimm：最后！为了让你更简单地上手，我可以让你先加入一些门派修炼武功！
-
-主角：哇！太棒了！
-
-Grimm：要去哪个门派拜师，就自己选择吧！",implemented,,/storyScripts/legacy/segments/195/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：要去哪个门派拜师，就自己选择吧！",,,pending,,/storyScripts/legacy/segments/195/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fb76a1ba4144cc685e0b,storyScripts,门派_无门派,legacy,门派_无门派,dialogue_run,"南贤
 主角","南贤 → 雅各布·格林 / Jacob Grimm [locked]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","南贤：哦？要自己闯荡？不错。
 
 南贤：为了表彰你的勇敢行为，我赠予你一个天赋吧！
 
-主角：哇！太好了！","格林：哦？要自己闯荡？不错。
-
-格林：为了表彰你的勇敢行为，我赠予你一个天赋吧！
-
-主角：哇！太好了！","Grimm：哦？要自己闯荡？不错。
-
-Grimm：为了表彰你的勇敢行为，我赠予你一个天赋吧！
-
-主角：哇！太好了！",implemented,,/storyScripts/legacy/segments/196/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：哇！太好了！",,,pending,,/storyScripts/legacy/segments/196/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0b7002326f3bec1e7b72,storyScripts,门派_无门派,legacy,门派_无门派,dialogue_run,"主角
 南贤","主角 → 玩家角色 / Player character [classified]
 南贤 → 雅各布·格林 / Jacob Grimm [locked]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：这……是虾米……
@@ -3651,19 +2915,7 @@ copy-0b7002326f3bec1e7b72,storyScripts,门派_无门派,legacy,门派_无门派,
 
 主角：……
 
-南贤：Good Luck!","主角：这……是虾米……
-
-格林：总有一天，你会发现它的价值……
-
-主角：……
-
-格林：Good Luck!","主角：这……是虾米……
-
-Grimm：总有一天，你会发现它的价值……
-
-主角：……
-
-Grimm：Good Luck!",implemented,,/storyScripts/legacy/segments/196/steps/5,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：Good Luck!",,,pending,,/storyScripts/legacy/segments/196/steps/5,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3c098f80ff4ecfcf5e34,storyScripts,original_主角之家.回家,legacy,original_主角之家.回家,dialogue_run,"主角
 南贤","主角 → 玩家角色 / Player character [classified]
 南贤 → 雅各布·格林 / Jacob Grimm [locked]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：我回来了。
@@ -3678,31 +2930,7 @@ copy-3c098f80ff4ecfcf5e34,storyScripts,original_主角之家.回家,legacy,origi
 
 南贤：好吧，看你实在太可怜，给你点奖励，自己回去参研吧。
 
-主角：（OH YEAH，终于又掏出点东西）","主角：我回来了。
-
-格林：怎么样，在江湖上闯荡得如何了？是否已经开始喜欢上这个世界了？
-
-主角：你就这样让我去闯荡江湖，我谁也打不过，一弄不好还直接被秒杀成失踪人口了！说句不好听的，我是被虐回来的。
-
-格林：那你想怎么样？可以先拣一些弱弱的对手来下手嘛。
-
-主角：连个小兵都至少基本内功10级，你看我有啥。
-
-格林：好吧，看你实在太可怜，给你点奖励，自己回去参研吧。
-
-主角：（OH YEAH，终于又掏出点东西）","主角：我回来了。
-
-Grimm：怎么样，在江湖上闯荡得如何了？是否已经开始喜欢上这个世界了？
-
-主角：你就这样让我去闯荡江湖，我谁也打不过，一弄不好还直接被秒杀成失踪人口了！说句不好听的，我是被虐回来的。
-
-Grimm：那你想怎么样？可以先拣一些弱弱的对手来下手嘛。
-
-主角：连个小兵都至少基本内功10级，你看我有啥。
-
-Grimm：好吧，看你实在太可怜，给你点奖励，自己回去参研吧。
-
-主角：（OH YEAH，终于又掏出点东西）",implemented,,/storyScripts/legacy/segments/197/steps/2,7,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：（OH YEAH，终于又掏出点东西）",,,pending,,/storyScripts/legacy/segments/197/steps/2,7,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-70c65cd272d416914706,storyScripts,original_主角之家.回家,legacy,original_主角之家.回家,dialogue_run,"主角
 南贤","主角 → 玩家角色 / Player character [classified]
 南贤 → 雅各布·格林 / Jacob Grimm [locked]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：我靠，这是什么？基本内功？！至少拿点像样的东西嘛。
@@ -3713,23 +2941,7 @@ copy-70c65cd272d416914706,storyScripts,original_主角之家.回家,legacy,origi
 
 主角：哇啊，那我可以反复来和你对话刷等级上限吗？
 
-南贤：哈哈，你这个武学[[red:全局只能触发一次]]，以后周目来找我触发这个剧情，或者在别的存档里触发这个剧情，也不会提高了喔！","主角：我靠，这是什么？基本内功？！至少拿点像样的东西嘛。
-
-格林：可别小看基本内功哦，我这个是给你提供[[red:武学精通]]，可以永久提升你的基本内功的上限！
-
-格林：[[red:武学精通，是全存档有效的。]]也就是说，在下个周目或者别的存档里，你的基本内功等级上限都已经被永久提高了。
-
-主角：哇啊，那我可以反复来和你对话刷等级上限吗？
-
-格林：哈哈，你这个武学[[red:全局只能触发一次]]，以后周目来找我触发这个剧情，或者在别的存档里触发这个剧情，也不会提高了喔！","主角：我靠，这是什么？基本内功？！至少拿点像样的东西嘛。
-
-Grimm：可别小看基本内功哦，我这个是给你提供[[red:武学精通]]，可以永久提升你的基本内功的上限！
-
-Grimm：[[red:武学精通，是全存档有效的。]]也就是说，在下个周目或者别的存档里，你的基本内功等级上限都已经被永久提高了。
-
-主角：哇啊，那我可以反复来和你对话刷等级上限吗？
-
-Grimm：哈哈，你这个武学[[red:全局只能触发一次]]，以后周目来找我触发这个剧情，或者在别的存档里触发这个剧情，也不会提高了喔！",implemented,,/storyScripts/legacy/segments/197/steps/10,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：哈哈，你这个武学[[red:全局只能触发一次]]，以后周目来找我触发这个剧情，或者在别的存档里触发这个剧情，也不会提高了喔！",,,pending,,/storyScripts/legacy/segments/197/steps/10,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0ee12a898e80cf1e249c,storyScripts,original_主角之家.回家,legacy,original_主角之家.回家,suggest,,,,点击左上角玩家头像，可以查看已经获得的武学精通。,,,pending,,/storyScripts/legacy/segments/197/steps/15/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-25abfa17056f0e425698,storyScripts,original_天关,legacy,original_天关,dialogue_run,"主角
 北丑","主角 → 玩家角色 / Player character [classified]
@@ -4778,50 +3990,22 @@ copy-51e1c4c69d1ee70ef699,storyScripts,original_华山论剑,legacy,original_华
 
 主角：……
 
-南贤：来吧，你的精锐，都上场来战吧！","主角：好了，到底是十大恶人还是十大好人呢？
-
-格林：你不觉得善与恶，其实没有严格的界限，尤其是这个东方不败可以跟令狐冲搞在一起的时代？
-
-主角：……
-
-格林：来吧，你的精锐，都上场来战吧！","主角：好了，到底是十大恶人还是十大好人呢？
-
-Grimm：你不觉得善与恶，其实没有严格的界限，尤其是这个东方不败可以跟令狐冲搞在一起的时代？
-
-主角：……
-
-Grimm：来吧，你的精锐，都上场来战吧！",implemented,,/storyScripts/legacy/segments/363/steps/2,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：来吧，你的精锐，都上场来战吧！",,,pending,,/storyScripts/legacy/segments/363/steps/2,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1707f5343de16624db70,storyScripts,华山论剑_天关,legacy,华山论剑_天关,dialogue_run,"南贤
 北丑","南贤 → 雅各布·格林 / Jacob Grimm [locked]
 北丑 → 威廉·格林 / Wilhelm Grimm [locked]",DE,"南贤：华山论剑总共4场比试，全部胜出才算赢了。
 
 北丑：和闯天关一样，你的队友都只能出场一次！所以，把最精锐的力量留在最后一战吧。
 
-南贤：好了，华山论剑第一场，开始了！","格林：华山论剑总共4场比试，全部胜出才算赢了。
-
-北丑：和闯天关一样，你的队友都只能出场一次！所以，把最精锐的力量留在最后一战吧。
-
-格林：好了，华山论剑第一场，开始了！","Grimm：华山论剑总共4场比试，全部胜出才算赢了。
-
-北丑：和闯天关一样，你的队友都只能出场一次！所以，把最精锐的力量留在最后一战吧。
-
-Grimm：好了，华山论剑第一场，开始了！",implemented,,/storyScripts/legacy/segments/364/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-df5ed5147f07c92f27c3,storyScripts,华山论剑_简单难度,legacy,华山论剑_简单难度,dialogue_run,南贤,南贤 → 雅各布·格林 / Jacob Grimm [locked],DE,南贤：简单难度的华山论剑总共只有一场比试，把你最强的阵容拉出来吧！,格林：简单难度的华山论剑总共只有一场比试，把你最强的阵容拉出来吧！,Grimm：简单难度的华山论剑总共只有一场比试，把你最强的阵容拉出来吧！,implemented,,/storyScripts/legacy/segments/365/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：好了，华山论剑第一场，开始了！",,,pending,,/storyScripts/legacy/segments/364/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-df5ed5147f07c92f27c3,storyScripts,华山论剑_简单难度,legacy,华山论剑_简单难度,dialogue_run,南贤,南贤 → 雅各布·格林 / Jacob Grimm [locked],DE,南贤：简单难度的华山论剑总共只有一场比试，把你最强的阵容拉出来吧！,,,pending,,/storyScripts/legacy/segments/365/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ec766355441da4deda74,storyScripts,original_华山论剑最终,legacy,original_华山论剑最终,dialogue_run,"南贤
 主角","南贤 → 雅各布·格林 / Jacob Grimm [locked]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","南贤：好了，恭喜你，这么BT都赢了!你真是铁杆粉丝啊！
 
 主角：就这么结束了？
 
-南贤：嗯，结束了。","格林：好了，恭喜你，这么BT都赢了!你真是铁杆粉丝啊！
-
-主角：就这么结束了？
-
-格林：嗯，结束了。","Grimm：好了，恭喜你，这么BT都赢了!你真是铁杆粉丝啊！
-
-主角：就这么结束了？
-
-Grimm：嗯，结束了。",implemented,,/storyScripts/legacy/segments/367/steps/2,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：嗯，结束了。",,,pending,,/storyScripts/legacy/segments/367/steps/2,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b209894cbf908b767563,storyScripts,original_华山论剑周目,legacy,original_华山论剑周目,dialogue_run,"主角
 汉家松鼠","主角 → 玩家角色 / Player character [classified]
 汉家松鼠 → 汉家松鼠 / Original creator credit [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：不要啊！不想就这么结束啊！
@@ -4858,23 +4042,7 @@ copy-a9cf49f2194259fe72b7,storyScripts,original_华山论剑最终炼狱,legacy,
 
 主角：喂喂，好歹让我休息一下啊！
 
-南贤：玩的就是刺激，你要不要挑战一下？","格林：好了，恭喜你，连这么BT的一战都赢了!你真是铁杆粉丝啊！
-
-主角：就这么结束了？感觉还是不过瘾啊，这可是炼狱难度！
-
-格林：好吧，看在你是炼狱难度，再给你一个隐藏关卡吧，这次可是真正的华山论剑。
-
-主角：喂喂，好歹让我休息一下啊！
-
-格林：玩的就是刺激，你要不要挑战一下？","Grimm：好了，恭喜你，连这么BT的一战都赢了!你真是铁杆粉丝啊！
-
-主角：就这么结束了？感觉还是不过瘾啊，这可是炼狱难度！
-
-Grimm：好吧，看在你是炼狱难度，再给你一个隐藏关卡吧，这次可是真正的华山论剑。
-
-主角：喂喂，好歹让我休息一下啊！
-
-Grimm：玩的就是刺激，你要不要挑战一下？",implemented,,/storyScripts/legacy/segments/370/steps/2,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：玩的就是刺激，你要不要挑战一下？",,,pending,,/storyScripts/legacy/segments/370/steps/2,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-82318e7ec4b2763f1c55,storyScripts,original_华山论剑最终炼狱,legacy,original_华山论剑最终炼狱,text,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",要挑战真.华山论剑吗？,,,pending,,/storyScripts/legacy/segments/370/steps/7/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-38d2ec0b30e756fe860f,storyScripts,original_华山论剑最终炼狱,legacy,original_华山论剑最终炼狱,text,,,,[[red:挑战!]],,,pending,,/storyScripts/legacy/segments/370/steps/7/blocks/0/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3e8dee2b9fe5cc42e0b1,storyScripts,original_华山论剑最终炼狱,legacy,original_华山论剑最终炼狱,text,,,,算了,,,pending,,/storyScripts/legacy/segments/370/steps/7/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -4884,24 +4052,12 @@ copy-f2ab9dff6827f9c01133,storyScripts,真华山论剑失败,legacy,真华山论
 
 主角：你给我安排这么一大帮BT，怎么打得过啊……
 
-南贤：好吧，那游戏就此结束了……","格林：看来你的功力还是没有达到登峰造极的地步啊~
-
-主角：你给我安排这么一大帮BT，怎么打得过啊……
-
-格林：好吧，那游戏就此结束了……","Grimm：看来你的功力还是没有达到登峰造极的地步啊~
-
-主角：你给我安排这么一大帮BT，怎么打得过啊……
-
-Grimm：好吧，那游戏就此结束了……",implemented,,/storyScripts/legacy/segments/373/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：好吧，那游戏就此结束了……",,,pending,,/storyScripts/legacy/segments/373/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8981ec9b61284691e71b,storyScripts,original_华山论剑最终炼狱2,legacy,original_华山论剑最终炼狱2,dialogue_run,"主角
 南贤","主角 → 玩家角色 / Player character [classified]
 南贤 → 雅各布·格林 / Jacob Grimm [locked]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：算了，还是不挑战了。
 
-南贤：好吧，那游戏就结束了……","主角：算了，还是不挑战了。
-
-格林：好吧，那游戏就结束了……","主角：算了，还是不挑战了。
-
-Grimm：好吧，那游戏就结束了……",implemented,,/storyScripts/legacy/segments/374/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：好吧，那游戏就结束了……",,,pending,,/storyScripts/legacy/segments/374/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d2fd68586c387f6534a8,storyScripts,original_佛山镇.黄飞鸿,legacy,original_佛山镇.黄飞鸿,dialogue_run,黄飞鸿,,,黄飞鸿：嘿嘿，香港脚、佛山无影脚各种腿法包教包会……,,,pending,,/storyScripts/legacy/segments/375/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c9eeb1eeca42cf27cf16,storyScripts,original_松鼠旅馆箱子,legacy,original_松鼠旅馆箱子,dialogue_run,"主角
 汉家松鼠","主角 → 玩家角色 / Player character [classified]
@@ -5653,11 +4809,7 @@ copy-1fdfd60d4c2928c1576e,storyScripts,test_HUASHAN,legacy,test_HUASHAN,dialogue
 北丑","南贤 → 雅各布·格林 / Jacob Grimm [locked]
 北丑 → 威廉·格林 / Wilhelm Grimm [locked]",DE,"南贤：带着你的小伙伴们fight吧！
 
-北丑：哈哈，真是激动人心啊！","格林：带着你的小伙伴们fight吧！
-
-北丑：哈哈，真是激动人心啊！","Grimm：带着你的小伙伴们fight吧！
-
-北丑：哈哈，真是激动人心啊！",implemented,,/storyScripts/legacy/segments/499/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+北丑：哈哈，真是激动人心啊！",,,pending,,/storyScripts/legacy/segments/499/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-faee876021e1866b3ccf,storyScripts,tlbb.dy_童姥使者1,legacy,tlbb.dy_童姥使者1,dialogue_run,"童姥使者
 主角","童姥使者 → 盖尔达 / Gerd [proposed]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","童姥使者：那边那个很丑的小哥，我们正在围殴这个丫头，没事请走开。
@@ -19196,23 +18348,7 @@ copy-86a525eb1bcaa47e1822,storyScripts,original_新手引导.开始,legacy,origi
 
 主角：不会吧，又是新手任务……
 
-南贤：放心吧，一定有好礼物的哦？做不做啊？","格林：等一下，我想起一个事。
-
-主角：？
-
-格林：我得来点新手任务。
-
-主角：不会吧，又是新手任务……
-
-格林：放心吧，一定有好礼物的哦？做不做啊？","Grimm：等一下，我想起一个事。
-
-主角：？
-
-Grimm：我得来点新手任务。
-
-主角：不会吧，又是新手任务……
-
-Grimm：放心吧，一定有好礼物的哦？做不做啊？",implemented,,/storyScripts/legacy/segments/1711/steps/0,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：放心吧，一定有好礼物的哦？做不做啊？",,,pending,,/storyScripts/legacy/segments/1711/steps/0,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2359cf4243b1d0c48c93,storyScripts,original_新手引导.开始,legacy,original_新手引导.开始,text,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",要不要做新手任务？,,,pending,,/storyScripts/legacy/segments/1711/steps/5/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-440cf398dc0ef0c80f2e,storyScripts,original_新手引导.开始,legacy,original_新手引导.开始,text,,,,还是做一做吧。,,,pending,,/storyScripts/legacy/segments/1711/steps/5/blocks/0/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-829d5736f6cfaa126aaa,storyScripts,original_新手引导.开始,legacy,original_新手引导.开始,text,,,,做啥新手任务，我要闯江湖！,,,pending,,/storyScripts/legacy/segments/1711/steps/5/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -19220,11 +18356,7 @@ copy-0b736013a48b4472c2b9,storyScripts,original_新手引导.任务买药,legacy
 南贤","主角 → 玩家角色 / Player character [classified]
 南贤 → 雅各布·格林 / Jacob Grimm [locked]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：……好吧，你赢了。
 
-南贤：那给你第一个任务吧，这里有300银两。","主角：……好吧，你赢了。
-
-格林：那给你第一个任务吧，这里有300银两。","主角：……好吧，你赢了。
-
-Grimm：那给你第一个任务吧，这里有300银两。",implemented,,/storyScripts/legacy/segments/1712/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：那给你第一个任务吧，这里有300银两。",,,pending,,/storyScripts/legacy/segments/1712/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-71c0a04899fa604c0562,storyScripts,original_新手引导.任务买药,legacy,original_新手引导.任务买药,dialogue_run,"主角
 南贤","主角 → 玩家角色 / Player character [classified]
 南贤 → 雅各布·格林 / Jacob Grimm [locked]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：哇！真是慷慨！
@@ -19239,41 +18371,13 @@ copy-71c0a04899fa604c0562,storyScripts,original_新手引导.任务买药,legacy
 
 南贤：卖药的地方在洛阳，你先在大地图中找到[[red:洛阳]]，然后点进去以后再找到[[red:商店]]。在商店买[[yellow:5]]颗[[yellow:小还丹]]回来。
 
-主角：哦……","主角：哇！真是慷慨！
-
-格林：你先别开心太早！这钱给你是教你怎么买药的。
-
-主角：呃……买药？
-
-格林：人在江湖飘，哪能不挨刀。你现在武功都被封印了，战斗中被虐了就吃点药……
-
-主角：……
-
-格林：卖药的地方在洛阳，你先在大地图中找到[[red:洛阳]]，然后点进去以后再找到[[red:商店]]。在商店买[[yellow:5]]颗[[yellow:小还丹]]回来。
-
-主角：哦……","主角：哇！真是慷慨！
-
-Grimm：你先别开心太早！这钱给你是教你怎么买药的。
-
-主角：呃……买药？
-
-Grimm：人在江湖飘，哪能不挨刀。你现在武功都被封印了，战斗中被虐了就吃点药……
-
-主角：……
-
-Grimm：卖药的地方在洛阳，你先在大地图中找到[[red:洛阳]]，然后点进去以后再找到[[red:商店]]。在商店买[[yellow:5]]颗[[yellow:小还丹]]回来。
-
-主角：哦……",implemented,,/storyScripts/legacy/segments/1712/steps/3,7,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：哦……",,,pending,,/storyScripts/legacy/segments/1712/steps/3,7,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6a4b6722d78d021a6a2c,storyScripts,original_新手引导.任务买药,legacy,original_新手引导.任务买药,dialogue_run,"南贤
 主角","南贤 → 雅各布·格林 / Jacob Grimm [locked]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","南贤：你可以点击右边的[[red:日志]]按钮查看当前游戏进度和任务目标。
 
-主角：好，我买药去了。","格林：你可以点击右边的[[red:日志]]按钮查看当前游戏进度和任务目标。
-
-主角：好，我买药去了。","Grimm：你可以点击右边的[[red:日志]]按钮查看当前游戏进度和任务目标。
-
-主角：好，我买药去了。",implemented,,/storyScripts/legacy/segments/1712/steps/11,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-38c20ad128641074bfb4,storyScripts,original_新手引导.买药,legacy,original_新手引导.买药,dialogue_run,商人,商人 → 当地居民 / Town resident [classified],GB,商人：哎呀，小兄弟来买药的？欢迎光临！看你是新手，我送你一本武功秘籍！你要什么类型的？,,,pending,,/storyScripts/legacy/segments/1713/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：好，我买药去了。",,,pending,,/storyScripts/legacy/segments/1712/steps/11,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-38c20ad128641074bfb4,storyScripts,original_新手引导.买药,legacy,original_新手引导.买药,dialogue_run,商人,商人 → 店主 / Shopkeeper [classified],GB,商人：哎呀，小兄弟来买药的？欢迎光临！看你是新手，我送你一本武功秘籍！你要什么类型的？,,,pending,,/storyScripts/legacy/segments/1713/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c329be6cd2e1fc4d7cdc,storyScripts,original_新手引导.买药,legacy,original_新手引导.买药,text,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",要什么类型的秘籍呢？,,,pending,,/storyScripts/legacy/segments/1713/steps/1/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c387401c7d68f81c2b23,storyScripts,original_新手引导.买药,legacy,original_新手引导.买药,text,,,,拳掌,,,pending,,/storyScripts/legacy/segments/1713/steps/1/blocks/0/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ad088e5116e7cc1e42ba,storyScripts,original_新手引导.买药,legacy,original_新手引导.买药,text,,,,剑法,,,pending,,/storyScripts/legacy/segments/1713/steps/1/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -19281,7 +18385,7 @@ copy-377d74f7afbf6f5a8d5f,storyScripts,original_新手引导.买药,legacy,origi
 copy-7ce4e2ac887253cd3fc6,storyScripts,original_新手引导.买药,legacy,original_新手引导.买药,text,,,,奇门,,,pending,,/storyScripts/legacy/segments/1713/steps/1/blocks/0/options/3/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6f56f1e93fa884066a7a,storyScripts,original_新手引导.买药继续,legacy,original_新手引导.买药继续,dialogue_run,"主角
 商人","主角 → 玩家角色 / Player character [classified]
-商人 → 当地居民 / Town resident [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：谢谢掌柜！
+商人 → 店主 / Shopkeeper [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：谢谢掌柜！
 
 商人：哈哈，太客气了。你可是要成为一代大侠的人物，我得讨好你这个大主顾……
 
@@ -19289,36 +18393,24 @@ copy-6f56f1e93fa884066a7a,storyScripts,original_新手引导.买药继续,legacy
 
 主角：哇！慷慨啊！",,,pending,,/storyScripts/legacy/segments/1718/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-dc6388ade96f1d864c56,storyScripts,original_新手引导.买药继续,legacy,original_新手引导.买药继续,dialogue_run,"商人
-主角","商人 → 当地居民 / Town resident [classified]
+主角","商人 → 店主 / Shopkeeper [classified]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","商人：嘿嘿，小意思。小兄弟可要成为一代大侠哦，这个游戏很好玩的哦。
 
 主角：一定一定！",,,pending,,/storyScripts/legacy/segments/1718/steps/5,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e14b48f65a156e96fa9e,storyScripts,original_新手引导.买到药了,legacy,original_新手引导.买到药了,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：呼呼，[[yellow:任务完成了]]，回去[[red:南贤居]]复命吧。,,,pending,,/storyScripts/legacy/segments/1719/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-3bc67eaf89708d6fab76,storyScripts,original_新手引导.买药完成,legacy,original_新手引导.买药完成,dialogue_run,南贤,南贤 → 雅各布·格林 / Jacob Grimm [locked],DE,南贤：恩，干得不错！,格林：恩，干得不错！,Grimm：恩，干得不错！,implemented,,/storyScripts/legacy/segments/1720/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-3bc67eaf89708d6fab76,storyScripts,original_新手引导.买药完成,legacy,original_新手引导.买药完成,dialogue_run,南贤,南贤 → 雅各布·格林 / Jacob Grimm [locked],DE,南贤：恩，干得不错！,,,pending,,/storyScripts/legacy/segments/1720/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c4a04be204455ea38580,storyScripts,original_新手引导.买药完成,legacy,original_新手引导.买药完成,dialogue_run,"南贤
 主角","南贤 → 雅各布·格林 / Jacob Grimm [locked]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","南贤：吃药很重要的！打不过的敌人记得多吃药！
 
-主角：……哦。","格林：吃药很重要的！打不过的敌人记得多吃药！
-
-主角：……哦。","Grimm：吃药很重要的！打不过的敌人记得多吃药！
-
-主角：……哦。",implemented,,/storyScripts/legacy/segments/1720/steps/3,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：……哦。",,,pending,,/storyScripts/legacy/segments/1720/steps/3,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-529d83b965b159bc8891,storyScripts,original_新手引导.任务打人,legacy,original_新手引导.任务打人,dialogue_run,"南贤
 主角","南贤 → 雅各布·格林 / Jacob Grimm [locked]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","南贤：[[red:新的任务]]来了！这样吧，你去帮我把[[red:洛阳]]城里那个不听话的[[yellow:小孩]]教训一下！
 
 主角：……欺负小孩，太没品了。
 
-南贤：……你牛逼，你是大英雄，要不你去帮我教训一下[[red:衡阳]]城里的[[yellow:黑老大]]？","格林：[[red:新的任务]]来了！这样吧，你去帮我把[[red:洛阳]]城里那个不听话的[[yellow:小孩]]教训一下！
-
-主角：……欺负小孩，太没品了。
-
-格林：……你牛逼，你是大英雄，要不你去帮我教训一下[[red:衡阳]]城里的[[yellow:黑老大]]？","Grimm：[[red:新的任务]]来了！这样吧，你去帮我把[[red:洛阳]]城里那个不听话的[[yellow:小孩]]教训一下！
-
-主角：……欺负小孩，太没品了。
-
-Grimm：……你牛逼，你是大英雄，要不你去帮我教训一下[[red:衡阳]]城里的[[yellow:黑老大]]？",implemented,,/storyScripts/legacy/segments/1721/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：……你牛逼，你是大英雄，要不你去帮我教训一下[[red:衡阳]]城里的[[yellow:黑老大]]？",,,pending,,/storyScripts/legacy/segments/1721/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-675c14962dd560315890,storyScripts,original_新手引导.任务打人,legacy,original_新手引导.任务打人,text,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",该如何选择？,,,pending,,/storyScripts/legacy/segments/1721/steps/3/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ca516d4beac36f1e3338,storyScripts,original_新手引导.任务打人,legacy,original_新手引导.任务打人,text,,,,还是去欺负小孩吧。,,,pending,,/storyScripts/legacy/segments/1721/steps/3/blocks/0/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-dae1064a027f0b1ea41e,storyScripts,original_新手引导.任务打人,legacy,original_新手引导.任务打人,text,,,,我要教训黑老大！,,,pending,,/storyScripts/legacy/segments/1721/steps/3/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -19328,16 +18420,8 @@ copy-77c782edd24d07ac9062,storyScripts,original_新手引导.任务打人小孩,
 
 南贤：真乖，新手任务嘛，挑个好欺负的混过去就好了。
 
-主角：……","主角：……我还是去教训小孩吧。
-
-格林：真乖，新手任务嘛，挑个好欺负的混过去就好了。
-
-主角：……","主角：……我还是去教训小孩吧。
-
-Grimm：真乖，新手任务嘛，挑个好欺负的混过去就好了。
-
-主角：……",implemented,,/storyScripts/legacy/segments/1722/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d4be770d0e0168485ac9,storyScripts,original_新手引导.任务打人小孩,legacy,original_新手引导.任务打人小孩,dialogue_run,南贤,南贤 → 雅各布·格林 / Jacob Grimm [locked],DE,南贤：还愣着干什么，快去[[red:洛阳]]，把街上那个[[yellow:小孩]]给我教训一顿！,格林：还愣着干什么，快去[[red:洛阳]]，把街上那个[[yellow:小孩]]给我教训一顿！,Grimm：还愣着干什么，快去[[red:洛阳]]，把街上那个[[yellow:小孩]]给我教训一顿！,implemented,,/storyScripts/legacy/segments/1722/steps/4,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：……",,,pending,,/storyScripts/legacy/segments/1722/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d4be770d0e0168485ac9,storyScripts,original_新手引导.任务打人小孩,legacy,original_新手引导.任务打人小孩,dialogue_run,南贤,南贤 → 雅各布·格林 / Jacob Grimm [locked],DE,南贤：还愣着干什么，快去[[red:洛阳]]，把街上那个[[yellow:小孩]]给我教训一顿！,,,pending,,/storyScripts/legacy/segments/1722/steps/4,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-faa6aa03a9ef37c7773c,storyScripts,original_新手引导.教训小孩开始,legacy,original_新手引导.教训小孩开始,dialogue_run,"小孩
 主角","小孩 → 当地居民 / Town resident [classified]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","小孩：叔叔，陪我玩玩嘛！
@@ -19376,29 +18460,13 @@ copy-4db723ac870a0d1f102d,storyScripts,original_新手引导.教训小孩完成,
 
 南贤：那当然，有人的地方就是江湖！
 
-主角：……哦。","格林：干得不错！在江湖上，就靠拳头说话了！
-
-主角：唔，欺负小孩也是江湖了？
-
-格林：那当然，有人的地方就是江湖！
-
-主角：……哦。","Grimm：干得不错！在江湖上，就靠拳头说话了！
-
-主角：唔，欺负小孩也是江湖了？
-
-Grimm：那当然，有人的地方就是江湖！
-
-主角：……哦。",implemented,,/storyScripts/legacy/segments/1727/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：……哦。",,,pending,,/storyScripts/legacy/segments/1727/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0265eec90bd0d5b80318,storyScripts,original_新手引导.任务打人黑帮,legacy,original_新手引导.任务打人黑帮,dialogue_run,"主角
 南贤","主角 → 玩家角色 / Player character [classified]
 南贤 → 雅各布·格林 / Jacob Grimm [locked]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：当哥真的武功全失啊？我要去教训黑老大！
 
-南贤：……好吧，good luck……","主角：当哥真的武功全失啊？我要去教训黑老大！
-
-格林：……好吧，good luck……","主角：当哥真的武功全失啊？我要去教训黑老大！
-
-Grimm：……好吧，good luck……",implemented,,/storyScripts/legacy/segments/1728/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a93bda74182ddee6b1ec,storyScripts,original_新手引导.任务打人黑帮,legacy,original_新手引导.任务打人黑帮,dialogue_run,南贤,南贤 → 雅各布·格林 / Jacob Grimm [locked],DE,南贤：你去南面的[[red:衡阳]]，然后挑战了街上的[[yellow:黑老大]]再回来吧。,格林：你去南面的[[red:衡阳]]，然后挑战了街上的[[yellow:黑老大]]再回来吧。,Grimm：你去南面的[[red:衡阳]]，然后挑战了街上的[[yellow:黑老大]]再回来吧。,implemented,,/storyScripts/legacy/segments/1728/steps/3,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：……好吧，good luck……",,,pending,,/storyScripts/legacy/segments/1728/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a93bda74182ddee6b1ec,storyScripts,original_新手引导.任务打人黑帮,legacy,original_新手引导.任务打人黑帮,dialogue_run,南贤,南贤 → 雅各布·格林 / Jacob Grimm [locked],DE,南贤：你去南面的[[red:衡阳]]，然后挑战了街上的[[yellow:黑老大]]再回来吧。,,,pending,,/storyScripts/legacy/segments/1728/steps/3,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-154154a9f90baaa2128d,storyScripts,original_新手引导.教训黑老大开始,legacy,original_新手引导.教训黑老大开始,dialogue_run,"黑老大
 主角","黑老大 → 当地居民 / Town resident [classified]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","黑老大：什么样的节奏呀，最呀最摇摆~
@@ -19441,49 +18509,13 @@ copy-83bcfd992c7adf54812c,storyScripts,original_新手引导.教训黑老大完�
 
 南贤：总之，等自己实力更强了，再去挑战之前无法战胜的对手吧。
 
-主角：哦……","格林：怎么样？叫你逞英雄，打不过吧？
-
-主角：……
-
-格林：你要记住，这个江湖是一个[[red:开放世界]]。遇到打不过的对手，是很正常的。
-
-主角：那打不过怎么办？
-
-格林：[[red:读档]]，躲着走啊！
-
-主角：……
-
-格林：总之，等自己实力更强了，再去挑战之前无法战胜的对手吧。
-
-主角：哦……","Grimm：怎么样？叫你逞英雄，打不过吧？
-
-主角：……
-
-Grimm：你要记住，这个江湖是一个[[red:开放世界]]。遇到打不过的对手，是很正常的。
-
-主角：那打不过怎么办？
-
-Grimm：[[red:读档]]，躲着走啊！
-
-主角：……
-
-Grimm：总之，等自己实力更强了，再去挑战之前无法战胜的对手吧。
-
-主角：哦……",implemented,,/storyScripts/legacy/segments/1733/steps/0,8,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：哦……",,,pending,,/storyScripts/legacy/segments/1733/steps/0,8,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-62ebd0eff2fd885fde02,storyScripts,original_新手引导.买药去啊,legacy,original_新手引导.买药去啊,dialogue_run,南贤,南贤 → 雅各布·格林 / Jacob Grimm [locked],DE,"南贤：还愣着干啥？快去买药啊。
 
-南贤：到[[red:洛阳]]，找到[[red:商店]]，买[[yellow:5]]颗[[yellow:小还丹]]回来。","格林：还愣着干啥？快去买药啊。
-
-格林：到[[red:洛阳]]，找到[[red:商店]]，买[[yellow:5]]颗[[yellow:小还丹]]回来。","Grimm：还愣着干啥？快去买药啊。
-
-Grimm：到[[red:洛阳]]，找到[[red:商店]]，买[[yellow:5]]颗[[yellow:小还丹]]回来。",implemented,,/storyScripts/legacy/segments/1734/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：到[[red:洛阳]]，找到[[red:商店]]，买[[yellow:5]]颗[[yellow:小还丹]]回来。",,,pending,,/storyScripts/legacy/segments/1734/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a3a6c17ed7aa4ca832ee,storyScripts,original_新手引导.教训小孩去啊,legacy,original_新手引导.教训小孩去啊,dialogue_run,南贤,南贤 → 雅各布·格林 / Jacob Grimm [locked],DE,"南贤：还愣着干啥？快去教训小孩啊。
 
-南贤：到[[red:洛阳]]，找到[[red:小孩]]，扁他一顿。","格林：还愣着干啥？快去教训小孩啊。
-
-格林：到[[red:洛阳]]，找到[[red:小孩]]，扁他一顿。","Grimm：还愣着干啥？快去教训小孩啊。
-
-Grimm：到[[red:洛阳]]，找到[[red:小孩]]，扁他一顿。",implemented,,/storyScripts/legacy/segments/1735/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：到[[red:洛阳]]，找到[[red:小孩]]，扁他一顿。",,,pending,,/storyScripts/legacy/segments/1735/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-cf1fa80c709beccb553f,storyScripts,original_新手引导.教训黑老大去啊,legacy,original_新手引导.教训黑老大去啊,dialogue_run,"南贤
 主角","南贤 → 雅各布·格林 / Jacob Grimm [locked]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","南贤：还愣着干啥？快去教训黑老大啊，大英雄。
@@ -19492,34 +18524,14 @@ copy-cf1fa80c709beccb553f,storyScripts,original_新手引导.教训黑老大去�
 
 南贤：当然啦，我估计被打得满地找牙的是你，嘿嘿。
 
-主角：……","格林：还愣着干啥？快去教训黑老大啊，大英雄。
-
-格林：到[[red:衡阳]]，找到[[red:黑老大]]，扁他一顿。
-
-格林：当然啦，我估计被打得满地找牙的是你，嘿嘿。
-
-主角：……","Grimm：还愣着干啥？快去教训黑老大啊，大英雄。
-
-Grimm：到[[red:衡阳]]，找到[[red:黑老大]]，扁他一顿。
-
-Grimm：当然啦，我估计被打得满地找牙的是你，嘿嘿。
-
-主角：……",implemented,,/storyScripts/legacy/segments/1736/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：……",,,pending,,/storyScripts/legacy/segments/1736/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f27d844a8f680980131b,storyScripts,original_新手引导结束,legacy,original_新手引导结束,dialogue_run,"南贤
 主角","南贤 → 雅各布·格林 / Jacob Grimm [locked]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","南贤：好了，打人、嗑药、探索，江湖无非如此，我的[[yellow:新手教学]]到这里就[[yellow:结束]]了。
 
 南贤：接下来，就看你自己大展身手了!
 
-主角：没问题！","格林：好了，打人、嗑药、探索，江湖无非如此，我的[[yellow:新手教学]]到这里就[[yellow:结束]]了。
-
-格林：接下来，就看你自己大展身手了!
-
-主角：没问题！","Grimm：好了，打人、嗑药、探索，江湖无非如此，我的[[yellow:新手教学]]到这里就[[yellow:结束]]了。
-
-Grimm：接下来，就看你自己大展身手了!
-
-主角：没问题！",implemented,,/storyScripts/legacy/segments/1737/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：没问题！",,,pending,,/storyScripts/legacy/segments/1737/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0610457f22064f468658,storyScripts,original_新手地图.送镖不进入,legacy,original_新手地图.送镖不进入,dialogue_run,镖局老大,镖局老大 → 当地居民 / Town resident [classified],GB,镖局老大：小兄弟武功高超，老夫这厢有礼了。,,,pending,,/storyScripts/legacy/segments/1739/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-36af23cbb6a3f0b86e9e,storyScripts,original_新手地图.送镖进入,legacy,original_新手地图.送镖进入,dialogue_run,镖局老大,镖局老大 → 当地居民 / Town resident [classified],GB,镖局老大：小兄弟看起来武功不错，要不要帮我送个镖，赚点银子？,,,pending,,/storyScripts/legacy/segments/1740/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7e321295c29ee20bf8b2,storyScripts,original_新手地图.送镖进入,legacy,original_新手地图.送镖进入,text,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",要不要接镖？,,,pending,,/storyScripts/legacy/segments/1740/steps/1/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -20841,8 +19853,8 @@ copy-2d045f40c415135c8925,storyScripts,捐款,legacy,捐款,dialogue_run,"支付
 主角：哦……
 
 支付宝二维码：一定要捐哦！真的要饿死了……饿死了看谁给你们做游戏玩，哼哼……",,,pending,,/storyScripts/legacy/segments/1884/steps/0,25,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-8087463d869ce623c601,storyScripts,browser_结伴练习,legacy,browser_结伴练习,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：先和伙伴配合一下，再继续闯荡江湖。,,,pending,,/storyScripts/legacy/segments/1885/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-21c78c6025056b1dd864,storyScripts,browser_新手章节回顾,legacy,browser_新手章节回顾,suggest,,,,入门体验告一段落。原版买药教学、门派选择和其他江湖地点已逐步接入；可继续完成南贤的原版任务。尚未迁移的特殊流程不会被当作已完成。,,,pending,,/storyScripts/legacy/segments/1886/steps/0/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-8087463d869ce623c601,storyScripts,browser_结伴练习,legacy,browser_结伴练习,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：先和伙伴配合一下，再继续闯荡江湖。,主角：该一起练练了。就算两个人都喊“交给我”，也总得有一个记得看侧翼。,"主角：Time to practise together. If we both shout 'I've got this', one of us still needs to watch the flank.",implemented,,/storyScripts/legacy/segments/1885/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-21c78c6025056b1dd864,storyScripts,browser_新手章节回顾,legacy,browser_新手章节回顾,suggest,,,,入门体验告一段落。原版买药教学、门派选择和其他江湖地点已逐步接入；可继续完成南贤的原版任务。尚未迁移的特殊流程不会被当作已完成。,入门练习暂告一段落。检查装备、修炼和同行伙伴，保存好进度，再继续上路。,"First lessons complete. Review your equipment, training and companions, then save before setting out.",implemented,,/storyScripts/legacy/segments/1886/steps/0/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f7cedc6d07e790bbd0c4,battles,测试战斗,,,name,,,,测试战斗,,,pending,,/battles/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2328461b37630b754b1e,battles,南贤居_木头人_战斗,,,name,,,,南贤居_木头人_战斗,,,pending,,/battles/1/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-15f124c0fd8c644c14c6,battles,南贤居_经验木头人_战斗,,,name,,,,南贤居_经验木头人_战斗,,,pending,,/battles/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21685,7 +20697,7 @@ copy-206fb90d429381a21452,battles,黑衣_华山,,,name,,,,黑衣_华山,,,pendin
 copy-98d39cdd1d758c312562,battles,browser_结伴练习,,,name,,,,结伴练习,,,pending,,/battles/393/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f864166f6cecaca5efe1,characters,主角,,,name,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",小虾米,,,pending,,/characters/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-808c248638c0c4358b92,characters,神级主角,,,name,神级主角,神级主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",小虾米,,,pending,,/characters/1/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d7b796dd61dd5ec3e4e4,characters,木头人,,,name,木头人,木头人 → 尤瑟·潘德拉贡 / Uther Pendragon [proposed],GB,木头人,,,pending,,/characters/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d7b796dd61dd5ec3e4e4,characters,木头人,,,name,木头人,木头人 → 训练假人 / Training Dummy [classified],,木头人,训练假人,Training Dummy,implemented,,/characters/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6fc846720838669cfde3,characters,胡斐,,,name,胡斐,胡斐 → 凯 / Kai [locked],DK,胡斐,,,pending,,/characters/3/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d8737ee376d3e775f66f,characters,华山胡斐,,,name,华山胡斐,华山胡斐 → 凯 / Kai [locked],DK,胡斐,,,pending,,/characters/4/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-dbbe268aeb810e549c1e,characters,张无忌,,,name,张无忌,"张无忌 → 哪吒 / Nezha [locked]
@@ -21988,9 +21000,9 @@ copy-0561b1a27e5679d0e5ec,characters,江城快报,,,name,江城快报,江城快�
 copy-494e6d471cbcfed27994,characters,旁白君,,,name,旁白君,旁白君 → 旁白君 / Narrator voice [classified],,旁白君,,,pending,,/characters/300/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7c6ede0b40104230d023,characters,返回,,,name,返回,返回 → 返回 / Return [classified],,返回,,,pending,,/characters/301/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-67bd34f73822f1cb68fc,characters,藏经阁,,,name,藏经阁,藏经阁 → 藏经阁 / Library entrance [classified],,藏经阁,,,pending,,/characters/302/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-88c214b6b2d7e918b393,characters,商人,,,name,商人,商人 → 当地居民 / Town resident [classified],GB,商人,,,pending,,/characters/303/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-88c214b6b2d7e918b393,characters,商人,,,name,商人,商人 → 店主 / Shopkeeper [classified],GB,商人,店主,Shopkeeper,implemented,,/characters/303/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-de0aef3f0c56380ec728,characters,佛像,,,name,佛像,佛像 → 佛像 / Statue [classified],,佛像,,,pending,,/characters/304/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d589f7554323cef017e0,characters,武师,,,name,武师,武师 → 当地居民 / Town resident [classified],GB,武师,,,pending,,/characters/305/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d589f7554323cef017e0,characters,武师,,,name,武师,武师 → 教官 / Instructor [classified],GB,武师,教官,Instructor,implemented,,/characters/305/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b07e137a8b469a176ced,characters,向前走,,,name,向前走,向前走 → 向前走 / Move forward [classified],,向前走,,,pending,,/characters/306/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ade80c0d5c3770e30714,characters,向左走,,,name,向左走,向左走 → 向左走 / Move left [classified],,向左走,,,pending,,/characters/307/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7093a486c3839b749c5f,characters,向右走,,,name,向右走,向右走 → 向右走 / Move right [classified],,向右走,,,pending,,/characters/308/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -22665,8 +21677,8 @@ copy-5e53e100c3dadd8b8fea,externalSkills,烈焰黑剑,,,name,,,,烈焰黑剑,,,p
 copy-673734e76f440d73ce96,externalSkills,烈焰黑剑,,,description,,,,神秘的黑暗武学,,,pending,,/externalSkills/152/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3b9115dec100482a3b1a,externalSkills,烈焰黑剑,,,name,,,,烈焰黑剑.幽垠,,,pending,,/externalSkills/152/formSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b6137d275dcd14f4ffa6,externalSkills,烈焰黑剑,,,description,,,,黑色火焰笼罩世界,,,pending,,/externalSkills/152/formSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-f5597a31d29a0b14f467,externalSkills,野球拳,,,name,,,,野球拳,,,pending,,/externalSkills/153/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-21408e469f8b8946585b,externalSkills,野球拳,,,description,,,,江湖混混与人胡搅蛮缠的拳法,,,pending,,/externalSkills/153/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-f5597a31d29a0b14f467,externalSkills,野球拳,,,name,,,,野球拳,街头拳法,Scrapper's Fist,implemented,,/externalSkills/153/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-21408e469f8b8946585b,externalSkills,野球拳,,,description,,,,江湖混混与人胡搅蛮缠的拳法,招式不算体面，成长余地却很大。优雅谈不上，纠缠到底倒是在行。,An unpolished fighting style with considerable room to grow. Graceful? Rarely. Persistent? Absolutely.,implemented,,/externalSkills/153/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-64631f445a9a42b2c27c,externalSkills,野球拳,,,name,,,,野球拳.市井流氓,,,pending,,/externalSkills/153/formSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-276568d86863843650d6,externalSkills,野球拳,,,description,,,,我是流氓我怕谁！,,,pending,,/externalSkills/153/formSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5c1da7ec6208452310da,externalSkills,野球拳,,,name,,,,野球拳.胡搅蛮缠,,,pending,,/externalSkills/153/formSkills/1/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -22787,8 +21799,8 @@ copy-542fe4e05cb76b853413,growTemplates,韦小宝,,,name,,,,韦小宝,,,pending,
 copy-b6ced8ec56b73752b584,growTemplates,内家,,,name,,,,内家,,,pending,,/growTemplates/14/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5d5637d4ea34a3c1267e,growTemplates,内功大师,,,name,,,,内功大师,,,pending,,/growTemplates/15/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6191618958b7504882c0,growTemplates,医生,,,name,,,,医生,,,pending,,/growTemplates/16/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-ef502dc6031d9616773c,internalSkills,基本内功,,,name,,,,基本内功,,,pending,,/internalSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-4850dd3984e146e08a08,internalSkills,基本内功,,,description,,,,天下内功的根基,,,pending,,/internalSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-ef502dc6031d9616773c,internalSkills,基本内功,,,name,,,,基本内功,稳息法,Steady Breath,implemented,,/internalSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-4850dd3984e146e08a08,internalSkills,基本内功,,,description,,,,天下内功的根基,阴阳均衡的基础内功。学会稳住气息，再考虑怎样惊艳全场。,A foundational inner discipline with balanced Yin and Yang. An excellent place to begin staying on your feet.,implemented,,/internalSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6d2393a0ac54a6a71fd2,internalSkills,血刀心法,,,name,,,,血刀心法,,,pending,,/internalSkills/1/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e22709cc519c816f68dd,internalSkills,血刀心法,,,description,,,,血刀门的入门心法，只重攻不重防,,,pending,,/internalSkills/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-cd8e851271ea493308fa,internalSkills,全真心法,,,name,,,,全真心法,,,pending,,/internalSkills/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -23349,7 +22361,7 @@ copy-c2927270ab4bcfc92459,maps,侠客岛洞内,,,description,,,,刻有太玄经�
 copy-91052b6af6e1c418d9e2,maps,侠客岛洞内,,,description,,,,出洞,,,pending,,/maps/28/locations/3/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-65ce5d26b97d5bfb380c,maps,南贤居死胡同,,,name,,,,南贤居死胡同,,,pending,,/maps/29/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-08a4ed0ab1e2c893d036,maps,南贤居死胡同,,,description,,,,一个死胡同,,,pending,,/maps/29/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-04645fa8302d8fd10373,maps,南贤居死胡同,,,description,,,,死老头南贤,收集故事的格林有事想请你帮忙。,The collector of stories needs your help.,implemented,,/maps/29/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-04645fa8302d8fd10373,maps,南贤居死胡同,,,description,,,,死老头南贤,格林：收集故事很在行，提剑上阵另当别论。,"Grimm, collector of tales and reluctant volunteer for sword practice.",implemented,,/maps/29/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fe677dec3f5aa1d3981f,maps,武道大会,,,name,,,,武道大会,,,pending,,/maps/30/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a29065541088f535cff7,maps,武道大会,,,description,,,,你来到一个大型的比武场地，四周林立着刀枪剑戟。,,,pending,,/maps/30/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ee46580d0dbfc8b7fd08,maps,武道大会,,,description,,,,游戏制作人汉家松鼠,,,pending,,/maps/30/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -23693,13 +22705,13 @@ copy-c8be195cbf818f1de894,maps,剑魔荒冢,,,description,,,,神雕大侠杨过�
 copy-999c644bf7766cda07d9,maps,剑魔荒冢,,,description,,,,返回大地图,,,pending,,/maps/81/locations/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8e78a38ae50e867b350a,maps,南贤居,,,name,,,,南贤居,格林居所,Grimm's home,implemented,,/maps/82/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9d0f34e8d2f154a2bcab,maps,南贤居,,,description,,,,你回到了南贤居，南贤还是保持着你离开时的模样，正摇头晃脑地看着一本书，口里念念有词。,你回到格林的居所。他仍在翻阅故事册，等着听你旅途上的见闻。,Grimm is still reading where you left him. There is always another story to discuss.,implemented,,/maps/82/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-94750338d20fd0d0d75a,maps,南贤居,,,description,,,,一个糟老头子,收集故事的格林有事想请你帮忙。,The collector of stories needs your help.,implemented,,/maps/82/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-79db81e47612e8590303,maps,南贤居,,,description,,,,一个用于练级的木头人,,,pending,,/maps/82/locations/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-fd82b127614a5b81e785,maps,南贤居,,,description,,,,返回大地图,,,pending,,/maps/82/locations/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-0ead0a88279c8eb51538,maps,南贤居,,,name,,,,结伴练习,,,pending,,/maps/82/locations/3/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-33a8e698dabeae9621f0,maps,南贤居,,,description,,,,本章新增的伙伴配合练习；使用原木头人规则。,,,pending,,/maps/82/locations/3/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-9a00807a4d2bfdd3b985,maps,南贤居,,,name,,,,章节回顾,,,pending,,/maps/82/locations/4/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-91e63252bd48c9cb6901,maps,南贤居,,,description,,,,回顾本章，准备下一段旅程。,,,pending,,/maps/82/locations/4/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-94750338d20fd0d0d75a,maps,南贤居,,,description,,,,一个糟老头子,格林：收集故事很在行，提剑上阵另当别论。,"Grimm, collector of tales and reluctant volunteer for sword practice.",implemented,,/maps/82/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-79db81e47612e8590303,maps,南贤居,,,description,,,,一个用于练级的木头人,身经百练，至今拒绝接受采访。,A veteran of countless practice sessions. Still refuses to give interviews.,implemented,,/maps/82/locations/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-fd82b127614a5b81e785,maps,南贤居,,,description,,,,返回大地图,重新上路。,Back to the road.,implemented,,/maps/82/locations/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-0ead0a88279c8eb51538,maps,南贤居,,,name,,,,结伴练习,,Team practice,implemented,,/maps/82/locations/3/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-33a8e698dabeae9621f0,maps,南贤居,,,description,,,,本章新增的伙伴配合练习；使用原木头人规则。,与伙伴练习配合作战。,Practise fighting alongside your companion.,implemented,,/maps/82/locations/3/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-9a00807a4d2bfdd3b985,maps,南贤居,,,name,,,,章节回顾,旅途小记,Journey notes,implemented,,/maps/82/locations/4/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-91e63252bd48c9cb6901,maps,南贤居,,,description,,,,回顾本章，准备下一段旅程。,回顾收获，准备下一段路。,Take stock before the next stretch of road.,implemented,,/maps/82/locations/4/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8e7c705805e630537f56,maps,白驼山庄,,,name,,,,白驼山庄,,,pending,,/maps/83/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5e240a93de3e6461739d,maps,白驼山庄,,,description,,,,你进入了白驼山庄，此处为西毒欧阳锋居所，所饲养毒物众多。欧阳锋侄儿欧阳克喜好女色，白驼山庄中身着暴露的美女众多，几个庄丁在远处警惕地盯着你。,,,pending,,/maps/83/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f7e3798915983bf90240,maps,白驼山庄,,,description,,,,白驼山少庄主欧阳克,,,pending,,/maps/83/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24069,18 +23081,18 @@ copy-bf8929e1667965863e5d,maps,公主寝宫,,,name,,,,公主寝宫,,,pending,,/m
 copy-d30f760b33abd3068987,maps,公主寝宫,,,description,,,,你施展轻功进入紫禁城，绕开禁军卫士来到公主寝宫。此处装饰富丽堂皇，摆满了各式首饰。,,,pending,,/maps/144/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1315fc34ea8b16baf1ec,maps,公主寝宫,,,description,,,,惊讶的望着你,,,pending,,/maps/144/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6916ea13bb33162ad820,maps,公主寝宫,,,description,,,,返回北京,,,pending,,/maps/144/locations/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-0eb70fbf03cd2e670d29,maps,小村,,,name,,,,小村,,,pending,,/maps/145/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-029308dd95385dc3cfa4,maps,小村,,,description,,,,你走出南贤屋外，看了一眼这个简陋的新手村……还是赶紧想办法离开这里吧。,,,pending,,/maps/145/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-0eb70fbf03cd2e670d29,maps,小村,,,name,,,,小村,旅人村,Wayside Village,implemented,,/maps/145/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-029308dd95385dc3cfa4,maps,小村,,,description,,,,你走出南贤屋外，看了一眼这个简陋的新手村……还是赶紧想办法离开这里吧。,村里有位耐心有限的教官、一位算账清楚的店主，还有个对工作很认真的训练假人。,"A village with a patient instructor, a practical shopkeeper, and a dummy that takes its work personally.",implemented,,/maps/145/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fbdd41ed17e95476ba4d,maps,小村,,,description,,,,南贤老头子的屋子,格林的居所，可以向他请教，或继续准备旅程。,Grimm's home. Speak with him or continue your preparations.,implemented,,/maps/145/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-38759dd255eeea947c93,maps,小村,,,description,,,,一个破破烂烂的寺庙,,,pending,,/maps/145/locations/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-b11cd829f38df2f59480,maps,小村,,,description,,,,小村里负责授人习武的武师,,,pending,,/maps/145/locations/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-b940f5819a5603906563,maps,小村,,,description,,,,杂货店,,,pending,,/maps/145/locations/3/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-38759dd255eeea947c93,maps,小村,,,description,,,,一个破破烂烂的寺庙,村边的一座旧祠。,An old shrine at the edge of the village.,implemented,,/maps/145/locations/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b11cd829f38df2f59480,maps,小村,,,description,,,,小村里负责授人习武的武师,教实用本领，淤青不另收费。,Practical lessons. The bruises are included.,implemented,,/maps/145/locations/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b940f5819a5603906563,maps,小村,,,description,,,,杂货店,旅途用品，明码标价。天命不能抵账。,"Useful supplies, priced individually. Destiny is not legal tender.",implemented,,/maps/145/locations/3/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-05d09482768567db0bb6,maps,南贤屋内,,,name,,,,南贤屋内,格林屋内,Grimm's house,implemented,,/maps/146/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a4e1f2d6fa85d3b6e13a,maps,南贤屋内,,,description,,,,你身处一间简陋的农家院内，南贤正在一边沉思着些什么。,格林坐在屋内，翻看着收集来的故事，似乎正在思索什么。,"Grimm sits with a book, thinking over the stories he has collected.",implemented,,/maps/146/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-9b5547f402f9a18afc4f,maps,南贤屋内,,,description,,,,糟老头子南贤,收集故事的格林有事想请你帮忙。,The collector of stories needs your help.,implemented,,/maps/146/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-40ed1b82de4ca0899cb6,maps,南贤屋内,,,description,,,,一个宁静的村庄,,,pending,,/maps/146/locations/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-f451a5e3f58c073e5901,maps,南贤屋内,,,name,,,,出村,,,pending,,/maps/146/locations/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-1d6045471600e216a06e,maps,南贤屋内,,,description,,,,返回江湖地图。,,,pending,,/maps/146/locations/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a4e1f2d6fa85d3b6e13a,maps,南贤屋内,,,description,,,,你身处一间简陋的农家院内，南贤正在一边沉思着些什么。,格林从笔记堆里给客人腾出了一把椅子。书桌就没这么走运了。,Grimm has made room among his notebooks for a visitor. The chair is clear; the desk has lost that battle.,implemented,,/maps/146/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-9b5547f402f9a18afc4f,maps,南贤屋内,,,description,,,,糟老头子南贤,格林：收集故事很在行，提剑上阵另当别论。,"Grimm, collector of tales and reluctant volunteer for sword practice.",implemented,,/maps/146/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-40ed1b82de4ca0899cb6,maps,南贤屋内,,,description,,,,一个宁静的村庄,去见教官，或到杂货铺准备行装。,Meet the instructor or visit the supply shop.,implemented,,/maps/146/locations/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-f451a5e3f58c073e5901,maps,南贤屋内,,,name,,,,出村,出发,Set out,implemented,,/maps/146/locations/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-1d6045471600e216a06e,maps,南贤屋内,,,description,,,,返回江湖地图。,返回世界地图。,Return to the world map.,implemented,,/maps/146/locations/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c8392e81956a92c9b1d4,maps,破庙,,,name,,,,破庙,,,pending,,/maps/147/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8273f150823e3518b4c3,maps,破庙,,,description,,,,你来到了一间破庙，因为人迹罕至，佛像已经很久无人打扫，挂满了蜘蛛网和灰尘。,,,pending,,/maps/147/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-eb79647d61e109580ea5,maps,破庙,,,description,,,,一个脏兮兮的佛像,,,pending,,/maps/147/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24217,7 +23229,7 @@ copy-cce552c0746aaddf3e5f,sects,无门派,,,description,,,,"不拜入任何门�
 皇图霸业谈笑间，不胜人生一场醉。
 提剑跨骑挥鬼雨，白骨如山鸟惊飞; 
 尘事如潮人如水，只叹江湖几人回。 ”",,,pending,,/sects/8/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-8a5802632cf0d4120bdd,shops,新手村.杂货店,,,name,,,,新手村.杂货店,,,pending,,/shops/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-8a5802632cf0d4120bdd,shops,新手村.杂货店,,,name,,,,新手村.杂货店,村中杂货铺,Village Supplies,implemented,,/shops/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0007e9cdc2b241b9d21e,shops,洛阳.商店.新手,,,name,,,,洛阳.商店.新手,,,pending,,/shops/1/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fdab7a1bd92297c5c06f,shops,洛阳.商店,,,name,,,,洛阳.商店,,,pending,,/shops/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3f0ebfd764ebe568574a,shops,洛阳.商店.神秘,,,name,,,,洛阳.商店.神秘,,,pending,,/shops/3/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24283,8 +23295,8 @@ copy-5ab24b6edd237050037c,specialSkills,飞星术,,,name,,,,飞星术,,,pending,
 copy-0e2dcd760c64c5ca3d9a,specialSkills,飞星术,,,description,,,,星宿派狠毒的招数，不管敌我，全场随机中毒。,,,pending,,/specialSkills/26/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6a2812e6452023fb8bb3,items,止血草,,,name,,,,止血草,,,pending,,/items/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7ea5eb7bb8eb35788be0,items,止血草,,,description,,,,常见的草药，有止血之功效,,,pending,,/items/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-4b3f524930310247a49c,items,小还丹,,,name,,,,小还丹,,,pending,,/items/1/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-209ca77602d4634bd2bf,items,小还丹,,,description,,,,活血化瘀的丹药，闯江湖必备,,,pending,,/items/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-4b3f524930310247a49c,items,小还丹,,,name,,,,小还丹,恢复药剂,Restorative Tonic,implemented,,/items/1/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-209ca77602d4634bd2bf,items,小还丹,,,description,,,,活血化瘀的丹药，闯江湖必备,恢复600点生命。治疗伤势，至于受伤的自尊，可能还得缓一缓。,Restores 600 HP. For injuries; wounded pride may take longer.,implemented,,/items/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a9420c8ddc76c99107bf,items,道口烧鸡,,,name,,,,道口烧鸡,,,pending,,/items/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b77d7aa7485f63533552,items,道口烧鸡,,,description,,,,五道口产的烧鸡，肥得流油,,,pending,,/items/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ba0f96e4f28e8309d227,items,红药,,,name,,,,红药,,,pending,,/items/3/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24295,12 +23307,12 @@ copy-3f3699f342d83ee93325,items,月饼,,,name,,,,月饼,,,pending,,/items/5/name
 copy-035077e5845b8b65597c,items,月饼,,,description,,,,八月十五吃掉绝没有奇效！,,,pending,,/items/5/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-31be279b601f7b6e6483,items,牛黄解毒片,,,name,,,,牛黄解毒片,,,pending,,/items/6/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-56a188e13ca300ddb027,items,牛黄解毒片,,,description,,,,初级的解毒药品,,,pending,,/items/6/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-64799cc0ce85ac40e4c9,items,大还丹,,,name,,,,大还丹,,,pending,,/items/7/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d1703e8c00f31448eb3e,items,大还丹,,,description,,,,活血化瘀的丹药，闯江湖必备,,,pending,,/items/7/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-53e76ad5a0fa9667df74,items,大蟠桃,,,name,,,,大蟠桃,,,pending,,/items/8/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-db3ae8566786efedcfa7,items,大蟠桃,,,description,,,,又大又甜的蟠桃，猴子的最爱,,,pending,,/items/8/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-41c8441d86b84067092a,items,冬虫夏草,,,name,,,,冬虫夏草,,,pending,,/items/9/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-b48a12c13759e24d005d,items,冬虫夏草,,,description,,,,具有巨大补效的罕见灵药,,,pending,,/items/9/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-64799cc0ce85ac40e4c9,items,大还丹,,,name,,,,大还丹,强效恢复药剂,Strong Restorative,implemented,,/items/7/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d1703e8c00f31448eb3e,items,大还丹,,,description,,,,活血化瘀的丹药，闯江湖必备,恢复1000点生命，并额外恢复最大生命的10%。有冷却时间，使用前请留意。,"Restores 1,000 HP plus 10% of maximum HP. It has a cooldown; plan before using it.",implemented,,/items/7/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-53e76ad5a0fa9667df74,items,大蟠桃,,,name,,,,大蟠桃,熟透的蜜桃,Sun-ripened Peach,implemented,,/items/8/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-db3ae8566786efedcfa7,items,大蟠桃,,,description,,,,又大又甜的蟠桃，猴子的最爱,恢复300点生命和300点内力。总算有一样补给适合放进野餐篮了。,"Restores 300 HP and 300 energy. Finally, a remedy that belongs in a picnic basket.",implemented,,/items/8/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-41c8441d86b84067092a,items,冬虫夏草,,,name,,,,冬虫夏草,山野灵药,Mountain Remedy,implemented,,/items/9/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b48a12c13759e24d005d,items,冬虫夏草,,,description,,,,具有巨大补效的罕见灵药,恢复1600点生命。药材珍贵，药效充足，味道不值得期待。,"Restores 1,600 HP. Rare herbs, a strong dose, and no interesting flavour.",implemented,,/items/9/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-47644479033163abaa18,items,特制鸡腿,,,name,,,,特制鸡腿,,,pending,,/items/10/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2428ab9074e22ce4938a,items,特制鸡腿,,,description,,,,七侠镇特产，李大嘴特制，超级无敌肥腻鸡腿,,,pending,,/items/10/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c094f6c6aa1456666c7b,items,九转熊蛇丸,,,name,,,,九转熊蛇丸,,,pending,,/items/11/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24479,8 +23491,8 @@ copy-c7e4e0a870078ab0735e,items,金头箍,,,name,,,,金头箍,,,pending,,/items/
 copy-88763dee8e5b8a97880b,items,金头箍,,,description,,,,一看就是富二代带的头箍,,,pending,,/items/94/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d2d8a3c30c00fe3409ef,items,银手镯,,,name,,,,银手镯,,,pending,,/items/95/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ed764cdb4bb9e30efcb5,items,银手镯,,,description,,,,银色手镯，珠光宝气,,,pending,,/items/95/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-3ad44d0bce0581a9cbe4,items,草帽,,,name,,,,草帽,,,pending,,/items/96/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-49d5cb162ba6d987e13b,items,草帽,,,description,,,,你是屌丝么？是就带吧,,,pending,,/items/96/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-3ad44d0bce0581a9cbe4,items,草帽,,,name,,,,草帽,旅人草帽,Traveller's Straw Hat,implemented,,/items/96/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-49d5cb162ba6d987e13b,items,草帽,,,description,,,,你是屌丝么？是就带吧,负责遮阳，不负责让你英姿勃发。属性与天赋效果见下方说明。,Keeps the sun off your head. The heroism is up to you. Its attribute and talent effects are listed below.,implemented,,/items/96/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2c103e4b1cc0ace2f6f9,items,木人,,,name,,,,木人,,,pending,,/items/97/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-349d9df258375f705a9b,items,木人,,,description,,,,商家堡娘俩用于诅咒某人的木头玩偶,,,pending,,/items/97/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2800a76983b5f3c3ffca,items,木人,,,description,,,,变身为一个木头人,,,pending,,/items/97/affixes/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24784,8 +23796,8 @@ copy-597c911466d8ce545c3e,items,连城剑法精要,,,name,,,,连城剑法精要,
 copy-ff7791158c21ed523327,items,连城剑法精要,,,description,,,,铁骨墨萼梅念笙大侠所创剑法，又称唐诗剑法,,,pending,,/items/245/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-32064589972a22be8837,items,打狗棒法,,,name,,,,打狗棒法,,,pending,,/items/246/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a9f5b0dcbb4ea2b376b0,items,打狗棒法,,,description,,,,丐帮不外传的神奇武功,,,pending,,/items/246/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-bb4f0068d2a6bd5a516f,items,内功入门,,,name,,,,内功入门,,,pending,,/items/247/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-febadfdd43f6c2e77681,items,内功入门,,,description,,,,记载最基本的内功入门常识,,,pending,,/items/247/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-bb4f0068d2a6bd5a516f,items,内功入门,,,name,,,,内功入门,呼吸入门,Breathing Primer,implemented,,/items/247/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-febadfdd43f6c2e77681,items,内功入门,,,description,,,,记载最基本的内功入门常识,稳息法的入门读本。选入修炼栏后，通过战斗经验提升对应技能。呼吸本身也请继续保持。,A beginner's guide to Steady Breath. Select it for training to build the skill through battle experience. Breathing remains strongly recommended.,implemented,,/items/247/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a93e8f1b3607adee4dfe,items,血刀心法秘籍,,,name,,,,血刀心法秘籍,,,pending,,/items/248/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-897fbc35aae570fdd26b,items,血刀心法秘籍,,,description,,,,记载血刀门的入门心法,,,pending,,/items/248/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b6c84b7b902fdcbd04b2,items,全真心法秘籍,,,name,,,,全真心法秘籍,,,pending,,/items/249/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -25415,14 +24427,14 @@ copy-cfbc842c9c142019eb51,browser,browser,,,internalSkills,,,,内功,,,pending,,
 copy-a319b140e4f830bdb30e,browser,browser,,,externalSkills,,,,外功招式,,,pending,,/browser/terms/externalSkills,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fa0db5042dd01e96afe0,browser,browser,,,energy,,,,内力,,,pending,,/browser/terms/energy,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ad6ee388c26bffaa90f2,browser,browser,,,title,,,,听南贤说说这个江湖,听格林说明他的求助,Listen to Grimm's request,implemented,,/browser/objectives/0/title,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-ffe960fe7530070e810f,browser,browser,,,title,,,,选择一本秘籍修炼,,,pending,,/browser/objectives/1/title,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-7149327cb11e104071f3,browser,browser,,,title,,,,在武师处完成第一场练习,,,pending,,/browser/objectives/2/title,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-ffe960fe7530070e810f,browser,browser,,,title,,,,选择一本秘籍修炼,选择一本读本修炼,Select a manual for training,implemented,,/browser/objectives/1/title,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-7149327cb11e104071f3,browser,browser,,,title,,,,在武师处完成第一场练习,在教官处完成第一场练习,Complete your first spar with the instructor,implemented,,/browser/objectives/2/title,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-de2f30b9bf51fc209abb,browser,browser,,,title,,,,找南贤出村，接下买药教学,找格林出村，接下买药教学,Ask Grimm about leaving the village,implemented,,/browser/objectives/3/title,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a82220660eff78a93a07,browser,browser,,,title,,,,到洛阳商店完成一次交易,,,pending,,/browser/objectives/4/title,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-cedeb7b499094296b616,browser,browser,,,title,,,,穿上一件装备,,,pending,,/browser/objectives/5/title,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-cedeb7b499094296b616,browser,browser,,,title,,,,穿上一件装备,,Put on a piece of equipment,implemented,,/browser/objectives/5/title,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-db9d38e0877c9d078f5a,browser,browser,,,title,,,,去万劫谷邀请钟灵同行,,,pending,,/browser/objectives/6/title,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6b1009f142d7a85baf71,browser,browser,,,title,,,,回南贤居完成结伴练习,回格林居所完成结伴练习,Return to Grimm's home for team practice,implemented,,/browser/objectives/7/title,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-c2bd84d1b217a86b4487,browser,browser,,,title,,,,保存这段江湖旅程,,,pending,,/browser/objectives/8/title,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-c2bd84d1b217a86b4487,browser,browser,,,title,,,,保存这段江湖旅程,保存这段旅程,Save your journey,implemented,,/browser/objectives/8/title,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-49c10fb59b73fe780c86,browser,browser,,,name,,,,一阳指禅,,,pending,,/browser/achievements/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-392da3db5ab1cdc3eb71,browser,browser,,,description,,,,击败南帝段王爷。,,,pending,,/browser/achievements/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-44eaac3e97511136ac78,browser,browser,,,name,,,,七星海棠,,,pending,,/browser/achievements/1/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -25726,3 +24738,14 @@ copy-9230a539bd9334c6643f,browser,browser,,,name,,,,流星赶月,,,pending,,/bro
 copy-15e3df5fa79bbc4cc4dd,browser,browser,,,name,,,,盖七省,,,pending,,/browser/creation/portraits/21/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-59ba64229938e946f2e3,browser,browser,,,name,,,,公子1,,,pending,,/browser/creation/portraits/22/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f07307f51b8fd6208e71,browser,browser,,,name,,,,主角2,,,pending,,/browser/creation/portraits/23/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-13173f59a6883c585018,maps,大地图/南贤居,,,display_label,,,,南贤居,格林居所,Grimm's home,implemented,,/maps/0/locations/44/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d2406ef5776b645f9677,maps,南贤居死胡同/南贤,,,display_label,,,,南贤,格林,Grimm,implemented,,/maps/29/locations/0/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-0efb82dd83b778617cf2,maps,南贤居/南贤,,,display_label,,,,南贤,格林,Grimm,implemented,,/maps/82/locations/0/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-c0670dba07a2440ed589,maps,南贤居/木头人,,,display_label,,,,木头人,训练假人,Training Dummy,implemented,,/maps/82/locations/1/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b65f850c6df01548e89a,maps,南贤居/返回,,,display_label,,,,返回,世界地图,World map,implemented,,/maps/82/locations/2/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d54e90293e54307dc48e,maps,小村/南贤居,,,display_label,,,,南贤居,格林居所,Grimm's home,implemented,,/maps/145/locations/0/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-f962a480ffa4fc1ce21b,maps,小村/破庙,,,display_label,,,,破庙,旧祠,Old Shrine,implemented,,/maps/145/locations/1/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-c877481f0c43e868ec75,maps,小村/武师,,,display_label,,,,武师,教官,Instructor,implemented,,/maps/145/locations/2/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-4628c451d88ffef3f1fd,maps,小村/杂货店,,,display_label,,,,杂货店,村中杂货铺,Village Supplies,implemented,,/maps/145/locations/3/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-829f3b743ef80779412c,maps,南贤屋内/南贤,,,display_label,,,,南贤,格林,Grimm,implemented,,/maps/146/locations/0/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-46383fbdd10dc731408c,maps,南贤屋内/小村,,,display_label,,,,小村,旅人村,Wayside Village,implemented,,/maps/146/locations/1/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
