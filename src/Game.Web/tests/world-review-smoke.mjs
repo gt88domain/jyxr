@@ -80,10 +80,13 @@ try{
   pass('320px and 375px phones keep search and first record on the first screen without overflow');
   await page.locator('#tools').evaluate(el=>el.open=true);
   for(const name of ['copy','flow']){
-    const response=await page.request.get(new URL('data/'+name+'.csv',base).href);
-    assert.equal(response.status(),200);
-    const bytes=await response.body();assert.equal(bytes.subarray(0,3).toString('hex'),'efbbbf');
-    assert.match(bytes.toString('utf8'),/source_sha256/);
+    const download=await page.evaluate(async url=>{
+      const response=await fetch(url);
+      const bytes=new Uint8Array(await response.arrayBuffer());
+      return {status:response.status,bom:Array.from(bytes.subarray(0,3)),header:new TextDecoder().decode(bytes.subarray(0,1024))};
+    },new URL('data/'+name+'.csv',base).href);
+    assert.equal(download.status,200);assert.deepEqual(download.bom,[239,187,191]);
+    assert.match(download.header,/source_sha256/);
   }
   pass('both complete Excel-compatible CSV downloads are served');
   assert.equal(await page.evaluate(()=>localStorage.getItem('jyxr-web.review-sentinel')),'preserved');
