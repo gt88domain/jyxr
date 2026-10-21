@@ -4,9 +4,9 @@
   "packs": [
     {
       "id": "jyx",
-      "title": "Thirteen Realms",
+      "title": "Storybound",
       "subtitle": "Grimm's Request",
-      "description": "Grimm needs your help. Begin in his house, learn the village's skills, and find companions. This first adaptation keeps the original adventure; later content still uses original names.",
+      "description": "Grimm collects the fairy tales people grow up with. He has summoned you to help when their stories go wrong. Learn skills, find companions, and set out. Later content still uses original names.",
       "url": "packs/worlds/en/content-package.json",
       "localeUrls": {
         "en": "packs/worlds/en/content-package.json",
