@@ -12,15 +12,25 @@ export async function checkWorldAtlas(h) {
  const image=await page.locator('.atlas-art').evaluate(img=>({width:img.naturalWidth,height:img.naturalHeight,url:img.currentSrc}));
  assert.equal(image.width,1536);assert.equal(image.height,1024);assert.match(image.url,/storybook-atlas[.]png/);
  assert.equal(await page.locator('[data-atlas-place]').count(),71);
+ const guide=page.locator('[data-opening-guide]');
+ assert.ok(await guide.count());
+ assert.equal(await guide.evaluate(el=>!!(el.compareDocumentPosition(document.querySelector('[data-world-atlas]'))&Node.DOCUMENT_POSITION_FOLLOWING)),true,'Task guide must precede the atlas');
+ assert.equal(await page.locator('[data-atlas-place]:visible').first().getAttribute('data-id'),'洛阳');
+ assert.equal(await page.locator('[data-atlas-recommended]').getAttribute('data-id'),'洛阳');
  for(const place of before.map.locations) {
   const button=page.locator(`[data-atlas-place][data-id="${place.id}"]`);
   assert.equal(await button.isDisabled(),!place.action,place.id);
   assert.equal(await button.isVisible(),!!place.action,place.id);
-  if(place.action)assert.match(await button.innerText(),new RegExp(`${place.timeSlots||1} ${atlas.timeUnit}`));
+  if(place.action)assert.match(await button.innerText(),new RegExp(`${place.timeSlots??1} ${atlas.timeUnit}`));
  }
  pass('generated atlas loads and all 71 destinations preserve host availability and travel time',image);
  const snapshot=s=>JSON.stringify({map:s.map,adventure:s.adventure,silver:s.silver,objectives:s.objectives,party:s.party});
  const original=snapshot(before);
+ await page.locator('[data-atlas-browse]').click();
+ assert.equal(await page.locator('.atlas-map-panel').evaluate(el=>el.open),false);
+ assert.equal(await page.locator('[data-atlas-results]').evaluate(el=>el===document.activeElement),true);
+ await page.locator('.atlas-map-panel>summary').click();
+ assert.equal(await page.locator('.atlas-map-panel').evaluate(el=>el.open),true);
  for(const region of atlas.regions) {
   await page.locator(`.atlas-pin[data-atlas-region="${region.id}"]`).click();
   assert.equal(await page.locator(`.atlas-tab[data-atlas-region="${region.id}"]`).getAttribute('aria-pressed'),'true');
@@ -37,6 +47,9 @@ export async function checkWorldAtlas(h) {
  await page.locator('#destination-search').fill(target.name);
  assert.equal(await page.locator(`[data-atlas-place][data-id="${target.id}"]`).isVisible(),true);
  assert.equal(await page.locator('.atlas-tab[data-atlas-region=""]').getAttribute('aria-pressed'),'true');
+ const guideName=before.map.locations.find(p=>p.id==='南贤居').name.replace(/['‘’]/g,'');
+ await page.locator('#destination-search').fill(guideName);
+ assert.equal(await page.locator('[data-atlas-place][data-id="南贤居"]').isVisible(),true);
  await page.locator('#destination-search').fill('this-destination-does-not-exist');
  assert.equal(await page.locator('[data-atlas-place]:visible').count(),0);
  assert.equal(await page.locator('[data-atlas-empty]').isVisible(),true);

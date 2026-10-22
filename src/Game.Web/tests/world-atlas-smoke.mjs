@@ -20,11 +20,13 @@ try {
  const budget=(await state()).silver;
  await click('[data-action="choice"][data-index="0"]');await continueDialogue();
  assert.equal((await state()).silver,budget+300);
+ assert.equal(await page.evaluate(()=>scrollY),0,'Entering the world map must restore its task heading');
  await checkWorldAtlas(h);
  await click('[data-action="interact"][data-id="洛阳"]');
  assert.equal((await state()).map.id,'洛阳');
  await click('[data-action="interact"][data-id="返回"]');
  assert.equal((await state()).map.id,'大地图');
+ assert.equal(await page.evaluate(()=>scrollY),0,'Returning from a destination must restore the map heading');
  assert.equal(await page.locator('.atlas-tab[data-atlas-region=""]').getAttribute('aria-pressed'),'true');
  pass('map reached and left through original tutorial/destination actions; filters reset on return');
 } catch(error) {failure=error;}

@@ -141,6 +141,9 @@ function applyResult(result: Result,restored=false) {
   if(restored||!previous)activitySeen=Math.max(0,...(state.activity||[]).map(a=>a.id));
   else if(previous.journeyId!==state.journeyId)activitySeen=0;
   render();
+  if (state.pack.worldAtlas && screen==='world' && previous?.map?.id!==state.map?.id) {
+    window.scrollTo({top:0,left:0,behavior:'instant'});
+  }
   const lastId=previous?.journeyId===state.journeyId?Math.max(0,...(previous.activity||[]).map(a=>a.id)):0;
   const notices=(state.activity||[]).filter(a=>a.notice&&a.id>lastId);
   if(!restored&&previous&&notices.length)toast(notices.slice(-2).map(a=>plain(a.message)).join('；')+(notices.length>2?`，另有${notices.length-2}条，见通知。`:''),false);
@@ -315,6 +318,15 @@ function shopQuantity() {
   return value;
 }
 document.addEventListener('click', event => {
+  const browse = (event.target as HTMLElement).closest<HTMLElement>('[data-atlas-browse]');
+  if (browse) {
+    const root=browse.closest<HTMLElement>('[data-world-atlas]');
+    const panel=root?.querySelector<HTMLDetailsElement>('.atlas-map-panel');
+    if (panel) panel.open=false;
+    const results=root?.querySelector<HTMLElement>('[data-atlas-results]');
+    results?.focus({preventScroll:true});results?.scrollIntoView({block:'start'});
+    return;
+  }
   const region = (event.target as HTMLElement).closest<HTMLElement>('[data-atlas-region]');
   if (region) {
     const root = region.closest<HTMLElement>('[data-world-atlas]');

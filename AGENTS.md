@@ -8,6 +8,8 @@ worlds 是 jyx 的显示内容覆盖，运行态 packId 保留 jyx，以维持�
 
 原版 `html5-web / e5bcf716591569bfea4747a8b3b6f4c8a91f5e1c` 及现代金庸 `legacy-jyx / 624f4e87ae251f8e0162e90d1eda11a1ef386cd7` 保留备份。新批次使用独立功能分支和 PR 回到 `fantasy-worlds`；部署仅更新 `gh-pages` 的 `fantasy-worlds/`，根目录旧版、`modern-jyx/` 与 `western/` 必须逐文件保持一致。原始运行包、技能数值、条件与存档编号不因角色表而修改。
 
+发布通过正常 Git 推送触发 Pages，按命令使用 `gh auth git-credential` 凭据助手；API 上传或旧的成功构建不能当作新版已上线。发布及触发排查见 [部署说明](docs/FANTASY_DEPLOYMENT.md)。
+
 原宿主存在按 `Skill.Name`、`Character.Name` 和天赋参数中的技能名称匹配规则的路径。运行包保留全部规则定义的原值，包含名称与说明；换装名称存入 `browser.displayCatalog`，只在 TypeScript 返回视图中投影。不能把编辑用显示包直接交给 C#，也不能翻译 ID、请求参数、条件、存档或命令中的名称。
 
 新版整系显示对应固定为拳掌→拳套、奇门→法术、内功→被动专精；剑术保留，刀系对应重武器。拳套不能再误标为施法，法术不能再统称魔杖；四系数值与条件保留。主专精与教材研习分别设置，原内功解锁的主动绝招继续保留。目前只换皮：所有触发条件、剧情链、任务链、奖励、概率与数值保持原版；不增强法术、不重排培养阶段。英文统一采用美式表达。学派与培养仅改呈现的说明见 [设计说明](docs/FANTASY_SCHOOL_TRAINING.md)。
