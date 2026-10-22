@@ -11,12 +11,20 @@ test('random roll text is not mistaken for an equipment modifier',()=>{
  assert.equal(translateUiText('防御力 +8，抗暴击率 +1%'),'Defence +8; Critical resistance +1%');
 });
 test('skill modifiers use the content name and retain their numeric value',()=>{
- setUiDisplayLabels({'石梁心法':'Stonebridge Breathing'});
- assert.equal(translateUiText('技能「石梁心法」威力 +5%'),'Stonebridge Breathing power +5%');
+ setUiDisplayLabels({'石梁心法':'Stonebridge Mastery'});
+ assert.equal(translateUiText('技能「石梁心法」威力 +5%'),'Stonebridge Mastery power +5%');
  setUiDisplayLabels();
 });
 test('unknown display text converges instead of causing an observer rewrite loop',()=>{
  const first=translateUiText('未命名属性+7%');
  assert.equal(translateUiText(first),first);
  assert.equal(translateUiText('未改写的后期故事。'),'未改写的后期故事。');
+});
+test('gauntlets, spellcasting and passive masteries retain distinct roles',()=>{
+ assert.equal(translateUiText('拳掌'),'Gauntlets');
+ assert.equal(translateUiText('奇门'),'Spellcasting');
+ assert.equal(translateUiText('内功'),'Passive masteries');
+ assert.equal(translateUiText('拳掌系技能加成 +10%'),'Gauntlets technique bonus +10%');
+ assert.equal(translateUiText('奇门系技能加成 +10%'),'Spellcasting technique bonus +10%');
+ assert.equal(translateUiText('同时主运一门'),'One equipped mastery at a time');
 });

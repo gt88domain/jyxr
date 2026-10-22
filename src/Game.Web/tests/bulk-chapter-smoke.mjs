@@ -56,7 +56,7 @@ try{
  await click(`[data-action="confirm-equipment-preview"][data-entry-number="${hat.entryNumber}"]`);await closeModal();
  await click('[data-action="cultivation"]');
  const scroll=(await state()).inventory.find(item=>item.id==='内功入门');
- assert.equal(scroll.name,'Steady Breath Scroll');await click(`[data-action="cultivate"][data-entry-number="${scroll.entryNumber}"]`);await closeModal();
+ assert.equal(scroll.name,'Steadfast Mastery Scroll');await click(`[data-action="cultivate"][data-entry-number="${scroll.entryNumber}"]`);await closeModal();
  await click('[data-action="inventory"]');
  let elixir=(await state()).inventory.find(item=>item.id==='新手礼包-大蟠桃');
  assert.equal(elixir.name,"Wayfarer's Welcome Elixir");
@@ -106,7 +106,7 @@ try{
  await click('[data-action="inventory"]');await audit('renamed supplies and actual random drops');await closeModal();
  await click('[data-action="history"]');await audit('notifications and operation history');await closeModal();
  const native=await page.evaluate(async()=>{const r=await window.loadJyxrRuntime();const a=await r.getAssemblyExports('Game.Web.Runtime');return JSON.parse(await a.Game.Web.Runtime.BrowserBridge.Dispatch('{"type":"state"}')).state;});
- assert.ok(native.hero.externalSkills.some(s=>s.name==='野球拳'));assert.ok(s.hero.externalSkills.some(s=>s.name==="Wayfarer's Arcane Strike"));
+ assert.ok(native.hero.externalSkills.some(s=>s.name==='野球拳'));assert.ok(s.hero.externalSkills.some(s=>s.name==="Wayfarer's Gauntlet Strike"));
  pass('recruitment and save/load preserve canonical rule names while displaying the new identity');
  await page.setViewportSize({width:375,height:812});await noOverflow('English chapter on phone');await page.screenshot({path:output+'bulk-chapter-mobile.png',fullPage:true});
  report.untranslated=untranslated;assert.deepEqual(untranslated,[],'Visible chapter and core UI must be English');

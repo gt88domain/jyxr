@@ -110,8 +110,8 @@
       "zh-CN": "格林请我帮助那些停在半途的童话。首先，学点本领，别让自己的故事停在开头。"
     },
     "点击人物状态栏，点击修炼，可以装备内功入门。": {
-      "en": "Open Training and select Steady Breath Scroll.",
-      "zh-CN": "打开人物状态栏的“修炼”，选入《稳息呼吸卷轴》。"
+      "en": "Open Training and select Steadfast Mastery Scroll.",
+      "zh-CN": "打开人物状态栏的“修炼”，选入《坚毅专精卷轴》。"
     },
     "装备上的武学经书，在战斗结束后能将获得的经验快速分配到该项武学上，可以迅速提升武学等级。": {
       "en": "A selected training scroll receives battle experience. Reading alone will not frighten the dummy.",
@@ -181,8 +181,8 @@
           {
             "speaker": "南贤",
             "text": {
-              "en": "Take this Steady Breath Scroll. Start with steady breathing. Most heroes find it useful to keep doing that.",
-              "zh-CN": "这本《稳息呼吸卷轴》给你。先学着稳住气息——大多数英雄都觉得，持续呼吸是个好习惯。"
+              "en": "Take this Steadfast Mastery Scroll. Sound foundations first; the dramatic entrances can wait.",
+              "zh-CN": "拿好坚毅专精卷轴。先打稳基础，威风的登场可以晚点再练。"
             }
           }
         ]
@@ -405,8 +405,8 @@
           {
             "speaker": "武师",
             "text": {
-              "en": "breathing methods strengthen your fighting. You can learn several, but only one is equipped at a time.",
-              "zh-CN": "呼吸法影响你的战斗能力。可以学会多种，但同一时间只能装备一种。"
+              "en": "Passive masteries strengthen your fighting. You can learn several; some benefits require one to be equipped.",
+              "zh-CN": "被动专精能强化战斗能力，可以学习多种；部分效果需要装备为当前主专精才生效。"
             }
           },
           {
@@ -419,8 +419,8 @@
           {
             "speaker": "武师",
             "text": {
-              "en": "Fists, swords, blades and unusual weapons reward different training. Pick a direction before collecting one of everything.",
-              "zh-CN": "施法、剑法、刃术和魔杖各有专长。先想好怎么打，再考虑把每样兵器都背在身上。"
+              "en": "Gauntlets, swords, blades and spells reward different training. Choose a direction; your pack does not need to contain an entire armoury.",
+              "zh-CN": "拳套、剑术、刃术和法术各有专长。先选个方向，背包里不必塞进整座兵器库。"
             }
           }
         ]
@@ -485,8 +485,8 @@
           {
             "speaker": "武师",
             "text": {
-              "en": "Attacks can favour Radiant or Umbral affinity. Your active breathing method supplies those affinities, so check the pairing.",
-              "zh-CN": "攻击分为光辉与幽影亲和。当前运用的呼吸法提供对应加成，搭配之前先看看数值。"
+              "en": "Attacks can favour Radiant or Umbral affinity. Your equipped mastery supplies those affinities, so check the pairing.",
+              "zh-CN": "攻击分为光辉与幽影亲和。当前运用的被动专精提供对应加成，搭配之前先看看数值。"
             }
           },
           {
@@ -499,8 +499,8 @@
           {
             "speaker": "武师",
             "text": {
-              "en": "A fine technique with the wrong discipline is a fine technique having a disappointing afternoon.",
-              "zh-CN": "招式再漂亮，呼吸法没配好，也只能漂亮地吃亏。"
+              "en": "A fine technique with the wrong mastery is a fine technique having a disappointing afternoon.",
+              "zh-CN": "招式再漂亮，被动专精没配好，也只能漂亮地吃亏。"
             }
           }
         ]
@@ -653,7 +653,7 @@
       }
     ]
   },
-  "version": "first-loop-1",
+  "version": "disciplines-1",
   "chapters": [
     "chapter-start.json",
     "chapter-guide.json"
@@ -708,7 +708,7 @@
         "en": [
           "[Spar] Let me try the training dummy.",
           "[Leave] That is enough bruises for now.",
-          "How do attacks and disciplines work?",
+          "How do attacks and masterys work?",
           "What do talents actually do?",
           "Where can I learn advanced techniques?",
           "How do Radiant and Umbral affinities work?",
@@ -718,7 +718,7 @@
         "zh-CN": [
           "【练习】让我试试训练假人。",
           "【离开】今天先少挨几下。",
-          "招式和呼吸法该怎么搭配？",
+          "招式和被动专精该怎么搭配？",
           "天赋究竟有什么用？",
           "去哪里学更高深的本领？",
           "光辉和幽影亲和怎样影响攻击？",
@@ -830,12 +830,12 @@
     "items": {
       "内功入门": {
         "name": {
-          "en": "Steady Breath Scroll",
-          "zh-CN": "稳息呼吸卷轴"
+          "en": "Steadfast Mastery Scroll",
+          "zh-CN": "坚毅专精卷轴"
         },
         "description": {
-          "en": "A beginner's guide to Steady Breath. Select it for training to build the skill through battle experience. Breathing remains strongly recommended.",
-          "zh-CN": "稳息呼吸法的入门卷轴。选入修炼栏后，通过战斗经验提升对应技能。呼吸本身也请继续保持。"
+          "en": "Study this scroll to learn Steadfast Mastery through combat XP. Select your equipped mastery separately.",
+          "zh-CN": "研习此卷轴，通过战斗经验学习坚毅专精；当前装备的主专精另行选择。"
         }
       },
       "草帽": {
@@ -892,24 +892,24 @@
     "externalSkills": {
       "野球拳": {
         "name": {
-          "en": "Wayfarer's Arcane Strike",
-          "zh-CN": "旅人奥术击"
+          "en": "Wayfarer's Gauntlet Strike",
+          "zh-CN": "旅人拳击"
         },
         "description": {
-          "en": "A beginner's force spell with considerable room to grow. Graceful? Rarely. Persistent? Absolutely.",
-          "zh-CN": "成长余地很大的基础力场魔法。优雅谈不上，纠缠到底倒是在行。"
+          "en": "A beginner's gauntlet technique with considerable room to grow. Graceful? Rarely. Persistent? Absolutely.",
+          "zh-CN": "入门拳套战技，成长潜力十足。动作未必漂亮，练习却不能少。"
         }
       }
     },
     "internalSkills": {
       "基本内功": {
         "name": {
-          "en": "Steady Breath",
-          "zh-CN": "稳息呼吸法"
+          "en": "Steadfast Mastery",
+          "zh-CN": "坚毅专精"
         },
         "description": {
-      "en": "A steady breathing rhythm that balances effort and recovery. Learn to stay on your feet before attempting a dramatic entrance.",
-      "zh-CN": "协调发力与恢复的基础呼吸法。先学会站稳，再考虑怎样惊艳全场。"
+          "en": "A passive mastery that strengthens your foundations. Select it as your equipped mastery separately from scroll study.",
+          "zh-CN": "巩固基础的被动专精。卷轴研习与当前装备的主专精分别设置。"
         }
       }
     },

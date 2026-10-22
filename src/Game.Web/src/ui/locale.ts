@@ -4,7 +4,7 @@ const dictionary:Record<string,string>=english;
 const cjk=/[\u3400-\u9fff]/;
 let contentLabels:Record<string,string>={};
 let activeLanguage='en';
-const fantasyChinese:Record<string,string>={'外功招式':'魔法与战技','武功':'技艺','武学':'技艺','功法':'技艺','内功':'呼吸法','内力':'能量','秘籍':'卷轴','修炼':'研习','拳掌':'施法','奇门':'魔杖','刀法':'刃术','门派':'学派','江湖':'故事世界','师父':'导师'};
+const fantasyChinese:Record<string,string>={'已切换当前运行内功。':'已切换当前主专精。','停止主运内功':'卸下主专精','切换主运内功':'更换主专精','同时主运一门':'同时装备一个主专精','设为主运':'装备为主专精','停止主运':'卸下主专精','当前运行心法':'当前主专精','主运功法':'主专精','外功招式':'主动技能','武功':'技艺','武学':'技艺','功法':'技艺','内功':'被动专精','心法':'专精','主运':'装备主专精','内力':'能量','秘籍':'卷轴','修炼':'研习','拳掌':'拳套','奇门':'法术','刀法':'刃术','门派':'学派','江湖':'故事世界','师父':'导师'};
 let contentTerms:Array<[string,string]>=[];
 export function setUiDisplayLabels(labels:Record<string,string>={}){
   contentLabels=labels;
@@ -12,7 +12,7 @@ export function setUiDisplayLabels(labels:Record<string,string>={}){
 }
 const patterns:Array<[RegExp,(...parts:string[])=>string]>=[
   [/^天赋「([^」]+)」(?:\n([\s\S]*))?$/,(name,description)=>`Talent: ${translateUiText(name)}${description?`\n${translateUiText(description)}`:''}`],
-  [/^(拳掌|剑|刀|奇门)系技能加成\s*([+−-][\d.]+%?)$/,(kind,amount)=>`${({'拳掌':'Spellcraft','剑':'Swordsmanship','刀':'Bladework','奇门':'Wandcraft'} as Record<string,string>)[kind]} technique bonus ${amount}`],
+  [/^(拳掌|剑|刀|奇门)系技能加成\s*([+−-][\d.]+%?)$/,(kind,amount)=>`${({'拳掌':'Gauntlets','剑':'Swordsmanship','刀':'Bladework','奇门':'Spellcasting'} as Record<string,string>)[kind]} technique bonus ${amount}`],
   [/^奥义「([^」]+)」触发率\s*([+−-][\d.]+%?)$/,(name,amount)=>`Combo ${translateUiText(name)} trigger chance ${amount}`],
   [/^使用「([^」]+)」时奥义触发倍率增加([\d.]+)$/,(name,amount)=>`${translateUiText(name)} combo chance multiplier +${amount}`],
   [/^技能「(.*?)」威力\s*([+−-][\d.]+%?)$/,(name,amount)=>`${translateUiText(name)} power ${amount}`],
@@ -80,7 +80,7 @@ const patterns:Array<[RegExp,(...parts:string[])=>string]>=[
   [/^(.+?)([+−-][\d.]+%?)$/,(stat,amount)=>`${translateUiText(stat.trim())} ${amount}`],
   [/^第\s*(\d+)\s*次生成。重摇重新分配随机属性，保留问答、头像和由问答决定的奖励。$/,(n)=>`Roll ${n}. Reroll random attributes while keeping your answers, portrait and background rewards.`],
   [/^天赋[：:]\s*(.*)$/,(names)=>`Talents: ${translateUiText(names)}`],
-  [/^心法[：:]\s*(.*)$/,(names)=>`Inner disciplines: ${translateUiText(names)}`],
+  [/^心法[：:]\s*(.*)$/,(names)=>`Masteries: ${translateUiText(names)}`],
   [/^获得「(.*?)」×(\d+)；获得「(.*?)」×(\d+)，另有(\d+)条，见通知。$/,(a,n,b,m,k)=>`Received ${translateUiText(a)} ×${n}; ${translateUiText(b)} ×${m}. ${k} more in Notifications.`],
   [/^(.*?)的头像$/,(name)=>`${name}'s portrait`],
   [/^历练\s*·\s*第\s*(\d+)\s*级$/,(n)=>`Level ${n}`],

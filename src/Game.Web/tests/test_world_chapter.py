@@ -39,6 +39,20 @@ class ChapterTests(unittest.TestCase):
     if skill.get('hard',999)<=3:
      self.assertIn(skill['id'],self.skin['definitions'][category])
 
+ def test_confirmed_families_keep_gauntlets_spells_and_masteries_distinct(self):
+  display,_=apply_skin(self.raw,self.skin,'en')
+  names={s['id']:s['name'] for s in display['externalSkills']}
+  self.assertEqual(names['野球拳'],"Wayfarer's Gauntlet Strike")
+  self.assertEqual(names['罗汉拳'],'Hearthward Fist')
+  self.assertEqual(names['疯魔杖法'],'Wandering Arcana')
+  self.assertEqual(self.skin['uiLabels']['拳掌']['en'],'Gauntlets')
+  self.assertEqual(self.skin['uiLabels']['奇门']['en'],'Spellcasting')
+  self.assertEqual(display['browser']['terms']['internalSkills'],'Passive masteries')
+  self.assertEqual(next(s for s in display['internalSkills'] if s['id']=='基本内功')['name'],'Steadfast Mastery')
+  choice=self.skin['choiceText']['original_新手引导.买药']['options']['en']
+  self.assertTrue(choice[0].startswith('Gauntlets —'))
+  self.assertTrue(choice[3].startswith('Spells —'))
+
  def test_all_nine_school_entries_include_their_choice_closures(self):
   pending=[s['storyId'] for s in self.source['sects']];seen=set()
   def jumps(value):

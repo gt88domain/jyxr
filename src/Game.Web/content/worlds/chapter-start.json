@@ -394,8 +394,8 @@
           {
             "speaker": "南贤",
             "text": {
-              "en": "Consider it a contribution. This lesson also raises Steady Breath's level limit through mastery.",
-              "zh-CN": "算是赞助吧。这堂课也会通过专精，提高稳息呼吸法的等级上限。"
+              "en": "Consider it a contribution. This lesson also raises Steadfast Mastery's level limit through proficiency.",
+              "zh-CN": "算是赞助吧。这堂课也会通过专精，提高坚毅专精的等级上限。"
             }
           }
         ]
@@ -567,8 +567,8 @@
           {
             "speaker": "南贤",
             "text": {
-              "en": "Knowing when to leave is a skill too. This lesson raises Steady Breath's level limit through mastery.",
-              "zh-CN": "知道何时离开，也是一门本领。这堂课会通过专精，提高稳息呼吸法的等级上限。"
+              "en": "Knowing when to leave is a skill too. This lesson raises Steadfast Mastery's level limit through proficiency.",
+              "zh-CN": "知道何时离开，也是一门本领。这堂课会通过专精，提高坚毅专精的等级上限。"
             }
           }
         ]
@@ -706,8 +706,8 @@
           {
             "speaker": "南贤",
             "text": {
-              "en": "Then take a mastery increase for Steady Breath. Strong foundations are less glamorous than swords, but harder to lose.",
-              "zh-CN": "那就给稳息呼吸法增加一项专精。基础没有宝剑风光，倒也没那么容易弄丢。"
+              "en": "Then take a proficiency increase for Steadfast Mastery. Strong foundations are less glamorous than swords, but harder to lose.",
+              "zh-CN": "那就给坚毅专精增加一项专精。基础没有宝剑风光，倒也没那么容易弄丢。"
             }
           }
         ]
@@ -719,7 +719,7 @@
           {
             "speaker": "南贤",
             "text": {
-              "en": "Mastery raises the skill's level limit across your saves and later rounds. This particular reward can be claimed only once per profile.",
+              "en": "Proficiency raises the skill's level limit across your saves and later rounds. This particular reward can be claimed only once per profile.",
               "zh-CN": "专精会提高技能等级上限，对同一档案下的存档和后续周目有效。这份奖励，每个档案只能领取一次。"
             }
           },
@@ -1700,16 +1700,16 @@
       },
       "options": {
         "en": [
-          "Magic — Hearthward Sigil",
+          "Gauntlets — Hearthward Fist",
           "Sword — Serpent Swordplay",
           "Blade — Thornblade Arts",
-          "Wand — Wandering Wandcraft"
+          "Spells — Wandering Arcana"
         ],
         "zh-CN": [
-          "魔法：护炉符术",
-          "剑法：青蛇剑术",
+          "拳套：护炉拳法",
+          "剑术：青蛇剑术",
           "刃术：荆刃战技",
-          "魔杖：游杖魔法"
+          "法术：游旅秘术"
         ]
       }
     },
@@ -1955,7 +1955,7 @@
         },
         "description": {
           "en": "Heimdall's watch, with training in unusual and poisonous techniques.",
-          "zh-CN": "海姆达尔的守望之地，也研习魔杖与毒术。"
+          "zh-CN": "海姆达尔的守望之地，也研习拳套与毒术。"
         }
       },
       "无门派": {
@@ -1972,12 +1972,12 @@
     "externalSkills": {
       "罗汉拳": {
         "name": {
-          "en": "Hearthward Sigil",
-          "zh-CN": "护炉符术"
+          "en": "Hearthward Fist",
+          "zh-CN": "护炉拳法"
         },
         "description": {
-          "en": "A foundational attack sigil. Its power, cost and reach are shown in the technique panel.",
-          "zh-CN": "基础攻击符术。威力、消耗和距离可在技能面板查看。"
+          "en": "A foundational gauntlet technique. Power, cost and reach are shown in the skill panel.",
+          "zh-CN": "基础拳套战技。威力、消耗和距离见技能面板。"
         }
       },
       "青蟒剑法": {
@@ -2002,12 +2002,12 @@
       },
       "疯魔杖法": {
         "name": {
-          "en": "Wandering Wandcraft",
-          "zh-CN": "游杖魔法"
+          "en": "Wandering Arcana",
+          "zh-CN": "游旅秘术"
         },
         "description": {
-          "en": "An energetic staff style for fighters who dislike standing still.",
-          "zh-CN": "适合不愿站着挨打的人，一套活跃的杖法。"
+          "en": "An arcane spell. Its existing power, targeting, cost and effects are listed in the skill panel.",
+          "zh-CN": "法术技能。实际威力、目标范围、消耗与效果见技能面板。"
         }
       },
       "猴抓": {
@@ -2034,8 +2034,8 @@
       },
       "飘雪穿云掌": {
         "name": {
-          "en": "Cloudburst Spell",
-          "zh-CN": "云涌魔法"
+          "en": "Cloudburst Palm",
+          "zh-CN": "云涌掌法"
         }
       },
       "蛇鹤八打": {
@@ -2046,16 +2046,16 @@
       },
       "燃木刀法": {
         "name": {
-          "en": "Emberblade Swordplay",
-          "zh-CN": "烬刃剑术"
+          "en": "Emberblade Arts",
+          "zh-CN": "烬刃战技"
         }
       }
     },
     "internalSkills": {
       "石梁心法": {
         "name": {
-          "en": "Stonebridge Breathing",
-          "zh-CN": "石桥呼吸法"
+          "en": "Stonebridge Mastery",
+          "zh-CN": "石桥专精"
         }
       }
     },
@@ -2098,8 +2098,8 @@
           "zh-CN": "小人物的运气"
         },
         "description": {
-          "en": "Adds 0.1 to the legacy legendary-combo chance multiplier for Wayfarer's Arcane Strike.",
-          "zh-CN": "为旅人奥术击的奥义触发倍率额外增加0.1。"
+          "en": "Adds 0.1 to the legacy legendary-combo chance multiplier for Wayfarer's Gauntlet Strike.",
+          "zh-CN": "为旅人拳击的奥义触发倍率额外增加0.1。"
         }
       },
       "草头百姓": {
@@ -2108,8 +2108,8 @@
           "zh-CN": "平民之志"
         },
         "description": {
-          "en": "Enables Wayfarer's Arcane Strike combinations and raises Otherworlder's low-health activation threshold.",
-          "zh-CN": "帮助触发旅人奥术击奥义，并提高异乡来客的触发血线。"
+          "en": "Enables Wayfarer's Gauntlet Strike combinations and raises Otherworlder's low-health activation threshold.",
+          "zh-CN": "帮助触发旅人拳击奥义，并提高异乡来客的触发血线。"
         }
       },
       "猎人": {
@@ -2692,22 +2692,22 @@
       },
       "罗汉拳谱": {
         "name": {
-          "en": "Hearthward Sigil Scroll",
-          "zh-CN": "护炉符术卷轴"
+          "en": "Hearthward Fist Scroll",
+          "zh-CN": "护炉拳法卷轴"
         },
         "description": {
-          "en": "Training scroll for Hearthward Sigil.",
-          "zh-CN": "护炉符术的修炼卷轴。"
+          "en": "Training scroll for Hearthward Fist.",
+          "zh-CN": "护炉拳法的修炼卷轴。"
         }
       },
       "飘雪穿云掌法": {
         "name": {
-          "en": "Cloudburst Spell Scroll",
-          "zh-CN": "云涌魔法卷轴"
+          "en": "Cloudburst Palm Scroll",
+          "zh-CN": "云涌掌法卷轴"
         },
         "description": {
-          "en": "Training scroll for Cloudburst Spell.",
-          "zh-CN": "云涌魔法的修炼卷轴。"
+          "en": "Training scroll for Cloudburst Palm.",
+          "zh-CN": "云涌掌法的修炼卷轴。"
         }
       },
       "华山剑法秘籍": {
@@ -2753,11 +2753,11 @@
       "疯魔杖法秘诀": {
         "name": {
           "en": "Wandering Wand Scroll",
-          "zh-CN": "游杖魔法卷轴"
+          "zh-CN": "游旅秘术卷轴"
         },
         "description": {
-          "en": "Training scroll for Wandering Wandcraft.",
-          "zh-CN": "游杖魔法的修炼卷轴。"
+          "en": "Training scroll for Wandering Arcana.",
+          "zh-CN": "游旅秘术的修炼卷轴。"
         }
       },
       "蛇鹤八打": {
@@ -2772,22 +2772,22 @@
       },
       "石梁心法秘籍": {
         "name": {
-          "en": "Stonebridge Breathing Scroll",
-          "zh-CN": "石桥呼吸卷轴"
+          "en": "Stonebridge Mastery Scroll",
+          "zh-CN": "石桥专精卷轴"
         },
         "description": {
-          "en": "Training scroll for Stonebridge Breathing.",
-          "zh-CN": "石桥呼吸法的修炼卷轴。"
+          "en": "Training scroll for Stonebridge Mastery.",
+          "zh-CN": "石桥专精的修炼卷轴。"
         }
       },
       "燃木刀法": {
         "name": {
-          "en": "Emberblade Swordplay",
-          "zh-CN": "烬刃剑术"
+          "en": "Emberblade Arts",
+          "zh-CN": "烬刃战技"
         },
         "description": {
-          "en": "Training scroll for Emberblade Swordplay.",
-          "zh-CN": "烬刃剑术的修炼卷轴。"
+          "en": "Training scroll for Emberblade Arts.",
+          "zh-CN": "烬刃战技的修炼卷轴。"
         }
       },
       "松果": {
@@ -3079,7 +3079,7 @@
         "zh-CN": "九风圣所"
       },
       "description": {
-        "en": "A sanctuary where discipline matters as much as strength.",
+        "en": "A sanctuary where mastery matters as much as strength.",
         "zh-CN": "力量与自律同样重要的一处圣所。"
       }
     },
@@ -3842,7 +3842,7 @@
           "zh-CN": "九风圣所"
         },
         "description": {
-          "en": "A sanctuary where discipline matters as much as strength.",
+          "en": "A sanctuary where mastery matters as much as strength.",
           "zh-CN": "力量与自律同样重要的一处圣所。"
         }
       },
@@ -4489,7 +4489,7 @@
     },
     "九阴神功": {
       "en": "Ninefold Moon Discipline",
-      "zh-CN": "月相呼吸法"
+      "zh-CN": "月相被动专精"
     },
     "重阳剑法": {
       "en": "Wildwood Sword",
@@ -4517,11 +4517,11 @@
     },
     "易筋经": {
       "en": "Body Tempering",
-      "zh-CN": "强身呼吸法"
+      "zh-CN": "强身被动专精"
     },
     "洗髓经": {
       "en": "Inner Renewal",
-      "zh-CN": "复苏呼吸法"
+      "zh-CN": "复苏被动专精"
     },
     "纯阳无极功": {
       "en": "Sunwell Discipline",
@@ -4888,16 +4888,16 @@
       "zh-CN": "训练假人"
     },
     "基本内功": {
-      "en": "Steady Breath",
-      "zh-CN": "稳息呼吸法"
+      "en": "Steadfast Mastery",
+      "zh-CN": "坚毅专精"
     },
     "野球拳": {
-      "en": "Wayfarer's Arcane Strike",
-      "zh-CN": "旅人奥术击"
+      "en": "Wayfarer's Gauntlet Strike",
+      "zh-CN": "旅人拳击"
     },
     "内功入门": {
-      "en": "Steady Breath Scroll",
-      "zh-CN": "稳息呼吸卷轴"
+      "en": "Steadfast Mastery Scroll",
+      "zh-CN": "坚毅专精卷轴"
     },
     "古墓弟子": {
       "en": "Mist Student",
@@ -5016,16 +5016,16 @@
       },
       "options": {
         "en": [
-          "My fists",
+          "Gauntlets",
           "A sword",
           "A blade",
-          "Thrown or unusual weapons"
+          "Spells"
         ],
         "zh-CN": [
-          "拳头",
+          "拳套",
           "长剑",
           "单刀",
-          "投掷与魔杖兵器"
+          "法术"
         ]
       }
     },
@@ -5118,8 +5118,8 @@
       "zh-CN": "修炼"
     },
     "internalSkills": {
-      "en": "breathing methods",
-      "zh-CN": "呼吸法"
+      "en": "Passive masteries",
+      "zh-CN": "被动专精"
     },
     "externalSkills": {
       "en": "Attack techniques",
