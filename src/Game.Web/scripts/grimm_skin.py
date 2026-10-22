@@ -115,6 +115,15 @@ def apply_skin(raw,skin,locale):
                 if hop['locationId'] not in maps.get(hop['mapId'],set()):raise ValueError('Chapter guide location missing')
         if chapter_guide['recommendedSectId'] not in {s['id'] for s in package['sects']}:raise ValueError('Chapter guide school missing')
         browser['chapterGuide']=chapter_guide
+    if 'worldAtlas' in skin:
+        atlas=localize(skin['worldAtlas'])
+        native=next((m for m in package['maps'] if m['id']==atlas.get('mapId') and m.get('kind')=='large'),None)
+        regions=atlas.get('regions',[])
+        locations=[id for region in regions for id in region.get('locations',[])]
+        if native is None or len(locations)!=len(set(locations)) or set(locations)!={l['id'] for l in native['locations']}:raise ValueError('Atlas must cover native destinations exactly once')
+        if not regions or len({r['id'] for r in regions})!=len(regions) or any(not re.fullmatch(r'[a-z][a-z0-9-]*',r['id']) or not r.get('name') or any(type(r.get(axis)) not in [int,float] or not 5<=r[axis]<=95 for axis in ['x','y']) for r in regions):raise ValueError('Invalid atlas region')
+        if not re.fullmatch(r'art/worlds/[a-z0-9-]+[.](png|webp)',atlas.get('image','')):raise ValueError('Invalid atlas artwork path')
+        browser['worldAtlas']=atlas
     for key,text in skin.get('browserText',{}).items():
         if key not in ['defaultName','currencyName','currencyUnit']:raise ValueError('Invalid browser text field')
         browser[key]=text[locale]
@@ -207,7 +216,7 @@ def assert_same_flow(original,adapted):
     # except the explicit presentation allowlist.
     def browser_rules(browser):
         browser=copy.deepcopy(browser)
-        for key in ['title','subtitle','description','chapterTitle','contentVersion','media','defaultName','currencyName','currencyUnit','terms','chapterGuide']:browser.pop(key,None)
+        for key in ['title','subtitle','description','chapterTitle','contentVersion','media','defaultName','currencyName','currencyUnit','terms','chapterGuide','worldAtlas']:browser.pop(key,None)
         for objective in browser['objectives']:objective.pop('title',None)
         for task in browser.get('legacyTasks',[]):task.pop('description',None)
         for question in browser.get('creation',{}).get('questions',[]):

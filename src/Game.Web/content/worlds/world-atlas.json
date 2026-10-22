@@ -1,0 +1,27 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "worldAtlas": {
+    "mapId": "大地图",
+    "image": "art/worlds/storybook-atlas.png",
+    "title": {"en": "The Storybook Isles", "zh-CN": "故事群岛"},
+    "description": {"en": "Choose an island to browse its destinations. Travel begins only when you choose a destination below.", "zh-CN": "点选岛屿筛选地点；点击下方具体地点才会出发。"},
+    "all": {"en": "All destinations", "zh-CN": "全部地点"},
+    "search": {"en": "Find a destination", "zh-CN": "寻找地点"},
+    "placeholder": {"en": "Search towns, schools, or locations", "zh-CN": "搜索城镇、学派或地点"},
+    "showUnavailable": {"en": "Show places with no current event", "zh-CN": "显示暂时没有事件的地点"},
+    "available": {"en": "Available now", "zh-CN": "当前可前往"},
+    "empty": {"en": "No matching destinations. Try another island, clear the search, or show places with no current event.", "zh-CN": "没有匹配地点。可换个岛屿、清空搜索，或显示暂时没有事件的地点。"},
+    "unavailable": {"en": "No event available right now", "zh-CN": "当前没有可触发的事件"},
+    "travel": {"en": "Travel and interaction", "zh-CN": "路程与交互"},
+    "timeUnit": {"en": "time slots", "zh-CN": "时辰"},
+    "visit": {"en": "Visit this destination", "zh-CN": "前往此地"},
+    "regions": [
+      {"id":"meadow","name":{"en":"Wayside Isle","zh-CN":"旅人岛"},"x":23,"y":75,"locations":["南贤居","洛阳","万劫谷","同福客栈","龙门镖局","江陵","襄阳"]},
+      {"id":"forest","name":{"en":"The Greenwood","zh-CN":"绿林岛"},"x":20,"y":34,"locations":["大理","大理树林","秦红棉居","小镜湖","无量山洞","天龙寺","青城派","程英居","绝情谷","擂鼓山"]},
+      {"id":"frost","name":{"en":"Frostbound Reach","zh-CN":"霜境群峰"},"x":46,"y":21,"locations":["昆仑山","灵鹫宫","大轮寺","血刀门","恒山","雁门关","帐篷","北京","张家口","苗人凤居","胡斐居","商家堡","鹿鼎山"]},
+      {"id":"highland","name":{"en":"Crown Highlands","zh-CN":"王冠高地"},"x":79,"y":29,"locations":["黑木崖","峨眉山","武道大会","华山","嵩山","武当派","全真教","古墓派","剑魔荒冢","聚贤庄","丐帮总舵","长安"]},
+      {"id":"sand","name":{"en":"The Amber Sands","zh-CN":"琥珀沙洲"},"x":79,"y":74,"locations":["沙漠","唐军营","光明顶","哈萨克部落","高昌迷宫","回族部落","星宿海","西夏","白驼山庄","香格里拉"]},
+      {"id":"coast","name":{"en":"Lakeheart & the Coast","zh-CN":"湖心与海岸"},"x":49,"y":49,"locations":["松鼠旅馆","风陵渡口","田伯光居","衡阳","杭州","东海剑池","阎基居","佛山镇","鄱阳湖","福建少林寺","一灯居","桃花岛","黑龙潭","长江岸边","太湖","勃泥岛","神龙岛","台湾","霹雳堂"]}
+    ]
+  }
+}

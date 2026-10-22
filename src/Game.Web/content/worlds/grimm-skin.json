@@ -657,7 +657,8 @@
   "chapters": [
     "chapter-start.json",
     "chapter-guide.json",
-    "chapter-us-catalog.json"
+    "chapter-us-catalog.json",
+    "world-atlas.json"
   ],
   "speakerNames": {
     "武师": {

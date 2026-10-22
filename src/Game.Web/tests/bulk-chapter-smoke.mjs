@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import {createHarness} from './ui-harness.mjs';
+import {checkWorldAtlas} from './world-atlas-checks.mjs';
 const h=await createHarness(process.env.GAME_WEB_REPORT||'bulk-chapter');
 const {page,report,output,pass,ready,click,state,continueDialogue,closeModal,noOverflow,finish}=h;
 const untranslated=[];
@@ -70,6 +71,7 @@ try{
  await click('[data-action="choice"][data-index="0"]');await talk();await audit('tutorial offer');
  const beforeBudget=(await state()).silver;
  await click('[data-action="choice"][data-index="0"]');await talk();assert.equal((await state()).map.id,'大地图');assert.equal((await state()).silver,beforeBudget+300);await audit('world map');
+ await checkWorldAtlas(h);
  await interact('洛阳');await audit('Crossroads');await interact('商店');await talk();await audit('manual choice');await click('[data-action="choice"][data-index="0"]');await talk();
  assert.ok((await state()).inventory.find(i=>i.id==='小还丹').count>=5);await interact('商店');await audit('supply shop');
  let s=await state();const product=s.shop.products.find(p=>p.itemId==='小还丹');const silver=s.silver;
