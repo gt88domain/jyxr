@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "worlds",
   "runtimePackId": "jyx",
-  "version": "storybook-atlas-1",
+  "version": "storybook-atlas-2",
   "title": "Storybound · Grimm's Request",
   "locale": "en",
   "inventory": "../jyx/assets.json",
