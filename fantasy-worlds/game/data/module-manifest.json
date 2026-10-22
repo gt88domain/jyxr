@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "worlds",
   "runtimePackId": "jyx",
-  "version": "american-reskin-1",
+  "version": "storybook-atlas-1",
   "title": "Storybound · Grimm's Request",
   "locale": "en",
   "inventory": "../jyx/assets.json",
@@ -28,6 +28,12 @@
     ]
   },
   "localAssets": [
+    {
+      "path": "art/worlds/storybook-atlas.png",
+      "bytes": 3299913,
+      "sha256": "c7cb728cc9e39b486f0263fce72ddf8185e9dcf421de17b48a4d4f2c01ab14a7",
+      "localSource": "content/worlds/art/storybook-atlas.png"
+    },
     {
       "path": "art/worlds/grimm-portrait.png",
       "bytes": 2578580,
