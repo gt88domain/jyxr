@@ -59,11 +59,11 @@ try{
  assert.equal(scroll.name,'Steadfast Mastery Scroll');await click(`[data-action="cultivate"][data-entry-number="${scroll.entryNumber}"]`);await closeModal();
  await click('[data-action="inventory"]');
  let elixir=(await state()).inventory.find(item=>item.id==='新手礼包-大蟠桃');
- assert.equal(elixir.name,"Wayfarer's Welcome Elixir");
+ assert.equal(elixir.name,"Traveler's Welcome Elixir");
  const beforeElixir=await state();await click(`[data-action="use-item"][data-entry-number="${elixir.entryNumber}"]`);
  assert.equal((await state()).hero.maxHp,beforeElixir.hero.maxHp+100);assert.equal((await state()).hero.maxMp,beforeElixir.hero.maxMp+100);await closeModal();
  await interact('武师');await talk();await click('[data-action="choice"][data-index="0"]');await talk();
- await audit('opening practice with renamed spell');await battle('first practice settles without inventing a victory');
+ await audit('opening practice with renamed skill');await battle('first practice preserves the original victory requirement',true);
  await click('[data-action="choice"][data-index="1"]');await talk();
  assert.equal((await state()).objectives.find(o=>o.id==='training').completed,true);
  await interact('南贤居');await interact('南贤');await talk();assert.equal((await state()).phase,'choice');await audit('Grimm choices');
@@ -95,7 +95,7 @@ try{
  s=await state();assert.equal(s.battle.units.filter(u=>u.team===1).length,2);assert.ok(s.battle.units.some(u=>u.definitionId==='钟灵'||u.name==='Eir'));
  await battle('two real companions win and settle team practice',true);await audit('team practice settled');
  await interact('章节回顾');
- assert.match((await state()).dialogue.text,/two travellers become a team/);await audit('field notes dialogue');await talk();
+ assert.match((await state()).dialogue.text,/two travelers become a team/);await audit('field notes dialogue');await talk();
  await click('[data-action="save"]');await page.reload();await page.locator('[data-action="load"]').waitFor({state:'visible',timeout:120000});await click('[data-action="load"]');
  s=await state();assert.ok(s.party.some(c=>c.id==='钟灵'&&c.name==='Eir'));assert.equal(s.hero.name,'Wren');
  assert.equal(s.hero.cultivation.itemId,'内功入门');assert.ok(s.hero.equipment.some(slot=>slot.item?.id==='草帽'));
@@ -106,7 +106,7 @@ try{
  await click('[data-action="inventory"]');await audit('renamed supplies and actual random drops');await closeModal();
  await click('[data-action="history"]');await audit('notifications and operation history');await closeModal();
  const native=await page.evaluate(async()=>{const r=await window.loadJyxrRuntime();const a=await r.getAssemblyExports('Game.Web.Runtime');return JSON.parse(await a.Game.Web.Runtime.BrowserBridge.Dispatch('{"type":"state"}')).state;});
- assert.ok(native.hero.externalSkills.some(s=>s.name==='野球拳'));assert.ok(s.hero.externalSkills.some(s=>s.name==="Wayfarer's Gauntlet Strike"));
+ assert.ok(native.hero.externalSkills.some(s=>s.name==='野球拳'));assert.ok(s.hero.externalSkills.some(s=>s.name==="Traveler's Gauntlet Strike"));
  pass('recruitment and save/load preserve canonical rule names while displaying the new identity');
  await page.setViewportSize({width:375,height:812});await noOverflow('English chapter on phone');await page.screenshot({path:output+'bulk-chapter-mobile.png',fullPage:true});
  report.untranslated=untranslated;assert.deepEqual(untranslated,[],'Visible chapter and core UI must be English');

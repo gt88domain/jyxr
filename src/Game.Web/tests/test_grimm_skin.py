@@ -83,6 +83,9 @@ class GrimmSkinTests(unittest.TestCase):
    self.assertEqual(bonus['bonus'],0.1)
    self.assertNotEqual(catalog['byId']['野球拳']['name'],skill['name'])
    self.assertEqual(next(c for c in runtime['characters'] if c['id']=='南贤')['name'],'南贤')
+   scoped=catalog['byCategory']
+   self.assertEqual(scoped['internalSkills']['易筋经']['name'],'Ironbody Mastery' if locale=='en' else '铁躯专精')
+   self.assertEqual(scoped['items']['易筋经']['name'],'Ironbody Mastery Scroll' if locale=='en' else '铁躯专精卷轴')
 
  def test_creation_changes_only_question_and_answer_copy(self):
   display,_=apply_skin(self.raw,self.skin,'en')
@@ -93,17 +96,27 @@ class GrimmSkinTests(unittest.TestCase):
    for a,b in zip(old['options'],new['options']):
     self.assertEqual({k:v for k,v in a.items() if k!='text'},{k:v for k,v in b.items() if k!='text'})
 
- def test_practice_participation_is_not_a_fabricated_battle_victory(self):
+ def test_practice_goal_and_all_objective_conditions_match_the_original(self):
   game,_=apply_skin(self.raw,self.skin,'en')
   goal=next(o for o in game['browser']['objectives'] if o['id']=='training')
-  self.assertEqual((goal['kind'],goal['target']),('story','新手村_武师木头人'))
+  self.assertEqual((goal['kind'],goal['target']),('battle','南贤居_木头人_战斗'))
+  self.assertEqual([{k:v for k,v in o.items() if k!='title'} for o in game['browser']['objectives']],
+                   [{k:v for k,v in o.items() if k!='title'} for o in self.source['browser']['objectives']])
   self.assertEqual(next(o for o in game['browser']['objectives'] if o['id']=='team')['kind'],'battle')
   self.assertEqual([{k:v for k,v in b.items() if k!='name'} for b in game['battles']],[{k:v for k,v in b.items() if k!='name'} for b in self.source['battles']])
-  self.skin['practiceLesson']['storyId']='新手村_南贤开场'
-  with self.assertRaisesRegex(ValueError,'practice lesson'):apply_skin(self.raw,self.skin,'en')
+  goal.update(kind='story',target='新手村_武师木头人')
+  with self.assertRaisesRegex(ValueError,'browser gameplay rules'):assert_same_flow(self.source,game)
 
  def test_directions_cannot_reference_a_missing_map_location(self):
   self.skin['chapterGuide']['steps'][0]['route'][0]['locationId']='missing'
   with self.assertRaisesRegex(ValueError,'guide location'):apply_skin(self.raw,self.skin,'en')
+
+ def test_map_event_and_host_task_conditions_cannot_be_rewritten(self):
+  game,_=apply_skin(self.raw,self.skin,'en')
+  game['maps'][0]['locations'][0]['events'][0]['when']='false'
+  with self.assertRaisesRegex(ValueError,'flow'):assert_same_flow(self.source,game)
+  game,_=apply_skin(self.raw,self.skin,'en')
+  game['browser']['legacyTasks'][0]['when']='false'
+  with self.assertRaisesRegex(ValueError,'browser gameplay rules'):assert_same_flow(self.source,game)
 
 if __name__=='__main__':unittest.main()

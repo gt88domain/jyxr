@@ -134,7 +134,7 @@ function applyResult(result: Result,restored=false) {
   if (!result.ok) throw new Error(result.error || '此次行动未能完成。');
   const previous=state;
   state = result.state;
-  setUiDisplayLabels(state.pack.displayCatalog?.text);
+  setUiDisplayLabels(state.pack.displayCatalog?.text,state.pack.displayCatalog);
   if(previous&&previous.journeyId!==state.journeyId)uiMessages.length=0;
   if(restored||!previous)activitySeen=Math.max(0,...(state.activity||[]).map(a=>a.id));
   else if(previous.journeyId!==state.journeyId)activitySeen=0;

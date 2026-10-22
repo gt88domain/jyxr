@@ -1,0 +1,4881 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "definitions": {
+    "externalSkills": {
+      "八卦游身掌": {
+        "name": {
+          "en": "Circle Step",
+          "zh-CN": "环步拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "八卦刀法": {
+        "name": {
+          "en": "Crosscut",
+          "zh-CN": "交叉重斩"
+        },
+        "description": {
+          "en": "An active heavy weapon skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动重武器技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "大剪刀": {
+        "name": {
+          "en": "Arcane Shears",
+          "zh-CN": "奥术剪影"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "无上大力杵": {
+        "name": {
+          "en": "Force Hammer",
+          "zh-CN": "力场之锤"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "漫天花雨": {
+        "name": {
+          "en": "Arcane Rain",
+          "zh-CN": "奥术之雨"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "盾术": {
+        "name": {
+          "en": "Shield Pulse",
+          "zh-CN": "盾形脉冲"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "冰魄银针": {
+        "name": {
+          "en": "Frost Needle",
+          "zh-CN": "寒霜针"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "抽髓掌": {
+        "name": {
+          "en": "Bonebreaker",
+          "zh-CN": "碎骨拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "海叟钓法": {
+        "name": {
+          "en": "Spellhook",
+          "zh-CN": "秘术钩索"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "灵蛇拳": {
+        "name": {
+          "en": "Snakebite Strike",
+          "zh-CN": "蛇牙拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "神驼雪山掌": {
+        "name": {
+          "en": "Mountain Fist",
+          "zh-CN": "山岳拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "灵蛇杖法": {
+        "name": {
+          "en": "Coiling Fist",
+          "zh-CN": "盘蛇拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "摧心掌": {
+        "name": {
+          "en": "Heartbreaker Strike",
+          "zh-CN": "破心掌"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "四象掌": {
+        "name": {
+          "en": "Four Winds Fist",
+          "zh-CN": "四风拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "昊天掌": {
+        "name": {
+          "en": "Skybreaker Palm",
+          "zh-CN": "破空掌"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "寒冰绵掌": {
+        "name": {
+          "en": "Winter Palm",
+          "zh-CN": "凛冬掌"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "落英神剑掌": {
+        "name": {
+          "en": "Falling Petal Strike",
+          "zh-CN": "落花掌"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "五毒神掌": {
+        "name": {
+          "en": "Venom Fist",
+          "zh-CN": "毒牙拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "密宗大手印": {
+        "name": {
+          "en": "Iron Seal Strike",
+          "zh-CN": "铁印掌"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "绕指柔剑": {
+        "name": {
+          "en": "Whiplash Sword",
+          "zh-CN": "柔刃剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "峨眉剑法": {
+        "name": {
+          "en": "Silverpeak Sword",
+          "zh-CN": "银峰剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "无量剑法": {
+        "name": {
+          "en": "Endless Edge",
+          "zh-CN": "无尽锋刃"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "天龙剑法": {
+        "name": {
+          "en": "Dragonfang Sword",
+          "zh-CN": "龙牙剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "玉箫剑法": {
+        "name": {
+          "en": "Whistling Blade",
+          "zh-CN": "啸音剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "全真剑法": {
+        "name": {
+          "en": "Watchkeeper Sword",
+          "zh-CN": "守望剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "玉女剑法": {
+        "name": {
+          "en": "Moonlit Sword",
+          "zh-CN": "月光剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "古墓剑法": {
+        "name": {
+          "en": "Mistblade Sword",
+          "zh-CN": "雾刃剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "狂风刀法": {
+        "name": {
+          "en": "Whirlwind Cleave",
+          "zh-CN": "旋风重斩"
+        },
+        "description": {
+          "en": "An active heavy weapon skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动重武器技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "玉蜂针": {
+        "name": {
+          "en": "Swarm Bolt",
+          "zh-CN": "蜂群飞弹"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "佛光普照": {
+        "name": {
+          "en": "Dawnlight Palm",
+          "zh-CN": "晨曦掌"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "阴阳倒乱刃": {
+        "name": {
+          "en": "Twilight Blades",
+          "zh-CN": "暮光飞刃"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "铁剑剑法": {
+        "name": {
+          "en": "Iron Sword",
+          "zh-CN": "铁剑剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "雪山剑法": {
+        "name": {
+          "en": "Snowpeak Sword",
+          "zh-CN": "雪峰剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "一剑化三清": {
+        "name": {
+          "en": "Threefold Edge",
+          "zh-CN": "三重剑锋"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "如来千手法": {
+        "name": {
+          "en": "Thousand Hands",
+          "zh-CN": "千手拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "化骨绵掌": {
+        "name": {
+          "en": "Crushing Palm",
+          "zh-CN": "碎骨掌"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "百变千幻云雾十三式": {
+        "name": {
+          "en": "Miststep Sword",
+          "zh-CN": "雾步剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "须弥山掌": {
+        "name": {
+          "en": "Mountain Pulse",
+          "zh-CN": "山岳脉冲"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "大洪拳": {
+        "name": {
+          "en": "Ironheart Fist",
+          "zh-CN": "铁心拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "五大夫剑法": {
+        "name": {
+          "en": "Fivefold Sword",
+          "zh-CN": "五式剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "忘情剑": {
+        "name": {
+          "en": "Cold Resolve Sword",
+          "zh-CN": "冷意剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "雁行刀": {
+        "name": {
+          "en": "Sweeping Cleave",
+          "zh-CN": "横扫重斩"
+        },
+        "description": {
+          "en": "An active heavy weapon skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动重武器技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "夫妻刀法": {
+        "name": {
+          "en": "Twin Cleavers",
+          "zh-CN": "双刃合击"
+        },
+        "description": {
+          "en": "An active heavy weapon skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动重武器技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "七弦无形剑": {
+        "name": {
+          "en": "Phantom Strings",
+          "zh-CN": "幻影琴弦"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "伏魔棍": {
+        "name": {
+          "en": "Banishment Pulse",
+          "zh-CN": "驱逐脉冲"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "碧针清掌": {
+        "name": {
+          "en": "Jade Needle Strike",
+          "zh-CN": "翠针掌"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "达摩剑法": {
+        "name": {
+          "en": "Pilgrim Sword",
+          "zh-CN": "行者剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "太白剑法": {
+        "name": {
+          "en": "Starlight Sword",
+          "zh-CN": "星光剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "上清剑法": {
+        "name": {
+          "en": "Skyward Sword",
+          "zh-CN": "凌空剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "归藏剑": {
+        "name": {
+          "en": "Hidden Edge",
+          "zh-CN": "藏锋剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "金乌刀法": {
+        "name": {
+          "en": "Sunbird Cleave",
+          "zh-CN": "日鸟重斩"
+        },
+        "description": {
+          "en": "An active heavy weapon skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动重武器技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "般若掌": {
+        "name": {
+          "en": "Sage's Palm",
+          "zh-CN": "贤者掌"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "日月鞭法": {
+        "name": {
+          "en": "Sun and Moon Lash",
+          "zh-CN": "日月法鞭"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "金蛇游身掌": {
+        "name": {
+          "en": "Golden Serpent Fist",
+          "zh-CN": "金蛇拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "金蛇锥": {
+        "name": {
+          "en": "Serpent Bolt",
+          "zh-CN": "蛇形飞弹"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "七星七绝剑": {
+        "name": {
+          "en": "Seven Stars Sword",
+          "zh-CN": "七星剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "寒冰神掌": {
+        "name": {
+          "en": "Frozen Fist",
+          "zh-CN": "冰封拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "龙爪手": {
+        "name": {
+          "en": "Dragon Claw",
+          "zh-CN": "龙爪拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "鹰爪功": {
+        "name": {
+          "en": "Eagle Claw",
+          "zh-CN": "鹰爪拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "大金刚掌": {
+        "name": {
+          "en": "Titan Palm",
+          "zh-CN": "巨人掌"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "袖里乾坤": {
+        "name": {
+          "en": "Hidden Hand",
+          "zh-CN": "藏手拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "天竺佛指": {
+        "name": {
+          "en": "Pilgrim's Touch",
+          "zh-CN": "行者指击"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "天山六阳掌": {
+        "name": {
+          "en": "Six Suns Palm",
+          "zh-CN": "六日掌"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "岳家枪法": {
+        "name": {
+          "en": "Spell Lance",
+          "zh-CN": "奥术长枪"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "黑血神针": {
+        "name": {
+          "en": "Bloodthorn Bolt",
+          "zh-CN": "血棘飞弹"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "伏魔杖法": {
+        "name": {
+          "en": "Warding Blast",
+          "zh-CN": "守卫冲击"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "玉女素心剑": {
+        "name": {
+          "en": "Twin Hearts Sword",
+          "zh-CN": "双心剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "虎爪绝户手": {
+        "name": {
+          "en": "Tiger Claw",
+          "zh-CN": "虎爪拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "夺命连环三仙剑": {
+        "name": {
+          "en": "Triple Deathstrike",
+          "zh-CN": "三重夺命剑"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "柔云剑法": {
+        "name": {
+          "en": "Drifting Cloud Sword",
+          "zh-CN": "流云剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "七伤摧魂针": {
+        "name": {
+          "en": "Soulthorn Bolt",
+          "zh-CN": "魂棘飞弹"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "拈花指": {
+        "name": {
+          "en": "Petal Touch",
+          "zh-CN": "拈花指击"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "铁掌": {
+        "name": {
+          "en": "Iron Palm",
+          "zh-CN": "铁掌"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "庖丁解牛": {
+        "name": {
+          "en": "Precision Strike",
+          "zh-CN": "精准拳击"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "擒龙功": {
+        "name": {
+          "en": "Dragon Grip",
+          "zh-CN": "擒龙手"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "两仪剑法": {
+        "name": {
+          "en": "Twin Forms Sword",
+          "zh-CN": "双式剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "反两仪刀法": {
+        "name": {
+          "en": "Reverse Cleave",
+          "zh-CN": "逆势重斩"
+        },
+        "description": {
+          "en": "An active heavy weapon skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动重武器技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "青莲掌法": {
+        "name": {
+          "en": "Blue Lotus Palm",
+          "zh-CN": "青莲掌"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "太极拳": {
+        "name": {
+          "en": "Flowing Fist",
+          "zh-CN": "流转拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "九阴白骨爪": {
+        "name": {
+          "en": "Bone Claw",
+          "zh-CN": "白骨爪"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "狂风快剑": {
+        "name": {
+          "en": "Gale Sword",
+          "zh-CN": "疾风剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "血刀大法": {
+        "name": {
+          "en": "Bloodreaver Cleave",
+          "zh-CN": "噬血重斩"
+        },
+        "description": {
+          "en": "An active heavy weapon skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动重武器技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "日月神鞭": {
+        "name": {
+          "en": "Eclipse Lash",
+          "zh-CN": "日蚀法鞭"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "三阴蜈蚣爪": {
+        "name": {
+          "en": "Venom Claw",
+          "zh-CN": "毒爪拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "空明拳": {
+        "name": {
+          "en": "Hollow Fist",
+          "zh-CN": "空灵拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "日月神掌": {
+        "name": {
+          "en": "Eclipse Palm",
+          "zh-CN": "日蚀掌"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "一阳指": {
+        "name": {
+          "en": "Sunpoint Strike",
+          "zh-CN": "日芒指击"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "倚天屠龙笔法": {
+        "name": {
+          "en": "Runescribe",
+          "zh-CN": "符文刻印"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "幻阴指": {
+        "name": {
+          "en": "Shadow Touch",
+          "zh-CN": "暗影指击"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "弹指神通": {
+        "name": {
+          "en": "Flicker Strike",
+          "zh-CN": "弹指击"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "混元掌": {
+        "name": {
+          "en": "Primal Palm",
+          "zh-CN": "原初掌"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "三花聚顶掌": {
+        "name": {
+          "en": "Threefold Palm",
+          "zh-CN": "三重掌"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "神门十三剑": {
+        "name": {
+          "en": "Gatebreaker Sword",
+          "zh-CN": "破门剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "火焰刀法": {
+        "name": {
+          "en": "Flamehand Strike",
+          "zh-CN": "烈焰拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "破玉拳": {
+        "name": {
+          "en": "Gemshatter Fist",
+          "zh-CN": "碎玉拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "碧落苍穹": {
+        "name": {
+          "en": "Open Sky Sword",
+          "zh-CN": "长空剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "天外飞龙": {
+        "name": {
+          "en": "Sky Dragon Sword",
+          "zh-CN": "飞龙剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "大力金刚指": {
+        "name": {
+          "en": "Titan's Touch",
+          "zh-CN": "巨人指击"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "太极剑": {
+        "name": {
+          "en": "Flowing Sword",
+          "zh-CN": "流转剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "苗家剑法": {
+        "name": {
+          "en": "Trailguard Sword",
+          "zh-CN": "行路卫剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "连城剑法": {
+        "name": {
+          "en": "Vaultbreaker Sword",
+          "zh-CN": "破库剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "药王神掌": {
+        "name": {
+          "en": "Healer's Palm",
+          "zh-CN": "药师掌"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "玄冥神掌": {
+        "name": {
+          "en": "Deepwinter Palm",
+          "zh-CN": "深冬掌"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "六脉神剑": {
+        "name": {
+          "en": "Sixfold Strike",
+          "zh-CN": "六重指击"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "黯然销魂掌": {
+        "name": {
+          "en": "Heartache Palm",
+          "zh-CN": "黯伤掌"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "胡家刀法": {
+        "name": {
+          "en": "Frontier Cleave",
+          "zh-CN": "边境重斩"
+        },
+        "description": {
+          "en": "An active heavy weapon skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动重武器技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "金蛇剑法": {
+        "name": {
+          "en": "Golden Serpent Sword",
+          "zh-CN": "金蛇剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "七伤拳": {
+        "name": {
+          "en": "Seven Wounds Fist",
+          "zh-CN": "七伤拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "天山折梅手": {
+        "name": {
+          "en": "Winterblossom Fist",
+          "zh-CN": "冬花拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "辟邪剑法": {
+        "name": {
+          "en": "Nightblade Sword",
+          "zh-CN": "夜刃剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "鸳鸯刀法": {
+        "name": {
+          "en": "Paired Cleavers",
+          "zh-CN": "成双重刃"
+        },
+        "description": {
+          "en": "An active heavy weapon skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动重武器技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "打狗棒法": {
+        "name": {
+          "en": "Runewarden's Staff",
+          "zh-CN": "符文守卫杖术"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "斗转星移": {
+        "name": {
+          "en": "Starfall Shift",
+          "zh-CN": "星落秘术"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "如来神掌": {
+        "name": {
+          "en": "Enlightened Palm",
+          "zh-CN": "明悟掌"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "天山剑法": {
+        "name": {
+          "en": "Winterpeak Sword",
+          "zh-CN": "冬峰剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "玄铁剑法": {
+        "name": {
+          "en": "Ironweight Sword",
+          "zh-CN": "重铁剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "降龙十八掌": {
+        "name": {
+          "en": "Dragonbreaker Fist",
+          "zh-CN": "破龙拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "独孤九剑": {
+        "name": {
+          "en": "Ninefold Sword",
+          "zh-CN": "九式剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "烈焰黑枪": {
+        "name": {
+          "en": "Blackfire Lance",
+          "zh-CN": "黑焰法枪"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "烈焰黑剑": {
+        "name": {
+          "en": "Blackfire Sword",
+          "zh-CN": "黑焰剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "越女剑法": {
+        "name": {
+          "en": "Maiden's Sword",
+          "zh-CN": "少女剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "墨拳": {
+        "name": {
+          "en": "Inkshadow Fist",
+          "zh-CN": "墨影拳"
+        },
+        "description": {
+          "en": "An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动拳套技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "墨剑": {
+        "name": {
+          "en": "Inkshadow Sword",
+          "zh-CN": "墨影剑术"
+        },
+        "description": {
+          "en": "An active sword skill. Check its range, energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动剑术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "缚星锁": {
+        "name": {
+          "en": "Starbind",
+          "zh-CN": "缚星术"
+        },
+        "description": {
+          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
+          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "南山刀法": {
+        "description": {
+          "en": "An active skill. Range, Energy cost, and rank bonuses are listed in the skill details.",
+          "zh-CN": "主动技能，实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "飘雪穿云掌": {
+        "description": {
+          "en": "An active skill. Range, Energy cost, and rank bonuses are listed in the skill details.",
+          "zh-CN": "主动技能，实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "华山剑法": {
+        "description": {
+          "en": "An active skill. Range, Energy cost, and rank bonuses are listed in the skill details.",
+          "zh-CN": "主动技能，实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "蛇鹤八打": {
+        "description": {
+          "en": "An active skill. Range, Energy cost, and rank bonuses are listed in the skill details.",
+          "zh-CN": "主动技能，实际范围、能量消耗与等级加成见技能详情。"
+        }
+      },
+      "燃木刀法": {
+        "description": {
+          "en": "An active skill. Range, Energy cost, and rank bonuses are listed in the skill details.",
+          "zh-CN": "主动技能，实际范围、能量消耗与等级加成见技能详情。"
+        }
+      }
+    },
+    "internalSkills": {
+      "化功大法": {
+        "name": {
+          "en": "Spellbreaker Mastery",
+          "zh-CN": "破法专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details. This mastery also unlocks active moves.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。 此专精还会解锁主动招式。"
+        }
+      },
+      "天山剑法诀": {
+        "name": {
+          "en": "Winterblade Mastery",
+          "zh-CN": "冬刃专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。"
+        }
+      },
+      "少林九阳功": {
+        "name": {
+          "en": "Dawn Monk Mastery",
+          "zh-CN": "晨曦武僧专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。"
+        }
+      },
+      "武当九阳功": {
+        "name": {
+          "en": "Dawn Warden Mastery",
+          "zh-CN": "晨曦守卫专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。"
+        }
+      },
+      "峨眉九阳功": {
+        "name": {
+          "en": "Dawn Sentinel Mastery",
+          "zh-CN": "晨曦哨兵专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。"
+        }
+      },
+      "玉女心经": {
+        "name": {
+          "en": "Moonheart Mastery",
+          "zh-CN": "月心专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。"
+        }
+      },
+      "罗汉伏魔功": {
+        "name": {
+          "en": "Demonward Mastery",
+          "zh-CN": "镇魔专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。"
+        }
+      },
+      "蛤蟆功": {
+        "name": {
+          "en": "Toadheart Mastery",
+          "zh-CN": "蟾心专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details. This mastery also unlocks active moves.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。 此专精还会解锁主动招式。"
+        }
+      },
+      "小无相功": {
+        "name": {
+          "en": "Shapeless Mastery",
+          "zh-CN": "无形专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。"
+        }
+      },
+      "太极神功": {
+        "name": {
+          "en": "Balance Mastery",
+          "zh-CN": "平衡专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。"
+        }
+      },
+      "北冥神功": {
+        "name": {
+          "en": "Deepwell Mastery",
+          "zh-CN": "深井专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。"
+        }
+      },
+      "控鹤功": {
+        "name": {
+          "en": "Crane Mastery",
+          "zh-CN": "白鹤专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。"
+        }
+      },
+      "无妄神功": {
+        "name": {
+          "en": "Clear Mind Mastery",
+          "zh-CN": "明心专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。"
+        }
+      },
+      "太玄神功": {
+        "name": {
+          "en": "Starseeker Mastery",
+          "zh-CN": "寻星专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details. This mastery also unlocks active moves.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。 此专精还会解锁主动招式。"
+        }
+      },
+      "血海魔功": {
+        "name": {
+          "en": "Bloodtide Mastery",
+          "zh-CN": "血潮专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details. This mastery also unlocks active moves.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。 此专精还会解锁主动招式。"
+        }
+      },
+      "混元功": {
+        "name": {
+          "en": "Primal Mastery",
+          "zh-CN": "原初专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details. This mastery also unlocks active moves.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。 此专精还会解锁主动招式。"
+        }
+      },
+      "寒冰真气": {
+        "name": {
+          "en": "Frostheart Mastery",
+          "zh-CN": "霜心专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。"
+        }
+      },
+      "日月心经": {
+        "name": {
+          "en": "Eclipse Mastery",
+          "zh-CN": "日蚀专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。"
+        }
+      },
+      "八荒六合唯我独尊功": {
+        "name": {
+          "en": "Sovereign Mastery",
+          "zh-CN": "君临专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。"
+        }
+      },
+      "神照功": {
+        "name": {
+          "en": "Lifebloom Mastery",
+          "zh-CN": "生机专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。"
+        }
+      },
+      "先天功": {
+        "name": {
+          "en": "First Light Mastery",
+          "zh-CN": "初光专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。"
+        }
+      },
+      "纯阳无极功": {
+        "name": {
+          "en": "Sunheart Mastery",
+          "zh-CN": "日心专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。"
+        }
+      },
+      "龙象般若功": {
+        "name": {
+          "en": "Titanheart Mastery",
+          "zh-CN": "巨人之心专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details. This mastery also unlocks active moves.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。 此专精还会解锁主动招式。"
+        }
+      },
+      "铁血大旗功": {
+        "name": {
+          "en": "Iron Banner Mastery",
+          "zh-CN": "铁旗专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details. This mastery also unlocks active moves.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。 此专精还会解锁主动招式。"
+        }
+      },
+      "易筋经": {
+        "name": {
+          "en": "Ironbody Mastery",
+          "zh-CN": "铁躯专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details. This mastery also unlocks active moves.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。 此专精还会解锁主动招式。"
+        }
+      },
+      "九阴神功": {
+        "name": {
+          "en": "Shadowheart Mastery",
+          "zh-CN": "影心专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details. This mastery also unlocks active moves.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。 此专精还会解锁主动招式。"
+        }
+      },
+      "逆运九阴神功": {
+        "name": {
+          "en": "Reversed Shadow Mastery",
+          "zh-CN": "逆影专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details. This mastery also unlocks active moves.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。 此专精还会解锁主动招式。"
+        }
+      },
+      "九阳神功": {
+        "name": {
+          "en": "Sunfire Mastery",
+          "zh-CN": "日焰专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details. This mastery also unlocks active moves.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。 此专精还会解锁主动招式。"
+        }
+      },
+      "葵花宝典": {
+        "name": {
+          "en": "Sunflower Mastery",
+          "zh-CN": "向日葵专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details. This mastery also unlocks active moves.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。 此专精还会解锁主动招式。"
+        }
+      },
+      "黑炎心法": {
+        "name": {
+          "en": "Blackfire Mastery",
+          "zh-CN": "黑焰专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。"
+        }
+      },
+      "墨阴神功": {
+        "name": {
+          "en": "Inkshadow Mastery",
+          "zh-CN": "墨影专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。"
+        }
+      },
+      "墨阳神功": {
+        "name": {
+          "en": "Inkflame Mastery",
+          "zh-CN": "墨焰专精"
+        },
+        "description": {
+          "en": "A passive mastery. Learned bonuses and equipped effects are listed separately in the skill details.",
+          "zh-CN": "被动专精。已学加成与装备后的效果分别列于技能详情。"
+        }
+      },
+      "石梁心法": {
+        "description": {
+          "en": "A passive mastery. Check learned bonuses, equipped effects, and any unlocked active moves in the skill details.",
+          "zh-CN": "被动专精，已学加成、装备后的效果和解锁招式见技能详情。"
+        }
+      }
+    },
+    "specialSkills": {
+      "华佗再世": {
+        "name": {
+          "en": "Master Healer",
+          "zh-CN": "大师治疗"
+        },
+        "description": {
+          "en": "Heal one character. Healing scales with Constitution and Fortune.",
+          "zh-CN": "治疗一个角色，治疗血量受自身的体质与幸运加成。"
+        }
+      },
+      "一刀两断": {
+        "name": {
+          "en": "Severing Blow",
+          "zh-CN": "断裂重击"
+        },
+        "description": {
+          "en": "A powerful attack with a chance to remove half the target's Health.",
+          "zh-CN": "威力无匹的攻击，一定几率减对方一半气血。"
+        }
+      },
+      "沉鱼落雁": {
+        "name": {
+          "en": "Disarming Charm",
+          "zh-CN": "摄心魅力"
+        },
+        "description": {
+          "en": "Remove the target's Rage.",
+          "zh-CN": "美人顾盼，消除对方的怒气。"
+        }
+      },
+      "诗酒飘零": {
+        "name": {
+          "en": "Drunken Brawl",
+          "zh-CN": "醉酒乱斗"
+        },
+        "description": {
+          "en": "Enter a drunken combat state. Check the status details for its chances and effects.",
+          "zh-CN": "进入醉酒模式，攻击变得不可理喻。"
+        }
+      },
+      "凌波微步": {
+        "name": {
+          "en": "Phantom Step",
+          "zh-CN": "幻影步"
+        },
+        "description": {
+          "en": "Become harder to pin down with evasive footwork.",
+          "zh-CN": "使身形变得飘忽不可见。"
+        }
+      },
+      "雪遁步行": {
+        "name": {
+          "en": "Snowstep",
+          "zh-CN": "踏雪步"
+        },
+        "description": {
+          "en": "Increase evasion and action gauge recovery speed.",
+          "zh-CN": "破晓猎团的身法技能，可以增加自身闪避及集气速度。"
+        }
+      },
+      "同归剑法": {
+        "name": {
+          "en": "Last Stand Strike",
+          "zh-CN": "同归剑击"
+        },
+        "description": {
+          "en": "Take 1,000 true damage to deal a greater amount of damage to an enemy.",
+          "zh-CN": "守望者学派绝技，对自己同时造成1000点真实伤害，对敌人造成更大伤害。"
+        }
+      },
+      "天地同寿": {
+        "name": {
+          "en": "Final Sacrifice",
+          "zh-CN": "最终献祭"
+        },
+        "description": {
+          "en": "Sacrifice your life and 10 maximum Health to deal heavy damage based on your remaining Health.",
+          "zh-CN": "以死亡和减少10点生命上限为代价，予以与自身残余气血相关的极大伤害。"
+        }
+      },
+      "笑傲江湖曲": {
+        "name": {
+          "en": "Song of Courage",
+          "zh-CN": "勇气之歌"
+        },
+        "description": {
+          "en": "Increase Attack for all allies with a rallying song.",
+          "zh-CN": "一曲笑傲惊天下，增强我方全体攻击力。"
+        }
+      },
+      "襄儿的心愿": {
+        "name": {
+          "en": "Guardian's Wish",
+          "zh-CN": "守护者心愿"
+        },
+        "description": {
+          "en": "Deal random true damage. The maximum damage rises with the user's level.",
+          "zh-CN": "使用者的心愿，就是随时可以召唤大哥哥保护自己！对敌人造成随机真实伤害。攻击上限随使用者等级提升。"
+        }
+      },
+      "火枪": {
+        "name": {
+          "en": "Flintlock Shot",
+          "zh-CN": "燧发枪射击"
+        },
+        "description": {
+          "en": "Fire a shot that deals true damage and inflicts Deep Wound. Damage depends on the difference in Fortune.",
+          "zh-CN": "使用者掏出他的火枪向敌人射击，造成真实伤害（无视护甲）及重伤敌人。伤害取决于敌我“幸运”的差距。"
+        }
+      },
+      "撒石灰": {
+        "name": {
+          "en": "Blinding Powder",
+          "zh-CN": "致盲粉末"
+        },
+        "description": {
+          "en": "Blind an enemy with a cloud of powder.",
+          "zh-CN": "使用者的下三滥手段，撒出石灰粉迷住对方的眼睛。"
+        }
+      },
+      "溜须拍马": {
+        "name": {
+          "en": "Beg for Mercy",
+          "zh-CN": "求饶"
+        },
+        "description": {
+          "en": "Beg for mercy and enter a protective state.",
+          "zh-CN": "千穿万穿，马屁不穿。使用者的护身绝技。"
+        }
+      },
+      "易容术": {
+        "name": {
+          "en": "Disguise",
+          "zh-CN": "伪装"
+        },
+        "description": {
+          "en": "Hide your identity and prepare a powerful surprise attack.",
+          "zh-CN": "使用者的易容绝技，可藏身于敌阵之中。暗中突袭，威力巨大。"
+        }
+      },
+      "过肩摔": {
+        "name": {
+          "en": "Shoulder Throw",
+          "zh-CN": "过肩摔"
+        },
+        "description": {
+          "en": "Throw a target behind you, inflicting Rooted and Paralyzed. True damage depends on the difference in Resolve.",
+          "zh-CN": "将对手摔到身后并定身、麻痹，造成基于敌我意志之差的真实伤害。"
+        }
+      },
+      "神龙摆尾": {
+        "name": {
+          "en": "Knockback Kick",
+          "zh-CN": "击退踢"
+        },
+        "description": {
+          "en": "Knock a target away and inflict Rooted and Paralyzed. True damage depends on the distance moved.",
+          "zh-CN": "一脚将对手踢开并定身、麻痹，造成基于移动距离的真实伤害。"
+        }
+      },
+      "清心普善咒": {
+        "name": {
+          "en": "Cleansing Chant",
+          "zh-CN": "净化颂歌"
+        },
+        "description": {
+          "en": "Remove negative status effects from all allies.",
+          "zh-CN": "清雅脱俗，宁神静气。解除全体队友异常状态。"
+        }
+      },
+      "阿碧的歌声": {
+        "name": {
+          "en": "Soothing Song",
+          "zh-CN": "抚慰之歌"
+        },
+        "description": {
+          "en": "Remove negative status effects from all allies with a soothing song.",
+          "zh-CN": "阿碧的歌声，柔美秀丽，解除全体队友异常状态。"
+        }
+      },
+      "吴侬软语": {
+        "name": {
+          "en": "Beguiling Whisper",
+          "zh-CN": "蛊惑低语"
+        },
+        "description": {
+          "en": "Remove all positive status effects from enemies.",
+          "zh-CN": "吴侬软语，闻者心醉，解除敌人所有增益状态。"
+        }
+      },
+      "武穆兵法": {
+        "name": {
+          "en": "Battlefield Orders",
+          "zh-CN": "战场号令"
+        },
+        "description": {
+          "en": "Strengthen your allies with battlefield orders.",
+          "zh-CN": "武穆兵法排兵布阵，增强所有队友能力。"
+        }
+      },
+      "解毒": {
+        "name": {
+          "en": "Cure Poison",
+          "zh-CN": "解毒术"
+        },
+        "description": {
+          "en": "Remove Poison, regardless of its strength.",
+          "zh-CN": "不管多么强的毒，一律清除。"
+        }
+      },
+      "梯云纵": {
+        "name": {
+          "en": "Cloudstep",
+          "zh-CN": "踏云步"
+        },
+        "description": {
+          "en": "Increase action gauge recovery speed.",
+          "zh-CN": "河流守卫冠绝天下的身法，能加快战斗集气速度。"
+        }
+      },
+      "六合劲": {
+        "name": {
+          "en": "Disrupting Strike",
+          "zh-CN": "扰乱劲击"
+        },
+        "description": {
+          "en": "Strike a target and disrupt its action gauge.",
+          "zh-CN": "以河流守卫精纯的内功对对手进行攻击，可以立即打散对手的集气。"
+        }
+      },
+      "腐尸毒": {
+        "name": {
+          "en": "Venom Burst",
+          "zh-CN": "毒素爆发"
+        },
+        "description": {
+          "en": "Immediately trigger the target's Poison to deal true damage.",
+          "zh-CN": "立即清算敌人的中毒，造成真实伤害。"
+        }
+      },
+      "飞星术": {
+        "name": {
+          "en": "Venom Shower",
+          "zh-CN": "毒雨"
+        },
+        "description": {
+          "en": "Randomly inflict Poison across the battlefield, affecting allies and enemies alike.",
+          "zh-CN": "虹桥守望狠毒的招数，不管敌我，全场随机中毒。"
+        }
+      }
+    },
+    "buffs": {
+      "伤害加深": {
+        "name": {
+          "en": "Vulnerability",
+          "zh-CN": "易伤"
+        },
+        "description": {
+          "en": "Take extra damage based on the strength of this status.",
+          "zh-CN": "伤害不停加深，受到与BUFF等级相关的额外伤害。"
+        }
+      },
+      "内伤": {
+        "name": {
+          "en": "Energy Drain",
+          "zh-CN": "能量流失"
+        },
+        "description": {
+          "en": "Lose Energy each turn and spend more Energy on skills.",
+          "zh-CN": "每回合减少能量值，能量消耗增加"
+        }
+      },
+      "刀封印": {
+        "name": {
+          "en": "Heavy Weapon Lock",
+          "zh-CN": "重武器封锁"
+        },
+        "description": {
+          "en": "Cannot use heavy weapon skills or their associated finishing moves.",
+          "zh-CN": "无法施展重武器外功，无法施展相关绝技"
+        }
+      },
+      "剑封印": {
+        "name": {
+          "en": "Sword Lock",
+          "zh-CN": "剑术封锁"
+        },
+        "description": {
+          "en": "Cannot use sword skills or their associated finishing moves.",
+          "zh-CN": "无法施展剑系外功，无法施展相关绝技"
+        }
+      },
+      "圣战": {
+        "name": {
+          "en": "Unstoppable",
+          "zh-CN": "不屈"
+        },
+        "description": {
+          "en": "Immune to negative status effects.",
+          "zh-CN": "不受任何不良状态影响。"
+        }
+      },
+      "坚守": {
+        "name": {
+          "en": "Defensive Stance",
+          "zh-CN": "坚守姿态"
+        },
+        "description": {
+          "en": "Deal less damage and take less damage.",
+          "zh-CN": "以减少攻击输出为代价，减少所受伤害。"
+        }
+      },
+      "奇门封印": {
+        "name": {
+          "en": "Spell Lock",
+          "zh-CN": "法术封锁"
+        },
+        "description": {
+          "en": "Cannot cast spells or use their associated finishing moves.",
+          "zh-CN": "无法施展法术，无法施展相关绝技"
+        }
+      },
+      "定身": {
+        "name": {
+          "en": "Rooted",
+          "zh-CN": "定身"
+        },
+        "description": {
+          "en": "Cannot move.",
+          "zh-CN": "无法移动。"
+        }
+      },
+      "封穴": {
+        "name": {
+          "en": "Recovery Block",
+          "zh-CN": "回复封锁"
+        },
+        "description": {
+          "en": "Cannot recover Energy.",
+          "zh-CN": "穴道被封，无法恢复能量。"
+        }
+      },
+      "左右互搏": {
+        "name": {
+          "en": "Double Strike",
+          "zh-CN": "双重攻击"
+        },
+        "description": {
+          "en": "Grants a chance to attack twice.",
+          "zh-CN": "一定概率出两次攻击"
+        }
+      },
+      "恢复": {
+        "name": {
+          "en": "Regeneration",
+          "zh-CN": "再生"
+        },
+        "description": {
+          "en": "Recover Health each turn.",
+          "zh-CN": "每回合回复生命值"
+        }
+      },
+      "拳掌封印": {
+        "name": {
+          "en": "Gauntlet Lock",
+          "zh-CN": "拳套封锁"
+        },
+        "description": {
+          "en": "Cannot use gauntlet skills or their associated finishing moves.",
+          "zh-CN": "无法施展拳套外功，无法施展相关绝技"
+        }
+      },
+      "攻击弱化": {
+        "name": {
+          "en": "Attack Down",
+          "zh-CN": "攻击降低"
+        },
+        "description": {
+          "en": "Reduces Attack.",
+          "zh-CN": "减少攻击力"
+        }
+      },
+      "易容": {
+        "name": {
+          "en": "Hidden",
+          "zh-CN": "隐匿"
+        },
+        "description": {
+          "en": "Hide your identity and prepare a powerful surprise attack.",
+          "zh-CN": "易容改面，藏于暗处。伺机发动致命伤害。"
+        }
+      },
+      "晕眩": {
+        "name": {
+          "en": "Stunned",
+          "zh-CN": "眩晕"
+        },
+        "description": {
+          "en": "Cannot act.",
+          "zh-CN": "无法行动"
+        }
+      },
+      "沾衣十八跌": {
+        "name": {
+          "en": "Counterthrow",
+          "zh-CN": "反摔"
+        },
+        "description": {
+          "en": "Grants a chance to reflect damage and stun an attacker when hit.",
+          "zh-CN": "气劲充满全身，攻击命中的敌人有一定概率被气劲反伤晕眩。"
+        }
+      },
+      "溜须拍马": {
+        "name": {
+          "en": "Beg for Mercy",
+          "zh-CN": "求饶"
+        },
+        "description": {
+          "en": "A temporary protective state that prevents damage.",
+          "zh-CN": "溜须拍马，跪地求饶，不受伤害。"
+        }
+      },
+      "狂战": {
+        "name": {
+          "en": "Berserk",
+          "zh-CN": "狂战"
+        },
+        "description": {
+          "en": "Deal more damage and take more damage.",
+          "zh-CN": "以受到更多伤害为代价，提升攻击力。"
+        }
+      },
+      "神行": {
+        "name": {
+          "en": "Haste",
+          "zh-CN": "急速"
+        },
+        "description": {
+          "en": "Increases action gauge recovery speed.",
+          "zh-CN": "提高战斗中的集气速度。"
+        }
+      },
+      "神速攻击": {
+        "name": {
+          "en": "Triple Strike",
+          "zh-CN": "三重攻击"
+        },
+        "description": {
+          "en": "Grants a chance to attack three times.",
+          "zh-CN": "一定概率出三次攻击"
+        }
+      },
+      "缓速": {
+        "name": {
+          "en": "Slowed",
+          "zh-CN": "减速"
+        },
+        "description": {
+          "en": "Reduces movement range.",
+          "zh-CN": "减少移动范围"
+        }
+      },
+      "致盲": {
+        "name": {
+          "en": "Blinded",
+          "zh-CN": "致盲"
+        },
+        "description": {
+          "en": "Reduces skill targeting range.",
+          "zh-CN": "减少技能攻击范围"
+        }
+      },
+      "诸般封印": {
+        "name": {
+          "en": "Skill Lock",
+          "zh-CN": "技能封锁"
+        },
+        "description": {
+          "en": "Blocks regular gauntlet, sword, heavy weapon, and spell skills. Finishing moves remain available.",
+          "zh-CN": "无法施展拳、刀、剑、法术，可以施展绝技"
+        }
+      },
+      "轻身": {
+        "name": {
+          "en": "Lightfoot",
+          "zh-CN": "轻身"
+        },
+        "description": {
+          "en": "Increases movement range.",
+          "zh-CN": "增加移动能力。"
+        }
+      },
+      "醉酒": {
+        "name": {
+          "en": "Drunk",
+          "zh-CN": "醉酒"
+        },
+        "description": {
+          "en": "Each turn has a 20% chance of losing your action and an 80% chance of filling Rage. Attacks may also strike twice.",
+          "zh-CN": "20%概率因为醉酒不能行动，80%概率怒气全满，同时攻击有一定几率出两次攻击"
+        }
+      },
+      "重伤": {
+        "name": {
+          "en": "Deep Wound",
+          "zh-CN": "重伤"
+        },
+        "description": {
+          "en": "Cuts incoming healing in half.",
+          "zh-CN": "受到的任何回复效果减半。"
+        }
+      },
+      "防御强化": {
+        "name": {
+          "en": "Defense Up",
+          "zh-CN": "防御提升"
+        },
+        "description": {
+          "en": "Increases Defense.",
+          "zh-CN": "提升防御力。"
+        }
+      },
+      "集气": {
+        "name": {
+          "en": "Charge Up",
+          "zh-CN": "蓄力"
+        },
+        "description": {
+          "en": "Build charge each turn.",
+          "zh-CN": "每回合增加蓄力值"
+        }
+      },
+      "飘渺": {
+        "name": {
+          "en": "Evasion",
+          "zh-CN": "闪避"
+        },
+        "description": {
+          "en": "Grants a chance to dodge attacks.",
+          "zh-CN": "一定概率躲避攻击"
+        }
+      },
+      "魔神降临": {
+        "name": {
+          "en": "Demonic Might",
+          "zh-CN": "魔神之力"
+        },
+        "description": {
+          "en": "Attacks always score critical hits, with 25% more critical damage.",
+          "zh-CN": "犹如魔神附体，所有攻击必定暴击，暴击伤害提高25%。"
+        }
+      },
+      "麻痹": {
+        "name": {
+          "en": "Paralyzed",
+          "zh-CN": "麻痹"
+        },
+        "description": {
+          "en": "Reduces action gauge recovery speed.",
+          "zh-CN": "降低战斗中的集气速度。"
+        }
+      }
+    },
+    "items": {
+      "生生造化丹": {
+        "name": {
+          "en": "Lifebloom Elixir",
+          "zh-CN": "生机药剂"
+        },
+        "description": {
+          "en": "A consumable. Check its recovery effects and conditions before using it.",
+          "zh-CN": "消耗品，使用前查看恢复效果与使用条件。"
+        }
+      },
+      "续命八丸": {
+        "name": {
+          "en": "Last Stand Tonic",
+          "zh-CN": "续命药剂"
+        },
+        "description": {
+          "en": "A consumable. Check its recovery effects and conditions before using it.",
+          "zh-CN": "消耗品，使用前查看恢复效果与使用条件。"
+        }
+      },
+      "仙灵琼露": {
+        "name": {
+          "en": "Fairy Spring Elixir",
+          "zh-CN": "精灵泉药剂"
+        },
+        "description": {
+          "en": "A consumable. Check its recovery effects and conditions before using it.",
+          "zh-CN": "消耗品，使用前查看恢复效果与使用条件。"
+        }
+      },
+      "圣战之药": {
+        "name": {
+          "en": "Unstoppable Elixir",
+          "zh-CN": "不屈药剂"
+        },
+        "description": {
+          "en": "A consumable. Check its recovery effects and conditions before using it.",
+          "zh-CN": "消耗品，使用前查看恢复效果与使用条件。"
+        }
+      },
+      "赵志敬的剑": {
+        "name": {
+          "en": "Watchman's Sword",
+          "zh-CN": "守夜人长剑"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "黄金棒": {
+        "name": {
+          "en": "Golden Staff",
+          "zh-CN": "黄金法杖"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "金龙鞭": {
+        "name": {
+          "en": "Dragoncoil Focus",
+          "zh-CN": "盘龙法器"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "天龙宝剑": {
+        "name": {
+          "en": "Dragonfang Sword",
+          "zh-CN": "龙牙长剑"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "君子剑": {
+        "name": {
+          "en": "Gentleman's Sword",
+          "zh-CN": "绅士长剑"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "重阳遗剑": {
+        "name": {
+          "en": "Founder's Sword",
+          "zh-CN": "创始人遗剑"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "淑女剑": {
+        "name": {
+          "en": "Lady's Sword",
+          "zh-CN": "淑女长剑"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "马钰佩剑": {
+        "name": {
+          "en": "Old Captain's Sword",
+          "zh-CN": "老队长佩剑"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "玄铁匕首": {
+        "name": {
+          "en": "Blacksteel Dagger",
+          "zh-CN": "黑钢匕首"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "回纥宝刀": {
+        "name": {
+          "en": "Nomad's Axe",
+          "zh-CN": "游牧战斧"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "紫金八卦刀": {
+        "name": {
+          "en": "Runed Battleaxe",
+          "zh-CN": "符文战斧"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "古铜匕首": {
+        "name": {
+          "en": "Bronze Dagger",
+          "zh-CN": "青铜匕首"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "戒刀": {
+        "name": {
+          "en": "Pilgrim's Cleaver",
+          "zh-CN": "行者重刃"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "吴钩": {
+        "name": {
+          "en": "Hooked Axe",
+          "zh-CN": "钩刃战斧"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "月梦爪": {
+        "name": {
+          "en": "Moonclaw Gauntlets",
+          "zh-CN": "月爪拳套"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "龙泉剑": {
+        "name": {
+          "en": "Dragonwell Sword",
+          "zh-CN": "龙泉长剑"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "锯齿刀": {
+        "name": {
+          "en": "Sawtooth Cleaver",
+          "zh-CN": "锯齿重刃"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "流星锤": {
+        "name": {
+          "en": "Meteor Focus",
+          "zh-CN": "陨星法器"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "搏击爪套": {
+        "name": {
+          "en": "Brawler's Claws",
+          "zh-CN": "斗士爪套"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "真.天龙宝剑": {
+        "name": {
+          "en": "Awakened Dragonfang",
+          "zh-CN": "觉醒龙牙剑"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "鸣凤剑": {
+        "name": {
+          "en": "Phoenix Song Sword",
+          "zh-CN": "凤鸣长剑"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "玄铁剑": {
+        "name": {
+          "en": "Ironweight Greatsword",
+          "zh-CN": "重铁巨剑"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "凝碧剑": {
+        "name": {
+          "en": "Jadeglass Sword",
+          "zh-CN": "翠晶长剑"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "真.金蛇剑": {
+        "name": {
+          "en": "Awakened Serpent Sword",
+          "zh-CN": "觉醒金蛇剑"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "被诅咒的木刀": {
+        "name": {
+          "en": "Cursed Wooden Axe",
+          "zh-CN": "诅咒木斧"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "真.倚天剑": {
+        "name": {
+          "en": "Awakened Skyblade",
+          "zh-CN": "觉醒天穹剑"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "真.屠龙刀": {
+        "name": {
+          "en": "Awakened Dragonslayer Axe",
+          "zh-CN": "觉醒屠龙斧"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "真.打狗棒": {
+        "name": {
+          "en": "Awakened Warden's Staff",
+          "zh-CN": "觉醒守卫法杖"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "真.灭仙爪": {
+        "name": {
+          "en": "Awakened Godbreaker Claws",
+          "zh-CN": "觉醒破神爪套"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "越女神剑": {
+        "name": {
+          "en": "Maiden's Blade",
+          "zh-CN": "少女神剑"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "金丝袈裟": {
+        "name": {
+          "en": "Goldthread Monk Robe",
+          "zh-CN": "金线武僧袍"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "华裳": {
+        "name": {
+          "en": "Court Finery",
+          "zh-CN": "宫廷礼服"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "忍者服": {
+        "name": {
+          "en": "Shadowrunner Garb",
+          "zh-CN": "潜影行装"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "三清袍": {
+        "name": {
+          "en": "Sage's Robe",
+          "zh-CN": "贤者长袍"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "幽梦衣": {
+        "name": {
+          "en": "Dreamweaver Robe",
+          "zh-CN": "织梦长袍"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "霓裳羽衣": {
+        "name": {
+          "en": "Featherlight Mantle",
+          "zh-CN": "轻羽披衣"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "岳飞的重铠": {
+        "name": {
+          "en": "Marshal's Plate",
+          "zh-CN": "元帅板甲"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "姜子牙的道袍": {
+        "name": {
+          "en": "Sage's Ceremonial Robe",
+          "zh-CN": "贤者礼袍"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "蚩尤的护甲": {
+        "name": {
+          "en": "Warlord's Armor",
+          "zh-CN": "战神护甲"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "千变魔女的披风": {
+        "name": {
+          "en": "Shapeshifter's Cloak",
+          "zh-CN": "变形者斗篷"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "木人": {
+        "name": {
+          "en": "Wooden Sentinel Charm",
+          "zh-CN": "木制哨兵护符"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "橙色灯戒": {
+        "name": {
+          "en": "Amber Lantern Ring",
+          "zh-CN": "琥珀灯戒"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "铂金戒指": {
+        "name": {
+          "en": "Platinum Ring",
+          "zh-CN": "铂金戒指"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "莽牯朱蛤": {
+        "name": {
+          "en": "Crimson Toad Charm",
+          "zh-CN": "赤蟾护符"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "一等鹿鼎公印记": {
+        "name": {
+          "en": "High Duke's Seal",
+          "zh-CN": "公爵印章"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "蓝宝戒指": {
+        "name": {
+          "en": "Sapphire Ring",
+          "zh-CN": "蓝宝石戒指"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "水晶护符": {
+        "name": {
+          "en": "Crystal Charm",
+          "zh-CN": "水晶护符"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "李延宗的项链": {
+        "name": {
+          "en": "Disguised Knight's Pendant",
+          "zh-CN": "隐名骑士吊坠"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "悲酥清风": {
+        "name": {
+          "en": "Sleeping Wind Vial",
+          "zh-CN": "眠风药瓶"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "王语嫣的武学概要": {
+        "name": {
+          "en": "Scholar's Combat Notes",
+          "zh-CN": "学者战斗笔记"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "铁剑令": {
+        "name": {
+          "en": "Iron Sword Token",
+          "zh-CN": "铁剑令牌"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "金蛇手抄本": {
+        "name": {
+          "en": "Serpentblade Notes",
+          "zh-CN": "蛇刃手抄本"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "仙丽雅的项链": {
+        "name": {
+          "en": "Frost Maiden's Pendant",
+          "zh-CN": "霜之少女吊坠"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "独孤求败的草帽": {
+        "name": {
+          "en": "Lone Swordsman's Hat",
+          "zh-CN": "独行剑客草帽"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "达摩祖师的木鱼": {
+        "name": {
+          "en": "Founder's Prayer Charm",
+          "zh-CN": "创始人祈愿符"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "孙悟空的紧箍咒": {
+        "name": {
+          "en": "Monkey King's Headband",
+          "zh-CN": "美猴王头箍"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "魔神信物": {
+        "name": {
+          "en": "Demonlord's Token",
+          "zh-CN": "魔王信物"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "墨玉": {
+        "name": {
+          "en": "Black Jade",
+          "zh-CN": "墨玉"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "小人物的逆袭": {
+        "name": {
+          "en": "Underdog's Badge",
+          "zh-CN": "小人物徽章"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "神奇戒指": {
+        "name": {
+          "en": "Wonder Ring",
+          "zh-CN": "奇迹戒指"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "渡元禅师的木鱼": {
+        "name": {
+          "en": "Wandering Monk's Prayer Charm",
+          "zh-CN": "行脚武僧祈愿符"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "火工头陀的秘本": {
+        "name": {
+          "en": "Renegade Monk's Notes",
+          "zh-CN": "叛门武僧秘本"
+        },
+        "description": {
+          "en": "Equipment. Compare its stats, bonuses, and requirements before equipping it.",
+          "zh-CN": "装备。穿戴前比较属性、附加效果与使用条件。"
+        }
+      },
+      "天山掌法谱": {
+        "name": {
+          "en": "Frostpalm Strike Scroll",
+          "zh-CN": "霜掌击卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Frostpalm Strike. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载霜掌击的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "松风剑法秘籍": {
+        "name": {
+          "en": "Wind-song Swordplay Scroll",
+          "zh-CN": "风歌剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Wind-song Swordplay. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载风歌剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "三分剑术": {
+        "name": {
+          "en": "Threefold Swordplay Scroll",
+          "zh-CN": "三段剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Threefold Swordplay. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载三段剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "雷震剑法秘籍": {
+        "name": {
+          "en": "Thunderedge Swordplay Scroll",
+          "zh-CN": "雷锋剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Thunderedge Swordplay. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载雷锋剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "袖箭秘诀": {
+        "name": {
+          "en": "Arcane Bolt Scroll",
+          "zh-CN": "奥术飞弹卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Arcane Bolt. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载奥术飞弹的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "拂尘秘诀": {
+        "name": {
+          "en": "Whispering Hex Scroll",
+          "zh-CN": "低语咒术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Whispering Hex. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载低语咒术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "七弦无形琴谱": {
+        "name": {
+          "en": "Phantom Strings Scroll",
+          "zh-CN": "幻影琴弦卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Phantom Strings. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载幻影琴弦的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "如来千手法": {
+        "name": {
+          "en": "Thousand Hands Scroll",
+          "zh-CN": "千手拳卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Thousand Hands. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载千手拳的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "寒冰绵掌谱": {
+        "name": {
+          "en": "Winter Palm Scroll",
+          "zh-CN": "凛冬掌卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Winter Palm. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载凛冬掌的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "百花错拳谱": {
+        "name": {
+          "en": "Petalstorm Fist Scroll",
+          "zh-CN": "花雨拳卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Petalstorm Fist. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载花雨拳的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "八卦游身掌法": {
+        "name": {
+          "en": "Circle Step Scroll",
+          "zh-CN": "环步拳卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Circle Step. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载环步拳的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "四象掌掌谱": {
+        "name": {
+          "en": "Four Winds Fist Scroll",
+          "zh-CN": "四风拳卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Four Winds Fist. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载四风拳的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "密宗大手印秘籍": {
+        "name": {
+          "en": "Iron Seal Strike Scroll",
+          "zh-CN": "铁印掌卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Iron Seal Strike. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载铁印掌的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "落英神剑掌秘籍": {
+        "name": {
+          "en": "Falling Petal Strike Scroll",
+          "zh-CN": "落花掌卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Falling Petal Strike. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载落花掌的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "五毒神掌掌谱": {
+        "name": {
+          "en": "Venom Fist Scroll",
+          "zh-CN": "毒牙拳卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Venom Fist. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载毒牙拳的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "三花聚顶掌掌谱": {
+        "name": {
+          "en": "Threefold Palm Scroll",
+          "zh-CN": "三重掌卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Threefold Palm. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载三重掌的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "无量剑法秘籍": {
+        "name": {
+          "en": "Endless Edge Scroll",
+          "zh-CN": "无尽锋刃卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Endless Edge. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载无尽锋刃的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "七星七绝剑剑谱": {
+        "name": {
+          "en": "Seven Stars Sword Scroll",
+          "zh-CN": "七星剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Seven Stars Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载七星剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "嵩山剑法秘籍": {
+        "name": {
+          "en": "Ridgeguard Swordplay Scroll",
+          "zh-CN": "岭卫剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Ridgeguard Swordplay. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载岭卫剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "绕指柔剑剑谱": {
+        "name": {
+          "en": "Whiplash Sword Scroll",
+          "zh-CN": "柔刃剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Whiplash Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载柔刃剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "玉箫剑法秘籍": {
+        "name": {
+          "en": "Whistling Blade Scroll",
+          "zh-CN": "啸音剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Whistling Blade. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载啸音剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "峨眉剑法秘籍": {
+        "name": {
+          "en": "Silverpeak Sword Scroll",
+          "zh-CN": "银峰剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Silverpeak Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载银峰剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "全真剑法秘籍": {
+        "name": {
+          "en": "Watchkeeper Sword Scroll",
+          "zh-CN": "守望剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Watchkeeper Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载守望剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "铁剑剑法秘籍": {
+        "name": {
+          "en": "Iron Sword Scroll",
+          "zh-CN": "铁剑剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Iron Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载铁剑剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "狂风刀法秘籍": {
+        "name": {
+          "en": "Whirlwind Cleave Scroll",
+          "zh-CN": "旋风重斩卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Whirlwind Cleave. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载旋风重斩的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "草原刀法": {
+        "name": {
+          "en": "Prairie Saber Arts Scroll",
+          "zh-CN": "草原弯刀术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Prairie Saber Arts. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载草原弯刀术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "玄虚刀法": {
+        "name": {
+          "en": "Hollowblade Arts Scroll",
+          "zh-CN": "虚刃战技卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Hollowblade Arts. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载虚刃战技的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "八卦刀法秘籍": {
+        "name": {
+          "en": "Crosscut Scroll",
+          "zh-CN": "交叉重斩卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Crosscut. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载交叉重斩的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "冰魄银针精要": {
+        "name": {
+          "en": "Frost Needle Scroll",
+          "zh-CN": "寒霜针卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Frost Needle. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载寒霜针的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "玉蜂针": {
+        "name": {
+          "en": "Swarm Bolt Scroll",
+          "zh-CN": "蜂群飞弹卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Swarm Bolt. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载蜂群飞弹的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "漫天花雨秘籍": {
+        "name": {
+          "en": "Arcane Rain Scroll",
+          "zh-CN": "奥术之雨卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Arcane Rain. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载奥术之雨的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "无上大力杵秘籍": {
+        "name": {
+          "en": "Force Hammer Scroll",
+          "zh-CN": "力场之锤卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Force Hammer. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载力场之锤的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "流星锤法": {
+        "name": {
+          "en": "Meteor Sigil Scroll",
+          "zh-CN": "陨星符术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Meteor Sigil. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载陨星符术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "毒龙鞭法秘籍": {
+        "name": {
+          "en": "Viper's Hex Scroll",
+          "zh-CN": "蝰蛇咒术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Viper's Hex. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载蝰蛇咒术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "如来神掌掌谱": {
+        "name": {
+          "en": "Enlightened Palm Scroll",
+          "zh-CN": "明悟掌卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Enlightened Palm. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载明悟掌的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "柴山十八路秘籍": {
+        "name": {
+          "en": "Trailblazer Cleave Scroll",
+          "zh-CN": "开径斩卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Trailblazer Cleave. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载开径斩的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "雁行刀秘录": {
+        "name": {
+          "en": "Sweeping Cleave Scroll",
+          "zh-CN": "横扫重斩卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Sweeping Cleave. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载横扫重斩的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "参合指书": {
+        "name": {
+          "en": "Needlepoint Strike Scroll",
+          "zh-CN": "针锋指击卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Needlepoint Strike. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载针锋指击的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "佛光普照": {
+        "name": {
+          "en": "Dawnlight Palm Scroll",
+          "zh-CN": "晨曦掌卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Dawnlight Palm. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载晨曦掌的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "擒龙功": {
+        "name": {
+          "en": "Dragon Grip Scroll",
+          "zh-CN": "擒龙手卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Dragon Grip. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载擒龙手的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "灵蛇拳秘籍": {
+        "name": {
+          "en": "Snakebite Strike Scroll",
+          "zh-CN": "蛇牙拳卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Snakebite Strike. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载蛇牙拳的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "九阴白骨爪精义": {
+        "name": {
+          "en": "Bone Claw Scroll",
+          "zh-CN": "白骨爪卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Bone Claw. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载白骨爪的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "铁掌掌谱": {
+        "name": {
+          "en": "Iron Palm Scroll",
+          "zh-CN": "铁掌卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Iron Palm. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载铁掌的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "大金刚掌法": {
+        "name": {
+          "en": "Titan Palm Scroll",
+          "zh-CN": "巨人掌卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Titan Palm. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载巨人掌的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "庖丁解牛": {
+        "name": {
+          "en": "Precision Strike Scroll",
+          "zh-CN": "精准拳击卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Precision Strike. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载精准拳击的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "幻阴指指法精要": {
+        "name": {
+          "en": "Shadow Touch Scroll",
+          "zh-CN": "暗影指击卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Shadow Touch. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载暗影指击的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "弹指神通入门": {
+        "name": {
+          "en": "Flicker Strike Scroll",
+          "zh-CN": "弹指击卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Flicker Strike. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载弹指击的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "弹指神通秘籍": {
+        "name": {
+          "en": "Flicker Strike Scroll",
+          "zh-CN": "弹指击卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Flicker Strike. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载弹指击的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "一阳指书": {
+        "name": {
+          "en": "Sunpoint Strike Scroll",
+          "zh-CN": "日芒指击卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Sunpoint Strike. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载日芒指击的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "火焰刀残篇": {
+        "name": {
+          "en": "Flamehand Strike Scroll",
+          "zh-CN": "烈焰拳卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Flamehand Strike. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载烈焰拳的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "火焰刀秘籍": {
+        "name": {
+          "en": "Flamehand Strike Scroll",
+          "zh-CN": "烈焰拳卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Flamehand Strike. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载烈焰拳的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "虎爪绝户手秘籍": {
+        "name": {
+          "en": "Tiger Claw Scroll",
+          "zh-CN": "虎爪拳卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Tiger Claw. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载虎爪拳的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "太极拳谱": {
+        "name": {
+          "en": "Flowing Fist Scroll",
+          "zh-CN": "流转拳卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Flowing Fist. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载流转拳的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "玉女素心口诀": {
+        "name": {
+          "en": "Twin Hearts Sword Scroll",
+          "zh-CN": "双心剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Twin Hearts Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载双心剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "玉女素心剑谱": {
+        "name": {
+          "en": "Twin Hearts Sword Scroll",
+          "zh-CN": "双心剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Twin Hearts Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载双心剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "金蛇剑法秘籍": {
+        "name": {
+          "en": "Golden Serpent Sword Scroll",
+          "zh-CN": "金蛇剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Golden Serpent Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载金蛇剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "百变千幻云雾十三式秘籍": {
+        "name": {
+          "en": "Miststep Sword Scroll",
+          "zh-CN": "雾步剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Miststep Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载雾步剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "柔云剑法秘籍": {
+        "name": {
+          "en": "Drifting Cloud Sword Scroll",
+          "zh-CN": "流云剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Drifting Cloud Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载流云剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "狂风快剑诀": {
+        "name": {
+          "en": "Gale Sword Scroll",
+          "zh-CN": "疾风剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Gale Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载疾风剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "神门十三剑剑谱": {
+        "name": {
+          "en": "Gatebreaker Sword Scroll",
+          "zh-CN": "破门剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Gatebreaker Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载破门剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "上清剑法": {
+        "name": {
+          "en": "Skyward Sword Scroll",
+          "zh-CN": "凌空剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Skyward Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载凌空剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "上清剑法精要": {
+        "name": {
+          "en": "Skyward Sword Scroll",
+          "zh-CN": "凌空剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Skyward Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载凌空剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "达摩剑法": {
+        "name": {
+          "en": "Pilgrim Sword Scroll",
+          "zh-CN": "行者剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Pilgrim Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载行者剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "两仪剑法": {
+        "name": {
+          "en": "Twin Forms Sword Scroll",
+          "zh-CN": "双式剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Twin Forms Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载双式剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "太极剑法谱": {
+        "name": {
+          "en": "Flowing Sword Scroll",
+          "zh-CN": "流转剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Flowing Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载流转剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "反两仪刀法": {
+        "name": {
+          "en": "Reverse Cleave Scroll",
+          "zh-CN": "逆势重斩卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Reverse Cleave. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载逆势重斩的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "血刀经": {
+        "name": {
+          "en": "Bloodreaver Cleave Scroll",
+          "zh-CN": "噬血重斩卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Bloodreaver Cleave. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载噬血重斩的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "血刀经真本": {
+        "name": {
+          "en": "Bloodreaver Cleave Scroll",
+          "zh-CN": "噬血重斩卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Bloodreaver Cleave. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载噬血重斩的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "阴阳倒乱刃": {
+        "name": {
+          "en": "Twilight Blades Scroll",
+          "zh-CN": "暮光飞刃卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Twilight Blades. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载暮光飞刃的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "岳家枪法精义": {
+        "name": {
+          "en": "Spell Lance Scroll",
+          "zh-CN": "奥术长枪卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Spell Lance. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载奥术长枪的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "伏魔杖法": {
+        "name": {
+          "en": "Warding Blast Scroll",
+          "zh-CN": "守卫冲击卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Warding Blast. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载守卫冲击的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "海叟钓法": {
+        "name": {
+          "en": "Spellhook Scroll",
+          "zh-CN": "秘术钩索卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Spellhook. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载秘术钩索的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "日月鞭法秘籍": {
+        "name": {
+          "en": "Sun and Moon Lash Scroll",
+          "zh-CN": "日月法鞭卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Sun and Moon Lash. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载日月法鞭的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "黑血神针秘籍": {
+        "name": {
+          "en": "Bloodthorn Bolt Scroll",
+          "zh-CN": "血棘飞弹卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Bloodthorn Bolt. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载血棘飞弹的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "七伤摧魂针法": {
+        "name": {
+          "en": "Soulthorn Bolt Scroll",
+          "zh-CN": "魂棘飞弹卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Soulthorn Bolt. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载魂棘飞弹的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "玄铁剑法谱": {
+        "name": {
+          "en": "Ironweight Sword Scroll",
+          "zh-CN": "重铁剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Ironweight Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载重铁剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "太极拳秘籍": {
+        "name": {
+          "en": "Flowing Fist Scroll",
+          "zh-CN": "流转拳卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Flowing Fist. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载流转拳的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "太极剑秘籍": {
+        "name": {
+          "en": "Flowing Sword Scroll",
+          "zh-CN": "流转剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Flowing Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载流转剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "倚天屠龙笔法秘籍": {
+        "name": {
+          "en": "Runescribe Scroll",
+          "zh-CN": "符文刻印卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Runescribe. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载符文刻印的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "黯然销魂掌谱": {
+        "name": {
+          "en": "Heartache Palm Scroll",
+          "zh-CN": "黯伤掌卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Heartache Palm. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载黯伤掌的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "六脉神剑谱": {
+        "name": {
+          "en": "Sixfold Strike Scroll",
+          "zh-CN": "六重指击卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Sixfold Strike. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载六重指击的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "六脉神剑心法": {
+        "name": {
+          "en": "Sixfold Strike Scroll",
+          "zh-CN": "六重指击卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Sixfold Strike. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载六重指击的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "天山折梅手法": {
+        "name": {
+          "en": "Winterblossom Fist Scroll",
+          "zh-CN": "冬花拳卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Winterblossom Fist. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载冬花拳的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "降龙十八掌谱": {
+        "name": {
+          "en": "Dragonbreaker Fist Scroll",
+          "zh-CN": "破龙拳卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Dragonbreaker Fist. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载破龙拳的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "降龙十八掌真意": {
+        "name": {
+          "en": "Dragonbreaker Fist Scroll",
+          "zh-CN": "破龙拳卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Dragonbreaker Fist. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载破龙拳的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "如来神掌秘籍": {
+        "name": {
+          "en": "Enlightened Palm Scroll",
+          "zh-CN": "明悟掌卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Enlightened Palm. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载明悟掌的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "独孤九剑剑谱": {
+        "name": {
+          "en": "Ninefold Sword Scroll",
+          "zh-CN": "九式剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Ninefold Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载九式剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "独孤九剑秘籍": {
+        "name": {
+          "en": "Ninefold Sword Scroll",
+          "zh-CN": "九式剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Ninefold Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载九式剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "独孤九剑真意": {
+        "name": {
+          "en": "Ninefold Sword Scroll",
+          "zh-CN": "九式剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Ninefold Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载九式剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "辟邪剑谱": {
+        "name": {
+          "en": "Nightblade Sword Scroll",
+          "zh-CN": "夜刃剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Nightblade Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载夜刃剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "两页胡家刀法": {
+        "name": {
+          "en": "Frontier Cleave Scroll",
+          "zh-CN": "边境重斩卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Frontier Cleave. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载边境重斩的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "胡家刀法手抄本": {
+        "name": {
+          "en": "Frontier Cleave Scroll",
+          "zh-CN": "边境重斩卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Frontier Cleave. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载边境重斩的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "胡家刀法秘籍": {
+        "name": {
+          "en": "Frontier Cleave Scroll",
+          "zh-CN": "边境重斩卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Frontier Cleave. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载边境重斩的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "苗家剑法秘籍": {
+        "name": {
+          "en": "Trailguard Sword Scroll",
+          "zh-CN": "行路卫剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Trailguard Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载行路卫剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "鸳鸯刀": {
+        "name": {
+          "en": "Paired Cleavers Scroll",
+          "zh-CN": "成双重刃卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Paired Cleavers. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载成双重刃的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "打狗棒法入门": {
+        "name": {
+          "en": "Runewarden's Staff Scroll",
+          "zh-CN": "符文守卫杖术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Runewarden's Staff. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载符文守卫杖术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "烈焰黑枪之法": {
+        "name": {
+          "en": "Blackfire Lance Scroll",
+          "zh-CN": "黑焰法枪卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Blackfire Lance. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载黑焰法枪的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "神照经": {
+        "name": {
+          "en": "Lifebloom Mastery Scroll",
+          "zh-CN": "生机专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Lifebloom Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载生机专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "三阴蜈蚣爪秘籍": {
+        "name": {
+          "en": "Venom Claw Scroll",
+          "zh-CN": "毒爪拳卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Venom Claw. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载毒爪拳的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "天山六阳掌真解": {
+        "name": {
+          "en": "Six Suns Palm Scroll",
+          "zh-CN": "六日掌卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Six Suns Palm. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载六日掌的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "般若掌秘籍": {
+        "name": {
+          "en": "Sage's Palm Scroll",
+          "zh-CN": "贤者掌卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Sage's Palm. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载贤者掌的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "拈花指秘籍": {
+        "name": {
+          "en": "Petal Touch Scroll",
+          "zh-CN": "拈花指击卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Petal Touch. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载拈花指击的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "伏魔棍秘籍": {
+        "name": {
+          "en": "Banishment Pulse Scroll",
+          "zh-CN": "驱逐脉冲卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Banishment Pulse. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载驱逐脉冲的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "野球拳秘籍": {
+        "name": {
+          "en": "Traveler's Gauntlet Strike Scroll",
+          "zh-CN": "旅人拳击卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Traveler's Gauntlet Strike. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载旅人拳击的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "斗转星移诀": {
+        "name": {
+          "en": "Starfall Shift Scroll",
+          "zh-CN": "星落秘术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Starfall Shift. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载星落秘术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "斗转星移心得": {
+        "name": {
+          "en": "Starfall Shift Scroll",
+          "zh-CN": "星落秘术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Starfall Shift. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载星落秘术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "金蛇剑法秘籍残篇": {
+        "name": {
+          "en": "Golden Serpent Sword Scroll",
+          "zh-CN": "金蛇剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Golden Serpent Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载金蛇剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "金蛇游身掌掌谱": {
+        "name": {
+          "en": "Golden Serpent Fist Scroll",
+          "zh-CN": "金蛇拳卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Golden Serpent Fist. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载金蛇拳的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "破玉拳秘籍": {
+        "name": {
+          "en": "Gemshatter Fist Scroll",
+          "zh-CN": "碎玉拳卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Gemshatter Fist. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载碎玉拳的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "连城剑法": {
+        "name": {
+          "en": "Vaultbreaker Sword Scroll",
+          "zh-CN": "破库剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Vaultbreaker Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载破库剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "连城剑法精要": {
+        "name": {
+          "en": "Vaultbreaker Sword Scroll",
+          "zh-CN": "破库剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Vaultbreaker Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载破库剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "打狗棒法": {
+        "name": {
+          "en": "Runewarden's Staff Scroll",
+          "zh-CN": "符文守卫杖术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Runewarden's Staff. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载符文守卫杖术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "血刀心法秘籍": {
+        "name": {
+          "en": "Hunter's Mastery Scroll",
+          "zh-CN": "猎人专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Hunter's Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载猎人专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "全真心法秘籍": {
+        "name": {
+          "en": "Woodland Mastery Scroll",
+          "zh-CN": "林地专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Woodland Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载林地专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "紫霞神功秘籍": {
+        "name": {
+          "en": "Dusklight Mastery Scroll",
+          "zh-CN": "暮光专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Dusklight Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载暮光专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "蛤蟆功秘籍": {
+        "name": {
+          "en": "Toadheart Mastery Scroll",
+          "zh-CN": "蟾心专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Toadheart Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载蟾心专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "武当心法抄本": {
+        "name": {
+          "en": "Riverflow Mastery Scroll",
+          "zh-CN": "河流专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Riverflow Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载河流专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "先天功秘籍": {
+        "name": {
+          "en": "First Light Mastery Scroll",
+          "zh-CN": "初光专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for First Light Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载初光专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "北冥神功精义": {
+        "name": {
+          "en": "Deepwell Mastery Scroll",
+          "zh-CN": "深井专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Deepwell Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载深井专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "血海魔功秘籍": {
+        "name": {
+          "en": "Bloodtide Mastery Scroll",
+          "zh-CN": "血潮专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Bloodtide Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载血潮专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "龙象般若功精义": {
+        "name": {
+          "en": "Titanheart Mastery Scroll",
+          "zh-CN": "巨人之心专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Titanheart Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载巨人之心专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "九阴真经抄本": {
+        "name": {
+          "en": "Shadowheart Mastery Scroll",
+          "zh-CN": "影心专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Shadowheart Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载影心专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "九阴真经": {
+        "name": {
+          "en": "Shadowheart Mastery Scroll",
+          "zh-CN": "影心专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Shadowheart Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载影心专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "真九阴真经": {
+        "name": {
+          "en": "Shadowheart Mastery Scroll",
+          "zh-CN": "影心专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Shadowheart Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载影心专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "葵花宝典": {
+        "name": {
+          "en": "Sunflower Mastery Scroll",
+          "zh-CN": "向日葵专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Sunflower Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载向日葵专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "真葵花宝典": {
+        "name": {
+          "en": "Sunflower Mastery Scroll",
+          "zh-CN": "向日葵专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Sunflower Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载向日葵专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "易筋经": {
+        "name": {
+          "en": "Ironbody Mastery Scroll",
+          "zh-CN": "铁躯专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Ironbody Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载铁躯专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "易筋经真本": {
+        "name": {
+          "en": "Ironbody Mastery Scroll",
+          "zh-CN": "铁躯专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Ironbody Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载铁躯专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "紫阳剑经": {
+        "name": {
+          "en": "Cold Resolve Sword Scroll",
+          "zh-CN": "冷意剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Cold Resolve Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载冷意剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "九阴遗篇": {
+        "name": {
+          "en": "Shadowheart Mastery Scroll",
+          "zh-CN": "影心专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Shadowheart Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载影心专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "混元功秘籍": {
+        "name": {
+          "en": "Primal Mastery Scroll",
+          "zh-CN": "原初专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Primal Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载原初专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "烈焰黑枪秘本": {
+        "name": {
+          "en": "Blackfire Lance Scroll",
+          "zh-CN": "黑焰法枪卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Blackfire Lance. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载黑焰法枪的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "小无相功精要": {
+        "name": {
+          "en": "Shapeless Mastery Scroll",
+          "zh-CN": "无形专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Shapeless Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载无形专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "大力金刚指秘籍": {
+        "name": {
+          "en": "Titan's Touch Scroll",
+          "zh-CN": "巨人指击卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Titan's Touch. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载巨人指击的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "九阳真经": {
+        "name": {
+          "en": "Sunfire Mastery Scroll",
+          "zh-CN": "日焰专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Sunfire Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载日焰专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "九阳真经真解": {
+        "name": {
+          "en": "Sunfire Mastery Scroll",
+          "zh-CN": "日焰专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Sunfire Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载日焰专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "太极神功秘籍": {
+        "name": {
+          "en": "Balance Mastery Scroll",
+          "zh-CN": "平衡专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Balance Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载平衡专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "武当九阳功秘籍": {
+        "name": {
+          "en": "Dawn Warden Mastery Scroll",
+          "zh-CN": "晨曦守卫专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Dawn Warden Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载晨曦守卫专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "罗汉伏魔功秘本": {
+        "name": {
+          "en": "Demonward Mastery Scroll",
+          "zh-CN": "镇魔专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Demonward Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载镇魔专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "神木王鼎": {
+        "name": {
+          "en": "Spellbreaker Mastery Scroll",
+          "zh-CN": "破法专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Spellbreaker Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载破法专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "金蛇剑法真解": {
+        "name": {
+          "en": "Golden Serpent Sword Scroll",
+          "zh-CN": "金蛇剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Golden Serpent Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载金蛇剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "铁血大旗功秘籍": {
+        "name": {
+          "en": "Iron Banner Mastery Scroll",
+          "zh-CN": "铁旗专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Iron Banner Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载铁旗专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "铁血大旗功真本": {
+        "name": {
+          "en": "Iron Banner Mastery Scroll",
+          "zh-CN": "铁旗专精卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Iron Banner Mastery. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载铁旗专精的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "破玉拳真解": {
+        "name": {
+          "en": "Gemshatter Fist Scroll",
+          "zh-CN": "碎玉拳卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Gemshatter Fist. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载碎玉拳的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "天外飞龙秘籍": {
+        "name": {
+          "en": "Sky Dragon Sword Scroll",
+          "zh-CN": "飞龙剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Sky Dragon Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载飞龙剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "碧落苍穹秘籍": {
+        "name": {
+          "en": "Open Sky Sword Scroll",
+          "zh-CN": "长空剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Open Sky Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载长空剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "越女剑法秘籍": {
+        "name": {
+          "en": "Maiden's Sword Scroll",
+          "zh-CN": "少女剑术卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Maiden's Sword. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载少女剑术的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "闯王军刀": {
+        "name": {
+          "en": "Rebel Captain's Axe",
+          "zh-CN": "叛军队长战斧"
+        },
+        "description": {
+          "en": "A quest item. Keep it for the related quest.",
+          "zh-CN": "任务道具，请保留用于对应任务。"
+        }
+      },
+      "杨不悔的发簪": {
+        "name": {
+          "en": "Young Traveler's Hairpin",
+          "zh-CN": "少女旅人发簪"
+        },
+        "description": {
+          "en": "A quest item. Keep it for the related quest.",
+          "zh-CN": "任务道具，请保留用于对应任务。"
+        }
+      },
+      "行军司马的信": {
+        "name": {
+          "en": "Quartermaster's Letter",
+          "zh-CN": "军需官书信"
+        },
+        "description": {
+          "en": "A quest item. Keep it for the related quest.",
+          "zh-CN": "任务道具，请保留用于对应任务。"
+        }
+      },
+      "少林寺失窃的经书": {
+        "name": {
+          "en": "Stolen Monastery Text",
+          "zh-CN": "失窃修道院典籍"
+        },
+        "description": {
+          "en": "A quest item. Keep it for the related quest.",
+          "zh-CN": "任务道具，请保留用于对应任务。"
+        }
+      },
+      "七星海棠": {
+        "name": {
+          "en": "Nightshade Blossom",
+          "zh-CN": "夜影花"
+        },
+        "description": {
+          "en": "A quest item. Keep it for the related quest.",
+          "zh-CN": "任务道具，请保留用于对应任务。"
+        }
+      },
+      "辟邪剑法残卷": {
+        "name": {
+          "en": "Torn Nightblade Notes",
+          "zh-CN": "夜刃残卷"
+        },
+        "description": {
+          "en": "A quest item. Keep it for the related quest.",
+          "zh-CN": "任务道具，请保留用于对应任务。"
+        }
+      },
+      "河岳英灵集": {
+        "name": {
+          "en": "Heroes' Almanac",
+          "zh-CN": "群英年鉴"
+        },
+        "description": {
+          "en": "A quest item. Keep it for the related quest.",
+          "zh-CN": "任务道具，请保留用于对应任务。"
+        }
+      },
+      "五毒教信物": {
+        "name": {
+          "en": "Venom Circle Token",
+          "zh-CN": "毒环会信物"
+        },
+        "description": {
+          "en": "A quest item. Keep it for the related quest.",
+          "zh-CN": "任务道具，请保留用于对应任务。"
+        }
+      },
+      "雪莲花": {
+        "name": {
+          "en": "Snow Lotus",
+          "zh-CN": "雪莲花"
+        },
+        "description": {
+          "en": "A quest item. Keep it for the related quest.",
+          "zh-CN": "任务道具，请保留用于对应任务。"
+        }
+      },
+      "万年醉": {
+        "name": {
+          "en": "Ancient Reserve",
+          "zh-CN": "陈年佳酿"
+        },
+        "description": {
+          "en": "A quest item. Keep it for the related quest.",
+          "zh-CN": "任务道具，请保留用于对应任务。"
+        }
+      },
+      "长白人参": {
+        "name": {
+          "en": "Mountain Ginseng",
+          "zh-CN": "高山人参"
+        },
+        "description": {
+          "en": "A quest item. Keep it for the related quest.",
+          "zh-CN": "任务道具，请保留用于对应任务。"
+        }
+      },
+      "天关.炼狱之证": {
+        "name": {
+          "en": "Inferno Trial Seal",
+          "zh-CN": "炼狱试炼印记"
+        },
+        "description": {
+          "en": "A quest item. Keep it for the related quest.",
+          "zh-CN": "任务道具，请保留用于对应任务。"
+        }
+      },
+      "天关.决战光明顶之证": {
+        "name": {
+          "en": "Summit Battle Seal",
+          "zh-CN": "山巅决战印记"
+        },
+        "description": {
+          "en": "A quest item. Keep it for the related quest.",
+          "zh-CN": "任务道具，请保留用于对应任务。"
+        }
+      },
+      "天关.林平之的复仇": {
+        "name": {
+          "en": "Vengeance Trial Seal",
+          "zh-CN": "复仇试炼印记"
+        },
+        "description": {
+          "en": "A quest item. Keep it for the related quest.",
+          "zh-CN": "任务道具，请保留用于对应任务。"
+        }
+      },
+      "天关.血战少室山": {
+        "name": {
+          "en": "Monastery Battle Seal",
+          "zh-CN": "修道院决战印记"
+        },
+        "description": {
+          "en": "A quest item. Keep it for the related quest.",
+          "zh-CN": "任务道具，请保留用于对应任务。"
+        }
+      },
+      "天关.越女剑": {
+        "name": {
+          "en": "Maiden's Sword Trial Seal",
+          "zh-CN": "少女剑术试炼印记"
+        },
+        "description": {
+          "en": "A quest item. Keep it for the related quest.",
+          "zh-CN": "任务道具，请保留用于对应任务。"
+        }
+      },
+      "黄金包裹一": {
+        "name": {
+          "en": "Sealed Gold Parcel I",
+          "zh-CN": "封存金包裹一"
+        },
+        "description": {
+          "en": "A quest item. Keep it for the related quest.",
+          "zh-CN": "任务道具，请保留用于对应任务。"
+        }
+      },
+      "黄金包裹二": {
+        "name": {
+          "en": "Sealed Gold Parcel II",
+          "zh-CN": "封存金包裹二"
+        },
+        "description": {
+          "en": "A quest item. Keep it for the related quest.",
+          "zh-CN": "任务道具，请保留用于对应任务。"
+        }
+      },
+      "温青青的发簪": {
+        "name": {
+          "en": "Companion's Hairpin",
+          "zh-CN": "伙伴发簪"
+        },
+        "description": {
+          "en": "A quest item. Keep it for the related quest.",
+          "zh-CN": "任务道具，请保留用于对应任务。"
+        }
+      },
+      "龙游帮VIP令牌": {
+        "name": {
+          "en": "Dragon Guild VIP Pass",
+          "zh-CN": "游龙公会贵宾证"
+        },
+        "description": {
+          "en": "A quest item. Keep it for the related quest.",
+          "zh-CN": "任务道具，请保留用于对应任务。"
+        }
+      },
+      "金蛇藏宝图": {
+        "name": {
+          "en": "Serpent Treasure Map",
+          "zh-CN": "金蛇藏宝图"
+        },
+        "description": {
+          "en": "A quest item. Keep it for the related quest.",
+          "zh-CN": "任务道具，请保留用于对应任务。"
+        }
+      },
+      "毒物": {
+        "name": {
+          "en": "Poison Specimen",
+          "zh-CN": "毒物样本"
+        },
+        "description": {
+          "en": "A quest item. Keep it for the related quest.",
+          "zh-CN": "任务道具，请保留用于对应任务。"
+        }
+      },
+      "笑傲江湖曲": {
+        "name": {
+          "en": "Song of Courage Scroll",
+          "zh-CN": "勇气之歌卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Song of Courage. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载勇气之歌的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "凌波微步图谱": {
+        "name": {
+          "en": "Phantom Step Scroll",
+          "zh-CN": "幻影步卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Phantom Step. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载幻影步的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "青莲诗集": {
+        "name": {
+          "en": "Drunken Brawl Scroll",
+          "zh-CN": "醉酒乱斗卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Drunken Brawl. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载醉酒乱斗的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "天地同寿": {
+        "name": {
+          "en": "Final Sacrifice Scroll",
+          "zh-CN": "最终献祭卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Final Sacrifice. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载最终献祭的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "武穆遗书": {
+        "name": {
+          "en": "Battlefield Orders Scroll",
+          "zh-CN": "战场号令卷轴"
+        },
+        "description": {
+          "en": "Training scroll for Battlefield Orders. Check its requirements and current effects in the item details.",
+          "zh-CN": "记载战场号令的卷轴。学习条件与实际效果见道具详情。"
+        }
+      },
+      "药王神篇": {
+        "name": {
+          "en": "Venom Sage's Notes",
+          "zh-CN": "毒术贤者笔记"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "神行百变秘籍": {
+        "name": {
+          "en": "Fleetfoot Training Notes",
+          "zh-CN": "疾步训练笔记"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "厚黑学": {
+        "name": {
+          "en": "Survivor's Playbook",
+          "zh-CN": "生存者手册"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "春宫图": {
+        "name": {
+          "en": "Scandalous Sketchbook",
+          "zh-CN": "风流画册"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "真北冥气穴图": {
+        "name": {
+          "en": "Deepwell Focus Notes",
+          "zh-CN": "深井凝神笔记"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "无尽斗志": {
+        "name": {
+          "en": "Unbroken Will Notes",
+          "zh-CN": "不灭斗志笔记"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "天下轻功总诀": {
+        "name": {
+          "en": "Traveler's Footwork Guide",
+          "zh-CN": "旅人步法指南"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "不老长春功法": {
+        "name": {
+          "en": "Evergreen Training Notes",
+          "zh-CN": "长青训练笔记"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "碎裂的怒吼": {
+        "name": {
+          "en": "Shattering Roar Notes",
+          "zh-CN": "碎裂怒吼笔记"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "沾衣十八跌": {
+        "name": {
+          "en": "Counterthrow Notes",
+          "zh-CN": "反摔笔记"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "万年长春": {
+        "name": {
+          "en": "Ancient Evergreen Notes",
+          "zh-CN": "古老长青笔记"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "灵心慧质": {
+        "name": {
+          "en": "Quick Learner's Notes",
+          "zh-CN": "敏学者笔记"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "隔空取物": {
+        "name": {
+          "en": "Farhand Notes",
+          "zh-CN": "远手秘术笔记"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "妙手仁心": {
+        "name": {
+          "en": "Healer's Handbook",
+          "zh-CN": "医师手册"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "飞向天际": {
+        "name": {
+          "en": "Skyward Leap Notes",
+          "zh-CN": "凌空跃步笔记"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "素心神剑心得": {
+        "name": {
+          "en": "Twin Hearts Sword Notes",
+          "zh-CN": "双心剑术笔记"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "太极心得手抄本": {
+        "name": {
+          "en": "Flowing Style Notes",
+          "zh-CN": "流转技法笔记"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "乾坤大挪移心法": {
+        "name": {
+          "en": "Force Redirection Notes",
+          "zh-CN": "借力转移笔记"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "华佗遗篇": {
+        "name": {
+          "en": "Master Healer's Notes",
+          "zh-CN": "大师医术遗篇"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "金钟罩心法": {
+        "name": {
+          "en": "Iron Guard Notes",
+          "zh-CN": "铁卫笔记"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "吸星大法精义": {
+        "name": {
+          "en": "Starwell Drain Notes",
+          "zh-CN": "星井汲取笔记"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "黑暗遗篇之黑天死炎": {
+        "name": {
+          "en": "Forbidden Blackfire Notes",
+          "zh-CN": "禁忌黑焰遗篇"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "黑暗遗篇之死生茫茫": {
+        "name": {
+          "en": "Forbidden Twilight Notes",
+          "zh-CN": "禁忌生死遗篇"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "斗转星移之法": {
+        "name": {
+          "en": "Starfall Shift Notes",
+          "zh-CN": "星落秘术笔记"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "精明天赋书": {
+        "name": {
+          "en": "Sharp Mind Notes",
+          "zh-CN": "精明笔记"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "左右互搏术": {
+        "name": {
+          "en": "Ambidexterity Notes",
+          "zh-CN": "双手互搏笔记"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "生意经": {
+        "name": {
+          "en": "Trader's Handbook",
+          "zh-CN": "商人手册"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "医术汇总": {
+        "name": {
+          "en": "Field Medicine Handbook",
+          "zh-CN": "野外医术手册"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "华山拳法纲要": {
+        "name": {
+          "en": "Highland Gauntlet Notes",
+          "zh-CN": "高地拳套纲要"
+        },
+        "description": {
+          "en": "Talent notes. Check the requirements and bonuses in the item details.",
+          "zh-CN": "天赋笔记，学习条件与加成见道具详情。"
+        }
+      },
+      "玉蜂浆": {
+        "name": {
+          "en": "Royal Honey",
+          "zh-CN": "蜂王蜜"
+        },
+        "description": {
+          "en": "An attribute booster. Check its actual effects and conditions before using it.",
+          "zh-CN": "属性提升道具，使用前查看实际效果与条件。"
+        }
+      },
+      "蛇胆": {
+        "name": {
+          "en": "Serpent Bile",
+          "zh-CN": "蛇胆"
+        },
+        "description": {
+          "en": "An attribute booster. Check its actual effects and conditions before using it.",
+          "zh-CN": "属性提升道具，使用前查看实际效果与条件。"
+        }
+      }
+    }
+  }
+}

@@ -100,15 +100,6 @@ def apply_skin(raw,skin,locale):
     browser['contentVersion']=skin['version']
     for objective in browser['objectives']:
         if objective['id'] in skin['objectives']:objective['title']=skin['objectives'][objective['id']][locale]
-    # A lesson is completed by taking part, while battle wins and rewards
-    # retain their original independent records. This never invents a victory.
-    if skin.get('practiceLesson'):
-        lesson=skin['practiceLesson']
-        if lesson!={'objectiveId':'training','storyId':'新手村_武师木头人','battleId':'南贤居_木头人_战斗'}:raise ValueError('Unsupported practice lesson')
-        objective=next(o for o in browser['objectives'] if o['id']==lesson['objectiveId'])
-        if objective['kind']!='battle' or objective['target']!=lesson['battleId']:raise ValueError('Practice objective changed')
-        if not any(step.get('battleId')==lesson['battleId'] for step in scripts[lesson['storyId']]['steps']):raise ValueError('Practice story no longer runs its battle')
-        objective.update(kind='story',target=lesson['storyId'])
     def localize(value):
         if isinstance(value,dict):return value[locale] if set(value)=={'en','zh-CN'} else {k:localize(v) for k,v in value.items()}
         if isinstance(value,list):return [localize(v) for v in value]
@@ -154,27 +145,31 @@ def compile_runtime_package(original,display,extra_labels=None):
     runtime=copy.deepcopy(original)
     runtime['storyScripts']=copy.deepcopy(display['storyScripts'])
     runtime['browser']=copy.deepcopy(display['browser'])
-    candidates={};id_candidates={}
-    def remember(id,before,after):
+    candidates={};id_candidates={};category_candidates={}
+    def remember(category,id,before,after):
         fields={key:after[key] for key in ['name','description'] if key in after and before.get(key)!=after[key]}
         if after.get('picture')!=before.get('picture') and after.get('picture'):
             fields['image']=display['browser']['media']['resources'][after['picture']]
         if fields:
             prior=id_candidates.setdefault(id,{})
+            scoped=category_candidates.setdefault(category,{}).setdefault(id,{})
             for key,value in fields.items():
                 prior.setdefault(key,set()).add(value)
+                scoped.setdefault(key,set()).add(value)
                 if key=='name':prior.setdefault('sourceName',set()).add(before.get('name') or id)
+                if key=='name':scoped.setdefault('sourceName',set()).add(before.get('name') or id)
                 old=before.get(key,id if key=='name' else '')
                 if old:candidates.setdefault(old,set()).add(value)
     for category,definitions in original.items():
         if not isinstance(definitions,list) or category in ['resources']:continue
         for before,after in zip(definitions,display[category],strict=True):
             if isinstance(before,dict) and isinstance(before.get('id'),str):
-                remember(before['id'],before,after)
+                remember(category,before['id'],before,after)
                 if category=='maps':
-                    for old,new in zip(before.get('locations',[]),after.get('locations',[]),strict=True):remember(old['id'],old,new)
+                    for old,new in zip(before.get('locations',[]),after.get('locations',[]),strict=True):remember('locations',old['id'],old,new)
     by_id={id:{field:next(iter(values)) for field,values in fields.items() if len(values)==1} for id,fields in id_candidates.items()}
     catalog={'schemaVersion':1,'byId':by_id,'text':{source:next(iter(values)) for source,values in candidates.items() if len(values)==1}}
+    catalog['byCategory']={category:{id:{field:next(iter(values)) for field,values in fields.items() if len(values)==1} for id,fields in entries.items()} for category,entries in category_candidates.items()}
     catalog['text'].update(extra_labels or {})
     runtime['browser']['displayCatalog']=catalog
     # No names, descriptions or labels ever enter the rule definitions.
@@ -213,9 +208,7 @@ def assert_same_flow(original,adapted):
     def browser_rules(browser):
         browser=copy.deepcopy(browser)
         for key in ['title','subtitle','description','chapterTitle','contentVersion','media','defaultName','currencyName','currencyUnit','terms','chapterGuide']:browser.pop(key,None)
-        for objective in browser['objectives']:
-            objective.pop('title',None)
-            if objective['id']=='training' and objective['kind']=='story' and objective.get('target')=='新手村_武师木头人':objective.update(kind='battle',target='南贤居_木头人_战斗')
+        for objective in browser['objectives']:objective.pop('title',None)
         for task in browser.get('legacyTasks',[]):task.pop('description',None)
         for question in browser.get('creation',{}).get('questions',[]):
             question.pop('title',None)

@@ -107,7 +107,7 @@
           {
             "speaker": "商人",
             "text": {
-              "en": "Grimm sent you? Excellent. I have a beginner's scroll for you. Choose a fighting style before you choose a heroic pose.",
+              "en": "Grimm sent you? Excellent. I've a beginner's scroll for you. Choose a fighting style before you choose a heroic pose.",
               "zh-CN": "格林让你来的？正好，我这里有本新手卷轴送你。先选打法，再选英雄的站姿。"
             }
           }
@@ -263,7 +263,7 @@
           {
             "speaker": "南贤",
             "text": {
-              "en": "You will find the young apprentice in Crossroads. A practice bout, remember. We are training a traveller, not a menace.",
+              "en": "You'll find the young apprentice in Crossroads. A practice bout, remember. We're training a traveler, not a menace.",
               "zh-CN": "小学徒就在十字镇。记住，是友好切磋。我在培养旅人，不是制造麻烦。"
             }
           }
@@ -278,14 +278,14 @@
           {
             "speaker": "小孩",
             "text": {
-              "en": "You must be Grimm's traveller. Ready for a practice bout? We stop when someone yields.",
+              "en": "You must be Grimm's traveler. Ready for a practice bout? We stop when someone yields.",
               "zh-CN": "你就是格林说的旅人？来练一场吧，谁认输就停。"
             }
           },
           {
             "speaker": "主角",
             "text": {
-              "en": "Agreed. I shall attempt to look experienced.",
+              "en": "Agreed. I'll attempt to look experienced.",
               "zh-CN": "同意。我会努力表现得很有经验。"
             }
           },
@@ -328,7 +328,7 @@
           {
             "speaker": "小孩",
             "text": {
-              "en": "Yes! That is the point. Now stop looking so surprised that you learned something.",
+              "en": "Yes! That's the point. Now stop looking so surprised that you learned something.",
               "zh-CN": "对，就是这个意思！别那么吃惊，你确实学会了一点东西。"
             }
           }
@@ -380,7 +380,7 @@
           {
             "speaker": "南贤",
             "text": {
-              "en": "You kept the bout friendly and learned from it. That is a useful beginning.",
+              "en": "You kept the bout friendly and learned from it. That's a useful beginning.",
               "zh-CN": "懂得友好切磋，也肯从中学东西。这个开头不错。"
             }
           },
@@ -409,7 +409,7 @@
           {
             "speaker": "主角",
             "text": {
-              "en": "I will try the bully. Somebody ought to object to his tolls.",
+              "en": "I'll try the bully. Somebody ought to object to his tolls.",
               "zh-CN": "我去试试恶霸。总该有人反对他那套拦路收费。"
             }
           },
@@ -444,7 +444,7 @@
           {
             "speaker": "黑老大",
             "text": {
-              "en": "A new traveller! The road toll is whatever you look nervous enough to pay.",
+              "en": "A new traveler! The road toll is whatever you look nervous enough to pay.",
               "zh-CN": "新来的旅人！过路费嘛，就看你紧张得愿意掏多少。"
             }
           },
@@ -480,7 +480,7 @@
           {
             "speaker": "主角",
             "text": {
-              "en": "There is an advanced demonstration? I would like to withdraw my application.",
+              "en": "There's an advanced demonstration? I would like to withdraw my application.",
               "zh-CN": "还有进阶演示？我申请撤回报名。"
             }
           }
@@ -495,7 +495,7 @@
           {
             "speaker": "主角",
             "text": {
-              "en": "I believe I have learned the principal lesson.",
+              "en": "I believe I've learned the principal lesson.",
               "zh-CN": "我想，主要的教训我已经学到了。"
             }
           },
@@ -509,7 +509,7 @@
           {
             "speaker": "主角",
             "text": {
-              "en": "That confidence is not armour. I will leave you to admire your own importance.",
+              "en": "That confidence is not armor. I'll leave you to admire your own importance.",
               "zh-CN": "自信不是铠甲。我先走，不耽误你继续欣赏自己的威风。"
             }
           },
@@ -560,7 +560,7 @@
           {
             "speaker": "南贤",
             "text": {
-              "en": "An open road contains enemies you cannot beat yet. Train, recruit companions, improve your equipment, and return when you are ready.",
+              "en": "An open road contains enemies you cannot beat yet. Train, recruit companions, improve your equipment, and return when you're ready.",
               "zh-CN": "路上的敌人，并不都等着让你现在击败。先修炼、结识伙伴、改善装备，准备好了再回来。"
             }
           },
@@ -641,7 +641,7 @@
           {
             "speaker": "主角",
             "text": {
-              "en": "I suppose I shall have to supply the ending myself.",
+              "en": "I suppose I'll have to supply the ending myself.",
               "zh-CN": "看来，结局还得我自己准备。"
             }
           }
@@ -685,14 +685,14 @@
           {
             "speaker": "主角",
             "text": {
-              "en": "I am back. The road has opinions about beginners.",
+              "en": "I'm back. The road has opinions about beginners.",
               "zh-CN": "我回来了。外面的路，对新手颇有意见。"
             }
           },
           {
             "speaker": "南贤",
             "text": {
-              "en": "And you are here to argue with them?",
+              "en": "And you're here to argue with them?",
               "zh-CN": "所以，你回来准备反驳它？"
             }
           },
@@ -733,7 +733,7 @@
           {
             "speaker": "南贤",
             "text": {
-              "en": "I collect stories. I am familiar with that one.",
+              "en": "I collect stories. I'm familiar with that one.",
               "zh-CN": "我是收集故事的。这种故事，我熟。"
             }
           }
@@ -748,7 +748,7 @@
           {
             "speaker": "小孩",
             "text": {
-              "en": "I can tell you are new. You are looking at the sign instead of the shortcuts.",
+              "en": "I can tell you're new. You're looking at the sign instead of the shortcuts.",
               "zh-CN": "看得出来你刚来。你在看路牌，还没开始找近道。"
             }
           },
@@ -777,7 +777,7 @@
           {
             "speaker": "王家老爷",
             "text": {
-              "en": "I have consulted the stars, the runes, and three very unhelpful birds. My dog is still out walking.",
+              "en": "I've consulted the stars, the runes, and three very unhelpful birds. My dog is still out walking.",
               "zh-CN": "我问过星辰，问过符文，还问过三只毫无帮助的鸟。我的狗，依旧在外头散步。"
             }
           },
@@ -806,7 +806,7 @@
           {
             "speaker": "钟灵",
             "text": {
-              "en": "I am Eir. My little stoat carries medicines between patients. He has gone missing, and I would rather find him before someone mistakes him for lunch.",
+              "en": "I'm Eir. My little stoat carries medicines between patients. He has gone missing, and I would rather find him before someone mistakes him for lunch.",
               "zh-CN": "我是埃尔。我的小白鼬负责在病人之间送药。它走丢了，我想赶在人家把它误认成午饭之前，找到它。"
             }
           },
@@ -828,7 +828,7 @@
           {
             "speaker": "钟灵",
             "text": {
-              "en": "Thank you. I will travel with you. Keep your hands away from unknown mouths; I prefer my new companions unbitten.",
+              "en": "Thank you. I'll travel with you. Keep your hands away from unknown mouths; I prefer my new companions unbitten.",
               "zh-CN": "谢谢，我和你同行。手别随便往不认识的嘴边放，我希望新伙伴先保持完整。"
             }
           }
@@ -843,7 +843,7 @@
           {
             "speaker": "钟灵",
             "text": {
-              "en": "Then we part here. I have a small, urgent search, and worry does not shorten the road.",
+              "en": "Then we part here. I've a small, urgent search, and worry does not shorten the road.",
               "zh-CN": "那就在这里分别吧。我还得赶紧找它，担心，可不会让路变短。"
             }
           }
@@ -901,7 +901,7 @@
           {
             "speaker": "主角",
             "text": {
-              "en": "A swift animal, a bitten hand, and Eir's missing assistant. That is at least a lead.",
+              "en": "A swift animal, a bitten hand, and Eir's missing assistant. That's at least a lead.",
               "zh-CN": "小兽跑得快，有人被咬了手，还提到埃尔的助手。至少，是一条线索。"
             }
           }
@@ -945,7 +945,7 @@
           {
             "speaker": "段延庆",
             "text": {
-              "en": "You have cost me the plan. You will not take the creature as well.",
+              "en": "You have cost me the plan. You'll not take the creature as well.",
               "zh-CN": "你毁了我的计划，别想再把小兽也带走。"
             }
           },
@@ -974,7 +974,7 @@
           {
             "speaker": "段延庆",
             "text": {
-              "en": "The scheme is exposed. We are leaving.",
+              "en": "The scheme is exposed. We're leaving.",
               "zh-CN": "计划暴露，撤退。"
             }
           },
@@ -988,7 +988,7 @@
           {
             "speaker": "主角",
             "text": {
-              "en": "We will give him a quiet place. I am sorry, Eir.",
+              "en": "We will give him a quiet place. I'm sorry, Eir.",
               "zh-CN": "我们给它找个安静的地方吧。对不起，埃尔。"
             }
           },
@@ -1111,7 +1111,7 @@
           {
             "speaker": "木婉清",
             "text": {
-              "en": "Save the performance. There is something moving beside the wall.",
+              "en": "Save the performance. There's something moving beside the wall.",
               "zh-CN": "省省吧，墙边有东西在动。"
             }
           },
@@ -1132,7 +1132,7 @@
           {
             "speaker": "木婉清",
             "text": {
-              "en": "Pick it up gently. We are returning him to Eir.",
+              "en": "Pick it up gently. We're returning him to Eir.",
               "zh-CN": "轻点抱好。把它送回埃尔那里。"
             }
           }
@@ -1169,21 +1169,21 @@
           {
             "speaker": "黄衫女子",
             "text": {
-              "en": "Grimm's recommendation? Then you are welcome at the House of Mists. Keep your voice down; concentration is easier without a fanfare.",
+              "en": "Grimm's recommendation? Then you're welcome at the House of Mists. Keep your voice down; concentration is easier without a fanfare.",
               "zh-CN": "格林介绍来的？那就欢迎加入迷雾学舍。小点声，专心练习不需要吹号助兴。"
             }
           },
           {
             "speaker": "主角",
             "text": {
-              "en": "I have brought no trumpet. A promising start.",
+              "en": "No trumpet. So far, so good.",
               "zh-CN": "我没带喇叭。看来，开头还不错。"
             }
           },
           {
             "speaker": "黄衫女子",
             "text": {
-              "en": "We study patience, precision and follow-up strikes. Respect the house, practise properly, and earn the next lesson.",
+              "en": "We study patience, precision and follow-up strikes. Respect the house, practice properly, and earn the next lesson.",
               "zh-CN": "这里讲究耐心、精准和后续连招。尊重学舍，认真练习，再来学下一课。"
             }
           },
@@ -1227,21 +1227,21 @@
           {
             "speaker": "金轮法王",
             "text": {
-              "en": "Percival. Welcome to the Grail Lodge. You seek training, I assume, rather than a warmer view.",
+              "en": "Percival. Welcome to the Grail Lodge. You're here to train, right? The view won't warm you up.",
               "zh-CN": "我是珀西瓦尔。欢迎来到圣杯山舍。想来，你是求学的，不是来欣赏更冷的风景。"
             }
           },
           {
             "speaker": "主角",
             "text": {
-              "en": "Both, if one of them includes a roof.",
+              "en": "Either one, as long as I get a roof.",
               "zh-CN": "两样都行，只要其中一样包括屋顶。"
             }
           },
           {
             "speaker": "金轮法王",
             "text": {
-              "en": "Shelter first, then practice. Strength is learned in stages; it is not issued with a grand title.",
+              "en": "Shelter first, then practice. Strength is learned in stages; it's not issued with a grand title.",
               "zh-CN": "先避风，再练习。力量要分阶段学，不是取个响亮名号，就能领到的。"
             }
           },
@@ -1263,7 +1263,7 @@
           {
             "speaker": "主角",
             "text": {
-              "en": "Warm up, then practise. At last, advice that works in both senses.",
+              "en": "Warm up, then practice. At last, advice that works in both senses.",
               "zh-CN": "先热身，再练习。总算，有条建议字面上也很实用。"
             }
           }
@@ -1364,7 +1364,7 @@
           {
             "speaker": "马钰",
             "text": {
-              "en": "Keeping your promises. The singing improves with confidence. Protect ordinary folk, practise, and earn your place.",
+              "en": "Keeping your promises. The singing improves with confidence. Protect ordinary folk, practice, and earn your place.",
               "zh-CN": "是守信。唱得好不好，自信一点，总会进步。保护普通人，认真练习，凭本领取得位置。"
             }
           }
@@ -1393,7 +1393,7 @@
           {
             "speaker": "秦婆婆",
             "text": {
-              "en": "A beginning. Study patterns, practise movement, and read between lessons. A clever fighter sees more than one possible next step.",
+              "en": "A beginning. Study patterns, practice movement, and read between lessons. A clever fighter sees more than one possible next step.",
               "zh-CN": "也是个开头。研究规律，练习身法，课间读书。聪明的武者，看得见不止一种下一步。"
             }
           }
@@ -1408,7 +1408,7 @@
           {
             "speaker": "方证大师",
             "text": {
-              "en": "I am Sanzang. Grimm's letter says you wish to learn. Will you take our vows, or train as a visiting student?",
+              "en": "I'm Sanzang. Grimm's letter says you wish to learn. Will you take our vows, or train as a visiting student?",
               "zh-CN": "我是三藏。格林信里说，你想来学习。你愿意立誓常住，还是以在外行走的弟子身份修习？"
             }
           },
@@ -1452,14 +1452,14 @@
           {
             "speaker": "方证大师",
             "text": {
-              "en": "A travelling student, then. Learn here, practise on the road, and use your strength to protect others.",
+              "en": "A traveling student, then. Learn here, practice on the road, and use your strength to protect others.",
               "zh-CN": "那就作为在外弟子吧。在此求学，在路上练习，把力量用来保护别人。"
             }
           },
           {
             "speaker": "主角",
             "text": {
-              "en": "I shall try to return with better habits, and the same amount of hair.",
+              "en": "I'll try to return with better habits, and the same amount of hair.",
               "zh-CN": "我会努力带着更好的习惯回来，头发的数量尽量保持原样。"
             }
           }
@@ -1488,7 +1488,7 @@
           {
             "speaker": "冲虚道长",
             "text": {
-              "en": "It is. Practise with your fellow students, and remember that patience is a form of strength.",
+              "en": "It's. Practice with your fellow students, and remember that patience is a form of strength.",
               "zh-CN": "确实。和同门好好练习，记住，耐心也是力量的一种。"
             }
           }
@@ -1575,7 +1575,7 @@
           {
             "speaker": "主角",
             "text": {
-              "en": "Let none pass unseen. I shall begin with the words directly in front of me.",
+              "en": "Let none pass unseen. I'll begin with the words directly in front of me.",
               "zh-CN": "不许漏过一人。我先从留意眼前这行字开始吧。"
             }
           }
@@ -1590,7 +1590,7 @@
           {
             "speaker": "南贤",
             "text": {
-              "en": "An independent traveller? Good. The road has no shortage of teachers.",
+              "en": "An independent traveler? Good. The road has no shortage of teachers.",
               "zh-CN": "独自闯荡？很好。路上从来不缺老师。"
             }
           },
@@ -1617,7 +1617,7 @@
           {
             "speaker": "主角",
             "text": {
-              "en": "That is a surprisingly practical parting gift.",
+              "en": "That's a surprisingly practical parting gift.",
               "zh-CN": "这份临别礼物，实用得有点出乎意料。"
             }
           },
@@ -1646,7 +1646,7 @@
           {
             "speaker": "主角",
             "text": {
-              "en": "A lesson I shall remember rather vividly.",
+              "en": "A lesson Yeah, I'm going to remember that one.",
               "zh-CN": "这堂课，我应该会记得相当深刻。"
             }
           },
@@ -1684,7 +1684,7 @@
       },
       "options": {
         "en": [
-          "Take the lessons. I am fond of surviving.",
+          "Take the lessons. I'd like to stay alive.",
           "Choose a school and set out."
         ],
         "zh-CN": [
@@ -1702,13 +1702,13 @@
         "en": [
           "Gauntlets — Hearthward Fist",
           "Sword — Serpent Swordplay",
-          "Blade — Thornblade Arts",
+          "Heavy Weapons — Thornblade Arts",
           "Spells — Wandering Arcana"
         ],
         "zh-CN": [
           "拳套：护炉拳法",
           "剑术：青蛇剑术",
-          "刃术：荆刃战技",
+          "重武器：荆刃战技",
           "法术：游旅秘术"
         ]
       }
@@ -1737,7 +1737,7 @@
       "options": {
         "en": [
           "Help her. Travel together.",
-          "Not now. I have another task."
+          "Not now. I've another task."
         ],
         "zh-CN": [
           "帮忙，结伴寻找。",
@@ -1753,7 +1753,7 @@
       "options": {
         "en": [
           "Take the vows and become a resident.",
-          "Remain a travelling student."
+          "Remain a traveling student."
         ],
         "zh-CN": [
           "立誓，成为常住弟子。",
@@ -1894,7 +1894,7 @@
           "zh-CN": "圣杯山舍"
         },
         "description": {
-          "en": "A snowbound school of disciplined strength and defence.",
+          "en": "A snowbound school of disciplined strength and defense.",
           "zh-CN": "雪中的学舍，注重力量、自律与防御。"
         }
       },
@@ -1934,7 +1934,7 @@
           "zh-CN": "明心庭院"
         },
         "description": {
-          "en": "Sanzang accepts both resident and travelling students.",
+          "en": "Sanzang accepts both resident and traveling students.",
           "zh-CN": "三藏接纳常住弟子，也接纳在外行走的弟子。"
         }
       },
@@ -1960,7 +1960,7 @@
       },
       "无门派": {
         "name": {
-          "en": "Independent Traveller",
+          "en": "Independent Traveler",
           "zh-CN": "独行道路"
         },
         "description": {
@@ -2088,7 +2088,7 @@
           "zh-CN": "异乡来客"
         },
         "description": {
-          "en": "At low health, greatly increases attack, critical chance and defence. Common Folk raises its health threshold.",
+          "en": "At low health, greatly increases attack, critical chance and defense. Common Folk raises its health threshold.",
           "zh-CN": "生命较低时，大幅提高攻击、暴击率与防御；平民之志会提高它的触发血线。"
         }
       },
@@ -2098,7 +2098,7 @@
           "zh-CN": "小人物的运气"
         },
         "description": {
-          "en": "Adds 0.1 to the legacy legendary-combo chance multiplier for Wayfarer's Gauntlet Strike.",
+          "en": "Adds 0.1 to the legacy legendary-combo chance multiplier for Traveler's Gauntlet Strike.",
           "zh-CN": "为旅人拳击的奥义触发倍率额外增加0.1。"
         }
       },
@@ -2108,7 +2108,7 @@
           "zh-CN": "平民之志"
         },
         "description": {
-          "en": "Enables Wayfarer's Gauntlet Strike combinations and raises Otherworlder's low-health activation threshold.",
+          "en": "Enables Traveler's Gauntlet Strike combinations and raises Otherworlder's low-health activation threshold.",
           "zh-CN": "帮助触发旅人拳击奥义，并提高异乡来客的触发血线。"
         }
       },
@@ -2148,7 +2148,7 @@
           "zh-CN": "分心的风流客"
         },
         "description": {
-          "en": "Against female opponents: attack is multiplied by 1.2; defence against them by 0.8.",
+          "en": "Against female opponents: attack is multiplied by 1.2; defense against them by 0.8.",
           "zh-CN": "面对女性对手时，攻击乘以1.2；承受其攻击时，防御乘以0.8。"
         }
       },
@@ -2234,11 +2234,11 @@
       },
       "俗家弟子": {
         "name": {
-          "en": "Travelling Student",
+          "en": "Traveling Student",
           "zh-CN": "行旅弟子"
         },
         "description": {
-          "en": "May ignore part of an opponent's defence, with benefits increasing by level.",
+          "en": "May ignore part of an opponent's defense, with benefits increasing by level.",
           "zh-CN": "有概率忽略对手部分防御，收益随等级提高。"
         }
       },
@@ -2352,7 +2352,7 @@
     "items": {
       "新手礼包-大蟠桃": {
         "name": {
-          "en": "Wayfarer's Welcome Elixir",
+          "en": "Traveler's Welcome Elixir",
           "zh-CN": "旅人启程药剂"
         },
         "description": {
@@ -2422,7 +2422,7 @@
       },
       "柳叶刀": {
         "name": {
-          "en": "Ranger's Sabre",
+          "en": "Ranger's Saber",
           "zh-CN": "游侠弯刀"
         },
         "description": {
@@ -2572,11 +2572,11 @@
       },
       "粗布道袍": {
         "name": {
-          "en": "Traveller's Robe",
+          "en": "Traveler's Robe",
           "zh-CN": "旅人布袍"
         },
         "description": {
-          "en": "Defence +5. Critical resistance +1%. Insight +10. Other modifiers are listed with the item.",
+          "en": "Defense +5. Critical resistance +1%. Insight +10. Other modifiers are listed with the item.",
           "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
         }
       },
@@ -2586,7 +2586,7 @@
           "zh-CN": "金线长袍"
         },
         "description": {
-          "en": "Defence +15. Constitution +15. Requires Agility 30. Other modifiers are listed with the item.",
+          "en": "Defense +15. Constitution +15. Requires Agility 30. Other modifiers are listed with the item.",
           "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
         }
       },
@@ -2596,7 +2596,7 @@
           "zh-CN": "破晓猎衣"
         },
         "description": {
-          "en": "Defence +5. Other modifiers are listed with the item.",
+          "en": "Defense +5. Other modifiers are listed with the item.",
           "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
         }
       },
@@ -2606,7 +2606,7 @@
           "zh-CN": "不来梅守望制服"
         },
         "description": {
-          "en": "Defence +5. Other modifiers are listed with the item.",
+          "en": "Defense +5. Other modifiers are listed with the item.",
           "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
         }
       },
@@ -2616,7 +2616,7 @@
           "zh-CN": "圣杯山舍服"
         },
         "description": {
-          "en": "Defence +5. Other modifiers are listed with the item.",
+          "en": "Defense +5. Other modifiers are listed with the item.",
           "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
         }
       },
@@ -2626,7 +2626,7 @@
           "zh-CN": "迷雾学舍服"
         },
         "description": {
-          "en": "Defence +5. Other modifiers are listed with the item.",
+          "en": "Defense +5. Other modifiers are listed with the item.",
           "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
         }
       },
@@ -2636,17 +2636,17 @@
           "zh-CN": "织线厅服"
         },
         "description": {
-          "en": "Defence +5. Other modifiers are listed with the item.",
+          "en": "Defense +5. Other modifiers are listed with the item.",
           "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
         }
       },
       "黄金重甲": {
         "name": {
-          "en": "Gilded Heavy Armour",
+          "en": "Gilded Heavy Armor",
           "zh-CN": "鎏金重甲"
         },
         "description": {
-          "en": "Defence +80. Critical resistance +15%. Grants Limited Stride. Requires Strength 55. Other modifiers are listed with the item.",
+          "en": "Defense +80. Critical resistance +15%. Grants Limited Stride. Requires Strength 55. Other modifiers are listed with the item.",
           "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
         }
       },
@@ -2656,7 +2656,7 @@
           "zh-CN": "乌丝背心"
         },
         "description": {
-          "en": "Defence +80. Critical resistance +5%. Resolve +5. Other modifiers are listed with the item.",
+          "en": "Defense +80. Critical resistance +5%. Resolve +5. Other modifiers are listed with the item.",
           "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
         }
       },
@@ -2666,7 +2666,7 @@
           "zh-CN": "金冠环"
         },
         "description": {
-          "en": "Attack +8. Defence +8. Grants Keen Eye. Other modifiers are listed with the item.",
+          "en": "Attack +8. Defense +8. Grants Keen Eye. Other modifiers are listed with the item.",
           "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
         }
       },
@@ -2676,7 +2676,7 @@
           "zh-CN": "银手镯"
         },
         "description": {
-          "en": "Attack +3. Defence +3. Grants Inner Sight. Other modifiers are listed with the item.",
+          "en": "Attack +3. Defense +3. Grants Inner Sight. Other modifiers are listed with the item.",
           "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
         }
       },
@@ -2686,7 +2686,7 @@
           "zh-CN": "凝神护符"
         },
         "description": {
-          "en": "Attack +3. Defence +10. Other modifiers are listed with the item.",
+          "en": "Attack +3. Defense +10. Other modifiers are listed with the item.",
           "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
         }
       },
@@ -2849,7 +2849,7 @@
         "zh-CN": "云冠山"
       },
       "description": {
-        "en": "A high mountain where narrow paths reward patient travellers.",
+        "en": "A high mountain where narrow paths reward patient travelers.",
         "zh-CN": "高山上的小径，只肯善待耐心的旅人。"
       }
     },
@@ -2879,7 +2879,7 @@
         "zh-CN": "旅人客栈"
       },
       "description": {
-        "en": "An inn where travellers compare scars, stories, and the price of supper.",
+        "en": "An inn where travelers compare scars, stories, and the price of supper.",
         "zh-CN": "旅人在这里比伤疤，比故事，也比晚饭价格。"
       }
     },
@@ -3169,7 +3169,7 @@
         "zh-CN": "风歌渡口"
       },
       "description": {
-        "en": "Travellers meet where the river makes them wait.",
+        "en": "Travelers meet where the river makes them wait.",
         "zh-CN": "河水让人停下的地方，旅人就会相遇。"
       }
     },
@@ -3199,7 +3199,7 @@
         "zh-CN": "提灯公会"
       },
       "description": {
-        "en": "A guild hall for the well-travelled and the badly underestimated.",
+        "en": "A guild hall for the well-traveled and the badly underestimated.",
         "zh-CN": "走过远路、也被人小看过的旅人，常在这里聚首。"
       }
     },
@@ -3289,7 +3289,7 @@
         "zh-CN": "浪客居所"
       },
       "description": {
-        "en": "A traveller's home, seldom improved by polite introductions.",
+        "en": "A traveler's home, seldom improved by polite introductions.",
         "zh-CN": "旅人的住处，客套往往起不了多少作用。"
       }
     },
@@ -3359,7 +3359,7 @@
         "zh-CN": "融雪镇"
       },
       "description": {
-        "en": "A market town where travellers pause between harder journeys.",
+        "en": "A market town where travelers pause between harder journeys.",
         "zh-CN": "旅人在两段艰难路程之间，歇脚的一处集镇。"
       }
     },
@@ -3419,7 +3419,7 @@
         "zh-CN": "北门集市"
       },
       "description": {
-        "en": "A northern market for travellers preparing for a longer road.",
+        "en": "A northern market for travelers preparing for a longer road.",
         "zh-CN": "准备走远路的旅人，常来这里补齐行装。"
       }
     },
@@ -3479,7 +3479,7 @@
         "zh-CN": "不来梅守望"
       },
       "description": {
-        "en": "A school where courage is practised in company.",
+        "en": "A school where courage is practiced in company.",
         "zh-CN": "在同伴之间，练出勇气的一处学舍。"
       }
     },
@@ -3499,7 +3499,7 @@
         "zh-CN": "珊瑚岛"
       },
       "description": {
-        "en": "An island reached by travellers with reasons to leave the mainland.",
+        "en": "An island reached by travelers with reasons to leave the mainland.",
         "zh-CN": "总有些人，带着离开大陆的理由，来到这里。"
       }
     },
@@ -3612,7 +3612,7 @@
           "zh-CN": "云冠山"
         },
         "description": {
-          "en": "A high mountain where narrow paths reward patient travellers.",
+          "en": "A high mountain where narrow paths reward patient travelers.",
           "zh-CN": "高山上的小径，只肯善待耐心的旅人。"
         }
       },
@@ -3642,7 +3642,7 @@
           "zh-CN": "旅人客栈"
         },
         "description": {
-          "en": "An inn where travellers compare scars, stories, and the price of supper.",
+          "en": "An inn where travelers compare scars, stories, and the price of supper.",
           "zh-CN": "旅人在这里比伤疤，比故事，也比晚饭价格。"
         }
       },
@@ -3932,7 +3932,7 @@
           "zh-CN": "风歌渡口"
         },
         "description": {
-          "en": "Travellers meet where the river makes them wait.",
+          "en": "Travelers meet where the river makes them wait.",
           "zh-CN": "河水让人停下的地方，旅人就会相遇。"
         }
       },
@@ -3962,7 +3962,7 @@
           "zh-CN": "提灯公会"
         },
         "description": {
-          "en": "A guild hall for the well-travelled and the badly underestimated.",
+          "en": "A guild hall for the well-traveled and the badly underestimated.",
           "zh-CN": "走过远路、也被人小看过的旅人，常在这里聚首。"
         }
       },
@@ -4052,7 +4052,7 @@
           "zh-CN": "浪客居所"
         },
         "description": {
-          "en": "A traveller's home, seldom improved by polite introductions.",
+          "en": "A traveler's home, seldom improved by polite introductions.",
           "zh-CN": "旅人的住处，客套往往起不了多少作用。"
         }
       },
@@ -4122,7 +4122,7 @@
           "zh-CN": "融雪镇"
         },
         "description": {
-          "en": "A market town where travellers pause between harder journeys.",
+          "en": "A market town where travelers pause between harder journeys.",
           "zh-CN": "旅人在两段艰难路程之间，歇脚的一处集镇。"
         }
       },
@@ -4182,7 +4182,7 @@
           "zh-CN": "北门集市"
         },
         "description": {
-          "en": "A northern market for travellers preparing for a longer road.",
+          "en": "A northern market for travelers preparing for a longer road.",
           "zh-CN": "准备走远路的旅人，常来这里补齐行装。"
         }
       },
@@ -4242,7 +4242,7 @@
           "zh-CN": "不来梅守望"
         },
         "description": {
-          "en": "A school where courage is practised in company.",
+          "en": "A school where courage is practiced in company.",
           "zh-CN": "在同伴之间，练出勇气的一处学舍。"
         }
       },
@@ -4262,7 +4262,7 @@
           "zh-CN": "珊瑚岛"
         },
         "description": {
-          "en": "An island reached by travellers with reasons to leave the mainland.",
+          "en": "An island reached by travelers with reasons to leave the mainland.",
           "zh-CN": "总有些人，带着离开大陆的理由，来到这里。"
         }
       },
@@ -4892,7 +4892,7 @@
       "zh-CN": "坚毅专精"
     },
     "野球拳": {
-      "en": "Wayfarer's Gauntlet Strike",
+      "en": "Traveler's Gauntlet Strike",
       "zh-CN": "旅人拳击"
     },
     "内功入门": {
@@ -5038,7 +5038,7 @@
         "en": [
           "A patient planner",
           "A quiet guardian",
-          "A curious traveller",
+          "A curious traveler",
           "A fearless brawler",
           "A disciplined captain"
         ],
@@ -5134,7 +5134,7 @@
       "zh-CN": "旅程"
     },
     "affiliation": {
-      "en": "Independent traveller",
+      "en": "Independent traveler",
       "zh-CN": "独行旅人"
     },
     "missions": {

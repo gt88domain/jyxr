@@ -27,3 +27,19 @@ test('a pending location keeps its canonical label instead of exposing a null na
 test('original apps bypass the projection and unknown schemas fail explicitly',()=>{
  const value={name:'南贤'};assert.equal(projectPresentation(value),value);assert.throws(()=>projectPresentation(value,{...catalog,schemaVersion:9}),/Unsupported/);
 });
+test('a shared legacy ID keeps skill, scroll and shop labels distinct without changing references',()=>{
+ const shared={schemaVersion:1,byId:{},text:{},byCategory:{
+  internalSkills:{shared:{name:'Ironbody Mastery',sourceName:'shared',description:'A mastery.'}},
+  items:{shared:{name:'Ironbody Mastery Scroll',sourceName:'shared',description:'A training scroll.'}}
+ }};
+ const raw={hero:{id:'主角',name:'shared',internalSkills:[{id:'shared',name:'shared'}],cultivation:{itemId:'shared',itemName:'shared',skillId:'shared',skillName:'shared'}},
+  inventory:[{id:'shared',name:'shared',count:2}],shop:{products:[{id:'product-7',itemId:'shared',name:'shared',price:123}]}};
+ const saved=structuredClone(raw),view=projectPresentation(raw,shared);
+ assert.deepEqual(raw,saved);
+ assert.equal(view.hero.name,'shared');
+ assert.equal(view.hero.internalSkills[0].name,'Ironbody Mastery');
+ assert.equal(view.inventory[0].name,'Ironbody Mastery Scroll');
+ assert.equal(view.shop.products[0].name,'Ironbody Mastery Scroll');
+ assert.deepEqual(view.hero.cultivation,{itemId:'shared',itemName:'Ironbody Mastery Scroll',skillId:'shared',skillName:'Ironbody Mastery'});
+ assert.equal(view.shop.products[0].price,123);assert.equal(view.inventory[0].count,2);
+});

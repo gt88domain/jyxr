@@ -118,7 +118,7 @@
       "zh-CN": "选入修炼栏的卷轴会获得战斗经验。只捧着书看，可吓不倒训练假人。"
     },
     "入门体验告一段落。原版买药教学、门派选择和其他江湖地点已逐步接入；可继续完成南贤的原版任务。尚未迁移的特殊流程不会被当作已完成。": {
-      "en": "That is how two travellers become a team. Review your opening-chapter goals and save your journey. More stories await beyond this field trial; those later chapters are still being rewritten.",
+      "en": "That is how two travelers become a team. Review your opening-chapter goals and save your journey. More stories await beyond this field trial; those later chapters are still being rewritten.",
       "zh-CN": "两个旅人就这样成为了搭档。检查前期章节目标，再保存这段旅程。实地委托之外还有更多故事，后续章节仍在逐批改写。"
     }
   },
@@ -194,7 +194,7 @@
           {
             "speaker": "主角",
             "text": {
-              "en": "Good. Something I can practise while panicking.",
+              "en": "Good. Something I can practice while panicking.",
               "zh-CN": "挺好，至少慌起来的时候，我也能顺便练练。"
             }
           }
@@ -260,7 +260,7 @@
           {
             "speaker": "南贤",
             "text": {
-              "en": "Your choices matter. It is hard to earn someone's trust after selling their family heirloom.",
+              "en": "Your choices matter. It's hard to earn someone's trust after selling their family heirloom.",
               "zh-CN": "你的选择很要紧。刚卖掉人家的传家宝，再谈信任，通常有点晚。"
             }
           },
@@ -325,7 +325,7 @@
           {
             "speaker": "南贤",
             "text": {
-              "en": "Make friends, learn their skills, and bring me your adventures. Leave their silverware where it is.",
+              "en": "Make friends, learn their skills, and bring me your adventures. Leave their silverware where it's.",
               "zh-CN": "结识伙伴，学习本领，把见闻带回来。人家的银餐具，就留在人家家里。"
             }
           }
@@ -369,7 +369,7 @@
           {
             "speaker": "武师",
             "text": {
-              "en": "Grimm's new traveller? Good. Put your feet there. No, both of them.",
+              "en": "Grimm's new traveler? Good. Put your feet there. No, both of them.",
               "zh-CN": "格林新找来的旅人？好，把脚站稳。对，两只脚都得站稳。"
             }
           },
@@ -419,8 +419,8 @@
           {
             "speaker": "武师",
             "text": {
-              "en": "Gauntlets, swords, blades and spells reward different training. Choose a direction; your pack does not need to contain an entire armoury.",
-              "zh-CN": "拳套、剑术、刃术和法术各有专长。先选个方向，背包里不必塞进整座兵器库。"
+              "en": "Gauntlets, swords, blades and spells reward different training. Choose a direction; your pack does not need to contain an entire armory.",
+              "zh-CN": "拳套、剑术、重武器和法术各有专长。先选个方向，背包里不必塞进整座兵器库。"
             }
           }
         ]
@@ -470,7 +470,7 @@
           {
             "speaker": "武师",
             "text": {
-              "en": "Experienced travellers can teach you too. Try speaking to them before testing whether their beard is real.",
+              "en": "Experienced travelers can teach you too. Try speaking to them before testing whether their beard is real.",
               "zh-CN": "旅途中的高手也可能指点你。先好好说话，别一见面就上手试人家的胡子是真是假。"
             }
           }
@@ -485,7 +485,7 @@
           {
             "speaker": "武师",
             "text": {
-              "en": "Attacks can favour Radiant or Umbral affinity. Your equipped mastery supplies those affinities, so check the pairing.",
+              "en": "Attacks can favor Radiant or Umbral affinity. Your equipped mastery supplies those affinities, so check the pairing.",
               "zh-CN": "攻击分为光辉与幽影亲和。当前运用的被动专精提供对应加成，搭配之前先看看数值。"
             }
           },
@@ -616,7 +616,7 @@
           {
             "speaker": "商人",
             "text": {
-              "en": "Welcome. Supplies on the shelves; heroic speeches outside. I have stock to count.",
+              "en": "Welcome. Supplies on the shelves; heroic speeches outside. I've stock to count.",
               "zh-CN": "欢迎。补给在货架上，豪言壮语请到门外说。我还得盘货。"
             }
           },
@@ -645,7 +645,7 @@
           {
             "speaker": "主角",
             "text": {
-              "en": "Time to practise together. If we both shout 'I've got this', one of us still needs to watch the flank.",
+              "en": "Time to practice together. If we both shout 'I've got this', one of us still needs to watch the flank.",
               "zh-CN": "该一起练练了。就算两个人都喊“交给我”，也总得有一个记得看侧翼。"
             }
           }
@@ -653,10 +653,11 @@
       }
     ]
   },
-  "version": "disciplines-1",
+  "version": "american-reskin-1",
   "chapters": [
     "chapter-start.json",
-    "chapter-guide.json"
+    "chapter-guide.json",
+    "chapter-us-catalog.json"
   ],
   "speakerNames": {
     "武师": {
@@ -680,12 +681,12 @@
       },
       "options": {
         "en": [
-          "[Set out] I am ready for the road.",
-          "[Leave] I will look around first.",
+          "[Set out] I'm ready for the road.",
+          "[Leave] I'll look around first.",
           "[Ask] How much do my choices matter?",
           "[Ask] Who might travel with me?",
-          "[Ask] What became of your other travellers?",
-          "[Ask] Remind me what I am here to do.",
+          "[Ask] What became of your other travelers?",
+          "[Ask] Remind me what I'm here to do.",
           "[Spar] Surely a writer knows a few sharp moves."
         ],
         "zh-CN": [
@@ -707,7 +708,7 @@
       "options": {
         "en": [
           "[Spar] Let me try the training dummy.",
-          "[Leave] That is enough bruises for now.",
+          "[Leave] That's enough bruises for now.",
           "How do attacks and masterys work?",
           "What do talents actually do?",
           "Where can I learn advanced techniques?",
@@ -800,7 +801,7 @@
           "zh-CN": "结伴练习"
         },
         "description": {
-          "en": "Practise fighting alongside your companion.",
+          "en": "Practice fighting alongside your companion.",
           "zh-CN": "与伙伴练习配合作战。"
         }
       },
@@ -840,7 +841,7 @@
       },
       "草帽": {
         "name": {
-          "en": "Traveller's Straw Hat",
+          "en": "Traveler's Straw Hat",
           "zh-CN": "旅人草帽"
         },
         "description": {
@@ -892,7 +893,7 @@
     "externalSkills": {
       "野球拳": {
         "name": {
-          "en": "Wayfarer's Gauntlet Strike",
+          "en": "Traveler's Gauntlet Strike",
           "zh-CN": "旅人拳击"
         },
         "description": {

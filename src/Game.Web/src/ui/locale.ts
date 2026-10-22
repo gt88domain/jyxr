@@ -1,28 +1,33 @@
 import english from './ui-en.json' with {type:'json'};
+import {categorizedDisplay,type DisplayCatalog} from '../presentation.ts';
 
 const dictionary:Record<string,string>=english;
 const cjk=/[\u3400-\u9fff]/;
 let contentLabels:Record<string,string>={};
+let displayCatalog:DisplayCatalog|undefined;
 let activeLanguage='en';
-const fantasyChinese:Record<string,string>={'已切换当前运行内功。':'已切换当前主专精。','停止主运内功':'卸下主专精','切换主运内功':'更换主专精','同时主运一门':'同时装备一个主专精','设为主运':'装备为主专精','停止主运':'卸下主专精','当前运行心法':'当前主专精','主运功法':'主专精','外功招式':'主动技能','武功':'技艺','武学':'技艺','功法':'技艺','内功':'被动专精','心法':'专精','主运':'装备主专精','内力':'能量','秘籍':'卷轴','修炼':'研习','拳掌':'拳套','奇门':'法术','刀法':'刃术','门派':'学派','江湖':'故事世界','师父':'导师'};
+const fantasyChinese:Record<string,string>={'已切换当前运行内功。':'已切换当前主专精。','停止主运内功':'卸下主专精','切换主运内功':'更换主专精','同时主运一门':'同时装备一个主专精','设为主运':'装备为主专精','停止主运':'卸下主专精','当前运行心法':'当前主专精','主运功法':'主专精','外功招式':'主动技能','武功':'技艺','武学':'技艺','功法':'技艺','内功':'被动专精','心法':'专精','主运':'装备主专精','内力':'能量','秘籍':'卷轴','修炼':'研习','拳掌':'拳套','奇门':'法术','刀法':'重武器','门派':'学派','江湖':'故事世界','师父':'导师'};
 let contentTerms:Array<[string,string]>=[];
-export function setUiDisplayLabels(labels:Record<string,string>={}){
+export function setUiDisplayLabels(labels:Record<string,string>={},catalog?:DisplayCatalog){
   contentLabels=labels;
+  displayCatalog=catalog;
   contentTerms=Object.entries(labels).filter(([source])=>cjk.test(source)&&source.length<48).sort((a,b)=>b[0].length-a[0].length);
 }
+function itemLabel(name:string){return categorizedDisplay(displayCatalog,['items'],name)?.name??translateUiText(name);}
+function skillLabel(name:string){return categorizedDisplay(displayCatalog,['externalSkills','internalSkills','specialSkills','legendSkills'],name)?.name??translateUiText(name);}
 const patterns:Array<[RegExp,(...parts:string[])=>string]>=[
   [/^天赋「([^」]+)」(?:\n([\s\S]*))?$/,(name,description)=>`Talent: ${translateUiText(name)}${description?`\n${translateUiText(description)}`:''}`],
-  [/^(拳掌|剑|刀|奇门)系技能加成\s*([+−-][\d.]+%?)$/,(kind,amount)=>`${({'拳掌':'Gauntlets','剑':'Swordsmanship','刀':'Bladework','奇门':'Spellcasting'} as Record<string,string>)[kind]} technique bonus ${amount}`],
+  [/^(拳掌|剑|刀|奇门)系技能加成\s*([+−-][\d.]+%?)$/,(kind,amount)=>`${({'拳掌':'Gauntlets','剑':'Swordsmanship','刀':'Heavy Weapons','奇门':'Spells'} as Record<string,string>)[kind]} technique bonus ${amount}`],
   [/^奥义「([^」]+)」触发率\s*([+−-][\d.]+%?)$/,(name,amount)=>`Combo ${translateUiText(name)} trigger chance ${amount}`],
   [/^使用「([^」]+)」时奥义触发倍率增加([\d.]+)$/,(name,amount)=>`${translateUiText(name)} combo chance multiplier +${amount}`],
-  [/^技能「(.*?)」威力\s*([+−-][\d.]+%?)$/,(name,amount)=>`${translateUiText(name)} power ${amount}`],
+  [/^技能「(.*?)」威力\s*([+−-][\d.]+%?)$/,(name,amount)=>`${skillLabel(name)} power ${amount}`],
   [/^(.*?)\s*→$/,(label)=>`${translateUiText(label.trim())} →`],
   [/^(\d+)轮$/,(n)=>`${n} turns`],
   [/^(自动交手|手动出招)\s*·\s*(.*)$/,(mode,speed)=>`${mode==='自动交手'?'Auto':'Manual'} · ${speed}`],
   [/^秘籍修炼「(.*?)」经验\s*\+(\d+)(?:，提升至\s*(\d+)\s*级)?。$/,(name,xp,level)=>`Scroll study: ${translateUiText(name)} · XP +${xp}${level?` · Rank ${level}`:''}.`],
   [/^随身(.*?)$/,(currency)=>`Carried ${translateUiText(currency)}`],
-  [/^【(.*?)】装备【(.*?)】$/,(name,item)=>`${translateUiText(name)} equipped ${translateUiText(item)}.`],
-  [/^【(.*?)】使用【(.*?)】$/,(name,item)=>`${translateUiText(name)} used ${translateUiText(item)}.`],
+  [/^【(.*?)】装备【(.*?)】$/,(name,item)=>`${translateUiText(name)} equipped ${itemLabel(item)}.`],
+  [/^【(.*?)】使用【(.*?)】$/,(name,item)=>`${translateUiText(name)} used ${itemLabel(item)}.`],
   [/^恢复气血与(?:内力|Energy)$/ ,()=>`Recover Health and Energy`],
   [/^为(.*?)换上「(.*?)」，替换(.*?)。确认前不会穿戴或消耗物品。$/,(name,item,old)=>`Equip ${translateUiText(item)} on ${name}, replacing ${translateUiText(old)}. Nothing changes before confirmation.`],
   [/^确认装备到(.*)$/,(name)=>`Equip on ${name}`],
@@ -32,7 +37,7 @@ const patterns:Array<[RegExp,(...parts:string[])=>string]>=[
   [/^本次浏览器提示\s*·\s*(\d+)\s*条$/,(n)=>`Browser feedback · ${n}`],
   [/^(.*?)受到\s*(\d+)\s*点伤害（暴击）。$/,(name,n)=>`${translateUiText(name)} takes ${n} damage (critical).`],
   [/^(.*?)受到\s*(\d+)\s*点伤害。$/,(name,n)=>`${translateUiText(name)} takes ${n} damage.`],
-  [/^(.*?)施展「(.*?)」。$/,(name,skill)=>`${translateUiText(name)} uses ${translateUiText(skill)}.`],
+  [/^(.*?)施展「(.*?)」。$/,(name,skill)=>`${translateUiText(name)} uses ${skillLabel(skill)}.`],
   [/^(.*?)从(\d+)级升至(\d+)级。$/,(name,a,b)=>`${translateUiText(name)} levels up: ${a} → ${b}.`],
   [/^(.*?)加入队伍（(.*?)）。$/,(name,placement)=>`${translateUiText(name)} joins the party (${translateUiText(placement)}).`],
   [/^(.*?)离开队伍。$/,(name)=>`${translateUiText(name)} leaves the party.`],
@@ -62,16 +67,16 @@ const patterns:Array<[RegExp,(...parts:string[])=>string]>=[
   [/^经历「(.*?)」$/,(title)=>`complete ${translateUiText(title)}`],
   [/^旅途记事\s*·\s*最近\s*(\d+)\s*条$/,(n)=>`Journey journal · Last ${n}`],
   [/^(\d+)年(\d+)月(\d+)日\s*(.*?)时$/,(year,month,day,time)=>`Year ${year}, month ${month}, day ${day} · ${translateUiText(time)}`],
-  [/^获得「(.*?)」×(\d+)$/,(item,n)=>`Received ${translateUiText(item)} ×${n}`],
+  [/^获得「(.*?)」×(\d+)$/,(item,n)=>`Received ${itemLabel(item)} ×${n}`],
   [/^(.*?)\s*获得天赋【(.*?)】$/,(name,talent)=>`${name} gained the talent ${translateUiText(talent)}.`],
-  [/^买入【(.*?)】$/,(item)=>`Bought ${translateUiText(item)}`],
+  [/^买入【(.*?)】$/,(item)=>`Bought ${itemLabel(item)}`],
   [/^(.*?)开始冒险。$/,(name)=>`${name} began the journey.`],
   [/^(.*?)休息调息。$/,(name)=>`${translateUiText(name)} rests and recovers.`],
   [/^进入战斗：(.*?)。$/,(name)=>`Battle begins: ${translateUiText(name)}.`],
   [/^(.*?)\s*·\s*战场$/,(name)=>`${translateUiText(name)} · Battlefield`],
   [/^战斗时间\s*(.*)$/,(time)=>`Battle time ${time}`],
   [/^施展距离\s*(\d+)\s*格\s*·\s*作用范围\s*(\d+)$/,(range,area)=>`Range ${range} tiles · Area ${area}`],
-  [/^师父：\s*(.*)$/,(masters)=>`Tutors: ${masters.split('、').map(translateUiText).join(', ')}`],
+  [/^师父：\s*(.*)$/,(masters)=>`Instructors: ${masters.split('、').map(translateUiText).join(', ')}`],
   [/^武学：\s*(.*)$/,(skills)=>`Techniques: ${skills.split('、').map(translateUiText).join(', ')}`],
   [/^(.*?)的故事，从你的名字开始。$/,(title)=>`${title}: every journey begins with a name.`],
   [/^入江湖\s*·\s*(\d+)\s*\/\s*(\d+)$/,(a,b)=>`Your background · ${a}/${b}`],
@@ -81,7 +86,7 @@ const patterns:Array<[RegExp,(...parts:string[])=>string]>=[
   [/^第\s*(\d+)\s*次生成。重摇重新分配随机属性，保留问答、头像和由问答决定的奖励。$/,(n)=>`Roll ${n}. Reroll random attributes while keeping your answers, portrait and background rewards.`],
   [/^天赋[：:]\s*(.*)$/,(names)=>`Talents: ${translateUiText(names)}`],
   [/^心法[：:]\s*(.*)$/,(names)=>`Masteries: ${translateUiText(names)}`],
-  [/^获得「(.*?)」×(\d+)；获得「(.*?)」×(\d+)，另有(\d+)条，见通知。$/,(a,n,b,m,k)=>`Received ${translateUiText(a)} ×${n}; ${translateUiText(b)} ×${m}. ${k} more in Notifications.`],
+  [/^获得「(.*?)」×(\d+)；获得「(.*?)」×(\d+)，另有(\d+)条，见通知。$/,(a,n,b,m,k)=>`Received ${itemLabel(a)} ×${n}; ${itemLabel(b)} ×${m}. ${k} more in Notifications.`],
   [/^(.*?)的头像$/,(name)=>`${name}'s portrait`],
   [/^历练\s*·\s*第\s*(\d+)\s*级$/,(n)=>`Level ${n}`],
   [/^第\s*(\d+)\s*级$/,(n)=>`Level ${n}`],

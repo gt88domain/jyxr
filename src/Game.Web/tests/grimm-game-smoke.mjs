@@ -98,7 +98,7 @@ try{
  await click('[data-action="leave-battle"]');await continueDialogue();
  await click('[data-action="choice"][data-index="1"]');await continueDialogue();current=await state();
  assert.equal(current.phase,'world');assert.equal(current.silver,outcome==='win'?10:0);assert.equal(current.hero.cultivation.itemId,'内功入门');
- assert.equal(current.objectives.find(o=>o.id==='training').completed,true);
+ assert.equal(current.objectives.find(o=>o.id==='training').completed,outcome==='win');
  pass('the original instructor route executes a real battle with unchanged victory or defeat settlement',{outcome,timedOut});
  await click('[data-action="save"]');await page.waitForFunction(()=>['当前世界的进度已保存。','Journey saved.'].includes(document.querySelector('#toast')?.textContent));
  const saved=await state();await page.reload();await page.locator('[data-action="load"]').waitFor({state:'visible',timeout:120000});await click('[data-action="load"]');

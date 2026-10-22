@@ -42,16 +42,35 @@ class ChapterTests(unittest.TestCase):
  def test_confirmed_families_keep_gauntlets_spells_and_masteries_distinct(self):
   display,_=apply_skin(self.raw,self.skin,'en')
   names={s['id']:s['name'] for s in display['externalSkills']}
-  self.assertEqual(names['野球拳'],"Wayfarer's Gauntlet Strike")
+  self.assertEqual(names['野球拳'],"Traveler's Gauntlet Strike")
   self.assertEqual(names['罗汉拳'],'Hearthward Fist')
   self.assertEqual(names['疯魔杖法'],'Wandering Arcana')
   self.assertEqual(self.skin['uiLabels']['拳掌']['en'],'Gauntlets')
-  self.assertEqual(self.skin['uiLabels']['奇门']['en'],'Spellcasting')
+  self.assertEqual(self.skin['uiLabels']['奇门']['en'],'Spells')
+  self.assertEqual(self.skin['uiLabels']['刀法']['en'],'Heavy Weapons')
   self.assertEqual(display['browser']['terms']['internalSkills'],'Passive masteries')
   self.assertEqual(next(s for s in display['internalSkills'] if s['id']=='基本内功')['name'],'Steadfast Mastery')
   choice=self.skin['choiceText']['original_新手引导.买药']['options']['en']
   self.assertTrue(choice[0].startswith('Gauntlets —'))
   self.assertTrue(choice[3].startswith('Spells —'))
+
+ def test_catalog_covers_all_base_skills_rewards_specials_and_statuses(self):
+  for group in ['externalSkills','internalSkills','items','specialSkills','buffs']:
+   self.assertEqual({s['id'] for s in self.source[group]},set(self.skin['definitions'][group]),group)
+   for s in self.source[group]:
+    copy=self.skin['definitions'][group][s['id']]
+    for field in ['name','description']:
+     for locale in ['en','zh-CN']:self.assertTrue(copy[field][locale].strip(),(group,s['id'],field,locale))
+
+ def test_american_spelling_in_all_authored_english(self):
+  forbidden=re.compile(r'\b(defence|armour|travellers?|travelling|practise|centre|grey|favour|sabre)\b',re.I)
+  def walk(v,english=False):
+   if isinstance(v,str) and english:self.assertIsNone(forbidden.search(v),v)
+   elif isinstance(v,dict):
+    for k,x in v.items():walk(x,english or k=='en')
+   elif isinstance(v,list):
+    for x in v:walk(x,english)
+  walk(self.skin)
 
  def test_all_nine_school_entries_include_their_choice_closures(self):
   pending=[s['storyId'] for s in self.source['sects']];seen=set()

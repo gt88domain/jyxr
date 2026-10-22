@@ -8,7 +8,7 @@ test('study scrolls stay distinct from manual controls and saves',()=>{
 });
 test('random roll text is not mistaken for an equipment modifier',()=>{
  assert.equal(translateUiText('随机 +2'),'Random +2');
- assert.equal(translateUiText('防御力 +8，抗暴击率 +1%'),'Defence +8; Critical resistance +1%');
+ assert.equal(translateUiText('防御力 +8，抗暴击率 +1%'),'Defense +8; Critical resistance +1%');
 });
 test('skill modifiers use the content name and retain their numeric value',()=>{
  setUiDisplayLabels({'石梁心法':'Stonebridge Mastery'});
@@ -22,9 +22,17 @@ test('unknown display text converges instead of causing an observer rewrite loop
 });
 test('gauntlets, spellcasting and passive masteries retain distinct roles',()=>{
  assert.equal(translateUiText('拳掌'),'Gauntlets');
- assert.equal(translateUiText('奇门'),'Spellcasting');
+ assert.equal(translateUiText('奇门'),'Spells');
+ assert.equal(translateUiText('刀法'),'Heavy Weapons');
  assert.equal(translateUiText('内功'),'Passive masteries');
  assert.equal(translateUiText('拳掌系技能加成 +10%'),'Gauntlets technique bonus +10%');
- assert.equal(translateUiText('奇门系技能加成 +10%'),'Spellcasting technique bonus +10%');
+ assert.equal(translateUiText('奇门系技能加成 +10%'),'Spells technique bonus +10%');
  assert.equal(translateUiText('同时主运一门'),'One equipped mastery at a time');
+});
+test('American English keeps shared item and skill names distinct in reward and bonus text',()=>{
+ setUiDisplayLabels({}, {schemaVersion:1,byId:{},text:{},byCategory:{items:{'易筋经':{name:'Ironbody Mastery Scroll'}},internalSkills:{'易筋经':{name:'Ironbody Mastery'}}}});
+ assert.equal(translateUiText('获得「易筋经」×2'),'Received Ironbody Mastery Scroll ×2');
+ assert.equal(translateUiText('技能「易筋经」威力 +5%'),'Ironbody Mastery power +5%');
+ assert.equal(translateUiText('刀法'),'Heavy Weapons');
+ setUiDisplayLabels();
 });
