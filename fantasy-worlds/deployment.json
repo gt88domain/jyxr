@@ -1,12 +1,5 @@
 {
-  "sourceCommit": "77abd8e4e9a2811e02ee018355a16f24b72ac66b",
-  "companionSummary": {
-    "identities": 62,
-    "forms": 65,
-    "instructions": 80,
-    "fixedIdentities": 20,
-    "displayAppliedIdentities": 33,
-    "authoredJoinScenes": 25
-  },
-  "buildTrigger": "authenticated-git-push"
+  "sourceCommit": "92c0976099fca0632144cae54ac4243f07563dc4",
+  "buildTrigger": "authenticated-git-push",
+  "scope": "First-chapter guidance, companion preparation and read-only chapter facts"
 }
