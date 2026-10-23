@@ -5,6 +5,8 @@ test('study scrolls stay distinct from manual controls and saves',()=>{
  assert.equal(translateUiText('秘籍'),'Scrolls');
  assert.equal(translateUiText('手动战斗'),'Manual combat');
  assert.equal(translateUiText('读取手动存档'),'Load manual save');
+ assert.equal(translateUiText('Bloodthorn Bolt · 第 1 重 / 10 重'),'Bloodthorn Bolt · Rank 1/10');
+ assert.doesNotMatch(translateUiText('秘籍正由其他队友修炼。'),/[\u3400-\u9fff]/);
 });
 test('random roll text is not mistaken for an equipment modifier',()=>{
  assert.equal(translateUiText('随机 +2'),'Random +2');
@@ -28,6 +30,13 @@ test('talent notifications translate the companion as well as the talent',()=>{
 test('combined level-up and loot toasts translate as separate activity messages',()=>{
  assert.equal(translateUiText("Wren从6级升至7级。；获得「Traveler's Robe」×1"),"Wren levels up: 6 → 7.; Received Traveler's Robe ×1");
  assert.equal(translateUiText('未改写甲；未改写乙。'),'未改写甲；未改写乙。');
+});
+test('world-news requirements remain readable when combined with semicolons',()=>{
+ setUiDisplayLabels({'黑暗的阴影':'An Unwelcome Shadow'});
+ const source='主角达到 15 级；参战队伍至少 8 人（含主角）；经历「黑暗的阴影」';
+ const expected='Reach level 15; Have at least 8 active party members, including yourself; complete An Unwelcome Shadow';
+ assert.equal(translateUiText(source),expected);assert.equal(translateUiText(expected),expected);
+ setUiDisplayLabels();
 });
 test('gauntlets, spellcasting and passive masteries retain distinct roles',()=>{
  assert.equal(translateUiText('拳掌'),'Gauntlets');

@@ -653,7 +653,7 @@
       }
     ]
   },
-  "version": "windrider-loop-1",
+  "version": "windrider-guidance-2",
   "chapters": [
     "chapter-start.json",
     "chapter-guide.json",

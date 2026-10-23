@@ -8,6 +8,19 @@ namespace Game.Web.Runtime;
 
 internal sealed partial class BrowserRuntimeSession
 {
+    // Read saved facts only. Inspecting guidance must not evaluate map events
+    // (which may draw random numbers) or execute story commands.
+    private object? ChapterJournalView()
+    {
+        if (_session is null || _pack["chapterGuide"]?["story"] is not JsonObject guide) return null;
+        return new
+        {
+            completedStories = (guide["trackedStories"]?.AsArray() ?? []).Select(n => n!.GetValue<string>())
+                .Where(_session.State.Story.IsStoryCompleted).ToArray(),
+            trust = guide["trustTarget"] is { } target ? _session.State.Adventure.GetFavorability(target.GetValue<string>()) : (int?)null
+        };
+    }
+
     private object CompanionJournalView()
     {
         var tracked = (_pack["companionRecruitmentStories"]?.AsArray() ?? [])
