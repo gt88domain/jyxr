@@ -12,3 +12,4 @@
 .talent-description{max-width:100%;min-width:0}.talent-description summary{cursor:pointer;min-height:32px;line-height:1.8}.talent-description p{max-width:340px;white-space:normal;line-height:1.8;overflow-wrap:anywhere}.skill-parameters{display:flex;flex-wrap:wrap;gap:5px 12px;line-height:1.8;font-size:12px}.item-unavailable{flex-basis:100%;color:#943d25}.profile-stat .stat-allocate{min-width:36px;min-height:36px}.route-clues-link{margin:12px 0}
 
 .companion-morality{padding:12px 0 18px;border-bottom:1px solid #b6b29366;margin-bottom:15px}.companion-morality>p:first-child{display:flex;align-items:center;gap:14px;font-size:13px}.companion-morality strong{font-size:22px;color:#755f37}.companion-morality .button{min-height:44px;padding:10px 14px;font-size:12px;margin-top:10px}
+.companion-preparation{font-size:12px;line-height:1.8;overflow-wrap:anywhere}.companion-preparation b{font-weight:600}

@@ -3,7 +3,7 @@ using Game.Web.Runtime;
 
 if (args.FirstOrDefault() == "--white-horse")
 {
-    await WhiteHorseSmoke.Run(args[1], args[2]);
+    await WhiteHorseSmoke.Run(args[1], args[2], args.ElementAtOrDefault(3) ?? "normal");
     return;
 }
 

@@ -46,4 +46,23 @@ class WindriderTests(unittest.TestCase):
   self.assertIn("story_completed('书剑恩仇录_六和塔')",final['when'])
   self.assertIn("!story_completed('mainStory_紧急1')",final['when'])
 
+ def test_guidance_references_real_stories_and_keeps_native_gates(self):
+  for locale in ['en','zh-CN']:
+   game,_=apply_skin(self.raw,self.skin,locale)
+   guide=game['browser']['chapterGuide']['story']
+   self.assertEqual(guide['trustGoal'],60)
+   self.assertEqual(guide['trustTarget'],'李文秀')
+   self.assertEqual(set(guide['nightSlots']),{'亥','子','丑','寅','卯'})
+   self.assertTrue(set(guide['trackedStories'])<=self.segments.keys())
+   stages={s['id']:s for s in guide['stages']}
+   for stage,chance in [('night',20),('camp-conflict',30),('warrens',50),('alternate-warrens',50),('find-knight',20)]:
+    text=guide['nightReady'] if stage=='night' else stages[stage]['detail']
+    self.assertIn(str(chance)+'%',text)
+   self.assertEqual(stages['knight-declined']['any'],['白马啸西风_陈达海加入3'])
+
+ def test_missing_story_guide_reference_is_rejected(self):
+  skin=copy.deepcopy(self.skin)
+  skin['chapterGuide']['story']['trackedStories'].append('not-a-story')
+  with self.assertRaisesRegex(ValueError,'Chapter story reference'):apply_skin(self.raw,skin,'en')
+
 if __name__=='__main__':unittest.main()

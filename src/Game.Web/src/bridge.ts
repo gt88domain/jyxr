@@ -32,6 +32,7 @@ export interface CreationState {
   preview: {portrait: string; sprite: string; silver: number; randomBonus: Record<string, number>; attributes: {id: string; label: string; value: number}[]; talents: {id: string; name: string}[]; internalSkills: {id: string; name: string; level: number}[]; items: {id: string; name: string; quantity: number; icon?: string}[]} | null;
 }
 export interface GameState {
+  chapterJournal?: {completedStories: string[]; trust: number | null} | null;
   journeyId?:string;
   activity?:import('./activity').ActivityEntry[];
   musicId?: string | null;

@@ -5,7 +5,7 @@ import {openingChapterStep} from './opening-chapter';
 /** Display existing runtime facts; never finish a story or test a probability. */
 export function journeyFocus(state:GameState) {
   const opening=openingChapterStep(state);
-  if(opening)return {kind:opening.complete?'chapter-complete':'chapter',label:state.pack.chapterGuide!.title,title:opening.title,detail:opening.detail};
+  if(opening)return {kind:opening.complete?'chapter-complete':'chapter',label:opening.storyStage?state.pack.chapterGuide!.story!.title:state.pack.chapterGuide!.title,title:opening.title,detail:opening.detail};
   if(state.tutorial)return {
     kind:'tutorial',label:'当前教学任务',title:state.tutorial.description||state.tutorial.id,
     detail:`${state.tutorial.id} · 前往：${state.tutorial.locations.join(' → ')}`,
