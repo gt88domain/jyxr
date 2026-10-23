@@ -1,0 +1,507 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "uiLabels": {
+    "猴子偷桃": {
+      "en": "Clockwork Swipe — Pocket Swipe",
+      "zh-CN": "机关扫击·妙手一掏"
+    },
+    "大鹏展翅": {
+      "en": "Eagle Peck — Wingspan",
+      "zh-CN": "鹰啄·展翼"
+    },
+    "屁股向后.平沙落雁式": {
+      "en": "Wind-song Swordplay — Low Sweep",
+      "zh-CN": "风歌剑术·低身横扫"
+    },
+    "三分剑法.天山飞雪": {
+      "en": "Threefold Swordplay — Snowfall",
+      "zh-CN": "三段剑术·落雪"
+    },
+    "伪生死符": {
+      "en": "Frostpalm Strike — False Seal",
+      "zh-CN": "霜掌击·虚张印记"
+    },
+    "飘雪穿云掌.雪漫金山": {
+      "en": "Cloudburst Palm — Whiteout",
+      "zh-CN": "云涌掌法·漫天飞雪"
+    },
+    "天罗地网掌.彩翼双飞": {
+      "en": "Binding Palm — Twin Wings",
+      "zh-CN": "缚网掌法·双翼"
+    },
+    "华山剑法.苍松迎客": {
+      "en": "Crane-wing Swordplay — Welcoming Pine",
+      "zh-CN": "鹤翼剑术·迎客松"
+    },
+    "连环箭": {
+      "en": "Arcane Bolt — Bolt Barrage",
+      "zh-CN": "奥术飞弹·飞弹连射"
+    },
+    "大嵩阳手.嵩阳神掌": {
+      "en": "Sunwake Fist — High Noon",
+      "zh-CN": "晨光拳·正午"
+    },
+    "百花错拳.百花缭乱": {
+      "en": "Petalstorm Fist — Full Bloom",
+      "zh-CN": "花雨拳·繁花盛放"
+    },
+    "毒龙鞭法.银龙毒鞭": {
+      "en": "Viper's Hex — Venom Coil",
+      "zh-CN": "蝰蛇咒术·毒蛇盘绕"
+    },
+    "摧心掌.辣手摧心": {
+      "en": "Heartbreaker Strike — Heartstopper",
+      "zh-CN": "破心掌·摧心一击"
+    },
+    "赤练神掌": {
+      "en": "Venom Fist — Scarlet Sting",
+      "zh-CN": "毒牙拳·赤红毒刺"
+    },
+    "狂风刀法.万里独行": {
+      "en": "Whirlwind Cleave — Lone Wanderer",
+      "zh-CN": "旋风重斩·独行者"
+    },
+    "阴阳倒乱刃.绝情绝义": {
+      "en": "Twilight Blades — Severance",
+      "zh-CN": "暮光飞刃·断情"
+    },
+    "太白剑法.庚金太白剑": {
+      "en": "Starlight Sword — Silver Star",
+      "zh-CN": "星光剑术·银星"
+    },
+    "上清剑法.上清无极": {
+      "en": "Skyward Sword — Boundless Sky",
+      "zh-CN": "凌空剑术·无垠天际"
+    },
+    "归藏剑.先天八剑": {
+      "en": "Hidden Edge — Eightfold Edge",
+      "zh-CN": "藏锋剑术·八重锋刃"
+    },
+    "金乌刀法.梅雪逢夏": {
+      "en": "Sunbird Cleave — Summer Thaw",
+      "zh-CN": "日鸟重斩·夏日融雪"
+    },
+    "金蛇游身掌.跗骨之蛆": {
+      "en": "Golden Serpent Fist — Clinging Fang",
+      "zh-CN": "金蛇拳·追身獠牙"
+    },
+    "金蛇锥.金蛇螺旋锥": {
+      "en": "Serpent Bolt — Spiral Bolt",
+      "zh-CN": "蛇形飞弹·螺旋飞弹"
+    },
+    "寒冰神掌.岁寒三尺": {
+      "en": "Frozen Fist — Deep Freeze",
+      "zh-CN": "冰封拳·深寒"
+    },
+    "岳家枪法.碧血丹心": {
+      "en": "Spell Lance — Unbroken Oath",
+      "zh-CN": "奥术长枪·不屈誓言"
+    },
+    "玉女素心剑.冷月窥人": {
+      "en": "Twin Hearts Sword — Watchful Moon",
+      "zh-CN": "双心剑术·守望之月"
+    },
+    "柔云剑法.一剑化三清": {
+      "en": "Drifting Cloud Sword — Threefold Cloud",
+      "zh-CN": "流云剑术·三重流云"
+    },
+    "庖丁解牛.游刃有余": {
+      "en": "Precision Strike — Perfect Opening",
+      "zh-CN": "精准拳击·绝佳破绽"
+    },
+    "青莲掌法.竹溪青莲掌": {
+      "en": "Blue Lotus Palm — Lotus Stream",
+      "zh-CN": "青莲掌·莲溪"
+    },
+    "太极拳.三环套月": {
+      "en": "Flowing Fist — Moon Rings",
+      "zh-CN": "流转拳·环月"
+    },
+    "太极拳.四两拨千斤": {
+      "en": "Flowing Fist — Gentle Leverage",
+      "zh-CN": "流转拳·借力"
+    },
+    "狂风快剑.神速": {
+      "en": "Gale Sword — Flash Step",
+      "zh-CN": "疾风剑术·瞬步"
+    },
+    "血刀大法.吸": {
+      "en": "Bloodreaver Cleave — Blood Draw",
+      "zh-CN": "噬血重斩·汲血"
+    },
+    "三阴蜈蚣爪.逍遥三笑散": {
+      "en": "Venom Claw — Last Laugh",
+      "zh-CN": "毒爪拳·最后一笑"
+    },
+    "空明拳.空空如也": {
+      "en": "Hollow Fist — Empty Hand",
+      "zh-CN": "空灵拳·空手"
+    },
+    "一阳指.万法归一": {
+      "en": "Sunpoint Strike — Single Focus",
+      "zh-CN": "日芒指击·万法归一"
+    },
+    "倚天屠龙笔法.银钩铁划": {
+      "en": "Runescribe — Iron Script",
+      "zh-CN": "符文刻印·铁画符文"
+    },
+    "幻阴指.冰魄神爪": {
+      "en": "Shadow Touch — Ice Claw",
+      "zh-CN": "暗影指击·冰魄爪"
+    },
+    "弹指神通.tjjtds": {
+      "en": "Flicker Strike — Sharp Reminder",
+      "zh-CN": "弹指击·痛快提醒"
+    },
+    "弹指神通.冰霜一指": {
+      "en": "Flicker Strike — Frost Touch",
+      "zh-CN": "弹指击·霜冻一指"
+    },
+    "混元掌.独步降魔": {
+      "en": "Primal Palm — Demonbreaker",
+      "zh-CN": "原初掌·破魔"
+    },
+    "三花聚顶掌.五气朝阳": {
+      "en": "Threefold Palm — Dawn Convergence",
+      "zh-CN": "三重掌·晨光汇聚"
+    },
+    "火焰刀法.十方炼狱": {
+      "en": "Flamehand Strike — Inferno",
+      "zh-CN": "烈焰拳·炼狱"
+    },
+    "破玉拳.封": {
+      "en": "Gemshatter Fist — Seal",
+      "zh-CN": "碎玉拳·封禁"
+    },
+    "破玉拳.崩": {
+      "en": "Gemshatter Fist — Shatter",
+      "zh-CN": "碎玉拳·崩碎"
+    },
+    "碧落苍穹.落九天": {
+      "en": "Open Sky Sword — Skyfall",
+      "zh-CN": "长空剑术·天坠"
+    },
+    "碧落苍穹.落黄泉": {
+      "en": "Open Sky Sword — Deep Descent",
+      "zh-CN": "长空剑术·深渊落击"
+    },
+    "天外飞龙.一剑西来": {
+      "en": "Sky Dragon Sword — Distant Edge",
+      "zh-CN": "飞龙剑术·远来之锋"
+    },
+    "天外飞龙.天外飞仙": {
+      "en": "Sky Dragon Sword — Heavenward",
+      "zh-CN": "飞龙剑术·飞升"
+    },
+    "大力金刚指.炎魔一指": {
+      "en": "Titan's Touch — Ember Touch",
+      "zh-CN": "巨人指击·炎触"
+    },
+    "太极剑.无我无剑": {
+      "en": "Flowing Sword — Perfect Stillness",
+      "zh-CN": "流转剑术·无我静境"
+    },
+    "苗家剑法.冲天掌苏秦背剑": {
+      "en": "Trailguard Sword — Skyward Guard",
+      "zh-CN": "行路卫剑术·向天之卫"
+    },
+    "连城剑法.长剑横九野": {
+      "en": "Vaultbreaker Sword — Horizon Sweep",
+      "zh-CN": "破库剑术·横扫天际"
+    },
+    "连城剑法.大雪满弓刀": {
+      "en": "Vaultbreaker Sword — Winter's Reach",
+      "zh-CN": "破库剑术·寒冬之触"
+    },
+    "药王神掌.万蛊嗜心": {
+      "en": "Healer's Palm — Toxic Bloom",
+      "zh-CN": "药师掌·毒花盛放"
+    },
+    "玄冥神掌.九幽归天": {
+      "en": "Deepwinter Palm — Deepwinter's End",
+      "zh-CN": "深冬掌·极寒终境"
+    },
+    "六脉神剑.少泽剑": {
+      "en": "Sixfold Strike — Quick Point",
+      "zh-CN": "六重指击·疾点"
+    },
+    "六脉神剑.六脉齐发": {
+      "en": "Sixfold Strike — Sixfold Release",
+      "zh-CN": "六重指击·六重齐发"
+    },
+    "黯然销魂掌.拖泥带水": {
+      "en": "Heartache Palm — Lingering Sorrow",
+      "zh-CN": "黯伤掌·余愁"
+    },
+    "胡家刀法.八方藏刀式": {
+      "en": "Frontier Cleave — Hidden Angles",
+      "zh-CN": "边境重斩·八方藏锋"
+    },
+    "金蛇剑法.金蛇狂舞": {
+      "en": "Golden Serpent Sword — Serpent Dance",
+      "zh-CN": "金蛇剑术·蛇舞"
+    },
+    "天山折梅手.折梅六式": {
+      "en": "Winterblossom Fist — Six Petals",
+      "zh-CN": "冬花拳·六瓣"
+    },
+    "辟邪剑法.剑魔乱舞": {
+      "en": "Nightblade Sword — Night Dance",
+      "zh-CN": "夜刃剑术·暗夜狂舞"
+    },
+    "鸳鸯刀法.花开并蒂": {
+      "en": "Paired Cleavers — Twin Bloom",
+      "zh-CN": "成双重刃·并蒂"
+    },
+    "打狗棒法.天下无狗": {
+      "en": "Runewarden's Staff — Warden's Verdict",
+      "zh-CN": "符文守卫杖术·守望者裁决"
+    },
+    "斗转星移.陨石星浪": {
+      "en": "Starfall Shift — Meteor Wave",
+      "zh-CN": "星落秘术·陨星潮"
+    },
+    "如来神掌.天佛降世": {
+      "en": "Enlightened Palm — Awakening",
+      "zh-CN": "明悟掌·觉醒"
+    },
+    "天山剑法.白莲": {
+      "en": "Winterpeak Sword — White Lotus",
+      "zh-CN": "冬峰剑术·白莲"
+    },
+    "天山剑法.回风飘雪": {
+      "en": "Winterpeak Sword — Snowdrift",
+      "zh-CN": "冬峰剑术·风雪"
+    },
+    "玄铁剑法.重剑无锋": {
+      "en": "Ironweight Sword — Blunt Resolve",
+      "zh-CN": "重铁剑术·藏锋"
+    },
+    "降龙十八掌.亢龙有悔": {
+      "en": "Dragonbreaker Fist — Dragon's Restraint",
+      "zh-CN": "破龙拳·龙之收势"
+    },
+    "降龙十八掌.飞龙在天": {
+      "en": "Dragonbreaker Fist — Soaring Dragon",
+      "zh-CN": "破龙拳·飞龙在天"
+    },
+    "独孤九剑.破剑式": {
+      "en": "Ninefold Sword — Swordbreaker",
+      "zh-CN": "九式剑术·破剑"
+    },
+    "独孤九剑.破刀式": {
+      "en": "Ninefold Sword — Cleaverbreaker",
+      "zh-CN": "九式剑术·破重刃"
+    },
+    "独孤九剑.破掌式": {
+      "en": "Ninefold Sword — Fistbreaker",
+      "zh-CN": "九式剑术·破拳"
+    },
+    "独孤九剑.破兵式": {
+      "en": "Ninefold Sword — Spellbreaker",
+      "zh-CN": "九式剑术·破法"
+    },
+    "独孤九剑.总诀式": {
+      "en": "Ninefold Sword — Final Principle",
+      "zh-CN": "九式剑术·终极剑理"
+    },
+    "烈焰黑枪.八方黑炎": {
+      "en": "Blackfire Lance — Blackfire Ring",
+      "zh-CN": "黑焰法枪·黑炎环"
+    },
+    "烈焰黑剑.幽垠": {
+      "en": "Blackfire Sword — Dark Horizon",
+      "zh-CN": "黑焰剑术·幽暗边际"
+    },
+    "野球拳.市井流氓": {
+      "en": "Traveler's Gauntlet Strike — Street Scrap",
+      "zh-CN": "旅人拳击·街头缠斗"
+    },
+    "野球拳.胡搅蛮缠": {
+      "en": "Traveler's Gauntlet Strike — Wild Flurry",
+      "zh-CN": "旅人拳击·胡乱连打"
+    },
+    "越女剑法.无影神剑": {
+      "en": "Maiden's Sword — Unseen Edge",
+      "zh-CN": "少女剑术·无影锋刃"
+    },
+    "化功大法.腐尸毒": {
+      "en": "Spellbreaker Mastery — Grave Venom",
+      "zh-CN": "破法专精·墓毒"
+    },
+    "蛤蟆功.癞蛤蟆蹬地": {
+      "en": "Toadheart Mastery — Toad's Leap",
+      "zh-CN": "蟾心专精·蛙跃"
+    },
+    "太玄神功.太玄真气": {
+      "en": "Starseeker Mastery — Starlit Current",
+      "zh-CN": "寻星专精·星光流"
+    },
+    "血海魔功.血魔刀": {
+      "en": "Bloodtide Mastery — Blood Edge",
+      "zh-CN": "血潮专精·血刃"
+    },
+    "混元功.混元一气": {
+      "en": "Primal Mastery — Primal Unity",
+      "zh-CN": "原初专精·原初合一"
+    },
+    "龙象般若功.龙象秘境": {
+      "en": "Titanheart Mastery — Titan's Realm",
+      "zh-CN": "巨人之心专精·巨人领域"
+    },
+    "龙象般若功.庄严宝相": {
+      "en": "Titanheart Mastery — Titan's Presence",
+      "zh-CN": "巨人之心专精·巨人威仪"
+    },
+    "铁血大旗功.铁血": {
+      "en": "Iron Banner Mastery — Iron Will",
+      "zh-CN": "铁旗专精·铁血意志"
+    },
+    "铁血大旗功.大旗": {
+      "en": "Iron Banner Mastery — Rallying Banner",
+      "zh-CN": "铁旗专精·集结旌旗"
+    },
+    "易筋经.易筋神功": {
+      "en": "Ironbody Mastery — Ironbody Awakening",
+      "zh-CN": "铁躯专精·铁躯觉醒"
+    },
+    "九阴神功.九阴神爪": {
+      "en": "Shadowheart Mastery — Shadow Claw",
+      "zh-CN": "影心专精·影爪"
+    },
+    "九阴神功.九阴极意": {
+      "en": "Shadowheart Mastery — Shadow's Summit",
+      "zh-CN": "影心专精·影之极意"
+    },
+    "逆运九阴神功.九阴狂啸": {
+      "en": "Reversed Shadow Mastery — Dark Howl",
+      "zh-CN": "逆影专精·幽暗狂啸"
+    },
+    "九阳神功.乾卦九阳": {
+      "en": "Sunfire Mastery — Sunburst",
+      "zh-CN": "日焰专精·烈日爆发"
+    },
+    "葵花宝典.绣花针": {
+      "en": "Sunflower Mastery — Needlepoint",
+      "zh-CN": "向日葵专精·绣针"
+    },
+    "葵花宝典.真辟邪剑法": {
+      "en": "Sunflower Mastery — Nightblade Revelation",
+      "zh-CN": "向日葵专精·夜刃真意"
+    }
+  },
+  "definitions": {
+    "talents": {
+      "神兵": {
+        "name": {
+          "en": "Keen Edge",
+          "zh-CN": "利刃"
+        },
+        "description": {
+          "en": "Attack is multiplied by 1.05.",
+          "zh-CN": "攻击力乘以1.05。"
+        }
+      },
+      "宝甲": {
+        "name": {
+          "en": "Warded Armor",
+          "zh-CN": "守护护甲"
+        },
+        "description": {
+          "en": "Incoming technique damage is multiplied by 0.95.",
+          "zh-CN": "承受的技能伤害乘以0.95。"
+        }
+      },
+      "左手剑": {
+        "name": {
+          "en": "Left-Handed Style",
+          "zh-CN": "左手战法"
+        },
+        "description": {
+          "en": "Attack is multiplied by 1.05; critical chance is reduced by 2 percentage points.",
+          "zh-CN": "攻击力乘以1.05，暴击率降低2个百分点。"
+        }
+      },
+      "老江湖": {
+        "name": {
+          "en": "Seasoned Fighter",
+          "zh-CN": "老练战士"
+        },
+        "description": {
+          "en": "Attack's lower bound is multiplied by 1.2 and its upper bound by 0.9.",
+          "zh-CN": "攻击下限乘以1.2，上限乘以0.9。"
+        }
+      },
+      "鲁莽": {
+        "name": {
+          "en": "Reckless Charge",
+          "zh-CN": "鲁莽冲锋"
+        },
+        "description": {
+          "en": "Attack is multiplied by 1.06; incoming technique damage by 1.1.",
+          "zh-CN": "攻击力乘以1.06，承受的技能伤害乘以1.1。"
+        }
+      },
+      "暴躁": {
+        "name": {
+          "en": "Hotheaded",
+          "zh-CN": "暴脾气"
+        },
+        "description": {
+          "en": "Gain Rage more readily when hit, but enemies gain 10 percentage points of critical chance against you.",
+          "zh-CN": "受击时更容易获得怒气，但敌人对你的暴击率增加10个百分点。"
+        }
+      },
+      "奋战": {
+        "name": {
+          "en": "Last Stand",
+          "zh-CN": "背水奋战"
+        },
+        "description": {
+          "en": "At 30% Health or less, attack and critical chance are multiplied by 1.5. Does not stack with Otherworlder.",
+          "zh-CN": "生命不高于30%时，攻击力与暴击率乘以1.5。不与异乡来客叠加。"
+        }
+      },
+      "真气护体": {
+        "name": {
+          "en": "Energy Ward",
+          "zh-CN": "能量护盾"
+        },
+        "description": {
+          "en": "A 50% chance to prevent defeat by spending Energy instead of taking lethal damage, at 2 Energy per damage.",
+          "zh-CN": "受到致命伤害时，有50%概率改为消耗能量以避免倒下，每点伤害消耗2能量。"
+        }
+      },
+      "拳掌增益": {
+        "name": {
+          "en": "Gauntlet Affinity",
+          "zh-CN": "拳套亲和"
+        },
+        "description": {
+          "en": "Gauntlets proficiency is multiplied by 1.05.",
+          "zh-CN": "拳套熟练乘以1.05。"
+        }
+      },
+      "剑法增益": {
+        "name": {
+          "en": "Sword Affinity",
+          "zh-CN": "剑术亲和"
+        },
+        "description": {
+          "en": "Swordsmanship proficiency is multiplied by 1.05.",
+          "zh-CN": "剑术熟练乘以1.05。"
+        }
+      },
+      "刀法增益": {
+        "name": {
+          "en": "Heavy Weapon Affinity",
+          "zh-CN": "重武器亲和"
+        },
+        "description": {
+          "en": "Heavy Weapons proficiency is multiplied by 1.05.",
+          "zh-CN": "重武器熟练乘以1.05。"
+        }
+      }
+    }
+  }
+}

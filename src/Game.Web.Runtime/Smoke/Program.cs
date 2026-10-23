@@ -1,6 +1,12 @@
 using System.Text.Json;
 using Game.Web.Runtime;
 
+if (args.FirstOrDefault() == "--white-horse")
+{
+    await WhiteHorseSmoke.Run(args[1], args[2]);
+    return;
+}
+
 if(args.FirstOrDefault()=="--frontier")
 {
     await FrontierSmoke.Run(args[1]);

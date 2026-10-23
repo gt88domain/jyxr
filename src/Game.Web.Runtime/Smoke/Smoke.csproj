@@ -18,6 +18,7 @@
     <Compile Include="AchievementSmoke.cs" />
     <Compile Include="BattleItemSmoke.cs" />
     <Compile Include="CampaignSmoke.cs" />
+    <Compile Include="WhiteHorseSmoke.cs" />
     <Compile Include="TimeoutSmoke.cs" />
     <Compile Include="SourceFixSmoke.cs" />
     <Compile Include="JournalSmoke.cs" />

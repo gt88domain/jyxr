@@ -1,0 +1,1081 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "speakerNames": {
+    "华辉": {
+      "zh-CN": "卡德尼奥",
+      "en": "Cardenio"
+    },
+    "女主": {
+      "zh-CN": "克里姆希尔德",
+      "en": "Kriemhild"
+    },
+    "铃兰": {
+      "zh-CN": "克里姆希尔德",
+      "en": "Kriemhild"
+    },
+    "瓦耳拉齐": {
+      "zh-CN": "罗克·吉纳特",
+      "en": "Roque Guinart"
+    },
+    "计老人": {
+      "zh-CN": "佩罗·佩雷斯神父",
+      "en": "Curate Pero Perez"
+    }
+  },
+  "dialogueEdits": {
+    "白马啸西风_初次见面": [
+      {
+        "start": 0,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Hello! Is this Windrider Camp? My map has more stains than landmarks.",
+              "zh-CN": "你好！这里是风骑营地吗？我的地图上，污渍可比路标多。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "It is. I'm Dulcinea. Keep your voice down; travelers haven't been making friends here lately.",
+              "zh-CN": "是的，我叫杜尔西内娅。小声些吧，最近来的旅人，可没留下什么好印象。"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_郭靖": [
+      {
+        "start": 0,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "郭靖",
+            "text": {
+              "en": "I grew up in a camp, too. The Huntsman, at your service. No hunting indoors, I promise.",
+              "zh-CN": "我也是在营地长大的。我是猎人。放心，不会在帐篷里打猎。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "Then you know how to be a guest. Father Perez raised me here. It's good to meet you.",
+              "zh-CN": "那你一定懂得做客的规矩。佩雷斯神父把我养大，就住在这里。很高兴认识你。"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_韦小宝": [
+      {
+        "start": 0,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "韦小宝",
+            "text": {
+              "en": "The Scarecrow, at your service! I'm the brains of this expedition. Well, the hat, mostly.",
+              "zh-CN": "稻草人为您效劳！我可是这支探险队的头脑。好吧，主要是头上的帽子。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "Do you always introduce yourself before letting anyone speak?",
+              "zh-CN": "你每次认识别人，都不让别人先开口吗？"
+            }
+          },
+          {
+            "speaker": "韦小宝",
+            "text": {
+              "en": "Only when the introduction is going well.",
+              "zh-CN": "只有自我介绍特别顺利的时候。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "Then perhaps try listening.",
+              "zh-CN": "那你不妨试试，先听别人说话。"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_初次见面2": [
+      {
+        "start": 0,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Anything a traveler should know?",
+              "zh-CN": "旅人来这里，有什么要留意的？"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "This is my home. People here are tired of strangers asking about buried treasure. Please don't give them another reason to worry.",
+              "zh-CN": "这里是我的家。大家已经厌烦了那些打听地下宝藏的陌生人，别再让他们担心了。"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_李文秀出走": [
+      {
+        "start": 0,
+        "expectedCount": 7,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Dulcinea? It's late. Are you going somewhere?",
+              "zh-CN": "杜尔西内娅？这么晚了，你要去哪儿？"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "Just out. The person I hoped would choose me has chosen someone else. I can wish them well tomorrow. Tonight, I need some air.",
+              "zh-CN": "出去走走。我盼望的那个人，已经选了别人。明天，我也许能祝福他们。今晚，我想先透口气。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "You shouldn't have to walk out there alone.",
+              "zh-CN": "你不该独自走进夜里。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "I don't know what I need. Please, give me a moment.",
+              "zh-CN": "我也不知道自己需要什么。请让我静一静。"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_沙漠恶战": [
+      {
+        "start": 2,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Dulcinea! Those travelers aren't here to ask for directions.",
+              "zh-CN": "杜尔西内娅！那些旅人，可不像是来问路的。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "Watch out! They're after me!",
+              "zh-CN": "小心！他们是冲我来的！"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_沙漠恶战2": [
+      {
+        "start": 1,
+        "expectedCount": 12,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "That Meteor Sigil of yours is impressive. Remind me not to stand under it.",
+              "zh-CN": "你的陨星符术真厉害。下次记得提醒我，别站在落点下面。"
+            }
+          },
+          {
+            "speaker": "华辉",
+            "text": {
+              "en": "I taught her. And you can stop admiring my lessons long enough to explain yourself.",
+              "zh-CN": "那是我教的。夸完我的学生，也该说说你的来意了。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "Cardenio! They wanted the treasure. Our friend helped me.",
+              "zh-CN": "卡德尼奥！那些人想找宝藏，是这位朋友帮了我。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I was passing through. The ambush made a rather poor first impression.",
+              "zh-CN": "我只是路过。这场伏击，让这里的第一印象稍微差了点。"
+            }
+          },
+          {
+            "speaker": "华辉",
+            "text": {
+              "en": "Passing through, are you? Show me whether you can fight as well as you can talk.",
+              "zh-CN": "只是路过？那就让我看看，你的本领是不是和嘴一样厉害。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "Must every introduction involve a duel?",
+              "zh-CN": "难道每次见面，都一定得先打一架吗？"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_沙漠战华辉": [
+      {
+        "start": 1,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "All right. A duel, then. I still think hello would have been easier.",
+              "zh-CN": "好吧，那就切磋。我还是觉得，说声你好容易些。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "Oh, honestly. Both of you!",
+              "zh-CN": "真是的，你们两个！"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_沙漠战华辉2": [
+      {
+        "start": 1,
+        "expectedCount": 5,
+        "lines": [
+          {
+            "speaker": "华辉",
+            "text": {
+              "en": "You've won. Are you satisfied?",
+              "zh-CN": "你赢了。现在满意了吧？"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I'd have preferred a handshake.",
+              "zh-CN": "我本来更想握个手。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "Thank you for helping me. Please go before he decides he wants a rematch.",
+              "zh-CN": "谢谢你救了我。请先走吧，免得他又想再比一次。"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_沙漠赔笑": [
+      {
+        "start": 1,
+        "expectedCount": 7,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Your student handled herself beautifully. I'll happily lose the argument and keep the bruises I already have.",
+              "zh-CN": "您的学生应付得很出色。道理算您赢，淤青就别再给我添了。"
+            }
+          },
+          {
+            "speaker": "华辉",
+            "text": {
+              "en": "Hmph. A traveler who knows when to stop. Come along, Dulcinea.",
+              "zh-CN": "哼，还知道适可而止。走吧，杜尔西内娅。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "That was clever. You may be the first stranger he's met without a second fight.",
+              "zh-CN": "你真有办法。你也许是第一个，没跟他再打一场的陌生人。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "Until next time.",
+              "zh-CN": "我们下次再见。"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_初见陈达海": [
+      {
+        "start": 2,
+        "expectedCount": 5,
+        "lines": [
+          {
+            "speaker": "陈达海",
+            "text": {
+              "en": "Stand back, villains! Your humble tents do not deceive Don Quixote!",
+              "zh-CN": "恶徒退后！几顶朴素帐篷，可骗不过堂吉诃德！"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "They're families, not villains! Your companions have already hurt someone!",
+              "zh-CN": "他们是一家家过日子的人，不是恶徒！跟着你的人，已经伤人了！"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I take it the welcoming committee has changed.",
+              "zh-CN": "看来，迎宾队伍换人了。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "He stormed into camp with those treasure hunters. Please help me stop them.",
+              "zh-CN": "他带着那些寻宝人闯进营地。请帮我阻止他们。"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_陈达海战斗": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I'm standing with Dulcinea. Put down the sword, Sir Knight.",
+              "zh-CN": "我站在杜尔西内娅这边。放下剑吧，骑士先生。"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_陈达海和事佬": [
+      {
+        "start": 0,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I'm siding with the knight. Stand aside, Dulcinea.",
+              "zh-CN": "我选择站在骑士这边。让开吧，杜尔西内娅。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "After what they did? Then you'll have to get past me.",
+              "zh-CN": "他们都做了那种事，你还这样说？那就先过我这一关。"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_再见李文秀": [
+      {
+        "start": 2,
+        "expectedCount": 7,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "The knight has fled. Why were they so determined to find you?",
+              "zh-CN": "那位骑士跑了。他们为什么非要找到你不可？"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "My parents had a map of Windmill Warrens. Treasure hunters followed them here. My parents didn't survive.",
+              "zh-CN": "我的父母曾有一张风车地宫的地图。寻宝人一路追到这里，我的父母再也没能回来。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I'm sorry.",
+              "zh-CN": "我很遗憾。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "They never found the map. Now they think I can lead them to the treasure.",
+              "zh-CN": "他们始终没找到地图。现在，他们以为我能带他们找到宝藏。"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_前往高昌": [
+      {
+        "start": 0,
+        "expectedCount": 7,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Do you know what's in Windmill Warrens?",
+              "zh-CN": "你知道风车地宫里有什么吗？"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "No. My parents never told me. The treasure hunters refuse to believe that.",
+              "zh-CN": "不知道，父母从没告诉过我。那些寻宝人，却怎么都不肯相信。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Then someone should find out before more people get hurt.",
+              "zh-CN": "那就该有人查清楚，别再让更多人受伤。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "I'm going after them. Take care of yourself.",
+              "zh-CN": "我要追上他们。你自己保重。"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_进入高昌迷宫": [
+      {
+        "start": 2,
+        "expectedCount": 7,
+        "lines": [
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "Their tracks led us here. Windmill Warrens... I thought it was only a story.",
+              "zh-CN": "他们的足迹通向这里。风车地宫……我一直以为，那只是个故事。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Someone's fighting up ahead.",
+              "zh-CN": "前面有人在打斗。"
+            }
+          },
+          {
+            "speaker": "瓦耳拉齐",
+            "text": {
+              "en": "You should have stayed away!",
+              "zh-CN": "你们本来就不该来！"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "Stop! Those people are from my camp!",
+              "zh-CN": "住手！那是我们营地的人！"
+            }
+          },
+          {
+            "speaker": "计老人",
+            "text": {
+              "en": "Dulcinea, look out!",
+              "zh-CN": "杜尔西内娅，小心！"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "Father Perez! No!",
+              "zh-CN": "佩雷斯神父！不！"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_完结1": [
+      {
+        "start": 2,
+        "expectedCount": 11,
+        "lines": [
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "That spell... Cardenio? Is that you?",
+              "zh-CN": "那个法术……卡德尼奥？是你吗？"
+            }
+          },
+          {
+            "speaker": "瓦耳拉齐",
+            "text": {
+              "en": "Cardenio was the name I hid behind. Roque Guinart is the man they banished.",
+              "zh-CN": "卡德尼奥，是我藏身时用的名字。他们放逐的那个人，叫罗克·吉纳特。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "Why didn't you tell me?",
+              "zh-CN": "你为什么不告诉我？"
+            }
+          },
+          {
+            "speaker": "瓦耳拉齐",
+            "text": {
+              "en": "I taught you to distrust strangers. I should have taught myself to let old grudges go.",
+              "zh-CN": "我教你提防陌生人，却没能教会自己，放下旧日的仇怨。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "Please. Stay with me.",
+              "zh-CN": "求你了，别离开我。"
+            }
+          },
+          {
+            "speaker": "瓦耳拉齐",
+            "text": {
+              "en": "Perez saved you. Remember him for that. As for me... don't mistake bitterness for wisdom.",
+              "zh-CN": "佩雷斯救了你，要记住他的这份好。至于我……别把怨恨，错当成智慧。"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_完结2": [
+      {
+        "start": 2,
+        "expectedCount": 21,
+        "lines": [
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "My teacher. Father Perez. Gone. I don't know where to go now.",
+              "zh-CN": "老师，佩雷斯神父，都不在了。我不知道，接下来还能去哪儿。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "You don't have to decide your whole future today. Just the next stretch of road. We'd be glad to share it.",
+              "zh-CN": "不用今天就想好一生。先想下一段路吧。我们愿意陪你走。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "And what happens when I don't feel brave?",
+              "zh-CN": "要是我没那么勇敢了呢？"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Then one of us carries the bags. That's what a party is for.",
+              "zh-CN": "那就换我们来背行李。结伴，不就是为了这个吗？"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "All right. But my horse gets a say in the route.",
+              "zh-CN": "好吧，不过去哪儿，我的马也得有一票。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Of course. The only one of us with four sensible feet.",
+              "zh-CN": "当然。我们当中，也只有它，脚踏实地得最彻底。"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_高昌秘宝": [
+      {
+        "start": 2,
+        "expectedCount": 3,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Windmill Warrens. The knight's trail really did lead somewhere.",
+              "zh-CN": "风车地宫。那位骑士的足迹，还真通向了一个地方。"
+            }
+          },
+          {
+            "speaker": "瓦耳拉齐",
+            "text": {
+              "en": "Another treasure hunter! You won't leave with what you came for.",
+              "zh-CN": "又一个寻宝人！你休想带着想要的东西离开。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I was hoping for directions. Apparently, it's an ambush.",
+              "zh-CN": "我本来想问个路。看来，这里更流行伏击。"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_高昌秘宝2": [
+      {
+        "start": 2,
+        "expectedCount": 9,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I've seen those spells before. You taught Dulcinea, didn't you?",
+              "zh-CN": "这些法术，我见过。你教过杜尔西内娅，对吗？"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "Cardenio! What happened to you?",
+              "zh-CN": "卡德尼奥！你怎么了？"
+            }
+          },
+          {
+            "speaker": "瓦耳拉齐",
+            "text": {
+              "en": "Roque Guinart. That's my real name. I should have told you long ago.",
+              "zh-CN": "罗克·吉纳特，那才是我的本名。我早就该告诉你。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "You hurt my teacher. Get away from him!",
+              "zh-CN": "你伤了我的老师。离他远点！"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_高昌秘宝3": [
+      {
+        "start": 2,
+        "expectedCount": 15,
+        "lines": [
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "I can't beat you. What do you want?",
+              "zh-CN": "我打不过你。你到底想要什么？"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Answers. What is everyone risking their lives for?",
+              "zh-CN": "一个答案。大家冒着生命危险，到底在找什么？"
+            }
+          },
+          {
+            "speaker": "瓦耳拉齐",
+            "text": {
+              "en": "Shelves. Old instruments. Books. The conquerors took the gold long ago and left their idea of civilization behind.",
+              "zh-CN": "书架，旧乐器，还有书。征服者早就带走了黄金，留下他们所谓的文明。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "My parents died for an empty treasury?",
+              "zh-CN": "我的父母，就为了一个空荡荡的宝库而死？"
+            }
+          },
+          {
+            "speaker": "瓦耳拉齐",
+            "text": {
+              "en": "For a rumor. A rumor is much harder to bury than gold.",
+              "zh-CN": "为了一场传言。传言，可比黄金更难掩埋。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "Come home with me, please.",
+              "zh-CN": "请跟我回家吧。"
+            }
+          },
+          {
+            "speaker": "瓦耳拉齐",
+            "text": {
+              "en": "Not yet. There are things I still have to settle.",
+              "zh-CN": "还不行。我还有未了的事情。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "Then I'll go back alone. Take care, traveler.",
+              "zh-CN": "那我先独自回去。旅人，你也保重。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "A book of old poems. Not gold, but it deserves a reader. I'll take it.",
+              "zh-CN": "一本旧诗集。虽然不是黄金，也值得有人翻开。我带上它吧。"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_陈达海加入": [
+      {
+        "start": 0,
+        "expectedCount": 5,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Still searching, Sir Knight? The warrens hold old books, not gold.",
+              "zh-CN": "骑士先生，还在找吗？地宫里只有旧书，没有黄金。"
+            }
+          },
+          {
+            "speaker": "陈达海",
+            "text": {
+              "en": "Then I have charged across half the desert for... a library?",
+              "zh-CN": "这么说，我纵横半片沙漠，竟然只是为了……一间图书室？"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Not your worst charge. But the people in camp deserve an apology.",
+              "zh-CN": "还不算你最糟的一次冲锋。不过，营地的人们，值得你道个歉。"
+            }
+          },
+          {
+            "speaker": "陈达海",
+            "text": {
+              "en": "A knight should put things right. If someone could point me in the right direction.",
+              "zh-CN": "骑士应当弥补过失。只要，有人能给我指对方向。"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_陈达海加入3": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "We'll leave him to think it over. Preferably before he challenges another building.",
+              "zh-CN": "让他自己想一想吧。最好，别再向哪座建筑发起挑战。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_女主.白马啸西风": [
+      {
+        "start": 2,
+        "expectedCount": 14,
+        "lines": [
+          {
+            "speaker": "女主",
+            "text": {
+              "en": "She smiled, but that doesn't mean she's all right.",
+              "zh-CN": "她笑了，却不代表她已经没事了。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I thought a new road might help.",
+              "zh-CN": "我想，换条路也许会好些。"
+            }
+          },
+          {
+            "speaker": "女主",
+            "text": {
+              "en": "It might. Just make room for her to be sad along the way.",
+              "zh-CN": "也许会。只是路上，也要允许她难过。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I can do that. And carry the bags.",
+              "zh-CN": "这我能做到，还能帮她背行李。"
+            }
+          },
+          {
+            "speaker": "女主",
+            "text": {
+              "en": "If I ever lose my way like that... will you remember what you said?",
+              "zh-CN": "如果哪天，我也那样迷失了……你会记得，自己说过的话吗？"
+            }
+          }
+        ]
+      }
+    ],
+    "original_女主.白马啸西风.保护": [
+      {
+        "start": 0,
+        "expectedCount": 5,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I'll stand beside you. You won't have to face it alone.",
+              "zh-CN": "我会站在你身边，不让你独自面对。"
+            }
+          },
+          {
+            "speaker": "女主",
+            "text": {
+              "en": "Then you'd better mean it.",
+              "zh-CN": "那你可要说到做到。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I do.",
+              "zh-CN": "我会的。"
+            }
+          }
+        ]
+      }
+    ],
+    "original_女主.白马啸西风.坚强": [
+      {
+        "start": 0,
+        "expectedCount": 7,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "You'll find your strength. And I'll be here while you do.",
+              "zh-CN": "你会找到自己的力量。在那之前，我会陪着你。"
+            }
+          },
+          {
+            "speaker": "女主",
+            "text": {
+              "en": "That was almost reassuring.",
+              "zh-CN": "这话，差一点就很让人安心了。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I'll keep practicing.",
+              "zh-CN": "我再多练习练习。"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "choiceText": {
+    "白马啸西风_李文秀出走": {
+      "prompt": {
+        "en": "What will you do?",
+        "zh-CN": "你打算怎么办？"
+      },
+      "options": {
+        "en": [
+          "Follow Dulcinea.",
+          "Stay in camp."
+        ],
+        "zh-CN": [
+          "跟上杜尔西内娅。",
+          "留在营地。"
+        ]
+      }
+    },
+    "白马啸西风_沙漠恶战2": {
+      "prompt": {
+        "en": "How will you answer?",
+        "zh-CN": "你怎么回答？"
+      },
+      "options": {
+        "en": [
+          "Accept the duel.",
+          "Keep the peace."
+        ],
+        "zh-CN": [
+          "接受切磋。",
+          "息事宁人。"
+        ]
+      }
+    },
+    "白马啸西风_初见陈达海": {
+      "prompt": {
+        "en": "Choose a side.",
+        "zh-CN": "你站在哪一边？"
+      },
+      "options": {
+        "en": [
+          "Stand with Dulcinea.",
+          "Side with Don Quixote."
+        ],
+        "zh-CN": [
+          "帮助杜尔西内娅。",
+          "站在堂吉诃德这边。"
+        ]
+      }
+    },
+    "白马啸西风_陈达海加入": {
+      "prompt": {
+        "en": "Invite the knight?",
+        "zh-CN": "要邀请这位骑士吗？"
+      },
+      "options": {
+        "en": [
+          "Invite him along.",
+          "Leave him to his search."
+        ],
+        "zh-CN": [
+          "邀请他同行。",
+          "让他继续自己的寻找。"
+        ]
+      }
+    },
+    "original_女主.白马啸西风": {
+      "prompt": {
+        "en": "What will you say?",
+        "zh-CN": "你会怎么回答？"
+      },
+      "options": {
+        "en": [
+          "I'll stand beside you.",
+          "You'll find your strength. I'll help."
+        ],
+        "zh-CN": [
+          "我会站在你身边。",
+          "你会找到自己的力量，我会帮你。"
+        ]
+      }
+    }
+  },
+  "uiLabels": {
+    "白马西风": {
+      "en": "Windrider",
+      "zh-CN": "风骑旅人"
+    },
+    "恶徒": {
+      "en": "Brigand",
+      "zh-CN": "匪徒"
+    },
+    "哈萨克勇士": {
+      "en": "Camp Defender",
+      "zh-CN": "营地卫士"
+    }
+  },
+  "locations": {
+    "哈萨克部落": {
+      "李文秀": {
+        "name": {
+          "en": "Dulcinea",
+          "zh-CN": "杜尔西内娅"
+        },
+        "description": {
+          "en": "A traveler raised in Windrider Camp. Speak with her before following the trail.",
+          "zh-CN": "在风骑营地长大的旅人。先和她交谈，再沿线索探索。"
+        }
+      }
+    },
+    "高昌迷宫": {
+      "陈达海": {
+        "name": {
+          "en": "Don Quixote",
+          "zh-CN": "堂吉诃德"
+        },
+        "description": {
+          "en": "A wandering knight with a very uncertain map.",
+          "zh-CN": "一位云游骑士，手里的地图似乎不怎么可靠。"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "battles": {
+      "白马啸西风.沙漠_战斗": {
+        "name": {
+          "en": "Night Road Ambush",
+          "zh-CN": "夜路伏击"
+        }
+      },
+      "白马啸西风.沙漠战华辉_战斗": {
+        "name": {
+          "en": "The Mentor's Challenge",
+          "zh-CN": "导师的挑战"
+        }
+      },
+      "哈萨克部落_战斗": {
+        "name": {
+          "en": "Stand with the Camp",
+          "zh-CN": "守护营地"
+        }
+      },
+      "哈萨克部落李文秀_战斗": {
+        "name": {
+          "en": "A Broken Trust",
+          "zh-CN": "失去信任"
+        }
+      },
+      "高昌迷宫_战斗": {
+        "name": {
+          "en": "Battle in the Warrens",
+          "zh-CN": "地宫决战"
+        }
+      },
+      "高昌迷宫李文秀_战斗": {
+        "name": {
+          "en": "One Last Misunderstanding",
+          "zh-CN": "最后的误会"
+        }
+      }
+    },
+    "talents": {
+      "毒系精通": {
+        "name": {
+          "en": "Poison Expertise",
+          "zh-CN": "毒素专精"
+        },
+        "description": {
+          "en": "Poison you apply gains 3 levels and lasts 2 more turns.",
+          "zh-CN": "施加的中毒提高3级，持续时间增加2回合。"
+        }
+      }
+    }
+  }
+}

@@ -28,6 +28,10 @@ import {moreMenuView} from './navigation';
 import './modern-ui.css';
 import type {GameCommand} from './command-contract';
 import {appConfig} from './app-config';
+import {filterWorldAtlas} from './world-atlas';
+import {startUiLocale,setUiDisplayLabels} from './ui/locale';
+
+startUiLocale(appConfig.id);
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 let state: GameState, slot: SaveSlot | undefined, busy = false, board: Board | undefined;
@@ -90,7 +94,8 @@ function render() {
   screen = nextScreen;
   app.className = `app ${screen}-app`;
   document.documentElement.dataset.pack = state.pack.id;
-  const sceneArt = screen === 'title' ? state.pack.media?.titleBackground : state.sceneBackground || state.map?.background || state.pack.media?.worldBackground;
+  const atlasArt = nextScreen === 'world' && state.map?.kind === 'large' && state.pack.worldAtlas?.mapId === state.map.id ? state.pack.worldAtlas.image : undefined;
+  const sceneArt = screen === 'title' ? state.pack.media?.titleBackground : atlasArt || state.sceneBackground || state.map?.background || state.pack.media?.worldBackground;
   app.style.backgroundImage = sceneArt ? `url("${assetUrl(sceneArt)}")` : '';
   document.title = `${state.pack.title} · ${state.pack.subtitle || '浏览器冒险'}`;
   app.innerHTML = nextScreen === 'title' ? title() : nextScreen === 'battle' ? battleShell() : world();
@@ -131,10 +136,14 @@ function applyResult(result: Result,restored=false) {
   if (!result.ok) throw new Error(result.error || '此次行动未能完成。');
   const previous=state;
   state = result.state;
+  setUiDisplayLabels(state.pack.displayCatalog?.text,state.pack.displayCatalog);
   if(previous&&previous.journeyId!==state.journeyId)uiMessages.length=0;
   if(restored||!previous)activitySeen=Math.max(0,...(state.activity||[]).map(a=>a.id));
   else if(previous.journeyId!==state.journeyId)activitySeen=0;
   render();
+  if (state.pack.worldAtlas && screen==='world' && previous?.map?.id!==state.map?.id) {
+    window.scrollTo({top:0,left:0,behavior:'instant'});
+  }
   const lastId=previous?.journeyId===state.journeyId?Math.max(0,...(previous.activity||[]).map(a=>a.id)):0;
   const notices=(state.activity||[]).filter(a=>a.notice&&a.id>lastId);
   if(!restored&&previous&&notices.length)toast(notices.slice(-2).map(a=>plain(a.message)).join('；')+(notices.length>2?`，另有${notices.length-2}条，见通知。`:''),false);
@@ -182,7 +191,7 @@ async function showEquipmentPreview(entryNumber: number) {
   modal('换装属性对比', '<div data-equipment-preview aria-live="polite">正在比较装备…</div>', true);
   const target = document.querySelector<HTMLElement>('[data-equipment-preview]')!;
   try {
-    const preview = await inspectEquipment(characterId, entryNumber);
+    const preview = await inspectEquipment(characterId, entryNumber,inspected.pack.displayCatalog);
     if (!target.isConnected || !modalOpen()) return;
     if (state !== inspected) {target.textContent = '人物状态已变化，请重新打开装备对比。';return;}
     equipmentPreviewContext = {state: inspected, entryNumber};
@@ -309,6 +318,21 @@ function shopQuantity() {
   return value;
 }
 document.addEventListener('click', event => {
+  const browse = (event.target as HTMLElement).closest<HTMLElement>('[data-atlas-browse]');
+  if (browse) {
+    const root=browse.closest<HTMLElement>('[data-world-atlas]');
+    const panel=root?.querySelector<HTMLDetailsElement>('.atlas-map-panel');
+    if (panel) panel.open=false;
+    const results=root?.querySelector<HTMLElement>('[data-atlas-results]');
+    results?.focus({preventScroll:true});results?.scrollIntoView({block:'start'});
+    return;
+  }
+  const region = (event.target as HTMLElement).closest<HTMLElement>('[data-atlas-region]');
+  if (region) {
+    const root = region.closest<HTMLElement>('[data-world-atlas]');
+    if (root) {root.dataset.region = region.dataset.atlasRegion || ''; filterWorldAtlas(root);}
+    return;
+  }
   const button = (event.target as HTMLElement).closest<HTMLElement>('[data-action]');
   if (!button || button.matches(':disabled')) return;
   const action = button.dataset.action;
@@ -401,6 +425,11 @@ document.addEventListener('click', event => {
 });
 document.addEventListener('change', event => {
   const control = event.target;
+  if (control instanceof HTMLInputElement && control.matches('[data-atlas-unavailable]')) {
+    const root = control.closest<HTMLElement>('[data-world-atlas]');
+    if (root) filterWorldAtlas(root);
+    return;
+  }
   if(control instanceof HTMLSelectElement&&control.matches('[data-activity-filter]')){filterActivity();return;}
   if (control instanceof HTMLSelectElement && control.id === 'managed-character') {void command({type:'selectCharacter',characterId:control.value}); return;}
   if (control instanceof HTMLSelectElement && control.id === 'inventory-sort') {
@@ -436,6 +465,11 @@ document.addEventListener('input', event => {
     inventoryQuery=input.value;refreshInventoryResults();return;
   }
   if (!(input instanceof HTMLInputElement) || input.id !== 'destination-search') return;
+  const atlasRoot = input.closest<HTMLElement>('[data-world-atlas]');
+  if (atlasRoot) {
+    // Search every island; selecting a region afterward narrows the results.
+    atlasRoot.dataset.region = ''; filterWorldAtlas(atlasRoot); return;
+  }
   const text = input.value.trim().toLocaleLowerCase();
   document.querySelectorAll<HTMLElement>('.chapter-locations .map-spot').forEach(button => {
     button.hidden = !button.textContent?.toLocaleLowerCase().includes(text);

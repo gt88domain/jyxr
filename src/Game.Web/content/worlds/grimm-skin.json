@@ -17,8 +17,8 @@
     "zh-CN": "格林的求助"
   },
   "description": {
-    "en": "Grimm collects the fairy tales people grow up with. He has summoned you to help when their stories go wrong. Learn skills, find companions, and set out. Later content still uses original names.",
-    "zh-CN": "格林收集着各国陪伴人们长大的童话。故事出了乱子，他召唤你前来帮忙。学习本领、结识伙伴，再出发。后续内容暂沿用原版。"
+    "en": "Grimm collects the fairy tales people grow up with. He has summoned you to help when their stories go wrong. Explore the village, run supplies, train and meet Eir. Later stories still contain original Chinese dialogue and artwork.",
+    "zh-CN": "格林收集着各国陪伴人们长大的童话。故事出了乱子，他召唤你前来帮忙。先在村中准备、出村补给、训练，再结识埃尔。中后期故事仍有原版对白和美术，正在逐批改写。"
   },
   "maps": {
     "南贤屋内": {
@@ -74,12 +74,12 @@
       "zh-CN": "回格林居所完成结伴练习"
     },
     "cultivation": {
-      "en": "Select a manual for training",
-      "zh-CN": "选择一本读本修炼"
+      "en": "Select a scroll for training",
+      "zh-CN": "选择一本卷轴修炼"
     },
     "training": {
-      "en": "Complete your first spar with the instructor",
-      "zh-CN": "在教官处完成第一场练习"
+      "en": "Finish an introductory practice bout",
+      "zh-CN": "完成一次入门实战练习"
     },
     "equipment": {
       "en": "Put on a piece of equipment",
@@ -110,16 +110,16 @@
       "zh-CN": "格林请我帮助那些停在半途的童话。首先，学点本领，别让自己的故事停在开头。"
     },
     "点击人物状态栏，点击修炼，可以装备内功入门。": {
-      "en": "Open 修炼 (Training) and select Breathing Primer.",
-      "zh-CN": "打开人物状态栏的“修炼”，选入《呼吸入门》。"
+      "en": "Open Training and select Steadfast Mastery Scroll.",
+      "zh-CN": "打开人物状态栏的“修炼”，选入《坚毅专精卷轴》。"
     },
     "装备上的武学经书，在战斗结束后能将获得的经验快速分配到该项武学上，可以迅速提升武学等级。": {
-      "en": "A selected training manual receives battle experience. Reading alone will not frighten the dummy.",
-      "zh-CN": "选入修炼栏的读本会获得战斗经验。只捧着书看，可吓不倒训练假人。"
+      "en": "A selected training scroll receives battle experience. Reading alone will not frighten the dummy.",
+      "zh-CN": "选入修炼栏的卷轴会获得战斗经验。只捧着书看，可吓不倒训练假人。"
     },
     "入门体验告一段落。原版买药教学、门派选择和其他江湖地点已逐步接入；可继续完成南贤的原版任务。尚未迁移的特殊流程不会被当作已完成。": {
-      "en": "First lessons complete. Review your equipment, training and companions, then save before setting out.",
-      "zh-CN": "入门练习暂告一段落。检查装备、修炼和同行伙伴，保存好进度，再继续上路。"
+      "en": "That is how two travelers become a team. Review your opening-chapter goals and save your journey. More stories await beyond this field trial; those later chapters are still being rewritten.",
+      "zh-CN": "两个旅人就这样成为了搭档。检查前期章节目标，再保存这段旅程。实地委托之外还有更多故事，后续章节仍在逐批改写。"
     }
   },
   "dialogueEdits": {
@@ -131,43 +131,43 @@
           {
             "speaker": "南贤",
             "text": {
-              "en": "I'm Grimm. I collect the fairy tales people grow up with. Usually, they stay on the page.",
-              "zh-CN": "我是格林，收集各国陪伴人们长大的童话。通常，它们会乖乖待在书里。"
+              "en": "I'm Grimm. I collect the fairy tales people grow up with. Here, their roads run into one another.",
+              "zh-CN": "我是格林，收集各国陪伴人们长大的童话。在这里，故事里的道路会通向彼此。"
             }
           },
           {
             "speaker": "主角",
             "text": {
-              "en": "You summoned me? I was having such an ordinary day.",
-              "zh-CN": "是你把我召唤来的？我今天本来过得挺普通的。"
+              "en": "You summoned me here? So which way do I go?",
+              "zh-CN": "是你把我召唤来的？那我该往哪儿走？"
             }
           },
           {
             "speaker": "南贤",
             "text": {
-              "en": "Yes. Some tales have stalled, and their people need help. My notes are excellent; my swordplay is not.",
-              "zh-CN": "是的。有些故事停在半途，里面的人需要帮助。我整理笔记很在行，挥剑就差远了。"
+              "en": "Some stories have lost their way. I could use your help getting them moving again.",
+              "zh-CN": "有些故事出了点岔子，我想请你帮个忙，让它们继续往前走。"
             }
           },
           {
             "speaker": "南贤",
             "text": {
-              "en": "Will you enter their stories, find companions, and help them find a way forward?",
-              "zh-CN": "你愿意走进这些故事，结识伙伴，帮他们找到接下来的路吗？"
+              "en": "Explore, find companions, and learn a few tricks. There's no single road you have to follow.",
+              "zh-CN": "四处看看，结识伙伴，再学几手本领。接下来走哪条路，由你自己选。"
             }
           },
           {
             "speaker": "主角",
             "text": {
-              "en": "All right. Does the job come with a sword?",
-              "zh-CN": "好吧。这份差事，配剑吗？"
+              "en": "An open road and interesting company? I'm in.",
+              "zh-CN": "有路可走，也有有趣的人作伴？那就出发吧。"
             }
           },
           {
             "speaker": "南贤",
             "text": {
-              "en": "A beginner's manual. Learn here first; I would hate to file you under 'cautionary tale'.",
-              "zh-CN": "配一本入门读本。先在村里学点本领，我可不想把你的事迹编进《前车之鉴》。"
+              "en": "Then take this beginner's scroll. Start in the village, and bring me a good story.",
+              "zh-CN": "先拿上这本入门卷轴，从村里开始吧。记得回来，给我讲讲你的见闻。"
             }
           }
         ]
@@ -181,8 +181,8 @@
           {
             "speaker": "南贤",
             "text": {
-              "en": "Take this Breathing Primer. Start with steady breathing. Most heroes find it useful to keep doing that.",
-              "zh-CN": "这本《呼吸入门》给你。先学着稳住气息——大多数英雄都觉得，持续呼吸是个好习惯。"
+              "en": "Take this Steadfast Mastery Scroll. Sound foundations first; the dramatic entrances can wait.",
+              "zh-CN": "拿好坚毅专精卷轴。先打稳基础，威风的登场可以晚点再练。"
             }
           }
         ]
@@ -194,8 +194,8 @@
           {
             "speaker": "主角",
             "text": {
-              "en": "Good. Something I can practise while panicking.",
-              "zh-CN": "挺好，至少慌起来的时候，我也能顺便练练。"
+              "en": "A useful start. I'll take a look around.",
+              "zh-CN": "那就从这里开始吧。我先到处看看。"
             }
           }
         ]
@@ -260,7 +260,7 @@
           {
             "speaker": "南贤",
             "text": {
-              "en": "Your choices matter. It is hard to earn someone's trust after selling their family heirloom.",
+              "en": "Your choices matter. It's hard to earn someone's trust after selling their family heirloom.",
               "zh-CN": "你的选择很要紧。刚卖掉人家的传家宝，再谈信任，通常有点晚。"
             }
           },
@@ -325,7 +325,7 @@
           {
             "speaker": "南贤",
             "text": {
-              "en": "Make friends, learn their skills, and bring me your adventures. Leave their silverware where it is.",
+              "en": "Make friends, learn their skills, and bring me your adventures. Leave their silverware where it's.",
               "zh-CN": "结识伙伴，学习本领，把见闻带回来。人家的银餐具，就留在人家家里。"
             }
           }
@@ -369,7 +369,7 @@
           {
             "speaker": "武师",
             "text": {
-              "en": "Grimm's new traveller? Good. Put your feet there. No, both of them.",
+              "en": "Grimm's new traveler? Good. Put your feet there. No, both of them.",
               "zh-CN": "格林新找来的旅人？好，把脚站稳。对，两只脚都得站稳。"
             }
           },
@@ -399,14 +399,14 @@
             "speaker": "武师",
             "text": {
               "en": "Attacks are the techniques you use on the field. Learn a useful mix; ten answers to the same problem are still one answer.",
-              "zh-CN": "外功招式是战场上主动使出的本领。搭配要实用，十招都解决同一个问题，遇上别的问题还是没辙。"
+              "zh-CN": "魔法与战技是战场上主动使出的本领。搭配要实用，十招都解决同一个问题，遇上别的问题还是没辙。"
             }
           },
           {
             "speaker": "武师",
             "text": {
-              "en": "Inner disciplines strengthen your fighting. You can learn several, but only one is equipped at a time.",
-              "zh-CN": "内功影响你的战斗能力。可以学会多种，但同一时间只能装备一种。"
+              "en": "Passive masteries strengthen your fighting. You can learn several; some benefits require one to be equipped.",
+              "zh-CN": "被动专精能强化战斗能力，可以学习多种；部分效果需要装备为当前主专精才生效。"
             }
           },
           {
@@ -419,8 +419,8 @@
           {
             "speaker": "武师",
             "text": {
-              "en": "Fists, swords, blades and unusual weapons reward different training. Pick a direction before collecting one of everything.",
-              "zh-CN": "拳掌、剑法、刀法和奇门各有专长。先想好怎么打，再考虑把每样兵器都背在身上。"
+              "en": "Gauntlets, swords, blades and spells reward different training. Choose a direction; your pack does not need to contain an entire armory.",
+              "zh-CN": "拳套、剑术、重武器和法术各有专长。先选个方向，背包里不必塞进整座兵器库。"
             }
           }
         ]
@@ -464,13 +464,13 @@
             "speaker": "武师",
             "text": {
               "en": "Schools teach advanced techniques through their own tasks. Earn their trust, and the better lessons follow.",
-              "zh-CN": "门派通常会通过任务传授高深本领。先赢得信任，才有后面的课。"
+              "zh-CN": "学派通常会通过任务传授高深本领。先赢得信任，才有后面的课。"
             }
           },
           {
             "speaker": "武师",
             "text": {
-              "en": "Experienced travellers can teach you too. Try speaking to them before testing whether their beard is real.",
+              "en": "Experienced travelers can teach you too. Try speaking to them before testing whether their beard is real.",
               "zh-CN": "旅途中的高手也可能指点你。先好好说话，别一见面就上手试人家的胡子是真是假。"
             }
           }
@@ -485,22 +485,22 @@
           {
             "speaker": "武师",
             "text": {
-              "en": "Attacks can favour Yin or Yang. Your equipped inner discipline supplies those affinities, so check the pairing.",
-              "zh-CN": "招式有阴、阳适性之分。当前装备的内功提供对应加成，搭配之前先看看数值。"
+              "en": "Attacks can favor Radiant or Umbral affinity. Your equipped mastery supplies those affinities, so check the pairing.",
+              "zh-CN": "攻击分为光辉与幽影亲和。当前运用的被动专精提供对应加成，搭配之前先看看数值。"
             }
           },
           {
             "speaker": "武师",
             "text": {
-              "en": "Yang attacks use its Yang affinity; Yin attacks use its Yin affinity. Harmonious attacks use whichever value is higher.",
-              "zh-CN": "阳性招式取阳适性，阴性招式取阴适性；调和招式取两者中较高的值。"
+              "en": "Radiant attacks use Radiant affinity; Umbral attacks use Umbral affinity. Balanced attacks use whichever value is higher.",
+              "zh-CN": "光辉攻击取光辉亲和，幽影攻击取幽影亲和；平衡攻击取两者中较高的值。"
             }
           },
           {
             "speaker": "武师",
             "text": {
-              "en": "A fine technique with the wrong discipline is a fine technique having a disappointing afternoon.",
-              "zh-CN": "招式再漂亮，内功没配好，也只能漂亮地吃亏。"
+              "en": "A fine technique with the wrong mastery is a fine technique having a disappointing afternoon.",
+              "zh-CN": "招式再漂亮，被动专精没配好，也只能漂亮地吃亏。"
             }
           }
         ]
@@ -616,7 +616,7 @@
           {
             "speaker": "商人",
             "text": {
-              "en": "Welcome. Supplies on the shelves; heroic speeches outside. I have stock to count.",
+              "en": "Welcome. Supplies on the shelves; heroic speeches outside. I've stock to count.",
               "zh-CN": "欢迎。补给在货架上，豪言壮语请到门外说。我还得盘货。"
             }
           },
@@ -645,7 +645,7 @@
           {
             "speaker": "主角",
             "text": {
-              "en": "Time to practise together. If we both shout 'I've got this', one of us still needs to watch the flank.",
+              "en": "Time to practice together. If we both shout 'I've got this', one of us still needs to watch the flank.",
               "zh-CN": "该一起练练了。就算两个人都喊“交给我”，也总得有一个记得看侧翼。"
             }
           }
@@ -653,7 +653,16 @@
       }
     ]
   },
-  "version": "village-humor-1",
+  "version": "windrider-loop-1",
+  "chapters": [
+    "chapter-start.json",
+    "chapter-guide.json",
+    "chapter-us-catalog.json",
+    "world-atlas.json",
+    "chapter-companions.json",
+    "chapter-equipment-copy.json",
+    "chapter-windrider.json"
+  ],
   "speakerNames": {
     "武师": {
       "en": "Instructor",
@@ -676,12 +685,12 @@
       },
       "options": {
         "en": [
-          "[Set out] I am ready for the road.",
-          "[Leave] I will look around first.",
+          "[Set out] I'm ready for the road.",
+          "[Leave] I'll look around first.",
           "[Ask] How much do my choices matter?",
           "[Ask] Who might travel with me?",
-          "[Ask] What became of your other travellers?",
-          "[Ask] Remind me what I am here to do.",
+          "[Ask] What became of your other travelers?",
+          "[Ask] Remind me what I'm here to do.",
           "[Spar] Surely a writer knows a few sharp moves."
         ],
         "zh-CN": [
@@ -703,21 +712,21 @@
       "options": {
         "en": [
           "[Spar] Let me try the training dummy.",
-          "[Leave] That is enough bruises for now.",
-          "How do attacks and disciplines work?",
+          "[Leave] That's enough bruises for now.",
+          "How do attacks and masterys work?",
           "What do talents actually do?",
           "Where can I learn advanced techniques?",
-          "How do Yin and Yang affect my attacks?",
+          "How do Radiant and Umbral affinities work?",
           "What should I do when a fight gets difficult?",
           "How do I raise a skill's level limit?"
         ],
         "zh-CN": [
           "【练习】让我试试训练假人。",
           "【离开】今天先少挨几下。",
-          "招式和内功该怎么搭配？",
+          "招式和被动专精该怎么搭配？",
           "天赋究竟有什么用？",
           "去哪里学更高深的本领？",
-          "阴阳适性怎样影响招式？",
+          "光辉和幽影亲和怎样影响攻击？",
           "碰上难打的敌人怎么办？",
           "怎样提高技能等级上限？"
         ]
@@ -796,7 +805,7 @@
           "zh-CN": "结伴练习"
         },
         "description": {
-          "en": "Practise fighting alongside your companion.",
+          "en": "Practice fighting alongside your companion.",
           "zh-CN": "与伙伴练习配合作战。"
         }
       },
@@ -826,17 +835,17 @@
     "items": {
       "内功入门": {
         "name": {
-          "en": "Breathing Primer",
-          "zh-CN": "呼吸入门"
+          "en": "Steadfast Mastery Scroll",
+          "zh-CN": "坚毅专精卷轴"
         },
         "description": {
-          "en": "A beginner's guide to Steady Breath. Select it for training to build the skill through battle experience. Breathing remains strongly recommended.",
-          "zh-CN": "稳息法的入门读本。选入修炼栏后，通过战斗经验提升对应技能。呼吸本身也请继续保持。"
+          "en": "Study this scroll to learn Steadfast Mastery through combat XP. Select your equipped mastery separately.",
+          "zh-CN": "研习此卷轴，通过战斗经验学习坚毅专精；当前装备的主专精另行选择。"
         }
       },
       "草帽": {
         "name": {
-          "en": "Traveller's Straw Hat",
+          "en": "Traveler's Straw Hat",
           "zh-CN": "旅人草帽"
         },
         "description": {
@@ -881,31 +890,31 @@
         },
         "description": {
           "en": "Restores 300 HP and 300 energy. Finally, a remedy that belongs in a picnic basket.",
-          "zh-CN": "恢复300点生命和300点内力。总算有一样补给适合放进野餐篮了。"
+          "zh-CN": "恢复300点生命和300点能量。总算有一样补给适合放进野餐篮了。"
         }
       }
     },
     "externalSkills": {
       "野球拳": {
         "name": {
-          "en": "Scrapper's Fist",
-          "zh-CN": "街头拳法"
+          "en": "Traveler's Gauntlet Strike",
+          "zh-CN": "旅人拳击"
         },
         "description": {
-          "en": "An unpolished fighting style with considerable room to grow. Graceful? Rarely. Persistent? Absolutely.",
-          "zh-CN": "招式不算体面，成长余地却很大。优雅谈不上，纠缠到底倒是在行。"
+          "en": "A beginner's gauntlet technique with considerable room to grow. Graceful? Rarely. Persistent? Absolutely.",
+          "zh-CN": "入门拳套战技，成长潜力十足。动作未必漂亮，练习却不能少。"
         }
       }
     },
     "internalSkills": {
       "基本内功": {
         "name": {
-          "en": "Steady Breath",
-          "zh-CN": "稳息法"
+          "en": "Steadfast Mastery",
+          "zh-CN": "坚毅专精"
         },
         "description": {
-          "en": "A foundational inner discipline with balanced Yin and Yang. An excellent place to begin staying on your feet.",
-          "zh-CN": "阴阳均衡的基础内功。学会稳住气息，再考虑怎样惊艳全场。"
+          "en": "A passive mastery that strengthens your foundations. Select it as your equipped mastery separately from scroll study.",
+          "zh-CN": "巩固基础的被动专精。卷轴研习与当前装备的主专精分别设置。"
         }
       }
     },

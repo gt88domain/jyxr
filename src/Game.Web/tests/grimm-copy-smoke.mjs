@@ -32,6 +32,11 @@ try{
   assert.equal(current.phase,'world');assert.equal(current.map.id,'小村');assert.equal(current.inventory.find(i=>i.id==='内功入门').count,1);assert.equal(current.silver,0);
   assert.ok(current.objectives.find(o=>o.id==='opening').completed);
   pass(locale+': compressed village explanation keeps the original manual reward and exit');
+  await click('[data-action="party"]');
+  assert.equal(await page.locator('[data-morality]').innerText(),String((await state()).adventure.morality));
+  assert.equal(await page.locator('[data-companion-roster]').getAttribute('href'),'../'+(locale==='en'?'en':'zh')+'/?kind=companions');
+  assert.match(await page.locator('[data-companion-roster]').innerText(),locale==='en'?/Companion roster/:/伙伴名册/);
+  await noOverflow(locale+' companion panel on phone');await click('[data-action="close-modal"]');
   await click('[data-action="interact"][data-id="武师"]');
   current=await state();assert.equal(current.dialogue.speaker,skin.speakerNames['武师'][locale]);
   assert.equal(current.dialogue.text,skin.dialogueEdits['新手村_武师'][0].lines[0].text[locale]);

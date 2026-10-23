@@ -4,6 +4,8 @@ import csv,hashlib,io,json,shutil,zipfile
 from pathlib import Path
 from world_cast import WEB,load,validate
 from world_review import build_review
+from world_companions import companion_inventory,export_companions
+from grimm_skin import load_skin
 
 project,countries,figures,cast,index,locks=load()
 summary=validate(project,countries,figures,cast,index,locks)
@@ -16,7 +18,13 @@ output.mkdir(parents=True,exist_ok=True)
 for name in ['assets','data','zh','en']:(output/name).mkdir(exist_ok=True)
 for name in ['catalog.css','catalog.mjs','favicon.svg']:shutil.copyfile(WEB/'cast'/name,output/'assets'/name)
 translations=json.loads((WEB/'cast/translations.json').read_text())
-payload={'project':project,'countries':countries,'figures':figures,'actors':cast['actors'],'summary':summary}
+native=json.loads((WEB/'public/data/packs/jyx/content-package.json').read_text())
+runtime={locale:json.loads((game/f'data/packs/worlds/{locale}/content-package.json').read_text()) for locale in ['en','zh-CN']}
+companions=companion_inventory(native,cast,figures,load_skin(WEB),runtime)
+export_companions(output/'data',companions)
+companion_by_id={a['actorId']:a for a in companions['characters']}
+actors=[{**a,'runtimeDisplayApplied':companion_by_id.get(a['actorId'],{}).get('displayApplied',False),'authoredJoinScenes':len(companion_by_id.get(a['actorId'],{}).get('authoredJoinStories',[]))} for a in cast['actors']]
+payload={'project':project,'countries':countries,'figures':figures,'actors':actors,'summary':summary,'companionSummary':companions['counts']}
 encoded=json.dumps(payload,ensure_ascii=False,separators=(',',':'))+'\n'
 (output/'data/catalog.json').write_text(encoded)
 (output/'data/translations.json').write_text(json.dumps(translations,ensure_ascii=False,separators=(',',':'))+'\n')

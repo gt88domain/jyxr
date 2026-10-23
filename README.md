@@ -1,6 +1,10 @@
 # Storybound · 童话旅人（暂名）
 
-本分支 fantasy-worlds 从现代金庸基线 624f4e8 独立开发，在同一个真实游戏里替换人物、对白与美术。当前格林替换原位置上的南贤，用六句交代收集童话和召唤玩家求助；村中问答、教官教学、首战提示及首次商店介绍按新人物性格重写。英文为主，中文作对照，幽默来自情境与角色；修炼书奖励、装备、战斗与存档继续执行原规则。国家线数量是内部规划，不用作游戏名或开场设定。买药任务后续、国家路线和大部分界面仍有原版内容，完整英文版尚未完成。
+童话新版继承 fantasy-worlds，在同一个现代 HTML5 游戏里替换人物、对白与美术。本批次通过独立功能分支扩到出村买药、训练两分支、埃尔招募与寻宠对白、九个门派入口和常用英文界面，共 78 段、220 句新版对白。英文为主，中文作对照，幽默来自情境与角色；规则定义、条件、奖励和存档编号保留，新名称只进入显示层。完整国家故事尚未完成；寻宠后续仍受原中期条件限制，不能算作新手阶段已自然走通的内容。
+
+[本批次范围、备份与回溯](docs/STORYBOUND_BULK_CHAPTER.md)。源码备份标签 `storybound-before-bulk-2026-10-21`，部署备份标签 `storybound-pages-before-bulk-2026-10-21`；本批次分支 `feat/storybound-bulk-chapter`，以 PR 对照 fantasy-worlds。
+
+前期闭环的推荐测试路线见 [FIRST_LOOP.md](src/Game.Web/content/worlds/FIRST_LOOP.md)，采用独行道路，完成装备、卷轴、战斗、交易、招募、两人配合与存读档9项目标。首屏指引来自内容配置；训练课与结伴练习均保留原来的获胜判定。前期技能与道具统一使用拳套、剑术、重武器、法术、被动专精、卷轴和药剂等名称，示例见 [TERMINOLOGY.md](src/Game.Web/content/worlds/TERMINOLOGY.md)。学派选择与培养的后续方案见 [设计说明](docs/FANTASY_SCHOOL_TRAINING.md)。前期闭环开始前的源码与部署另存 `storybound-before-first-loop-2026-10-21`、`storybound-pages-before-first-loop-2026-10-21` 标签。
 
 - [Game · Grimm's Request](https://gt88domain.github.io/jyxr/fantasy-worlds/game/)
 - [同一游戏的中文文案对照](https://gt88domain.github.io/jyxr/fantasy-worlds/game/?lang=zh-CN)；[中文原版游戏](https://gt88domain.github.io/jyxr/)
@@ -68,3 +72,5 @@ dotnet run --project src/Game.Web.Runtime/Smoke/Smoke.csproj -- --original src/G
 模块边界与已知限制见[模块架构](docs/MODULAR_GAME.md)。162张地图、513个人物定义和1,887段剧情是已有迁移包的资料规模，不代表全部路线验证完成；原有缺口按原审计保留。旧迁移文档中的百分比不作为本分支的完成率。
 
 本体沿用[GPLv3](LICENSE)，保留原作者虹乡俗人及贡献者署名。原素材来源、许可与说明随包保留，内容源提交和逐文件摘要见`src/Game.Web/content/jyx/`。
+
+美式英文换皮范围与保留原触发条件的校验见 [AMERICAN_RESKIN.md](docs/AMERICAN_RESKIN.md)。

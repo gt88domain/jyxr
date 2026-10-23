@@ -65,7 +65,8 @@
     "cast:build": "python3 scripts/build-world-catalog.py",
     "test:cast": "python3 -m unittest discover -s tests -p test_world_cast.py && node tests/world-cast-smoke.mjs",
     "test:opening": "python3 -m unittest discover -s tests -p test_grimm_skin.py && node tests/grimm-game-smoke.mjs",
-    "test:opening-copy": "python3 -m unittest discover -s tests -p test_grimm_skin.py && node tests/grimm-copy-smoke.mjs"
+    "test:opening-copy": "python3 -m unittest discover -s tests -p test_grimm_skin.py && node tests/grimm-copy-smoke.mjs",
+    "test:world-chapter": "python3 -m unittest discover -s tests -p test_world_chapter.py && node --test tests/presentation.test.mjs tests/world-terminology.test.mjs && node tests/bulk-chapter-smoke.mjs"
   },
   "dependencies": { "phaser": "3.90.0" },
   "devDependencies": {

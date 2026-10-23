@@ -10,7 +10,7 @@ export interface CharacterAnimation {id: string; texture: string; atlas: string;
 export interface Unit { animation?: CharacterAnimation | null; facing?: string; id: string; definitionId?: string; sprite?: string | null; portrait?: string | null; name: string; team: number; x: number; y: number; hp: number; maxHp: number; mp: number; maxMp: number; rage?: number; alive: boolean; buffs?: {id: string; name: string; description: string; level: number; remainingTurns: number; isDebuff: boolean}[]; }
 export interface PackMedia { titleBackground?: string; worldBackground?: string; battleBackground?: string; defaultFriendly?: string; defaultEnemy?: string; characters?: Record<string, string>; portraits?: Record<string, string>; maps?: Record<string, string>; battles?: Record<string, string>; }
 export interface Objective { id: string; title: string; description?: string | null; kind: 'story' | 'party' | 'equipment' | 'cultivation' | 'purchase' | 'battle' | 'save'; target?: string; completed: boolean; }
-export interface ContentPack { id: string; title: string; artSource?: {kind: string; versionLabel?: string}; subtitle?: string; chapterTitle?: string; description?: string; defaultName?: string; currencyName?: string; currencyUnit?: string; terms?: Record<string, string>; statLabels?: Record<string,string>; contentVersion?: string; heroDefinitionId: string; initialMapId: string; initialStoryId?: string; trainingStoryId?: string; trainingMapId?: string; completionStoryId?: string; media?: PackMedia; objectives?: Omit<Objective, 'completed'>[]; }
+export interface ContentPack { id: string; worldAtlas?:import('./world-atlas-model').WorldAtlas; chapterGuide?:import('./opening-chapter').ChapterGuide; displayCatalog?: DisplayCatalog; title: string; artSource?: {kind: string; versionLabel?: string}; subtitle?: string; chapterTitle?: string; description?: string; defaultName?: string; currencyName?: string; currencyUnit?: string; terms?: Record<string, string>; statLabels?: Record<string,string>; contentVersion?: string; heroDefinitionId: string; initialMapId: string; initialStoryId?: string; trainingStoryId?: string; trainingMapId?: string; completionStoryId?: string; media?: PackMedia; objectives?: Omit<Objective, 'completed'>[]; }
 export interface PartyMember { id: string; definitionId: string; name: string; level: number; hp: number; maxHp: number; mp: number; maxMp: number; skills: Skill[]; equipment: EquipmentSlot[]; isHero: boolean; sprite?: string | null; portrait?: string | null; }
 export interface Shop { id: string; name: string; products: { id: string; itemId: string | null; name: string; description: string; icon?: string | null; price: number | null; premiumPrice: number | null; remaining: number | null; purchased: number; canBuy: boolean }[]; sellable: { entryNumber: number; id: string; name: string; icon?: string | null; quantity: number; price: number }[]; }
 export interface Battle {
@@ -85,12 +85,12 @@ interface Exports {
 let api: Exports;
 let sessionEpoch=0;
 function current(epoch:number){if(epoch!==sessionEpoch)throw new Error('会话已切换，旧操作结果已忽略。');}
-export async function inspectEquipment(characterId: string, entryNumber: number): Promise<EquipmentPreview> {
+export async function inspectEquipment(characterId: string, entryNumber: number, catalog?:DisplayCatalog): Promise<EquipmentPreview> {
   const epoch=sessionEpoch;
   const result = JSON.parse(await api.InspectEquipment(JSON.stringify({characterId, entryNumber}))) as {ok: boolean; error?: string; preview?: EquipmentPreview};
   current(epoch);
   if (!result.ok || !result.preview) throw new Error(result.error || '装备对比暂不可用。');
-  return result.preview;
+  return projectPresentation(result.preview,catalog);
 }
 export async function inspectCompanionConditions(): Promise<Record<string, boolean | null>> {
   const epoch=sessionEpoch;
@@ -108,7 +108,7 @@ function decode(value: string): Result {
     map.description ||= '';
     map.locations = (map.locations ?? []).map(location => ({...location, name: location.name || location.id, description: location.description || ''}));
   }
-  return result;
+  return projectPresentation(result,result.state.pack.displayCatalog);
 }
 export async function loadRuntime(progress: (message: string) => void, packId = 'jyx'): Promise<Result> {
   progress('正在载入游戏规则……');
@@ -214,6 +214,8 @@ export async function miniGameInput(input: Record<string, unknown>): Promise<Min
   return result.frame;
 }
 import {readPack} from './content';
+import {projectPresentation} from './presentation';
+import type {DisplayCatalog} from './presentation';
 import {assertCommand} from './command-contract';
 import type {GameCommand} from './command-contract';
 import {readProfile, writeProfile, readSlot} from './storage';

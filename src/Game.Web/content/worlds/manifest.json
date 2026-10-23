@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "worlds",
   "runtimePackId": "jyx",
-  "version": "village-humor-1",
+  "version": "windrider-loop-1",
   "title": "Storybound · Grimm's Request",
   "locale": "en",
   "inventory": "../jyx/assets.json",
@@ -17,11 +17,17 @@
     ]
   },
   "localAssets": [
+    {
+      "path": "art/worlds/storybook-atlas.png",
+      "bytes": 3299913,
+      "sha256": "c7cb728cc9e39b486f0263fce72ddf8185e9dcf421de17b48a4d4f2c01ab14a7",
+      "localSource": "content/worlds/art/storybook-atlas.png"
+    },
     {"path": "art/worlds/grimm-portrait.png", "bytes": 2578580, "sha256": "9fe2cf45d8270c65363443f2cb40ba14fd106683bc59674ae3e479c76748616b", "localSource": "content/worlds/art/grimm-portrait.png"}
   ],
   "source": {
     "sourceCommit": "624f4e87ae251f8e0162e90d1eda11a1ef386cd7",
     "baseUrl": "https://raw.githubusercontent.com/gt88domain/jyxr/85462cbc226ea97cf02294e7e331d13396598300/",
-    "scope": "Presentation overlay of the frozen JYX game: same rule identity, stable IDs, map locations, story flow and numeric data. Independent storage. Grimm and the village lessons / first shop visit are rewritten; later country routes are pending."
+    "scope": "Canonical frozen JYX rules with a view-only display catalog and independent storage. Rewritten village, supplies/tutorial branches, Eir recruitment/pet dialogue and nine school entries; seven-question creation and core English UI. Later country stories and school lessons remain pending. Pet follow-up keeps its original midgame prerequisites."
   }
 }

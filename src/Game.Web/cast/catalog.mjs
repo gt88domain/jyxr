@@ -46,6 +46,7 @@ try{
     h('section',{'aria-label':t('search')},h('div',{className:'filters'},field('search',search),field('country',country),field('kind',kind)),
       h('details',{className:'more-filters'},h('summary',{},t('moreFilters')),h('div',{className:'more-filter-body'},field('status',status),
         h('a',{className:'download',href:new URL('../data/cast.csv',import.meta.url).href,download:'storybound-cast.csv'},t('csv')),
+        h('a',{className:'download',href:new URL('../data/companions.csv',import.meta.url).href,download:'storybound-companions.csv'},t('companionsCsv')),
         h('a',{className:'download',href:new URL('../data/catalog.json',import.meta.url).href,download:'storybound-cast.json'},t('json'))),
         h('div',{className:'notes'},h('p',{},t('scope',{definitions:s.sourceDefinitions,names:s.sourceDisplayNames,recruitmentForms:s.recruitmentForms,recruitmentIdentities:s.recruitmentIdentities})),h('p',{},t('identityNote'))))),
     h('section',{},h('div',{className:'results-heading'},resultCount),cards,more),
@@ -101,7 +102,7 @@ try{
     return h('article',{className:'cast-card',dataset:{actorId:a.actorId,legacy:a.legacyIdentity}},
       h('div',{className:'card-top'},h('span',{className:'monogram','aria-hidden':'true'},initials),
         h('div',{className:'card-title'},h('div',{className:'country-label'},countryLabel(a.primaryCountry)),h('h3',{},a.name[locale]),h('div',{className:'alternate'},a.name[other]))),
-      h('div',{className:'badges'},badge(statusLabel(a),a.status==='locked'?'fixed':a.status==='proposed'?'proposed':''),a.traveler?badge('🧭 '+t('traveler')):null,f?badge(t(f.recognition)):null),
+      h('div',{className:'badges'},badge(statusLabel(a),a.status==='locked'?'fixed':a.status==='proposed'?'proposed':''),a.recruitmentDefinitionIds.length?badge(t(a.runtimeDisplayApplied?'displayApplied':'displayPending')):null,a.traveler?badge('🧭 '+t('traveler')):null,f?badge(t(f.recognition)):null),
       h('div',{className:'legacy'},t('legacy')+': '+a.legacyIdentity),
       h('p',{className:'source'},f?.sourceLabel[locale]||t(a.kind==='system'?'systemRole':a.kind==='player'?'playerRole':'commonRole')),
       h('div',{className:'card-actions'},h('span',{className:'forms'},t('forms')+' · '+a.forms.length),button)
