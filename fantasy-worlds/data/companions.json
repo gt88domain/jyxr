@@ -1,0 +1,2289 @@
+{
+  "schemaVersion": 1,
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "scope": "Source JOIN/FOLLOW inventory. Display names and authored join scenes do not prove a complete recruitment route or current availability.",
+  "counts": {
+    "identities": 62,
+    "forms": 65,
+    "instructions": 80,
+    "fixedIdentities": 20,
+    "displayAppliedIdentities": 32,
+    "authoredJoinScenes": 25
+  },
+  "characters": [
+    {
+      "actorId": "actor-a027e13b7239",
+      "legacyIdentity": "郭襄",
+      "name": {
+        "zh-CN": "爱丽丝",
+        "en": "Alice"
+      },
+      "status": "locked",
+      "country": "GB",
+      "sourceWork": "Alice books / Lewis Carroll",
+      "recognition": "wide",
+      "forms": [
+        "郭襄"
+      ],
+      "runtimeNames": {
+        "en": {
+          "郭襄": "Alice"
+        },
+        "zh-CN": {
+          "郭襄": "爱丽丝"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "sdxl_郭襄.风陵渡口.战斗胜利"
+      ],
+      "instructions": [
+        {
+          "characterId": "郭襄",
+          "kind": "JOIN",
+          "storyId": "sdxl_郭襄.风陵渡口.战斗胜利",
+          "pointer": "/storyScripts/legacy/segments/454/steps/19"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-2d5bba2c67c9",
+      "legacyIdentity": "陈家洛",
+      "name": {
+        "zh-CN": "达达尼昂",
+        "en": "D'Artagnan"
+      },
+      "status": "locked",
+      "country": "FR",
+      "sourceWork": "The Three Musketeers / Alexandre Dumas",
+      "recognition": "wide",
+      "forms": [
+        "陈家洛"
+      ],
+      "runtimeNames": {
+        "en": {
+          "陈家洛": "D'Artagnan"
+        },
+        "zh-CN": {
+          "陈家洛": "达达尼昂"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "书剑恩仇录_庖丁解牛"
+      ],
+      "instructions": [
+        {
+          "characterId": "陈家洛",
+          "kind": "JOIN",
+          "storyId": "书剑恩仇录_庖丁解牛",
+          "pointer": "/storyScripts/legacy/segments/923/steps/8"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-b584ae9abf3f",
+      "legacyIdentity": "陈达海",
+      "name": {
+        "zh-CN": "堂吉诃德",
+        "en": "Don Quixote"
+      },
+      "status": "locked",
+      "country": "ES",
+      "sourceWork": "Don Quixote / Miguel de Cervantes",
+      "recognition": "wide",
+      "forms": [
+        "陈达海"
+      ],
+      "runtimeNames": {
+        "en": {
+          "陈达海": "Don Quixote"
+        },
+        "zh-CN": {
+          "陈达海": "堂吉诃德"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "陈达海",
+          "kind": "JOIN",
+          "storyId": "白马啸西风_陈达海加入2",
+          "pointer": "/storyScripts/legacy/segments/1836/steps/0"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-aba8f69ed2ef",
+      "legacyIdentity": "阿珂",
+      "name": {
+        "zh-CN": "多萝西·盖尔",
+        "en": "Dorothy Gale"
+      },
+      "status": "locked",
+      "country": "US",
+      "sourceWork": "Oz books / L. Frank Baum",
+      "recognition": "wide",
+      "forms": [
+        "阿珂"
+      ],
+      "runtimeNames": {
+        "en": {
+          "阿珂": "Dorothy Gale"
+        },
+        "zh-CN": {
+          "阿珂": "多萝西·盖尔"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "鹿鼎记_台湾3",
+        "鹿鼎记_阿九.邀请2"
+      ],
+      "instructions": [
+        {
+          "characterId": "阿珂",
+          "kind": "JOIN",
+          "storyId": "鹿鼎记_阿九.邀请2",
+          "pointer": "/storyScripts/legacy/segments/949/steps/9"
+        },
+        {
+          "characterId": "阿珂",
+          "kind": "JOIN",
+          "storyId": "鹿鼎记_台湾3",
+          "pointer": "/storyScripts/legacy/segments/961/steps/11"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-a5d3bf76f256",
+      "legacyIdentity": "狄云",
+      "name": {
+        "zh-CN": "德古拉",
+        "en": "Dracula"
+      },
+      "status": "locked",
+      "country": "RO",
+      "sourceWork": "Dracula / Bram Stoker",
+      "recognition": "wide",
+      "forms": [
+        "狄云"
+      ],
+      "runtimeNames": {
+        "en": {
+          "狄云": "Dracula"
+        },
+        "zh-CN": {
+          "狄云": "德古拉"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "连城诀_唐诗山洞.狄云正式加入"
+      ],
+      "instructions": [
+        {
+          "characterId": "狄云",
+          "kind": "JOIN",
+          "storyId": "连城诀_唐诗山洞.狄云正式加入",
+          "pointer": "/storyScripts/legacy/segments/899/steps/1"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-d7d7c05d77b0",
+      "legacyIdentity": "李文秀",
+      "name": {
+        "zh-CN": "杜尔西内娅",
+        "en": "Dulcinea"
+      },
+      "status": "locked",
+      "country": "ES",
+      "sourceWork": "Don Quixote / Miguel de Cervantes",
+      "recognition": "genre",
+      "forms": [
+        "李文秀"
+      ],
+      "runtimeNames": {
+        "en": {
+          "李文秀": "Dulcinea"
+        },
+        "zh-CN": {
+          "李文秀": "杜尔西内娅"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "白马啸西风_李文秀加入"
+      ],
+      "instructions": [
+        {
+          "characterId": "李文秀",
+          "kind": "JOIN",
+          "storyId": "白马啸西风_李文秀加入",
+          "pointer": "/storyScripts/legacy/segments/1827/steps/2"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-b50498c05b7b",
+      "legacyIdentity": "程灵素",
+      "name": {
+        "zh-CN": "格尔达",
+        "en": "Gerda"
+      },
+      "status": "locked",
+      "country": "DK",
+      "sourceWork": "The Snow Queen / Hans Christian Andersen",
+      "recognition": "genre",
+      "forms": [
+        "程灵素"
+      ],
+      "runtimeNames": {
+        "en": {
+          "程灵素": "Gerda"
+        },
+        "zh-CN": {
+          "程灵素": "格尔达"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "雪山飞狐_药王庄.程灵素.求药"
+      ],
+      "instructions": [
+        {
+          "characterId": "程灵素",
+          "kind": "JOIN",
+          "storyId": "雪山飞狐_药王庄.程灵素.求药",
+          "pointer": "/storyScripts/legacy/segments/800/steps/11"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-b78efecbd494",
+      "legacyIdentity": "苏荃",
+      "name": {
+        "zh-CN": "格琳达",
+        "en": "Glinda"
+      },
+      "status": "locked",
+      "country": "US",
+      "sourceWork": "Oz books / L. Frank Baum",
+      "recognition": "wide",
+      "forms": [
+        "苏荃"
+      ],
+      "runtimeNames": {
+        "en": {
+          "苏荃": "Glinda"
+        },
+        "zh-CN": {
+          "苏荃": "格琳达"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "鹿鼎记_神龙岛4"
+      ],
+      "instructions": [
+        {
+          "characterId": "苏荃",
+          "kind": "JOIN",
+          "storyId": "鹿鼎记_神龙岛4",
+          "pointer": "/storyScripts/legacy/segments/958/steps/8"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-c4a1a48428e1",
+      "legacyIdentity": "石破天",
+      "name": {
+        "zh-CN": "赫拉克勒斯",
+        "en": "Heracles"
+      },
+      "status": "locked",
+      "country": "GR",
+      "sourceWork": "Greek mythology",
+      "recognition": "wide",
+      "forms": [
+        "石破天"
+      ],
+      "runtimeNames": {
+        "en": {
+          "石破天": "Heracles"
+        },
+        "zh-CN": {
+          "石破天": "赫拉克勒斯"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "侠客行_石张家口"
+      ],
+      "instructions": [
+        {
+          "characterId": "石破天",
+          "kind": "JOIN",
+          "storyId": "侠客行_石张家口",
+          "pointer": "/storyScripts/legacy/segments/1375/steps/6"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-5a3d4ce0f54f",
+      "legacyIdentity": "袁承志",
+      "name": {
+        "zh-CN": "荷鲁斯",
+        "en": "Horus"
+      },
+      "status": "locked",
+      "country": "EG",
+      "sourceWork": "Ancient Egyptian mythology",
+      "recognition": "wide",
+      "forms": [
+        "袁承志",
+        "儿时袁承志"
+      ],
+      "runtimeNames": {
+        "en": {
+          "袁承志": "Horus",
+          "儿时袁承志": "Horus"
+        },
+        "zh-CN": {
+          "袁承志": "荷鲁斯",
+          "儿时袁承志": "荷鲁斯"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "bixuejianShyou_不接黄金",
+        "bixuejianShyou_接金败石梁派3",
+        "bixuejianShyou_接黄金2",
+        "bixuejianShyou_脱险"
+      ],
+      "instructions": [
+        {
+          "characterId": "袁承志",
+          "kind": "JOIN",
+          "storyId": "bixuejianShyou_接黄金2",
+          "pointer": "/storyScripts/legacy/segments/1515/steps/5"
+        },
+        {
+          "characterId": "袁承志",
+          "kind": "JOIN",
+          "storyId": "bixuejianShyou_不接黄金",
+          "pointer": "/storyScripts/legacy/segments/1525/steps/12"
+        },
+        {
+          "characterId": "袁承志",
+          "kind": "JOIN",
+          "storyId": "bixuejianShyou_接金败石梁派3",
+          "pointer": "/storyScripts/legacy/segments/1544/steps/9"
+        },
+        {
+          "characterId": "儿时袁承志",
+          "kind": "JOIN",
+          "storyId": "bixuejianShyou_脱险",
+          "pointer": "/storyScripts/legacy/segments/1508/steps/8"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-425b9c8b43bd",
+      "legacyIdentity": "胡斐",
+      "name": {
+        "zh-CN": "凯",
+        "en": "Kai"
+      },
+      "status": "locked",
+      "country": "DK",
+      "sourceWork": "The Snow Queen / Hans Christian Andersen",
+      "recognition": "genre",
+      "forms": [
+        "胡斐"
+      ],
+      "runtimeNames": {
+        "en": {
+          "胡斐": "Kai"
+        },
+        "zh-CN": {
+          "胡斐": "凯"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "雪山飞狐_胡斐居.胜利"
+      ],
+      "instructions": [
+        {
+          "characterId": "胡斐",
+          "kind": "JOIN",
+          "storyId": "雪山飞狐_胡斐居.胜利",
+          "pointer": "/storyScripts/legacy/segments/787/steps/7"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-c50ae39ea1d3",
+      "legacyIdentity": "杨过",
+      "name": {
+        "zh-CN": "亚瑟王",
+        "en": "King Arthur"
+      },
+      "status": "locked",
+      "country": "GB",
+      "sourceWork": "Arthurian legend",
+      "recognition": "wide",
+      "forms": [
+        "杨过"
+      ],
+      "runtimeNames": {
+        "en": {
+          "杨过": "King Arthur"
+        },
+        "zh-CN": {
+          "杨过": "亚瑟王"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "sdxl_剑魔荒冢.战胜神雕"
+      ],
+      "instructions": [
+        {
+          "characterId": "杨过",
+          "kind": "JOIN",
+          "storyId": "sdxl_剑魔荒冢.战胜神雕",
+          "pointer": "/storyScripts/legacy/segments/462/steps/13"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-166d6c6e8671",
+      "legacyIdentity": "令狐冲",
+      "name": {
+        "zh-CN": "宫本武藏",
+        "en": "Miyamoto Musashi"
+      },
+      "status": "locked",
+      "country": "JP",
+      "sourceWork": "Japanese swordsmanship history",
+      "recognition": "wide",
+      "forms": [
+        "令狐冲"
+      ],
+      "runtimeNames": {
+        "en": {
+          "令狐冲": "Miyamoto Musashi"
+        },
+        "zh-CN": {
+          "令狐冲": "宫本武藏"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "笑傲江湖_令狐冲加入"
+      ],
+      "instructions": [
+        {
+          "characterId": "令狐冲",
+          "kind": "JOIN",
+          "storyId": "笑傲江湖_令狐冲加入",
+          "pointer": "/storyScripts/legacy/segments/675/steps/1"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-1f963cab5898",
+      "legacyIdentity": "张无忌",
+      "name": {
+        "zh-CN": "哪吒",
+        "en": "Nezha"
+      },
+      "status": "locked",
+      "country": "CN",
+      "sourceWork": "Chinese myth and Investiture of the Gods",
+      "recognition": "wide",
+      "forms": [
+        "张无忌"
+      ],
+      "runtimeNames": {
+        "en": {
+          "张无忌": "Nezha"
+        },
+        "zh-CN": {
+          "张无忌": "哪吒"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "yttlj_昆仑仙境",
+        "倚天屠龙_张无忌入队"
+      ],
+      "instructions": [
+        {
+          "characterId": "张无忌",
+          "kind": "JOIN",
+          "storyId": "test_是",
+          "pointer": "/storyScripts/legacy/segments/494/steps/1"
+        },
+        {
+          "characterId": "张无忌",
+          "kind": "JOIN",
+          "storyId": "yttlj_昆仑仙境",
+          "pointer": "/storyScripts/legacy/segments/664/steps/2"
+        },
+        {
+          "characterId": "张无忌",
+          "kind": "JOIN",
+          "storyId": "倚天屠龙_张无忌入队",
+          "pointer": "/storyScripts/legacy/segments/1383/steps/8"
+        }
+      ],
+      "containsTestSegment": true
+    },
+    {
+      "actorId": "actor-9c0bbffeb772",
+      "legacyIdentity": "袁冠南",
+      "name": {
+        "zh-CN": "匹诺曹",
+        "en": "Pinocchio"
+      },
+      "status": "locked",
+      "country": "IT",
+      "sourceWork": "The Adventures of Pinocchio / Carlo Collodi",
+      "recognition": "wide",
+      "forms": [
+        "袁冠南"
+      ],
+      "runtimeNames": {
+        "en": {
+          "袁冠南": "Pinocchio"
+        },
+        "zh-CN": {
+          "袁冠南": "匹诺曹"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "鸳鸯刀正_风陵渡胜"
+      ],
+      "instructions": [
+        {
+          "characterId": "袁冠南",
+          "kind": "JOIN",
+          "storyId": "鸳鸯刀正_风陵渡胜",
+          "pointer": "/storyScripts/legacy/segments/1453/steps/4"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-a51b6586c8d3",
+      "legacyIdentity": "黄蓉",
+      "name": {
+        "zh-CN": "白雪公主",
+        "en": "Snow White"
+      },
+      "status": "locked",
+      "country": "DE",
+      "sourceWork": "Grimm tales",
+      "recognition": "wide",
+      "forms": [
+        "黄蓉"
+      ],
+      "runtimeNames": {
+        "en": {
+          "黄蓉": "Snow White"
+        },
+        "zh-CN": {
+          "黄蓉": "白雪公主"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "射雕英雄传_桃花岛招亲2"
+      ],
+      "instructions": [
+        {
+          "characterId": "黄蓉",
+          "kind": "JOIN",
+          "storyId": "射雕英雄传_桃花岛招亲2",
+          "pointer": "/storyScripts/legacy/segments/866/steps/6"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-7f328b696bb2",
+      "legacyIdentity": "郭靖",
+      "name": {
+        "zh-CN": "白雪公主的猎人",
+        "en": "The Huntsman"
+      },
+      "status": "locked",
+      "country": "DE",
+      "sourceWork": "Grimm tales",
+      "recognition": "genre",
+      "forms": [
+        "郭靖"
+      ],
+      "runtimeNames": {
+        "en": {
+          "郭靖": "The Huntsman"
+        },
+        "zh-CN": {
+          "郭靖": "白雪公主的猎人"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "射雕英雄传_塞外郭靖"
+      ],
+      "instructions": [
+        {
+          "characterId": "郭靖",
+          "kind": "JOIN",
+          "storyId": "射雕英雄传_塞外郭靖",
+          "pointer": "/storyScripts/legacy/segments/840/steps/10"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-9ef680fcc0b6",
+      "legacyIdentity": "小龙女",
+      "name": {
+        "zh-CN": "湖中仙女",
+        "en": "The Lady of the Lake"
+      },
+      "status": "locked",
+      "country": "GB",
+      "sourceWork": "Arthurian legend",
+      "recognition": "wide",
+      "forms": [
+        "小龙女"
+      ],
+      "runtimeNames": {
+        "en": {
+          "小龙女": "The Lady of the Lake"
+        },
+        "zh-CN": {
+          "小龙女": "湖中仙女"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "sdxl_绝情谷底.小龙女加入"
+      ],
+      "instructions": [
+        {
+          "characterId": "小龙女",
+          "kind": "JOIN",
+          "storyId": "sdxl_绝情谷底.小龙女加入",
+          "pointer": "/storyScripts/legacy/segments/476/steps/8"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-f892fa26a650",
+      "legacyIdentity": "韦小宝",
+      "name": {
+        "zh-CN": "稻草人",
+        "en": "The Scarecrow"
+      },
+      "status": "locked",
+      "country": "US",
+      "sourceWork": "Oz books / L. Frank Baum",
+      "recognition": "wide",
+      "forms": [
+        "韦小宝"
+      ],
+      "runtimeNames": {
+        "en": {
+          "韦小宝": "The Scarecrow"
+        },
+        "zh-CN": {
+          "韦小宝": "稻草人"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "鹿鼎记_北京韦小宝加入"
+      ],
+      "instructions": [
+        {
+          "characterId": "韦小宝",
+          "kind": "JOIN",
+          "storyId": "鹿鼎记_北京韦小宝加入",
+          "pointer": "/storyScripts/legacy/segments/927/steps/3"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-712acdf2ce54",
+      "legacyIdentity": "乔峰",
+      "name": {
+        "zh-CN": "索尔",
+        "en": "Thor"
+      },
+      "status": "locked",
+      "country": "NO",
+      "sourceWork": "Norse mythology",
+      "recognition": "wide",
+      "forms": [
+        "乔峰"
+      ],
+      "runtimeNames": {
+        "en": {
+          "乔峰": "Thor"
+        },
+        "zh-CN": {
+          "乔峰": "索尔"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "tlbb.dy_雁门关有阿朱"
+      ],
+      "instructions": [
+        {
+          "characterId": "乔峰",
+          "kind": "JOIN",
+          "storyId": "tlbb.dy_雁门关有阿朱",
+          "pointer": "/storyScripts/legacy/segments/561/steps/30"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-68c2a804a0ae",
+      "legacyIdentity": "血刀老祖",
+      "name": {
+        "zh-CN": "亚伯拉罕·范海辛",
+        "en": "Abraham Van Helsing"
+      },
+      "status": "proposed",
+      "country": "RO",
+      "sourceWork": "Dracula / Bram Stoker",
+      "recognition": "wide",
+      "forms": [
+        "血刀老祖"
+      ],
+      "runtimeNames": {
+        "en": {
+          "血刀老祖": "Abraham Van Helsing"
+        },
+        "zh-CN": {
+          "血刀老祖": "亚伯拉罕·范海辛"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "血刀老祖",
+          "kind": "JOIN",
+          "storyId": "连城诀_昆仑山.血刀老祖加入",
+          "pointer": "/storyScripts/legacy/segments/906/steps/3"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-fd2d45f601ba",
+      "legacyIdentity": "慕容复",
+      "name": {
+        "zh-CN": "巴德尔",
+        "en": "Baldr"
+      },
+      "status": "proposed",
+      "country": "NO",
+      "sourceWork": "Norse mythology",
+      "recognition": "genre",
+      "forms": [
+        "慕容复"
+      ],
+      "runtimeNames": {
+        "en": {
+          "慕容复": "慕容复"
+        },
+        "zh-CN": {
+          "慕容复": "慕容复"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "慕容复",
+          "kind": "JOIN",
+          "storyId": "tlbb.dy_燕子坞慕容复",
+          "pointer": "/storyScripts/legacy/segments/596/steps/16"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-11502aee34ae",
+      "legacyIdentity": "慕容博",
+      "name": {
+        "zh-CN": "包尔",
+        "en": "Borr"
+      },
+      "status": "proposed",
+      "country": "NO",
+      "sourceWork": "Norse mythology",
+      "recognition": "genre",
+      "forms": [
+        "慕容博"
+      ],
+      "runtimeNames": {
+        "en": {
+          "慕容博": "慕容博"
+        },
+        "zh-CN": {
+          "慕容博": "慕容博"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "慕容博",
+          "kind": "JOIN",
+          "storyId": "original_松鼠旅馆慕容博",
+          "pointer": "/storyScripts/legacy/segments/405/steps/0"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-7aede0e7a7da",
+      "legacyIdentity": "蓝凤凰",
+      "name": {
+        "zh-CN": "喀耳刻",
+        "en": "Circe"
+      },
+      "status": "proposed",
+      "country": "GR",
+      "sourceWork": "Greek mythology",
+      "recognition": "genre",
+      "forms": [
+        "蓝凤凰"
+      ],
+      "runtimeNames": {
+        "en": {
+          "蓝凤凰": "蓝凤凰"
+        },
+        "zh-CN": {
+          "蓝凤凰": "蓝凤凰"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "蓝凤凰",
+          "kind": "JOIN",
+          "storyId": "笑傲江湖_蓝凤凰2",
+          "pointer": "/storyScripts/legacy/segments/680/steps/7"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-aa771f50201a",
+      "legacyIdentity": "阿九",
+      "name": {
+        "zh-CN": "克娄巴特拉",
+        "en": "Cleopatra"
+      },
+      "status": "proposed",
+      "country": "EG",
+      "sourceWork": "Egyptian history",
+      "recognition": "wide",
+      "forms": [
+        "九难",
+        "阿九"
+      ],
+      "runtimeNames": {
+        "en": {
+          "九难": "Cleopatra",
+          "阿九": "Cleopatra"
+        },
+        "zh-CN": {
+          "九难": "克娄巴特拉",
+          "阿九": "克娄巴特拉"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "鹿鼎记_阿九.邀请2"
+      ],
+      "instructions": [
+        {
+          "characterId": "九难",
+          "kind": "JOIN",
+          "storyId": "鹿鼎记_阿九.邀请2",
+          "pointer": "/storyScripts/legacy/segments/949/steps/8"
+        },
+        {
+          "characterId": "九难",
+          "kind": "JOIN",
+          "storyId": "bixuejianShyou_铁剑门0",
+          "pointer": "/storyScripts/legacy/segments/1572/steps/8"
+        },
+        {
+          "characterId": "阿九",
+          "kind": "JOIN",
+          "storyId": "bixuejianShyou_京城行2",
+          "pointer": "/storyScripts/legacy/segments/1567/steps/6"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-42a0a1286f3d",
+      "legacyIdentity": "一灯大师",
+      "name": {
+        "zh-CN": "德罗塞尔迈耶",
+        "en": "Drosselmeyer"
+      },
+      "status": "proposed",
+      "country": "DE",
+      "sourceWork": "The Nutcracker and the Mouse King / E. T. A. Hoffmann",
+      "recognition": "genre",
+      "forms": [
+        "一灯大师"
+      ],
+      "runtimeNames": {
+        "en": {
+          "一灯大师": "一灯大师"
+        },
+        "zh-CN": {
+          "一灯大师": "一灯大师"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "一灯大师",
+          "kind": "JOIN",
+          "storyId": "original_松鼠旅馆一灯大师",
+          "pointer": "/storyScripts/legacy/segments/397/steps/0"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-a4aa96386f55",
+      "legacyIdentity": "钟灵",
+      "name": {
+        "zh-CN": "埃尔",
+        "en": "Eir"
+      },
+      "status": "proposed",
+      "country": "NO",
+      "sourceWork": "Norse mythology",
+      "recognition": "genre",
+      "forms": [
+        "钟灵"
+      ],
+      "runtimeNames": {
+        "en": {
+          "钟灵": "Eir"
+        },
+        "zh-CN": {
+          "钟灵": "埃尔"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "tlbb.dy_钟灵找"
+      ],
+      "instructions": [
+        {
+          "characterId": "钟灵",
+          "kind": "JOIN",
+          "storyId": "tlbb.dy_钟灵找",
+          "pointer": "/storyScripts/legacy/segments/639/steps/1"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-a78b0b16de32",
+      "legacyIdentity": "木婉清",
+      "name": {
+        "zh-CN": "格芙琼",
+        "en": "Gefjon"
+      },
+      "status": "proposed",
+      "country": "NO",
+      "sourceWork": "Norse mythology",
+      "recognition": "regional",
+      "forms": [
+        "木婉清"
+      ],
+      "runtimeNames": {
+        "en": {
+          "木婉清": "Gefjon"
+        },
+        "zh-CN": {
+          "木婉清": "格芙琼"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "木婉清",
+          "kind": "JOIN",
+          "storyId": "tlbb.dy_镇南王府.救木婉清1",
+          "pointer": "/storyScripts/legacy/segments/520/steps/8"
+        },
+        {
+          "characterId": "木婉清",
+          "kind": "JOIN",
+          "storyId": "tlbb.dy_木婉清.攻略成功",
+          "pointer": "/storyScripts/legacy/segments/1850/steps/52"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-ff496f0b2e18",
+      "legacyIdentity": "程英",
+      "name": {
+        "zh-CN": "桂妮薇儿",
+        "en": "Guinevere"
+      },
+      "status": "proposed",
+      "country": "GB",
+      "sourceWork": "Arthurian legend",
+      "recognition": "wide",
+      "forms": [
+        "程英.初级",
+        "程英.高级"
+      ],
+      "runtimeNames": {
+        "en": {
+          "程英.初级": "程英",
+          "程英.高级": "程英"
+        },
+        "zh-CN": {
+          "程英.初级": "程英",
+          "程英.高级": "程英"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "程英.初级",
+          "kind": "JOIN",
+          "storyId": "sdxl_程英.加入",
+          "pointer": "/storyScripts/legacy/segments/450/steps/1"
+        },
+        {
+          "characterId": "程英.高级",
+          "kind": "JOIN",
+          "storyId": "sdxl_程英.风陵渡口",
+          "pointer": "/storyScripts/legacy/segments/452/steps/7"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-22d9c7a217a3",
+      "legacyIdentity": "毒手药王",
+      "name": {
+        "zh-CN": "汉斯·克里斯蒂安·安徒生",
+        "en": "Hans Christian Andersen"
+      },
+      "status": "proposed",
+      "country": "DK",
+      "sourceWork": "Danish literary history",
+      "recognition": "wide",
+      "forms": [
+        "毒手药王"
+      ],
+      "runtimeNames": {
+        "en": {
+          "毒手药王": "毒手药王"
+        },
+        "zh-CN": {
+          "毒手药王": "毒手药王"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "毒手药王",
+          "kind": "JOIN",
+          "storyId": "original_松鼠旅馆毒手药王",
+          "pointer": "/storyScripts/legacy/segments/395/steps/0"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-3a5c9fa9ce1b",
+      "legacyIdentity": "丁春秋",
+      "name": {
+        "zh-CN": "海姆达尔",
+        "en": "Heimdall"
+      },
+      "status": "proposed",
+      "country": "NO",
+      "sourceWork": "Norse mythology",
+      "recognition": "wide",
+      "forms": [
+        "丁春秋"
+      ],
+      "runtimeNames": {
+        "en": {
+          "丁春秋": "Heimdall"
+        },
+        "zh-CN": {
+          "丁春秋": "海姆达尔"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "丁春秋",
+          "kind": "JOIN",
+          "storyId": "tlbb.xz_星宿派投降",
+          "pointer": "/storyScripts/legacy/segments/663/steps/3"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-23f218a45635",
+      "legacyIdentity": "阿紫",
+      "name": {
+        "zh-CN": "海拉",
+        "en": "Hel"
+      },
+      "status": "proposed",
+      "country": "NO",
+      "sourceWork": "Norse mythology",
+      "recognition": "wide",
+      "forms": [
+        "阿紫"
+      ],
+      "runtimeNames": {
+        "en": {
+          "阿紫": "阿紫"
+        },
+        "zh-CN": {
+          "阿紫": "阿紫"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "阿紫",
+          "kind": "JOIN",
+          "storyId": "tlbb.dy_小镜湖阮星竹6",
+          "pointer": "/storyScripts/legacy/segments/615/steps/21"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-4f778e8cfbb8",
+      "legacyIdentity": "平一指",
+      "name": {
+        "zh-CN": "希波克拉底",
+        "en": "Hippocrates"
+      },
+      "status": "proposed",
+      "country": "GR",
+      "sourceWork": "Greek medical history",
+      "recognition": "wide",
+      "forms": [
+        "平一指"
+      ],
+      "runtimeNames": {
+        "en": {
+          "平一指": "平一指"
+        },
+        "zh-CN": {
+          "平一指": "平一指"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "平一指",
+          "kind": "JOIN",
+          "storyId": "笑傲江湖_平一指2",
+          "pointer": "/storyScripts/legacy/segments/688/steps/19"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-2303aade9d2a",
+      "legacyIdentity": "王语嫣",
+      "name": {
+        "zh-CN": "伊登",
+        "en": "Idunn"
+      },
+      "status": "proposed",
+      "country": "NO",
+      "sourceWork": "Norse mythology",
+      "recognition": "genre",
+      "forms": [
+        "王语嫣"
+      ],
+      "runtimeNames": {
+        "en": {
+          "王语嫣": "王语嫣"
+        },
+        "zh-CN": {
+          "王语嫣": "王语嫣"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "王语嫣",
+          "kind": "JOIN",
+          "storyId": "tlbb.dy_西夏驸马段誉6",
+          "pointer": "/storyScripts/legacy/segments/577/steps/11"
+        },
+        {
+          "characterId": "王语嫣",
+          "kind": "JOIN",
+          "storyId": "tlbb.dy_燕子坞慕容复",
+          "pointer": "/storyScripts/legacy/segments/596/steps/17"
+        },
+        {
+          "characterId": "王语嫣",
+          "kind": "JOIN",
+          "storyId": "tlbb.dy_阿碧线李青萝.touch.成功",
+          "pointer": "/storyScripts/legacy/segments/1865/steps/21"
+        },
+        {
+          "characterId": "王语嫣",
+          "kind": "JOIN",
+          "storyId": "tlbb.dy_阿碧线李青萝.touch.不成功2",
+          "pointer": "/storyScripts/legacy/segments/1867/steps/12"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-83ca40ce56f1",
+      "legacyIdentity": "木桑道长",
+      "name": {
+        "zh-CN": "伊姆霍特普",
+        "en": "Imhotep"
+      },
+      "status": "proposed",
+      "country": "EG",
+      "sourceWork": "Egyptian history",
+      "recognition": "genre",
+      "forms": [
+        "木桑道长"
+      ],
+      "runtimeNames": {
+        "en": {
+          "木桑道长": "木桑道长"
+        },
+        "zh-CN": {
+          "木桑道长": "木桑道长"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "木桑道长",
+          "kind": "JOIN",
+          "storyId": "original_松鼠旅馆木桑道长",
+          "pointer": "/storyScripts/legacy/segments/386/steps/0"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-0b28590eec09",
+      "legacyIdentity": "田伯光",
+      "name": {
+        "zh-CN": "石川五右卫门",
+        "en": "Ishikawa Goemon"
+      },
+      "status": "proposed",
+      "country": "JP",
+      "sourceWork": "Japanese history and legend",
+      "recognition": "genre",
+      "forms": [
+        "田伯光"
+      ],
+      "runtimeNames": {
+        "en": {
+          "田伯光": "Ishikawa Goemon"
+        },
+        "zh-CN": {
+          "田伯光": "石川五右卫门"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "田伯光",
+          "kind": "JOIN",
+          "storyId": "笑傲江湖_田伯光居.胜田伯光",
+          "pointer": "/storyScripts/legacy/segments/667/steps/9"
+        },
+        {
+          "characterId": "田伯光",
+          "kind": "JOIN",
+          "storyId": "笑傲江湖_田伯光居.负田伯光",
+          "pointer": "/storyScripts/legacy/segments/668/steps/9"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-06f41f3805cb",
+      "legacyIdentity": "温青青",
+      "name": {
+        "zh-CN": "伊西斯",
+        "en": "Isis"
+      },
+      "status": "proposed",
+      "country": "EG",
+      "sourceWork": "Ancient Egyptian mythology",
+      "recognition": "wide",
+      "forms": [
+        "温青青"
+      ],
+      "runtimeNames": {
+        "en": {
+          "温青青": "Isis"
+        },
+        "zh-CN": {
+          "温青青": "伊西斯"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "温青青",
+          "kind": "JOIN",
+          "storyId": "bixuejianShyou_不接黄金石梁派7",
+          "pointer": "/storyScripts/legacy/segments/1553/steps/14"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-8ba17cc7d832",
+      "legacyIdentity": "曲非烟",
+      "name": {
+        "zh-CN": "出云阿国",
+        "en": "Izumo no Okuni"
+      },
+      "status": "proposed",
+      "country": "JP",
+      "sourceWork": "Japanese history",
+      "recognition": "regional",
+      "forms": [
+        "曲非烟"
+      ],
+      "runtimeNames": {
+        "en": {
+          "曲非烟": "曲非烟"
+        },
+        "zh-CN": {
+          "曲非烟": "曲非烟"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "曲非烟",
+          "kind": "JOIN",
+          "storyId": "笑傲江湖_曲非烟胜",
+          "pointer": "/storyScripts/legacy/segments/678/steps/7"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-0a4e48d6e2df",
+      "legacyIdentity": "女主",
+      "name": {
+        "zh-CN": "克里姆希尔德",
+        "en": "Kriemhild"
+      },
+      "status": "proposed",
+      "country": "DE",
+      "sourceWork": "Germanic heroic legend",
+      "recognition": "genre",
+      "forms": [
+        "女主"
+      ],
+      "runtimeNames": {
+        "en": {
+          "女主": "铃兰"
+        },
+        "zh-CN": {
+          "女主": "铃兰"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "女主",
+          "kind": "FOLLOW",
+          "storyId": "original_女主出场.结束",
+          "pointer": "/storyScripts/legacy/segments/135/steps/9"
+        },
+        {
+          "characterId": "女主",
+          "kind": "JOIN",
+          "storyId": "original_女主长安加入队伍",
+          "pointer": "/storyScripts/legacy/segments/1631/steps/1"
+        },
+        {
+          "characterId": "女主",
+          "kind": "FOLLOW",
+          "storyId": "original_长安深夜怪事.女主的提议",
+          "pointer": "/storyScripts/legacy/segments/1647/steps/11"
+        },
+        {
+          "characterId": "女主",
+          "kind": "FOLLOW",
+          "storyId": "original_山庄风云.出发",
+          "pointer": "/storyScripts/legacy/segments/1653/steps/1"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-ac534e94ebdb",
+      "legacyIdentity": "段誉",
+      "name": {
+        "zh-CN": "洛基",
+        "en": "Loki"
+      },
+      "status": "proposed",
+      "country": "NO",
+      "sourceWork": "Norse mythology",
+      "recognition": "wide",
+      "forms": [
+        "段誉"
+      ],
+      "runtimeNames": {
+        "en": {
+          "段誉": "Loki"
+        },
+        "zh-CN": {
+          "段誉": "洛基"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "段誉",
+          "kind": "JOIN",
+          "storyId": "tlbb.dy_天龙寺.救段誉1",
+          "pointer": "/storyScripts/legacy/segments/523/steps/28"
+        },
+        {
+          "characterId": "段誉",
+          "kind": "JOIN",
+          "storyId": "tlbb.dy_曼陀山庄3",
+          "pointer": "/storyScripts/legacy/segments/538/steps/5"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-90ad843cf32f",
+      "legacyIdentity": "霍青桐",
+      "name": {
+        "zh-CN": "米莱狄",
+        "en": "Milady de Winter"
+      },
+      "status": "proposed",
+      "country": "FR",
+      "sourceWork": "The Three Musketeers / Alexandre Dumas",
+      "recognition": "genre",
+      "forms": [
+        "霍青桐"
+      ],
+      "runtimeNames": {
+        "en": {
+          "霍青桐": "Milady de Winter"
+        },
+        "zh-CN": {
+          "霍青桐": "米莱狄"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "霍青桐",
+          "kind": "JOIN",
+          "storyId": "书剑恩仇录_回族部落霍青桐",
+          "pointer": "/storyScripts/legacy/segments/919/steps/12"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-0e6b4f798bf5",
+      "legacyIdentity": "无崖子",
+      "name": {
+        "zh-CN": "密米尔",
+        "en": "Mimir"
+      },
+      "status": "proposed",
+      "country": "NO",
+      "sourceWork": "Norse mythology",
+      "recognition": "genre",
+      "forms": [
+        "无崖子"
+      ],
+      "runtimeNames": {
+        "en": {
+          "无崖子": "无崖子"
+        },
+        "zh-CN": {
+          "无崖子": "无崖子"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "无崖子",
+          "kind": "JOIN",
+          "storyId": "original_松鼠旅馆无崖子",
+          "pointer": "/storyScripts/legacy/segments/406/steps/0"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-3f7cc5633b4e",
+      "legacyIdentity": "水笙",
+      "name": {
+        "zh-CN": "米娜·哈克",
+        "en": "Mina Harker"
+      },
+      "status": "proposed",
+      "country": "RO",
+      "sourceWork": "Dracula / Bram Stoker",
+      "recognition": "wide",
+      "forms": [
+        "水笙"
+      ],
+      "runtimeNames": {
+        "en": {
+          "水笙": "水笙"
+        },
+        "zh-CN": {
+          "水笙": "水笙"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "水笙",
+          "kind": "JOIN",
+          "storyId": "连城诀_雪谷水笙",
+          "pointer": "/storyScripts/legacy/segments/911/steps/15"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-fad26824143a",
+      "legacyIdentity": "林平之",
+      "name": {
+        "zh-CN": "源义经",
+        "en": "Minamoto Yoshitsune"
+      },
+      "status": "proposed",
+      "country": "JP",
+      "sourceWork": "Japanese history and legend",
+      "recognition": "genre",
+      "forms": [
+        "神林平之"
+      ],
+      "runtimeNames": {
+        "en": {
+          "神林平之": "林平之"
+        },
+        "zh-CN": {
+          "神林平之": "林平之"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "神林平之",
+          "kind": "JOIN",
+          "storyId": "笑傲邪_并派大会胜利2",
+          "pointer": "/storyScripts/legacy/segments/775/steps/7"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-2053541b7ec2",
+      "legacyIdentity": "公孙谷主",
+      "name": {
+        "zh-CN": "莫德雷德",
+        "en": "Mordred"
+      },
+      "status": "proposed",
+      "country": "GB",
+      "sourceWork": "Arthurian legend",
+      "recognition": "genre",
+      "forms": [
+        "公孙谷主"
+      ],
+      "runtimeNames": {
+        "en": {
+          "公孙谷主": "公孙谷主"
+        },
+        "zh-CN": {
+          "公孙谷主": "公孙谷主"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "公孙谷主",
+          "kind": "JOIN",
+          "storyId": "original_松鼠旅馆公孙谷主",
+          "pointer": "/storyScripts/legacy/segments/385/steps/0"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-0d524bc54686",
+      "legacyIdentity": "阿碧",
+      "name": {
+        "zh-CN": "南娜",
+        "en": "Nanna"
+      },
+      "status": "proposed",
+      "country": "NO",
+      "sourceWork": "Norse mythology",
+      "recognition": "genre",
+      "forms": [
+        "阿碧"
+      ],
+      "runtimeNames": {
+        "en": {
+          "阿碧": "Nanna"
+        },
+        "zh-CN": {
+          "阿碧": "南娜"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "阿碧",
+          "kind": "JOIN",
+          "storyId": "tlbb.dy_阿朱阿碧.阿碧",
+          "pointer": "/storyScripts/legacy/segments/635/steps/5"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-043d5604919c",
+      "legacyIdentity": "段正淳",
+      "name": {
+        "zh-CN": "尼约德",
+        "en": "Njord"
+      },
+      "status": "proposed",
+      "country": "NO",
+      "sourceWork": "Norse mythology",
+      "recognition": "genre",
+      "forms": [
+        "段正淳"
+      ],
+      "runtimeNames": {
+        "en": {
+          "段正淳": "段正淳"
+        },
+        "zh-CN": {
+          "段正淳": "段正淳"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "段正淳",
+          "kind": "JOIN",
+          "storyId": "tlbb.dy_马夫人2",
+          "pointer": "/storyScripts/legacy/segments/607/steps/18"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-45309c136478",
+      "legacyIdentity": "阎基",
+      "name": {
+        "zh-CN": "奥勒·路却埃",
+        "en": "Ole Lukoie"
+      },
+      "status": "proposed",
+      "country": "DK",
+      "sourceWork": "Ole Lukoie / Hans Christian Andersen",
+      "recognition": "genre",
+      "forms": [
+        "阎基"
+      ],
+      "runtimeNames": {
+        "en": {
+          "阎基": "阎基"
+        },
+        "zh-CN": {
+          "阎基": "阎基"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "阎基",
+          "kind": "JOIN",
+          "storyId": "雪山飞狐_阎基居.七星海棠.胜利.不杀",
+          "pointer": "/storyScripts/legacy/segments/804/steps/11"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-571d625f6783",
+      "legacyIdentity": "金蛇郎君",
+      "name": {
+        "zh-CN": "奥西里斯",
+        "en": "Osiris"
+      },
+      "status": "proposed",
+      "country": "EG",
+      "sourceWork": "Ancient Egyptian mythology",
+      "recognition": "wide",
+      "forms": [
+        "金蛇郎君"
+      ],
+      "runtimeNames": {
+        "en": {
+          "金蛇郎君": "金蛇郎君"
+        },
+        "zh-CN": {
+          "金蛇郎君": "金蛇郎君"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "金蛇郎君",
+          "kind": "JOIN",
+          "storyId": "bixuejianShyou_金蛇败",
+          "pointer": "/storyScripts/legacy/segments/1563/steps/24"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-642c16361b73",
+      "legacyIdentity": "东方不败",
+      "name": {
+        "zh-CN": "佐佐木小次郎",
+        "en": "Sasaki Kojiro"
+      },
+      "status": "proposed",
+      "country": "JP",
+      "sourceWork": "Japanese swordsmanship history",
+      "recognition": "genre",
+      "forms": [
+        "东方不败"
+      ],
+      "runtimeNames": {
+        "en": {
+          "东方不败": "东方不败"
+        },
+        "zh-CN": {
+          "东方不败": "东方不败"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "东方不败",
+          "kind": "JOIN",
+          "storyId": "original_松鼠旅馆东方不败",
+          "pointer": "/storyScripts/legacy/segments/403/steps/0"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-2143fd4cd48f",
+      "legacyIdentity": "崔秋山",
+      "name": {
+        "zh-CN": "舒",
+        "en": "Shu"
+      },
+      "status": "proposed",
+      "country": "EG",
+      "sourceWork": "Ancient Egyptian mythology",
+      "recognition": "genre",
+      "forms": [
+        "崔秋山"
+      ],
+      "runtimeNames": {
+        "en": {
+          "崔秋山": "Shu"
+        },
+        "zh-CN": {
+          "崔秋山": "舒"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "bixuejianShyou_脱险"
+      ],
+      "instructions": [
+        {
+          "characterId": "崔秋山",
+          "kind": "JOIN",
+          "storyId": "bixuejianShyou_脱险",
+          "pointer": "/storyScripts/legacy/segments/1508/steps/9"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-00bbe764da72",
+      "legacyIdentity": "阿朱",
+      "name": {
+        "zh-CN": "希芙",
+        "en": "Sif"
+      },
+      "status": "proposed",
+      "country": "NO",
+      "sourceWork": "Norse mythology",
+      "recognition": "genre",
+      "forms": [
+        "阿朱"
+      ],
+      "runtimeNames": {
+        "en": {
+          "阿朱": "Sif"
+        },
+        "zh-CN": {
+          "阿朱": "希芙"
+        }
+      },
+      "displayApplied": true,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "阿朱",
+          "kind": "JOIN",
+          "storyId": "tlbb.dy_阿朱阿碧.阿朱",
+          "pointer": "/storyScripts/legacy/segments/634/steps/5"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-de58de67ac31",
+      "legacyIdentity": "庄聚贤",
+      "name": {
+        "zh-CN": "西格蒙德",
+        "en": "Sigmund"
+      },
+      "status": "proposed",
+      "country": "NO",
+      "sourceWork": "Norse heroic legend",
+      "recognition": "genre",
+      "forms": [
+        "庄聚贤"
+      ],
+      "runtimeNames": {
+        "en": {
+          "庄聚贤": "庄聚贤"
+        },
+        "zh-CN": {
+          "庄聚贤": "庄聚贤"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "庄聚贤",
+          "kind": "JOIN",
+          "storyId": "original_松鼠旅馆庄聚贤",
+          "pointer": "/storyScripts/legacy/segments/388/steps/0"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-42093753dcd1",
+      "legacyIdentity": "达尔巴",
+      "name": {
+        "zh-CN": "疯帽匠",
+        "en": "The Mad Hatter"
+      },
+      "status": "proposed",
+      "country": "GB",
+      "sourceWork": "Alice books / Lewis Carroll",
+      "recognition": "wide",
+      "forms": [
+        "达尔巴"
+      ],
+      "runtimeNames": {
+        "en": {
+          "达尔巴": "达尔巴"
+        },
+        "zh-CN": {
+          "达尔巴": "达尔巴"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "达尔巴",
+          "kind": "JOIN",
+          "storyId": "门派大轮寺_大轮寺出师",
+          "pointer": "/storyScripts/legacy/segments/1040/steps/10"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-8e4658b6c97c",
+      "legacyIdentity": "田归农",
+      "name": {
+        "zh-CN": "魔镜恶魔",
+        "en": "The Mirror Troll"
+      },
+      "status": "proposed",
+      "country": "DK",
+      "sourceWork": "The Snow Queen / Hans Christian Andersen",
+      "recognition": "genre",
+      "forms": [
+        "田归农"
+      ],
+      "runtimeNames": {
+        "en": {
+          "田归农": "田归农"
+        },
+        "zh-CN": {
+          "田归农": "田归农"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "田归农",
+          "kind": "JOIN",
+          "storyId": "雪山飞狐_湘妃庙.相信田归农",
+          "pointer": "/storyScripts/legacy/segments/818/steps/3"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-61571e7385a9",
+      "legacyIdentity": "周伯通",
+      "name": {
+        "zh-CN": "胡桃夹子王子",
+        "en": "The Nutcracker Prince"
+      },
+      "status": "proposed",
+      "country": "DE",
+      "sourceWork": "The Nutcracker and the Mouse King / E. T. A. Hoffmann",
+      "recognition": "wide",
+      "forms": [
+        "周伯通"
+      ],
+      "runtimeNames": {
+        "en": {
+          "周伯通": "周伯通"
+        },
+        "zh-CN": {
+          "周伯通": "周伯通"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "周伯通",
+          "kind": "JOIN",
+          "storyId": "original_松鼠旅馆周伯通",
+          "pointer": "/storyScripts/legacy/segments/396/steps/0"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-02b3f4b54429",
+      "legacyIdentity": "田青文",
+      "name": {
+        "zh-CN": "冰雪女王",
+        "en": "The Snow Queen"
+      },
+      "status": "proposed",
+      "country": "DK",
+      "sourceWork": "The Snow Queen / Hans Christian Andersen",
+      "recognition": "wide",
+      "forms": [
+        "田青文"
+      ],
+      "runtimeNames": {
+        "en": {
+          "田青文": "田青文"
+        },
+        "zh-CN": {
+          "田青文": "田青文"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "田青文",
+          "kind": "JOIN",
+          "storyId": "破庙_田青文_TOUCH_win",
+          "pointer": "/storyScripts/legacy/segments/24/steps/5"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-eb9a698daecf",
+      "legacyIdentity": "胡一刀",
+      "name": {
+        "zh-CN": "坚定的锡兵",
+        "en": "The Steadfast Tin Soldier"
+      },
+      "status": "proposed",
+      "country": "DK",
+      "sourceWork": "The Steadfast Tin Soldier / Hans Christian Andersen",
+      "recognition": "wide",
+      "forms": [
+        "胡一刀"
+      ],
+      "runtimeNames": {
+        "en": {
+          "胡一刀": "胡一刀"
+        },
+        "zh-CN": {
+          "胡一刀": "胡一刀"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "胡一刀",
+          "kind": "JOIN",
+          "storyId": "original_松鼠旅馆胡一刀",
+          "pointer": "/storyScripts/legacy/segments/394/steps/0"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-6202bdc84690",
+      "legacyIdentity": "杨冰儿",
+      "name": {
+        "zh-CN": "小叮当",
+        "en": "Tinker Bell"
+      },
+      "status": "proposed",
+      "country": "GB",
+      "sourceWork": "Peter Pan / J. M. Barrie",
+      "recognition": "wide",
+      "forms": [
+        "杨冰儿"
+      ],
+      "runtimeNames": {
+        "en": {
+          "杨冰儿": "杨冰儿"
+        },
+        "zh-CN": {
+          "杨冰儿": "杨冰儿"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "杨冰儿",
+          "kind": "JOIN",
+          "storyId": "门派古墓_古墓出师",
+          "pointer": "/storyScripts/legacy/segments/996/steps/10"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-d764d4e4fd3a",
+      "legacyIdentity": "任盈盈",
+      "name": {
+        "zh-CN": "巴御前",
+        "en": "Tomoe Gozen"
+      },
+      "status": "proposed",
+      "country": "JP",
+      "sourceWork": "Japanese history and legend",
+      "recognition": "genre",
+      "forms": [
+        "任盈盈"
+      ],
+      "runtimeNames": {
+        "en": {
+          "任盈盈": "任盈盈"
+        },
+        "zh-CN": {
+          "任盈盈": "任盈盈"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "任盈盈",
+          "kind": "JOIN",
+          "storyId": "笑傲江湖_平一指治好",
+          "pointer": "/storyScripts/legacy/segments/735/steps/31"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-4d4e6b707b07",
+      "legacyIdentity": "风清扬",
+      "name": {
+        "zh-CN": "冢原卜传",
+        "en": "Tsukahara Bokuden"
+      },
+      "status": "proposed",
+      "country": "JP",
+      "sourceWork": "Japanese swordsmanship history",
+      "recognition": "regional",
+      "forms": [
+        "风清扬"
+      ],
+      "runtimeNames": {
+        "en": {
+          "风清扬": "风清扬"
+        },
+        "zh-CN": {
+          "风清扬": "风清扬"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "风清扬",
+          "kind": "JOIN",
+          "storyId": "original_松鼠旅馆风清扬",
+          "pointer": "/storyScripts/legacy/segments/404/steps/0"
+        }
+      ],
+      "containsTestSegment": false
+    },
+    {
+      "actorId": "actor-b12705e9bff0",
+      "legacyIdentity": "岳不群",
+      "name": {
+        "zh-CN": "柳生宗矩",
+        "en": "Yagyu Munenori"
+      },
+      "status": "proposed",
+      "country": "JP",
+      "sourceWork": "Japanese swordsmanship history",
+      "recognition": "regional",
+      "forms": [
+        "岳不群"
+      ],
+      "runtimeNames": {
+        "en": {
+          "岳不群": "岳不群"
+        },
+        "zh-CN": {
+          "岳不群": "岳不群"
+        }
+      },
+      "displayApplied": false,
+      "authoredJoinStories": [],
+      "instructions": [
+        {
+          "characterId": "岳不群",
+          "kind": "JOIN",
+          "storyId": "original_松鼠旅馆岳不群",
+          "pointer": "/storyScripts/legacy/segments/387/steps/0"
+        }
+      ],
+      "containsTestSegment": false
+    }
+  ]
+}

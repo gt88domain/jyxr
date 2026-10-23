@@ -47,27 +47,27 @@ copy-55e34934d07cfef5b0e4,storyScripts,新手村_南贤开场,legacy,新手村_�
 
 南贤：……
 
-南贤：好了，时间不早了，来，我带你到外头看看吧！","南贤：我是格林，收集各国陪伴人们长大的童话。通常，它们会乖乖待在书里。
+南贤：好了，时间不早了，来，我带你到外头看看吧！","南贤：我是格林，收集各国陪伴人们长大的童话。在这里，故事里的道路会通向彼此。
 
-主角：是你把我召唤来的？我今天本来过得挺普通的。
+主角：是你把我召唤来的？那我该往哪儿走？
 
-南贤：是的。有些故事停在半途，里面的人需要帮助。我整理笔记很在行，挥剑就差远了。
+南贤：有些故事出了点岔子，我想请你帮个忙，让它们继续往前走。
 
-南贤：你愿意走进这些故事，结识伙伴，帮他们找到接下来的路吗？
+南贤：四处看看，结识伙伴，再学几手本领。接下来走哪条路，由你自己选。
 
-主角：好吧。这份差事，配剑吗？
+主角：有路可走，也有有趣的人作伴？那就出发吧。
 
-南贤：配一本入门卷轴。先在村里学点本领，我可不想把你的事迹编进《前车之鉴》。","南贤：I'm Grimm. I collect the fairy tales people grow up with. Usually, they stay on the page.
+南贤：先拿上这本入门卷轴，从村里开始吧。记得回来，给我讲讲你的见闻。","南贤：I'm Grimm. I collect the fairy tales people grow up with. Here, their roads run into one another.
 
-主角：You summoned me? I was having such an ordinary day.
+主角：You summoned me here? So which way do I go?
 
-南贤：Yes. Some tales have stalled, and their people need help. My notes are excellent; my swordplay is not.
+南贤：Some stories have lost their way. I could use your help getting them moving again.
 
-南贤：Will you enter their stories, find companions, and help them find a way forward?
+南贤：Explore, find companions, and learn a few tricks. There's no single road you have to follow.
 
-主角：All right. Does the job come with a sword?
+主角：An open road and interesting company? I'm in.
 
-南贤：A beginner's scroll. Learn here first; I would hate to file you under 'cautionary tale'.",implemented,,/storyScripts/legacy/segments/2/steps/0,23,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：Then take this beginner's scroll. Start in the village, and bring me a good story.",implemented,,/storyScripts/legacy/segments/2/steps/0,23,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3a08148b8cd47e7f84f8,storyScripts,新手村_南贤开场,legacy,新手村_南贤开场,journal,,,,再次来到金庸十四天书的世界。,格林请我帮助那些停在半途的童话。首先，学点本领，别让自己的故事停在开头。,Grimm needs help with tales that have stalled. First: learn enough to survive my own first chapter.,implemented,,/storyScripts/legacy/segments/2/steps/24/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5a02dacff3e4a5a10a73,storyScripts,新手村_小村介绍,legacy,新手村_小村介绍,dialogue_run,"主角
 南贤","主角 → 玩家角色 / Player character [classified]
@@ -82,7 +82,7 @@ copy-64bf9ad9e8c31ed0b426,storyScripts,新手村_小村介绍,legacy,新手村_�
 南贤","主角 → 玩家角色 / Player character [classified]
 南贤 → 雅各布·格林 / Jacob Grimm [locked]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：我靠，这是什么？内功入门？！至少拿点像样的东西嘛。
 
-南贤：老朽这儿也只有这点货了……你就将就着学着吧。",主角：挺好，至少慌起来的时候，我也能顺便练练。,主角：Good. Something I can practice while panicking.,implemented,,/storyScripts/legacy/segments/3/steps/6,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+南贤：老朽这儿也只有这点货了……你就将就着学着吧。",主角：那就从这里开始吧。我先到处看看。,主角：A useful start. I'll take a look around.,implemented,,/storyScripts/legacy/segments/3/steps/6,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b165c3f562830485c7d5,storyScripts,新手村_小村介绍,legacy,新手村_小村介绍,suggest,,,,点击人物状态栏，点击修炼，可以装备内功入门。,打开人物状态栏的“修炼”，选入《坚毅专精卷轴》。,Open Training and select Steadfast Mastery Scroll.,implemented,,/storyScripts/legacy/segments/3/steps/8/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b5da0d3115bea915b13c,storyScripts,新手村_小村介绍,legacy,新手村_小村介绍,suggest,,,,装备上的武学经书，在战斗结束后能将获得的经验快速分配到该项武学上，可以迅速提升武学等级。,选入修炼栏的卷轴会获得战斗经验。只捧着书看，可吓不倒训练假人。,A selected training scroll receives battle experience. Reading alone will not frighten the dummy.,implemented,,/storyScripts/legacy/segments/3/steps/9/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d85ee9d19f4e65b8a01f,storyScripts,新手村_南贤,legacy,新手村_南贤,text,南贤,南贤 → 雅各布·格林 / Jacob Grimm [locked],DE,有什么事吗？,出发前还有什么想问？提问免费，答案可能附带功课。,Before you go: questions are free. Answers may involve homework.,implemented,,/storyScripts/legacy/segments/4/steps/0/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -4499,8 +4499,32 @@ copy-7e26757360a97b4d6d67,storyScripts,sdxl_郭襄.风陵渡口.战斗胜利,leg
 
 田伯光：事不宜迟，走你~
 
-郭芙：（追之不及）妹妹！",,,pending,,/storyScripts/legacy/segments/454/steps/2,16,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-fb8f082b73ba0998644f,storyScripts,sdxl_郭襄.风陵渡口.战斗胜利,legacy,sdxl_郭襄.风陵渡口.战斗胜利,journal,,,,风陵渡口偶遇郭芙、郭襄姐妹。,,,pending,,/storyScripts/legacy/segments/454/steps/18/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+郭芙：（追之不及）妹妹！","主角：一场误会。就是闹得稍微热闹了点。
+
+郭芙：你倒挺会挑词。
+
+郭襄：我是爱丽丝。你们知不知道，亚瑟王去哪儿了？
+
+主角：见过。我可以和你一起找找。
+
+田伯光：五右卫门赞成。一路上，总得有些有趣的人。
+
+郭芙：爱丽丝，回来时胳膊腿可别少了。
+
+郭襄：我尽力，温蒂。走吧，总会有一条讲道理的路。","主角：A misunderstanding. A rather energetic one.
+
+郭芙：That is one word for it.
+
+郭襄：I'm Alice. You wouldn't happen to know where King Arthur went?
+
+主角：We've met. I could help you look.
+
+田伯光：Goemon approves of a journey with interesting company.
+
+郭芙：Alice, do try to come back with the same number of limbs.
+
+郭襄：I'll do my best, Wendy. Come on—there must be a sensible path somewhere.",implemented,,/storyScripts/legacy/segments/454/steps/2,16,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-fb8f082b73ba0998644f,storyScripts,sdxl_郭襄.风陵渡口.战斗胜利,legacy,sdxl_郭襄.风陵渡口.战斗胜利,journal,,,,风陵渡口偶遇郭芙、郭襄姐妹。,在渡口遇见温蒂和爱丽丝。,Met Wendy and Alice at the ferry.,implemented,,/storyScripts/legacy/segments/454/steps/18/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-858c8e615dcdd70a767c,storyScripts,sdxl_剑魔荒冢.杨过,legacy,sdxl_剑魔荒冢.杨过,dialogue_run,"主角
 神雕
 杨过","主角 → 玩家角色 / Player character [classified]
@@ -4584,8 +4608,24 @@ copy-efbc2cd393d9942cdf5a,storyScripts,sdxl_剑魔荒冢.战胜神雕,legacy,sdx
 
 杨过：我被虐待了很多年了……
 
-神雕：……唉，你们走吧。有空常回来看看……",,,pending,,/storyScripts/legacy/segments/462/steps/2,10,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-bd7161ab20fd5ce3adc5,storyScripts,sdxl_剑魔荒冢.战胜神雕,legacy,sdxl_剑魔荒冢.战胜神雕,journal,,,,剑魔荒冢战胜神雕、杨过。,,,pending,,/storyScripts/legacy/segments/462/steps/12/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+神雕：……唉，你们走吧。有空常回来看看……","神雕：怎么都不说话？总不能每次都让我负责等下文。
+
+主角：你会说话？
+
+杨过：狮鹫一直觉得，这是它最了不起的本领。
+
+神雕：本来就是。记得回来看看，亚瑟。最好，别一回来就打架。
+
+杨过：会的。一起去看看，你这条路通往哪里吧？","神雕：Well? Somebody say something. I can't supply every dramatic pause.
+
+主角：You can talk?
+
+杨过：The Griffin considers that its finest accomplishment.
+
+神雕：It is. Come visit again, Arthur. Preferably without starting another fight.
+
+杨过：I will. Shall we see where your road leads?",implemented,,/storyScripts/legacy/segments/462/steps/2,10,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-bd7161ab20fd5ce3adc5,storyScripts,sdxl_剑魔荒冢.战胜神雕,legacy,sdxl_剑魔荒冢.战胜神雕,journal,,,,剑魔荒冢战胜神雕、杨过。,完成了与亚瑟、狮鹫的切磋。,Completed the bout with Arthur and the Griffin.,implemented,,/storyScripts/legacy/segments/462/steps/12/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-eb383a54d0b1d623771e,storyScripts,sdxl_3,legacy,sdxl_3,dialogue_run,"主角
 杨过
 神雕","主角 → 玩家角色 / Player character [classified]
@@ -4684,8 +4724,20 @@ copy-c80f96cbbca21a899bf0,storyScripts,sdxl_绝情谷底.小龙女加入,legacy,
 
 小龙女：（不再说话，默默含笑望着杨过。）
 
-主角：时候也不早了，我们出谷吧。",,,pending,,/storyScripts/legacy/segments/476/steps/2,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-06d2cd069c067628e367,storyScripts,sdxl_绝情谷底.小龙女加入,legacy,sdxl_绝情谷底.小龙女加入,journal,,,,绝情谷底，杨过与小龙女久别重逢。,,,pending,,/storyScripts/legacy/segments/476/steps/5/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：时候也不早了，我们出谷吧。","主角：你们两位配合得真不错。
+
+小龙女：我和亚瑟练过一些时候。谢谢你，帮我们重新找到了彼此。
+
+主角：一起出谷吧？
+
+小龙女：好。湖中仙女也想换个地方走走。","主角：You two made quite a team.
+
+小龙女：Arthur and I have had a little practice. Thank you for helping us find one another again.
+
+主角：Shall we leave the valley?
+
+小龙女：Yes. The Lady of the Lake would welcome a change of scenery.",implemented,,/storyScripts/legacy/segments/476/steps/2,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-06d2cd069c067628e367,storyScripts,sdxl_绝情谷底.小龙女加入,legacy,sdxl_绝情谷底.小龙女加入,journal,,,,绝情谷底，杨过与小龙女久别重逢。,亚瑟与湖中仙女在谷底重逢。,Arthur and the Lady of the Lake have reunited in the valley.,implemented,,/storyScripts/legacy/segments/476/steps/5/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f755e7f35ff216910088,storyScripts,sdxl_三枚金针.丢失,legacy,sdxl_三枚金针.丢失,dialogue_run,"郭襄
 主角","郭襄 → 爱丽丝 / Alice [locked]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","郭襄：完了完了，出大事了。
@@ -5663,7 +5715,23 @@ copy-04f4e51256e4d57ca804,storyScripts,tlbb.dy_雁门关有阿朱,legacy,tlbb.dy
 
 乔峰：（一怔，随即叹一口气）好吧，我们沿途一起查探。阿朱，咱们走吧。
 
-阿朱：嗯！",,,pending,,/storyScripts/legacy/segments/561/steps/2,28,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+阿朱：嗯！","乔峰：人人都在议论我属于哪里。我不想再让别人替我回答了。
+
+阿朱：那就自己选条路，索尔。我会站在你身边。
+
+段誉：最好是条有旅馆的路。再英明的决定，也得先吃晚饭。
+
+乔峰：这回我同意你，洛基。一起走吧，答案由我们自己找。
+
+阿朱：好。先往前走一步。","乔峰：So much noise about where I belong. I'm tired of letting other people answer that question.
+
+阿朱：Then choose your own road, Thor. I'll stand beside you.
+
+段誉：Preferably a road with an inn. Even noble decisions deserve dinner.
+
+乔峰：For once, Loki, I agree. We'll travel together and find our own answers.
+
+阿朱：Good. One step at a time.",implemented,,/storyScripts/legacy/segments/561/steps/2,28,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-54ebac35fcbe879134d1,storyScripts,tlbb.dy_丐帮大变.王语嫣1,legacy,tlbb.dy_丐帮大变.王语嫣1,dialogue_run,"段誉
 王语嫣
 李延宗","段誉 → 洛基 / Loki [proposed]
@@ -7079,7 +7147,7 @@ copy-e75507d141a66d2f9637,storyScripts,tlbb.dy_钟灵,legacy,tlbb.dy_钟灵,dial
 copy-96a037556e0a241bc478,storyScripts,tlbb.dy_钟灵,legacy,tlbb.dy_钟灵,text,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",要帮钟灵找闪电貂吗？,帮助埃尔寻找小白鼬吗？,Help Eir find her stoat?,implemented,,/storyScripts/legacy/segments/638/steps/1/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5dcfd14716a55609e9b5,storyScripts,tlbb.dy_钟灵,legacy,tlbb.dy_钟灵,text,,,,义不容辞,帮忙，结伴寻找。,Help her. Travel together.,implemented,,/storyScripts/legacy/segments/638/steps/1/blocks/0/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a9a0e860f73354412e16,storyScripts,tlbb.dy_钟灵,legacy,tlbb.dy_钟灵,text,,,,我还有要事在身……,暂时不行，我还有别的事。,Not now. I've another task.,implemented,,/storyScripts/legacy/segments/638/steps/1/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d11932120d4bf35ce2e1,storyScripts,tlbb.dy_钟灵找,legacy,tlbb.dy_钟灵找,dialogue_run,钟灵,钟灵 → 埃尔 / Eir [proposed],NO,钟灵：太好了！我们出发吧！,钟灵：谢谢，我和你同行。手别随便往不认识的嘴边放，我希望新伙伴先保持完整。,钟灵：Thank you. I'll travel with you. Keep your hands away from unknown mouths; I prefer my new companions unbitten.,implemented,,/storyScripts/legacy/segments/639/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d11932120d4bf35ce2e1,storyScripts,tlbb.dy_钟灵找,legacy,tlbb.dy_钟灵找,dialogue_run,钟灵,钟灵 → 埃尔 / Eir [proposed],NO,钟灵：太好了！我们出发吧！,钟灵：那就一起找吧，我和你同行。手可别乱伸，我那位小助手的牙齿，动作还挺快。,"钟灵：Let's look together, then. I'll travel with you. Watch where you put your hands; my little assistant can be rather quick with his teeth.",implemented,,/storyScripts/legacy/segments/639/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b6aeba9ca4bd679e94a1,storyScripts,tlbb.dy_钟灵不找,legacy,tlbb.dy_钟灵不找,dialogue_run,钟灵,钟灵 → 埃尔 / Eir [proposed],NO,钟灵：大哥哥是坏蛋……,钟灵：那就在这里分别吧。我还得赶紧找它，担心，可不会让路变短。,"钟灵：Then we part here. I've a small, urgent search, and worry does not shorten the road.",implemented,,/storyScripts/legacy/segments/640/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a9802dc9c4c91dd3f423,storyScripts,tlbb.dy_钟灵不找2,legacy,tlbb.dy_钟灵不找2,dialogue_run,钟灵,钟灵 → 埃尔 / Eir [proposed],NO,钟灵：哼，你不找就不找。我请别人帮我找……,钟灵：你改变主意的话，我的邀请还在。它个头小，跑得快，对咬陌生人这件事，颇有自信。,"钟灵：My offer still stands if your plans have changed. He is small, quick, and remarkably confident about biting strangers.",implemented,,/storyScripts/legacy/segments/641/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-79b41c4d81b5ac7bd303,storyScripts,tlbb.dy_闪电貂,legacy,tlbb.dy_闪电貂,dialogue_run,"云中鹤
@@ -7396,13 +7464,21 @@ copy-b425e49aa13e643de981,storyScripts,yttlj_昆仑仙境,legacy,yttlj_昆仑仙
 张无忌 → 夏洛克·福尔摩斯 / Sherlock Holmes [proposed]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","张无忌：这昆仑仙境……当年我在此习得九阳真经，一转眼过去很久了……
 
-主角：好了，别感慨了，我们继续冒险去吧！",,,pending,,/storyScripts/legacy/segments/664/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：好了，别感慨了，我们继续冒险去吧！","张无忌：我在这些山里学会了不少东西。最清楚的一件，就是我坐不住。
+
+主角：那就来吧，哪吒。还有好多地方没去过呢。","张无忌：I learned a great deal in these mountains. Mostly that sitting still isn't for me.
+
+主角：Then come along, Nezha. There's plenty more to see.",implemented,,/storyScripts/legacy/segments/664/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-06c7be1ed380d24e6e33,storyScripts,yttlj_昆仑仙境,legacy,yttlj_昆仑仙境,dialogue_run,"成昆
 张无忌","成昆 → 申公豹 / Shen Gongbao [proposed]
 张无忌 → 哪吒 / Nezha [locked]
 张无忌 → 夏洛克·福尔摩斯 / Sherlock Holmes [proposed]","CN,GB","成昆：哈哈哈哈，今天总算让我逮到你啦！张教主！
 
-张无忌：成昆！",,,pending,,/storyScripts/legacy/segments/664/steps/3,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+张无忌：成昆！","成昆：这么快就想走？我可找你很久了。
+
+张无忌：申公豹。果然，刚有点好心情，你就来了。","成昆：Leaving so soon? I've been looking for you.
+
+张无忌：Shen Gongbao. Of course you'd arrive just as things got pleasant.",implemented,,/storyScripts/legacy/segments/664/steps/3,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ffa47afaa89693c24f99,storyScripts,yttlj_昆仑仙境胜,legacy,yttlj_昆仑仙境胜,dialogue_run,"张无忌
 主角","张无忌 → 哪吒 / Nezha [locked]
 张无忌 → 夏洛克·福尔摩斯 / Sherlock Holmes [proposed]
@@ -7523,7 +7599,7 @@ copy-632bec26b1b9140f4acd,storyScripts,笑傲江湖_令狐冲不加入太邪,leg
 copy-3873c356a8799bd190b2,storyScripts,笑傲江湖_令狐冲不加入太邪,legacy,笑傲江湖_令狐冲不加入太邪,text,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",怎么办？,,,pending,,/storyScripts/legacy/segments/674/steps/2/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-4f9e9517ee04a090c27c,storyScripts,笑傲江湖_令狐冲不加入太邪,legacy,笑傲江湖_令狐冲不加入太邪,text,,,,杀啊！,,,pending,,/storyScripts/legacy/segments/674/steps/2/blocks/0/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9a23f2e5e59a812eeb63,storyScripts,笑傲江湖_令狐冲不加入太邪,legacy,笑傲江湖_令狐冲不加入太邪,text,,,,算了,,,pending,,/storyScripts/legacy/segments/674/steps/2/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-aa44b5eda639f9beae60,storyScripts,笑傲江湖_令狐冲加入,legacy,笑傲江湖_令狐冲加入,dialogue_run,令狐冲,令狐冲 → 宫本武藏 / Miyamoto Musashi [locked],"GB,JP",令狐冲：趁盈盈不在赶紧走吧……要不就潇洒不起来了。,,,pending,,/storyScripts/legacy/segments/675/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-aa44b5eda639f9beae60,storyScripts,笑傲江湖_令狐冲加入,legacy,笑傲江湖_令狐冲加入,dialogue_run,令狐冲,令狐冲 → 宫本武藏 / Miyamoto Musashi [locked],"GB,JP",令狐冲：趁盈盈不在赶紧走吧……要不就潇洒不起来了。,令狐冲：那就换条路走走。我带剑，你带上点好奇心。,"令狐冲：A new road, then. I'll bring my sword; you bring a little curiosity.",implemented,,/storyScripts/legacy/segments/675/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-36d5653e5e642e152c01,storyScripts,笑傲江湖_曲非烟1,legacy,笑傲江湖_曲非烟1,dialogue_run,"曲非烟
 主角","曲非烟 → 出云阿国 / Izumo no Okuni [proposed]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","曲非烟：山间清泉，明月松风，也不能减淡我心中一丝一毫的恨意……怎么办……
@@ -9381,8 +9457,16 @@ copy-2a004073c9f6b103d991,storyScripts,雪山飞狐_胡斐居.胜利,legacy,雪�
 
 主角：那咱赶紧把它找回来吧。
 
-胡斐：厉害！走你",,,pending,,/storyScripts/legacy/segments/787/steps/2,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-394095a54c9930d3b865,storyScripts,雪山飞狐_胡斐居.胜利,legacy,雪山飞狐_胡斐居.胜利,journal,,,,答应帮胡斐找回两页刀法。,,,pending,,/storyScripts/legacy/segments/787/steps/8/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+胡斐：厉害！走你","胡斐：打得漂亮。我是凯。看来，我学的本领还缺着几页。
+
+主角：看起来是两页。一起找回来？
+
+胡斐：乐意。我很想知道，摔倒之后的那几页到底教什么。","胡斐：Well fought. I'm Kai. Apparently my lessons have a few missing pages.
+
+主角：Two pages, by the look of it. Shall we find them?
+
+胡斐：Gladly. I'd like to know what happens after the part where I fall over.",implemented,,/storyScripts/legacy/segments/787/steps/2,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-394095a54c9930d3b865,storyScripts,雪山飞狐_胡斐居.胜利,legacy,雪山飞狐_胡斐居.胜利,journal,,,,答应帮胡斐找回两页刀法。,答应帮助凯找回遗失的两页战技。,Agreed to help Kai recover two missing pages of his techniques.,implemented,,/storyScripts/legacy/segments/787/steps/8/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b429ff27f427835f200f,storyScripts,雪山飞狐_胡斐居.失败,legacy,雪山飞狐_胡斐居.失败,dialogue_run,胡斐,胡斐 → 凯 / Kai [locked],DK,胡斐：兄弟还需要努力啊。,,,pending,,/storyScripts/legacy/segments/788/steps/2,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-72b8b12bcc53cfbe54df,storyScripts,雪山飞狐_阎基居.两页刀法,legacy,雪山飞狐_阎基居.两页刀法,dialogue_run,"阎基
 主角","阎基 → 奥勒·路却埃 / Ole Lukoie [proposed]
@@ -9523,8 +9607,28 @@ copy-d2ba63cf0db7a26a19d0,storyScripts,雪山飞狐_药王庄.程灵素.求药,l
 
 主角：程姑娘能否跟我们走一趟？医治苗大侠的眼睛？
 
-程灵素：看在这位胡大哥的份上我就跟你走一趟。",,,pending,,/storyScripts/legacy/segments/800/steps/0,11,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-1ec7540e6a9b1c8f5e26,storyScripts,雪山飞狐_药王庄.程灵素.求药,legacy,雪山飞狐_药王庄.程灵素.求药,journal,,,,程灵素答应医治金面佛苗人凤的眼睛,,,pending,,/storyScripts/legacy/segments/800/steps/12/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+程灵素：看在这位胡大哥的份上我就跟你走一趟。","胡斐：这里就是药师的花园了。但愿有人在。
+
+程灵素：我是格尔达。出什么事了？
+
+主角：一位朋友中了毒，眼睛伤得很重。
+
+程灵素：想帮上忙，得先找到夜影花这种药材。去问问那位游方药商，也许有线索。
+
+胡斐：你愿意和我们一起去吗？
+
+程灵素：好，等我收拾一下。凯，碰到像是有毒的东西，请别先伸手确认。","胡斐：This is the healer's garden. I hope we've caught someone at home.
+
+程灵素：I'm Gerda. What happened?
+
+主角：A friend has been poisoned. His eyes are badly hurt.
+
+程灵素：I'll need the Nightshade Blossom before I can help. Try the wandering medicine seller for a lead.
+
+胡斐：Will you come with us?
+
+程灵素：Yes. Let me gather my things. Kai, please don't investigate anything poisonous with your fingers.",implemented,,/storyScripts/legacy/segments/800/steps/0,11,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-1ec7540e6a9b1c8f5e26,storyScripts,雪山飞狐_药王庄.程灵素.求药,legacy,雪山飞狐_药王庄.程灵素.求药,journal,,,,程灵素答应医治金面佛苗人凤的眼睛,格尔达答应帮助医治中毒的朋友。,Gerda has agreed to help treat our poisoned friend.,implemented,,/storyScripts/legacy/segments/800/steps/12/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-51ec6a08cb6614b87754,storyScripts,雪山飞狐_阎基居.七星海棠,legacy,雪山飞狐_阎基居.七星海棠,dialogue_run,"阎基
 主角
 胡斐","阎基 → 奥勒·路却埃 / Ole Lukoie [proposed]
@@ -10028,7 +10132,19 @@ copy-5b4cc9c2f93a82654c40,storyScripts,射雕英雄传_塞外郭靖,legacy,射�
 
 郭靖：要不，你带我出去转转，见见世面吧。最重要的是去找到那个叫黄蓉的妹子！
 
-主角：……就带你去玩玩吧。",,,pending,,/storyScripts/legacy/segments/840/steps/2,8,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：……就带你去玩玩吧。","郭靖：大家叫我猎人。我在同一条路上，待得有点久了。
+
+主角：来看看别的路吧。
+
+郭靖：我愿意。也想去找找白雪公主。她总能在意想不到的地方交到朋友。
+
+主角：那你来对地方了。","郭靖：They call me the Huntsman. I've spent rather too long on the same stretch of road.
+
+主角：Come see a different one.
+
+郭靖：I would. I'd also like to find Snow White. She has a habit of making friends in unlikely places.
+
+主角：Then you'll fit right in.",implemented,,/storyScripts/legacy/segments/840/steps/2,8,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-10b556f779eb0cfa5255,storyScripts,射雕英雄传_白驼山欧阳克1,legacy,射雕英雄传_白驼山欧阳克1,dialogue_run,"主角
 欧阳克","主角 → 玩家角色 / Player character [classified]
 欧阳克 → 贡特尔 / Gunther [proposed]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：听说白驼山养了很多草X马，十大神兽之首啊。来参观下。
@@ -10219,8 +10335,20 @@ copy-0fe91b29d99c9d89840e,storyScripts,射雕英雄传_桃花岛招亲2,legacy,�
 
 黄药师：蓉儿，你就随这傻小子多多历练一下吧。
 
-黄蓉：是，爹爹。",,,pending,,/storyScripts/legacy/segments/866/steps/2,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-5515c319dfc186c87b38,storyScripts,射雕英雄传_桃花岛招亲2,legacy,射雕英雄传_桃花岛招亲2,journal,,,,击败天下四绝。,,,pending,,/storyScripts/legacy/segments/866/steps/14/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+黄蓉：是，爹爹。","黄药师：不错。看来，你们能互相照应。
+
+黄蓉：猎人，你这一路，可长进不少。
+
+黄药师：白雪，外面还有不少东西，值得你去学。
+
+黄蓉：那就一起去看看吧。","黄药师：Well done. You can look after one another.
+
+黄蓉：You've come a long way, Huntsman.
+
+黄药师：Snow White, the world has a few more lessons for you.
+
+黄蓉：Then let's go and find them.",implemented,,/storyScripts/legacy/segments/866/steps/2,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-5515c319dfc186c87b38,storyScripts,射雕英雄传_桃花岛招亲2,legacy,射雕英雄传_桃花岛招亲2,journal,,,,击败天下四绝。,战胜了四位高手。,Overcame the four masters.,implemented,,/storyScripts/legacy/segments/866/steps/14/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-97363b9e2824ad57c05b,storyScripts,射雕英雄传_重阳宫王重阳1,legacy,射雕英雄传_重阳宫王重阳1,dialogue_run,"郭靖
 黄蓉","郭靖 → 白雪公主的猎人 / The Huntsman [locked]
 黄蓉 → 白雪公主 / Snow White [locked]","DE,ES","郭靖：蓉儿，你说今天欧阳锋会不会来抢真经？
@@ -10493,7 +10621,7 @@ copy-bbbf282f1ba5ed029fb8,storyScripts,连城诀_唐诗山洞.直接杀死狄云
 狄云：啊！",,,pending,,/storyScripts/legacy/segments/898/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a05ebf0d15720a393ead,storyScripts,连城诀_唐诗山洞.直接杀死狄云奖励,legacy,连城诀_唐诗山洞.直接杀死狄云奖励,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：哈哈哈哈，神照经是我的了！,,,pending,,/storyScripts/legacy/segments/898/steps/5,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-bc5d52514684a61f41f2,storyScripts,连城诀_唐诗山洞.直接杀死狄云奖励,legacy,连城诀_唐诗山洞.直接杀死狄云奖励,journal,,,,杀死狄云，抢到神照经。,,,pending,,/storyScripts/legacy/segments/898/steps/6/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-0433c4a7d1a3802d54c4,storyScripts,连城诀_唐诗山洞.狄云正式加入,legacy,连城诀_唐诗山洞.狄云正式加入,dialogue_run,狄云,狄云 → 德古拉 / Dracula [locked],RO,狄云：好，你为人正直，我跟你一起闯荡江湖。,,,pending,,/storyScripts/legacy/segments/899/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-0433c4a7d1a3802d54c4,storyScripts,连城诀_唐诗山洞.狄云正式加入,legacy,连城诀_唐诗山洞.狄云正式加入,dialogue_run,狄云,狄云 → 德古拉 / Dracula [locked],RO,狄云：好，你为人正直，我跟你一起闯荡江湖。,狄云：你守了诺言。德古拉愿意与你同行。路上，也请继续如此。,狄云：You've kept your word. Dracula will travel with you. I expect the same courtesy on the road.,implemented,,/storyScripts/legacy/segments/899/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c03efb20ac665442af4e,storyScripts,连城诀_唐诗山洞.狄云不加入前,legacy,连城诀_唐诗山洞.狄云不加入前,dialogue_run,"狄云
 主角","狄云 → 德古拉 / Dracula [locked]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","狄云：听说你打败了血刀老祖？
@@ -10751,7 +10879,23 @@ copy-e20fb8690afb6166c9ff,storyScripts,书剑恩仇录_庖丁解牛,legacy,书�
 
 陈家洛：不怕，还有我来帮忙！
 
-主角：陈大当家，你的拳法终于大成了！",,,pending,,/storyScripts/legacy/segments/923/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：陈大当家，你的拳法终于大成了！","张召重：放下武器。你们的人手，可不够。
+
+霍青桐：那想必，过我们这一关很容易吧？
+
+主角：我们还真需要一位帮手。
+
+陈家洛：达达尼昂，前来凑个热闹。希望，你们给我留了一点麻烦。
+
+主角：来得正好。","张召重：Put down your weapons. You're outnumbered.
+
+霍青桐：Then you'll have no trouble getting past us, will you?
+
+主角：We could use another pair of hands.
+
+陈家洛：D'Artagnan, reporting for trouble. I hope you saved some for me.
+
+主角：You're just in time.",implemented,,/storyScripts/legacy/segments/923/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-31957fb39f9e4850d26a,storyScripts,书剑恩仇录_庖丁解牛胜,legacy,书剑恩仇录_庖丁解牛胜,dialogue_run,"张召重
 陈家洛
 主角","张召重 → 罗什福尔 / Rochefort [proposed]
@@ -10790,7 +10934,11 @@ copy-dcc2be40c99d0a128129,storyScripts,鹿鼎记_北京韦小宝2,legacy,鹿鼎�
 copy-da947ea1e24966433eb4,storyScripts,鹿鼎记_北京韦小宝2,legacy,鹿鼎记_北京韦小宝2,text,,,,算了。,,,pending,,/storyScripts/legacy/segments/926/steps/1/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7f2c2e19b61a904fe7a0,storyScripts,鹿鼎记_北京韦小宝加入,legacy,鹿鼎记_北京韦小宝加入,dialogue_run,韦小宝,韦小宝 → 稻草人 / The Scarecrow [locked],"ES,IT,US","韦小宝：嘿嘿，兄弟，以后有钱一起赚。
 
-韦小宝：我不太擅长打架啦，不过打架的时候带上我，可以帮你用点好东西顺便在后头打打阴枪。",,,pending,,/storyScripts/legacy/segments/927/steps/1,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+韦小宝：我不太擅长打架啦，不过打架的时候带上我，可以帮你用点好东西顺便在后头打打阴枪。","韦小宝：稻草人，为你效劳。我不敢保证每次都有妙计，不过，随身带好补给的道理，我还是懂的。
+
+韦小宝：来看看这条路，能让我们遇上什么。","韦小宝：The Scarecrow, at your service. I can't promise a brilliant plan every time, but I do know the value of keeping supplies handy.
+
+韦小宝：Let's see what we can make of this road.",implemented,,/storyScripts/legacy/segments/927/steps/1,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-cc19a296439f08fd2251,storyScripts,鹿鼎记_北京韦小宝没钱,legacy,鹿鼎记_北京韦小宝没钱,dialogue_run,韦小宝,韦小宝 → 稻草人 / The Scarecrow [locked],"ES,IT,US",韦小宝：穷鬼，别惹得本爷一身晦气！,,,pending,,/storyScripts/legacy/segments/928/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-4cd96c46ccbcb20036a2,storyScripts,鹿鼎记_皇宫鳌拜1,legacy,鹿鼎记_皇宫鳌拜1,dialogue_run,"韦小宝
 主角","韦小宝 → 稻草人 / The Scarecrow [locked]
@@ -11003,7 +11151,19 @@ copy-192a61d10b03feaa4525,storyScripts,鹿鼎记_阿九.邀请2,legacy,鹿鼎记
 
 九难：放心，有师父保护你周全。我们走吧。
 
-阿珂：（不情愿）哦……",,,pending,,/storyScripts/legacy/segments/949/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+阿珂：（不情愿）哦……","九难：原来，这把剑是这样到了你手里。你经历的旅途，还真不寻常。
+
+主角：这条路，总有些出人意料的地方。
+
+九难：多萝西，我们一起走吧？
+
+阿珂：好。不过，我可得留意着那位稻草人。","九难：So that is how the blade reached you. You have a knack for unusual journeys.
+
+主角：The road keeps surprising me.
+
+九难：Dorothy, shall we join them?
+
+阿珂：All right. But I'm keeping an eye on the Scarecrow.",implemented,,/storyScripts/legacy/segments/949/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fd3cf6228075ad5ab0b5,storyScripts,鹿鼎记_阿九.邀请2,legacy,鹿鼎记_阿九.邀请2,dialogue_run,"韦小宝
 九难","韦小宝 → 稻草人 / The Scarecrow [locked]
 九难 → 克娄巴特拉 / Cleopatra [proposed]","EG,ES,IT,US","韦小宝：YES!
@@ -11012,7 +11172,15 @@ copy-fd3cf6228075ad5ab0b5,storyScripts,鹿鼎记_阿九.邀请2,legacy,鹿鼎记
 
 九难：我教你一点武功，可以保全性命。
 
-韦小宝：谢谢师太!师太文成武德，鸟生鱼汤~",,,pending,,/storyScripts/legacy/segments/949/steps/10,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+韦小宝：谢谢师太!师太文成武德，鸟生鱼汤~","韦小宝：这主意真好！
+
+九难：你也该学着，少惹一点麻烦。
+
+韦小宝：我学起来，一定很认真。","韦小宝：A splendid idea!
+
+九难：And you could use a little practice keeping out of trouble.
+
+韦小宝：I'm a very willing student.",implemented,,/storyScripts/legacy/segments/949/steps/10,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-abda47f9a6c7e4d9086e,storyScripts,鹿鼎记_阿九.不邀请,legacy,鹿鼎记_阿九.不邀请,dialogue_run,"主角
 韦小宝
 九难
@@ -11145,7 +11313,19 @@ copy-465e69fddedf9aedbb44,storyScripts,鹿鼎记_神龙岛4,legacy,鹿鼎记_神
 
 苏荃：（白了韦小宝一眼）你这坏家伙！你可要对我负责。
 
-韦小宝：哈哈，必须的必须的！",,,pending,,/storyScripts/legacy/segments/958/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+韦小宝：哈哈，必须的必须的！","苏荃：诺姆王，你对这座岛的统治结束了。我不会留下来，陪你假装一切照旧。
+
+洪教主：那就走！我谁也不需要！
+
+韦小宝：我们这儿，还容得下一位旅伴，格琳达。
+
+苏荃：那就别浪费这份好意了。走吧。","苏荃：Your rule over this island is over, Nome King. I won't stay here to pretend otherwise.
+
+洪教主：Go, then! I have no need of any of you!
+
+韦小宝：We have room for another traveler, Glinda.
+
+苏荃：Then let's put that generous offer to good use. Come along.",implemented,,/storyScripts/legacy/segments/958/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6e3624c3c78ac12bd6f5,storyScripts,鹿鼎记_台湾1,legacy,鹿鼎记_台湾1,dialogue_run,"郑克爽
 阿珂
 韦小宝
@@ -11226,7 +11406,31 @@ copy-fad27ac9bbaac5db6747,storyScripts,鹿鼎记_台湾3,legacy,鹿鼎记_台湾
 
 阿珂：（你这样，已经胜过了郑公子万万千千了……）师父也不要我了，这……我和你们一起闯荡江湖吧。
 
-韦小宝：欢迎！欢迎！",,,pending,,/storyScripts/legacy/segments/961/steps/2,9,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+韦小宝：欢迎！欢迎！","韦小宝：狮子，别丢下我们。求你了。
+
+陈近南：朋友，你比自己想的更勇敢。别辜负它。
+
+韦小宝：狮子……
+
+阿珂：他对你很重要。我看得出来。
+
+韦小宝：他帮过我。我不会忘的。
+
+阿珂：那我和你们一起走。路上，互相照应。
+
+韦小宝：谢谢你，多萝西。","韦小宝：Stay with us, Lion. Please.
+
+陈近南：You've more courage than you think, my friend. Use it well.
+
+韦小宝：Lion...
+
+阿珂：He mattered to you. I can see that.
+
+韦小宝：He stood by me. I won't forget it.
+
+阿珂：Then I'll travel with you. We can look after one another.
+
+韦小宝：Thank you, Dorothy.",implemented,,/storyScripts/legacy/segments/961/steps/2,9,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f6efdb6cbf8791a7b57b,storyScripts,鹿鼎记_鹿鼎山1,legacy,鹿鼎记_鹿鼎山1,dialogue_run,"韦小宝
 康熙","韦小宝 → 稻草人 / The Scarecrow [locked]
 康熙 → 奥兹大法师 / The Wizard of Oz [locked]","ES,IT,US","韦小宝：康熙，你竟然派兵来围剿我，就因为这个龙脉吗！
@@ -14501,8 +14705,20 @@ copy-487222b161cabda94b3f,storyScripts,侠客行_石张家口,legacy,侠客行_�
 
 主角：有啊，走吧，我太需要你了！
 
-石破天：成，走你",,,pending,,/storyScripts/legacy/segments/1375/steps/2,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-9ff4d535ca6e7deac6e3,storyScripts,侠客行_石张家口,legacy,侠客行_石张家口,dialogue_run,白自在,白自在 → 阿瑞斯 / Ares [proposed],GR,白自在：石中玉！终于让我找到你了！抓住他！,,,pending,,/storyScripts/legacy/segments/1375/steps/7,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+石破天：成，走你","主角：赫拉克勒斯！一起走吗？
+
+石破天：乐意。有事需要我帮忙？
+
+主角：和这群人一起？多半少不了。
+
+石破天：那就好。带路吧。","主角：Heracles! Care to join us?
+
+石破天：Gladly. Is there work to be done?
+
+主角：With this company? Almost certainly.
+
+石破天：Excellent. Lead on.",implemented,,/storyScripts/legacy/segments/1375/steps/2,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-9ff4d535ca6e7deac6e3,storyScripts,侠客行_石张家口,legacy,侠客行_石张家口,dialogue_run,白自在,白自在 → 阿瑞斯 / Ares [proposed],GR,白自在：石中玉！终于让我找到你了！抓住他！,白自在：可算找到你了！你还欠我一个交代。,白自在：There you are! You still owe me an answer.,implemented,,/storyScripts/legacy/segments/1375/steps/7,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-493f0b27f2af6f5e9ec6,storyScripts,侠客行_石雪山,legacy,侠客行_石雪山,dialogue_run,"石破天
 白自在","石破天 → 赫拉克勒斯 / Heracles [locked]
 白自在 → 阿瑞斯 / Ares [proposed]",GR,"石破天：哎呀，不要一上来就动手动脚的，有什么事不能坐下好好说呢？
@@ -14637,13 +14853,33 @@ copy-e7df50515beea57e80c7,storyScripts,倚天屠龙_张无忌入队,legacy,倚�
 
 张无忌：也好，难得碰上一个还肯拿我当兄弟的人，出去走走也好。只是……敏敏？
 
-赵敏：无忌哥哥，我已经跟我爹爹道过别了。况且他们，他们拿我做饵，也无情分可言，今后我便只有你一个亲人，我不跟你走还能去哪里。",,,pending,,/storyScripts/legacy/segments/1383/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+赵敏：无忌哥哥，我已经跟我爹爹道过别了。况且他们，他们拿我做饵，也无情分可言，今后我便只有你一个亲人，我不跟你走还能去哪里。","张无忌：木兰！你受伤了吗？
+
+赵敏：我没事。看来，你找到了能跟上你的旅伴。
+
+主角：勉强跟得上。
+
+张无忌：要紧的时候，你帮了我。我愿意和你一起走。
+
+赵敏：去吧。这里的事，我来处理。","张无忌：Mulan! Are you hurt?
+
+赵敏：I'm all right. And I see you've found someone who can keep up with you.
+
+主角：Only just.
+
+张无忌：You stood with me when it mattered. I'd be glad to travel with you.
+
+赵敏：Go on. I'll take care of things here.",implemented,,/storyScripts/legacy/segments/1383/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-26325ad48cb138a68bd9,storyScripts,倚天屠龙_张无忌入队,legacy,倚天屠龙_张无忌入队,dialogue_run,"张无忌
 主角","张无忌 → 哪吒 / Nezha [locked]
 张无忌 → 夏洛克·福尔摩斯 / Sherlock Holmes [proposed]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","张无忌：敏敏，你真好。哎，现在最放心不下的还是明教的这帮兄弟们，真好想再回[[red:光明顶]]看看啊！
 
-主角：哈哈，好，皆大欢喜，那么就走吧！",,,pending,,/storyScripts/legacy/segments/1383/steps/9,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：哈哈，好，皆大欢喜，那么就走吧！","张无忌：有机会的话，我还想回玉冠顶看看。
+
+主角：记下了。走吧。","张无忌：I'd like to look in at Jade Summit when we have the chance.
+
+主角：We'll keep it in mind. Let's go.",implemented,,/storyScripts/legacy/segments/1383/steps/9,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e2aac510c6b46badb502,storyScripts,倚天屠龙_光明顶胜利,legacy,倚天屠龙_光明顶胜利,dialogue_run,"杨逍
 张无忌","杨逍 → 二郎神杨戬 / Erlang Shen [proposed]
 张无忌 → 哪吒 / Nezha [locked]
@@ -15596,7 +15832,19 @@ copy-7a49781c3411dbcebe61,storyScripts,鸳鸯刀正_风陵渡胜,legacy,鸳鸯�
 
 萧中慧：相公，这位少侠倒是挺有趣，实力也强，我们不如？
 
-袁冠南：好，少侠啊，我们以后就跟你混了吧！",,,pending,,/storyScripts/legacy/segments/1453/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+袁冠南：好，少侠啊，我们以后就跟你混了吧！","主角：这下，总算解决了。
+
+袁冠南：刀就交给你们吧。我找到了比争它们更有趣的事。
+
+萧中慧：是什么呢？
+
+袁冠南：一次像样的冒险。愿意带上匹诺曹吗？","主角：That settles it.
+
+袁冠南：Keep the blades. I've found something more interesting than another argument over them.
+
+萧中慧：And what would that be?
+
+袁冠南：A proper adventure. May Pinocchio join you?",implemented,,/storyScripts/legacy/segments/1453/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6a5d7b7841a3e128aa3a,storyScripts,鸳鸯刀_风陵渡口下次再来,legacy,鸳鸯刀_风陵渡口下次再来,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：打不过啊，太变态了，下次再来吧。,,,pending,,/storyScripts/legacy/segments/1454/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-43c02eb227ecf5f81521,storyScripts,鸳鸯刀邪_风陵渡,legacy,鸳鸯刀邪_风陵渡,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：（虽然是两把破刀，不过看这二人这么保护这刀，一定有秘密）拿来吧！,,,pending,,/storyScripts/legacy/segments/1455/steps/1,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d29970f09c3ecf18c2c1,storyScripts,鸳鸯刀邪_西夏酒楼,legacy,鸳鸯刀邪_西夏酒楼,dialogue_run,"韦小宝
@@ -15761,11 +16009,11 @@ copy-bc7fcfdb82f231dd56d0,storyScripts,霹雳堂_钟灵,legacy,霹雳堂_钟灵,
 
 钟灵：反正我以后都和大哥哥在一起嘛，你的就是我的。以后雕雕就是我俩的宠物！","钟灵：它恢复得不错。现在，可以教你怎样和它配合作战了——小心一点，别让手指挡着它的路。
 
-主角：这堂课，我应该会记得相当深刻。
+主角：明白。我会看好自己的手指。
 
 钟灵：它仍和我们一起。信任，可不能像一根多余的腰带，随便转手。","钟灵：He is healthy again. I can show you how to work with him now—carefully, and without putting your fingers in the way.
 
-主角：A lesson Yeah, I'm going to remember that one.
+主角：Understood. I'll keep my fingers to myself.
 
 钟灵：He stays with us. Trust is not something to hand over like a spare belt.",implemented,,/storyScripts/legacy/segments/1480/steps/2,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1440db450a3d131af6bf,storyScripts,霹雳堂_慕容复,legacy,霹雳堂_慕容复,dialogue_run,"慕容复
@@ -15983,7 +16231,19 @@ copy-e13fc2a11ee172aef65c,storyScripts,bixuejianShyou_脱险,legacy,bixuejianShy
 
 主角：可是闯王李自成李将军？在下慕名已久，不如结伴而行，一路也好有个照应？
 
-崔秋山：如此甚好。",,,pending,,/storyScripts/legacy/segments/1508/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+崔秋山：如此甚好。","崔秋山：脱身了。谢谢各位出手相助。
+
+儿时袁承志：舒，你受伤了！
+
+主角：你们要去哪儿？可以一起走。
+
+崔秋山：那就有劳了。荷鲁斯，跟紧些。","崔秋山：We're clear. Thank you for coming to our aid.
+
+儿时袁承志：Shu, you're hurt!
+
+主角：Where are you headed? We can share the road.
+
+崔秋山：That would be welcome. Horus, stay close.",implemented,,/storyScripts/legacy/segments/1508/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3678df12fff2d2ad85af,storyScripts,bixuejianShyou_华山学武1,legacy,bixuejianShyou_华山学武1,dialogue_run,"儿时袁承志
 崔秋山
 哑仆","儿时袁承志 → 荷鲁斯 / Horus [locked]
@@ -16109,10 +16369,22 @@ copy-549fd887b44bf7b175bd,storyScripts,bixuejianShyou_接黄金2,legacy,bixuejia
 
 主角：你这么无头苍蝇一般的去追也不是办法，我们一起去追吧，看她的样子，似乎是往衢州的方向去了。
 
-袁承志：好吧，一起去。",,,pending,,/storyScripts/legacy/segments/1515/steps/1,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-6c28bdbb70a9e3e3a69c,storyScripts,bixuejianShyou_接黄金2,legacy,bixuejianShyou_接黄金2,text,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",是否要打开包裹？,,,pending,,/storyScripts/legacy/segments/1515/steps/9/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a11fdb25b0d8faeaa009,storyScripts,bixuejianShyou_接黄金2,legacy,bixuejianShyou_接黄金2,text,,,,打开,,,pending,,/storyScripts/legacy/segments/1515/steps/9/blocks/0/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-60de040ee67dfcc3034c,storyScripts,bixuejianShyou_接黄金2,legacy,bixuejianShyou_接黄金2,text,,,,不打开,,,pending,,/storyScripts/legacy/segments/1515/steps/9/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+袁承志：好吧，一起去。","主角：等一下，荷鲁斯。误会可以边走边说。
+
+袁承志：那就走快些。我得追上她。
+
+主角：一起吧。两个人找，总比一个人容易。
+
+袁承志：好。这些补给你先拿着，包裹的事稍后再说。","主角：A moment, Horus. We can settle the misunderstanding while we walk.
+
+袁承志：Then walk quickly. I mean to catch up with her.
+
+主角：Together, then. Two pairs of eyes are better than one.
+
+袁承志：Agreed. Take these supplies; we'll sort out the parcel later.",implemented,,/storyScripts/legacy/segments/1515/steps/1,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-6c28bdbb70a9e3e3a69c,storyScripts,bixuejianShyou_接黄金2,legacy,bixuejianShyou_接黄金2,text,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",是否要打开包裹？,要打开包裹吗？,Open the parcel?,implemented,,/storyScripts/legacy/segments/1515/steps/9/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a11fdb25b0d8faeaa009,storyScripts,bixuejianShyou_接黄金2,legacy,bixuejianShyou_接黄金2,text,,,,打开,打开。,Open it.,implemented,,/storyScripts/legacy/segments/1515/steps/9/blocks/0/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-60de040ee67dfcc3034c,storyScripts,bixuejianShyou_接黄金2,legacy,bixuejianShyou_接黄金2,text,,,,不打开,先保持封好。,Leave it sealed.,implemented,,/storyScripts/legacy/segments/1515/steps/9/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-76d2b048ee8d4ac9dfbd,storyScripts,bixuejianShyou_得黄金,legacy,bixuejianShyou_得黄金,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：哇，那么多的金子!,,,pending,,/storyScripts/legacy/segments/1516/steps/1,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2e939f4668f0c80cc667,storyScripts,bixuejianShyou_接黄金3,legacy,bixuejianShyou_接黄金3,dialogue_run,"袁承志
 主角
@@ -16198,7 +16470,23 @@ copy-e364129f495a43341869,storyScripts,bixuejianShyou_不接黄金,legacy,bixuej
 
 主角：……说来话长，我们还是快去追吧!
 
-袁承志：哦好!",,,pending,,/storyScripts/legacy/segments/1525/steps/2,10,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+袁承志：哦好!","主角：荷鲁斯？这是怎么回事？
+
+温青：伊西斯决定送出的礼物，可不是拿来争论的。
+
+袁承志：说完就走了。我们得跟上。
+
+主角：确实，比对着一条开走的船讲道理容易些。
+
+袁承志：走吧，我和你同行。","主角：Horus? What's going on?
+
+温青：Isis leaves a gift when she chooses. Arguing won't improve it.
+
+袁承志：And there she goes. We should follow.
+
+主角：That would be easier than arguing with a departing boat.
+
+袁承志：Come on, then. I'll travel with you.",implemented,,/storyScripts/legacy/segments/1525/steps/2,10,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-48870eec44ddc2bfeb1c,storyScripts,bixuejianShyou_打开包裹石梁派,legacy,bixuejianShyou_打开包裹石梁派,dialogue_run,"温方达
 温青青
 袁承志
@@ -16585,7 +16873,23 @@ copy-ec6029b5bed57aaab772,storyScripts,bixuejianShyou_接金败石梁派3,legacy
 
 主角：那正好，我也准备去襄阳一趟，不如一起去，一路上也能有个照应？
 
-袁承志：这……好吧。",,,pending,,/storyScripts/legacy/segments/1544/steps/2,7,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+袁承志：这……好吧。","袁承志：黄金保住了。谢谢你们赶来。
+
+主角：接下来去哪儿，荷鲁斯？
+
+袁承志：高桥城。我要去见一个人。
+
+主角：那就一起走吧。
+
+袁承志：好。上次见面时的事，我也该向你道个歉。","袁承志：The gold is safe. Thank you for coming.
+
+主角：Where next, Horus?
+
+袁承志：Highbridge. There is someone I need to see.
+
+主角：Then let's share the road.
+
+袁承志：Gladly. And I owe you an apology for our last meeting.",implemented,,/storyScripts/legacy/segments/1544/steps/2,7,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7f9d80ef26de3b547f28,storyScripts,bixuejianShyou_不接黄金石梁派1,legacy,bixuejianShyou_不接黄金石梁派1,dialogue_run,"袁承志
 温正","袁承志 → 荷鲁斯 / Horus [locked]
 温正 → 凯布利 / Khepri [proposed]","CN,EG,US","袁承志：请问这里可是石梁派？
@@ -18822,7 +19126,7 @@ copy-0265eec90bd0d5b80318,storyScripts,original_新手引导.任务打人黑帮,
 南贤：必要时，站远一点反对。碰上强敌，可不代表非得一直输给他。","主角：I'll try the bully. Somebody ought to object to his tolls.
 
 南贤：Object from a safe distance if necessary. A difficult enemy is not an instruction to keep losing to him.",implemented,,/storyScripts/legacy/segments/1728/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a93bda74182ddee6b1ec,storyScripts,original_新手引导.任务打人黑帮,legacy,original_新手引导.任务打人黑帮,dialogue_run,南贤,南贤 → 雅各布·格林 / Jacob Grimm [locked],DE,南贤：你去南面的[[red:衡阳]]，然后挑战了街上的[[yellow:黑老大]]再回来吧。,南贤：雨集镇在南边。挑战那里的拦路恶霸，再回来告诉我你学到了什么。,"南贤：Rainmarket is south of here. Challenge the road bully, then come back and tell me what you learned.",implemented,,/storyScripts/legacy/segments/1728/steps/3,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a93bda74182ddee6b1ec,storyScripts,original_新手引导.任务打人黑帮,legacy,original_新手引导.任务打人黑帮,dialogue_run,南贤,南贤 → 雅各布·格林 / Jacob Grimm [locked],DE,南贤：你去南面的[[red:衡阳]]，然后挑战了街上的[[yellow:黑老大]]再回来吧。,南贤：去雨集镇挑战那里的拦路恶霸，再回来告诉我你学到了什么。,"南贤：Challenge the road bully in Rainmarket, then come back and tell me what you learned.",implemented,,/storyScripts/legacy/segments/1728/steps/3,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-154154a9f90baaa2128d,storyScripts,original_新手引导.教训黑老大开始,legacy,original_新手引导.教训黑老大开始,dialogue_run,"黑老大
 主角","黑老大 → 当地居民 / Town resident [classified]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","黑老大：什么样的节奏呀，最呀最摇摆~
@@ -19337,7 +19641,11 @@ copy-8c52b9cb652a748d35de,storyScripts,白马啸西风_李文秀加入,legacy,�
 李文秀","主角 → 玩家角色 / Player character [classified]
 李文秀 → 杜尔西内娅 / Dulcinea [locked]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：李姑娘，我和你一起去惩罚那些恶人！我想他们还没有走远。
 
-李文秀：好。",,,pending,,/storyScripts/legacy/segments/1827/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+李文秀：好。","主角：杜尔西内娅，我和你一起去。我们一起面对他们。
+
+李文秀：谢谢。走吧。","主角：Dulcinea, I'll come with you. We can face them together.
+
+李文秀：Thank you. Let's go.",implemented,,/storyScripts/legacy/segments/1827/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-580f2cd1b3dc80830b0f,storyScripts,白马啸西风_前往高昌,legacy,白马啸西风_前往高昌,dialogue_run,"主角
 李文秀","主角 → 玩家角色 / Player character [classified]
 李文秀 → 杜尔西内娅 / Dulcinea [locked]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：那后来藏宝图呢？
@@ -21098,24 +21406,24 @@ copy-98d39cdd1d758c312562,battles,browser_结伴练习,,,name,,,,结伴练习,,T
 copy-f864166f6cecaca5efe1,characters,主角,,,name,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",小虾米,,,pending,,/characters/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-808c248638c0c4358b92,characters,神级主角,,,name,神级主角,神级主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",小虾米,,,pending,,/characters/1/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d7b796dd61dd5ec3e4e4,characters,木头人,,,name,木头人,木头人 → 训练假人 / Training Dummy [classified],,木头人,训练假人,Training Dummy,implemented,,/characters/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-6fc846720838669cfde3,characters,胡斐,,,name,胡斐,胡斐 → 凯 / Kai [locked],DK,胡斐,,,pending,,/characters/3/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d8737ee376d3e775f66f,characters,华山胡斐,,,name,华山胡斐,华山胡斐 → 凯 / Kai [locked],DK,胡斐,,,pending,,/characters/4/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-6fc846720838669cfde3,characters,胡斐,,,name,胡斐,胡斐 → 凯 / Kai [locked],DK,胡斐,凯,Kai,implemented,,/characters/3/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d8737ee376d3e775f66f,characters,华山胡斐,,,name,华山胡斐,华山胡斐 → 凯 / Kai [locked],DK,胡斐,凯,Kai,implemented,,/characters/4/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-dbbe268aeb810e549c1e,characters,张无忌,,,name,张无忌,"张无忌 → 哪吒 / Nezha [locked]
-张无忌 → 夏洛克·福尔摩斯 / Sherlock Holmes [proposed]","CN,GB",张无忌,,,pending,,/characters/5/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+张无忌 → 夏洛克·福尔摩斯 / Sherlock Holmes [proposed]","CN,GB",张无忌,哪吒,Nezha,implemented,,/characters/5/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-12f2f4ff72e53c865958,characters,光明顶张无忌,,,name,光明顶张无忌,光明顶张无忌 → 夏洛克·福尔摩斯 / Sherlock Holmes [proposed],GB,张无忌,,,pending,,/characters/6/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5e2fbad06b0e6a755134,characters,周芷若,,,name,周芷若,周芷若 → 白素贞 / Bai Suzhen [proposed],CN,周芷若,,,pending,,/characters/7/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7543d03b150540665f4c,characters,小昭,,,name,小昭,小昭 → 小青 / Xiaoqing [proposed],CN,小昭,,,pending,,/characters/8/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f9a4e3c73cec45147f67,characters,段誉,,,name,段誉,段誉 → 洛基 / Loki [proposed],"CN,NO",段誉,洛基,Loki,implemented,,/characters/9/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-6689a4f4bbf7bb705b09,characters,华山段誉,,,name,华山段誉,华山段誉 → 洛基 / Loki [proposed],"CN,NO",段誉,,,pending,,/characters/10/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-6689a4f4bbf7bb705b09,characters,华山段誉,,,name,华山段誉,华山段誉 → 洛基 / Loki [proposed],"CN,NO",段誉,洛基,Loki,implemented,,/characters/10/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f3df8e29c850d9aa8b04,characters,程英.初级,,,name,程英.初级,程英.初级 → 桂妮薇儿 / Guinevere [proposed],GB,程英,,,pending,,/characters/11/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7a762643a4a8f86577e4,characters,程英.高级,,,name,程英.高级,程英.高级 → 桂妮薇儿 / Guinevere [proposed],GB,程英,,,pending,,/characters/12/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-487a339d86d452410d80,characters,郭芙,,,name,郭芙,郭芙 → 温蒂·达令 / Wendy Darling [proposed],GB,郭芙,,,pending,,/characters/13/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-df2914ff1ed2d1a2fe5a,characters,郭襄,,,name,郭襄,郭襄 → 爱丽丝 / Alice [locked],"CN,GB",郭襄,,,pending,,/characters/14/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-02b68b4d07b7b8e004af,characters,华山郭襄,,,name,华山郭襄,华山郭襄 → 爱丽丝 / Alice [locked],"CN,GB",郭襄,,,pending,,/characters/15/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-e034ab6ae6f1ff7384c3,characters,神雕,,,name,神雕,神雕 → 狮鹫 / The Griffin [proposed],"CN,GB",神雕,,,pending,,/characters/16/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-3d2ea768883dc073a1da,characters,田伯光,,,name,田伯光,田伯光 → 石川五右卫门 / Ishikawa Goemon [proposed],"CN,DE,GB,JP",田伯光,,,pending,,/characters/17/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-11768bdf8226639f99e7,characters,小龙女,,,name,小龙女,小龙女 → 湖中仙女 / The Lady of the Lake [locked],"DE,GB",小龙女,,,pending,,/characters/18/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-04bd44ecede220d52258,characters,杨过,,,name,杨过,杨过 → 亚瑟王 / King Arthur [locked],"CN,DE,GB",杨过,,,pending,,/characters/19/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-487a339d86d452410d80,characters,郭芙,,,name,郭芙,郭芙 → 温蒂·达令 / Wendy Darling [proposed],GB,郭芙,温蒂·达令,Wendy Darling,implemented,,/characters/13/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-df2914ff1ed2d1a2fe5a,characters,郭襄,,,name,郭襄,郭襄 → 爱丽丝 / Alice [locked],"CN,GB",郭襄,爱丽丝,Alice,implemented,,/characters/14/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-02b68b4d07b7b8e004af,characters,华山郭襄,,,name,华山郭襄,华山郭襄 → 爱丽丝 / Alice [locked],"CN,GB",郭襄,爱丽丝,Alice,implemented,,/characters/15/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-e034ab6ae6f1ff7384c3,characters,神雕,,,name,神雕,神雕 → 狮鹫 / The Griffin [proposed],"CN,GB",神雕,狮鹫,The Griffin,implemented,,/characters/16/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-3d2ea768883dc073a1da,characters,田伯光,,,name,田伯光,田伯光 → 石川五右卫门 / Ishikawa Goemon [proposed],"CN,DE,GB,JP",田伯光,石川五右卫门,Ishikawa Goemon,implemented,,/characters/17/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-11768bdf8226639f99e7,characters,小龙女,,,name,小龙女,小龙女 → 湖中仙女 / The Lady of the Lake [locked],"DE,GB",小龙女,湖中仙女,The Lady of the Lake,implemented,,/characters/18/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-04bd44ecede220d52258,characters,杨过,,,name,杨过,杨过 → 亚瑟王 / King Arthur [locked],"CN,DE,GB",杨过,亚瑟王,King Arthur,implemented,,/characters/19/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1801f65ba0a396c38c70,characters,李莫愁,,,name,李莫愁,李莫愁 → 摩根勒菲 / Morgan le Fay [proposed],GB,李莫愁,,,pending,,/characters/20/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a0428ce7ec06ea6a4ed6,characters,木婉清(蒙面),,,name,木婉清(蒙面),木婉清(蒙面) → 格芙琼 / Gefjon [proposed],NO,木婉清,,,pending,,/characters/21/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f5e7082b465f35c9b5dd,characters,木婉清.蒙面,,,name,木婉清.蒙面,木婉清.蒙面 → 格芙琼 / Gefjon [proposed],NO,木婉清,,,pending,,/characters/22/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21156,8 +21464,8 @@ copy-e136472e5d787b7cb6e2,characters,巴天石,,,name,巴天石,巴天石 → �
 copy-783ff5bd36fa8cf16cb0,characters,范晔,,,name,范晔,范晔 → 红发埃里克 / Erik the Red [proposed],NO,范晔,,,pending,,/characters/57/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-75df8369d6dde319b193,characters,华赫艮,,,name,华赫艮,华赫艮 → 赫尔莫德 / Hermod [proposed],NO,华赫艮,,,pending,,/characters/58/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-095f23859ea17a87e64a,characters,灭绝师太,,,name,灭绝师太,灭绝师太 → 观音 / Guanyin [proposed],CN,灭绝师太,,,pending,,/characters/59/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d2149260e6bcc904d9db,characters,成昆,,,name,成昆,成昆 → 申公豹 / Shen Gongbao [proposed],CN,成昆,,,pending,,/characters/60/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-9fdf2e2432b0dcec58f7,characters,炼狱成昆,,,name,炼狱成昆,炼狱成昆 → 申公豹 / Shen Gongbao [proposed],CN,成昆,,,pending,,/characters/61/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d2149260e6bcc904d9db,characters,成昆,,,name,成昆,成昆 → 申公豹 / Shen Gongbao [proposed],CN,成昆,申公豹,Shen Gongbao,implemented,,/characters/60/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-9fdf2e2432b0dcec58f7,characters,炼狱成昆,,,name,炼狱成昆,炼狱成昆 → 申公豹 / Shen Gongbao [proposed],CN,成昆,申公豹,Shen Gongbao,implemented,,/characters/61/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-baa93fc49f6cac58c85f,characters,摘星子,,,name,摘星子,摘星子 → 哈拉尔·哈德拉达 / Harald Hardrada [proposed],NO,摘星子,哈拉尔·哈德拉达,Harald Hardrada,implemented,,/characters/62/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-15daf6d3c9886589af86,characters,天狼子,,,name,天狼子,天狼子 → 比约恩 / Bjorn Ironside [proposed],NO,天狼子,比约恩,Bjorn Ironside,implemented,,/characters/63/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c35bae1f3d09c987e9a8,characters,出尘子,,,name,出尘子,出尘子 → 乌勒尔 / Ullr [proposed],NO,出尘子,乌勒尔,Ullr,implemented,,/characters/64/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21177,7 +21485,7 @@ copy-27e5830ea87393c53a0b,characters,商老太,,,name,商老太,商老太 → �
 copy-6bcc79cb132b6f543f32,characters,阎基,,,name,阎基,阎基 → 奥勒·路却埃 / Ole Lukoie [proposed],DK,阎基,,,pending,,/characters/78/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-852842c04498504b4873,characters,商剑鸣,,,name,商剑鸣,商剑鸣 → 新衣皇帝 / The Emperor of the New Clothes [proposed],DK,商剑鸣,,,pending,,/characters/79/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e63b9f7258249d58dfe5,characters,天龙门弟子,,,name,天龙门弟子,天龙门弟子 → 组织成员 / Guild member [classified],DK,天龙门弟子,,,pending,,/characters/80/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-8421a657b0b1d528029d,characters,程灵素,,,name,程灵素,程灵素 → 格尔达 / Gerda [locked],DK,程灵素,,,pending,,/characters/81/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-8421a657b0b1d528029d,characters,程灵素,,,name,程灵素,程灵素 → 格尔达 / Gerda [locked],DK,程灵素,格尔达,Gerda,implemented,,/characters/81/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-bd56b2dec849d7c4bafc,characters,毒手药王,,,name,毒手药王,毒手药王 → 汉斯·克里斯蒂安·安徒生 / Hans Christian Andersen [proposed],DK,毒手药王,,,pending,,/characters/82/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5e32f63a03a75880ecd4,characters,旁白,,,name,旁白,旁白 → 旁白 / Narrator [classified],,旁白,,,pending,,/characters/83/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5201c4dfdbd6d7d24cce,characters,南贤,,,name,南贤,南贤 → 雅各布·格林 / Jacob Grimm [locked],DE,南贤,格林,Grimm,implemented,,/characters/84/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21189,7 +21497,7 @@ copy-2499f026c1839c882ee9,characters,变身田归农,,,name,变身田归农,变�
 copy-701647b672c653e81aac,characters,苗若兰,,,name,苗若兰,苗若兰 → 拇指姑娘 / Thumbelina [proposed],DK,苗若兰,,,pending,,/characters/90/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d23fa70f5c89209ce278,characters,宝树,,,name,宝树,宝树 → 扫烟囱的小男孩 / The Chimney Sweep [proposed],DK,宝树,,,pending,,/characters/91/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b5a0dbeeaa99345faf63,characters,石壁,,,name,石壁,石壁 → 石壁 / Inscribed wall [classified],,石壁,,,pending,,/characters/92/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-c87ed7c03e5efc6e191a,characters,赵敏,,,name,赵敏,赵敏 → 花木兰 / Hua Mulan [proposed],CN,赵敏,,,pending,,/characters/93/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-c87ed7c03e5efc6e191a,characters,赵敏,,,name,赵敏,赵敏 → 花木兰 / Hua Mulan [proposed],CN,赵敏,花木兰,Hua Mulan,implemented,,/characters/93/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d194c7345dc836762261,characters,鹤笔翁,,,name,鹤笔翁,鹤笔翁 → 宁采臣 / Ning Caichen [proposed],CN,鹤笔翁,,,pending,,/characters/94/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-cb998aded5951ca38b9d,characters,鹿杖客,,,name,鹿杖客,鹿杖客 → 阎王 / Yanluo Wang [proposed],CN,鹿杖客,,,pending,,/characters/95/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b2b3516ea338ee2cc858,characters,岳肃,,,name,岳肃,岳肃 → 红孩儿 / Red Boy [proposed],CN,岳肃,,,pending,,/characters/96/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21207,8 +21515,8 @@ copy-f6956862aff936f9e117,characters,常遇春,,,name,常遇春,常遇春 → �
 copy-4a3dbd3728acc9d3e45c,characters,徐达,,,name,徐达,徐达 → 闻仲 / Wen Zhong [proposed],CN,徐达,,,pending,,/characters/108/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-367c368e54e71b9dca49,characters,康茂才,,,name,康茂才,康茂才 → 后羿 / Hou Yi [proposed],CN,康茂才,,,pending,,/characters/109/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f7a0a92e1938f6e852ad,characters,黑影,,,name,黑影,黑影 → 殷夫人 / Lady Yin [proposed],CN,黑影,,,pending,,/characters/110/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-29743a89593060fa5eb4,characters,变身张无忌,,,name,变身张无忌,变身张无忌 → 哪吒 / Nezha [locked],CN,张无忌,,,pending,,/characters/111/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-485de5ca6ad52a5c2c39,characters,神级张无忌,,,name,神级张无忌,神级张无忌 → 哪吒 / Nezha [locked],CN,张无忌,,,pending,,/characters/112/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-29743a89593060fa5eb4,characters,变身张无忌,,,name,变身张无忌,变身张无忌 → 哪吒 / Nezha [locked],CN,张无忌,哪吒,Nezha,implemented,,/characters/111/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-485de5ca6ad52a5c2c39,characters,神级张无忌,,,name,神级张无忌,神级张无忌 → 哪吒 / Nezha [locked],CN,张无忌,哪吒,Nezha,implemented,,/characters/112/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c497c7a1db9f41a6af9e,characters,秦婆婆,,,name,秦婆婆,秦婆婆 → 乌尔德 / Urd [proposed],NO,秦婆婆,乌尔德,Urd,implemented,,/characters/113/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-cabe88490c46446e552c,characters,梅剑,,,name,梅剑,梅剑 → 贝斯特拉 / Bestla [proposed],NO,梅剑,,,pending,,/characters/114/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7fdfc11d7d1e121e3ddd,characters,兰剑,,,name,兰剑,兰剑 → 诗寇蒂 / Skuld [proposed],NO,兰剑,,,pending,,/characters/115/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21248,19 +21556,19 @@ copy-8fbbaeac148aa7ba62f3,characters,神级任盈盈,,,name,神级任盈盈,神�
 copy-5bd281236b458ea7d65d,characters,仪清,,,name,仪清,仪清 → 立花誾千代 / Tachibana Ginchiyo [proposed],JP,仪清,,,pending,,/characters/149/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5620c3b4610e5732618a,characters,鲁连荣,,,name,鲁连荣,鲁连荣 → 金太郎 / Kintaro [proposed],JP,鲁连荣,,,pending,,/characters/150/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-236446f16767dd5a9fa2,characters,天乙真人,,,name,天乙真人,天乙真人 → 东乡重位 / Togo Shigekata [proposed],JP,天乙真人,,,pending,,/characters/151/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-7ee83434076276196560,characters,不败令狐冲,,,name,不败令狐冲,不败令狐冲 → 宫本武藏 / Miyamoto Musashi [locked],"GB,JP",令狐冲,,,pending,,/characters/152/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-7ee83434076276196560,characters,不败令狐冲,,,name,不败令狐冲,不败令狐冲 → 宫本武藏 / Miyamoto Musashi [locked],"GB,JP",令狐冲,宫本武藏,Miyamoto Musashi,implemented,,/characters/152/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-609a80cae5f9490352a5,characters,烟霞神龙,,,name,烟霞神龙,烟霞神龙 → 会说话的蟋蟀 / The Talking Cricket [proposed],IT,烟霞神龙,,,pending,,/characters/153/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-87e520819db7ed3688b6,characters,双手开碑,,,name,双手开碑,双手开碑 → 曼贾福科 / Mangiafuoco [proposed],IT,双手开碑,,,pending,,/characters/154/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-33efe4286144c1645e11,characters,流星赶月,,,name,流星赶月,流星赶月 → 烛芯 / Lampwick [proposed],IT,流星赶月,,,pending,,/characters/155/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d9383e9005d43f7f43eb,characters,盖七省,,,name,盖七省,盖七省 → 狐狸 / The Fox [proposed],IT,盖七省,,,pending,,/characters/156/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-e666c1bb6803c702cf71,characters,萧中慧,,,name,萧中慧,萧中慧 → 蓝仙女 / The Blue Fairy [proposed],IT,萧中慧,,,pending,,/characters/157/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a6eeaf7aa2ec285c018e,characters,袁冠南,,,name,袁冠南,袁冠南 → 匹诺曹 / Pinocchio [locked],IT,袁冠南,,,pending,,/characters/158/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-e666c1bb6803c702cf71,characters,萧中慧,,,name,萧中慧,萧中慧 → 蓝仙女 / The Blue Fairy [proposed],IT,萧中慧,蓝仙女,The Blue Fairy,implemented,,/characters/157/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a6eeaf7aa2ec285c018e,characters,袁冠南,,,name,袁冠南,袁冠南 → 匹诺曹 / Pinocchio [locked],IT,袁冠南,匹诺曹,Pinocchio,implemented,,/characters/158/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ce5a714abaebda1d736e,characters,卓天雄,,,name,卓天雄,卓天雄 → 奥兰多 / Orlando [proposed],IT,卓天雄,,,pending,,/characters/159/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c4adafaa286e70859012,characters,雷老虎,,,name,雷老虎,雷老虎 → 毛毛虫 / The Caterpillar [proposed],GB,雷老虎,,,pending,,/characters/160/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-363abc90131e715fa0bc,characters,梦姑,,,name,梦姑,梦姑 → 玛丽·里德 / Mary Read [proposed],GB,梦姑,,,pending,,/characters/161/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6c236464847d0cd50237,characters,火工头陀,,,name,火工头陀,火工头陀 → 史密先生 / Mr Smee [proposed],GB,火工头陀,,,pending,,/characters/162/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a7e9bd1d35a33a5787d1,characters,天关乔峰,,,name,天关乔峰,天关乔峰 → 索尔 / Thor [locked],NO,乔峰,,,pending,,/characters/163/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-ee64fc3355e0d5b50255,characters,天关段誉,,,name,天关段誉,天关段誉 → 洛基 / Loki [proposed],"CN,NO",段誉,,,pending,,/characters/164/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a7e9bd1d35a33a5787d1,characters,天关乔峰,,,name,天关乔峰,天关乔峰 → 索尔 / Thor [locked],NO,乔峰,索尔,Thor,implemented,,/characters/163/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-ee64fc3355e0d5b50255,characters,天关段誉,,,name,天关段誉,天关段誉 → 洛基 / Loki [proposed],"CN,NO",段誉,洛基,Loki,implemented,,/characters/164/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-abf07b6b725247688066,characters,天关慕容复,,,name,天关慕容复,天关慕容复 → 巴德尔 / Baldr [proposed],NO,慕容复,,,pending,,/characters/165/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c0d58733dac91ff367d6,characters,天关庄聚贤,,,name,天关庄聚贤,天关庄聚贤 → 西格蒙德 / Sigmund [proposed],NO,庄聚贤,,,pending,,/characters/166/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ee7d5b239dea3a745ead,characters,宋青书,,,name,宋青书,宋青书 → 白龙马 / The White Dragon Horse [proposed],CN,宋青书,,,pending,,/characters/167/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21303,7 +21611,7 @@ copy-9f674e4767aaea465dfc,characters,长安一梦长老,,,name,长安一梦长�
 copy-fb5a92dc3f70a47644bf,characters,长安一梦部落众1,,,name,长安一梦部落众1,长安一梦部落众1 → 荒野匪徒 / Outlaw [classified],ES,部落众,,,pending,,/characters/204/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9ebbb78405103917893f,characters,长安一梦阿玉,,,name,长安一梦阿玉,长安一梦阿玉 → 熙德 / El Cid [proposed],ES,阿玉,,,pending,,/characters/205/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7a42b736a350ead67ba0,characters,长安一梦陌生男子,,,name,长安一梦陌生男子,长安一梦陌生男子 → 当地居民 / Town resident [classified],ES,陌生男子,,,pending,,/characters/206/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-1cf75c92e2c02c909624,characters,郭靖,,,name,郭靖,郭靖 → 白雪公主的猎人 / The Huntsman [locked],"DE,ES",郭靖,,,pending,,/characters/207/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-1cf75c92e2c02c909624,characters,郭靖,,,name,郭靖,郭靖 → 白雪公主的猎人 / The Huntsman [locked],"DE,ES",郭靖,白雪公主的猎人,The Huntsman,implemented,,/characters/207/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3cd015de3ad878e55605,characters,欧阳克,,,name,欧阳克,欧阳克 → 贡特尔 / Gunther [proposed],DE,欧阳克,,,pending,,/characters/208/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2a296605b4e6decbd22f,characters,渔,,,name,渔,渔 → 汉赛尔 / Hansel [proposed],DE,点苍渔隐,,,pending,,/characters/209/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-86e30014e4d3dff7a72c,characters,樵,,,name,樵,樵 → 哈根 / Hagen [proposed],DE,樵夫,,,pending,,/characters/210/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21311,13 +21619,13 @@ copy-6a162cf1f31201f92a3f,characters,耕,,,name,耕,耕 → 青蛙王子 / The F
 copy-e31802679ab8029ec429,characters,读,,,name,读,读 → 侏儒怪 / Rumpelstiltskin [proposed],DE,朱子柳,,,pending,,/characters/212/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2cf75a7d610608226217,characters,新手村梅超风,,,name,新手村梅超风,新手村梅超风 → 莴苣姑娘 / Rapunzel [proposed],"CN,DE",梅超风,,,pending,,/characters/213/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-037bebab9b35df5d1fa0,characters,梅超风,,,name,梅超风,梅超风 → 莴苣姑娘 / Rapunzel [proposed],"CN,DE",梅超风,,,pending,,/characters/214/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-b9448d5e828886630a0f,characters,黄蓉,,,name,黄蓉,黄蓉 → 白雪公主 / Snow White [locked],DE,黄蓉,,,pending,,/characters/215/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b9448d5e828886630a0f,characters,黄蓉,,,name,黄蓉,黄蓉 → 白雪公主 / Snow White [locked],DE,黄蓉,白雪公主,Snow White,implemented,,/characters/215/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c2fc919d85ff3775f909,characters,裘千仞,,,name,裘千仞,裘千仞 → 白兔先生 / The White Rabbit [proposed],GB,裘千仞,,,pending,,/characters/216/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3f2f22d8f27a74b350f6,characters,炼狱裘千仞,,,name,炼狱裘千仞,炼狱裘千仞 → 白兔先生 / The White Rabbit [proposed],GB,裘千仞,,,pending,,/characters/217/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5875c42d281943509b13,characters,一灯大师,,,name,一灯大师,一灯大师 → 德罗塞尔迈耶 / Drosselmeyer [proposed],DE,一灯大师,,,pending,,/characters/218/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-523e17d949fb8c773b69,characters,炼狱一灯大师,,,name,炼狱一灯大师,炼狱一灯大师 → 德罗塞尔迈耶 / Drosselmeyer [proposed],DE,一灯大师,,,pending,,/characters/219/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-9f6ed80b1eaf7b66f7f3,characters,黄药师,,,name,黄药师,黄药师 → 浮士德 / Faust [proposed],DE,黄药师,,,pending,,/characters/220/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d8b3c88e31ddc0233e27,characters,炼狱黄药师,,,name,炼狱黄药师,炼狱黄药师 → 浮士德 / Faust [proposed],DE,黄药师,,,pending,,/characters/221/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-9f6ed80b1eaf7b66f7f3,characters,黄药师,,,name,黄药师,黄药师 → 浮士德 / Faust [proposed],DE,黄药师,浮士德,Faust,implemented,,/characters/220/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d8b3c88e31ddc0233e27,characters,炼狱黄药师,,,name,炼狱黄药师,炼狱黄药师 → 浮士德 / Faust [proposed],DE,黄药师,浮士德,Faust,implemented,,/characters/221/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-325f227b4ab6d2aaf80f,characters,洪七公,,,name,洪七公,洪七公 → 齐格弗里德 / Siegfried [proposed],DE,洪七公,,,pending,,/characters/222/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c45fc935c71a1f4ad5c5,characters,炼狱洪七公,,,name,炼狱洪七公,炼狱洪七公 → 齐格弗里德 / Siegfried [proposed],DE,洪七公,,,pending,,/characters/223/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-325e7f8ef42c056f1ac8,characters,欧阳锋,,,name,欧阳锋,欧阳锋 → 梅菲斯特 / Mephistopheles [proposed],DE,欧阳锋,,,pending,,/characters/224/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21338,7 +21646,7 @@ copy-c93a508f0981c79033f5,characters,发狂鸠摩智,,,name,发狂鸠摩智,发�
 copy-a278ca9faecbdaacc5b2,characters,炼狱鸠摩智,,,name,炼狱鸠摩智,炼狱鸠摩智 → 斯雷普尼尔 / Sleipnir [proposed],NO,鸠摩智,,,pending,,/characters/239/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fd0a2306b42f76e352c9,characters,包不同,,,name,包不同,包不同 → 索列姆 / Thrym [proposed],NO,包不同,,,pending,,/characters/240/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7328cf8ebcb8852ffd02,characters,风波恶,,,name,风波恶,风波恶 → 芬里尔 / Fenrir [proposed],NO,风波恶,,,pending,,/characters/241/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-10ce57bcf48202c66081,characters,阿朱,,,name,阿朱,阿朱 → 希芙 / Sif [proposed],NO,阿朱,,,pending,,/characters/242/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-10ce57bcf48202c66081,characters,阿朱,,,name,阿朱,阿朱 → 希芙 / Sif [proposed],NO,阿朱,希芙,Sif,implemented,,/characters/242/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e3b4bf89c6e736f1e751,characters,阿碧,,,name,阿碧,阿碧 → 南娜 / Nanna [proposed],NO,阿碧,南娜,Nanna,implemented,,/characters/243/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c2a897249ab79ffaff4d,characters,钟灵,,,name,钟灵,钟灵 → 埃尔 / Eir [proposed],NO,钟灵,埃尔,Eir,implemented,,/characters/244/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b933211e2c65fd884faf,characters,段延庆,,,name,段延庆,段延庆 → 奥拉夫·特里格瓦松 / Olaf Tryggvason [proposed],NO,段延庆,奥拉夫·特里格瓦松,Olaf Tryggvason,implemented,,/characters/245/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21350,9 +21658,9 @@ copy-0fbcee13ceb31d828f22,characters,全冠清,,,name,全冠清,全冠清 → �
 copy-20dbca7a01ed7a3230c9,characters,李延宗,,,name,李延宗,李延宗 → 洛吉 / Logi [proposed],NO,李延宗,,,pending,,/characters/251/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0b3af229ef57bfae70d5,characters,慕容复,,,name,慕容复,慕容复 → 巴德尔 / Baldr [proposed],NO,慕容复,,,pending,,/characters/252/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-06367c202411937d6f5e,characters,曼陀山庄神秘人,,,name,曼陀山庄神秘人,曼陀山庄神秘人 → 金发哈拉尔 / Harald Fairhair [proposed],NO,神秘人,,,pending,,/characters/253/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-95d28da949208747749a,characters,乔峰,,,name,乔峰,乔峰 → 索尔 / Thor [locked],NO,乔峰,,,pending,,/characters/254/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-1ae1d00a8454e7fe2365,characters,超级乔峰,,,name,超级乔峰,超级乔峰 → 索尔 / Thor [locked],NO,乔峰,,,pending,,/characters/255/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-76ea6b0bdf84b25a76e9,characters,萧峰,,,name,萧峰,萧峰 → 索尔 / Thor [locked],NO,萧峰,,,pending,,/characters/256/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-95d28da949208747749a,characters,乔峰,,,name,乔峰,乔峰 → 索尔 / Thor [locked],NO,乔峰,索尔,Thor,implemented,,/characters/254/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-1ae1d00a8454e7fe2365,characters,超级乔峰,,,name,超级乔峰,超级乔峰 → 索尔 / Thor [locked],NO,乔峰,索尔,Thor,implemented,,/characters/255/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-76ea6b0bdf84b25a76e9,characters,萧峰,,,name,萧峰,萧峰 → 索尔 / Thor [locked],NO,萧峰,索尔,Thor,implemented,,/characters/256/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-883b8681aa6886821ae0,characters,玄慈方丈,,,name,玄慈方丈,玄慈方丈 → 罗洛 / Rollo [proposed],NO,玄慈方丈,,,pending,,/characters/257/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0818e7a7e37b078ef640,characters,玄难,,,name,玄难,玄难 → 乌特迦·洛基 / Utgard-Loki [proposed],NO,玄难,,,pending,,/characters/258/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3b0d45c9a3d6476820c9,characters,玄寂,,,name,玄寂,玄寂 → 福尔塞蒂 / Forseti [proposed],NO,玄寂,,,pending,,/characters/259/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21424,8 +21732,8 @@ copy-1bf60724f4698921e892,characters,文艺吕布,,,name,文艺吕布,文艺吕�
 copy-df86d67bbbff64b41fbe,characters,home,,,name,home,home → home / Home marker [classified],,home,,,pending,,/characters/324/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-529b9e9813b651118ca8,characters,素心,,,name,素心,素心 → 加拉哈德 / Galahad [proposed],GB,素心,,,pending,,/characters/325/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-663c5a9de0dfa61e1444,characters,土拨鼠主角,,,name,土拨鼠主角,土拨鼠主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",小虾米,,,pending,,/characters/326/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-8c054c202230f004bee4,characters,令狐冲,,,name,令狐冲,令狐冲 → 宫本武藏 / Miyamoto Musashi [locked],"GB,JP",令狐冲,,,pending,,/characters/327/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-670e85b216e7d77735e7,characters,黑木崖超级令狐冲,,,name,黑木崖超级令狐冲,黑木崖超级令狐冲 → 宫本武藏 / Miyamoto Musashi [locked],"GB,JP",令狐冲,,,pending,,/characters/328/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-8c054c202230f004bee4,characters,令狐冲,,,name,令狐冲,令狐冲 → 宫本武藏 / Miyamoto Musashi [locked],"GB,JP",令狐冲,宫本武藏,Miyamoto Musashi,implemented,,/characters/327/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-670e85b216e7d77735e7,characters,黑木崖超级令狐冲,,,name,黑木崖超级令狐冲,黑木崖超级令狐冲 → 宫本武藏 / Miyamoto Musashi [locked],"GB,JP",令狐冲,宫本武藏,Miyamoto Musashi,implemented,,/characters/328/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e81d6db6017bb274cc03,characters,蓝凤凰,,,name,蓝凤凰,蓝凤凰 → 喀耳刻 / Circe [proposed],"GR,JP",蓝凤凰,,,pending,,/characters/329/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-dee8796d166707a5115e,characters,曲非烟,,,name,曲非烟,曲非烟 → 出云阿国 / Izumo no Okuni [proposed],JP,曲非烟,,,pending,,/characters/330/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ffb355cde82ecd309ce0,characters,疯狂曲非烟,,,name,疯狂曲非烟,疯狂曲非烟 → 出云阿国 / Izumo no Okuni [proposed],JP,曲非烟,,,pending,,/characters/331/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21456,29 +21764,29 @@ copy-7da34ecbfbfbb4be2b90,characters,何红药,,,name,何红药,何红药 → �
 copy-d2e4dcfa368d96e1a97c,characters,金蛇郎君,,,name,金蛇郎君,金蛇郎君 → 奥西里斯 / Osiris [proposed],EG,金蛇郎君,,,pending,,/characters/356/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9bd206d1f1ba6037875d,characters,五毒教弟子,,,name,五毒教弟子,五毒教弟子 → 组织成员 / Guild member [classified],EG,五毒教弟子,,,pending,,/characters/357/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3536164ecf00f15b4856,characters,五毒教圣使,,,name,五毒教圣使,五毒教圣使 → 塔沃蕾特 / Taweret [proposed],EG,五毒教圣使,,,pending,,/characters/358/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-54468d45c0046da77d3a,characters,温青青,,,name,温青青,温青青 → 伊西斯 / Isis [proposed],"EG,US",温青青,,,pending,,/characters/359/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-eebc07d5d6bed30d22d3,characters,袁承志,,,name,袁承志,袁承志 → 荷鲁斯 / Horus [locked],"CN,EG,US",袁承志,,,pending,,/characters/360/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-054b2038c1f29cdb3275,characters,华山袁承志,,,name,华山袁承志,华山袁承志 → 荷鲁斯 / Horus [locked],"CN,EG,US",袁承志,,,pending,,/characters/361/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-54468d45c0046da77d3a,characters,温青青,,,name,温青青,温青青 → 伊西斯 / Isis [proposed],"EG,US",温青青,伊西斯,Isis,implemented,,/characters/359/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-eebc07d5d6bed30d22d3,characters,袁承志,,,name,袁承志,袁承志 → 荷鲁斯 / Horus [locked],"CN,EG,US",袁承志,荷鲁斯,Horus,implemented,,/characters/360/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-054b2038c1f29cdb3275,characters,华山袁承志,,,name,华山袁承志,华山袁承志 → 荷鲁斯 / Horus [locked],"CN,EG,US",袁承志,荷鲁斯,Horus,implemented,,/characters/361/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8b4468d0d863fd24d82e,characters,穆人清,,,name,穆人清,穆人清 → 托特 / Thoth [proposed],EG,穆人清,,,pending,,/characters/362/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6f3aa5e93322ca905cc5,characters,炼狱穆人清,,,name,炼狱穆人清,炼狱穆人清 → 托特 / Thoth [proposed],EG,穆人清,,,pending,,/characters/363/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1396b004fe289c55617d,characters,木桑道长,,,name,木桑道长,木桑道长 → 伊姆霍特普 / Imhotep [proposed],EG,木桑道长,,,pending,,/characters/364/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1dd8a05a5de2e84d0d2a,characters,血刀老祖,,,name,血刀老祖,血刀老祖 → 亚伯拉罕·范海辛 / Abraham Van Helsing [proposed],RO,血刀老祖,亚伯拉罕·范海辛,Abraham Van Helsing,implemented,,/characters/365/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-50deeed0497ee84a5846,characters,炼狱血刀老祖,,,name,炼狱血刀老祖,炼狱血刀老祖 → 亚伯拉罕·范海辛 / Abraham Van Helsing [proposed],RO,血刀老祖,,,pending,,/characters/366/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a2d5b6af72743d6281c7,characters,狄云,,,name,狄云,狄云 → 德古拉 / Dracula [locked],RO,狄云,,,pending,,/characters/367/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-87e3a49c8fa11fa97d51,characters,华山狄云,,,name,华山狄云,华山狄云 → 德古拉 / Dracula [locked],RO,狄云,,,pending,,/characters/368/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a2d5b6af72743d6281c7,characters,狄云,,,name,狄云,狄云 → 德古拉 / Dracula [locked],RO,狄云,德古拉,Dracula,implemented,,/characters/367/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-87e3a49c8fa11fa97d51,characters,华山狄云,,,name,华山狄云,华山狄云 → 德古拉 / Dracula [locked],RO,狄云,德古拉,Dracula,implemented,,/characters/368/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-097b012220756cfde029,characters,水笙,,,name,水笙,水笙 → 米娜·哈克 / Mina Harker [proposed],RO,水笙,,,pending,,/characters/369/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ebc19b0c1705157e01d4,characters,梅念笙,,,name,梅念笙,梅念笙 → 乔纳森·哈克 / Jonathan Harker [proposed],RO,梅念笙,,,pending,,/characters/370/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-6129bf3055e363e6ce77,characters,李文秀,,,name,李文秀,李文秀 → 杜尔西内娅 / Dulcinea [locked],ES,李文秀,,,pending,,/characters/371/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-cb534f0943522db05157,characters,陈达海,,,name,陈达海,陈达海 → 堂吉诃德 / Don Quixote [locked],ES,陈达海,,,pending,,/characters/372/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-6129bf3055e363e6ce77,characters,李文秀,,,name,李文秀,李文秀 → 杜尔西内娅 / Dulcinea [locked],ES,李文秀,杜尔西内娅,Dulcinea,implemented,,/characters/371/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-cb534f0943522db05157,characters,陈达海,,,name,陈达海,陈达海 → 堂吉诃德 / Don Quixote [locked],ES,陈达海,堂吉诃德,Don Quixote,implemented,,/characters/372/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-21b959c4930dcb036c45,characters,瓦耳拉齐,,,name,瓦耳拉齐,瓦耳拉齐 → 罗克·吉纳特 / Roque Guinart [proposed],ES,瓦耳拉齐,,,pending,,/characters/373/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-692eeff813205458d788,characters,华辉,,,name,华辉,华辉 → 卡德尼奥 / Cardenio [proposed],ES,华辉,,,pending,,/characters/374/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b8f5b4f74b608f7df5d5,characters,计老人,,,name,计老人,计老人 → 佩罗·佩雷斯神父 / Curate Pero Perez [proposed],ES,计老人,,,pending,,/characters/375/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f6844c74914e3fe57a93,characters,朝廷走狗,,,name,朝廷走狗,朝廷走狗 → 波尔托斯 / Porthos [proposed],FR,朝廷走狗,,,pending,,/characters/376/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-ffa2fd35c5072a268e41,characters,霍青桐,,,name,霍青桐,霍青桐 → 米莱狄 / Milady de Winter [proposed],FR,霍青桐,,,pending,,/characters/377/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-9b15bad3024a810af6f2,characters,张召重,,,name,张召重,张召重 → 罗什福尔 / Rochefort [proposed],"CN,FR",张召重,,,pending,,/characters/378/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-1f01892c79e5db9ad1bd,characters,炼狱张召重,,,name,炼狱张召重,炼狱张召重 → 罗什福尔 / Rochefort [proposed],"CN,FR",张召重,,,pending,,/characters/379/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-0c079635c34e0db16474,characters,陈家洛,,,name,陈家洛,陈家洛 → 达达尼昂 / D'Artagnan [locked],FR,陈家洛,,,pending,,/characters/380/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-0cc365e6da222c817c35,characters,韦小宝,,,name,韦小宝,韦小宝 → 稻草人 / The Scarecrow [locked],"ES,IT,US",韦小宝,,,pending,,/characters/381/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-ffa2fd35c5072a268e41,characters,霍青桐,,,name,霍青桐,霍青桐 → 米莱狄 / Milady de Winter [proposed],FR,霍青桐,米莱狄,Milady de Winter,implemented,,/characters/377/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-9b15bad3024a810af6f2,characters,张召重,,,name,张召重,张召重 → 罗什福尔 / Rochefort [proposed],"CN,FR",张召重,罗什福尔,Rochefort,implemented,,/characters/378/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-1f01892c79e5db9ad1bd,characters,炼狱张召重,,,name,炼狱张召重,炼狱张召重 → 罗什福尔 / Rochefort [proposed],"CN,FR",张召重,罗什福尔,Rochefort,implemented,,/characters/379/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-0c079635c34e0db16474,characters,陈家洛,,,name,陈家洛,陈家洛 → 达达尼昂 / D'Artagnan [locked],FR,陈家洛,达达尼昂,D'Artagnan,implemented,,/characters/380/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-0cc365e6da222c817c35,characters,韦小宝,,,name,韦小宝,韦小宝 → 稻草人 / The Scarecrow [locked],"ES,IT,US",韦小宝,稻草人,The Scarecrow,implemented,,/characters/381/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a20d0c123780fced6a0a,characters,鳌拜,,,name,鳌拜,鳌拜 → 铁皮人 / The Tin Woodman [locked],US,鳌拜,,,pending,,/characters/382/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-31cc5d83fce112cec11a,characters,康熙,,,name,康熙,康熙 → 奥兹大法师 / The Wizard of Oz [locked],US,康熙,,,pending,,/characters/383/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-080c830d0a0af8cc8c3c,characters,柳燕,,,name,柳燕,柳燕 → 杰莉娅·詹姆 / Jellia Jamb [proposed],US,柳燕,,,pending,,/characters/384/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21486,16 +21794,16 @@ copy-69048d27d93d6383d313,characters,太后,,,name,太后,太后 → 西方恶�
 copy-ca14f3773056fe8f90a7,characters,毛东珠,,,name,毛东珠,毛东珠 → 莫姆比 / Mombi [proposed],US,毛东珠,,,pending,,/characters/386/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-27c4d06b04d983102694,characters,胖头陀,,,name,胖头陀,胖头陀 → 长毛人 / The Shaggy Man [proposed],US,胖头陀,,,pending,,/characters/387/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-51715c8340d5250c29e6,characters,瘦头陀,,,name,瘦头陀,瘦头陀 → 提克托克 / Tik-Tok [proposed],US,瘦头陀,,,pending,,/characters/388/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-9d50bad0e2f65bc1c7b7,characters,阿珂,,,name,阿珂,阿珂 → 多萝西·盖尔 / Dorothy Gale [locked],US,阿珂,,,pending,,/characters/389/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a84bb4d9ddcf6d44871b,characters,九难,,,name,九难,九难 → 克娄巴特拉 / Cleopatra [proposed],"EG,US",九难,,,pending,,/characters/390/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-1f5dace3aa5674b77850,characters,苏荃,,,name,苏荃,苏荃 → 格琳达 / Glinda [locked],US,苏荃,,,pending,,/characters/391/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-e792ececb7549042b38e,characters,洪教主,,,name,洪教主,洪教主 → 诺姆王 / The Nome King [proposed],US,洪教主,,,pending,,/characters/392/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-9d50bad0e2f65bc1c7b7,characters,阿珂,,,name,阿珂,阿珂 → 多萝西·盖尔 / Dorothy Gale [locked],US,阿珂,多萝西·盖尔,Dorothy Gale,implemented,,/characters/389/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a84bb4d9ddcf6d44871b,characters,九难,,,name,九难,九难 → 克娄巴特拉 / Cleopatra [proposed],"EG,US",九难,克娄巴特拉,Cleopatra,implemented,,/characters/390/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-1f5dace3aa5674b77850,characters,苏荃,,,name,苏荃,苏荃 → 格琳达 / Glinda [locked],US,苏荃,格琳达,Glinda,implemented,,/characters/391/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-e792ececb7549042b38e,characters,洪教主,,,name,洪教主,洪教主 → 诺姆王 / The Nome King [proposed],US,洪教主,诺姆王,The Nome King,implemented,,/characters/392/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c9b7d86bb0422d26f991,characters,陈圆圆,,,name,陈圆圆,陈圆圆 → 贝茜·鲍宾 / Betsy Bobbin [proposed],US,陈圆圆,,,pending,,/characters/393/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b626bb2f508e699dc211,characters,李自成,,,name,李自成,李自成 → 亚哈船长 / Captain Ahab [proposed],US,李自成,,,pending,,/characters/394/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7b4153e8bb0886327746,characters,吴三桂,,,name,吴三桂,吴三桂 → 无头骑士 / The Headless Horseman [proposed],US,吴三桂,,,pending,,/characters/395/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0c5b0dec276b030af39c,characters,郑克爽,,,name,郑克爽,郑克爽 → 亮纽扣 / Button-Bright [proposed],US,郑克爽,,,pending,,/characters/396/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9d484b7ee4aa8537a571,characters,冯锡范,,,name,冯锡范,冯锡范 → 古夫将军 / General Guph [proposed],US,冯锡范,,,pending,,/characters/397/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-0f0d724528f974c5802d,characters,陈近南,,,name,陈近南,陈近南 → 胆小狮 / The Cowardly Lion [locked],US,陈近南,,,pending,,/characters/398/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-0f0d724528f974c5802d,characters,陈近南,,,name,陈近南,陈近南 → 胆小狮 / The Cowardly Lion [locked],US,陈近南,胆小狮,The Cowardly Lion,implemented,,/characters/398/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d85a01b81ece89ae2ac4,characters,少林小和尚,,,name,少林小和尚,少林小和尚 → 组织成员 / Guild member [classified],NO,少林小和尚,,,pending,,/characters/399/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e6434ac66b14a9f0f44c,characters,方证大师,,,name,方证大师,方证大师 → 唐三藏 / Tang Sanzang [proposed],"CN,NO",方证大师,唐三藏,Tang Sanzang,implemented,,/characters/400/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ffcb640c3e32eb719578,characters,少林禅师,,,name,少林禅师,少林禅师 → 组织成员 / Guild member [classified],NO,少林禅师,,,pending,,/characters/401/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21520,16 +21828,16 @@ copy-3cb1262dbfe0236efb37,characters,何太冲,,,name,何太冲,何太冲 → �
 copy-76cab10b61b90eac89c7,characters,班淑娴,,,name,班淑娴,班淑娴 → 伊索尔德 / Isolde [proposed],GB,班淑娴,,,pending,,/characters/420/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b8ef4d0f22d5730202a8,characters,空性大师,,,name,空性大师,空性大师 → 长约翰·西尔弗 / Long John Silver [proposed],GB,空性大师,,,pending,,/characters/421/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ccf46d89e3b0457c3c87,characters,松鼠洪七公,,,name,松鼠洪七公,松鼠洪七公 → 齐格弗里德 / Siegfried [proposed],DE,洪七公,,,pending,,/characters/422/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-7e4197f2e20f0dcc426e,characters,松鼠乔峰,,,name,松鼠乔峰,松鼠乔峰 → 索尔 / Thor [locked],NO,乔峰,,,pending,,/characters/423/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-4225f683d68f3d934a1d,characters,松鼠郭靖,,,name,松鼠郭靖,松鼠郭靖 → 白雪公主的猎人 / The Huntsman [locked],"DE,ES",郭靖,,,pending,,/characters/424/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-8137265d74caae0fccfb,characters,松鼠黄蓉,,,name,松鼠黄蓉,松鼠黄蓉 → 白雪公主 / Snow White [locked],DE,黄蓉,,,pending,,/characters/425/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-7e4197f2e20f0dcc426e,characters,松鼠乔峰,,,name,松鼠乔峰,松鼠乔峰 → 索尔 / Thor [locked],NO,乔峰,索尔,Thor,implemented,,/characters/423/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-4225f683d68f3d934a1d,characters,松鼠郭靖,,,name,松鼠郭靖,松鼠郭靖 → 白雪公主的猎人 / The Huntsman [locked],"DE,ES",郭靖,白雪公主的猎人,The Huntsman,implemented,,/characters/424/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-8137265d74caae0fccfb,characters,松鼠黄蓉,,,name,松鼠黄蓉,松鼠黄蓉 → 白雪公主 / Snow White [locked],DE,黄蓉,白雪公主,Snow White,implemented,,/characters/425/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9f0a6917c32209c0cde8,characters,松鼠黄裳,,,name,松鼠黄裳,松鼠黄裳 → 花衣魔笛手 / The Pied Piper [proposed],DE,黄裳,,,pending,,/characters/426/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-bca708d68c4cf8f714b6,characters,松鼠风清扬,,,name,松鼠风清扬,松鼠风清扬 → 冢原卜传 / Tsukahara Bokuden [proposed],JP,风清扬,,,pending,,/characters/427/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3274d4c563772004acbf,characters,松鼠独孤求败,,,name,松鼠独孤求败,松鼠独孤求败 → 伊藤一刀斋 / Ito Ittosai [proposed],JP,独孤求败,,,pending,,/characters/428/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d9ccc03e5a005c0f2543,characters,松鼠杨过,,,name,松鼠杨过,松鼠杨过 → 亚瑟王 / King Arthur [locked],"CN,DE,GB",杨过,,,pending,,/characters/429/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-118f4ccfbb9639777687,characters,松鼠令狐冲,,,name,松鼠令狐冲,松鼠令狐冲 → 宫本武藏 / Miyamoto Musashi [locked],"GB,JP",令狐冲,,,pending,,/characters/430/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-f8dfd7ef50bebfcf8e84,characters,松鼠神雕,,,name,松鼠神雕,松鼠神雕 → 狮鹫 / The Griffin [proposed],"CN,GB",神雕,,,pending,,/characters/431/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d15c1427a6206f9ef296,characters,松鼠小龙女,,,name,松鼠小龙女,松鼠小龙女 → 湖中仙女 / The Lady of the Lake [locked],"DE,GB",小龙女,,,pending,,/characters/432/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d9ccc03e5a005c0f2543,characters,松鼠杨过,,,name,松鼠杨过,松鼠杨过 → 亚瑟王 / King Arthur [locked],"CN,DE,GB",杨过,亚瑟王,King Arthur,implemented,,/characters/429/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-118f4ccfbb9639777687,characters,松鼠令狐冲,,,name,松鼠令狐冲,松鼠令狐冲 → 宫本武藏 / Miyamoto Musashi [locked],"GB,JP",令狐冲,宫本武藏,Miyamoto Musashi,implemented,,/characters/430/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-f8dfd7ef50bebfcf8e84,characters,松鼠神雕,,,name,松鼠神雕,松鼠神雕 → 狮鹫 / The Griffin [proposed],"CN,GB",神雕,狮鹫,The Griffin,implemented,,/characters/431/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d15c1427a6206f9ef296,characters,松鼠小龙女,,,name,松鼠小龙女,松鼠小龙女 → 湖中仙女 / The Lady of the Lake [locked],"DE,GB",小龙女,湖中仙女,The Lady of the Lake,implemented,,/characters/432/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-76049b2c4bf34b507f1c,characters,松鼠王重阳,,,name,松鼠王重阳,松鼠王重阳 → 铁汉斯 / Iron John [proposed],DE,王重阳,,,pending,,/characters/433/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-36198140807fd87690c7,characters,松鼠林朝英,,,name,松鼠林朝英,松鼠林朝英 → 白雪王后 / The Queen of Snow White [proposed],DE,林朝英,,,pending,,/characters/434/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e9c9a33fb61e687833ac,characters,松鼠无敌小虾米,,,name,松鼠无敌小虾米,松鼠无敌小虾米 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",小虾米,,,pending,,/characters/435/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21562,12 +21870,12 @@ copy-29d7f3bc27da2325d316,characters,黄裳,,,name,黄裳,黄裳 → 花衣魔�
 copy-3bfe050d3178ccaca037,characters,御虚阁,,,name,御虚阁,御虚阁 → 御虚阁 / Inner pavilion [classified],,御虚阁,,,pending,,/characters/462/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ced561ec0871d6badd4c,characters,烧香坊,,,name,烧香坊,烧香坊 → 烧香坊 / Incense hall [classified],,烧香坊,,,pending,,/characters/463/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8c35f19f7442fae8f125,characters,静念楼,,,name,静念楼,静念楼 → 静念楼 / Quiet hall [classified],,静念楼,,,pending,,/characters/464/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-52867a18c57514d680f5,characters,儿时袁承志,,,name,儿时袁承志,儿时袁承志 → 荷鲁斯 / Horus [locked],"CN,EG,US",袁承志,,,pending,,/characters/465/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-6772dd62ede247ef8f25,characters,崔秋山,,,name,崔秋山,崔秋山 → 舒 / Shu [proposed],"CN,EG",崔秋山,,,pending,,/characters/466/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-52867a18c57514d680f5,characters,儿时袁承志,,,name,儿时袁承志,儿时袁承志 → 荷鲁斯 / Horus [locked],"CN,EG,US",袁承志,荷鲁斯,Horus,implemented,,/characters/465/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-6772dd62ede247ef8f25,characters,崔秋山,,,name,崔秋山,崔秋山 → 舒 / Shu [proposed],"CN,EG",崔秋山,舒,Shu,implemented,,/characters/466/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ac4f6981b836061cae7f,characters,哑仆,,,name,哑仆,哑仆 → 盖布 / Geb [proposed],EG,哑仆,,,pending,,/characters/467/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2a705c54d45e7b6e7c8d,characters,东厂杀手,,,name,东厂杀手,东厂杀手 → 蒙面刺客 / Masked assassin [classified],EG,东厂杀手,,,pending,,/characters/468/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f8f19601b2419c6bf4cf,characters,孙仲寿,,,name,孙仲寿,孙仲寿 → 卜塔 / Ptah [proposed],EG,孙仲寿,,,pending,,/characters/469/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-822bb8e0b4931ed66a09,characters,温青,,,name,温青,温青 → 伊西斯 / Isis [proposed],"EG,US",温青,,,pending,,/characters/470/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-822bb8e0b4931ed66a09,characters,温青,,,name,温青,温青 → 伊西斯 / Isis [proposed],"EG,US",温青,伊西斯,Isis,implemented,,/characters/470/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a7a6ab1e05583701556a,characters,船老大,,,name,船老大,船老大 → 当地居民 / Town resident [classified],EG,船老大,,,pending,,/characters/471/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-213380dca273369e9929,characters,温方达,,,name,温方达,温方达 → 阿蒙 / Amun [proposed],EG,温方达,,,pending,,/characters/472/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9465be946f7b81774fdc,characters,温方义,,,name,温方义,"温方义 → 贝斯 / Bes [proposed]
@@ -21584,12 +21892,12 @@ copy-db1e3ef96be42f14314e,characters,炼狱黄真,,,name,炼狱黄真,炼狱黄�
 copy-6c45db99ee17ef5b82e9,characters,归辛树,,,name,归辛树,归辛树 → 索贝克 / Sobek [proposed],EG,归辛树,,,pending,,/characters/481/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2599a7e2256afad35127,characters,炼狱归辛树,,,name,炼狱归辛树,炼狱归辛树 → 索贝克 / Sobek [proposed],EG,归辛树,,,pending,,/characters/482/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5ec25c364d09ecdd6a1c,characters,归二娘,,,name,归二娘,归二娘 → 塞赫美特 / Sekhmet [proposed],EG,归二娘,,,pending,,/characters/483/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-5c56230a1b34f4dfa90b,characters,炼狱袁承志,,,name,炼狱袁承志,炼狱袁承志 → 荷鲁斯 / Horus [locked],"CN,EG,US",袁承志,,,pending,,/characters/484/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-5c56230a1b34f4dfa90b,characters,炼狱袁承志,,,name,炼狱袁承志,炼狱袁承志 → 荷鲁斯 / Horus [locked],"CN,EG,US",袁承志,荷鲁斯,Horus,implemented,,/characters/484/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-98b51894a16888f79940,characters,玉真子,,,name,玉真子,玉真子 → 赛特 / Set [proposed],EG,玉真子,,,pending,,/characters/485/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-90f50bca655de5a14879,characters,炼狱玉真子,,,name,炼狱玉真子,炼狱玉真子 → 赛特 / Set [proposed],EG,玉真子,,,pending,,/characters/486/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a2393dad222de084b0c5,characters,温正,,,name,温正,温正 → 凯布利 / Khepri [proposed],EG,温正,,,pending,,/characters/487/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6dd65d20973dd9100c6b,characters,炼狱金蛇郎君,,,name,炼狱金蛇郎君,炼狱金蛇郎君 → 奥西里斯 / Osiris [proposed],EG,金蛇郎君,,,pending,,/characters/488/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-1d9fbc738b8fcd53d24b,characters,阿九,,,name,阿九,阿九 → 克娄巴特拉 / Cleopatra [proposed],"EG,US",阿九,,,pending,,/characters/489/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-1d9fbc738b8fcd53d24b,characters,阿九,,,name,阿九,阿九 → 克娄巴特拉 / Cleopatra [proposed],"EG,US",阿九,克娄巴特拉,Cleopatra,implemented,,/characters/489/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d1f5b62ec9c07a4c702e,characters,太监,,,name,太监,太监 → 城堡卫兵 / Castle guard [classified],EG,太监,,,pending,,/characters/490/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-37aad0a72c027e76dae1,characters,崇祯皇帝,,,name,崇祯皇帝,崇祯皇帝 → 拉美西斯二世 / Ramesses II [proposed],EG,崇祯皇帝,,,pending,,/characters/491/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-35e58a44a86efd99c34a,characters,昆仑派弟子,,,name,昆仑派弟子,昆仑派弟子 → 组织成员 / Guild member [classified],CN,昆仑派弟子,,,pending,,/characters/492/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21601,10 +21909,10 @@ copy-ee5cb395f170572b35ee,characters,石清,,,name,石清,石清 → 宙斯 / Ze
 copy-d73bc4508e2f0781c844,characters,石中玉,,,name,石中玉,石中玉 → 赫尔墨斯 / Hermes [proposed],GR,石中玉,,,pending,,/characters/498/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-dfac63c27c30295ee73a,characters,龙岛主,,,name,龙岛主,龙岛主 → 波塞冬 / Poseidon [proposed],GR,龙岛主,,,pending,,/characters/499/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-187ee3b9b8d84ebfe8be,characters,木岛主,,,name,木岛主,木岛主 → 哈迪斯 / Hades [proposed],GR,木岛主,,,pending,,/characters/500/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-69efded728b0e5923210,characters,石破天,,,name,石破天,石破天 → 赫拉克勒斯 / Heracles [locked],GR,石破天,,,pending,,/characters/501/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-805accce7ce527b55453,characters,疯狂石破天,,,name,疯狂石破天,疯狂石破天 → 赫拉克勒斯 / Heracles [locked],GR,石破天,,,pending,,/characters/502/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-69efded728b0e5923210,characters,石破天,,,name,石破天,石破天 → 赫拉克勒斯 / Heracles [locked],GR,石破天,赫拉克勒斯,Heracles,implemented,,/characters/501/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-805accce7ce527b55453,characters,疯狂石破天,,,name,疯狂石破天,疯狂石破天 → 赫拉克勒斯 / Heracles [locked],GR,石破天,赫拉克勒斯,Heracles,implemented,,/characters/502/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1c8ac3231f0cab140ad9,characters,谢烟客,,,name,谢烟客,谢烟客 → 喀戎 / Chiron [proposed],GR,谢烟客,,,pending,,/characters/503/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-915dab76ebd87648f594,characters,白自在,,,name,白自在,白自在 → 阿瑞斯 / Ares [proposed],GR,白自在,,,pending,,/characters/504/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-915dab76ebd87648f594,characters,白自在,,,name,白自在,白自在 → 阿瑞斯 / Ares [proposed],GR,白自在,阿瑞斯,Ares,implemented,,/characters/504/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7514ce535d2b41e6e770,characters,血刀弟子,,,name,血刀弟子,血刀弟子 → 组织成员 / Guild member [classified],RO,血刀弟子,,,pending,,/characters/505/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ac05ff6edf569502fbd9,characters,宝象,,,name,宝象,宝象 → 亚瑟·霍姆伍德 / Arthur Holmwood [proposed],RO,宝象,,,pending,,/characters/506/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b4f65d10043d324373e8,characters,胜谛,,,name,胜谛,胜谛 → 格雷乌切亚努 / Greuceanu [proposed],RO,胜谛,格雷乌切亚努,Greuceanu,implemented,,/characters/507/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21646,7 +21954,7 @@ copy-a476c418c2561b5e8d51,externalSkills,三分剑法,,,description,,,,三分剑
 copy-0f8db3cc2f8f40340040,externalSkills,草原刀法,,,name,,,,草原刀法,草原弯刀术,Prairie Saber Arts,implemented,,/externalSkills/11/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-770932e370c0ae69552c,externalSkills,草原刀法,,,description,,,,游牧民族的刀法精髓,草原旅人讲求实用的弯刀技艺。,Open-country heavy weapon skills with a traveler's sense of economy.,implemented,,/externalSkills/11/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-dc80e23913d8e9249281,externalSkills,天山掌法,,,name,,,,天山掌法,霜掌击,Frostpalm Strike,implemented,,/externalSkills/12/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-83cad5f096bd6c01decf,externalSkills,天山掌法,,,description,,,,灵鹫宫的入门掌法,来自山间学派的符术，实际参数见技能面板。,A mountain-school gauntlets technique. Its live parameters are shown in the skill panel.,implemented,,/externalSkills/12/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-83cad5f096bd6c01decf,externalSkills,天山掌法,,,description,,,,灵鹫宫的入门掌法,来自山间学派的拳套战技。威力、消耗和距离见技能面板。,"A mountain-school gauntlet technique. Power, cost and reach are shown in the skill panel.",implemented,,/externalSkills/12/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9c8e1a7bc1f009b3845a,externalSkills,天山掌法,,,name,,,,伪生死符,,,pending,,/externalSkills/12/formSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-da723ba798745dd82b24,externalSkills,天山掌法,,,description,,,,灵鹫宫普通弟子行走江湖吓唬人的,,,pending,,/externalSkills/12/formSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-98fbcc7d4fdc4c6e0e0f,externalSkills,飘雪穿云掌,,,name,,,,飘雪穿云掌,云涌掌法,Cloudburst Palm,implemented,,/externalSkills/13/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21654,7 +21962,7 @@ copy-2e660217fcb95ca108dc,externalSkills,飘雪穿云掌,,,description,,,,峨眉
 copy-1dfbbe4ce41b1bf3a393,externalSkills,飘雪穿云掌,,,name,,,,飘雪穿云掌.雪漫金山,,,pending,,/externalSkills/13/formSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fbad8e70b5286b4f4550,externalSkills,飘雪穿云掌,,,description,,,,飘雪穿云，雪漫金山,,,pending,,/externalSkills/13/formSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-886910f00407d24bcd4b,externalSkills,天罗地网掌,,,name,,,,天罗地网掌,缚网掌法,Binding Palm,implemented,,/externalSkills/14/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-b1414e4d2b339b14a19f,externalSkills,天罗地网掌,,,description,,,,古墓派轻灵飘逸的掌法,以交织手法施展的攻击咒法，距离和消耗见面板。,A woven pattern of gauntlets strikes. Check the panel for range and cost.,implemented,,/externalSkills/14/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b1414e4d2b339b14a19f,externalSkills,天罗地网掌,,,description,,,,古墓派轻灵飘逸的掌法,以交织手法施展的拳套攻击，距离和消耗见面板。,A woven pattern of gauntlet strikes. Check the panel for range and cost.,implemented,,/externalSkills/14/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c1c719564c693d0c751f,externalSkills,天罗地网掌,,,name,,,,天罗地网掌.彩翼双飞,,,pending,,/externalSkills/14/formSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-83a5de641b09b5440e46,externalSkills,天罗地网掌,,,description,,,,杨过、小龙女自由发挥的天罗地网绝技,,,pending,,/externalSkills/14/formSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9e3685404734a3d3fcb7,externalSkills,华山剑法,,,name,,,,华山剑法,鹤翼剑术,Crane-wing Swordplay,implemented,,/externalSkills/15/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21674,7 +21982,7 @@ copy-ec676afbb5530a8548f4,externalSkills,蛇鹤八打,,,description,,,,云中鹤
 copy-443662914f0bcf72d9d0,externalSkills,雷震剑法,,,name,,,,雷震剑法,雷锋剑术,Thunderedge Swordplay,implemented,,/externalSkills/20/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-19378c66078b44452c63,externalSkills,雷震剑法,,,description,,,,雷震剑法,果断迅捷的剑术，实际伤害参数见技能面板。,Decisive sword strokes. The skill panel shows the actual damage parameters.,implemented,,/externalSkills/20/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0bca38576593b9af1e84,externalSkills,大嵩阳手,,,name,,,,大嵩阳手,晨光拳,Sunwake Fist,implemented,,/externalSkills/21/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-2cfb601c25334fd1e9d1,externalSkills,大嵩阳手,,,description,,,,嵩山派武功,有力的符术，施展前查看亲和与消耗。,A forceful gauntlets technique. Check its affinity and cost before casting.,implemented,,/externalSkills/21/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-2cfb601c25334fd1e9d1,externalSkills,大嵩阳手,,,description,,,,嵩山派武功,有力的拳套战技，使用前查看亲和与消耗。,A forceful gauntlet technique. Check its affinity and cost before using it.,implemented,,/externalSkills/21/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-36fd61224d68076a9b69,externalSkills,大嵩阳手,,,name,,,,大嵩阳手.嵩阳神掌,,,pending,,/externalSkills/21/formSkills/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9e2a971f2f3ba3916ccd,externalSkills,大嵩阳手,,,description,,,,亡命的一击,,,pending,,/externalSkills/21/formSkills/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8b947b6d4726cc5beb6e,externalSkills,百花错拳,,,name,,,,百花错拳,花雨拳,Petalstorm Fist,implemented,,/externalSkills/22/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21692,15 +22000,15 @@ copy-4fa209507e90188f0aaa,externalSkills,毒龙鞭法,,,description,,,,歹毒的
 copy-1068b9b339dc81bfe510,externalSkills,流星锤,,,name,,,,流星锤,陨星符术,Meteor Sigil,implemented,,/externalSkills/26/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9a9f4a78565d0a8c8d4c,externalSkills,流星锤,,,description,,,,流星锤,法术技能。实际威力、目标范围、消耗与效果见技能面板。,"An arcane spell. Its existing power, targeting, cost and effects are listed in the skill panel.",implemented,,/externalSkills/26/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-4b418a54ec99ec777e58,externalSkills,伏虎掌,,,name,,,,伏虎掌,岩爪击,Stoneclaw Strike,implemented,,/externalSkills/27/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-f54a07e20690137ac921,externalSkills,伏虎掌,,,description,,,,华山派粗浅的拳掌功夫,发力沉稳的攻击符术。,Firmly grounded gauntlets strikes.,implemented,,/externalSkills/27/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-f54a07e20690137ac921,externalSkills,伏虎掌,,,description,,,,华山派粗浅的拳掌功夫,发力沉稳的拳套攻击。,Firmly grounded gauntlet strikes.,implemented,,/externalSkills/27/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a83ba18e1f9a14e02308,externalSkills,韦陀棍,,,name,,,,韦陀棍,守门脉冲,Gatekeeper's Pulse,implemented,,/externalSkills/28/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ec59dae7f2cc96d7ce0a,externalSkills,韦陀棍,,,description,,,,少林十三棍，威震天下,法术技能。实际威力、目标范围、消耗与效果见技能面板。,"An arcane spell. Its existing power, targeting, cost and effects are listed in the skill panel.",implemented,,/externalSkills/28/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3aac2d05b12acd30ff3e,externalSkills,小洪拳,,,name,,,,小洪拳,学徒直拳,Apprentice Jab,implemented,,/externalSkills/29/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-c493d2195ec5cf0e8dfd,externalSkills,小洪拳,,,description,,,,南少林武功和洪熙官有什么关系？,入门符术，实际威力和消耗见技能面板。,A beginner's gauntlets technique. Consult the panel for its actual power and cost.,implemented,,/externalSkills/29/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-c493d2195ec5cf0e8dfd,externalSkills,小洪拳,,,description,,,,南少林武功和洪熙官有什么关系？,入门拳套战技，实际威力和消耗见技能面板。,A beginner's gauntlet technique. Consult the panel for its actual power and cost.,implemented,,/externalSkills/29/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1231f955247144ad32bd,externalSkills,绵掌,,,name,,,,绵掌,柔风掌法,Softwind Palm,implemented,,/externalSkills/30/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d287d293b2229e615ab6,externalSkills,绵掌,,,description,,,,武当派扎实的基本武功，柔中带刚,经由反复练习掌握的流动符术。,Flowing gauntlets practiced through careful repetition.,implemented,,/externalSkills/30/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d287d293b2229e615ab6,externalSkills,绵掌,,,description,,,,武当派扎实的基本武功，柔中带刚,经由反复练习掌握的连贯拳套技艺。,Flowing gauntlet strikes practiced through careful repetition.,implemented,,/externalSkills/30/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-019d6a3025d886511bd8,externalSkills,参合指,,,name,,,,参合指,针锋指击,Needlepoint Strike,implemented,,/externalSkills/31/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-9edda4ef2f404faee85a,externalSkills,参合指,,,description,,,,姑苏慕容氏的指法,凝聚力量的符术攻击，施展前查看目标距离。,A concentrated gauntlets strike. Check its target range before casting.,implemented,,/externalSkills/31/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-9edda4ef2f404faee85a,externalSkills,参合指,,,description,,,,姑苏慕容氏的指法,凝聚力量的拳套攻击，使用前查看目标距离。,A concentrated gauntlet strike. Check its target range before using it.,implemented,,/externalSkills/31/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f9aea0c3cc093f555d14,externalSkills,八卦游身掌,,,name,,,,八卦游身掌,环步拳,Circle Step,implemented,,/externalSkills/32/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2c9f7dc428e1b7d56611,externalSkills,八卦游身掌,,,description,,,,八卦门的掌系绝学。,主动拳套技能。实际范围、能量消耗与等级加成见技能详情。,"An active gauntlet skill. Check its range, energy cost, and rank bonuses in the skill details.",implemented,,/externalSkills/32/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5c313f48190042ffb6eb,externalSkills,八卦刀法,,,name,,,,八卦刀法,交叉重斩,Crosscut,implemented,,/externalSkills/33/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24184,8 +24492,8 @@ copy-521cc43a4a6897f0cf6e,items,斗转星移诀,,,name,,,,斗转星移诀,星落
 copy-45ce114db27a88b8dc59,items,斗转星移诀,,,description,,,,姑苏慕容氏家传武功。,记载星落秘术的卷轴。学习条件与实际效果见道具详情。,Training scroll for Starfall Shift. Check its requirements and current effects in the item details.,implemented,,/items/239/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-dedc8740aa7fabcac06f,items,斗转星移心得,,,name,,,,斗转星移心得,星落秘术卷轴,Starfall Shift Scroll,implemented,,/items/240/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-405e073882a0b43ca9b5,items,斗转星移心得,,,description,,,,姑苏慕容氏家传武功。,记载星落秘术的卷轴。学习条件与实际效果见道具详情。,Training scroll for Starfall Shift. Check its requirements and current effects in the item details.,implemented,,/items/240/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-2e4e2c726c2434a47433,items,金蛇剑法秘籍残篇,,,name,,,,金蛇剑法秘籍残篇,金蛇剑术卷轴,Golden Serpent Sword Scroll,implemented,,/items/241/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-f254b0bc225148e8032b,items,金蛇剑法秘籍残篇,,,description,,,,金蛇郎君纵横天下的剑法秘籍，不过似乎最后少了几页,记载金蛇剑术的卷轴。学习条件与实际效果见道具详情。,Training scroll for Golden Serpent Sword. Check its requirements and current effects in the item details.,implemented,,/items/241/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-2e4e2c726c2434a47433,items,金蛇剑法秘籍残篇,,,name,,,,金蛇剑法秘籍残篇,金蛇剑术残页,Golden Serpent Sword Fragment,implemented,,/items/241/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-f254b0bc225148e8032b,items,金蛇剑法秘籍残篇,,,description,,,,金蛇郎君纵横天下的剑法秘籍，不过似乎最后少了几页,金蛇剑术卷轴的残页。使用条件与效果见道具详情。,A fragment of the Golden Serpent Sword scroll. Check its requirements and effects in the item details.,implemented,,/items/241/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3f1f19ed04c3f38fe520,items,金蛇游身掌掌谱,,,name,,,,金蛇游身掌掌谱,金蛇拳卷轴,Golden Serpent Fist Scroll,implemented,,/items/242/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-317e308e75ad7e121428,items,金蛇游身掌掌谱,,,description,,,,记载了金蛇游身掌36式,记载金蛇拳的卷轴。学习条件与实际效果见道具详情。,Training scroll for Golden Serpent Fist. Check its requirements and current effects in the item details.,implemented,,/items/242/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8ba518b8cf7dc5d7fb9f,items,破玉拳秘籍,,,name,,,,破玉拳秘籍,碎玉拳卷轴,Gemshatter Fist Scroll,implemented,,/items/243/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24488,16 +24796,16 @@ copy-ed1244e482fc7c8a6b9c,talents,八卦阵,,,name,,,,八卦阵,,,pending,,/tale
 copy-eb3cc5ada455890e6a8a,talents,八卦阵,,,description,,,,腾挪移遁的高明阵法，当自己收到伤害时，将80%的伤害转移给范围内一名随机队友。,,,pending,,/talents/11/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-bc2bae9028c253c85592,talents,刀封印,,,name,,,,刀封印,,,pending,,/talents/12/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-94c86168a2355945515a,talents,刀封印,,,description,,,,攻击一定概率造成刀封印效果。,,,pending,,/talents/12/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-43870baf903a988efb66,talents,刀法增益,,,name,,,,刀法增益,,,pending,,/talents/13/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-b7f846e9fdeadff14186,talents,刀法增益,,,description,,,,刀法威力增加5%。,,,pending,,/talents/13/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-43870baf903a988efb66,talents,刀法增益,,,name,,,,刀法增益,重武器亲和,Heavy Weapon Affinity,implemented,,/talents/13/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b7f846e9fdeadff14186,talents,刀法增益,,,description,,,,刀法威力增加5%。,重武器熟练乘以1.05。,Heavy Weapons proficiency is multiplied by 1.05.,implemented,,/talents/13/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a00372edd5f677dfe987,talents,刀系装备,,,name,,,,刀系装备,重武器媒介,Heavy Weapons Focus,implemented,,/talents/14/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1ea12a3d11a57fcd5c84,talents,刀系装备,,,description,,,,使用刀法以外的武功，有伤害减益。,使用此媒介时，非重武器技能造成90%的伤害。,Non-Heavy Weapons techniques deal 90% damage while using this focus.,implemented,,/talents/14/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b54af83f0a0ff21cb7a4,talents,刚柔并济,,,name,,,,刚柔并济,,,pending,,/talents/15/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-cb0c3dba9a088ace3ab9,talents,刚柔并济,,,description,,,,略微提高武当派所有武学威力。,,,pending,,/talents/15/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-424fa8521c6261cac971,talents,剑封印,,,name,,,,剑封印,,,pending,,/talents/16/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-95e46f9f4334241cf40b,talents,剑封印,,,description,,,,攻击一定概率造成剑封印效果。,,,pending,,/talents/16/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-dd4989dc588b31c636d6,talents,剑法增益,,,name,,,,剑法增益,,,pending,,/talents/17/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-b15cd4cbeb2d02f7bbea,talents,剑法增益,,,description,,,,剑法威力增加5%。,,,pending,,/talents/17/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-dd4989dc588b31c636d6,talents,剑法增益,,,name,,,,剑法增益,剑术亲和,Sword Affinity,implemented,,/talents/17/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b15cd4cbeb2d02f7bbea,talents,剑法增益,,,description,,,,剑法威力增加5%。,剑术熟练乘以1.05。,Swordsmanship proficiency is multiplied by 1.05.,implemented,,/talents/17/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0b5b729091bc7a17b224,talents,剑系装备,,,name,,,,剑系装备,剑术媒介,Sword Focus,implemented,,/talents/18/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c16ac7d4c45e00ab386b,talents,剑系装备,,,description,,,,使用剑法以外的武功，有伤害减益。,使用此媒介时，非剑术技能造成90%的伤害。,Non-Swordsmanship techniques deal 90% damage while using this focus.,implemented,,/talents/18/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2e009a30fc5c95017bff,talents,化功大法,,,name,,,,化功大法,,,pending,,/talents/19/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24548,16 +24856,16 @@ copy-068a481e451f398eab36,talents,奇门装备,,,name,,,,奇门装备,法术媒�
 copy-eef9c43406417b114154,talents,奇门装备,,,description,,,,使用奇门以外的武功，有伤害减益。,使用此媒介时，非法术技能造成90%的伤害。,Non-Spells techniques deal 90% damage while using this focus.,implemented,,/talents/40/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c837dbdf45c822246b12,talents,奇门遁甲,,,name,,,,奇门遁甲,,,pending,,/talents/41/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-58c7f75188182d034436,talents,奇门遁甲,,,description,,,,擅长奇门五行之术，增加9%的闪避概率，极大的增加自己的攻击命中率。,,,pending,,/talents/41/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-6ecf2f20619fd402bda6,talents,奋战,,,name,,,,奋战,,,pending,,/talents/42/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-252a5fba2bbb500132ae,talents,奋战,,,description,,,,浴血奋战，战斗力随着血量减少大幅度提高。,,,pending,,/talents/42/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-6ecf2f20619fd402bda6,talents,奋战,,,name,,,,奋战,背水奋战,Last Stand,implemented,,/talents/42/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-252a5fba2bbb500132ae,talents,奋战,,,description,,,,浴血奋战，战斗力随着血量减少大幅度提高。,生命不高于30%时，攻击力与暴击率乘以1.5。不与异乡来客叠加。,"At 30% Health or less, attack and critical chance are multiplied by 1.5. Does not stack with Otherworlder.",implemented,,/talents/42/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-782e2e08f5d2f2ba9693,talents,好色,,,name,,,,好色,分心的风流客,Distractible Charmer,implemented,,/talents/43/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9cc9c9ef537be91d24bc,talents,好色,,,description,,,,见一个爱一个。对女性的攻击力提高，防御力降低。,面对女性对手时，攻击乘以1.2；承受其攻击时，防御乘以0.8。,Against female opponents: attack is multiplied by 1.2; defense against them by 0.8.,implemented,,/talents/43/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8db4cfdd34334c64dc0c,talents,妙手仁心,,,name,,,,妙手仁心,,,pending,,/talents/44/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c6e62b1dd95817a86357,talents,妙手仁心,,,description,,,,对药物属性了如指掌，使用药物无CD。,,,pending,,/talents/44/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3f6aa8377b4efa044c57,talents,孤独求败,,,name,,,,孤独求败,,,pending,,/talents/45/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3f0c59050691db3a63d4,talents,孤独求败,,,description,,,,站在武林巅峰，几乎洞悉一切敌人的弱点。,,,pending,,/talents/45/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-363c29ad3395d13f8b70,talents,宝甲,,,name,,,,宝甲,,,pending,,/talents/46/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-96e34f8ef18c5dcd17b8,talents,宝甲,,,description,,,,穿上这护身宝甲就觉着安全。受到的伤害减少5%。,,,pending,,/talents/46/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-363c29ad3395d13f8b70,talents,宝甲,,,name,,,,宝甲,守护护甲,Warded Armor,implemented,,/talents/46/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-96e34f8ef18c5dcd17b8,talents,宝甲,,,description,,,,穿上这护身宝甲就觉着安全。受到的伤害减少5%。,承受的技能伤害乘以0.95。,Incoming technique damage is multiplied by 0.95.,implemented,,/talents/46/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d2f23342a9503a016032,talents,寒冰真气,,,name,,,,寒冰真气,,,pending,,/talents/47/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-eb1328571fd4c0b681dd,talents,寒冰真气,,,description,,,,攻击有一定概率附加重度麻痹效果。,,,pending,,/talents/47/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-18acf1dfd163041dca09,talents,寸长寸强,,,name,,,,寸长寸强,,,pending,,/talents/48/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24570,8 +24878,8 @@ copy-4a98ae1860e79222f26d,talents,峨眉宗师,,,name,,,,峨眉宗师,,,pending,
 copy-98cb0799755fc7921466,talents,峨眉宗师,,,description,,,,郭襄专属天赋，大幅度提高与峨眉派及郭襄相关武学威力。,,,pending,,/talents/51/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-39503512d5914f793178,talents,左右互搏,,,name,,,,左右互搏,,,pending,,/talents/52/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9618d6ec54f3dd68595e,talents,左右互搏,,,description,,,,周伯通原汁原味的左右互搏之术，每回合攻击较高几率造成两次伤害。,,,pending,,/talents/52/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a5208c6a5ab4e6f2abb7,talents,左手剑,,,name,,,,左手剑,,,pending,,/talents/53/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d7affa651b4186c42a4b,talents,左手剑,,,description,,,,什么？你说用右手？？增加伤害5%，降低暴击概率2%。,,,pending,,/talents/53/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a5208c6a5ab4e6f2abb7,talents,左手剑,,,name,,,,左手剑,左手战法,Left-Handed Style,implemented,,/talents/53/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d7affa651b4186c42a4b,talents,左手剑,,,description,,,,什么？你说用右手？？增加伤害5%，降低暴击概率2%。,攻击力乘以1.05，暴击率降低2个百分点。,Attack is multiplied by 1.05; critical chance is reduced by 2 percentage points.,implemented,,/talents/53/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f4a4019fa78ecdb5cb02,talents,幽居,,,name,,,,幽居,静修,Quiet Practice,implemented,,/talents/54/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-902f884696172ae4e20b,talents,幽居,,,description,,,,随着等级逐步提升，提高多重攻击的概率。,随等级提高，增加多重攻击的触发概率。,The chance of additional strikes improves with level.,implemented,,/talents/54/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3c4bd8c4cd70224edae1,talents,异世人,,,name,,,,异世人,异乡来客,Otherworlder,implemented,,/talents/55/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24594,8 +24902,8 @@ copy-ed86ccee740c1777627b,talents,我就是神,,,name,,,,我就是神,,,pending,
 copy-97847c9c1acc9615150a,talents,我就是神,,,description,,,,每场战斗的第一次【无尽斗志】必定判定成功。,,,pending,,/talents/63/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-315f41931b8931461515,talents,我是疯子,,,name,,,,我是疯子,,,pending,,/talents/64/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e86fdf32f2d79318558b,talents,我是疯子,,,description,,,,逆运自身内功，所有造成的不良状态随机增加0-2的不良状态程度和持续时间。,,,pending,,/talents/64/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-c2b9473f0b72d6f69cef,talents,拳掌增益,,,name,,,,拳掌增益,,,pending,,/talents/65/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-3ca840103c40dd29bb75,talents,拳掌增益,,,description,,,,拳掌威力增加5%。,,,pending,,/talents/65/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-c2b9473f0b72d6f69cef,talents,拳掌增益,,,name,,,,拳掌增益,拳套亲和,Gauntlet Affinity,implemented,,/talents/65/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-3ca840103c40dd29bb75,talents,拳掌增益,,,description,,,,拳掌威力增加5%。,拳套熟练乘以1.05。,Gauntlets proficiency is multiplied by 1.05.,implemented,,/talents/65/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-4a60823a68ab9f2f849e,talents,拳掌封印,,,name,,,,拳掌封印,,,pending,,/talents/66/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-bc9c61c3f63b724f2e42,talents,拳掌封印,,,description,,,,攻击一定概率造成拳掌封印效果。,,,pending,,/talents/66/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6bf58ad8406a51c98f58,talents,拳系装备,,,name,,,,拳系装备,拳套媒介,Gauntlets Focus,implemented,,/talents/67/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24620,8 +24928,8 @@ copy-4e565d623bfa28333b99,talents,易筋伐髓,,,name,,,,易筋伐髓,,,pending,
 copy-d2ccfa9feedc68038f4a,talents,易筋伐髓,,,description,,,,达摩菩提专属天赋，增加少林派武学威力。,,,pending,,/talents/76/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-28ff9580f75ea88a04ae,talents,普照,,,name,,,,普照,,,pending,,/talents/77/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-63cd7bd4a5f8b4928f1b,talents,普照,,,description,,,,由自身强大的佛法向自己及身边队友进行治疗。,,,pending,,/talents/77/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-f8c4f72cd60c5624068d,talents,暴躁,,,name,,,,暴躁,,,pending,,/talents/78/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-780ee627a1347110556a,talents,暴躁,,,description,,,,火爆脾气，更容易受到致命一击，也更容易在战斗中获得怒气。,,,pending,,/talents/78/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-f8c4f72cd60c5624068d,talents,暴躁,,,name,,,,暴躁,暴脾气,Hotheaded,implemented,,/talents/78/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-780ee627a1347110556a,talents,暴躁,,,description,,,,火爆脾气，更容易受到致命一击，也更容易在战斗中获得怒气。,受击时更容易获得怒气，但敌人对你的暴击率增加10个百分点。,"Gain Rage more readily when hit, but enemies gain 10 percentage points of critical chance against you.",implemented,,/talents/78/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-65d87b7ad9cda2c5c6b6,talents,木婉清的眷恋,,,name,,,,木婉清的眷恋,,,pending,,/talents/79/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6feb4da581bb5ec15cce,talents,木婉清的眷恋,,,description,,,,木婉清出场的情况下，提升段誉所有武学的威力。,,,pending,,/talents/79/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9177e48608c1ad3e5991,talents,武学奇才,,,name,,,,武学奇才,,,pending,,/talents/80/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24670,14 +24978,14 @@ copy-f2e9eecd27e9f5978e3d,talents,百足之虫,,,name,,,,百足之虫,,,pending,
 copy-ef6b00bbeed2fac2bdf5,talents,百足之虫,,,description,,,,百足之虫，即使战至垂死也有概率毅立不倒。,,,pending,,/talents/101/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-60b5ff8c3526f1d661ef,talents,真武七截阵,,,name,,,,真武七截阵,,,pending,,/talents/102/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-287840d18c7ad47ae92d,talents,真武七截阵,,,description,,,,武当派镇派绝技，威力可敌六十四位当世高手！(50%几率为队友挡刀，一定几率增强攻击杀伤力),,,pending,,/talents/102/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-09f26f17d0ae509121e1,talents,真气护体,,,name,,,,真气护体,,,pending,,/talents/103/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-8725d9dd50745e857d30,talents,真气护体,,,description,,,,真气充盈在身体四周，即使受到致命伤害也可化解。50%概率在濒死时将受到伤害转为扣减内力。,,,pending,,/talents/103/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-09f26f17d0ae509121e1,talents,真气护体,,,name,,,,真气护体,能量护盾,Energy Ward,implemented,,/talents/103/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-8725d9dd50745e857d30,talents,真气护体,,,description,,,,真气充盈在身体四周，即使受到致命伤害也可化解。50%概率在濒死时将受到伤害转为扣减内力。,受到致命伤害时，有50%概率改为消耗能量以避免倒下，每点伤害消耗2能量。,"A 50% chance to prevent defeat by spending Energy instead of taking lethal damage, at 2 Energy per damage.",implemented,,/talents/103/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1c795133872af561cfb1,talents,破甲,,,name,,,,破甲,,,pending,,/talents/104/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-bc0c543ef5506340c17f,talents,破甲,,,description,,,,攻击有一定概率忽视对方一定数额护甲。,,,pending,,/talents/104/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-89e7c0ebe493f566dc37,talents,碎裂的怒吼,,,name,,,,碎裂的怒吼,,,pending,,/talents/105/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-30ef115c0a447417bc14,talents,碎裂的怒吼,,,description,,,,惊天怒吼，施放奥义时一定概率造成周围敌人晕眩。,,,pending,,/talents/105/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-c4e493348f265b051470,talents,神兵,,,name,,,,神兵,,,pending,,/talents/106/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-1167b501ea14f917adfa,talents,神兵,,,description,,,,这把武器锋芒锐利的紧。伤害增加5%。,,,pending,,/talents/106/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-c4e493348f265b051470,talents,神兵,,,name,,,,神兵,利刃,Keen Edge,implemented,,/talents/106/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-1167b501ea14f917adfa,talents,神兵,,,description,,,,这把武器锋芒锐利的紧。伤害增加5%。,攻击力乘以1.05。,Attack is multiplied by 1.05.,implemented,,/talents/106/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ac7e5c669d6fe489bc20,talents,神拳无敌,,,name,,,,神拳无敌,,,pending,,/talents/107/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-249455cd49241435a9b0,talents,神拳无敌,,,description,,,,对拳法的掌握达到入微的境界，提升拳法类伤害，并提升铁拳无双发动概率。,,,pending,,/talents/107/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9a3b9ef5e630a157605a,talents,神经病,,,name,,,,神经病,冒进之心,Reckless Spirit,implemented,,/talents/108/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24692,8 +25000,8 @@ copy-3d868cae4032d57056e9,talents,精明,,,name,,,,精明,,,pending,,/talents/11
 copy-87eb2839ac74dbdb6eed,talents,精明,,,description,,,,心思缜密，回避致命伤害。提升暴击概率，一定概率将受到的伤害强制降为500点，多余伤害转化为内力伤害。,,,pending,,/talents/112/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d40b3d84b304e987b39c,talents,素心神剑,,,name,,,,素心神剑,,,pending,,/talents/113/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-639cf951a3ec38253c1f,talents,素心神剑,,,description,,,,小龙女由于机缘巧合所领悟的左右互搏之术，每回合攻击一定几率造成两次伤害。,,,pending,,/talents/113/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-6d526d2424c2c684208b,talents,老江湖,,,name,,,,老江湖,,,pending,,/talents/114/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-03e09f3f8d152c23b4b6,talents,老江湖,,,description,,,,这位老江湖很沉稳，降低攻击上限，提高攻击下限。,,,pending,,/talents/114/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-6d526d2424c2c684208b,talents,老江湖,,,name,,,,老江湖,老练战士,Seasoned Fighter,implemented,,/talents/114/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-03e09f3f8d152c23b4b6,talents,老江湖,,,description,,,,这位老江湖很沉稳，降低攻击上限，提高攻击下限。,攻击下限乘以1.2，上限乘以0.9。,Attack's lower bound is multiplied by 1.2 and its upper bound by 0.9.,implemented,,/talents/114/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b1e14ec6ea10284aec19,talents,自我主义,,,name,,,,自我主义,利己之心,Self-Interest,implemented,,/talents/115/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b4932523773182538e72,talents,自我主义,,,description,,,,为了达到目的，不管队友死活。降低所有场上队友能力，提高自己能力，俗称坑队友。坑得越多，自己越强。,根据己方人数提高自身攻击，同时削弱其他队友的战斗能力。,Gains attack from the number of allied units while reducing other allies' fighting strength.,implemented,,/talents/115/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-155c1d9f3dc282feef42,talents,臭叫花,,,name,,,,臭叫花,,,pending,,/talents/116/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24754,8 +25062,8 @@ copy-1660012818aa82cbee23,talents,锐眼,,,name,,,,锐眼,锐目,Keen Eye,implem
 copy-b81ef328d86e603f5481,talents,锐眼,,,description,,,,哼！我看到了真相！增加命中率。,提高命中率。,Improves accuracy.,implemented,,/talents/141/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-46abd1141ba3f33d1d49,talents,长平公主的眷恋,,,name,,,,长平公主的眷恋,,,pending,,/talents/142/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d7c211f13994614d7217,talents,长平公主的眷恋,,,description,,,,长平公主阿九魂牵梦绕的眷恋，提升袁承志所有武学的威力。,,,pending,,/talents/142/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-8093fd245d0fc18d57b6,talents,阉人,,,name,,,,阉人,,,pending,,/talents/143/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-ffed02858e08881ed114,talents,阉人,,,description,,,,已经去“势”，内力消耗增大，使用葵花宝典、辟邪剑法必定暴击。,,,pending,,/talents/143/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-8093fd245d0fc18d57b6,talents,阉人,,,name,,,,阉人,净身者,Eunuch,implemented,,/talents/143/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-ffed02858e08881ed114,talents,阉人,,,description,,,,已经去“势”，内力消耗增大，使用葵花宝典、辟邪剑法必定暴击。,增加能量消耗。使用向日葵专精和夜刃剑术时必定暴击。,Increases Energy costs. Sunflower Mastery and Nightblade Sword always score critical hits.,implemented,,/talents/143/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fd134e763f57c11f8d55,talents,阴毒,,,name,,,,阴毒,毒术,Venomcraft,implemented,,/talents/144/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-820f15c5e6acba3c5e2c,talents,阴毒,,,description,,,,随着等级逐步提升，提高对中毒的敌人的伤害。,随等级提高，增加对中毒敌人的伤害。,Damage against poisoned enemies improves with level.,implemented,,/talents/144/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-08061996e737491b5969,talents,阴谋家,,,name,,,,阴谋家,,,pending,,/talents/145/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24774,8 +25082,8 @@ copy-b3abb3e9a802eb744e70,talents,鬼魅,,,name,,,,鬼魅,,,pending,,/talents/15
 copy-1a8210b3512e4968434e,talents,鬼魅,,,description,,,,像鬼魅一样身形飘忽不定，集气速度突破极限。且不受任何状态影响。,,,pending,,/talents/151/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3d16dd774e3dc087784a,talents,魔神降临,,,name,,,,魔神降临,,,pending,,/talents/152/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3fa67f71f91d8393b266,talents,魔神降临,,,description,,,,每回合有一定概率变身为恐怖的魔神。,,,pending,,/talents/152/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-92903402c9e1eac99480,talents,鲁莽,,,name,,,,鲁莽,,,pending,,/talents/153/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-b614bcd302c1c2d33fdd,talents,鲁莽,,,description,,,,勇气和鲁莽往往只有一线之隔。伤害增加6%，受到的伤害增加10%。,,,pending,,/talents/153/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-92903402c9e1eac99480,talents,鲁莽,,,name,,,,鲁莽,鲁莽冲锋,Reckless Charge,implemented,,/talents/153/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-b614bcd302c1c2d33fdd,talents,鲁莽,,,description,,,,勇气和鲁莽往往只有一线之隔。伤害增加6%，受到的伤害增加10%。,攻击力乘以1.06，承受的技能伤害乘以1.1。,Attack is multiplied by 1.06; incoming technique damage by 1.1.,implemented,,/talents/153/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-244a66083a4357588938,talents,鲲跃北溟,,,name,,,,鲲跃北溟,,,pending,,/talents/154/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-cf92bece16c97e34947f,talents,鲲跃北溟,,,description,,,,攻击有50%概率吸取对手内力。,,,pending,,/talents/154/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-013ddba1cc293640e787,talents,鹿鼎.一等鹿鼎公,,,name,,,,鹿鼎.一等鹿鼎公,,,pending,,/talents/155/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3

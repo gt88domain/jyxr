@@ -1,5 +1,12 @@
 {
-  "sourceCommit": "79246da8482ba30c42ce4e1fb1130cf08904518a",
-  "atlasSha256": "c7cb728cc9e39b486f0263fce72ddf8185e9dcf421de17b48a4d4f2c01ab14a7",
+  "sourceCommit": "7b3b36ea7359910b615b1da7fa555e2bbdbd4106",
+  "companionSummary": {
+    "identities": 62,
+    "forms": 65,
+    "instructions": 80,
+    "fixedIdentities": 20,
+    "displayAppliedIdentities": 32,
+    "authoredJoinScenes": 25
+  },
   "buildTrigger": "authenticated-git-push"
 }
