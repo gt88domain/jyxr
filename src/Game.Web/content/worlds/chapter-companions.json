@@ -1,0 +1,1272 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "speakerNames": {
+    "天关乔峰": {
+      "zh-CN": "索尔",
+      "en": "Thor"
+    },
+    "乔峰": {
+      "zh-CN": "索尔",
+      "en": "Thor"
+    },
+    "超级乔峰": {
+      "zh-CN": "索尔",
+      "en": "Thor"
+    },
+    "萧峰": {
+      "zh-CN": "索尔",
+      "en": "Thor"
+    },
+    "松鼠乔峰": {
+      "zh-CN": "索尔",
+      "en": "Thor"
+    },
+    "不败令狐冲": {
+      "zh-CN": "宫本武藏",
+      "en": "Miyamoto Musashi"
+    },
+    "令狐冲": {
+      "zh-CN": "宫本武藏",
+      "en": "Miyamoto Musashi"
+    },
+    "黑木崖超级令狐冲": {
+      "zh-CN": "宫本武藏",
+      "en": "Miyamoto Musashi"
+    },
+    "松鼠令狐冲": {
+      "zh-CN": "宫本武藏",
+      "en": "Miyamoto Musashi"
+    },
+    "小龙女": {
+      "zh-CN": "湖中仙女",
+      "en": "The Lady of the Lake"
+    },
+    "松鼠小龙女": {
+      "zh-CN": "湖中仙女",
+      "en": "The Lady of the Lake"
+    },
+    "张无忌": {
+      "zh-CN": "哪吒",
+      "en": "Nezha"
+    },
+    "变身张无忌": {
+      "zh-CN": "哪吒",
+      "en": "Nezha"
+    },
+    "神级张无忌": {
+      "zh-CN": "哪吒",
+      "en": "Nezha"
+    },
+    "李文秀": {
+      "zh-CN": "杜尔西内娅",
+      "en": "Dulcinea"
+    },
+    "杨过": {
+      "zh-CN": "亚瑟王",
+      "en": "King Arthur"
+    },
+    "松鼠杨过": {
+      "zh-CN": "亚瑟王",
+      "en": "King Arthur"
+    },
+    "狄云": {
+      "zh-CN": "德古拉",
+      "en": "Dracula"
+    },
+    "华山狄云": {
+      "zh-CN": "德古拉",
+      "en": "Dracula"
+    },
+    "石破天": {
+      "zh-CN": "赫拉克勒斯",
+      "en": "Heracles"
+    },
+    "疯狂石破天": {
+      "zh-CN": "赫拉克勒斯",
+      "en": "Heracles"
+    },
+    "程灵素": {
+      "zh-CN": "格尔达",
+      "en": "Gerda"
+    },
+    "胡斐": {
+      "zh-CN": "凯",
+      "en": "Kai"
+    },
+    "华山胡斐": {
+      "zh-CN": "凯",
+      "en": "Kai"
+    },
+    "苏荃": {
+      "zh-CN": "格琳达",
+      "en": "Glinda"
+    },
+    "袁冠南": {
+      "zh-CN": "匹诺曹",
+      "en": "Pinocchio"
+    },
+    "袁承志": {
+      "zh-CN": "荷鲁斯",
+      "en": "Horus"
+    },
+    "华山袁承志": {
+      "zh-CN": "荷鲁斯",
+      "en": "Horus"
+    },
+    "儿时袁承志": {
+      "zh-CN": "荷鲁斯",
+      "en": "Horus"
+    },
+    "炼狱袁承志": {
+      "zh-CN": "荷鲁斯",
+      "en": "Horus"
+    },
+    "郭襄": {
+      "zh-CN": "爱丽丝",
+      "en": "Alice"
+    },
+    "华山郭襄": {
+      "zh-CN": "爱丽丝",
+      "en": "Alice"
+    },
+    "郭靖": {
+      "zh-CN": "白雪公主的猎人",
+      "en": "The Huntsman"
+    },
+    "松鼠郭靖": {
+      "zh-CN": "白雪公主的猎人",
+      "en": "The Huntsman"
+    },
+    "阿珂": {
+      "zh-CN": "多萝西·盖尔",
+      "en": "Dorothy Gale"
+    },
+    "陈家洛": {
+      "zh-CN": "达达尼昂",
+      "en": "D'Artagnan"
+    },
+    "陈达海": {
+      "zh-CN": "堂吉诃德",
+      "en": "Don Quixote"
+    },
+    "陈近南": {
+      "zh-CN": "胆小狮",
+      "en": "The Cowardly Lion"
+    },
+    "韦小宝": {
+      "zh-CN": "稻草人",
+      "en": "The Scarecrow"
+    },
+    "黄蓉": {
+      "zh-CN": "白雪公主",
+      "en": "Snow White"
+    },
+    "松鼠黄蓉": {
+      "zh-CN": "白雪公主",
+      "en": "Snow White"
+    },
+    "张召重": {
+      "zh-CN": "罗什福尔",
+      "en": "Rochefort"
+    },
+    "炼狱张召重": {
+      "zh-CN": "罗什福尔",
+      "en": "Rochefort"
+    },
+    "成昆": {
+      "zh-CN": "申公豹",
+      "en": "Shen Gongbao"
+    },
+    "炼狱成昆": {
+      "zh-CN": "申公豹",
+      "en": "Shen Gongbao"
+    },
+    "华山段誉": {
+      "zh-CN": "洛基",
+      "en": "Loki"
+    },
+    "天关段誉": {
+      "zh-CN": "洛基",
+      "en": "Loki"
+    },
+    "洪教主": {
+      "zh-CN": "诺姆王",
+      "en": "The Nome King"
+    },
+    "温青青": {
+      "zh-CN": "伊西斯",
+      "en": "Isis"
+    },
+    "温青": {
+      "zh-CN": "伊西斯",
+      "en": "Isis"
+    },
+    "田伯光": {
+      "zh-CN": "石川五右卫门",
+      "en": "Ishikawa Goemon"
+    },
+    "白自在": {
+      "zh-CN": "阿瑞斯",
+      "en": "Ares"
+    },
+    "神雕": {
+      "zh-CN": "狮鹫",
+      "en": "The Griffin"
+    },
+    "松鼠神雕": {
+      "zh-CN": "狮鹫",
+      "en": "The Griffin"
+    },
+    "萧中慧": {
+      "zh-CN": "蓝仙女",
+      "en": "The Blue Fairy"
+    },
+    "赵敏": {
+      "zh-CN": "花木兰",
+      "en": "Hua Mulan"
+    },
+    "郭芙": {
+      "zh-CN": "温蒂·达令",
+      "en": "Wendy Darling"
+    },
+    "九难": {
+      "zh-CN": "克娄巴特拉",
+      "en": "Cleopatra"
+    },
+    "阿九": {
+      "zh-CN": "克娄巴特拉",
+      "en": "Cleopatra"
+    },
+    "阿朱": {
+      "zh-CN": "希芙",
+      "en": "Sif"
+    },
+    "霍青桐": {
+      "zh-CN": "米莱狄",
+      "en": "Milady de Winter"
+    },
+    "黄药师": {
+      "zh-CN": "浮士德",
+      "en": "Faust"
+    },
+    "炼狱黄药师": {
+      "zh-CN": "浮士德",
+      "en": "Faust"
+    },
+    "崔秋山": {
+      "zh-CN": "舒",
+      "en": "Shu"
+    }
+  },
+  "dialogueEdits": {
+    "笑傲江湖_令狐冲加入": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "令狐冲",
+            "text": {
+              "en": "A new road, then. I'll bring my sword; you bring a little curiosity.",
+              "zh-CN": "那就换条路走走。我带剑，你带上点好奇心。"
+            }
+          }
+        ]
+      }
+    ],
+    "雪山飞狐_药王庄.程灵素.求药": [
+      {
+        "start": 0,
+        "expectedCount": 11,
+        "lines": [
+          {
+            "speaker": "胡斐",
+            "text": {
+              "en": "This is the healer's garden. I hope we've caught someone at home.",
+              "zh-CN": "这里就是药师的花园了。但愿有人在。"
+            }
+          },
+          {
+            "speaker": "程灵素",
+            "text": {
+              "en": "I'm Gerda. What happened?",
+              "zh-CN": "我是格尔达。出什么事了？"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "A friend has been poisoned. His eyes are badly hurt.",
+              "zh-CN": "一位朋友中了毒，眼睛伤得很重。"
+            }
+          },
+          {
+            "speaker": "程灵素",
+            "text": {
+              "en": "I'll need the Nightshade Blossom before I can help. Try the wandering medicine seller for a lead.",
+              "zh-CN": "想帮上忙，得先找到夜影花这种药材。去问问那位游方药商，也许有线索。"
+            }
+          },
+          {
+            "speaker": "胡斐",
+            "text": {
+              "en": "Will you come with us?",
+              "zh-CN": "你愿意和我们一起去吗？"
+            }
+          },
+          {
+            "speaker": "程灵素",
+            "text": {
+              "en": "Yes. Let me gather my things. Kai, please don't investigate anything poisonous with your fingers.",
+              "zh-CN": "好，等我收拾一下。凯，碰到像是有毒的东西，请别先伸手确认。"
+            }
+          }
+        ]
+      }
+    ],
+    "雪山飞狐_胡斐居.胜利": [
+      {
+        "start": 2,
+        "expectedCount": 5,
+        "lines": [
+          {
+            "speaker": "胡斐",
+            "text": {
+              "en": "Well fought. I'm Kai. Apparently my lessons have a few missing pages.",
+              "zh-CN": "打得漂亮。我是凯。看来，我学的本领还缺着几页。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Two pages, by the look of it. Shall we find them?",
+              "zh-CN": "看起来是两页。一起找回来？"
+            }
+          },
+          {
+            "speaker": "胡斐",
+            "text": {
+              "en": "Gladly. I'd like to know what happens after the part where I fall over.",
+              "zh-CN": "乐意。我很想知道，摔倒之后的那几页到底教什么。"
+            }
+          }
+        ]
+      }
+    ],
+    "bixuejianShyou_接黄金2": [
+      {
+        "start": 1,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "A moment, Horus. We can settle the misunderstanding while we walk.",
+              "zh-CN": "等一下，荷鲁斯。误会可以边走边说。"
+            }
+          },
+          {
+            "speaker": "袁承志",
+            "text": {
+              "en": "Then walk quickly. I mean to catch up with her.",
+              "zh-CN": "那就走快些。我得追上她。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Together, then. Two pairs of eyes are better than one.",
+              "zh-CN": "一起吧。两个人找，总比一个人容易。"
+            }
+          },
+          {
+            "speaker": "袁承志",
+            "text": {
+              "en": "Agreed. Take these supplies; we'll sort out the parcel later.",
+              "zh-CN": "好。这些补给你先拿着，包裹的事稍后再说。"
+            }
+          }
+        ]
+      }
+    ],
+    "bixuejianShyou_不接黄金": [
+      {
+        "start": 2,
+        "expectedCount": 10,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Horus? What's going on?",
+              "zh-CN": "荷鲁斯？这是怎么回事？"
+            }
+          },
+          {
+            "speaker": "温青",
+            "text": {
+              "en": "Isis leaves a gift when she chooses. Arguing won't improve it.",
+              "zh-CN": "伊西斯决定送出的礼物，可不是拿来争论的。"
+            }
+          },
+          {
+            "speaker": "袁承志",
+            "text": {
+              "en": "And there she goes. We should follow.",
+              "zh-CN": "说完就走了。我们得跟上。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "That would be easier than arguing with a departing boat.",
+              "zh-CN": "确实，比对着一条开走的船讲道理容易些。"
+            }
+          },
+          {
+            "speaker": "袁承志",
+            "text": {
+              "en": "Come on, then. I'll travel with you.",
+              "zh-CN": "走吧，我和你同行。"
+            }
+          }
+        ]
+      }
+    ],
+    "bixuejianShyou_接金败石梁派3": [
+      {
+        "start": 2,
+        "expectedCount": 7,
+        "lines": [
+          {
+            "speaker": "袁承志",
+            "text": {
+              "en": "The gold is safe. Thank you for coming.",
+              "zh-CN": "黄金保住了。谢谢你们赶来。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Where next, Horus?",
+              "zh-CN": "接下来去哪儿，荷鲁斯？"
+            }
+          },
+          {
+            "speaker": "袁承志",
+            "text": {
+              "en": "Highbridge. There is someone I need to see.",
+              "zh-CN": "高桥城。我要去见一个人。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Then let's share the road.",
+              "zh-CN": "那就一起走吧。"
+            }
+          },
+          {
+            "speaker": "袁承志",
+            "text": {
+              "en": "Gladly. And I owe you an apology for our last meeting.",
+              "zh-CN": "好。上次见面时的事，我也该向你道个歉。"
+            }
+          }
+        ]
+      }
+    ],
+    "sdxl_郭襄.风陵渡口.战斗胜利": [
+      {
+        "start": 2,
+        "expectedCount": 16,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "A misunderstanding. A rather energetic one.",
+              "zh-CN": "一场误会。就是闹得稍微热闹了点。"
+            }
+          },
+          {
+            "speaker": "郭芙",
+            "text": {
+              "en": "That is one word for it.",
+              "zh-CN": "你倒挺会挑词。"
+            }
+          },
+          {
+            "speaker": "郭襄",
+            "text": {
+              "en": "I'm Alice. You wouldn't happen to know where King Arthur went?",
+              "zh-CN": "我是爱丽丝。你们知不知道，亚瑟王去哪儿了？"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "We've met. I could help you look.",
+              "zh-CN": "见过。我可以和你一起找找。"
+            }
+          },
+          {
+            "speaker": "田伯光",
+            "text": {
+              "en": "Goemon approves of a journey with interesting company.",
+              "zh-CN": "五右卫门赞成。一路上，总得有些有趣的人。"
+            }
+          },
+          {
+            "speaker": "郭芙",
+            "text": {
+              "en": "Alice, do try to come back with the same number of limbs.",
+              "zh-CN": "爱丽丝，回来时胳膊腿可别少了。"
+            }
+          },
+          {
+            "speaker": "郭襄",
+            "text": {
+              "en": "I'll do my best, Wendy. Come on—there must be a sensible path somewhere.",
+              "zh-CN": "我尽力，温蒂。走吧，总会有一条讲道理的路。"
+            }
+          }
+        ]
+      }
+    ],
+    "射雕英雄传_塞外郭靖": [
+      {
+        "start": 2,
+        "expectedCount": 8,
+        "lines": [
+          {
+            "speaker": "郭靖",
+            "text": {
+              "en": "They call me the Huntsman. I've spent rather too long on the same stretch of road.",
+              "zh-CN": "大家叫我猎人。我在同一条路上，待得有点久了。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Come see a different one.",
+              "zh-CN": "来看看别的路吧。"
+            }
+          },
+          {
+            "speaker": "郭靖",
+            "text": {
+              "en": "I would. I'd also like to find Snow White. She has a habit of making friends in unlikely places.",
+              "zh-CN": "我愿意。也想去找找白雪公主。她总能在意想不到的地方交到朋友。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Then you'll fit right in.",
+              "zh-CN": "那你来对地方了。"
+            }
+          }
+        ]
+      }
+    ],
+    "鹿鼎记_北京韦小宝加入": [
+      {
+        "start": 1,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "韦小宝",
+            "text": {
+              "en": "The Scarecrow, at your service. I can't promise a brilliant plan every time, but I do know the value of keeping supplies handy.",
+              "zh-CN": "稻草人，为你效劳。我不敢保证每次都有妙计，不过，随身带好补给的道理，我还是懂的。"
+            }
+          },
+          {
+            "speaker": "韦小宝",
+            "text": {
+              "en": "Let's see what we can make of this road.",
+              "zh-CN": "来看看这条路，能让我们遇上什么。"
+            }
+          }
+        ]
+      }
+    ],
+    "tlbb.dy_雁门关有阿朱": [
+      {
+        "start": 2,
+        "expectedCount": 28,
+        "lines": [
+          {
+            "speaker": "乔峰",
+            "text": {
+              "en": "So much noise about where I belong. I'm tired of letting other people answer that question.",
+              "zh-CN": "人人都在议论我属于哪里。我不想再让别人替我回答了。"
+            }
+          },
+          {
+            "speaker": "阿朱",
+            "text": {
+              "en": "Then choose your own road, Thor. I'll stand beside you.",
+              "zh-CN": "那就自己选条路，索尔。我会站在你身边。"
+            }
+          },
+          {
+            "speaker": "段誉",
+            "text": {
+              "en": "Preferably a road with an inn. Even noble decisions deserve dinner.",
+              "zh-CN": "最好是条有旅馆的路。再英明的决定，也得先吃晚饭。"
+            }
+          },
+          {
+            "speaker": "乔峰",
+            "text": {
+              "en": "For once, Loki, I agree. We'll travel together and find our own answers.",
+              "zh-CN": "这回我同意你，洛基。一起走吧，答案由我们自己找。"
+            }
+          },
+          {
+            "speaker": "阿朱",
+            "text": {
+              "en": "Good. One step at a time.",
+              "zh-CN": "好。先往前走一步。"
+            }
+          }
+        ]
+      }
+    ],
+    "sdxl_绝情谷底.小龙女加入": [
+      {
+        "start": 2,
+        "expectedCount": 3,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "You two made quite a team.",
+              "zh-CN": "你们两位配合得真不错。"
+            }
+          },
+          {
+            "speaker": "小龙女",
+            "text": {
+              "en": "Arthur and I have had a little practice. Thank you for helping us find one another again.",
+              "zh-CN": "我和亚瑟练过一些时候。谢谢你，帮我们重新找到了彼此。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Shall we leave the valley?",
+              "zh-CN": "一起出谷吧？"
+            }
+          },
+          {
+            "speaker": "小龙女",
+            "text": {
+              "en": "Yes. The Lady of the Lake would welcome a change of scenery.",
+              "zh-CN": "好。湖中仙女也想换个地方走走。"
+            }
+          }
+        ]
+      }
+    ],
+    "yttlj_昆仑仙境": [
+      {
+        "start": 0,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "张无忌",
+            "text": {
+              "en": "I learned a great deal in these mountains. Mostly that sitting still isn't for me.",
+              "zh-CN": "我在这些山里学会了不少东西。最清楚的一件，就是我坐不住。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Then come along, Nezha. There's plenty more to see.",
+              "zh-CN": "那就来吧，哪吒。还有好多地方没去过呢。"
+            }
+          }
+        ]
+      },
+      {
+        "start": 3,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "成昆",
+            "text": {
+              "en": "Leaving so soon? I've been looking for you.",
+              "zh-CN": "这么快就想走？我可找你很久了。"
+            }
+          },
+          {
+            "speaker": "张无忌",
+            "text": {
+              "en": "Shen Gongbao. Of course you'd arrive just as things got pleasant.",
+              "zh-CN": "申公豹。果然，刚有点好心情，你就来了。"
+            }
+          }
+        ]
+      }
+    ],
+    "倚天屠龙_张无忌入队": [
+      {
+        "start": 2,
+        "expectedCount": 6,
+        "lines": [
+          {
+            "speaker": "张无忌",
+            "text": {
+              "en": "Mulan! Are you hurt?",
+              "zh-CN": "木兰！你受伤了吗？"
+            }
+          },
+          {
+            "speaker": "赵敏",
+            "text": {
+              "en": "I'm all right. And I see you've found someone who can keep up with you.",
+              "zh-CN": "我没事。看来，你找到了能跟上你的旅伴。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Only just.",
+              "zh-CN": "勉强跟得上。"
+            }
+          },
+          {
+            "speaker": "张无忌",
+            "text": {
+              "en": "You stood with me when it mattered. I'd be glad to travel with you.",
+              "zh-CN": "要紧的时候，你帮了我。我愿意和你一起走。"
+            }
+          },
+          {
+            "speaker": "赵敏",
+            "text": {
+              "en": "Go on. I'll take care of things here.",
+              "zh-CN": "去吧。这里的事，我来处理。"
+            }
+          }
+        ]
+      },
+      {
+        "start": 9,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "张无忌",
+            "text": {
+              "en": "I'd like to look in at Jade Summit when we have the chance.",
+              "zh-CN": "有机会的话，我还想回玉冠顶看看。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "We'll keep it in mind. Let's go.",
+              "zh-CN": "记下了。走吧。"
+            }
+          }
+        ]
+      }
+    ],
+    "白马啸西风_李文秀加入": [
+      {
+        "start": 0,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Dulcinea, I'll come with you. We can face them together.",
+              "zh-CN": "杜尔西内娅，我和你一起去。我们一起面对他们。"
+            }
+          },
+          {
+            "speaker": "李文秀",
+            "text": {
+              "en": "Thank you. Let's go.",
+              "zh-CN": "谢谢。走吧。"
+            }
+          }
+        ]
+      }
+    ],
+    "sdxl_剑魔荒冢.战胜神雕": [
+      {
+        "start": 2,
+        "expectedCount": 10,
+        "lines": [
+          {
+            "speaker": "神雕",
+            "text": {
+              "en": "Well? Somebody say something. I can't supply every dramatic pause.",
+              "zh-CN": "怎么都不说话？总不能每次都让我负责等下文。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "You can talk?",
+              "zh-CN": "你会说话？"
+            }
+          },
+          {
+            "speaker": "杨过",
+            "text": {
+              "en": "The Griffin considers that its finest accomplishment.",
+              "zh-CN": "狮鹫一直觉得，这是它最了不起的本领。"
+            }
+          },
+          {
+            "speaker": "神雕",
+            "text": {
+              "en": "It is. Come visit again, Arthur. Preferably without starting another fight.",
+              "zh-CN": "本来就是。记得回来看看，亚瑟。最好，别一回来就打架。"
+            }
+          },
+          {
+            "speaker": "杨过",
+            "text": {
+              "en": "I will. Shall we see where your road leads?",
+              "zh-CN": "会的。一起去看看，你这条路通往哪里吧？"
+            }
+          }
+        ]
+      }
+    ],
+    "连城诀_唐诗山洞.狄云正式加入": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "狄云",
+            "text": {
+              "en": "You've kept your word. Dracula will travel with you. I expect the same courtesy on the road.",
+              "zh-CN": "你守了诺言。德古拉愿意与你同行。路上，也请继续如此。"
+            }
+          }
+        ]
+      }
+    ],
+    "侠客行_石张家口": [
+      {
+        "start": 2,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Heracles! Care to join us?",
+              "zh-CN": "赫拉克勒斯！一起走吗？"
+            }
+          },
+          {
+            "speaker": "石破天",
+            "text": {
+              "en": "Gladly. Is there work to be done?",
+              "zh-CN": "乐意。有事需要我帮忙？"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "With this company? Almost certainly.",
+              "zh-CN": "和这群人一起？多半少不了。"
+            }
+          },
+          {
+            "speaker": "石破天",
+            "text": {
+              "en": "Excellent. Lead on.",
+              "zh-CN": "那就好。带路吧。"
+            }
+          }
+        ]
+      },
+      {
+        "start": 7,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "白自在",
+            "text": {
+              "en": "There you are! You still owe me an answer.",
+              "zh-CN": "可算找到你了！你还欠我一个交代。"
+            }
+          }
+        ]
+      }
+    ],
+    "鹿鼎记_神龙岛4": [
+      {
+        "start": 2,
+        "expectedCount": 6,
+        "lines": [
+          {
+            "speaker": "苏荃",
+            "text": {
+              "en": "Your rule over this island is over, Nome King. I won't stay here to pretend otherwise.",
+              "zh-CN": "诺姆王，你对这座岛的统治结束了。我不会留下来，陪你假装一切照旧。"
+            }
+          },
+          {
+            "speaker": "洪教主",
+            "text": {
+              "en": "Go, then! I have no need of any of you!",
+              "zh-CN": "那就走！我谁也不需要！"
+            }
+          },
+          {
+            "speaker": "韦小宝",
+            "text": {
+              "en": "We have room for another traveler, Glinda.",
+              "zh-CN": "我们这儿，还容得下一位旅伴，格琳达。"
+            }
+          },
+          {
+            "speaker": "苏荃",
+            "text": {
+              "en": "Then let's put that generous offer to good use. Come along.",
+              "zh-CN": "那就别浪费这份好意了。走吧。"
+            }
+          }
+        ]
+      }
+    ],
+    "鸳鸯刀正_风陵渡胜": [
+      {
+        "start": 0,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "That settles it.",
+              "zh-CN": "这下，总算解决了。"
+            }
+          },
+          {
+            "speaker": "袁冠南",
+            "text": {
+              "en": "Keep the blades. I've found something more interesting than another argument over them.",
+              "zh-CN": "刀就交给你们吧。我找到了比争它们更有趣的事。"
+            }
+          },
+          {
+            "speaker": "萧中慧",
+            "text": {
+              "en": "And what would that be?",
+              "zh-CN": "是什么呢？"
+            }
+          },
+          {
+            "speaker": "袁冠南",
+            "text": {
+              "en": "A proper adventure. May Pinocchio join you?",
+              "zh-CN": "一次像样的冒险。愿意带上匹诺曹吗？"
+            }
+          }
+        ]
+      }
+    ],
+    "bixuejianShyou_脱险": [
+      {
+        "start": 2,
+        "expectedCount": 6,
+        "lines": [
+          {
+            "speaker": "崔秋山",
+            "text": {
+              "en": "We're clear. Thank you for coming to our aid.",
+              "zh-CN": "脱身了。谢谢各位出手相助。"
+            }
+          },
+          {
+            "speaker": "儿时袁承志",
+            "text": {
+              "en": "Shu, you're hurt!",
+              "zh-CN": "舒，你受伤了！"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Where are you headed? We can share the road.",
+              "zh-CN": "你们要去哪儿？可以一起走。"
+            }
+          },
+          {
+            "speaker": "崔秋山",
+            "text": {
+              "en": "That would be welcome. Horus, stay close.",
+              "zh-CN": "那就有劳了。荷鲁斯，跟紧些。"
+            }
+          }
+        ]
+      }
+    ],
+    "鹿鼎记_阿九.邀请2": [
+      {
+        "start": 2,
+        "expectedCount": 6,
+        "lines": [
+          {
+            "speaker": "九难",
+            "text": {
+              "en": "So that is how the blade reached you. You have a knack for unusual journeys.",
+              "zh-CN": "原来，这把剑是这样到了你手里。你经历的旅途，还真不寻常。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "The road keeps surprising me.",
+              "zh-CN": "这条路，总有些出人意料的地方。"
+            }
+          },
+          {
+            "speaker": "九难",
+            "text": {
+              "en": "Dorothy, shall we join them?",
+              "zh-CN": "多萝西，我们一起走吧？"
+            }
+          },
+          {
+            "speaker": "阿珂",
+            "text": {
+              "en": "All right. But I'm keeping an eye on the Scarecrow.",
+              "zh-CN": "好。不过，我可得留意着那位稻草人。"
+            }
+          }
+        ]
+      },
+      {
+        "start": 10,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "韦小宝",
+            "text": {
+              "en": "A splendid idea!",
+              "zh-CN": "这主意真好！"
+            }
+          },
+          {
+            "speaker": "九难",
+            "text": {
+              "en": "And you could use a little practice keeping out of trouble.",
+              "zh-CN": "你也该学着，少惹一点麻烦。"
+            }
+          },
+          {
+            "speaker": "韦小宝",
+            "text": {
+              "en": "I'm a very willing student.",
+              "zh-CN": "我学起来，一定很认真。"
+            }
+          }
+        ]
+      }
+    ],
+    "鹿鼎记_台湾3": [
+      {
+        "start": 2,
+        "expectedCount": 9,
+        "lines": [
+          {
+            "speaker": "韦小宝",
+            "text": {
+              "en": "Stay with us, Lion. Please.",
+              "zh-CN": "狮子，别丢下我们。求你了。"
+            }
+          },
+          {
+            "speaker": "陈近南",
+            "text": {
+              "en": "You've more courage than you think, my friend. Use it well.",
+              "zh-CN": "朋友，你比自己想的更勇敢。别辜负它。"
+            }
+          },
+          {
+            "speaker": "韦小宝",
+            "text": {
+              "en": "Lion...",
+              "zh-CN": "狮子……"
+            }
+          },
+          {
+            "speaker": "阿珂",
+            "text": {
+              "en": "He mattered to you. I can see that.",
+              "zh-CN": "他对你很重要。我看得出来。"
+            }
+          },
+          {
+            "speaker": "韦小宝",
+            "text": {
+              "en": "He stood by me. I won't forget it.",
+              "zh-CN": "他帮过我。我不会忘的。"
+            }
+          },
+          {
+            "speaker": "阿珂",
+            "text": {
+              "en": "Then I'll travel with you. We can look after one another.",
+              "zh-CN": "那我和你们一起走。路上，互相照应。"
+            }
+          },
+          {
+            "speaker": "韦小宝",
+            "text": {
+              "en": "Thank you, Dorothy.",
+              "zh-CN": "谢谢你，多萝西。"
+            }
+          }
+        ]
+      }
+    ],
+    "书剑恩仇录_庖丁解牛": [
+      {
+        "start": 2,
+        "expectedCount": 6,
+        "lines": [
+          {
+            "speaker": "张召重",
+            "text": {
+              "en": "Put down your weapons. You're outnumbered.",
+              "zh-CN": "放下武器。你们的人手，可不够。"
+            }
+          },
+          {
+            "speaker": "霍青桐",
+            "text": {
+              "en": "Then you'll have no trouble getting past us, will you?",
+              "zh-CN": "那想必，过我们这一关很容易吧？"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "We could use another pair of hands.",
+              "zh-CN": "我们还真需要一位帮手。"
+            }
+          },
+          {
+            "speaker": "陈家洛",
+            "text": {
+              "en": "D'Artagnan, reporting for trouble. I hope you saved some for me.",
+              "zh-CN": "达达尼昂，前来凑个热闹。希望，你们给我留了一点麻烦。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "You're just in time.",
+              "zh-CN": "来得正好。"
+            }
+          }
+        ]
+      }
+    ],
+    "射雕英雄传_桃花岛招亲2": [
+      {
+        "start": 2,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "黄药师",
+            "text": {
+              "en": "Well done. You can look after one another.",
+              "zh-CN": "不错。看来，你们能互相照应。"
+            }
+          },
+          {
+            "speaker": "黄蓉",
+            "text": {
+              "en": "You've come a long way, Huntsman.",
+              "zh-CN": "猎人，你这一路，可长进不少。"
+            }
+          },
+          {
+            "speaker": "黄药师",
+            "text": {
+              "en": "Snow White, the world has a few more lessons for you.",
+              "zh-CN": "白雪，外面还有不少东西，值得你去学。"
+            }
+          },
+          {
+            "speaker": "黄蓉",
+            "text": {
+              "en": "Then let's go and find them.",
+              "zh-CN": "那就一起去看看吧。"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "choiceText": {
+    "bixuejianShyou_接黄金2": {
+      "prompt": {
+        "en": "Open the parcel?",
+        "zh-CN": "要打开包裹吗？"
+      },
+      "options": {
+        "en": [
+          "Open it.",
+          "Leave it sealed."
+        ],
+        "zh-CN": [
+          "打开。",
+          "先保持封好。"
+        ]
+      }
+    }
+  },
+  "commandText": {
+    "程灵素答应医治金面佛苗人凤的眼睛": {
+      "en": "Gerda has agreed to help treat our poisoned friend.",
+      "zh-CN": "格尔达答应帮助医治中毒的朋友。"
+    },
+    "答应帮胡斐找回两页刀法。": {
+      "en": "Agreed to help Kai recover two missing pages of his techniques.",
+      "zh-CN": "答应帮助凯找回遗失的两页战技。"
+    },
+    "风陵渡口偶遇郭芙、郭襄姐妹。": {
+      "en": "Met Wendy and Alice at the ferry.",
+      "zh-CN": "在渡口遇见温蒂和爱丽丝。"
+    },
+    "绝情谷底，杨过与小龙女久别重逢。": {
+      "en": "Arthur and the Lady of the Lake have reunited in the valley.",
+      "zh-CN": "亚瑟与湖中仙女在谷底重逢。"
+    },
+    "剑魔荒冢战胜神雕、杨过。": {
+      "en": "Completed the bout with Arthur and the Griffin.",
+      "zh-CN": "完成了与亚瑟、狮鹫的切磋。"
+    },
+    "击败天下四绝。": {
+      "en": "Overcame the four masters.",
+      "zh-CN": "战胜了四位高手。"
+    }
+  },
+  "definitions": {
+    "talents": {
+      "阉人": {
+        "name": {
+          "en": "Eunuch",
+          "zh-CN": "净身者"
+        },
+        "description": {
+          "en": "Increases Energy costs. Sunflower Mastery and Nightblade Sword always score critical hits.",
+          "zh-CN": "增加能量消耗。使用向日葵专精和夜刃剑术时必定暴击。"
+        }
+      }
+    }
+  }
+}

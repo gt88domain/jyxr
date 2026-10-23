@@ -49,7 +49,16 @@ try{
  await audit('portrait');await click('[data-action="creation-portrait"][data-id="头像.主角"]');await audit('character preview');await click('[data-action="creation-confirm"]');await talk();await audit('Grimm room');
  await interact('南贤');await talk();assert.equal((await state()).map.id,'小村');await audit('village');
  for(const panel of ['character','equipment','cultivation','inventory','party','quests','settings']){
-  await click(`[data-action="${panel}"]`);await audit(panel);await closeModal();
+  await click(`[data-action="${panel}"]`);await audit(panel);
+  if(panel==='party'){
+   const before=await state();
+   assert.equal(await page.locator('[data-morality]').innerText(),String(before.adventure.morality));
+   assert.equal(await page.locator('[data-companion-roster]').getAttribute('href'),'../en/?kind=companions');
+   assert.equal(await page.locator('[data-morality] input,[data-morality] button').count(),0);
+   assert.equal((await state()).adventure.morality,before.adventure.morality);
+   pass('party panel exposes canonical morality and a read-only companion roster');
+  }
+  await closeModal();
  }
  await click('[data-action="equipment"]');
  const hat=(await state()).inventory.find(item=>item.id==='草帽');

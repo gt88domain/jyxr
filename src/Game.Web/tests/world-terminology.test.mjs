@@ -20,6 +20,11 @@ test('unknown display text converges instead of causing an observer rewrite loop
  assert.equal(translateUiText(first),first);
  assert.equal(translateUiText('未改写的后期故事。'),'未改写的后期故事。');
 });
+test('talent notifications translate the companion as well as the talent',()=>{
+ setUiDisplayLabels({'乔峰':'Thor','阉人':'Eunuch'});
+ assert.equal(translateUiText('乔峰 获得天赋【阉人】'),'Thor gained the talent Eunuch.');
+ setUiDisplayLabels();
+});
 test('gauntlets, spellcasting and passive masteries retain distinct roles',()=>{
  assert.equal(translateUiText('拳掌'),'Gauntlets');
  assert.equal(translateUiText('奇门'),'Spells');

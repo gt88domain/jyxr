@@ -131,43 +131,43 @@
           {
             "speaker": "南贤",
             "text": {
-              "en": "I'm Grimm. I collect the fairy tales people grow up with. Usually, they stay on the page.",
-              "zh-CN": "我是格林，收集各国陪伴人们长大的童话。通常，它们会乖乖待在书里。"
+              "en": "I'm Grimm. I collect the fairy tales people grow up with. Here, their roads run into one another.",
+              "zh-CN": "我是格林，收集各国陪伴人们长大的童话。在这里，故事里的道路会通向彼此。"
             }
           },
           {
             "speaker": "主角",
             "text": {
-              "en": "You summoned me? I was having such an ordinary day.",
-              "zh-CN": "是你把我召唤来的？我今天本来过得挺普通的。"
+              "en": "You summoned me here? So which way do I go?",
+              "zh-CN": "是你把我召唤来的？那我该往哪儿走？"
             }
           },
           {
             "speaker": "南贤",
             "text": {
-              "en": "Yes. Some tales have stalled, and their people need help. My notes are excellent; my swordplay is not.",
-              "zh-CN": "是的。有些故事停在半途，里面的人需要帮助。我整理笔记很在行，挥剑就差远了。"
+              "en": "Some stories have lost their way. I could use your help getting them moving again.",
+              "zh-CN": "有些故事出了点岔子，我想请你帮个忙，让它们继续往前走。"
             }
           },
           {
             "speaker": "南贤",
             "text": {
-              "en": "Will you enter their stories, find companions, and help them find a way forward?",
-              "zh-CN": "你愿意走进这些故事，结识伙伴，帮他们找到接下来的路吗？"
+              "en": "Explore, find companions, and learn a few tricks. There's no single road you have to follow.",
+              "zh-CN": "四处看看，结识伙伴，再学几手本领。接下来走哪条路，由你自己选。"
             }
           },
           {
             "speaker": "主角",
             "text": {
-              "en": "All right. Does the job come with a sword?",
-              "zh-CN": "好吧。这份差事，配剑吗？"
+              "en": "An open road and interesting company? I'm in.",
+              "zh-CN": "有路可走，也有有趣的人作伴？那就出发吧。"
             }
           },
           {
             "speaker": "南贤",
             "text": {
-              "en": "A beginner's scroll. Learn here first; I would hate to file you under 'cautionary tale'.",
-              "zh-CN": "配一本入门卷轴。先在村里学点本领，我可不想把你的事迹编进《前车之鉴》。"
+              "en": "Then take this beginner's scroll. Start in the village, and bring me a good story.",
+              "zh-CN": "先拿上这本入门卷轴，从村里开始吧。记得回来，给我讲讲你的见闻。"
             }
           }
         ]
@@ -194,8 +194,8 @@
           {
             "speaker": "主角",
             "text": {
-              "en": "Good. Something I can practice while panicking.",
-              "zh-CN": "挺好，至少慌起来的时候，我也能顺便练练。"
+              "en": "A useful start. I'll take a look around.",
+              "zh-CN": "那就从这里开始吧。我先到处看看。"
             }
           }
         ]
@@ -658,7 +658,9 @@
     "chapter-start.json",
     "chapter-guide.json",
     "chapter-us-catalog.json",
-    "world-atlas.json"
+    "world-atlas.json",
+    "chapter-companions.json",
+    "chapter-equipment-copy.json"
   ],
   "speakerNames": {
     "武师": {

@@ -429,8 +429,8 @@
           {
             "speaker": "南贤",
             "text": {
-              "en": "Rainmarket is south of here. Challenge the road bully, then come back and tell me what you learned.",
-              "zh-CN": "雨集镇在南边。挑战那里的拦路恶霸，再回来告诉我你学到了什么。"
+              "en": "Challenge the road bully in Rainmarket, then come back and tell me what you learned.",
+              "zh-CN": "去雨集镇挑战那里的拦路恶霸，再回来告诉我你学到了什么。"
             }
           }
         ]
@@ -828,8 +828,8 @@
           {
             "speaker": "钟灵",
             "text": {
-              "en": "Thank you. I'll travel with you. Keep your hands away from unknown mouths; I prefer my new companions unbitten.",
-              "zh-CN": "谢谢，我和你同行。手别随便往不认识的嘴边放，我希望新伙伴先保持完整。"
+              "en": "Let's look together, then. I'll travel with you. Watch where you put your hands; my little assistant can be rather quick with his teeth.",
+              "zh-CN": "那就一起找吧，我和你同行。手可别乱伸，我那位小助手的牙齿，动作还挺快。"
             }
           }
         ]
@@ -1646,8 +1646,8 @@
           {
             "speaker": "主角",
             "text": {
-              "en": "A lesson Yeah, I'm going to remember that one.",
-              "zh-CN": "这堂课，我应该会记得相当深刻。"
+              "en": "Understood. I'll keep my fingers to myself.",
+              "zh-CN": "明白。我会看好自己的手指。"
             }
           },
           {
@@ -4461,7 +4461,7 @@
     },
     "玄铁剑法": {
       "en": "Ironweight Sword",
-      "zh-CN": "沉铁剑术"
+      "zh-CN": "重铁剑术"
     },
     "玉女素心剑": {
       "en": "Twin Hearts Sword",
@@ -4472,64 +4472,64 @@
       "zh-CN": "双手协同"
     },
     "龙象般若功": {
-      "en": "Giant's Resolve",
-      "zh-CN": "巨人之志"
+      "en": "Titanheart Mastery",
+      "zh-CN": "巨人之心专精"
     },
     "火焰刀法": {
-      "en": "Flame Edge",
-      "zh-CN": "焰锋"
+      "en": "Flamehand Strike",
+      "zh-CN": "烈焰拳"
     },
     "血刀大法": {
-      "en": "Crimson Fang Technique",
-      "zh-CN": "赤牙刀术"
+      "en": "Bloodreaver Cleave",
+      "zh-CN": "噬血重斩"
     },
     "血海魔功": {
-      "en": "Bloodtide Discipline",
-      "zh-CN": "血潮心法"
+      "en": "Bloodtide Mastery",
+      "zh-CN": "血潮专精"
     },
     "九阴神功": {
-      "en": "Ninefold Moon Discipline",
-      "zh-CN": "月相被动专精"
+      "en": "Shadowheart Mastery",
+      "zh-CN": "影心专精"
     },
     "重阳剑法": {
       "en": "Wildwood Sword",
       "zh-CN": "荒林剑术"
     },
     "三花聚顶掌": {
-      "en": "Threefold Bloom",
-      "zh-CN": "三重花掌"
+      "en": "Threefold Palm",
+      "zh-CN": "三重掌"
     },
     "天山折梅手": {
-      "en": "Winter Branch Hands",
-      "zh-CN": "冬枝手"
+      "en": "Winterblossom Fist",
+      "zh-CN": "冬花拳"
     },
     "北冥神功": {
-      "en": "Deepwell Discipline",
-      "zh-CN": "深井心法"
+      "en": "Deepwell Mastery",
+      "zh-CN": "深井专精"
     },
     "八荒六合唯我独尊功": {
-      "en": "Sovereign Thread",
-      "zh-CN": "统御之线"
+      "en": "Sovereign Mastery",
+      "zh-CN": "君临专精"
     },
     "生死符": {
       "en": "Thread of Fate",
       "zh-CN": "命运丝印"
     },
     "易筋经": {
-      "en": "Body Tempering",
-      "zh-CN": "强身被动专精"
+      "en": "Ironbody Mastery",
+      "zh-CN": "铁躯专精"
     },
     "洗髓经": {
       "en": "Inner Renewal",
       "zh-CN": "复苏被动专精"
     },
     "纯阳无极功": {
-      "en": "Sunwell Discipline",
-      "zh-CN": "日泉心法"
+      "en": "Sunheart Mastery",
+      "zh-CN": "日心专精"
     },
     "太极拳": {
-      "en": "Turning Tide Fist",
-      "zh-CN": "回潮拳"
+      "en": "Flowing Fist",
+      "zh-CN": "流转拳"
     },
     "剑": {
       "en": "Swordcraft",
@@ -4537,15 +4537,15 @@
     },
     "三阴蜈蚣爪": {
       "en": "Venom Claw",
-      "zh-CN": "毒爪"
+      "zh-CN": "毒爪拳"
     },
     "飞星术": {
       "en": "Shooting Star",
       "zh-CN": "飞星"
     },
     "化功大法": {
-      "en": "Withering Touch",
-      "zh-CN": "凋零之触"
+      "en": "Spellbreaker Mastery",
+      "zh-CN": "破法专精"
     },
     "昆仑山": {
       "en": "Cloudpeak",

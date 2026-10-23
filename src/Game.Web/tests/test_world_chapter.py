@@ -91,7 +91,7 @@ class ChapterTests(unittest.TestCase):
   for locale in ['en','zh-CN']:
    display,report=apply_skin(self.raw,self.skin,locale)
    self.assertTrue(report['sameGameplayFlow']);assert_same_flow(self.source,display)
-  self.assertEqual(len(self.skin['dialogueEdits'])+len(self.skin['segments']),78)
+  self.assertEqual(len(self.skin['dialogueEdits'])+len(self.skin['segments']),102)
   self.assertNotIn('倚天屠龙_张无忌',self.skin['dialogueEdits'])
 
 if __name__=='__main__':unittest.main()

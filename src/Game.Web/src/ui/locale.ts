@@ -68,7 +68,7 @@ const patterns:Array<[RegExp,(...parts:string[])=>string]>=[
   [/^旅途记事\s*·\s*最近\s*(\d+)\s*条$/,(n)=>`Journey journal · Last ${n}`],
   [/^(\d+)年(\d+)月(\d+)日\s*(.*?)时$/,(year,month,day,time)=>`Year ${year}, month ${month}, day ${day} · ${translateUiText(time)}`],
   [/^获得「(.*?)」×(\d+)$/,(item,n)=>`Received ${itemLabel(item)} ×${n}`],
-  [/^(.*?)\s*获得天赋【(.*?)】$/,(name,talent)=>`${name} gained the talent ${translateUiText(talent)}.`],
+  [/^(.*?)\s*获得天赋【(.*?)】$/,(name,talent)=>`${translateUiText(name)} gained the talent ${translateUiText(talent)}.`],
   [/^买入【(.*?)】$/,(item)=>`Bought ${itemLabel(item)}`],
   [/^(.*?)开始冒险。$/,(name)=>`${name} began the journey.`],
   [/^(.*?)休息调息。$/,(name)=>`${translateUiText(name)} rests and recovers.`],

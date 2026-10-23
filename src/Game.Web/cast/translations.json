@@ -2,7 +2,7 @@
   "en": {
     "brand":"Storybound","eyebrow":"Familiar tales · One shared cast","title":"Meet the new cast",
     "intro":"Familiar figures first. One identity across countries and growth forms. Compare every role with its legacy reference.",
-    "phase":"Cast proposal preview · Gameplay translation and new art are still pending.",
+    "phase":"Cast and recruitment preview · Display names, dialogue and artwork are tracked separately.",
     "countries":"Countries","storyRoles":"Story roles","locked":"Fixed identities","proposed":"Candidates",
     "search":"Find a character","searchPlaceholder":"New name, Chinese reference or source work","country":"Home country","allCountries":"All countries","kind":"Show","named":"Story roles","companions":"Recruitment references","archetype":"Common roles & creatures","system":"Interface labels","player":"Player character","all":"All entries",
     "moreFilters":"More filters & downloads","status":"Casting status","allStatuses":"All statuses","fixed":"Fixed identity","candidate":"Candidate · needs review","classified":"Classified entry","csv":"Download bilingual comparison CSV","json":"Download complete cast data",
@@ -15,12 +15,15 @@
     "sourceOnly":"This read-only review tool never opens or modifies game saves.",
     "unassigned":"No national identity","commonRole":"Shared role archetype","systemRole":"Interface or archive entry","playerRole":"Player chooses their own identity","noEvidence":"No country-specific story references in this extraction.",
     "presentation-and-relationship-review":"Presentation and relationship adaptation needed","regional-familiarity-review":"Regional figure: check audience familiarity","legacy-form-label-review":"Check legacy growth-form labels","story-role-review":"Review narrative and combat-role fit",
+    "companionsCsv":"Download companion cast CSV",
+    "displayApplied":"Name used in game",
+    "displayPending":"Name not yet applied",
     "error":"The cast could not be loaded. Please refresh or try again later."
   },
   "zh-CN": {
     "brand":"童话旅人","eyebrow":"各国熟悉的故事 · 一份统一角色表","title":"认识新的伙伴与对手",
     "intro":"优先选择熟悉人物。同一角色跨国、成长后仍保持一个身份，每项都可查看原角色对应。",
-    "phase":"角色方案预览｜剧情翻译与新美术尚未接入。",
+    "phase":"角色与招募资料预览｜名称接入、对白改写和美术分别标注。",
     "countries":"国家","storyRoles":"独立剧情角色","locked":"固定身份","proposed":"待审候选",
     "search":"寻找角色","searchPlaceholder":"新名字、原角色或来源作品","country":"主归属国家","allCountries":"全部国家","kind":"显示内容","named":"剧情角色","companions":"招募记录中的角色","archetype":"公共兵种与动物","system":"界面与物件标签","player":"玩家角色","all":"全部条目",
     "moreFilters":"更多筛选与下载","status":"对应状态","allStatuses":"全部状态","fixed":"身份固定","candidate":"候选 · 待审阅","classified":"已分类","csv":"下载中英对应表 CSV","json":"下载完整角色资料",
@@ -33,6 +36,9 @@
     "sourceOnly":"这是只读审阅工具，不会打开或修改游戏存档。",
     "unassigned":"不设国籍","commonRole":"公共角色形象","systemRole":"界面或存档资料条目","playerRole":"玩家自行确定身份","noEvidence":"本次抽取未发现国家线专属关联。",
     "presentation-and-relationship-review":"形象及人物关系需要改编校对","regional-familiarity-review":"本土人物，需要检查观众辨识度","legacy-form-label-review":"原成长形态标签需要校对","story-role-review":"需要审阅剧情与战斗定位是否合适",
+    "companionsCsv":"下载伙伴专用对应表 CSV",
+    "displayApplied":"游戏中已换名",
+    "displayPending":"游戏中尚未换名",
     "error":"角色资料读取失败，请刷新或稍后再试。"
   }
 }

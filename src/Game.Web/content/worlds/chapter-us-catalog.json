@@ -3888,12 +3888,12 @@
       },
       "金蛇剑法秘籍残篇": {
         "name": {
-          "en": "Golden Serpent Sword Scroll",
-          "zh-CN": "金蛇剑术卷轴"
+          "en": "Golden Serpent Sword Fragment",
+          "zh-CN": "金蛇剑术残页"
         },
         "description": {
-          "en": "Training scroll for Golden Serpent Sword. Check its requirements and current effects in the item details.",
-          "zh-CN": "记载金蛇剑术的卷轴。学习条件与实际效果见道具详情。"
+          "en": "A fragment of the Golden Serpent Sword scroll. Check its requirements and effects in the item details.",
+          "zh-CN": "金蛇剑术卷轴的残页。使用条件与效果见道具详情。"
         }
       },
       "金蛇游身掌掌谱": {

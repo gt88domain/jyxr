@@ -30,7 +30,7 @@ try{
  await page.goto(new URL('en/',base).href);await ready();
  assert.equal(await page.locator('html').getAttribute('lang'),'en');
  assert.match(await page.locator('h1').innerText(),/Meet the new cast/);
- assert.match(await page.locator('[data-phase]').innerText(),/Gameplay translation and new art are still pending/);
+ assert.match(await page.locator('[data-phase]').innerText(),/Display names, dialogue and artwork are tracked separately/);
  assert.equal(await page.locator('#country option').count(),14);
  assert.ok((await page.locator('#result-count').innerText()).startsWith(data.actors.filter(a=>a.kind==='named').length+' '));
  pass('English preview boots with thirteen countries and honest delivery status');
@@ -93,7 +93,19 @@ try{
  assert.equal(csvBytes.toString('utf8').trim().split(/\r?\n/).length,514);
  pass('bilingual spreadsheet export contains all 513 original definitions');
  const served=await page.evaluate(async url=>(await fetch(url)).json(),new URL('data/catalog.json',base).href);
- assert.deepEqual(served.actors,data.actors);
+ assert.deepEqual(served.actors.map(({runtimeDisplayApplied,authoredJoinScenes,...actor})=>actor),data.actors);
+ const inventory=await page.evaluate(async url=>(await fetch(url)).json(),new URL('data/companions.json',base).href);
+ assert.equal(inventory.counts.identities,recruitmentIdentities);
+ assert.equal(inventory.counts.fixedIdentities,20);
+ for(const row of inventory.characters){
+  const actor=served.actors.find(a=>a.actorId===row.actorId);
+  assert.equal(actor.runtimeDisplayApplied,row.displayApplied);
+  assert.equal(actor.authoredJoinScenes,row.authoredJoinStories.length);
+  if(row.status==='locked')assert.equal(row.displayApplied,true,row.legacyIdentity);
+ }
+ const companionCsv=await page.evaluate(async url=>(await fetch(url)).text(),new URL('data/companions.csv',base).href);
+ assert.equal(companionCsv.trim().split(/\r?\n/).length,recruitmentIdentities+1);
+ pass('companion-only export distinguishes fixed identities, applied names and authored scenes');
  const storage=await page.evaluate(async()=>({marks:['jyxr-web','jyxr-modern-jyx','jyxr-modern-western'].map(id=>localStorage.getItem(id+'.test-sentinel')),databases:await indexedDB.databases()}));
  assert.deepEqual(storage.marks,['preserved','preserved','preserved']);assert.equal(storage.databases.length,0);
  pass('review tool preserves legacy storage and never creates a game database');
