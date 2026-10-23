@@ -653,14 +653,15 @@
       }
     ]
   },
-  "version": "american-reskin-1",
+  "version": "windrider-loop-1",
   "chapters": [
     "chapter-start.json",
     "chapter-guide.json",
     "chapter-us-catalog.json",
     "world-atlas.json",
     "chapter-companions.json",
-    "chapter-equipment-copy.json"
+    "chapter-equipment-copy.json",
+    "chapter-windrider.json"
   ],
   "speakerNames": {
     "武师": {

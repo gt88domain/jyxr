@@ -25,6 +25,10 @@ test('talent notifications translate the companion as well as the talent',()=>{
  assert.equal(translateUiText('乔峰 获得天赋【阉人】'),'Thor gained the talent Eunuch.');
  setUiDisplayLabels();
 });
+test('combined level-up and loot toasts translate as separate activity messages',()=>{
+ assert.equal(translateUiText("Wren从6级升至7级。；获得「Traveler's Robe」×1"),"Wren levels up: 6 → 7.; Received Traveler's Robe ×1");
+ assert.equal(translateUiText('未改写甲；未改写乙。'),'未改写甲；未改写乙。');
+});
 test('gauntlets, spellcasting and passive masteries retain distinct roles',()=>{
  assert.equal(translateUiText('拳掌'),'Gauntlets');
  assert.equal(translateUiText('奇门'),'Spells');

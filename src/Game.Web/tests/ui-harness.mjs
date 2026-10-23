@@ -6,7 +6,7 @@ import {clickMenu} from './menu-controls.mjs';
 import {projectPresentation} from '../src/presentation.ts';
 
 // Only `state` is sent to the runtime. Gameplay changes must use visible controls.
-export async function createHarness(name, contextOptions = {}) {
+export async function createHarness(name, contextOptions = {}, options = {}) {
   const output = fileURLToPath(new URL('../test-results/', import.meta.url));
   await mkdir(output, {recursive: true});
   const report = {baseURL: process.env.GAME_WEB_URL || 'http://127.0.0.1:4173', startedAt: new Date().toISOString(),
@@ -25,7 +25,7 @@ export async function createHarness(name, contextOptions = {}) {
       return load.apply(this,args);
     };
   });
-  await context.tracing.start({screenshots: true, snapshots: true});
+  if(options.trace!==false)await context.tracing.start({screenshots: true, snapshots: true});
   const page = await context.newPage();
   page.setDefaultTimeout(20_000);
   page.on('console', message => {
@@ -114,7 +114,7 @@ export async function createHarness(name, contextOptions = {}) {
     }
     report.finishedAt = new Date().toISOString();
     await writeFile(`${output}${name}.json`, JSON.stringify(report, null, 2));
-    await context.tracing.stop({path: `${output}${name}-trace.zip`}).catch(() => {});
+    if(options.trace!==false)await context.tracing.stop({path: `${output}${name}-trace.zip`}).catch(() => {});
     await browser.close();
   }
   return {page, report, output, pass, ready, visible, click, state, continueDialogue, closeModal, rejectImport, noOverflow, finish};

@@ -3,7 +3,7 @@
   "chapterGuide": {
     "title": {"en": "First field assignment", "zh-CN": "第一次实地委托"},
     "completeTitle": {"en": "Opening chapter complete", "zh-CN": "前期章节已完成"},
-    "completeText": {"en": "You have prepared your gear, studied a scroll, fought, traded and found a companion. Review the field notes, then save. Later stories are still being rewritten.", "zh-CN": "装备、卷轴研习、战斗、交易和伙伴合作已经完成。回顾实地笔记，再保存旅程。后续故事仍在逐批改写。"},
+    "completeText": {"en": "Your party is ready to explore. For a first story, meet Dulcinea at Windrider Camp. Her trail leads to Windmill Warrens. Trust, nighttime encounters and your choices matter, so save before major decisions.", "zh-CN": "队伍已准备好，可以开始探索。第一条故事推荐去风骑营地认识杜尔西内娅，沿线索前往风车地宫。好感、夜间相遇和选择都会影响走向，重要决定前记得存档。"},
     "reviewLocationId": "章节回顾",
     "reviewLabel": {"en": "Review field notes", "zh-CN": "回顾实地笔记"},
     "recommendedSectId": "无门派",

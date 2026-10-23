@@ -125,6 +125,13 @@ export function translateUiText(value:string):string {
   const text=value.trim();
   if(!cjk.test(text))return value;
   let translated=dictionary[text]??contentLabels[text];
+  // Toasts combine independent activity messages into one text node.
+  // Translate each message before joining; full-line patterns cannot match
+  // a level-up followed by a separate loot notification.
+  if(translated===undefined&&text.includes('；')){
+    const parts=text.split('；'),messages=parts.map(translateUiText);
+    if(messages.some((message,index)=>message!==parts[index]))translated=messages.join('; ');
+  }
   if(translated===undefined&&text.includes('，')){
     const parts=text.split('，');
     if(parts.every(part=>/^[^，]+[+−-][\d.]+%?$/.test(part.trim())))translated=parts.map(part=>translateUiText(part.trim())).join('; ');
