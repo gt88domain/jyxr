@@ -7,7 +7,7 @@
     "forms": 65,
     "instructions": 80,
     "fixedIdentities": 20,
-    "displayAppliedIdentities": 32,
+    "displayAppliedIdentities": 33,
     "authoredJoinScenes": 25
   },
   "characters": [
@@ -1459,13 +1459,13 @@
       ],
       "runtimeNames": {
         "en": {
-          "女主": "铃兰"
+          "女主": "Kriemhild"
         },
         "zh-CN": {
-          "女主": "铃兰"
+          "女主": "克里姆希尔德"
         }
       },
-      "displayApplied": false,
+      "displayApplied": true,
       "authoredJoinStories": [],
       "instructions": [
         {

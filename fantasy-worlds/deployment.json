@@ -1,11 +1,11 @@
 {
-  "sourceCommit": "7b3b36ea7359910b615b1da7fa555e2bbdbd4106",
+  "sourceCommit": "77abd8e4e9a2811e02ee018355a16f24b72ac66b",
   "companionSummary": {
     "identities": 62,
     "forms": 65,
     "instructions": 80,
     "fixedIdentities": 20,
-    "displayAppliedIdentities": 32,
+    "displayAppliedIdentities": 33,
     "authoredJoinScenes": 25
   },
   "buildTrigger": "authenticated-git-push"
