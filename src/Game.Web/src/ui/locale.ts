@@ -24,7 +24,7 @@ const patterns:Array<[RegExp,(...parts:string[])=>string]>=[
   [/^(.*?)\s*→$/,(label)=>`${translateUiText(label.trim())} →`],
   [/^(\d+)轮$/,(n)=>`${n} turns`],
   [/^(自动交手|手动出招)\s*·\s*(.*)$/,(mode,speed)=>`${mode==='自动交手'?'Auto':'Manual'} · ${speed}`],
-  [/^秘籍修炼「(.*?)」经验\s*\+(\d+)(?:，提升至\s*(\d+)\s*级)?。$/,(name,xp,level)=>`Scroll study: ${translateUiText(name)} · XP +${xp}${level?` · Rank ${level}`:''}.`],
+  [/^秘籍修炼「(.*?)」经验\s*\+(\d+)(?:，提升至\s*(\d+)\s*级)?。$/,(name,xp,level)=>`Study: ${translateUiText(name)} · XP +${xp}${level?` · Rank ${level}`:''}.`],
   [/^随身(.*?)$/,(currency)=>`Carried ${translateUiText(currency)}`],
   [/^【(.*?)】装备【(.*?)】$/,(name,item)=>`${translateUiText(name)} equipped ${itemLabel(item)}.`],
   [/^【(.*?)】使用【(.*?)】$/,(name,item)=>`${translateUiText(name)} used ${itemLabel(item)}.`],
@@ -41,17 +41,17 @@ const patterns:Array<[RegExp,(...parts:string[])=>string]>=[
   [/^(.*?)从(\d+)级升至(\d+)级。$/,(name,a,b)=>`${translateUiText(name)} levels up: ${a} → ${b}.`],
   [/^(.*?)加入队伍（(.*?)）。$/,(name,placement)=>`${translateUiText(name)} joins the party (${translateUiText(placement)}).`],
   [/^(.*?)离开队伍。$/,(name)=>`${translateUiText(name)} leaves the party.`],
-  [/^已选择修炼秘籍「(.*?)」。秘籍保留在背包，战斗结算经验将用于此项修炼。$/,(name)=>`Studying ${translateUiText(name)}. The scroll remains in inventory; combat settlement awards study XP.`],
+  [/^已选择修炼秘籍「(.*?)」。秘籍保留在背包，战斗结算经验将用于此项修炼。$/,(name)=>`Studying ${translateUiText(name)}. The guide stays in your inventory; battles award study XP.`],
   [/^(.*?)\s*·\s*路程与交互\s*(\d+)\s*时辰$/,(description,n)=>`${translateUiText(description)} · Travel and interaction: ${n} time slots`],
   [/^第\s*(\d+)\s*级\s*·\s*(.*)$/,(n,role)=>`Level ${n} · ${translateUiText(role)}`],
   [/^(.*?)\s*·\s*第\s*(\d+)\s*级$/,(role,n)=>`${translateUiText(role)} · Level ${n}`],
   [/^人物经验\s*(.*)$/,(n)=>`Character XP ${n}`],
   [/^伙伴修炼总览\s*·\s*(\d+)\s*人已选秘籍$/,(n)=>`Party training overview · ${n} assigned`],
-  [/^秘籍：\s*(.*)$/,(n)=>`Scroll: ${translateUiText(n)}`],
+  [/^秘籍：\s*(.*)$/,(n)=>`Guide: ${translateUiText(n)}`],
   [/^(修炼|穿戴)门槛\s*·\s*(\d+)\/(\d+)\s*已满足$/,(kind,a,b)=>`${kind==='修炼'?'Training':'Equipment'} requirements · ${a}/${b} met`],
   [/^([✓○])\s*(.*?)（面板）$/,(mark,stat)=>`${mark} ${translateUiText(stat)} (character sheet)`],
   [/^当前\s*(.*?)\s*\/\s*需要\s*(.*)$/,(a,b)=>`Current ${a} / Required ${b}`],
-  [/^秘籍共\s*(\d+)\s*本\s*·\s*空闲\s*(\d+)\s*本$/,(a,b)=>`Scrolls: ${a} · Available: ${b}`],
+  [/^秘籍共\s*(\d+)\s*本\s*·\s*空闲\s*(\d+)\s*本$/,(a,b)=>`Guides: ${a} · Available: ${b}`],
   [/^第\s*(\d+)\s*重\s*\/\s*(\d+)\s*重(.*)$/,(a,b,tail)=>`Rank ${a}/${b}${translateUiText(tail)}`],
   [/^(.+?)\s*·\s*第\s*(\d+)\s*重\s*\/\s*(\d+)\s*重$/,(name,a,b)=>`${translateUiText(name)} · Rank ${a}/${b}`],
   [/^第\s*(\d+)\s*重\s*·\s*耗(.*?)\s+(\d+)$/,(n,energy,cost)=>`Rank ${n} · ${translateUiText(energy)} ${cost}`],
@@ -176,7 +176,7 @@ export function startUiLocale(appId:string):void {
   const language=new URL(location.href).searchParams.get('lang')||'en';
   if(appId!=='jyxr-fantasy-worlds')return;
   activeLanguage=language==='zh-CN'?'zh-CN':'en';
-  const excluded='script,style,code,pre,textarea,[data-testid="dialogue-text"],.story-choices,.hero-heading h2,.dialogue-content h2';
+  const excluded='script,style,code,pre,textarea,[data-testid="dialogue-text"],.story-choices,.hero-heading h2,.as-identity h2,.dialogue-content h2';
   const attributes=['aria-label','title','placeholder','alt'];
   let observer:MutationObserver;
   function translate(){

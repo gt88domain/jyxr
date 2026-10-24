@@ -645,7 +645,7 @@
       "黑血神针": {
         "name": {
           "en": "Bloodthorn Bolt",
-          "zh-CN": "血棘飞弹"
+          "zh-CN": "血棘飞矢"
         },
         "description": {
           "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
@@ -3559,11 +3559,11 @@
       "黑血神针秘籍": {
         "name": {
           "en": "Bloodthorn Bolt Scroll",
-          "zh-CN": "血棘飞弹卷轴"
+          "zh-CN": "血棘飞矢卷轴"
         },
         "description": {
           "en": "Training scroll for Bloodthorn Bolt. Check its requirements and current effects in the item details.",
-          "zh-CN": "记载血棘飞弹的卷轴。学习条件与实际效果见道具详情。"
+          "zh-CN": "记载血棘飞矢的卷轴。学习条件与实际效果见道具详情。"
         }
       },
       "七伤摧魂针法": {

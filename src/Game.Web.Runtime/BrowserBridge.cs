@@ -386,6 +386,8 @@ internal sealed partial class BrowserRuntimeSession
             state.Currency.AddSilver(prepared.Silver);
             foreach (var (id, quantity) in prepared.Items) _session.InventoryService.AddItem(id, quantity);
         }
+        if (PackText("starterEquipmentId") is { Length: > 0 } starter && !state.Inventory.Entries.Any(e => e.Definition.Id == starter))
+            _session.InventoryService.AddItem(starter, 1);
         _creation = null;
         _session.MapService.EnterMap(PackText("initialMapId"));
         _battle = null;

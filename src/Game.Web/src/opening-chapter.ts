@@ -11,11 +11,11 @@ export interface ChapterGuide {
   story?:StoryGuide;
   title:string;completeTitle:string;completeText:string;reviewLocationId:string;reviewLabel:string;
   recommendedSectId:string;schoolNote:string;stepOrder:string[];
-  steps:{id:string;detail:string;panel?:'equipment'|'cultivation'|'save';route?:ChapterRoute[]}[];
+  steps:{id:string;detail:string;panel?:'loadout'|'equipment'|'cultivation'|'save';route?:ChapterRoute[]}[];
   taskRoutes:Record<string,ChapterRoute[]>;
 }
 /** Directions come from content. Completion comes exclusively from the host. */
-export function openingChapterStep(state:GameState):{title:string;detail:string;route:ChapterRoute[];panel?:'equipment'|'cultivation'|'save';complete:boolean;storyStage?:string}|null{
+export function openingChapterStep(state:GameState):{title:string;detail:string;route:ChapterRoute[];panel?:'loadout'|'equipment'|'cultivation'|'save';complete:boolean;storyStage?:string}|null{
   const guide=state.pack.chapterGuide;if(!guide)return null;
   const goals=state.objectives||[];
   if(state.tutorial)return {title:state.tutorial.description,detail:'',route:guide.taskRoutes[state.tutorial.id]||[],complete:false};

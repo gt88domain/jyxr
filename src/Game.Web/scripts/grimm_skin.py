@@ -95,6 +95,11 @@ def apply_skin(raw,skin,locale):
             for child in value:walk(child)
     walk(package['storyScripts'])
     browser=package['browser']
+    if 'starterEquipmentId' in skin:
+        # Explicitly authorized modern onboarding exception. It cannot change
+        # the original creation answers, story rewards or combat definitions.
+        if skin['starterEquipmentId']!='木刀':raise ValueError('Unsupported starter equipment')
+        browser['starterEquipmentId']=skin['starterEquipmentId']
     for key in ['title','subtitle','description']:browser[key]=skin[key][locale]
     browser['chapterTitle']=skin['subtitle'][locale]
     browser['contentVersion']=skin['version']
@@ -107,7 +112,7 @@ def apply_skin(raw,skin,locale):
     if 'chapterGuide' in skin:
         chapter_guide=localize(skin['chapterGuide']);goal_ids={o['id'] for o in browser['objectives']}
         if set(chapter_guide['stepOrder'])!=goal_ids or len(chapter_guide['stepOrder'])!=len(goal_ids) or {s['id'] for s in chapter_guide['steps']}!=goal_ids or len(chapter_guide['steps'])!=len(goal_ids):raise ValueError('Chapter guide goals do not match')
-        if any(s.get('panel') not in [None,'equipment','cultivation','save'] for s in chapter_guide['steps']):raise ValueError('Chapter guide panel unsupported')
+        if any(s.get('panel') not in [None,'loadout','equipment','cultivation','save'] for s in chapter_guide['steps']):raise ValueError('Chapter guide panel unsupported')
         maps={m['id']:{l['id'] for l in m.get('locations',[])} for m in package['maps']}
         routes=[s.get('route',[]) for s in chapter_guide['steps']]+list(chapter_guide['taskRoutes'].values())
         if story:=chapter_guide.get('story'):
@@ -148,6 +153,38 @@ def apply_skin(raw,skin,locale):
             for option,label in zip(question['options'],text['options'][locale],strict=True):option['text']=label
     for group in ['characters','portraits']:browser['media'][group][guide]=skin['portrait']
     for resource in ['头像.南贤','头像.'+name]:browser['media']['resources'][resource]=skin['portrait']
+    if skin.get('materialNaming')=='rpg-guides-v1':
+        skills={s['id']:s for s in package['externalSkills']}
+        renames={}
+        for item in package['items']:
+            effects=item.get('useEffects',[])
+            if item.get('type')!='skill_book' or len(effects)!=1 or effects[0]['type'] not in ['internal_skill','external_skill']:continue
+            spell=effects[0]['type']=='external_skill' and skills[effects[0]['skillId']]['type']=='qimen'
+            before=item['name']
+            if locale=='en':
+                stem=re.sub(r' (Scroll|Manual|Tome)$','',before)
+                item['name']=stem+(' Tome' if spell else ' Manual')
+                item['description']=re.sub(r'\b[Ss]croll\b','tome' if spell else 'manual',item['description'])
+            else:
+                stem=re.sub(r'(卷轴|手册|法术书)$','',before)
+                item['name']=stem+('法术书' if spell else '手册')
+                item['description']=item['description'].replace('卷轴','法术书' if spell else '手册')
+            if before!=item['name']:renames[before]=item['name']
+        def material_text(text):
+            for old,new in sorted(renames.items(),key=lambda p:-len(p[0])):text=text.replace(old,new)
+            text=re.sub(r'\bscroll study\b','study',text,flags=re.I)
+            if locale=='en':return re.sub(r'\b(scrolls?)\b',lambda m:('Guides' if m[0][0].isupper() else 'guides') if m[0].lower().endswith('s') else ('Guide' if m[0][0].isupper() else 'guide'),text,flags=re.I)
+            return text.replace('卷轴','教材')
+        def material_copy(value):
+            if isinstance(value,list):
+                for child in value:material_copy(child)
+            elif isinstance(value,dict):
+                for key,child in value.items():
+                    if key in ['text','detail','description','completeText','title','schoolNote'] and isinstance(child,str):value[key]=material_text(child)
+                    elif key=='call' and isinstance(child,str) and (match:=text_command.fullmatch(child)):
+                        value[key]=match[1]+"('"+material_text(match[2]).replace("'",'’')+"')"
+                    elif isinstance(child,(dict,list)):material_copy(child)
+        material_copy(package['storyScripts']);material_copy(package['internalSkills']);material_copy(browser['chapterGuide']);material_copy(browser['objectives']);material_copy(browser.get('legacyTasks',[]))
     # A presentation overlay of this same game keeps jyx: existing legacy rule
     # selection depends on this identity. App-level storage is separately scoped.
     if browser['id']!='jyx':raise ValueError('The source rule identity must stay jyx')
@@ -225,6 +262,8 @@ def assert_same_flow(original,adapted):
     # except the explicit presentation allowlist.
     def browser_rules(browser):
         browser=copy.deepcopy(browser)
+        if 'starterEquipmentId' in browser:
+            if browser.pop('starterEquipmentId')!='木刀':raise ValueError('Unsupported starter equipment')
         for key in ['title','subtitle','description','chapterTitle','contentVersion','media','defaultName','currencyName','currencyUnit','terms','chapterGuide','worldAtlas']:browser.pop(key,None)
         for objective in browser['objectives']:objective.pop('title',None)
         for task in browser.get('legacyTasks',[]):task.pop('description',None)

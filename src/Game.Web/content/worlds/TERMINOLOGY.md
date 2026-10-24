@@ -8,11 +8,12 @@
 | 钟灵 | 埃尔 | Eir |
 | 野球拳 | 旅人拳击 | Traveler's Gauntlet Strike |
 | 基本内功 | 坚毅专精 | Steadfast Mastery |
-| 内功入门 | 坚毅专精卷轴 | Steadfast Mastery Scroll |
+| 内功入门 | 坚毅专精手册 | Steadfast Mastery Manual |
 | 罗汉拳 | 护炉拳法 | Hearthward Fist |
-| 罗汉拳谱 | 护炉拳法卷轴 | Hearthward Fist Scroll |
+| 罗汉拳谱 | 护炉拳法手册 | Hearthward Fist Manual |
 | 青蟒剑法 | 青蛇剑术 | Serpent Swordplay |
-| 青蟒剑法秘籍 | 青蛇剑术卷轴 | Serpent Swordplay Scroll |
+| 青蟒剑法秘籍 | 青蛇剑术手册 | Serpent Swordplay Manual |
+| 黑血神针秘籍 | 血棘飞矢法术书 | Bloodthorn Bolt Tome |
 | 万劫刀法 | 荆刃战技 | Thornblade Arts |
 | 疯魔杖法 | 游旅秘术 | Wandering Arcana |
 | 石梁心法 | 石桥专精 | Stonebridge Mastery |
@@ -24,7 +25,7 @@
 | 回力跑鞋 | 疾步靴 | Fleetfoot Boots |
 | 阴／阳 | 幽影／光辉 | Umbral / Radiant |
 
-这是对现有玩法的题材呈现：改成拳套、法术和被动专精不会额外制造燃烧、冰冻或独立魔法伤害类别。原技能范围、亲和、消耗、效果和奖励保持。卷轴研习与当前装备的主专精是两个真实操作；道具说明按原效果标明恢复量、永久属性或装备要求。
+这是对现有玩法的题材呈现：改成拳套、法术和被动专精不会额外制造燃烧、冰冻或独立魔法伤害类别。原技能范围、亲和、消耗、效果和剧情奖励保持。研习教材与当前装备的主专精是两个真实操作；战技及专精教材用 Manual，法术教材用 Tome，总称 Learning guides。道具说明按原效果标明恢复量、永久属性或装备要求。
 
 完整名称保存在 `grimm-skin.json`、`chapter-start.json` 、`chapter-guide.json` 和 `chapter-us-catalog.json`；[三列文案与流程对照](https://gt88domain.github.io/jyxr/fantasy-worlds/review/)用于逐条审阅。
 
