@@ -13,8 +13,8 @@
   "maps": {
     "大轮寺雪山": {
       "name": {
-        "en": "Grail Snowfields",
-        "zh-CN": "圣杯雪地"
+        "en": "Camelot Snowfields",
+        "zh-CN": "卡美洛雪原"
       },
       "description": {
         "en": "The lodge's outdoor training grounds. The mountain pass stays closed until graduation.",
@@ -108,8 +108,8 @@
       },
       "大轮寺": {
         "name": {
-          "en": "Return to Grail Lodge",
-          "zh-CN": "返回圣杯山舍"
+          "en": "Return to Round Table",
+          "zh-CN": "返回圆桌骑士团"
         },
         "description": {
           "en": "Return to the indoor practice rooms.",
@@ -416,8 +416,8 @@
   },
   "commandText": {
     "出师大轮寺。": {
-      "en": "Graduated from Grail Lodge. The Mad Hatter joined the party.",
-      "zh-CN": "圣杯山舍出师，疯帽匠加入队伍。"
+      "en": "Graduated from Round Table. The Mad Hatter joined the party.",
+      "zh-CN": "圆桌骑士团出师，疯帽匠加入队伍。"
     }
   },
   "chapterGuide": {
@@ -429,8 +429,8 @@
           "大轮寺雪山"
         ],
         "name": {
-          "en": "Grail Lodge training",
-          "zh-CN": "圣杯山舍训练"
+          "en": "Round Table training",
+          "zh-CN": "圆桌骑士团训练"
         },
         "graduationStory": "门派大轮寺_大轮寺出师",
         "graduationAfterDay": 60,

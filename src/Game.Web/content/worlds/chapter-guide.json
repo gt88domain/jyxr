@@ -28,7 +28,7 @@
     "reviewLocationId": "章节回顾",
     "reviewLabel": {"en": "Review field notes", "zh-CN": "回顾实地笔记"},
     "recommendedSectId": "大轮寺",
-    "schoolNote": {"en": "Choose a training organization, or travel independently. Grail Lodge has a guided first training route and a companion at graduation. Its mountain pass stays closed until then. Joining starts that route immediately; signature techniques are earned later.", "zh-CN": "可以加入组织训练，也可以独自旅行。圣杯山舍有完整的初步训练指引，出师时会有伙伴加入；此前山道不会开放。点击加入即开始该路线，特色技艺仍需后续获取。"},
+    "schoolNote": {"en": "Choose a training organization, or travel independently. Round Table has a guided first training route and a companion at graduation. Its mountain pass stays closed until then. Joining starts that route immediately; signature techniques are earned later.", "zh-CN": "可以加入组织训练，也可以独自旅行。圆桌骑士团有完整的初步训练指引，出师时会有伙伴加入；此前山道不会开放。点击加入即开始该路线，特色技艺仍需后续获取。"},
     "stepOrder": ["opening", "equipment", "cultivation", "training", "tutorial", "shopping", "companion", "team", "save"],
     "steps": [
       {"id": "opening", "detail": {"en": "Speak with Grimm. His first gift is a mastery scroll, not a demand for rent.", "zh-CN": "和格林交谈，领取第一份专精卷轴。他暂时不会收你房租。"}, "route": [{"mapId": "南贤屋内", "locationId": "南贤"}]},

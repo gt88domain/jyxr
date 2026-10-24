@@ -31,7 +31,10 @@ try{
  assert.equal(await page.locator('html').getAttribute('lang'),'en');
  assert.match(await page.locator('h1').innerText(),/Meet the new cast/);
  assert.match(await page.locator('[data-phase]').innerText(),/Display names, dialogue and artwork are tracked separately/);
- assert.equal(await page.locator('#country option').count(),14);
+ assert.equal(await page.locator('#country option').count(),15);
+ assert.equal(await page.locator('#country optgroup').count(),2);
+ await page.locator('#country').selectOption('KR');assert.equal(await page.locator('.cast-card').count(),0);
+ await page.locator('#country').selectOption('');
  assert.ok((await page.locator('#result-count').innerText()).startsWith(data.actors.filter(a=>a.kind==='named').length+' '));
  pass('English preview boots with thirteen countries and honest delivery status');
  await page.evaluate(()=>{for(const id of ['jyxr-web','jyxr-modern-jyx','jyxr-modern-western'])localStorage.setItem(id+'.test-sentinel','preserved');});

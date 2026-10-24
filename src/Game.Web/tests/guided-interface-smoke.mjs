@@ -86,7 +86,7 @@ try{
  }
  await page.screenshot({path:output+'guided-training-desktop.png'});
  const zh=new URL(report.baseURL);zh.searchParams.set('lang','zh-CN');await page.goto(zh.href);await page.locator('[data-action="new"]').waitFor({timeout:120000});await load('joined');
- assert.match(await page.locator('[data-guidance]').innerText(),/圣杯/);assert.equal((await state()).adventure.sect,'大轮寺');await noOverflow('Chinese comparison');
+ assert.match(await page.locator('[data-guidance]').innerText(),/圆桌/);assert.equal((await state()).adventure.sect,'大轮寺');await noOverflow('Chinese comparison');
  pass('320–1440px layout and Chinese comparison keep the same live route');
 }catch(error){failure=error;}
 await finish(failure);

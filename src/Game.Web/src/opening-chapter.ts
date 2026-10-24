@@ -2,6 +2,7 @@ import type {GameState} from './bridge';
 import {e} from './ui/format';
 import {storyChapterStep} from './story-guide';
 import {academyStep,type AcademyGuide} from './academy-guide';
+import type {Organization} from './world-status';
 export interface ChapterRoute {mapId:string;locationId:string;}
 export interface StoryGuide {
   title:string; trustTarget:string;trustLabel:string;trustGoal:number; trackedStories:string[];
@@ -9,6 +10,7 @@ export interface StoryGuide {
   stages:{id:string;any?:string[];title:string;detail:string;route:ChapterRoute[];complete?:boolean;panel?:'cultivation'}[];
 }
 export interface ChapterGuide {
+  organizations?:Organization[];
   academies?:AcademyGuide[];
   story?:StoryGuide;
   title:string;completeTitle:string;completeText:string;reviewLocationId:string;reviewLabel:string;

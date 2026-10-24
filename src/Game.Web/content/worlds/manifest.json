@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "worlds",
   "runtimePackId": "jyx",
-  "version": "guided-interface-1",
+  "version": "classic-organizations-1",
   "title": "Storybound · Grimm's Request",
   "locale": "en",
   "inventory": "../jyx/assets.json",

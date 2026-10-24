@@ -7,18 +7,21 @@ import {nextStepAction} from './journey-panel';
 import {copy} from './ui-language';
 import {e,icon} from './ui/format';
 import './guided-interface.css';
+import {worldStatus} from './world-status';
 /** One compact home for the live map, current goal and ordinary map actions. */
 export function worldDashboard(state:GameState){
   const h=state.managedCharacter||state.hero,step=openingChapterStep(state),academy=academyStep(state),atlas=state.map.kind==='large'&&state.pack.worldAtlas;
   const equipped=h.equipment?.filter(x=>x.item).length||0;
+  const status=worldStatus(state,document.documentElement.lang);
   return `<main class="world-screen guided-world" data-guided-world>
 <header class="gw-location">
 <div>
 <span class="eyebrow">${copy('Adventure journal','冒险手册')}</span>
 <h1>${e(state.map.name)}</h1>
 </div>
-<span>${copy('Day','第')} ${(state.adventure?.days||0)+1}${copy('','天')}</span>
+<span class="gw-clock" data-world-clock><strong>${copy('Day','第')} ${status.day}${copy('','天')}</strong><small>${status.night?'☾ ':''}${e(status.time)}</small></span>
 </header>
+<div class="gw-affiliation" data-world-affiliation title="${e(status.organizationFullName)}"><span>${copy('Organization','所属组织')}</span><strong>${e(status.organizationName)}</strong></div>
 <section class="gw-status" aria-label="${copy('Party status','队伍状态')}">
 <button data-action="loadout">
 <img src="${e(assetUrl(h.portrait))}" alt="">

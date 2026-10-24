@@ -19,6 +19,15 @@ def load_skin(web=None):
         chapter=json.loads(path.read_text(encoding='utf8'))
         if chapter.pop('sourceSha256',None)!=skin['sourceSha256']:raise ValueError('Chapter source changed')
         merge(skin,chapter)
+    # Organization names have one editable owner; chapter copy keeps its own
+    # prose, while display definitions are derived here before compilation.
+    countries={c['id'] for c in json.loads((folder/'countries.json').read_text(encoding='utf8'))}
+    for organization in skin.get('chapterGuide',{}).get('organizations',[]):
+        if organization['storyCountry'] is not None and organization['storyCountry'] not in countries:raise ValueError('Organization story country missing')
+        if any(not organization[field].get(locale) for field in ['name','shortName'] for locale in ['en','zh-CN']):raise ValueError('Organization localization missing')
+        definition=skin['definitions']['sects'][organization['id']]
+        if 'name' in definition:raise ValueError('Organization name must be owned by organizations.json')
+        definition['name']=copy.deepcopy(organization['name'])
     return skin
 
 def apply_skin(raw,skin,locale):
@@ -125,6 +134,15 @@ def apply_skin(raw,skin,locale):
             if any(not set(s.get('any',[]))<=set(tracked) for s in stages):raise ValueError('Chapter stage uses untracked story')
             routes += [s['route'] for s in stages]
         academies=chapter_guide.get('academies',[])
+        organizations=chapter_guide.get('organizations',[])
+        if organizations:
+            if {o['id'] for o in organizations}!={s['id'] for s in package['sects']} or len(organizations)!=len(package['sects']):raise ValueError('Organization catalog must cover the original choices')
+            affiliations=[id for o in organizations for id in o['affiliationIds']]
+            if len(set(affiliations))!=len(affiliations):raise ValueError('Duplicate affiliation alias')
+            for organization in organizations:
+                if not organization['sourceWork'] or not organization['name'] or not organization['shortName']:raise ValueError('Organization display or source missing')
+                if organization['reviewStatus'] not in ['reviewed','candidate','needs-review','independent']:raise ValueError('Unknown organization review status')
+                if organization.get('mentorId') and organization['mentorId'] not in {c['id'] for c in package['characters']}:raise ValueError('Organization mentor missing')
         if len({a['id'] for a in academies})!=len(academies):raise ValueError('Duplicate academy guide')
         for academy in academies:
             if academy['id'] not in {s['id'] for s in package['sects']} or not set(academy['maps'])<=set(maps):raise ValueError('Academy guide reference missing')
