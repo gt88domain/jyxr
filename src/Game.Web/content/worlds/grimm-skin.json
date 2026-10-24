@@ -1,5 +1,7 @@
 {
   "schemaVersion": 1,
+  "starterEquipmentId": "木刀",
+  "materialNaming": "rpg-guides-v1",
   "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
   "characterId": "南贤",
   "figureId": "de.jacob-grimm",
@@ -653,7 +655,7 @@
       }
     ]
   },
-  "version": "windrider-guidance-2",
+  "version": "adventurer-sheet-1",
   "chapters": [
     "chapter-start.json",
     "chapter-guide.json",

@@ -46,6 +46,7 @@ const settings = readSettings();
 const audio = new GameAudio(settings);
 applySettings(settings);
 let activePanel: PanelName | null = null, inventoryFilter: InventoryFilter = 'all';
+let requestedSheet = new URL(location.href).searchParams.get('screen')==='loadout';
 let inventoryQuery = '', inventorySort: InventorySort = 'original';
 let equipmentPreviewContext: {state: GameState; entryNumber: number} | undefined;
 let battleActionContext: {state: GameState; command: GameCommand} | undefined;
@@ -149,6 +150,7 @@ function applyResult(result: Result,restored=false) {
   if(!restored&&previous&&notices.length)toast(notices.slice(-2).map(a=>plain(a.message)).join('；')+(notices.length>2?`，另有${notices.length-2}条，见通知。`:''),false);
   refreshActivityBadge();
   if (result.warning) toast(result.warning);
+  if(requestedSheet&&state.phase==='world'&&state.pack.chapterGuide){requestedSheet=false;openPanel('loadout');}
 }
 function refreshActivityBadge(){
   const count=(state?.activity||[]).filter(a=>a.notice&&a.id>activitySeen).length;
@@ -258,6 +260,7 @@ function openPanel(name: PanelName) {
   if (name === 'inventory') {inventoryFilter = 'all'; inventoryQuery = ''; inventorySort = 'original';}
   const content = panelContent(name, state, settings, busy, inventoryFilter, {query: inventoryQuery, sort: inventorySort});
   modal(content.title, content.content, true);
+  document.querySelector('#game-modal')?.classList.toggle('adventurer-modal',name==='loadout');
 }
 function refreshPanel() {
   const node = document.querySelector<HTMLDialogElement>('#game-modal[open]');
@@ -395,7 +398,7 @@ document.addEventListener('click', event => {
   else if (action === 'leave-battle') void command({type: 'leaveBattle'});
   else if (action === 'skill') {selectedSkill = button.dataset.id!; battleIntent = 'attack'; updateBattle();}
   else if (action === 'battle-intent' && (button.dataset.id === 'move' || button.dataset.id === 'attack')) {battleIntent = button.dataset.id; updateBattle();}
-  else if (action === 'character' || action === 'inventory' || action === 'equipment' || action === 'cultivation' || action === 'settings' || action === 'party' || action === 'quests') openPanel(action);
+  else if (action === 'loadout' || action === 'character' || action === 'inventory' || action === 'equipment' || action === 'cultivation' || action === 'settings' || action === 'party' || action === 'quests') openPanel(action);
   else if (action === 'inventory-filter') {inventoryFilter = button.dataset.id as InventoryFilter; refreshPanel();}
   else if (action === 'preview-equipment') void showEquipmentPreview(Number(button.dataset.entryNumber));
   else if (action === 'confirm-equipment-preview') void (async()=>{

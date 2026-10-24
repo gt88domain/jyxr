@@ -1,6 +1,12 @@
 using System.Text.Json;
 using Game.Web.Runtime;
 
+if(args.FirstOrDefault()=="--onboarding")
+{
+    await OnboardingSmoke.Run(args[1],args[2],args[3],args[4]);
+    return;
+}
+
 if (args.FirstOrDefault() == "--white-horse")
 {
     await WhiteHorseSmoke.Run(args[1], args[2], args.ElementAtOrDefault(3) ?? "normal");

@@ -27,6 +27,8 @@ internal sealed partial class BrowserRuntimeSession
                 throw new InvalidOperationException($"内容包缺少 {key}。");
         content.GetCharacter(pack["heroDefinitionId"]!.GetValue<string>());
         content.GetMap(pack["initialMapId"]!.GetValue<string>());
+        if (pack["starterEquipmentId"]?.GetValue<string>() is { Length: > 0 } starter)
+            content.GetEquipment(starter);
         if (pack["formationRules"] is { } formationNode)
         {
             var formation = formationNode.Deserialize<Game.Core.Battle.BattleFormationRules>(Json) ?? throw new InvalidOperationException("阵法规则为空。");
@@ -197,7 +199,8 @@ internal sealed partial class BrowserRuntimeSession
             "story" => _session.State.Story.IsStoryCompleted(target),
             "party" => _session.State.Party.ContainsMember(target),
             "equipment" => Enum.GetValues<EquipmentSlotType>().Any(s => Hero.GetEquipment(s) is { } e && (target.Length == 0 || e.Definition.Id == target)),
-            "cultivation" => CultivationView(Hero) is not null && (target.Length == 0 || _cultivationItemId == target),
+            "cultivation" => CultivationView(Hero) is not null && (target.Length == 0 || _cultivationItemId == target)
+                || PackText("starterEquipmentId").Length > 0 && _session.State.Inventory.Entries.Any(e => (target.Length == 0 || e.Definition.Id == target) && CompletedStudy(e.Definition, Hero)),
             "purchase" => _session.State.Shop.PurchasedQuantities.Any(p => p.Value > 0 && (target.Length == 0 || p.Key.ShopId == target)),
             "save" => _hasSaved,
             "battle" => WonBattles.Contains(target),

@@ -124,6 +124,8 @@ internal sealed partial class BrowserRuntimeSession
         var trialTier = CreationProfile["trialItems"]!.AsArray().LastOrDefault(t => draft.TrialCount >= t!["minimum"]!.GetValue<int>());
         if (trialTier is not null)
             foreach (var node in trialTier["items"]!.AsArray()) { var id = node!.GetValue<string>(); items[id] = checked(items.GetValueOrDefault(id) + 1); }
+        if (draft.Round == 1 && PackText("starterEquipmentId") is { Length: > 0 } starter)
+            items[starter] = Math.Max(1, items.GetValueOrDefault(starter));
         var randomStats = CreationProfile["randomStats"]!.AsArray().Select(n => n!.GetValue<string>()).ToArray();
         var bonus = randomStats.ToDictionary(s => s, _ => 0);
         for (var i = 0; i < 13; i++)

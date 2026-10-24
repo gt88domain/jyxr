@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {test} from 'node:test';
 import {translateUiText,setUiDisplayLabels} from '../src/ui/locale.ts';
 test('study scrolls stay distinct from manual controls and saves',()=>{
- assert.equal(translateUiText('秘籍'),'Scrolls');
+ assert.equal(translateUiText('秘籍'),'Training guides');
  assert.equal(translateUiText('手动战斗'),'Manual combat');
  assert.equal(translateUiText('读取手动存档'),'Load manual save');
  assert.equal(translateUiText('Bloodthorn Bolt · 第 1 重 / 10 重'),'Bloodthorn Bolt · Rank 1/10');

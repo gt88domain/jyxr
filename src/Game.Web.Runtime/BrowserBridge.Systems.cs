@@ -50,6 +50,13 @@ internal sealed partial class BrowserRuntimeSession
         var book = BookSkill(item)!.Value;
         return Math.Min(currentMax, book.Level ?? currentMax);
     }
+    private bool CompletedStudy(ItemDefinition item, CharacterInstance character)
+    {
+        if (BookSkill(item) is not { } book) return false;
+        var skill = book.Internal ? character.InternalSkills.Cast<SkillInstance>().FirstOrDefault(s => s.Id == book.SkillId)
+            : character.ExternalSkills.FirstOrDefault(s => s.Id == book.SkillId);
+        return skill is not null && skill.Level >= BookMaxLevel(item, skill);
+    }
 
     private void SetCultivation(long entryNumber)
     {
@@ -96,6 +103,10 @@ internal sealed partial class BrowserRuntimeSession
     {
         var analysis = _session!.ItemUseService.AnalyzeTarget(entry, Managed);
         var book = BookSkill(entry.Definition);
+        var learned = book is { } guide ? (guide.Internal ? Managed.InternalSkills : Managed.ExternalSkills.Cast<SkillInstance>())
+            .FirstOrDefault(s => s.Id == guide.SkillId) : null;
+        var studyLimit = learned is null ? 0 : BookMaxLevel(entry.Definition, learned);
+        var mastered = learned is not null && learned.Level >= studyLimit;
         var equipment = entry.Definition as EquipmentDefinition;
         var targets = _battle?.Units.Where(u => u.Team == 1 && u.IsAlive).Select(u => new
         {
@@ -108,7 +119,8 @@ internal sealed partial class BrowserRuntimeSession
         var reason = _battle is not null ? itemBattleReason ?? "" : !CanManage ? "对话中暂不可调整。" : analysis.CanUse ? "" : analysis.Reason;
         if (_battle is null && CanManage && !_session.State.Party.ContainsMember(Managed.Id))
             reason = "此人物当前不在参战队伍；请先到队伍编排查看后备或剧情安排。";
-        if (book is not null && !ManualAvailable(entry, Managed)) reason = "秘籍正由其他队友修炼。";
+        if (mastered && CanManage) reason = "已掌握这本教材的内容。可换一本教材，或继续使用已学技能。";
+        else if (book is not null && !ManualAvailable(entry, Managed)) reason = "秘籍正由其他队友修炼。";
         return new
         {
             id = entry.Definition.Id, entryNumber = entry.EntryNumber, name = entry.Definition.Name, icon = ItemMedia(entry.Definition.Id),
@@ -118,6 +130,7 @@ internal sealed partial class BrowserRuntimeSession
             requirements = _session.ItemUseService.DescribeRequirements(entry.Definition, Managed),
             training = book is null ? null : new {
                 skillId = book.Value.SkillId,
+                mastered, learnedLevel = learned?.Level ?? 0, studyLimit,
                 copies = entry is StackInventoryEntry manualStack ? manualStack.Quantity : 1,
                 assignedTo = _session.State.Party.GetAllCharacters().Where(c => CultivationId(c) == entry.Definition.Id).Select(c => new { id = c.Id, name = c.Name }).ToArray(),
             },

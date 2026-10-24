@@ -85,7 +85,7 @@ class GrimmSkinTests(unittest.TestCase):
    self.assertEqual(next(c for c in runtime['characters'] if c['id']=='南贤')['name'],'南贤')
    scoped=catalog['byCategory']
    self.assertEqual(scoped['internalSkills']['易筋经']['name'],'Ironbody Mastery' if locale=='en' else '铁躯专精')
-   self.assertEqual(scoped['items']['易筋经']['name'],'Ironbody Mastery Scroll' if locale=='en' else '铁躯专精卷轴')
+   self.assertEqual(scoped['items']['易筋经']['name'],'Ironbody Mastery Manual' if locale=='en' else '铁躯专精手册')
 
  def test_creation_changes_only_question_and_answer_copy(self):
   display,_=apply_skin(self.raw,self.skin,'en')
