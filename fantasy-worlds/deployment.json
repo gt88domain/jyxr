@@ -1,5 +1,5 @@
 {
-  "sourceCommit": "4651a82f926fba041bd85a4b9550af4fdde4552d",
+  "sourceCommit": "896893fddbd154d961a1c27134232f7e0c3ccf0d",
   "buildTrigger": "authenticated-git-push",
-  "scope": "Live adventurer-sheet preview, beginner equipment, reusable manuals and spell tomes"
+  "scope": "Modular map dashboard, first-screen shortcuts, organization selection and verified Grail Lodge training/graduation route"
 }

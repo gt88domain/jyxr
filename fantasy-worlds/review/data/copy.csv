@@ -11980,24 +11980,24 @@ copy-1a2bea0ba1f4fe780fe7,storyScripts,门派大轮寺_拜师,legacy,门派大�
 金轮法王：Shelter first, then practice. Strength is learned in stages; it's not issued with a grand title.
 
 主角：I had suspected there might be a catch.",implemented,,/storyScripts/legacy/segments/1012/steps/2,15,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-e6e125e810ec29c67c68,storyScripts,门派大轮寺_新的一天,legacy,门派大轮寺_新的一天,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：又是新的一天了！,,,pending,,/storyScripts/legacy/segments/1013/steps/2,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-e6e125e810ec29c67c68,storyScripts,门派大轮寺_新的一天,legacy,门派大轮寺_新的一天,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：又是新的一天了！,主角：新的一天。雪依然没有学会自己走开。,主角：Another day. The snow has made no progress on shoveling itself.,implemented,,/storyScripts/legacy/segments/1013/steps/2,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7200369b1fa7c33f4c53,storyScripts,门派大轮寺_练功,legacy,门派大轮寺_练功,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：今天要练习什么呢？,主角：先热身，再练习。总算，有条建议字面上也很实用。,"主角：Warm up, then practice. At last, advice that works in both senses.",implemented,,/storyScripts/legacy/segments/1014/steps/2,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-f48a44c35c11442b6350,storyScripts,门派大轮寺_出不去,legacy,门派大轮寺_出不去,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：功夫没练到家，还是不要下山先！,,,pending,,/storyScripts/legacy/segments/1015/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-f48a44c35c11442b6350,storyScripts,门派大轮寺_出不去,legacy,门派大轮寺_出不去,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：功夫没练到家，还是不要下山先！,主角：还不能走。先完成山舍训练，山道才会开放。,主角：Not yet. Finish the lodge's training first; then the mountain pass opens.,implemented,,/storyScripts/legacy/segments/1015/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7cf350b070b2482e649e,storyScripts,门派大轮寺_雪山小路,legacy,门派大轮寺_雪山小路,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：练习了一下雪中跑步！
 
-主角：累死了，累死了……",,,pending,,/storyScripts/legacy/segments/1016/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：累死了，累死了……",主角：又在雪里跑了一圈。我的脚印快比我练得好了。,主角：One more lap through the snow. My footprints are getting very good at this.,implemented,,/storyScripts/legacy/segments/1016/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5ad0409ba326bcc51b45,storyScripts,门派大轮寺_密宗大手印,legacy,门派大轮寺_密宗大手印,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：练习一下大手印功夫……
 
-主角：拍你一个大手印！",,,pending,,/storyScripts/legacy/segments/1017/steps/2,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：拍你一个大手印！",主角：铁印重击。木桩表示不想发表评论。,主角：Iron Seal Strike. The practice post has declined to offer feedback.,implemented,,/storyScripts/legacy/segments/1017/steps/2,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-eaa789ba54a678860c7b,storyScripts,门派大轮寺_无上大力杵,legacy,门派大轮寺_无上大力杵,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：嘿呀！抡起杆子砸死你！
 
-主角：真重，真重……",,,pending,,/storyScripts/legacy/segments/1018/steps/2,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：真重，真重……",主角：力场巨锤！这法术不错，记得别对着屋顶。,"主角：Force Hammer! A useful spell, provided I point it away from the roof.",implemented,,/storyScripts/legacy/segments/1018/steps/2,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-cf3f2f95bb0ae675bd1c,storyScripts,门派大轮寺_漫天花雨,legacy,门派大轮寺_漫天花雨,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：原来我大轮寺还会暗器，是不是跟四川人学的……
 
-主角：看我的，漫天花雨！",,,pending,,/storyScripts/legacy/segments/1019/steps/2,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：看我的，漫天花雨！",主角：奥术骤雨。总算有一种天气，是我说了算。,"主角：Arcane Rain. Finally, weather I can take credit for.",implemented,,/storyScripts/legacy/segments/1019/steps/2,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0f42c8bec207314ad885,storyScripts,门派大轮寺_参禅,legacy,门派大轮寺_参禅,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：作为大轮寺弟子，雪中参禅也是很重要的。
 
-主角：欢喜禅，欢喜禅……（快冻死了）",,,pending,,/storyScripts/legacy/segments/1020/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：欢喜禅，欢喜禅……（快冻死了）",主角：静心冥想了一天。连水壶都懂得别打扰。,主角：A quiet day of meditation. Even the kettle knows better than to interrupt.,implemented,,/storyScripts/legacy/segments/1020/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2f93dce7aa7be5aafcee,storyScripts,门派大轮寺_桑结1,legacy,门派大轮寺_桑结1,dialogue_run,"主角
 桑结","主角 → 玩家角色 / Player character [classified]
 桑结 → 三月兔 / The March Hare [proposed]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：桑结大护法，你好。
@@ -12078,7 +12078,15 @@ copy-34f7471b5cea334c3b06,storyScripts,门派大轮寺_大理高手1,legacy,门�
 
 主角：师父，弟子担心学艺不精……
 
-金轮法王：没事，就打打。输了也没什么。这些灵丹妙药，你先拿去。",,,pending,,/storyScripts/legacy/segments/1036/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+金轮法王：没事，就打打。输了也没什么。这些灵丹妙药，你先拿去。","金轮法王：来了一位挑战者。让他看看你学到了什么，地板的损失我来承担。
+
+主角：要是我展示的是如何摔倒呢？
+
+金轮法王：那就再练。先拿上这些药。","金轮法王：A visiting challenger is here. Show them what you've learned. The floor is already insured.
+
+主角：And if my demonstration involves falling over?
+
+金轮法王：Then we practice again. Take these remedies first.",implemented,,/storyScripts/legacy/segments/1036/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1168f0bf1c05a2c8389f,storyScripts,门派大轮寺_大理高手2,legacy,门派大轮寺_大理高手2,dialogue_run,"大理高手
 金轮法王
 主角","大理高手 → 组织成员 / Guild member [classified]
@@ -12087,7 +12095,15 @@ copy-1168f0bf1c05a2c8389f,storyScripts,门派大轮寺_大理高手2,legacy,门�
 
 金轮法王：你去吧。
 
-主角：是。",,,pending,,/storyScripts/legacy/segments/1037/steps/2,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：是。","大理高手：友好切磋一场吧。我想鞠躬，可肩上还堆着雪。
+
+金轮法王：你上吧，记得给客人留个完整的身子。
+
+主角：争取让他感受到热烈欢迎。","大理高手：A friendly bout, then. I'd bow, but my shoulders are full of snow.
+
+金轮法王：You're up. Try to leave the visitor in one piece.
+
+主角：I'll aim for a warm welcome.",implemented,,/storyScripts/legacy/segments/1037/steps/2,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b1e9eb71524bc674e646,storyScripts,门派大轮寺_大理高手胜,legacy,门派大轮寺_大理高手胜,dialogue_run,"主角
 大理高手
 金轮法王","主角 → 玩家角色 / Player character [classified]
@@ -12096,11 +12112,15 @@ copy-b1e9eb71524bc674e646,storyScripts,门派大轮寺_大理高手胜,legacy,�
 
 大理高手：罢了，我一败涂地。
 
-金轮法王：哈哈，干得漂亮。这个奖给你！",,,pending,,/storyScripts/legacy/segments/1038/steps/2,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-f8e6989e13d0a2b9384e,storyScripts,门派大轮寺_大理高手胜,legacy,门派大轮寺_大理高手胜,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：谢谢师父。,,,pending,,/storyScripts/legacy/segments/1038/steps/7,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+金轮法王：哈哈，干得漂亮。这个奖给你！","大理高手：打得好。上山前真该先热热身。
+
+金轮法王：这本焰掌教材是你应得的，别烧着窗帘。","大理高手：Well fought. I should have warmed up before coming up the mountain.
+
+金轮法王：You've earned this Flamehand Strike guide. Keep the flames away from the curtains.",implemented,,/storyScripts/legacy/segments/1038/steps/2,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-f8e6989e13d0a2b9384e,storyScripts,门派大轮寺_大理高手胜,legacy,门派大轮寺_大理高手胜,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：谢谢师父。,主角：附带防火提醒的奖励，正合我意。,主角：A reward with a fire warning. My favorite kind.,implemented,,/storyScripts/legacy/segments/1038/steps/7,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-34e61b66a90b80a67851,storyScripts,门派大轮寺_大理高手负,legacy,门派大轮寺_大理高手负,dialogue_run,金轮法王,金轮法王 → 珀西瓦尔 / Percival [proposed],GB,"金轮法王：大理段氏果然厉害，不过我这小徒才学了一个多月，输了也正常。
 
-金轮法王：算了，今日大理段氏胜一局，改日我一定亲自上天龙寺领教高招。",,,pending,,/storyScripts/legacy/segments/1039/steps/2,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+金轮法王：算了，今日大理段氏胜一局，改日我一定亲自上天龙寺领教高招。",金轮法王：输了一场，不等于白学。恢复一下再练；这场输赢不决定能否出师。,"金轮法王：A lost bout, not a lost education. Recover, then return to training. Graduation doesn't require winning this match.",implemented,,/storyScripts/legacy/segments/1039/steps/2,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0af2530f34bbf5089983,storyScripts,门派大轮寺_大轮寺出师,legacy,门派大轮寺_大轮寺出师,dialogue_run,"金轮法王
 主角","金轮法王 → 珀西瓦尔 / Percival [proposed]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","金轮法王：好了，你在雪山的修行就告一段落了。下山去吧。
@@ -12117,7 +12137,15 @@ copy-0af2530f34bbf5089983,storyScripts,门派大轮寺_大轮寺出师,legacy,�
 
 金轮法王：你一个人闯荡江湖，还是太凶险了。我让达尔巴陪你一起去吧。
 
-主角：好啊好啊，多谢师父！",,,pending,,/storyScripts/legacy/segments/1040/steps/2,8,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：好啊好啊，多谢师父！","金轮法王：初步训练完成了。你可以下山了。
+
+主角：那山舍最厉害的专精呢？
+
+金轮法王：还要靠旅途上的历练。我让疯帽匠跟你同行，总得有人记得喝茶。","金轮法王：Your first training is complete. The mountain pass is open to you.
+
+主角：And the lodge's greatest mastery?
+
+金轮法王：Earn it on your travels. I'm sending the Hatter with you; someone should keep track of teatime.",implemented,,/storyScripts/legacy/segments/1040/steps/2,8,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9cd91c779133e3831dd9,storyScripts,门派大轮寺_大轮寺出师,legacy,门派大轮寺_大轮寺出师,dialogue_run,"达尔巴
 主角
 金轮法王","达尔巴 → 疯帽匠 / The Mad Hatter [proposed]
@@ -12128,13 +12156,21 @@ copy-9cd91c779133e3831dd9,storyScripts,门派大轮寺_大轮寺出师,legacy,�
 
 金轮法王：你们加油！达尔巴，找到霍都这个叛徒一定要活捉回来。
 
-达尔巴：是！师父。",,,pending,,/storyScripts/legacy/segments/1040/steps/11,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-e416957fbabb7aa7b7f8,storyScripts,门派大轮寺_大轮寺出师,legacy,门派大轮寺_大轮寺出师,journal,,,,出师大轮寺。,,,pending,,/storyScripts/legacy/segments/1040/steps/15/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+达尔巴：是！师父。","达尔巴：准备好了！茶杯归我带，明智决定归你带。
+
+主角：这分工听起来有点不妙。
+
+金轮法王：互相照应。下山的出口在雪地训练场那边。","达尔巴：Ready! I've packed the cups. You can carry the sensible decisions.
+
+主角：That's a worrying division of labor.
+
+金轮法王：Look after each other. The pass is beyond the snowy training grounds.",implemented,,/storyScripts/legacy/segments/1040/steps/11,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-e416957fbabb7aa7b7f8,storyScripts,门派大轮寺_大轮寺出师,legacy,门派大轮寺_大轮寺出师,journal,,,,出师大轮寺。,圣杯山舍出师，疯帽匠加入队伍。,Graduated from Grail Lodge. The Mad Hatter joined the party.,implemented,,/storyScripts/legacy/segments/1040/steps/15/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e9f6856c1c15c3dc39dd,storyScripts,门派大轮寺_回大轮寺,legacy,门派大轮寺_回大轮寺,dialogue_run,"主角
 金轮法王","主角 → 玩家角色 / Player character [classified]
 金轮法王 → 珀西瓦尔 / Percival [proposed]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：师父好。
 
-金轮法王：嗯，你在江湖上闯荡，要不堕我大轮寺威名。",,,pending,,/storyScripts/legacy/segments/1041/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+金轮法王：嗯，你在江湖上闯荡，要不堕我大轮寺威名。",金轮法王：这么快回来了？正好，水壶刚还问起你呢。,金轮法王：Back already? Good. The kettle has been asking after you.,implemented,,/storyScripts/legacy/segments/1041/steps/0,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-55410df00f3719655f92,storyScripts,门派大轮寺_回大轮寺.郭襄,legacy,门派大轮寺_回大轮寺.郭襄,dialogue_run,"主角
 金轮法王
 郭襄","主角 → 玩家角色 / Player character [classified]
@@ -22135,9 +22171,9 @@ copy-cad701729f5a6c68bd07,characters,杨冰儿,,,name,杨冰儿,杨冰儿 → �
 copy-f4443bad04d21062fd21,characters,金轮法王,,,name,金轮法王,金轮法王 → 珀西瓦尔 / Percival [proposed],GB,金轮法王,珀西瓦尔,Percival,implemented,,/characters/447/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6973867338e2bebcb8ac,characters,金轮法王强化,,,name,金轮法王强化,金轮法王强化 → 珀西瓦尔 / Percival [proposed],GB,金轮法王,,,pending,,/characters/448/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c8f023fa85b325acf18c,characters,桑结,,,name,桑结,桑结 → 三月兔 / The March Hare [proposed],GB,桑结,,,pending,,/characters/449/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-13eeb65319629176ba16,characters,达尔巴,,,name,达尔巴,达尔巴 → 疯帽匠 / The Mad Hatter [proposed],GB,达尔巴,,,pending,,/characters/450/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-13eeb65319629176ba16,characters,达尔巴,,,name,达尔巴,达尔巴 → 疯帽匠 / The Mad Hatter [proposed],GB,达尔巴,疯帽匠,The Mad Hatter,implemented,,/characters/450/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-4e4f223b6332dd615056,characters,灵智上人,,,name,灵智上人,灵智上人 → 雷斯垂德探长 / Inspector Lestrade [proposed],GB,灵智上人,,,pending,,/characters/451/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-af6505505c98a6306927,characters,大理高手,,,name,大理高手,大理高手 → 组织成员 / Guild member [classified],"CN,GB",大理高手,,,pending,,/characters/452/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-af6505505c98a6306927,characters,大理高手,,,name,大理高手,大理高手 → 组织成员 / Guild member [classified],"CN,GB",大理高手,来访挑战者,Visiting Challenger,implemented,,/characters/452/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a353ce44c4f8423c6141,characters,尹志平,,,name,尹志平,尹志平 → 忠实的约翰 / Faithful John [proposed],DE,尹志平,,,pending,,/characters/453/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3b0c32ed060e82e99479,characters,赵志敬,,,name,赵志敬,赵志敬 → 幸运的汉斯 / Hans in Luck [proposed],DE,赵志敬,,,pending,,/characters/454/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-164b5df25bf7ca2c5660,characters,苗守一,,,name,苗守一,苗守一 → 希尔德布兰德 / Hildebrand [proposed],DE,苗守一,,,pending,,/characters/455/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -23379,18 +23415,18 @@ copy-521b1afecc552cb0b798,maps,杨冰儿房间,,,description,,,,古墓派弟子�
 copy-d4b51ad105a66dae7c12,maps,杨冰儿房间,,,description,,,,返回古墓走廊,,,pending,,/maps/34/locations/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fcf0ca4b6b2addd19f56,maps,门派大轮寺,,,name,,,,门派大轮寺,圣杯山舍,Grail Lodge,implemented,,/maps/35/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fcad92a9df628edf6e95,maps,门派大轮寺,,,description,,,,你沿着雪山的小径来到了大轮寺，雪后大轮寺的金顶在阳光的映照下愈发耀眼。几个新入寺修行的喇嘛正在院中扫雪，不惧风雪前来上香的信众正在金顶下集合参拜。,雪中的学舍，弟子才知道哪些门后还留着暖意。,A snowbound school. Only its students know which doors stay warm.,implemented,,/maps/35/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-f39ec155c648b7aa9793,maps,门派大轮寺,,,description,,,,武艺高超的金轮法王,,,pending,,/maps/35/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-eb65cb02c4fa52943e5e,maps,门派大轮寺,,,description,,,,修炼密宗大手印,,,pending,,/maps/35/locations/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-410ba767035a01a19c8f,maps,门派大轮寺,,,description,,,,修炼无上大力杵,,,pending,,/maps/35/locations/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-fb14acf49a90a687eae6,maps,门派大轮寺,,,description,,,,修炼漫天花雨,,,pending,,/maps/35/locations/3/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a5ff38ddfc9efd973b7b,maps,门派大轮寺,,,description,,,,大轮寺雪山,,,pending,,/maps/35/locations/4/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-fd16dec60561c75b15d5,maps,大轮寺雪山,,,name,,,,大轮寺雪山,,,pending,,/maps/36/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-6bfefdae8b995086033f,maps,大轮寺雪山,,,description,,,,大轮寺附近的雪山，白雪皑皑。,,,pending,,/maps/36/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-de5fba1679f84bae44f5,maps,大轮寺雪山,,,description,,,,参悟欢喜禅,,,pending,,/maps/36/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-3002927586f32bf9f7dd,maps,大轮寺雪山,,,description,,,,练习雪中行走,,,pending,,/maps/36/locations/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-ddca682d7c5341ba4a5a,maps,大轮寺雪山,,,description,,,,前往大轮寺雪谷,,,pending,,/maps/36/locations/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d76f6d9273da3bc35e00,maps,大轮寺雪山,,,description,,,,返回大轮寺,,,pending,,/maps/36/locations/3/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-460017a3475d07ca50f3,maps,大轮寺雪山,,,description,,,,返回江湖！,,,pending,,/maps/36/locations/4/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-f39ec155c648b7aa9793,maps,门派大轮寺,,,description,,,,武艺高超的金轮法王,你的导师。出师后还有后续教学。,Your tutor. More lessons await after graduation.,implemented,,/maps/35/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-eb65cb02c4fa52943e5e,maps,门派大轮寺,,,description,,,,修炼密宗大手印,一天：力量+1、体质+1，铁印重击提升一级，受当前上限限制。,"One day: Strength +1, Vitality +1, Iron Seal Strike +1 rank, up to its current cap.",implemented,,/maps/35/locations/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-410ba767035a01a19c8f,maps,门派大轮寺,,,description,,,,修炼无上大力杵,一天：力量+1、体质+1，力场巨锤提升一级，受当前上限限制。,"One day: Strength +1, Vitality +1, Force Hammer +1 rank, up to its current cap.",implemented,,/maps/35/locations/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-fb14acf49a90a687eae6,maps,门派大轮寺,,,description,,,,修炼漫天花雨,一天：敏捷+2，奥术骤雨提升一级，受当前上限限制。,"One day: Agility +2, Arcane Rain +1 rank, up to its current cap.",implemented,,/maps/35/locations/3/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a5ff38ddfc9efd973b7b,maps,门派大轮寺,,,description,,,,大轮寺雪山,户外训练；出师后可从这里下山。,Outdoor training; the way out opens after graduation.,implemented,,/maps/35/locations/4/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-fd16dec60561c75b15d5,maps,大轮寺雪山,,,name,,,,大轮寺雪山,圣杯雪地,Grail Snowfields,implemented,,/maps/36/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-6bfefdae8b995086033f,maps,大轮寺雪山,,,description,,,,大轮寺附近的雪山，白雪皑皑。,山舍的户外训练场。出师之后才能从山道下山。,The lodge's outdoor training grounds. The mountain pass stays closed until graduation.,implemented,,/maps/36/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-de5fba1679f84bae44f5,maps,大轮寺雪山,,,description,,,,参悟欢喜禅,花一天时间静心研修。,Spend one day improving your focus.,implemented,,/maps/36/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-3002927586f32bf9f7dd,maps,大轮寺雪山,,,description,,,,练习雪中行走,一天：体质+1，生命上限与能量上限各+15。,"One day: Vitality +1, maximum Health +15 and Energy +15.",implemented,,/maps/36/locations/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-ddca682d7c5341ba4a5a,maps,大轮寺雪山,,,description,,,,前往大轮寺雪谷,通往额外挑战的支路。,A side trail with further challenges.,implemented,,/maps/36/locations/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d76f6d9273da3bc35e00,maps,大轮寺雪山,,,description,,,,返回大轮寺,返回室内练习场。,Return to the indoor practice rooms.,implemented,,/maps/36/locations/3/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-460017a3475d07ca50f3,maps,大轮寺雪山,,,description,,,,返回江湖！,完成初步训练后才能下山。,Complete your initial training before leaving.,implemented,,/maps/36/locations/4/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-702e64f9e7f155bb5ff5,maps,大轮寺雪谷,,,name,,,,大轮寺雪谷,,,pending,,/maps/37/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fee2150e308254070e0d,maps,大轮寺雪谷,,,description,,,,大轮寺附近的山谷，两边山崖高耸，谷底积满了厚厚的白雪。,,,pending,,/maps/37/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-64e8fc47ae2adaaa4515,maps,大轮寺雪谷,,,description,,,,大护法桑结,,,pending,,/maps/37/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -25808,6 +25844,16 @@ copy-d089d178dfbe25722f69,maps,衡阳/潇湘古林,,,display_label,,,,潇湘古�
 copy-72f74d80c8cb4a3f216e,maps,衡阳/湘妃庙,,,display_label,,,,湘妃庙,雨中祠堂,Rain Shrine,implemented,,/maps/14/locations/3/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1ce796df7904d4f20d92,maps,衡阳/返回,,,display_label,,,,返回,世界地图,World Map,implemented,,/maps/14/locations/4/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d2406ef5776b645f9677,maps,南贤居死胡同/南贤,,,display_label,,,,南贤,格林,Grimm,implemented,,/maps/29/locations/0/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-35e5848ffe0f06707f95,maps,门派大轮寺/金轮法王,,,display_label,,,,金轮法王,珀西瓦尔,Percival,implemented,,/maps/35/locations/0/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-6ce8d9f6b82c799d408d,maps,门派大轮寺/修炼密宗大手印,,,display_label,,,,修炼密宗大手印,铁印练习,Iron Seal Practice,implemented,,/maps/35/locations/1/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-416b4a356a44b19f1f90,maps,门派大轮寺/修炼无上大力杵,,,display_label,,,,修炼无上大力杵,力场巨锤练习,Force Hammer Practice,implemented,,/maps/35/locations/2/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-bd5caa20293dc821b5bc,maps,门派大轮寺/修炼漫天花雨,,,display_label,,,,修炼漫天花雨,奥术骤雨练习,Arcane Rain Practice,implemented,,/maps/35/locations/3/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-e6ae8f75043c416147e6,maps,门派大轮寺/大轮寺雪山,,,display_label,,,,大轮寺雪山,雪地与下山口,Snowfields & Mountain Pass,implemented,,/maps/35/locations/4/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-3f443dfa71b86e55ce70,maps,大轮寺雪山/欢喜禅,,,display_label,,,,欢喜禅,静心冥想,Quiet Meditation,implemented,,/maps/36/locations/0/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-fdcecc502ad80fb0beeb,maps,大轮寺雪山/雪中行走,,,display_label,,,,雪中行走,雪地跑步,Snow Run,implemented,,/maps/36/locations/1/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-6359f64f58c8c9d7fb3b,maps,大轮寺雪山/大轮寺雪谷,,,display_label,,,,大轮寺雪谷,雪谷,Snow Valley,implemented,,/maps/36/locations/2/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-8b4b211d5a4bf7213a82,maps,大轮寺雪山/大轮寺,,,display_label,,,,大轮寺,返回圣杯山舍,Return to Grail Lodge,implemented,,/maps/36/locations/3/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-30b644eabe3d33bfff3c,maps,大轮寺雪山/返回,,,display_label,,,,返回,下山,Leave the Mountain,implemented,,/maps/36/locations/4/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-dd1688cf664f531fd0c0,maps,万劫谷/钟灵,,,display_label,,,,钟灵,埃尔,Eir,implemented,,/maps/54/locations/0/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a2e5cdae6898fdcfb0bb,maps,万劫谷/返回,,,display_label,,,,返回,世界地图,World Map,implemented,,/maps/54/locations/1/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0efb82dd83b778617cf2,maps,南贤居/南贤,,,display_label,,,,南贤,格林,Grimm,implemented,,/maps/82/locations/0/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3

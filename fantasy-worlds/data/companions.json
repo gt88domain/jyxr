@@ -7,8 +7,8 @@
     "forms": 65,
     "instructions": 80,
     "fixedIdentities": 20,
-    "displayAppliedIdentities": 33,
-    "authoredJoinScenes": 25
+    "displayAppliedIdentities": 34,
+    "authoredJoinScenes": 26
   },
   "characters": [
     {
@@ -1995,14 +1995,16 @@
       ],
       "runtimeNames": {
         "en": {
-          "达尔巴": "达尔巴"
+          "达尔巴": "The Mad Hatter"
         },
         "zh-CN": {
-          "达尔巴": "达尔巴"
+          "达尔巴": "疯帽匠"
         }
       },
-      "displayApplied": false,
-      "authoredJoinStories": [],
+      "displayApplied": true,
+      "authoredJoinStories": [
+        "门派大轮寺_大轮寺出师"
+      ],
       "instructions": [
         {
           "characterId": "达尔巴",
