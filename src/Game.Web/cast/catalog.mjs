@@ -18,7 +18,7 @@ try{
     return response.json();
   }));
   const t=(key,values={})=>String(translations[locale][key]??key).replace(/\{(\w+)\}/g,(_,name)=>String(values[name]??''));
-  const countries=new Map(catalog.countries.map(c=>[c.id,c]));
+  const countries=new Map(catalog.origins.map(c=>[c.id,c]));
   const figures=new Map(catalog.figures.map(f=>[f.id,f]));
   const params=new URL(location.href).searchParams;
   const options={q:params.get('q')||'',country:countries.has(params.get('country'))?params.get('country'):'',kind:['named','companions','archetype','system','player','all'].includes(params.get('kind'))?params.get('kind'):'named',status:['locked','proposed','classified'].includes(params.get('status'))?params.get('status'):'',limit:36};
@@ -28,7 +28,8 @@ try{
   const field=(key,control)=>h('label',{className:'field'},t(key),control);
   const select=(id,entries)=>h('select',{id},entries.map(([value,text])=>h('option',{value},text)));
   const search=h('input',{id:'search',type:'search',placeholder:t('searchPlaceholder'),autocomplete:'off'});
-  const country=select('country',[['',t('allCountries')],...catalog.countries.map(c=>[c.id,countryLabel(c.id)])]);
+  const country=select('country',[['',t('allCountries')]]);
+  for(const scope of ['story','external'])country.append(h('optgroup',{label:locale==='en'?(scope==='story'?'Story countries':'Other origins'):(scope==='story'?'国家主线':'其他来源国家')},catalog.origins.filter(c=>c.scope===scope).map(c=>h('option',{value:c.id},countryLabel(c.id)))));
   const kind=select('kind',['named','companions','archetype','system','player','all'].map(key=>[key,t(key)]));
   const status=select('status',[['',t('allStatuses')],...['locked','proposed','classified'].map(key=>[key,t(key==='locked'?'fixed':key==='proposed'?'candidate':key)])]);
   const resultCount=h('h2',{id:'result-count',role:'status','aria-live':'polite'});
@@ -42,7 +43,7 @@ try{
   document.querySelector('#close-detail').setAttribute('aria-label',t('close'));
   root.replaceChildren(
     h('section',{},h('div',{className:'eyebrow'},t('eyebrow')),h('h1',{},t('title')),h('p',{className:'intro'},t('intro')),h('p',{className:'phase',dataset:{phase:'cast-preview'}},t('phase')),
-      h('div',{className:'stats'},[[13,'countries'],[s.kinds.named,'storyRoles'],[s.locked,'locked'],[s.proposed,'proposed']].map(([n,key])=>h('div',{className:'stat'},h('strong',{},n),h('span',{},t(key)))))),
+      h('div',{className:'stats'},[[catalog.countries.length,'countries'],[s.kinds.named,'storyRoles'],[s.locked,'locked'],[s.proposed,'proposed']].map(([n,key])=>h('div',{className:'stat'},h('strong',{},n),h('span',{},t(key)))))),
     h('section',{'aria-label':t('search')},h('div',{className:'filters'},field('search',search),field('country',country),field('kind',kind)),
       h('details',{className:'more-filters'},h('summary',{},t('moreFilters')),h('div',{className:'more-filter-body'},field('status',status),
         h('a',{className:'download',href:new URL('../data/cast.csv',import.meta.url).href,download:'storybound-cast.csv'},t('csv')),

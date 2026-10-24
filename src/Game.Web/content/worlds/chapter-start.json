@@ -1227,8 +1227,8 @@
           {
             "speaker": "金轮法王",
             "text": {
-              "en": "Percival. Welcome to the Grail Lodge. You're here to train, right? The view won't warm you up.",
-              "zh-CN": "我是珀西瓦尔。欢迎来到圣杯山舍。想来，你是求学的，不是来欣赏更冷的风景。"
+              "en": "Percival. Welcome to the Round Table. You're here to train, right? The view won't warm you up.",
+              "zh-CN": "我是珀西瓦尔。欢迎来到圆桌骑士团。想来，你是求学的，不是来欣赏更冷的风景。"
             }
           },
           {
@@ -1278,8 +1278,8 @@
           {
             "speaker": "胜谛",
             "text": {
-              "en": "The Dawn Hunters do not admit sightseers. State your business.",
-              "zh-CN": "破晓猎团不接待看热闹的。说明来意。"
+              "en": "Van Helsing's Hunters do not admit sightseers. State your business.",
+              "zh-CN": "范海辛猎团不接待看热闹的。说明来意。"
             }
           },
           {
@@ -1879,90 +1879,54 @@
   "definitions": {
     "sects": {
       "古墓派": {
-        "name": {
-          "en": "House of Mists",
-          "zh-CN": "迷雾学舍"
-        },
         "description": {
           "en": "Precision, patient footwork and follow-up attacks.",
           "zh-CN": "精准、耐心的步法，以及后续连击。"
         }
       },
       "大轮寺": {
-        "name": {
-          "en": "Grail Lodge",
-          "zh-CN": "圣杯山舍"
-        },
         "description": {
           "en": "A snowbound school of disciplined strength and defense.",
           "zh-CN": "雪中的学舍，注重力量、自律与防御。"
         }
       },
       "血刀门": {
-        "name": {
-          "en": "Dawn Hunters",
-          "zh-CN": "破晓猎团"
-        },
         "description": {
           "en": "Dangerous blood arts, resilient fighters, and difficult choices.",
           "zh-CN": "危险的血术、顽强的斗士，以及不容易的选择。"
         }
       },
       "全真教": {
-        "name": {
-          "en": "Bremen Watch",
-          "zh-CN": "不来梅守望"
-        },
         "description": {
           "en": "Protect ordinary folk and learn courage in company.",
           "zh-CN": "守护普通人，与同伴一起练出勇气。"
         }
       },
       "灵鹫宫": {
-        "name": {
-          "en": "Threadhall",
-          "zh-CN": "织线厅"
-        },
         "description": {
           "en": "Urd's school of movement and insight.",
           "zh-CN": "兀儿德研习身法与领悟的学舍。"
         }
       },
       "少林派": {
-        "name": {
-          "en": "Dharma Courtyard",
-          "zh-CN": "明心庭院"
-        },
         "description": {
           "en": "Sanzang accepts both resident and traveling students.",
           "zh-CN": "三藏接纳常住弟子，也接纳在外行走的弟子。"
         }
       },
       "武当派": {
-        "name": {
-          "en": "River Wardens",
-          "zh-CN": "河流守卫"
-        },
         "description": {
           "en": "Sha Wujing teaches balance and timely replies.",
           "zh-CN": "沙悟净传授平衡之道与恰当的还击时机。"
         }
       },
       "星宿派": {
-        "name": {
-          "en": "Bridge Watch",
-          "zh-CN": "虹桥守望"
-        },
         "description": {
           "en": "Heimdall's watch, with training in unusual and poisonous techniques.",
           "zh-CN": "海姆达尔的守望之地，也研习拳套与毒术。"
         }
       },
       "无门派": {
-        "name": {
-          "en": "Independent Traveler",
-          "zh-CN": "独行道路"
-        },
         "description": {
           "en": "Keep your independence and develop your own combination of skills.",
           "zh-CN": "保持独立，搭配属于自己的本领。"
@@ -2592,8 +2556,8 @@
       },
       "血刀门门装": {
         "name": {
-          "en": "Dawn Hunter's Coat",
-          "zh-CN": "破晓猎衣"
+          "en": "Hunter's Coat",
+          "zh-CN": "猎人外套"
         },
         "description": {
           "en": "Defense +5. Other modifiers are listed with the item.",
@@ -2612,8 +2576,8 @@
       },
       "大轮寺装束": {
         "name": {
-          "en": "Grail Lodge Garb",
-          "zh-CN": "圣杯山舍服"
+          "en": "Round Table Garb",
+          "zh-CN": "圆桌骑士团服"
         },
         "description": {
           "en": "Defense +5. Other modifiers are listed with the item.",
@@ -2885,8 +2849,8 @@
     },
     "大轮寺": {
       "name": {
-        "en": "Grail Lodge",
-        "zh-CN": "圣杯山舍"
+        "en": "Round Table Hall",
+        "zh-CN": "圆桌大厅"
       },
       "description": {
         "en": "A snowbound school. Only its students know which doors stay warm.",
@@ -2895,8 +2859,8 @@
     },
     "血刀门": {
       "name": {
-        "en": "Dawn Hunters' Lodge",
-        "zh-CN": "破晓猎馆"
+        "en": "Van Helsing's Lodge",
+        "zh-CN": "范海辛猎馆"
       },
       "description": {
         "en": "A guarded lodge for hunters willing to study dangerous arts.",
@@ -3575,8 +3539,8 @@
     },
     "门派大轮寺": {
       "name": {
-        "en": "Grail Lodge",
-        "zh-CN": "圣杯山舍"
+        "en": "Round Table Hall",
+        "zh-CN": "圆桌大厅"
       },
       "description": {
         "en": "A snowbound school. Only its students know which doors stay warm.",
@@ -3585,8 +3549,8 @@
     },
     "少林寺内": {
       "name": {
-        "en": "Dharma Courtyard",
-        "zh-CN": "明心庭院"
+        "en": "Shaolin Temple",
+        "zh-CN": "少林寺"
       },
       "description": {
         "en": "A southern branch of the sanctuary schools.",
@@ -3648,8 +3612,8 @@
       },
       "大轮寺": {
         "name": {
-          "en": "Grail Lodge",
-          "zh-CN": "圣杯山舍"
+          "en": "Round Table",
+          "zh-CN": "圆桌骑士团"
         },
         "description": {
           "en": "A snowbound school. Only its students know which doors stay warm.",
@@ -3658,8 +3622,8 @@
       },
       "血刀门": {
         "name": {
-          "en": "Dawn Hunters' Lodge",
-          "zh-CN": "破晓猎馆"
+          "en": "Van Helsing's Lodge",
+          "zh-CN": "范海辛猎馆"
         },
         "description": {
           "en": "A guarded lodge for hunters willing to study dangerous arts.",
@@ -4564,12 +4528,12 @@
       "zh-CN": "旅人客栈"
     },
     "大轮寺": {
-      "en": "Grail Lodge",
-      "zh-CN": "圣杯山舍"
+      "en": "Round Table",
+      "zh-CN": "圆桌骑士团"
     },
     "血刀门": {
-      "en": "Dawn Hunters' Lodge",
-      "zh-CN": "破晓猎馆"
+      "en": "Van Helsing's Lodge",
+      "zh-CN": "范海辛猎馆"
     },
     "香格里拉": {
       "en": "Hidden Orchard",
@@ -4864,8 +4828,8 @@
       "zh-CN": "迷雾学舍"
     },
     "少林寺": {
-      "en": "Dharma Courtyard",
-      "zh-CN": "明心庭院"
+      "en": "Shaolin Temple",
+      "zh-CN": "少林寺"
     },
     "南贤居": {
       "en": "Grimm's home",
@@ -4904,12 +4868,12 @@
       "zh-CN": "迷雾学徒"
     },
     "大轮弟子": {
-      "en": "Grail Student",
-      "zh-CN": "圣杯学徒"
+      "en": "Round Table Initiate",
+      "zh-CN": "圆桌学徒"
     },
     "血刀门人": {
-      "en": "Dawn Hunter",
-      "zh-CN": "破晓猎手"
+      "en": "Vampire Hunter",
+      "zh-CN": "吸血鬼猎人"
     },
     "全真弟子": {
       "en": "Bremen Watcher",

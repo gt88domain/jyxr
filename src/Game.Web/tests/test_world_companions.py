@@ -13,13 +13,15 @@ class CompanionReskinTests(unittest.TestCase):
  def setUpClass(cls):
   cls.raw=(WEB/'public/data/packs/jyx/content-package.json').read_bytes()
   cls.source=json.loads(cls.raw);cls.skin=load_skin(WEB)
-  _,_,cls.figures,cls.cast,_,_=load()
+  _,_,cls.figures,cls.cast,_,_,_=load()
   cls.display={locale:apply_skin(cls.raw,cls.skin,locale)[0] for locale in ['en','zh-CN']}
   cls.runtime={locale:compile_runtime_package(cls.source,pkg,{key:text[locale] for key,text in cls.skin.get('uiLabels',{}).items()}) for locale,pkg in cls.display.items()}
 
  def test_inventory_distinguishes_identity_form_display_and_debug_records(self):
   inventory=companion_inventory(self.source,self.cast,self.figures,self.skin,self.runtime)
-  self.assertEqual(inventory['counts'],{'identities':62,'forms':65,'instructions':80,'fixedIdentities':20,'displayAppliedIdentities':33,'authoredJoinScenes':25})
+  self.assertEqual(inventory['counts'],{'identities':62,'forms':65,'instructions':80,'fixedIdentities':20,'displayAppliedIdentities':34,'authoredJoinScenes':26})
+  hatter=next(a for a in inventory['characters'] if a['legacyIdentity']=='达尔巴')
+  self.assertTrue(hatter['displayApplied'])
   for actor in inventory['characters']:
    if actor['status']=='locked':self.assertTrue(actor['displayApplied'],actor['legacyIdentity'])
    self.assertEqual(actor['containsTestSegment'],any(c['storyId'].startswith('test_') for c in actor['instructions']))

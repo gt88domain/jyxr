@@ -655,7 +655,7 @@
       }
     ]
   },
-  "version": "guided-interface-1",
+  "version": "classic-organizations-1",
   "chapters": [
     "chapter-start.json",
     "chapter-guide.json",
@@ -664,7 +664,8 @@
     "chapter-companions.json",
     "chapter-equipment-copy.json",
     "chapter-windrider.json",
-    "chapter-academy.json"
+    "chapter-academy.json",
+    "organizations.json"
   ],
   "speakerNames": {
     "武师": {

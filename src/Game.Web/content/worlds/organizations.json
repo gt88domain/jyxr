@@ -1,0 +1,164 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "chapterGuide": {
+    "organizations": [
+      {
+        "id": "古墓派",
+        "affiliationIds": [
+          "古墓"
+        ],
+        "name": {
+          "en": "House of Mists",
+          "zh-CN": "迷雾学舍"
+        },
+        "shortName": {
+          "en": "House of Mists",
+          "zh-CN": "迷雾学舍"
+        },
+        "storyCountry": "GB",
+        "sourceWork": "Arthurian legend",
+        "reviewStatus": "candidate"
+      },
+      {
+        "id": "大轮寺",
+        "affiliationIds": [
+          "大轮寺"
+        ],
+        "name": {
+          "en": "Knights of the Round Table",
+          "zh-CN": "圆桌骑士团"
+        },
+        "shortName": {
+          "en": "Round Table",
+          "zh-CN": "圆桌骑士团"
+        },
+        "storyCountry": "GB",
+        "sourceWork": "Arthurian legend; Percival",
+        "mentorId": "金轮法王",
+        "reviewStatus": "reviewed"
+      },
+      {
+        "id": "血刀门",
+        "affiliationIds": [
+          "血刀门"
+        ],
+        "name": {
+          "en": "Van Helsing's Hunters",
+          "zh-CN": "范海辛猎团"
+        },
+        "shortName": {
+          "en": "Van Helsing's Hunters",
+          "zh-CN": "范海辛猎团"
+        },
+        "storyCountry": "RO",
+        "sourceWork": "Bram Stoker, Dracula (1897); Van Helsing",
+        "mentorId": "血刀老祖",
+        "reviewStatus": "reviewed"
+      },
+      {
+        "id": "全真教",
+        "affiliationIds": [
+          "全真教"
+        ],
+        "name": {
+          "en": "Bremen Watch",
+          "zh-CN": "不来梅守望"
+        },
+        "shortName": {
+          "en": "Bremen Watch",
+          "zh-CN": "不来梅守望"
+        },
+        "storyCountry": "DE",
+        "sourceWork": "Grimm fairy tales; Iron John",
+        "reviewStatus": "candidate"
+      },
+      {
+        "id": "灵鹫宫",
+        "affiliationIds": [
+          "灵鹫宫"
+        ],
+        "name": {
+          "en": "Threadhall",
+          "zh-CN": "织线厅"
+        },
+        "shortName": {
+          "en": "Threadhall",
+          "zh-CN": "织线厅"
+        },
+        "storyCountry": "NO",
+        "sourceWork": "Norse mythology; Urd",
+        "reviewStatus": "candidate"
+      },
+      {
+        "id": "少林派",
+        "affiliationIds": [
+          "少林派"
+        ],
+        "name": {
+          "en": "Shaolin Temple",
+          "zh-CN": "少林寺"
+        },
+        "shortName": {
+          "en": "Shaolin Temple",
+          "zh-CN": "少林寺"
+        },
+        "storyCountry": "CN",
+        "sourceWork": "Historical Shaolin tradition; Sanzang from Journey to the West",
+        "mentorId": "方证大师",
+        "reviewStatus": "reviewed"
+      },
+      {
+        "id": "武当派",
+        "affiliationIds": [
+          "武当派"
+        ],
+        "name": {
+          "en": "River Wardens",
+          "zh-CN": "河流守卫"
+        },
+        "shortName": {
+          "en": "River Wardens",
+          "zh-CN": "河流守卫"
+        },
+        "storyCountry": "CN",
+        "sourceWork": "Chinese mythology; Taiyi Zhenren",
+        "reviewStatus": "candidate"
+      },
+      {
+        "id": "星宿派",
+        "affiliationIds": [
+          "星宿派"
+        ],
+        "name": {
+          "en": "Bridge Watch",
+          "zh-CN": "虹桥守望"
+        },
+        "shortName": {
+          "en": "Bridge Watch",
+          "zh-CN": "虹桥守望"
+        },
+        "storyCountry": "NO",
+        "sourceWork": "Norse mythology; Heimdall",
+        "reviewStatus": "needs-review",
+        "reviewNote": "Heimdall's guardian identity needs review against this route's poison abilities. Do not silently replace the character or change the effects."
+      },
+      {
+        "id": "无门派",
+        "affiliationIds": [
+          "无门派"
+        ],
+        "name": {
+          "en": "Unaffiliated",
+          "zh-CN": "独行道路"
+        },
+        "shortName": {
+          "en": "Independent",
+          "zh-CN": "独行者"
+        },
+        "storyCountry": null,
+        "sourceWork": "Independent travel",
+        "reviewStatus": "independent"
+      }
+    ]
+  }
+}

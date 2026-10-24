@@ -7,8 +7,8 @@ from world_review import build_review
 from world_companions import companion_inventory,export_companions
 from grimm_skin import load_skin
 
-project,countries,figures,cast,index,locks=load()
-summary=validate(project,countries,figures,cast,index,locks)
+project,countries,figures,cast,index,locks,origins=load()
+summary=validate(project,countries,figures,cast,index,locks,origins)
 output=WEB.parents[1]/'artifacts/fantasy-worlds-site'
 game=WEB/'dist'
 if not (game/'data/module-manifest.json').exists() or json.loads((game/'data/module-manifest.json').read_text())['id']!='worlds':
@@ -24,7 +24,7 @@ companions=companion_inventory(native,cast,figures,load_skin(WEB),runtime)
 export_companions(output/'data',companions)
 companion_by_id={a['actorId']:a for a in companions['characters']}
 actors=[{**a,'runtimeDisplayApplied':companion_by_id.get(a['actorId'],{}).get('displayApplied',False),'authoredJoinScenes':len(companion_by_id.get(a['actorId'],{}).get('authoredJoinStories',[]))} for a in cast['actors']]
-payload={'project':project,'countries':countries,'figures':figures,'actors':actors,'summary':summary,'companionSummary':companions['counts']}
+payload={'project':project,'countries':countries,'origins':origins,'figures':figures,'actors':actors,'summary':summary,'companionSummary':companions['counts']}
 encoded=json.dumps(payload,ensure_ascii=False,separators=(',',':'))+'\n'
 (output/'data/catalog.json').write_text(encoded)
 (output/'data/translations.json').write_text(json.dumps(translations,ensure_ascii=False,separators=(',',':'))+'\n')

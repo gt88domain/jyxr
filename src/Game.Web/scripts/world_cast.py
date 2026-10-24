@@ -6,7 +6,12 @@ WEB=Path(__file__).resolve().parents[1]
 DATA=WEB/'content/worlds'
 def read(name):return json.loads((DATA/name).read_text(encoding='utf8'))
 
-def validate(project,countries,figures,cast,index,locks):
+def origin_registry(countries,additional):
+ """Story countries stay fixed; origins can register additional countries."""
+ return [{'id':c['id'],'flag':c['flag'],'name':dict(c['name']),'scope':scope}
+         for group,scope in [(countries,'story'),(additional,'external')] for c in group]
+
+def validate(project,countries,figures,cast,index,locks,origins):
  def require(condition,message):
   if not condition:raise ValueError(message)
  def localized(value,label):
@@ -25,11 +30,22 @@ def validate(project,countries,figures,cast,index,locks):
   require(c['flag']==''.join(chr(0x1f1e6+ord(s)-ord('A')) for s in c['id']),'Incorrect country flag')
  require(next(c for c in countries if c['id']=='DK')['legacyStories']==['飞狐外传','雪山飞狐'],'The fox stories must share Denmark')
  require(next(c for c in countries if c['id']=='US')['coreDifficulty']=='medium','US line must stay medium')
+ origin_ids=[c['id'] for c in origins]
+ require(len(origin_ids)==len(set(origin_ids)),'Duplicate origin country')
+ require(set(ids)<=set(origin_ids),'Missing story-country origin')
+ for c in origins:
+  require(re.fullmatch('[A-Z]{2}',c['id']) is not None,'Invalid origin country code')
+  localized(c['name'],'Origin '+c['id'])
+  require(c['flag']==''.join(chr(0x1f1e6+ord(s)-ord('A')) for s in c['id']),'Incorrect origin flag')
+  require(c['scope']==('story' if c['id'] in ids else 'external'),'Origin scope changed')
+  if c['id'] in ids:
+   core=next(x for x in countries if x['id']==c['id'])
+   require(c['name']==core['name'] and c['flag']==core['flag'],'Story-country origin drift')
  require(cast['baseline']==project['baseline']==index['baseline'],'Baseline drift')
  figures_by_id={f['id']:f for f in figures}
  require(len(figures_by_id)==len(figures),'Duplicate figure ID')
  for f in figures:
-  require(f['country'] in ids,'Unknown figure country')
+  require(f['country'] in origin_ids,'Unknown figure country')
   localized(f['name'],'Figure '+f['id'])
   localized(f['sourceLabel'],'Source '+f['id'])
   require(bool(f.get('sourceWork')),'Missing figure source')
@@ -45,9 +61,9 @@ def validate(project,countries,figures,cast,index,locks):
   require(a['kind'] in ['named','archetype','system','player'],'Unknown entity kind')
   require(a['status'] in ['locked','proposed','classified'],'Unknown casting status')
   country=a['primaryCountry']
-  require(country is None or country in ids,'Invalid primary country')
+  require(country is None or country in origin_ids,'Invalid primary country')
   require(len(a['relatedCountries'])==len(set(a['relatedCountries'])),'Duplicate related countries')
-  require(set(a['relatedCountries']).issubset(ids),'Unknown related country')
+  require(set(a['relatedCountries']).issubset(origin_ids),'Unknown related country')
   require(country is None or country in a['relatedCountries'],'Primary country omitted')
   require(a['traveler']==(a['kind']=='named' and len(a['relatedCountries'])>1),'Traveler must reflect story references, not party travel')
   if a['kind']=='named':
@@ -81,10 +97,12 @@ def validate(project,countries,figures,cast,index,locks):
  require(set(index['recruitmentCatalog']['definitionIds']).issubset(covered),'Missing recruitment reference')
  require(set(id for a in actors for id in a['recruitmentDefinitionIds'])==set(index['recruitmentCatalog']['definitionIds']),'Recruitment index mismatch')
  summary={'sourceDefinitions':len(covered),'sourceDisplayNames':index['sourceDisplayNames'],'identityGroups':len(actors),'kinds':dict(collections.Counter(a['kind'] for a in actors)),'locked':len(locks),'proposed':sum(a['status']=='proposed' for a in actors),'recruitmentForms':index['recruitmentCatalog']['forms'],'recruitmentDisplayNames':index['recruitmentCatalog']['displayNames'],'recruitmentIdentities':sum(bool(a['recruitmentDefinitionIds']) for a in actors),'existingFigureLibrary':len(figures),'namedOriginals':sum(figures_by_id[a['figureId']]['original'] for a in actors if a['kind']=='named'),'travelers':sum(a['traveler'] for a in actors),'namedByCountry':dict(collections.Counter(a['primaryCountry'] for a in actors if a['kind']=='named'))}
+ summary.update(storyCountries=len(ids),originCountries=len(origin_ids))
  return summary
 
 def load():
  names=['project.json','countries.json','figures.json','cast-map.json','legacy-index.json','locked-identities.json']
- return tuple(read(name) for name in names)
+ data=tuple(read(name) for name in names)
+ return (*data,origin_registry(data[1],read('origin-countries.json')))
 
 if __name__=='__main__':print(json.dumps(validate(*load()),ensure_ascii=False,indent=2))
