@@ -20,6 +20,7 @@
     <Compile Include="CampaignSmoke.cs" />
     <Compile Include="WhiteHorseSmoke.cs" />
     <Compile Include="OnboardingSmoke.cs" />
+    <Compile Include="AcademyJourneySmoke.cs" />
     <Compile Include="TimeoutSmoke.cs" />
     <Compile Include="SourceFixSmoke.cs" />
     <Compile Include="JournalSmoke.cs" />

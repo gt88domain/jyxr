@@ -9,7 +9,7 @@
       "nightSlots":["亥","子","丑","寅","卯"],
       "nightReady":{"en":"It is nighttime. The encounter has a 20% chance; a quiet visit does not mean the story is broken.", "zh-CN":"当前属于夜间。相遇仍有20%概率；这次没发生新事件不代表剧情出错。"},
       "nightWaiting":{"en":"Return at night, from 9 p.m. through 7 a.m. Travel and conversations advance time; opening menus does not.", "zh-CN":"请在夜间21点至次日7点之间再来。旅行与交谈会推进时间，打开菜单不会。"},
-      "trackedStories":["白马啸西风_初次见面","白马啸西风_李文秀出走","白马啸西风_李文秀加入","白马啸西风_前往高昌","白马啸西风_完结2","白马啸西风_高昌秘宝3","白马啸西风_陈达海加入2","白马啸西风_陈达海加入3"],
+      "trackedStories":["白马啸西风_初次见面","白马啸西风_李文秀出走","白马啸西风_李文秀加入","白马啸西风_前往高昌","白马啸西风_完结2","白马啸西风_高昌秘宝3","白马啸西风_陈达海加入2","白马啸西风_陈达海加入3","门派大轮寺_大轮寺出师"],
       "stages":[
         {"id":"knight-ending","any":["白马啸西风_陈达海加入2"],"complete":true,"title":{"en":"A knight joins the party", "zh-CN":"骑士加入了队伍"},"detail":{"en":"Don Quixote is traveling with you. Pick him in the party roster to equip gear and choose a mastery and training scroll. Save before your next adventure.", "zh-CN":"堂吉诃德已同行。在队伍中选择他，穿装备、设置主专精和研习卷轴。下次冒险前记得保存。"},"route":[]},
         {"id":"knight-declined","any":["白马啸西风_陈达海加入3"],"complete":true,"title":{"en":"The knight follows his own trail", "zh-CN":"骑士继续独自寻宝"},"detail":{"en":"You chose to leave Don Quixote to his search. That choice ends this invitation; it is not a failed recruitment button. Keep your almanac, prepare your party, and explore another story.", "zh-CN":"你选择让堂吉诃德继续寻宝。这次邀请已经结束，并非招募按钮失效。保留诗集，整备队伍后探索其他故事。"},"route":[]},
@@ -27,8 +27,8 @@
     "completeText": {"en": "Your party is ready to explore. For a first story, meet Dulcinea at Windrider Camp. Her trail leads to Windmill Warrens. Trust, nighttime encounters and your choices matter, so save before major decisions.", "zh-CN": "队伍已准备好，可以开始探索。第一条故事推荐去风骑营地认识杜尔西内娅，沿线索前往风车地宫。好感、夜间相遇和选择都会影响走向，重要决定前记得存档。"},
     "reviewLocationId": "章节回顾",
     "reviewLabel": {"en": "Review field notes", "zh-CN": "回顾实地笔记"},
-    "recommendedSectId": "无门派",
-    "schoolNote": {"en": "For this short field assignment, choose Independent Traveler. The academies lead into longer training routes; you can explore those later.", "zh-CN": "本次短章测试建议选择「独行道路」。其他学派会进入更长的训练路线，可以留待后续探索。"},
+    "recommendedSectId": "大轮寺",
+    "schoolNote": {"en": "Choose a training organization, or travel independently. Grail Lodge has a guided first training route and a companion at graduation. Its mountain pass stays closed until then. Joining starts that route immediately; signature techniques are earned later.", "zh-CN": "可以加入组织训练，也可以独自旅行。圣杯山舍有完整的初步训练指引，出师时会有伙伴加入；此前山道不会开放。点击加入即开始该路线，特色技艺仍需后续获取。"},
     "stepOrder": ["opening", "equipment", "cultivation", "training", "tutorial", "shopping", "companion", "team", "save"],
     "steps": [
       {"id": "opening", "detail": {"en": "Speak with Grimm. His first gift is a mastery scroll, not a demand for rent.", "zh-CN": "和格林交谈，领取第一份专精卷轴。他暂时不会收你房租。"}, "route": [{"mapId": "南贤屋内", "locationId": "南贤"}]},

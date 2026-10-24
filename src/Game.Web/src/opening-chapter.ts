@@ -1,6 +1,7 @@
 import type {GameState} from './bridge';
 import {e} from './ui/format';
 import {storyChapterStep} from './story-guide';
+import {academyStep,type AcademyGuide} from './academy-guide';
 export interface ChapterRoute {mapId:string;locationId:string;}
 export interface StoryGuide {
   title:string; trustTarget:string;trustLabel:string;trustGoal:number; trackedStories:string[];
@@ -8,6 +9,7 @@ export interface StoryGuide {
   stages:{id:string;any?:string[];title:string;detail:string;route:ChapterRoute[];complete?:boolean;panel?:'cultivation'}[];
 }
 export interface ChapterGuide {
+  academies?:AcademyGuide[];
   story?:StoryGuide;
   title:string;completeTitle:string;completeText:string;reviewLocationId:string;reviewLabel:string;
   recommendedSectId:string;schoolNote:string;stepOrder:string[];
@@ -17,6 +19,7 @@ export interface ChapterGuide {
 /** Directions come from content. Completion comes exclusively from the host. */
 export function openingChapterStep(state:GameState):{title:string;detail:string;route:ChapterRoute[];panel?:'loadout'|'equipment'|'cultivation'|'save';complete:boolean;storyStage?:string}|null{
   const guide=state.pack.chapterGuide;if(!guide)return null;
+  const academy=academyStep(state);if(academy)return academy;
   const goals=state.objectives||[];
   if(state.tutorial)return {title:state.tutorial.description,detail:'',route:guide.taskRoutes[state.tutorial.id]||[],complete:false};
   const pending=guide.stepOrder.map(id=>goals.find(g=>g.id===id)).filter(g=>g&&!g.completed);

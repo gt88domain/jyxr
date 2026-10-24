@@ -124,6 +124,14 @@ def apply_skin(raw,skin,locale):
             if not stages or 'any' in stages[-1] or any('any' not in s for s in stages[:-1]) or len({s['id'] for s in stages})!=len(stages):raise ValueError('Chapter story stages need unique IDs and one final fallback')
             if any(not set(s.get('any',[]))<=set(tracked) for s in stages):raise ValueError('Chapter stage uses untracked story')
             routes += [s['route'] for s in stages]
+        academies=chapter_guide.get('academies',[])
+        if len({a['id'] for a in academies})!=len(academies):raise ValueError('Duplicate academy guide')
+        for academy in academies:
+            if academy['id'] not in {s['id'] for s in package['sects']} or not set(academy['maps'])<=set(maps):raise ValueError('Academy guide reference missing')
+            if academy['graduationStory'] not in set(chapter_guide.get('story',{}).get('trackedStories',[])):raise ValueError('Academy graduation must be tracked')
+            if type(academy['graduationAfterDay']) is not int or academy['graduationAfterDay']<0:raise ValueError('Invalid academy graduation threshold')
+            if not {s['id'] for s in academy['skills']}<={s['id'] for s in package['externalSkills']}:raise ValueError('Academy skill missing')
+            routes += [academy['training'],academy['exit']]
         for route in routes:
             for hop in route:
                 if hop['locationId'] not in maps.get(hop['mapId'],set()):raise ValueError('Chapter guide location missing')

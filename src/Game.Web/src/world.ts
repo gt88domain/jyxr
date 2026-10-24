@@ -7,6 +7,9 @@ import {worldAtlasView} from './world-atlas';
 import {journeyFocus} from './journey';
 import {openingChapterView} from './opening-chapter';
 import './opening-chapter.css';
+import {modernWorlds} from './ui-language';
+import {worldDashboard} from './world-dashboard';
+import {academyView} from './academy';
 
 const e = (value: unknown) => String(value ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]!));
 export function currency(state: GameState) {return state.pack.currencyUnit || state.pack.currencyName || '';}
@@ -17,6 +20,7 @@ export function titleView(state: GameState, slot: SaveSlot | undefined, packs: P
 }
 
 export function worldView(state: GameState, hero: string): string {
+  if(modernWorlds(state))return worldDashboard(state);
   const locations = state.map?.locations || [];
   const training = state.pack.trainingMapId === state.map.id && state.pack.trainingStoryId;
   const focus=journeyFocus(state);
@@ -35,5 +39,6 @@ export function shopView(state: GameState): string {
 
 export function sectView(state: GameState): string {
   if (state.phase !== 'sect') return '';
+  if(modernWorlds(state))return academyView(state);
   return `<div class="shop-scrim sect-scrim"><section class="shop-window sect-screen paper" role="dialog" aria-modal="true" aria-label="选择门派"><div class="eyebrow">原版拜师</div><h2>择一门，入江湖</h2><p class="panel-intro">门派介绍、师父与入门剧情来自原版。选择后会继续对应拜师剧情；选择“无门派”则独自闯荡。</p>${state.pack.chapterGuide?`<p class="chapter-school-note">${e(state.pack.chapterGuide.schoolNote)}</p>`:''}<div class="sect-options">${(state.sects || []).map(s => `<article ${s.id===state.pack.chapterGuide?.recommendedSectId?'data-opening-recommended':''}><header><h3>${e(s.name)}</h3><span>${e(s.focus)}</span></header><p>${e(s.description)}</p><small>师父：${e(s.masters.join('、'))}<br>武学：${e(s.skills.join('、'))}</small><button class="button primary" data-action="select-sect" data-id="${e(s.id)}" ${s.available ? '' : 'disabled'}>${s.available ? s.id === '无门派' ? '独自闯荡' : '前往拜师' : '入口尚未迁移'}</button></article>`).join('')}</div></section></div>`;
 }
