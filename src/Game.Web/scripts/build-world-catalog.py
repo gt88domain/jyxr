@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Build both locale views from one validated cast, without touching the game."""
-import csv,hashlib,io,json,shutil,zipfile
+import csv,hashlib,io,json,os,shutil,zipfile
 from pathlib import Path
 from world_cast import WEB,load,validate
 from world_review import build_review
@@ -33,6 +33,7 @@ version=hashlib.sha256((encoded+(WEB/'cast/catalog.mjs').read_text()+(WEB/'cast/
 for locale,folder,prefix in [('en','en','../'),('zh-CN','zh','../'),('en','','./')]:
  text=html.replace('{{LANG}}',locale).replace('{{TITLE}}',project['title'][locale]).replace('{{PREFIX}}',prefix)
  text=text.replace('{{OTHER_LANG}}','中文' if locale=='en' else 'English').replace('{{OTHER_PATH}}',prefix+('zh/' if locale=='en' else 'en/'))
+ text=text.replace('{{PLAYTHROUGH}}',f' · <a href="{prefix}playthrough/">游玩实录 / Playthrough</a>' if os.environ.get('GAME_PLAYTHROUGH_REPORT') else '')
  text=text.replace('{{OTHER_LANG_CODE}}','zh-CN' if locale=='en' else 'en').replace('{{VERSION}}',version)
  (output/folder/'index.html').write_text(text)
 
@@ -54,6 +55,9 @@ for path in review_sources:
 # The rejected standalone story viewer is replaced by the actual game. Keep
 # its old URL useful without introducing another dialogue runner.
 shutil.copytree(game,output/'game')
+if original_report:=os.environ.get('GAME_PLAYTHROUGH_REPORT'):
+ from build_playthrough import build as build_playthrough
+ build_playthrough(output/'playthrough',original_report,os.environ['GAME_PLAYTHROUGH_RETEST'],os.environ.get('GAME_PLAYTHROUGH_BEFORE'),os.environ.get('GAME_PLAYTHROUGH_AFTER'))
 (output/'opening').mkdir(exist_ok=True)
 (output/'opening/index.html').write_text('''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Grimm · Game</title></head><body><p><a id="game-link" href="../game/">Continue to the game / 进入游戏</a></p><script>const target=new URL('../game/',location.href);target.search=location.search;document.querySelector('#game-link').href=target.href;location.replace(target.href);</script></body></html>''',encoding='utf8')
 shutil.copyfile(WEB.parents[1]/'LICENSE',output/'LICENSE')

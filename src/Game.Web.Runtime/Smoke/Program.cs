@@ -1,6 +1,12 @@
 using System.Text.Json;
 using Game.Web.Runtime;
 
+if(args.FirstOrDefault()=="--three-stories")
+{
+    await ThreeStorySmoke.Run(args[1],args[2],args[3],args.ElementAtOrDefault(4)=="resume",args.ElementAtOrDefault(4)=="first-two");
+    return;
+}
+
 if(args.FirstOrDefault()=="--academy-journey")
 {
     await AcademyJourneySmoke.Run(args[1],args[2]);

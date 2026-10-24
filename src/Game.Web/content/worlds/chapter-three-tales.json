@@ -1,0 +1,1207 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "dialogueEdits": {
+    "书剑恩仇录_回族部落一般": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "霍青桐",
+            "text": {
+              "en": "A quiet camp. Enjoy it; quiet never stays for supper.",
+              "zh-CN": "营地很安静。好好享受吧，安静通常待不到晚饭。"
+            }
+          }
+        ]
+      }
+    ],
+    "书剑恩仇录_回族部落": [
+      {
+        "start": 2,
+        "expectedCount": 3,
+        "lines": [
+          {
+            "speaker": "朝廷走狗",
+            "text": {
+              "en": "The Cardinal requests your ledger. His request comes with five swords.",
+              "zh-CN": "枢机主教要你的账册。这份请求，附带五把剑。"
+            }
+          },
+          {
+            "speaker": "霍青桐",
+            "text": {
+              "en": "Tell him to make an appointment. Preferably after I've left.",
+              "zh-CN": "请他先预约。最好约在我离开之后。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I'm guessing this isn't a bookkeeping dispute.",
+              "zh-CN": "我猜，这不只是记账上的争执。"
+            }
+          }
+        ]
+      }
+    ],
+    "书剑恩仇录_回族部落霍青桐负": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "That went badly. I'll regroup and return; the camp still needs help.",
+              "zh-CN": "打得不太顺。先整备再来，营地还需要帮忙。"
+            }
+          }
+        ]
+      }
+    ],
+    "书剑恩仇录_回族部落霍青桐": [
+      {
+        "start": 2,
+        "expectedCount": 10,
+        "lines": [
+          {
+            "speaker": "霍青桐",
+            "text": {
+              "en": "Milady de Winter. You interrupted a remarkably rude business meeting.",
+              "zh-CN": "米莱狄·德温特。你打断了一场格外无礼的商谈。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Does every meeting here end with swords?",
+              "zh-CN": "这里的商谈，都用剑收尾吗？"
+            }
+          },
+          {
+            "speaker": "霍青桐",
+            "text": {
+              "en": "Only the informal ones. A courier is being held at the Cardinal's Tower. I want him out.",
+              "zh-CN": "只有非正式商谈才这样。一名信使被关在枢机塔，我要把他救出来。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Come along. You clearly know this business better than I do.",
+              "zh-CN": "一起走吧。这门生意你显然比我熟。"
+            }
+          },
+          {
+            "speaker": "霍青桐",
+            "text": {
+              "en": "A useful arrangement. Take this Threefold Swordplay manual; try not to fold it into a hat.",
+              "zh-CN": "这安排不错。拿上这本三段剑术手册，别把它折成帽子。"
+            }
+          }
+        ]
+      }
+    ],
+    "书剑恩仇录_六和塔一般": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "朝廷走狗",
+            "text": {
+              "en": "The tower is closed to visitors. Especially helpful ones.",
+              "zh-CN": "塔楼谢绝访客，尤其是乐于助人的那种。"
+            }
+          }
+        ]
+      }
+    ],
+    "书剑恩仇录_六和塔": [
+      {
+        "start": 2,
+        "expectedCount": 9,
+        "lines": [
+          {
+            "speaker": "张召重",
+            "text": {
+              "en": "D'Artagnan. At last, a visitor worth arresting.",
+              "zh-CN": "达达尼昂，总算来了位值得逮捕的客人。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I was about to feel terribly important.",
+              "zh-CN": "我差点就以为自己是什么大人物了。"
+            }
+          },
+          {
+            "speaker": "陈家洛",
+            "text": {
+              "en": "Rochefort, release the courier. We can spare everyone a great deal of trouble.",
+              "zh-CN": "罗什福尔，放了那名信使，大家都能少些麻烦。"
+            }
+          },
+          {
+            "speaker": "张召重",
+            "text": {
+              "en": "The trouble is already on the payroll. Guards!",
+              "zh-CN": "麻烦已经领了薪水。卫兵！"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Right. No visitor's pass, then.",
+              "zh-CN": "明白了，今天办不了访客证。"
+            }
+          }
+        ]
+      }
+    ],
+    "书剑恩仇录_六和塔胜": [
+      {
+        "start": 2,
+        "expectedCount": 6,
+        "lines": [
+          {
+            "speaker": "张召重",
+            "text": {
+              "en": "Enjoy your rescue. I'll arrange a less convenient reunion.",
+              "zh-CN": "好好庆祝吧。下次重逢，我会安排得没这么方便。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "He really does book every meeting in advance.",
+              "zh-CN": "他还真是什么见面都要预约。"
+            }
+          },
+          {
+            "speaker": "陈家洛",
+            "text": {
+              "en": "The courier is free. Take these training guides, and watch the caravan; Rochefort holds a grudge remarkably well.",
+              "zh-CN": "信使自由了。这些教材给你，之后留意营地。罗什福尔记仇的本事一流。"
+            }
+          }
+        ]
+      }
+    ],
+    "书剑恩仇录_庖丁解牛": [
+      {
+        "start": 2,
+        "expectedCount": 6,
+        "lines": [
+          {
+            "speaker": "张召重",
+            "text": {
+              "en": "This time, the caravan and its secrets come with me.",
+              "zh-CN": "这一次，商队和它的秘密都得跟我走。"
+            }
+          },
+          {
+            "speaker": "霍青桐",
+            "text": {
+              "en": "You keep saying that. It's becoming an expensive habit.",
+              "zh-CN": "你总这么说。这习惯可不便宜。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "There are rather a lot of them.",
+              "zh-CN": "他们来的人，还真不少。"
+            }
+          },
+          {
+            "speaker": "陈家洛",
+            "text": {
+              "en": "Then you'll want another sword. D'Artagnan, at your service.",
+              "zh-CN": "那你们就需要多一把剑。达达尼昂，愿意效劳。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Good timing. We were running short of dramatic entrances.",
+              "zh-CN": "来得正好，我们正缺一次漂亮的登场。"
+            }
+          }
+        ]
+      }
+    ],
+    "书剑恩仇录_庖丁解牛胜": [
+      {
+        "start": 0,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "张召重",
+            "text": {
+              "en": "That was not how this operation was budgeted.",
+              "zh-CN": "这场行动的预算，可不是这么做的。"
+            }
+          },
+          {
+            "speaker": "陈家洛",
+            "text": {
+              "en": "Consider it a revision. I'm staying with this company.",
+              "zh-CN": "就当修改预算了。我会留在这支队伍。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "We could use your experience. And that sword lesson.",
+              "zh-CN": "正需要你的经验，还有那堂剑术课。"
+            }
+          }
+        ]
+      }
+    ],
+    "鸳鸯刀_太岳四侠": [
+      {
+        "start": 2,
+        "expectedCount": 14,
+        "lines": [
+          {
+            "speaker": "盖七省",
+            "text": {
+              "en": "Halt! Official ferry toll. Very official. We've made a sign.",
+              "zh-CN": "站住！正式渡口收费。非常正式，我们还写了牌子。"
+            }
+          },
+          {
+            "speaker": "流星赶月",
+            "text": {
+              "en": "I held the sign while it dried.",
+              "zh-CN": "牌子晾干时，是我负责扶着的。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Impressive credentials. Who appointed you?",
+              "zh-CN": "资历真不错。谁任命你们的？"
+            }
+          },
+          {
+            "speaker": "烟霞神龙",
+            "text": {
+              "en": "We took a vote. Four in favor.",
+              "zh-CN": "我们投过票，四票赞成。"
+            }
+          },
+          {
+            "speaker": "双手开碑",
+            "text": {
+              "en": "No one opposed. Excellent turnout.",
+              "zh-CN": "无人反对，投票率很高。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I'd like to inspect your permit before you inspect my purse.",
+              "zh-CN": "在你们检查我的钱包之前，我想先检查你们的许可。"
+            }
+          }
+        ]
+      }
+    ],
+    "鸳鸯刀_太岳四侠2": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "盖七省",
+            "text": {
+              "en": "Plenty of luggage, no toll permit. Our paperwork is flawless. Our next step is fighting.",
+              "zh-CN": "行李不少，却没有缴费许可。我们的手续无懈可击，下一步该动手了。"
+            }
+          }
+        ]
+      }
+    ],
+    "鸳鸯刀_太岳四侠胜利": [
+      {
+        "start": 2,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Your permit appears to have expired.",
+              "zh-CN": "你们的许可，好像过期了。"
+            }
+          },
+          {
+            "speaker": "盖七省",
+            "text": {
+              "en": "A temporary administrative setback!",
+              "zh-CN": "只是暂时的行政挫折！"
+            }
+          },
+          {
+            "speaker": "双手开碑",
+            "text": {
+              "en": "I told you we needed a larger sign.",
+              "zh-CN": "早说了，牌子得做大一点。"
+            }
+          }
+        ]
+      }
+    ],
+    "鸳鸯刀_太岳四侠胜利1": [
+      {
+        "start": 2,
+        "expectedCount": 6,
+        "lines": [
+          {
+            "speaker": "萧中慧",
+            "text": {
+              "en": "Four grown men charging travelers for a river they don't own. How enterprising.",
+              "zh-CN": "四个大人，替不属于自己的河收费。真会做生意。"
+            }
+          },
+          {
+            "speaker": "烟霞神龙",
+            "text": {
+              "en": "Blue Fairy! This traveler wants the paired seals!",
+              "zh-CN": "蓝仙女！这位旅人想抢那对印记！"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I wanted a receipt. The story seems to be growing.",
+              "zh-CN": "我只是想要张收据，事情怎么越传越大？"
+            }
+          }
+        ]
+      }
+    ],
+    "鸳鸯刀_风陵渡": [
+      {
+        "start": 1,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "袁冠南",
+            "text": {
+              "en": "The seals stay with us. You can argue with my wooden sword.",
+              "zh-CN": "印记得留下。想讲道理，可以先问我的木剑。"
+            }
+          },
+          {
+            "speaker": "萧中慧",
+            "text": {
+              "en": "Pinocchio, be careful. We still don't know this traveler.",
+              "zh-CN": "匹诺曹，小心些，我们还不认识这位旅人。"
+            }
+          }
+        ]
+      }
+    ],
+    "鸳鸯刀_风陵渡胜2": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "萧中慧",
+            "text": {
+              "en": "You've made your point. If it's the paired seals you want, let Pinocchio be.",
+              "zh-CN": "你已经证明本事了。如果你要的是这对印记，别再伤害匹诺曹。"
+            }
+          }
+        ]
+      }
+    ],
+    "鸳鸯刀正_风陵渡": [
+      {
+        "start": 1,
+        "expectedCount": 10,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Keep them. I came for the ferry, not somebody else's keepsake.",
+              "zh-CN": "你们留着吧。我是来坐船的，不是来抢别人的纪念物。"
+            }
+          },
+          {
+            "speaker": "萧中慧",
+            "text": {
+              "en": "Then perhaps we should have started with introductions.",
+              "zh-CN": "那么，我们也许该先自我介绍。"
+            }
+          },
+          {
+            "speaker": "袁冠南",
+            "text": {
+              "en": "Pinocchio. These seals are supposed to make their keeper unbeatable.",
+              "zh-CN": "我叫匹诺曹。听说这对印记，能让持有者天下无敌。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "We've just conducted a fairly thorough test of that claim.",
+              "zh-CN": "刚才那场，算是相当充分的实测了。"
+            }
+          },
+          {
+            "speaker": "袁冠南",
+            "text": {
+              "en": "Together they say, 'Kindness outlasts force.' Oh. That may explain the results.",
+              "zh-CN": "合起来写的是：善意胜过蛮力。哦，难怪刚才会那样。"
+            }
+          },
+          {
+            "speaker": "萧中慧",
+            "text": {
+              "en": "A lesson worth keeping, even without a trophy.",
+              "zh-CN": "即使没有战利品，这课也值得记住。"
+            }
+          }
+        ]
+      }
+    ],
+    "鸳鸯刀_风陵渡1": [
+      {
+        "start": 0,
+        "expectedCount": 5,
+        "lines": [
+          {
+            "speaker": "卓天雄",
+            "text": {
+              "en": "Captain Orlando, royal collector. Hand over the seals.",
+              "zh-CN": "皇家征收官，奥兰多队长。交出印记。"
+            }
+          },
+          {
+            "speaker": "袁冠南",
+            "text": {
+              "en": "You may have them. They don't do what you think.",
+              "zh-CN": "可以给你，它们没有你想的那种本事。"
+            }
+          },
+          {
+            "speaker": "卓天雄",
+            "text": {
+              "en": "Then I'll take the witnesses, too.",
+              "zh-CN": "那证人也一并带走。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Ah. Another permit problem.",
+              "zh-CN": "啊，又是一桩手续问题。"
+            }
+          }
+        ]
+      }
+    ],
+    "鸳鸯刀正_风陵渡败": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "We need to regroup. I should keep a save before that ferry encounter next time.",
+              "zh-CN": "得先整备。再走这段渡口事件前，应该留一份存档。"
+            }
+          }
+        ]
+      }
+    ],
+    "鸳鸯刀正_风陵渡胜": [
+      {
+        "start": 0,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "You can have the seals. The travelers are going free.",
+              "zh-CN": "印记可以拿走，旅人们得自由离开。"
+            }
+          },
+          {
+            "speaker": "萧中慧",
+            "text": {
+              "en": "Thank you. Pinocchio has quite enough to learn without a royal cell.",
+              "zh-CN": "谢谢。匹诺曹要学的事已经够多了，用不着再去牢房进修。"
+            }
+          },
+          {
+            "speaker": "袁冠南",
+            "text": {
+              "en": "Let me come with you! I'll be useful. Usually. And when I'm not, I'll try.",
+              "zh-CN": "让我跟你们走吧！我能帮上忙。通常都能。帮不上时，我也会努力。"
+            }
+          }
+        ]
+      }
+    ],
+    "鸳鸯刀_风陵渡口下次再来": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Not my finest crossing. I'll prepare before trying the ferry again.",
+              "zh-CN": "这回渡河不太漂亮。准备好了再来。"
+            }
+          }
+        ]
+      }
+    ],
+    "鸳鸯刀邪_风陵渡": [
+      {
+        "start": 1,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I'll claim the secret. A matched set ought to be worth something.",
+              "zh-CN": "秘密归我。这么配套的东西，总该值点什么。"
+            }
+          }
+        ]
+      }
+    ],
+    "鸳鸯刀邪_西夏酒楼": [
+      {
+        "start": 0,
+        "expectedCount": 6,
+        "lines": [
+          {
+            "speaker": "韦小宝",
+            "text": {
+              "en": "Those seals? The Wizard mentioned their secret once. He got as far as 'Pearl.'",
+              "zh-CN": "那对印记？魔法师提过它们的秘密，只说到了珍珠。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Pearl what?",
+              "zh-CN": "珍珠什么？"
+            }
+          },
+          {
+            "speaker": "韦小宝",
+            "text": {
+              "en": "That's where he stopped. For a man with so many answers, he does leave a lot unfinished.",
+              "zh-CN": "他说到这儿就停了。知道那么多答案的人，也真能留悬念。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Then we'd better look for Snowmelt Town.",
+              "zh-CN": "那么，就去融雪镇找找。"
+            }
+          }
+        ]
+      }
+    ],
+    "鸳鸯刀邪_佛山镇": [
+      {
+        "start": 0,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "小孩",
+            "text": {
+              "en": "There's an old cave near Snowmelt Town. Very dark. Excellent echoes.",
+              "zh-CN": "融雪镇附近有座老洞窟。很黑，回声特别好。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Show me the entrance? I'll leave the echo testing to you.",
+              "zh-CN": "能带我去入口吗？测试回声的工作，就交给你。"
+            }
+          },
+          {
+            "speaker": "小孩",
+            "text": {
+              "en": "Deal. The cave never interrupts.",
+              "zh-CN": "成交。洞窟从不打断人说话。"
+            }
+          }
+        ]
+      }
+    ],
+    "鸳鸯刀邪_佛山镇1": [
+      {
+        "start": 2,
+        "expectedCount": 3,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "A long slot, then a short one. The paired seals turn the light into a trail.",
+              "zh-CN": "先是一道长槽，再是一道短槽。合用这对印记，光就指明了路。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "There. A chest. At last, a riddle with a handle.",
+              "zh-CN": "在那儿，一口箱子。总算碰上一个带把手的谜语。"
+            }
+          }
+        ]
+      },
+      {
+        "start": 8,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "A playbook and a small fortune. A very practical secret.",
+              "zh-CN": "一本手册，还有一笔钱。这秘密倒很实用。"
+            }
+          }
+        ]
+      }
+    ],
+    "mainStory_黑暗的阴影": [
+      {
+        "start": 0,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "A letter from Grimm?",
+              "zh-CN": "格林的信？"
+            }
+          },
+          {
+            "speaker": "南贤",
+            "text": {
+              "en": "Come see me.",
+              "zh-CN": "回来见我。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Concise. He must be saving ink for the stories.",
+              "zh-CN": "真简短。他一定把墨水留给故事了。"
+            }
+          },
+          {
+            "speaker": "汉家松鼠",
+            "text": {
+              "en": "Field note: visiting Grimm advances the world story. Some unfinished encounters may close permanently. Finish what matters to you and save before returning.",
+              "zh-CN": "旅途提示：回访格林会推进世界剧情，一些未完成的事件可能永久关闭。先完成你在意的路线，返回前记得保存。"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "choiceText": {
+    "鸳鸯刀_太岳四侠": {
+      "prompt": {
+        "en": "How do you answer the toll collectors?",
+        "zh-CN": "怎样回应这些收费人？"
+      },
+      "options": {
+        "en": [
+          "Challenge their claim.",
+          "Let them inspect the bag."
+        ],
+        "zh-CN": [
+          "质疑他们的许可。",
+          "让他们检查行囊。"
+        ]
+      }
+    },
+    "鸳鸯刀_风陵渡胜2": {
+      "prompt": {
+        "en": "What will you do about the paired seals?",
+        "zh-CN": "怎样处理这对印记？"
+      },
+      "options": {
+        "en": [
+          "Leave the seals with them. (Morality +3)",
+          "Claim the secret. (Morality −3)"
+        ],
+        "zh-CN": [
+          "让他们留下印记。（道德+3）",
+          "收下这个秘密。（道德−3）"
+        ]
+      }
+    }
+  },
+  "speakerNames": {
+    "朝廷走狗": {
+      "en": "Cardinal's Guard",
+      "zh-CN": "枢机卫兵"
+    },
+    "朝廷鹰犬": {
+      "en": "Cardinal's Guard",
+      "zh-CN": "枢机卫兵"
+    },
+    "盖七省": {
+      "en": "Toll Spokesman",
+      "zh-CN": "收费头目"
+    },
+    "流星赶月": {
+      "en": "Toll Lookout",
+      "zh-CN": "收费哨兵"
+    },
+    "双手开碑": {
+      "en": "Toll Collector",
+      "zh-CN": "收费员"
+    },
+    "烟霞神龙": {
+      "en": "Toll Captain",
+      "zh-CN": "收费队长"
+    },
+    "卓天雄": {
+      "en": "Captain Orlando",
+      "zh-CN": "奥兰多队长"
+    },
+    "汉家松鼠": {
+      "en": "Field Notes",
+      "zh-CN": "旅途提示"
+    }
+  },
+  "uiLabels": {
+    "朝廷走狗": {
+      "en": "Cardinal's Guard",
+      "zh-CN": "枢机卫兵"
+    },
+    "朝廷鹰犬": {
+      "en": "Cardinal's Guard",
+      "zh-CN": "枢机卫兵"
+    },
+    "盖七省": {
+      "en": "Toll Spokesman",
+      "zh-CN": "收费头目"
+    },
+    "流星赶月": {
+      "en": "Toll Lookout",
+      "zh-CN": "收费哨兵"
+    },
+    "双手开碑": {
+      "en": "Toll Collector",
+      "zh-CN": "收费员"
+    },
+    "烟霞神龙": {
+      "en": "Toll Captain",
+      "zh-CN": "收费队长"
+    },
+    "卓天雄": {
+      "en": "Captain Orlando",
+      "zh-CN": "奥兰多队长"
+    }
+  },
+  "maps": {
+    "六和塔": {
+      "name": {
+        "en": "Cardinal's Tower",
+        "zh-CN": "枢机塔"
+      },
+      "description": {
+        "en": "Rochefort's guards hold a courier here. D'Artagnan has business with them.",
+        "zh-CN": "罗什福尔的卫兵在此关押一名信使。达达尼昂有事找他们。"
+      }
+    }
+  },
+  "locations": {
+    "大地图": {
+      "六和塔": {
+        "name": {
+          "en": "Cardinal's Tower",
+          "zh-CN": "枢机塔"
+        },
+        "description": {
+          "en": "A guarded tower with an imprisoned courier.",
+          "zh-CN": "关押着信使的守卫塔楼。"
+        }
+      }
+    },
+    "六和塔": {
+      "朝廷走狗": {
+        "name": {
+          "en": "Cardinal's Guard",
+          "zh-CN": "枢机卫兵"
+        },
+        "description": {
+          "en": "The rescue encounter has a 50% chance while its original story window remains open.",
+          "zh-CN": "原剧情窗口内，营救事件每次有50%概率出现。"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "battles": {
+      "回族部落_战斗": {
+        "name": {
+          "en": "The Caravan Stand",
+          "zh-CN": "商队保卫战"
+        }
+      },
+      "六和塔_战斗": {
+        "name": {
+          "en": "The Tower Rescue",
+          "zh-CN": "塔楼营救"
+        }
+      },
+      "庖丁解牛_战斗": {
+        "name": {
+          "en": "The Caravan's Last Stand",
+          "zh-CN": "商队决战"
+        }
+      },
+      "鸳鸯刀_太岳四侠战斗": {
+        "name": {
+          "en": "A Questionable Toll",
+          "zh-CN": "可疑的过路费"
+        }
+      },
+      "鸳鸯刀风陵渡1_战斗": {
+        "name": {
+          "en": "A Wooden Sword's Warning",
+          "zh-CN": "木剑的警告"
+        }
+      },
+      "鸳鸯刀正风陵渡_战斗": {
+        "name": {
+          "en": "The Royal Collector",
+          "zh-CN": "皇家征收官"
+        }
+      }
+    }
+  },
+  "commandText": {
+    "六和塔营救文泰来。": {
+      "en": "Freed the courier at the Cardinal's Tower.",
+      "zh-CN": "在枢机塔救出了信使。"
+    }
+  },
+  "chapterGuide": {
+    "stories": [
+      {
+        "title": {
+          "en": "The Cardinal's Ledger",
+          "zh-CN": "枢机主教的账册"
+        },
+        "trackedStories": [
+          "书剑恩仇录_回族部落霍青桐",
+          "书剑恩仇录_六和塔胜",
+          "书剑恩仇录_庖丁解牛胜",
+          "mainStory_神秘剑客1",
+          "mainStory_紧急1"
+        ],
+        "prepareLabel": {
+          "en": "Prepare your companions",
+          "zh-CN": "培养与整备队友"
+        },
+        "stages": [
+          {
+            "id": "france-complete",
+            "title": {
+              "en": "Two allies, one rescued courier",
+              "zh-CN": "两名伙伴，一位获救信使"
+            },
+            "detail": {
+              "en": "Milady and D'Artagnan can travel with you. The rescue awarded Petalstorm Fist and Riverflow Mastery manuals; the camp finale awarded Drifting Cloud Sword and raised its training cap by 2. Equip and train each ally separately. The courier is a story character, not another recruit.",
+              "zh-CN": "米莱狄与达达尼昂可与你同行。救援奖励落英拳与流河专精手册；营地决战奖励流云剑术手册，并使其研习上限提高2级。请分别为伙伴穿装备、安排研习。信使只参与剧情，不是额外队友。"
+            },
+            "route": [],
+            "complete": true,
+            "any": [
+              "书剑恩仇录_庖丁解牛胜"
+            ]
+          },
+          {
+            "id": "france-camp",
+            "title": {
+              "en": "Return to Rose Caravan",
+              "zh-CN": "返回蔷薇商队"
+            },
+            "detail": {
+              "en": "The courier is free. Return to Rose Caravan and meet Rochefort for the last fight. D'Artagnan joins before it. This scene closes after the world emergency; save before confronting the guards.",
+              "zh-CN": "信使已经自由。返回蔷薇商队，找罗什福尔进行最后一战；达达尼昂会在战前加入。世界紧急事件之后，这个场景会关闭。交战前保存。"
+            },
+            "route": [
+              {
+                "mapId": "大地图",
+                "locationId": "回族部落"
+              },
+              {
+                "mapId": "回族部落",
+                "locationId": "张召重"
+              },
+              {
+                "mapId": "六和塔",
+                "locationId": "返回"
+              },
+              {
+                "mapId": "杭州",
+                "locationId": "返回"
+              }
+            ],
+            "blockedBy": [
+              "mainStory_紧急1"
+            ],
+            "blockedDetail": {
+              "en": "The world emergency has already closed this original story window. A prior save is needed to revisit it.",
+              "zh-CN": "世界紧急事件已关闭原本的剧情窗口，需使用之前的存档重访。"
+            },
+            "any": [
+              "书剑恩仇录_六和塔胜"
+            ]
+          },
+          {
+            "id": "france-tower",
+            "title": {
+              "en": "Free the Cardinal's prisoner",
+              "zh-CN": "营救枢机主教的囚犯"
+            },
+            "detail": {
+              "en": "Travel to Canalward, enter the Cardinal's Tower, and talk to the guard. The rescue has a 50% chance on a visit; leave and return if the tower is quiet. Bring supplies: Rochefort has twelve guards. The rescue window closes after the Mysterious Swordsman milestone.",
+              "zh-CN": "前往运河镇，进入枢机塔，与守卫交谈。救援事件每次造访有50%概率；暂未发生时可离开后再来。罗什福尔带着十二名守卫，请备好补给。神秘剑客里程碑之后，救援窗口会关闭。"
+            },
+            "route": [
+              {
+                "mapId": "大地图",
+                "locationId": "杭州"
+              },
+              {
+                "mapId": "杭州",
+                "locationId": "六和塔"
+              },
+              {
+                "mapId": "六和塔",
+                "locationId": "朝廷走狗"
+              },
+              {
+                "mapId": "回族部落",
+                "locationId": "返回"
+              }
+            ],
+            "blockedBy": [
+              "mainStory_神秘剑客1"
+            ],
+            "blockedDetail": {
+              "en": "The Mysterious Swordsman milestone has already closed the rescue window.",
+              "zh-CN": "神秘剑客里程碑已经关闭救援窗口。"
+            },
+            "any": [
+              "书剑恩仇录_回族部落霍青桐"
+            ]
+          },
+          {
+            "id": "france-meet",
+            "title": {
+              "en": "Help the Rose Caravan",
+              "zh-CN": "帮助蔷薇商队"
+            },
+            "detail": {
+              "en": "Visit Rose Caravan to help Milady against five guards. Winning recruits her and grants the Threefold Swordplay Manual. This route must begin before the Mysterious Swordsman milestone.",
+              "zh-CN": "前往蔷薇商队，帮助米莱狄击败五名守卫。获胜后她会加入，并赠送三段剑术手册。这条路线须在神秘剑客里程碑之前开始。"
+            },
+            "route": [
+              {
+                "mapId": "大地图",
+                "locationId": "回族部落"
+              }
+            ],
+            "blockedBy": [
+              "mainStory_神秘剑客1"
+            ],
+            "blockedDetail": {
+              "en": "That original recruitment window is closed in this save.",
+              "zh-CN": "此存档中的原招募窗口已关闭。"
+            }
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "The Paired Seals",
+          "zh-CN": "双印记"
+        },
+        "trackedStories": [
+          "鸳鸯刀正_风陵渡胜",
+          "鸳鸯刀正_风陵渡败",
+          "鸳鸯刀邪_风陵渡",
+          "鸳鸯刀邪_西夏酒楼",
+          "鸳鸯刀邪_佛山镇1"
+        ],
+        "prepareLabel": {
+          "en": "Prepare for the solo finale",
+          "zh-CN": "为单人决战整备"
+        },
+        "nightSlots": [
+          "亥",
+          "子",
+          "丑",
+          "寅",
+          "卯"
+        ],
+        "nightReady": {
+          "en": "It is nighttime. The opening has no random chance gate.",
+          "zh-CN": "当前是夜间，开场没有额外随机概率。"
+        },
+        "nightWaiting": {
+          "en": "Visit from 9 p.m. through 7 a.m. Travel advances time; menus do not.",
+          "zh-CN": "请在21点至次日7点间造访。旅行推进时间，打开菜单不会。"
+        },
+        "stages": [
+          {
+            "id": "italy-complete",
+            "title": {
+              "en": "Pinocchio joins the journey",
+              "zh-CN": "匹诺曹加入旅程"
+            },
+            "detail": {
+              "en": "You refused the seals, defeated Orlando, and recruited Pinocchio. Both good-branch decisions added 3 Morality each. The Blue Fairy stays a story ally; she does not join. Select Pinocchio in Party to equip and train him.",
+              "zh-CN": "你拒收双印记、击败奥兰多，招募了匹诺曹。善线两处各增加3点道德值。蓝仙女是剧情盟友，不会入队。到队伍中选择匹诺曹，为他穿戴装备并安排研习。"
+            },
+            "route": [],
+            "complete": true,
+            "any": [
+              "鸳鸯刀正_风陵渡胜"
+            ]
+          },
+          {
+            "id": "italy-secret-complete",
+            "title": {
+              "en": "The secret is yours",
+              "zh-CN": "秘密已经揭晓"
+            },
+            "detail": {
+              "en": "The Scarecrow branch is complete: Survivor's Playbook, 5,000 silver, and +3 to the Paired Cleavers training cap. This is a different reward path; Pinocchio does not join on it.",
+              "zh-CN": "稻草人分支已完成：获得生存者指南、5000银币，双刃合击研习上限提高3级。这是另一条奖励路线，匹诺曹不会在此加入。"
+            },
+            "route": [],
+            "complete": true,
+            "any": [
+              "鸳鸯刀邪_佛山镇1"
+            ]
+          },
+          {
+            "id": "italy-defeat",
+            "title": {
+              "en": "The solo fight was lost",
+              "zh-CN": "单人决战落败"
+            },
+            "detail": {
+              "en": "This original branch does not reopen at the ferry after its final defeat. To try recruiting Pinocchio again, load an intact save from before the ferry encounter, improve your hero, and return at night. Companions cannot deploy in the final fight.",
+              "zh-CN": "原路线在最后落败后，不会从渡口重新开始。若要再次尝试招募匹诺曹，需读取渡口事件前的完整存档，培养主角后夜间再来。最后一战不能部署伙伴。"
+            },
+            "route": [],
+            "blockedBy": [
+              "鸳鸯刀正_风陵渡败"
+            ],
+            "blockedDetail": {
+              "en": "No automatic reset or recovery reward has been added.",
+              "zh-CN": "没有额外重置剧情或补发奖励。"
+            },
+            "any": [
+              "鸳鸯刀正_风陵渡败"
+            ]
+          },
+          {
+            "id": "italy-secret-town",
+            "title": {
+              "en": "Follow the pearl clue",
+              "zh-CN": "追查珍珠线索"
+            },
+            "detail": {
+              "en": "With the Scarecrow in your active party, ask the child in Snowmelt Town about the cave. This branch leads to the Playbook reward, not Pinocchio's recruitment.",
+              "zh-CN": "带上参战队伍中的稻草人，到融雪镇向孩子打听洞窟。此分支通往指南奖励，不会招募匹诺曹。"
+            },
+            "route": [
+              {
+                "mapId": "大地图",
+                "locationId": "佛山镇"
+              },
+              {
+                "mapId": "佛山镇",
+                "locationId": "小孩"
+              }
+            ],
+            "any": [
+              "鸳鸯刀邪_西夏酒楼"
+            ]
+          },
+          {
+            "id": "italy-secret",
+            "title": {
+              "en": "Ask the Scarecrow",
+              "zh-CN": "请教稻草人"
+            },
+            "detail": {
+              "en": "You kept the seals. Their secret requires the Scarecrow in your active party; talk to him at the tavern. The seals are story props, not newly granted inventory items.",
+              "zh-CN": "你留下了双印记。解密需要参战队伍中有稻草人，再去酒楼找他交谈。双印记是剧情道具，原路线并未新发放背包物品。"
+            },
+            "route": [
+              {
+                "mapId": "大地图",
+                "locationId": "西夏"
+              },
+              {
+                "mapId": "西夏",
+                "locationId": "西夏酒楼"
+              },
+              {
+                "mapId": "西夏酒楼",
+                "locationId": "韦小宝"
+              }
+            ],
+            "any": [
+              "鸳鸯刀邪_风陵渡"
+            ]
+          },
+          {
+            "id": "italy-night",
+            "title": {
+              "en": "Meet the travelers at Windsong Ferry",
+              "zh-CN": "夜访风歌渡口"
+            },
+            "detail": {
+              "en": "Save before the encounter. Two opening fights lead to a choice: refuse the seals (+3 Morality) to protect Pinocchio and the Blue Fairy, or claim them (-3 Morality) for the Scarecrow branch. Protecting them ends with your hero ALONE against Orlando and six guards. Train and buy supplies first; losing that finale closes this invitation.",
+              "zh-CN": "事件前先保存。前两战之后可选择：拒收印记（道德+3），保护匹诺曹和蓝仙女；或收下印记（道德-3），进入稻草人分支。保护路线最终由主角独自对抗奥兰多和六名守卫，先训练、补给；最后落败会关闭这次招募。"
+            },
+            "route": [
+              {
+                "mapId": "大地图",
+                "locationId": "风陵渡口"
+              },
+              {
+                "mapId": "风陵渡口",
+                "locationId": "返回"
+              }
+            ],
+            "night": true
+          }
+        ]
+      }
+    ]
+  }
+}

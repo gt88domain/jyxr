@@ -19,7 +19,7 @@ class CompanionReskinTests(unittest.TestCase):
 
  def test_inventory_distinguishes_identity_form_display_and_debug_records(self):
   inventory=companion_inventory(self.source,self.cast,self.figures,self.skin,self.runtime)
-  self.assertEqual(inventory['counts'],{'identities':62,'forms':65,'instructions':80,'fixedIdentities':20,'displayAppliedIdentities':34,'authoredJoinScenes':26})
+  self.assertEqual(inventory['counts'],{'identities':62,'forms':65,'instructions':80,'fixedIdentities':20,'displayAppliedIdentities':34,'authoredJoinScenes':27})
   hatter=next(a for a in inventory['characters'] if a['legacyIdentity']=='达尔巴')
   self.assertTrue(hatter['displayApplied'])
   for actor in inventory['characters']:
@@ -58,7 +58,10 @@ class CompanionReskinTests(unittest.TestCase):
 
  def test_no_dialogue_or_join_is_invented_for_command_only_or_debug_segments(self):
   chapter=json.loads((WEB/'content/worlds/chapter-companions.json').read_text())
-  self.assertEqual(len(chapter['dialogueEdits']),24)
+  self.assertEqual(len(chapter['dialogueEdits']),22)
+  for moved in ['书剑恩仇录_庖丁解牛','鸳鸯刀正_风陵渡胜']:
+   self.assertNotIn(moved,chapter['dialogueEdits'])
+   self.assertIn(moved,self.skin['dialogueEdits'])
   self.assertFalse(any(id.startswith('test_') for id in chapter['dialogueEdits']))
   source={s['name']:s for f in self.source['storyScripts'].values() for s in f['segments']}
   new={s['name']:s for f in self.display['en']['storyScripts'].values() for s in f['segments']}

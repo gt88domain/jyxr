@@ -9,6 +9,9 @@ export interface DisplayCatalog {
 }
 const fields=new Set(['name','description','itemName','skillName','speaker','title','label','defaultName','characterName','replacedItemName','runningInternalName','focus']);
 const skillCategories=['externalSkills','internalSkills','specialSkills','legendSkills'];
+// Runtime content is immutable for one initialized session. Cache only its
+// display projection; character, inventory and story snapshots stay fresh.
+const packViews=new WeakMap<DisplayCatalog,WeakMap<object,unknown>>();
 export function categorizedDisplay(catalog:DisplayCatalog|undefined,categories:string[],id:string|undefined):DisplayEntry|undefined {
   if(!id)return undefined;
   return categories.map(category=>catalog?.byCategory?.[category]?.[id]).find(entry=>entry?.name);
@@ -19,6 +22,11 @@ export function projectPresentation<T>(input:T,catalog?:DisplayCatalog):T {
   function walk(value:unknown,key=''):unknown {
     if(Array.isArray(value))return value.map(item=>typeof item==='string'&&['masters','skills','traits'].includes(key)?categorizedDisplay(catalog,key==='skills'?skillCategories:key==='masters'?['characters']:['talents'],item)?.name??catalog!.text[item]??item:walk(item,key));
     if(!value||typeof value!=='object')return value;
+    if(key==='pack'){
+      let views=packViews.get(catalog!);if(!views){views=new WeakMap();packViews.set(catalog!,views);}
+      if(views.has(value))return views.get(value);
+      const projected=walk(value);views.set(value,projected);return projected;
+    }
     const object=value as Record<string,unknown>;
     const id=typeof object.definitionId==='string'?object.definitionId:typeof object.id==='string'?object.id:undefined;
     const category=({inventory:'items',items:'items',item:'items',products:'items',sellable:'items',entries:'items',externalSkills:'externalSkills',internalSkills:'internalSkills',specialSkills:'specialSkills',talents:'talents',buffs:'buffs',sects:'sects',map:'maps',locations:'locations',characters:'characters',party:'characters',roster:'characters',units:'characters',hero:'characters',managedCharacter:'characters'} as Record<string,string>)[key];
