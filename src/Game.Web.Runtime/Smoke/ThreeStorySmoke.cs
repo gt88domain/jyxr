@@ -8,8 +8,11 @@ using Game.Web.Runtime;
 // Checkpoints are intact exports; no flags, items, RNG, or combat results edited.
 internal static class ThreeStorySmoke
 {
-    public static async Task Run(string contentPath, string startPath, string output, bool resume = false, bool firstTwoOnly = false)
+    public static async Task Run(string contentPath, string startPath, string output, string mode = "three")
     {
+        if (mode is not ("three" or "resume" or "first-two" or "knight")) throw new ArgumentException("Unknown story trial mode: " + mode);
+        var resume = mode == "resume";
+        var firstTwoOnly = mode == "first-two";
         Directory.CreateDirectory(output);
         var events = new List<object>();
         var timings = new List<object>();
@@ -171,13 +174,36 @@ internal static class ThreeStorySmoke
         }
         void Report(bool passed, string? error = null)
         {
-            File.WriteAllText(Path.Combine(output, "report.json"), JsonSerializer.Serialize(new { passed, error, scope = firstTwoOnly ? "first two endings and Dulcinea training" : "three-story trial", difficulty = "normal", sourceSave = inputSave, sourceSha256 = sourceHash, contentSha256 = Hash(File.ReadAllText(contentPath)), method = "Sequential ordinary player commands from an unedited, previously played normal save; manual offense and real potions; no forced outcomes", checkpoints, events, timings }, new JsonSerializerOptions { WriteIndented = false }));
+            File.WriteAllText(Path.Combine(output, "report.json"), JsonSerializer.Serialize(new { passed, error, scope = mode == "knight" ? "alternate Windrider ending" : firstTwoOnly ? "first two endings and Dulcinea training" : "three-story trial", difficulty = "normal", sourceSave = inputSave, sourceSha256 = sourceHash, contentSha256 = Hash(File.ReadAllText(contentPath)), method = "Sequential ordinary player commands from an unedited, previously played normal save; manual offense and real potions; no forced outcomes", checkpoints, events, timings }, new JsonSerializerOptions { WriteIndented = false }));
         }
         try
         {
             Parse(BrowserBridge.Initialize(File.ReadAllText(contentPath)));
             Parse(BrowserBridge.ImportSave(File.ReadAllText(startPath)));
             if (state["adventure"]!["difficulty"]!.ToString() != "normal") throw new InvalidOperationException("Source is not normal difficulty");
+            if (mode == "knight")
+            {
+                stage = "knight"; Checkpoint("knight-start");
+                if (Done("白马啸西风_李文秀加入") || state["roster"]!.AsArray().Any(c => c!["definitionId"]!.ToString() == "李文秀")) throw new InvalidOperationException("Alternative route must start before Dulcinea joins");
+                await Retry("哈萨克部落", "白马啸西风_前往高昌");
+                await World(); Checkpoint("knight-camp");
+                var favor = JsonNode.Parse(BrowserBridge.ExportSave())!["game"]!["adventure"]!["favorabilityByTarget"]!["李文秀"]!.GetValue<int>();
+                if (favor >= 60) throw new InvalidOperationException("Alternative route bypassed the real trust gate");
+                await Retry("高昌迷宫", "白马啸西风_高昌秘宝3");
+                var morality = state["adventure"]!["morality"]!.GetValue<int>();
+                if (!state["inventory"]!.AsArray().Any(i => i!["id"]!.ToString() == "河岳英灵集")) throw new InvalidOperationException("Missing alternate almanac reward");
+                for (int n = 0; n < 120 && !Done("白马啸西风_陈达海加入2"); n++)
+                {
+                    if (state["map"]!["id"]!.ToString() != "高昌迷宫") await Travel("高昌迷宫");
+                    if (state["map"]!["locations"]!.AsArray().Any(l => l!["id"]!.ToString() == "陈达海" && l["action"] is not null)) await Visit("陈达海");
+                    else { await World(); await Travel("高昌迷宫"); }
+                }
+                if (!Done("白马啸西风_陈达海加入2") || !state["roster"]!.AsArray().Any(c => c!["definitionId"]!.ToString() == "陈达海") || state["roster"]!.AsArray().Any(c => c!["definitionId"]!.ToString() == "李文秀") || state["adventure"]!["morality"]!.GetValue<int>() != morality - 2) throw new InvalidOperationException("Actual knight recruitment, exclusivity or morality reward is wrong");
+                await Manage(); await World(); Checkpoint("knight-ending");
+                var export = BrowserBridge.ExportSave(); Parse(BrowserBridge.ImportSave(export));
+                if (!Done("白马啸西风_陈达海加入2")) throw new InvalidOperationException("Knight ending lost on reload");
+                Report(true); Console.WriteLine("PASS alternate route: camp choice, original trust gate, two ruins fights, almanac, knight recruitment, morality -2 and reload"); return;
+            }
             if (!resume)
             {
             Checkpoint("start");

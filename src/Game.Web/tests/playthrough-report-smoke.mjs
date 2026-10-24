@@ -9,7 +9,12 @@ page.on('response',r=>{if(r.status()>=400)errors.push(`${r.status()} ${r.url()}`
 let failure;
 try{
  await page.goto(base);await page.locator('#summary article').first().waitFor();
- assert.equal(await page.locator('#summary .cleared').count(),2);assert.equal(await page.locator('#summary .blocked').count(),1);
+ assert.equal(await page.locator('#summary .cleared').count(),1);assert.equal(await page.locator('#summary .needs-review').count(),1);assert.equal(await page.locator('#summary .blocked').count(),1);
+ const compact=await page.locator('#events .event').count();
+ await page.locator('#view').selectOption('full');assert.ok(await page.locator('#events .event').count()>compact);
+ await page.locator('#stage').selectOption('knight');assert.match(await page.locator('#events').innerText(),/堂吉诃德/);
+ assert.match(await page.locator('#alternate-result').innerText(),/55/);
+ await page.locator('#view').selectOption('story');
  await page.locator('#stage').selectOption('france');
  await page.locator('#search').fill('米莱');assert.ok(await page.locator('#events .event').count()>0);
  await page.locator('#search').fill('');await page.locator('#language').selectOption('en');
@@ -19,7 +24,7 @@ try{
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  await page.locator('#search').fill('');await page.locator('#language').selectOption('zh-CN');await page.screenshot({path:'artifacts/three-report-mobile.png'});
  assert.deepEqual(errors,[]);
- console.log('PASS observed report: two cleared endings, blocked solo fight, bilingual transcript, companions, filtering, genuine reload and phone layout');
+ console.log('PASS observed report: verified Windrider branches, corrected France status, folded repeats, full evidence, bilingual transcript, reload and phone layout');
 }catch(e){failure=e;console.error(e);}finally{
  await mkdir('artifacts',{recursive:true});await writeFile('artifacts/three-report-browser.json',JSON.stringify({passed:!failure,base,errors,error:failure?.stack},null,2)+'\n');await browser.close();
 }

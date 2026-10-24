@@ -57,7 +57,7 @@ for path in review_sources:
 shutil.copytree(game,output/'game')
 if original_report:=os.environ.get('GAME_PLAYTHROUGH_REPORT'):
  from build_playthrough import build as build_playthrough
- build_playthrough(output/'playthrough',original_report,os.environ['GAME_PLAYTHROUGH_RETEST'],os.environ.get('GAME_PLAYTHROUGH_BEFORE'),os.environ.get('GAME_PLAYTHROUGH_AFTER'))
+ build_playthrough(output/'playthrough',original_report,os.environ['GAME_PLAYTHROUGH_RETEST'],os.environ.get('GAME_PLAYTHROUGH_BEFORE'),os.environ.get('GAME_PLAYTHROUGH_AFTER'),os.environ.get('GAME_PLAYTHROUGH_KNIGHT'))
 (output/'opening').mkdir(exist_ok=True)
 (output/'opening/index.html').write_text('''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Grimm · Game</title></head><body><p><a id="game-link" href="../game/">Continue to the game / 进入游戏</a></p><script>const target=new URL('../game/',location.href);target.search=location.search;document.querySelector('#game-link').href=target.href;location.replace(target.href);</script></body></html>''',encoding='utf8')
 shutil.copyfile(WEB.parents[1]/'LICENSE',output/'LICENSE')
