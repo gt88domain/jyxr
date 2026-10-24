@@ -23,5 +23,15 @@
     "name": "italy-trained",
     "sha256": "771dfb2d59252d44fd4cfa3f44031d09f6649db6364ce7480fd709e607242d52",
     "bytes": 61625
+  },
+  {
+    "name": "knight-start",
+    "sha256": "21f81e263def2445097700c7cb878748a458b8a0f33d41baf673b4c5153c4f4a",
+    "bytes": 55873
+  },
+  {
+    "name": "knight-ending",
+    "sha256": "3446f962acc436303fd090022e6820e09c72a710f7c665d2f7ecf485dd1e795f",
+    "bytes": 56258
   }
 ]
