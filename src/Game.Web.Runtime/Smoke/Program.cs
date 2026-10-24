@@ -3,7 +3,7 @@ using Game.Web.Runtime;
 
 if(args.FirstOrDefault()=="--three-stories")
 {
-    await ThreeStorySmoke.Run(args[1],args[2],args[3],args.ElementAtOrDefault(4)=="resume",args.ElementAtOrDefault(4)=="first-two");
+    await ThreeStorySmoke.Run(args[1],args[2],args[3],args.ElementAtOrDefault(4)??"three");
     return;
 }
 
