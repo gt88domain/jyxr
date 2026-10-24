@@ -11965,7 +11965,7 @@ copy-1a2bea0ba1f4fe780fe7,storyScripts,门派大轮寺_拜师,legacy,门派大�
 
 主角：呜呜……（先自己练习吧）","主角：格林说过有个学派，倒没说会有这么多雪。
 
-金轮法王：我是珀西瓦尔。欢迎来到圣杯山舍。想来，你是求学的，不是来欣赏更冷的风景。
+金轮法王：我是珀西瓦尔。欢迎来到圆桌骑士团。想来，你是求学的，不是来欣赏更冷的风景。
 
 主角：两样都行，只要其中一样包括屋顶。
 
@@ -11973,7 +11973,7 @@ copy-1a2bea0ba1f4fe780fe7,storyScripts,门派大轮寺_拜师,legacy,门派大�
 
 主角：我就怀疑，事情没有那么便宜。","主角：Grimm mentioned a school. He did not mention quite this much snow.
 
-金轮法王：Percival. Welcome to the Grail Lodge. You're here to train, right? The view won't warm you up.
+金轮法王：Percival. Welcome to the Round Table. You're here to train, right? The view won't warm you up.
 
 主角：Either one, as long as I get a roof.
 
@@ -12165,7 +12165,7 @@ copy-9cd91c779133e3831dd9,storyScripts,门派大轮寺_大轮寺出师,legacy,�
 主角：That's a worrying division of labor.
 
 金轮法王：Look after each other. The pass is beyond the snowy training grounds.",implemented,,/storyScripts/legacy/segments/1040/steps/11,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-e416957fbabb7aa7b7f8,storyScripts,门派大轮寺_大轮寺出师,legacy,门派大轮寺_大轮寺出师,journal,,,,出师大轮寺。,圣杯山舍出师，疯帽匠加入队伍。,Graduated from Grail Lodge. The Mad Hatter joined the party.,implemented,,/storyScripts/legacy/segments/1040/steps/15/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-e416957fbabb7aa7b7f8,storyScripts,门派大轮寺_大轮寺出师,legacy,门派大轮寺_大轮寺出师,journal,,,,出师大轮寺。,圆桌骑士团出师，疯帽匠加入队伍。,Graduated from Round Table. The Mad Hatter joined the party.,implemented,,/storyScripts/legacy/segments/1040/steps/15/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e9f6856c1c15c3dc39dd,storyScripts,门派大轮寺_回大轮寺,legacy,门派大轮寺_回大轮寺,dialogue_run,"主角
 金轮法王","主角 → 玩家角色 / Player character [classified]
 金轮法王 → 珀西瓦尔 / Percival [proposed]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：师父好。
@@ -12263,11 +12263,11 @@ copy-9377ab2886edeab080a1,storyScripts,血刀门_进门,legacy,血刀门_进门,
 
 主角：晚辈久仰血刀门大名！特此来求师！
 
-胜谛：你这小子，邪邪乎乎的，正和老子心意，估计老祖也会非常喜欢你，赶紧进去叩见老祖吧！","胜谛：破晓猎团不接待看热闹的。说明来意。
+胜谛：你这小子，邪邪乎乎的，正和老子心意，估计老祖也会非常喜欢你，赶紧进去叩见老祖吧！","胜谛：范海辛猎团不接待看热闹的。说明来意。
 
 主角：格林让我来学学，怎样在危险的同伴身边生存。
 
-胜谛：那你找对门了。范海辛在里面。","胜谛：The Dawn Hunters do not admit sightseers. State your business.
+胜谛：那你找对门了。范海辛在里面。","胜谛：Van Helsing's Hunters do not admit sightseers. State your business.
 
 主角：Grimm sent me to learn how to survive dangerous company.
 
@@ -23413,14 +23413,14 @@ copy-5c0fc2b8f678d3854237,maps,杨冰儿房间,,,name,,,,杨冰儿房间,,,pendi
 copy-c14af7c56dd34d22e0fa,maps,杨冰儿房间,,,description,,,,你行至此处房间，虽然仍是四面石壁，空空如也，空气之中却多了一股沁人心脾的幽香。房间一角是一张简陋的石床，另一角则是一张石桌，几个用来保存玉峰浆的白瓷瓶整齐地摆放在桌上。一袭白衣挂在床尾的墙上。,,,pending,,/maps/34/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-521b1afecc552cb0b798,maps,杨冰儿房间,,,description,,,,古墓派弟子杨冰儿,,,pending,,/maps/34/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d4b51ad105a66dae7c12,maps,杨冰儿房间,,,description,,,,返回古墓走廊,,,pending,,/maps/34/locations/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-fcf0ca4b6b2addd19f56,maps,门派大轮寺,,,name,,,,门派大轮寺,圣杯山舍,Grail Lodge,implemented,,/maps/35/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-fcf0ca4b6b2addd19f56,maps,门派大轮寺,,,name,,,,门派大轮寺,圆桌大厅,Round Table Hall,implemented,,/maps/35/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fcad92a9df628edf6e95,maps,门派大轮寺,,,description,,,,你沿着雪山的小径来到了大轮寺，雪后大轮寺的金顶在阳光的映照下愈发耀眼。几个新入寺修行的喇嘛正在院中扫雪，不惧风雪前来上香的信众正在金顶下集合参拜。,雪中的学舍，弟子才知道哪些门后还留着暖意。,A snowbound school. Only its students know which doors stay warm.,implemented,,/maps/35/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f39ec155c648b7aa9793,maps,门派大轮寺,,,description,,,,武艺高超的金轮法王,你的导师。出师后还有后续教学。,Your tutor. More lessons await after graduation.,implemented,,/maps/35/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-eb65cb02c4fa52943e5e,maps,门派大轮寺,,,description,,,,修炼密宗大手印,一天：力量+1、体质+1，铁印重击提升一级，受当前上限限制。,"One day: Strength +1, Vitality +1, Iron Seal Strike +1 rank, up to its current cap.",implemented,,/maps/35/locations/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-410ba767035a01a19c8f,maps,门派大轮寺,,,description,,,,修炼无上大力杵,一天：力量+1、体质+1，力场巨锤提升一级，受当前上限限制。,"One day: Strength +1, Vitality +1, Force Hammer +1 rank, up to its current cap.",implemented,,/maps/35/locations/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fb14acf49a90a687eae6,maps,门派大轮寺,,,description,,,,修炼漫天花雨,一天：敏捷+2，奥术骤雨提升一级，受当前上限限制。,"One day: Agility +2, Arcane Rain +1 rank, up to its current cap.",implemented,,/maps/35/locations/3/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a5ff38ddfc9efd973b7b,maps,门派大轮寺,,,description,,,,大轮寺雪山,户外训练；出师后可从这里下山。,Outdoor training; the way out opens after graduation.,implemented,,/maps/35/locations/4/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-fd16dec60561c75b15d5,maps,大轮寺雪山,,,name,,,,大轮寺雪山,圣杯雪地,Grail Snowfields,implemented,,/maps/36/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-fd16dec60561c75b15d5,maps,大轮寺雪山,,,name,,,,大轮寺雪山,卡美洛雪原,Camelot Snowfields,implemented,,/maps/36/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6bfefdae8b995086033f,maps,大轮寺雪山,,,description,,,,大轮寺附近的雪山，白雪皑皑。,山舍的户外训练场。出师之后才能从山道下山。,The lodge's outdoor training grounds. The mountain pass stays closed until graduation.,implemented,,/maps/36/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-de5fba1679f84bae44f5,maps,大轮寺雪山,,,description,,,,参悟欢喜禅,花一天时间静心研修。,Spend one day improving your focus.,implemented,,/maps/36/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-3002927586f32bf9f7dd,maps,大轮寺雪山,,,description,,,,练习雪中行走,一天：体质+1，生命上限与能量上限各+15。,"One day: Vitality +1, maximum Health +15 and Energy +15.",implemented,,/maps/36/locations/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -23437,7 +23437,7 @@ copy-32d013be0d4b7242d7cb,maps,大轮寺雪谷深处,,,description,,,,雪谷深�
 copy-59a3407ce99cd996de7c,maps,大轮寺雪谷深处,,,description,,,,臂力惊人的达尔巴,,,pending,,/maps/38/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c5b5ba423bdf3012fb30,maps,大轮寺雪谷深处,,,description,,,,大轮寺灵智上人,,,pending,,/maps/38/locations/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-cbccf3d431a63f12bcd8,maps,大轮寺雪谷深处,,,description,,,,返回大轮寺雪谷,,,pending,,/maps/38/locations/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-5ad36f27ad9937300769,maps,血刀门,,,name,,,,血刀门,破晓猎馆,Dawn Hunters' Lodge,implemented,,/maps/39/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-5ad36f27ad9937300769,maps,血刀门,,,name,,,,血刀门,范海辛猎馆,Van Helsing's Lodge,implemented,,/maps/39/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8c2c9efb848898c99100,maps,血刀门,,,description,,,,你的眼前是沸腾翻滚的血池，空气中充满了灼烧的味道。几个血刀门弟子正在不怀好意地盯着你，仿佛随时准备从后方向你袭来。,戒备森严的猎馆，接纳愿意研习危险技艺的人。,A guarded lodge for hunters willing to study dangerous arts.,implemented,,/maps/39/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0a1b505e7d168d266c14,maps,血刀门,,,description,,,,血刀门掌门人，血刀老祖,,,pending,,/maps/39/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ca69e088bcabd54c5196,maps,血刀门,,,description,,,,血刀门，善勇,,,pending,,/maps/39/locations/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -23464,7 +23464,7 @@ copy-5a6647f409e14fcc2d29,maps,灵鹫宫,,,description,,,,九宫八卦，易经�
 copy-d1e26abab1db13b46353,maps,灵鹫宫,,,description,,,,山川锦绣，九月九华,,,pending,,/maps/41/locations/4/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fdf25794ca31295c43bd,maps,灵鹫宫,,,description,,,,后山树林，菊剑在踢毽子要一起玩么？,,,pending,,/maps/41/locations/5/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f117b74e6445053bfd9e,maps,灵鹫宫,,,description,,,,返回江湖！,,,pending,,/maps/41/locations/6/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-3a31b3e4ca4d398e6f53,maps,少林寺内,,,name,,,,少林寺内,明心庭院,Dharma Courtyard,implemented,,/maps/42/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-3a31b3e4ca4d398e6f53,maps,少林寺内,,,name,,,,少林寺内,少林寺,Shaolin Temple,implemented,,/maps/42/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-87239225307ca25ae227,maps,少林寺内,,,description,,,,此刻的少林寺中一片宁静，矮墙之外松涛阵阵，大殿之中木鱼声声，一阵若有若无的檀香飘过，沁人心脾。,圣所诸学派在南方的一处分支。,A southern branch of the sanctuary schools.,implemented,,/maps/42/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9a422135c66e74dc928b,maps,少林寺内,,,description,,,,少林十八罗汉居住的地方,,,pending,,/maps/42/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-62e77a74e989c3fcaa47,maps,少林寺内,,,description,,,,少林弟子受戒场所,,,pending,,/maps/42/locations/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24213,11 +24213,11 @@ copy-a315ebbfa20f9923d8cd,sects,古墓派,,,name,,,,古墓派,迷雾学舍,House
 copy-b78ba893a0f7700855f4,sects,古墓派,,,primaryFocus,,,,剑法,,,pending,,/sects/0/primaryFocus,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a99aee4b0819a8f93ba7,sects,古墓派,,,description,,,,"“活死人墓”说的是一代人杰王重阳，在抗金失利后，愤而出家，自称“活死人”，在终南山扩建了一座古墓，住在里面，不肯出墓门一步，意思是“虽生犹死，不愿与金贼共居于青天之下”。后来，他将活死人墓让给了林朝英，林朝英创立古墓派。
  “天能覆盖万物而不能承载万物，地能承载万物而不能覆盖万物，大道能包容万物而不能分辨万物。”",精准、耐心的步法，以及后续连击。,"Precision, patient footwork and follow-up attacks.",implemented,,/sects/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-92ebf34d6f2fc3459693,sects,大轮寺,,,name,,,,大轮寺,圣杯山舍,Grail Lodge,implemented,,/sects/1/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-92ebf34d6f2fc3459693,sects,大轮寺,,,name,,,,大轮寺,圆桌骑士团,Knights of the Round Table,implemented,,/sects/1/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-79f27f55a5887b51efd0,sects,大轮寺,,,primaryFocus,,,,拳法,,,pending,,/sects/1/primaryFocus,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-bc991b7d0ce0b44dc4aa,sects,大轮寺,,,description,,,,"大雪山大轮寺源自西域密宗，武学讲究自外而内，故而练得一身刚硬的外功。
           大轮寺主金轮法王乃当世武学之神人，自研出绝世内功龙象般若功，若有缘能学会，则必可独步江湖。",雪中的学舍，注重力量、自律与防御。,A snowbound school of disciplined strength and defense.,implemented,,/sects/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-2050ccc8bd0f2e10b9e8,sects,血刀门,,,name,,,,血刀门,破晓猎团,Dawn Hunters,implemented,,/sects/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-2050ccc8bd0f2e10b9e8,sects,血刀门,,,name,,,,血刀门,范海辛猎团,Van Helsing's Hunters,implemented,,/sects/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-82b3b869785c61ae9cdf,sects,血刀门,,,primaryFocus,,,,刀法,,,pending,,/sects/2/primaryFocus,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-869a5c54ac9a10072008,sects,血刀门,,,description,,,,"青海黑教，臭名昭著的江湖邪教，无恶不作。门内全部人都使用弯刀因刀上有条血红色弯条所以叫血刀。
           血刀重杀伐屠戮，凡想入门者得血刀杀伐令，取令上人头，令上可能是江湖闻名之人，也可孤零柔弱挚友，天下无不可杀之人，相残，走过第一步的得令者需要自相残杀，最后能站立着方能入得血刀门。",危险的血术、顽强的斗士，以及不容易的选择。,"Dangerous blood arts, resilient fighters, and difficult choices.",implemented,,/sects/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24231,7 +24231,7 @@ copy-62923c40bb10a48b72b4,sects,灵鹫宫,,,primaryFocus,,,,掌法、内功,,,pe
 copy-4ae319eef871c954bcc5,sects,灵鹫宫,,,description,,,,"灵鹫宫远在天山缥缈峰，经过几十年的经营，却悄悄控制着中原至东南沿海大多数江湖帮会。所以江湖上谈起天山灵鹫宫，不谈“天山”，往往用“宫里”代替。
 
 天山童姥是天山唯一的神，见过她面目的人少之又少，大多数人只是从血腥的江湖故事里听到过这个恐怖的名字。",兀儿德研习身法与领悟的学舍。,Urd's school of movement and insight.,implemented,,/sects/4/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-f056a33cc63e2e23224e,sects,少林派,,,name,,,,少林派,明心庭院,Dharma Courtyard,implemented,,/sects/5/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-f056a33cc63e2e23224e,sects,少林派,,,name,,,,少林派,少林寺,Shaolin Temple,implemented,,/sects/5/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8a4e7d8340e550d7da13,sects,少林派,,,primaryFocus,,,,拳/棍、内功,,,pending,,/sects/5/primaryFocus,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-eb252e16f4bce714b8c2,sects,少林派,,,description,,,,"少林乃天下武学泰斗，以禅入武，习武修禅。佛曰慈悲，渡世人劫。少林武学实战威猛，也讲究因果循环、报应不爽。
 
@@ -24245,7 +24245,7 @@ copy-5e4e5c2e6522d04a4bd6,sects,星宿派,,,name,,,,星宿派,虹桥守望,Bridg
 copy-2dcdc1168a74d265298f,sects,星宿派,,,primaryFocus,,,,拳、毒功,,,pending,,/sects/7/primaryFocus,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ed68af86a88d74b68f44,sects,星宿派,,,description,,,,"星宿一派，源于北宋时期的逍遥派。星宿派的开山祖师丁春秋，师承是逍遥派。逍遥派的武功是道家的一派，讲究的是修身养性，延年益寿，但是丁春秋一生精于炼毒，已不同于道家的炼丹。
 星宿派的功夫基本都是丁春秋叛师后自创，主要在「毒」字上下的功夫。掌上带毒、暗器上带毒、以毒麻痹、化解他人内功，江湖上人提起，无不谈虎色变。",海姆达尔的守望之地，也研习拳套与毒术。,"Heimdall's watch, with training in unusual and poisonous techniques.",implemented,,/sects/7/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-6459344e5a6a89696d32,sects,无门派,,,name,,,,无门派,独行道路,Independent Traveler,implemented,,/sects/8/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-6459344e5a6a89696d32,sects,无门派,,,name,,,,无门派,独行道路,Unaffiliated,implemented,,/sects/8/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-04cde02518375afacc35,sects,无门派,,,primaryFocus,,,,?,,,pending,,/sects/8/primaryFocus,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-cce552c0746aaddf3e5f,sects,无门派,,,description,,,,"不拜入任何门派，凭自己一己之力闯荡江湖！
 
@@ -24276,7 +24276,7 @@ copy-9bc1686ae1561f617a36,specialSkills,诗酒飘零,,,description,,,,进入醉�
 copy-1fa8c490ea16fa7ffeeb,specialSkills,凌波微步,,,name,,,,凌波微步,幻影步,Phantom Step,implemented,,/specialSkills/5/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fcf5f8d0e7f87970da10,specialSkills,凌波微步,,,description,,,,使身形变得飘忽不可见。,,Become harder to pin down with evasive footwork.,implemented,,/specialSkills/5/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2405045ef0f761ece6e0,specialSkills,雪遁步行,,,name,,,,雪遁步行,踏雪步,Snowstep,implemented,,/specialSkills/6/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-c8299990958a59431af4,specialSkills,雪遁步行,,,description,,,,血刀门的身法技能，可以增加自身闪避及集气速度。,破晓猎团的身法技能，可以增加自身闪避及集气速度。,Increase evasion and action gauge recovery speed.,implemented,,/specialSkills/6/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-c8299990958a59431af4,specialSkills,雪遁步行,,,description,,,,血刀门的身法技能，可以增加自身闪避及集气速度。,范海辛猎团的身法技能，可以增加自身闪避及集气速度。,Increase evasion and action gauge recovery speed.,implemented,,/specialSkills/6/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b7043af8fc878722c67e,specialSkills,同归剑法,,,name,,,,同归剑法,同归剑击,Last Stand Strike,implemented,,/specialSkills/7/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-af835ca968bc9e7afc95,specialSkills,同归剑法,,,description,,,,全真教绝技，对自己同时造成1000点真实伤害，对敌人造成更大伤害。,守望者学派绝技，对自己同时造成1000点真实伤害，对敌人造成更大伤害。,"Take 1,000 true damage to deal a greater amount of damage to an enemy.",implemented,,/specialSkills/7/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-994e10dead33287129b4,specialSkills,天地同寿,,,name,,,,天地同寿,最终献祭,Final Sacrifice,implemented,,/specialSkills/8/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -24469,13 +24469,13 @@ copy-712bb90450a2da3f8b81,items,粗布道袍,,,name,,,,粗布道袍,旅人布袍
 copy-184d2326bd320f81dc68,items,粗布道袍,,,description,,,,普通道士穿的衣服,穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。,Defense +5. Critical resistance +1%. Insight +10. Other modifiers are listed with the item.,implemented,,/items/74/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-bd1f403dbe6f93d724dd,items,金丝道袍,,,name,,,,金丝道袍,金线长袍,Goldthread Robe,implemented,,/items/75/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-363aaf69dd4e0b7597ae,items,金丝道袍,,,description,,,,用金蚕丝织成的袍子，轻盈而坚韧,穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。,Defense +15. Constitution +15. Requires Agility 30. Other modifiers are listed with the item.,implemented,,/items/75/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a87e6ecdc940282c570e,items,血刀门门装,,,name,,,,血刀门门装,破晓猎衣,Dawn Hunter's Coat,implemented,,/items/76/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a87e6ecdc940282c570e,items,血刀门门装,,,name,,,,血刀门门装,猎人外套,Hunter's Coat,implemented,,/items/76/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e575d18bb61ea2167941,items,血刀门门装,,,description,,,,血刀门弟子的装束,穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。,Defense +5. Other modifiers are listed with the item.,implemented,,/items/76/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e9d1f710fcc86b959278,items,血刀门门装,,,description,,,,血刀门弟子,,,pending,,/items/76/affixes/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8e2cd549f3354206bec2,items,全真教道服,,,name,,,,全真教道服,不来梅守望制服,Bremen Watch Uniform,implemented,,/items/77/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d74fc9cb74bfc8b0a61f,items,全真教道服,,,description,,,,全真教弟子的装束,穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。,Defense +5. Other modifiers are listed with the item.,implemented,,/items/77/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1d94406b9a65a964f108,items,全真教道服,,,description,,,,全真教弟子,,,pending,,/items/77/affixes/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-f03834d60fede308f46f,items,大轮寺装束,,,name,,,,大轮寺装束,圣杯山舍服,Grail Lodge Garb,implemented,,/items/78/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-f03834d60fede308f46f,items,大轮寺装束,,,name,,,,大轮寺装束,圆桌骑士团服,Round Table Garb,implemented,,/items/78/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-51f076a1361474e810cd,items,大轮寺装束,,,description,,,,大轮弟子的装束,穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。,Defense +5. Other modifiers are listed with the item.,implemented,,/items/78/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-68d52af6dadc7f0b4d19,items,大轮寺装束,,,description,,,,大轮寺弟子,,,pending,,/items/78/affixes/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0fe159c087351a5df8cd,items,古墓派装束,,,name,,,,古墓派装束,迷雾学舍服,Mist House Garb,implemented,,/items/79/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -25766,8 +25766,8 @@ copy-446dde7ec7e228733ce9,maps,大地图/昆仑山,,,display_label,,,,昆仑山,
 copy-04a1c1bc331a1a4ac268,maps,大地图/黑木崖,,,display_label,,,,黑木崖,黑松崖,Black Pine Cliff,implemented,,/maps/0/locations/1/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9f17d59ab73adc6c3142,maps,大地图/灵鹫宫,,,display_label,,,,灵鹫宫,织线厅,Threadhall,implemented,,/maps/0/locations/2/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-caf547de170fed891522,maps,大地图/松鼠旅馆,,,display_label,,,,松鼠旅馆,旅人客栈,Wayfarers' Inn,implemented,,/maps/0/locations/3/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-2067ce14e4a7353e8855,maps,大地图/大轮寺,,,display_label,,,,大轮寺,圣杯山舍,Grail Lodge,implemented,,/maps/0/locations/4/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-6cf7e37ee3718d386bc8,maps,大地图/血刀门,,,display_label,,,,血刀门,破晓猎馆,Dawn Hunters' Lodge,implemented,,/maps/0/locations/5/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-2067ce14e4a7353e8855,maps,大地图/大轮寺,,,display_label,,,,大轮寺,圆桌骑士团,Round Table,implemented,,/maps/0/locations/4/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-6cf7e37ee3718d386bc8,maps,大地图/血刀门,,,display_label,,,,血刀门,范海辛猎馆,Van Helsing's Lodge,implemented,,/maps/0/locations/5/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-662ff365e0af9d3f2ad5,maps,大地图/香格里拉,,,display_label,,,,香格里拉,隐秘果园,Hidden Orchard,implemented,,/maps/0/locations/6/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-47a661d9a5769ee4ff94,maps,大地图/沙漠,,,display_label,,,,沙漠,琉璃沙丘,Glass Dunes,implemented,,/maps/0/locations/7/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e96e69314ebfbc658102,maps,大地图/唐军营,,,display_label,,,,唐军营,向阳营地,Sunward Camp,implemented,,/maps/0/locations/8/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -25852,7 +25852,7 @@ copy-e6ae8f75043c416147e6,maps,门派大轮寺/大轮寺雪山,,,display_label,,
 copy-3f443dfa71b86e55ce70,maps,大轮寺雪山/欢喜禅,,,display_label,,,,欢喜禅,静心冥想,Quiet Meditation,implemented,,/maps/36/locations/0/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fdcecc502ad80fb0beeb,maps,大轮寺雪山/雪中行走,,,display_label,,,,雪中行走,雪地跑步,Snow Run,implemented,,/maps/36/locations/1/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6359f64f58c8c9d7fb3b,maps,大轮寺雪山/大轮寺雪谷,,,display_label,,,,大轮寺雪谷,雪谷,Snow Valley,implemented,,/maps/36/locations/2/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-8b4b211d5a4bf7213a82,maps,大轮寺雪山/大轮寺,,,display_label,,,,大轮寺,返回圣杯山舍,Return to Grail Lodge,implemented,,/maps/36/locations/3/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-8b4b211d5a4bf7213a82,maps,大轮寺雪山/大轮寺,,,display_label,,,,大轮寺,返回圆桌骑士团,Return to Round Table,implemented,,/maps/36/locations/3/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-30b644eabe3d33bfff3c,maps,大轮寺雪山/返回,,,display_label,,,,返回,下山,Leave the Mountain,implemented,,/maps/36/locations/4/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-dd1688cf664f531fd0c0,maps,万劫谷/钟灵,,,display_label,,,,钟灵,埃尔,Eir,implemented,,/maps/54/locations/0/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a2e5cdae6898fdcfb0bb,maps,万劫谷/返回,,,display_label,,,,返回,世界地图,World Map,implemented,,/maps/54/locations/1/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3

@@ -1,5 +1,5 @@
 {
-  "sourceCommit": "896893fddbd154d961a1c27134232f7e0c3ccf0d",
+  "sourceCommit": "eb332c2092196352a3e096f75926c4120508d9b8",
   "buildTrigger": "authenticated-git-push",
-  "scope": "Modular map dashboard, first-screen shortcuts, organization selection and verified Grail Lodge training/graduation route"
+  "scope": "Real world clock and affiliation, classic organization names, separate character-origin registry"
 }
