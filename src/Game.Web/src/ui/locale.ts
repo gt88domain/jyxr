@@ -176,7 +176,7 @@ export function startUiLocale(appId:string):void {
   const language=new URL(location.href).searchParams.get('lang')||'en';
   if(appId!=='jyxr-fantasy-worlds')return;
   activeLanguage=language==='zh-CN'?'zh-CN':'en';
-  const excluded='script,style,code,pre,textarea,[data-testid="dialogue-text"],.story-choices,.hero-heading h2,.as-identity h2,.dialogue-content h2';
+  const excluded='script,style,code,pre,textarea,[data-testid="dialogue-text"],[data-player-name],.story-choices,.hero-heading h2,.as-identity h2,.dialogue-content h2';
   const attributes=['aria-label','title','placeholder','alt'];
   let observer:MutationObserver;
   function translate(){

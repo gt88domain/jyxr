@@ -49,6 +49,7 @@ worlds 是 jyx 的显示内容覆盖，运行态 packId 保留 jyx，以维持�
 | 任务 | 入口 |
 | --- | --- |
 | 启动项目、目录位置、常用命令 | [README](README.md) |
+| HTML5 界面拆分、首屏快捷与组织教学验收 | [界面盘点与替换](docs/UI_MIGRATION.md) |
 | 会话、存档、MOD 启动、地图与全局事件 | [运行时架构](docs/runtime-architecture.md) |
 | 剧情、条件表达式、地图 action、控制台 | [游戏内容 DSL v3](docs/game-dsl-v3.md) |
 | MOD 数据目录、补丁、原版迁移 | [MOD 数据补丁](docs/mod-data-patching.md)、[迁移指南](docs/legacy-mod-migration-guide.md) |

@@ -1,0 +1,499 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "speakerNames": {
+    "达尔巴": {
+      "en": "The Mad Hatter",
+      "zh-CN": "疯帽匠"
+    },
+    "大理高手": {
+      "en": "Visiting Challenger",
+      "zh-CN": "来访挑战者"
+    }
+  },
+  "maps": {
+    "大轮寺雪山": {
+      "name": {
+        "en": "Grail Snowfields",
+        "zh-CN": "圣杯雪地"
+      },
+      "description": {
+        "en": "The lodge's outdoor training grounds. The mountain pass stays closed until graduation.",
+        "zh-CN": "山舍的户外训练场。出师之后才能从山道下山。"
+      }
+    }
+  },
+  "locations": {
+    "门派大轮寺": {
+      "金轮法王": {
+        "name": {
+          "en": "Percival",
+          "zh-CN": "珀西瓦尔"
+        },
+        "description": {
+          "en": "Your tutor. More lessons await after graduation.",
+          "zh-CN": "你的导师。出师后还有后续教学。"
+        }
+      },
+      "修炼密宗大手印": {
+        "name": {
+          "en": "Iron Seal Practice",
+          "zh-CN": "铁印练习"
+        },
+        "description": {
+          "en": "One day: Strength +1, Vitality +1, Iron Seal Strike +1 rank, up to its current cap.",
+          "zh-CN": "一天：力量+1、体质+1，铁印重击提升一级，受当前上限限制。"
+        }
+      },
+      "修炼无上大力杵": {
+        "name": {
+          "en": "Force Hammer Practice",
+          "zh-CN": "力场巨锤练习"
+        },
+        "description": {
+          "en": "One day: Strength +1, Vitality +1, Force Hammer +1 rank, up to its current cap.",
+          "zh-CN": "一天：力量+1、体质+1，力场巨锤提升一级，受当前上限限制。"
+        }
+      },
+      "修炼漫天花雨": {
+        "name": {
+          "en": "Arcane Rain Practice",
+          "zh-CN": "奥术骤雨练习"
+        },
+        "description": {
+          "en": "One day: Agility +2, Arcane Rain +1 rank, up to its current cap.",
+          "zh-CN": "一天：敏捷+2，奥术骤雨提升一级，受当前上限限制。"
+        }
+      },
+      "大轮寺雪山": {
+        "name": {
+          "en": "Snowfields & Mountain Pass",
+          "zh-CN": "雪地与下山口"
+        },
+        "description": {
+          "en": "Outdoor training; the way out opens after graduation.",
+          "zh-CN": "户外训练；出师后可从这里下山。"
+        }
+      }
+    },
+    "大轮寺雪山": {
+      "欢喜禅": {
+        "name": {
+          "en": "Quiet Meditation",
+          "zh-CN": "静心冥想"
+        },
+        "description": {
+          "en": "Spend one day improving your focus.",
+          "zh-CN": "花一天时间静心研修。"
+        }
+      },
+      "雪中行走": {
+        "name": {
+          "en": "Snow Run",
+          "zh-CN": "雪地跑步"
+        },
+        "description": {
+          "en": "One day: Vitality +1, maximum Health +15 and Energy +15.",
+          "zh-CN": "一天：体质+1，生命上限与能量上限各+15。"
+        }
+      },
+      "大轮寺雪谷": {
+        "name": {
+          "en": "Snow Valley",
+          "zh-CN": "雪谷"
+        },
+        "description": {
+          "en": "A side trail with further challenges.",
+          "zh-CN": "通往额外挑战的支路。"
+        }
+      },
+      "大轮寺": {
+        "name": {
+          "en": "Return to Grail Lodge",
+          "zh-CN": "返回圣杯山舍"
+        },
+        "description": {
+          "en": "Return to the indoor practice rooms.",
+          "zh-CN": "返回室内练习场。"
+        }
+      },
+      "返回": {
+        "name": {
+          "en": "Leave the Mountain",
+          "zh-CN": "下山"
+        },
+        "description": {
+          "en": "Complete your initial training before leaving.",
+          "zh-CN": "完成初步训练后才能下山。"
+        }
+      }
+    }
+  },
+  "dialogueEdits": {
+    "门派大轮寺_新的一天": [
+      {
+        "start": 2,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Another day. The snow has made no progress on shoveling itself.",
+              "zh-CN": "新的一天。雪依然没有学会自己走开。"
+            }
+          }
+        ]
+      }
+    ],
+    "门派大轮寺_出不去": [
+      {
+        "start": 0,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Not yet. Finish the lodge's training first; then the mountain pass opens.",
+              "zh-CN": "还不能走。先完成山舍训练，山道才会开放。"
+            }
+          }
+        ]
+      }
+    ],
+    "门派大轮寺_雪山小路": [
+      {
+        "start": 0,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "One more lap through the snow. My footprints are getting very good at this.",
+              "zh-CN": "又在雪里跑了一圈。我的脚印快比我练得好了。"
+            }
+          }
+        ]
+      }
+    ],
+    "门派大轮寺_密宗大手印": [
+      {
+        "start": 2,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Iron Seal Strike. The practice post has declined to offer feedback.",
+              "zh-CN": "铁印重击。木桩表示不想发表评论。"
+            }
+          }
+        ]
+      }
+    ],
+    "门派大轮寺_无上大力杵": [
+      {
+        "start": 2,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Force Hammer! A useful spell, provided I point it away from the roof.",
+              "zh-CN": "力场巨锤！这法术不错，记得别对着屋顶。"
+            }
+          }
+        ]
+      }
+    ],
+    "门派大轮寺_漫天花雨": [
+      {
+        "start": 2,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Arcane Rain. Finally, weather I can take credit for.",
+              "zh-CN": "奥术骤雨。总算有一种天气，是我说了算。"
+            }
+          }
+        ]
+      }
+    ],
+    "门派大轮寺_参禅": [
+      {
+        "start": 0,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "A quiet day of meditation. Even the kettle knows better than to interrupt.",
+              "zh-CN": "静心冥想了一天。连水壶都懂得别打扰。"
+            }
+          }
+        ]
+      }
+    ],
+    "门派大轮寺_大理高手1": [
+      {
+        "start": 2,
+        "expectedCount": 6,
+        "lines": [
+          {
+            "speaker": "金轮法王",
+            "text": {
+              "en": "A visiting challenger is here. Show them what you've learned. The floor is already insured.",
+              "zh-CN": "来了一位挑战者。让他看看你学到了什么，地板的损失我来承担。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "And if my demonstration involves falling over?",
+              "zh-CN": "要是我展示的是如何摔倒呢？"
+            }
+          },
+          {
+            "speaker": "金轮法王",
+            "text": {
+              "en": "Then we practice again. Take these remedies first.",
+              "zh-CN": "那就再练。先拿上这些药。"
+            }
+          }
+        ]
+      }
+    ],
+    "门派大轮寺_大理高手2": [
+      {
+        "start": 2,
+        "expectedCount": 3,
+        "lines": [
+          {
+            "speaker": "大理高手",
+            "text": {
+              "en": "A friendly bout, then. I'd bow, but my shoulders are full of snow.",
+              "zh-CN": "友好切磋一场吧。我想鞠躬，可肩上还堆着雪。"
+            }
+          },
+          {
+            "speaker": "金轮法王",
+            "text": {
+              "en": "You're up. Try to leave the visitor in one piece.",
+              "zh-CN": "你上吧，记得给客人留个完整的身子。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "I'll aim for a warm welcome.",
+              "zh-CN": "争取让他感受到热烈欢迎。"
+            }
+          }
+        ]
+      }
+    ],
+    "门派大轮寺_大理高手胜": [
+      {
+        "start": 2,
+        "expectedCount": 3,
+        "lines": [
+          {
+            "speaker": "大理高手",
+            "text": {
+              "en": "Well fought. I should have warmed up before coming up the mountain.",
+              "zh-CN": "打得好。上山前真该先热热身。"
+            }
+          },
+          {
+            "speaker": "金轮法王",
+            "text": {
+              "en": "You've earned this Flamehand Strike guide. Keep the flames away from the curtains.",
+              "zh-CN": "这本焰掌教材是你应得的，别烧着窗帘。"
+            }
+          }
+        ]
+      },
+      {
+        "start": 7,
+        "expectedCount": 1,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "A reward with a fire warning. My favorite kind.",
+              "zh-CN": "附带防火提醒的奖励，正合我意。"
+            }
+          }
+        ]
+      }
+    ],
+    "门派大轮寺_大理高手负": [
+      {
+        "start": 2,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "金轮法王",
+            "text": {
+              "en": "A lost bout, not a lost education. Recover, then return to training. Graduation doesn't require winning this match.",
+              "zh-CN": "输了一场，不等于白学。恢复一下再练；这场输赢不决定能否出师。"
+            }
+          }
+        ]
+      }
+    ],
+    "门派大轮寺_大轮寺出师": [
+      {
+        "start": 2,
+        "expectedCount": 8,
+        "lines": [
+          {
+            "speaker": "金轮法王",
+            "text": {
+              "en": "Your first training is complete. The mountain pass is open to you.",
+              "zh-CN": "初步训练完成了。你可以下山了。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "And the lodge's greatest mastery?",
+              "zh-CN": "那山舍最厉害的专精呢？"
+            }
+          },
+          {
+            "speaker": "金轮法王",
+            "text": {
+              "en": "Earn it on your travels. I'm sending the Hatter with you; someone should keep track of teatime.",
+              "zh-CN": "还要靠旅途上的历练。我让疯帽匠跟你同行，总得有人记得喝茶。"
+            }
+          }
+        ]
+      },
+      {
+        "start": 11,
+        "expectedCount": 4,
+        "lines": [
+          {
+            "speaker": "达尔巴",
+            "text": {
+              "en": "Ready! I've packed the cups. You can carry the sensible decisions.",
+              "zh-CN": "准备好了！茶杯归我带，明智决定归你带。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "That's a worrying division of labor.",
+              "zh-CN": "这分工听起来有点不妙。"
+            }
+          },
+          {
+            "speaker": "金轮法王",
+            "text": {
+              "en": "Look after each other. The pass is beyond the snowy training grounds.",
+              "zh-CN": "互相照应。下山的出口在雪地训练场那边。"
+            }
+          }
+        ]
+      }
+    ],
+    "门派大轮寺_回大轮寺": [
+      {
+        "start": 0,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "金轮法王",
+            "text": {
+              "en": "Back already? Good. The kettle has been asking after you.",
+              "zh-CN": "这么快回来了？正好，水壶刚还问起你呢。"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "commandText": {
+    "出师大轮寺。": {
+      "en": "Graduated from Grail Lodge. The Mad Hatter joined the party.",
+      "zh-CN": "圣杯山舍出师，疯帽匠加入队伍。"
+    }
+  },
+  "chapterGuide": {
+    "academies": [
+      {
+        "id": "大轮寺",
+        "maps": [
+          "门派大轮寺",
+          "大轮寺雪山"
+        ],
+        "name": {
+          "en": "Grail Lodge training",
+          "zh-CN": "圣杯山舍训练"
+        },
+        "graduationStory": "门派大轮寺_大轮寺出师",
+        "graduationAfterDay": 60,
+        "intro": {
+          "en": "A guided training route for gauntlets and spells. Each practice spends a day; the mountain pass opens after graduation. The Mad Hatter joins then, not on arrival.",
+          "zh-CN": "有完整指引的拳套与法术训练路线。每次练习花费一天，出师后才能下山，疯帽匠也在那时加入。"
+        },
+        "trainingDetail": {
+          "en": "Pick a training activity below. Each practice advances one day and grants the listed growth. Graduation triggers after more than 60 adventure days, during training; opening menus does not advance time. You stay affiliated after leaving.",
+          "zh-CN": "选择下方训练。每次花费一天，获得列出的成长。冒险总天数超过60天后，在训练中触发出师；打开菜单不会推进时间。下山后仍保留组织身份。"
+        },
+        "graduateTitle": {
+          "en": "Your new companion is ready",
+          "zh-CN": "新伙伴准备好了"
+        },
+        "graduateDetail": {
+          "en": "The Mad Hatter joined through graduation. Check his gear and mastery in Adventurer. Go through the Snowfields, then Leave the Mountain. This is graduation, not quitting the lodge. Save before exploring.",
+          "zh-CN": "疯帽匠已通过出师剧情加入。在人物页为他检查装备和专精。前往雪地，再选下山；出师并不取消组织身份，探索前记得保存。"
+        },
+        "training": [
+          {
+            "mapId": "门派大轮寺",
+            "locationId": "修炼密宗大手印"
+          },
+          {
+            "mapId": "大轮寺雪山",
+            "locationId": "大轮寺"
+          }
+        ],
+        "exit": [
+          {
+            "mapId": "门派大轮寺",
+            "locationId": "大轮寺雪山"
+          },
+          {
+            "mapId": "大轮寺雪山",
+            "locationId": "返回"
+          }
+        ],
+        "skills": [
+          {
+            "id": "密宗大手印",
+            "name": {
+              "en": "Iron Seal Strike",
+              "zh-CN": "铁印重击"
+            }
+          },
+          {
+            "id": "无上大力杵",
+            "name": {
+              "en": "Force Hammer",
+              "zh-CN": "力场巨锤"
+            }
+          },
+          {
+            "id": "漫天花雨",
+            "name": {
+              "en": "Arcane Rain",
+              "zh-CN": "奥术骤雨"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

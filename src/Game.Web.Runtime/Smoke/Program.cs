@@ -1,6 +1,12 @@
 using System.Text.Json;
 using Game.Web.Runtime;
 
+if(args.FirstOrDefault()=="--academy-journey")
+{
+    await AcademyJourneySmoke.Run(args[1],args[2]);
+    return;
+}
+
 if(args.FirstOrDefault()=="--onboarding")
 {
     await OnboardingSmoke.Run(args[1],args[2],args[3],args[4]);

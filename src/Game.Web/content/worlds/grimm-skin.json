@@ -655,7 +655,7 @@
       }
     ]
   },
-  "version": "adventurer-sheet-1",
+  "version": "guided-interface-1",
   "chapters": [
     "chapter-start.json",
     "chapter-guide.json",
@@ -663,7 +663,8 @@
     "world-atlas.json",
     "chapter-companions.json",
     "chapter-equipment-copy.json",
-    "chapter-windrider.json"
+    "chapter-windrider.json",
+    "chapter-academy.json"
   ],
   "speakerNames": {
     "武师": {

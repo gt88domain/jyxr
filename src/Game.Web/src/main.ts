@@ -30,6 +30,7 @@ import type {GameCommand} from './command-contract';
 import {appConfig} from './app-config';
 import {filterWorldAtlas} from './world-atlas';
 import {startUiLocale,setUiDisplayLabels} from './ui/locale';
+import {copy,modernWorlds} from './ui-language';
 
 startUiLocale(appConfig.id);
 
@@ -261,6 +262,13 @@ function openPanel(name: PanelName) {
   const content = panelContent(name, state, settings, busy, inventoryFilter, {query: inventoryQuery, sort: inventorySort});
   modal(content.title, content.content, true);
   document.querySelector('#game-modal')?.classList.toggle('adventurer-modal',name==='loadout');
+  decoratePanel();
+}
+function decoratePanel(){
+  const node=document.querySelector('#game-modal');
+  if(!node||!activePanel||!modernWorlds(state)||activePanel==='loadout'||state.phase==='title')return;
+  node.classList.add('guided-panel');
+  node.querySelector('.close-modal')?.insertAdjacentHTML('afterend',`<nav class="guided-panel-shortcuts" aria-label="${copy('Quick actions','快捷操作')}">${[['loadout',copy('Adventurer','人物')],['inventory',copy('Bag','行囊')],['party',copy('Party','队伍')],['quests',copy('Goals','目标')]].map(([a,label])=>`<button data-action="${a}" ${activePanel===a?'aria-current="page"':''}>${label}</button>`).join('')}</nav>`);
 }
 function refreshPanel() {
   const node = document.querySelector<HTMLDialogElement>('#game-modal[open]');
@@ -269,6 +277,7 @@ function refreshPanel() {
   const content = panelContent(activePanel, state, settings, busy, inventoryFilter, {query: inventoryQuery, sort: inventorySort});
   node.innerHTML = `<button class="icon-button close-modal" data-action="close-modal" aria-label="关闭">${icon('close')}</button><div class="eyebrow">旅途一页</div><h2>${e(content.title)}</h2>${content.content}`;
   node.scrollTop = scroll;
+  decoratePanel();
 }
 function refreshInventoryResults() {
   if (activePanel !== 'inventory') return;
@@ -348,7 +357,7 @@ document.addEventListener('click', event => {
   else if (action === 'creation-confirm') void creationCommand({type: 'confirmCreation'});
   else if (action === 'begin-round-creation') void creationCommand({type:'beginRoundCreation'});
   else if (action === 'save-ending') void save();
-  else if (action === 'manage-character') void (async()=>{if(await command({type:'selectCharacter',characterId:button.dataset.id!})) openPanel(button.dataset.panel==='cultivation'?'cultivation':button.dataset.panel==='equipment'?'equipment':'character');})();
+  else if (action === 'manage-character') void (async()=>{if(await command({type:'selectCharacter',characterId:button.dataset.id!})) openPanel(button.dataset.panel==='cultivation'?'cultivation':button.dataset.panel==='equipment'?'equipment':button.dataset.panel==='loadout'||modernWorlds(state)?'loadout':'character');})();
   else if (action === 'allocate-stat') void manage({type:'allocateStat',stat:button.dataset.stat!},'属性点已分配。');
   else if (action === 'party-placement') void manage({type:'setPartyPlacement',characterId:button.dataset.id!,placement:button.dataset.placement!},'队伍已调整。');
   else if (action === 'party-order') void manage({type:'reorderParty',characterId:button.dataset.id!,index:Number(button.dataset.index)},'队伍顺序已调整。');
@@ -371,7 +380,8 @@ document.addEventListener('click', event => {
   else if (action === 'import') document.querySelector<HTMLInputElement>('#import-file')!.click();
   else if (action === 'training') void command({type: 'startTraining'});
   else if (action === 'talk') void command({type: 'talk', locationId: button.dataset.id!});
-  else if (action === 'interact') void command({type: 'interact', locationId: button.dataset.id!});
+  else if (action === 'interact') {document.querySelector<HTMLDialogElement>('#game-modal')?.close();void command({type: 'interact', locationId: button.dataset.id!});}
+  else if(action==='map-focus'){document.querySelector<HTMLDialogElement>('#game-modal')?.close();document.querySelector<HTMLElement>('[data-world-destinations]')?.scrollIntoView({block:'start',behavior:settings.reducedMotion?'instant':'smooth'});}
   else if (action === 'next') void command({type: 'next'});
   else if (action === 'choice') void command({type: 'choose', index: Number(button.dataset.index)});
   else if (action === 'rest' || action === 'mobile-rest') void command({type: 'rest'});
@@ -398,7 +408,7 @@ document.addEventListener('click', event => {
   else if (action === 'leave-battle') void command({type: 'leaveBattle'});
   else if (action === 'skill') {selectedSkill = button.dataset.id!; battleIntent = 'attack'; updateBattle();}
   else if (action === 'battle-intent' && (button.dataset.id === 'move' || button.dataset.id === 'attack')) {battleIntent = button.dataset.id; updateBattle();}
-  else if (action === 'loadout' || action === 'character' || action === 'inventory' || action === 'equipment' || action === 'cultivation' || action === 'settings' || action === 'party' || action === 'quests') openPanel(action);
+  else if (action === 'loadout' || action === 'character' || action === 'inventory' || action === 'equipment' || action === 'cultivation' || action === 'settings' || action === 'party' || action === 'quests') {openPanel(action);if(button.dataset.sheetAnchor)document.getElementById(button.dataset.sheetAnchor)?.scrollIntoView({block:'start'});}
   else if (action === 'inventory-filter') {inventoryFilter = button.dataset.id as InventoryFilter; refreshPanel();}
   else if (action === 'preview-equipment') void showEquipmentPreview(Number(button.dataset.entryNumber));
   else if (action === 'confirm-equipment-preview') void (async()=>{
