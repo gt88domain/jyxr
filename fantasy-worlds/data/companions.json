@@ -8,7 +8,7 @@
     "instructions": 80,
     "fixedIdentities": 20,
     "displayAppliedIdentities": 34,
-    "authoredJoinScenes": 26
+    "authoredJoinScenes": 27
   },
   "characters": [
     {
@@ -1558,7 +1558,9 @@
         }
       },
       "displayApplied": true,
-      "authoredJoinStories": [],
+      "authoredJoinStories": [
+        "书剑恩仇录_回族部落霍青桐"
+      ],
       "instructions": [
         {
           "characterId": "霍青桐",

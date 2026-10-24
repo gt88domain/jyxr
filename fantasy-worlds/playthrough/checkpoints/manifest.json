@@ -1,0 +1,27 @@
+[
+  {
+    "name": "start",
+    "sha256": "1d14362037a59528ee86e91b76cd6aabe218cadd6a5dc8642cf25fd471d991e8",
+    "bytes": 53612
+  },
+  {
+    "name": "spain-trained",
+    "sha256": "15e2d75d666258bd8ecc973b570aae2fa58f9a2f66fd45f1e393333a8e994fe0",
+    "bytes": 56329
+  },
+  {
+    "name": "france-complete",
+    "sha256": "15499c6d20a669f764d3028810f75d835c1d3e78b81d9d82ba3bc08b26c9c83c",
+    "bytes": 59510
+  },
+  {
+    "name": "italy-ready",
+    "sha256": "e25656bf4d60fa0cf6b6c7b37bcdf89541ef272367259a446172ee342e5023a3",
+    "bytes": 60506
+  },
+  {
+    "name": "italy-trained",
+    "sha256": "771dfb2d59252d44fd4cfa3f44031d09f6649db6364ce7480fd709e607242d52",
+    "bytes": 61625
+  }
+]

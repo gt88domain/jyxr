@@ -532,7 +532,19 @@ copy-4abd1a0fc3e84ae510ad,storyScripts,mainStory_黑暗的阴影,legacy,mainStor
 
 主角：……真是简短，回去看看吧。
 
-汉家松鼠：松鼠提示，回去见南贤就回开启下一章节剧情，当前一些未触发任务可能会[[red:【永久关闭】]]！请慎重！",,,pending,,/storyScripts/legacy/segments/47/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+汉家松鼠：松鼠提示，回去见南贤就回开启下一章节剧情，当前一些未触发任务可能会[[red:【永久关闭】]]！请慎重！","主角：格林的信？
+
+南贤：回来见我。
+
+主角：真简短。他一定把墨水留给故事了。
+
+汉家松鼠：旅途提示：回访格林会推进世界剧情，一些未完成的事件可能永久关闭。先完成你在意的路线，返回前记得保存。","主角：A letter from Grimm?
+
+南贤：Come see me.
+
+主角：Concise. He must be saving ink for the stories.
+
+汉家松鼠：Field note: visiting Grimm advances the world story. Some unfinished encounters may close permanently. Finish what matters to you and save before returning.",implemented,,/storyScripts/legacy/segments/47/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fe85cd656a76292e979b,storyScripts,mainStory_黑暗的阴影1,legacy,mainStory_黑暗的阴影1,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：喂，老头，我回来看看你。
 
 主角：！",,,pending,,/storyScripts/legacy/segments/48/steps/2,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -10825,7 +10837,7 @@ copy-ae186938a43bcaf8714d,storyScripts,连城诀_连城诀2,legacy,连城诀_连
 水笙：狄大哥，别想太多了，一切都已经过去了。
 
 狄云：嗯……",,,pending,,/storyScripts/legacy/segments/915/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-90bf4708d4ba9b6745d3,storyScripts,书剑恩仇录_回族部落一般,legacy,书剑恩仇录_回族部落一般,dialogue_run,霍青桐,霍青桐 → 米莱狄 / Milady de Winter [proposed],FR,霍青桐：草海边是连绵的群山，天山下是我们的故乡。,,,pending,,/storyScripts/legacy/segments/916/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-90bf4708d4ba9b6745d3,storyScripts,书剑恩仇录_回族部落一般,legacy,书剑恩仇录_回族部落一般,dialogue_run,霍青桐,霍青桐 → 米莱狄 / Milady de Winter [proposed],FR,霍青桐：草海边是连绵的群山，天山下是我们的故乡。,霍青桐：营地很安静。好好享受吧，安静通常待不到晚饭。,霍青桐：A quiet camp. Enjoy it; quiet never stays for supper.,implemented,,/storyScripts/legacy/segments/916/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-423c338fedc126f60401,storyScripts,书剑恩仇录_回族部落,legacy,书剑恩仇录_回族部落,dialogue_run,"朝廷走狗
 霍青桐
 主角","朝廷走狗 → 波尔托斯 / Porthos [proposed]
@@ -10834,8 +10846,16 @@ copy-423c338fedc126f60401,storyScripts,书剑恩仇录_回族部落,legacy,书�
 
 霍青桐：卑鄙的中原人，只知道仗势欺人。
 
-主角：美女，我来帮你！",,,pending,,/storyScripts/legacy/segments/917/steps/2,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-38627108133204b7a886,storyScripts,书剑恩仇录_回族部落霍青桐负,legacy,书剑恩仇录_回族部落霍青桐负,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：……打不过，要英雄救美看来还要再练练级……,,,pending,,/storyScripts/legacy/segments/918/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：美女，我来帮你！","朝廷走狗：枢机主教要你的账册。这份请求，附带五把剑。
+
+霍青桐：请他先预约。最好约在我离开之后。
+
+主角：我猜，这不只是记账上的争执。","朝廷走狗：The Cardinal requests your ledger. His request comes with five swords.
+
+霍青桐：Tell him to make an appointment. Preferably after I've left.
+
+主角：I'm guessing this isn't a bookkeeping dispute.",implemented,,/storyScripts/legacy/segments/917/steps/2,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-38627108133204b7a886,storyScripts,书剑恩仇录_回族部落霍青桐负,legacy,书剑恩仇录_回族部落霍青桐负,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：……打不过，要英雄救美看来还要再练练级……,主角：打得不太顺。先整备再来，营地还需要帮忙。,主角：That went badly. I'll regroup and return; the camp still needs help.,implemented,,/storyScripts/legacy/segments/918/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a24bc44ec95fe365193f,storyScripts,书剑恩仇录_回族部落霍青桐,legacy,书剑恩仇录_回族部落霍青桐,dialogue_run,"霍青桐
 主角","霍青桐 → 米莱狄 / Milady de Winter [proposed]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","霍青桐：感谢你为我们解了围。
@@ -10856,8 +10876,24 @@ copy-a24bc44ec95fe365193f,storyScripts,书剑恩仇录_回族部落霍青桐,leg
 
 霍青桐：嗯……好吧，最近族里事情不算很多。
 
-主角：太好了，太好了。有你这样的高手在，顿时安心了。（嘿嘿……）",,,pending,,/storyScripts/legacy/segments/919/steps/2,10,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-264d9398b807b4e69621,storyScripts,书剑恩仇录_六和塔一般,legacy,书剑恩仇录_六和塔一般,dialogue_run,朝廷走狗,朝廷走狗 → 波尔托斯 / Porthos [proposed],FR,朝廷走狗：这里是关押钦犯的重地，闲杂人等滚远点。,,,pending,,/storyScripts/legacy/segments/920/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：太好了，太好了。有你这样的高手在，顿时安心了。（嘿嘿……）","霍青桐：米莱狄·德温特。你打断了一场格外无礼的商谈。
+
+主角：这里的商谈，都用剑收尾吗？
+
+霍青桐：只有非正式商谈才这样。一名信使被关在枢机塔，我要把他救出来。
+
+主角：一起走吧。这门生意你显然比我熟。
+
+霍青桐：这安排不错。拿上这本三段剑术手册，别把它折成帽子。","霍青桐：Milady de Winter. You interrupted a remarkably rude business meeting.
+
+主角：Does every meeting here end with swords?
+
+霍青桐：Only the informal ones. A courier is being held at the Cardinal's Tower. I want him out.
+
+主角：Come along. You clearly know this business better than I do.
+
+霍青桐：A useful arrangement. Take this Threefold Swordplay manual; try not to fold it into a hat.",implemented,,/storyScripts/legacy/segments/919/steps/2,10,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-264d9398b807b4e69621,storyScripts,书剑恩仇录_六和塔一般,legacy,书剑恩仇录_六和塔一般,dialogue_run,朝廷走狗,朝廷走狗 → 波尔托斯 / Porthos [proposed],FR,朝廷走狗：这里是关押钦犯的重地，闲杂人等滚远点。,朝廷走狗：塔楼谢绝访客，尤其是乐于助人的那种。,朝廷走狗：The tower is closed to visitors. Especially helpful ones.,implemented,,/storyScripts/legacy/segments/920/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1162d99a6b2373a8e1ad,storyScripts,书剑恩仇录_六和塔,legacy,书剑恩仇录_六和塔,dialogue_run,"张召重
 主角
 陈家洛","张召重 → 罗什福尔 / Rochefort [proposed]
@@ -10878,7 +10914,23 @@ copy-1162d99a6b2373a8e1ad,storyScripts,书剑恩仇录_六和塔,legacy,书剑�
 
 张召重：就是拿你命来换！
 
-主角：陈大当家，小心！",,,pending,,/storyScripts/legacy/segments/921/steps/2,9,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：陈大当家，小心！","张召重：达达尼昂，总算来了位值得逮捕的客人。
+
+主角：我差点就以为自己是什么大人物了。
+
+陈家洛：罗什福尔，放了那名信使，大家都能少些麻烦。
+
+张召重：麻烦已经领了薪水。卫兵！
+
+主角：明白了，今天办不了访客证。","张召重：D'Artagnan. At last, a visitor worth arresting.
+
+主角：I was about to feel terribly important.
+
+陈家洛：Rochefort, release the courier. We can spare everyone a great deal of trouble.
+
+张召重：The trouble is already on the payroll. Guards!
+
+主角：Right. No visitor's pass, then.",implemented,,/storyScripts/legacy/segments/921/steps/2,9,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8bff6d31473ac06f249c,storyScripts,书剑恩仇录_六和塔胜,legacy,书剑恩仇录_六和塔胜,dialogue_run,"张召重
 主角
 陈家洛","张召重 → 罗什福尔 / Rochefort [proposed]
@@ -10893,8 +10945,16 @@ copy-8bff6d31473ac06f249c,storyScripts,书剑恩仇录_六和塔胜,legacy,书�
 
 陈家洛：好了，文当家也救出来了，我们先走了。小兄弟，后会有期。
 
-主角：嗯，后会有期。",,,pending,,/storyScripts/legacy/segments/922/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-bf500ef78d5139823d01,storyScripts,书剑恩仇录_六和塔胜,legacy,书剑恩仇录_六和塔胜,journal,,,,六和塔营救文泰来。,,,pending,,/storyScripts/legacy/segments/922/steps/10/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：嗯，后会有期。","张召重：好好庆祝吧。下次重逢，我会安排得没这么方便。
+
+主角：他还真是什么见面都要预约。
+
+陈家洛：信使自由了。这些教材给你，之后留意营地。罗什福尔记仇的本事一流。","张召重：Enjoy your rescue. I'll arrange a less convenient reunion.
+
+主角：He really does book every meeting in advance.
+
+陈家洛：The courier is free. Take these training guides, and watch the caravan; Rochefort holds a grudge remarkably well.",implemented,,/storyScripts/legacy/segments/922/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-bf500ef78d5139823d01,storyScripts,书剑恩仇录_六和塔胜,legacy,书剑恩仇录_六和塔胜,journal,,,,六和塔营救文泰来。,在枢机塔救出了信使。,Freed the courier at the Cardinal’s Tower.,implemented,,/storyScripts/legacy/segments/922/steps/10/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e20fb8690afb6166c9ff,storyScripts,书剑恩仇录_庖丁解牛,legacy,书剑恩仇录_庖丁解牛,dialogue_run,"张召重
 霍青桐
 主角
@@ -10911,23 +10971,23 @@ copy-e20fb8690afb6166c9ff,storyScripts,书剑恩仇录_庖丁解牛,legacy,书�
 
 陈家洛：不怕，还有我来帮忙！
 
-主角：陈大当家，你的拳法终于大成了！","张召重：放下武器。你们的人手，可不够。
+主角：陈大当家，你的拳法终于大成了！","张召重：这一次，商队和它的秘密都得跟我走。
 
-霍青桐：那想必，过我们这一关很容易吧？
+霍青桐：你总这么说。这习惯可不便宜。
 
-主角：我们还真需要一位帮手。
+主角：他们来的人，还真不少。
 
-陈家洛：达达尼昂，前来凑个热闹。希望，你们给我留了一点麻烦。
+陈家洛：那你们就需要多一把剑。达达尼昂，愿意效劳。
 
-主角：来得正好。","张召重：Put down your weapons. You're outnumbered.
+主角：来得正好，我们正缺一次漂亮的登场。","张召重：This time, the caravan and its secrets come with me.
 
-霍青桐：Then you'll have no trouble getting past us, will you?
+霍青桐：You keep saying that. It's becoming an expensive habit.
 
-主角：We could use another pair of hands.
+主角：There are rather a lot of them.
 
-陈家洛：D'Artagnan, reporting for trouble. I hope you saved some for me.
+陈家洛：Then you'll want another sword. D'Artagnan, at your service.
 
-主角：You're just in time.",implemented,,/storyScripts/legacy/segments/923/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：Good timing. We were running short of dramatic entrances.",implemented,,/storyScripts/legacy/segments/923/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-31957fb39f9e4850d26a,storyScripts,书剑恩仇录_庖丁解牛胜,legacy,书剑恩仇录_庖丁解牛胜,dialogue_run,"张召重
 陈家洛
 主角","张召重 → 罗什福尔 / Rochefort [proposed]
@@ -10938,7 +10998,15 @@ copy-31957fb39f9e4850d26a,storyScripts,书剑恩仇录_庖丁解牛胜,legacy,�
 
 主角：陈大当家，多谢相助！
 
-陈家洛：兄弟，别客气。驱除鞑虏，算我一份！",,,pending,,/storyScripts/legacy/segments/924/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+陈家洛：兄弟，别客气。驱除鞑虏，算我一份！","张召重：这场行动的预算，可不是这么做的。
+
+陈家洛：就当修改预算了。我会留在这支队伍。
+
+主角：正需要你的经验，还有那堂剑术课。","张召重：That was not how this operation was budgeted.
+
+陈家洛：Consider it a revision. I'm staying with this company.
+
+主角：We could use your experience. And that sword lesson.",implemented,,/storyScripts/legacy/segments/924/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8c997c4e776118423892,storyScripts,鹿鼎记_北京韦小宝,legacy,鹿鼎记_北京韦小宝,dialogue_run,"韦小宝
 主角","韦小宝 → 稻草人 / The Scarecrow [locked]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","韦小宝：今天天气不错，溜出宫来玩玩……
@@ -15809,11 +15877,31 @@ copy-c5f8f2d6fa3b1146ac92,storyScripts,鸳鸯刀_太岳四侠,legacy,鸳鸯刀_�
 
 主角：大哥，我就是穷屌丝一个啊。耗子来我家都是抹着眼泪走的啊。
 
-盖七省：我不信！除非让我摸摸……",,,pending,,/storyScripts/legacy/segments/1443/steps/2,14,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-aedd11518df98a4a74b7,storyScripts,鸳鸯刀_太岳四侠,legacy,鸳鸯刀_太岳四侠,text,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",（这厮是个变态么？）那就……,,,pending,,/storyScripts/legacy/segments/1443/steps/16/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-881e4b2883e56e0a3ed7,storyScripts,鸳鸯刀_太岳四侠,legacy,鸳鸯刀_太岳四侠,text,,,,没什么好谈的了，手下见真章吧。,,,pending,,/storyScripts/legacy/segments/1443/steps/16/blocks/0/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-74e0caf89f5b352844d3,storyScripts,鸳鸯刀_太岳四侠,legacy,鸳鸯刀_太岳四侠,text,,,,就让你摸摸吧……,,,pending,,/storyScripts/legacy/segments/1443/steps/16/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-abe0687b8c5294b105e6,storyScripts,鸳鸯刀_太岳四侠2,legacy,鸳鸯刀_太岳四侠2,dialogue_run,盖七省,盖七省 → 狐狸 / The Fox [proposed],IT,盖七省：（上下其手）呔！你这包囊里鼓鼓的，身上银子也不少！看来是不见棺材不掉泪了！,,,pending,,/storyScripts/legacy/segments/1445/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+盖七省：我不信！除非让我摸摸……","盖七省：站住！正式渡口收费。非常正式，我们还写了牌子。
+
+流星赶月：牌子晾干时，是我负责扶着的。
+
+主角：资历真不错。谁任命你们的？
+
+烟霞神龙：我们投过票，四票赞成。
+
+双手开碑：无人反对，投票率很高。
+
+主角：在你们检查我的钱包之前，我想先检查你们的许可。","盖七省：Halt! Official ferry toll. Very official. We've made a sign.
+
+流星赶月：I held the sign while it dried.
+
+主角：Impressive credentials. Who appointed you?
+
+烟霞神龙：We took a vote. Four in favor.
+
+双手开碑：No one opposed. Excellent turnout.
+
+主角：I'd like to inspect your permit before you inspect my purse.",implemented,,/storyScripts/legacy/segments/1443/steps/2,14,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-aedd11518df98a4a74b7,storyScripts,鸳鸯刀_太岳四侠,legacy,鸳鸯刀_太岳四侠,text,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",（这厮是个变态么？）那就……,怎样回应这些收费人？,How do you answer the toll collectors?,implemented,,/storyScripts/legacy/segments/1443/steps/16/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-881e4b2883e56e0a3ed7,storyScripts,鸳鸯刀_太岳四侠,legacy,鸳鸯刀_太岳四侠,text,,,,没什么好谈的了，手下见真章吧。,质疑他们的许可。,Challenge their claim.,implemented,,/storyScripts/legacy/segments/1443/steps/16/blocks/0/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-74e0caf89f5b352844d3,storyScripts,鸳鸯刀_太岳四侠,legacy,鸳鸯刀_太岳四侠,text,,,,就让你摸摸吧……,让他们检查行囊。,Let them inspect the bag.,implemented,,/storyScripts/legacy/segments/1443/steps/16/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-abe0687b8c5294b105e6,storyScripts,鸳鸯刀_太岳四侠2,legacy,鸳鸯刀_太岳四侠2,dialogue_run,盖七省,盖七省 → 狐狸 / The Fox [proposed],IT,盖七省：（上下其手）呔！你这包囊里鼓鼓的，身上银子也不少！看来是不见棺材不掉泪了！,盖七省：行李不少，却没有缴费许可。我们的手续无懈可击，下一步该动手了。,"盖七省：Plenty of luggage, no toll permit. Our paperwork is flawless. Our next step is fighting.",implemented,,/storyScripts/legacy/segments/1445/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-cc6836163bd4ca655fcf,storyScripts,鸳鸯刀_太岳四侠胜利,legacy,鸳鸯刀_太岳四侠胜利,dialogue_run,"主角
 盖七省
 双手开碑","主角 → 玩家角色 / Player character [classified]
@@ -15824,7 +15912,15 @@ copy-cc6836163bd4ca655fcf,storyScripts,鸳鸯刀_太岳四侠胜利,legacy,鸳�
 
 主角：身上有多少钱，快快交出来！嗯，就这么几两。
 
-双手开碑：大哥，这年头土匪也不好当啊。",,,pending,,/storyScripts/legacy/segments/1446/steps/2,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+双手开碑：大哥，这年头土匪也不好当啊。","主角：你们的许可，好像过期了。
+
+盖七省：只是暂时的行政挫折！
+
+双手开碑：早说了，牌子得做大一点。","主角：Your permit appears to have expired.
+
+盖七省：A temporary administrative setback!
+
+双手开碑：I told you we needed a larger sign.",implemented,,/storyScripts/legacy/segments/1446/steps/2,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d8471e079361e68fa98a,storyScripts,鸳鸯刀_太岳四侠胜利1,legacy,鸳鸯刀_太岳四侠胜利1,dialogue_run,"萧中慧
 烟霞神龙
 流星赶月
@@ -15843,16 +15939,28 @@ copy-d8471e079361e68fa98a,storyScripts,鸳鸯刀_太岳四侠胜利1,legacy,鸳�
 
 萧中慧：这么不耐烦的小毛贼竟敢打鸳鸯刀的主意。
 
-主角：等等……听我解释啊！",,,pending,,/storyScripts/legacy/segments/1447/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：等等……听我解释啊！","萧中慧：四个大人，替不属于自己的河收费。真会做生意。
+
+烟霞神龙：蓝仙女！这位旅人想抢那对印记！
+
+主角：我只是想要张收据，事情怎么越传越大？","萧中慧：Four grown men charging travelers for a river they don't own. How enterprising.
+
+烟霞神龙：Blue Fairy! This traveler wants the paired seals!
+
+主角：I wanted a receipt. The story seems to be growing.",implemented,,/storyScripts/legacy/segments/1447/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8bec2632e316227362a1,storyScripts,鸳鸯刀_风陵渡,legacy,鸳鸯刀_风陵渡,dialogue_run,"袁冠南
 萧中慧","袁冠南 → 匹诺曹 / Pinocchio [locked]
 萧中慧 → 蓝仙女 / The Blue Fairy [proposed]",IT,"袁冠南：哼，你们竟然也是来夺刀的么！
 
-萧中慧：相公，不跟他们废话，打吧！",,,pending,,/storyScripts/legacy/segments/1448/steps/1,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-bbc3728f066b4295cdf6,storyScripts,鸳鸯刀_风陵渡胜2,legacy,鸳鸯刀_风陵渡胜2,dialogue_run,萧中慧,萧中慧 → 蓝仙女 / The Blue Fairy [proposed],IT,萧中慧：既然你这么想要这对鸳鸯刀，就给了你们吧！可别伤害冠南啊。,,,pending,,/storyScripts/legacy/segments/1449/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a868ab21fd028fffbc34,storyScripts,鸳鸯刀_风陵渡胜2,legacy,鸳鸯刀_风陵渡胜2,text,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",收下这对刀么？,,,pending,,/storyScripts/legacy/segments/1449/steps/1/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-82e8b80c17dd2f989704,storyScripts,鸳鸯刀_风陵渡胜2,legacy,鸳鸯刀_风陵渡胜2,text,,,,不收,,,pending,,/storyScripts/legacy/segments/1449/steps/1/blocks/0/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-a62ae10f393b679a8c5b,storyScripts,鸳鸯刀_风陵渡胜2,legacy,鸳鸯刀_风陵渡胜2,text,,,,收下,,,pending,,/storyScripts/legacy/segments/1449/steps/1/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+萧中慧：相公，不跟他们废话，打吧！","袁冠南：印记得留下。想讲道理，可以先问我的木剑。
+
+萧中慧：匹诺曹，小心些，我们还不认识这位旅人。","袁冠南：The seals stay with us. You can argue with my wooden sword.
+
+萧中慧：Pinocchio, be careful. We still don't know this traveler.",implemented,,/storyScripts/legacy/segments/1448/steps/1,2,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-bbc3728f066b4295cdf6,storyScripts,鸳鸯刀_风陵渡胜2,legacy,鸳鸯刀_风陵渡胜2,dialogue_run,萧中慧,萧中慧 → 蓝仙女 / The Blue Fairy [proposed],IT,萧中慧：既然你这么想要这对鸳鸯刀，就给了你们吧！可别伤害冠南啊。,萧中慧：你已经证明本事了。如果你要的是这对印记，别再伤害匹诺曹。,"萧中慧：You've made your point. If it's the paired seals you want, let Pinocchio be.",implemented,,/storyScripts/legacy/segments/1449/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a868ab21fd028fffbc34,storyScripts,鸳鸯刀_风陵渡胜2,legacy,鸳鸯刀_风陵渡胜2,text,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",收下这对刀么？,怎样处理这对印记？,What will you do about the paired seals?,implemented,,/storyScripts/legacy/segments/1449/steps/1/prompt/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-82e8b80c17dd2f989704,storyScripts,鸳鸯刀_风陵渡胜2,legacy,鸳鸯刀_风陵渡胜2,text,,,,不收,让他们留下印记。（道德+3）,Leave the seals with them. (Morality +3),implemented,,/storyScripts/legacy/segments/1449/steps/1/blocks/0/options/0/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-a62ae10f393b679a8c5b,storyScripts,鸳鸯刀_风陵渡胜2,legacy,鸳鸯刀_风陵渡胜2,text,,,,收下,收下这个秘密。（道德−3）,Claim the secret. (Morality −3),implemented,,/storyScripts/legacy/segments/1449/steps/1/blocks/0/options/1/text,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a72b6196736a3d96bee9,storyScripts,鸳鸯刀正_风陵渡,legacy,鸳鸯刀正_风陵渡,dialogue_run,"主角
 萧中慧
 袁冠南","主角 → 玩家角色 / Player character [classified]
@@ -15875,7 +15983,27 @@ copy-a72b6196736a3d96bee9,storyScripts,鸳鸯刀正_风陵渡,legacy,鸳鸯刀�
 
 萧中慧：相公……看他这么一笑我突然就觉着我们之前的所作所为全都是笑话了……
 
-袁冠南：唉，我也是这么想的。为了一个蠢货搞出来的两把破刀拼死拼活，是为了什么呢？要是那个卓天雄再来夺刀，就给了他把！",,,pending,,/storyScripts/legacy/segments/1450/steps/1,10,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+袁冠南：唉，我也是这么想的。为了一个蠢货搞出来的两把破刀拼死拼活，是为了什么呢？要是那个卓天雄再来夺刀，就给了他把！","主角：你们留着吧。我是来坐船的，不是来抢别人的纪念物。
+
+萧中慧：那么，我们也许该先自我介绍。
+
+袁冠南：我叫匹诺曹。听说这对印记，能让持有者天下无敌。
+
+主角：刚才那场，算是相当充分的实测了。
+
+袁冠南：合起来写的是：善意胜过蛮力。哦，难怪刚才会那样。
+
+萧中慧：即使没有战利品，这课也值得记住。","主角：Keep them. I came for the ferry, not somebody else's keepsake.
+
+萧中慧：Then perhaps we should have started with introductions.
+
+袁冠南：Pinocchio. These seals are supposed to make their keeper unbeatable.
+
+主角：We've just conducted a fairly thorough test of that claim.
+
+袁冠南：Together they say, 'Kindness outlasts force.' Oh. That may explain the results.
+
+萧中慧：A lesson worth keeping, even without a trophy.",implemented,,/storyScripts/legacy/segments/1450/steps/1,10,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fe455de5a9fff75d74a9,storyScripts,鸳鸯刀_风陵渡1,legacy,鸳鸯刀_风陵渡1,dialogue_run,"卓天雄
 袁冠南
 主角","卓天雄 → 奥兰多 / Orlando [proposed]
@@ -15888,8 +16016,20 @@ copy-fe455de5a9fff75d74a9,storyScripts,鸳鸯刀_风陵渡1,legacy,鸳鸯刀_风
 
 主角：谁怕了！我怕过谁？给我死来！
 
-卓天雄：好小子，我就喜欢收拾你这种白痴……兄弟们上！",,,pending,,/storyScripts/legacy/segments/1451/steps/0,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-e069aaf5dec3923ea33b,storyScripts,鸳鸯刀正_风陵渡败,legacy,鸳鸯刀正_风陵渡败,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：民不与官斗，我闪！,,,pending,,/storyScripts/legacy/segments/1452/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+卓天雄：好小子，我就喜欢收拾你这种白痴……兄弟们上！","卓天雄：皇家征收官，奥兰多队长。交出印记。
+
+袁冠南：可以给你，它们没有你想的那种本事。
+
+卓天雄：那证人也一并带走。
+
+主角：啊，又是一桩手续问题。","卓天雄：Captain Orlando, royal collector. Hand over the seals.
+
+袁冠南：You may have them. They don't do what you think.
+
+卓天雄：Then I'll take the witnesses, too.
+
+主角：Ah. Another permit problem.",implemented,,/storyScripts/legacy/segments/1451/steps/0,5,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-e069aaf5dec3923ea33b,storyScripts,鸳鸯刀正_风陵渡败,legacy,鸳鸯刀正_风陵渡败,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：民不与官斗，我闪！,主角：得先整备。再走这段渡口事件前，应该留一份存档。,主角：We need to regroup. I should keep a save before that ferry encounter next time.,implemented,,/storyScripts/legacy/segments/1452/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7a49781c3411dbcebe61,storyScripts,鸳鸯刀正_风陵渡胜,legacy,鸳鸯刀正_风陵渡胜,dialogue_run,"主角
 袁冠南
 萧中慧","主角 → 玩家角色 / Player character [classified]
@@ -15900,21 +16040,17 @@ copy-7a49781c3411dbcebe61,storyScripts,鸳鸯刀正_风陵渡胜,legacy,鸳鸯�
 
 萧中慧：相公，这位少侠倒是挺有趣，实力也强，我们不如？
 
-袁冠南：好，少侠啊，我们以后就跟你混了吧！","主角：这下，总算解决了。
+袁冠南：好，少侠啊，我们以后就跟你混了吧！","主角：印记可以拿走，旅人们得自由离开。
 
-袁冠南：刀就交给你们吧。我找到了比争它们更有趣的事。
+萧中慧：谢谢。匹诺曹要学的事已经够多了，用不着再去牢房进修。
 
-萧中慧：是什么呢？
+袁冠南：让我跟你们走吧！我能帮上忙。通常都能。帮不上时，我也会努力。","主角：You can have the seals. The travelers are going free.
 
-袁冠南：一次像样的冒险。愿意带上匹诺曹吗？","主角：That settles it.
+萧中慧：Thank you. Pinocchio has quite enough to learn without a royal cell.
 
-袁冠南：Keep the blades. I've found something more interesting than another argument over them.
-
-萧中慧：And what would that be?
-
-袁冠南：A proper adventure. May Pinocchio join you?",implemented,,/storyScripts/legacy/segments/1453/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-6a5d7b7841a3e128aa3a,storyScripts,鸳鸯刀_风陵渡口下次再来,legacy,鸳鸯刀_风陵渡口下次再来,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：打不过啊，太变态了，下次再来吧。,,,pending,,/storyScripts/legacy/segments/1454/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-43c02eb227ecf5f81521,storyScripts,鸳鸯刀邪_风陵渡,legacy,鸳鸯刀邪_风陵渡,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：（虽然是两把破刀，不过看这二人这么保护这刀，一定有秘密）拿来吧！,,,pending,,/storyScripts/legacy/segments/1455/steps/1,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+袁冠南：Let me come with you! I'll be useful. Usually. And when I'm not, I'll try.",implemented,,/storyScripts/legacy/segments/1453/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-6a5d7b7841a3e128aa3a,storyScripts,鸳鸯刀_风陵渡口下次再来,legacy,鸳鸯刀_风陵渡口下次再来,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：打不过啊，太变态了，下次再来吧。,主角：这回渡河不太漂亮。准备好了再来。,主角：Not my finest crossing. I'll prepare before trying the ferry again.,implemented,,/storyScripts/legacy/segments/1454/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-43c02eb227ecf5f81521,storyScripts,鸳鸯刀邪_风陵渡,legacy,鸳鸯刀邪_风陵渡,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：（虽然是两把破刀，不过看这二人这么保护这刀，一定有秘密）拿来吧！,主角：秘密归我。这么配套的东西，总该值点什么。,主角：I'll claim the secret. A matched set ought to be worth something.,implemented,,/storyScripts/legacy/segments/1455/steps/1,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d29970f09c3ecf18c2c1,storyScripts,鸳鸯刀邪_西夏酒楼,legacy,鸳鸯刀邪_西夏酒楼,dialogue_run,"韦小宝
 主角","韦小宝 → 稻草人 / The Scarecrow [locked]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","韦小宝：诶，老大，这是不是就是那个鸳鸯双刀？
@@ -15927,7 +16063,19 @@ copy-d29970f09c3ecf18c2c1,storyScripts,鸳鸯刀邪_西夏酒楼,legacy,鸳鸯�
 
 韦小宝：没了，他就说到这里。
 
-主角：哦……朱，朱什么呢？或者是猪？诛？",,,pending,,/storyScripts/legacy/segments/1456/steps/0,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：哦……朱，朱什么呢？或者是猪？诛？","韦小宝：那对印记？魔法师提过它们的秘密，只说到了珍珠。
+
+主角：珍珠什么？
+
+韦小宝：他说到这儿就停了。知道那么多答案的人，也真能留悬念。
+
+主角：那么，就去融雪镇找找。","韦小宝：Those seals? The Wizard mentioned their secret once. He got as far as 'Pearl.'
+
+主角：Pearl what?
+
+韦小宝：That's where he stopped. For a man with so many answers, he does leave a lot unfinished.
+
+主角：Then we'd better look for Snowmelt Town.",implemented,,/storyScripts/legacy/segments/1456/steps/0,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f20ce0d4ae6e440d69c5,storyScripts,鸳鸯刀邪_佛山镇,legacy,鸳鸯刀邪_佛山镇,dialogue_run,"小孩
 主角","小孩 → 当地居民 / Town resident [classified]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","小孩：珠江三角洲上有一座洞窟，里面可黑啦！
@@ -15936,13 +16084,25 @@ copy-f20ce0d4ae6e440d69c5,storyScripts,鸳鸯刀邪_佛山镇,legacy,鸳鸯刀�
 
 主角：小朋友，你能带我去那洞窟么，给，这点钱给你留着买糖葫芦吃。
 
-小孩：好吧大哥哥。",,,pending,,/storyScripts/legacy/segments/1457/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+小孩：好吧大哥哥。","小孩：融雪镇附近有座老洞窟。很黑，回声特别好。
+
+主角：能带我去入口吗？测试回声的工作，就交给你。
+
+小孩：成交。洞窟从不打断人说话。","小孩：There's an old cave near Snowmelt Town. Very dark. Excellent echoes.
+
+主角：Show me the entrance? I'll leave the echo testing to you.
+
+小孩：Deal. The cave never interrupts.",implemented,,/storyScripts/legacy/segments/1457/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-daccfc11f9c5fa27cf58,storyScripts,鸳鸯刀邪_佛山镇1,legacy,鸳鸯刀邪_佛山镇1,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","主角：唔，拐过这道弯，前面就伸手不见五指了。恩？这弯道处的墙壁上有一个凹槽？看起来……是鸳鸯刀里长的那把。
 
 主角：阳光……被折射进来了。指向的位置……还有一个短的凹槽，看来是这把了。
 
-主角：在这里！挖挖看！",,,pending,,/storyScripts/legacy/segments/1458/steps/2,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-7f1ad3d69d3649298e29,storyScripts,鸳鸯刀邪_佛山镇1,legacy,鸳鸯刀邪_佛山镇1,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：这都什么乱七八糟的，不过还算发了笔横财，就这样吧。,,,pending,,/storyScripts/legacy/segments/1458/steps/8,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：在这里！挖挖看！","主角：先是一道长槽，再是一道短槽。合用这对印记，光就指明了路。
+
+主角：在那儿，一口箱子。总算碰上一个带把手的谜语。","主角：A long slot, then a short one. The paired seals turn the light into a trail.
+
+主角：There. A chest. At last, a riddle with a handle.",implemented,,/storyScripts/legacy/segments/1458/steps/2,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-7f1ad3d69d3649298e29,storyScripts,鸳鸯刀邪_佛山镇1,legacy,鸳鸯刀邪_佛山镇1,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：这都什么乱七八糟的，不过还算发了笔横财，就这样吧。,主角：一本手册，还有一笔钱。这秘密倒很实用。,主角：A playbook and a small fortune. A very practical secret.,implemented,,/storyScripts/legacy/segments/1458/steps/8,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5a3a5de19efff5c9593a,storyScripts,霹雳堂_胜利,legacy,霹雳堂_胜利,dialogue_run,孔八拉,孔八拉 → 赫菲斯托斯 / Hephaestus [proposed],GR,孔八拉：恭喜你，获得胜利！,,,pending,,/storyScripts/legacy/segments/1459/steps/2,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-0d6971053dc01a747a02,storyScripts,霹雳堂_杨过,legacy,霹雳堂_杨过,dialogue_run,"杨过
 主角","杨过 → 亚瑟王 / King Arthur [locked]
@@ -21083,9 +21243,9 @@ copy-dcc9dac5c3028c5a6b6c,battles,风陵渡黑衣人_战斗,,,name,,,,风陵渡�
 copy-055f00e16bee442be0ae,battles,天关战斗_围攻黑木崖,,,name,,,,天关战斗_围攻黑木崖,,,pending,,/battles/97/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-cd56a71b929d9cc4bf2b,battles,战东方不败_战斗,,,name,,,,战东方不败_战斗,,,pending,,/battles/98/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1f6ae0b6f80c75e77104,battles,令狐挑东方_战斗,,,name,,,,令狐挑东方_战斗,,,pending,,/battles/99/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-c877a90337f80e25a8a6,battles,鸳鸯刀_太岳四侠战斗,,,name,,,,鸳鸯刀_太岳四侠战斗,,,pending,,/battles/100/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-50e1e379203a7e9c614d,battles,鸳鸯刀风陵渡1_战斗,,,name,,,,鸳鸯刀风陵渡1_战斗,,,pending,,/battles/101/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-e4e4533b56b7e0e5d649,battles,鸳鸯刀正风陵渡_战斗,,,name,,,,鸳鸯刀正风陵渡_战斗,,,pending,,/battles/102/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-c877a90337f80e25a8a6,battles,鸳鸯刀_太岳四侠战斗,,,name,,,,鸳鸯刀_太岳四侠战斗,可疑的过路费,A Questionable Toll,implemented,,/battles/100/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-50e1e379203a7e9c614d,battles,鸳鸯刀风陵渡1_战斗,,,name,,,,鸳鸯刀风陵渡1_战斗,木剑的警告,A Wooden Sword's Warning,implemented,,/battles/101/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-e4e4533b56b7e0e5d649,battles,鸳鸯刀正风陵渡_战斗,,,name,,,,鸳鸯刀正风陵渡_战斗,皇家征收官,The Royal Collector,implemented,,/battles/102/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-4f34498035b5be945f61,battles,笑傲邪华山_战斗,,,name,,,,笑傲邪华山_战斗,,,pending,,/battles/103/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1d420ae9a92a8dcb00ad,battles,收服恒山_战斗,,,name,,,,收服恒山_战斗,,,pending,,/battles/104/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b47a5375ffa5a95cdda3,battles,笑傲邪_并派战斗,,,name,,,,笑傲邪_并派战斗,,,pending,,/battles/105/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21340,13 +21500,13 @@ copy-a6a6ff85e6abb8481dd5,battles,高昌迷宫李文秀_战斗,,,name,,,,高昌�
 copy-c76bcf8b30f200555bba,battles,高昌迷宫李文秀_战斗,,,name,,,,哈萨克勇士,,,pending,,/battles/227/randomParticipants/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-2e58f24e63499ea45ad9,battles,高昌迷宫李文秀_战斗,,,name,,,,哈萨克勇士,,,pending,,/battles/227/randomParticipants/1/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-fe4c5cf1b92ed4a2f094,battles,高昌迷宫李文秀_战斗,,,name,,,,哈萨克勇士,,,pending,,/battles/227/randomParticipants/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-1001bf463a3f5d9c4274,battles,回族部落_战斗,,,name,,,,回族部落_战斗,,,pending,,/battles/228/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-1001bf463a3f5d9c4274,battles,回族部落_战斗,,,name,,,,回族部落_战斗,商队保卫战,The Caravan Stand,implemented,,/battles/228/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-5e585c63c53bd38aafdd,battles,回族部落_战斗,,,name,,,,朝廷走狗,,,pending,,/battles/228/randomParticipants/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-bcc4fdecccbd29282f0e,battles,回族部落_战斗,,,name,,,,朝廷走狗,,,pending,,/battles/228/randomParticipants/1/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6b0b94438252b7e52a50,battles,回族部落_战斗,,,name,,,,朝廷走狗,,,pending,,/battles/228/randomParticipants/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b4bfbb11bd053f09a2ca,battles,回族部落_战斗,,,name,,,,朝廷走狗,,,pending,,/battles/228/randomParticipants/3/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a71ad92587691e1f1a44,battles,回族部落_战斗,,,name,,,,朝廷走狗,,,pending,,/battles/228/randomParticipants/4/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-e9329eb94a6ebdc1331b,battles,六和塔_战斗,,,name,,,,六和塔_战斗,,,pending,,/battles/229/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-e9329eb94a6ebdc1331b,battles,六和塔_战斗,,,name,,,,六和塔_战斗,塔楼营救,The Tower Rescue,implemented,,/battles/229/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-07b278eae56a24e29542,battles,六和塔_战斗,,,name,,,,朝廷鹰犬,,,pending,,/battles/229/randomParticipants/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e52c899a1495dd6fb192,battles,六和塔_战斗,,,name,,,,朝廷鹰犬,,,pending,,/battles/229/randomParticipants/1/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ccfadc5d83cf98e93abf,battles,六和塔_战斗,,,name,,,,朝廷鹰犬,,,pending,,/battles/229/randomParticipants/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21359,7 +21519,7 @@ copy-e49585b04f763e2cbb9c,battles,六和塔_战斗,,,name,,,,朝廷鹰犬,,,pend
 copy-2a9a70c68cdd998eb878,battles,六和塔_战斗,,,name,,,,朝廷鹰犬,,,pending,,/battles/229/randomParticipants/9/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a551ecb7d3f78dc6d8fe,battles,六和塔_战斗,,,name,,,,朝廷鹰犬,,,pending,,/battles/229/randomParticipants/10/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-41e0485350a5c95aa101,battles,六和塔_战斗,,,name,,,,朝廷鹰犬,,,pending,,/battles/229/randomParticipants/11/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-c26237137070bb6b24c5,battles,庖丁解牛_战斗,,,name,,,,庖丁解牛_战斗,,,pending,,/battles/230/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-c26237137070bb6b24c5,battles,庖丁解牛_战斗,,,name,,,,庖丁解牛_战斗,商队决战,The Caravan's Last Stand,implemented,,/battles/230/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a18b6166f8fe11344b79,battles,庖丁解牛_战斗,,,name,,,,朝廷鹰犬,,,pending,,/battles/230/randomParticipants/0/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-eb70fed522efb2ce4a38,battles,庖丁解牛_战斗,,,name,,,,朝廷鹰犬,,,pending,,/battles/230/randomParticipants/1/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a3ea0ac8682204b3f020,battles,庖丁解牛_战斗,,,name,,,,朝廷鹰犬,,,pending,,/battles/230/randomParticipants/2/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -21873,13 +22033,13 @@ copy-5bd281236b458ea7d65d,characters,仪清,,,name,仪清,仪清 → 立花誾�
 copy-5620c3b4610e5732618a,characters,鲁连荣,,,name,鲁连荣,鲁连荣 → 金太郎 / Kintaro [proposed],JP,鲁连荣,,,pending,,/characters/150/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-236446f16767dd5a9fa2,characters,天乙真人,,,name,天乙真人,天乙真人 → 东乡重位 / Togo Shigekata [proposed],JP,天乙真人,,,pending,,/characters/151/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-7ee83434076276196560,characters,不败令狐冲,,,name,不败令狐冲,不败令狐冲 → 宫本武藏 / Miyamoto Musashi [locked],"GB,JP",令狐冲,宫本武藏,Miyamoto Musashi,implemented,,/characters/152/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-609a80cae5f9490352a5,characters,烟霞神龙,,,name,烟霞神龙,烟霞神龙 → 会说话的蟋蟀 / The Talking Cricket [proposed],IT,烟霞神龙,,,pending,,/characters/153/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-87e520819db7ed3688b6,characters,双手开碑,,,name,双手开碑,双手开碑 → 曼贾福科 / Mangiafuoco [proposed],IT,双手开碑,,,pending,,/characters/154/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-33efe4286144c1645e11,characters,流星赶月,,,name,流星赶月,流星赶月 → 烛芯 / Lampwick [proposed],IT,流星赶月,,,pending,,/characters/155/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d9383e9005d43f7f43eb,characters,盖七省,,,name,盖七省,盖七省 → 狐狸 / The Fox [proposed],IT,盖七省,,,pending,,/characters/156/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-609a80cae5f9490352a5,characters,烟霞神龙,,,name,烟霞神龙,烟霞神龙 → 会说话的蟋蟀 / The Talking Cricket [proposed],IT,烟霞神龙,收费队长,Toll Captain,implemented,,/characters/153/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-87e520819db7ed3688b6,characters,双手开碑,,,name,双手开碑,双手开碑 → 曼贾福科 / Mangiafuoco [proposed],IT,双手开碑,收费员,Toll Collector,implemented,,/characters/154/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-33efe4286144c1645e11,characters,流星赶月,,,name,流星赶月,流星赶月 → 烛芯 / Lampwick [proposed],IT,流星赶月,收费哨兵,Toll Lookout,implemented,,/characters/155/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d9383e9005d43f7f43eb,characters,盖七省,,,name,盖七省,盖七省 → 狐狸 / The Fox [proposed],IT,盖七省,收费头目,Toll Spokesman,implemented,,/characters/156/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e666c1bb6803c702cf71,characters,萧中慧,,,name,萧中慧,萧中慧 → 蓝仙女 / The Blue Fairy [proposed],IT,萧中慧,蓝仙女,The Blue Fairy,implemented,,/characters/157/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a6eeaf7aa2ec285c018e,characters,袁冠南,,,name,袁冠南,袁冠南 → 匹诺曹 / Pinocchio [locked],IT,袁冠南,匹诺曹,Pinocchio,implemented,,/characters/158/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-ce5a714abaebda1d736e,characters,卓天雄,,,name,卓天雄,卓天雄 → 奥兰多 / Orlando [proposed],IT,卓天雄,,,pending,,/characters/159/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-ce5a714abaebda1d736e,characters,卓天雄,,,name,卓天雄,卓天雄 → 奥兰多 / Orlando [proposed],IT,卓天雄,奥兰多队长,Captain Orlando,implemented,,/characters/159/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c4adafaa286e70859012,characters,雷老虎,,,name,雷老虎,雷老虎 → 毛毛虫 / The Caterpillar [proposed],GB,雷老虎,,,pending,,/characters/160/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-363abc90131e715fa0bc,characters,梦姑,,,name,梦姑,梦姑 → 玛丽·里德 / Mary Read [proposed],GB,梦姑,,,pending,,/characters/161/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-6c236464847d0cd50237,characters,火工头陀,,,name,火工头陀,火工头陀 → 史密先生 / Mr Smee [proposed],GB,火工头陀,,,pending,,/characters/162/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -22040,7 +22200,7 @@ copy-dde50616ec1114808723,characters,恶棍,,,name,恶棍,恶棍 → 荒野匪�
 copy-80ee7d43c3d38453c440,characters,牧民A,,,name,牧民A,牧民A → 当地居民 / Town resident [classified],GB,牧民A,,,pending,,/characters/316/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-41ea7f3c0c5ee92c0903,characters,牧民B,,,name,牧民B,牧民B → 当地居民 / Town resident [classified],GB,牧民B,,,pending,,/characters/317/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-01521fe92763e77df9e4,characters,牧民C,,,name,牧民C,牧民C → 当地居民 / Town resident [classified],GB,牧民C,,,pending,,/characters/318/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-c7639e3b141f4bcddae0,characters,汉家松鼠,,,name,汉家松鼠,汉家松鼠 → 汉家松鼠 / Original creator credit [classified],ES,汉家松鼠,,,pending,,/characters/319/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-c7639e3b141f4bcddae0,characters,汉家松鼠,,,name,汉家松鼠,汉家松鼠 → 汉家松鼠 / Original creator credit [classified],ES,汉家松鼠,旅途提示,Field Notes,implemented,,/characters/319/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-4f66056103b8b3dbbaca,characters,支付宝二维码,,,name,支付宝二维码,支付宝二维码 → 支付宝二维码 / Archived payment marker [classified],,支付宝二维码,,,pending,,/characters/320/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e4d549ce03a5a96ef663,characters,cg,,,name,cg,cg → cg / Cinematic marker [classified],,cg,,,pending,,/characters/321/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-625fae17a132cdc669e9,characters,子尹,,,name,子尹,子尹 → 威尔·斯卡利特 / Will Scarlet [proposed],GB,子尹,,,pending,,/characters/322/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -22097,7 +22257,7 @@ copy-cb534f0943522db05157,characters,陈达海,,,name,陈达海,陈达海 → �
 copy-21b959c4930dcb036c45,characters,瓦耳拉齐,,,name,瓦耳拉齐,瓦耳拉齐 → 罗克·吉纳特 / Roque Guinart [proposed],ES,瓦耳拉齐,罗克·吉纳特,Roque Guinart,implemented,,/characters/373/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-692eeff813205458d788,characters,华辉,,,name,华辉,华辉 → 卡德尼奥 / Cardenio [proposed],ES,华辉,卡德尼奥,Cardenio,implemented,,/characters/374/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b8f5b4f74b608f7df5d5,characters,计老人,,,name,计老人,计老人 → 佩罗·佩雷斯神父 / Curate Pero Perez [proposed],ES,计老人,佩罗·佩雷斯神父,Curate Pero Perez,implemented,,/characters/375/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-f6844c74914e3fe57a93,characters,朝廷走狗,,,name,朝廷走狗,朝廷走狗 → 波尔托斯 / Porthos [proposed],FR,朝廷走狗,,,pending,,/characters/376/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-f6844c74914e3fe57a93,characters,朝廷走狗,,,name,朝廷走狗,朝廷走狗 → 波尔托斯 / Porthos [proposed],FR,朝廷走狗,枢机卫兵,Cardinal's Guard,implemented,,/characters/376/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-ffa2fd35c5072a268e41,characters,霍青桐,,,name,霍青桐,霍青桐 → 米莱狄 / Milady de Winter [proposed],FR,霍青桐,米莱狄,Milady de Winter,implemented,,/characters/377/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-9b15bad3024a810af6f2,characters,张召重,,,name,张召重,张召重 → 罗什福尔 / Rochefort [proposed],"CN,FR",张召重,罗什福尔,Rochefort,implemented,,/characters/378/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1f01892c79e5db9ad1bd,characters,炼狱张召重,,,name,炼狱张召重,炼狱张召重 → 罗什福尔 / Rochefort [proposed],"CN,FR",张召重,罗什福尔,Rochefort,implemented,,/characters/379/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -23900,9 +24060,9 @@ copy-712d1fb30174fdfc6b55,maps,杭州酒楼,,,description,,,,一个五大三粗�
 copy-feee6a0064c8df7379e9,maps,杭州酒楼,,,description,,,,石清，一个儒雅的剑客。,,,pending,,/maps/108/locations/3/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a202caa17b7a9cff6092,maps,杭州酒楼,,,description,,,,灵鹫宫出门收贡礼的人,,,pending,,/maps/108/locations/4/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-54736d3b9e30524da37c,maps,杭州酒楼,,,description,,,,返回杭州,,,pending,,/maps/108/locations/5/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-c3b1e5169cb0985b9436,maps,六和塔,,,name,,,,六和塔,,,pending,,/maps/109/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-d3b28ed6eafe79196011,maps,六和塔,,,description,,,,你来到杭州六和塔前，此处有众多官兵把守，戒备森严。,,,pending,,/maps/109/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-bc93e3e04bce4bfd5071,maps,六和塔,,,description,,,,红花会四当家文泰来被关押在此。,,,pending,,/maps/109/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-c3b1e5169cb0985b9436,maps,六和塔,,,name,,,,六和塔,枢机塔,Cardinal's Tower,implemented,,/maps/109/name,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-d3b28ed6eafe79196011,maps,六和塔,,,description,,,,你来到杭州六和塔前，此处有众多官兵把守，戒备森严。,罗什福尔的卫兵在此关押一名信使。达达尼昂有事找他们。,Rochefort's guards hold a courier here. D'Artagnan has business with them.,implemented,,/maps/109/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-bc93e3e04bce4bfd5071,maps,六和塔,,,description,,,,红花会四当家文泰来被关押在此。,原剧情窗口内，营救事件每次有50%概率出现。,The rescue encounter has a 50% chance while its original story window remains open.,implemented,,/maps/109/locations/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-f15dc68492c342ba0e48,maps,六和塔,,,description,,,,岳飞元帅埋骨之地有事情发生！,,,pending,,/maps/109/locations/1/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-85aa7da765d645c81949,maps,六和塔,,,description,,,,夜黑风高，闹鬼啦！,,,pending,,/maps/109/locations/1/events/0/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-040925ea04813770ad0d,maps,六和塔,,,description,,,,衢州石梁派,,,pending,,/maps/109/locations/2/description,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
@@ -25859,6 +26019,7 @@ copy-a2e5cdae6898fdcfb0bb,maps,万劫谷/返回,,,display_label,,,,返回,世界
 copy-0efb82dd83b778617cf2,maps,南贤居/南贤,,,display_label,,,,南贤,格林,Grimm,implemented,,/maps/82/locations/0/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-c0670dba07a2440ed589,maps,南贤居/木头人,,,display_label,,,,木头人,训练假人,Training Dummy,implemented,,/maps/82/locations/1/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-b65f850c6df01548e89a,maps,南贤居/返回,,,display_label,,,,返回,世界地图,World map,implemented,,/maps/82/locations/2/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-279d48583be1d22f5710,maps,六和塔/朝廷走狗,,,display_label,,,,朝廷走狗,枢机卫兵,Cardinal's Guard,implemented,,/maps/109/locations/0/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-4a78189fe848505316a4,maps,哈萨克部落/李文秀,,,display_label,,,,李文秀,杜尔西内娅,Dulcinea,implemented,,/maps/130/locations/0/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d5b1d8cc0cba5977c41d,maps,高昌迷宫/陈达海,,,display_label,,,,陈达海,堂吉诃德,Don Quixote,implemented,,/maps/131/locations/0/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-d54e90293e54307dc48e,maps,小村/南贤居,,,display_label,,,,南贤居,格林居所,Grimm's home,implemented,,/maps/145/locations/0/id,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3

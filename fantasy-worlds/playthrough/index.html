@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Storybound · 游玩实录</title><link rel="stylesheet" href="report.css"></head>
+<body><main><nav><a href="../game/">进入游戏 / Play</a> · <a href="../review/">文案对照 / Copy review</a></nav>
+<h1>前三条故事线 · 游玩实录</h1>
+<p>这是一份实际操作记录。使用之前正常游玩的普通难度存档，从出村培养完成后开始；没有编辑属性、剧情标志或战斗结果。不是全新开局、困难通关或完整游戏通关。</p>
+<section id="summary" aria-label="实测结果"></section>
+<section class="paper"><h2>这次发现与改善</h2><ul>
+<li>西班牙：保留夜间20%、营地30%、废墟50%的事件概率与60信任招募门槛。招到杜尔西内娅后实际穿装备、分配点数、设置专精、研习血棘飞矢；调至第二位，8次结伴练习后确实获得研习经验。</li>
+<li>法国：补齐商队、运河镇→塔楼→守卫的真实导航，三场战斗与回营地的步骤。米莱狄、达达尼昂真正入队；获救信使不计入队友。</li>
+<li>意大利：前两战通过，最后单人战两次落败。期间正常买药、完成48次练习，主角12→13级；低级练习效率有限。柔云剑术教材需要60剑术，本次主角不满足，不能把拿到教材当成已经学会。</li>
+<li>意大利原数据的失败会关闭渡口入口。指引已提前提示单人战、存档与原失败后果；保留原条件，没有自动解锁或补发匹诺曹。</li>
+<li>实际遇到格林来信的4句中文，已改成英文与中文对照，并重新走完前两条路线验证。信件仍提示回访格林可能关闭未完事件。</li>
+<li>性能：固定内容表的显示投影按会话复用，角色与背包继续实时更新；切语言和世界时隔离。当前每次宿主响应仍携带完整内容表，后续可单独优化接口。下方数字只代表本机观测，不代表手机帧率。</li>
+</ul><div id="performance"></div></section>
+<section class="paper"><h2>待继续解决</h2><p>意大利单人决战尚未过关，需要更适合的培养与补给路线；不通过修改敌人数值解决。稻草人解密分支本次未走，不算已测试。手机触控实机、困难难度三线连续通关也未验证。</p><p>本文保留实际失败和重读记录；此前试跑中的中文漏句可以在完整原始证据中看到，成功复测的对白以当前对照记录为准。</p></section>
+<section class="paper"><h2>按实际发生顺序查看</h2><div class="filters"><label>语言 <select id="language"><option value="zh-CN">中文对照</option><option value="en">American English</option></select></label><label>路线 <select id="stage"><option value="all">全部</option><option value="spain">西班牙</option><option value="france">法国</option><option value="italy">意大利</option><option value="recovery">失败后培养</option></select></label><label>搜索 <input id="search" type="search" placeholder="人物、对白、物品或地点"></label></div><p id="count" role="status"></p><div id="events"></div></section>
+<p><a href="data.json" download>下载整理记录</a> · <a href="observations.json" download>下载完整原始证据（含战斗事件、操作耗时与失败）</a></p><p id="source"></p>
+<section class="paper"><h2>下载真实实测存档</h2><p>这是本次普通难度实测旅程。可在游戏的导入功能中查看；请先导出自己的旅程，再导入实测档。</p><p><a href="checkpoints/start.json" download>本次起点（已完成教学培养）</a> · <a href="checkpoints/spain-trained.json" download>杜尔西内娅培养后</a> · <a href="checkpoints/france-complete.json" download>法国线完成后</a> · <a href="checkpoints/italy-ready.json" download>意大利事件前</a> · <a href="checkpoints/italy-trained.json" download>48次练习后</a> · <a href="checkpoints/manifest.json">校验值</a></p></section>
+</main><script type="module" src="report.mjs"></script></body></html>
