@@ -9,6 +9,7 @@ let activeLanguage='en';
 const fantasyChinese:Record<string,string>={'已切换当前运行内功。':'已切换当前主专精。','停止主运内功':'卸下主专精','切换主运内功':'更换主专精','同时主运一门':'同时装备一个主专精','设为主运':'装备为主专精','停止主运':'卸下主专精','当前运行心法':'当前主专精','主运功法':'主专精','外功招式':'主动技能','武功':'技艺','武学':'技艺','功法':'技艺','内功':'被动专精','心法':'专精','主运':'装备主专精','内力':'能量','秘籍':'卷轴','修炼':'研习','拳掌':'拳套','奇门':'法术','刀法':'重武器','门派':'学派','江湖':'故事世界','师父':'导师'};
 let contentTerms:Array<[string,string]>=[];
 export function setUiDisplayLabels(labels:Record<string,string>={},catalog?:DisplayCatalog){
+  if(contentLabels===labels&&displayCatalog===catalog)return;
   contentLabels=labels;
   displayCatalog=catalog;
   contentTerms=Object.entries(labels).filter(([source])=>cjk.test(source)&&source.length<48).sort((a,b)=>b[0].length-a[0].length);

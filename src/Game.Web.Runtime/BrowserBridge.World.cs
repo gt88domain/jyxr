@@ -15,7 +15,8 @@ internal sealed partial class BrowserRuntimeSession
         if (_session is null || _pack["chapterGuide"]?["story"] is not JsonObject guide) return null;
         return new
         {
-            completedStories = (guide["trackedStories"]?.AsArray() ?? []).Select(n => n!.GetValue<string>())
+            completedStories = new[] { guide }.Concat((_pack["chapterGuide"]?["stories"]?.AsArray() ?? []).OfType<JsonObject>())
+                .SelectMany(g => (g["trackedStories"]?.AsArray() ?? []).Select(n => n!.GetValue<string>())).Distinct(StringComparer.Ordinal)
                 .Where(_session.State.Story.IsStoryCompleted).ToArray(),
             trust = guide["trustTarget"] is { } target ? _session.State.Adventure.GetFavorability(target.GetValue<string>()) : (int?)null
         };

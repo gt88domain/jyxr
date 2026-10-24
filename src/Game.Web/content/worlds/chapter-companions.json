@@ -939,42 +939,6 @@
         ]
       }
     ],
-    "鸳鸯刀正_风陵渡胜": [
-      {
-        "start": 0,
-        "expectedCount": 4,
-        "lines": [
-          {
-            "speaker": "主角",
-            "text": {
-              "en": "That settles it.",
-              "zh-CN": "这下，总算解决了。"
-            }
-          },
-          {
-            "speaker": "袁冠南",
-            "text": {
-              "en": "Keep the blades. I've found something more interesting than another argument over them.",
-              "zh-CN": "刀就交给你们吧。我找到了比争它们更有趣的事。"
-            }
-          },
-          {
-            "speaker": "萧中慧",
-            "text": {
-              "en": "And what would that be?",
-              "zh-CN": "是什么呢？"
-            }
-          },
-          {
-            "speaker": "袁冠南",
-            "text": {
-              "en": "A proper adventure. May Pinocchio join you?",
-              "zh-CN": "一次像样的冒险。愿意带上匹诺曹吗？"
-            }
-          }
-        ]
-      }
-    ],
     "bixuejianShyou_脱险": [
       {
         "start": 2,
@@ -1126,49 +1090,6 @@
             "text": {
               "en": "Thank you, Dorothy.",
               "zh-CN": "谢谢你，多萝西。"
-            }
-          }
-        ]
-      }
-    ],
-    "书剑恩仇录_庖丁解牛": [
-      {
-        "start": 2,
-        "expectedCount": 6,
-        "lines": [
-          {
-            "speaker": "张召重",
-            "text": {
-              "en": "Put down your weapons. You're outnumbered.",
-              "zh-CN": "放下武器。你们的人手，可不够。"
-            }
-          },
-          {
-            "speaker": "霍青桐",
-            "text": {
-              "en": "Then you'll have no trouble getting past us, will you?",
-              "zh-CN": "那想必，过我们这一关很容易吧？"
-            }
-          },
-          {
-            "speaker": "主角",
-            "text": {
-              "en": "We could use another pair of hands.",
-              "zh-CN": "我们还真需要一位帮手。"
-            }
-          },
-          {
-            "speaker": "陈家洛",
-            "text": {
-              "en": "D'Artagnan, reporting for trouble. I hope you saved some for me.",
-              "zh-CN": "达达尼昂，前来凑个热闹。希望，你们给我留了一点麻烦。"
-            }
-          },
-          {
-            "speaker": "主角",
-            "text": {
-              "en": "You're just in time.",
-              "zh-CN": "来得正好。"
             }
           }
         ]

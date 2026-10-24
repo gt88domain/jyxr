@@ -2,6 +2,16 @@ import assert from 'node:assert/strict';
 import {test} from 'node:test';
 import {projectPresentation} from '../src/presentation.ts';
 const catalog={schemaVersion:1,byId:{'野球拳':{name:"Scrapper's Fist",sourceName:'野球拳'},'南贤':{name:'Grimm',sourceName:'南贤'},'草帽':{name:'Straw Hat',description:'A hat.',sourceName:'草帽'}},text:{'南贤':'Grimm','野球拳':"Scrapper's Fist",'草帽':'Straw Hat'}};
+test('immutable content reuses its view while live party state and languages remain separate',()=>{
+ const pack={title:'南贤',displayCatalog:catalog};
+ const first=projectPresentation({pack,hero:{id:'主角',name:'Wren',hp:40}},catalog);
+ const second=projectPresentation({pack,hero:{id:'主角',name:'Wren',hp:12}},catalog);
+ assert.equal(first.pack,second.pack);assert.equal(second.hero.hp,12);assert.notEqual(first.hero,second.hero);
+ const chinese={...catalog,text:{...catalog.text,'南贤':'格林'}};
+ const switched=projectPresentation({pack},chinese);
+ assert.equal(switched.pack.title,'格林');assert.notEqual(switched.pack,first.pack);
+ assert.equal(pack.title,'南贤');assert.equal(first.pack.displayCatalog,catalog);
+});
 test('presentation translates labels without modifying rule references or input',()=>{
  const source={hero:{id:'主角',name:'南贤'},characters:[{id:'南贤',name:'南贤'}],skill:{id:'野球拳',name:'野球拳',skillName:'野球拳',skillId:'野球拳'},equipment:{definitionId:'草帽',name:'草帽',description:'旧描述'},dialogue:{speaker:'南贤',text:'Pending source dialogue.'},command:{type:'equip',itemId:'草帽',target:'南贤',call:"skill('野球拳')"}};
  const before=structuredClone(source),view=projectPresentation(source,catalog);

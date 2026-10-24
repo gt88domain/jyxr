@@ -85,6 +85,7 @@ interface Exports {
 }
 let api: Exports;
 let sessionEpoch=0;
+let sessionPack:ContentPack|undefined;
 function current(epoch:number){if(epoch!==sessionEpoch)throw new Error('会话已切换，旧操作结果已忽略。');}
 export async function inspectEquipment(characterId: string, entryNumber: number, catalog?:DisplayCatalog): Promise<EquipmentPreview> {
   const epoch=sessionEpoch;
@@ -100,9 +101,14 @@ export async function inspectCompanionConditions(): Promise<Record<string, boole
 const profileCache = new Map<string, string>();
 const blockedProfiles = new Set<string>();
 declare global { interface Window { loadJyxrRuntime: () => Promise<{getConfig: () => {mainAssemblyName: string}; getAssemblyExports: (name: string) => Promise<any>}>; } }
-function decode(value: string): Result {
+function decode(value: string,epoch=sessionEpoch): Result {
+  current(epoch);
   const result = JSON.parse(value) as Result;
   if(!result||typeof result.ok!=='boolean'||!result.state||typeof result.state.pack?.id!=='string'||typeof result.state.phase!=='string'||(result.state.phase!=='title'&&!Array.isArray(result.state.map?.locations)))throw new Error('游戏返回的数据结构无效。');
+  // The host's pack is fixed until Initialize. Reuse it across responses so
+  // presentation and locale work do not rebuild the same content tables.
+  sessionPack??=result.state.pack;
+  result.state.pack=sessionPack;
   const map = result.state?.map;
   if (map) {
     map.name ||= map.id;
@@ -126,14 +132,15 @@ export async function initializePack(packId: string, prepared?: string): Promise
 }
 async function initializePackCore(packId:string,prepared:string|undefined,epoch:number):Promise<Result>{
   const content=prepared??await readPack(packId);current(epoch);
-  const result = decode(await api.Initialize(content));current(epoch);
+  sessionPack=undefined;
+  const result = decode(await api.Initialize(content),epoch);current(epoch);
   if (!result.ok) return result;
   try {
     const stored = await readProfile(packId);
     current(epoch);
     profileCache.delete(packId); blockedProfiles.delete(packId);
     if (stored) {
-      const loaded = decode(await api.InitializeProfile(stored));
+      const loaded = decode(await api.InitializeProfile(stored),epoch);
       current(epoch);
       if (!loaded.ok) {
         blockedProfiles.add(packId);
@@ -149,7 +156,7 @@ async function initializePackCore(packId:string,prepared:string|undefined,epoch:
         if (backup.browserSaveVersion === 1 || backup.browserSaveVersion === 2) {
           const owner = backup.browserSaveVersion === 2 ? backup.packId : 'jyx';
           if (owner !== packId || !backup.profile) throw new Error('Invalid legacy profile owner');
-          const migrated = decode(await api.InitializeProfile(JSON.stringify({schemaVersion: 1, packId, profile: backup.profile})));
+          const migrated = decode(await api.InitializeProfile(JSON.stringify({schemaVersion: 1, packId, profile: backup.profile})),epoch);
           current(epoch);
           if (!migrated.ok) {
             blockedProfiles.add(packId);
@@ -170,7 +177,7 @@ async function initializePackCore(packId:string,prepared:string|undefined,epoch:
 }
 export async function dispatch(command: GameCommand): Promise<Result> {
   assertCommand(command);const epoch=sessionEpoch;
-  const result=decode(await api.Dispatch(JSON.stringify(command)));current(epoch);
+  const result=decode(await api.Dispatch(JSON.stringify(command)),epoch);current(epoch);
   return persistProfile(result,epoch);
 }
 async function persistProfile(result: Result,epoch=sessionEpoch): Promise<Result> {
@@ -190,12 +197,12 @@ export async function exportSave(): Promise<string> {
   const epoch=sessionEpoch;
   const data = await api.ExportSave();
   current(epoch);
-  if (!JSON.parse(data).error) await persistProfile(decode(await api.Dispatch('{"type":"state"}')),epoch);
+  if (!JSON.parse(data).error) await persistProfile(decode(await api.Dispatch('{"type":"state"}'),epoch),epoch);
   return data;
 }
 export async function importSave(data: string, stored = false): Promise<Result> {
   const epoch=++sessionEpoch;
-  const result = decode(await (stored ? api.ImportStoredSave(data) : api.ImportSave(data)));
+  const result = decode(await (stored ? api.ImportStoredSave(data) : api.ImportSave(data)),epoch);
   current(epoch);
   if (result.ok && !stored) {blockedProfiles.delete(result.state.pack.id); profileCache.delete(result.state.pack.id);}
   return persistProfile(result,epoch);

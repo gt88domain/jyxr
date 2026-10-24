@@ -19,6 +19,7 @@
     <Compile Include="BattleItemSmoke.cs" />
     <Compile Include="CampaignSmoke.cs" />
     <Compile Include="WhiteHorseSmoke.cs" />
+    <Compile Include="ThreeStorySmoke.cs" />
     <Compile Include="OnboardingSmoke.cs" />
     <Compile Include="AcademyJourneySmoke.cs" />
     <Compile Include="TimeoutSmoke.cs" />

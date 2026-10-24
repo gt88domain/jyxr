@@ -124,14 +124,15 @@ def apply_skin(raw,skin,locale):
         if any(s.get('panel') not in [None,'loadout','equipment','cultivation','save'] for s in chapter_guide['steps']):raise ValueError('Chapter guide panel unsupported')
         maps={m['id']:{l['id'] for l in m.get('locations',[])} for m in package['maps']}
         routes=[s.get('route',[]) for s in chapter_guide['steps']]+list(chapter_guide['taskRoutes'].values())
-        if story:=chapter_guide.get('story'):
+        for story in ([chapter_guide['story']] if chapter_guide.get('story') else [])+chapter_guide.get('stories',[]):
             segments={s['name'] for f in package['storyScripts'].values() for s in f['segments']}
             tracked=story['trackedStories']
             if len(tracked)!=len(set(tracked)) or not set(tracked)<=segments:raise ValueError('Chapter story reference missing or duplicated')
-            if story['trustTarget'] not in {c['id'] for c in package['characters']}:raise ValueError('Chapter trust target missing')
+            if story.get('trustTarget') and story['trustTarget'] not in {c['id'] for c in package['characters']}:raise ValueError('Chapter trust target missing')
             stages=story['stages']
             if not stages or 'any' in stages[-1] or any('any' not in s for s in stages[:-1]) or len({s['id'] for s in stages})!=len(stages):raise ValueError('Chapter story stages need unique IDs and one final fallback')
             if any(not set(s.get('any',[]))<=set(tracked) for s in stages):raise ValueError('Chapter stage uses untracked story')
+            if any(not set(s.get('blockedBy',[]))<=set(tracked) for s in stages):raise ValueError('Chapter window uses untracked story')
             routes += [s['route'] for s in stages]
         academies=chapter_guide.get('academies',[])
         organizations=chapter_guide.get('organizations',[])

@@ -91,8 +91,10 @@ class ChapterTests(unittest.TestCase):
   for locale in ['en','zh-CN']:
    display,report=apply_skin(self.raw,self.skin,locale)
    self.assertTrue(report['sameGameplayFlow']);assert_same_flow(self.source,display)
-  # 128 earlier segments plus 13 lodge training/graduation segments.
-  self.assertEqual(len(self.skin['dialogueEdits'])+len(self.skin['segments']),141)
+  # Two old join scenes are now owned by the complete France/Italy chapter.
+  expected={n for n,s in self.segments.items() if n.startswith(('书剑恩仇录_', '鸳鸯刀')) and any(x['kind']=='dialogue' for x in s['steps'])}
+  self.assertFalse(expected-set(self.skin['dialogueEdits']))
+  self.assertIn('mainStory_黑暗的阴影',self.skin['dialogueEdits'])
   self.assertNotIn('倚天屠龙_张无忌',self.skin['dialogueEdits'])
 
 if __name__=='__main__':unittest.main()
