@@ -16,7 +16,7 @@ test('night hint reads actual clock and keeps the chance explicit',()=>{
 });
 test('low trust follows its own route without implying a failed recruit',()=>{
  const step=storyChapterStep(state(['白马啸西风_初次见面','白马啸西风_前往高昌'],55));
- assert.equal(step.storyStage,'alternate-warrens');assert.match(step.detail,/did not join/);
+ assert.equal(step.storyStage,'alternate-warrens');assert.match(step.detail,/trust was below 60/);
  assert.equal(step.route.find(r=>r.mapId==='大地图').locationId,'高昌迷宫');
 });
 test('reward, invitation and declined invitation have distinct next steps',()=>{

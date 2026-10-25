@@ -2,7 +2,7 @@
 import copy,json,sys,unittest
 from pathlib import Path
 WEB=Path(__file__).resolve().parents[1];sys.path.insert(0,str(WEB/'scripts'))
-from grimm_skin import apply_skin,assert_same_flow,load_skin
+from grimm_skin import apply_skin,assert_same_flow,compile_runtime_package,load_skin
 
 class WindriderTests(unittest.TestCase):
  @classmethod
@@ -64,5 +64,33 @@ class WindriderTests(unittest.TestCase):
   skin=copy.deepcopy(self.skin)
   skin['chapterGuide']['story']['trackedStories'].append('not-a-story')
   with self.assertRaisesRegex(ValueError,'Chapter story reference'):apply_skin(self.raw,skin,'en')
+
+ def test_spanish_roles_are_distinct_and_do_not_change_rule_names(self):
+  display,_=apply_skin(self.raw,self.skin,'en');runtime=compile_runtime_package(self.native,display,{k:v['en'] for k,v in self.skin.get('uiLabels',{}).items()})
+  self.assertEqual(runtime['characters'],self.native['characters'])
+  catalog=runtime['browser']['displayCatalog']['byCategory']['characters']
+  self.assertEqual(catalog['华辉']['name'],'Combat Trainer')
+  self.assertEqual(catalog['瓦耳拉齐']['name'],'Gines de Pasamonte')
+  self.assertEqual(catalog['计老人']['name'],'Curate Pero Perez')
+  cast=json.loads((WEB/'content/worlds/cast-map.json').read_text())['actors']
+  trainer=next(a for a in cast if a['legacyIdentity']=='华辉');thief=next(a for a in cast if a['legacyIdentity']=='瓦耳拉齐')
+  self.assertEqual(trainer['kind'],'archetype');self.assertIsNone(trainer['figureId'])
+  self.assertEqual(thief['figureId'],'es.gines-de-pasamonte')
+
+ def test_recovered_book_keeps_quest_behavior_and_storehouse_labels_agree(self):
+  display,_=apply_skin(self.raw,self.skin,'en')
+  book=next(i for i in display['items'] if i['id']=='河岳英灵集')
+  self.assertIn('Amadis of Gaul',book['name']);self.assertEqual(book['type'],'quest_item');self.assertEqual(book['useEffects'],[])
+  warehouse=next(m for m in display['maps'] if m['id']=='高昌迷宫')
+  world=next(m for m in display['maps'] if m['id']=='大地图')
+  destination=next(l for l in world['locations'] if l['id']=='高昌迷宫')
+  self.assertEqual(warehouse['name'],'Windmill Storehouse');self.assertEqual(destination['name'],warehouse['name'])
+
+ def test_new_spanish_dialogue_does_not_retain_the_white_horse_family_plot(self):
+  display,_=apply_skin(self.raw,self.skin,'en');segments={s['name']:s for f in display['storyScripts'].values() for s in f['segments']}
+  texts=' '.join(s['text'] for id,seg in segments.items() if id.startswith('白马啸西风_') for s in seg['steps'] if s['kind']=='dialogue')
+  for old in ['My parents','my teacher','Cardenio','Roque Guinart','banished','My teacher. Father Perez. Gone.']:
+   self.assertNotIn(old,texts)
+  self.assertIn('Gines',texts);self.assertIn('supplies',texts);self.assertIn('smoke',texts)
 
 if __name__=='__main__':unittest.main()

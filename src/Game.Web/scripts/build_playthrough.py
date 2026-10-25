@@ -100,9 +100,9 @@ def build(output, original, retest, before=None, after=None, knight=None):
         perf[name] = dict(ui={a: round(statistics.median(x['ms'] for x in p['ui'] if x['action'] == a), 1) for a in sorted({x['action'] for x in p['ui']})}, dispatchMedianMs=round(statistics.median(x['dispatchMs'] for x in p['runtime']), 1), parseMedianMs=round(statistics.median(x['parseMs'] for x in p['runtime']), 1), responseBytes=p['runtime'][0]['bytes'], longTasks=len(p['longTasks']))
     result = dict(title='Three-story playthrough', sourceSave=second['sourceSave'], sourceSha256=second['sourceSha256'], contentSha256=second['contentSha256'], rows=rows, performance=perf,
                   deploymentAudit=dict(requiredIds=sorted(required),observedIds=observed,matched=formation_matched),
-                  outcomes=[dict(country='Spain', original='白马啸西风', status='cleared', companions=['Dulcinea'], note='Normal difficulty; actual reward, equipment, mastery, spell study, formation, and save reload verified.'),
-                            dict(country='France', original='书剑恩仇录', status='cleared' if formation_matched else 'needs-review', companions=['Milady de Winter', "D’Artagnan"], note='Ending and required deployment verified; this does not establish original-engine difficulty parity.' if formation_matched else 'Ending and rewards reached, but the required final deployment was not enforced. This is NOT complete combat or difficulty validation. The host defect remains unresolved.'),
-                            dict(country='Italy', original='鸳鸯刀', status='blocked', companions=[], note='First two fights won twice; the original solo finale lost twice. Pinocchio has NOT been recruited. Blue Fairy is a story ally.')])
+                  outcomes=[dict(country='Spain', chapter='风车风波', original='白马啸西风', status='cleared', companions=['Dulcinea'], note='Rewritten windmill story; normal difficulty, actual rewards, equipment, mastery, spell study and reload verified. The knight ending is a separate observed trial.'),
+                            dict(country='France', chapter='枢机主教的账册', original='书剑恩仇录', status='cleared' if formation_matched else 'needs-review', companions=['Milady de Winter', "D’Artagnan"], note='Ending and required deployment verified; this does not establish original-engine difficulty parity.' if formation_matched else 'Ending and rewards reached, but the required final deployment was not enforced. This is NOT complete combat or difficulty validation. The host defect remains unresolved.'),
+                            dict(country='Italy', chapter='双印记', original='鸳鸯刀', status='blocked', companions=[], note='Earlier trial: first two fights won twice; the solo finale lost twice. Pinocchio has NOT been recruited. Blue Fairy is a story ally.')])
     if alternate:
         result['alternate'] = dict(passed=True, sourceSave=alternate['sourceSave'], sourceSha256=alternate['sourceSha256'], battles=[e['data']['id'] for e in alternate['events'] if e['kind']=='battle-end'], checkpoints=alternate['checkpoints'])
     output = Path(output)
@@ -110,7 +110,7 @@ def build(output, original, retest, before=None, after=None, knight=None):
     (output / 'data.json').write_text(json.dumps(result, ensure_ascii=False, separators=(',', ':')) + '\n')
     # Full evidence includes the failed trial and the subsequent successful
     # two-story retest. The smaller viewer never needs to parse combat telemetry.
-    (output / 'observations.json').write_text(json.dumps(dict(initial=first, retest=second, knight=alternate), ensure_ascii=False, separators=(',', ':')) + '\n')
+    (output / 'observations.json').write_text(json.dumps(dict(schemaVersion=2, evidenceScopes={'initial':'Historical full trial, used for the earlier Italy attempt; its old Spanish dialogue is not current chapter copy.', 'retest':'Current Spanish heroine chapter, training and France follow-up trial.', 'knight':'Current Spanish independent knight chapter trial.'}, initial=first, retest=second, knight=alternate), ensure_ascii=False, separators=(',', ':')) + '\n')
     saves = output / 'checkpoints'
     saves.mkdir(exist_ok=True)
     manifest = []
