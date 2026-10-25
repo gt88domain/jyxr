@@ -281,7 +281,7 @@ home,home,home,actor-4ea140588150,system,,home,Home marker,classified,,,False,,
 华山高手,华山高手,华山高手,actor-cd7d55a062c1,archetype,JP,组织成员,Guild member,classified,,,False,JP,
 华服女子,华服女子,华服女子,actor-0c8a99eb994a,archetype,GB,当地居民,Town resident,classified,,,False,GB,
 华赫艮,华赫艮,华赫艮,actor-add436042197,named,NO,赫尔莫德,Hermod,proposed,Norse mythology,genre,False,NO,story-role-review
-华辉,华辉,华辉,actor-7e01a9550608,named,ES,卡德尼奥,Cardenio,proposed,Don Quixote / Miguel de Cervantes,genre,False,ES,story-role-review
+华辉,华辉,华辉,actor-7e01a9550608,archetype,ES,战技教官,Combat Trainer,classified,,,False,ES,
 卓一航,卓一航,卓一航,actor-b6cbb3b2c4d4,named,CN,黄天化,Huang Tianhua,proposed,Chinese myth and Investiture of the Gods,regional,False,CN,"regional-familiarity-review,legacy-form-label-review,story-role-review"
 忘情卓一航,卓一航,卓一航,actor-b6cbb3b2c4d4,named,CN,黄天化,Huang Tianhua,proposed,Chinese myth and Investiture of the Gods,regional,False,CN,"regional-familiarity-review,legacy-form-label-review,story-role-review"
 古墓叛徒,古墓叛徒,古墓叛徒,actor-29ca68b4ae05,named,GB,安妮·邦尼,Anne Bonny,proposed,British pirate history,genre,False,GB,story-role-review
@@ -419,7 +419,7 @@ home,home,home,actor-4ea140588150,system,,home,Home marker,classified,,,False,,
 玄难,玄难,玄难,actor-05e8e407418c,named,NO,乌特迦·洛基,Utgard-Loki,proposed,Norse mythology,genre,False,NO,story-role-review
 王家老爷,王家老爷,王家老爷,actor-079409595a1f,named,GB,梅林,Merlin,proposed,Arthurian legend,wide,False,GB,story-role-review
 班淑娴,班淑娴,班淑娴,actor-c8b7c662c64a,named,GB,伊索尔德,Isolde,proposed,Arthurian legend,genre,False,GB,story-role-review
-瓦耳拉齐,瓦耳拉齐,瓦耳拉齐,actor-aa6c1f76b11f,named,ES,罗克·吉纳特,Roque Guinart,proposed,Don Quixote / Miguel de Cervantes,genre,False,ES,story-role-review
+瓦耳拉齐,瓦耳拉齐,瓦耳拉齐,actor-aa6c1f76b11f,named,ES,希内斯·德·帕萨蒙特,Gines de Pasamonte,proposed,Don Quixote / Miguel de Cervantes,genre,False,ES,story-role-review
 男子,男子,男子,actor-a5f1b174c659,archetype,NO,当地居民,Town resident,classified,,,False,NO,
 白展堂,白展堂,白展堂,actor-5073a6e10845,named,GB,吉姆·霍金斯,Jim Hawkins,proposed,British literature / Treasure Island,genre,False,GB,story-role-review
 白煞,白煞,白煞,actor-b54243f566b0,named,CN,玉皇大帝,The Jade Emperor,proposed,Journey to the West / Wu Cheng'en,genre,False,CN,story-role-review

@@ -5,8 +5,8 @@ const el=(tag,text,parent,cls)=>{const n=document.createElement(tag);if(text!==u
 const locale=()=>byId('language').value;
 const label=value=>typeof value==='object'&&value!==null?value[locale()]||value.en||'':String(value??'');
 const hours={'子':'11 p.m.–1 a.m.','丑':'1–3 a.m.','寅':'3–5 a.m.','卯':'5–7 a.m.','辰':'7–9 a.m.','巳':'9–11 a.m.','午':'11 a.m.–1 p.m.','未':'1–3 p.m.','申':'3–5 p.m.','酉':'5–7 p.m.','戌':'7–9 p.m.','亥':'9–11 p.m.'};
-for(const o of data.outcomes){const a=el('article',undefined,byId('summary'),o.status);el('h2',`${o.country} · ${o.original}`,a);el('strong',o.status==='cleared'?'已走通 / Cleared':o.status==='needs-review'?'结局已到达，参战规则待修 / Needs review':'未走通 / Blocked',a);el('p',o.note,a);el('p',`实际新增队友：${o.companions.join(', ')||'无；匹诺曹尚未入队'}`,a);}
-if(data.alternate){byId('alternate-result').textContent='堂吉诃德分支已普通难度实战通过：支持女主但好感仅55→未招到女主→地宫两战→诗集→20%骑士事件→邀请入队（道德−2）→完整存读档。此分支从另一份有校验的真实培养档开始，不是女主结局后继续招第二个人。';}
+for(const o of data.outcomes){const a=el('article',undefined,byId('summary'),o.status);el('h2',`${o.country} · ${o.chapter||o.original}`,a);el('strong',o.status==='cleared'?'已走通 / Cleared':o.status==='needs-review'?'结局已到达，参战规则待修 / Needs review':'未走通 / Blocked',a);el('p',o.note,a);el('p',`实际新增队友：${o.companions.join(', ')||'无；匹诺曹尚未入队'}`,a);}
+if(data.alternate){byId('alternate-result').textContent='新版骑士分支已普通难度实战通过：支持女主但好感仅55→各自追查→粮仓两战与误会澄清→追回《阿马迪斯》→20%骑士事件→邀请入队（道德−2）→完整存读档。此分支从另一份有校验的真实培养档开始，不是女主结局后继续招第二个人。';}
 const perf=data.performance;
 if(perf.before&&perf.after){
  const t=el('table',undefined,byId('performance'));const head=el('tr',undefined,el('thead',undefined,t));['同机观测中位数（ms）','改善前','改善后'].forEach(s=>el('th',s,head));

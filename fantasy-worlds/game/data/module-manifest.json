@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "worlds",
   "runtimePackId": "jyx",
-  "version": "classic-organizations-1",
+  "version": "spanish-windmill-1",
   "title": "Storybound · Grimm's Request",
   "locale": "en",
   "inventory": "../jyx/assets.json",

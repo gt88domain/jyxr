@@ -6,13 +6,13 @@
   },
   {
     "name": "spain-trained",
-    "sha256": "15e2d75d666258bd8ecc973b570aae2fa58f9a2f66fd45f1e393333a8e994fe0",
-    "bytes": 56329
+    "sha256": "717bf67216a8c9e1f27241eb2c174a76ed4fce8dcdd8bb2b0baa62e7f5cfb2d7",
+    "bytes": 56604
   },
   {
     "name": "france-complete",
-    "sha256": "15499c6d20a669f764d3028810f75d835c1d3e78b81d9d82ba3bc08b26c9c83c",
-    "bytes": 59510
+    "sha256": "af66910566b7c54078192d6d28ea55ee045bde7119b10e8e9bc8b692557fd6da",
+    "bytes": 59805
   },
   {
     "name": "italy-ready",
@@ -31,7 +31,7 @@
   },
   {
     "name": "knight-ending",
-    "sha256": "3446f962acc436303fd090022e6820e09c72a710f7c665d2f7ecf485dd1e795f",
-    "bytes": 56258
+    "sha256": "1b0774b13f14e804eec5fbe270974e8536bde2983ce9ec6a182670e53c1bd214",
+    "bytes": 57232
   }
 ]
