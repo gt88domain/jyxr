@@ -23,6 +23,39 @@ public sealed class BattleService
     public BattleState BuildBattleState(SpecialBattleRequest request) =>
         _stateFactory.BuildBattleState(request);
 
+    /// <summary>
+    /// Fills an ordinary battle's deployment slots in party order, reserving
+    /// places for required members before considering optional companions.
+    /// </summary>
+    public IReadOnlyList<string> SelectDefaultCombatants(string battleId)
+    {
+        var battle = _session.ContentRepository.GetBattle(battleId);
+        var playerTeam = _session.Config.BattlePlayerTeam;
+        var slots = battle.Participants.Count(p =>
+            p.Team == playerTeam && p.PartyIndex is not null && p.CharacterId is null);
+        // Scripted battles can supply the entire cast (including a temporary
+        // hero form) while carrying old required-party metadata.
+        if (slots == 0) return [];
+        var fixedIds = battle.Participants
+            .Where(p => p.Team == playerTeam && !string.IsNullOrWhiteSpace(p.CharacterId))
+            .Select(p => p.CharacterId!).ToHashSet(StringComparer.Ordinal);
+        var members = _session.State.Party.Members
+            .Where(c => !fixedIds.Contains(c.Id)).Select(c => c.Id).ToArray();
+        // Match explicit deployment: only members actually in the active party
+        // are mandatory. A story requirement must not create a missing recruit.
+        var selected = battle.RequiredCharacterIds.Where(id => members.Contains(id))
+            .ToHashSet(StringComparer.Ordinal);
+        if (selected.Count > slots)
+            throw new InvalidOperationException($"Battle '{battleId}' has more required party members than deployment slots.");
+        foreach (var id in members)
+        {
+            if (selected.Count >= slots) break;
+            selected.Add(id);
+        }
+        // Keep formation order; reserving a place must not reorder the saved party.
+        return members.Where(selected.Contains).ToArray();
+    }
+
     public OrdinaryBattleVictorySettlement PreviewVictorySettlement(
         BattleState state,
         SpecialBattleRequest request) =>

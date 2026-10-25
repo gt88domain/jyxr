@@ -17,7 +17,7 @@ export const uiSurfaces = [
   ['equipment','Legacy equipment detail','panels.ts','retained'],
   ['cultivation','Legacy training detail','panels.ts','retained'],
   ['inventory','Bag / item use','panels.ts','later'],
-  ['party','Roster / deployment','panels.ts','later'],
+  ['party','Roster / deployment','party-roster.ts','replaced'],
   ['quests','Goals / journal','journey-panel.ts','replaced'],
   ['chest','Storage','panels.ts','later'],
   ['settings','Preferences / sound','panels.ts','later'],

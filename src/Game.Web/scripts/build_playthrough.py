@@ -110,11 +110,11 @@ def build(output, original, retest, before=None, after=None, knight=None):
     (output / 'data.json').write_text(json.dumps(result, ensure_ascii=False, separators=(',', ':')) + '\n')
     # Full evidence includes the failed trial and the subsequent successful
     # two-story retest. The smaller viewer never needs to parse combat telemetry.
-    (output / 'observations.json').write_text(json.dumps(dict(schemaVersion=2, evidenceScopes={'initial':'Historical full trial, used for the earlier Italy attempt; its old Spanish dialogue is not current chapter copy.', 'retest':'Current Spanish heroine chapter, training and France follow-up trial.', 'knight':'Current Spanish independent knight chapter trial.'}, initial=first, retest=second, knight=alternate), ensure_ascii=False, separators=(',', ':')) + '\n')
+    (output / 'observations.json').write_text(json.dumps(dict(schemaVersion=2, evidenceScopes={'initial':'Historical full trial, used for the earlier Italy attempt; its old Spanish and French dialogue is not current chapter copy.', 'retest':'Current Spanish heroine chapter, training and French ledger trial with required deployment enforced.', 'knight':'Spanish independent knight chapter trial; that dialogue is unchanged in this batch.'}, initial=first, retest=second, knight=alternate), ensure_ascii=False, separators=(',', ':')) + '\n')
     saves = output / 'checkpoints'
     saves.mkdir(exist_ok=True)
     manifest = []
-    for name, path in [('start', ROOT / second['sourceSave']), ('spain-trained', Path(retest).parent / 'spain-trained.json'), ('france-complete', Path(retest).parent / 'france-complete.json'), ('italy-ready', Path(original).parent / 'italy-ready.json'), ('italy-trained', Path(original).parent / 'italy-trained.json')]:
+    for name, path in [('start', ROOT / second['sourceSave']), ('spain-trained', Path(retest).parent / 'spain-trained.json'), ('france-finale-ready', Path(retest).parent / 'france-finale-ready.json'), ('france-complete', Path(retest).parent / 'france-complete.json'), ('italy-ready', Path(original).parent / 'italy-ready.json'), ('italy-trained', Path(original).parent / 'italy-trained.json')]:
         raw = path.read_bytes()
         (saves / (name + '.json')).write_bytes(raw)
         manifest.append(dict(name=name, sha256=hashlib.sha256(raw).hexdigest(), bytes=len(raw)))

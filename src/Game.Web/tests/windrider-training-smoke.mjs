@@ -53,7 +53,7 @@ async function practice(){
 }
 try{
  await page.goto(report.baseURL);await page.locator('[data-action="new"]').waitFor({timeout:120000});
- for(const [name,stage] of [['start','meet'],['met','night'],['night','camp-conflict'],['recruited','warrens'],['alternate-ready','alternate-warrens'],['knight-ending','knight-ending']]){
+ for(const [name,stage] of [['start','meet'],['met','night'],['night','camp-conflict'],['recruited','warrens'],['alternate-ready','alternate-warrens'],['knight-ending','france-meet']]){
   await load(name);assert.equal(await page.locator('[data-story-stage]').getAttribute('data-story-stage'),stage);
   const before=await gameSave();
   await click('[data-action="quests"]');await audit();await closeModal();
@@ -65,17 +65,17 @@ try{
  }
  pass('six real progress checkpoints show the correct branch and destination without advancing time or RNG');
  await load('dulcinea-ending');
- assert.equal(await page.locator('[data-story-stage]').getAttribute('data-story-stage'),'dulcinea-ending');
+ assert.equal(await page.locator('[data-story-stage]').getAttribute('data-story-stage'),'france-meet');
  await page.setViewportSize({width:375,height:812});await noOverflow('chapter guidance on phone');
  await page.screenshot({path:output+'windrider-guide-mobile.png',fullPage:true});
  await click('[data-action="party"]');await audit();
  const card=page.locator('[data-roster-id="李文秀"]');
- assert.match(await card.locator('[data-companion-preparation]').innerText(),/Attribute points/);
+ assert.match(await card.locator('[data-companion-preparation]').innerText(),/Unspent points/);
  await click('[data-roster-id="李文秀"] [data-action="party-order"][data-index="1"]');
  assert.equal((await state()).party[1].definitionId,'李文秀');
  await click('[data-roster-id="李文秀"] [data-panel="equipment"]');
  assert.equal((await state()).managedCharacter.definitionId,'李文秀');
- assert.equal(await page.locator('[role="tab"][data-action="equipment"]').getAttribute('aria-selected'),'true');
+ assert.equal(await page.locator('#managed-character').inputValue(),(await state()).managedCharacter.id);
  let s=await state(),gear=s.inventory.find(i=>i.kind==='equipment'&&i.canEquip);
  if(!gear){
   const equipped=s.managedCharacter.equipment.find(x=>x.item);assert.ok(equipped);
@@ -84,7 +84,7 @@ try{
  }
  assert.ok(gear);await click(`[data-action="equip-item"][data-entry-number="${gear.entryNumber}"]`);
  assert.ok((await state()).managedCharacter.equipment.some(x=>x.item?.id===gear.id));
- await click('#game-modal [role="tab"][data-action="character"]');
+ await click('#game-modal [data-action="character"]');
  const points=(await state()).managedCharacter.unspentStatPoints;assert.ok(points>=30);
  for(let n=0;n<points;n++)await click('[data-action="allocate-stat"][data-stat="qimen"]');
  assert.equal((await state()).managedCharacter.unspentStatPoints,0);

@@ -8,8 +8,11 @@ page.on('pageerror',e=>errors.push(e.message));
 page.on('response',r=>{if(r.status()>=400)errors.push(`${r.status()} ${r.url()}`);});
 let failure;
 try{
+ const loaded=page.waitForResponse(r=>new URL(r.url()).pathname===new URL('data.json',base).pathname&&r.status()===200);
  await page.goto(base);await page.locator('#summary article').first().waitFor();
- assert.equal(await page.locator('#summary .cleared').count(),1);assert.equal(await page.locator('#summary .needs-review').count(),1);assert.equal(await page.locator('#summary .blocked').count(),1);
+ const data=await (await loaded).json();
+ assert.equal(data.deploymentAudit.matched,true,'France must use its actual required companions');
+ assert.equal(await page.locator('#summary .cleared').count(),2);assert.equal(await page.locator('#summary .needs-review').count(),0);assert.equal(await page.locator('#summary .blocked').count(),1);
  const compact=await page.locator('#events .event').count();
  await page.locator('#view').selectOption('full');assert.ok(await page.locator('#events .event').count()>compact);
  await page.locator('#stage').selectOption('knight');assert.match(await page.locator('#events').innerText(),/堂吉诃德/);
