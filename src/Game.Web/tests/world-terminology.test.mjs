@@ -1,6 +1,12 @@
 import assert from 'node:assert/strict';
 import {test} from 'node:test';
 import {translateUiText,setUiDisplayLabels} from '../src/ui/locale.ts';
+test('composite battle labels translate while preserving the player name',()=>{
+ assert.equal(translateUiText('我方 · 3人'),'Allies · 3');
+ assert.equal(translateUiText('对手 · 7人'),'Enemies · 7');
+ assert.equal(translateUiText('Wren · 请选择走位格'),'Wren · Choose a destination');
+ assert.equal(translateUiText('Storybound内容载入：513 名角色、158 门外功、347 件物品。'),'Storybound is ready.');
+});
 test('study scrolls stay distinct from manual controls and saves',()=>{
  assert.equal(translateUiText('秘籍'),'Training guides');
  assert.equal(translateUiText('手动战斗'),'Manual combat');

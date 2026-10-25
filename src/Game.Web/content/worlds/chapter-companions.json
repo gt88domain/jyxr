@@ -782,15 +782,15 @@
           {
             "speaker": "主角",
             "text": {
-              "en": "Dulcinea, I'll come with you. We can face them together.",
-              "zh-CN": "杜尔西内娅，我和你一起去。我们一起面对他们。"
+              "en": "We've compared notes. Let's go after that wagon together.",
+              "zh-CN": "线索已经对上了，一起去追那辆马车吧。"
             }
           },
           {
             "speaker": "李文秀",
             "text": {
-              "en": "Thank you. Let's go.",
-              "zh-CN": "谢谢。走吧。"
+              "en": "Good. I'll watch the road. You watch for anyone selling us another giant.",
+              "zh-CN": "好。我看路，你提防那些还想给我们介绍巨人的人。"
             }
           }
         ]

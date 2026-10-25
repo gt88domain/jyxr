@@ -14092,22 +14092,20 @@
       "legacyNames": [
         "华辉"
       ],
-      "kind": "named",
-      "status": "proposed",
-      "figureId": "es.cardenio",
+      "kind": "archetype",
+      "status": "classified",
+      "figureId": null,
       "name": {
-        "zh-CN": "卡德尼奥",
-        "en": "Cardenio"
+        "en": "Combat Trainer",
+        "zh-CN": "战技教官"
       },
       "primaryCountry": "ES",
       "relatedCountries": [
         "ES"
       ],
       "traveler": false,
-      "reviewFlags": [
-        "story-role-review"
-      ],
-      "selectionReason": "existing-figure-candidate",
+      "reviewFlags": [],
+      "selectionReason": "functional-training-role",
       "originalReason": null,
       "forms": [
         {
@@ -20818,10 +20816,10 @@
       ],
       "kind": "named",
       "status": "proposed",
-      "figureId": "es.roque-guinart",
+      "figureId": "es.gines-de-pasamonte",
       "name": {
-        "zh-CN": "罗克·吉纳特",
-        "en": "Roque Guinart"
+        "en": "Gines de Pasamonte",
+        "zh-CN": "希内斯·德·帕萨蒙特"
       },
       "primaryCountry": "ES",
       "relatedCountries": [
@@ -20831,7 +20829,7 @@
       "reviewFlags": [
         "story-role-review"
       ],
-      "selectionReason": "existing-figure-candidate",
+      "selectionReason": "authored-spanish-antagonist",
       "originalReason": null,
       "forms": [
         {

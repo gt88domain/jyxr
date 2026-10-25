@@ -4358,12 +4358,12 @@
       },
       "河岳英灵集": {
         "name": {
-          "en": "Heroes' Almanac",
-          "zh-CN": "群英年鉴"
+          "en": "Amadis of Gaul — Recovered Copy",
+          "zh-CN": "《阿马迪斯·德·高拉》追回的旧本"
         },
         "description": {
-          "en": "A quest item. Keep it for the related quest.",
-          "zh-CN": "任务道具，请保留用于对应任务。"
+          "en": "A recovered copy of a chivalric romance Don Quixote admires. Keep it for related quests. It is a book, not equipment or medicine.",
+          "zh-CN": "追回的一册骑士小说，是堂吉诃德推崇的读物。请保留用于相关任务；它是书籍，不是装备或药剂。"
         }
       },
       "五毒教信物": {

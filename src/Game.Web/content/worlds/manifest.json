@@ -2,18 +2,29 @@
   "schemaVersion": 1,
   "id": "worlds",
   "runtimePackId": "jyx",
-  "version": "classic-organizations-1",
+  "version": "spanish-windmill-1",
   "title": "Storybound · Grimm's Request",
   "locale": "en",
   "inventory": "../jyx/assets.json",
   "rules": "shared-modern-core",
   "app": {
-    "id": "jyxr-fantasy-worlds", "database": "jyxr-fantasy-worlds",
-    "preferencesKey": "jyxr-fantasy-worlds.preferences.v1", "features": [],
+    "id": "jyxr-fantasy-worlds",
+    "database": "jyxr-fantasy-worlds",
+    "preferencesKey": "jyxr-fantasy-worlds.preferences.v1",
+    "features": [],
     "externalLinks": [
-      {"label": "中文原版游戏", "url": "https://gt88domain.github.io/jyxr/"},
-      {"label": "新版中文文案", "url": "?lang=zh-CN"},
-      {"label": "English dialogue", "url": "?lang=en"}
+      {
+        "label": "中文原版游戏",
+        "url": "https://gt88domain.github.io/jyxr/"
+      },
+      {
+        "label": "新版中文文案",
+        "url": "?lang=zh-CN"
+      },
+      {
+        "label": "English dialogue",
+        "url": "?lang=en"
+      }
     ]
   },
   "localAssets": [
@@ -23,7 +34,12 @@
       "sha256": "c7cb728cc9e39b486f0263fce72ddf8185e9dcf421de17b48a4d4f2c01ab14a7",
       "localSource": "content/worlds/art/storybook-atlas.png"
     },
-    {"path": "art/worlds/grimm-portrait.png", "bytes": 2578580, "sha256": "9fe2cf45d8270c65363443f2cb40ba14fd106683bc59674ae3e479c76748616b", "localSource": "content/worlds/art/grimm-portrait.png"}
+    {
+      "path": "art/worlds/grimm-portrait.png",
+      "bytes": 2578580,
+      "sha256": "9fe2cf45d8270c65363443f2cb40ba14fd106683bc59674ae3e479c76748616b",
+      "localSource": "content/worlds/art/grimm-portrait.png"
+    }
   ],
   "source": {
     "sourceCommit": "624f4e87ae251f8e0162e90d1eda11a1ef386cd7",

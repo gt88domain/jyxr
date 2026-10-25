@@ -17,6 +17,9 @@ export function setUiDisplayLabels(labels:Record<string,string>={},catalog?:Disp
 function itemLabel(name:string){return categorizedDisplay(displayCatalog,['items'],name)?.name??translateUiText(name);}
 function skillLabel(name:string){return categorizedDisplay(displayCatalog,['externalSkills','internalSkills','specialSkills','legendSkills'],name)?.name??translateUiText(name);}
 const patterns:Array<[RegExp,(...parts:string[])=>string]>=[
+  [/^(我方|对手)\s*·\s*(\d+)人$/,(team,n)=>`${team==='我方'?'Allies':'Enemies'} · ${n}`],
+  [/^(.*?)\s*·\s*请选择走位格$/,(name)=>`${name} · Choose a destination`],
+  [/^(.*?)内容载入：\s*\d+\s*名角色、\s*\d+\s*门外功、\s*\d+\s*件物品。$/,(title)=>`${title} is ready.`],
   [/^天赋「([^」]+)」(?:\n([\s\S]*))?$/,(name,description)=>`Talent: ${translateUiText(name)}${description?`\n${translateUiText(description)}`:''}`],
   [/^(拳掌|剑|刀|奇门)系技能加成\s*([+−-][\d.]+%?)$/,(kind,amount)=>`${({'拳掌':'Gauntlets','剑':'Swordsmanship','刀':'Heavy Weapons','奇门':'Spells'} as Record<string,string>)[kind]} technique bonus ${amount}`],
   [/^奥义「([^」]+)」触发率\s*([+−-][\d.]+%?)$/,(name,amount)=>`Combo ${translateUiText(name)} trigger chance ${amount}`],

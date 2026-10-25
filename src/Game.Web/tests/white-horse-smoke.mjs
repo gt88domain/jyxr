@@ -78,7 +78,7 @@ async function travel(id){await world();return await visit(id);}
 try{
  await page.goto(report.baseURL);await page.locator('[data-action="new"]').waitFor({timeout:120000});
  await checkpoint('start');await travel('哈萨克部落');await visit('李文秀');await audit('first meeting in camp');
- assert.ok(observed.some(t=>t.includes("I'm Dulcinea")));
+ assert.ok(observed.some(t=>t.includes('Aldonza')&&t.includes('Dulcinea')));
  pass('chapter starts through the real camp entrance from an intact normal-growth checkpoint');
  for(let attempt=0;attempt<120&&!observed.includes('Until next time.');attempt++)await visit('李文秀');
  assert.ok(observed.includes('Until next time.'));

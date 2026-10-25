@@ -2929,12 +2929,12 @@
     },
     "高昌迷宫": {
       "name": {
-        "en": "Windmill Warrens",
-        "zh-CN": "风车迷窟"
+        "en": "Windmill Storehouse",
+        "zh-CN": "风车粮仓"
       },
       "description": {
-        "en": "Old passages beneath the dry plains. Follow landmarks, not confidence.",
-        "zh-CN": "旱原下的古老通道。跟着路标走，别只靠自信。"
+        "en": "An old windmill storehouse with fresh wagon tracks and an unusually large painted footprint.",
+        "zh-CN": "旧风车粮仓旁留着新车辙，门上还画了个大得出奇的脚印。"
       }
     },
     "回族部落": {
@@ -3692,12 +3692,12 @@
       },
       "高昌迷宫": {
         "name": {
-          "en": "Windmill Warrens",
-          "zh-CN": "风车迷窟"
+          "en": "Windmill Storehouse",
+          "zh-CN": "风车粮仓"
         },
         "description": {
-          "en": "Old passages beneath the dry plains. Follow landmarks, not confidence.",
-          "zh-CN": "旱原下的古老通道。跟着路标走，别只靠自信。"
+          "en": "Follow the missing supply wagons to an old windmill. Someone has painted a giant footprint on the door.",
+          "zh-CN": "沿失踪补给马车的线索前往旧风车，门上还画着一个巨人的脚印。"
         }
       },
       "回族部落": {
@@ -4560,8 +4560,8 @@
       "zh-CN": "逐风营地"
     },
     "高昌迷宫": {
-      "en": "Windmill Warrens",
-      "zh-CN": "风车迷窟"
+      "en": "Windmill Storehouse",
+      "zh-CN": "风车粮仓"
     },
     "回族部落": {
       "en": "Rose Caravan",
