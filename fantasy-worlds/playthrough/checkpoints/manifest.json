@@ -6,13 +6,18 @@
   },
   {
     "name": "spain-trained",
-    "sha256": "717bf67216a8c9e1f27241eb2c174a76ed4fce8dcdd8bb2b0baa62e7f5cfb2d7",
-    "bytes": 56604
+    "sha256": "b5d43925a0cc331f029231db49251db2fefc58db6ead59da7117f1a0d6b62cbc",
+    "bytes": 56898
+  },
+  {
+    "name": "france-finale-ready",
+    "sha256": "c6e14bc81878ba49a3645e7d295db0033187e87690aab750eda42c9bf93c9ebf",
+    "bytes": 58163
   },
   {
     "name": "france-complete",
-    "sha256": "af66910566b7c54078192d6d28ea55ee045bde7119b10e8e9bc8b692557fd6da",
-    "bytes": 59805
+    "sha256": "ecce06e7a750409572e03427ee75c43bca1cc09d7953b498fdaa6533a930f5b3",
+    "bytes": 59878
   },
   {
     "name": "italy-ready",

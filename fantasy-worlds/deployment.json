@@ -1,5 +1,5 @@
 {
-  "sourceCommit": "cfa8b59e40b41a558da111e6d49c7eb9b8197f24",
+  "sourceCommit": "c0d6ca2997153e21c0bd9742d3b8419fc1bdfadc",
   "buildTrigger": "authenticated-git-push",
-  "scope": "Spanish windmill theft story rewritten in both languages; distinct trainer and Gines roles, recovered Amadis quest book, both normal recruitment endings observed. Rules and original sites preserved; France deployment defect remains unresolved."
+  "scope": "Required story companions deploy correctly; French ledger chapter rewritten in both languages; first-screen companion preparation controls. Normal two-chapter trial and real WASM deployment verified; original sites preserved."
 }

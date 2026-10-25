@@ -10837,7 +10837,7 @@ copy-ae186938a43bcaf8714d,storyScripts,连城诀_连城诀2,legacy,连城诀_连
 水笙：狄大哥，别想太多了，一切都已经过去了。
 
 狄云：嗯……",,,pending,,/storyScripts/legacy/segments/915/steps/0,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-90bf4708d4ba9b6745d3,storyScripts,书剑恩仇录_回族部落一般,legacy,书剑恩仇录_回族部落一般,dialogue_run,霍青桐,霍青桐 → 米莱狄 / Milady de Winter [proposed],FR,霍青桐：草海边是连绵的群山，天山下是我们的故乡。,霍青桐：营地很安静。好好享受吧，安静通常待不到晚饭。,霍青桐：A quiet camp. Enjoy it; quiet never stays for supper.,implemented,,/storyScripts/legacy/segments/916/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-90bf4708d4ba9b6745d3,storyScripts,书剑恩仇录_回族部落一般,legacy,书剑恩仇录_回族部落一般,dialogue_run,霍青桐,霍青桐 → 米莱狄 / Milady de Winter [proposed],FR,霍青桐：草海边是连绵的群山，天山下是我们的故乡。,霍青桐：享受这片刻安静吧。如果有人问起，就说我们在聊天气。,"霍青桐：Enjoy the quiet. If anyone asks, we discussed the weather.",implemented,,/storyScripts/legacy/segments/916/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-423c338fedc126f60401,storyScripts,书剑恩仇录_回族部落,legacy,书剑恩仇录_回族部落,dialogue_run,"朝廷走狗
 霍青桐
 主角","朝廷走狗 → 波尔托斯 / Porthos [proposed]
@@ -10846,16 +10846,16 @@ copy-423c338fedc126f60401,storyScripts,书剑恩仇录_回族部落,legacy,书�
 
 霍青桐：卑鄙的中原人，只知道仗势欺人。
 
-主角：美女，我来帮你！","朝廷走狗：枢机主教要你的账册。这份请求，附带五把剑。
+主角：美女，我来帮你！","朝廷走狗：米莱狄，罗什福尔要那本账册，还有你抄下的名字。
 
-霍青桐：请他先预约。最好约在我离开之后。
+霍青桐：为了女士的读书笔记，竟来了五个带剑的男人。真抬举我。
 
-主角：我猜，这不只是记账上的争执。","朝廷走狗：The Cardinal requests your ledger. His request comes with five swords.
+主角：你们的阅读纠纷，用不着拿整个商队来解决。","朝廷走狗：Rochefort wants the ledger, Milady. And the names you copied.
 
-霍青桐：Tell him to make an appointment. Preferably after I've left.
+霍青桐：Five armed men for a lady's reading notes. How flattering.
 
-主角：I'm guessing this isn't a bookkeeping dispute.",implemented,,/storyScripts/legacy/segments/917/steps/2,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-38627108133204b7a886,storyScripts,书剑恩仇录_回族部落霍青桐负,legacy,书剑恩仇录_回族部落霍青桐负,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：……打不过，要英雄救美看来还要再练练级……,主角：打得不太顺。先整备再来，营地还需要帮忙。,主角：That went badly. I'll regroup and return; the camp still needs help.,implemented,,/storyScripts/legacy/segments/918/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：You can settle your reading habits without threatening the caravan.",implemented,,/storyScripts/legacy/segments/917/steps/2,3,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-38627108133204b7a886,storyScripts,书剑恩仇录_回族部落霍青桐负,legacy,书剑恩仇录_回族部落霍青桐负,dialogue_run,主角,主角 → 玩家角色 / Player character [classified],"CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US",主角：……打不过，要英雄救美看来还要再练练级……,主角：得先整备一下。这些卫兵可不是来谈判的。,主角：I need to regroup. Those guards aren't here to negotiate.,implemented,,/storyScripts/legacy/segments/918/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-a24bc44ec95fe365193f,storyScripts,书剑恩仇录_回族部落霍青桐,legacy,书剑恩仇录_回族部落霍青桐,dialogue_run,"霍青桐
 主角","霍青桐 → 米莱狄 / Milady de Winter [proposed]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","霍青桐：感谢你为我们解了围。
@@ -10876,24 +10876,28 @@ copy-a24bc44ec95fe365193f,storyScripts,书剑恩仇录_回族部落霍青桐,leg
 
 霍青桐：嗯……好吧，最近族里事情不算很多。
 
-主角：太好了，太好了。有你这样的高手在，顿时安心了。（嘿嘿……）","霍青桐：米莱狄·德温特。你打断了一场格外无礼的商谈。
+主角：太好了，太好了。有你这样的高手在，顿时安心了。（嘿嘿……）","霍青桐：米莱狄·德温特。旅人，你登场得很漂亮。别浪费这份本事。
 
-主角：这里的商谈，都用剑收尾吗？
+主角：什么笔记，值得别人动用五把剑？
 
-霍青桐：只有非正式商谈才这样。一名信使被关在枢机塔，我要把他救出来。
+霍青桐：款项、人名，还有大人物希望忘掉的事。罗什福尔把我的信使关在枢机塔。
 
-主角：一起走吧。这门生意你显然比我熟。
+主角：我可以帮忙救人，但别把我算进你的阴谋里。
 
-霍青桐：这安排不错。拿上这本三段剑术手册，别把它折成帽子。","霍青桐：Milady de Winter. You interrupted a remarkably rude business meeting.
+霍青桐：当然。我们利益相同。目前，这比信任更管用。
 
-主角：Does every meeting here end with swords?
+霍青桐：我和你一起走。这本三段剑术手册拿着。有用的盟友，也得练习。","霍青桐：Milady de Winter. An excellent entrance, traveler. Let's put it to use.
 
-霍青桐：Only the informal ones. A courier is being held at the Cardinal's Tower. I want him out.
+主角：What did you read that was worth five swords?
 
-主角：Come along. You clearly know this business better than I do.
+霍青桐：Payments. Names. Things powerful men prefer to forget. Rochefort's holding my courier at the Cardinal's Tower.
 
-霍青桐：A useful arrangement. Take this Threefold Swordplay manual; try not to fold it into a hat.",implemented,,/storyScripts/legacy/segments/919/steps/2,10,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
-copy-264d9398b807b4e69621,storyScripts,书剑恩仇录_六和塔一般,legacy,书剑恩仇录_六和塔一般,dialogue_run,朝廷走狗,朝廷走狗 → 波尔托斯 / Porthos [proposed],FR,朝廷走狗：这里是关押钦犯的重地，闲杂人等滚远点。,朝廷走狗：塔楼谢绝访客，尤其是乐于助人的那种。,朝廷走狗：The tower is closed to visitors. Especially helpful ones.,implemented,,/storyScripts/legacy/segments/920/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：I'll help get the courier out. That doesn't make me part of your schemes.
+
+霍青桐：Of course. We have a common interest. For now, that's more useful than trust.
+
+霍青桐：I'll travel with you. Take this Threefold Swordplay Manual. Even a useful ally needs practice.",implemented,,/storyScripts/legacy/segments/919/steps/2,10,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+copy-264d9398b807b4e69621,storyScripts,书剑恩仇录_六和塔一般,legacy,书剑恩仇录_六和塔一般,dialogue_run,朝廷走狗,朝廷走狗 → 波尔托斯 / Porthos [proposed],FR,朝廷走狗：这里是关押钦犯的重地，闲杂人等滚远点。,朝廷走狗：不见访客，不收口信。尤其不欢迎火枪手。,朝廷走狗：No visitors. No messages. And absolutely no musketeers.,implemented,,/storyScripts/legacy/segments/920/steps/0,1,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-1162d99a6b2373a8e1ad,storyScripts,书剑恩仇录_六和塔,legacy,书剑恩仇录_六和塔,dialogue_run,"张召重
 主角
 陈家洛","张召重 → 罗什福尔 / Rochefort [proposed]
@@ -10914,23 +10918,27 @@ copy-1162d99a6b2373a8e1ad,storyScripts,书剑恩仇录_六和塔,legacy,书剑�
 
 张召重：就是拿你命来换！
 
-主角：陈大当家，小心！","张召重：达达尼昂，总算来了位值得逮捕的客人。
+主角：陈大当家，小心！","张召重：达达尼昂，又急着插手别人的事？
 
-主角：我差点就以为自己是什么大人物了。
+陈家洛：你把一个送信的人关了起来。我就当这是给我的请帖。
 
-陈家洛：罗什福尔，放了那名信使，大家都能少些麻烦。
+主角：米莱狄让我们来救人。我开始怀疑她漏讲了不少细节。
 
-张召重：麻烦已经领了薪水。卫兵！
+陈家洛：她向来如此。替我挡住守卫，我去把信使带出来。
 
-主角：明白了，今天办不了访客证。","张召重：D'Artagnan. At last, a visitor worth arresting.
+张召重：囚犯留下。卫兵，让客人们听明白。
 
-主角：I was about to feel terribly important.
+主角：先救人，解释留到之后。","张召重：D'Artagnan. Still rushing into other people's affairs?
 
-陈家洛：Rochefort, release the courier. We can spare everyone a great deal of trouble.
+陈家洛：You locked up a courier for carrying a letter. I'd call that an invitation.
 
-张召重：The trouble is already on the payroll. Guards!
+主角：Milady sent us. I'm beginning to suspect she left out a few details.
 
-主角：Right. No visitor's pass, then.",implemented,,/storyScripts/legacy/segments/921/steps/2,9,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+陈家洛：She usually does. Get me past these guards; I'll bring the courier out.
+
+张召重：The prisoner stays. Guards, make sure our guests understand.
+
+主角：Rescue first. Explanations afterward.",implemented,,/storyScripts/legacy/segments/921/steps/2,9,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8bff6d31473ac06f249c,storyScripts,书剑恩仇录_六和塔胜,legacy,书剑恩仇录_六和塔胜,dialogue_run,"张召重
 主角
 陈家洛","张召重 → 罗什福尔 / Rochefort [proposed]
@@ -10945,15 +10953,19 @@ copy-8bff6d31473ac06f249c,storyScripts,书剑恩仇录_六和塔胜,legacy,书�
 
 陈家洛：好了，文当家也救出来了，我们先走了。小兄弟，后会有期。
 
-主角：嗯，后会有期。","张召重：好好庆祝吧。下次重逢，我会安排得没这么方便。
+主角：嗯，后会有期。","张召重：你们放走了一个信使，可账册上的名字不会就此消失。
 
-主角：他还真是什么见面都要预约。
+陈家洛：信使安全了。我送他离开塔楼。这些教材给你，你值得这份谢礼。
 
-陈家洛：信使自由了。这些教材给你，之后留意营地。罗什福尔记仇的本事一流。","张召重：Enjoy your rescue. I'll arrange a less convenient reunion.
+主角：那罗什福尔呢？他看起来可不打算收工。
 
-主角：He really does book every meeting in advance.
+陈家洛：回蔷薇商队，我会去找你。也留心米莱狄，她从不把话说全。","张召重：You've freed one messenger. You haven't silenced the names in that ledger.
 
-陈家洛：The courier is free. Take these training guides, and watch the caravan; Rochefort holds a grudge remarkably well.",implemented,,/storyScripts/legacy/segments/922/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+陈家洛：The courier is safe. I'll see him clear of the tower. Keep these training guides; you've earned them.
+
+主角：And Rochefort? He doesn't look ready to call it a day.
+
+陈家洛：Return to Rose Caravan. I'll meet you there. Keep an eye on Milady, too—she never tells the whole story.",implemented,,/storyScripts/legacy/segments/922/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-bf500ef78d5139823d01,storyScripts,书剑恩仇录_六和塔胜,legacy,书剑恩仇录_六和塔胜,journal,,,,六和塔营救文泰来。,在枢机塔救出了信使。,Freed the courier at the Cardinal’s Tower.,implemented,,/storyScripts/legacy/segments/922/steps/10/call,0,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-e20fb8690afb6166c9ff,storyScripts,书剑恩仇录_庖丁解牛,legacy,书剑恩仇录_庖丁解牛,dialogue_run,"张召重
 霍青桐
@@ -10971,23 +10983,27 @@ copy-e20fb8690afb6166c9ff,storyScripts,书剑恩仇录_庖丁解牛,legacy,书�
 
 陈家洛：不怕，还有我来帮忙！
 
-主角：陈大当家，你的拳法终于大成了！","张召重：这一次，商队和它的秘密都得跟我走。
+主角：陈大当家，你的拳法终于大成了！","张召重：米莱狄，交出账册。所有证人也跟我走。
 
-霍青桐：你总这么说。这习惯可不便宜。
+霍青桐：既要我的情报，又要我闭嘴。你的购物清单真不客气。
 
-主角：他们来的人，还真不少。
+陈家洛：达达尼昂，愿意效劳。信使已经安全离开，这些旅人也要自由离开。
 
-陈家洛：那你们就需要多一把剑。达达尼昂，愿意效劳。
+主角：你愿意和米莱狄并肩作战？
 
-主角：来得正好，我们正缺一次漂亮的登场。","张召重：This time, the caravan and its secrets come with me.
+陈家洛：并肩，可以。把后背交给她？我们还是慢慢来。
 
-霍青桐：You keep saying that. It's becoming an expensive habit.
+霍青桐：那就暂时休战。可别忙着疑心，忘了活下来。","张召重：The ledger, Milady. Then every witness comes with me.
 
-主角：There are rather a lot of them.
+霍青桐：You want my information and my silence. Such an ambitious shopping list.
 
-陈家洛：Then you'll want another sword. D'Artagnan, at your service.
+陈家洛：D'Artagnan, at your service. The courier's out of reach. These travelers are leaving freely, too.
 
-主角：Good timing. We were running short of dramatic entrances.",implemented,,/storyScripts/legacy/segments/923/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+主角：You're willing to fight beside Milady?
+
+陈家洛：Beside her, yes. With my back to her? Let's not rush things.
+
+霍青桐：A temporary truce, then. Do try to survive your suspicions.",implemented,,/storyScripts/legacy/segments/923/steps/2,6,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-31957fb39f9e4850d26a,storyScripts,书剑恩仇录_庖丁解牛胜,legacy,书剑恩仇录_庖丁解牛胜,dialogue_run,"张召重
 陈家洛
 主角","张召重 → 罗什福尔 / Rochefort [proposed]
@@ -10998,15 +11014,19 @@ copy-31957fb39f9e4850d26a,storyScripts,书剑恩仇录_庖丁解牛胜,legacy,�
 
 主角：陈大当家，多谢相助！
 
-陈家洛：兄弟，别客气。驱除鞑虏，算我一份！","张召重：这场行动的预算，可不是这么做的。
+陈家洛：兄弟，别客气。驱除鞑虏，算我一份！","张召重：好好享受这点同盟之情吧。我知道，有些人的忠诚变得有多快。
 
-陈家洛：就当修改预算了。我会留在这支队伍。
+陈家洛：商队能继续赶路，信使也自由了。我会留下与你同行。人人为我，我为人人！
 
-主角：正需要你的经验，还有那堂剑术课。","张召重：That was not how this operation was budgeted.
+主角：有你帮忙就好。信不信得过，咱们路上再争。
 
-陈家洛：Consider it a revision. I'm staying with this company.
+陈家洛：米莱狄在，肯定不愁没话说。拿上这本流云剑术手册，我们能一起练的还多。","张召重：Enjoy your little alliance. I know how quickly its loyalties can change.
 
-主角：We could use your experience. And that sword lesson.",implemented,,/storyScripts/legacy/segments/924/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
+陈家洛：The caravan can move on, and the courier is free. I'll stay with you. All for one, and one for all!
+
+主角：I'll take the help. We can argue about trust on the road.
+
+陈家洛：With Milady along, we'll have plenty to discuss. Take this Drifting Cloud Sword Manual. There's more to learn together.",implemented,,/storyScripts/legacy/segments/924/steps/0,4,c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3
 copy-8c997c4e776118423892,storyScripts,鹿鼎记_北京韦小宝,legacy,鹿鼎记_北京韦小宝,dialogue_run,"韦小宝
 主角","韦小宝 → 稻草人 / The Scarecrow [locked]
 主角 → 玩家角色 / Player character [classified]","CN,DE,DK,EG,ES,FR,GB,GR,IT,JP,NO,RO,US","韦小宝：今天天气不错，溜出宫来玩玩……
