@@ -103,6 +103,12 @@ internal static class ThreeStorySmoke
                     case "battle":
                         var battleId = state["battle"]!["id"]!.ToString();
                         Record("battle-start", new { id = battleId, units = state["battle"]!["units"]!.DeepClone() });
+                        if (battleId == "庖丁解牛_战斗")
+                        {
+                            var deployed = state["battle"]!["units"]!.AsArray().Where(u => u!["team"]!.GetValue<int>() == 1).Select(u => u!["definitionId"]!.ToString()).ToHashSet();
+                            var required = package["battles"]!.AsArray().Single(b => b!["id"]!.ToString() == battleId)!["requiredCharacterIds"]!.AsArray().Select(id => id!.ToString()).ToHashSet();
+                            if (!required.IsSubsetOf(deployed)) throw new InvalidOperationException("France finale omitted a required companion");
+                        }
                         int turns = 0, medicine = 0, offensive = 0, automated = 0;
                         long lastEvent = -1;
                         for (; turns < 2500 && state["battle"]!["outcome"]!.ToString() == "ongoing"; turns++)
@@ -236,7 +242,7 @@ internal static class ThreeStorySmoke
                 await World();
             }
             if (!Done("书剑恩仇录_六和塔胜")) throw new InvalidOperationException("Tower encounter did not open");
-            await Travel("回族部落"); await Visit("张召重"); await World(); Checkpoint("france-complete");
+            await Travel("回族部落"); Checkpoint("france-finale-ready"); await Visit("张召重"); await World(); Checkpoint("france-complete");
             if (firstTwoOnly)
             {
                 var export = BrowserBridge.ExportSave(); Parse(BrowserBridge.ImportSave(export));

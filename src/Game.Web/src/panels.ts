@@ -8,6 +8,7 @@ import './journey.css';
 import {adventurerSheet} from './adventurer-sheet';
 import {journeyPanel} from './journey-panel';
 import {copy,modernWorlds} from './ui-language';
+import {partyRoster} from './party-roster';
 
 export type PanelName = 'loadout' | 'character' | 'equipment' | 'cultivation' | 'inventory' | 'settings' | 'party' | 'quests' | 'chest';
 export type InventoryFilter = 'all' | 'equipment' | 'skillBook' | 'consumable' | 'other';
@@ -129,6 +130,7 @@ function achievementsView(state:GameState){
   return state.achievements?.length?`<h3 class="panel-heading">已获称号</h3><div class="skill-records">${state.achievements.map(a=>`<article data-achievement-id="${e(a.id)}"><strong>${e(a.name)}</strong>${a.description?`<p>${e(a.description)}</p>`:''}</article>`).join('')}</div>`:'';
 }
 export function panelContent(name: PanelName, state: GameState, settings: Settings, busy = false, filter: InventoryFilter = 'all', inventoryOptions: InventoryViewOptions = {query:'',sort:'original'}): {title: string; content: string} {
+  if(name==='party'&&modernWorlds(state))return {title:copy('Your party','你的队伍'),content:partyRoster(state,busy)};
   if(name==='loadout')return {title:'冒险者手册',content:adventurerSheet(state,busy)};
   if(name==='quests'&&modernWorlds(state))return {title:copy('Your journey','你的旅程'),content:journeyPanel(state)+`<details class="journey-full"><summary>${copy('All objectives, milestones & journal','全部目标、里程碑与旅途记录')}</summary>${questPanel(state)}${achievementsView(state)}</details><button class="text-button" data-action="history">${copy('Notifications & activity','通知与操作记录')} →</button>`};
   if (name === 'party') return {title: '同行队伍', content: (state.pack.chapterGuide&&state.adventure?`<section class="companion-morality"><p><span>道德值</span> <strong data-morality>${e(state.adventure.morality)}</strong></p><p class="panel-intro">有些伙伴会在意你的行事方式；数值高低并非对所有条件都更有利。</p><a class="button outline" data-companion-roster href="../${document.documentElement.lang==='zh-CN'?'zh':'en'}/?kind=companions" target="_blank" rel="noopener"><span>伙伴名册</span> ↗</a></section>`:'')+rosterControls(state,busy) + `<details class="roster-details"><summary>参战队员详情 · 装备与武功</summary>${partyPanel(state)}</details>`};

@@ -55,6 +55,8 @@ Presentation 负责与 UI 引擎无关的交互状态和展示流程；Godot 负
 
 不保留字符串/数组构建重载或测试专用公开入口。
 
+浏览器普通剧情战斗通过 `BattleService.SelectDefaultCombatants` 自动部署：先为已在出战队伍中的 `RequiredCharacterIds` 预留名额，再按队伍顺序填满其余 `partyIndex` 槽位，返回顺序与保存的队伍顺序一致。缺席、后备或跟随角色不会因此加入队伍；这与 Godot 手动选人仅锁定已有成员的规则一致。固定参战人物不重复占自动部署名额，完全固定阵容的演出战斗不读取队伍必选元数据；非零槽位无法容纳必选角色时明确报错。竞技场等已有手动选择流程仍提交自己的 `SelectedCharacterIds`，构建与结算入口不变。
+
 ## Presentation
 
 `Game.Presentation` 是普通 .NET 程序集，只依赖 `Game.Core`。战斗流程包括：

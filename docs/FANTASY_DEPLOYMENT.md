@@ -1,6 +1,6 @@
 # Fantasy preview publication
 
-The preview lives under `gh-pages:fantasy-worlds/`. Keep the original root game, `modern-jyx/`, `western/`, and existing runtime binaries unchanged. Compare the Git blob IDs before and after publication, and retain source and Pages rollback tags. Do not rebuild or replace the runtime for a frontend-only change.
+The preview lives under `gh-pages:fantasy-worlds/`. Keep the original root game, `modern-jyx/`, and `western/` unchanged. Compare the Git blob IDs before and after publication, and retain source and Pages rollback tags. Do not rebuild or replace the runtime for a frontend-only change. When the shared host changes, rebuild the runtime and publish it only inside `fantasy-worlds/`; retain the immediately previous fingerprinted runtime assets for already-open clients. Older generated fingerprints may be retired inside this preview after checking the complete Pages tree size against the hosting limit.
 
 ## Pages trigger diagnosed on 2026-10-22
 

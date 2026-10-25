@@ -405,7 +405,7 @@ internal sealed partial class BrowserRuntimeSession
     }
 
     private void StartBattle(string id)
-        => StartBattle(new OrdinaryBattleRequest(id, RequireSession().State.Party.Members.Select(c => c.Id).ToArray()));
+        => StartBattle(new OrdinaryBattleRequest(id, RequireSession().BattleService.SelectDefaultCombatants(id)));
 
     private void StartBattle(SpecialBattleRequest request)
     {
