@@ -92,3 +92,32 @@ GAME_WEB_URL=http://127.0.0.1:4230 node src/Game.Web/tests/france-entry-guide-sm
 FRENCH_TOWER_PREPARE=welcome FRENCH_TOWER_RESUME_REPORT=src/Game.Web/test-results/opening-france-tower-roster-observed.json GAME_WEB_URL=http://127.0.0.1:4230 node src/Game.Web/tests/opening-france-tower-smoke.mjs
 GAME_WEB_URL=http://127.0.0.1:4230 node src/Game.Web/tests/france-tower-guide-smoke.mjs
 ```
+
+## 同一新档的专精培养与法国终战
+
+从185银币救援导出（SHA `043d7259eae269f6d0283be00b1297d62810c633d8b0e50622e879f7a852c05d`）继续，正常学习并装备Riverflow Mastery，归还埃尔原单本教材；主角穿上塔楼已有掉落Cleaver of the Road。米莱狄在第2位实际参加6场结伴练习，主角休息，她使用已学剑术；六场tick分别381、381、477、381、381、381，全部获胜、无药剂消耗。专精依次3、5、7、8、9、10级，最终10级／207经验且保持装备。人物基础根骨46未改，面板54→64，新增派生加成恰为原10级效果+10。不是直接写入培养等级。
+
+六胜各收入10，余额185→245。由正常地图到Storymarket→West Market→Supplies，实际买1份Ninepetal Elixir（100）与2瓶Restorative Tonic（各50），余45；所有购买有真实扣款。到蔷薇商队后先保存，再选择罗什福尔。前置对白正常招募原16级达达尼昂，实际部署主角、米莱狄、达达尼昂，对抗罗什福尔与十二名守卫；杜尔西内娅等其他队员未出场，未让新加入者提前培养或换装。
+
+终战实际手动win，tick 1112。使用本批购买的三份补给及既有 `红药` 1份；收入78，余额123。主角、米莱狄升到10级，达达尼昂仍16，六人队伍保留。固定奖励Drifting Cloud Sword Manual 1本、原 `柔云剑法` 上限奖励+2以及 `融会贯通` 称号均到账；导出档案的上限消费键只有一次。另有正常随机掉落，不作为固定剧情奖励。未分配属性点，道德50、圆桌组织身份与其他章节进度保留。
+
+培养导出 `opening-france-riverflow-trained-save.json` SHA `c4581d19398d38896202944126c34cae58fca797ba6fb6ebf066b1449c53db16`；战前 `opening-france-finale-ready-save.json` SHA `ddd7b55aef3e51e54c2e17db5e0cd033a6441eb67013aa1b448b09df7377dcf2`；结局 `opening-france-complete-newgame-save.json` SHA `1e3621d70511343b93a45c1701d5625da3567e887a7f60ab716713817f734e84`。这三处都正常手动保存、刷新读取、导出，核对构筑、装备、阵容、教材、背包、任务、时辰、地图与余额。当前资源另外记录，不改变或宣称修复[恢复边界](MAP_SAVE_VITALS.md)。
+
+### 实际英文缺口与最终复验
+
+- 终战前目标把防御培养建议落实到Gear & study、教材与主专精两个操作，并说明结伴练习前两位、补给和指定参战者。没有新增专精等级门槛或强迫玩家采用此构筑。
+- 实战达达尼昂菜单中Precision Strike — Perfect Opening的说明残留 `庖丁解牛真意`，已补成自然英文；消耗、怒气、范围、冷却及解锁不变。
+- 实际奖励通知中的称号原名补上Versatile显示映射；原称号ID和解锁状态不变。中文对照中的河流专精名称与现有教材保持一致。
+
+`opening-france-finale.json` 的实际培养、固定阵容、终战与保存4项检查通过，`progressVerified=true`；原 `englishCopyVerified=false` 保留，反映当时确有上述技能说明缺口，不能当作全部英文通过。修正后的 `france-finale-review.json` 7项检查通过：真实战前指引的至少44px操作仍在390px底栏上方，原专精加成和教材归还保留，真实结局／称号／教材通知可读，正常保存读取无构筑或收支差异。两份正常报告均无浏览器异常、请求失败或HTTP错误。
+
+最终菜单另在隔离浏览器上下文从真实结局进行一次**不结算、不导出**的正常结伴练习探查：暂把达达尼昂放第2位，等其回合查看实际技能菜单，确认新说明无中文；未重打终战，不算额外获胜、培养、收入或永久编队。下批继续的来源仍是上述123银币原结局导出。
+
+前端构建、8项章节流程与13项冻结规则检查通过；C#、存档格式和核心数值未改，未重建.NET。这一批七场实际战斗全部获胜，未制造失败来测试恢复，因此修改后的gameover读档按钮仍未实测。390×844为无头Chromium鼠标视口，不是真机或触摸模拟；中文对照未逐项试玩。原塔楼首败、意大利未过、困难难度、其他组织与后期内容边界仍保留。
+
+法国普通路线至此由同一新开局账本实际跑通，不借用旧法国通关档。随后格林来信已经出现，未再找他推进关闭窗口的世界事件。下一小批应从123银币结局继续原意大利路线与真实准备，而不是改核心规则保证通关。候选未部署或合并。
+
+```sh
+GAME_WEB_URL=http://127.0.0.1:4230 node src/Game.Web/tests/opening-france-finale-smoke.mjs
+GAME_WEB_URL=http://127.0.0.1:4230 node src/Game.Web/tests/france-finale-review-smoke.mjs
+```

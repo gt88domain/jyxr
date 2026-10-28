@@ -823,6 +823,7 @@
     }
   },
   "uiLabels": {
+    "融会贯通": {"en": "Versatile", "zh-CN": "融会贯通"},
     "返回杭州": {"en": "Return to Canalward.", "zh-CN": "返回运河镇。"},
     "长安.商店": {"en": "West Market Supplies", "zh-CN": "西市补给铺"},
     "精兵铁卫": {
@@ -991,7 +992,7 @@
             },
             "detail": {
               "en": "Milady and D'Artagnan can travel with you, for different reasons. The rescue awarded Petalstorm Fist and Riverflow Mastery manuals; the camp finale awarded Drifting Cloud Sword and raised its training cap by 2. Equip and train each ally separately. The ledger stays in the story; it is not an inventory reward. The courier does not join.",
-              "zh-CN": "米莱狄与达达尼昂各有所图，都可与你同行。救援奖励落英拳与流河专精手册；营地决战奖励流云剑术手册，并使其研习上限提高2级。请分别为伙伴穿装备、安排研习。账册只参与剧情，不是背包奖励；信使不会入队。"
+              "zh-CN": "米莱狄与达达尼昂各有所图，都可与你同行。救援奖励落英拳与河流专精手册；营地决战奖励流云剑术手册，并使其研习上限提高2级。请分别为伙伴穿装备、安排研习。账册只参与剧情，不是背包奖励；信使不会入队。"
             },
             "route": [],
             "complete": true,
@@ -1006,8 +1007,8 @@
               "zh-CN": "返回蔷薇商队"
             },
             "detail": {
-              "en": "The courier is free. Prepare Milady before confronting Rochefort at Rose Caravan: the finale requires your hero, Milady, and D'Artagnan. D'Artagnan joins just before combat; your other companions cannot replace these three. This scene closes after the world emergency. Save before the encounter; defeat ends the journey.",
-              "zh-CN": "信使已经自由。去蔷薇商队找罗什福尔之前，先培养并整备米莱狄：决战指定主角、米莱狄与达达尼昂出场。达达尼昂在战前才加入，其他伙伴不能代替这三人。世界紧急事件之后，此场景会关闭。事件前保存，落败会结束旅程。"
+              "en": "Prepare Milady in Gear & study. For a defensive build, study the Riverflow Mastery Manual and equip the learned mastery separately. Team Practice uses slots 1–2. The finale requires your hero, Milady, and D'Artagnan, who joins just before combat; other companions cannot replace them. Restock and save before visiting Rose Caravan; defeat ends the journey. The world emergency closes this scene.",
+              "zh-CN": "先在装备与研习中选择米莱狄。防御培养可选河流专精手册研习，再另行装备已学专精；结伴练习只用前两位队员。决战指定主角、米莱狄与战前才加入的达达尼昂，其他伙伴无法替代。造访蔷薇商队前补给并保存，落败会结束旅程；世界紧急事件会关闭本场景。"
             },
             "route": [
               {
