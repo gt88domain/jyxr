@@ -26,5 +26,5 @@ export const uiSurfaces = [
   ['battle-confirm','Touch action confirmation','battle-controls.ts','existing'],
   ['history','Notifications / activity','activity.ts','existing'],
   ['more','Secondary actions','navigation.ts','replaced'],
-  ['guide','Help','main.ts','existing'],
+  ['guide','Help','player-guide.ts','replaced'],
 ] as const;

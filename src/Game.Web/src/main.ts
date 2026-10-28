@@ -31,6 +31,7 @@ import {appConfig} from './app-config';
 import {filterWorldAtlas} from './world-atlas';
 import {startUiLocale,setUiDisplayLabels} from './ui/locale';
 import {copy,modernWorlds} from './ui-language';
+import {playerGuide} from './player-guide';
 
 startUiLocale(appConfig.id);
 
@@ -435,7 +436,7 @@ document.addEventListener('click', event => {
   }
   else if (action==='companion-clues'&&state.phase!=='title') void showModulePanel('companions',{here:true});
   else if (action && appConfig.features.some(feature=>feature.id===action)) void showModulePanel(action);
-  else if (action === 'guide') modal('行走指南', `<p class="guide-text">点击地图上的人物或地点继续剧情，在“目标”查看当前章节。获得修炼书后，在修炼面板选择；正在运行的${e(state.pack.terms?.internalSkills||'心法')}与正在研习的书可分别调整。装备和补给可在行囊使用，伙伴可在队伍查看。<br><br>手动战斗时，青色格表示可移动的位置。选择招式，点击橙色目标格施展；有些招式可对自己使用。也可切换自动战斗、调整倍速，或暂停观察。<br><br>打开人物、设置等面板时战斗暂停。离开战斗、对话和商店后可保存进度。不同应用及内容包分别存档；清除网站数据前请在行囊导出备份。</p>`);
+  else if (action === 'guide') modal('行走指南', appConfig.id==='jyxr-fantasy-worlds'?playerGuide(state):`<p class="guide-text">点击地图上的人物或地点继续剧情，在“目标”查看当前章节。获得修炼书后，在修炼面板选择；正在运行的${e(state.pack.terms?.internalSkills||'心法')}与正在研习的书可分别调整。装备和补给可在行囊使用，伙伴可在队伍查看。<br><br>手动战斗时，青色格表示可移动的位置。选择招式，点击橙色目标格施展；有些招式可对自己使用。也可切换自动战斗、调整倍速，或暂停观察。<br><br>打开人物、设置等面板时战斗暂停。离开战斗、对话和商店后可保存进度。不同应用及内容包分别存档；清除网站数据前请在行囊导出备份。</p>`);
   else if (action === 'download-save') void (async () => {
     try {const data = await exportSave(); const parsed = JSON.parse(data); if (parsed.error || parsed.ok === false) throw new Error(parsed.error || '无法导出当前进度。'); const href = URL.createObjectURL(new Blob([data], {type: 'application/json'})); const link = document.createElement('a'); link.href = href; link.download = `${state.pack.title}-${state.hero.name}.json`; link.click(); setTimeout(() => URL.revokeObjectURL(href), 1000);}
     catch (error) {console.error(error); toast('导出未能完成，请先离开战斗。');}
