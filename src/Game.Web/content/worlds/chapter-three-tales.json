@@ -1220,8 +1220,8 @@
               "zh-CN": "夜访风歌渡口"
             },
             "detail": {
-              "en": "Save before the encounter. Two opening fights lead to a choice: refuse the seals (+3 Morality) to protect Pinocchio and the Blue Fairy, or claim them (-3 Morality) for the Scarecrow branch. Protecting them ends with your hero ALONE against Orlando and six guards. Train and buy supplies first; losing that finale closes this invitation.",
-              "zh-CN": "事件前先保存。前两战之后可选择：拒收印记（道德+3），保护匹诺曹和蓝仙女；或收下印记（道德-3），进入稻草人分支。保护路线最终由主角独自对抗奥兰多和六名守卫，先训练、补给；最后落败会关闭这次招募。"
+              "en": "Save before the encounter. Two opening fights lead to a choice: refuse the seals (+3 Morality) to protect Pinocchio and the Blue Fairy, or claim them (-3 Morality) for the Scarecrow branch. Protecting them ends with your hero ALONE against Orlando and six guards. Check your hero’s learned techniques, equipped mastery, and gear—not just their level. Owning a manual does not mean you meet its study requirements. Train and buy supplies first; losing that finale closes this invitation.",
+              "zh-CN": "事件前先保存。前两战之后可选择：拒收印记（道德+3），保护匹诺曹和蓝仙女；或收下印记（道德-3），进入稻草人分支。保护路线最终由主角独自对抗奥兰多和六名守卫，先检查主角已学战技、主专精与装备，不只看等级；背包里有手册不代表已经满足研习条件。先训练、补给；最后落败会关闭这次招募。"
             },
             "route": [
               {

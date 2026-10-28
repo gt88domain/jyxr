@@ -4,13 +4,14 @@ import type {Battle, Unit} from './bridge';
 import {BattleLighting} from './battle-lighting';
 import {BattleSkillEffects} from './battle-effects';
 import {BoardTapGuard} from './board-input';
+import {boardLabel} from './board-labels';
 
 export interface BoardOptions {selectedSkillId?: string; speed?: number; manual?: boolean; busy?: boolean; paused?: boolean; showGrid?: boolean; showDamage?: boolean; battleLighting?: boolean; reducedMotion?: boolean; intent?: 'move' | 'attack';}
 type VisualBattle = Battle & {targets?: {x: number; y: number; skillId: string}[]};
 interface Pawn {container: Phaser.GameObjects.Container; art: Phaser.GameObjects.Sprite | Phaser.GameObjects.Image | Phaser.GameObjects.Text; ring: Phaser.GameObjects.Graphics; bars: Phaser.GameObjects.Graphics; name: Phaser.GameObjects.Text; previous: Unit;}
 
 export function boardGeometry(width: number, height: number, columns: number, rows: number) {
-  const cell = Math.min((width - 24) / columns, (height - 92) / rows, 92);
+  const cell = Math.max(1, Math.min((width - 24) / columns, (height - 92) / rows, 92));
   return {cell, left: (width - cell * columns) / 2, top: (height - cell * rows) * .65};
 }
 
@@ -128,7 +129,10 @@ class BattleScene extends Phaser.Scene {
   }
   private draw(resize = false) {
     if (!this.battle || !this.ground) return;
+    // Resize observers can briefly report a hidden/zero-sized canvas.
+    if (this.scale.width <= 24 || this.scale.height <= 92) return;
     const b = this.battle, {cell, left, top} = this.geometry();
+    if (cell < 12) return;
     this.parentElement.dataset.boardGeometry = JSON.stringify({cell, left, top, width: b.width, height: b.height});
     const active = b.units.find(unit => unit.id === b.activeUnitId && unit.alive);
     const lit = this.options.battleLighting !== false;
@@ -203,7 +207,10 @@ class BattleScene extends Phaser.Scene {
     const width = cell * .82, barY = cell * .08, bars = pawn.bars.clear();
     bars.fillStyle(0x1c2d24, .94).fillRoundedRect(-width / 2 - 1, barY - 1, width + 2, 7, 3);
     bars.fillStyle(unit.team === 1 ? 0xa7d1a5 : 0xe8a27e).fillRoundedRect(-width / 2, barY, width * Math.max(0, unit.hp / unit.maxHp), 5, 2);
-    pawn.name.setPosition(0, barY + 9).setFontSize(Math.max(9, Math.min(12, cell * .18))).setText(unit.name);
+    pawn.name.setPosition(0, barY + 9).setFontSize(Math.max(9, Math.min(12, cell * .18)));
+    const number = this.battle!.units.findIndex(candidate => candidate.id === unit.id) + 1;
+    pawn.name.setText(boardLabel(unit.name, number, cell, text => pawn!.name.context.measureText(text).width));
+    pawn.name.setColor(unit.team === 1 ? '#d6ffe2' : '#ffe1c9');
     if (!first && this.battle!.events === undefined && unit.hp !== previous.hp) {
       const delta = unit.hp - previous.hp;
       if (this.options.showDamage !== false) {
