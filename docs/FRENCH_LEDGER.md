@@ -61,3 +61,34 @@
 FRANCE_RESUME_REPORT=src/Game.Web/test-results/opening-france-practice-observed.json GAME_WEB_URL=http://127.0.0.1:4230 node src/Game.Web/tests/opening-france-smoke.mjs
 GAME_WEB_URL=http://127.0.0.1:4230 node src/Game.Web/tests/france-entry-guide-smoke.mjs
 ```
+
+## 同一新档的塔楼救援
+
+由上述82银币实际招募档继续，培养与收支详见[开局账本](OPENING_LEDGER.md)。米莱狄已有三段剑术10级，教材显示已完成；为她穿上背包原掉落Broadsword、借埃尔的Traveler's Robe，暂停埃尔的研习并借用同一本Hearthward Fist Manual。她实际参加一次结伴练习，剑术使用两次，10级经验0→104，所选拳术由1级／0→1级／7；win，tick 381，收入10。埃尔已学技能不因暂停而丢失；没有购买、创造教材或虚计未出场者的经验。
+
+原第一次脚本在塔楼开战前把CSS转为大写的“IN THIS BATTLE”与原文本比较，误断后退出。`opening-france-tower-roster-observed.json` 保留实际培养结果和正常战前导出；这是测试读取方式错误，不是战斗败北。改用原文本后由该存档续接，不重刷培养。
+
+第一次真正操作的救援记录为 `opening-france-tower-timeout-observed.json`：主角、米莱狄、杜尔西内娅对抗原13名敌人，十二名守卫清除，罗什福尔剩459／2000生命；主角仍953生命，两位女队员倒下，tick 3001真实超时。剧情正常进入gameover，没有奖励或收入。浏览器异常、请求和HTTP错误均为0，不能把这个失败解释为已发现的核心阻塞。
+
+随后正常导入原92银币战前导出，保留上一次失败证据，采用明确不同的一次准备与操作：
+
+- 使用一直未消耗的5份Traveler's Welcome Elixir：米莱狄3份、杜尔西内娅2份。都是新开局时已存在的原赠品，通过已有道具按钮使用；每份原效果为最大生命／能量各+100。准备后两人为900／800和1350／1100。
+- 阵容不改。米莱狄主动接近后使用已学剑术，避免远处有新拳术目标便一直不靠近；主角使用已有Rallying Cry。能量补给在主力技能不足时安排，不等到所有廉价招式均无法使用。
+- 未分配属性点，未改道具、技能、AI、敌人数值、时限、概率、触发或奖励。存档不经脚本编辑；由旧战前档恢复，因此失败尝试消耗不与胜利尝试重复扣算。
+
+重试实际win，tick 1275。原出场三人保留，疯帽匠、埃尔和达达尼昂未参加。主角使用Rallying Cry 4次、Iron Seal Strike 10次及基础拳术4次；米莱狄剑术4次、Hearthward Fist 3次；杜尔西内娅Meteor Sigil 12次。实际消耗已有Restorative Tonic 2瓶、Ninepetal Elixir 3份，无购买。原胜利收入93，余额185；主角与两位女队员均正常升至9级，米莱狄拳术9级／113经验，原主专精仍装备。原两本救援教材各1，另有Cleaver of the Road随机掉落1；其词条不是固定奖励保证。
+
+正常塔楼前导出SHA `7c8e92a6bedc3abb3a7026c5a93e1ac5662048aeabddd4dff253f4b310f0d8c5`；赠品准备后 `028cdf16cc290da0d429962b8b2c7989db79d504bc6062cf096c023259e016ee`；救援后 `043d7259eae269f6d0283be00b1297d62810c633d8b0e50622e879f7a852c05d`。原入口50%保留，成功尝试的守卫第一次交互即触发，不声称固定一次必触发。手动保存、刷新读取和导出核对了人物构筑、阵容、装备、培养、任务、地图、时辰、背包实例与余额；当前资源另记，继续保留[已知资源恢复边界](MAP_SAVE_VITALS.md)。
+
+### 本批实际显示修正与检查范围
+
+塔楼目标现在明确“前三位队员出战，达达尼昂此时不在阵容”，保留死亡后果、50%与世界事件窗口。三段剑术教材说明明确重复使用、教至10级和完成后的处理；米莱狄实际技能菜单出现的Snowfall中文说明补为英文，不改其参数或解锁。失败实录中的结束标题、周目行、说明和读档／返回标题按钮补齐英文；附近Stonebridge Hall与返回Canalward说明也已本地化，未进入其支线。
+
+`opening-france-tower.json` 的续接、真实阵容、技能菜单、实际救援与保存路径5项检查通过。`france-tower-guide.json` 从原92银币准备档和实际185银币救援档做6项只读／保存检查：首屏目标按钮至少44px且在底栏上方，无横向溢出；完成教材解释、邻近地点、任务、奖励条件与后续指定阵容提示可读。米莱狄此时能研习Riverflow Mastery，Petalstorm Fist仍受原拳套40门槛限制，两本新教材在检查中均未选择或装备。两份正常报告无浏览器异常、请求失败或HTTP错误。
+
+前端构建与29项显示检查、8项章节流程、13项冻结规则检查通过；C#与存档格式未动，未重建.NET。失败界面新文字由实际失败字符串的显示测试覆盖，**本次没有在修改后的实战gameover界面点击读档按钮**；实际恢复使用未编辑的战前导出及正常保存／读取，不能把两者混称。测试为390×844无头Chromium鼠标输入，不是真机。法国终战、困难难度、其他组织、意大利终战及全游戏验收仍未由本批证明。下一小批先安排新奖励的研习与主专精，再准备原法国决战；候选未部署或合并。
+
+```sh
+FRENCH_TOWER_PREPARE=welcome FRENCH_TOWER_RESUME_REPORT=src/Game.Web/test-results/opening-france-tower-roster-observed.json GAME_WEB_URL=http://127.0.0.1:4230 node src/Game.Web/tests/opening-france-tower-smoke.mjs
+GAME_WEB_URL=http://127.0.0.1:4230 node src/Game.Web/tests/france-tower-guide-smoke.mjs
+```

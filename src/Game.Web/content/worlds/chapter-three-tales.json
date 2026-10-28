@@ -823,6 +823,7 @@
     }
   },
   "uiLabels": {
+    "返回杭州": {"en": "Return to Canalward.", "zh-CN": "返回运河镇。"},
     "长安.商店": {"en": "West Market Supplies", "zh-CN": "西市补给铺"},
     "精兵铁卫": {
       "en": "Castle Guard",
@@ -901,6 +902,10 @@
       }
     },
     "六和塔": {
+      "石梁派": {
+        "name": {"en": "Stonebridge Hall", "zh-CN": "石桥会馆"},
+        "description": {"en": "A nearby hall on another story route.", "zh-CN": "附近的会馆，另有一段故事。"}
+      },
       "朝廷走狗": {
         "name": {
           "en": "Cardinal's Guard",
@@ -1040,8 +1045,8 @@
               "zh-CN": "营救枢机主教的囚犯"
             },
             "detail": {
-              "en": "Travel to Canalward, enter the Cardinal's Tower, and talk to the guard. The rescue has a 50% chance on a visit; leave and return if the tower is quiet. Prepare your party and save first: Rochefort has twelve guards, and defeat ends the journey. The rescue window closes after the Mysterious Swordsman milestone.",
-              "zh-CN": "前往运河镇，进入枢机塔，与守卫交谈。救援事件每次造访有50%概率；暂未发生时可离开后再来。先整备队伍并保存：罗什福尔带着十二名守卫，落败会结束旅程。神秘剑客里程碑之后，救援窗口会关闭。"
+              "en": "Prepare your party and save first; defeat ends the journey. Your first three members fight Rochefort and twelve guards. D'Artagnan is not in this battle. In Canalward, enter the Cardinal's Tower and talk to the guard. If the tower is quiet, leave and retry (50% chance). The Mysterious Swordsman milestone closes this window.",
+              "zh-CN": "先整备队伍并保存，落败会结束旅程。塔楼由队伍前三位对抗罗什福尔与十二名守卫，达达尼昂此时不参战。到运河镇进入枢机塔，再和守卫交谈；若未触发，请离开重访，概率仍为50%。神秘剑客里程碑之后，救援窗口会关闭。"
             },
             "route": [
               {

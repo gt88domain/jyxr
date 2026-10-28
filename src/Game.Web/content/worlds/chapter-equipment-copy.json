@@ -9,6 +9,10 @@
       "en": "An area Gauntlets technique that can apply Paralyzed. Check the live Energy and Rage costs and highlighted targets.",
       "zh-CN": "可施加麻痹的群体拳套招式。实际能量、怒气消耗及目标范围请在战斗中查看。"
     },
+    "三分剑法的精髓": {
+      "en": "An advanced Threefold Swordplay technique. Check its current Energy, Rage, cooldown, and highlighted area before using it.",
+      "zh-CN": "三段剑术的进阶招式。使用前请确认当前能量、怒气消耗、冷却与高亮作用范围。"
+    },
     "猴子偷桃": {
       "en": "Clockwork Swipe — Pocket Swipe",
       "zh-CN": "机关扫击·妙手一掏"

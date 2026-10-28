@@ -2852,8 +2852,8 @@
           "zh-CN": "三段剑术卷轴"
         },
         "description": {
-          "en": "Training scroll for Threefold Swordplay. Check its requirements and current effects in the item details.",
-          "zh-CN": "记载三段剑术的卷轴。学习条件与实际效果见道具详情。"
+          "en": "A reusable guide to Threefold Swordplay, up to Rank 10. Studying does not consume it. A character who has completed this guide needs a different one for further study; learned techniques remain available in combat.",
+          "zh-CN": "可重复使用的三段剑术手册，传授至10级；研习不消耗教材。已完成本书的角色，需要换另一份教材继续研习，已学招式仍可在战斗中使用。"
         }
       },
       "雷震剑法秘籍": {

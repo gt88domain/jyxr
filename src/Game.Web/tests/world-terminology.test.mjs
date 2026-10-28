@@ -1,6 +1,14 @@
 import assert from 'node:assert/strict';
 import {test} from 'node:test';
 import {translateUiText,setUiDisplayLabels} from '../src/ui/locale.ts';
+test('the observed fatal encounter explains recovery and translates its numbered ending',()=>{
+ assert.equal(translateUiText('第 1 周目 · 此程落幕'),'Playthrough 1 · Journey ended');
+ assert.equal(translateUiText('胜败有时，江湖未远'),'This journey has ended');
+ assert.equal(translateUiText('此次遭遇结束了这一程，可读取此前保存的进度。'),'This encounter ended your journey. Load an earlier save to prepare again.');
+ assert.equal(translateUiText('读取上次存档'),'Load saved game');
+ assert.equal(translateUiText('返回标题'),'Return to title');
+ assert.equal(translateUiText('第 1 周目 · 未改写结局'),'第 1 周目 · 未改写结局');
+});
 test('study rejection explains the required attribute without Chinese residue',()=>{
  assert.equal(translateUiText('需要剑法达到60'),'Requires Swords 60.');
  assert.equal(translateUiText('需要定力达到50'),'Requires Resolve 50.');
