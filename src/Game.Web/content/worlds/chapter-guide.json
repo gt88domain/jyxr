@@ -86,8 +86,8 @@
             "zh-CN": "把新法术练起来"
           },
           "detail": {
-            "en": "The supplies are going home, and Dulcinea is traveling with you. She earned 30 attribute points, +40 spell aptitude, and +500 maximum Health and Energy. In Gear & study, choose Dulcinea under Party member, then select the Bloodthorn Bolt Tome. Her equipped mastery is separate. Move her to slot 2 in Party for Team Practice.",
-            "zh-CN": "补给已送回，杜尔西内娅选择与你同行。她获得30培养点、法术熟练+40、生命和能量上限各+500。在“装备与研习”的“当前队员”中选择她，再选血棘飞矢法术书；主专精另行设置。结伴练习前，可在队伍把她调到第二位。"
+            "en": "The supplies are going home, and Dulcinea is traveling with you. She earned 30 attribute points, +40 spell aptitude, and +500 maximum Health and Energy. In Gear & study, choose Dulcinea under Party member, then select the Bloodthorn Bolt Tome. Her equipped mastery is separate. Move her to slot 2 in Party for Team Practice. Her spells burst along her row and column: choose the spell, then her own tile.",
+            "zh-CN": "补给已送回，杜尔西内娅选择与你同行。她获得30培养点、法术熟练+40、生命和能量上限各+500。在“装备与研习”的“当前队员”中选择她，再选血棘飞矢法术书；主专精另行设置。结伴练习前，可在队伍把她调到第二位。她的法术沿自身同行与同列爆发：先选招，再点她自己的格子。"
           },
           "route": []
         },
@@ -714,8 +714,8 @@
           "zh-CN": "陨星符术"
         },
         "description": {
-          "en": "An arcane spell. Its existing power, targeting, cost and effects are listed in the skill panel.",
-          "zh-CN": "法术技能。实际威力、目标范围、消耗与效果见技能面板。"
+          "en": "A cross-shaped burst centered on you. Move within reach of an enemy in your row or column, choose this spell, then select your own tile. It does not reach diagonal tiles. Check the current Energy cost and area before casting.",
+          "zh-CN": "以自身为中心的十字形法术。先移动到敌人同行或同列且在范围内的位置，再选本法术并点自己的格子施放；不能命中斜角格。施法前确认当前能量消耗与范围。"
         }
       },
       "伏虎掌": {

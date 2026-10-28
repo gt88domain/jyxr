@@ -648,8 +648,8 @@
           "zh-CN": "血棘飞矢"
         },
         "description": {
-          "en": "A spell. Check its range, Energy cost, and rank bonuses in the skill details.",
-          "zh-CN": "主动法术技能。实际范围、能量消耗与等级加成见技能详情。"
+          "en": "A burst of poisoned thorns centered on you. Move within reach of an enemy in your row or column, choose this spell, then select your own tile. Diagonal tiles are outside its area. Check the current Energy cost and area before casting.",
+          "zh-CN": "以自身为中心放出毒棘。先移动到敌人同行或同列且在范围内的位置，再选本法术并点自己的格子施放；斜角格不在作用范围内。施法前确认当前能量消耗与范围。"
         }
       },
       "伏魔杖法": {
