@@ -1,6 +1,10 @@
 import assert from 'node:assert/strict';
 import {test} from 'node:test';
 import {translateUiText,setUiDisplayLabels} from '../src/ui/locale.ts';
+test('study rejection explains the required attribute without Chinese residue',()=>{
+ assert.equal(translateUiText('需要剑法达到60'),'Requires Swords 60.');
+ assert.equal(translateUiText('需要定力达到50'),'Requires Resolve 50.');
+});
 test('composite battle labels translate while preserving the player name',()=>{
  assert.equal(translateUiText('我方 · 3人'),'Allies · 3');
  assert.equal(translateUiText('对手 · 7人'),'Enemies · 7');

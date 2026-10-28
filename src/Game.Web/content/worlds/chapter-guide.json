@@ -806,8 +806,8 @@
           "zh-CN": "河流专精"
         },
         "description": {
-          "en": "A passive mastery. Learned bonuses, equipped effects and unlocked techniques are listed in the skill panel.",
-          "zh-CN": "被动专精。已学加成、装备后效果及解锁招式见技能面板。"
+          "en": "A passive mastery with an emphasis on defense. Equip it to use its combat scaling; studying the manual is a separate choice. Rank 10 grants +10 Constitution.",
+          "zh-CN": "偏重防御的被动专精。装备后应用战斗加成，研习教材需另行设置。10级获得10点根骨加成。"
         }
       },
       "青城内功": {

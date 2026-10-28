@@ -13,8 +13,9 @@ function rank(skill:Skill){return `${t('Rank','等级')} ${skill.level}${skill.m
 function meter(value:number,max:number){return `<div class="as-meter"><i style="width:${max>0?Math.min(100,value/max*100):100}%"></i></div>`;}
 function material(item:InventoryItem,current:string|undefined,busy:boolean){
  const selected=item.id===current,mastered=!!item.training?.mastered;
- const status=mastered?t('Already learned','已掌握'):selected?t('Studying','研习中'):item.canCultivate?t('Ready to study','可以研习'):t('Requirements not met','暂不可研习');
- return `<article class="as-material" data-item-id="${e(item.id)}"><div class="as-item-icon">${image(item.icon)}</div><div><span class="as-kicker">${e(status)}</span><h4>${e(item.name)}</h4><p>${e(plain(item.description))}</p>${!item.canCultivate&&!selected?`<p class="as-reason">${e(item.reason)}</p>`:''}<button class="as-button ${selected?'subtle':''}" data-action="cultivate" data-entry-number="${item.entryNumber}" ${lock(busy||!item.canCultivate||selected)}>${selected?t('Studying','研习中'):mastered?t('Book completed','本书已掌握'):t('Study this guide','研习这本教材')}</button></div></article>`;
+ const owners=item.training?.assignedTo||[],inUse=!selected&&!item.canCultivate&&owners.length>0;
+ const status=mastered?t('Already learned','已掌握'):selected?t('Studying','研习中'):inUse?t('In use by a companion','伙伴正在研习'):item.canCultivate?t('Ready to study','可以研习'):t('Requirements not met','暂不可研习');
+ return `<article class="as-material" data-item-id="${e(item.id)}"><div class="as-item-icon">${image(item.icon)}</div><div><span class="as-kicker">${e(status)}</span><h4>${e(item.name)}</h4><p>${e(plain(item.description))}</p>${!item.canCultivate&&!selected?`<p class="as-reason">${e(item.reason)}</p>`:''}${inUse?owners.map(c=>`<button class="as-text-button" data-action="manage-character" data-id="${e(c.id)}" data-panel="loadout" data-section="as-study" ${lock(busy)}>${t('View study:','查看研习：')} ${e(c.name)} →</button>`).join(''):''}<button class="as-button ${selected?'subtle':''}" data-action="cultivate" data-entry-number="${item.entryNumber}" ${lock(busy||!item.canCultivate||selected)}>${selected?t('Studying','研习中'):mastered?t('Book completed','本书已掌握'):t('Study this guide','研习这本教材')}</button></div></article>`;
 }
 
 /** A live character sheet: all changes use the existing host commands. */
