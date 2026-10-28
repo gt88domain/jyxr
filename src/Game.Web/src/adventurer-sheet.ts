@@ -33,9 +33,9 @@ export function adventurerSheet(state:GameState,busy:boolean){
  const equippedCount=gear.filter(g=>g.item).length;
  const ready=[equippedCount>0,!!equipped,!!study||allMastered];
  return `<section class="adventurer-sheet" data-adventurer-sheet>
- <header class="as-heading"><a class="as-brand" href="#" data-action="close-modal"><span>${glyph('Weapon')}</span>STORYBOUND <small>${t('THE ADVENTURER’S JOURNAL','冒险者手册')}</small></a><span class="as-edition">${t('Character & build','角色与培养')} <i>◆</i> ${t('Live preview','界面示范')}</span></header>
+ <header class="as-heading"><a class="as-brand" href="#" data-action="close-modal"><span>${glyph('Weapon')}</span>STORYBOUND <small>${t('THE ADVENTURER’S JOURNAL','冒险者手册')}</small></a><span class="as-edition">${t('Character & build','角色与培养')}</span></header>
  <div class="as-title"><div><span class="as-kicker">${t('Make your next adventure yours','准备好，下一段冒险属于你')}</span><h2>${t('Your adventurer','你的冒险者')}<span>.</span></h2><p>${t('Equip your gear. Find your style. Bring a friend.','穿上装备，练出自己的风格，再带上一位伙伴。')}</p></div><label class="as-party-select">${t('Party member','当前队员')}<select id="managed-character" ${lock(busy)}>${(state.roster||state.party).map(c=>`<option value="${e(c.id)}" ${c.id===hero.id?'selected':''}>${e(c.name)} · ${t('Lv.','等级')} ${c.level}</option>`).join('')}</select></label></div>
- <nav class="as-onboarding" aria-label="${t('Getting ready','出发准备')}">${[t('Equip a weapon','穿戴武器'),t('Set a mastery','装备专精'),t('Choose your study','选择研习')].map((s,i)=>`<a href="#as-${['gear','mastery','study'][i]}" class="${ready[i]?'done':''}"><b>${ready[i]?'✓':i+1}</b><span>${s}</span></a>`).join('')}</nav>
+ <nav class="as-onboarding" aria-label="${t('Getting ready','出发准备')}">${[t('Equip gear','穿戴装备'),t('Set a mastery','装备专精'),t('Choose your study','选择研习')].map((s,i)=>`<a href="#as-${['gear','mastery','study'][i]}" class="${ready[i]?'done':''}"><b>${ready[i]?'✓':i+1}</b><span>${s}</span></a>`).join('')}</nav>
  ${locked?`<p class="as-notice">${t('You can look around. Finish the current encounter to change your build.','现在可以查看；结束当前交互或战斗后再调整培养。')}</p>`:''}
  <div class="as-layout">
  <aside class="as-character">

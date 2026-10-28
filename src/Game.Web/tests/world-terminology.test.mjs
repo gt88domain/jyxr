@@ -41,6 +41,18 @@ test('combined level-up and loot toasts translate as separate activity messages'
  assert.equal(translateUiText("Wren从6级升至7级。；获得「Traveler's Robe」×1"),"Wren levels up: 6 → 7.; Received Traveler's Robe ×1");
  assert.equal(translateUiText('未改写甲；未改写乙。'),'未改写甲；未改写乙。');
 });
+test('stat rewards stay readable with English player names and combined toasts',()=>{
+ assert.equal(translateUiText('Rowan max_hp +100；Rowan max_mp +100'),'Rowan · Maximum Health +100; Rowan · Maximum Energy +100');
+ assert.equal(translateUiText("  Max O'Hara max_mp -25 "),"  Max O'Hara · Maximum Energy -25 ");
+ assert.equal(translateUiText('Rowan · Maximum Energy -25'),'Rowan · Maximum Energy -25');
+});
+test('stat reward names use the display catalog without translating unknown commands',()=>{
+ setUiDisplayLabels({'钟灵':'Eir'});
+ assert.equal(translateUiText('钟灵 max_hp +100'),'Eir · Maximum Health +100');
+ assert.equal(translateUiText("set_flag('max_hp')"),"set_flag('max_hp')");
+ assert.equal(translateUiText('Rowan unknown_stat +100'),'Rowan unknown_stat +100');
+ setUiDisplayLabels();
+});
 test('world-news requirements remain readable when combined with semicolons',()=>{
  setUiDisplayLabels({'黑暗的阴影':'An Unwelcome Shadow'});
  const source='主角达到 15 级；参战队伍至少 8 人（含主角）；经历「黑暗的阴影」';

@@ -132,8 +132,11 @@ export function translateUiText(value:string):string {
     return result;
   }
   const text=value.trim();
-  if(!cjk.test(text))return value;
-  let translated=dictionary[text]??contentLabels[text];
+  // Stat-reward notices can contain only an English player name and a raw
+  // runtime key. Translate this known message shape even without CJK text.
+  const statChange=text.match(/^([^；\r\n]+?)\s+(max_hp|max_mp)\s+([+-]\d+)$/);
+  if(!cjk.test(text)&&!statChange&&!text.includes('；'))return value;
+  let translated=statChange?`${categorizedDisplay(displayCatalog,['characters'],statChange[1])?.name??contentLabels[statChange[1]]??statChange[1]} · ${statChange[2]==='max_hp'?'Maximum Health':'Maximum Energy'} ${statChange[3]}`:dictionary[text]??contentLabels[text];
   // Toasts combine independent activity messages into one text node.
   // Translate each message before joining; full-line patterns cannot match
   // a level-up followed by a separate loot notification.
