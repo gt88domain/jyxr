@@ -551,8 +551,8 @@
           {
             "speaker": "主角",
             "text": {
-              "en": "We need to regroup. I should keep a save before that ferry encounter next time.",
-              "zh-CN": "得先整备。再走这段渡口事件前，应该留一份存档。"
+              "en": "We need to regroup. This invitation is closed. We can try again from an earlier save, with a better plan.",
+              "zh-CN": "得先整备了。这次邀请已经关闭；要再试，得读回之前的存档，重新准备。"
             }
           }
         ]
@@ -823,6 +823,12 @@
     }
   },
   "uiLabels": {
+    "太岳四侠": {"en": "No Toll Today", "zh-CN": "渡口免票"},
+    "加入雪山大轮寺。": {"en": "Joined the Knights of the Round Table.", "zh-CN": "加入圆桌骑士团。"},
+    "打赢四个看似搞笑却很仗义的货": {"en": "Defeated the fake toll collectors at the ferry.", "zh-CN": "击败渡口自封的收税团。"},
+    "高昌迷宫说服李文秀一起浪迹江湖。": {"en": "Recovered the missing supplies with Dulcinea.", "zh-CN": "与杜尔西内娅追回失踪补给。"},
+    "帮助陈家洛击败铁手判官张召重。": {"en": "Defeated Rochefort with Milady and D'Artagnan.", "zh-CN": "与米莱狄、达达尼昂共同击败罗什福尔。"},
+    "战斗结束。可返回地图重新切磋。": {"en": "Battle ended. Follow the story outcome or load an earlier save.", "zh-CN": "战斗结束。请按剧情结果继续，或读取之前的存档。"},
     "融会贯通": {"en": "Versatile", "zh-CN": "融会贯通"},
     "返回杭州": {"en": "Return to Canalward.", "zh-CN": "返回运河镇。"},
     "长安.商店": {"en": "West Market Supplies", "zh-CN": "西市补给铺"},
@@ -1175,16 +1181,16 @@
               "zh-CN": "单人决战落败"
             },
             "detail": {
-              "en": "This defeat closes the ferry invitation in the current save. To retry, reload the page and choose Load manual save on the title screen if you saved before the encounter, or import your pre-fight backup. Continue may load the newer autosave with the defeat still recorded. Improve your hero before returning at night; companions cannot join the final fight.",
-              "zh-CN": "当前存档中的渡口邀请已因落败关闭。若事件前已手动保存，可刷新页面，在标题页选择读取手动存档；也可导入战前备份。继续旅程可能读到记录了落败的较新自动存档。先培养主角再于夜间重访，伙伴不能参加最后一战。"
+              "en": "This defeat closes the ferry invitation. If you saved before the encounter, reload the page and choose Load manual save on the title screen, or import your backup from before the ferry. Saving now would overwrite that manual save with this defeat. Continue may load the newer autosave with the loss recorded. Improve your hero before returning; companions cannot join the final fight.",
+              "zh-CN": "渡口邀请已因落败关闭。若事件前已手动保存，可刷新页面，在标题页选择读取手动存档，或导入渡口前的备份。现在再保存会用失败进度覆盖原手动档；继续旅程也可能读到记录了落败的较新自动档。先培养主角再来，伙伴不能参加最后一战。"
             },
             "route": [],
             "blockedBy": [
               "鸳鸯刀正_风陵渡败"
             ],
             "blockedDetail": {
-              "en": "No automatic reset or recovery reward has been added.",
-              "zh-CN": "没有额外重置剧情或补发奖励。"
+              "en": "Returning to the ferry will not reopen this invitation in the current save.",
+              "zh-CN": "当前存档中，再到渡口也不会重开这次邀请。"
             },
             "any": [
               "鸳鸯刀正_风陵渡败"
@@ -1249,8 +1255,8 @@
               "zh-CN": "夜访风歌渡口"
             },
             "detail": {
-              "en": "Save first. After two fights, refuse the seals (+3 Morality) to protect Pinocchio and the Blue Fairy, or keep them (-3) for the Scarecrow route. Protecting them ends with your hero ALONE against Orlando and six guards. Check learned techniques, mastery, gear, and Energy supplies. Storymarket's West Market sells Ninepetal Elixir, which restores Health and Energy. You can explore another route before starting this challenge. Losing the finale closes this invitation.",
-              "zh-CN": "先保存。前两战后，拒收印记（道德+3）可保护匹诺曹与蓝仙女；收下印记（道德-3）进入稻草人路线。保护路线最终由主角独战奥兰多与六名守卫。请检查已学战技、主专精、装备与能量补给。故事集市的西市出售同时恢复生命和能量的九瓣花露药剂。准备不足时，可先探索其他路线再开启挑战；终战落败会关闭这次招募。"
+              "en": "Prepare and save before setting out at night. Three fights run without a map break; Health and Energy carry over. The first two use your first three party members. The finale is your hero ALONE against Orlando and six guards. Refuse the seals (+3 Morality) to protect Pinocchio, or keep them (-3) for the Scarecrow route. Stock up at West Market Supplies. A solo defeat closes this invitation; retry from an earlier manual save.",
+              "zh-CN": "夜间出发前先准备并保存。三场战斗连续进行，中途不回地图，生命与能量会延续。前两战用队伍前三位，终战只有主角独战奥兰多与六名守卫。拒收印记（道德+3）保护匹诺曹；收下（道德-3）进入稻草人路线。可先去西市补给铺整备。单人战落败会关闭邀请，重试须读取更早的手动档。"
             },
             "route": [
               {
