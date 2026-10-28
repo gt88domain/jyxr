@@ -17,6 +17,7 @@ export function setUiDisplayLabels(labels:Record<string,string>={},catalog?:Disp
 function itemLabel(name:string){return categorizedDisplay(displayCatalog,['items'],name)?.name??translateUiText(name);}
 function skillLabel(name:string){return categorizedDisplay(displayCatalog,['externalSkills','internalSkills','specialSkills','legendSkills'],name)?.name??translateUiText(name);}
 const patterns:Array<[RegExp,(...parts:string[])=>string]>=[
+  [/^招式冷却中，还需\s*(\d+)\s*回合。$/,(turns)=>`Technique cooling down: ${turns} turns remaining.`],
   [/^需要(剑法|刀法|拳掌|奇门|根骨|定力|臂力|身法|悟性|福缘)达到\s*(\d+)$/,(stat,value)=>`Requires ${translateUiText(stat)} ${value}.`],
   [/^(我方|对手)\s*·\s*(\d+)人$/,(team,n)=>`${team==='我方'?'Allies':'Enemies'} · ${n}`],
   [/^(.*?)\s*·\s*请选择走位格$/,(name)=>`${name} · Choose a destination`],

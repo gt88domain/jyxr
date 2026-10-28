@@ -1,4 +1,9 @@
 {
+  "选择招式": "Choose a technique",
+  "怒气不足。": "Not enough Rage.",
+  "内力不足。": "Not enough Energy.",
+  "招式被封印。": "This technique is sealed.",
+  "该招式当前无法使用。": "This technique is unavailable right now.",
   "卷轴研习": "Study",
   "本书已掌握": "Book completed",
   "当前教材已学完": "Current guides completed",

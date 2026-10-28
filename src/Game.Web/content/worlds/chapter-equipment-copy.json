@@ -1,6 +1,14 @@
 {
   "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
   "uiLabels": {
+    "我是流氓我怕谁！": {
+      "en": "A rough-and-ready Gauntlets technique. Your footwork could use work; your confidence is doing fine. Check its current costs and targets.",
+      "zh-CN": "粗犷直接的拳套招式。步法还可再练，自信倒是十分充足。实际消耗与目标请在战斗中查看。"
+    },
+    "百花错拳绝技": {
+      "en": "An area Gauntlets technique that can apply Paralyzed. Check the live Energy and Rage costs and highlighted targets.",
+      "zh-CN": "可施加麻痹的群体拳套招式。实际能量、怒气消耗及目标范围请在战斗中查看。"
+    },
     "猴子偷桃": {
       "en": "Clockwork Swipe — Pocket Swipe",
       "zh-CN": "机关扫击·妙手一掏"
