@@ -112,12 +112,12 @@
       "zh-CN": "格林请我帮助那些停在半途的童话。首先，学点本领，别让自己的故事停在开头。"
     },
     "点击人物状态栏，点击修炼，可以装备内功入门。": {
-      "en": "Open Training and select Steadfast Mastery Scroll.",
-      "zh-CN": "打开人物状态栏的“修炼”，选入《坚毅专精卷轴》。"
+      "en": "Open Gear & study and select the Steadfast Mastery Manual.",
+      "zh-CN": "打开“装备与研习”，选择《坚毅专精手册》。"
     },
     "装备上的武学经书，在战斗结束后能将获得的经验快速分配到该项武学上，可以迅速提升武学等级。": {
-      "en": "A selected training scroll receives battle experience. Reading alone will not frighten the dummy.",
-      "zh-CN": "选入修炼栏的卷轴会获得战斗经验。只捧着书看，可吓不倒训练假人。"
+      "en": "Your selected guide gains study XP when you fight. Reading alone won't scare the dummy.",
+      "zh-CN": "选好教材后，实际出战才会得到研习经验。只捧着书看，可吓不倒训练假人。"
     },
     "入门体验告一段落。原版买药教学、门派选择和其他江湖地点已逐步接入；可继续完成南贤的原版任务。尚未迁移的特殊流程不会被当作已完成。": {
       "en": "That is how two travelers become a team. Review your opening-chapter goals and save your journey. More stories await beyond this field trial; those later chapters are still being rewritten.",
@@ -718,7 +718,7 @@
         "en": [
           "[Spar] Let me try the training dummy.",
           "[Leave] That's enough bruises for now.",
-          "How do attacks and masterys work?",
+          "How do attacks and masteries work?",
           "What do talents actually do?",
           "Where can I learn advanced techniques?",
           "How do Radiant and Umbral affinities work?",

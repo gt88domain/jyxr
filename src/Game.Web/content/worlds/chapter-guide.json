@@ -388,8 +388,8 @@
       {
         "id": "shopping",
         "detail": {
-          "en": "Visit Crossroads Supplies. Choose one free scroll, receive five tonics, then make an actual purchase. Bring the supplies back to Grimm.",
-          "zh-CN": "前往十字镇补给铺，选择一份赠送卷轴、领取五份药剂，再实际购买一件商品。随后回去向格林交差。"
+          "en": "Visit Crossroads Supplies. Choose one free learning guide, receive five tonics, then make an actual purchase. Bring the supplies back to Grimm.",
+          "zh-CN": "前往十字镇补给铺，选择一份赠送教材、领取五份药剂，再实际购买一件商品。随后回去向格林交差。"
         },
         "route": [
           {
