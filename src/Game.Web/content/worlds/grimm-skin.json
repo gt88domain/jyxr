@@ -874,8 +874,8 @@
           "zh-CN": "强效恢复药剂"
         },
         "description": {
-          "en": "Restores 1,000 HP plus 10% of maximum HP. It has a cooldown; plan before using it.",
-          "zh-CN": "恢复1000点生命，并额外恢复最大生命的10%。有冷却时间，使用前请留意。"
+          "en": "Restores 1,000 Health plus 10% of maximum Health. Item cooldowns apply above Normal difficulty.",
+          "zh-CN": "恢复1000点生命，并额外恢复最大生命的10%。高于普通难度时启用物品冷却。"
         }
       },
       "冬虫夏草": {

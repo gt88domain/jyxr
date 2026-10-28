@@ -18,7 +18,7 @@ try{
  await click('[data-action="interact"][data-id="商店"]');
  const s=await state(),product=s.shop.products.find(p=>p.itemId==='九花玉露丸');
  assert.equal(s.shop.name,'West Market Supplies');assert.equal(product.name,'Ninepetal Elixir');
- assert.match(product.description,/600 Health and 300 Energy/);assert.match(product.description,/cooldown/);
+ assert.match(product.description,/600 Health and 300 Energy/);assert.match(product.description,/cooldowns apply above Normal difficulty/);
  assert.equal(product.price,100);assert.equal(s.silver,494);
  const quantity=s.inventory.find(i=>i.id==='九花玉露丸')?.count||0;
  await page.locator('#shop-quantity').fill('4');await click(`[data-action="buy-item"][data-id="${product.id}"]`);

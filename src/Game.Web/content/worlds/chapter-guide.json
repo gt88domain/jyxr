@@ -938,8 +938,8 @@
           "zh-CN": "九瓣花露药剂"
         },
         "description": {
-          "en": "Restores 600 Health and 300 Energy. Has a cooldown.",
-          "zh-CN": "恢复600点生命和300点能量。有使用冷却。"
+          "en": "Restores 600 Health and 300 Energy. Item cooldowns apply above Normal difficulty.",
+          "zh-CN": "恢复600点生命和300点能量。高于普通难度时启用物品冷却。"
         }
       },
       "木刀": {

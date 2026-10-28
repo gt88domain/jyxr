@@ -16,6 +16,10 @@ try{
  await click('[data-action="interact"][data-id="张召重"]');
  for(let n=0;n<30&&(await state()).phase==='dialogue';n++)await click('[data-action="next"]');
  const before=(await state()).battle;assert.equal(before.id,'庖丁解牛_战斗');assert.equal(before.units.length,16);
+ assert.match(await page.locator('#battle-clock').innerText(),/Battle time.*3000/);
+ await click('[data-action="inventory"]');
+ assert.match(await page.locator('[data-potion-turn-cost]').innerText(),/Using a potion ends this character’s action/);
+ await h.closeModal();
  assert.equal(await page.locator('.battle-roster[open]').count(),0);
  await page.locator('.battle-roster summary').click();
  for(const [i,u] of before.units.entries()){
@@ -29,6 +33,7 @@ try{
  const after=(await state()).battle;
  assert.deepEqual(after,before,'Reading the roster or resizing must not advance combat');
  await page.setViewportSize({width:390,height:844});await page.locator('.battle-roster summary').click();
+ await page.evaluate(()=>scrollTo(0,0));
  await page.screenshot({path:h.output+'battle-labels-mobile.png'});
  pass('Real French battle: all 16 numbered names match the roster; inspecting and resizing preserve battle state');
 }catch(e){failure=e;}

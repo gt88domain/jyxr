@@ -1,1 +1,2 @@
 .battle-roster{padding:10px 12px;background:#183c31;color:#fff5de;font-size:12px}.battle-roster summary{cursor:pointer;min-height:24px;line-height:24px}.battle-roster p{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:8px;align-items:center;margin:10px 0}.battle-roster span{overflow-wrap:anywhere}.battle-roster small{white-space:nowrap}.battle-roster .friendly b{color:#d6ffe2}.battle-roster .opponent b{color:#ffe1c9}
+.duel-clock{font-size:11px;line-height:1.4;color:#d5ddc8;margin:5px 0 0}

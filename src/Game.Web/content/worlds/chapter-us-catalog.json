@@ -2172,8 +2172,8 @@
           "zh-CN": "生机药剂"
         },
         "description": {
-          "en": "Restores 2,000 Health and 2,000 Energy. Has a cooldown.",
-          "zh-CN": "恢复2000点生命和2000点能量。有使用冷却。"
+          "en": "Restores 2,000 Health and 2,000 Energy. Item cooldowns apply above Normal difficulty.",
+          "zh-CN": "恢复2000点生命和2000点能量。高于普通难度时启用物品冷却。"
         }
       },
       "续命八丸": {

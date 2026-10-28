@@ -4,17 +4,18 @@ import {createHash} from 'node:crypto';
 import {createHarness} from './ui-harness.mjs';
 const dir=process.env.PLAYTHROUGH_CHECKPOINTS;assert.ok(dir);
 const defense=process.env.ITALY_DEFENSE==='1';
-const file=defense?'src/Game.Web/test-results/defense-trained-save.json':dir+'/italy-trained.json',raw=await readFile(file);
+const armor=process.env.ITALY_ARMOR==='1';
+const file=armor?'src/Game.Web/test-results/pre-ferry-defense-armor.json':defense?'src/Game.Web/test-results/defense-trained-save.json':dir+'/italy-trained.json',raw=await readFile(file);
 const manifest=JSON.parse(await readFile(dir+'/manifest.json','utf8'));
-const proof=defense?JSON.parse(await readFile('src/Game.Web/test-results/defense-training.json','utf8')):null;
-if(defense)assert.ok(proof.passed);
-assert.equal(createHash('sha256').update(raw).digest('hex'),defense?proof.checkpoint.sha256:manifest.find(x=>x.name==='italy-trained').sha256);
+const proof=armor||defense?JSON.parse(await readFile(`src/Game.Web/test-results/${armor?'preparation-path':'defense-training'}.json`,'utf8')):null;
+if(proof)assert.ok(proof.passed);
+assert.equal(createHash('sha256').update(raw).digest('hex'),proof?proof.checkpoint.sha256:manifest.find(x=>x.name==='italy-trained').sha256);
 const prepared=process.env.ITALY_PREPARE==='1';
 const supplied=process.env.ITALY_SHOP==='1';
-const h=await createHarness(defense?'italy-defense':supplied?'italy-supplied':prepared?'italy-prepared':'italy-manual',{viewport:{width:390,height:844}},{trace:false});
+const h=await createHarness(armor?'italy-armor':defense?'italy-defense':supplied?'italy-supplied':prepared?'italy-prepared':'italy-manual',{viewport:{width:390,height:844}},{trace:false});
 const {page,report,click,ready,state,pass,finish}=h;
 await page.addInitScript(()=>localStorage.setItem('jyxr-fantasy-worlds.preferences.v1',JSON.stringify({battleSpeed:4,battleMode:'manual',musicVolume:0,effectsVolume:0,reducedMotion:true})));
-report.outcomes=[];report.method='Unedited published normal-difficulty Italy-trained save; visible map, dialogue, medicine and manual combat controls. An observed defeat is not a cleared chapter.';
+report.outcomes=[];report.starts=[];report.device='Headless Chromium, 390x844 CSS-pixel viewport and mouse inputs; no physical-phone or touch-device validation';report.method='Unedited normal-difficulty save with verified provenance; visible map, dialogue, medicine and manual combat controls. An observed defeat is not a cleared chapter.';
 let failure;
 try{
  await page.goto(report.baseURL);await page.locator('[data-action="new"]').waitFor({timeout:120000});
@@ -27,11 +28,12 @@ try{
   await click('[data-action="interact"][data-id="长安西市"]');
   await click('[data-action="interact"][data-id="商店"]');
   const s=await state(),product=s.shop.products.find(p=>p.itemId==='九花玉露丸');
-  assert.ok(product?.canBuy);assert.equal(product.price,100);assert.equal(s.silver,defense?544:494);
-  await page.locator('#shop-quantity').fill('4');
+  const quantity=armor?3:4;
+  assert.ok(product?.canBuy);assert.equal(product.price,100);assert.equal(s.silver,armor?344:defense?544:494);
+  await page.locator('#shop-quantity').fill(String(quantity));
   await click(`[data-action="buy-item"][data-id="${product.id}"]`);
-  assert.equal((await state()).silver,s.silver-400);
-  report.supplies={city:s.map.name,shop:s.shop.name,item:product.name,price:product.price,quantity:4,before:s.silver,after:s.silver-400};
+  assert.equal((await state()).silver,s.silver-100*quantity);
+  report.supplies={city:s.map.name,shop:s.shop.name,item:product.name,price:product.price,quantity,before:s.silver,after:s.silver-100*quantity};
   await click('[data-action="close-shop"]');
   await click('[data-action="interact"][data-id="返回"]');await click('[data-action="interact"][data-id="返回"]');
  }
@@ -50,8 +52,9 @@ try{
   if(s.phase==='choice'){await click('[data-action="choice"][data-index="0"]');continue;}
   if(s.phase==='battle'){
    entered=true;battleId=s.battle.id;
+   if(report.starts.at(-1)?.id!==battleId){report.starts.push({id:battleId,hero:s.hero,units:s.battle.units});console.log('BATTLE',battleId);}
    if(s.battle.outcome!=='ongoing'){
-    report.outcomes.push({id:battleId,outcome:s.battle.outcome,units:s.battle.units});
+    report.outcomes.push({id:battleId,outcome:s.battle.outcome,tick:s.battle.tick,tickLimit:s.battle.tickLimit,timedOut:s.battle.timedOut,units:s.battle.units});
     await click('[data-action="leave-battle"]');
     if(s.battle.outcome!=='win')break;
     continue;
@@ -99,6 +102,7 @@ try{
   await click(`[data-action="interact"][data-id="${id}"]`);
  }
  assert.ok(report.outcomes.length,'Observe at least one real battle outcome');
+ assert.ok(report.outcomes.some(b=>b.id==='鸳鸯刀正风陵渡_战斗'),'A complete finale outcome is required; opening victories alone are not a completed trial');
  for(let n=0;n<20&&(await state()).phase==='dialogue';n++)await click('[data-action="next"]');
  report.ending={phase:(await state()).phase,map:(await state()).map?.id};
  if(report.outcomes.at(-1).id==='鸳鸯刀正风陵渡_战斗'&&report.outcomes.at(-1).outcome==='win'){
@@ -108,6 +112,8 @@ try{
   await page.locator('[data-action="load"]').waitFor({timeout:120000});await click('[data-action="load"]');
   assert.ok((await state()).roster.some(c=>c.definitionId==='袁冠南'));
   report.recruitment='Pinocchio joined through the original victory story and remained after save/reload.';
+  await click('[data-action="inventory"]');const waiting=page.waitForEvent('download');await click('[data-action="download-save"]');const exported=await waiting;const path=h.output+(armor?'italy-armor-victory.json':'italy-manual-victory.json');await exported.saveAs(path);await h.closeModal();
+  report.victoryCheckpoint={path,sha256:createHash('sha256').update(await readFile(path)).digest('hex')};
  }
  if(report.outcomes.at(-1).outcome!=='win'){
   assert.ok((await state()).chapterJournal.completedStories.includes('鸳鸯刀正_风陵渡败'));
