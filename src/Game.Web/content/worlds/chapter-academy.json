@@ -447,8 +447,8 @@
           "zh-CN": "新伙伴准备好了"
         },
         "graduateDetail": {
-          "en": "The Mad Hatter joined through graduation. Check his gear and mastery in Adventurer. Go through the Snowfields, then Leave the Mountain. This is graduation, not quitting the lodge. Save before exploring.",
-          "zh-CN": "疯帽匠已通过出师剧情加入。在人物页为他检查装备和专精。前往雪地，再选下山；出师并不取消组织身份，探索前记得保存。"
+          "en": "The Mad Hatter joined through graduation. Open Gear & study to check his equipment, mastery and study. Team Practice uses only the first two party slots; move him to slot 2 in Party to train him. Leave through the Snowfields, then Leave the Mountain. You remain a member. Save before exploring.",
+          "zh-CN": "疯帽匠已通过毕业剧情加入。到“装备与研习”查看装备、主专精和教材。结伴练习仅前两位出场，可在队伍把他调到第二位。经雪地，再选下山；离开后仍保留组织身份。出发前保存。"
         },
         "training": [
           {

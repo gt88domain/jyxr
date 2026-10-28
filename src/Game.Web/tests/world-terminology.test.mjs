@@ -62,6 +62,14 @@ test('actual first-lesson notices translate learned skills and the overflow summ
  assert.equal(translateUiText(source),expected);assert.equal(translateUiText(expected),expected);
  setUiDisplayLabels();
 });
+test('repeat lessons report actual rank gains, distinct from first learning or power bonuses',()=>{
+ setUiDisplayLabels({'密宗大手印':'Iron Seal Strike','基本内功':'Steadfast Mastery'});
+ const source='Rowan 臂力 +1；Rowan 外功【密宗大手印】 +1，另有1条，见通知。';
+ const expected='Rowan Strength +1; Rowan · Iron Seal Strike rank +1. 1 more in Notifications.';
+ assert.equal(translateUiText(source),expected);assert.equal(translateUiText(expected),expected);
+ assert.equal(translateUiText('Rowan 内功【基本内功】 +2'),'Rowan · Steadfast Mastery rank +2.');
+ setUiDisplayLabels();
+});
 test('world-news requirements remain readable when combined with semicolons',()=>{
  setUiDisplayLabels({'黑暗的阴影':'An Unwelcome Shadow'});
  const source='主角达到 15 级；参战队伍至少 8 人（含主角）；经历「黑暗的阴影」';
