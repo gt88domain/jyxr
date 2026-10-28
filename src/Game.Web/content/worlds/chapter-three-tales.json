@@ -823,6 +823,10 @@
     }
   },
   "uiLabels": {
+    "精兵铁卫": {
+      "en": "Castle Guard",
+      "zh-CN": "城堡卫兵"
+    },
     "朝廷走狗": {
       "en": "Cardinal's Guard",
       "zh-CN": "枢机卫兵"
