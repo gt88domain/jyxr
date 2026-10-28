@@ -674,8 +674,8 @@
           "zh-CN": "花雨拳"
         },
         "description": {
-          "en": "A gauntlet technique. Power, range, cost and unlocked effects are listed in the skill panel.",
-          "zh-CN": "拳套战技。实际威力、距离、消耗及解锁效果见技能面板。"
+          "en": "A gauntlet technique. Rank 8 unlocks Full Bloom, an area technique that can apply Paralyzed. Check its current Energy, Rage and range requirements in battle.",
+          "zh-CN": "拳套战技。8级解锁群体招式繁花盛放，可施加麻痹。实际能量、怒气与距离要求请在战斗中查看。"
         }
       },
       "嵩山剑法": {
@@ -958,8 +958,8 @@
           "zh-CN": "钢制拳套"
         },
         "description": {
-          "en": "Attack +50; critical chance +2%. Gauntlets focus. Requires Gauntlets 35 and Strength 35.",
-          "zh-CN": "攻击+50，暴击率+2%。拳套媒介，需要拳套熟练35、力量35。"
+          "en": "Attack +50; critical chance +2%. Gauntlets Focus reduces attack by 10% for Swordsmanship, Heavy Weapons and Spells. Requires Gauntlets 35 and Strength 35.",
+          "zh-CN": "攻击+50、暴击率+2%。拳套媒介使剑术、重武器和法术的攻击值降低10%。需要拳套35、力量35。"
         }
       },
       "精制匕首": {
@@ -968,8 +968,8 @@
           "zh-CN": "决斗匕首"
         },
         "description": {
-          "en": "Attack +40; critical chance +3%. Sword focus. Requires Agility 35.",
-          "zh-CN": "攻击+40，暴击率+3%。剑术媒介，需要敏捷35。"
+          "en": "Attack +40; critical chance +3%. Sword Focus reduces attack by 10% for Gauntlets, Heavy Weapons and Spells. Requires Agility 35.",
+          "zh-CN": "攻击+40、暴击率+3%。剑术媒介使拳套、重武器和法术的攻击值降低10%。需要敏捷35。"
         }
       },
       "铲刀": {
@@ -1080,8 +1080,8 @@
           "zh-CN": "拳套媒介"
         },
         "description": {
-          "en": "Non-Gauntlets techniques deal 90% damage while using this focus.",
-          "zh-CN": "使用此媒介时，非拳套技能造成90%的伤害。"
+          "en": "Reduces attack by 10% for Swordsmanship, Heavy Weapons and Spells.",
+          "zh-CN": "剑术、重武器和法术的攻击值降低10%。"
         }
       },
       "刀系装备": {
@@ -1090,8 +1090,8 @@
           "zh-CN": "重武器媒介"
         },
         "description": {
-          "en": "Non-Heavy Weapons techniques deal 90% damage while using this focus.",
-          "zh-CN": "使用此媒介时，非重武器技能造成90%的伤害。"
+          "en": "Reduces attack by 10% for Gauntlets, Swordsmanship and Spells.",
+          "zh-CN": "拳套、剑术和法术的攻击值降低10%。"
         }
       },
       "剑系装备": {
@@ -1100,8 +1100,8 @@
           "zh-CN": "剑术媒介"
         },
         "description": {
-          "en": "Non-Swordsmanship techniques deal 90% damage while using this focus.",
-          "zh-CN": "使用此媒介时，非剑术技能造成90%的伤害。"
+          "en": "Reduces attack by 10% for Gauntlets, Heavy Weapons and Spells.",
+          "zh-CN": "拳套、重武器和法术的攻击值降低10%。"
         }
       },
       "奇门装备": {
@@ -1110,8 +1110,8 @@
           "zh-CN": "法术媒介"
         },
         "description": {
-          "en": "Non-Spells techniques deal 90% damage while using this focus.",
-          "zh-CN": "使用此媒介时，非法术技能造成90%的伤害。"
+          "en": "Reduces attack by 10% for Gauntlets, Swordsmanship and Heavy Weapons.",
+          "zh-CN": "拳套、剑术和重武器的攻击值降低10%。"
         }
       },
       "奇门增益": {

@@ -1,4 +1,5 @@
 import type {GameState, Skill} from './bridge';
+import {copy} from './ui-language';
 
 const e = (value: unknown) => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
 const plain = (value: string) => value.replace(/\[\[[a-z]+:([^\]]*)\]\]/gi, '$1').replace(/<\/?color[^>]*>/g, '');
@@ -10,7 +11,7 @@ export function skillFacts(skill: Skill, energy: string): string {
 export function battleSkillsView(state: GameState, selected: string, canSelect: boolean): string {
   const active = state.battle?.units.find(u => u.id === state.battle?.activeUnitId);
   const energy = state.pack.terms?.energy || '内力';
-  return `<p class="panel-intro">${e(active?.name || '当前角色')} · ${e(energy)} ${active?.mp ?? 0} / ${active?.maxMp ?? 0} · 怒气 ${active?.rage ?? 0}。${canSelect ? '选招后返回战场，点目标格确认施展。' : '当前可查看招式；手动操控且轮到我方时可选招。'}</p><div class="battle-skill-sheet">${(state.battle?.skills || []).map(skill => `<article class="battle-skill-card ${selected === skill.id ? 'selected' : ''}"><h3>${e(skill.name)} <small>第 ${skill.level} 重</small></h3><p>${e(plain(skill.description || '查看战场高亮范围选择目标。'))}</p><p class="battle-skill-facts">${e(skillFacts(skill, energy))}</p>${skill.available === false ? `<p class="duel-unavailable" data-skill-reason>${e(skill.reason || '当前无法施展')}</p>` : ''}<button class="item-action" data-action="choose-battle-skill" data-id="${e(skill.id)}" ${!canSelect || skill.available === false ? 'disabled' : ''}>${selected === skill.id ? '使用此招' : '选择此招'}</button></article>`).join('') || '<p>当前没有可用招式。</p>'}</div>`;
+  return `<p class="panel-intro">${e(active?.name || '当前角色')} · ${e(energy)} ${active?.mp ?? 0} / ${active?.maxMp ?? 0} · 怒气 ${active?.rage ?? 0}。${canSelect ? '选招后返回战场，点目标格确认施展。' : '当前可查看招式；手动操控且轮到我方时可选招。'}</p><p class="panel-intro" data-skill-preparation-note>${copy("Rank, weapon focus and effects all matter. Lower Energy cost conserves resources; damage also depends on the technique and your build.","等级、武器媒介和效果都会影响选择。较低能量消耗有助于续航，伤害还取决于招式本身与角色搭配。")}</p><div class="battle-skill-sheet">${(state.battle?.skills || []).map(skill => `<article class="battle-skill-card ${selected === skill.id ? 'selected' : ''}"><h3>${e(skill.name)} <small>第 ${skill.level} 重</small></h3><p>${e(plain(skill.description || '查看战场高亮范围选择目标。'))}</p><p class="battle-skill-facts">${e(skillFacts(skill, energy))}</p>${skill.available === false ? `<p class="duel-unavailable" data-skill-reason>${e(skill.reason || '当前无法施展')}</p>` : ''}<button class="item-action" data-action="choose-battle-skill" data-id="${e(skill.id)}" ${!canSelect || skill.available === false ? 'disabled' : ''}>${selected === skill.id ? '使用此招' : '选择此招'}</button></article>`).join('') || '<p>当前没有可用招式。</p>'}</div>`;
 }
 
 export function battleActionView(state: GameState, command: Record<string, unknown>): string {

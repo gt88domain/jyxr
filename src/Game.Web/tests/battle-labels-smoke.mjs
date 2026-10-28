@@ -17,6 +17,10 @@ try{
  for(let n=0;n<30&&(await state()).phase==='dialogue';n++)await click('[data-action="next"]');
  const before=(await state()).battle;assert.equal(before.id,'庖丁解牛_战斗');assert.equal(before.units.length,16);
  assert.match(await page.locator('#battle-clock').innerText(),/Battle time.*3000/);
+ await click('[data-action="battle-skills"]');
+ assert.match(await page.locator('[data-skill-preparation-note]').innerText(),/Lower Energy cost conserves resources/);
+ assert.match(await page.locator('.battle-skill-sheet').innerText(),/major power increase at rank 10/);
+ await h.closeModal();
  await click('[data-action="inventory"]');
  assert.match(await page.locator('[data-potion-turn-cost]').innerText(),/Using a potion ends this character’s action/);
  await h.closeModal();
