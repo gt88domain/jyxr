@@ -219,8 +219,8 @@
           {
             "speaker": "华辉",
             "text": {
-              "en": "Know your own strengths before you choose your next lesson. Want a field test?",
-              "zh-CN": "选下一门技艺前，先认清自己的本事。要做个实地考核吗？"
+              "en": "This field test is optional, but defeat ends your journey. Know your strengths before saying yes.",
+              "zh-CN": "考核可不接，但输了就会结束这段旅程。先掂量自己的本事，再决定要不要参加。"
             }
           },
           {
@@ -926,11 +926,11 @@
       },
       "options": {
         "en": [
-          "Follow Dulcinea.",
+          "Follow Dulcinea (combat).",
           "Stay in camp."
         ],
         "zh-CN": [
-          "跟上杜尔西内娅。",
+          "跟上杜尔西内娅（战斗）。",
           "留在营地。"
         ]
       }
@@ -942,12 +942,12 @@
       },
       "options": {
         "en": [
-          "Accept the duel.",
-          "Keep the peace."
+          "Take the optional field test (−5 Trust).",
+          "Return the supplies first (+5 Trust)."
         ],
         "zh-CN": [
-          "接受切磋。",
-          "息事宁人。"
+          "接受实地考核（信任−5）。",
+          "先送回补给（信任+5）。"
         ]
       }
     },

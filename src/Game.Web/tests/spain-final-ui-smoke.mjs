@@ -1,0 +1,36 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {createHarness} from './ui-harness.mjs';
+const proof=JSON.parse(await readFile('src/Game.Web/test-results/opening-spain-warehouse-observed.json','utf8'));assert.ok(proof.progressVerified);
+assert.equal(createHash('sha256').update(await readFile(proof.checkpoint.path)).digest('hex'),proof.checkpoint.sha256);
+const original=JSON.parse(await readFile(proof.checkpoint.path,'utf8'));assert.ok(original.activity.entries.some(e=>e.message==='李文秀 自由属性点 +30'));
+const h=await createHarness('spain-final-ui',{viewport:{width:390,height:844}},{trace:false});
+const {page,report,ready,click,state,closeModal,noOverflow,pass,finish}=h;report.source=proof.checkpoint;report.upstreamReport='opening-spain-warehouse-observed.json';report.method='Inspect the earned completed chapter, expanded diary, four actual reward notices and the intended companion’s usable tome, then save/reload. No repeat battles or spent reward points.';let failure;
+try{
+ await page.goto(report.baseURL);await page.locator('[data-action="new"]').waitFor({timeout:120000});
+ await page.locator('#import-file').setInputFiles(proof.checkpoint.path);await page.waitForFunction(()=>document.querySelector('#import-file')?.value==='');await ready();const start=await state();
+ assert.equal(start.silver,52);assert.equal(start.chapterJournal.trust,60);assert.equal(start.adventure.morality,50);assert.ok(start.chapterJournal.completedStories.includes('白马啸西风_完结2'));assert.ok(start.objectives.every(o=>o.completed));assert.ok(!start.roster.some(c=>c.definitionId==='陈达海'));
+ assert.match(await page.locator('[data-guidance]').innerText(),/Rose Caravan/);
+ await click('[data-action="quests"]');await page.locator('[data-journey-story="dulcinea-ending"] summary').click();const ending=await page.locator('[data-journey-story="dulcinea-ending"]').innerText();
+ for(const text of ['supplies are going home','30 attribute points','+40 spell aptitude','Party member','Bloodthorn Bolt Tome','slot 2'])assert.ok(ending.includes(text));assert.doesNotMatch(ending,/[\u3400-\u9fff]/);await noOverflow('Expanded actual Spain ending at 390px');await page.screenshot({path:h.output+'spain-ending-reviewed.png'});await closeModal();
+ pass('Completed Spain can be expanded from the real journal while the next France objective stays available');
+ await click('[data-action="history"]');const notices=await page.locator('.activity-list p').allInnerTexts();
+ for(const text of ['Dulcinea · Unspent attribute points +30','Dulcinea · Spell aptitude +40','Dulcinea · Maximum Health +500','Dulcinea · Maximum Energy +500'])assert.ok(notices.includes(text),text);
+ await noOverflow('Actual character reward history at 390px');await page.screenshot({path:h.output+'spain-reward-history.png'});await closeModal();
+ await click('[data-action="loadout"]');const lady=start.party.find(c=>c.definitionId==='李文秀');await page.locator('#managed-character').selectOption(lady.id);await ready();const s=await state(),c=s.managedCharacter;
+ assert.equal(c.unspentStatPoints,30);assert.equal(c.level,proof.beforeReward.level);const base=(c,id)=>c.attributes.find(a=>a.id===id).baseValue;
+ for(const [id,gain] of [['qimen',40],['max_hp',500],['max_mp',500]])assert.equal(base(c,id)-base(proof.beforeReward,id),gain);
+ assert.ok(c.equipment.some(e=>e.item?.id==='粗布道袍'));const book=s.inventory.find(i=>i.id==='黑血神针秘籍');assert.equal(book.count,1);assert.ok(book.canCultivate);assert.ok(book.requirements.every(r=>r.met));
+ report.rewards={character:c.name,points:c.unspentStatPoints,spellAptitude:base(c,'qimen'),maxHealth:base(c,'max_hp'),maxEnergy:base(c,'max_mp'),tome:{name:book.name,canStudy:book.canCultivate,requirements:book.requirements}};
+ await page.locator('.as-onboarding a[href="#as-study"]').click();await noOverflow('Actual reward tome on its intended companion');await page.screenshot({path:h.output+'spain-tome-ready.png'});await closeModal();
+ const viewed=await state();assert.equal(viewed.silver,start.silver);assert.deepEqual(viewed.adventure,start.adventure);assert.deepEqual(viewed.chapterJournal,start.chapterJournal);
+ pass('Reward numbers match the real character and history; selecting Dulcinea makes the owned spell tome ready without spending her points');
+ await click('[data-action="save"]');await page.reload();await page.locator('[data-action="load"]').waitFor({timeout:120000});await click('[data-action="load"]');const loaded=await state(),build=({hp,mp,...c})=>c;
+ assert.deepEqual(build(loaded.hero),build(start.hero));assert.deepEqual(loaded.party.map(build),start.party.map(build));assert.deepEqual(loaded.adventure,start.adventure);assert.deepEqual(loaded.chapterJournal,start.chapterJournal);assert.equal(loaded.silver,52);
+ const items=s=>s.inventory.map(i=>({id:i.id,entryNumber:i.entryNumber,count:i.count}));assert.deepEqual(items(loaded),items(start));
+ await click('[data-action="inventory"]');const waiting=page.waitForEvent('download');await click('[data-action="download-save"]');await (await waiting).saveAs(h.output+'opening-spain-reviewed-save.json');await closeModal();
+ report.checkpoint={path:'src/Game.Web/test-results/opening-spain-reviewed-save.json',sha256:createHash('sha256').update(await readFile(h.output+'opening-spain-reviewed-save.json')).digest('hex')};
+ pass('Manual save, reload and export preserve the observed Spain ending, original faction, party builds and 52-silver balance');
+}catch(e){failure=e;}
+await finish(failure);

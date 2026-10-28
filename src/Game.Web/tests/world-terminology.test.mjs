@@ -53,6 +53,13 @@ test('stat reward names use the display catalog without translating unknown comm
  assert.equal(translateUiText('Rowan unknown_stat +100'),'Rowan unknown_stat +100');
  setUiDisplayLabels();
 });
+test('Spain rewards distinguish spell aptitude and unspent points from learned spells',()=>{
+ setUiDisplayLabels({'李文秀':'Dulcinea'});
+ assert.equal(translateUiText('李文秀 奇门 +40'),'Dulcinea · Spell aptitude +40');
+ assert.equal(translateUiText('李文秀 自由属性点 +30'),'Dulcinea · Unspent attribute points +30');
+ assert.equal(translateUiText('奇门'),'Spells');
+ setUiDisplayLabels();
+});
 test('actual first-lesson notices translate learned skills and the overflow summary together',()=>{
  setUiDisplayLabels({'密宗大手印':'Iron Seal Strike','基本内功':'Steadfast Mastery'});
  assert.equal(translateUiText('Rowan 习得外功【密宗大手印】 1级'),'Rowan learned Iron Seal Strike (Rank 1).');

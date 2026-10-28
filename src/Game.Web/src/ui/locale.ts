@@ -16,6 +16,7 @@ export function setUiDisplayLabels(labels:Record<string,string>={},catalog?:Disp
 }
 function itemLabel(name:string){return categorizedDisplay(displayCatalog,['items'],name)?.name??translateUiText(name);}
 function skillLabel(name:string){return categorizedDisplay(displayCatalog,['externalSkills','internalSkills','specialSkills','legendSkills'],name)?.name??translateUiText(name);}
+const statNoticeLabels:Record<string,string>={max_hp:'Maximum Health',max_mp:'Maximum Energy','奇门':'Spell aptitude','自由属性点':'Unspent attribute points'};
 const patterns:Array<[RegExp,(...parts:string[])=>string]>=[
   [/^招式冷却中，还需\s*(\d+)\s*回合。$/,(turns)=>`Technique cooling down: ${turns} turns remaining.`],
   [/^需要(剑法|刀法|拳掌|奇门|根骨|定力|臂力|身法|悟性|福缘)达到\s*(\d+)$/,(stat,value)=>`Requires ${translateUiText(stat)} ${value}.`],
@@ -136,9 +137,9 @@ export function translateUiText(value:string):string {
   const text=value.trim();
   // Stat-reward notices can contain only an English player name and a raw
   // runtime key. Translate this known message shape even without CJK text.
-  const statChange=text.match(/^([^；\r\n]+?)\s+(max_hp|max_mp)\s+([+-]\d+)$/);
+  const statChange=text.match(/^([^；\r\n]+?)\s+(max_hp|max_mp|奇门|自由属性点)\s+([+-]\d+)$/);
   if(!cjk.test(text)&&!statChange&&!text.includes('；'))return value;
-  let translated=statChange?`${categorizedDisplay(displayCatalog,['characters'],statChange[1])?.name??contentLabels[statChange[1]]??statChange[1]} · ${statChange[2]==='max_hp'?'Maximum Health':'Maximum Energy'} ${statChange[3]}`:dictionary[text]??contentLabels[text];
+  let translated=statChange?`${categorizedDisplay(displayCatalog,['characters'],statChange[1])?.name??contentLabels[statChange[1]]??statChange[1]} · ${statNoticeLabels[statChange[2]]} ${statChange[3]}`:dictionary[text]??contentLabels[text];
   const overflow=text.match(/^([\s\S]+)，另有(\d+)条，见通知。$/);
   if(translated===undefined&&overflow)translated=`${translateUiText(overflow[1])} ${overflow[2]} more in Notifications.`;
   // Toasts combine independent activity messages into one text node.

@@ -86,8 +86,8 @@
             "zh-CN": "把新法术练起来"
           },
           "detail": {
-            "en": "The supplies are going home, Gines is being handed to the guards, and Dulcinea chose to travel with you. She earned 30 training points, +40 spell aptitude and +500 maximum Health and Energy. Equip spare gear and study the Bloodthorn Bolt Tome. Move her to party slot two for Team Practice; her equipped mastery is set separately.",
-            "zh-CN": "补给已送回，希内斯交给守卫，杜尔西内娅选择与你同行。她获得30培养点、法术熟练+40、生命和能量上限各+500。为她穿备用装备、研习血棘飞矢法术书；结伴练习时调到第二位，主专精单独设置。"
+            "en": "The supplies are going home, and Dulcinea is traveling with you. She earned 30 attribute points, +40 spell aptitude, and +500 maximum Health and Energy. In Gear & study, choose Dulcinea under Party member, then select the Bloodthorn Bolt Tome. Her equipped mastery is separate. Move her to slot 2 in Party for Team Practice.",
+            "zh-CN": "补给已送回，杜尔西内娅选择与你同行。她获得30培养点、法术熟练+40、生命和能量上限各+500。在“装备与研习”的“当前队员”中选择她，再选血棘飞矢法术书；主专精另行设置。结伴练习前，可在队伍把她调到第二位。"
           },
           "route": []
         },
@@ -157,8 +157,8 @@
             "zh-CN": "沿车辙前往风车粮仓"
           },
           "detail": {
-            "en": "Dulcinea trusts you enough to investigate together. Equip her and follow the wagons to Windmill Storehouse. The entrance has a 50% chance; leave and return if it is quiet. This branch recruits her; Don Quixote's invitation belongs to the other ending. Save before the fight.",
-            "zh-CN": "杜尔西内娅愿意和你一同追查。为她穿好装备，沿车辙前往风车粮仓。入口有50%概率，暂未发生时可离开后再来。这条路线招募女主，骑士的邀请属于另一结局。交战前保存。"
+            "en": "Dulcinea trusts you enough to investigate together. Equip her and follow the wagons to Windmill Storehouse. If no scene starts after you enter, use Back to return to the road and try the entrance again. The event has a 50% chance. This branch recruits her; Don Quixote's invitation belongs to the other ending. Save before the fight.",
+            "zh-CN": "杜尔西内娅愿意和你一同追查。为她穿好装备，沿车辙前往风车粮仓。若进入后没有剧情，点返回回到道路，再次进入；事件概率为50%。这条路线招募女主，骑士的邀请属于另一结局。交战前保存。"
           },
           "route": [
             {
@@ -213,8 +213,8 @@
             "zh-CN": "入夜后再找杜尔西内娅"
           },
           "detail": {
-            "en": "Dulcinea watches for stolen supply wagons at night. If the special event does not appear, the everyday reply repeats and adds no trust. Follow her, then choose Keep the peace with the combat trainer to add 5 trust. Losing his optional field test ends the journey, so save before accepting. Companions must actually deploy to earn study XP.",
-            "zh-CN": "杜尔西内娅入夜后追查失窃补给。特殊事件没出现时会重复日常回答，不增加信任。跟随她，之后对战技教官选择息事宁人，可加5信任；额外实地考核失败会结束旅程，接受前请保存。伙伴必须实际出场，才能获得研习经验。"
+            "en": "Save on the map before checking her night patrol. Quiet visits repeat the everyday reply and add no trust. Follow her, then choose Return the supplies first for +5 trust. The optional field test costs 5 trust. Losing either the patrol fight or that test ends the journey. The patrol uses only you and Dulcinea; other companions will not gain study XP.",
+            "zh-CN": "夜间找她前，先在地图上保存。普通造访会重复日常回答，不加信任。跟随后选择先送回补给，可加5信任；可选实地考核会扣5信任。夜巡战或该考核失败都会结束旅程。夜巡只有你与杜尔西内娅出场，其他伙伴不会获得研习经验。"
           },
           "route": [
             {
