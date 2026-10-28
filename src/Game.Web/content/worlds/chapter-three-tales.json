@@ -823,6 +823,7 @@
     }
   },
   "uiLabels": {
+    "长安.商店": {"en": "West Market Supplies", "zh-CN": "西市补给铺"},
     "精兵铁卫": {
       "en": "Castle Guard",
       "zh-CN": "城堡卫兵"
@@ -857,6 +858,10 @@
     }
   },
   "maps": {
+    "长安西市": {
+      "name": {"en": "West Market", "zh-CN": "西市"},
+      "description": {"en": "Storymarket's stalls sell supplies for the road. Check what each potion restores before buying.", "zh-CN": "故事集市的摊铺供应旅途物资。购买前先看清药剂恢复生命、能量，还是两者。"}
+    },
     "六和塔": {
       "name": {
         "en": "Cardinal's Tower",
@@ -869,6 +874,20 @@
     }
   },
   "locations": {
+    "长安": {
+      "长安西市": {
+        "name": {"en": "West Market", "zh-CN": "西市"},
+        "description": {"en": "Shops and stalls. Head here for travel supplies.", "zh-CN": "店铺与摊贩集中于此，可购买旅途补给。"}
+      },
+      "长安城中心": {
+        "name": {"en": "City Square", "zh-CN": "城中广场"},
+        "description": {"en": "Townhouses and a music hall, with stories of their own.", "zh-CN": "宅邸与琴舍坐落于此，另有各自的故事。"}
+      },
+      "长安城边": {
+        "name": {"en": "City Outskirts", "zh-CN": "城郊"},
+        "description": {"en": "The edge of Storymarket, with roads toward the countryside.", "zh-CN": "故事集市的边缘，道路通往城外。"}
+      }
+    },
     "大地图": {
       "六和塔": {
         "name": {
@@ -1224,8 +1243,8 @@
               "zh-CN": "夜访风歌渡口"
             },
             "detail": {
-              "en": "Save before the encounter. Two opening fights lead to a choice: refuse the seals (+3 Morality) to protect Pinocchio and the Blue Fairy, or claim them (-3 Morality) for the Scarecrow branch. Protecting them ends with your hero ALONE against Orlando and six guards. Check your hero’s learned techniques, equipped mastery, and gear—not just their level. Owning a manual does not mean you meet its study requirements. Train and buy supplies first; losing that finale closes this invitation.",
-              "zh-CN": "事件前先保存。前两战之后可选择：拒收印记（道德+3），保护匹诺曹和蓝仙女；或收下印记（道德-3），进入稻草人分支。保护路线最终由主角独自对抗奥兰多和六名守卫，先检查主角已学战技、主专精与装备，不只看等级；背包里有手册不代表已经满足研习条件。先训练、补给；最后落败会关闭这次招募。"
+              "en": "Save first. After two fights, refuse the seals (+3 Morality) to protect Pinocchio and the Blue Fairy, or keep them (-3) for the Scarecrow route. Protecting them ends with your hero ALONE against Orlando and six guards. Check learned techniques, mastery, gear, and Energy supplies. Storymarket's West Market sells Ninepetal Elixir, which restores Health and Energy. You can explore another route before starting this challenge. Losing the finale closes this invitation.",
+              "zh-CN": "先保存。前两战后，拒收印记（道德+3）可保护匹诺曹与蓝仙女；收下印记（道德-3）进入稻草人路线。保护路线最终由主角独战奥兰多与六名守卫。请检查已学战技、主专精、装备与能量补给。故事集市的西市出售同时恢复生命和能量的九瓣花露药剂。准备不足时，可先探索其他路线再开启挑战；终战落败会关闭这次招募。"
             },
             "route": [
               {

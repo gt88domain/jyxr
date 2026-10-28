@@ -2172,8 +2172,8 @@
           "zh-CN": "生机药剂"
         },
         "description": {
-          "en": "A consumable. Check its recovery effects and conditions before using it.",
-          "zh-CN": "消耗品，使用前查看恢复效果与使用条件。"
+          "en": "Restores 2,000 Health and 2,000 Energy. Has a cooldown.",
+          "zh-CN": "恢复2000点生命和2000点能量。有使用冷却。"
         }
       },
       "续命八丸": {

@@ -7,7 +7,8 @@ const file=dir+'/italy-trained.json',raw=await readFile(file);
 const manifest=JSON.parse(await readFile(dir+'/manifest.json','utf8'));
 assert.equal(createHash('sha256').update(raw).digest('hex'),manifest.find(x=>x.name==='italy-trained').sha256);
 const prepared=process.env.ITALY_PREPARE==='1';
-const h=await createHarness(prepared?'italy-prepared':'italy-manual',{viewport:{width:390,height:844}},{trace:false});
+const supplied=process.env.ITALY_SHOP==='1';
+const h=await createHarness(supplied?'italy-supplied':prepared?'italy-prepared':'italy-manual',{viewport:{width:390,height:844}},{trace:false});
 const {page,report,click,ready,state,pass,finish}=h;
 await page.addInitScript(()=>localStorage.setItem('jyxr-fantasy-worlds.preferences.v1',JSON.stringify({battleSpeed:4,battleMode:'manual',musicVolume:0,effectsVolume:0,reducedMotion:true})));
 report.outcomes=[];report.method='Unedited published normal-difficulty Italy-trained save; visible map, dialogue, medicine and manual combat controls. An observed defeat is not a cleared chapter.';
@@ -16,6 +17,20 @@ try{
  await page.goto(report.baseURL);await page.locator('[data-action="new"]').waitFor({timeout:120000});
  await page.locator('#import-file').setInputFiles(file);await page.waitForFunction(()=>document.querySelector('#import-file')?.value==='');await ready();
  report.start={sha256:createHash('sha256').update(raw).digest('hex'),hero:(await state()).hero};
+ if(supplied){
+  assert.equal((await state()).map.id,'大地图');
+  await click('[data-action="interact"][data-id="长安"]');
+  await click('[data-action="interact"][data-id="长安西市"]');
+  await click('[data-action="interact"][data-id="商店"]');
+  const s=await state(),product=s.shop.products.find(p=>p.itemId==='九花玉露丸');
+  assert.ok(product?.canBuy);assert.equal(product.price,100);assert.equal(s.silver,494);
+  await page.locator('#shop-quantity').fill('4');
+  await click(`[data-action="buy-item"][data-id="${product.id}"]`);
+  assert.equal((await state()).silver,94);
+  report.supplies={city:s.map.name,shop:s.shop.name,item:product.name,price:product.price,quantity:4,before:494,after:94};
+  await click('[data-action="close-shop"]');
+  await click('[data-action="interact"][data-id="返回"]');await click('[data-action="interact"][data-id="返回"]');
+ }
  if(prepared){
   await click('[data-action="cultivation"]');
   const guide=(await state()).inventory.find(i=>i.id==='百花错拳谱');
@@ -39,13 +54,17 @@ try{
    }
    const b=s.battle,unit=b.units.find(u=>u.id===b.activeUnitId);
    if(unit.team!==1){await page.waitForTimeout(150);continue;}
-   const tonic=s.inventory.find(i=>i.id==='小还丹'&&i.battleTargets?.some(t=>t.id===unit.id&&t.canUse));
-   if(tonic&&unit.hp<unit.maxHp*.6){
+   const usable=i=>i.battleTargets?.some(t=>t.id===unit.id&&t.canUse);
+   const energy=supplied&&b.id==='鸳鸯刀正风陵渡_战斗'&&unit.mp<unit.maxMp*.3?s.inventory.find(i=>i.id==='九花玉露丸'&&usable(i)):null;
+   const tonic=energy||s.inventory.find(i=>i.id==='小还丹'&&usable(i));
+   if(tonic&&(energy||unit.hp<unit.maxHp*.6)){
     await click('[data-action="inventory"]');
     const target=page.locator(`.battle-item-target[data-entry-number="${tonic.entryNumber}"]`);
     if(await target.count())await target.selectOption(unit.id);
     await click(`[data-action="use-item"][data-entry-number="${tonic.entryNumber}"]`);
-    await h.closeModal();report.medicine=(report.medicine||0)+1;continue;
+    await h.closeModal();report.medicine=(report.medicine||0)+1;
+    if(energy)report.energyMedicine=(report.energyMedicine||0)+1;
+    continue;
    }
    const enemy=b.units.filter(u=>u.team!==1&&u.alive);
    const attacks=(b.targets||[]).filter(t=>enemy.some(u=>u.id===t.targetId))
