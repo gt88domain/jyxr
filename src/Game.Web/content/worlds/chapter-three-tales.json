@@ -1169,8 +1169,8 @@
               "zh-CN": "单人决战落败"
             },
             "detail": {
-              "en": "This original branch does not reopen at the ferry after its final defeat. To try recruiting Pinocchio again, load an intact save from before the ferry encounter, improve your hero, and return at night. Companions cannot deploy in the final fight.",
-              "zh-CN": "原路线在最后落败后，不会从渡口重新开始。若要再次尝试招募匹诺曹，需读取渡口事件前的完整存档，培养主角后夜间再来。最后一战不能部署伙伴。"
+              "en": "This defeat closes the ferry invitation in the current save. To retry, reload the page and choose Load manual save on the title screen if you saved before the encounter, or import your pre-fight backup. Continue may load the newer autosave with the defeat still recorded. Improve your hero before returning at night; companions cannot join the final fight.",
+              "zh-CN": "当前存档中的渡口邀请已因落败关闭。若事件前已手动保存，可刷新页面，在标题页选择读取手动存档；也可导入战前备份。继续旅程可能读到记录了落败的较新自动存档。先培养主角再于夜间重访，伙伴不能参加最后一战。"
             },
             "route": [],
             "blockedBy": [

@@ -44,6 +44,29 @@ Riverflow Mastery Manual 是法国塔楼胜利的既有奖励，要求30 Constit
 
 英文说明现明确该专精偏重防御、10级Constitution奖励及教材与装备分别设置。现代手册将“教材被伙伴占用”与“属性不足”分开，提供跳到实际研习者的按钮；学习失败的属性门槛不再残留中文。测试入口 `defense-training-smoke.mjs`、`study-handoff-smoke.mjs`，后续实战使用 `ITALY_DEFENSE=1 ITALY_SHOP=1 ITALY_PREPARE=1`。新导出是普通实际游玩成果，不能将其注入正式新开局。
 
+## 可达来源与本批准备短路径
+
+| 来源 | 正常路径与要求 | 代价和效果 | 验证范围 |
+| --- | --- | --- | --- |
+| Riverflow Mastery Manual | 法国塔楼既有奖励；30 Constitution；唯一教材由伙伴占用时先暂停原研习 | 不需采购；5次实战练到10级，且本次共获得50银币 | 学习、交接、练习、装备、导出和读档均实测 |
+| Gilded Heavy Armor | Crossroads（十字镇）→ Supply Shop；55 Strength | 200银币；Defense +80、抗暴击率+15%；技能承伤降低5%，移动距离加成−1 | 正常购买与换装实测：现有防御6→81；544银币→344 |
+| Goldthread Robe | Storymarket → West Market → Shop；30 Agility | 原定义价格200；Defense +15、Constitution +15 | 静态来源和条件核查，未购买或对战验证 |
+| Lifebloom Elixir | Storymarket → West Market → Shop | 原定义价格500；回复2000生命与2000能量，有冷却；不可把资源缺口当成免费获得 | 静态核查，未购买或对战验证 |
+| Steel Gauntlets | Storymarket → West Market → Shop；35 Gauntlets、35 Strength | 原定义价格500；Attack +50、暴击率+2%；换掉已有武器时必须看净变化 | 静态核查，不声称已经获得或一定提高50点净攻击 |
+| Woodland Mastery Manual | Storymarket → West Market → Shop；30 Constitution、30 Fortune | 原定义价格200；属于另一种专精，不是自动回复生命或能量的药剂 | 静态核查，不作为已验证恢复方案 |
+
+装备路径本批从真实训练后的完整存档出发，正常返回大地图并进入十字镇补给铺。购买重甲时显示实际恢复／减伤说明和移动代价，打开装备对比后才确认穿戴；得到新完整战前导出 `pre-ferry-defense-armor.json` 并记录SHA。该重甲构筑尚未参加终战，不据此承诺通关。
+
+上述重甲、金丝衣、钢拳套和 Woodland 教材均受原商店限购记录约束；已在该存档买过时不能重复购买。表中的静态价格不替代商店当场报价和可购买状态。
+
+换装对比将抗暴击率与命中率按百分比显示，并把原始移动修正字段明确标为 Movement modifier，避免玩家把 `0→−1` 误解为实际只能移动负一格。没有改动统计值或实际移动规则。
+
+准备完手动保存并导出备份，再正常移动到另一地点产生较新自动存档；刷新页面后明确选择 Load manual save，验证返回战前地点、装备与货币。这个验证不重新打一遍终战；它检查手动档与最新自动档的选择差异。已有失败保存恢复证据另行保留。
+
+因此失败提示不再笼统要求“读档”：需要事件前手动保存时，在标题页选择 Load manual save，或者导入战前备份；Continue 可能加载已经记录失败的较新自动存档。若战败后主动覆盖手动档，须使用此前导出的完整备份。新提示的显示条件由内容流程检查保护，本批未为该段新文字重复一次终战。
+
+本批文本/界面变更仅为：重甲说明的减伤和移动代价；失败后恢复说明；百分比与移动加成标签。实际短路径、390px换装对比、购买、手动保存、备份下载与明确读取手动档由 `preparation-path-smoke.mjs` 验证。没有新素材需求。
+
 战前指引补充检查已学战技、主专精、装备及手册条件，不新增任务门槛。下一步应从真实可获得的教材和属性培养中形成有效的主角单人构筑，再验证终战；目前不宣称匹诺曹已经招募或意大利线已通关。
 
 测试入口 `italy-observed-smoke.mjs` 另检查落败记录的保存、读取，以及导入完整战前档恢复重试前提。真实结果保存在 `src/Game.Web/test-results/italy-observed.json`；其中 `passed` 表示验证流程通过，最终胜败须读 `outcomes`，不能当作通关标志。

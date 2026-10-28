@@ -2610,8 +2610,8 @@
           "zh-CN": "鎏金重甲"
         },
         "description": {
-          "en": "Defense +80. Critical resistance +15%. Grants Limited Stride. Requires Strength 55. Other modifiers are listed with the item.",
-          "zh-CN": "穿戴属性、附加天赋与使用条件见物品面板；请留意额外词条。"
+          "en": "Defense +80; critical resistance +15%. Warded Armor reduces incoming technique damage by 5%, while Limited Stride reduces movement by 1. Requires Strength 55.",
+          "zh-CN": "防御+80、抗暴击率+15%。守护护甲使承受的技能伤害降低5%；步幅受限使移动距离减少1。需要55点臂力。"
         }
       },
       "乌蚕衣": {
