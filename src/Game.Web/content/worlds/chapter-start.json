@@ -263,8 +263,8 @@
           {
             "speaker": "南贤",
             "text": {
-              "en": "You'll find the young apprentice in Crossroads. A practice bout, remember. We're training a traveler, not a menace.",
-              "zh-CN": "小学徒就在十字镇。记住，是友好切磋。我在培养旅人，不是制造麻烦。"
+              "en": "Find the young apprentice in Crossroads. You'll spar alone, so give your companions a well-earned break.",
+              "zh-CN": "去十字镇找那位小学徒。这场由你单独切磋，正好让同行伙伴歇一歇。"
             }
           }
         ]
@@ -597,8 +597,8 @@
           {
             "speaker": "南贤",
             "text": {
-              "en": "The young apprentice is in Crossroads. Arrange a friendly practice bout, then come back.",
-              "zh-CN": "小学徒在十字镇。约好友好切磋，结束后回来找我。"
+              "en": "The young apprentice in Crossroads is ready for your solo practice bout. Come back afterward.",
+              "zh-CN": "十字镇的小学徒正等你单人切磋，练完记得回来。"
             }
           }
         ]
@@ -1720,11 +1720,11 @@
       },
       "options": {
         "en": [
-          "Friendly practice in Crossroads.",
+          "Spar with the Crossroads apprentice (solo).",
           "Challenge the Rainmarket bully."
         ],
         "zh-CN": [
-          "去十字镇友好切磋。",
+          "去十字镇单人友好切磋。",
           "去雨集镇挑战恶霸。"
         ]
       }
@@ -5116,8 +5116,8 @@
       "zh-CN": "带着药剂回格林居所复命。"
     },
     "教训小孩": {
-      "en": "Arrange a friendly practice bout with the young apprentice in Crossroads.",
-      "zh-CN": "在十字镇和小学徒友好切磋。"
+      "en": "Spar solo with the young apprentice in Crossroads.",
+      "zh-CN": "在十字镇与小学徒进行单人切磋。"
     },
     "教训小孩完成": {
       "en": "Return to Grimm's home after the practice bout.",

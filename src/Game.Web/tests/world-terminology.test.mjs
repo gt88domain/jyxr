@@ -53,6 +53,15 @@ test('stat reward names use the display catalog without translating unknown comm
  assert.equal(translateUiText('Rowan unknown_stat +100'),'Rowan unknown_stat +100');
  setUiDisplayLabels();
 });
+test('actual first-lesson notices translate learned skills and the overflow summary together',()=>{
+ setUiDisplayLabels({'密宗大手印':'Iron Seal Strike','基本内功':'Steadfast Mastery'});
+ assert.equal(translateUiText('Rowan 习得外功【密宗大手印】 1级'),'Rowan learned Iron Seal Strike (Rank 1).');
+ assert.equal(translateUiText('Rowan 习得内功【基本内功】 2级'),'Rowan learned Steadfast Mastery (Rank 2).');
+ const source='Rowan 臂力 +1；Rowan 习得外功【密宗大手印】 1级，另有1条，见通知。';
+ const expected='Rowan Strength +1; Rowan learned Iron Seal Strike (Rank 1). 1 more in Notifications.';
+ assert.equal(translateUiText(source),expected);assert.equal(translateUiText(expected),expected);
+ setUiDisplayLabels();
+});
 test('world-news requirements remain readable when combined with semicolons',()=>{
  setUiDisplayLabels({'黑暗的阴影':'An Unwelcome Shadow'});
  const source='主角达到 15 级；参战队伍至少 8 人（含主角）；经历「黑暗的阴影」';

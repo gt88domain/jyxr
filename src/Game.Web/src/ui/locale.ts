@@ -45,6 +45,7 @@ const patterns:Array<[RegExp,(...parts:string[])=>string]>=[
   [/^(.*?)受到\s*(\d+)\s*点伤害。$/,(name,n)=>`${translateUiText(name)} takes ${n} damage.`],
   [/^(.*?)施展「(.*?)」。$/,(name,skill)=>`${translateUiText(name)} uses ${skillLabel(skill)}.`],
   [/^(.*?)从(\d+)级升至(\d+)级。$/,(name,a,b)=>`${translateUiText(name)} levels up: ${a} → ${b}.`],
+  [/^(.*?)\s*习得(?:外功|内功)【(.*?)】\s*(\d+)级$/,(name,skill,rank)=>`${translateUiText(name)} learned ${skillLabel(skill)} (Rank ${rank}).`],
   [/^(.*?)加入队伍（(.*?)）。$/,(name,placement)=>`${translateUiText(name)} joins the party (${translateUiText(placement)}).`],
   [/^(.*?)离开队伍。$/,(name)=>`${translateUiText(name)} leaves the party.`],
   [/^已选择修炼秘籍「(.*?)」。秘籍保留在背包，战斗结算经验将用于此项修炼。$/,(name)=>`Studying ${translateUiText(name)}. The guide stays in your inventory; battles award study XP.`],
@@ -137,6 +138,8 @@ export function translateUiText(value:string):string {
   const statChange=text.match(/^([^；\r\n]+?)\s+(max_hp|max_mp)\s+([+-]\d+)$/);
   if(!cjk.test(text)&&!statChange&&!text.includes('；'))return value;
   let translated=statChange?`${categorizedDisplay(displayCatalog,['characters'],statChange[1])?.name??contentLabels[statChange[1]]??statChange[1]} · ${statChange[2]==='max_hp'?'Maximum Health':'Maximum Energy'} ${statChange[3]}`:dictionary[text]??contentLabels[text];
+  const overflow=text.match(/^([\s\S]+)，另有(\d+)条，见通知。$/);
+  if(translated===undefined&&overflow)translated=`${translateUiText(overflow[1])} ${overflow[2]} more in Notifications.`;
   // Toasts combine independent activity messages into one text node.
   // Translate each message before joining; full-line patterns cannot match
   // a level-up followed by a separate loot notification.
