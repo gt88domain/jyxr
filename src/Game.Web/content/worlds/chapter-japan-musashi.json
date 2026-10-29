@@ -1,9 +1,18 @@
 {
   "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
   "maps": {
-    "华山后山3": {"name": {"en": "Crane Peak — Misty Fork", "zh-CN": "华山后山3"}},
-    "华山后山4": {"name": {"en": "Crane Peak — High Trail", "zh-CN": "华山后山4"}},
-    "华山后山": {"name": {"en": "Crane Peak — Hidden Glade", "zh-CN": "华山后山"}}
+    "华山后山3": {
+      "name": {"en": "Crane Peak — Misty Fork", "zh-CN": "华山后山3"},
+      "description": {"en": "Mist drifts across the paths above Crane Peak. Steep slopes fall away beyond the trees, and the mountain keeps the view to itself.", "zh-CN": "你行走在华山之中，云雾缭绕，地势险峻。"}
+    },
+    "华山后山4": {
+      "name": {"en": "Crane Peak — High Trail", "zh-CN": "华山后山4"},
+      "description": {"en": "Clouds drift across the high trail at Crane Peak. The ground drops steeply beyond the path, and the view comes and goes with the mist.", "zh-CN": "你行走在华山之中，云雾缭绕，地势险峻。"}
+    },
+    "华山后山": {
+      "name": {"en": "Crane Peak — Hidden Glade", "zh-CN": "华山后山"},
+      "description": {"en": "The climb opens into a quiet glade behind Crane Peak. Wildflowers grow between the trees and rocks. Looking back, you can barely make out the path through the clouds.", "zh-CN": "你好不容易爬上华山后山，回望来时的路，已经在云雾之中再也看不真切。此处地势忽然开阔，树林石缝之间不知名的野花丛生，不复山间险峻的情形。"}
+    }
   },
   "uiLabels": {
     "貌似前方有亮光……": {"en": "Light ahead.", "zh-CN": "貌似前方有亮光……"},
