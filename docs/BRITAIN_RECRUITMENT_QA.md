@@ -81,6 +81,8 @@ mainStory与所有丹麦原始标记不变，worldTriggerState仍只 `legacy-glo
 
 这些是待处理事项，不是已实现的修复。若再验这两战，必须先有明确的新范围与不同正常准备／操作依据，不用当前判负反复刷到赢，也不先把原时限认定成必须修改的核心阻塞。
 
+后续仅呈现批次已修结算英文溢出并按原恢复配置补准Deep Wound说明，见[结算与状态说明验证](BATTLE_RESULT_PRESENTATION_QA.md)。该批使用隔离呈现夹具，没有重跑本次战斗；以上胜败、招募与恢复边界不变。
+
 ```sh
 GAME_WEB_URL=http://127.0.0.1:4230 node src/Game.Web/tests/britain-recruitment-smoke.mjs
 node --test src/Game.Web/tests/battle-cast-coverage.test.mjs src/Game.Web/tests/battle-cleave-aim.test.mjs

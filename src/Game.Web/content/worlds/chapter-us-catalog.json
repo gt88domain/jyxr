@@ -2110,7 +2110,7 @@
           "zh-CN": "重伤"
         },
         "description": {
-          "en": "Cuts incoming healing in half.",
+          "en": "Rest and items restore half as much Health and Energy. Life steal and damage conversion also restore half as much Health.",
           "zh-CN": "受到的任何回复效果减半。"
         }
       },
