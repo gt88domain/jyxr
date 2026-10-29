@@ -13,3 +13,4 @@
 
 .companion-morality{padding:12px 0 18px;border-bottom:1px solid #b6b29366;margin-bottom:15px}.companion-morality>p:first-child{display:flex;align-items:center;gap:14px;font-size:13px}.companion-morality strong{font-size:22px;color:#755f37}.companion-morality .button{min-height:44px;padding:10px 14px;font-size:12px;margin-top:10px}
 .companion-preparation{font-size:12px;line-height:1.8;overflow-wrap:anywhere}.companion-preparation b{font-weight:600}
+.sheet-skills>.learned-technique{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;min-width:0}.sheet-skills>.learned-technique>span{display:block;overflow-wrap:anywhere}.learned-technique>small{white-space:nowrap}.learned-technique>details{grid-column:1/-1;min-width:0}.learned-technique summary{cursor:pointer;min-height:44px;box-sizing:border-box;padding:11px 0;line-height:1.7}.learned-technique details p{font-size:13px;line-height:1.8;white-space:normal;overflow-wrap:anywhere;margin:0 0 8px}
