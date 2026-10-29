@@ -1,0 +1,61 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "speakerNames": {
+    "炼狱金蛇郎君": {"en": "Osiris", "zh-CN": "奥西里斯"}
+  },
+  "uiLabels": {
+    "金蛇郎君": {"en": "Osiris", "zh-CN": "奥西里斯"},
+    "独臂血流不止": {"en": "Cleopatra needs Imhotep's help recovering from her wounds.", "zh-CN": "克娄巴特拉需要伊姆霍特普帮助她疗伤。"}
+  },
+  "locations": {
+    "华山仙境": {
+      "炼狱金蛇郎君": {
+        "name": {"en": "Golden Serpent Trial", "zh-CN": "金蛇试炼"},
+        "description": {"en": "Horus and Cleopatra can test the Golden Serpent techniques together.", "zh-CN": "荷鲁斯与克娄巴特拉可以一起演练金蛇战技。"}
+      }
+    }
+  },
+  "definitions": {
+    "battles": {
+      "袁九变身_战斗": {"name": {"en": "Golden Serpent Trial", "zh-CN": "金蛇试炼"}}
+    },
+    "talents": {
+      "金蛇郎君": {
+        "name": {"en": "Serpent's Edge", "zh-CN": "灵蛇锋芒"},
+        "description": {"en": "Adds 50 percentage points to Golden Serpent Sword's critical-hit chance.", "zh-CN": "金蛇剑术的暴击概率增加50个百分点。"}
+      }
+    }
+  },
+  "choiceText": {
+    "bixuejianShyou_华山仙境变身01": {
+      "prompt": {"en": "Begin the two-person trial? A loss or timeout means Game Over.", "zh-CN": "开始双人试炼？失败或超时会进入游戏结束画面。"},
+      "options": {
+        "en": ["[Battle] Take on the trial.", "Skip the trial."],
+        "zh-CN": ["【战斗】接受试炼。", "放弃这次试炼。"]
+      }
+    }
+  },
+  "dialogueEdits": {
+    "bixuejianShyou_华山派": [{"start": 1, "expectedCount": 9, "lines": [
+      {"speaker": "木桑道长", "text": {"en": "I can tend those wounds. You'll need rest, and a better way to defend yourself.", "zh-CN": "这些伤我能处理。你需要休养，也需要学会更好地保护自己。"}},
+      {"speaker": "木桑道长", "text": {"en": "Will you study with me while you recover?", "zh-CN": "养伤的时候，愿意跟我学些本领吗？"}},
+      {"speaker": "阿九", "text": {"en": "I'll study. But I don't intend to spend the rest of my life on a mountain.", "zh-CN": "我愿意学。不过，我可没打算在山上过一辈子。"}},
+      {"speaker": "木桑道长", "text": {"en": "Good. I teach people to travel safely, not to fill spare rooms.", "zh-CN": "很好。我教人平安远行，可不是为了填满空房间。"}},
+      {"speaker": "阿九", "text": {"en": "Then I'll learn. Thank you.", "zh-CN": "那我会认真学。谢谢你。"}},
+      {"speaker": "木桑道长", "text": {"en": "Start by sitting down. Determination isn't a bandage.", "zh-CN": "先坐下来吧。再有决心，也不能拿它当绷带。"}},
+      {"speaker": "木桑道长", "text": {"en": "We'll work on control and footwork. You can make grand entrances once you can stand without swaying.", "zh-CN": "我们先练控制和步法。等你站稳不晃了，再考虑威风地登场。"}},
+      {"speaker": "阿九", "text": {"en": "A sensible order of business. Unusual, but I'll try it.", "zh-CN": "安排得倒是合理。有点不习惯，不过我会试试。"}},
+      {"speaker": "木桑道长", "text": {"en": "Rest here, Cleopatra. Horus, give her time. Come back and see us.", "zh-CN": "克娄巴特拉，留在这里安心休养。荷鲁斯，给她些时间，再回来看我们。"}}
+    ]}],
+    "bixuejianShyou_华山仙境变身01": [{"start": 1, "expectedCount": 2, "lines": [
+      {"speaker": "袁承志", "text": {"en": "I can follow Osiris's Golden Serpent Sword, but I keep losing the rhythm when I switch techniques.", "zh-CN": "奥西里斯的金蛇剑术，我已经能跟上了。可一换招式，就总抓不住节奏。"}},
+      {"speaker": "九难", "text": {"en": "Then let's work through it together. Imagine his attacks coming from every side.", "zh-CN": "那就一起琢磨。想象他的攻击会从各个方向而来。"}}
+    ]}],
+    "bixuejianShyou_华山仙境变身02": [{"start": 1, "expectedCount": 1, "lines": [
+      {"speaker": "袁承志", "text": {"en": "Ready, Cleopatra? Keep an eye on the serpent, not just the sword.", "zh-CN": "准备好了，克娄巴特拉？看清灵蛇的变化，别只盯着剑。"}}
+    ]}],
+    "bixuejianShyou_华山仙境变身03": [{"start": 1, "expectedCount": 1, "lines": [
+      {"speaker": "袁承志", "text": {"en": "That's it. Change the angle before they follow the blade. The sword, fist, and spell all share the same rhythm.", "zh-CN": "原来如此。在对方跟上剑锋之前，先变换角度。剑术、拳套和法术，都能顺着同一个节奏衔接。"}}
+    ]}]
+  }
+}
