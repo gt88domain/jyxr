@@ -1,0 +1,51 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "speakerNames": {
+    "炼狱穆人清": {"en": "Thoth", "zh-CN": "托特"}
+  },
+  "uiLabels": {
+    "神剑仙缘穆人清。": {"en": "Thoth has made time for Horus between the camp's other demands.", "zh-CN": "托特从营地的事务中腾出时间，准备听听荷鲁斯的见闻。"},
+    "恍惚中天边似有一剑西来": {"en": "A sword strike in a line. Base cost: 2 Rage; base cooldown: 3 turns.", "zh-CN": "直线范围的剑术招式。基础消耗2点怒气，基础冷却3回合。"},
+    "月圆之夜，紫禁之巅，一剑西来，天外飞仙!": {"en": "A sword strike in a star pattern. Base cost: 4 Rage; base cooldown: 4 turns.", "zh-CN": "星形范围的剑术招式。基础消耗4点怒气，基础冷却4回合。"},
+    "混元一气，浑身坚逾精钢": {"en": "A mastery technique with a square pattern. Base cost: 4 Rage; base cooldown: 3 turns.", "zh-CN": "方形范围的专精招式。基础消耗4点怒气，基础冷却3回合。"}
+  },
+  "definitions": {
+    "battles": {
+      "华山仙境.战斗2": {"name": {"en": "Thoth's Advanced Trial", "zh-CN": "托特的进阶考验"}}
+    }
+  },
+  "dialogueEdits": {
+    "bixuejianShyou_闯王剧情1": [
+      {"start": 1, "expectedCount": 8, "lines": [
+        {"speaker": "袁承志", "text": {"en": "Thoth, we settled the dispute over the relief gold at Stonebridge.", "zh-CN": "托特，我们解决了石桥会馆那批救济黄金的争端。"}},
+        {"speaker": "穆人清", "text": {"en": "Hathor sent word. That was no small piece of work.", "zh-CN": "哈索尔已经捎来消息。这可不是件轻松的差事。"}},
+        {"speaker": "袁承志", "text": {"en": "We had help. This traveler kept us from becoming part of the problem.", "zh-CN": "有人帮了我们。多亏这位旅人，我们才没把自己也变成麻烦的一部分。"}},
+        {"speaker": "主角", "text": {"en": "I prefer being invited back.", "zh-CN": "我还是更喜欢，人家下次愿意请我回去。"}},
+        {"speaker": "穆人清", "text": {"en": "And Horus says you can fight.", "zh-CN": "荷鲁斯还说，你很能打。"}},
+        {"speaker": "主角", "text": {"en": "Well enough to know when I'd rather be talking.", "zh-CN": "至少练到了，知道什么时候宁可动嘴的程度。"}},
+        {"speaker": "穆人清", "text": {"en": "Then here's a Gemshatter Fist Manual. A thank-you for looking after my student.", "zh-CN": "那就收下这本碎玉拳手册。谢谢你一路照应我的学生。"}},
+        {"speaker": "主角", "text": {"en": "A gift that will get me into more fights. Thoughtful.", "zh-CN": "一份能让我卷进更多战斗的礼物。真周到。"}}
+      ]},
+      {"start": 11, "expectedCount": 5, "lines": [
+        {"speaker": "主角", "text": {"en": "Thank you, Thoth.", "zh-CN": "谢谢你，托特。"}},
+        {"speaker": "穆人清", "text": {"en": "The camp has enough arguments without me keeping you. Horus, go and see who needs help.", "zh-CN": "营地里的争论已经够多，我就不留你们了。荷鲁斯，去看看谁需要帮助。"}},
+        {"speaker": "袁承志", "text": {"en": "I will.", "zh-CN": "我会的。"}},
+        {"speaker": "穆人清", "text": {"en": "When you've something new to show me, come back.", "zh-CN": "等有了新的体会，再回来让我看看。"}},
+        {"speaker": "袁承志", "text": {"en": "Then I'll make the next visit worth your time.", "zh-CN": "那下次回来，我一定让你看得满意。"}}
+      ]}
+    ],
+    "bixuejianShyou_闯王剧情2": [{"start": 1, "expectedCount": 4, "lines": [
+      {"speaker": "袁承志", "text": {"en": "Thoth, I'd like another lesson.", "zh-CN": "托特，我想再请教一课。"}},
+      {"speaker": "穆人清", "text": {"en": "Then show me what the road has taught you.", "zh-CN": "那就让我看看，旅途教会了你什么。"}},
+      {"speaker": "袁承志", "text": {"en": "With pleasure.", "zh-CN": "乐意之至。"}},
+      {"speaker": "穆人清", "text": {"en": "Less talking. More footwork.", "zh-CN": "少说几句，多留心脚步。"}}
+    ]}],
+    "bixuejianShyou_闯王剧情3": [{"start": 1, "expectedCount": 2, "lines": [
+      {"speaker": "穆人清", "text": {"en": "Now do you see it?", "zh-CN": "现在，看清了吗？"}},
+      {"speaker": "袁承志", "text": {"en": "Stop chasing the flourish. Set the angle, then strike. The opening was there all along.", "zh-CN": "别再追着花招跑。先找准角度，再出剑。破绽原来一直都在那里。"}}
+    ]}],
+    "bixuejianShyou_闯王剧情4": [{"start": 1, "expectedCount": 1, "lines": [
+      {"speaker": "穆人清", "text": {"en": "Not yet. Take what you've learned back onto the road, then try me again.", "zh-CN": "还差一点。带着这次的体会继续走走，再回来试试。"}}
+    ]}]
+  }
+}
