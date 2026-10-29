@@ -1,0 +1,61 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "speakerNames": {
+    "五毒教弟子": {"en": "Sanctuary Guard", "zh-CN": "圣所守卫"},
+    "五毒教圣使": {"en": "Sanctuary Warden", "zh-CN": "圣所护卫"},
+    "蓝凤凰": {"en": "Circe", "zh-CN": "喀耳刻"}
+  },
+  "maps": {
+    "五毒教山中1": {"name": {"en": "Venom Circle — Lower Trail", "zh-CN": "毒环山径·山脚"}, "description": {"en": "A narrow trail winds into the hills beyond Fjordhaven. The trees hide most of the view.", "zh-CN": "峡湾城外，一条狭窄山路蜿蜒向上。大半景色，都被树木遮住了。"}},
+    "五毒教山中2": {"name": {"en": "Venom Circle — Winding Trail", "zh-CN": "毒环山径·盘山路"}, "description": {"en": "The trail bends between wooded slopes. Branches rustle above the path.", "zh-CN": "山路在林坡间转折。头顶的枝叶，传来阵阵沙响。"}},
+    "五毒教山中3": {"name": {"en": "Venom Circle — Rocky Bend", "zh-CN": "毒环山径·岩间弯道"}, "description": {"en": "Rocks crowd the trail as it turns through the trees. Somewhere beyond them, insects hum.", "zh-CN": "山路绕过密林，岩石挤在两旁。更深处，隐约传来虫鸣。"}},
+    "五毒教山中4": {"name": {"en": "Venom Circle — Upper Trail", "zh-CN": "毒环山径·高处小径"}, "description": {"en": "The air is warm and still among the high trees. Distant voices mingle with the insects.", "zh-CN": "高处的树林里，空气温暖而沉静。远处的人声，混在虫鸣之中。"}},
+    "五毒教": {"name": {"en": "Venom Circle Sanctuary", "zh-CN": "毒环圣所"}, "description": {"en": "Quiet courtyards open onto a guarded path into the woods. Circe watches the visitors, while a guard keeps an eye on the inner gate.", "zh-CN": "清静的庭院连着通往密林的小路。喀耳刻打量着来客，守卫则留意着内庭入口。"}},
+    "五毒教森林1": {"name": {"en": "Serpentwood — Mossy Fork", "zh-CN": "灵蛇林·苔地路口"}, "description": {"en": "Moss spreads between the roots. The sanctuary falls quiet behind the trees.", "zh-CN": "苔藓沿树根铺开。树木遮住了圣所，也隔开了那边的声音。"}},
+    "五毒教森林2": {"name": {"en": "Serpentwood — Twisting Paths", "zh-CN": "灵蛇林·曲折小径"}, "description": {"en": "The paths twist through thick undergrowth. Something stirs whenever the leaves settle.", "zh-CN": "小路在密集的灌木中转折。叶子刚刚静下来，便又有东西在深处动了动。"}},
+    "五毒教森林3": {"name": {"en": "Serpentwood — Old Roots", "zh-CN": "灵蛇林·古树旁"}, "description": {"en": "Old roots rise above the soil. A faint hiss travels through the undergrowth.", "zh-CN": "老树的根露在地面上。低低的嘶声，从灌木间传来。"}},
+    "五毒教森林4": {"name": {"en": "Serpentwood — Stony Hollow", "zh-CN": "灵蛇林·石间空地"}, "description": {"en": "The trees thin around a hollow strewn with stones. The shadows beyond them seem unusually still.", "zh-CN": "树林在一片散落石块的空地旁稀疏起来。更深的阴影里，却安静得有些异样。"}},
+    "金蛇窟": {"name": {"en": "Serpent Cavern", "zh-CN": "金蛇密窟"}, "description": {"en": "A blade waits in the cavern's still air. The silence feels deliberate.", "zh-CN": "凝滞的空气中，一柄剑静静等待着。这里的安静，像是有人刻意安排的。"}}
+  },
+  "uiLabels": {
+    "去往云南五毒教": {"en": "Take the hillside trail toward the Venom Circle Sanctuary.", "zh-CN": "沿山路前往毒环圣所。"},
+    "返回大理。": {"en": "Back to Fjordhaven.", "zh-CN": "返回峡湾城。"},
+    "返回大理": {"en": "Back to Fjordhaven.", "zh-CN": "返回峡湾城。"},
+    "返回五毒教。": {"en": "Back to the sanctuary.", "zh-CN": "返回毒环圣所。"},
+    "返回五毒教": {"en": "Back to the sanctuary.", "zh-CN": "返回毒环圣所。"},
+    "五毒教深处": {"en": "Inner woods", "zh-CN": "内庭密林"},
+    "通往五毒教深处": {"en": "A guarded path into the inner woods.", "zh-CN": "通往内庭密林的路，由守卫看守。"},
+    "五毒教教主蓝凤凰": {"en": "Circe watches the newcomers.", "zh-CN": "喀耳刻打量着新来的旅人。"},
+    "千娇百媚蓝凤凰": {"en": "Circe has noticed the company you're keeping.", "zh-CN": "喀耳刻留意到了与你同行的人。"},
+    "五毒教不传之秘": {"en": "A guarded blade. The hero must face its wardens alone.", "zh-CN": "有人守护着这柄剑。主角必须独自面对护卫。"},
+    "传来阵阵怪虫的声音……": {"en": "Strange insects hum nearby.", "zh-CN": "附近传来奇异的虫鸣。"},
+    "传来貌似蛇的响声……": {"en": "Something hisses beyond the trees.", "zh-CN": "树后传来低低的嘶声。"}
+  },
+  "definitions": {
+    "battles": {"金蛇窟_战斗": {"name": {"en": "The Cavern Wardens", "zh-CN": "密窟护卫"}}},
+    "achievements": {
+      "金蛇传人": {
+        "name": {"en": "The Sanctuary's Secret", "zh-CN": "圣所秘藏"},
+        "description": {"en": "Found the Serpent-Gold Sword.", "zh-CN": "找到蛇纹金剑。"}
+      }
+    }
+  },
+  "dialogueEdits": {
+    "碧血剑_五毒教圣地1": [{"start": 0, "expectedCount": 1, "lines": [
+      {"speaker": "五毒教弟子", "text": {"en": "The inner woods are restricted. You'll need permission to pass.", "zh-CN": "内庭密林，不对外开放。得到许可后才能通过。"}}
+    ]}],
+    "碧血剑_五毒教圣地2": [{"start": 0, "expectedCount": 4, "lines": [
+      {"speaker": "五毒教弟子", "text": {"en": "The inner woods are restricted. Do you have permission?", "zh-CN": "内庭密林，不对外开放。你有通行许可吗？"}},
+      {"speaker": "主角", "text": {"en": "Would this Venom Circle Token do?", "zh-CN": "这枚毒环会信物，可以吗？"}},
+      {"speaker": "五毒教弟子", "text": {"en": "The Circle's seal. You're cleared to enter.", "zh-CN": "毒环的印记。你可以进去了。"}},
+      {"speaker": "五毒教弟子", "text": {"en": "Keep to the paths. The sanctuary wardens guard more than the gate.", "zh-CN": "留意脚下的路。圣所护卫看守的，可不只是入口。"}}
+    ]}],
+    "碧血剑_五毒教金蛇窟": [{"start": 0, "expectedCount": 2, "lines": [
+      {"speaker": "主角", "text": {"en": "The Serpent-Gold Sword. Someone has kept it very well hidden.", "zh-CN": "蛇纹金剑。它可真是藏得够隐蔽的。"}},
+      {"speaker": "主角", "text": {"en": "And very well guarded. Here they come!", "zh-CN": "守得也够严。他们来了！"}}
+    ]}],
+    "碧血剑_五毒教金蛇剑": [{"start": 0, "expectedCount": 1, "lines": [
+      {"speaker": "主角", "text": {"en": "So much for taking a quick look. Let's get that sword.", "zh-CN": "看来，随便看看也不轻松。把剑带上吧。"}}
+    ]}]
+  }
+}
