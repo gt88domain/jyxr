@@ -1,0 +1,33 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "maps": {
+    "华山山洞": {
+      "name": {"en": "Crane Peak Cave", "zh-CN": "华山山洞"},
+      "description": {
+        "en": "You duck through a low opening into a surprisingly roomy cave behind Crane Peak.",
+        "zh-CN": "你弯身走进华山后山的一个山洞中，原来此处别有洞天，内部空间极为开阔。"
+      }
+    }
+  },
+  "locations": {
+    "华山后山": {
+      "华山山洞": {
+        "name": {"en": "Crane Peak Cave", "zh-CN": "华山山洞"},
+        "description": {"en": "A small cave behind Crane Peak.", "zh-CN": "华山后方的一个小山洞。"}
+      }
+    }
+  },
+  "uiLabels": {
+    "返回华山后山。": {"en": "Back to Hidden Glade.", "zh-CN": "返回华山后山。"}
+  },
+  "choiceText": {
+    "碧血剑_何红药1": {
+      "prompt": {"en": "What do you do?", "zh-CN": "要留在这里吗？"},
+      "options": {"en": ["Stay here", "Leave"], "zh-CN": ["留在这里", "还是走吧"]}
+    },
+    "碧血剑_何红药2": {
+      "prompt": {"en": "Stay after that warning?", "zh-CN": "要留在这里吗？"},
+      "options": {"en": ["Stay and face a fight", "Leave"], "zh-CN": ["留在这里", "还是走吧"]}
+    }
+  }
+}
