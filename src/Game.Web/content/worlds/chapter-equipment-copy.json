@@ -424,8 +424,8 @@
           "zh-CN": "守护护甲"
         },
         "description": {
-          "en": "Incoming technique damage is multiplied by 0.95.",
-          "zh-CN": "承受的技能伤害乘以0.95。"
+          "en": "Take 5% less technique damage.",
+          "zh-CN": "受到的技能伤害降低5%。"
         }
       },
       "左手剑": {
