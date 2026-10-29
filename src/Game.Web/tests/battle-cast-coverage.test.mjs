@@ -30,3 +30,18 @@ test('all four shapes match real native impacts and Energy use from the one recr
  assert.deepEqual(fixture.cases.map(c=>c.shape),['single','plus','cleave','line']);
  for(const c of fixture.cases){assert.equal(c.skill.available,true);assert.equal(c.native.isLegend,false);assert.equal(describeCast(pack,c.skill).shape,c.shape);assert.equal(c.native.skillId,c.skill.id);assert.equal(c.selectedHostTarget.skillId,c.skill.id);assert.equal(c.native.unitId,c.actor.id);assert.deepEqual(c.native.targetPosition,{x:c.selectedHostTarget.x,y:c.selectedHostTarget.y});assert.equal(c.mpBefore-c.mpAfter,c.skill.mpCost);assert.deepEqual(sorted(impactCells(c.actor,c.selectedHostTarget,c.shape,c.skill.impactSize,fixture.grid.width,fixture.grid.height)),sorted(c.native.impactedPositions));}
 });
+test('the actual Musashi-route interruption frame can inspect usable skills without requiring an unavailable Star form',()=>{
+ const f=JSON.parse(readFileSync(new URL('./fixtures/musashi-route-disabled-star.json',import.meta.url))),b=f.battle,actor=b.units.find(u=>u.id===b.activeUnitId);
+ assert.equal(b.tick,83);
+ const star=b.skills.find(s=>s.id==='庖丁解牛.游刃有余');
+ assert.equal(star.available,false);assert.equal(star.reason,'怒气不足。');
+ assert.equal(describeCast(pack,star),null);
+ assert.doesNotThrow(()=>b.skills.map(s=>describeCast(pack,s)));
+ const cast=bestHostCast(b,actor,pack);
+ assert.ok(cast);assert.equal(cast.skill.available,true);assert.ok(b.targets.includes(cast.aim));
+ assert.ok(cast.hitIds.length>0);assert.notEqual(cast.skill.id,star.id);
+});
+test('making the same Star form available in an offline fixture still stops unsupported geometry',()=>{
+ const f=JSON.parse(readFileSync(new URL('./fixtures/musashi-route-disabled-star.json',import.meta.url))),star=f.battle.skills.find(s=>s.id==='庖丁解牛.游刃有余');
+ assert.throws(()=>describeCast(pack,{...star,available:true}),/Unsupported QA impact shape: 庖丁解牛\.游刃有余 star/);
+});

@@ -4,6 +4,9 @@ import {cleaveImpactTiles} from './battle-cleave-aim.mjs';
 // host targets entry. Unknown shapes stop the caller rather than becoming Single.
 const defaults={quanzhang:'single',qimen:'plus',daofa:'cleave',jianfa:'line'};
 export function describeCast(pack,live){
+ // A host-disabled form cannot be cast this turn. Do not require its geometry
+ // during preflight; an available unknown shape must still stop the caller.
+ if(live.available===false)return null;
  let base=pack.externalSkills.find(s=>s.id===live.id),form;
  if(!base){base=pack.externalSkills.find(s=>(form=s.formSkills?.find(f=>f.id===live.id)));}
  if(!base)return null;

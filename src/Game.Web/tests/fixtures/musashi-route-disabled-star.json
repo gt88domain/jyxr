@@ -1,0 +1,440 @@
+{
+  "sourceReport": "test-results/musashi-route.json",
+  "sourceSha256": "ec10cd22f22f73b6752c70c59b08a5010b3eb3f3c2ea2ebe953005f6b1d33e03",
+  "method": "Read-only projection of the real tick83 interrupted host frame. No battle replay and no saved-game edits. This fixture is for offline QA geometry only.",
+  "battle": {
+    "id": "山中等级0_战斗",
+    "width": 11,
+    "height": 4,
+    "tick": 83,
+    "outcome": "ongoing",
+    "activeUnitId": "participant_2_陈家洛",
+    "units": [
+      {
+        "id": "participant_0_主角",
+        "definitionId": "主角",
+        "team": 1,
+        "alive": true,
+        "x": 3,
+        "y": 0,
+        "hp": 1740
+      },
+      {
+        "id": "participant_1_袁冠南",
+        "definitionId": "袁冠南",
+        "team": 1,
+        "alive": true,
+        "x": 1,
+        "y": 3,
+        "hp": 1500
+      },
+      {
+        "id": "participant_2_陈家洛",
+        "definitionId": "陈家洛",
+        "team": 1,
+        "alive": true,
+        "x": 2,
+        "y": 1,
+        "hp": 1700
+      },
+      {
+        "id": "participant_3_霍青桐",
+        "definitionId": "霍青桐",
+        "team": 1,
+        "alive": true,
+        "x": 2,
+        "y": 3,
+        "hp": 1200
+      },
+      {
+        "id": "random_0_battle_random_0_小混混",
+        "definitionId": "小混混",
+        "team": 2,
+        "alive": true,
+        "x": 5,
+        "y": 1,
+        "hp": 140
+      },
+      {
+        "id": "random_1_battle_random_1_明教徒",
+        "definitionId": "明教徒",
+        "team": 2,
+        "alive": true,
+        "x": 5,
+        "y": 2,
+        "hp": 210
+      },
+      {
+        "id": "random_2_battle_random_2_童姥使者",
+        "definitionId": "童姥使者",
+        "team": 2,
+        "alive": true,
+        "x": 5,
+        "y": 3,
+        "hp": 140
+      },
+      {
+        "id": "random_3_battle_random_3_小混混4",
+        "definitionId": "小混混4",
+        "team": 2,
+        "alive": false,
+        "x": 5,
+        "y": 0,
+        "hp": 0
+      },
+      {
+        "id": "random_4_battle_random_4_小混混2",
+        "definitionId": "小混混2",
+        "team": 2,
+        "alive": true,
+        "x": 6,
+        "y": 1,
+        "hp": 140
+      },
+      {
+        "id": "random_5_battle_random_5_小混混",
+        "definitionId": "小混混",
+        "team": 2,
+        "alive": true,
+        "x": 6,
+        "y": 3,
+        "hp": 280
+      }
+    ],
+    "skills": [
+      {
+        "id": "百花错拳",
+        "level": 10,
+        "available": true,
+        "reason": null,
+        "mpCost": 144,
+        "castSize": 3,
+        "impactSize": 1
+      },
+      {
+        "id": "庖丁解牛",
+        "level": 10,
+        "available": true,
+        "reason": null,
+        "mpCost": 144,
+        "castSize": 3,
+        "impactSize": 1
+      },
+      {
+        "id": "百花错拳.百花缭乱",
+        "level": 10,
+        "available": false,
+        "reason": "怒气不足。",
+        "mpCost": 144,
+        "castSize": 3,
+        "impactSize": 2
+      },
+      {
+        "id": "庖丁解牛.游刃有余",
+        "level": 10,
+        "available": false,
+        "reason": "怒气不足。",
+        "mpCost": 144,
+        "castSize": 0,
+        "impactSize": 3
+      },
+      {
+        "id": "打鸡血",
+        "level": 1,
+        "available": true,
+        "reason": null,
+        "mpCost": 100,
+        "castSize": 0,
+        "impactSize": 0
+      },
+      {
+        "id": "过肩摔",
+        "level": 1,
+        "available": false,
+        "reason": "怒气不足。",
+        "mpCost": 0,
+        "castSize": 1,
+        "impactSize": 1
+      },
+      {
+        "id": "神龙摆尾",
+        "level": 1,
+        "available": false,
+        "reason": "怒气不足。",
+        "mpCost": 0,
+        "castSize": 1,
+        "impactSize": 1
+      }
+    ],
+    "targets": [
+      {
+        "skillId": "百花错拳",
+        "x": 0,
+        "y": 0,
+        "targetId": null
+      },
+      {
+        "skillId": "百花错拳",
+        "x": 1,
+        "y": 0,
+        "targetId": null
+      },
+      {
+        "skillId": "百花错拳",
+        "x": 2,
+        "y": 0,
+        "targetId": null
+      },
+      {
+        "skillId": "百花错拳",
+        "x": 3,
+        "y": 0,
+        "targetId": "participant_0_主角"
+      },
+      {
+        "skillId": "百花错拳",
+        "x": 4,
+        "y": 0,
+        "targetId": null
+      },
+      {
+        "skillId": "百花错拳",
+        "x": 0,
+        "y": 1,
+        "targetId": null
+      },
+      {
+        "skillId": "百花错拳",
+        "x": 1,
+        "y": 1,
+        "targetId": null
+      },
+      {
+        "skillId": "百花错拳",
+        "x": 3,
+        "y": 1,
+        "targetId": null
+      },
+      {
+        "skillId": "百花错拳",
+        "x": 4,
+        "y": 1,
+        "targetId": null
+      },
+      {
+        "skillId": "百花错拳",
+        "x": 5,
+        "y": 1,
+        "targetId": "random_0_battle_random_0_小混混"
+      },
+      {
+        "skillId": "百花错拳",
+        "x": 0,
+        "y": 2,
+        "targetId": null
+      },
+      {
+        "skillId": "百花错拳",
+        "x": 1,
+        "y": 2,
+        "targetId": null
+      },
+      {
+        "skillId": "百花错拳",
+        "x": 2,
+        "y": 2,
+        "targetId": null
+      },
+      {
+        "skillId": "百花错拳",
+        "x": 3,
+        "y": 2,
+        "targetId": null
+      },
+      {
+        "skillId": "百花错拳",
+        "x": 4,
+        "y": 2,
+        "targetId": null
+      },
+      {
+        "skillId": "百花错拳",
+        "x": 1,
+        "y": 3,
+        "targetId": "participant_1_袁冠南"
+      },
+      {
+        "skillId": "百花错拳",
+        "x": 2,
+        "y": 3,
+        "targetId": "participant_3_霍青桐"
+      },
+      {
+        "skillId": "百花错拳",
+        "x": 3,
+        "y": 3,
+        "targetId": null
+      },
+      {
+        "skillId": "庖丁解牛",
+        "x": 0,
+        "y": 0,
+        "targetId": null
+      },
+      {
+        "skillId": "庖丁解牛",
+        "x": 1,
+        "y": 0,
+        "targetId": null
+      },
+      {
+        "skillId": "庖丁解牛",
+        "x": 2,
+        "y": 0,
+        "targetId": null
+      },
+      {
+        "skillId": "庖丁解牛",
+        "x": 3,
+        "y": 0,
+        "targetId": "participant_0_主角"
+      },
+      {
+        "skillId": "庖丁解牛",
+        "x": 4,
+        "y": 0,
+        "targetId": null
+      },
+      {
+        "skillId": "庖丁解牛",
+        "x": 0,
+        "y": 1,
+        "targetId": null
+      },
+      {
+        "skillId": "庖丁解牛",
+        "x": 1,
+        "y": 1,
+        "targetId": null
+      },
+      {
+        "skillId": "庖丁解牛",
+        "x": 3,
+        "y": 1,
+        "targetId": null
+      },
+      {
+        "skillId": "庖丁解牛",
+        "x": 4,
+        "y": 1,
+        "targetId": null
+      },
+      {
+        "skillId": "庖丁解牛",
+        "x": 5,
+        "y": 1,
+        "targetId": "random_0_battle_random_0_小混混"
+      },
+      {
+        "skillId": "庖丁解牛",
+        "x": 0,
+        "y": 2,
+        "targetId": null
+      },
+      {
+        "skillId": "庖丁解牛",
+        "x": 1,
+        "y": 2,
+        "targetId": null
+      },
+      {
+        "skillId": "庖丁解牛",
+        "x": 2,
+        "y": 2,
+        "targetId": null
+      },
+      {
+        "skillId": "庖丁解牛",
+        "x": 3,
+        "y": 2,
+        "targetId": null
+      },
+      {
+        "skillId": "庖丁解牛",
+        "x": 4,
+        "y": 2,
+        "targetId": null
+      },
+      {
+        "skillId": "庖丁解牛",
+        "x": 1,
+        "y": 3,
+        "targetId": "participant_1_袁冠南"
+      },
+      {
+        "skillId": "庖丁解牛",
+        "x": 2,
+        "y": 3,
+        "targetId": "participant_3_霍青桐"
+      },
+      {
+        "skillId": "庖丁解牛",
+        "x": 3,
+        "y": 3,
+        "targetId": null
+      },
+      {
+        "skillId": "打鸡血",
+        "x": 2,
+        "y": 1,
+        "targetId": "participant_2_陈家洛"
+      }
+    ],
+    "reachable": [
+      {
+        "x": 2,
+        "y": 1
+      },
+      {
+        "x": 3,
+        "y": 1
+      },
+      {
+        "x": 1,
+        "y": 1
+      },
+      {
+        "x": 2,
+        "y": 2
+      },
+      {
+        "x": 2,
+        "y": 0
+      },
+      {
+        "x": 3,
+        "y": 2
+      },
+      {
+        "x": 1,
+        "y": 0
+      },
+      {
+        "x": 0,
+        "y": 1
+      },
+      {
+        "x": 1,
+        "y": 2
+      }
+    ],
+    "action": {
+      "unitId": "participant_2_陈家洛",
+      "team": 1,
+      "mainActionCommitted": false,
+      "canMove": true,
+      "canRest": true,
+      "canAttack": true
+    }
+  }
+}
