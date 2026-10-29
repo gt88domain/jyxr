@@ -1,6 +1,104 @@
 {
   "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
   "dialogueEdits": {
+    "雪山飞狐_阎基居.两页刀法": [
+      {
+        "start": 2,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "阎基",
+            "text": {
+              "en": "Visitors! Excellent. Leave your valuables on the counter. The consultation is nonrefundable.",
+              "zh-CN": "有客人！太好了。值钱的东西请放柜台，诊金概不退还。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "A mugging with office hours. That's a new one.",
+              "zh-CN": "还有按时营业的打劫，这倒是头一回见。"
+            }
+          }
+        ]
+      }
+    ],
+    "雪山飞狐_阎基居.两页刀法.胜利": [
+      {
+        "start": 2,
+        "expectedCount": 3,
+        "lines": [
+          {
+            "speaker": "胡斐",
+            "text": {
+              "en": "That last move... that's from my missing pages.",
+              "zh-CN": "刚才那一招……就在我缺的那两页里。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Looks like your notes have been keeping this business afloat. Hand them over.",
+              "zh-CN": "看来这门生意还靠你的笔记撑着。把它们交出来吧。"
+            }
+          },
+          {
+            "speaker": "阎基",
+            "text": {
+              "en": "Fine. A refund. My least favorite treatment.",
+              "zh-CN": "好吧，退款。这可是我最不喜欢的疗法。"
+            }
+          }
+        ]
+      },
+      {
+        "start": 6,
+        "expectedCount": 2,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "And the bottle in the cupboard? Call it compensation for the consultation.",
+              "zh-CN": "柜子里的那瓶呢？就算这次问诊的补偿吧。"
+            }
+          },
+          {
+            "speaker": "阎基",
+            "text": {
+              "en": "Last-Light Remedy. Take it. And don't tell anyone I gave a refund.",
+              "zh-CN": "余光灵药。拿去吧，别告诉别人我还退过诊金。"
+            }
+          }
+        ]
+      },
+      {
+        "start": 9,
+        "expectedCount": 3,
+        "lines": [
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Two pages and a remedy. A productive appointment.",
+              "zh-CN": "两页笔记和一瓶灵药，今天这趟没白来。"
+            }
+          },
+          {
+            "speaker": "阎基",
+            "text": {
+              "en": "I've had more profitable days treating splinters.",
+              "zh-CN": "我给人挑木刺，都比今天赚得多。"
+            }
+          },
+          {
+            "speaker": "主角",
+            "text": {
+              "en": "Then try charging for those instead.",
+              "zh-CN": "那还是靠挑木刺收钱吧。"
+            }
+          }
+        ]
+      }
+    ],
     "雪山飞狐_胡斐居": [{
       "start": 2,
       "expectedCount": 4,
@@ -50,7 +148,14 @@
       }}]
     }]
   },
+  "speakerNames": {
+    "阎基": {"en": "The Apothecary", "zh-CN": "药师"}
+  },
   "commandText": {
+    "找回了两页胡家刀法。": {
+      "en": "Recovered Kai's missing Frontier Cleave Pages and a Last-Light Remedy at the Apothecary's Hut.",
+      "zh-CN": "在药师小舍找回凯缺失的边境重斩残页，并获得一份余光灵药。"
+    },
     "答应帮胡斐找回两页刀法。": {
       "en": "Kai joined the party. We agreed to look for two missing pages from his fighting notes.",
       "zh-CN": "凯加入队伍，我们答应帮他找回战技笔记缺失的两页。"
@@ -58,7 +163,8 @@
   },
   "definitions": {
     "battles": {
-      "胡斐居.战斗": {"name": {"en": "Kai's Friendly Match", "zh-CN": "与凯友好切磋"}}
+      "胡斐居.战斗": {"name": {"en": "Kai's Friendly Match", "zh-CN": "与凯友好切磋"}},
+      "阎基居.战斗": {"name": {"en": "The Apothecary's Toll", "zh-CN": "药师的过路费"}}
     }
   }
 }

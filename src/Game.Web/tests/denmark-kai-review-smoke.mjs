@@ -22,7 +22,7 @@ try{
  await click('[data-action="quests"]');await page.locator('[data-journey-story="denmark-kai-recruited"] > summary').click();
  assert.ok((await page.locator('[data-journey-story="denmark-kai-recruited"]').innerText()).includes('not the whole Denmark story'));
  await page.locator('.journey-full > summary').click();await page.locator('.journey-journal > summary').click();
- assert.equal(await page.locator('[data-journey-focus] > span').innerText(),'Denmark · Meet Kai');
+ assert.equal(await page.locator('[data-journey-focus] > span').innerText(),"Denmark · Kai's Missing Pages");
  const journal=await page.locator('.journey-full').innerText();assert.ok(journal.includes('An Unwelcome Shadow · Received'));assert.ok(journal.includes('Kai joined the party.'));assert.doesNotMatch(journal,/[\u3400-\u9fff]/);
  await noOverflow('Actual Kai conclusion, journal and correct story title');await closeModal();await unchanged(before);
  pass('The genuine conclusion and nested journal use the current chapter title; received news does not claim its follow-up was completed');

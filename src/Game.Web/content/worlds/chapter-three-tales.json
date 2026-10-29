@@ -1284,19 +1284,29 @@
         ]
       },
       {
-        "title": {"en": "Denmark · Meet Kai", "zh-CN": "丹麦·初识凯"},
-        "trackedStories": ["雪山飞狐_胡斐居.胜利", "雪山飞狐_胡斐居.失败", "mainStory_黑暗的阴影1"],
+        "title": {"en": "Denmark · Kai's Missing Pages", "zh-CN": "丹麦·凯的缺页笔记"},
+        "trackedStories": ["雪山飞狐_胡斐居.胜利", "雪山飞狐_胡斐居.失败", "mainStory_黑暗的阴影1", "雪山飞狐_阎基居.两页刀法.胜利"],
         "prepareLabel": {"en": "Gear & study", "zh-CN": "装备与研习"},
         "stages": [
           {
-            "id": "denmark-kai-recruited",
-            "any": ["雪山飞狐_胡斐居.胜利"],
-            "title": {"en": "Kai has joined", "zh-CN": "凯已加入"},
+            "id": "denmark-pages-found",
+            "any": ["雪山飞狐_阎基居.两页刀法.胜利"],
+            "title": {"en": "Kai's pages are back", "zh-CN": "找回凯的残页"},
             "detail": {
-              "en": "Kai joined after your friendly match. His fighting notes are missing two pages; the search continues from here. In Party, check his gear, mastery and study. For Team Practice, move him to second place. This completes his first meeting, not the whole Denmark story.",
-              "zh-CN": "切磋后凯已加入，他的战技笔记还缺两页，寻找之旅从这里继续。在队伍中检查装备、专精与研习；结伴练习时把他调到第二位。这只完成了初遇，不是丹麦全章。"
+              "en": "You recovered Kai's Frontier Cleave Pages and a Last-Light Remedy. The pages teach up to Rank 5; inspect their requirements in Party → Kai → Study. Getting the pages does not automatically train him. This completes the missing-pages quest, not the whole Denmark story.",
+              "zh-CN": "你找回了凯的边境重斩残页，并获得一份余光灵药。残页可教至5级；到队伍→凯→研习查看要求。获得教材并不等于已经替他培养。这只完成缺页笔记任务，不是丹麦全章。"
             },
             "route": [], "complete": true, "panel": "cultivation"
+          },
+          {
+            "id": "denmark-kai-recruited",
+            "any": ["雪山飞狐_胡斐居.胜利"],
+            "title": {"en": "Visit the Apothecary's Hut", "zh-CN": "前往药师小舍"},
+            "detail": {
+              "en": "Kai has joined. Save before visiting the Apothecary's Hut. Your hero and Kai fight together; a loss or timeout ends this journey. Win to recover his missing Frontier Cleave Pages and a Last-Light Remedy. This is the next step, not the whole Denmark story.",
+              "zh-CN": "凯已加入。前往药师小舍前先保存。本场主角和凯共同出战，失败或超时会结束旅程。获胜后找回边境重斩残页，并获得余光灵药。这是下一步，不是丹麦全章。"
+            },
+            "route": [{"mapId": "大地图", "locationId": "阎基居"}]
           },
           {
             "id": "denmark-kai-rematch",

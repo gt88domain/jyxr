@@ -190,11 +190,11 @@ def apply_skin(raw,skin,locale):
             before=item['name']
             if locale=='en':
                 stem=re.sub(r' (Scroll|Manual|Tome)$','',before)
-                item['name']=stem+(' Tome' if spell else ' Manual')
+                item['name']=before if before.endswith(' Pages') else stem+(' Tome' if spell else ' Manual')
                 item['description']=re.sub(r'\b[Ss]croll\b','tome' if spell else 'manual',item['description'])
             else:
                 stem=re.sub(r'(卷轴|手册|法术书)$','',before)
-                item['name']=stem+('法术书' if spell else '手册')
+                item['name']=before if before.endswith('残页') else stem+('法术书' if spell else '手册')
                 item['description']=item['description'].replace('卷轴','法术书' if spell else '手册')
             if before!=item['name']:renames[before]=item['name']
         def material_text(text):

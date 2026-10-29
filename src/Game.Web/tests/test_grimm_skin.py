@@ -96,6 +96,17 @@ class GrimmSkinTests(unittest.TestCase):
    for a,b in zip(old['options'],new['options']):
     self.assertEqual({k:v for k,v in a.items() if k!='text'},{k:v for k,v in b.items() if k!='text'})
 
+ def test_recovered_pages_keep_their_name_and_original_teaching_rules(self):
+  original=next(i for i in self.source['items'] if i['id']=='两页胡家刀法')
+  for locale,name in [('en','Frontier Cleave Pages'),('zh-CN','边境重斩残页')]:
+   display,_=apply_skin(self.raw,self.skin,locale)
+   pages=next(i for i in display['items'] if i['id']==original['id'])
+   self.assertEqual(pages['name'],name)
+   for field in ['type','consumeOnUse','requirements','useEffects']:self.assertEqual(pages[field],original[field])
+  # An ordinary copy of the same technique remains a manual.
+  display,_=apply_skin(self.raw,self.skin,'en')
+  self.assertEqual(next(i for i in display['items'] if i['id']=='胡家刀法手抄本')['name'],'Frontier Cleave Manual')
+
  def test_practice_goal_and_all_objective_conditions_match_the_original(self):
   game,_=apply_skin(self.raw,self.skin,'en')
   goal=next(o for o in game['browser']['objectives'] if o['id']=='training')

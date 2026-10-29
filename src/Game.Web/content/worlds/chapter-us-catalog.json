@@ -3728,12 +3728,12 @@
       },
       "两页胡家刀法": {
         "name": {
-          "en": "Frontier Cleave Scroll",
-          "zh-CN": "边境重斩卷轴"
+          "en": "Frontier Cleave Pages",
+          "zh-CN": "边境重斩残页"
         },
         "description": {
-          "en": "Training scroll for Frontier Cleave. Check its requirements and current effects in the item details.",
-          "zh-CN": "记载边境重斩的卷轴。学习条件与实际效果见道具详情。"
+          "en": "Two missing pages from Kai's fighting notes. Study them to learn Frontier Cleave up to Rank 5. Requires Heavy Weapons 45 and Insight 60. Reusable; only characters who fight earn study XP.",
+          "zh-CN": "凯的战技笔记缺失的两页。研习可将边境重斩练至5级，要求重武器45、悟性60。教材可以反复使用，只有实际参战者获得研习经验。"
         }
       },
       "胡家刀法手抄本": {
