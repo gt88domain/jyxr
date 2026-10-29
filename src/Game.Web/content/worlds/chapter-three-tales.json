@@ -1285,18 +1285,39 @@
       },
       {
         "title": {"en": "Denmark · Kai and Gerda", "zh-CN": "丹麦·凯与格尔达"},
-        "trackedStories": ["雪山飞狐_胡斐居.胜利", "雪山飞狐_胡斐居.失败", "mainStory_黑暗的阴影1", "雪山飞狐_阎基居.两页刀法.胜利", "雪山飞狐_苗人凤居.苗人凤被毒.胜利", "雪山飞狐_药王庄.程灵素.求药"],
+        "trackedStories": ["雪山飞狐_胡斐居.胜利", "雪山飞狐_胡斐居.失败", "mainStory_黑暗的阴影1", "雪山飞狐_阎基居.两页刀法.胜利", "雪山飞狐_苗人凤居.苗人凤被毒.胜利", "雪山飞狐_药王庄.程灵素.求药", "雪山飞狐_阎基居.七星海棠.胜利.杀", "雪山飞狐_阎基居.七星海棠.胜利.不杀", "雪山飞狐_苗人凤居.田归农来战.胜利.2"],
         "prepareLabel": {"en": "Gear & study", "zh-CN": "装备与研习"},
         "stages": [
+          {
+            "id": "denmark-investigation",
+            "any": ["雪山飞狐_苗人凤居.田归农来战.胜利.2"],
+            "title": {"en": "The old duel needs investigating", "zh-CN": "继续调查旧决斗"},
+            "detail": {"en": "You heard the champion's account and received a Frontier Cleave Manual. Check its requirements in Party → Study. The old duel is still unresolved; this is not the whole Denmark story.", "zh-CN": "你听过老勇士的解释，获得边境重斩手册。可在队伍→研习查看要求。旧决斗仍未查清，这不是丹麦全章。"},
+            "route": [], "complete": true, "panel": "cultivation"
+          },
+          {
+            "id": "denmark-return-with-apothecary",
+            "any": ["雪山飞狐_阎基居.七星海棠.胜利.不杀"],
+            "title": {"en": "Hear the champion's account", "zh-CN": "听听老勇士的解释"},
+            "detail": {"en": "The apothecary has joined, and you have the Nightshade Blossom. Return to Winter Cottage. Gerda will treat the champion before you hear his account of the old duel. Another choice follows; hearing him out does not require attacking him.", "zh-CN": "药师已加入，你也拿到了夜影花。返回冬日小屋，格尔达会先为老勇士敷药，再听他解释旧决斗。随后还有一次选择，听他解释不等于必须攻击他。"},
+            "route": [{"mapId": "大地图", "locationId": "苗人凤居"}, {"mapId": "苗人凤居", "locationId": "苗人凤"}]
+          },
+          {
+            "id": "denmark-return-with-blossom",
+            "any": ["雪山飞狐_阎基居.七星海棠.胜利.杀"],
+            "title": {"en": "Bring the blossom to Winter Cottage", "zh-CN": "带花返回冬日小屋"},
+            "detail": {"en": "You recovered the Nightshade Blossom. Return to the champion with Gerda. Save first: treating him leads directly to another fight. Getting the ingredient has not finished this story.", "zh-CN": "你拿到了夜影花。和格尔达回去找老勇士，先保存：敷药后会直接进入另一场战斗。取得材料不等于故事结束。"},
+            "route": [{"mapId": "大地图", "locationId": "苗人凤居"}, {"mapId": "苗人凤居", "locationId": "苗人凤"}]
+          },
           {
             "id": "denmark-gerda-joined",
             "any": ["雪山飞狐_药王庄.程灵素.求药"],
             "title": {"en": "Gerda has joined", "zh-CN": "格尔达已加入"},
             "detail": {
-              "en": "Gerda joined to help, but the champion still needs an antidote. A Nightshade Blossom is needed next; joining the party does not cure him. In Party, inspect her gear, mastery and study before the next fight. This completes finding help, not the whole Denmark story.",
-              "zh-CN": "格尔达已加入帮忙，老勇士仍需解药，下一步要找夜影花。加入队伍不等于已经治好他。可先在队伍中检查她的装备、专精与研习，再准备下一战。这只完成寻求帮助，不是丹麦全章。"
+              "en": "Ask the apothecary for a Nightshade Blossom. His follow-up has a 50% chance. Save first: you and Kai fight; defeat or timeout ends the journey. Both choices give the blossom, but Morality and later events differ. Gerda joining the party does not cure him. This is not the whole Denmark story.",
+              "zh-CN": "去找药师取夜影花，后续事件有50%概率。先保存：主角与凯参战，失败或超时会结束旅程。两种选择都给花，但道德和后续事件不同。格尔达加入不等于治好老勇士，这不是丹麦全章。"
             },
-            "route": [], "complete": true, "panel": "cultivation"
+            "route": [{"mapId": "药王庄", "locationId": "返回"}, {"mapId": "衡阳", "locationId": "返回"}, {"mapId": "大地图", "locationId": "阎基居"}]
           },
           {
             "id": "denmark-find-gerda",

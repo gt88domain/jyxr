@@ -1,5 +1,7 @@
 # 丹麦取药分歧：只读审阅与英文候选
 
+本页保留6d4b822批次的审阅历史。后续已将取药／对峙／调查六段接入运行文案，并在**独立QA副本**完成放过药师→不攻击→调查；真实结果及另一条未验边界见[隔离QA实录](DENMARK_NIGHTSHADE_QA.md)。296银币九人基线未推进；下文“尚未接入／NOT_RUN”是审阅当时状态。
+
 基线 `a2dadf110b3c7f3bb02cb3f92dc2d26c2623972c`，仍为 `feat/storybound-italian-battle`。本批只读检查原包、命令实现和已保全存档，**没有打开游戏推进、掷取药事件、战斗或选择分歧**。下列英文为文档候选，尚未加载到游戏；不能称这段已英文实玩通过。
 
 原包SHA-256为 `c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3`。原始场景、地图引用、战斗、物品与称号提取保留为工作区忽略产物 `src/Game.Web/test-results/denmark-nightshade-source-audit.json`。实际救援结果与旧失败见[上一批实录](DENMARK_REMEDY.md)。

@@ -1,0 +1,90 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "dialogueEdits": {
+    "雪山飞狐_阎基居.七星海棠": [{"start": 2, "expectedCount": 8, "lines": [
+      {"speaker": "阎基", "text": {"en": "Back again? I'm beginning to charge myself for these visits.", "zh-CN": "又来了？再这样，我都想给自己收诊费了。"}},
+      {"speaker": "主角", "text": {"en": "We're looking for a Nightshade Blossom. Someone needs an antidote.", "zh-CN": "我们在找夜影花，有人等着配解药。"}},
+      {"speaker": "阎基", "text": {"en": "Flowers? I run a respectable practice.", "zh-CN": "花？我开的可是正经诊所。"}},
+      {"speaker": "胡斐", "text": {"en": "Then help us. The champion at Winter Cottage was poisoned.", "zh-CN": "那就帮帮忙。冬日小屋的老勇士中毒了。"}},
+      {"speaker": "阎基", "text": {"en": "No blossoms here. Try a florist.", "zh-CN": "这里没花，去找花匠吧。"}},
+      {"speaker": "主角", "text": {"en": "Then why is there one behind the counter?", "zh-CN": "那柜台后面这株是什么？"}},
+      {"speaker": "阎基", "text": {"en": "Ah. That one. You should have left it alone.", "zh-CN": "啊，那株。你们不该碰它。"}},
+      {"speaker": "胡斐", "text": {"en": "Step back. He's reaching for it!", "zh-CN": "退后，他要动手！"}}
+    ]}],
+    "雪山飞狐_阎基居.七星海棠.胜利": [{"start": 2, "expectedCount": 5, "lines": [
+      {"speaker": "阎基", "text": {"en": "Please! I'm much more useful alive.", "zh-CN": "饶命！活着的我更有用。"}},
+      {"speaker": "胡斐", "text": {"en": "You've tried robbing us and poisoning us. That's quite a résumé.", "zh-CN": "抢过我们，又想下毒。你这履历真够丰富。"}},
+      {"speaker": "阎基", "text": {"en": "I know a secret about the champion!", "zh-CN": "我知道老勇士的秘密！"}},
+      {"speaker": "主角", "text": {"en": "Then talk.", "zh-CN": "那就说。"}},
+      {"speaker": "阎基", "text": {"en": "Promise you'll spare me first. That's my final offer.", "zh-CN": "先答应放过我，这是我的最后条件。"}}
+    ]}],
+    "雪山飞狐_阎基居.七星海棠.胜利.杀": [
+      {"start": 2, "expectedCount": 2, "lines": [
+        {"speaker": "主角", "text": {"en": "You tried to poison us. You're done hurting people.", "zh-CN": "你还想下毒害人。到此为止了。"}},
+        {"speaker": "阎基", "text": {"en": "Wait—!", "zh-CN": "等等——！"}}
+      ]},
+      {"start": 7, "expectedCount": 1, "lines": [
+        {"speaker": "程灵素", "text": {"en": "We have the blossom. Let's get back to Winter Cottage.", "zh-CN": "花拿到了，快回冬日小屋。"}}
+      ]}
+    ],
+    "雪山飞狐_阎基居.七星海棠.胜利.不杀": [
+      {"start": 3, "expectedCount": 7, "lines": [
+        {"speaker": "主角", "text": {"en": "You live. Tell us what you know.", "zh-CN": "留你一命。把知道的说出来。"}},
+        {"speaker": "阎基", "text": {"en": "The champion has been very quiet about an old duel.", "zh-CN": "老勇士一直不肯提一场旧决斗。"}},
+        {"speaker": "阎基", "text": {"en": "A traveler died from poison after fighting him. I saw the blade.", "zh-CN": "一个旅人在和他交手后中毒身亡。我见过那把兵器。"}},
+        {"speaker": "胡斐", "text": {"en": "Then why haven't you said anything?", "zh-CN": "那你怎么现在才说？"}},
+        {"speaker": "阎基", "text": {"en": "Nobody had asked quite this firmly.", "zh-CN": "以前没人问得这么坚决。"}},
+        {"speaker": "胡斐", "text": {"en": "You're coming with us. You'll tell him exactly what you told us.", "zh-CN": "跟我们走，当着他的面把这些话再说一遍。"}},
+        {"speaker": "阎基", "text": {"en": "In front of witnesses? Absolutely. I like witnesses.", "zh-CN": "有证人在场？当然好，我最喜欢有证人了。"}}
+      ]},
+      {"start": 12, "expectedCount": 1, "lines": [
+        {"speaker": "程灵素", "text": {"en": "We have the blossom. Let's get back to Winter Cottage.", "zh-CN": "花拿到了，快回冬日小屋。"}}
+      ]}
+    ],
+    "雪山飞狐_苗人凤居.阎基对峙": [{"start": 2, "expectedCount": 15, "lines": [
+      {"speaker": "胡斐", "text": {"en": "The apothecary may be lying. We help first, then ask questions.", "zh-CN": "药师可能在说谎。先救人，再问清楚。"}},
+      {"speaker": "胡斐", "text": {"en": "We're back. Gerda has the antidote.", "zh-CN": "我们回来了，格尔达带来了解药。"}},
+      {"speaker": "苗人凤", "text": {"en": "Thank you.", "zh-CN": "多谢。"}},
+      {"speaker": "程灵素", "text": {"en": "Hold still. This will sting. (She applies the antidote and covers his eyes.)", "zh-CN": "别动，会有点刺痛。（她敷上药，包好他的眼睛。）"}},
+      {"speaker": "苗人凤", "text": {"en": "You weren't exaggerating.", "zh-CN": "你还真没夸张。"}},
+      {"speaker": "胡斐", "text": {"en": "A traveler died after a duel with you. Was poison involved?", "zh-CN": "有个旅人在和你决斗后死去，和毒有关吗？"}},
+      {"speaker": "阎基", "text": {"en": "Tell him about the blade.", "zh-CN": "把兵器的事告诉他。"}},
+      {"speaker": "苗人凤", "text": {"en": "We exchanged weapons. I wounded him. He died from poison I never knew was there.", "zh-CN": "我们交换过兵器。我伤了他，他却中了我根本不知道的毒。"}},
+      {"speaker": "胡斐", "text": {"en": "And you still don't know how it got there?", "zh-CN": "你到现在也不知道毒是怎么沾上去的？"}},
+      {"speaker": "阎基", "text": {"en": "There. He admitted it. What else do you need?", "zh-CN": "听见了？他承认了，还用问吗？"}},
+      {"speaker": "苗人凤", "text": {"en": "I admitted what happened. Not what you're implying.", "zh-CN": "我承认发生过的事，不是你暗示的那回事。"}},
+      {"speaker": "阎基", "text": {"en": "You wanted to win. Poison made that easy.", "zh-CN": "你想赢，下毒就容易多了。"}},
+      {"speaker": "苗人凤", "text": {"en": "No. He was my friend.", "zh-CN": "不。他是我的朋友。"}},
+      {"speaker": "胡斐", "text": {"en": "Then someone is leaving out a very important part.", "zh-CN": "那就有人漏掉了最重要的部分。"}},
+      {"speaker": "阎基", "text": {"en": "You're wasting time. Finish him before he can fool you.", "zh-CN": "别浪费时间，在他骗过你们之前动手。"}}
+    ]}],
+    "雪山飞狐_苗人凤居.田归农来战.胜利.2": [{"start": 2, "expectedCount": 5, "lines": [
+      {"speaker": "苗人凤", "text": {"en": "I won't stop you from asking questions. I want answers too.", "zh-CN": "我不会拦着你们调查，我也想知道答案。"}},
+      {"speaker": "主角", "text": {"en": "Then we find out who poisoned that blade.", "zh-CN": "那就找出是谁在兵器上下的毒。"}},
+      {"speaker": "胡斐", "text": {"en": "Someone wants us blaming each other instead of asking questions.", "zh-CN": "有人想让我们互相责怪，而不是问清真相。"}},
+      {"speaker": "苗人凤", "text": {"en": "Take this Frontier Cleave Manual. It belonged to my friend. I hope it helps you find the truth.", "zh-CN": "带上这本边境重斩手册吧。它曾属于我的朋友，但愿能帮你们查明真相。"}},
+      {"speaker": "胡斐", "text": {"en": "Thank you. We'll follow the evidence.", "zh-CN": "谢谢。我们会顺着证据查下去。"}}
+    ]}]
+  },
+  "choiceText": {
+    "雪山飞狐_阎基居.七星海棠.胜利": {
+      "prompt": {"en": "What do you do with the apothecary? Both choices provide the blossom.", "zh-CN": "如何处置药师？两种选择都能拿到花。"},
+      "options": {"en": ["Kill him. (+2 Morality)", "Spare him. (−2 Morality; he joins)"], "zh-CN": ["杀死他。（道德＋2）", "放过他。（道德－2；药师加入）"]}
+    },
+    "雪山飞狐_苗人凤居.阎基对峙": {
+      "prompt": {"en": "Kill the champion on the apothecary's word? Attacking costs 4 Morality and starts a fight.", "zh-CN": "仅凭药师的话就杀死老勇士？动手会扣4道德并进入战斗。"},
+      "options": {"en": ["Kill him.", "Don't attack. Investigate."], "zh-CN": ["杀死他。", "不动手，先调查。"]}
+    }
+  },
+  "commandText": {
+    "杀死了江湖混混阎基。": {"en": "Killed the apothecary and recovered a Nightshade Blossom. Return to Winter Cottage.", "zh-CN": "杀死药师，拿到一株夜影花。返回冬日小屋。"},
+    "从阎基口中得知，苗人凤是胡斐的杀父仇人。": {"en": "Spared the apothecary. He joined us and accused the champion of poisoning a traveler in an old duel. Return to Winter Cottage with the blossom and hear the champion's account.", "zh-CN": "放过药师。他加入队伍，指控老勇士在旧决斗中毒害旅人。带花返回冬日小屋，听听老勇士的说法。"},
+    "得知苗人凤是胡斐的杀父仇人，但此事需要进一步调查原因。": {"en": "Heard the champion's account of a poisoned duel. He gave us a Frontier Cleave Manual. The truth still needs investigating.", "zh-CN": "听过老勇士对中毒决斗的解释，获得边境重斩手册。真相仍待调查。"}
+  },
+  "uiLabels": {
+    "江湖流氓": {"en": "Thug", "zh-CN": "打手"}
+  },
+  "definitions": {"battles": {
+    "阎基居.战斗.七星海棠": {"name": {"en": "The Nightshade Blossom", "zh-CN": "夜影花争夺"}}
+  }}
+}

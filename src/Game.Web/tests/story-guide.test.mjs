@@ -73,7 +73,14 @@ test('finishing Spain recommends France while exploring Italy keeps the local gu
  assert.equal(openingChapterStep(s).route.find(r=>r.mapId==='潇湘古林5').locationId,'向右走');
  s.chapterJournal.completedStories.push('雪山飞狐_药王庄.程灵素.求药');
  assert.equal(openingChapterStep(s).storyStage,'denmark-gerda-joined');
- assert.equal(openingChapterStep(s).complete,true);
+ assert.equal(openingChapterStep(s).complete,false);
+ assert.match(openingChapterStep(s).detail,/50% chance/);
  assert.match(openingChapterStep(s).detail,/joining the party does not cure him/);
  assert.match(openingChapterStep(s).detail,/not the whole Denmark story/);
+ s.chapterJournal.completedStories.push('雪山飞狐_阎基居.七星海棠.胜利.不杀');
+ assert.equal(openingChapterStep(s).storyStage,'denmark-return-with-apothecary');
+ assert.match(openingChapterStep(s).detail,/Another choice follows/);
+ s.chapterJournal.completedStories.push('雪山飞狐_苗人凤居.田归农来战.胜利.2');
+ assert.equal(openingChapterStep(s).storyStage,'denmark-investigation');
+ assert.equal(openingChapterStep(s).complete,true);
 });
