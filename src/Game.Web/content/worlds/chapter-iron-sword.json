@@ -1,0 +1,74 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "speakerNames": {
+    "玉真子": {"en": "Set", "zh-CN": "赛特"},
+    "炼狱玉真子": {"en": "Set", "zh-CN": "赛特"}
+  },
+  "maps": {
+    "华山仙境": {
+      "name": {"en": "Crane Peak — Hidden Retreat", "zh-CN": "鹤峰秘居"},
+      "description": {"en": "Beyond the mountain trails, a sheltered retreat overlooks Crane Peak. It feels quiet enough for a lesson. Whether the lesson stays quiet is another matter.", "zh-CN": "越过山路，一处隐蔽的居所俯瞰着鹤峰。这里安静得适合上课。至于这堂课能不能一直安静下去，就难说了。"}
+    }
+  },
+  "uiLabels": {
+    "特想念阿九，回来找她来了": {"en": "Check on Cleopatra's training with Horus.", "zh-CN": "和荷鲁斯一起看看克娄巴特拉的修习进展。"},
+    "苍穹碧落": {"en": "Bearer of the Iron Sword", "zh-CN": "铁剑传承者"},
+    "获得铁剑令，习得铁剑门绝学剑法": {"en": "Received the Iron Sword Token and Open Sky Sword Manual.", "zh-CN": "获得铁剑令牌与长空剑术手册。"}
+  },
+  "definitions": {
+    "battles": {
+      "铁剑门_战斗1": {"name": {"en": "The Iron Sword Claim", "zh-CN": "铁剑之争"}},
+      "铁剑门_战斗2": {"name": {"en": "Set's Last Gambit", "zh-CN": "赛特的最后一搏"}}
+    }
+  },
+  "dialogueEdits": {
+    "bixuejianShyou_铁剑门0": [
+      {"start": 1, "expectedCount": 7, "lines": [
+        {"speaker": "袁承志", "text": {"en": "Imhotep? How is Cleopatra?", "zh-CN": "伊姆霍特普？克娄巴特拉怎么样了？"}},
+        {"speaker": "木桑道长", "text": {"en": "Ask her yourself. Try not to look so surprised.", "zh-CN": "你自己问她吧。尽量别太惊讶。"}},
+        {"speaker": "九难", "text": {"en": "Horus. You took your time.", "zh-CN": "荷鲁斯。你可让我等了不短的时间。"}},
+        {"speaker": "主角", "text": {"en": "You look ready to conquer something.", "zh-CN": "看起来，你已经准备好征服点什么了。"}},
+        {"speaker": "袁承志", "text": {"en": "She usually is.", "zh-CN": "她一向如此。"}},
+        {"speaker": "九难", "text": {"en": "First, I'd settle for getting off this mountain.", "zh-CN": "眼下，能先下山，我就很满意了。"}},
+        {"speaker": "主角", "text": {"en": "An expedition with a sensible goal. That's new.", "zh-CN": "目标这么实际的远行，还真少见。"}}
+      ]},
+      {"start": 9, "expectedCount": 1, "lines": [
+        {"speaker": "木桑道长", "text": {"en": "Take care of each other. Wait—who's there?", "zh-CN": "你们互相照顾。等等——谁在那儿？"}}
+      ]}
+    ],
+    "bixuejianShyou_铁剑门1": [{"start": 1, "expectedCount": 9, "lines": [
+      {"speaker": "玉真子", "text": {"en": "Imhotep. Still playing teacher?", "zh-CN": "伊姆霍特普。还在当你的老师？"}},
+      {"speaker": "木桑道长", "text": {"en": "Set. What do you want?", "zh-CN": "赛特。你想干什么？"}},
+      {"speaker": "玉真子", "text": {"en": "Something you lost.", "zh-CN": "找回一样你丢掉的东西。"}},
+      {"speaker": "玉真子", "text": {"en": "(Set raises a small iron sword, stamped with the order's seal.)", "zh-CN": "（赛特举起一柄小铁剑，上面铸着传承的印记。）"}},
+      {"speaker": "木桑道长", "text": {"en": "The Iron Sword Token. After all this time.", "zh-CN": "铁剑令牌。隔了这么久，竟然又见到了。"}},
+      {"speaker": "玉真子", "text": {"en": "You swore to honor its bearer. Kneel.", "zh-CN": "你发过誓，要尊重持有它的人。跪下。"}},
+      {"speaker": "木桑道长", "text": {"en": "(Imhotep lowers his head before the old seal.)", "zh-CN": "（伊姆霍特普向古老的印记低下头。）"}},
+      {"speaker": "玉真子", "text": {"en": "There. Much better. Now stay down.", "zh-CN": "这就对了。现在，别起来了。"}},
+      {"speaker": "主角", "text": {"en": "That's enough.", "zh-CN": "够了。"}}
+    ]}],
+    "bixuejianShyou_铁剑门2": [{"start": 1, "expectedCount": 5, "lines": [
+      {"speaker": "玉真子", "text": {"en": "All of you against me. Is that how your honorable school teaches courage?", "zh-CN": "你们一群人对付我一个。你们这体面的传承，就是这样教人勇气的？"}},
+      {"speaker": "袁承志", "text": {"en": "You mistook respect for surrender.", "zh-CN": "你把尊重，当成了投降。"}},
+      {"speaker": "玉真子", "text": {"en": "(Set swallows a black pellet and draws a ragged breath.)", "zh-CN": "（赛特吞下一颗黑色药丸，急促地吸了一口气。）"}},
+      {"speaker": "主角", "text": {"en": "Careful. That wasn't a snack.", "zh-CN": "当心。那可不是点心。"}},
+      {"speaker": "玉真子", "text": {"en": "(His next breath comes out as a growl. He raises his sword.)", "zh-CN": "（他的下一口气变成了低吼，手中的剑再次举起。）"}}
+    ]}],
+    "bixuejianShyou_铁剑门3": [
+      {"start": 1, "expectedCount": 8, "lines": [
+        {"speaker": "玉真子", "text": {"en": "What—get it off me!", "zh-CN": "什么——快把它弄走！"}},
+        {"speaker": "玉真子", "text": {"en": "(A small golden serpent darts from the rocks and bites Set. He stiffens, then collapses.)", "zh-CN": "（一条小金蛇从石缝中窜出，咬住赛特。他浑身一僵，随后倒了下去。）"}},
+        {"speaker": "木桑道长", "text": {"en": "We learned under the same teacher. Our teacher valued skill. Set valued obedience.", "zh-CN": "我们曾在同一位老师门下学习。老师看重本领，赛特却只想让人服从。"}},
+        {"speaker": "木桑道长", "text": {"en": "Our teacher lost that token on a journey. Set spent years hunting for it, and never wondered what it was meant to protect.", "zh-CN": "老师在一次远行中遗失了令牌。赛特花了多年寻找，却从没想过，这传承究竟该守护什么。"}},
+        {"speaker": "九难", "text": {"en": "He can't use it against you now.", "zh-CN": "现在，他再也不能拿它对付你了。"}},
+        {"speaker": "木桑道长", "text": {"en": "The token is yours, Cleopatra. Let it remind you what authority is for.", "zh-CN": "令牌归你了，克娄巴特拉。让它提醒你，权威该用来做什么。"}},
+        {"speaker": "九难", "text": {"en": "You trust me with it?", "zh-CN": "你放心把它交给我？"}},
+        {"speaker": "木桑道长", "text": {"en": "You know the difference between leading and being obeyed. Take the token and this Open Sky Sword Manual. It's time I saw more of the world.", "zh-CN": "你知道，带领别人和让别人服从，并不一样。拿好令牌和这本长空剑术手册，我也该多出去看看了。"}}
+      ]},
+      {"start": 12, "expectedCount": 2, "lines": [
+        {"speaker": "袁承志", "text": {"en": "We'll put your teaching to good use.", "zh-CN": "我们会把你教的本领用在正地方。"}},
+        {"speaker": "木桑道长", "text": {"en": "See that you do. I'd hate to have to climb back up here.", "zh-CN": "说到做到。我可不想再爬回来检查。"}}
+      ]}
+    ]
+  }
+}
