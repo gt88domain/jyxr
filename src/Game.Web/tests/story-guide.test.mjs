@@ -3,6 +3,7 @@ import {test} from 'node:test';
 import {readFileSync} from 'node:fs';
 import {storyChapterStep,storyChapterSteps} from '../src/story-guide.ts';
 import {openingChapterStep} from '../src/opening-chapter.ts';
+import {journeyFocus} from '../src/journey.ts';
 const pack=JSON.parse(readFileSync(new URL('../public/data/packs/worlds/en/content-package.json',import.meta.url))).browser;
 function state(completedStories=[],trust=50,timeSlot='午'){
  return {pack,chapterJournal:{completedStories,trust},adventure:{timeSlot}};
@@ -33,14 +34,16 @@ test('reading the guide is deterministic and does not mutate state or random sta
  try{for(let n=0;n<50;n++)assert.equal(storyChapterStep(s).storyStage,'night');}finally{Math.random=random;}
  assert.deepEqual(s,before);
 });
-test('three independent routes preserve story windows and original solo-defeat behavior',()=>{
+test('independent routes preserve story windows and original solo-defeat behavior',()=>{
  const s=state(['白马啸西风_完结2','mainStory_神秘剑客1']);
- const guides=storyChapterSteps(s);assert.equal(guides.length,3);
+ const guides=storyChapterSteps(s);assert.equal(guides.length,4);
  assert.equal(guides[1].blocked,true);assert.deepEqual(guides[1].route,[]);
  assert.match(guides[2].detail,/ALONE/);
  s.chapterJournal.completedStories.push('鸳鸯刀正_风陵渡败');
  const defeat=storyChapterSteps(s)[2];assert.equal(defeat.complete,false);assert.equal(defeat.blocked,true);
- assert.deepEqual(defeat.route,[]);assert.match(defeat.detail,/load an intact save/);
+ assert.deepEqual(defeat.route,[]);assert.match(defeat.detail,/Load manual save/);assert.match(defeat.detail,/Saving now would overwrite/);
+ s.chapterJournal.completedStories.push('mainStory_黑暗的阴影1');
+ const kai=storyChapterSteps(s).at(-1);assert.equal(kai.blocked,true);assert.deepEqual(kai.route,[]);
 });
 test('finishing Spain recommends France while exploring Italy keeps the local guide',()=>{
  const s={...state(['白马啸西风_完结2']),map:{id:'大地图'},objectives:pack.objectives.map(o=>({...o,completed:true}))};
@@ -49,6 +52,12 @@ test('finishing Spain recommends France while exploring Italy keeps the local gu
  s.map.id='大地图';s.chapterJournal.completedStories.push('书剑恩仇录_庖丁解牛胜');
  assert.equal(openingChapterStep(s).storyStage,'italy-night');
  s.chapterJournal.completedStories.push('鸳鸯刀正_风陵渡胜');
+ assert.equal(openingChapterStep(s).storyStage,'denmark-kai-meet');
+ assert.equal(journeyFocus(s).label,'Denmark · Meet Kai');
+ assert.equal(openingChapterStep(s).complete,false);
+ assert.match(openingChapterStep(s).detail,/hero ALONE/);
+ s.chapterJournal.completedStories.push('雪山飞狐_胡斐居.胜利');
+ assert.equal(openingChapterStep(s).storyStage,'denmark-kai-recruited');
  assert.equal(openingChapterStep(s).complete,true);
- assert.match(openingChapterStep(s).detail,/Blue Fairy.*does not join/);
+ assert.match(openingChapterStep(s).detail,/not the whole Denmark story/);
 });

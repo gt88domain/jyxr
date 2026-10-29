@@ -1,0 +1,64 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "dialogueEdits": {
+    "雪山飞狐_胡斐居": [{
+      "start": 2,
+      "expectedCount": 4,
+      "lines": [
+        {"speaker": "胡斐", "text": {
+          "en": "Please don't touch the ice pieces. They're almost a word.",
+          "zh-CN": "先别碰那些冰片。就快拼成一个词了。"
+        }},
+        {"speaker": "主角", "text": {
+          "en": "Your fighting notes have a suspiciously large blank in the middle.",
+          "zh-CN": "你的战技笔记中间，好像空了很大一块。"
+        }},
+        {"speaker": "主角", "text": {
+          "en": "A friendly match might help. We can test the parts you still have.",
+          "zh-CN": "不如友好切磋一场，先试试你手头还有的部分。"
+        }},
+        {"speaker": "胡斐", "text": {
+          "en": "Two pages are missing. If the answer is 'duck,' I'd rather learn it now.",
+          "zh-CN": "少了两页。要是上面写着‘记得低头’，最好现在就让我学会。"
+        }}
+      ]
+    }],
+    "雪山飞狐_胡斐居.胜利": [{
+      "start": 2,
+      "expectedCount": 5,
+      "lines": [
+        {"speaker": "胡斐", "text": {
+          "en": "Well fought. I'm Kai. I suspect the missing pages covered that.",
+          "zh-CN": "打得漂亮。我叫凯。我怀疑少掉的那两页正好讲这个。"
+        }},
+        {"speaker": "主角", "text": {
+          "en": "Let's find them before you have to improvise the rest.",
+          "zh-CN": "一起找回来吧，免得后面全靠你临场发挥。"
+        }},
+        {"speaker": "胡斐", "text": {
+          "en": "Gladly. If Gerda asks, this was studying. Definitely not getting knocked over.",
+          "zh-CN": "好。要是格尔达问起，就说我在学习，绝不是被人打趴下了。"
+        }}
+      ]
+    }],
+    "雪山飞狐_胡斐居.失败": [{
+      "start": 2,
+      "expectedCount": 1,
+      "lines": [{"speaker": "胡斐", "text": {
+        "en": "Let's call that a first draft. Check your footing before the next one.",
+        "zh-CN": "这回就算初稿。下次先看准脚下。"
+      }}]
+    }]
+  },
+  "commandText": {
+    "答应帮胡斐找回两页刀法。": {
+      "en": "Kai joined the party. We agreed to look for two missing pages from his fighting notes.",
+      "zh-CN": "凯加入队伍，我们答应帮他找回战技笔记缺失的两页。"
+    }
+  },
+  "definitions": {
+    "battles": {
+      "胡斐居.战斗": {"name": {"en": "Kai's Friendly Match", "zh-CN": "与凯友好切磋"}}
+    }
+  }
+}

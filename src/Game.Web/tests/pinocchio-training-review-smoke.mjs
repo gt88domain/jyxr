@@ -34,7 +34,8 @@ try{
  await noOverflow('Actual Pinocchio talent explanation at 390px');await closeModal();
  pass('The actual recruited companion’s talent uses English and preserves its original male/female pairing and random bonus conditions');
  await click('[data-action="quests"]');const stages=await page.locator('[data-journey-story]').evaluateAll(nodes=>nodes.map(n=>({stage:n.dataset.journeyStory,title:n.querySelector('summary').textContent})));
- assert.equal(stages.length,3);for(const s of stages)assert.ok(s.title.startsWith('✓'),JSON.stringify(s));
+ for(const id of ['dulcinea-ending','france-complete','italy-complete'])assert.ok(stages.some(s=>s.stage===id&&s.title.startsWith('✓')),JSON.stringify(stages));
+ assert.ok(stages.some(s=>s.stage==='denmark-kai-meet'&&!s.title.startsWith('✓')),'The new Kai introduction remains pending in this genuine earlier export');
  for(const summary of await page.locator('[data-journey-story] > summary').all())await summary.click();
  const text=await page.locator('#game-modal').innerText();assert.doesNotMatch(text,/[\u3400-\u9fff]/);report.chapterCards=stages;
  await noOverflow('Same-save three completed chapters after companion training');await closeModal();

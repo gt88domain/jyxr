@@ -74,6 +74,7 @@ const patterns:Array<[RegExp,(...parts:string[])=>string]>=[
   [/^装备：\s*(.*)$/,(gear)=>`Equipment: ${translateUiText(gear)}`],
   [/^(.*?)\s*·\s*完成\s*(\d+)\s*\/\s*(\d+)\s*项。本章以完整游玩流程为目标，阅读与手动战斗时间因人而异。$/,(title,a,b)=>`${title} · ${a}/${b} goals complete. Reading and manual combat affect play time.`],
   [/^(.*?)\s*·\s*尚未发生$/,(title)=>`${translateUiText(title)} · Not yet received`],
+  [/^(.*?)\s*·\s*已发生$/,(title)=>`${translateUiText(title)} · Received`],
   [/^主角达到\s*(\d+)\s*级；参战队伍至少\s*(\d+)\s*人（含主角）(.*)$/,(level,size,tail)=>`Reach level ${level}; have ${size} active party members, including yourself${tail?`; ${translateUiText(tail.replace(/^；/,''))}`:''}`],
   [/^主角达到\s*(\d+)\s*级$/,(level)=>`Reach level ${level}`],
   [/^参战队伍至少\s*(\d+)\s*人（含主角）$/,(size)=>`Have at least ${size} active party members, including yourself`],

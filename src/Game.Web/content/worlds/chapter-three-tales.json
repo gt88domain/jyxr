@@ -1282,6 +1282,46 @@
             "night": true
           }
         ]
+      },
+      {
+        "title": {"en": "Denmark · Meet Kai", "zh-CN": "丹麦·初识凯"},
+        "trackedStories": ["雪山飞狐_胡斐居.胜利", "雪山飞狐_胡斐居.失败", "mainStory_黑暗的阴影1"],
+        "prepareLabel": {"en": "Gear & study", "zh-CN": "装备与研习"},
+        "stages": [
+          {
+            "id": "denmark-kai-recruited",
+            "any": ["雪山飞狐_胡斐居.胜利"],
+            "title": {"en": "Kai has joined", "zh-CN": "凯已加入"},
+            "detail": {
+              "en": "Kai joined after your friendly match. His fighting notes are missing two pages; the search continues from here. In Party, check his gear, mastery and study. For Team Practice, move him to second place. This completes his first meeting, not the whole Denmark story.",
+              "zh-CN": "切磋后凯已加入，他的战技笔记还缺两页，寻找之旅从这里继续。在队伍中检查装备、专精与研习；结伴练习时把他调到第二位。这只完成了初遇，不是丹麦全章。"
+            },
+            "route": [], "complete": true, "panel": "cultivation"
+          },
+          {
+            "id": "denmark-kai-rematch",
+            "any": ["雪山飞狐_胡斐居.失败"],
+            "title": {"en": "Prepare for a rematch", "zh-CN": "整备后再切磋"},
+            "detail": {
+              "en": "Kai hasn't joined. Check your equipment, mastery and live skill costs before another friendly match. Only your hero fights; companions cannot take their place. Make a manual save before setting out.",
+              "zh-CN": "凯尚未加入。再次切磋前检查装备、主专精和实时招式消耗。只有主角出战，伙伴不能代替。出发前先手动保存。"
+            },
+            "blockedBy": ["mainStory_黑暗的阴影1"],
+            "blockedDetail": {"en": "This invitation closed after you discussed Grimm's first letter with him. Other stories remain available.", "zh-CN": "和格林谈过第一封来信后，这次邀请已经结束。仍可探索其他故事。"},
+            "route": [{"mapId": "南贤居", "locationId": "返回"}, {"mapId": "大地图", "locationId": "胡斐居"}]
+          },
+          {
+            "id": "denmark-kai-meet",
+            "title": {"en": "Visit Kai's Cottage", "zh-CN": "拜访凯的小屋"},
+            "detail": {
+              "en": "Kai is working on an ice puzzle and some incomplete fighting notes. Save before visiting his cottage: a friendly match uses your hero ALONE. Win and he can join the search for two missing pages. Visit before discussing Grimm's first letter with him.",
+              "zh-CN": "凯正在摆弄冰片谜题和不完整的战技笔记。拜访小屋前先保存，友好切磋只有主角出战。获胜后，他会加入寻找两页笔记的旅程。请在和格林谈起第一封来信前拜访。"
+            },
+            "blockedBy": ["mainStory_黑暗的阴影1"],
+            "blockedDetail": {"en": "The invitation has ended in this journey. Other stories remain available.", "zh-CN": "本次旅程中的邀请已结束，仍可探索其他故事。"},
+            "route": [{"mapId": "南贤居", "locationId": "返回"}, {"mapId": "大地图", "locationId": "胡斐居"}]
+          }
+        ]
       }
     ]
   }

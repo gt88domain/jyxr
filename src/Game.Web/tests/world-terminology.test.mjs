@@ -1,6 +1,10 @@
 import assert from 'node:assert/strict';
 import {test} from 'node:test';
 import {translateUiText,setUiDisplayLabels} from '../src/ui/locale.ts';
+test('received world news is translated without claiming its follow-up is complete',()=>{
+ assert.equal(translateUiText('黑暗的阴影 · 已发生'),'An Unwelcome Shadow · Received');
+ assert.equal(translateUiText('黑暗的阴影 · 尚未发生'),'An Unwelcome Shadow · Not yet received');
+});
 test('the observed fatal encounter explains recovery and translates its numbered ending',()=>{
  assert.equal(translateUiText('第 1 周目 · 此程落幕'),'Playthrough 1 · Journey ended');
  assert.equal(translateUiText('胜败有时，江湖未远'),'This journey has ended');
