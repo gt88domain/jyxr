@@ -274,85 +274,6 @@
         ]
       }
     ],
-    "bixuejianShyou_接黄金2": [
-      {
-        "start": 1,
-        "expectedCount": 4,
-        "lines": [
-          {
-            "speaker": "主角",
-            "text": {
-              "en": "A moment, Horus. We can settle the misunderstanding while we walk.",
-              "zh-CN": "等一下，荷鲁斯。误会可以边走边说。"
-            }
-          },
-          {
-            "speaker": "袁承志",
-            "text": {
-              "en": "Then walk quickly. I mean to catch up with her.",
-              "zh-CN": "那就走快些。我得追上她。"
-            }
-          },
-          {
-            "speaker": "主角",
-            "text": {
-              "en": "Together, then. Two pairs of eyes are better than one.",
-              "zh-CN": "一起吧。两个人找，总比一个人容易。"
-            }
-          },
-          {
-            "speaker": "袁承志",
-            "text": {
-              "en": "Agreed. Take these supplies; we'll sort out the parcel later.",
-              "zh-CN": "好。这些补给你先拿着，包裹的事稍后再说。"
-            }
-          }
-        ]
-      }
-    ],
-    "bixuejianShyou_不接黄金": [
-      {
-        "start": 2,
-        "expectedCount": 10,
-        "lines": [
-          {
-            "speaker": "主角",
-            "text": {
-              "en": "Horus? What's going on?",
-              "zh-CN": "荷鲁斯？这是怎么回事？"
-            }
-          },
-          {
-            "speaker": "温青",
-            "text": {
-              "en": "Isis leaves a gift when she chooses. Arguing won't improve it.",
-              "zh-CN": "伊西斯决定送出的礼物，可不是拿来争论的。"
-            }
-          },
-          {
-            "speaker": "袁承志",
-            "text": {
-              "en": "And there she goes. We should follow.",
-              "zh-CN": "说完就走了。我们得跟上。"
-            }
-          },
-          {
-            "speaker": "主角",
-            "text": {
-              "en": "That would be easier than arguing with a departing boat.",
-              "zh-CN": "确实，比对着一条开走的船讲道理容易些。"
-            }
-          },
-          {
-            "speaker": "袁承志",
-            "text": {
-              "en": "Come on, then. I'll travel with you.",
-              "zh-CN": "走吧，我和你同行。"
-            }
-          }
-        ]
-      }
-    ],
     "bixuejianShyou_接金败石梁派3": [
       {
         "start": 2,
@@ -1052,24 +973,6 @@
         ]
       }
     ]
-  },
-  "choiceText": {
-    "bixuejianShyou_接黄金2": {
-      "prompt": {
-        "en": "Open the parcel?",
-        "zh-CN": "要打开包裹吗？"
-      },
-      "options": {
-        "en": [
-          "Open it.",
-          "Leave it sealed."
-        ],
-        "zh-CN": [
-          "打开。",
-          "先保持封好。"
-        ]
-      }
-    }
   },
   "commandText": {
     "风陵渡口偶遇郭芙、郭襄姐妹。": {

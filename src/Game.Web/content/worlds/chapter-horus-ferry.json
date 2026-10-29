@@ -1,0 +1,95 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "speakerNames": {"船老大": {"en": "Ferryman", "zh-CN": "船夫"}},
+  "uiLabels": {
+    "长大了的袁承志": {"en": "Horus, son of Isis and Osiris.", "zh-CN": "荷鲁斯，伊西斯与奥西里斯的儿子。"},
+    "龙游帮VIP服务小弟": {"en": "A ferryman who also handles Dragon Guild travel.", "zh-CN": "也承接游龙公会旅行服务的船夫。"}
+  },
+  "choiceText": {
+    "bixuejianShyou_风陵渡口": {
+      "prompt": {"en": "Keep the gold for yourself?", "zh-CN": "要把这份黄金据为己有吗？"},
+      "options": {"en": ["Take the gold.", "Leave it with them."], "zh-CN": ["收下黄金。", "不插手这份黄金。"]}
+    },
+    "bixuejianShyou_接黄金2": {
+      "prompt": {"en": "Open the parcel, or keep it sealed for Isis?", "zh-CN": "要打开包裹，还是保持封好留给伊西斯？"},
+      "options": {"en": ["Open it.", "Leave it sealed."], "zh-CN": ["打开。", "先保持封好。"]}
+    },
+    "bixuejianShyou_接黄金3": {
+      "prompt": {"en": "Pay their 10,000-silver fare?", "zh-CN": "要支付这笔10,000银币的船资吗？"},
+      "options": {"en": ["Pay the fare.", "Refuse to pay."], "zh-CN": ["支付船资。", "拒绝支付。"]}
+    }
+  },
+  "dialogueEdits": {
+    "bixuejianShyou_风陵渡口": [{"start": 2, "expectedCount": 4, "lines": [
+      {"speaker": "温青", "text": {"en": "Horus, carry this. I recovered it from the thieves.", "zh-CN": "荷鲁斯，拿着这个。我从窃贼那里追回来的。"}},
+      {"speaker": "袁承志", "text": {"en": "Then we should find its owners, Mother.", "zh-CN": "那我们该去找它的失主，母亲。"}},
+      {"speaker": "温青", "text": {"en": "Of course. I asked you to carry a parcel, not settle a philosophical question.", "zh-CN": "当然。我是让你拿个包裹，不是让你解决哲学难题。"}},
+      {"speaker": "袁承志", "text": {"en": "(Horus keeps his arms folded. The parcel remains between them.)", "zh-CN": "（荷鲁斯依旧抱着胳膊。包裹还横在母子两人之间。）"}}
+    ]}],
+    "bixuejianShyou_接黄金": [{"start": 2, "expectedCount": 7, "lines": [
+      {"speaker": "主角", "text": {"en": "If nobody wants it, I can give it a very comfortable home.", "zh-CN": "要是谁都不想要，我倒能给它找个很舒服的家。"}},
+      {"speaker": "袁承志", "text": {"en": "That's my mother, and that gold isn't yours.", "zh-CN": "那是我母亲，而且这份黄金不是你的。"}},
+      {"speaker": "温青", "text": {"en": "I asked for help carrying it, not a committee to spend it.", "zh-CN": "我是请人帮着拿包裹，可不是请人商量怎么把它花光。"}},
+      {"speaker": "温青", "text": {"en": "(Isis thrusts the parcel at you and strides ashore.)", "zh-CN": "（伊西斯把包裹塞给你，大步上了岸。）"}},
+      {"speaker": "袁承志", "text": {"en": "(Horus starts after her. You step into his path.)", "zh-CN": "（荷鲁斯刚要跟上，你拦住了他的去路。）"}},
+      {"speaker": "主角", "text": {"en": "Relax. I'm sure its owners won't miss a coin or two.", "zh-CN": "别紧张。我想，失主总不至于计较一两枚金币。"}},
+      {"speaker": "袁承志", "text": {"en": "You don't get to decide that. Hand it over.", "zh-CN": "这不由你决定。把它交出来。"}}
+    ]}],
+    "bixuejianShyou_接黄金2": [{"start": 1, "expectedCount": 4, "lines": [
+      {"speaker": "主角", "text": {"en": "All right, Horus. Point taken. Let's sort this out without another duel.", "zh-CN": "好吧，荷鲁斯。你的意思我明白了。剩下的，咱们别再靠决斗解决。"}},
+      {"speaker": "袁承志", "text": {"en": "Then help me catch up with Mother.", "zh-CN": "那就帮我追上母亲。"}},
+      {"speaker": "主角", "text": {"en": "We'll look around Stonebridge Hall together. Keep that parcel sealed until we find her.", "zh-CN": "我们一起去石桥会馆找找。在见到她之前，先别拆包裹。"}},
+      {"speaker": "袁承志", "text": {"en": "Agreed. Take these supplies. I want witnesses when she asks what took so long.", "zh-CN": "好。这些补给你先拿着。她问起我们为什么耽搁这么久，我还需要几个证人。"}}
+    ]}],
+    "bixuejianShyou_接黄金3": [{"start": 1, "expectedCount": 7, "lines": [
+      {"speaker": "袁承志", "text": {"en": "(Horus snatches back the parcel and hurries ashore after Isis.)", "zh-CN": "（荷鲁斯夺回包裹，匆匆上岸追赶伊西斯。）"}},
+      {"speaker": "主角", "text": {"en": "Next time, I'm staying out of family finances. Stonebridge Hall it is.", "zh-CN": "下次，我一定不掺和人家的家务账。先去石桥会馆吧。"}},
+      {"speaker": "船老大", "text": {"en": "Hold on. Your friends still owe their fares.", "zh-CN": "等等。你朋友还欠着船资呢。"}},
+      {"speaker": "主角", "text": {"en": "That sounds like a conversation you should have with my friends.", "zh-CN": "这话，听起来应该跟我朋友说。"}},
+      {"speaker": "船老大", "text": {"en": "You arrived together. You can settle it together.", "zh-CN": "一起来的，就一起结账。"}},
+      {"speaker": "主角", "text": {"en": "Fine. What's the damage?", "zh-CN": "好吧。一共多少？"}},
+      {"speaker": "船老大", "text": {"en": "10,000 silver.", "zh-CN": "10,000银币。"}}
+    ]}],
+    "bixuejianShyou_不接黄金": [{"start": 2, "expectedCount": 10, "lines": [
+      {"speaker": "主角", "text": {"en": "Horus? Family business?", "zh-CN": "荷鲁斯？在商量家里的事？"}},
+      {"speaker": "袁承志", "text": {"en": "My mother recovered some stolen gold. We're discussing where it goes.", "zh-CN": "我母亲追回了一些赃金。我们在商量怎么处置。"}},
+      {"speaker": "温青", "text": {"en": "Back to its owners, obviously. Both of you can stop looking so solemn.", "zh-CN": "当然是还给失主。你们俩都不用这么严肃。"}},
+      {"speaker": "温青", "text": {"en": "(Isis tucks the parcel under her arm and heads ashore.)", "zh-CN": "（伊西斯把包裹夹在臂下，径自上了岸。）"}},
+      {"speaker": "主角", "text": {"en": "She walks fast.", "zh-CN": "她走得可真快。"}},
+      {"speaker": "袁承志", "text": {"en": "Always has. I should catch up before she starts another argument.", "zh-CN": "一直如此。我得在她又跟人争论之前追上去。"}},
+      {"speaker": "主角", "text": {"en": "She headed toward Stonebridge Hall. Does she always leave you to explain things?", "zh-CN": "她往石桥会馆那边去了。她总把解释的事留给你吗？"}},
+      {"speaker": "袁承志", "text": {"en": "Only when there are witnesses.", "zh-CN": "只在有旁人看着的时候。"}},
+      {"speaker": "主角", "text": {"en": "Then let's give you a few more. Come with us.", "zh-CN": "那就再多几个旁人吧。和我们一起走。"}},
+      {"speaker": "袁承志", "text": {"en": "Gladly. Take these supplies; we'll have better luck traveling together.", "zh-CN": "好。这些补给你先拿着，我们结伴走会更顺当。"}}
+    ]}],
+    "bixuejianShyou_得黄金": [{"start": 1, "expectedCount": 1, "lines": [
+      {"speaker": "主角", "text": {"en": "Gold... and a hairpin. I really should have left that sealed.", "zh-CN": "黄金……还有一枚发簪。我真该把包裹好好封着。"}}
+    ]}],
+    "bixuejianShyou_付船资": [
+      {"start": 1, "expectedCount": 1, "lines": [
+        {"speaker": "主角", "text": {"en": "Ten thousand? Did they charter the river? Fine. Here.", "zh-CN": "一万？他们把整条河都包下来了？好吧，给你。"}}
+      ]},
+      {"start": 3, "expectedCount": 1, "lines": [
+        {"speaker": "船老大", "text": {"en": "Thank you. Here's a Dragon Guild VIP Pass. Keep it if you come back.", "zh-CN": "多谢。这是游龙公会贵宾证，下次来时记得带上。"}}
+      ]}
+    ],
+    "bixuejianShyou_不付船资": [{"start": 1, "expectedCount": 2, "lines": [
+      {"speaker": "主角", "text": {"en": "Ten thousand silver? I was helping with a parcel, not chartering a fleet.", "zh-CN": "一万银币？我只是帮着拿个包裹，可没包下整支船队。"}},
+      {"speaker": "船老大", "text": {"en": "Then settle the bill my way!", "zh-CN": "那就照我的办法结账！"}}
+    ]}],
+    "bixuejianShyou_不付船资胜利1": [{"start": 1, "expectedCount": 1, "lines": [
+      {"speaker": "船老大", "text": {"en": "That was only the dock crew. Everyone else, over here!", "zh-CN": "刚才只是码头的人。其他人，都过来！"}}
+    ]}],
+    "bixuejianShyou_不付船资胜利2": [
+      {"start": 1, "expectedCount": 3, "lines": [
+        {"speaker": "主角", "text": {"en": "Are we finished discussing the bill?", "zh-CN": "这笔账，咱们谈完了吗？"}},
+        {"speaker": "船老大", "text": {"en": "(The ferryman studies the planks at his feet.)", "zh-CN": "（船夫低头研究起脚下的木板。）"}},
+        {"speaker": "主角", "text": {"en": "And what's this?", "zh-CN": "这又是什么？"}}
+      ]},
+      {"start": 5, "expectedCount": 2, "lines": [
+        {"speaker": "主角", "text": {"en": "A Dragon Guild VIP Pass. Let's call this a receipt.", "zh-CN": "游龙公会贵宾证。那就当作收据吧。"}},
+        {"speaker": "船老大", "text": {"en": "(The ferryman looks as though he'd rather close the ferry for the day.)", "zh-CN": "（船夫看起来很想今天就此收船。）"}}
+      ]}
+    ]
+  }
+}

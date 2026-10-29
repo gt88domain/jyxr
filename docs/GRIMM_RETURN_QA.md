@@ -70,7 +70,7 @@ Read-only result/backup checks are in `grimm-return-result-audit.json`. All old 
 
 NOT_RUN: loss/timeout branch, priority home chat, Chinese gameplay, real phones, downstream chapters and all endings. This proves one original main-stage route on this build, not the whole game.
 
-The continuation now satisfies the stage prerequisite for the original Horus meeting at Windrider Crossing (`风陵渡口`), but still has neither Horus nor Isis. That native entry retains50% chance. Its meeting has4 lines and two gold choices: accept leads to original morality−3 and a battle; decline leads to morality+3, Horus JOIN and original item commands. Both continuations require a separate coherent mother/son writing pass before acceptance; no choice was made or probability retried here. The next global main letter requires hero15 and at least8 friends plus this stage; hero is still13, so no such follow-up is claimed triggered.
+The continuation now satisfies the stage prerequisite for the original Horus meeting at **Windsong Ferry** (`风陵渡口`; earlier reports incorrectly called it Windrider Crossing), but still has neither Horus nor Isis. That native entry retains50% chance. Its meeting has4 lines and two gold choices: accept leads to original morality−3 and a battle; decline leads to morality+3, Horus JOIN and original item commands. The subsequent [ferry copy batch](HORUS_FERRY_COPY_QA.md) adapts this local subtree coherently; one normal arrival there did not select the encounter, with no reroll or choice. The next global main letter requires hero15 and at least8 friends plus this stage; hero is still13, so no such follow-up is claimed triggered.
 
 Suggested PR title: **Adapt and validate Grimm's first world-story return**
 
