@@ -1,5 +1,7 @@
 # Guinevere原生候选：独立审阅未执行
 
+**后续状态已更新：** 协调方提供真实Sediment原ZIP后，本executor已下载、核SHA／CRC／22项payload与候选PNG，并实际看图，建议保留候选，见[独立视觉审阅](GUINEVERE_CANDIDATE_VISUAL_REVIEW.md)。本文保留此前仅有Library ID、无法落地时的事实，不再作为当前图审阻塞。512、绑定和用户验收仍未执行。
+
 基线 `42c78b789078f4ca9a163d5cb1e916fcc7b4f08c`，同一writer、工作区与 `feat/storybound-italian-battle`。收到协调方dot的原素材席交付元数据，尚未在本executor取得实际PNG；本批只记录可验证范围，不生图、改图、导出512、绑定资源或改manifest。
 
 ## 源端交付回执与本地验证分开
