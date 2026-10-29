@@ -1058,8 +1058,8 @@
           "zh-CN": "边境重斩"
         },
         "description": {
-          "en": "An active heavy weapon skill. Check its range, energy cost, and rank bonuses in the skill details.",
-          "zh-CN": "主动重武器技能。实际范围、能量消耗与等级加成见技能详情。"
+          "en": "A heavy-weapon sweep that hits a three-tile row. Aim at a highlighted tile, even an empty one: the blow also hits one tile on either side of your aim point.",
+          "zh-CN": "重武器横扫，命中瞄准格及横向两侧各一格。可选择标出的空格，敌人不必站在你点击的格子上；三格横排与攻击方向垂直。"
         }
       },
       "金蛇剑法": {

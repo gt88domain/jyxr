@@ -1,0 +1,13 @@
+{
+  "sourceReport": "denmark-shrine-armored.json",
+  "sourceReportSha256": "1bccc80854d016998b21ea86361415940d11186531f0b95644d936f5e06b57e9",
+  "sourcePackageSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "battleId": "湘妃庙.胡斐单挑田归农阎基.战斗",
+  "tick": 200,
+  "note": "Offline geometry fixture copied from a real post-move frame, not an importable save. Skills, availability and cast targets were not recorded in that original frame.",
+  "units": [
+    {"definitionId": "胡斐", "team": 1, "alive": true, "x": 4, "y": 2},
+    {"definitionId": "变态田归农", "team": 2, "alive": true, "x": 7, "y": 2},
+    {"definitionId": "阎基", "team": 2, "alive": true, "x": 5, "y": 1}
+  ]
+}

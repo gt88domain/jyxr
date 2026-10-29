@@ -8,6 +8,9 @@
 .adventurer-sheet .as-identity>a{font-size:11px;color:#68816b}.adventurer-sheet .as-points svg{width:12px;height:12px}
 .as-requirements{margin:8px 0;color:#697b65;font-size:11px}
 .as-requirements summary{min-height:44px;align-content:center;cursor:pointer}
+.as-technique-info{font-size:12px;color:#435d4a;margin-top:4px}
+.as-technique-info summary{min-height:44px;align-content:center;cursor:pointer}
+.adventurer-sheet .as-technique-info p{margin:4px 0;line-height:1.5;overflow-wrap:anywhere}
 .adventurer-sheet .as-requirements p{display:grid;gap:2px;margin:5px 0}
 .as-requirements [data-requirement-met="false"]{color:#936c34}
 @media(max-width:600px){.adventurer-sheet .as-quick-stats{display:grid;grid-column:1/-1;margin-top:9px;padding-top:7px;grid-template-columns:1fr 1fr}.adventurer-sheet .as-quick-stats>span:not([data-build-stat=attack]):not([data-build-stat=defence]){display:none}}
