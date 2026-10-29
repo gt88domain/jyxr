@@ -1,5 +1,7 @@
 # Isis recruitment: Stonebridge Hall decline-gold chain
 
+**Subsequent alternative branch:** [ferry-duel-loss narrative](STONEBRIDGE_LOST_GOLD_COPY_QA.md) now completes its separate3-scene/19-line entry-through-Horus-recruitment branch without rewriting the47 lines below. Genuine saves still lack that loss flag; both branches remain unplayed. Opened/sealed parcel alternatives are still pending.
+
 Base `fcbfac39cca4f783365d396cd9e89f82bfdaba40`, initially clean, same writer/workspace/branch. This is the direct Isis recruitment chain following the ferry's declined-gold outcome. It does not expand to all Egyptian stories or the other gold branches.
 
 ## Actual increment

@@ -274,49 +274,6 @@
         ]
       }
     ],
-    "bixuejianShyou_接金败石梁派3": [
-      {
-        "start": 2,
-        "expectedCount": 7,
-        "lines": [
-          {
-            "speaker": "袁承志",
-            "text": {
-              "en": "The gold is safe. Thank you for coming.",
-              "zh-CN": "黄金保住了。谢谢你们赶来。"
-            }
-          },
-          {
-            "speaker": "主角",
-            "text": {
-              "en": "Where next, Horus?",
-              "zh-CN": "接下来去哪儿，荷鲁斯？"
-            }
-          },
-          {
-            "speaker": "袁承志",
-            "text": {
-              "en": "Highbridge. There is someone I need to see.",
-              "zh-CN": "高桥城。我要去见一个人。"
-            }
-          },
-          {
-            "speaker": "主角",
-            "text": {
-              "en": "Then let's share the road.",
-              "zh-CN": "那就一起走吧。"
-            }
-          },
-          {
-            "speaker": "袁承志",
-            "text": {
-              "en": "Gladly. And I owe you an apology for our last meeting.",
-              "zh-CN": "好。上次见面时的事，我也该向你道个歉。"
-            }
-          }
-        ]
-      }
-    ],
     "sdxl_郭襄.风陵渡口.战斗胜利": [
       {
         "start": 2,

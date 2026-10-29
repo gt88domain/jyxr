@@ -1,0 +1,30 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "dialogueEdits": {
+    "bixuejianShyou_接金败石梁派1": [{"start": 1, "expectedCount": 1, "lines": [
+      {"speaker": "主角", "text": {"en": "Stonebridge Hall. I was hoping for something quieter than a fight.", "zh-CN": "石桥会馆。我还盼着，这次能遇到点比打架安静的事。"}}
+    ]}],
+    "bixuejianShyou_接金败石梁派2": [{"start": 2, "expectedCount": 11, "lines": [
+      {"speaker": "黄真", "text": {"en": "We've made it through your guards. Can we discuss returning the gold now?", "zh-CN": "我们已经闯过了守卫。现在，能谈谈归还黄金的事了吗？"}},
+      {"speaker": "温方达", "text": {"en": "Yes. Once we've settled two small matters.", "zh-CN": "可以。不过，先把两件小事说清楚。"}},
+      {"speaker": "黄真", "text": {"en": "I weigh hearts for a living. I can listen to two complaints.", "zh-CN": "我平时做的就是衡量人心。听两句意见，倒也不难。"}},
+      {"speaker": "温方义", "text": {"en": "First, respect the hall's rules. We don't hand a guarded chest to anyone who shouts loud enough.", "zh-CN": "第一，遵守会馆的规矩。谁的声音大，就把看管的箱子交给谁，那可不行。"}},
+      {"speaker": "黄真", "text": {"en": "Then let a witness speak for the owners. Hathor has come all this way for them.", "zh-CN": "那就让证人替失主说话。哈索尔正是为他们一路找到这里的。"}},
+      {"speaker": "温方义", "text": {"en": "Second, Horus stays until we're sure he can get it safely home.", "zh-CN": "第二，要确认荷鲁斯能把东西安全送回去，才能让他离开。"}},
+      {"speaker": "黄真", "text": {"en": "You can test him. Keeping him fed while you decide will cost you more than the chest.", "zh-CN": "你们尽管考验他。要是一直犹豫，光是留他吃饭，就得比这箱东西花得还多。"}},
+      {"speaker": "温方达", "text": {"en": "You think you've understood our formation? Step inside and prove it.", "zh-CN": "你们以为已经看懂阵势了？那就进来证明给我们看。"}},
+      {"speaker": "袁承志", "text": {"en": "Gladly. Show me the whole defense this time.", "zh-CN": "好。这次就让我看看，完整的守卫阵势。"}},
+      {"speaker": "温方义", "text": {"en": "As you wish. Everyone, take your positions.", "zh-CN": "如你所愿。所有人，就位。"}},
+      {"speaker": "主角", "text": {"en": "Leave room for me.", "zh-CN": "也给我留个位置。"}}
+    ]}],
+    "bixuejianShyou_接金败石梁派3": [{"start": 2, "expectedCount": 7, "lines": [
+      {"speaker": "袁承志", "text": {"en": "Thank you. I'll leave Hathor and Anubis to argue over the receipts.", "zh-CN": "多谢。收据的事，就留给哈索尔和阿努比斯商量吧。"}},
+      {"speaker": "主角", "text": {"en": "Horus. Glad I found you before you challenged the furniture, too.", "zh-CN": "荷鲁斯。还好赶上了，免得你连这里的家具也要挑战一遍。"}},
+      {"speaker": "袁承志", "text": {"en": "About that duel at the ferry... I owe you an apology.", "zh-CN": "渡口那场决斗……我还欠你一句道歉。"}},
+      {"speaker": "主角", "text": {"en": "Call it a bad introduction. Where next?", "zh-CN": "就当是开场没打好招呼吧。接下来去哪儿？"}},
+      {"speaker": "袁承志", "text": {"en": "Highbridge. There's a teacher I need to find.", "zh-CN": "高桥城。我得去找一位老师。"}},
+      {"speaker": "主角", "text": {"en": "We're heading that way. Travel with us; we could use someone who stands up for his friends.", "zh-CN": "我们也往那边走。一起吧，我们正需要会替朋友出头的同行者。"}},
+      {"speaker": "袁承志", "text": {"en": "All right. These fighting notes should help on the road.", "zh-CN": "好。这份战技笔记，在路上应该能帮上忙。"}}
+    ]}]
+  }
+}
