@@ -24,7 +24,7 @@
 
 ## 当前接入范围
 
-`chapter-egypt-family.json`局部持有`bixuejianShyou_金蛇郎君`／`bixuejianShyou_金蛇败`两段11句中英对白。沿用Osiris／Isis／Horus，将父女／女婿／嫁妆表达改为父母与儿子的试炼及家族寻宝；保留8／27步及全部原指令。Osiris名字和试炼两处说明通过既有词典投影，Horus锁定身份不改。仅内容构建、冻结流程与隔离显示投影通过；真实档缺人物与阶段前提，未实走，不为看对白补标记或多打战斗。相邻`金蛇胜1`仍有1句“乖女儿”，整条家族线尚未连贯，见[范围与待办](../../../../docs/EGYPT_FAMILY_COPY_QA.md)。
+`chapter-egypt-family.json`持有原家庭试炼／寻宝链6段21句中英对白：初谈、二战桥接、成功送别、另一结果同行、寻宝遇袭与取宝离开。父女／女婿／嫁妆改为Osiris／Isis父母与Horus儿子的家庭故事，桥接与两种结尾均已收齐；Horus锁定身份、全部86步和65个非对白步骤保留。蒙面刺客沿用已分类通用身份，词典投影显示名字及试炼／藏宝图说明；招式与地点用现有Golden Serpent Sword／Highbridge名称。内容构建和双语冻结／投影检查通过；真实档缺人物与阶段条件，整条实际路线未走，不为看对白伪造标记或刷战斗。见[内聚改编与验收边界](../../../../docs/EGYPT_FAMILY_CHAIN_COPY_QA.md)，不是全埃及章或游戏通关证明。
 
 `grimm-skin.json` 保存格林六句开场、全部新手村问答、教官教学与首战提示、首次商店介绍和结伴练习。它通过 `chapters` 加载 `chapter-start.json`，补出村买药、四种赠书、切磋和恶霸两条训练分支、胜负后续、埃尔的招募与寻宠对白，以及九个门派全部入口和选项闭合。`chapter-companions.json` 接入已定名的20个招募身份及关联说话人，持有20个现有加入相关剧情段，另四段分别由法国／意大利与丹麦章节持有；不往纯命令加入段和测试段添加对白。`chapter-windrider.json` 补齐白马线全部剩余对白、选择及3段女主跨线后续。`chapter-academy.json` 提供组织培养与毕业后续；`chapter-three-tales.json` 完整改写法国9段、意大利15段及格林来信，并集中持有后续短段指引；`chapter-denmark-kai.json` 持有凯初遇胜败与寻页战前后的五段及其旅途记录；`chapter-denmark-remedy.json` 持有三段毒信救援对白及迁入的格尔达求药加入段；`chapter-denmark-nightshade.json` 持有取药、两条处置、相邻对峙和调查共6段；`chapter-denmark-shrine.json` 持有祠堂敲诈、同谋揭露及凯单战胜利3段。合计专门改写180个剧情段、610句新版对白。丹麦其余后续、其他中后期招募前置路线和门派后续修炼剧情仍待改写。寻宠后续保留原中期前提和概率，不承诺新手阶段立即完成。
 

@@ -1,5 +1,7 @@
 # Osiris family: two-scene bilingual writing batch
 
+**Subsequent cohesive batch:** [family-chain narrative completion](EGYPT_FAMILY_CHAIN_COPY_QA.md) adds the four remaining bridge/success/treasure scenes,10 lines; all six scenes now have21 bilingual lines. The pending relationship conflicts below describe this earlier two-scene scope and are now addressed within that chain. Actual route remains unplayed because original prerequisites are missing.
+
 Base `9ccf7369f7d9df8305ab547775f08b58f5ed066d`, initially clean, same writer/workspace/branch. This adapts the two requested scenes; it does not replay Nephthys combat or complete the Egyptian story.
 
 ## Exact product scope

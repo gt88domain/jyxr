@@ -1,11 +1,13 @@
 {
   "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
   "speakerNames": {
-    "金蛇郎君": {"en": "Osiris", "zh-CN": "奥西里斯"}
+    "金蛇郎君": {"en": "Osiris", "zh-CN": "奥西里斯"},
+    "神秘刺客": {"en": "Masked assassin", "zh-CN": "蒙面刺客"}
   },
   "uiLabels": {
     "金蛇郎君夏雪宜": {"en": "Osiris, ruler of the underworld, has a lesson for Horus. Isis is keeping an eye on them both.", "zh-CN": "冥界之主奥西里斯准备给荷鲁斯上一课。伊西斯正留意着他们父子俩。"},
-    "金蛇郎君夏雪宜。": {"en": "Osiris has a lesson for Horus, with Isis watching.", "zh-CN": "奥西里斯准备指导荷鲁斯，伊西斯在旁看着。"}
+    "金蛇郎君夏雪宜。": {"en": "Osiris has a lesson for Horus, with Isis watching.", "zh-CN": "奥西里斯准备指导荷鲁斯，伊西斯在旁看着。"},
+    "似乎在缅怀着什么": {"en": "Osiris studies his old treasure map.", "zh-CN": "奥西里斯正研究着自己的旧藏宝图。"}
   },
   "dialogueEdits": {
     "bixuejianShyou_金蛇郎君": [{"start": 2, "expectedCount": 5, "lines": [
@@ -15,6 +17,12 @@
       {"speaker": "金蛇郎君", "text": {"en": "Isis, I said a lesson, not a funeral. Ready, Horus?", "zh-CN": "伊西斯，我说的是上课，又不是办葬礼。荷鲁斯，准备好了？"}},
       {"speaker": "金蛇郎君", "text": {"en": "(Osiris eases his stance.)", "zh-CN": "（奥西里斯放松了架势。）"}}
     ]}],
+    "bixuejianShyou_金蛇胜1": [{"start": 2, "expectedCount": 1, "lines": [
+      {"speaker": "金蛇郎君", "text": {"en": "Good, Horus. Now show me your Golden Serpent Sword technique. Isis, watch closely; you might spot something useful too.", "zh-CN": "很好，荷鲁斯。现在让我看看你的金蛇剑术。伊西斯，也仔细看看，说不定你也能有所收获。"}}
+    ]}],
+    "bixuejianShyou_金蛇胜2": [{"start": 24, "expectedCount": 1, "lines": [
+      {"speaker": "金蛇郎君", "text": {"en": "Well fought, Horus. You and Isis have your share now. Keep the map as a souvenir; leave the old cache alone. I'm due back in the underworld.", "zh-CN": "打得好，荷鲁斯。你和伊西斯都拿到了应得的礼物。藏宝图留作纪念，旧宝藏就别去动了。我该回冥界了。"}}
+    ]}],
     "bixuejianShyou_金蛇败": [{"start": 2, "expectedCount": 6, "lines": [
       {"speaker": "金蛇郎君", "text": {"en": "Not bad, Horus. Next time, let your feet catch up with your enthusiasm.", "zh-CN": "不错，荷鲁斯。下回先让脚步跟上你的热情。"}},
       {"speaker": "温青青", "text": {"en": "Then come with us for a while. The world could use a little family supervision.", "zh-CN": "那就陪我们走一阵吧。这个世界也该让咱们一家照看照看了。"}},
@@ -22,6 +30,22 @@
       {"speaker": "主角", "text": {"en": "Then help us follow your treasure map. A short trip, a few directions, hardly any paperwork.", "zh-CN": "那就帮我们看看你留下的藏宝图吧。走一小段，指几次路，几乎不用批公文。"}},
       {"speaker": "温青青", "text": {"en": "Those treasures were meant for us, remember? Our son inherited your sense of direction. Let's not test it.", "zh-CN": "那些宝物本来就是留给我们的，记得吗？儿子把你的方向感也继承了。咱们还是别考验它了。"}},
       {"speaker": "金蛇郎君", "text": {"en": "Fair enough. I'll come along and show you where I put it.", "zh-CN": "好吧。我和你们一起去，指给你们看藏在哪儿。"}}
-    ]}]
+    ]}],
+    "bixuejianShyou_取宝藏": [{"start": 2, "expectedCount": 6, "lines": [
+      {"speaker": "金蛇郎君", "text": {"en": "Here we are: the general's old house in Highbridge. My cache should still be inside.", "zh-CN": "到了，就是高桥城这座将军的旧宅。我的宝物应该还在里面。"}},
+      {"speaker": "袁承志", "text": {"en": "The map puts it in the woodshed. You hid treasure next to the firewood?", "zh-CN": "图上指的是柴房。你把宝物藏在柴火旁边？"}},
+      {"speaker": "温青青", "text": {"en": "There it is. For once, the directions were right.", "zh-CN": "就在这儿。难得有一次，路线全对了。"}},
+      {"speaker": "主角", "text": {"en": "An old house, hidden treasure... This is where someone usually jumps out.", "zh-CN": "旧宅，宝藏……这种时候，通常会有人突然跳出来。"}},
+      {"speaker": "神秘刺客", "text": {"en": "Then let's not disappoint you. The treasure stays with me.", "zh-CN": "那就不让你失望了。宝物得留下归我。"}},
+      {"speaker": "主角", "text": {"en": "Next time, I'm predicting a picnic.", "zh-CN": "下次，我一定改口预言一场野餐。"}}
+    ]}],
+    "bixuejianShyou_得宝藏": [
+      {"start": 2, "expectedCount": 1, "lines": [
+        {"speaker": "金蛇郎君", "text": {"en": "The treasure is yours. Isis, Horus, try not to spend it all before I get back to the underworld.", "zh-CN": "宝物归你们了。伊西斯，荷鲁斯，可别等我还没回到冥界，你们就全花光了。"}}
+      ]},
+      {"start": 4, "expectedCount": 1, "lines": [
+        {"speaker": "主角", "text": {"en": "And just like that, our guide remembers he has a job.", "zh-CN": "就这么一转眼，我们的向导想起自己还得上班了。"}}
+      ]}
+    ]
   }
 }
