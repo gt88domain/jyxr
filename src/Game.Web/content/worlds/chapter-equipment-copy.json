@@ -432,6 +432,27 @@
   },
   "definitions": {
     "talents": {
+      "令狐冲的怪病": {
+        "name": {"en": "Lingering Cough", "zh-CN": "令狐冲的怪病"},
+        "description": {
+          "en": "Coughing can cost an action (40% chance). The physician from Healer's House prevents this while fighting on the same side with at least 2 Health.",
+          "zh-CN": "令狐冲的怪病让他咳嗽不止。"
+        }
+      },
+      "嗜酒如命": {
+        "name": {"en": "One More Drink", "zh-CN": "嗜酒如命"},
+        "description": {
+          "en": "Before acting, has a 15% chance to gain Drunk II for 3 turns. Drunk can cost an action or fill Rage, and attacks may gain an extra strike.",
+          "zh-CN": "每回合有一定概率进入醉酒状态。"
+        }
+      },
+      "浪子剑客": {
+        "name": {"en": "Wandering Swordsman", "zh-CN": "浪子剑客"},
+        "description": {
+          "en": "Multiplies Swordsmanship proficiency by 1.2 (rounded down).",
+          "zh-CN": "令狐冲专属天赋，御剑技巧评估提高20%。"
+        }
+      },
       "神兵": {
         "name": {
           "en": "Keen Edge",
