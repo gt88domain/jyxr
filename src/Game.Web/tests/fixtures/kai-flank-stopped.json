@@ -1,0 +1,20 @@
+{
+  "sourceReport": "denmark-shrine-flank.json",
+  "sourceReportSha256": "24b07657de5b6dbfa90d14544b956c94001b0b505f09a214f1842b7789f2dc41",
+  "battleId": "湘妃庙.胡斐单挑田归农阎基.战斗",
+  "tick": 400,
+  "outcome": "ongoing",
+  "note": "Actual bounded QA stop, not a defeat, a restorable battle save or proof that every tactic is blocked.",
+  "kai": {"x": 2, "y": 3, "hp": 258, "mp": 520},
+  "boss": {"x": 6, "y": 3, "hp": 2500},
+  "apothecary": {"x": 3, "y": 2, "hp": 1000},
+  "action": {"canMove": true, "canAttack": true, "mainActionCommitted": false},
+  "skill": {"id": "胡家刀法", "available": true, "mpCost": 128},
+  "reachable": [{"x": 2, "y": 3}, {"x": 1, "y": 3}],
+  "targets": [
+    {"skillId": "胡家刀法", "x": 2, "y": 2, "targetId": null},
+    {"skillId": "胡家刀法", "x": 1, "y": 3, "targetId": null},
+    {"skillId": "胡家刀法", "x": 3, "y": 3, "targetId": null}
+  ],
+  "movementBudget": {"reported": false, "remainingMovePower": null}
+}
