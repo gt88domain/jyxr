@@ -121,6 +121,27 @@ class GrimmSkinTests(unittest.TestCase):
   self.assertEqual(scoped['achievements']['天外飞龙']['description'],achievement['description'])
   self.assertNotEqual(scoped['achievements']['天外飞龙']['description'],scoped['externalSkills']['天外飞龙']['description'])
 
+ def test_achievement_copy_is_scoped_by_id_when_source_descriptions_are_shared(self):
+  for locale in ['en','zh-CN']:
+   display,_=apply_skin(self.raw,self.skin,locale)
+   labels={key:text[locale] for key,text in self.skin.get('uiLabels',{}).items()}
+   runtime=compile_runtime_package(self.source,display,labels)
+   titles=runtime['browser']['displayCatalog']['byCategory']['achievements']
+   self.assertEqual(titles['铁剑传人']['description'],'Studied with Thoth and Imhotep after their trial.' if locale=='en' else '在考验后向托特与伊姆霍特普学习。')
+   self.assertEqual(titles['百变不传']['description'],'Learned footwork from Imhotep at Highbridge.' if locale=='en' else '在高桥城向伊姆霍特普学习步法。')
+   self.assertEqual(runtime['browser']['achievements'],self.source['browser']['achievements'])
+
+ def test_achievement_copy_cannot_change_ids_or_unlock_rules(self):
+  self.skin['definitions']['achievements']['铁剑传人']['id']={'en':'replacement','zh-CN':'新编号'}
+  with self.assertRaisesRegex(ValueError,'display field'):apply_skin(self.raw,self.skin,'en')
+  self.skin['definitions']['achievements']['铁剑传人'].pop('id')
+  display,_=apply_skin(self.raw,self.skin,'en')
+  display['browser']['achievements'][0]['id']='replacement'
+  with self.assertRaises(ValueError):assert_same_flow(self.source,display)
+  display,_=apply_skin(self.raw,self.skin,'en')
+  display['browser']['achievements'][0]['unlocked']=True
+  with self.assertRaises(ValueError):assert_same_flow(self.source,display)
+
  def test_recovered_pages_keep_their_name_and_original_teaching_rules(self):
   original=next(i for i in self.source['items'] if i['id']=='两页胡家刀法')
   for locale,name in [('en','Frontier Cleave Pages'),('zh-CN','边境重斩残页')]:

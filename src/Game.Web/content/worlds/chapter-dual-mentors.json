@@ -1,0 +1,102 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "uiLabels": {
+    "神剑仙猿穆人清": {"en": "Thoth and Imhotep are comparing teaching methods.", "zh-CN": "托特与伊姆霍特普正在比较各自的教学方法。"},
+    "神剑仙猿穆人清。": {"en": "Thoth and Imhotep are comparing teaching methods.", "zh-CN": "托特与伊姆霍特普正在比较各自的教学方法。"},
+    "铁剑门掌门木桑道长": {"en": "Imhotep is enjoying a game with Thoth.", "zh-CN": "伊姆霍特普正与托特对弈。"},
+    "袁承志得到穆人清和木桑道长真传。": {"en": "Horus trained with Thoth and Imhotep.", "zh-CN": "荷鲁斯向托特与伊姆霍特普学习。"},
+    "木桑道人穆人清考校袁承志。": {"en": "Thoth and Imhotep tested Horus and offered another lesson.", "zh-CN": "托特与伊姆霍特普考察荷鲁斯，并再次指点了他。"}
+  },
+  "definitions": {
+    "battles": {
+      "穆人清_战斗": {"name": {"en": "A Lesson from Both Masters", "zh-CN": "双导师的考验"}}
+    },
+    "achievements": {
+      "神剑仙猿": {
+        "name": {"en": "Two Masters' Legacy", "zh-CN": "双导师传承"},
+        "description": {"en": "Passed Thoth and Imhotep's trial.", "zh-CN": "通过托特与伊姆霍特普的考验。"}
+      },
+      "铁剑传人": {
+        "name": {"en": "Iron Sword Student", "zh-CN": "铁剑学徒"},
+        "description": {"en": "Studied with Thoth and Imhotep after their trial.", "zh-CN": "在考验后向托特与伊姆霍特普学习。"}
+      }
+    }
+  },
+  "dialogueEdits": {
+    "碧血剑_穆人清": [{"start": 0, "expectedCount": 11, "lines": [
+      {"speaker": "木桑道长", "text": {"en": "Your king has nowhere to go, Thoth. Even wisdom needs an exit.", "zh-CN": "你的国王无路可走了，托特。就算是智慧，也得有条退路。"}},
+      {"speaker": "穆人清", "text": {"en": "My king was doing well until your hand passed over the board.", "zh-CN": "你的手掠过棋盘之前，我的国王还好好的。"}},
+      {"speaker": "木桑道长", "text": {"en": "A bold accusation. I'm fast, not dishonest.", "zh-CN": "这指控可真大胆。我手快，可不代表我作弊。"}},
+      {"speaker": "袁承志", "text": {"en": "Still arguing over the same game?", "zh-CN": "还在为同一盘棋争论？"}},
+      {"speaker": "木桑道长", "text": {"en": "Perfect timing. You can lose the next game instead.", "zh-CN": "来得正好。下一盘，换你来输。"}},
+      {"speaker": "穆人清", "text": {"en": "Horus, good to see you. Isis, has he been keeping out of trouble?", "zh-CN": "荷鲁斯，见到你真好。伊西斯，他最近有没有少惹些麻烦？"}},
+      {"speaker": "温青青", "text": {"en": "About as well as you two keep quiet.", "zh-CN": "和你们两个保持安静的本事，差不多吧。"}},
+      {"speaker": "穆人清", "text": {"en": "We were discussing which of us taught him better.", "zh-CN": "我们正在讨论，到底是谁把他教得更好。"}},
+      {"speaker": "木桑道长", "text": {"en": "An awkward question, since I improved everything you taught him.", "zh-CN": "这问题不太公平。毕竟，你教他的那些，我都替他改进过了。"}},
+      {"speaker": "温青青", "text": {"en": "Then stop asking the board. Let Horus face you both.", "zh-CN": "那就别问棋盘了。让荷鲁斯来面对你们两个。"}},
+      {"speaker": "木桑道长", "text": {"en": "Finally. A game I can play standing up.", "zh-CN": "总算能来一场，站着进行的较量了。"}}
+    ]}],
+    "碧血剑_穆人清胜利": [
+      {"start": 0, "expectedCount": 5, "lines": [
+        {"speaker": "木桑道长", "text": {"en": "Well. That settles absolutely nothing.", "zh-CN": "好吧。看来，什么也没争出结果。"}},
+        {"speaker": "穆人清", "text": {"en": "It settles that Horus can manage both of us.", "zh-CN": "至少争明白了一件事：荷鲁斯能应付我们两个。"}},
+        {"speaker": "木桑道长", "text": {"en": "Which was my teaching, clearly.", "zh-CN": "这显然，是我教得好。"}},
+        {"speaker": "袁承志", "text": {"en": "I'm beginning to see why you prefer a board.", "zh-CN": "我开始明白，你们为什么更喜欢对着棋盘争论了。"}},
+        {"speaker": "穆人清", "text": {"en": "Never mind the score. Watch this next movement.", "zh-CN": "先别管谁赢几局。看好接下来这一式。"}}
+      ]},
+      {"start": 11, "expectedCount": 1, "lines": [
+        {"speaker": "木桑道长", "text": {"en": "Then take my Fleetfoot Training Notes, and watch how Arcane Rain spreads.", "zh-CN": "那也收下我的疾步训练笔记，再看看奥术之雨是怎样展开的。"}}
+      ]},
+      {"start": 17, "expectedCount": 2, "lines": [
+        {"speaker": "木桑道长", "text": {"en": "Enough lessons. Thoth, bring the board. We can argue somewhere with a better view.", "zh-CN": "课先上到这里。托特，带上棋盘。咱们换个风景好的地方继续争。"}},
+        {"speaker": "穆人清", "text": {"en": "Keep practicing, Horus. Isis, try to keep him out of too much trouble.", "zh-CN": "继续练习，荷鲁斯。伊西斯，尽量让他少惹些麻烦。"}}
+      ]}
+    ],
+    "碧血剑_穆人清失败": [
+      {"start": 0, "expectedCount": 5, "lines": [
+        {"speaker": "木桑道长", "text": {"en": "Now that was a proper workout.", "zh-CN": "这才算，真正活动了一回筋骨。"}},
+        {"speaker": "穆人清", "text": {"en": "Horus, you've learned to make us work for it.", "zh-CN": "荷鲁斯，你已经学会让我们认真出手了。"}},
+        {"speaker": "木桑道长", "text": {"en": "That's what I call a useful student.", "zh-CN": "这样的学生，教起来才有意思。"}},
+        {"speaker": "袁承志", "text": {"en": "I was hoping for a less painful recommendation.", "zh-CN": "我还希望，能得到一份没这么疼的评价。"}},
+        {"speaker": "木桑道长", "text": {"en": "A lesson, then. Watch Arcane Rain, and look for the openings between the strikes.", "zh-CN": "那就再学一课。看清奥术之雨，也留意每次攻击之间的空当。"}}
+      ]},
+      {"start": 11, "expectedCount": 2, "lines": [
+        {"speaker": "木桑道长", "text": {"en": "Thoth, bring the board. I still owe you a game.", "zh-CN": "托特，带上棋盘。我还欠你一局。"}},
+        {"speaker": "穆人清", "text": {"en": "You owe me an explanation for the last one. Take care, both of you.", "zh-CN": "上一局的事，你还欠我个解释呢。你们两个，路上保重。"}}
+      ]}
+    ],
+    "碧血剑_穆人清胜利简单模式": [
+      {"start": 0, "expectedCount": 5, "lines": [
+        {"speaker": "木桑道长", "text": {"en": "Well. That settles absolutely nothing.", "zh-CN": "好吧。看来，什么也没争出结果。"}},
+        {"speaker": "穆人清", "text": {"en": "It settles that Horus can manage both of us.", "zh-CN": "至少争明白了一件事：荷鲁斯能应付我们两个。"}},
+        {"speaker": "木桑道长", "text": {"en": "A fine advertisement for my lessons.", "zh-CN": "这可给我的教学，做了个好榜样。"}},
+        {"speaker": "袁承志", "text": {"en": "Both of your lessons.", "zh-CN": "是你们两位的教学。"}},
+        {"speaker": "穆人清", "text": {"en": "Diplomatic. Now watch this movement.", "zh-CN": "很会说话。现在，看清这一式。"}}
+      ]},
+      {"start": 11, "expectedCount": 1, "lines": [
+        {"speaker": "木桑道长", "text": {"en": "And now for Arcane Rain. A different way to keep an opponent guessing.", "zh-CN": "接下来是奥术之雨。换一种方法，让对手猜不透你的下一步。"}}
+      ]},
+      {"start": 14, "expectedCount": 4, "lines": [
+        {"speaker": "温青青", "text": {"en": "Is that all? He's finally standing still long enough to listen.", "zh-CN": "这就结束了？难得他能站稳一会儿，认真听你们说话。"}},
+        {"speaker": "穆人清", "text": {"en": "One lesson at a time. Let him use this one before you ask for another.", "zh-CN": "一课一课来。先让他把这一课用好，再学下一课。"}},
+        {"speaker": "木桑道长", "text": {"en": "Come on, Thoth. Bring the board; the view is better outside.", "zh-CN": "走吧，托特。带上棋盘，外面的风景更好。"}},
+        {"speaker": "穆人清", "text": {"en": "Keep practicing, Horus. Put it to good use.", "zh-CN": "继续练习，荷鲁斯。把学到的本领用好。"}}
+      ]}
+    ],
+    "碧血剑_穆人清失败简单模式": [
+      {"start": 0, "expectedCount": 5, "lines": [
+        {"speaker": "木桑道长", "text": {"en": "Now that was a proper workout.", "zh-CN": "这才算，真正活动了一回筋骨。"}},
+        {"speaker": "穆人清", "text": {"en": "You held your ground, Horus. Keep working on the timing.", "zh-CN": "荷鲁斯，你站稳了脚跟。出手的时机，还要继续琢磨。"}},
+        {"speaker": "木桑道长", "text": {"en": "And don't let him convince you this was all his idea.", "zh-CN": "还有，别让他把主意全算到自己头上。"}},
+        {"speaker": "袁承志", "text": {"en": "I'd settle for convincing him to stop hitting me.", "zh-CN": "能先劝他别再打我，我就满意了。"}},
+        {"speaker": "木桑道长", "text": {"en": "Watch Arcane Rain. A change of approach can be useful.", "zh-CN": "看看奥术之雨。换一种思路，有时很管用。"}}
+      ]},
+      {"start": 11, "expectedCount": 4, "lines": [
+        {"speaker": "温青青", "text": {"en": "Perhaps a little more advice before you go?", "zh-CN": "走之前，是不是还能再指点几句？"}},
+        {"speaker": "穆人清", "text": {"en": "Let him try this first. Advice is easier to collect than practice.", "zh-CN": "先让他试试这些吧。收集建议，可比真正练习容易多了。"}},
+        {"speaker": "木桑道长", "text": {"en": "Speaking of practice, Thoth, you still owe me a game.", "zh-CN": "说到练习，托特，你还欠我一盘棋。"}},
+        {"speaker": "穆人清", "text": {"en": "Then let's find a board you haven't touched. Take care, both of you.", "zh-CN": "那就先找一副，你还没碰过的棋盘吧。你们两个，路上保重。"}}
+      ]}
+    ]
+  }
+}

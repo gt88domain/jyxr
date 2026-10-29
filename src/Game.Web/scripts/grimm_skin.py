@@ -2,7 +2,7 @@
 import copy,hashlib,json,re
 from pathlib import Path
 
-COPY_CATEGORIES={'items','externalSkills','internalSkills','shops','talents','buffs','specialSkills','battles','sects','legendSkills'}
+COPY_CATEGORIES={'items','externalSkills','internalSkills','shops','talents','buffs','specialSkills','battles','sects','legendSkills','achievements'}
 
 def load_skin(web=None):
     web=Path(web) if web else Path(__file__).resolve().parents[1]
@@ -44,7 +44,8 @@ def apply_skin(raw,skin,locale):
         if character['id'] in aliases:character['name']=aliases[character['id']]
     for category,definitions in skin.get('definitions',{}).items():
         if category not in COPY_CATEGORIES:raise ValueError('Unsupported copy category: '+category)
-        by_id={definition['id']:definition for definition in package[category]}
+        definitions_in_package=package['browser']['achievements'] if category=='achievements' else package[category]
+        by_id={definition['id']:definition for definition in definitions_in_package}
         for id,fields in definitions.items():
             for field,text in fields.items():
                 if field not in ['name','description'] or not isinstance(by_id[id].get(field),str):raise ValueError('Invalid display field')
@@ -227,6 +228,8 @@ def compile_runtime_package(original,display,extra_labels=None):
     runtime=copy.deepcopy(original)
     runtime['storyScripts']=copy.deepcopy(display['storyScripts'])
     runtime['browser']=copy.deepcopy(display['browser'])
+    if 'achievements' in original['browser']:
+        runtime['browser']['achievements']=copy.deepcopy(original['browser']['achievements'])
     candidates={};id_candidates={};category_candidates={}
     def remember(category,id,before,after):
         fields={key:after[key] for key in ['name','description'] if key in after and before.get(key)!=after[key]}
@@ -256,8 +259,9 @@ def compile_runtime_package(original,display,extra_labels=None):
     # Achievement IDs can also name skills. Keep their own descriptions even
     # when untranslated, instead of inheriting another category's byId entry.
     achievements={}
-    for achievement in original['browser'].get('achievements',[]):
-        fields={key:catalog['text'].get(achievement[key],achievement[key])
+    for achievement,translated in zip(original['browser'].get('achievements',[]),display['browser'].get('achievements',[]),strict=True):
+        if achievement['id']!=translated['id']:raise ValueError('Achievement display changed original IDs')
+        fields={key:translated[key] if translated.get(key)!=achievement[key] else catalog['text'].get(achievement[key],achievement[key])
                 for key in ['name','description'] if isinstance(achievement.get(key),str)}
         fields.setdefault('name',achievement['id'])
         fields['sourceName']=achievement.get('name') or achievement['id']
@@ -304,6 +308,8 @@ def assert_same_flow(original,adapted):
         for key in ['title','subtitle','description','chapterTitle','contentVersion','media','defaultName','currencyName','currencyUnit','terms','chapterGuide','worldAtlas']:browser.pop(key,None)
         for objective in browser['objectives']:objective.pop('title',None)
         for task in browser.get('legacyTasks',[]):task.pop('description',None)
+        for achievement in browser.get('achievements',[]):
+            achievement.pop('name',None);achievement.pop('description',None)
         for question in browser.get('creation',{}).get('questions',[]):
             question.pop('title',None)
             for option in question['options']:option.pop('text',None)
