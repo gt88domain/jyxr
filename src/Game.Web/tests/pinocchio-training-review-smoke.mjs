@@ -1,0 +1,45 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {createHarness} from './ui-harness.mjs';
+
+const proof=JSON.parse(await readFile('src/Game.Web/test-results/pinocchio-training.json','utf8'));
+assert.ok(proof.passed&&proof.progressVerified);assert.equal(proof.battle.outcome,'win');
+assert.equal(createHash('sha256').update(await readFile(proof.checkpoint.path)).digest('hex'),proof.checkpoint.sha256);
+const h=await createHarness('pinocchio-training-review',{viewport:{width:390,height:844}},{trace:false});
+const {page,report,ready,click,state,closeModal,noOverflow,pass,finish}=h;
+report.source=proof.checkpoint;report.method='Read-only review of the genuine post-practice export. Verify actual requirement comparisons, earned study, talent copy and three completed chapter cards. No repeated combat, gear change, training assignment or story advance.';
+let failure;
+try{
+ await page.goto(report.baseURL);await page.locator('[data-action="new"]').waitFor({timeout:120000});
+ await page.locator('#import-file').setInputFiles(proof.checkpoint.path);await page.waitForFunction(()=>document.querySelector('#import-file')?.value==='');await ready();
+ const before=await state();assert.equal(before.silver,266);assert.equal(before.party.length,7);assert.equal(before.party[1].definitionId,'袁冠南');assert.equal(before.adventure.morality,56);
+ await click('[data-action="party"]');await click('[data-roster-id="袁冠南"] [data-panel="cultivation"]');
+ const pin=(await state()).managedCharacter;assert.equal(pin.cultivation.level,4);assert.equal(pin.cultivation.exp,0);assert.equal(pin.equipment.filter(g=>g.item).length,3);assert.equal(pin.equippedInternalSkillId,'基本内功');
+ const flame=page.locator('.as-material[data-item-id="火焰刀残篇"]');
+ assert.ok((await flame.innerText()).includes('Current 60 / Required 65'));assert.ok((await flame.innerText()).includes('Strength'));assert.ok(await flame.locator('[data-action="cultivate"]').isDisabled());
+ const cloud=page.locator('.as-material[data-item-id="柔云剑法秘籍"]');
+ assert.equal(await cloud.locator('[data-requirement-met="false"]').count(),2);
+ assert.ok((await cloud.innerText()).includes('Current 52 / Required 60'));assert.ok((await cloud.innerText()).includes('Current 30 / Required 50'));
+ assert.ok(await cloud.locator('[data-action="cultivate"]').isDisabled());
+ report.requirements={flame:await flame.innerText(),cloud:await cloud.innerText()};
+ const buttons=await page.locator('.as-requirements summary').all();for(const b of buttons)assert.ok((await b.boundingBox()).height>=44);
+ assert.doesNotMatch(await page.locator('[data-adventurer-sheet]').innerText(),/[\u3400-\u9fff]/);
+ await noOverflow('Live guide requirements and actual study gain at 390px');await flame.scrollIntoViewIfNeeded();await page.screenshot({path:h.output+'pinocchio-requirements-reviewed.png'});
+ pass('Blocked guides show current/required values and remain disabled; actual Rank 4 study and three owned equipment slots persist');
+ await click('[data-action="character"]');await page.locator('[data-talent-id="夫妻同心"] summary').click();
+ const talent=await page.locator('[data-talent-id="夫妻同心"]').innerText();report.talent=talent;
+ for(const text of ['Bonded Hearts','male ally','female ally','20%–100%','attack and defense'])assert.ok(talent.includes(text),text);
+ assert.doesNotMatch(await page.locator('#game-modal').innerText(),/[\u3400-\u9fff]/);
+ await noOverflow('Actual Pinocchio talent explanation at 390px');await closeModal();
+ pass('The actual recruited companion’s talent uses English and preserves its original male/female pairing and random bonus conditions');
+ await click('[data-action="quests"]');const stages=await page.locator('[data-journey-story]').evaluateAll(nodes=>nodes.map(n=>({stage:n.dataset.journeyStory,title:n.querySelector('summary').textContent})));
+ assert.equal(stages.length,3);for(const s of stages)assert.ok(s.title.startsWith('✓'),JSON.stringify(s));
+ for(const summary of await page.locator('[data-journey-story] > summary').all())await summary.click();
+ const text=await page.locator('#game-modal').innerText();assert.doesNotMatch(text,/[\u3400-\u9fff]/);report.chapterCards=stages;
+ await noOverflow('Same-save three completed chapters after companion training');await closeModal();
+ const after=await state();assert.deepEqual(after.party,before.party);assert.deepEqual(after.adventure,before.adventure);assert.deepEqual(after.chapterJournal,before.chapterJournal);assert.equal(after.silver,before.silver);
+ assert.ok(after.objectives.every(o=>o.completed));
+ pass('The same new-game chain keeps all nine starter goals and Spain/France/Italy completion cards, without another Grimm milestone or reward');
+}catch(e){failure=e;}
+await finish(failure);

@@ -928,6 +928,15 @@
     }
   },
   "definitions": {
+    "talents": {
+      "夫妻同心": {
+        "name": {"en": "Bonded Hearts", "zh-CN": "同心羁绊"},
+        "description": {
+          "en": "In battle, when a male ally and a female ally both have Bonded Hearts, both gain a random 20%–100% bonus to attack and defense.",
+          "zh-CN": "战场上己方一男一女同时拥有同心羁绊时，两人的攻击与防御获得随机20%至100%加成。"
+        }
+      }
+    },
     "battles": {
       "回族部落_战斗": {
         "name": {
