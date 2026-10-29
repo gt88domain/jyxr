@@ -274,56 +274,6 @@
         ]
       }
     ],
-    "雪山飞狐_药王庄.程灵素.求药": [
-      {
-        "start": 0,
-        "expectedCount": 11,
-        "lines": [
-          {
-            "speaker": "胡斐",
-            "text": {
-              "en": "This is the healer's garden. I hope we've caught someone at home.",
-              "zh-CN": "这里就是药师的花园了。但愿有人在。"
-            }
-          },
-          {
-            "speaker": "程灵素",
-            "text": {
-              "en": "I'm Gerda. What happened?",
-              "zh-CN": "我是格尔达。出什么事了？"
-            }
-          },
-          {
-            "speaker": "主角",
-            "text": {
-              "en": "A friend has been poisoned. His eyes are badly hurt.",
-              "zh-CN": "一位朋友中了毒，眼睛伤得很重。"
-            }
-          },
-          {
-            "speaker": "程灵素",
-            "text": {
-              "en": "I'll need the Nightshade Blossom before I can help. Try the wandering medicine seller for a lead.",
-              "zh-CN": "想帮上忙，得先找到夜影花这种药材。去问问那位游方药商，也许有线索。"
-            }
-          },
-          {
-            "speaker": "胡斐",
-            "text": {
-              "en": "Will you come with us?",
-              "zh-CN": "你愿意和我们一起去吗？"
-            }
-          },
-          {
-            "speaker": "程灵素",
-            "text": {
-              "en": "Yes. Let me gather my things. Kai, please don't investigate anything poisonous with your fingers.",
-              "zh-CN": "好，等我收拾一下。凯，碰到像是有毒的东西，请别先伸手确认。"
-            }
-          }
-        ]
-      }
-    ],
     "bixuejianShyou_接黄金2": [
       {
         "start": 1,
@@ -1122,10 +1072,6 @@
     }
   },
   "commandText": {
-    "程灵素答应医治金面佛苗人凤的眼睛": {
-      "en": "Gerda has agreed to help treat our poisoned friend.",
-      "zh-CN": "格尔达答应帮助医治中毒的朋友。"
-    },
     "风陵渡口偶遇郭芙、郭襄姐妹。": {
       "en": "Met Wendy and Alice at the ferry.",
       "zh-CN": "在渡口遇见温蒂和爱丽丝。"

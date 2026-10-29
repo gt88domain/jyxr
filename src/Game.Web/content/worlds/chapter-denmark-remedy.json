@@ -1,0 +1,85 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "dialogueEdits": {
+    "雪山飞狐_苗人凤居.苗人凤被毒": [{"start": 0, "expectedCount": 6, "lines": [
+      {"speaker": "天龙门弟子", "text": {"en": "A letter for the champion. Best read it somewhere with plenty of light.", "zh-CN": "给老勇士的信。最好找个明亮的地方看。"}},
+      {"speaker": "苗人凤", "text": {"en": "Stay a moment. A challenge deserves an answer.", "zh-CN": "稍等。有人下战书，总得回个话。"}},
+      {"speaker": "苗人凤", "text": {"en": "Ah! The paper—my eyes!", "zh-CN": "啊！这纸……我的眼睛！"}},
+      {"speaker": "胡斐", "text": {"en": "Poison on a letter? Couldn't you just lose an argument like everyone else?", "zh-CN": "在信上涂毒？就不能像别人那样，辩不过就认输吗？"}},
+      {"speaker": "天龙门弟子", "text": {"en": "He can't see. Move in!", "zh-CN": "他看不见了，动手！"}},
+      {"speaker": "主角", "text": {"en": "You'll have to get through us first.", "zh-CN": "先过我们这一关。"}}
+    ]}],
+    "雪山飞狐_苗人凤居.苗人凤被毒.胜利": [{"start": 0, "expectedCount": 9, "lines": [
+      {"speaker": "苗人凤", "text": {"en": "Well. That's one way to make me stop reading.", "zh-CN": "好吧，想让我不看书，也不必用这种办法。"}},
+      {"speaker": "胡斐", "text": {"en": "Sit down. Don't rub your eyes.", "zh-CN": "先坐下，别揉眼睛。"}},
+      {"speaker": "苗人凤", "text": {"en": "The paper was poisoned. Gerda keeps a healer's garden near Rainmarket. She may know an antidote.", "zh-CN": "纸上有毒。格尔达在雨集镇附近照料一座药草花园，她也许知道解药。"}},
+      {"speaker": "主角", "text": {"en": "Then we'll find her. How do we reach the garden?", "zh-CN": "我们去找她。花园怎么走？"}},
+      {"speaker": "苗人凤", "text": {"en": "Take the woodland trail outside Rainmarket. Follow the herbs. Avoid the invitations.", "zh-CN": "走雨集镇外的林间小径，顺着药草香找。至于邀请函，就别碰了。"}},
+      {"speaker": "胡斐", "text": {"en": "Rest here. We'll bring back help—and less mail.", "zh-CN": "在这里休息吧。我们会带回帮手，少带几封信。"}}
+    ]}],
+    "雪山飞狐_苗人凤居.苗人凤.正在求解药": [{"start": 0, "expectedCount": 2, "lines": [
+      {"speaker": "胡斐", "text": {"en": "We're on our way to Gerda. Try to rest.", "zh-CN": "我们正要去找格尔达，先好好休息。"}},
+      {"speaker": "苗人凤", "text": {"en": "I will. No reading until further notice.", "zh-CN": "好。另行通知前，我绝不看信。"}}
+    ]}],
+    "雪山飞狐_药王庄.程灵素.求药": [{"start": 0, "expectedCount": 11, "lines": [
+      {"speaker": "胡斐", "text": {"en": "Gerda? Please tell me you're in. We need help.", "zh-CN": "格尔达？但愿你在家，我们需要帮忙。"}},
+      {"speaker": "程灵素", "text": {"en": "Kai? What happened?", "zh-CN": "凯？出什么事了？"}},
+      {"speaker": "主角", "text": {"en": "A poisoned letter. The champion at Winter Cottage can barely see.", "zh-CN": "一封毒信。冬日小屋的老勇士几乎看不见了。"}},
+      {"speaker": "程灵素", "text": {"en": "For this poison, I need a Nightshade Blossom to prepare the antidote. The apothecary may know where to find one.", "zh-CN": "要配这种毒的解药，需要一株夜影花。那位药师也许知道哪里能找到。"}},
+      {"speaker": "胡斐", "text": {"en": "Will you come with us?", "zh-CN": "你愿意和我们一起去吗？"}},
+      {"speaker": "程灵素", "text": {"en": "Of course. And Kai—this time, let me handle anything that stings, burns, or glows.", "zh-CN": "当然。还有，凯——这回那些扎手、灼人或发光的东西，让我来碰。"}}
+    ]}]
+  },
+  "speakerNames": {
+    "苗人凤": {"en": "The Old Champion", "zh-CN": "老勇士"},
+    "天龙门弟子": {"en": "Guild Member", "zh-CN": "组织成员"},
+    "毒手药王": {"en": "The Garden Keeper", "zh-CN": "花园看守人"}
+  },
+  "commandText": {
+    "苗人凤眼睛被奸人毒瞎，需请求毒手药王医治": {"en": "The champion at Winter Cottage was blinded by a poisoned letter. Find Gerda at the Healer's Garden near Rainmarket.", "zh-CN": "冬日小屋的老勇士被毒信伤了眼睛，需要去雨集镇附近的药草花园找格尔达。"},
+    "程灵素答应医治金面佛苗人凤的眼睛": {"en": "Gerda joined to help the poisoned champion. We still need a Nightshade Blossom for the antidote.", "zh-CN": "格尔达加入队伍，帮助中毒的老勇士；配解药仍需要夜影花。"}
+  },
+  "definitions": {"talents": {
+    "毒圣": {
+      "name": {"en": "Poison Lore", "zh-CN": "毒理学识"},
+      "description": {"en": "Your poison effects are 5 levels stronger and last 4 extra turns.", "zh-CN": "你施加的中毒效果提高5级，持续时间延长4回合。"}
+    },
+    "妙手仁心": {
+      "name": {"en": "Remedy Expert", "zh-CN": "用药能手"},
+      "description": {"en": "In battle, ignores item cooldowns. Using an item still ends this character's action.", "zh-CN": "战斗中可忽略物品冷却；用药仍会结束当前角色的行动。"}
+    },
+    "灵心慧质": {
+      "name": {"en": "Careful Aim", "zh-CN": "谨慎瞄准"},
+      "description": {"en": "Your attacks do not cause friendly-fire damage.", "zh-CN": "你的攻击不会对队友造成误伤伤害。"}
+    }
+  }, "battles": {
+    "苗人凤居.苗人凤被毒.战斗": {"name": {"en": "The Poisoned Letter", "zh-CN": "毒信伏击"}}
+  }},
+  "maps": {
+    "药王庄": {"name": {"en": "Healer's Garden", "zh-CN": "药草花园"}, "description": {"en": "Herbs fill the quiet garden. Gerda tends the beds and helps travelers in need.", "zh-CN": "药草长满安静的花园，格尔达在这里照料花圃，帮助有需要的旅人。"}},
+    "潇湘古林1": {"name": {"en": "Rainwood Edge", "zh-CN": "雨雾林边缘"}, "description": {"en": "A wooded trail beyond Rainmarket. Check Goals for the marked path; an encounter may interrupt the walk.", "zh-CN": "雨集镇外的林间小径。可从目标查看指引，途中可能遇到伏击。"}},
+    "潇湘古林2": {"name": {"en": "Rainwood Fork", "zh-CN": "雨雾林岔路"}, "description": {"en": "Paths divide among the trees.", "zh-CN": "小径在林间分岔。"}},
+    "潇湘古林3": {"name": {"en": "Rainwood Crossing", "zh-CN": "雨雾林路口"}, "description": {"en": "The trail continues deeper into the woods.", "zh-CN": "小径继续通往林中深处。"}},
+    "潇湘古林4": {"name": {"en": "Deep Rainwood", "zh-CN": "雨雾林深处"}, "description": {"en": "Water and birdsong carry through the trees.", "zh-CN": "林间传来水声和鸟鸣。"}},
+    "潇湘古林5": {"name": {"en": "Scented Clearing", "zh-CN": "花香林地"}, "description": {"en": "An unfamiliar herbal scent drifts along one of the paths.", "zh-CN": "一条小径上飘来陌生的药草香。"}},
+    "潇湘古林6": {"name": {"en": "Old Rainwood", "zh-CN": "古老雨雾林"}, "description": {"en": "Old trees shelter another quiet crossing.", "zh-CN": "古树遮住另一处安静的路口。"}}
+  },
+  "uiLabels": {
+    "天龙门弟子": {"en": "Guild Member", "zh-CN": "组织成员"},
+    "药王庄": {"en": "Healer's Garden", "zh-CN": "药草花园"},
+    "潇湘古林": {"en": "Rainwood Trail", "zh-CN": "雨雾林小径"},
+    "有人正在送信给金面佛苗人凤": {"en": "A courier is delivering a letter to the old champion.", "zh-CN": "有人正给老勇士送信。"},
+    "被毒瞎眼睛的金面佛苗人凤": {"en": "The poisoned champion is waiting for an antidote.", "zh-CN": "中毒的老勇士正等着解药。"},
+    "返回衡阳": {"en": "Back to Rainmarket.", "zh-CN": "返回雨集镇。"},
+    "一个面色枯黄的姑娘": {"en": "Gerda tends the herb beds.", "zh-CN": "格尔达正在照料药草。"},
+    "向前走": {"en": "Path ahead", "zh-CN": "前方小径"},
+    "向左走": {"en": "Left path", "zh-CN": "左侧小径"},
+    "向右走": {"en": "Right path", "zh-CN": "右侧小径"},
+    "通往衡阳郊外……": {"en": "A path toward the outskirts of Rainmarket.", "zh-CN": "通往雨集镇郊外的小径。"},
+    "通往古林深处……": {"en": "The trail leads deeper into the woods.", "zh-CN": "小径通往林中深处。"},
+    "前方人声鼎沸……": {"en": "Voices carry from beyond the trees.", "zh-CN": "前方林间传来人声。"},
+    "传来哗啦啦的水流声……": {"en": "Running water can be heard beyond the trees.", "zh-CN": "林间传来流水声。"},
+    "传来一阵阵阴风……": {"en": "A chill draft comes from the cave.", "zh-CN": "洞口吹来凉风。"},
+    "传来阵阵奇怪的花香……": {"en": "An unfamiliar floral scent drifts down the trail.", "zh-CN": "小径上飘来陌生的花香。"}
+  }
+}

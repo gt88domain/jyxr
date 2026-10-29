@@ -1284,19 +1284,39 @@
         ]
       },
       {
-        "title": {"en": "Denmark · Kai's Missing Pages", "zh-CN": "丹麦·凯的缺页笔记"},
-        "trackedStories": ["雪山飞狐_胡斐居.胜利", "雪山飞狐_胡斐居.失败", "mainStory_黑暗的阴影1", "雪山飞狐_阎基居.两页刀法.胜利"],
+        "title": {"en": "Denmark · Kai and Gerda", "zh-CN": "丹麦·凯与格尔达"},
+        "trackedStories": ["雪山飞狐_胡斐居.胜利", "雪山飞狐_胡斐居.失败", "mainStory_黑暗的阴影1", "雪山飞狐_阎基居.两页刀法.胜利", "雪山飞狐_苗人凤居.苗人凤被毒.胜利", "雪山飞狐_药王庄.程灵素.求药"],
         "prepareLabel": {"en": "Gear & study", "zh-CN": "装备与研习"},
         "stages": [
           {
-            "id": "denmark-pages-found",
-            "any": ["雪山飞狐_阎基居.两页刀法.胜利"],
-            "title": {"en": "Kai's pages are back", "zh-CN": "找回凯的残页"},
+            "id": "denmark-gerda-joined",
+            "any": ["雪山飞狐_药王庄.程灵素.求药"],
+            "title": {"en": "Gerda has joined", "zh-CN": "格尔达已加入"},
             "detail": {
-              "en": "You recovered Kai's Frontier Cleave Pages and a Last-Light Remedy. The pages teach up to Rank 5; inspect their requirements in Party → Kai → Study. Getting the pages does not automatically train him. This completes the missing-pages quest, not the whole Denmark story.",
-              "zh-CN": "你找回了凯的边境重斩残页，并获得一份余光灵药。残页可教至5级；到队伍→凯→研习查看要求。获得教材并不等于已经替他培养。这只完成缺页笔记任务，不是丹麦全章。"
+              "en": "Gerda joined to help, but the champion still needs an antidote. A Nightshade Blossom is needed next; joining the party does not cure him. In Party, inspect her gear, mastery and study before the next fight. This completes finding help, not the whole Denmark story.",
+              "zh-CN": "格尔达已加入帮忙，老勇士仍需解药，下一步要找夜影花。加入队伍不等于已经治好他。可先在队伍中检查她的装备、专精与研习，再准备下一战。这只完成寻求帮助，不是丹麦全章。"
             },
             "route": [], "complete": true, "panel": "cultivation"
+          },
+          {
+            "id": "denmark-find-gerda",
+            "any": ["雪山飞狐_苗人凤居.苗人凤被毒.胜利"],
+            "title": {"en": "Find Gerda at the Healer's Garden", "zh-CN": "去药草花园找格尔达"},
+            "detail": {
+              "en": "The attackers are gone, but the champion's eyes still need an antidote. Head to Rainmarket, then follow Goals along the Rainwood Trail to the Healer's Garden. Save before the woods; an ambush may interrupt your walk. Speak with Gerda when you arrive.",
+              "zh-CN": "伏击者已退去，老勇士的眼睛仍需要解药。去雨集镇，再跟随目标指引穿过雨雾林，前往药草花园。林中可能遭遇伏击，进林前先保存。到达后和格尔达交谈。"
+            },
+            "route": [{"mapId": "苗人凤居", "locationId": "返回"}, {"mapId": "大地图", "locationId": "衡阳"}, {"mapId": "衡阳", "locationId": "潇湘古林"}, {"mapId": "潇湘古林1", "locationId": "向右走"}, {"mapId": "潇湘古林3", "locationId": "向前走"}, {"mapId": "潇湘古林4", "locationId": "向左走"}, {"mapId": "潇湘古林5", "locationId": "向右走"}, {"mapId": "药王庄", "locationId": "程灵素"}]
+          },
+          {
+            "id": "denmark-pages-found",
+            "any": ["雪山飞狐_阎基居.两页刀法.胜利"],
+            "title": {"en": "Visit Winter Cottage with Kai", "zh-CN": "和凯拜访冬日小屋"},
+            "detail": {
+              "en": "Kai's pages are back and remain available for study. Next, visit the old champion at Winter Cottage. Save first: the visit leads to an ambush. Kai is required; two party members fight. A loss or timeout ends this journey. This is another step, not the whole Denmark story.",
+              "zh-CN": "凯的残页已经找回，仍可用于研习。下一步去冬日小屋拜访老勇士。先保存：来访会遇到伏击。凯必选出场，本场两名队员参战，失败或超时会结束旅程。这是下一步，不是丹麦全章。"
+            },
+            "route": [{"mapId": "大地图", "locationId": "苗人凤居"}, {"mapId": "苗人凤居", "locationId": "苗人凤"}]
           },
           {
             "id": "denmark-kai-recruited",

@@ -53,7 +53,7 @@ test('finishing Spain recommends France while exploring Italy keeps the local gu
  assert.equal(openingChapterStep(s).storyStage,'italy-night');
  s.chapterJournal.completedStories.push('鸳鸯刀正_风陵渡胜');
  assert.equal(openingChapterStep(s).storyStage,'denmark-kai-meet');
- assert.equal(journeyFocus(s).label,"Denmark · Kai's Missing Pages");
+ assert.equal(journeyFocus(s).label,'Denmark · Kai and Gerda');
  assert.equal(openingChapterStep(s).complete,false);
  assert.match(openingChapterStep(s).detail,/hero ALONE/);
  s.chapterJournal.completedStories.push('雪山飞狐_胡斐居.胜利');
@@ -66,6 +66,14 @@ test('finishing Spain recommends France while exploring Italy keeps the local gu
  assert.equal(openingChapterStep(s).complete,false);
  s.chapterJournal.completedStories.push('雪山飞狐_阎基居.两页刀法.胜利');
  assert.equal(openingChapterStep(s).storyStage,'denmark-pages-found');
+ assert.equal(openingChapterStep(s).complete,false);
+ assert.match(openingChapterStep(s).detail,/Kai is required; two party members fight/);
+ s.chapterJournal.completedStories.push('雪山飞狐_苗人凤居.苗人凤被毒.胜利');
+ assert.equal(openingChapterStep(s).storyStage,'denmark-find-gerda');
+ assert.equal(openingChapterStep(s).route.find(r=>r.mapId==='潇湘古林5').locationId,'向右走');
+ s.chapterJournal.completedStories.push('雪山飞狐_药王庄.程灵素.求药');
+ assert.equal(openingChapterStep(s).storyStage,'denmark-gerda-joined');
  assert.equal(openingChapterStep(s).complete,true);
+ assert.match(openingChapterStep(s).detail,/joining the party does not cure him/);
  assert.match(openingChapterStep(s).detail,/not the whole Denmark story/);
 });

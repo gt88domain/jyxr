@@ -1808,8 +1808,8 @@
           "zh-CN": "解毒术"
         },
         "description": {
-          "en": "Remove Poison, regardless of its strength.",
-          "zh-CN": "不管多么强的毒，一律清除。"
+          "en": "In battle, removes Poison from allies in the highlighted area, regardless of its strength.",
+          "zh-CN": "在战斗中清除作用范围内己方的中毒状态，不限制强度。"
         }
       },
       "梯云纵": {
