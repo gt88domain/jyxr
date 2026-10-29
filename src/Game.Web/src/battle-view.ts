@@ -27,7 +27,11 @@ export function battleShell(state: GameState): string {
 function combatant(unit: Unit | undefined, friendly: boolean, energy: string, count: number): string {
   if (!unit) return '';
   const ratio = Math.max(0, Math.min(100, unit.hp / unit.maxHp * 100));
-  const statuses=(unit.buffs||[]).map(buff=>`<span class="duel-state ${buff.isDebuff?'negative':'positive'}" data-buff-id="${escape(buff.id)}" tabindex="0" title="${escape(`${buff.name}：${plain(buff.description)}；程度 ${buff.level}，剩余 ${buff.remainingTurns} 回合`)}">${escape(buff.name)}${buff.level>0?` ${buff.level}`:''}<small>${buff.remainingTurns}轮</small></span>`).join('');
+  const statuses=(unit.buffs||[]).map(buff=>{
+    const turns=copy(`${buff.remainingTurns} ${buff.remainingTurns===1?'turn':'turns'}`,`${buff.remainingTurns}轮`);
+    const description=copy(`${buff.name}: ${plain(buff.description)}\nRank ${buff.level}; ${turns} remaining`,`${buff.name}：${plain(buff.description)}；程度 ${buff.level}，剩余 ${buff.remainingTurns} 回合`);
+    return `<span class="duel-state ${buff.isDebuff?'negative':'positive'}" data-buff-id="${escape(buff.id)}" tabindex="0" title="${escape(description)}">${escape(buff.name)}${buff.level>0?` ${buff.level}`:''}<small>${turns}</small></span>`;
+  }).join('');
   return `<article class="duel-combatant ${friendly ? 'friendly' : 'opponent'}"><img src="${assetUrl(unit.portrait || unit.sprite)}" alt=""/><div class="duel-combatant-info"><div><span>${friendly ? '我方' : '对手'}${count > 1 ? ` · ${count}人` : ''}</span><strong>${escape(unit.name)}</strong></div><div class="duel-hp-track"><i style="width:${ratio}%"></i></div><p>气血 <b>${unit.hp}</b><span> / ${unit.maxHp}</span><small>${escape(energy)} ${unit.mp} / ${unit.maxMp}</small></p>${statuses?`<div class="duel-statuses" aria-label="${escape(unit.name)}的状态">${statuses}</div>`:''}</div></article>`;
 }
 
