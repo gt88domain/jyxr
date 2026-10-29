@@ -1,0 +1,85 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "speakerNames": {
+    "木桑道长": {"en": "Imhotep", "zh-CN": "伊姆霍特普"},
+    "穆人清": {"en": "Thoth", "zh-CN": "托特"},
+    "归辛树": {"en": "Sobek", "zh-CN": "索贝克"},
+    "炼狱归辛树": {"en": "Sobek", "zh-CN": "索贝克"},
+    "归二娘": {"en": "Sekhmet", "zh-CN": "塞赫美特"},
+    "神秘剑客": {"en": "Masked Duelist", "zh-CN": "蒙面剑客"},
+    "东厂杀手": {"en": "Masked Assassin", "zh-CN": "蒙面刺客"}
+  },
+  "uiLabels": {
+    "神行百变小木桑": {"en": "Imhotep has a lesson in footwork. He expects you to keep up.", "zh-CN": "伊姆霍特普准备教几步身法，希望你能跟得上。"},
+    "百变不传": {"en": "Light on Your Feet", "zh-CN": "步履轻盈"},
+    "木桑道人传授袁承志神行百变绝技。": {"en": "Learned footwork from Imhotep at Highbridge.", "zh-CN": "在高桥城向伊姆霍特普学习步法。"},
+    "千招无敌": {"en": "A Worthy Student", "zh-CN": "出色的学生"},
+    "袁承志单挑归辛树胜利。": {"en": "Horus won Sobek's solo test.", "zh-CN": "荷鲁斯独自赢下索贝克的考验。"}
+  },
+  "definitions": {
+    "battles": {
+      "襄阳.战斗01": {"name": {"en": "Trouble at Highbridge", "zh-CN": "高桥城遇袭"}},
+      "襄阳.战斗02": {"name": {"en": "Sobek's Challenge", "zh-CN": "索贝克的挑战"}},
+      "襄阳.战斗03": {"name": {"en": "Horus's Solo Test", "zh-CN": "荷鲁斯的独战考验"}}
+    },
+    "talents": {
+      "神行百变": {
+        "name": {"en": "Elusive Footwork", "zh-CN": "灵巧步法"},
+        "description": {"en": "Grants an evasion check: 15% at 80% Health or above; 7% below.", "zh-CN": "提供一次闪避判定：生命至少80%时概率15%，低于80%时概率7%。"}
+      },
+      "混元一气": {
+        "name": {"en": "Primal Attunement", "zh-CN": "原初共鸣"},
+        "description": {"en": "With Primal Mastery equipped, increases Defense used against incoming attacks by 50%. Adds 25 percentage points to Primal Palm's critical-hit chance.", "zh-CN": "装备原初专精时，受到攻击的伤害结算防御提高50%。原初掌的暴击概率增加25个百分点。"}
+      },
+      "铁拳无双": {
+        "name": {"en": "Stunning Knuckles", "zh-CN": "震慑拳劲"},
+        "description": {"en": "On Gauntlet hits, may inflict Stunned for 2 turns (base 25% chance). Other talents can raise the chance; unprotected allies may also be affected.", "zh-CN": "拳套命中后可使目标晕眩2回合，基础触发率25%；其他天赋可提高概率，未受保护的友方也可能受影响。"}
+      }
+    }
+  },
+  "dialogueEdits": {
+    "bixuejianShyou_襄阳大战": [{"start": 1, "expectedCount": 3, "lines": [
+      {"speaker": "木桑道长", "text": {"en": "Horus. Still practicing, or have you started letting your reputation do the work?", "zh-CN": "荷鲁斯。还在练习吗，还是已经开始靠名气出手了？"}},
+      {"speaker": "袁承志", "text": {"en": "Practicing. My reputation is a poor substitute for footwork.", "zh-CN": "还在练。名气可替不了脚下的功夫。"}},
+      {"speaker": "木桑道长", "text": {"en": "Good. Those masked raiders have been preying on travelers. Show me what you've learned.", "zh-CN": "很好。那些蒙面劫匪一直在袭击旅人，让我看看你学到了什么。"}}
+    ]}],
+    "bixuejianShyou_神拳无敌1": [
+      {"start": 1, "expectedCount": 9, "lines": [
+        {"speaker": "木桑道长", "text": {"en": "Good. I hear you and Sobek have a disagreement to settle.", "zh-CN": "不错。听说你和索贝克还有点分歧要解决。"}},
+        {"speaker": "袁承志", "text": {"en": "He thinks I've been neglecting Thoth's lessons.", "zh-CN": "他觉得，我把托特教的本领荒废了。"}},
+        {"speaker": "木桑道长", "text": {"en": "Then show him you haven't. I'll take the blame for any bruised pride.", "zh-CN": "那就让他看看。要是谁的自尊受了伤，算我的。"}},
+        {"speaker": "主角", "text": {"en": "I'd rather he took the bruises.", "zh-CN": "我还是希望挨打的能是他。"}},
+        {"speaker": "袁承志", "text": {"en": "That is not helping.", "zh-CN": "你这可帮不上忙。"}},
+        {"speaker": "木桑道长", "text": {"en": "Then let me help. Watch my feet, both of you.", "zh-CN": "那就让我来帮忙。你们两个，看好我的脚步。"}},
+        {"speaker": "木桑道长", "text": {"en": "(Imhotep slips past a fallen cart without breaking stride.)", "zh-CN": "（伊姆霍特普掠过一辆翻倒的马车，脚步没有丝毫停顿。）"}},
+        {"speaker": "袁承志", "text": {"en": "You barely touched the ground.", "zh-CN": "你的脚几乎都没碰到地。"}},
+        {"speaker": "主角", "text": {"en": "(You pay very close attention.)", "zh-CN": "（你看得格外认真。）"}}
+      ]},
+      {"start": 15, "expectedCount": 2, "lines": [
+        {"speaker": "木桑道长", "text": {"en": "Keep moving, and pay attention. Sobek will make you earn it.", "zh-CN": "保持脚步，留心观察。索贝克可不会让你轻松过关。"}},
+        {"speaker": "袁承志", "text": {"en": "I suppose the lesson isn't over yet.", "zh-CN": "看来，这堂课还没结束。"}}
+      ]}
+    ],
+    "bixuejianShyou_神拳无敌2": [{"start": 2, "expectedCount": 1, "lines": [
+      {"speaker": "归辛树", "text": {"en": "There you are. Sekhmet and I have other matters to attend to. Let's see your stance.", "zh-CN": "你们来了。塞赫美特和我还有别的事要办。让我看看你的架势。"}}
+    ]}],
+    "bixuejianShyou_神拳无敌3": [{"start": 2, "expectedCount": 8, "lines": [
+      {"speaker": "归辛树", "text": {"en": "(Sobek lowers his guard.) Wait.", "zh-CN": "（索贝克放低双手。）等等。"}},
+      {"speaker": "袁承志", "text": {"en": "I'm listening.", "zh-CN": "你说。"}},
+      {"speaker": "归辛树", "text": {"en": "Thoth, you can come out now. I recognize your training.", "zh-CN": "托特，可以出来了。我认得你教的招式。"}},
+      {"speaker": "穆人清", "text": {"en": "Good. At least one of you is paying attention.", "zh-CN": "很好。至少有一个人在认真观察。"}},
+      {"speaker": "主角", "text": {"en": "I was paying attention. Mostly to not getting hit.", "zh-CN": "我也很认真。主要在认真躲拳头。"}},
+      {"speaker": "穆人清", "text": {"en": "Horus, your companion has been helping. Face Sobek alone this time. I want to see what you can do.", "zh-CN": "荷鲁斯，你的同伴一直在帮忙。这次独自面对索贝克，让我看看你的本领。"}},
+      {"speaker": "主角", "text": {"en": "I'll supervise from a safer distance.", "zh-CN": "那我就在安全一点的地方督战。"}},
+      {"speaker": "袁承志", "text": {"en": "Yes, teacher.", "zh-CN": "是，老师。"}}
+    ]}],
+    "bixuejianShyou_神拳无敌4": [{"start": 2, "expectedCount": 2, "lines": [
+      {"speaker": "袁承志", "text": {"en": "(Sobek changes from a rush to a solid guard. Horus finally sees the rhythm.)", "zh-CN": "（索贝克从猛攻转为稳守，荷鲁斯终于看清了其中的节奏。）"}},
+      {"speaker": "袁承志", "text": {"en": "That's it. Primal Palm and Gemshatter Fist fit together.", "zh-CN": "原来如此。原初掌与碎玉拳，正好能互相配合。"}}
+    ]}],
+    "bixuejianShyou_神拳无敌5": [{"start": 2, "expectedCount": 2, "lines": [
+      {"speaker": "袁承志", "text": {"en": "(Even through the bruises, Horus follows the rhythm of Sobek's strikes.)", "zh-CN": "（虽然挨了不少拳，荷鲁斯还是跟上了索贝克出招的节奏。）"}},
+      {"speaker": "袁承志", "text": {"en": "I see where I went wrong. I can build on this.", "zh-CN": "我明白错在哪儿了。接下来，可以在这个基础上继续练。"}}
+    ]}]
+  }
+}
