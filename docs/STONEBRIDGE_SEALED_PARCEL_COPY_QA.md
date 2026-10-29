@@ -1,5 +1,7 @@
 # Stonebridge Hall: complete sealed-parcel narrative branch
 
+**Final adjacent text batch:** [opened-parcel narrative and local summary](STONEBRIDGE_OPENED_PARCEL_COPY_QA.md) now completes the separate4-scene/33-slot alternative. The37 lines and sealed-branch rules below are unchanged. All four identified hall alternatives have their direct writing covered; genuine saves still lack their prerequisites and none is claimed played.
+
 Base `f23736a3edc947a601eda08b52be424c7e378086`, initially clean, same workspace/writer/branch. One complete alternative is delivered from its native entrance to the original world-map return. The opened-parcel branch is not partially rewritten here.
 
 ## Actual writing increment

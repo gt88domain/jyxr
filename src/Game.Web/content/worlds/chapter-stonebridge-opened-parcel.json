@@ -1,0 +1,50 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "uiLabels": {
+    "丧心病狂": {"en": "Ruthless", "zh-CN": "冷酷无情"},
+    "抢劫闯王军饷。": {"en": "Seized the relief gold at Stonebridge Hall.", "zh-CN": "在石桥会馆强夺救济黄金。"}
+  },
+  "dialogueEdits": {
+    "bixuejianShyou_打开包裹石梁派": [{"start": 1, "expectedCount": 16, "lines": [
+      {"speaker": "温方达", "text": {"en": "The ledger lists two chests. Where's the other one?", "zh-CN": "账簿上记着两箱。另一箱在哪儿？"}},
+      {"speaker": "温青青", "text": {"en": "It changed hands at the ferry.", "zh-CN": "在渡口时，到了别人手里。"}},
+      {"speaker": "温方达", "text": {"en": "Gold is remarkably sociable when nobody's watching.", "zh-CN": "没人盯着的时候，黄金还真是很会交朋友。"}},
+      {"speaker": "温青青", "text": {"en": "So, apparently, are travelers.", "zh-CN": "看来，旅人也一样。"}},
+      {"speaker": "袁承志", "text": {"en": "Mother. We found you.", "zh-CN": "母亲。找到你了。"}},
+      {"speaker": "温青青", "text": {"en": "And you've found the parcel, I hope.", "zh-CN": "希望，你们也找到了包裹。"}},
+      {"speaker": "温方达", "text": {"en": "You brought someone with you?", "zh-CN": "你还带了别人来？"}},
+      {"speaker": "袁承志", "text": {"en": "A traveler from the ferry. We came to settle the question of the gold.", "zh-CN": "渡口认识的旅人。我们来把黄金的事说清楚。"}},
+      {"speaker": "温方达", "text": {"en": "Then let's see the parcel.", "zh-CN": "那就让我们看看包裹。"}},
+      {"speaker": "主角", "text": {"en": "About that. It seems to have gone missing.", "zh-CN": "说起这个，它好像丢了。"}},
+      {"speaker": "温方山", "text": {"en": "(Sinuhe points at your belongings.) Then why do you have Isis's hairpin?", "zh-CN": "（辛努赫指向你的随身物品。）那你为什么带着伊西斯的发簪？"}},
+      {"speaker": "主角", "text": {"en": "(You should have kept track of more than the coins.)", "zh-CN": "（看来，刚才不该只顾着数金币。）"}},
+      {"speaker": "温青青", "text": {"en": "I put that in the parcel. You opened it and kept the gold?", "zh-CN": "那是我放在包裹里的。你打开了它，还私吞了黄金？"}},
+      {"speaker": "袁承志", "text": {"en": "I trusted you. That's over.", "zh-CN": "我信任过你。到此为止了。"}},
+      {"speaker": "主角", "text": {"en": "I can explain.", "zh-CN": "我可以解释。"}},
+      {"speaker": "温方达", "text": {"en": "You can explain yourself after the wardens disarm you.", "zh-CN": "等守卫缴了你的武器，你再解释吧。"}}
+    ]}],
+    "bixuejianShyou_包裹线end": [{"start": 1, "expectedCount": 8, "lines": [
+      {"speaker": "温青青", "text": {"en": "Enough, Amun. Horus is still here.", "zh-CN": "够了，阿蒙。荷鲁斯还在这里。"}},
+      {"speaker": "安小慧", "text": {"en": "Horus? What happened here?", "zh-CN": "荷鲁斯？这里发生了什么？"}},
+      {"speaker": "袁承志", "text": {"en": "Hathor. What brings you to this mess?", "zh-CN": "哈索尔。你怎么也卷进这场乱子了？"}},
+      {"speaker": "安小慧", "text": {"en": "The relief gold was stolen. Anubis and I traced it to these chests.", "zh-CN": "救济黄金被劫了。阿努比斯和我一路追查，找到了这两箱。"}},
+      {"speaker": "袁承志", "text": {"en": "Anubis is here too?", "zh-CN": "阿努比斯也在？"}},
+      {"speaker": "安小慧", "text": {"en": "Yes. The villages need those supplies. We can't leave the gold in the hands of thieves.", "zh-CN": "是的。村民需要那些补给，我们不能把黄金留在窃贼手里。"}},
+      {"speaker": "袁承志", "text": {"en": "Then we need to stop pretending this is a private argument.", "zh-CN": "那就别再把这当成几个人之间的争执了。"}},
+      {"speaker": "主角", "text": {"en": "Then I'm not leaving without the rest.", "zh-CN": "那我就更不能，把剩下的留在这里了。"}}
+    ]}],
+    "bixuejianShyou_包裹线end2": [{"start": 1, "expectedCount": 7, "lines": [
+      {"speaker": "主角", "text": {"en": "I'd stay for the reunion, but I'm rather attached to leaving.", "zh-CN": "我倒想留下看你们叙旧，可惜我更喜欢早点离开。"}},
+      {"speaker": "黄真", "text": {"en": "Horus? Hathor? Stay behind me.", "zh-CN": "荷鲁斯？哈索尔？站到我身后。"}},
+      {"speaker": "袁承志", "text": {"en": "Anubis, watch out. This traveler doesn't stop at taking gold.", "zh-CN": "阿努比斯，当心。这旅人可不只想拿走黄金。"}},
+      {"speaker": "黄真", "text": {"en": "Then this is where it stops.", "zh-CN": "那就到这里为止。"}},
+      {"speaker": "主角", "text": {"en": "You can chase me, or you can help the people behind you.", "zh-CN": "你可以追我，也可以先帮帮你身后的人。"}},
+      {"speaker": "黄真", "text": {"en": "Threatening the wounded won't save you.", "zh-CN": "拿伤者作威胁，也救不了你。"}},
+      {"speaker": "袁承志", "text": {"en": "You're not facing this alone.", "zh-CN": "你不用独自面对这件事。"}}
+    ]}],
+    "bixuejianShyou_包裹线end3": [{"start": 1, "expectedCount": 2, "lines": [
+      {"speaker": "黄真", "text": {"en": "(Anubis gathers the wounded.) This isn't over. Horus, with me.", "zh-CN": "（阿努比斯扶起伤者。）这件事还没完。荷鲁斯，跟我走。"}},
+      {"speaker": "主角", "text": {"en": "Then don't keep me waiting.", "zh-CN": "那就别让我等太久。"}}
+    ]}]
+  }
+}
