@@ -1,5 +1,7 @@
 # Osiris family trial and treasure chain: narrative completion
 
+**Later normal progression:** [Grimm return QA](GRIMM_RETURN_QA.md) preserves the184-silver source while producing an independent194-silver continuation with the original stage1 flag. That new continuation still lacks Horus/Isis; the six family scenes below remain statically accepted rather than played. Their original prerequisite claims refer to the protected earlier source, not a claim that the stage flag can never be reached.
+
 Base `9a179690c2edd800adf83b1940a6a9778a1ed373`, clean before editing, same workspace/writer/branch. This completes the known adjacent writing gaps as one batch. It is content delivery and static acceptance, not a campaign playthrough.
 
 ## Cohesive scope

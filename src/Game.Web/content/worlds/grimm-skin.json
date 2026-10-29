@@ -39,8 +39,8 @@
         "zh-CN": "格林居所"
       },
       "description": {
-        "en": "Grimm is still reading where you left him. There is always another story to discuss.",
-        "zh-CN": "你回到格林的居所。他仍在翻阅故事册，等着听你旅途上的见闻。"
+        "en": "Storybooks and loose notes cover almost every surface. There is just enough room for a visitor.",
+        "zh-CN": "故事书和零散笔记几乎铺满了每个角落。屋里勉强还能容下一个访客。"
       }
     },
     "小村": {
@@ -674,6 +674,7 @@
     "chapter-japan-musashi.json",
     "chapter-crane-cave.json",
     "chapter-egypt-family.json",
+    "chapter-grimm-return.json",
     "chapter-academy.json",
     "organizations.json"
   ],
