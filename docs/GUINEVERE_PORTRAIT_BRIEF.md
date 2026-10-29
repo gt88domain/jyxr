@@ -16,6 +16,8 @@
 
 后续协调方明确回执：唯一Guinevere候选已分配给既有素材席 **`produce_card33`**，尚未生图，原因是其GitHub工具读取PNG报UnicodeDecodeError，未取得参考像素。本任务不再派发、不生成或绑定，由该原素材席继续负责。
 
+再后协调方已报告源席取得原参考并完成一次生成＋一次构图编辑，优选原生PNG与私人备份均已有源端回执。此executor尚无Library落地能力，独立图审为NOT_RUN，见[候选审阅状态](GUINEVERE_CANDIDATE_REVIEW_STATUS.md)。上段保留当时未生图的历史，不再作为当前制作状态；候选不等于用户验收或游戏接入。
+
 ### 原PNG二进制交接状态
 
 协调方要求用现有合法Library／附件能力交付原图。已复核原PNG **2,578,580 bytes**、SHA `9fe2cf45d8270c65363443f2cb40ba14fd106683bc59674ae3e479c76748616b`，字节未变。当前可用工具清单没有Library、附件或Google Drive上传工具，也没有工具搜索入口；`download_file`只支持下载已存在的Sediment文件，`codex_app__attach_artifact`只接受PR链接，不能上传PNG。
