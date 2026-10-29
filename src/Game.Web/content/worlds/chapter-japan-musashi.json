@@ -1,5 +1,16 @@
 {
   "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "maps": {
+    "华山后山3": {"name": {"en": "Crane Peak — Misty Fork", "zh-CN": "华山后山3"}},
+    "华山后山4": {"name": {"en": "Crane Peak — High Trail", "zh-CN": "华山后山4"}},
+    "华山后山": {"name": {"en": "Crane Peak — Hidden Glade", "zh-CN": "华山后山"}}
+  },
+  "uiLabels": {
+    "貌似前方有亮光……": {"en": "Light ahead.", "zh-CN": "貌似前方有亮光……"},
+    "返回华山": {"en": "Back to Crane Peak.", "zh-CN": "返回华山"},
+    "华山山洞": {"en": "Crane Peak Cave", "zh-CN": "华山山洞"},
+    "华山后方的一个小山洞。": {"en": "A small cave behind Crane Peak.", "zh-CN": "华山后方的一个小山洞。"}
+  },
   "dialogueEdits": {
     "笑傲江湖_天下第一令狐冲": [{"start": 0, "expectedCount": 12, "lines": [
       {"speaker": "令狐冲", "text": {"en": "Two swords, one road. Somehow, I still manage to take the wrong turn.", "zh-CN": "两把剑，一条路。我居然还是能走错。"}},
