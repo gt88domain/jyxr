@@ -1,0 +1,98 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "speakerNames": {
+    "炼狱黄真": {"en": "Anubis", "zh-CN": "阿努比斯"}
+  },
+  "maps": {
+    "华山派": {
+      "name": {"en": "Crane Hall", "zh-CN": "鹤峰会馆"},
+      "description": {"en": "A quiet hall above the mountain trails, with space for visiting teachers and their students.", "zh-CN": "山路上方的一座清静会馆，供来访的导师和学生歇脚。"}
+    }
+  },
+  "uiLabels": {
+    "华山大弟子": {"en": "Anubis guards the entrance. He hasn't forgotten the stolen gold.", "zh-CN": "阿努比斯守着入口。他没有忘记被夺走的黄金。"}
+  },
+  "definitions": {
+    "battles": {
+      "华山仙境_灭华山": {"name": {"en": "The Hall's Defenders", "zh-CN": "会馆守卫者"}},
+      "华山仙境_灭铁剑1": {"name": {"en": "An Uneasy Alliance", "zh-CN": "勉强的同盟"}},
+      "华山仙境_灭铁剑2": {"name": {"en": "Set's Counterattack", "zh-CN": "赛特的反击"}}
+    },
+    "achievements": {
+      "铁剑掌门": {
+        "name": {"en": "Iron Sword Usurper", "zh-CN": "铁剑篡位者"},
+        "description": {"en": "Took the Iron Sword Token by force.", "zh-CN": "以威胁夺取铁剑令牌。"}
+      }
+    }
+  },
+  "dialogueEdits": {
+    "bixuejianShyou_包裹线end4": [{"start": 1, "expectedCount": 5, "lines": [
+      {"speaker": "黄真", "text": {"en": "You took the gold and threatened everyone who stood in your way. You don't get to walk in here as a guest.", "zh-CN": "你夺走黄金，还威胁每个挡路的人。别以为到了这里，仍能被当作客人。"}},
+      {"speaker": "主角", "text": {"en": "You didn't stop me then. What changed?", "zh-CN": "上次你没拦住我。现在，有什么不同？"}},
+      {"speaker": "穆人清", "text": {"en": "Horus trusted you. That trust cost him dearly.", "zh-CN": "荷鲁斯信任过你。为了这份信任，他付出了代价。"}},
+      {"speaker": "穆人清", "text": {"en": "It won't cost anyone else. Put down your weapon.", "zh-CN": "不能再让别人付出代价。放下武器。"}},
+      {"speaker": "主角", "text": {"en": "You can try taking it.", "zh-CN": "你可以，试着来拿。"}}
+    ]}],
+    "bixuejianShyou_包裹线end5": [
+      {"start": 1, "expectedCount": 1, "lines": [
+        {"speaker": "主角", "text": {"en": "Your whole hall couldn't stop me.", "zh-CN": "你们整个会馆，也没能拦住我。"}}
+      ]},
+      {"start": 4, "expectedCount": 6, "lines": [
+        {"speaker": "木桑道长", "text": {"en": "Then stop at the hall. You won't take the Iron Sword tradition with it.", "zh-CN": "那就到会馆为止。铁剑的传承，不会一起被你夺走。"}},
+        {"speaker": "主角", "text": {"en": "More defenders. How considerate.", "zh-CN": "还有人来守。真是周到。"}},
+        {"speaker": "玉真子", "text": {"en": "Who thinks they can take what's mine?", "zh-CN": "谁觉得，我的东西也能随便拿走？"}},
+        {"speaker": "木桑道长", "text": {"en": "Set? You're standing with me?", "zh-CN": "赛特？你要站在我这边？"}},
+        {"speaker": "玉真子", "text": {"en": "I'm standing for the order. Don't mistake it for forgiveness.", "zh-CN": "我是为了传承。别把这当成原谅。"}},
+        {"speaker": "木桑道长", "text": {"en": "Then for once, let that be enough.", "zh-CN": "那这一次，就让它足够吧。"}}
+      ]}
+    ],
+    "bixuejianShyou_包裹线end6": [
+      {"start": 1, "expectedCount": 12, "lines": [
+        {"speaker": "主角", "text": {"en": "Still nobody strong enough to keep what I want.", "zh-CN": "还是没人，能守住我想要的东西。"}},
+        {"speaker": "木桑道长", "text": {"en": "This is what you call victory? A hall full of wounded people?", "zh-CN": "满堂伤者。这就是你所谓的胜利？"}},
+        {"speaker": "玉真子", "text": {"en": "Wait. Spare me, and I'll give you something worth taking.", "zh-CN": "等等。放过我，我给你一样真正值得拿走的东西。"}},
+        {"speaker": "木桑道长", "text": {"en": "Set. At least meet the end without selling everyone else.", "zh-CN": "赛特。至少在最后，别把所有人都卖了。"}},
+        {"speaker": "主角", "text": {"en": "I can take it from you when you're dead.", "zh-CN": "等你死了，我一样能拿走。"}},
+        {"speaker": "玉真子", "text": {"en": "You can search all you like. You won't find where I hid it.", "zh-CN": "你尽管找。你不会知道，我把它藏在哪儿。"}},
+        {"speaker": "木桑道长", "text": {"en": "You'd bargain with the person who did this?", "zh-CN": "你要和造成这一切的人讨价还价？"}},
+        {"speaker": "玉真子", "text": {"en": "I spent years chasing the Iron Sword Token. I've finally got it, and now there's no order left to command. I'm not dying for an empty title.", "zh-CN": "我找了多年，才找到铁剑令牌。现在终于拿到了，却没剩下什么值得号令的人。我不会为一个空名送命。"}},
+        {"speaker": "主角", "text": {"en": "The order can keep its name. I'll take its authority. Give me the token.", "zh-CN": "传承可以留下名字。权力归我。交出令牌。"}},
+        {"speaker": "玉真子", "text": {"en": "That little sword won't make them follow you.", "zh-CN": "一柄小铁剑，不会让他们追随你。"}},
+        {"speaker": "主角", "text": {"en": "The token, or your life.", "zh-CN": "令牌，或者你的命。"}},
+        {"speaker": "玉真子", "text": {"en": "All right. Take it.", "zh-CN": "好吧。拿去。"}}
+      ]},
+      {"start": 15, "expectedCount": 8, "lines": [
+        {"speaker": "主角", "text": {"en": "Break your sword. Then crawl out of my sight.", "zh-CN": "折断你的剑。然后，从我眼前爬走。"}},
+        {"speaker": "玉真子", "text": {"en": "No. I won't leave myself helpless. I have something better than the token.", "zh-CN": "不。我不会让自己任人宰割。我还有比令牌更好的东西。"}},
+        {"speaker": "主角", "text": {"en": "What could be worth more?", "zh-CN": "还有什么，比它更值钱？"}},
+        {"speaker": "玉真子", "text": {"en": "Iron Banner Mastery. An old discipline, sealed away for years. I found its manual.", "zh-CN": "铁旗专精。一门被封存多年的旧学，我找到了它的手册。"}},
+        {"speaker": "主角", "text": {"en": "You expect me to trade a victory for a book?", "zh-CN": "你指望，一本书就能换走我的胜利？"}},
+        {"speaker": "玉真子", "text": {"en": "For a chance to become stronger. Keep your victory. Just let me leave alive.", "zh-CN": "换一个变强的机会。胜利归你，只让我活着离开。"}},
+        {"speaker": "主角", "text": {"en": "The manual. Now.", "zh-CN": "手册。现在就交出来。"}},
+        {"speaker": "玉真子", "text": {"en": "Here. It's all yours.", "zh-CN": "在这儿。全归你了。"}}
+      ]},
+      {"start": 24, "expectedCount": 2, "lines": [
+        {"speaker": "主角", "text": {"en": "Then go. Before I change my mind.", "zh-CN": "那就走。趁我还没改主意。"}},
+        {"speaker": "玉真子", "text": {"en": "(Set turns away, then lunges.) You first!", "zh-CN": "（赛特转过身，却突然扑来。）你先走！"}}
+      ]}
+    ],
+    "bixuejianShyou_包裹线end7": [
+      {"start": 1, "expectedCount": 9, "lines": [
+        {"speaker": "主角", "text": {"en": "You had a way out. Why turn back?", "zh-CN": "明明有路可走。为什么还要回头？"}},
+        {"speaker": "玉真子", "text": {"en": "(Set's breathing falters.) Because Imhotep was right about one thing.", "zh-CN": "（赛特的呼吸断续起来。）因为有一件事，伊姆霍特普说对了。"}},
+        {"speaker": "主角", "text": {"en": "Which thing?", "zh-CN": "哪件事？"}},
+        {"speaker": "玉真子", "text": {"en": "An order is more than whoever holds its token.", "zh-CN": "一门传承，不只属于拿着令牌的人。"}},
+        {"speaker": "木桑道长", "text": {"en": "Set... You remembered.", "zh-CN": "赛特……你还记得。"}},
+        {"speaker": "玉真子", "text": {"en": "I wanted to lead it. I didn't want to be the last man who ran from it.", "zh-CN": "我想领导它。可我不想，成为最后一个逃离它的人。"}},
+        {"speaker": "木桑道长", "text": {"en": "(Imhotep gives a faint laugh. His eyes fall still.)", "zh-CN": "（伊姆霍特普轻轻笑了一声，目光随之凝住。）"}},
+        {"speaker": "玉真子", "text": {"en": "(Set opens his hand. Something small and golden moves.) One last trick.", "zh-CN": "（赛特张开手，有个金色的小东西动了动。）最后一招。"}},
+        {"speaker": "主角", "text": {"en": "A golden serpent—venom!", "zh-CN": "金蛇——是毒！"}}
+      ]},
+      {"start": 14, "expectedCount": 3, "lines": [
+        {"speaker": "主角", "text": {"en": "The venom is out. I still feel weaker.", "zh-CN": "毒已经排出去了。可这股虚弱，还留着。"}},
+        {"speaker": "玉真子", "text": {"en": "(Set laughs once, then falls silent.)", "zh-CN": "（赛特笑了一声，随后再无声息。）"}},
+        {"speaker": "主角", "text": {"en": "A fine prize. And a costly one.", "zh-CN": "好一份战利品。代价也够高的。"}}
+      ]}
+    ]
+  }
+}
