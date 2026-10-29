@@ -14,6 +14,16 @@
 | 本任务接单核查 | 协作工具当前只列 `/root`；仓库未找到Guinevere文件或该ID的其它接单记录。本writer未接制作、未生图、未另派agent |
 | 跨线程边界 | 对dot来源线程作了一次只读状态查询，未返回结果，终止等待且不重复请求。因此**不能据本地列表保证其它线程无人接单**。由dot沿原素材席台账核对并分配唯一负责人；此文不是新增接单回执 |
 
+后续协调方明确回执：唯一Guinevere候选已分配给既有素材席 **`produce_card33`**，尚未生图，原因是其GitHub工具读取PNG报UnicodeDecodeError，未取得参考像素。本任务不再派发、不生成或绑定，由该原素材席继续负责。
+
+### 原PNG二进制交接状态
+
+协调方要求用现有合法Library／附件能力交付原图。已复核原PNG **2,578,580 bytes**、SHA `9fe2cf45d8270c65363443f2cb40ba14fd106683bc59674ae3e479c76748616b`，字节未变。当前可用工具清单没有Library、附件或Google Drive上传工具，也没有工具搜索入口；`download_file`只支持下载已存在的Sediment文件，`codex_app__attach_artifact`只接受PR链接，不能上传PNG。
+
+另对现有附件作了一次只读查询，返回：`This app tool is no longer available through dynamic tools. Use the codex_app MCP server. If that server is unavailable on this host, task delegation is unavailable.` 当前宿主没有另一个可调用的codex_app上传入口，因此没有取得可复用的附件ID。
+
+**状态：NOT_TRANSFERRED；真实FileID：无。** 本机路径、固定GitHub URL和已显示的图片都不冒充跨任务已交付文件；没有长串base64、重生、改图、新共享权限或凭据操作。由协调方在具备二进制附件／Library交付能力的原素材链路解决，现有参考继续原字节保留。本能力缺口没有中止独立游戏路线验证。
+
 ## 已在用、可直接读取的参考
 
 **主要风格参考：** [grimm-portrait.png](../src/Game.Web/content/worlds/art/grimm-portrait.png)，1024×1536、不需重做。[来源记录](../src/Game.Web/content/worlds/art/grimm-portrait.source.json)记为本项目2026-10-20用image_gen生成，SHA-256 `9fe2cf45d8270c65363443f2cb40ba14fd106683bc59674ae3e479c76748616b`。原source记录提到的 `opening/art/grimm-study.png`不在本工作区，交付参照应使用这里已实际查看的PNG，不依赖缺失路径。
@@ -72,3 +82,5 @@ Merlin入口是原 `original_洛阳奇闻.阿福1`，六个旧对白槽目前压
 其入口只在白天开放。本档为辰时、世界坐标(728,600)；按当前[MapService](../src/Game.Application/MapService.cs)的 `floor(distance/22)+1`规则，到洛阳(925,537)预计10时段，加返回世界1时段，抵达卯时。先正常读居民三句会消耗原1时段到辰时，随后梅林入口应可用；这是一次有内容的街头交谈，不等待或反复进图刷时段。实际以宿主预览和入口为准，若不符则停止核对，不强行点不可用事件。
 
 路线不回访格林、不找亚瑟／丹麦挑战，不购物、修炼、换队或使用道具；主角仍13级且未完成格林第二会面，不满足关闭国家窗口的下一世界阶段。需要保留原地图档与全部旧报告。上述只是已读原条件后的下一批范围，**未进行浏览器旅行、六页对白或新存读档验证**，不算新增通关或本批测试通过。
+
+后续已按该有限范围实际执行；首轮核清小地图隐藏入口的QA读取错误后，从原抵达档接续，未重复旅行，六页及正常存读档通过。见[Crossroads完整实录](CROSSROADS_CONVERSATIONS_QA.md)，保留上段作为当时提案，不能将这次实测扩成寻犬后续或完整国家线。
