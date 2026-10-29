@@ -1,0 +1,40 @@
+{
+  "sourceReport": "britain-recruitment.json",
+  "sourceReportSha256": "c63848c94aca60b14cd2cff9f466696def96bce4d0b218715e652a75c85e4c96",
+  "note": "Four real non-legend UI casts from one failed recruitment attempt, not importable game state. Grid dimensions come from the frozen BattleStateFactory constants; the host's native impacts are already clipped.",
+  "grid": {"width": 11, "height": 4},
+  "cases": [
+    {
+      "shape": "single", "battleId": "剑魔荒冢_战斗.神雕", "tick": 418,
+      "actor": {"id": "participant_0_主角", "x": 6, "y": 2},
+      "skill": {"id": "野球拳", "level": 8, "castSize": 3, "impactSize": 1, "available": true, "mpCost": 32},
+      "selectedHostTarget": {"skillId": "野球拳", "x": 7, "y": 0, "targetId": "participant_4_battle_4_神雕"},
+      "mpBefore": 44, "mpAfter": 12,
+      "native": {"sequence": 258, "kind": "SkillCast", "unitId": "participant_0_主角", "skillId": "野球拳", "targetPosition": {"x": 7, "y": 0}, "impactedPositions": [{"x": 7, "y": 0}], "isLegend": false}
+    },
+    {
+      "shape": "plus", "battleId": "剑魔荒冢_战斗.杨过", "tick": 95,
+      "actor": {"id": "participant_0_主角", "x": 7, "y": 2},
+      "skill": {"id": "无上大力杵", "level": 15, "castSize": 0, "impactSize": 2, "available": true, "mpCost": 192},
+      "selectedHostTarget": {"skillId": "无上大力杵", "x": 7, "y": 2, "targetId": "participant_0_主角"},
+      "mpBefore": 1260, "mpAfter": 1068,
+      "native": {"sequence": 13, "kind": "SkillCast", "unitId": "participant_0_主角", "skillId": "无上大力杵", "targetPosition": {"x": 7, "y": 2}, "impactedPositions": [{"x": 7, "y": 0}, {"x": 7, "y": 1}, {"x": 5, "y": 2}, {"x": 6, "y": 2}, {"x": 7, "y": 2}, {"x": 8, "y": 2}, {"x": 9, "y": 2}, {"x": 7, "y": 3}], "isLegend": false}
+    },
+    {
+      "shape": "cleave", "battleId": "剑魔荒冢_战斗.神雕", "tick": 346,
+      "actor": {"id": "participant_1_袁冠南", "x": 7, "y": 2},
+      "skill": {"id": "夫妻刀法", "level": 7, "castSize": 1, "impactSize": 1, "available": true, "mpCost": 144},
+      "selectedHostTarget": {"skillId": "夫妻刀法", "x": 8, "y": 2, "targetId": null},
+      "mpBefore": 1329, "mpAfter": 1185,
+      "native": {"sequence": 213, "kind": "SkillCast", "unitId": "participant_1_袁冠南", "skillId": "夫妻刀法", "targetPosition": {"x": 8, "y": 2}, "impactedPositions": [{"x": 8, "y": 1}, {"x": 8, "y": 2}, {"x": 8, "y": 3}], "isLegend": false}
+    },
+    {
+      "shape": "line", "battleId": "剑魔荒冢_战斗.神雕", "tick": 87,
+      "actor": {"id": "participant_1_袁冠南", "x": 5, "y": 3},
+      "skill": {"id": "三分剑法", "level": 4, "castSize": 1, "impactSize": 4, "available": true, "mpCost": 57},
+      "selectedHostTarget": {"skillId": "三分剑法", "x": 6, "y": 3, "targetId": "participant_0_主角"},
+      "mpBefore": 1500, "mpAfter": 1443,
+      "native": {"sequence": 105, "kind": "SkillCast", "unitId": "participant_1_袁冠南", "skillId": "三分剑法", "targetPosition": {"x": 6, "y": 3}, "impactedPositions": [{"x": 6, "y": 3}, {"x": 7, "y": 3}, {"x": 8, "y": 3}, {"x": 9, "y": 3}], "isLegend": false}
+    }
+  ]
+}
