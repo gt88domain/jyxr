@@ -2,6 +2,7 @@
 .notification-button{position:relative}.notification-button [data-notice-count]{position:absolute;right:-4px;top:-4px;border-radius:12px;min-width:18px;padding:2px 4px;color:white;background:#b65c42;font-size:10px;line-height:14px}
 .activity-tools{display:grid;grid-template-columns:2fr 1fr;gap:12px;margin:20px 0}.activity-tools label{display:grid;gap:8px;font-size:12px;min-width:0}.activity-list{display:grid;gap:10px}.activity-list article,.activity-ui-messages article{padding:12px;border:1px solid var(--line);border-radius:6px;min-width:0}.activity-list article header{display:flex;justify-content:space-between;gap:8px;font-size:12px}.activity-list time,.activity-ui-messages time,.activity-list small{font-size:11px;color:var(--muted)}.activity-list p,.activity-ui-messages p{font-size:14px;line-height:1.8;margin:8px 0;overflow-wrap:anywhere}.activity-ui-messages{margin-top:24px}.activity-list [hidden]{display:none}
 :root[data-interface=classic] .modern-only{display:none!important}
+.dialogue-next{min-height:44px}
 :root[data-interface=modern]{--world-header:56px;--serif:"PingFang SC","Microsoft YaHei",sans-serif}
 :root[data-interface=modern] .topbar{height:56px;padding:0 24px;background:#15382fef;gap:10px}
 :root[data-interface=modern] .wordmark{font-size:17px;letter-spacing:0;gap:8px}

@@ -1,0 +1,44 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "dialogueEdits": {
+    "sdxl_剑魔荒冢.杨过": [{"start": 2, "expectedCount": 10, "lines": [
+      {"speaker": "主角", "text": {"en": "An old barrow, a knight, and a griffin. This looks like the start of a very unusual errand.", "zh-CN": "一座古冢、一位骑士，还有一只狮鹫。这趟差事看来很不寻常。"}},
+      {"speaker": "神雕", "text": {"en": "...", "zh-CN": "……"}},
+      {"speaker": "杨过", "text": {"en": "If you've come for the sword, the griffin has already heard every excuse.", "zh-CN": "若你是冲着古剑来的，狮鹫已经听过所有借口了。"}},
+      {"speaker": "主角", "text": {"en": "Good thing I'm here for the company.", "zh-CN": "幸好，我是来找旅伴的。"}},
+      {"speaker": "神雕", "text": {"en": "...", "zh-CN": "……"}},
+      {"speaker": "杨过", "text": {"en": "That's the first excuse it hasn't heard.", "zh-CN": "这倒是它头一回听到的借口。"}},
+      {"speaker": "主角", "text": {"en": "King Arthur, how about traveling with us?", "zh-CN": "亚瑟王，要不要和我们一起旅行？"}},
+      {"speaker": "杨过", "text": {"en": "Do you invite every stranger you meet?", "zh-CN": "你遇到陌生人，都会这样邀请吗？"}},
+      {"speaker": "主角", "text": {"en": "Only the ones with excellent references. Yours come with a castle.", "zh-CN": "只邀请来头可靠的。你的来头，还附带一座城堡。"}},
+      {"speaker": "杨过", "text": {"en": "I'll take that as a compliment.", "zh-CN": "我就当这是句恭维吧。"}}
+    ]}],
+    "sdxl_剑魔荒冢.杨过2": [{"start": 0, "expectedCount": 1, "lines": [
+      {"speaker": "杨过", "text": {"en": "What's on your mind?", "zh-CN": "你想说些什么？"}}
+    ]}],
+    "sdxl_1": [{"start": 0, "expectedCount": 3, "lines": [
+      {"speaker": "杨过", "text": {"en": "The Lady of the Lake entrusted me with a sword. I thought the hard part would be finding someone worthy to wield it.", "zh-CN": "湖中仙女托付给我一把剑。我原以为，最难的是找到配得上它的人。"}},
+      {"speaker": "杨过", "text": {"en": "Then I became king. Everyone had a problem, and very few of them could be solved by hitting something.", "zh-CN": "后来我成了国王。每个人都有难题，能靠砍点什么解决的却寥寥无几。"}},
+      {"speaker": "杨过", "text": {"en": "I come here when I need to think. The griffin is a splendid adviser. It has yet to suggest raising taxes.", "zh-CN": "需要静一静时，我就来这里。狮鹫是位好顾问，至今还没劝我加过税。"}}
+    ]}],
+    "sdxl_神雕": [{"start": 0, "expectedCount": 2, "lines": [
+      {"speaker": "神雕", "text": {"en": "Krrr.", "zh-CN": "咕噜。"}},
+      {"speaker": "主角", "text": {"en": "I'll assume that means hello. Your manners are better than most guards'.", "zh-CN": "我就当这是在问好了。你的礼貌，比大多数守卫强。"}}
+    ]}]
+  },
+  "choiceText": {
+    "sdxl_剑魔荒冢.杨过2": {
+      "prompt": {"en": "What will you say to Arthur?", "zh-CN": "要对亚瑟说什么？"},
+      "options": {
+        "en": ["Tell me your story.", "Care for a friendly match?", "Attack Arthur. (-3 Morality)", "Just passing through. Goodbye."],
+        "zh-CN": ["说说你的经历吧。", "来一场友好切磋？", "攻击亚瑟。（道德－3）", "只是路过，告辞了。"]
+      }
+    }
+  },
+  "locations": {
+    "剑魔荒冢": {
+      "杨过": {"description": {"en": "A king, a sword, and an unfinished story.", "zh-CN": "一位国王、一把古剑，还有未完的故事。"}},
+      "神雕": {"description": {"en": "Arthur's watchful, tight-lipped companion.", "zh-CN": "亚瑟身边警觉而寡言的旅伴。"}}
+    }
+  }
+}
