@@ -1299,7 +1299,7 @@
             "id": "denmark-investigation",
             "any": ["雪山飞狐_苗人凤居.田归农来战.胜利.2"],
             "title": {"en": "The old duel needs investigating", "zh-CN": "继续调查旧决斗"},
-            "detail": {"en": "Prepare Kai before Rain Shrine in Rainmarket. If you spared the apothecary, two fights follow without a map break: three party slots (Kai required), then the apothecary leaves and Kai fights two poisoners ALONE, including a Level 15 foe. If you killed the apothecary, the guildmaster offers a different account. Save first: defeat or timeout ends the journey. Getting a manual does not train Kai.", "zh-CN": "先培养凯，再去雨集镇的雨中祠堂。放过药师的路线有连续两战：先三人、凯必选，随后药师离队，凯单独面对两名下毒者，其中一人为15级。杀死药师的路线则会听到另一种说法。先保存，失败或超时会结束旅程。拿到教材不等于已经培养凯。"},
+            "detail": {"en": "Prepare Kai before Rain Shrine in Rainmarket. If you spared the apothecary, Health and Energy carry over between two fights: three party slots (Kai required), then the apothecary leaves and Kai fights two poisoners ALONE, including a Level 15 foe. If you killed the apothecary, the guildmaster offers a different account. Save first: defeat or timeout ends the journey. Getting a manual does not train Kai.", "zh-CN": "先培养凯，再去雨集镇的雨中祠堂。放过药师的路线有两战，生命与能量连续继承：先三人、凯必选，随后药师离队，凯单独面对两名下毒者，其中一人为15级。杀死药师的路线则会听到另一种说法。先保存，失败或超时会结束旅程。拿到教材不等于已经培养凯。"},
             "route": [{"mapId": "大地图", "locationId": "衡阳"}, {"mapId": "衡阳", "locationId": "湘妃庙"}, {"mapId": "湘妃庙", "locationId": "田归农"}]
           },
           {

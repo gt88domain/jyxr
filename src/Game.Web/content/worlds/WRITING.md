@@ -30,6 +30,8 @@
 
 祠堂已做一次正常QA尝试，首战胜、凯单人战败，失败页Load恢复通过；胜利收尾只有静态改写，没有实际到达。The Guildmaster为职业名，未锁定The Mirror Troll候选。需要先准备必选伙伴，不改两战、离队或单人规则；真实失败与显示检查见 [DENMARK_SHRINE_QA.md](../../../../docs/DENMARK_SHRINE_QA.md)。
 
+凯随后实际穿已有装备、选择合条件教材并正常两练到招式4阶，装备主专精随出招到9阶；仅一次准备后祠堂仍单战败。完整Manual的60／60／50条件与9阶上限、Team Practice前两位出场及实际研习经验说明已明确，祠堂警示资源连续承接。培养通过与剧情未通过分开记录，见 [KAI_PREPARATION_QA.md](../../../../docs/KAI_PREPARATION_QA.md)。
+
 伙伴名单从原包加入／跟随命令提取，记录62个身份、65个形态，包含特殊及测试记录。身份是否固定、名称是否接入、加入场景是否改写是三件事；当前20个已定名招募身份全部换名，另42个仍为候选，其中部分名称已在游戏使用。生成的伙伴CSV提供逐项对照，不能把记录总数说成全部正常可招募或全部路线已完成。完整说明见 [FANTASY_COMPANIONS.md](../../../../docs/FANTASY_COMPANIONS.md)。
 
 第一条小说路线是《白马啸西风》对应的风骑者之旅。两个结局保留不同奖励、好感条件与招募结果；不能把低好感分支也写成女主加入。本章已按批准方案改为补给失窃、骑士误判与风车粮仓；原华辉显示为普通战技教官，瓦耳拉齐显示为希内斯，二者不再是同一人的假名与真名。删除父仇、养父与导师死亡文案，见 [SPANISH_WINDMILL.md](../../../../docs/SPANISH_WINDMILL.md)。法国《书剑恩仇录》线已按互不信任的临时同盟改写，宿主修复必选部署后以主角、米莱狄、达达尼昂实际完成普通终战；这不等于全部原版难度一致。改编边界见 [FRENCH_LEDGER.md](../../../../docs/FRENCH_LEDGER.md)。意大利《鸳鸯刀》线已由同一正常新档链、调整实际补给分配后手动打通善线，匹诺曹按原剧情加入；旧失败保留，稻草人分支未验。最新证据见 [BATTLE_READABILITY_ITALY.md](../../../../docs/BATTLE_READABILITY_ITALY.md)，[THREE_STORY_PLAYTHROUGH.md](../../../../docs/THREE_STORY_PLAYTHROUGH.md)保留历史实录；流程、窗口限制及测试边界见 [STORY_CHAPTERS.md](../../../../docs/STORY_CHAPTERS.md)。

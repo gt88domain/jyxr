@@ -1,5 +1,7 @@
 # 丹麦调查后：雨中祠堂QA
 
+后续已用本页另存的失败恢复QA档给凯装备并做两次正常研习，达到招式4阶后单独再试一次，仍单人战败；本页旧失败与源档均保留。最新[培养与一次准备后尝试](KAI_PREPARATION_QA.md)记录独立350银币档及不同profile，不把它们拼接成通关。
+
 ## 验证前记录
 
 基线 `9b31c76c671e5e0372d3fa8d7e13c21e326f4cc2`，仍为原工作区与 `feat/storybound-italian-battle`，未另建writer。接续的是[取药独立QA](DENMARK_NIGHTSHADE_QA.md)十人330银币档，不是替受保护296银币九人档选择分支。
