@@ -4,6 +4,7 @@
     "炼狱穆人清": {"en": "Thoth", "zh-CN": "托特"}
   },
   "uiLabels": {
+    "习得华山派剑法绝技，天外飞龙。": {"en": "Horus learned Sky Dragon Sword from Thoth.", "zh-CN": "荷鲁斯向托特学会了飞龙剑术。"},
     "神剑仙缘穆人清。": {"en": "Thoth has made time for Horus between the camp's other demands.", "zh-CN": "托特从营地的事务中腾出时间，准备听听荷鲁斯的见闻。"},
     "恍惚中天边似有一剑西来": {"en": "A sword strike in a line. Base cost: 2 Rage; base cooldown: 3 turns.", "zh-CN": "直线范围的剑术招式。基础消耗2点怒气，基础冷却3回合。"},
     "月圆之夜，紫禁之巅，一剑西来，天外飞仙!": {"en": "A sword strike in a star pattern. Base cost: 4 Rage; base cooldown: 4 turns.", "zh-CN": "星形范围的剑术招式。基础消耗4点怒气，基础冷却4回合。"},

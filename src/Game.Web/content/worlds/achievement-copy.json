@@ -1,0 +1,12 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "uiLabels": {
+    "杀死阎基，获得七星海棠。": {"en": "Killed the apothecary and obtained Nightshade Blossom.", "zh-CN": "杀死药师，获得夜影花。"},
+    "成为少林寺挂名弟子": {"en": "Became a visiting student of Shaolin Temple.", "zh-CN": "成为少林寺的挂名学徒。"},
+    "获得六脉神剑心法": {"en": "Obtained the teachings of Sixfold Strike.", "zh-CN": "获得六重指击的传承。"},
+    "领悟少林派神技如来神掌。": {"en": "Gained insight into Enlightened Palm.", "zh-CN": "领悟明悟掌。"},
+    "三十年前雁门关之谜已解，慕容复加入队伍。": {"en": "Solved the 30-year mystery at Storm Pass and gained a companion.", "zh-CN": "解开风暴关三十年前的谜团，结识一位同行伙伴。"},
+    "击败野心勃勃的华山剑宗传人封不平。": {"en": "Defeated the ambitious rival sword master at Crane Peak.", "zh-CN": "击败鹤峰那位野心勃勃的剑术高手。"},
+    "击败玄冥二老": {"en": "Defeated the two frost masters.", "zh-CN": "击败两位寒霜高手。"}
+  }
+}

@@ -96,6 +96,31 @@ class GrimmSkinTests(unittest.TestCase):
    for a,b in zip(old['options'],new['options']):
     self.assertEqual({k:v for k,v in a.items() if k!='text'},{k:v for k,v in b.items() if k!='text'})
 
+ def test_achievement_display_keeps_its_own_description_for_a_shared_skill_id(self):
+  for locale in ['en','zh-CN']:
+   display,_=apply_skin(self.raw,self.skin,locale)
+   original_before=copy.deepcopy(self.source);display_before=copy.deepcopy(display)
+   labels={key:text[locale] for key,text in self.skin.get('uiLabels',{}).items()}
+   runtime=compile_runtime_package(self.source,display,labels)
+   self.assertEqual(self.source,original_before);self.assertEqual(display,display_before)
+   self.assertEqual(runtime['browser']['achievements'],self.source['browser']['achievements'])
+   catalog=runtime['browser']['displayCatalog'];scoped=catalog['byCategory']
+   achievement=scoped['achievements']['天外飞龙'];skill=scoped['externalSkills']['天外飞龙']
+   self.assertEqual(achievement['name'],skill['name'])
+   self.assertEqual(achievement['description'],'Horus learned Sky Dragon Sword from Thoth.' if locale=='en' else '荷鲁斯向托特学会了飞龙剑术。')
+   self.assertNotEqual(achievement['description'],skill['description'])
+   self.assertEqual(achievement['sourceName'],'天外飞龙')
+   self.assertEqual(set(scoped['achievements']),{a['id'] for a in self.source['browser']['achievements']})
+
+ def test_untranslated_achievement_retains_its_source_description(self):
+  display,_=apply_skin(self.raw,self.skin,'en')
+  # A title with a skill ID but no translated description still owns its text.
+  runtime=compile_runtime_package(self.source,display)
+  achievement=next(a for a in self.source['browser']['achievements'] if a['id']=='天外飞龙')
+  scoped=runtime['browser']['displayCatalog']['byCategory']
+  self.assertEqual(scoped['achievements']['天外飞龙']['description'],achievement['description'])
+  self.assertNotEqual(scoped['achievements']['天外飞龙']['description'],scoped['externalSkills']['天外飞龙']['description'])
+
  def test_recovered_pages_keep_their_name_and_original_teaching_rules(self):
   original=next(i for i in self.source['items'] if i['id']=='两页胡家刀法')
   for locale,name in [('en','Frontier Cleave Pages'),('zh-CN','边境重斩残页')]:

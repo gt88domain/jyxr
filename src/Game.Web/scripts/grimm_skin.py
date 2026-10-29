@@ -253,6 +253,16 @@ def compile_runtime_package(original,display,extra_labels=None):
     catalog={'schemaVersion':1,'byId':by_id,'text':{source:next(iter(values)) for source,values in candidates.items() if len(values)==1}}
     catalog['byCategory']={category:{id:{field:next(iter(values)) for field,values in fields.items() if len(values)==1} for id,fields in entries.items()} for category,entries in category_candidates.items()}
     catalog['text'].update(extra_labels or {})
+    # Achievement IDs can also name skills. Keep their own descriptions even
+    # when untranslated, instead of inheriting another category's byId entry.
+    achievements={}
+    for achievement in original['browser'].get('achievements',[]):
+        fields={key:catalog['text'].get(achievement[key],achievement[key])
+                for key in ['name','description'] if isinstance(achievement.get(key),str)}
+        fields.setdefault('name',achievement['id'])
+        fields['sourceName']=achievement.get('name') or achievement['id']
+        achievements[achievement['id']]=fields
+    catalog['byCategory']['achievements']=achievements
     runtime['browser']['displayCatalog']=catalog
     # No names, descriptions or labels ever enter the rule definitions.
     for key in original:

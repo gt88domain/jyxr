@@ -53,3 +53,18 @@ test('a shared legacy ID keeps skill, scroll and shop labels distinct without ch
  assert.deepEqual(view.hero.cultivation,{itemId:'shared',itemName:'Ironbody Mastery Scroll',skillId:'shared',skillName:'Ironbody Mastery'});
  assert.equal(view.shop.products[0].price,123);assert.equal(view.inventory[0].count,2);
 });
+test('a shared skill and achievement ID preserves separate bilingual descriptions and unlock data',()=>{
+ for(const language of ['en','zh-CN']){
+  const names=language==='en'?{skill:'Sky Dragon Sword',title:'Sky Dragon Sword',earned:'Learned from Thoth.',effect:'A sword attack.'}:{skill:'飞龙剑术',title:'飞龙剑术',earned:'向托特学会剑术。',effect:'剑术攻击。'};
+  const scoped={schemaVersion:1,text:{},byId:{shared:{name:names.skill,description:names.effect,sourceName:'shared'}},byCategory:{
+   externalSkills:{shared:{name:names.skill,description:names.effect,sourceName:'shared'}},
+   achievements:{shared:{name:names.title,description:names.earned,sourceName:'shared'}}
+  }};
+  const input={externalSkills:[{id:'shared',name:'shared',description:'skill source',powerBase:6}],achievements:[{id:'shared',name:'shared',description:'title source',unlocked:true}],command:{call:"legacy_nick('shared')"}},before=structuredClone(input),view=projectPresentation(input,scoped);
+  assert.deepEqual(input,before);assert.equal(view.externalSkills[0].description,names.effect);assert.equal(view.achievements[0].description,names.earned);assert.equal(view.externalSkills[0].name,names.skill);assert.equal(view.achievements[0].name,names.title);assert.equal(view.achievements[0].id,'shared');assert.equal(view.achievements[0].unlocked,true);assert.equal(view.externalSkills[0].powerBase,6);assert.deepEqual(view.command,input.command);
+ }
+});
+test('an achievement absent from its category never borrows a foreign template description',()=>{
+ const source={achievements:[{id:'草帽',name:'Unmapped title',description:'An original achievement description.'}]};
+ assert.deepEqual(projectPresentation(source,catalog),source);
+});

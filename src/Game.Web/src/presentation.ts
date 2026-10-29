@@ -29,9 +29,10 @@ export function projectPresentation<T>(input:T,catalog?:DisplayCatalog):T {
     }
     const object=value as Record<string,unknown>;
     const id=typeof object.definitionId==='string'?object.definitionId:typeof object.id==='string'?object.id:undefined;
-    const category=({inventory:'items',items:'items',item:'items',products:'items',sellable:'items',entries:'items',externalSkills:'externalSkills',internalSkills:'internalSkills',specialSkills:'specialSkills',talents:'talents',buffs:'buffs',sects:'sects',map:'maps',locations:'locations',characters:'characters',party:'characters',roster:'characters',units:'characters',hero:'characters',managedCharacter:'characters'} as Record<string,string>)[key];
+    const category=({inventory:'items',items:'items',item:'items',products:'items',sellable:'items',entries:'items',externalSkills:'externalSkills',internalSkills:'internalSkills',specialSkills:'specialSkills',talents:'talents',buffs:'buffs',sects:'sects',achievements:'achievements',map:'maps',locations:'locations',characters:'characters',party:'characters',roster:'characters',units:'characters',hero:'characters',managedCharacter:'characters'} as Record<string,string>)[key];
     const scopedId=category==='items'&&typeof object.itemId==='string'?object.itemId:id;
-    const display=categorizedDisplay(catalog,category?[category]:key==='skills'?skillCategories:[],scopedId)??(id?catalog!.byId[id]:undefined);
+    // An unknown achievement keeps its own text rather than a foreign template.
+    const display=categorizedDisplay(catalog,category?[category]:key==='skills'?skillCategories:[],scopedId)??(id&&category!=='achievements'?catalog!.byId[id]:undefined);
     const result:Record<string,unknown>={};
     for(const [field,item] of Object.entries(object)){
       if(field==='displayCatalog'){result[field]=item;continue;}
