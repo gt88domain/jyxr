@@ -1,0 +1,23 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "speakerNames": {
+    "程英.初级": {"en": "Guinevere", "zh-CN": "桂妮薇儿"},
+    "程英.高级": {"en": "Guinevere", "zh-CN": "桂妮薇儿"}
+  },
+  "dialogueEdits": {
+    "sdxl_程英.月下吹箫": [{"start": 2, "expectedCount": 6, "lines": [
+      {"speaker": "程英.初级", "text": {"en": "A knight rides out at break of day, and somehow takes the map away.", "zh-CN": "骑士清早出了门，顺手把地图也带走了。"}},
+      {"speaker": "主角", "text": {"en": "That explains why everyone's asking for directions.", "zh-CN": "难怪大家都在问路。"}},
+      {"speaker": "程英.初级", "text": {"en": "You were listening?", "zh-CN": "你听见了？"}},
+      {"speaker": "主角", "text": {"en": "A little. Are you waiting for someone?", "zh-CN": "听见一点。你在等人吗？"}},
+      {"speaker": "程英.初级", "text": {"en": "Looking for him, actually. He has a talent for finding trouble before breakfast.", "zh-CN": "其实是在找人。他总能在早饭前就找到麻烦。"}},
+      {"speaker": "主角", "text": {"en": "Then travel with us. We seem to have a talent for finding it afterward.", "zh-CN": "那就和我们同行吧。我们通常在早饭后找到麻烦。"}}
+    ]}],
+    "sdxl_程英.加入": [{"start": 0, "expectedCount": 1, "lines": [
+      {"speaker": "程英.初级", "text": {"en": "Your good reputation got here before you did. I'd be glad to travel together.", "zh-CN": "你的好名声，比你先到了这里。我很乐意与你同行。"}}
+    ]}],
+    "sdxl_程英.不加入": [{"start": 0, "expectedCount": 1, "lines": [
+      {"speaker": "程英.初级", "text": {"en": "Not yet. A good reputation matters when you're trusting someone with your life.", "zh-CN": "暂时还不行。把性命托付给别人时，好名声很重要。"}}
+    ]}]
+  }
+}
