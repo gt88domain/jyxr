@@ -1,0 +1,44 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "maps": {
+    "公主寝宫": {
+      "name": {"en": "Royal Apartments", "zh-CN": "王室居所"},
+      "description": {"en": "Heavy curtains and a folding screen shelter these quiet rooms from the guarded corridors. The windows overlook the courtyard.", "zh-CN": "厚重的帘幕与一架屏风，将安静的房间和卫兵把守的走廊隔开。窗外是一座庭院。"}
+    }
+  },
+  "uiLabels": {
+    "惊讶的望着你": {"en": "Cleopatra wasn't expecting company.", "zh-CN": "克娄巴特拉没料到会有访客。"}
+  },
+  "dialogueEdits": {
+    "bixuejianShyou_京城行1": [{"start": 2, "expectedCount": 22, "lines": [
+      {"speaker": "袁承志", "text": {"en": "Cleopatra? I thought you were traveling.", "zh-CN": "克娄巴特拉？我还以为你在四处游历。"}},
+      {"speaker": "阿九", "text": {"en": "I was. Then the palace decided I was essential. How did you get past the guards?", "zh-CN": "原本是。后来，王宫觉得我不可或缺。你怎么绕过卫兵的？"}},
+      {"speaker": "太监", "text": {"en": "Your Majesty? May I come in?", "zh-CN": "陛下？可以进来吗？"}},
+      {"speaker": "阿九", "text": {"en": "What is it?", "zh-CN": "什么事？"}},
+      {"speaker": "太监", "text": {"en": "Ramesses says there's an intruder. We've been ordered to search every room.", "zh-CN": "拉美西斯说有闯入者，下令搜查每个房间。"}},
+      {"speaker": "阿九", "text": {"en": "Then look somewhere useful. I haven't invited an assassin.", "zh-CN": "那就去该查的地方找。我可没邀请刺客。"}},
+      {"speaker": "太监", "text": {"en": "I still have to inspect the apartments.", "zh-CN": "可我仍然得检查这几间屋子。"}},
+      {"speaker": "阿九", "text": {"en": "You plan to search my rooms?", "zh-CN": "你打算搜查我的房间？"}},
+      {"speaker": "太监", "text": {"en": "I'd rather annoy you than report an empty search to Ramesses.", "zh-CN": "比起向拉美西斯报告一无所获，我宁愿先惹您生气。"}},
+      {"speaker": "阿九", "text": {"en": "Horus, behind that screen. Quietly.", "zh-CN": "荷鲁斯，躲到屏风后面。轻一点。"}},
+      {"speaker": "袁承志", "text": {"en": "I can get back out the window.", "zh-CN": "我可以从窗户出去。"}},
+      {"speaker": "阿九", "text": {"en": "And introduce yourself to every guard in the courtyard? Behind the screen.", "zh-CN": "然后，向院子里的每个卫兵自我介绍？到屏风后面去。"}},
+      {"speaker": "袁承志", "text": {"en": "A difficult strategy to argue with.", "zh-CN": "这个安排，还真不好反驳。"}},
+      {"speaker": "袁承志", "text": {"en": "(Horus slips behind a folding screen. Cleopatra moves a lamp to leave it in shadow.)", "zh-CN": "（荷鲁斯闪到屏风后。克娄巴特拉挪开一盏灯，让那边藏进阴影里。）"}},
+      {"speaker": "阿九", "text": {"en": "All right. A quick look, then you can get back to your search.", "zh-CN": "好了。看一眼，然后继续你的搜查。"}},
+      {"speaker": "太监", "text": {"en": "(The guard checks the room, sees nothing unusual, and backs toward the door.)", "zh-CN": "（卫兵查看房间，没有发现异常，便退向门口。）"}},
+      {"speaker": "阿九", "text": {"en": "Thank you. Close the door on your way out.", "zh-CN": "有劳了。出去时，把门带上。"}},
+      {"speaker": "袁承志", "text": {"en": "(Horus steps out and nearly knocks over the lamp.)", "zh-CN": "（荷鲁斯走出来，险些撞翻那盏灯。）"}},
+      {"speaker": "阿九", "text": {"en": "Careful. I just convinced him there was nobody dangerous in here.", "zh-CN": "当心。我刚让他相信，这里没有危险人物。"}},
+      {"speaker": "袁承志", "text": {"en": "I make no promises about the furniture.", "zh-CN": "至于家具安不安全，我可不敢保证。"}},
+      {"speaker": "阿九", "text": {"en": "Then let's leave while it still has a chance.", "zh-CN": "那就趁它还有机会，赶紧走吧。"}},
+      {"speaker": "主角", "text": {"en": "If we're all finished defeating the furniture, can we go?", "zh-CN": "各位，要是已经打败了家具，我们可以出发了吗？"}}
+    ]}],
+    "bixuejianShyou_京城行2": [{"start": 2, "expectedCount": 4, "lines": [
+      {"speaker": "阿九", "text": {"en": "I'm coming with you.", "zh-CN": "我要和你们一起走。"}},
+      {"speaker": "袁承志", "text": {"en": "Just like that?", "zh-CN": "就这么决定了？"}},
+      {"speaker": "阿九", "text": {"en": "I've stayed long enough to know who owns every locked door. I'd like to see somewhere else.", "zh-CN": "我已经待得够久了，久到知道每扇锁着的门都听谁的。现在，我想去看看别的地方。"}},
+      {"speaker": "主角", "text": {"en": "Then welcome aboard. We can argue about the route outside.", "zh-CN": "那就欢迎同行。至于接下来去哪儿，我们出去再讨论。"}}
+    ]}]
+  }
+}
