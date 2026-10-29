@@ -823,6 +823,8 @@
     }
   },
   "uiLabels": {
+    "仁者无敌": {"en": "Kindness Prevails", "zh-CN": "仁者无敌"},
+    "书生袁冠南入队": {"en": "Pinocchio joined your party.", "zh-CN": "匹诺曹加入队伍。"},
     "太岳四侠": {"en": "No Toll Today", "zh-CN": "渡口免票"},
     "加入雪山大轮寺。": {"en": "Joined the Knights of the Round Table.", "zh-CN": "加入圆桌骑士团。"},
     "打赢四个看似搞笑却很仗义的货": {"en": "Defeated the fake toll collectors at the ferry.", "zh-CN": "击败渡口自封的收税团。"},
@@ -1149,8 +1151,8 @@
               "zh-CN": "匹诺曹加入旅程"
             },
             "detail": {
-              "en": "You refused the seals, defeated Orlando, and recruited Pinocchio. Both good-branch decisions added 3 Morality each. The Blue Fairy stays a story ally; she does not join. Select Pinocchio in Party to equip and train him.",
-              "zh-CN": "你拒收双印记、击败奥兰多，招募了匹诺曹。善线两处各增加3点道德值。蓝仙女是剧情盟友，不会入队。到队伍中选择匹诺曹，为他穿戴装备并安排研习。"
+              "en": "You refused the seals, defeated Orlando, and recruited Pinocchio. Refusing the seals added 3 Morality; winning the final fight added 3 more. The Blue Fairy stays a story ally; she does not join. Select Pinocchio in Party to equip and train him.",
+              "zh-CN": "你拒收双印记、击败奥兰多，招募了匹诺曹。拒收印记加3点道德，终战获胜再加3点。蓝仙女是剧情盟友，不会入队。到队伍中选择匹诺曹，为他穿戴装备并安排研习。"
             },
             "route": [],
             "complete": true,

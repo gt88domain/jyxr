@@ -1,5 +1,7 @@
 # 战场可读性与意大利终战检查
 
+最新结果：沿同一新开局档，正常增加一瓶生命药并重新分配补给后，意大利善线三战实际获胜、匹诺曹加入，见文末“补给分配后的首次真实通关”。前文失败是保留的历史实录，不计入获胜分支的收入与消耗。
+
 本文所有“手机”检查均指无头 Chromium 的移动尺寸视口模拟，使用鼠标点击，不是手机真机或触屏实测。后续报告增加明确设备元数据；不将390px无溢出等同于手机硬件验收。
 
 本批基于 `b7913959845a95880fcf13103331c8e87eda31c6`，在 `feat/storybound-italian-battle` 继续。没有修改战斗规则、数值、人物成长、奖励或剧情判定。
@@ -163,3 +165,40 @@ Steel Gauntlets 的正常来源仍为 Storymarket → West Market → Shop，原
 ITALY_RESUME_TRAINING_REPORT=src/Game.Web/test-results/opening-italy-training-observed.json GAME_WEB_URL=http://127.0.0.1:4230 node src/Game.Web/tests/opening-italy-newgame-smoke.mjs
 GAME_WEB_URL=http://127.0.0.1:4230 node src/Game.Web/tests/italy-newgame-review-smoke.mjs
 ```
+
+## 补给分配后的首次真实通关（01916b8之后）
+
+从上节实际手动恢复的73银币档继续，源SHA仍为 `f09e3e0388bcecea3864de604a5eb26678fb8010e7d8242873c73ad31e40dd1c`。先复制到 `test-results/backups/pre-italy-allocation-01916b8/`，保留原151银币失败分支与报告。没有重新培养、分配属性、换装备、编辑存档、补发资源或改变敌人。
+
+上次把唯一的生命／能量混合药用于伙伴，主角仅111能量进入单人战。这次到Crossroads Supplies正常花50银币补买一瓶Restorative Tonic，73→23，伙伴使用生命补给，Ninepetal专留主角单人战。伙伴能量低时正常休息，低血量敌人优先廉价收尾；主角在开场仅做有至少700能量余量的范围支援。不是只换药而其他操作完全相同的对照试验，随机因素也未固定。
+
+下表HP／MP均为实际当前值，升级造成的上限增长另算。每次动作记录包含行动前后所有单位与库存；两次快照之间可能包含敌方行动，不能把全部变化都归于单个按钮。
+
+| 战斗 | 开始HP／MP（主角；达达尼昂；米莱狄） | 结束HP／MP与存活 | 结果／余额 |
+| --- | --- | --- | --- |
+| 收税团 | 1380/1020；1500/1200；1100/960 | 1380/1020；1153/321；660/476，三人存活 | win，tick 682；23→47 |
+| 双印记冲突 | 1380/1020；1153/321；660/476 | 主角1380/816存活；达达尼昂0/217、米莱狄0/148退场 | win，tick 2632；47→101 |
+| 原主角单人终战 | 主角1380/816，仅主角部署 | 主角567/31存活，敌方全部击倒 | win，tick 2636；101→256 |
+
+第一战没有用药。第二战实际消耗：两瓶Restorative分别用于米莱狄、达达尼昂；Hearth-roast Chicken用于米莱狄；Strong Restorative用于达达尼昂。Ninepetal保留到第三战，在主角865生命／364能量时使用一次，之后已无这几类补给。第二战明显比前次1490 tick慢，不能说全部阶段效率均改善。
+
+单人战记录66次主角操作：39次招式、13次移动、13次休息、1次药剂。**Full Bloom实际施放7次**，当时实时卡为10级、144能量／4怒气；不是仅解锁或选中。Rallying Cry只用1次，已在有下一招能量余量时才施放；其余招式为Iron Seal Strike 8次、基础旅人拳击19次、Petalstorm Fist 2次、Force Hammer 2次。66份技能可用性快照保留当时能量、怒气、冷却和不可用理由。记录的范围覆盖数量不是命中或状态触发保证；此次报告未保存精确施法中心坐标，不追填。
+
+### 真实结算、英文与存档
+
+拒收印记原道德+3，终战获胜再+3，50→56。匹诺曹按原剧情15级加入，队伍共7人；蓝仙女没有加入。最终主角12级、达达尼昂17、米莱狄11、杜尔西内娅9、疯帽匠12、埃尔2。原称号 `仁者无敌` 实际解锁，随机掉落Antidote Tincture 1份；没有继续与格林推进会关闭其他支线的世界事件。
+
+实际界面发现新获称号的名字、说明仍为中文，已在显示词典补为Kindness Prevails／Pinocchio joined your party.，未改解锁或ID。完成指引原写“两次善线选择各加3”不准确，现明确一次拒收选择加3、终战获胜再加3。玩家指南补充战吼也花能量，以及休息、用药都消耗行动；只说明现有规则，不替玩家执行分配或新增奖励。
+
+`italy-energy-allocation.json` 的 `passed=true`、`progressVerified=true` 与三场实际win同时成立；4项检查，无浏览器异常、请求失败或HTTP错误。它保留每场起止、药品目标、技能与逐行动状态。获胜导出 `italy-allocation-victory-save.json` 的SHA为 `9b18cc6ca59ceec6b76286b167a621af0aeac16bdf2c9993b3aa9a3e85ca75d6`；此次夜间战前导出为 `63d3e9a7211e60a2de436d7a681c48343626a2c425aaaf34a2359e9aca21718f`。保存、刷新读取及导出核对了任务、伙伴构筑、装备、教材、物品、道德与256银币。当前生命／能量仍遵循[原恢复机制](MAP_SAVE_VITALS.md)，不算精确资源恢复修复。
+
+UI复验只导入上述真实战前／结局档，不重复战斗：检查指南真实入口、完成说明、已获称号及通知、Party→Pinocchio→Study的真实人物页、存读档与390px布局。测试脚本及报告位于下列入口，报告、截图和存档是忽略产物，未随源码分支发布。
+
+最终 `italy-allocation-review.json` 8项检查通过，无浏览器异常、请求失败或HTTP错误。最初脚本误等单独的Load manual save按钮；刚手动保存且没有更新自动档时，Continue本来就指向同一手动档，不另显示按钮。该选择器超时保留为 `italy-allocation-review-selector-observed.json`，修正后实际点击Continue完成核对，不计为游戏失败或新增核心修复。390×844仍是无头Chromium鼠标视口，不是真机。前端构建、8项章节流程及13项冻结规则检查通过。
+
+```sh
+GAME_WEB_URL=http://127.0.0.1:4230 node src/Game.Web/tests/italy-energy-allocation-smoke.mjs
+GAME_WEB_URL=http://127.0.0.1:4230 node src/Game.Web/tests/italy-allocation-review-smoke.mjs
+```
+
+此结果是同一新档链的一次普通难度手动善线通关，不保证任意构筑、随机种子、自动战斗或困难难度。稻草人分支、新伙伴实际再培养、后期个人故事、其他组织和真机仍未由本节验证。旧失败及其真实恢复证据保留；本次没有自然失败，通用gameover页读档按钮仍未触发。C#、战斗／成长／经济、触发、收益及存档格式未改，未重建.NET，无新素材需求，不部署或合并。
