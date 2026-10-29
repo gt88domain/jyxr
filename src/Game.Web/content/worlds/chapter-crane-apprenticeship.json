@@ -1,0 +1,67 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "speakerNames": {
+    "哑仆": {"en": "Geb", "zh-CN": "盖布"}
+  },
+  "uiLabels": {
+    "儿时袁承志": {"en": "Horus", "zh-CN": "荷鲁斯"},
+    "似乎是华山派的哑仆": {"en": "Geb greets visitors to Thoth's retreat with a wave and a watchful eye.", "zh-CN": "盖布挥手迎接来访者，留意着通往托特居所的小路。"}
+  },
+  "definitions": {
+    "battles": {
+      "华山仙境.战斗": {"name": {"en": "Thoth's First Lesson", "zh-CN": "托特的第一课"}}
+    }
+  },
+  "dialogueEdits": {
+    "bixuejianShyou_华山学武1": [{"start": 2, "expectedCount": 11, "lines": [
+      {"speaker": "儿时袁承志", "text": {"en": "Does every teacher live at the top of a mountain?", "zh-CN": "所有老师都住在山顶上吗？"}},
+      {"speaker": "崔秋山", "text": {"en": "Only the ones hoping to avoid visitors. I've been thinking about our next move.", "zh-CN": "只有那些不想被打扰的。我一直在想，咱们接下来该怎么办。"}},
+      {"speaker": "崔秋山", "text": {"en": "Before I return to camp, I want you to meet Thoth. He taught me, and he may agree to teach you.", "zh-CN": "回营地之前，我想带你见见托特。他教过我，也许也愿意教你。"}},
+      {"speaker": "儿时袁承志", "text": {"en": "You're leaving?", "zh-CN": "你要走了？"}},
+      {"speaker": "崔秋山", "text": {"en": "I've healed enough to return to my duties. You still have a great deal to learn.", "zh-CN": "我的伤已经好得差不多，该回去做事了。你还有很多本领要学。"}},
+      {"speaker": "儿时袁承志", "text": {"en": "Then let me come with you.", "zh-CN": "那让我跟你一起去。"}},
+      {"speaker": "崔秋山", "text": {"en": "Not yet. Learn to stand your ground before you go looking for trouble.", "zh-CN": "还不行。先学会站稳脚跟，再去找麻烦。"}},
+      {"speaker": "哑仆", "text": {"en": "(Geb raises a hand in greeting, then points to the narrow trail.)", "zh-CN": "（盖布举手招呼，随后指向狭窄的小路。）"}},
+      {"speaker": "崔秋山", "text": {"en": "Geb. Good to see you. Horus, he keeps Thoth's visitors from wandering off a cliff.", "zh-CN": "盖布，见到你真好。荷鲁斯，多亏有他照看，来拜访托特的人才不会走下悬崖。"}},
+      {"speaker": "儿时袁承志", "text": {"en": "Good to meet you. I was beginning to worry about that.", "zh-CN": "很高兴见到你。我刚才还真在担心这个。"}},
+      {"speaker": "哑仆", "text": {"en": "(Geb smiles and beckons you along the path.)", "zh-CN": "（盖布笑着招手，示意你们沿小路跟上。）"}}
+    ]}],
+    "bixuejianShyou_华山学武2": [{"start": 2, "expectedCount": 6, "lines": [
+      {"speaker": "哑仆", "text": {"en": "(Geb taps on the door and gestures for you to enter.)", "zh-CN": "（盖布轻敲房门，示意你们进去。）"}},
+      {"speaker": "穆人清", "text": {"en": "Visitors? I was just enjoying a remarkably quiet day.", "zh-CN": "有客人？我正享受这难得安静的一天呢。"}},
+      {"speaker": "儿时袁承志", "text": {"en": "Master Thoth! I've come to be your student.", "zh-CN": "托特大师！我是来拜师的。"}},
+      {"speaker": "穆人清", "text": {"en": "You have the introduction backward. Usually, I agree first.", "zh-CN": "你把顺序弄反了。通常，得先问问我同不同意。"}},
+      {"speaker": "崔秋山", "text": {"en": "I've taught Horus a few Gauntlet techniques. He learns quickly, especially when he listens. Will you give him a chance?", "zh-CN": "我教过荷鲁斯几招拳套战技。他学得很快，尤其是肯认真听的时候。能给他一个机会吗？"}},
+      {"speaker": "穆人清", "text": {"en": "I'll judge that for myself. Show me what you've learned.", "zh-CN": "这个，我亲自判断。让我看看你学到了什么。"}}
+    ]}],
+    "bixuejianShyou_华山收徒1": [
+      {"start": 2, "expectedCount": 9, "lines": [
+        {"speaker": "穆人清", "text": {"en": "A quick learner. Yes, I'll teach you. We can work on the listening.", "zh-CN": "学得确实快。好，我愿意教你。认真听讲的本领，可以慢慢练。"}},
+        {"speaker": "崔秋山", "text": {"en": "Thank you, Thoth.", "zh-CN": "谢谢你，托特。"}},
+        {"speaker": "儿时袁承志", "text": {"en": "Thank you, teacher!", "zh-CN": "谢谢老师！"}},
+        {"speaker": "儿时袁承志", "text": {"en": "(Horus bows so low that he nearly loses his balance.)", "zh-CN": "（荷鲁斯深深鞠躬，差点没站稳。）"}},
+        {"speaker": "崔秋山", "text": {"en": "Stay here and learn, Horus. I'll see our friend back down the mountain.", "zh-CN": "留在这里好好学，荷鲁斯。我陪咱们的朋友下山。"}},
+        {"speaker": "儿时袁承志", "text": {"en": "Thank you, Shu. For bringing me here. For all of it.", "zh-CN": "谢谢你，舒。谢谢你带我来，还有一路上的一切。"}},
+        {"speaker": "崔秋山", "text": {"en": "Save some gratitude for after your first lesson.", "zh-CN": "留点谢意，等上完第一堂课再说。"}},
+        {"speaker": "儿时袁承志", "text": {"en": "Thank you, my friend. I'll stay here and train. Perhaps we'll share the road again.", "zh-CN": "也谢谢你，朋友。我会留下练习，也许以后还能再次同行。"}},
+        {"speaker": "主角", "text": {"en": "Take your time. I'd prefer a reunion with fewer rescue attempts.", "zh-CN": "慢慢学。下次重逢，我希望能少救你几回。"}}
+      ]},
+      {"start": 12, "expectedCount": 1, "lines": [
+        {"speaker": "穆人清", "text": {"en": "A gift for the road. Three Orchardkeeper's Peaches. You've earned more than sore feet.", "zh-CN": "送你三颗守园人的蜜桃，带在路上。这一路，你不该只收获两只酸疼的脚。"}}
+      ]},
+      {"start": 14, "expectedCount": 1, "lines": [
+        {"speaker": "主角", "text": {"en": "Thank you. Finally, a lesson I can eat.", "zh-CN": "谢谢。终于有一堂课，能吃进肚子里了。"}}
+      ]}
+    ],
+    "bixuejianShyou_华山收徒2": [{"start": 2, "expectedCount": 8, "lines": [
+      {"speaker": "穆人清", "text": {"en": "Rough around the edges, but you've only just begun. I'll teach you.", "zh-CN": "还不够熟练，不过你也才刚开始。我愿意教你。"}},
+      {"speaker": "崔秋山", "text": {"en": "Thank you, Thoth.", "zh-CN": "谢谢你，托特。"}},
+      {"speaker": "儿时袁承志", "text": {"en": "Thank you, teacher!", "zh-CN": "谢谢老师！"}},
+      {"speaker": "儿时袁承志", "text": {"en": "(Horus bows, then winces at a fresh bruise.)", "zh-CN": "（荷鲁斯鞠了一躬，牵动新添的淤青，忍不住咧了咧嘴。）"}},
+      {"speaker": "崔秋山", "text": {"en": "Stay and learn, Horus. If you mean to help people, start by keeping your guard up.", "zh-CN": "留下来学吧，荷鲁斯。真想帮助别人，就先学会保护好自己。"}},
+      {"speaker": "儿时袁承志", "text": {"en": "I will. I won't waste this chance.", "zh-CN": "我会的。我不会浪费这个机会。"}},
+      {"speaker": "崔秋山", "text": {"en": "Good. I'm returning to camp. Take care of each other.", "zh-CN": "好。我要回营地了，你们互相照顾。"}},
+      {"speaker": "主角", "text": {"en": "We will. Safe travels, Shu.", "zh-CN": "我们会的。舒，一路平安。"}}
+    ]}]
+  }
+}
