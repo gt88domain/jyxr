@@ -1,5 +1,8 @@
 {
   "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "speakerNames": {
+    "何红药": {"en": "Nephthys", "zh-CN": "奈芙蒂斯"}
+  },
   "maps": {
     "华山山洞": {
       "name": {"en": "Crane Peak Cave", "zh-CN": "华山山洞"},
@@ -15,10 +18,51 @@
         "name": {"en": "Crane Peak Cave", "zh-CN": "华山山洞"},
         "description": {"en": "A small cave behind Crane Peak.", "zh-CN": "华山后方的一个小山洞。"}
       }
+    },
+    "华山山洞": {
+      "何红药": {
+        "name": {"en": "Nephthys", "zh-CN": "奈芙蒂斯"},
+        "description": {"en": "Nephthys keeps a quiet vigil in the cave. She would rather not be interrupted.", "zh-CN": "奈芙蒂斯在洞中静静守夜，不希望被打扰。"}
+      }
     }
   },
   "uiLabels": {
-    "返回华山后山。": {"en": "Back to Hidden Glade.", "zh-CN": "返回华山后山。"}
+    "返回华山后山。": {"en": "Back to Hidden Glade.", "zh-CN": "返回华山后山。"},
+    "何红药帮手": {"en": "Vigil Attendant", "zh-CN": "守夜侍从"}
+  },
+  "definitions": {
+    "battles": {
+      "何红药_战斗": {"name": {"en": "Nephthys's Vigil", "zh-CN": "奈芙蒂斯的守夜"}}
+    }
+  },
+  "commandText": {
+    "击败何红药，得到五毒教信物。": {"en": "Faced Nephthys's wrath and received a Venom Circle Token.", "zh-CN": "应对了奈芙蒂斯的怒火，获得一枚毒环信物。"}
+  },
+  "dialogueEdits": {
+    "碧血剑_何红药1": [{"start": 0, "expectedCount": 7, "lines": [
+      {"speaker": "何红药", "text": {"en": "Osiris rules the underworld now. I still catch myself listening for his footsteps.", "zh-CN": "奥西里斯如今统治冥界。我却还是忍不住，想听见他的脚步声。"}},
+      {"speaker": "主角", "text": {"en": "You knew him well?", "zh-CN": "你和他很亲近？"}},
+      {"speaker": "何红药", "text": {"en": "My brother. Isis is my sister, and Horus is her son. Grief is practically a family business.", "zh-CN": "他是我兄弟。伊西斯是我姐妹，荷鲁斯是她的儿子。我们家简直把哀悼做成了家业。"}},
+      {"speaker": "主角", "text": {"en": "That sounds like a difficult line of work.", "zh-CN": "这份家业，听起来不太好做。"}},
+      {"speaker": "何红药", "text": {"en": "Especially when visitors mistake a quiet vigil for an invitation to chat.", "zh-CN": "尤其是访客总把安静守夜，当成欢迎闲聊的邀请。"}},
+      {"speaker": "主角", "text": {"en": "Would you rather be alone?", "zh-CN": "你想一个人静一静？"}},
+      {"speaker": "何红药", "text": {"en": "Yes. Even the dead deserve a little privacy.", "zh-CN": "是的。就连亡者，也该有点清静。"}}
+    ]}],
+    "碧血剑_何红药2": [{"start": 0, "expectedCount": 1, "lines": [
+      {"speaker": "何红药", "text": {"en": "I asked for quiet, traveler. Stay, and you'll meet the less welcoming side of a guardian.", "zh-CN": "旅人，我已经请你给我一点清静。再留下，就得见识守护者不怎么好客的一面了。"}}
+    ]}],
+    "碧血剑_何红药3": [{"start": 0, "expectedCount": 1, "lines": [
+      {"speaker": "何红药", "text": {"en": "Then defend yourself. The dead are under my protection.", "zh-CN": "那就准备自保吧。亡者由我守护。"}}
+    ]}],
+    "碧血剑_何红药胜": [
+      {"start": 0, "expectedCount": 2, "lines": [
+        {"speaker": "何红药", "text": {"en": "Keep the token. I return to Osiris in the Duat. You still have a life to get on with.", "zh-CN": "信物留给你。我该回冥界去见奥西里斯了。你在人间还有自己的路要走。"}},
+        {"speaker": "主角", "text": {"en": "I'll try to spend less of it arguing with gods.", "zh-CN": "我争取少花点时间，和神明争论。"}}
+      ]},
+      {"start": 3, "expectedCount": 1, "lines": [
+        {"speaker": "主角", "text": {"en": "A Venom Circle Token. Maybe the next gatekeeper will be easier to talk to.", "zh-CN": "一枚毒环信物。希望下一个守门人，能好说话些。"}}
+      ]}
+    ]
   },
   "choiceText": {
     "碧血剑_何红药1": {
