@@ -1,0 +1,56 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "uiLabels": {
+    "温方山": {"en": "Sinuhe", "zh-CN": "辛努赫"},
+    "温方悟": {"en": "Ra", "zh-CN": "拉"},
+    "温方施": {"en": "Khonsu", "zh-CN": "孔苏"},
+    "石梁五祖": {"en": "Stonebridge Victor", "zh-CN": "石桥胜者"}
+  },
+  "dialogueEdits": {
+    "bixuejianShyou_接金胜不开包裹石梁派1": [{"start": 2, "expectedCount": 14, "lines": [
+      {"speaker": "温方达", "text": {"en": "The ledger lists two chests. Where's the other one?", "zh-CN": "账簿上记着两箱。另一箱在哪儿？"}},
+      {"speaker": "温青青", "text": {"en": "It was separated from us at the ferry.", "zh-CN": "在渡口时，和我们分开了。"}},
+      {"speaker": "温方达", "text": {"en": "Separated? Gold usually needs help with that.", "zh-CN": "分开了？黄金通常得有人帮忙，才会自己走开。"}},
+      {"speaker": "温青青", "text": {"en": "We had more volunteers than we needed.", "zh-CN": "那会儿，热心帮忙的人有点太多。"}},
+      {"speaker": "袁承志", "text": {"en": "Mother. We found you.", "zh-CN": "母亲。找到你了。"}},
+      {"speaker": "温青青", "text": {"en": "And you've brought our volunteer.", "zh-CN": "还把我们的热心人带来了。"}},
+      {"speaker": "温方达", "text": {"en": "You know this traveler?", "zh-CN": "你认识这位旅人？"}},
+      {"speaker": "袁承志", "text": {"en": "We disagreed at the ferry. The parcel is still sealed.", "zh-CN": "我们在渡口起过争执。包裹还封着。"}},
+      {"speaker": "袁承志", "text": {"en": "Show them the parcel. Slowly, this time.", "zh-CN": "把包裹拿给他们看看。这次，动作慢一点。"}},
+      {"speaker": "主角", "text": {"en": "Here. Sealed, as promised. But whose gold was this before the thieves found it?", "zh-CN": "在这里。按说好的，一直封着。不过，这黄金在落入窃贼手里之前，到底是谁的？"}},
+      {"speaker": "温方达", "text": {"en": "That's what we're checking.", "zh-CN": "我们正在核对。"}},
+      {"speaker": "温方达", "text": {"en": "(A messenger leans close and whispers to Amun.)", "zh-CN": "（一名传信人走近，向阿蒙低语了几句。）"}},
+      {"speaker": "温方达", "text": {"en": "Someone at the gate has a very loud opinion. Let's hear it.", "zh-CN": "门口有人，意见很响亮。去听听吧。"}},
+      {"speaker": "主角", "text": {"en": "I was afraid we'd arrived during the quiet part.", "zh-CN": "我就担心，我们刚才赶上的已经算是安静时候了。"}}
+    ]}],
+    "bixuejianShyou_接金胜不开包裹石梁派2": [{"start": 2, "expectedCount": 11, "lines": [
+      {"speaker": "温方达", "text": {"en": "You can't walk in and claim a guarded chest.", "zh-CN": "不能一进门，就要求带走看管着的箱子。"}},
+      {"speaker": "安小慧", "text": {"en": "The villages that lost it won't be impressed by a locked door.", "zh-CN": "丢了这笔钱的村民，可不会因为门锁得好就满意了。"}},
+      {"speaker": "温青青", "text": {"en": "Easy. I recovered it from thieves. I'm not handing it to the next loud voice.", "zh-CN": "别急。我从窃贼那里追回了它，总不能谁声音大就交给谁。"}},
+      {"speaker": "安小慧", "text": {"en": "(She notices Horus.) Horus? Still getting into trouble before breakfast?", "zh-CN": "（她看见荷鲁斯。）荷鲁斯？又是还没吃早饭，就先惹上麻烦了？"}},
+      {"speaker": "袁承志", "text": {"en": "Hathor. I was hoping this visit would be less eventful.", "zh-CN": "哈索尔。我还希望，这次来能平静些。"}},
+      {"speaker": "安小慧", "text": {"en": "That would be a first.", "zh-CN": "那可真是头一回了。"}},
+      {"speaker": "温方达", "text": {"en": "So you're acquainted. Friendship isn't proof of ownership.", "zh-CN": "原来你们认识。可朋友关系，不是认领凭据。"}},
+      {"speaker": "袁承志", "text": {"en": "Then let us hear the claim. We can argue about manners afterward.", "zh-CN": "那就先把来由说清楚。礼数的事，可以稍后再争。"}},
+      {"speaker": "温青青", "text": {"en": "If you're carrying it back, show the wardens you can protect it.", "zh-CN": "要由你们带回去，就先向守卫证明，你们护得住它。"}},
+      {"speaker": "安小慧", "text": {"en": "Every day it sits here is another day the villages go without supplies.", "zh-CN": "它在这里多放一天，村里就得多等一天补给。"}},
+      {"speaker": "温方达", "text": {"en": "Then let's settle this. Wardens, take your positions.", "zh-CN": "那就把这件事定下来。守卫，就位。"}}
+    ]}],
+    "bixuejianShyou_接金胜不开包裹石梁派3": [{"start": 2, "expectedCount": 5, "lines": [
+      {"speaker": "主角", "text": {"en": "The claim is clear enough. Can we get back on the road?", "zh-CN": "来由已经说清楚了。我们能重新上路了吗？"}},
+      {"speaker": "袁承志", "text": {"en": "Hathor, stay close. We haven't finished sorting this out.", "zh-CN": "哈索尔，先别走远。事情还没说完。"}},
+      {"speaker": "温方达", "text": {"en": "Not yet. Bes, bring in the outer watch.", "zh-CN": "还不行。贝斯，叫外围守卫过来。"}},
+      {"speaker": "温方义", "text": {"en": "On your feet! Full formation!", "zh-CN": "都起来！完整阵势，就位！"}},
+      {"speaker": "主角", "text": {"en": "Of course. The argument has reinforcements.", "zh-CN": "果然。连这场争论，都还有援军。"}}
+    ]}],
+    "bixuejianShyou_接金胜不开包裹石梁派4": [{"start": 8, "expectedCount": 7, "lines": [
+      {"speaker": "主角", "text": {"en": "Can we agree that the gold is leaving with us?", "zh-CN": "现在能同意，由我们把黄金带走了吧？"}},
+      {"speaker": "温方达", "text": {"en": "(Amun closes the hall's ledger.)", "zh-CN": "（阿蒙合上了会馆的账簿。）"}},
+      {"speaker": "温方义", "text": {"en": "(Bes lowers his signal horn.)", "zh-CN": "（贝斯放下了传令的号角。）"}},
+      {"speaker": "温方山", "text": {"en": "(Sinuhe makes a very small note in the margin.)", "zh-CN": "（辛努赫在页边，很小地记了一笔。）"}},
+      {"speaker": "温方悟", "text": {"en": "(Ra studies the ceiling.)", "zh-CN": "（拉开始研究天花板。）"}},
+      {"speaker": "温方施", "text": {"en": "(Khonsu looks toward the door.)", "zh-CN": "（孔苏望向了门口。）"}},
+      {"speaker": "主角", "text": {"en": "I'll take that as a yes. Let's get moving.", "zh-CN": "那我就当作同意了。走吧。"}}
+    ]}]
+  }
+}

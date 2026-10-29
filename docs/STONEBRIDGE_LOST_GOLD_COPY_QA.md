@@ -1,5 +1,7 @@
 # Stonebridge Hall: complete ferry-duel-loss narrative branch
 
+**Next completed content branch:** [sealed-parcel narrative](STONEBRIDGE_SEALED_PARCEL_COPY_QA.md) now adds its separate4 scenes/37 previously unadapted dialogue slots. The19 lines below and their distinct battle outcome mapping are unchanged. Opened-parcel writing (4/33) remains pending; genuine saves still do not satisfy either alternative entry, so neither gameplay is reported passed.
+
 Base `3de29bae86fccbe3e1673e7041ff3740cab95757`, initially clean, same workspace/writer/branch. This batch completes one alternative from its native entry through original world-map return. It does not partially rewrite all three alternatives or replay the accepted decline-gold chain.
 
 ## Branch graph and chosen boundary
