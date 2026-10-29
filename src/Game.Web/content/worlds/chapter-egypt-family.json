@@ -1,0 +1,27 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "speakerNames": {
+    "金蛇郎君": {"en": "Osiris", "zh-CN": "奥西里斯"}
+  },
+  "uiLabels": {
+    "金蛇郎君夏雪宜": {"en": "Osiris, ruler of the underworld, has a lesson for Horus. Isis is keeping an eye on them both.", "zh-CN": "冥界之主奥西里斯准备给荷鲁斯上一课。伊西斯正留意着他们父子俩。"},
+    "金蛇郎君夏雪宜。": {"en": "Osiris has a lesson for Horus, with Isis watching.", "zh-CN": "奥西里斯准备指导荷鲁斯，伊西斯在旁看着。"}
+  },
+  "dialogueEdits": {
+    "bixuejianShyou_金蛇郎君": [{"start": 2, "expectedCount": 5, "lines": [
+      {"speaker": "温青青", "text": {"en": "Osiris! Even the underworld lets you take a day off?", "zh-CN": "奥西里斯！原来冥界也肯给你放一天假？"}},
+      {"speaker": "金蛇郎君", "text": {"en": "A very short one. Horus, let's see what you've learned.", "zh-CN": "很短的一天。荷鲁斯，让我看看你学到了什么。"}},
+      {"speaker": "温青青", "text": {"en": "Try teaching our son without flattening him, dear.", "zh-CN": "亲爱的，教儿子就好，别把他打扁了。"}},
+      {"speaker": "金蛇郎君", "text": {"en": "Isis, I said a lesson, not a funeral. Ready, Horus?", "zh-CN": "伊西斯，我说的是上课，又不是办葬礼。荷鲁斯，准备好了？"}},
+      {"speaker": "金蛇郎君", "text": {"en": "(Osiris eases his stance.)", "zh-CN": "（奥西里斯放松了架势。）"}}
+    ]}],
+    "bixuejianShyou_金蛇败": [{"start": 2, "expectedCount": 6, "lines": [
+      {"speaker": "金蛇郎君", "text": {"en": "Not bad, Horus. Next time, let your feet catch up with your enthusiasm.", "zh-CN": "不错，荷鲁斯。下回先让脚步跟上你的热情。"}},
+      {"speaker": "温青青", "text": {"en": "Then come with us for a while. The world could use a little family supervision.", "zh-CN": "那就陪我们走一阵吧。这个世界也该让咱们一家照看照看了。"}},
+      {"speaker": "金蛇郎君", "text": {"en": "I have an underworld to run. It doesn't exactly manage itself.", "zh-CN": "我还得管着冥界。那地方可不会自己运转。"}},
+      {"speaker": "主角", "text": {"en": "Then help us follow your treasure map. A short trip, a few directions, hardly any paperwork.", "zh-CN": "那就帮我们看看你留下的藏宝图吧。走一小段，指几次路，几乎不用批公文。"}},
+      {"speaker": "温青青", "text": {"en": "Those treasures were meant for us, remember? Our son inherited your sense of direction. Let's not test it.", "zh-CN": "那些宝物本来就是留给我们的，记得吗？儿子把你的方向感也继承了。咱们还是别考验它了。"}},
+      {"speaker": "金蛇郎君", "text": {"en": "Fair enough. I'll come along and show you where I put it.", "zh-CN": "好吧。我和你们一起去，指给你们看藏在哪儿。"}}
+    ]}]
+  }
+}
