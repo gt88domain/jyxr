@@ -56,4 +56,4 @@
 
 武藏已拥有的6个高级形态另补原description键的中英说明。四类封印仅封对应技艺及高级形态，特殊能力不受该封印影响，目标可能抵抗；Ironbody Awakening的负面效果作用于命中目标、防御增益作用于施术者，不能写成全队护盾或无敌。现有人物页只展开宿主已返回的高级说明，未解锁的Final Principle不补造；390px中英及320px英文的只读页面和存读档已实测，战斗／其它角色仍未验。见[实际说明与冻结证据](../../../../docs/MUSASHI_TECHNIQUE_DETAILS_QA.md)。
 
-`chapter-crane-cave.json`持有环境、返回、两菜单及4段12句中英幻想对白。用户允许改编人物关系后，沿用Nephthys候选，局部写为Osiris／Isis的姐妹、Horus的姨母；以守夜者的隐私、守护与返回冥界表达原流程。原文另存，Horus锁定身份未改，候选未全局锁定；其它埃及场景仍待改写。map与同ID洞口按既有分类显示。仅一次实际英文初谈7句→第一次Leave→存读档，完整序列化结果与旧对白流程相同；余5句与中文仅静态核对。第二菜单、战斗、信物及后续未实玩，无新美术。见[改编与验收](../../../../docs/NEPHTHYS_CAVE_ADAPTATION.md)，[原始实录](../../../../docs/CRANE_CAVE_FIRST_LEAVE_QA.md)保留历史。
+`chapter-crane-cave.json`持有环境、返回、两菜单及4段12句中英幻想对白。用户允许改编人物关系后，沿用Nephthys候选，局部写为Osiris／Isis的姐妹、Horus的姨母；以守夜者的隐私、守护与返回冥界表达原流程。原文另存，Horus锁定身份未改，候选未全局锁定；其它埃及场景仍待改写。map与同ID洞口按既有分类显示。[初谈7句→第一次Leave](../../../../docs/NEPHTHYS_CAVE_ADAPTATION.md)曾实走一次且序列化结果与旧对白相同；随后另一次获授权的原两次Stay战斗tick189胜，12句英文、信物／日志／回地图及完整存读档实际通过，见[实战回执](../../../../docs/NEPHTHYS_BATTLE_QA.md)。没有调数值、改构筑或重打，中文仍仅静态，下游入口与其它分支未验，无新美术。[原始实录](../../../../docs/CRANE_CAVE_FIRST_LEAVE_QA.md)和全部旧失败保留。

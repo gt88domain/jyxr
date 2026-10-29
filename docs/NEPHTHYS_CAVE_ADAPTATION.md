@@ -1,5 +1,7 @@
 # Nephthys cave: bilingual fantasy adaptation
 
+**Later acceptance:** the same product commit has now passed one original two-Stay combat route, tick189 victory, all12 English lines, token/journal/map return and normal Save/Load. See [combat receipt](NEPHTHYS_BATTLE_QA.md). The static-only/NOT_RUN statements below describe this earlier writing batch; downstream unlock, Chinese playthrough and other branches remain untested.
+
 Base: `6cb3a194b560ff1d155a3c5b9802100580069872`, same workspace and `feat/storybound-italian-battle`. At17:12UTC on2026-10-29 the user allowed adapting Western figures, relationships, motives and dialogue. The earlier identity hold is resolved for this scene. This is original fantasy writing, not literal translation or a definitive account of Egyptian mythology.
 
 `chapter-crane-cave.json` now owns Nephthys's local speaker name, cave NPC description, four original segments /12 bilingual dialogue slots, attendant/battle labels and victory journal copy. Newly written US English and fantasy Chinese tell the same story. Nephthys mourns her brother Osiris and guards the dead; Isis is her sister and Horus is Isis's son. Her request for privacy explains the original Leave options; persistent intrusion leads to the existing fight. Later victory text sends her back to Osiris in the Duat rather than repeating the original character's suicide wording. The existing reward remains the Venom Circle Token.
