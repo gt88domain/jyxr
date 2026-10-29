@@ -1,0 +1,22 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "speakerNames": {
+    "蓝凤凰": {"en": "Circe", "zh-CN": "喀耳刻"},
+    "令狐冲": {"en": "Miyamoto Musashi", "zh-CN": "宫本武藏"},
+    "平一指": {"en": "Hippocrates", "zh-CN": "希波克拉底"}
+  },
+  "dialogueEdits": {
+    "笑傲江湖_蓝凤凰1": [{"start": 0, "expectedCount": 1, "lines": [
+      {"speaker": "蓝凤凰", "text": {"en": "Welcome to the sanctuary. Looking for a spell, or just somewhere quiet to catch your breath?", "zh-CN": "欢迎来到圣所。想找一道法术，还是找个清静地方歇歇？"}}
+    ]}],
+    "笑傲江湖_蓝凤凰2": [{"start": 0, "expectedCount": 7, "lines": [
+      {"speaker": "蓝凤凰", "text": {"en": "Musashi. Two swords, and not enough breath for either?", "zh-CN": "武藏，带着两把剑，气却连挥一把都不够？"}},
+      {"speaker": "令狐冲", "text": {"en": "The swords are fine. It's their owner who's wheezing.", "zh-CN": "剑都好好的。喘不上气的，是拿剑的人。"}},
+      {"speaker": "蓝凤凰", "text": {"en": "I'd offer you a potion, but I suspect you'd try to parry it.", "zh-CN": "本想给你一瓶药，可我怕你抬手就要格挡。"}},
+      {"speaker": "令狐冲", "text": {"en": "Only if it came at me point-first.", "zh-CN": "除非你把瓶口当剑尖，朝我刺过来。"}},
+      {"speaker": "蓝凤凰", "text": {"en": "Good. Your wit survived. Has a physician seen you?", "zh-CN": "还好，嘴上功夫没丢。找医师看过了吗？"}},
+      {"speaker": "令狐冲", "text": {"en": "Not one who could explain it. Breathing shouldn't be the hardest part of swordplay.", "zh-CN": "没人说得清缘由。练剑最难的，总不该是喘气吧。"}},
+      {"speaker": "蓝凤凰", "text": {"en": "Then let's ask Hippocrates at the Healer's House. I'll come along. Take my Viper's Hex Tome, too; it may prove more useful than stubbornness.", "zh-CN": "那就去医师居所，问问希波克拉底。我和你们同行。这本蝰蛇咒术法术书也带上，兴许比硬撑管用。"}}
+    ]}]
+  }
+}

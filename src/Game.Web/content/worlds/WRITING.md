@@ -24,7 +24,9 @@
 
 ## 当前接入范围
 
-`chapter-serpent-sanctuary.json`补圣所许可／密窟取剑4段8句、10张既有地图显示，沿现有Venom Circle Token与Serpent-Gold Sword名称。八个重复敌兵显示Sanctuary Warden，不变更Taweret候选或Circe身份锁定；原12步、优先胜利标记许可／无信物消耗、八处5%遭遇、主角独战及剑／称号保持。一次真实194档副本无随机战到达，实看7句，原战tick378胜、242银币／剑1／信物1／11人并真实存读档一致。构建和冻结／投影通过；战后QA字段拼写错误原报告保留，独立真实导出复核通过，未重打。拒绝、败局、Circe招募及真机未验，见[完整路线／证据与边界](../../../../docs/SERPENT_SANCTUARY_QA.md)。相邻Circe／Musashi2段8槽仍中文，下一有限内容候选，不计已招募。
+`chapter-circe-recruitment.json`补Circe／武藏初遇与招募2段8句，延续既有呼吸不顺、用药与格挡的冷幽默，去掉旧暧昧称呼；医师沿既有候选Hippocrates，地点Healer's House，赠品沿用Viper's Hex Tome。原10步、四武藏形态／无Circe门槛、无武藏招呼fallback、JOIN→法术书不变，不增治愈／学习或任务条件。真实242档一次Back／一次点击实看7句，正常加入第12人、法术书0→1、无挪人或资源消耗，存读档一致；构建／双语定向及实玩11检查首遍通过。Fallback／其它形态／医师治疗／真机未验，见[招募实录](../../../../docs/CIRCE_RECRUITMENT_QA.md)。
+
+`chapter-serpent-sanctuary.json`补圣所许可／密窟取剑4段8句、10张既有地图显示，沿现有Venom Circle Token与Serpent-Gold Sword名称。八个重复敌兵显示Sanctuary Warden，不变更Taweret候选或Circe身份锁定；原12步、优先胜利标记许可／无信物消耗、八处5%遭遇、主角独战及剑／称号保持。一次真实194档副本无随机战到达，实看7句，原战tick378胜、242银币／剑1／信物1／11人并真实存读档一致。构建和冻结／投影通过；战后QA字段拼写错误原报告保留，独立真实导出复核通过，未重打。拒绝、败局及真机未验，见[完整路线／证据与边界](../../../../docs/SERPENT_SANCTUARY_QA.md)。Circe招募由上批独立验证，不回写旧报告。
 
 `chapter-hostile-followup.json`补开包裹敌对线后续4段46句，有鹤峰会馆原入口；Anubis／Thoth对抗夺金旅人，Imhotep／Set联手、夺令取书与最终反噬收成一条。原63步／17非对白、敌方Horus、三战致死败局、四物品／称号发放时点及最大生命／能量各−200、根骨／臂力各−5完全保留，不改友好招募或新阵营机制。内容构建和一次双语冻结／投影通过，真实档缺敌对前置，实际全NOT_RUN。原下一候选圣地／金蛇窟已由上批独立完成，不将静态敌对线算作实玩，见[敌对完整收尾与证据](../../../../docs/HOSTILE_HALL_FOLLOWUP_COPY_QA.md)。
 
