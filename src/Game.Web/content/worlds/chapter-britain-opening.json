@@ -24,11 +24,29 @@
     "sdxl_神雕": [{"start": 0, "expectedCount": 2, "lines": [
       {"speaker": "神雕", "text": {"en": "Krrr.", "zh-CN": "咕噜。"}},
       {"speaker": "主角", "text": {"en": "I'll assume that means hello. Your manners are better than most guards'.", "zh-CN": "我就当这是在问好了。你的礼貌，比大多数守卫强。"}}
+    ]}],
+    "sdxl_2": [{"start": 0, "expectedCount": 1, "lines": [
+      {"speaker": "主角", "text": {"en": "A friendly match, then. Let's see what you've got.", "zh-CN": "那就友好切磋一场，看看你的身手。"}}
+    ]}],
+    "sdxl_剑魔荒冢.杨过不理": [{"start": 0, "expectedCount": 3, "lines": [
+      {"speaker": "主角", "text": {"en": "Not a good time for a match?", "zh-CN": "现在不方便切磋？"}},
+      {"speaker": "杨过", "text": {"en": "Not today. Let's leave it at that.", "zh-CN": "今天不行，就说到这里吧。"}},
+      {"speaker": "主角", "text": {"en": "Another time, then.", "zh-CN": "那就改日再来。"}}
+    ]}],
+    "sdxl_剑魔荒冢.战胜杨过": [{"start": 2, "expectedCount": 8, "lines": [
+      {"speaker": "杨过", "text": {"en": "Well fought. I haven't had to work that hard in a while.", "zh-CN": "打得好，我已经许久没这样认真过了。"}},
+      {"speaker": "主角", "text": {"en": "I'll try not to look too pleased with myself.", "zh-CN": "我尽量别显得太得意。"}},
+      {"speaker": "杨过", "text": {"en": "If I'm to travel with you, my companion deserves a say.", "zh-CN": "若要与你同行，我的伙伴也该表个态。"}},
+      {"speaker": "神雕", "text": {"en": "I say you're not taking my king without proving you can keep him out of trouble.", "zh-CN": "我的态度是：想带走我的国王，先证明你能照应他。"}},
+      {"speaker": "主角", "text": {"en": "You can talk?", "zh-CN": "你会说话？"}},
+      {"speaker": "神雕", "text": {"en": "Of course. I was waiting for a conversation worth joining.", "zh-CN": "当然，我只是在等一场值得开口的谈话。"}},
+      {"speaker": "主角", "text": {"en": "And I thought the quiet one would be easy to impress.", "zh-CN": "我还以为，安静的那个比较好商量。"}},
+      {"speaker": "神雕", "text": {"en": "Let's find out. Cousins! We have a visitor!", "zh-CN": "试试就知道了。亲戚们，来招呼客人！"}}
     ]}]
   },
   "choiceText": {
     "sdxl_剑魔荒冢.杨过2": {
-      "prompt": {"en": "What will you say to Arthur?", "zh-CN": "要对亚瑟说什么？"},
+      "prompt": {"en": "Sparring requires 35–74 Morality. A win leads straight into a second fight. Health and Energy carry over; losing or timing out in that second fight ends the journey. Choose Goodbye to prepare and save.", "zh-CN": "切磋要求道德35～74。获胜会直接进入第二战，生命与能量继续继承；第二战失败或超时会结束旅程。可选“告辞”先整备并保存。"},
       "options": {
         "en": ["Tell me your story.", "Care for a friendly match?", "Attack Arthur. (-3 Morality)", "Just passing through. Goodbye."],
         "zh-CN": ["说说你的经历吧。", "来一场友好切磋？", "攻击亚瑟。（道德－3）", "只是路过，告辞了。"]
@@ -39,6 +57,12 @@
     "剑魔荒冢": {
       "杨过": {"description": {"en": "A king, a sword, and an unfinished story.", "zh-CN": "一位国王、一把古剑，还有未完的故事。"}},
       "神雕": {"description": {"en": "Arthur's watchful, tight-lipped companion.", "zh-CN": "亚瑟身边警觉而寡言的旅伴。"}}
+    }
+  },
+  "definitions": {
+    "battles": {
+      "剑魔荒冢_战斗.杨过": {"name": {"en": "A Friendly Match with Arthur", "zh-CN": "与亚瑟友好切磋"}},
+      "剑魔荒冢_战斗.神雕": {"name": {"en": "The Griffin's Challenge", "zh-CN": "狮鹫的考验"}}
     }
   }
 }
