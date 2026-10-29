@@ -1,5 +1,7 @@
 # Horus at Windsong Ferry: coherent gold-choice batch
 
+**Next content batch:** [Isis at Stonebridge Hall](ISIS_STONEBRIDGE_COPY_QA.md) now adapts the direct declined-gold recruitment chain (8 dialogue segments/47 lines, plus its unchanged battle-only segment). This does not change this visit's missing50%result: both genuine saves still lack Horus/the decline flag, and actual recruitment remains NOT_RUN. Other hall alternatives and VIP service stay outside that batch.
+
 Base `8df777bdc4004bc1e1f270ff22784d0dd891f438`, clean before editing, same writer/workspace/branch. Original194-silver progress is protected. No merge/deployment, new characters/art or core changes.
 
 ## Names, story and scope

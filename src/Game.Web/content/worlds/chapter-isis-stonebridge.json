@@ -1,0 +1,109 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "speakerNames": {
+    "温正": {"en": "Khepri", "zh-CN": "凯布利"},
+    "安小慧": {"en": "Hathor", "zh-CN": "哈索尔"},
+    "黄真": {"en": "Anubis", "zh-CN": "阿努比斯"},
+    "温方达": {"en": "Amun", "zh-CN": "阿蒙"},
+    "温方义": {"en": "Bes", "zh-CN": "贝斯"},
+    "温方山": {"en": "Sinuhe", "zh-CN": "辛努赫"},
+    "温方悟": {"en": "Ra", "zh-CN": "拉"},
+    "温方施": {"en": "Khonsu", "zh-CN": "孔苏"}
+  },
+  "maps": {
+    "石梁派": {
+      "name": {"en": "Stonebridge Hall", "zh-CN": "石桥会馆"},
+      "description": {"en": "An old meeting house with a busy assembly room. Someone inside has strong opinions about the accounts.", "zh-CN": "一座热闹的老会馆。听起来，里面有人对账目很有意见。"}
+    },
+    "石梁派大殿": {
+      "name": {"en": "Stonebridge Hall — Assembly Room", "zh-CN": "石桥会馆—议事厅"},
+      "description": {"en": "Ledgers and maps cover the long table. Scuff marks run across the open floor.", "zh-CN": "长桌上铺着账簿和地图。空地上留着一道道脚步擦痕。"}
+    }
+  },
+  "locations": {
+    "石梁派": {
+      "石梁派大殿": {"name": {"en": "Assembly room", "zh-CN": "议事厅"}, "description": {"en": "Enter the assembly room at Stonebridge Hall.", "zh-CN": "进入石桥会馆的议事厅。"}}
+    },
+    "石梁派大殿": {
+      "温青青": {"name": {"en": "Isis", "zh-CN": "伊西斯"}, "description": {"en": "Isis is waiting for your answer about the guarded gold.", "zh-CN": "伊西斯正等你答复，是否准备好带走守卫看管的黄金。"}}
+    }
+  },
+  "uiLabels": {"温方义": {"en": "Bes", "zh-CN": "贝斯"}},
+  "choiceText": {
+    "bixuejianShyou_不接黄金石梁派5": {
+      "prompt": {"en": "Challenge the guardians now?", "zh-CN": "现在挑战守卫吗？"},
+      "options": {"en": ["Take the challenge.", "Prepare first."], "zh-CN": ["接受挑战。", "先做准备。"]}
+    }
+  },
+  "dialogueEdits": {
+    "bixuejianShyou_不接黄金石梁派1": [{"start": 1, "expectedCount": 6, "lines": [
+      {"speaker": "袁承志", "text": {"en": "Is this Stonebridge Hall?", "zh-CN": "这里是石桥会馆吗？"}},
+      {"speaker": "温正", "text": {"en": "It is. Who's asking?", "zh-CN": "是的。请问你是？"}},
+      {"speaker": "袁承志", "text": {"en": "Horus. I'm looking for my mother, Isis.", "zh-CN": "荷鲁斯。我来找母亲伊西斯。"}},
+      {"speaker": "温正", "text": {"en": "That narrows it down. What brought you here?", "zh-CN": "这就好找了。你们有什么事？"}},
+      {"speaker": "袁承志", "text": {"en": "The gold she recovered. I'd like to know who's getting it back.", "zh-CN": "她追回的那批黄金。我想知道要交还给谁。"}},
+      {"speaker": "温正", "text": {"en": "Come inside. I'll let her know you're here.", "zh-CN": "请进。我去告诉她，你们到了。"}}
+    ]}],
+    "bixuejianShyou_不接黄金石梁派2": [{"start": 2, "expectedCount": 3, "lines": [
+      {"speaker": "袁承志", "text": {"en": "Please tell Mother I need a word about the parcel.", "zh-CN": "请告诉母亲，我想问问包裹的事。"}},
+      {"speaker": "温正", "text": {"en": "She's checking the accounts. She won't be long.", "zh-CN": "她在核对账目，应该很快就来。"}},
+      {"speaker": "袁承志", "text": {"en": "Then I'll leave word with you. We shouldn't keep you from your work.", "zh-CN": "那就请你代为传话。我们也不好一直耽误你做事。"}}
+    ]}],
+    "bixuejianShyou_不接黄金石梁派3": [{"start": 2, "expectedCount": 7, "lines": [
+      {"speaker": "温青", "text": {"en": "Horus. I knew you'd find the place eventually.", "zh-CN": "荷鲁斯。我就知道，你总能找到这里。"}},
+      {"speaker": "袁承志", "text": {"en": "Your directions were suspiciously short, Mother.", "zh-CN": "母亲，你指路时说得未免太省事了。"}},
+      {"speaker": "温青", "text": {"en": "You followed them, didn't you?", "zh-CN": "你不是已经找到了吗？"}},
+      {"speaker": "袁承志", "text": {"en": "We came to make sure the gold reaches its owners.", "zh-CN": "我们来确认，黄金会交到失主手里。"}},
+      {"speaker": "温青", "text": {"en": "(Isis catches Horus by the sleeve before he can leave.)", "zh-CN": "（伊西斯在荷鲁斯转身前，拉住了他的衣袖。）"}},
+      {"speaker": "袁承志", "text": {"en": "What is it?", "zh-CN": "怎么了？"}},
+      {"speaker": "主角", "text": {"en": "Stay for supper, Horus. Even heroes can survive one meal with their mother.", "zh-CN": "留下吃顿饭吧，荷鲁斯。就算是英雄，陪母亲吃顿饭也不至于有事。"}}
+    ]}],
+    "bixuejianShyou_不接黄金石梁派31": [{"start": 0, "expectedCount": 3, "lines": [
+      {"speaker": "温青青", "text": {"en": "(Isis smiles and pulls up another chair.)", "zh-CN": "（伊西斯笑着，又拉过一把椅子。）"}},
+      {"speaker": "袁承志", "text": {"en": "All right. Supper first, then the gold.", "zh-CN": "好吧。先吃饭，再说黄金。"}},
+      {"speaker": "温青青", "text": {"en": "(They spend the evening over food, maps, and several disputed family stories.)", "zh-CN": "（这一晚，大家围着饭菜和地图，听了几段各有不同版本的家庭往事。）"}}
+    ]}],
+    "bixuejianShyou_不接黄金石梁派4": [{"start": 2, "expectedCount": 11, "lines": [
+      {"speaker": "主角", "text": {"en": "Morning already? That sounds like an argument in the hall.", "zh-CN": "天已经亮了？前厅好像有人在争论。"}},
+      {"speaker": "温正", "text": {"en": "You can't simply walk in and demand a chest of gold.", "zh-CN": "你不能一进门，就要求带走一箱黄金。"}},
+      {"speaker": "安小慧", "text": {"en": "It's stolen relief money. The villages can't eat a receipt.", "zh-CN": "那是被劫的救济款。村民可不能拿收据当饭吃。"}},
+      {"speaker": "安小慧", "text": {"en": "(She spots Horus.) Horus? Remember who always brought extra food to the festivals?", "zh-CN": "（她看见荷鲁斯。）荷鲁斯？还记得谁总在节庆时多带些吃的吗？"}},
+      {"speaker": "袁承志", "text": {"en": "Hathor! You never let anyone leave hungry.", "zh-CN": "哈索尔！你从不让人空着肚子离开。"}},
+      {"speaker": "安小慧", "text": {"en": "Someone had to balance out your taste for heroics.", "zh-CN": "总得有人照顾一下，免得大家都只顾着当英雄。"}},
+      {"speaker": "温正", "text": {"en": "So you know the claimant. That doesn't settle the claim.", "zh-CN": "原来你认识来领款的人。可光认识，还不能把账结清。"}},
+      {"speaker": "袁承志", "text": {"en": "Then let us hear it properly. What happened to the gold?", "zh-CN": "那就把事情说清楚。这批黄金到底出了什么事？"}},
+      {"speaker": "温青青", "text": {"en": "I recovered it from thieves. It's under my seal until someone can get it safely home.", "zh-CN": "我从窃贼那里追回了它。在有人能把它安全送回去之前，先由我封存。"}},
+      {"speaker": "主角", "text": {"en": "Sounds like we need fewer speeches and a delivery plan.", "zh-CN": "看来，咱们需要少说几句，多想想怎么把东西送回去。"}},
+      {"speaker": "温青青", "text": {"en": "Get ready, then. If you want to carry it out, you'll have to get past the hall's guardians.", "zh-CN": "那就做好准备。想把它带走，得先过会馆守卫这一关。"}}
+    ]}],
+    "bixuejianShyou_不接黄金石梁派5": [{"start": 2, "expectedCount": 1, "lines": [
+      {"speaker": "温青青", "text": {"en": "The gold is ready. Are you ready for the guardians?", "zh-CN": "黄金就在这里。你准备好面对守卫了吗？"}}
+    ]}],
+    "bixuejianShyou_不接黄金石梁派6": [{"start": 2, "expectedCount": 7, "lines": [
+      {"speaker": "主角", "text": {"en": "Those guardians don't give much ground.", "zh-CN": "这些守卫，真是寸步不让。"}},
+      {"speaker": "袁承志", "text": {"en": "Every step is covered. We need a better angle.", "zh-CN": "每一步都有人照应。我们得换个角度。"}},
+      {"speaker": "黄真", "text": {"en": "Then stop charging the center. Watch the gaps between the guards.", "zh-CN": "那就别只顾着往中间冲。看看守卫之间的空隙。"}},
+      {"speaker": "温方达", "text": {"en": "A helper? Bes, call the rest of them.", "zh-CN": "来了帮手？贝斯，叫其他人过来。"}},
+      {"speaker": "温方义", "text": {"en": "One signal. Everyone to their posts!", "zh-CN": "信号一响，全员就位！"}},
+      {"speaker": "主角", "text": {"en": "I was hoping the signal meant lunch.", "zh-CN": "我还以为，那是开饭的信号。"}},
+      {"speaker": "温方达", "text": {"en": "You'll have to finish the trial before you get another meal.", "zh-CN": "想再吃一顿，先把考验完成再说。"}}
+    ]}],
+    "bixuejianShyou_不接黄金石梁派7": [
+      {"start": 2, "expectedCount": 1, "lines": [
+        {"speaker": "主角", "text": {"en": "That extra formation kept getting in its own way.", "zh-CN": "后面加上的那套阵势，倒一直在挡自己的路。"}}
+      ]},
+      {"start": 9, "expectedCount": 5, "lines": [
+        {"speaker": "主角", "text": {"en": "All right. Can we get these supplies back to their owners now?", "zh-CN": "好了。现在能把这些补给送回失主手里了吗？"}},
+        {"speaker": "袁承志", "text": {"en": "Mother, we'll take the gold to Hathor's people.", "zh-CN": "母亲，我们会把黄金送去给哈索尔那边的人。"}},
+        {"speaker": "主角", "text": {"en": "Isis, come with us. A sensible adult might keep the rest of us out of trouble.", "zh-CN": "伊西斯，和我们同行吧。有个稳妥的大人在，剩下的人也能少惹点事。"}},
+        {"speaker": "袁承志", "text": {"en": "Please. I'd rather have you beside us than negotiating from another town.", "zh-CN": "一起走吧。我宁可你在身边，也不想再隔着一座城找你商量。"}},
+        {"speaker": "温青青", "text": {"en": "(Isis nods.)", "zh-CN": "（伊西斯点了点头。）"}}
+      ]},
+      {"start": 16, "expectedCount": 3, "lines": [
+        {"speaker": "主角", "text": {"en": "A treasure map too? Is this where you tell us to follow three cryptic landmarks?", "zh-CN": "还有藏宝图？接下来，是不是要让我们找三个谜一样的地标？"}},
+        {"speaker": "温青青", "text": {"en": "If I knew the exact spot, Horus wouldn't still be arguing with that map.", "zh-CN": "我要是知道确切地点，荷鲁斯也不用一直和那张图较劲了。"}},
+        {"speaker": "主角", "text": {"en": "(You decide not to ask who drew it.)", "zh-CN": "（你决定，还是别问这图是谁画的了。）"}}
+      ]}
+    ]
+  }
+}
