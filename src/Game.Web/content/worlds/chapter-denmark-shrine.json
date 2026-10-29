@@ -1,0 +1,52 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "dialogueEdits": {
+    "雪山飞狐_湘妃庙.田归农.阎基": [{"start": 2, "expectedCount": 10, "lines": [
+      {"speaker": "阎基", "text": {"en": "Master! Still keeping dry while the rest of us drip?", "zh-CN": "首领！别人都淋透了，您倒还干干爽爽？"}},
+      {"speaker": "田归农", "text": {"en": "Do I know you?", "zh-CN": "我认识你吗？"}},
+      {"speaker": "阎基", "text": {"en": "I used to run your errands. Small bottles. No questions.", "zh-CN": "我以前替您跑过腿。小瓶子，不问用途。"}},
+      {"speaker": "田归农", "text": {"en": "Then you know when to keep quiet.", "zh-CN": "那你也该知道什么时候闭嘴。"}},
+      {"speaker": "阎基", "text": {"en": "Our friends are asking about an old duel. Unfortunate business, wasn't it?", "zh-CN": "朋友们在查一场旧决斗。真是不幸，对吧？"}},
+      {"speaker": "田归农", "text": {"en": "Get to the point.", "zh-CN": "说重点。"}},
+      {"speaker": "阎基", "text": {"en": "A little money could clear up my memory.", "zh-CN": "一点钱，也许能让我想得更清楚。"}},
+      {"speaker": "主角", "text": {"en": "We're investigating a murder. He's negotiating a consulting fee.", "zh-CN": "我们在查谋杀，他却在谈顾问费。"}},
+      {"speaker": "田归农", "text": {"en": "You picked the wrong man to blackmail.", "zh-CN": "想敲诈我？你找错人了。"}},
+      {"speaker": "主角", "text": {"en": "For the record, that was his idea.", "zh-CN": "先声明，那是他的主意。"}}
+    ]}],
+    "雪山飞狐_湘妃庙.田归农.阎基.胜利": [{"start": 2, "expectedCount": 10, "lines": [
+      {"speaker": "阎基", "text": {"en": "Now, let's be reasonable about that fee.", "zh-CN": "现在，可以好好谈谈那笔费用了吧。"}},
+      {"speaker": "田归农", "text": {"en": "You want a reward for poisoning the traveler? You put it on the blade.", "zh-CN": "毒死旅人还想拿赏钱？毒可是你涂在兵器上的。"}},
+      {"speaker": "胡斐", "text": {"en": "You poisoned him?", "zh-CN": "是你下的毒？"}},
+      {"speaker": "阎基", "text": {"en": "This is an appalling breach of confidence.", "zh-CN": "你这保密工作也太差了。"}},
+      {"speaker": "田归农", "text": {"en": "I supplied the poison. You did the rest.", "zh-CN": "我提供毒药，剩下的是你干的。"}},
+      {"speaker": "田归农", "text": {"en": "Two celebrated fighters, each too busy admiring the other to notice us.", "zh-CN": "两位大名鼎鼎的高手，忙着惺惺相惜，谁也没留意我们。"}},
+      {"speaker": "胡斐", "text": {"en": "You've lied to us since we met. No more hiding behind other people.", "zh-CN": "你从见面就在骗我们，别再躲在别人身后了。"}},
+      {"speaker": "田归农", "text": {"en": "Then come closer. You haven't seen what I can really do.", "zh-CN": "那就过来，你还没见过我的真本事。"}},
+      {"speaker": "主角", "text": {"en": "Kai, be careful.", "zh-CN": "凯，小心。"}},
+      {"speaker": "胡斐", "text": {"en": "I will. But this ends here.", "zh-CN": "我会的。但这事必须在这里了结。"}}
+    ]}],
+    "雪山飞狐_湘妃庙.胡斐单挑田归农阎基.胜利": [{"start": 0, "expectedCount": 1, "lines": [
+      {"speaker": "胡斐", "text": {"en": "The two poisoners are dead. We owe the champion the truth—and an apology. Back to Winter Cottage.", "zh-CN": "两个下毒者都死了。该把真相告诉老勇士，也该向他道歉。回冬日小屋吧。"}}
+    ]}]
+  },
+  "speakerNames": {
+    "田归农": {"en": "The Guildmaster", "zh-CN": "组织首领"},
+    "变态田归农": {"en": "The Guildmaster", "zh-CN": "组织首领"}
+  },
+  "commandText": {
+    "手刃害死胡一刀的奸贼田归农、阎基。": {"en": "Defeated the two poisoners at Rain Shrine. Return to Winter Cottage and tell the champion what happened.", "zh-CN": "在雨中祠堂击败两名下毒者。返回冬日小屋，把经过告诉老勇士。"}
+  },
+  "definitions": {"battles": {
+    "湘妃庙.田归农.阎基.战斗": {"name": {"en": "The Apothecary's Price", "zh-CN": "药师的价码"}},
+    "湘妃庙.胡斐单挑田归农阎基.战斗": {"name": {"en": "Kai Faces the Poisoners", "zh-CN": "凯独战下毒者"}}
+  }},
+  "maps": {
+    "湘妃庙": {"name": {"en": "Rain Shrine", "zh-CN": "雨中祠堂"}, "description": {"en": "Rain drips through the old roof. Travelers shelter among the weathered pillars.", "zh-CN": "雨水从旧屋顶滴落，旅人在风化的柱子间避雨。"}}
+  },
+  "locations": {
+    "湘妃庙": {
+      "田归农": {"name": {"en": "The Guildmaster", "zh-CN": "组织首领"}, "description": {"en": "A guildmaster sheltering from the rain. The apothecary recognizes him.", "zh-CN": "在此避雨的组织首领，药师认得他。"}},
+      "返回": {"name": {"en": "Back to Rainmarket", "zh-CN": "返回雨集镇"}, "description": {"en": "Return to Rainmarket.", "zh-CN": "返回雨集镇。"}}
+    }
+  }
+}

@@ -1285,15 +1285,22 @@
       },
       {
         "title": {"en": "Denmark · Kai and Gerda", "zh-CN": "丹麦·凯与格尔达"},
-        "trackedStories": ["雪山飞狐_胡斐居.胜利", "雪山飞狐_胡斐居.失败", "mainStory_黑暗的阴影1", "雪山飞狐_阎基居.两页刀法.胜利", "雪山飞狐_苗人凤居.苗人凤被毒.胜利", "雪山飞狐_药王庄.程灵素.求药", "雪山飞狐_阎基居.七星海棠.胜利.杀", "雪山飞狐_阎基居.七星海棠.胜利.不杀", "雪山飞狐_苗人凤居.田归农来战.胜利.2"],
+        "trackedStories": ["雪山飞狐_胡斐居.胜利", "雪山飞狐_胡斐居.失败", "mainStory_黑暗的阴影1", "雪山飞狐_阎基居.两页刀法.胜利", "雪山飞狐_苗人凤居.苗人凤被毒.胜利", "雪山飞狐_药王庄.程灵素.求药", "雪山飞狐_阎基居.七星海棠.胜利.杀", "雪山飞狐_阎基居.七星海棠.胜利.不杀", "雪山飞狐_苗人凤居.田归农来战.胜利.2", "雪山飞狐_湘妃庙.胡斐单挑田归农阎基.胜利"],
         "prepareLabel": {"en": "Gear & study", "zh-CN": "装备与研习"},
         "stages": [
+          {
+            "id": "denmark-poisoners-defeated",
+            "any": ["雪山飞狐_湘妃庙.胡斐单挑田归农阎基.胜利"],
+            "title": {"en": "The poisoners are defeated", "zh-CN": "已击败下毒者"},
+            "detail": {"en": "Kai won the solo fight. You received Dragonfang Sword, and Trailguard Sword's training cap increased by 1. Inspect the actual equipment and study requirements before using them. The champion still needs to hear what happened; this is not the whole Denmark story.", "zh-CN": "凯赢得独战，获得龙牙剑，巡卫剑术的修炼上限提高1级。使用前查看实际装备和研习要求。老勇士仍在等真相，这不是丹麦全章。"},
+            "route": [], "complete": true, "panel": "cultivation"
+          },
           {
             "id": "denmark-investigation",
             "any": ["雪山飞狐_苗人凤居.田归农来战.胜利.2"],
             "title": {"en": "The old duel needs investigating", "zh-CN": "继续调查旧决斗"},
-            "detail": {"en": "You heard the champion's account and received a Frontier Cleave Manual. Check its requirements in Party → Study. The old duel is still unresolved; this is not the whole Denmark story.", "zh-CN": "你听过老勇士的解释，获得边境重斩手册。可在队伍→研习查看要求。旧决斗仍未查清，这不是丹麦全章。"},
-            "route": [], "complete": true, "panel": "cultivation"
+            "detail": {"en": "Prepare Kai before Rain Shrine in Rainmarket. If you spared the apothecary, two fights follow without a map break: three party slots (Kai required), then the apothecary leaves and Kai fights two poisoners ALONE, including a Level 15 foe. If you killed the apothecary, the guildmaster offers a different account. Save first: defeat or timeout ends the journey. Getting a manual does not train Kai.", "zh-CN": "先培养凯，再去雨集镇的雨中祠堂。放过药师的路线有连续两战：先三人、凯必选，随后药师离队，凯单独面对两名下毒者，其中一人为15级。杀死药师的路线则会听到另一种说法。先保存，失败或超时会结束旅程。拿到教材不等于已经培养凯。"},
+            "route": [{"mapId": "大地图", "locationId": "衡阳"}, {"mapId": "衡阳", "locationId": "湘妃庙"}, {"mapId": "湘妃庙", "locationId": "田归农"}]
           },
           {
             "id": "denmark-return-with-apothecary",

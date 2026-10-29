@@ -1,6 +1,15 @@
 import assert from 'node:assert/strict';
 import {test} from 'node:test';
 import {translateUiText,setUiDisplayLabels} from '../src/ui/locale.ts';
+test('observed story departure translates placement and preserves player labels',()=>{
+ setUiDisplayLabels({'阎基':'The Apothecary'});
+ assert.equal(translateUiText('阎基：参战 → 后备。'),'The Apothecary: Active → Reserve.');
+ assert.equal(translateUiText('The Apothecary: 参战 → 后备。'),'The Apothecary: Active → Reserve.');
+ assert.equal(translateUiText('Wren：后备 → 参战。'),'Wren: Reserve → Active.');
+ assert.equal(translateUiText('Wren：随行 → 后备。'),'Wren: Following → Reserve.');
+ assert.equal(translateUiText('Wren: Reserve → Active.'),'Wren: Reserve → Active.');
+ setUiDisplayLabels({});
+});
 test('received world news is translated without claiming its follow-up is complete',()=>{
  assert.equal(translateUiText('黑暗的阴影 · 已发生'),'An Unwelcome Shadow · Received');
  assert.equal(translateUiText('黑暗的阴影 · 尚未发生'),'An Unwelcome Shadow · Not yet received');

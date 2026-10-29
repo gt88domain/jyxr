@@ -82,5 +82,10 @@ test('finishing Spain recommends France while exploring Italy keeps the local gu
  assert.match(openingChapterStep(s).detail,/Another choice follows/);
  s.chapterJournal.completedStories.push('雪山飞狐_苗人凤居.田归农来战.胜利.2');
  assert.equal(openingChapterStep(s).storyStage,'denmark-investigation');
+ assert.equal(openingChapterStep(s).complete,false);
+ assert.match(openingChapterStep(s).detail,/Kai fights two poisoners ALONE/);
+ assert.match(openingChapterStep(s).detail,/If you killed the apothecary/);
+ s.chapterJournal.completedStories.push('雪山飞狐_湘妃庙.胡斐单挑田归农阎基.胜利');
+ assert.equal(openingChapterStep(s).storyStage,'denmark-poisoners-defeated');
  assert.equal(openingChapterStep(s).complete,true);
 });

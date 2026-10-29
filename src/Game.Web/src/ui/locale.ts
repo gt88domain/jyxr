@@ -18,6 +18,10 @@ function itemLabel(name:string){return categorizedDisplay(displayCatalog,['items
 function skillLabel(name:string){return categorizedDisplay(displayCatalog,['externalSkills','internalSkills','specialSkills','legendSkills'],name)?.name??translateUiText(name);}
 const statNoticeLabels:Record<string,string>={max_hp:'Maximum Health',max_mp:'Maximum Energy','奇门':'Spell aptitude','自由属性点':'Unspent attribute points'};
 const patterns:Array<[RegExp,(...parts:string[])=>string]>=[
+  [/^(.+?)[:：]\s*(参战|随行|后备)\s*→\s*(参战|随行|后备)[。.]?$/,(name,from,to)=>{
+    const placement:Record<string,string>={'参战':'Active','随行':'Following','后备':'Reserve'};
+    return `${translateUiText(name.trim())}: ${placement[from]} → ${placement[to]}.`;
+  }],
   [/^第\s*(\d+)\s*周目\s*·\s*此程落幕$/,(round)=>`Playthrough ${round} · Journey ended`],
   [/^招式冷却中，还需\s*(\d+)\s*回合。$/,(turns)=>`Technique cooling down: ${turns} turns remaining.`],
   [/^需要(剑法|刀法|拳掌|奇门|根骨|定力|臂力|身法|悟性|福缘)达到\s*(\d+)$/,(stat,value)=>`Requires ${translateUiText(stat)} ${value}.`],
