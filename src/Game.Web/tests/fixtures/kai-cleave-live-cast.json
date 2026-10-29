@@ -1,0 +1,32 @@
+{
+  "sourceReport": "denmark-shrine-cleave-verified.json",
+  "sourceReportSha256": "d98d6a6a50b193263e4b053b89644bd1632a187ae41ff3f5ba817b43588b832f",
+  "battleId": "湘妃庙.胡斐单挑田归农阎基.战斗",
+  "tick": 300,
+  "note": "Small evidence fixture from a normal UI cast, not an importable save or a new simulation. The complete attempt ended in defeat.",
+  "host": {
+    "activeUnitId": "participant_0_胡斐",
+    "action": {"unitId": "participant_0_胡斐", "team": 1, "mainActionCommitted": false, "canMove": true, "canRest": true, "canAttack": true},
+    "skill": {"id": "胡家刀法", "level": 4, "mpCost": 128, "castSize": 1, "impactSize": 1, "available": true},
+    "targets": [
+      {"skillId": "胡家刀法", "x": 3, "y": 1, "targetId": null},
+      {"skillId": "胡家刀法", "x": 2, "y": 2, "targetId": null},
+      {"skillId": "胡家刀法", "x": 4, "y": 2, "targetId": null},
+      {"skillId": "胡家刀法", "x": 3, "y": 3, "targetId": null}
+    ]
+  },
+  "units": [
+    {"id": "participant_0_胡斐", "team": 1, "alive": true, "x": 3, "y": 2},
+    {"id": "participant_1_battle_1_变态田归农", "team": 2, "alive": true, "x": 7, "y": 2},
+    {"id": "participant_2_battle_2_阎基", "team": 2, "alive": true, "x": 4, "y": 1}
+  ],
+  "aim": {"x": 3, "y": 1, "targetId": null},
+  "mpBefore": 580,
+  "mpAfter": 452,
+  "nativeCast": {
+    "sequence": 252, "kind": "SkillCast", "unitId": "participant_0_胡斐", "skillId": "胡家刀法", "isLegend": false,
+    "targetPosition": {"x": 3, "y": 1},
+    "impactedPositions": [{"x": 2, "y": 1}, {"x": 3, "y": 1}, {"x": 4, "y": 1}]
+  },
+  "nativeDamage": {"sequence": 253, "kind": "Damaged", "sourceUnitId": "participant_0_胡斐", "unitId": "participant_2_battle_2_阎基", "amount": 375, "critical": false}
+}
