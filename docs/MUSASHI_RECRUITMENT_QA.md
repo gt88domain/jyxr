@@ -56,3 +56,5 @@
 报告 `passed=true`，16项限定检查通过，浏览器／HTTP／请求异常均为0；`encounterVerified=false`、`recruitmentVerified=true`、`recoveryVerified=true`，明确区分战斗与招募。13页对白、队伍卡截图和全部前后导出另有 `musashi-recheck-evidence-manifest.json` 记录bytes／SHA；上次失败报告、原97ad档、Guinevere候选和既有各国成果均未改。
 
 本批止于武藏加入后的正常地图档。下一处可独立审阅的缺口为武藏高级招式的英文显示说明；未在这批改动、培养或进入后续剧情。
+
+后续[实际技能页审阅](MUSASHI_SKILL_COPY_REVIEW.md)已确认：6个高级名称在人物页可见，中文description在宿主数据中存在，但现有非战斗页面没有高级说明入口，培养页只显示两张基础技能卡。本轮未为此新增界面或进入战斗，未改文案；页面检查及普通Load保持本档完整序列化字段不变，高级说明显示仍未验。
