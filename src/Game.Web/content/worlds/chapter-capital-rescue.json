@@ -1,0 +1,54 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "speakerNames": {
+    "崇祯皇帝": {"en": "Ramesses II", "zh-CN": "拉美西斯二世"},
+    "太监": {"en": "Castle Guard", "zh-CN": "城堡卫兵"}
+  },
+  "maps": {
+    "天安门": {
+      "name": {"en": "Palace Gate", "zh-CN": "王宫城门"},
+      "description": {"en": "Guards watch the palace approaches. Beyond the gate, raised voices carry across the courtyards.", "zh-CN": "卫兵守着通往王宫的道路。城门后，喧闹声穿过一座座庭院传来。"}
+    }
+  },
+  "uiLabels": {
+    "神情激昂，状若癫狂": {"en": "Ptah brings word of fighting inside the palace.", "zh-CN": "卜塔带来了王宫内发生冲突的消息。"},
+    "公主寝宫": {"en": "Royal Apartments", "zh-CN": "王室居所"},
+    "前往公主寝宫": {"en": "Visit the royal apartments.", "zh-CN": "前往王室居所。"},
+    "返回北京": {"en": "Back to Liberty Crossing.", "zh-CN": "返回自由渡城。"},
+    "大内绝顶高手": {"en": "Palace Champion", "zh-CN": "王宫精锐"},
+    "阿九断臂": {"en": "Cleopatra's left arm was badly wounded. Strength -30; Focus +30. Seek Imhotep at Crane Peak.", "zh-CN": "克娄巴特拉左臂重伤。臂力-30，定力+30。去鹤峰寻找伊姆霍特普。"},
+    "剑光殿前": {"en": "Escape from the Palace", "zh-CN": "脱离王宫"},
+    "打败崇祯皇帝。": {"en": "Defeated Ramesses II and escaped with Cleopatra.", "zh-CN": "击败拉美西斯二世，与克娄巴特拉离开王宫。"}
+  },
+  "definitions": {
+    "battles": {
+      "崇祯_战斗": {"name": {"en": "The Palace Betrayal", "zh-CN": "王宫背叛"}}
+    }
+  },
+  "dialogueEdits": {
+    "bixuejianShyou_京城行3": [{"start": 2, "expectedCount": 1, "lines": [
+      {"speaker": "孙仲寿", "text": {"en": "The outer gates have fallen. There's fighting in the palace!", "zh-CN": "外城门失守了。王宫里也打起来了！"}}
+    ]}],
+    "bixuejianShyou_京城行4": [{"start": 2, "expectedCount": 10, "lines": [
+      {"speaker": "阿九", "text": {"en": "Ramesses, the gates have fallen. Leave while there's still a way out.", "zh-CN": "拉美西斯，城门已经失守。趁还有路可走，离开这里。"}},
+      {"speaker": "阿九", "text": {"en": "Stay with him. Get him beyond the fighting.", "zh-CN": "你跟着他，带他远离交战的地方。"}},
+      {"speaker": "太监", "text": {"en": "Yes, Your Majesty. Are you coming with us?", "zh-CN": "是，陛下。您也和我们一起走吗？"}},
+      {"speaker": "阿九", "text": {"en": "I'm leaving with Horus.", "zh-CN": "我和荷鲁斯一起走。"}},
+      {"speaker": "崇祯皇帝", "text": {"en": "With him? You would walk out while my palace burns?", "zh-CN": "和他？我的王宫正在燃烧，你却要就这样离开？"}},
+      {"speaker": "阿九", "text": {"en": "I'm asking you to leave it alive. The throne isn't worth this.", "zh-CN": "我是在劝你活着离开。一个王座，不值得这样。"}},
+      {"speaker": "崇祯皇帝", "text": {"en": "Your word. You'll stay at my side.", "zh-CN": "向我保证。你会留在我身边。"}},
+      {"speaker": "阿九", "text": {"en": "I'll see you safely out. I won't stay for your throne.", "zh-CN": "我会护送你平安离开。但我不会为你的王座留下。"}},
+      {"speaker": "崇祯皇帝", "text": {"en": "I built a kingdom. You would have me leave with nothing?", "zh-CN": "我建立了一个王国，你却要我两手空空地离开？"}},
+      {"speaker": "崇祯皇帝", "text": {"en": "(He swings at Cleopatra. She twists aside, but the blade catches her left arm.)", "zh-CN": "（他挥剑劈向克娄巴特拉。她侧身闪避，剑锋仍划中了左臂。）"}}
+    ]}],
+    "bixuejianShyou_京城行5": [{"start": 1, "expectedCount": 7, "lines": [
+      {"speaker": "主角", "text": {"en": "(Horus forces Ramesses back. Cleopatra clutches her badly wounded left arm.)", "zh-CN": "（荷鲁斯逼退拉美西斯。克娄巴特拉紧按着重伤的左臂。）"}},
+      {"speaker": "袁承志", "text": {"en": "You struck the person trying to save you. Give me one reason to let you walk away.", "zh-CN": "她想救你，你却对她下手。给我一个放你走的理由。"}},
+      {"speaker": "崇祯皇帝", "text": {"en": "Then finish it.", "zh-CN": "那就动手吧。"}},
+      {"speaker": "阿九", "text": {"en": "No. Horus, don't. I won't trade this wound for an execution.", "zh-CN": "不。荷鲁斯，别这样。我不想用这道伤，换来一场处决。"}},
+      {"speaker": "袁承志", "text": {"en": "(He lowers his blade.) For you. We're getting out of here.", "zh-CN": "（他放低剑锋。）看在你的份上。我们现在就离开。"}},
+      {"speaker": "阿九", "text": {"en": "I need a healer. Please—let's go.", "zh-CN": "我需要找人疗伤。走吧，求你了。"}},
+      {"speaker": "袁承志", "text": {"en": "Imhotep. We need to find Imhotep.", "zh-CN": "伊姆霍特普。我们得去找伊姆霍特普。"}}
+    ]}]
+  }
+}
