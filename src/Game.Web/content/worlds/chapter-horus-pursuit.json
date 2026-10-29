@@ -1,0 +1,33 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "speakerNames": {
+    "孙仲寿": {"en": "Ptah", "zh-CN": "卜塔"}
+  },
+  "definitions": {
+    "battles": {
+      "广州.战斗": {"name": {"en": "Hold the Line", "zh-CN": "守住阵线"}}
+    }
+  },
+  "dialogueEdits": {
+    "bixuejianShyou_东厂追杀": [
+      {"start": 1, "expectedCount": 5, "lines": [
+        {"speaker": "崔秋山", "text": {"en": "Horus, this is Stoneclaw Strike. My teacher showed me how to hold my ground.", "zh-CN": "荷鲁斯，这就是岩爪击。我的老师用它教会了我，怎样站稳脚跟。"}},
+        {"speaker": "崔秋山", "text": {"en": "I haven't mastered every part of it. I can still keep most trouble at arm's length.", "zh-CN": "我还没完全掌握它。不过，大多数麻烦，还能挡在一臂之外。"}},
+        {"speaker": "崔秋山", "text": {"en": "But the first lesson was a promise: never use it to hurt people who can't defend themselves.", "zh-CN": "但第一课是一个承诺：绝不用它伤害无力自保的人。"}},
+        {"speaker": "儿时袁承志", "text": {"en": "Then I promise too. I won't use it to bully anyone.", "zh-CN": "那我也承诺，绝不用它欺负别人。"}},
+        {"speaker": "崔秋山", "text": {"en": "Good. Watch my hands. The speech isn't the technique.", "zh-CN": "好。看着我的手，光会说可算不上学会了。"}}
+      ]},
+      {"start": 7, "expectedCount": 5, "lines": [
+        {"speaker": "崔秋山", "text": {"en": "(Bootsteps draw closer. Shu breaks off his demonstration.)", "zh-CN": "（脚步声越来越近，舒停下了示范。）"}},
+        {"speaker": "崔秋山", "text": {"en": "Masked assassins. They've found us.", "zh-CN": "蒙面刺客。他们找到我们了。"}},
+        {"speaker": "孙仲寿", "text": {"en": "Shu, get Horus out of here. I'll cover your retreat.", "zh-CN": "舒，带荷鲁斯离开这里。我来掩护。"}},
+        {"speaker": "崔秋山", "text": {"en": "Stay close, Horus. We'll get through this.", "zh-CN": "荷鲁斯，别离太远。我们一起闯过去。"}},
+        {"speaker": "主角", "text": {"en": "You won't have to do it alone.", "zh-CN": "你们不用独自面对他们。"}}
+      ]}
+    ],
+    "bixuejianShyou_东厂已追杀": [{"start": 0, "expectedCount": 2, "lines": [
+      {"speaker": "崔秋山", "text": {"en": "We can talk once we're off this road.", "zh-CN": "等离开这条路，我们再慢慢说。"}},
+      {"speaker": "主角", "text": {"en": "Agreed. Lead the way.", "zh-CN": "好，你带路。"}}
+    ]}]
+  }
+}
