@@ -433,10 +433,10 @@
   "definitions": {
     "talents": {
       "令狐冲的怪病": {
-        "name": {"en": "Lingering Cough", "zh-CN": "令狐冲的怪病"},
+        "name": {"en": "Lingering Cough", "zh-CN": "久咳"},
         "description": {
-          "en": "Coughing can cost an action (40% chance). The physician from Healer's House prevents this while fighting on the same side with at least 2 Health.",
-          "zh-CN": "令狐冲的怪病让他咳嗽不止。"
+          "en": "Before acting, coughing has a 40% chance to cost an action. A living Hippocrates deployed on the same side prevents this while he has at least 2 Health. Having him in the traveling party is not enough; this does not prevent other effects from costing an action.",
+          "zh-CN": "行动前有40%概率因咳嗽失去本次行动。同阵营参战的希波克拉底存活且生命至少为2时，可防止这一效果；只在旅行队伍中不算参战，也不防止其他原因造成的行动中断。"
         }
       },
       "嗜酒如命": {

@@ -24,6 +24,8 @@
 
 ## 当前接入范围
 
+`chapter-hippocrates-consultation.json`补医师初诊／招呼／提醒／治疗前导4段28句，接续Circe与武藏的呼吸问题。以既有Snow Lotus／Mountain Ginseng／Ancient Reserve三背包材料写指引，Frostsilk只是后段剧情组件，不创建第四物品门槛。原32步、日志／JOIN后立即致死战斗／回地图／原治好跳转不变；地图明确战前保存提示。咳嗽说明在既有`chapter-equipment-copy.json`唯一所有者澄清40%／同场医师生命≥2，保留全部规则；医师入旅行队不等于自动参战。最终内容／双语定向通过，首个所有权与QA分类键错误保留，实际全NOT_RUN；下游35句治好／45步成长仍原样未改。见[初诊图与后续验证边界](../../../../docs/HIPPOCRATES_CONSULTATION_COPY_QA.md)。
+
 `chapter-circe-recruitment.json`补Circe／武藏初遇与招募2段8句，延续既有呼吸不顺、用药与格挡的冷幽默，去掉旧暧昧称呼；医师沿既有候选Hippocrates，地点Healer's House，赠品沿用Viper's Hex Tome。原10步、四武藏形态／无Circe门槛、无武藏招呼fallback、JOIN→法术书不变，不增治愈／学习或任务条件。真实242档一次Back／一次点击实看7句，正常加入第12人、法术书0→1、无挪人或资源消耗，存读档一致；构建／双语定向及实玩11检查首遍通过。Fallback／其它形态／医师治疗／真机未验，见[招募实录](../../../../docs/CIRCE_RECRUITMENT_QA.md)。
 
 `chapter-serpent-sanctuary.json`补圣所许可／密窟取剑4段8句、10张既有地图显示，沿现有Venom Circle Token与Serpent-Gold Sword名称。八个重复敌兵显示Sanctuary Warden，不变更Taweret候选或Circe身份锁定；原12步、优先胜利标记许可／无信物消耗、八处5%遭遇、主角独战及剑／称号保持。一次真实194档副本无随机战到达，实看7句，原战tick378胜、242银币／剑1／信物1／11人并真实存读档一致。构建和冻结／投影通过；战后QA字段拼写错误原报告保留，独立真实导出复核通过，未重打。拒绝、败局及真机未验，见[完整路线／证据与边界](../../../../docs/SERPENT_SANCTUARY_QA.md)。Circe招募由上批独立验证，不回写旧报告。

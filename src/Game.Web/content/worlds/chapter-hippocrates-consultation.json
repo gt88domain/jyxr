@@ -1,0 +1,72 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "speakerNames": {
+    "平一指": {"en": "Hippocrates", "zh-CN": "希波克拉底"},
+    "蓝凤凰": {"en": "Circe", "zh-CN": "喀耳刻"},
+    "令狐冲": {"en": "Miyamoto Musashi", "zh-CN": "宫本武藏"},
+    "费彬": {"en": "Benkei", "zh-CN": "武藏坊弁庆"},
+    "嵩山弟子": {"en": "Temple Guard", "zh-CN": "寺院守卫"}
+  },
+  "maps": {
+    "平一指居": {
+      "name": {"en": "Healer's House", "zh-CN": "医师居所"},
+      "description": {"en": "Bundles of herbs hang above a crowded worktable. Hippocrates receives patients here, including adventurers who insist their injuries are part of the training.", "zh-CN": "成束的药草悬在拥挤的工作台上方。希波克拉底在此接诊，也接待那些坚持说受伤是修炼一部分的冒险者。"}
+    }
+  },
+  "uiLabels": {
+    "移居洛阳的平一指居": {"en": "Hippocrates receives patients at the Healer's House.", "zh-CN": "希波克拉底在医师居所接待病人。"},
+    "杀人名医平一指": {"en": "Ask Hippocrates about treatment. Musashi's first consultation leads to a battle; save and prepare first.", "zh-CN": "向希波克拉底问诊。武藏初诊后会立即开战，请先保存并做好准备。"},
+    "回洛阳城": {"en": "Back to Crossroads.", "zh-CN": "返回十字镇。"},
+    "寻找治疗令狐冲的雪莲花、万年冰蚕、长白人参、万年醉。": {
+      "en": "Bring Snow Lotus, Mountain Ginseng, and Ancient Reserve to Hippocrates at the Healer's House. Return with him, Musashi, and Circe in the party. Ask about Frostsilk when those three supplies are ready.",
+      "zh-CN": "把雪莲花、高山人参和陈年佳酿带到医师居所；返回时，希波克拉底、武藏和喀耳刻都须在队。三样备齐后，再谈霜蚕丝的事。"
+    }
+  },
+  "definitions": {
+    "battles": {"平一指_战斗": {"name": {"en": "Trouble at the Healer's House", "zh-CN": "医师居所的冲突"}}}
+  },
+  "dialogueEdits": {
+    "笑傲江湖_平一指1": [{"start": 0, "expectedCount": 1, "lines": [
+      {"speaker": "平一指", "text": {"en": "Tell me what hurts. Pride can wait.", "zh-CN": "先说哪里不舒服。面子的事，可以等会儿。"}}
+    ]}],
+    "笑傲江湖_平一指2": [
+      {"start": 0, "expectedCount": 12, "lines": [
+        {"speaker": "平一指", "text": {"en": "Tell me what hurts. Pride can wait.", "zh-CN": "先说哪里不舒服。面子的事，可以等会儿。"}},
+        {"speaker": "蓝凤凰", "text": {"en": "Hippocrates, I brought you a swordsman who's losing a duel with his own lungs.", "zh-CN": "希波克拉底，我带来一位剑客。他正和自己的肺交手，眼看要输了。"}},
+        {"speaker": "令狐冲", "text": {"en": "I was hoping for a less dramatic introduction.", "zh-CN": "我还以为，你会介绍得平和一点。"}},
+        {"speaker": "平一指", "text": {"en": "How long has this been happening?", "zh-CN": "这个情况，持续多久了？"}},
+        {"speaker": "平一指", "text": {"en": "And before you answer: a training dummy is not a qualified physician.", "zh-CN": "先提醒一句：练习木人，不是合格的医师。"}},
+        {"speaker": "令狐冲", "text": {"en": "Since one particularly vigorous practice session. My breathing hasn't recovered.", "zh-CN": "从一次练得特别狠的修习开始，呼吸就一直不顺。"}},
+        {"speaker": "平一指", "text": {"en": "And you've kept practicing.", "zh-CN": "然后，你还在接着练。"}},
+        {"speaker": "令狐冲", "text": {"en": "I thought discipline might help.", "zh-CN": "我以为，勤练总会有用。"}},
+        {"speaker": "蓝凤凰", "text": {"en": "His lungs appear to disagree.", "zh-CN": "他的肺，看起来不太赞同。"}},
+        {"speaker": "平一指", "text": {"en": "This needs careful treatment. A potion from the market won't do it.", "zh-CN": "这得仔细调治，集市上的普通药剂解决不了。"}},
+        {"speaker": "令狐冲", "text": {"en": "What will?", "zh-CN": "那该怎么办？"}},
+        {"speaker": "平一指", "text": {"en": "Bring Snow Lotus, Mountain Ginseng, and Ancient Reserve. There's also the matter of Frostsilk, but those three come first.", "zh-CN": "先带来雪莲花、高山人参和陈年佳酿。另外还缺霜蚕丝，不过先把这三样备齐。"}}
+      ]},
+      {"start": 13, "expectedCount": 6, "lines": [
+        {"speaker": "令狐冲", "text": {"en": "Those don't sound like things the corner store keeps behind the counter.", "zh-CN": "听着不像街角小店随手就能拿出来的东西。"}},
+        {"speaker": "平一指", "text": {"en": "If they were, this would have been a very short consultation.", "zh-CN": "若真有那么好找，这次问诊早就结束了。"}},
+        {"speaker": "令狐冲", "text": {"en": "And until then? I'd like to finish a sentence without coughing.", "zh-CN": "在那之前呢？我很想完整说完一句话，中途不用咳嗽。"}},
+        {"speaker": "平一指", "text": {"en": "I'll travel with you. Circe's good at spotting trouble; someone should be there to treat it.", "zh-CN": "我和你们同行。喀耳刻很擅长发现麻烦，总得有人处理后果。"}},
+        {"speaker": "平一指", "text": {"en": "If I'm fighting beside you with at least 2 Health, your cough won't cost you a turn. It isn't a permanent cure.", "zh-CN": "我与你同场参战、生命至少为2时，能让你不因咳嗽耽误行动。不过，这还不算根治。"}},
+        {"speaker": "令狐冲", "text": {"en": "A physician who knows the difference. I'm reassured.", "zh-CN": "能把这两件事分清楚的医师，让人放心多了。"}}
+      ]},
+      {"start": 20, "expectedCount": 3, "lines": [
+        {"speaker": "平一指", "text": {"en": "For that protection, I need a place in the deployed lineup. Just having me in the traveling party won't do.", "zh-CN": "要有这层保护，得让我实际参战。光把我算在旅行队伍里，可帮不上忙。"}},
+        {"speaker": "费彬", "text": {"en": "Circe! Your spells have stirred up enough trouble. Surrender the swordsman, and we'll sort this out.", "zh-CN": "喀耳刻！你的法术惹的麻烦够多了。把那剑客交出来，咱们再分辨清楚！"}},
+        {"speaker": "主角", "text": {"en": "He came for a diagnosis. Apparently that's a fighting word.", "zh-CN": "他明明只是来问诊的。原来问诊，也能成为开打的理由。"}}
+      ]}
+    ],
+    "笑傲江湖_平一指3": [{"start": 0, "expectedCount": 2, "lines": [
+      {"speaker": "平一指", "text": {"en": "Still gathering supplies? Bring Snow Lotus, Mountain Ginseng, and Ancient Reserve.", "zh-CN": "还在找材料？带来雪莲花、高山人参和陈年佳酿。"}},
+      {"speaker": "平一指", "text": {"en": "Return with me, Musashi, and Circe in the party. Once those three supplies are ready, we'll deal with the Frostsilk.", "zh-CN": "返回时，让我、武藏和喀耳刻都留在队里。三样材料备好后，再来解决霜蚕丝的事。"}}
+    ]}],
+    "笑傲江湖_平一指治疗": [{"start": 0, "expectedCount": 4, "lines": [
+      {"speaker": "平一指", "text": {"en": "Snow Lotus, Mountain Ginseng, Ancient Reserve. That's the three supplies I asked you to bring. We're still missing Frostsilk.", "zh-CN": "雪莲花、高山人参、陈年佳酿。我要你们带来的三样都齐了，现在还缺霜蚕丝。"}},
+      {"speaker": "令狐冲", "text": {"en": "I knew there was going to be a 'still.'", "zh-CN": "我就知道，后面还有个“还”字。"}},
+      {"speaker": "平一指", "text": {"en": "The mixture needs that last component. I won't give you an unfinished remedy.", "zh-CN": "药方不能少那最后一味。我不会把没配好的药交给你。"}},
+      {"speaker": "令狐冲", "text": {"en": "Then let's finish it properly.", "zh-CN": "那就把最后一步，也好好办完。"}}
+    ]}]
+  }
+}
