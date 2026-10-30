@@ -16,11 +16,7 @@
   "locations": {
     "衡阳郊外": {
       "曲非烟": {
-        "name": {"en": "Izumo no Okuni", "zh-CN": "出云阿国"},
-        "description": {
-          "en": "A dancer and spellcaster rehearsing in the clearing.",
-          "zh-CN": "一位舞者兼施法者，正在空地上排练。"
-        }
+        "name": {"en": "Izumo no Okuni", "zh-CN": "出云阿国"}
       },
       "返回": {
         "description": {"en": "Back to the Rainwood trail.", "zh-CN": "返回雨雾林小径。"}
@@ -28,9 +24,14 @@
     }
   },
   "uiLabels": {
+    "古琴知音": {"en": "A Place in the Troupe", "zh-CN": "剧团新伴"},
+    "一个聪明灵秀的女子，日月神教长老曲洋的孙女。": {
+      "en": "A dancer and spellcaster rehearsing in the clearing.",
+      "zh-CN": "一位舞者兼施法者，正在空地上排练。"
+    },
     "夜晚独自抚琴的曲非烟……": {
-      "en": "Speak with Okuni. With Musashi, this meeting leads to a battle; save and prepare first.",
-      "zh-CN": "与阿国交谈。武藏同行时，这次会面会接着开战；请先保存并做好准备。"
+      "en": "With Musashi: fight. Save.",
+      "zh-CN": "武藏同行时开战，请先保存。"
     }
   },
   "definitions": {
