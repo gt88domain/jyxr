@@ -1,0 +1,41 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "segments": {
+    "mainStory_紧急1": {
+      "en": [
+        "You're back. Good. This couldn't wait.",
+        "Your pigeon made that clear. What happened?",
+        "An army is attacking Highbridge. The defenses are close to breaking.",
+        "An entire army?",
+        "If Highbridge falls, the crossing is open. They can move on the other river towns.",
+        "What happened to the garrison?",
+        "They're still fighting. Reports describe masked fighters in the attacking ranks, like the ones who came after us.",
+        "Our friends with the secret master?",
+        "The same masks.",
+        "How many?",
+        "Hundreds. Possibly a thousand.",
+        "That's a lot of people to keep a name secret.",
+        "No name yet. But this time, they're threatening a whole town.",
+        "Then what's the plan?",
+        "We're going to Highbridge. Keep your companions close; we may have to fight as soon as we arrive."
+      ],
+      "zh-CN": [
+        "你回来了，正好。这件事等不得。",
+        "你的鸽子已经提醒过我了。发生什么事？",
+        "一支军队正在进攻高桥城，城防快撑不住了。",
+        "整支军队？",
+        "高桥城一失守，渡口就敞开了。他们便能继续进攻沿河的其他城镇。",
+        "守军怎么样了？",
+        "还在抵抗。报告说，进攻队伍中混着蒙面人，和先前袭击我们的那些很像。",
+        "又是那群替神秘主人办事的“朋友”？",
+        "同样的面具。",
+        "有多少？",
+        "数百人，也可能有上千。",
+        "这么多人，倒是谁也没把名字说漏。",
+        "名字还没查到。但这一次，受威胁的是整座城。",
+        "那我们怎么办？",
+        "一起去高桥城。伙伴们别走散；一到那里，可能就得交手。"
+      ]
+    }
+  }
+}
