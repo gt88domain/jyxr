@@ -2,6 +2,23 @@ import assert from 'node:assert/strict';
 import {test} from 'node:test';
 import {readFileSync} from 'node:fs';
 import {translateUiText,setUiDisplayLabels} from '../src/ui/locale.ts';
+import {projectPresentation} from '../src/presentation.ts';
+test('mainline prerequisite names match the projected milestone titles',()=>{
+ const pack=JSON.parse(readFileSync(new URL('../public/data/packs/worlds/en/content-package.json',import.meta.url)));
+ const milestones=pack.browser.milestones,catalog=pack.browser.displayCatalog;
+ setUiDisplayLabels(catalog.text,catalog);
+ try{
+  for(const milestone of milestones){
+   for(const requirement of milestone.requirements){
+    const match=requirement.match(/^经历「(.*?)」$/);if(!match)continue;
+    const source=milestones.find(m=>m.title===match[1]);assert.ok(source,'Referenced milestone must exist');
+    const projected=projectPresentation({milestones:[source]},catalog).milestones[0];
+    const expectedTitle=translateUiText(projected.title);
+    assert.equal(translateUiText(requirement),`complete ${expectedTitle}`);
+   }
+  }
+ }finally{setUiDisplayLabels();}
+});
 test('observed study settlement resolves a category-only spell name without changing XP or rank',()=>{
  const catalog=JSON.parse(readFileSync(new URL('../public/data/packs/worlds/en/content-package.json',import.meta.url))).browser.displayCatalog;
  assert.equal(catalog.text['毒龙鞭法'],undefined);
