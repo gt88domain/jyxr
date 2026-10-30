@@ -24,6 +24,8 @@
 
 ## 当前接入范围
 
+`chapter-hippocrates-cure.json`补完整治好段35句与两日志显示，巴御前带来叙事Frostsilk、劝武藏休养后同行；不沿用旧夫妻吃醋／父女关系，末尾沿已有候选织田信长与Black Pine Cliff转介。原45步／10指令、Tomoe JOIN→15天→移天赋／40点／剑＋30／生命能量上限各＋1000／Ninefold Sword上限＋1及两日志完全保持；不造第四物品或新门槛。内容与双语定向首遍通过，全部实玩NOT_RUN，13人306档三材料仍0。五医师段共63槽77步现文本齐、仅旧初诊21句实际走过，不将静态治疗算通关，见[完整改编与冻结结果](../../../../docs/HIPPOCRATES_CURE_COPY_QA.md)。
+
 医师初诊后续已一次正常实玩：无新产品修改，12人242档→原四人对15敌tick325胜→13人306银币，21句／原日志与三件实际掉落保留，三材料仍0、未换装备。首次QA背包不变假设失败保留passed:false，另仅真实胜档恢复测试四检查通过，无重战或重复发奖。武藏四次跳过行动的原因未暴露，不把它们都写成咳嗽；医师没有自动部署。提醒／治疗／35句治好／真机仍未验，见[单次实战与恢复回执](../../../../docs/HIPPOCRATES_CONSULTATION_PLAY_QA.md)。
 
 `chapter-hippocrates-consultation.json`补医师初诊／招呼／提醒／治疗前导4段28句，接续Circe与武藏的呼吸问题。以既有Snow Lotus／Mountain Ginseng／Ancient Reserve三背包材料写指引，Frostsilk只是后段剧情组件，不创建第四物品门槛。原32步、日志／JOIN后立即致死战斗／回地图／原治好跳转不变；地图明确战前保存提示。咳嗽说明在既有`chapter-equipment-copy.json`唯一所有者澄清40%／同场医师生命≥2，保留全部规则；医师入旅行队不等于自动参战。最终内容／双语定向通过，首个所有权与QA分类键错误保留；当时静态交付、后续初诊实玩见上。下游35句治好／45步成长仍原样未改，见[初诊图与后续验证边界](../../../../docs/HIPPOCRATES_CONSULTATION_COPY_QA.md)。

@@ -1,0 +1,67 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "speakerNames": {
+    "任盈盈": {"en": "Tomoe Gozen", "zh-CN": "巴御前"},
+    "任我行": {"en": "Oda Nobunaga", "zh-CN": "织田信长"},
+    "令狐冲": {"en": "Miyamoto Musashi", "zh-CN": "宫本武藏"},
+    "蓝凤凰": {"en": "Circe", "zh-CN": "喀耳刻"},
+    "平一指": {"en": "Hippocrates", "zh-CN": "希波克拉底"}
+  },
+  "uiLabels": {
+    "令狐冲的怪病治好了！": {
+      "en": "Hippocrates completed Musashi's treatment. Lingering Cough is gone.",
+      "zh-CN": "希波克拉底完成了对武藏的治疗，久咳已经消退。"
+    },
+    "圣姑有点想她爹了，让令狐冲去看看": {
+      "en": "Tomoe says Oda Nobunaga wants to see Musashi at Black Pine Cliff. Visit when you're ready.",
+      "zh-CN": "巴御前说，织田信长想在黑松崖见武藏。准备好后，可以前往拜访。"
+    }
+  },
+  "dialogueEdits": {
+    "笑傲江湖_平一指治好": [
+      {"start": 0, "expectedCount": 31, "lines": [
+        {"speaker": "任盈盈", "text": {"en": "There you are. I followed the sound of someone refusing to rest.", "zh-CN": "总算找到你了。听着有人不肯休息的动静，一路找来的。"}},
+        {"speaker": "令狐冲", "text": {"en": "Tomoe? How did you find us?", "zh-CN": "巴御前？你怎么找到这里的？"}},
+        {"speaker": "任盈盈", "text": {"en": "A swordsman coughing his way across the countryside is not difficult to track.", "zh-CN": "一个咳嗽着走遍乡间的剑客，可不难找。"}},
+        {"speaker": "任盈盈", "text": {"en": "Besides, your idea of a quiet recovery seems to involve an audience.", "zh-CN": "而且，你所谓的静养，好像还得配一群观众。"}},
+        {"speaker": "令狐冲", "text": {"en": "The audience was the doctor's idea. I think.", "zh-CN": "观众是医师安排的。大概吧。"}},
+        {"speaker": "任盈盈", "text": {"en": "Then listen to the doctor for once.", "zh-CN": "那这回，就好好听医师的话。"}},
+        {"speaker": "蓝凤凰", "text": {"en": "He has been listening. The treatment is missing one last ingredient.", "zh-CN": "他已经在听了。只是治疗，还差最后一味材料。"}},
+        {"speaker": "任盈盈", "text": {"en": "Yes. He told every innkeeper on the road. It saved me a great deal of searching.", "zh-CN": "知道，他沿路把这事告诉了每位旅店老板，倒是省了我不少找人的工夫。"}},
+        {"speaker": "蓝凤凰", "text": {"en": "A remarkably effective form of diagnosis.", "zh-CN": "真是很有效的问诊方式。"}},
+        {"speaker": "任盈盈", "text": {"en": "I brought the Frostsilk. You can stop making it sound like a lost kingdom.", "zh-CN": "我带来了霜蚕丝。不用再把它说得像失落的王国一样难找。"}},
+        {"speaker": "令狐冲", "text": {"en": "You found it? I was beginning to think the cough would outlive me.", "zh-CN": "你找到了？我都快以为，这咳嗽会比我活得还久。"}},
+        {"speaker": "平一指", "text": {"en": "Good. That's the final component. Now I can prepare the treatment.", "zh-CN": "很好，最后一味也齐了。现在可以开始配药调治。"}},
+        {"speaker": "蓝凤凰", "text": {"en": "A warrior with the right supplies. My favorite kind of reinforcement.", "zh-CN": "一位带齐所需材料的战士。我最喜欢这样的援军。"}},
+        {"speaker": "任盈盈", "text": {"en": "Before you reach for your swords, we need to discuss what comes next.", "zh-CN": "先别急着拿剑，我们得谈谈接下来的打算。"}},
+        {"speaker": "令狐冲", "text": {"en": "Must we? I was hoping the medicine came with a little freedom.", "zh-CN": "一定要现在谈吗？我还盼着，吃完药就能自在些。"}},
+        {"speaker": "任盈盈", "text": {"en": "It comes with recovery.", "zh-CN": "吃完药，接着就是养病。"}},
+        {"speaker": "令狐冲", "text": {"en": "That sounds suspiciously like a schedule.", "zh-CN": "听起来，很像一份作息安排。"}},
+        {"speaker": "任盈盈", "text": {"en": "Rest first. Then we travel together. No racing off to prove you're cured.", "zh-CN": "先休养，再一起上路。别为了证明自己好了，转身就跑去比武。"}},
+        {"speaker": "令狐冲", "text": {"en": "Travel together?", "zh-CN": "一起上路？"}},
+        {"speaker": "任盈盈", "text": {"en": "You make that sound harder than fighting.", "zh-CN": "让你说得，好像比打架还难。"}},
+        {"speaker": "令狐冲", "text": {"en": "Not harder. Less familiar. I could use someone who tells me when to stop.", "zh-CN": "倒不是难，只是不大习惯。有人提醒我适可而止，也挺好。"}},
+        {"speaker": "任盈盈", "text": {"en": "Good. Though I don't intend to spend every day chasing you down.", "zh-CN": "那就好。不过，我可不打算每天都满世界追着你跑。"}},
+        {"speaker": "令狐冲", "text": {"en": "Circe, you've heard her. Is there a spell for listening?", "zh-CN": "喀耳刻，你也听到了。有让人好好听劝的法术吗？"}},
+        {"speaker": "蓝凤凰", "text": {"en": "For that, I recommend rest. Actual rest, not 'very slow sword practice.'", "zh-CN": "这事我建议靠休息。真正的休息，不是“慢一点练剑”。"}},
+        {"speaker": "任盈盈", "text": {"en": "Will that keep him out of trouble?", "zh-CN": "这样就能让他少惹点麻烦？"}},
+        {"speaker": "蓝凤凰", "text": {"en": "Unlikely. Once he's breathing properly, he'll find twice as many duels to volunteer for.", "zh-CN": "恐怕不行。等呼吸顺了，他大概会找来两倍的比武，抢着参加。"}},
+        {"speaker": "任盈盈", "text": {"en": "Then I'll come along. Someone should insist he survives the victory celebration.", "zh-CN": "那我就同行吧。总得有人确保，他能平安度过自己的庆功。"}},
+        {"speaker": "令狐冲", "text": {"en": "I was planning a modest one.", "zh-CN": "我本来只打算，稍微庆祝一下。"}},
+        {"speaker": "任盈盈", "text": {"en": "Good. We'll begin by putting the swords down.", "zh-CN": "很好。那就从放下剑开始。"}},
+        {"speaker": "令狐冲", "text": {"en": "Thank you, Tomoe. For the medicine, and for coming.", "zh-CN": "谢谢你，巴御前。谢谢你的药，也谢谢你愿意来。"}},
+        {"speaker": "任盈盈", "text": {"en": "Save the speech. You'll need that breath for recovering.", "zh-CN": "长篇大论就省了吧。留点气力，好好养病。"}}
+      ]},
+      {"start": 32, "expectedCount": 1, "lines": [
+        {"speaker": "主角", "text": {"en": "Fifteen days of treatment and rest later...", "zh-CN": "治疗并休养了十五天后……"}}
+      ]},
+      {"start": 40, "expectedCount": 1, "lines": [
+        {"speaker": "令狐冲", "text": {"en": "A full breath, and not a cough. Tomoe, I think I'm ready for the road.", "zh-CN": "一口气吸到底，也不咳嗽了。巴御前，我想可以上路了。"}}
+      ]},
+      {"start": 42, "expectedCount": 2, "lines": [
+        {"speaker": "任盈盈", "text": {"en": "Oda Nobunaga wants a word with you at Black Pine Cliff. We should stop by when we can.", "zh-CN": "织田信长想在黑松崖见你。方便的时候，我们去一趟吧。"}},
+        {"speaker": "令狐冲", "text": {"en": "Then we'll make time for him. Together.", "zh-CN": "那就找时间，一起去见他。"}}
+      ]}
+    ]
+  }
+}
