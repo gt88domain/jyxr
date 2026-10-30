@@ -6963,6 +6963,24 @@
     }
   },
   {
+    "id": "gb.william-shakespeare",
+    "country": "GB",
+    "name": {
+      "zh-CN": "威廉·莎士比亚",
+      "en": "William Shakespeare"
+    },
+    "sourceWork": "English literary history",
+    "sourceType": "existing-figure",
+    "gender": "male",
+    "roles": ["scholar", "storyteller"],
+    "recognition": "wide",
+    "original": false,
+    "sourceLabel": {
+      "zh-CN": "英国文学史",
+      "en": "English literary history"
+    }
+  },
+  {
     "id": "cn.li-bai",
     "country": "CN",
     "name": {

@@ -4,6 +4,8 @@
 
 范围是当前冻结运行包 `public/data/packs/jyx/content-package.json`，不是所有历史版本／MOD。原SHA仍为 `c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3`。
 
+后续[十阶段文本改编](RIVERBANK_POET_COPY_QA.md)已把新版本诗人显示身份改为候选威廉·莎士比亚，原`李白`／`original_李白1—10`编号及本清单的概率、前置、数量不变。以下“李白”是原来源名称，不表示新显示身份或已经完成十次会面。
+
 ## 当前真实起点
 
 `hippocrates-victory-recovery-complete-save.json`：76917B，SHA `5e34e7627d4711eeef473b26d391aaf1eef6a4f504e7ac45797f4bf943e57894`。医师居所，**13人／306银币，普通难度、一周目、主角14级、武藏11级、道德54**。武藏、Circe、Hippocrates在队；`曲非烟／疯狂曲非烟`均不在队或后备。背包三件材料均0，仓库为空。

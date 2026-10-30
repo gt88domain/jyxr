@@ -4538,12 +4538,12 @@
       },
       "青莲诗集": {
         "name": {
-          "en": "Drunken Brawl Scroll",
-          "zh-CN": "醉酒乱斗卷轴"
+          "en": "Tavern Versebook",
+          "zh-CN": "酒馆诗集"
         },
         "description": {
-          "en": "Training scroll for Drunken Brawl. Check its requirements and current effects in the item details.",
-          "zh-CN": "记载醉酒乱斗的卷轴。学习条件与实际效果见道具详情。"
+          "en": "Use this book to learn Drunken Brawl. The book is consumed when used; the special skill's current costs and effects are shown in its details.",
+          "zh-CN": "使用后学会特殊技能醉酒乱斗，并消耗这本书。技能当前消耗与效果见详细说明。"
         }
       },
       "天地同寿": {

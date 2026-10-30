@@ -5122,14 +5122,14 @@
       ],
       "kind": "named",
       "status": "proposed",
-      "figureId": "cn.li-bai",
+      "figureId": "gb.william-shakespeare",
       "name": {
-        "zh-CN": "李白",
-        "en": "Li Bai"
+        "zh-CN": "威廉·莎士比亚",
+        "en": "William Shakespeare"
       },
-      "primaryCountry": "CN",
+      "primaryCountry": "GB",
       "relatedCountries": [
-        "CN"
+        "GB"
       ],
       "traveler": false,
       "reviewFlags": [

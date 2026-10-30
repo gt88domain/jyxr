@@ -1,0 +1,71 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "speakerNames": {"李白": {"en": "William Shakespeare", "zh-CN": "威廉·莎士比亚"}},
+  "uiLabels": {
+    "诗仙李白行吟江畔": {"en": "William Shakespeare is trying out a few lines by the river.", "zh-CN": "威廉·莎士比亚正在河畔试写几句台词。"},
+    "长江之滨聆听诗仙真意。": {
+      "en": "Met William Shakespeare on the Great Riverbank and received Ancient Reserve and the Tavern Versebook.",
+      "zh-CN": "在大河岸结识威廉·莎士比亚，获赠陈年佳酿和酒馆诗集。"
+    }
+  },
+  "definitions": {
+    "achievements": {
+      "太白诗仙": {
+        "name": {"en": "The Bard's Audience", "zh-CN": "诗人的听众"},
+        "description": {"en": "Heard Shakespeare's ten riverside scenes.", "zh-CN": "听过莎士比亚的十段河畔小剧场。"}
+      }
+    }
+  },
+  "dialogueEdits": {
+    "original_李白1": [{"start": 1, "expectedCount": 2, "lines": [
+      {"speaker": "李白", "text": {"en": "All the world's a stage. This river has taken that as permission to drown out the actors.", "zh-CN": "整个世界都是舞台。这条河却以为，自己可以放开嗓门，把演员的声音全盖过去。"}},
+      {"speaker": "主角", "text": {"en": "William Shakespeare? I'd ask it to keep the rushing to the action scenes.", "zh-CN": "威廉·莎士比亚？我会建议它，把奔腾的劲头留到打戏。"}}
+    ]}],
+    "original_李白2": [{"start": 1, "expectedCount": 2, "lines": [
+      {"speaker": "李白", "text": {"en": "Every traveler arrives with a story. Half begin, 'It was like that when I found it.'", "zh-CN": "每位旅人都带着故事。一半人的开头是：“我找到它时，它已经这样了。”"}},
+      {"speaker": "主角", "text": {"en": "Mine begins with a man named Grimm. After that, the explanations get less convincing.", "zh-CN": "我的故事，开头是一个叫格林的人。再往下，就越解释越难让人信了。"}}
+    ]}],
+    "original_李白3": [{"start": 1, "expectedCount": 2, "lines": [
+      {"speaker": "李白", "text": {"en": "A king wanted a heroic speech. I offered him a quiet exit. He said it lacked majesty.", "zh-CN": "一位国王想要一段英雄演说。我替他安排了悄悄退场，他嫌不够威风。"}},
+      {"speaker": "主角", "text": {"en": "Did you explain that staying alive is an excellent dramatic choice?", "zh-CN": "你有没有告诉他，活下来，也是一种很出色的戏剧选择？"}}
+    ]}],
+    "original_李白4": [{"start": 1, "expectedCount": 2, "lines": [
+      {"speaker": "李白", "text": {"en": "I wrote a forest that moves. The trees here insist they're waiting for better roles.", "zh-CN": "我写过一座会移动的森林。这里的树却坚持说，得先等到更好的角色。"}},
+      {"speaker": "主角", "text": {"en": "I'd settle for one that doesn't drop branches on us.", "zh-CN": "我要求不高，别往我们头上掉树枝就行。"}}
+    ]}],
+    "original_李白5": [{"start": 1, "expectedCount": 2, "lines": [
+      {"speaker": "李白", "text": {"en": "That innkeeper wants a tragedy about unpaid tabs. He says the research is already finished.", "zh-CN": "那位旅店老板，想要一出讲欠账的悲剧。他说，素材已经全备齐了。"}},
+      {"speaker": "主角", "text": {"en": "If you use my name, make it a very short play.", "zh-CN": "要是用了我的名字，请把戏写短一点。"}}
+    ]}],
+    "original_李白6": [{"start": 1, "expectedCount": 2, "lines": [
+      {"speaker": "李白", "text": {"en": "The moon has inspired a sonnet. The mosquito has inspired several shorter words.", "zh-CN": "月亮让我想出了一首十四行诗。蚊子则让我想出了好几个更短的词。"}},
+      {"speaker": "主角", "text": {"en": "Try the sonnet first. The mosquito's already getting applause.", "zh-CN": "先念诗吧。蚊子那边，已经有人在鼓掌了。"}}
+    ]}],
+    "original_李白7": [{"start": 1, "expectedCount": 2, "lines": [
+      {"speaker": "李白", "text": {"en": "Two rival captains asked me to judge their quarrel. I suggested they try listening. Neither had rehearsed that part.", "zh-CN": "两位互不服气的队长，请我评理。我建议他们试着听别人说话，可谁都没排练过这一段。"}},
+      {"speaker": "主角", "text": {"en": "A difficult role. Almost no sword work.", "zh-CN": "这角色确实难演，几乎没有拔剑的机会。"}}
+    ]}],
+    "original_李白8": [{"start": 1, "expectedCount": 2, "lines": [
+      {"speaker": "李白", "text": {"en": "One traveler read me a love poem meant for three different people. At last, a tragedy with efficient casting.", "zh-CN": "有位旅人，念了一首准备送给三个人的情诗。总算遇到一出选角很有效率的悲剧。"}},
+      {"speaker": "主角", "text": {"en": "Did you tell them the audience might compare notes?", "zh-CN": "你有没有提醒他，观众之间，可能会互相对一对词？"}}
+    ]}],
+    "original_李白9": [{"start": 1, "expectedCount": 2, "lines": [
+      {"speaker": "李白", "text": {"en": "I've found a splendid ending: everyone gets home, the swords stay sheathed, and dinner is still warm.", "zh-CN": "我想到了一个好结局：人人平安到家，剑没有出鞘，晚饭也还是热的。"}},
+      {"speaker": "主角", "text": {"en": "Keep that one. We could use it.", "zh-CN": "这个结局，请留着。我们很用得上。"}}
+    ]}],
+    "original_李白10": [
+      {"start": 1, "expectedCount": 7, "lines": [
+        {"speaker": "李白", "text": {"en": "You're back. Ten meetings, and not once have you tried to sell me a tragic backstory. Remarkable.", "zh-CN": "你又来了。见了十回，居然一次都没打算卖给我一个悲惨身世。难得。"}},
+        {"speaker": "主角", "text": {"en": "I thought you preferred to get those for free.", "zh-CN": "我以为，你更喜欢免费听这些。"}},
+        {"speaker": "李白", "text": {"en": "Only the first draft. You've been a fine audience, even when the jokes weren't.", "zh-CN": "只限初稿。你一直是位好观众，就算有些笑话不怎么好笑。"}},
+        {"speaker": "主角", "text": {"en": "Does a fine audience get a reward?", "zh-CN": "那好观众，有没有奖赏？"}},
+        {"speaker": "李白", "text": {"en": "Usually applause. Unfortunately, I drank the budget.", "zh-CN": "通常会有掌声。可惜，我把预算喝掉了。"}},
+        {"speaker": "主角", "text": {"en": "A bold approach to theater management.", "zh-CN": "真是一种大胆的剧院经营方式。"}},
+        {"speaker": "李白", "text": {"en": "A bottle of Ancient Reserve, and my Tavern Versebook. Keep the bottle safe; use the book to learn Drunken Brawl.", "zh-CN": "给你一瓶陈年佳酿，还有我的酒馆诗集。酒先好好留着；使用诗集，可以学会醉酒乱斗。"}}
+      ]},
+      {"start": 10, "expectedCount": 1, "lines": [
+        {"speaker": "李白", "text": {"en": "Until our next meeting. May your exits be graceful and your footing less experimental.", "zh-CN": "后会有期。愿你退场时足够潇洒，走路时少点即兴发挥。"}}
+      ]}
+    ]
+  }
+}
