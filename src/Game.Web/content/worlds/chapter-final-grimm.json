@@ -1,0 +1,53 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "uiLabels": {
+    "华山论剑！": {"en": "Tournament at Crane Peak!", "zh-CN": "鹤峰比武大会！"}
+  },
+  "commandText": {
+    "蒙古大军败退。": {"en": "The attacking army has retreated.", "zh-CN": "进攻的军队已退却。"}
+  },
+  "segments": {
+    "mainStory_最终决战3": {
+      "en": [
+        "Is that it? Are we done?",
+        "For the moment. You look ready to sleep standing up.",
+        "I was hoping victory would feel a little less like sore feet.",
+        "The feet have earned a rest.",
+        "And the rest of the story?",
+        "Which part?",
+        "The places we missed. The techniques we never learned. The people we never met.",
+        "You could always make another journey.",
+        "From the beginning?",
+        "If you want to see how things might go differently. But first, finish this journey.",
+        "There's a 'but first.' Of course there is.",
+        "One last thing before you head home.",
+        "Go on. I'm listening.",
+        "There's still a final trial.",
+        "A tournament at Crane Peak?",
+        "That's right. A chance to put everything you and your companions have learned to the test.",
+        "Then let's give them something to remember.",
+        "To Crane Peak, then. Bring your companions ready."
+      ],
+      "zh-CN": [
+        "就这样？结束了？",
+        "暂时结束了。你看起来站着都能睡着。",
+        "我还以为，胜利的感觉不该只有脚疼。",
+        "这双脚确实该歇歇了。",
+        "那故事剩下的部分呢？",
+        "你指哪部分？",
+        "没去过的地方，没学到的技艺，还有没认识的人。",
+        "你总可以再走一趟。",
+        "从头开始？",
+        "如果你想看看不同的走法。不过，先把这一趟走完。",
+        "又是“不过，先……”我就知道。",
+        "回家之前，还有最后一件事。",
+        "说吧。我听着。",
+        "还有一场最后的考验。",
+        "鹤峰的比武大会？",
+        "没错。正好看看你和伙伴们一路学到的本领。",
+        "那就让他们见识见识。",
+        "去鹤峰吧。带上准备妥当的伙伴。"
+      ]
+    }
+  }
+}
