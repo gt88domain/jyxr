@@ -1,0 +1,106 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "definitions": {
+    "battles": {
+      "神秘剑客_战斗": {
+        "name": {"en": "The Masked Duelist", "zh-CN": "蒙面剑客的阻拦"}
+      }
+    }
+  },
+  "uiLabels": {
+    "青城山上，与神秘的剑客展开了厮杀。": {
+      "en": "Defeated the Masked Duelist's group on the mountain trail. His master remains unnamed. Check the party's gear and training before traveling on.",
+      "zh-CN": "在山道上击退蒙面剑客一伙，幕后主使依然不明。继续上路前，检查伙伴们的装备与研习。"
+    }
+  },
+  "segments": {
+    "mainStory_神秘剑客": {
+      "en": [
+        "A note from Grimm. Let's hope he's the one waiting at his house this time.",
+        "\"Come see me. Bring your companions ready for trouble, and save your progress before you leave. —Grimm\"",
+        "Useful instructions. Either he's getting better at letters, or this is a very good forgery."
+      ],
+      "zh-CN": [
+        "格林的信。希望这次在家等我的，真的是他本人。",
+        "“来见我。带上准备妥当的伙伴，出发前先保存进度。可能有麻烦。——格林”",
+        "总算写了点有用的。要么他写信有长进了，要么这是封高明的假信。"
+      ]
+    },
+    "mainStory_神秘剑客1": {
+      "en": [
+        "Your note said to expect trouble. Please tell me you haven't invited another surprise guest.",
+        "A masked swordsman has been seen on the mountain trail. His followers have been asking about you.",
+        "The friendly kind of questions?",
+        "Mostly threats. I doubt we're being invited to tea.",
+        "And that wouldn't fit on the note?",
+        "I wanted to explain in person. Also, I wasn't sure how to draw a threatening mask.",
+        "Please don't try. I'd spend a week looking for an angry pumpkin.",
+        "How far is this mountain?",
+        "Far enough that I'd rather take a shortcut. This won't be a practice bout—be ready to fight.",
+        "Of course. The shortest route has swords at the end.",
+        "Stay close, all of you. Let's find out who's been watching your travels."
+      ],
+      "zh-CN": [
+        "你的信说会有麻烦。别告诉我，你又请了位突然来访的客人。",
+        "山道上出现了一名蒙面剑客。他的随从一直在打听你。",
+        "友善地打听？",
+        "听着更像威胁。恐怕不是请我们去喝茶。",
+        "这些话就不能一起写在信上？",
+        "我想当面说明。再说，我也不知道怎么画一张凶神恶煞的面具。",
+        "那就别画了。我可不想花一周找一颗发怒的南瓜。",
+        "这座山有多远？",
+        "远得让我宁愿走条捷径。这回可不是练习赛——得准备真正交手。",
+        "我就知道。最短的路，尽头总有几把剑。",
+        "大家跟紧。我们去看看，到底是谁一直盯着你的旅程。"
+      ]
+    },
+    "mainStory_神秘剑客3": {
+      "en": [
+        "That was quick. My stomach is still back at your house.",
+        "It can catch up. Eyes ahead, and keep your companions together."
+      ],
+      "zh-CN": [
+        "真快。我的胃好像还在你家。",
+        "它会追上来的。看前面，让伙伴们别走散。"
+      ]
+    },
+    "mainStory_神秘剑客4": {
+      "en": [
+        "Stop there. My master has no use for travelers who ask questions.",
+        "Then he's going to hate me. Who sent you?",
+        "Our order will take these roads. Stand aside or be buried beside them.",
+        "A secret master, an unnamed order, and a mask. You're making introductions difficult.",
+        "That sounds like the people behind our uninvited guest. Keep your companions close.",
+        "I was hoping his friends would have better manners.",
+        "Enough talk. Cut them down!",
+        "Stay together—here they come!"
+      ],
+      "zh-CN": [
+        "站住。我的主人，不喜欢爱问问题的旅人。",
+        "那他肯定会讨厌我。谁派你来的？",
+        "这些道路迟早归我们掌握。要么让路，要么埋在路边。",
+        "神秘的主人，没名字的组织，再加一副面具。你这自我介绍可真难懂。",
+        "听起来，和那位不速之客是一伙的。伙伴们彼此照应。",
+        "我还指望他的朋友能更有礼貌些呢。",
+        "废话够了。把他们砍倒！",
+        "大家别散——他们来了！"
+      ]
+    },
+    "mainStory_神秘剑客5": {
+      "en": [
+        "Not bad. My master will want to hear about you.",
+        "Then start with my question. Who are you working for?",
+        "(He steps back into the shadows.) You'll know soon enough. Try to stay interesting until then.",
+        "He rehearsed the exit more than the answer.",
+        "There's room to develop your Steadfast Mastery further. Check its training limit, and get the party ready for the road."
+      ],
+      "zh-CN": [
+        "不错。我的主人会想听听你的事。",
+        "那就先回答我的问题。你到底替谁办事？",
+        "（他退入暗处。）你迟早会知道。到那时，可别让我觉得无趣。",
+        "退场倒是排练得很熟，答案却一个也没准备。",
+        "坚毅专精还有继续精进的余地。查看它的研习上限，再把伙伴们准备妥当，继续上路。"
+      ]
+    }
+  }
+}

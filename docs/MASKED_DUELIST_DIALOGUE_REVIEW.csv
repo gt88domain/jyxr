@@ -1,0 +1,30 @@
+﻿segment_id,step_index_0_based,speaker_id,original_text,new_en_US,new_zh_CN
+mainStory_神秘剑客,0,主角,咦？飞鸽传书？又是南贤老头子的？,A note from Grimm. Let's hope he's the one waiting at his house this time.,格林的信。希望这次在家等我的，真的是他本人。
+mainStory_神秘剑客,1,南贤,“快回来吧！”,"""Come see me. Bring your companions ready for trouble, and save your progress before you leave. —Grimm""",“来见我。带上准备妥当的伙伴，出发前先保存进度。可能有麻烦。——格林”
+mainStory_神秘剑客,2,主角,……就不能写长一点么……回去看看吧。,"Useful instructions. Either he's getting better at letters, or this is a very good forgery.",总算写了点有用的。要么他写信有长进了，要么这是封高明的假信。
+mainStory_神秘剑客1,2,主角,老头子，我收到你的飞鸽传书，所以就赶回来了。什么事情啊？,Your note said to expect trouble. Please tell me you haven't invited another surprise guest.,你的信说会有麻烦。别告诉我，你又请了位突然来访的客人。
+mainStory_神秘剑客1,3,南贤,我最近接到密报，说在[[yellow:四川青城山]]一带有神秘剑客活动，你去看一下吧！,A masked swordsman has been seen on the mountain trail. His followers have been asking about you.,山道上出现了一名蒙面剑客。他的随从一直在打听你。
+mainStory_神秘剑客1,4,主角,……你找我回来就只有这么一句话？,The friendly kind of questions?,友善地打听？
+mainStory_神秘剑客1,5,南贤,是啊。,Mostly threats. I doubt we're being invited to tea.,听着更像威胁。恐怕不是请我们去喝茶。
+mainStory_神秘剑客1,6,主角,你把绑在鸽子身上的信写长一点会死啊……,And that wouldn't fit on the note?,这些话就不能一起写在信上？
+mainStory_神秘剑客1,7,南贤,因为好久没见你了嘛。,"I wanted to explain in person. Also, I wasn't sure how to draw a threatening mask.",我想当面说明。再说，我也不知道怎么画一张凶神恶煞的面具。
+mainStory_神秘剑客1,8,主角,……,Please don't try. I'd spend a week looking for an angry pumpkin.,那就别画了。我可不想花一周找一颗发怒的南瓜。
+mainStory_神秘剑客1,9,主角,话说，四川，好~远~啊~,How far is this mountain?,这座山有多远？
+mainStory_神秘剑客1,10,南贤,……不就是回到大地图上，然后点一下鼠标就到了么……,Far enough that I'd rather take a shortcut. This won't be a practice bout—be ready to fight.,远得让我宁愿走条捷径。这回可不是练习赛——得准备真正交手。
+mainStory_神秘剑客1,11,主角,……你可不可以不要这么直白。,Of course. The shortest route has swords at the end.,我就知道。最短的路，尽头总有几把剑。
+mainStory_神秘剑客1,12,南贤,唉，算了，我送你过去。妈咪妈咪哄！,"Stay close, all of you. Let's find out who's been watching your travels.",大家跟紧。我们去看看，到底是谁一直盯着你的旅程。
+mainStory_神秘剑客3,2,主角,真是快啊……,That was quick. My stomach is still back at your house.,真快。我的胃好像还在你家。
+mainStory_神秘剑客3,3,南贤,别感叹了，你看前面！,"It can catch up. Eyes ahead, and keep your companions together.",它会追上来的。看前面，让伙伴们别走散。
+mainStory_神秘剑客4,2,神秘剑客,你们是什么人？！,Stop there. My master has no use for travelers who ask questions.,站住。我的主人，不喜欢爱问问题的旅人。
+mainStory_神秘剑客4,3,主角,喂，这是我们的问题才对吧……,Then he's going to hate me. Who sent you?,那他肯定会讨厌我。谁派你来的？
+mainStory_神秘剑客4,4,神秘剑客,魔君有令，凡阻挡我圣教者，杀无赦！,Our order will take these roads. Stand aside or be buried beside them.,这些道路迟早归我们掌握。要么让路，要么埋在路边。
+mainStory_神秘剑客4,5,主角,喂，你们又是哪个邪教的啊？话说，为什么是大魔王这么老套的剧情啊？,"A secret master, an unnamed order, and a mask. You're making introductions difficult.",神秘的主人，没名字的组织，再加一副面具。你这自我介绍可真难懂。
+mainStory_神秘剑客4,6,南贤,据说，是这个游戏的编剧实在想不出什么新剧情了，只好整个大魔王的。,That sounds like the people behind our uninvited guest. Keep your companions close.,听起来，和那位不速之客是一伙的。伙伴们彼此照应。
+mainStory_神秘剑客4,7,主角,……,I was hoping his friends would have better manners.,我还指望他的朋友能更有礼貌些呢。
+mainStory_神秘剑客4,8,神秘剑客,你们在叽里呱啦什么？杀！,Enough talk. Cut them down!,废话够了。把他们砍倒！
+mainStory_神秘剑客4,9,主角,喂！到底是哪个邪教啊？ ,Stay together—here they come!,大家别散——他们来了！
+mainStory_神秘剑客5,2,神秘剑客,很厉害，不错。少年，再会了。,Not bad. My master will want to hear about you.,不错。我的主人会想听听你的事。
+mainStory_神秘剑客5,3,主角,喂！到底是哪个邪教啊？,Then start with my question. Who are you working for?,那就先回答我的问题。你到底替谁办事？
+mainStory_神秘剑客5,4,神秘剑客,（嘴角浮现一丝诡异的微笑）待到我圣教血洗九州之日，一切自将大白。少年，保重吧，哈哈哈哈。,(He steps back into the shadows.) You'll know soon enough. Try to stay interesting until then.,（他退入暗处。）你迟早会知道。到那时，可别让我觉得无趣。
+mainStory_神秘剑客5,5,主角,……神经病。,He rehearsed the exit more than the answer.,退场倒是排练得很熟，答案却一个也没准备。
+mainStory_神秘剑客5,6,南贤,……算了，我们走吧。,"There's room to develop your Steadfast Mastery further. Check its training limit, and get the party ready for the road.",坚毅专精还有继续精进的余地。查看它的研习上限，再把伙伴们准备妥当，继续上路。
