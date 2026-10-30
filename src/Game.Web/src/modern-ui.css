@@ -58,6 +58,7 @@
 :root[data-interface=modern] .chapter-title .title-copy{font-size:14px;margin-top:14px}
 :root[data-interface=modern] .pack-choice{padding:12px;border-radius:6px}
 @media(max-width:760px){
+  :root[data-interface=modern] #app.title-app~#toast{top:calc(var(--world-header) + 12px + env(safe-area-inset-top,0px));bottom:auto}
   .more-menu{grid-template-columns:1fr}.more-menu>button{min-height:64px;padding:12px 30px 12px 12px}
   .activity-tools{grid-template-columns:1fr}.activity-list article header{flex-wrap:wrap}
   :root[data-interface=modern] .topbar{padding:0 12px;height:56px}
