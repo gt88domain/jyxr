@@ -1,0 +1,25 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "maps": {
+    "昆仑山山路1": {
+      "name": {"en": "Cloudpeak — Snow Trail", "zh-CN": "云冠山·雪路"},
+      "description": {"en": "Wind sweeps loose snow across the trail. The mountain disappears behind a shifting white curtain.", "zh-CN": "风卷起浮雪，掠过小路。山峰隐没在不断变动的雪幕后。"}
+    },
+    "昆仑山山洞1": {
+      "name": {"en": "Cloudpeak — Sheltered Cave", "zh-CN": "云冠山·避风洞"},
+      "description": {"en": "The wind howls outside, but the cave is quiet. For a moment, you can hear yourself think.", "zh-CN": "洞外风声呼啸，洞中却很安静。总算有片刻，能听清自己的念头。"}
+    }
+  },
+  "uiLabels": {
+    "昆仑山白雪皑皑，风雪中道路绵延到远方。": {"en": "A snowy trail climbs through the wind.", "zh-CN": "一条雪路，迎风向山中延伸。"},
+    "返回昆仑山山路": {"en": "Back to the snow trail.", "zh-CN": "返回雪路。"},
+    "返回昆仑山": {"en": "Back to Cloudpeak.", "zh-CN": "返回云冠山。"},
+    "前方好像有个山洞……": {"en": "A cave opens ahead.", "zh-CN": "前方出现一个洞口……"},
+    "前明教教主张无忌": {"en": "Nezha is sheltering from the wind.", "zh-CN": "哪吒正在洞中避风。"}
+  },
+  "dialogueEdits": {
+    "笑傲江湖_昆仑山雪莲": [{"start": 0, "expectedCount": 1, "lines": [
+      {"speaker": "主角", "text": {"en": "Snow Lotus. Let's keep it safe.", "zh-CN": "雪莲花。先好好收着。"}}
+    ]}]
+  }
+}
