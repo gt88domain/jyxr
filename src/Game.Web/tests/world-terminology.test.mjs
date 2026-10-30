@@ -1,6 +1,26 @@
 import assert from 'node:assert/strict';
 import {test} from 'node:test';
+import {readFileSync} from 'node:fs';
 import {translateUiText,setUiDisplayLabels} from '../src/ui/locale.ts';
+test('observed study settlement resolves a category-only spell name without changing XP or rank',()=>{
+ const catalog=JSON.parse(readFileSync(new URL('../public/data/packs/worlds/en/content-package.json',import.meta.url))).browser.displayCatalog;
+ assert.equal(catalog.text['毒龙鞭法'],undefined);
+ setUiDisplayLabels(catalog.text,catalog);
+ try{
+  const expected="Study: Viper's Hex · XP +152 · Rank 3.";
+  assert.equal(translateUiText('秘籍修炼「毒龙鞭法」经验 +152，提升至 3 级。'),expected);
+  assert.equal(translateUiText(expected),expected);
+  assert.equal(translateUiText('秘籍修炼「毒龙鞭法」经验 +7。'),"Study: Viper's Hex · XP +7.");
+ }finally{setUiDisplayLabels();}
+});
+test('study notices use the skill namespace when an item shares its legacy ID',()=>{
+ setUiDisplayLabels({}, {schemaVersion:1,byId:{},text:{},byCategory:{items:{'易筋经':{name:'Ironbody Mastery Scroll'}},internalSkills:{'易筋经':{name:'Ironbody Mastery'}}}});
+ try{
+  assert.equal(translateUiText('秘籍修炼「易筋经」经验 +30。'),'Study: Ironbody Mastery · XP +30.');
+  assert.equal(translateUiText('获得「易筋经」×1'),'Received Ironbody Mastery Scroll ×1');
+  assert.equal(translateUiText('秘籍修炼「未映射技艺」经验 +9。'),'Study: 未映射技艺 · XP +9.');
+ }finally{setUiDisplayLabels();}
+});
 test('observed story departure translates placement and preserves player labels',()=>{
  setUiDisplayLabels({'阎基':'The Apothecary'});
  assert.equal(translateUiText('阎基：参战 → 后备。'),'The Apothecary: Active → Reserve.');

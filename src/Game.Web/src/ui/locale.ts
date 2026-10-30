@@ -16,6 +16,7 @@ export function setUiDisplayLabels(labels:Record<string,string>={},catalog?:Disp
 }
 function itemLabel(name:string){return categorizedDisplay(displayCatalog,['items'],name)?.name??translateUiText(name);}
 function skillLabel(name:string){return categorizedDisplay(displayCatalog,['externalSkills','internalSkills','specialSkills','legendSkills'],name)?.name??translateUiText(name);}
+const studyNotice=/^秘籍修炼「(.*?)」经验\s*\+(\d+)(?:，提升至\s*(\d+)\s*级)?。$/;
 const statNoticeLabels:Record<string,string>={max_hp:'Maximum Health',max_mp:'Maximum Energy','奇门':'Spell aptitude','自由属性点':'Unspent attribute points'};
 const patterns:Array<[RegExp,(...parts:string[])=>string]>=[
   [/^(.+?)[:：]\s*(参战|随行|后备)\s*→\s*(参战|随行|后备)[。.]?$/,(name,from,to)=>{
@@ -36,7 +37,7 @@ const patterns:Array<[RegExp,(...parts:string[])=>string]>=[
   [/^(.*?)\s*→$/,(label)=>`${translateUiText(label.trim())} →`],
   [/^(\d+)轮$/,(n)=>`${n} turns`],
   [/^(自动交手|手动出招)\s*·\s*(.*)$/,(mode,speed)=>`${mode==='自动交手'?'Auto':'Manual'} · ${speed}`],
-  [/^秘籍修炼「(.*?)」经验\s*\+(\d+)(?:，提升至\s*(\d+)\s*级)?。$/,(name,xp,level)=>`Study: ${translateUiText(name)} · XP +${xp}${level?` · Rank ${level}`:''}.`],
+  [studyNotice,(name,xp,level)=>`Study: ${skillLabel(name)} · XP +${xp}${level?` · Rank ${level}`:''}.`],
   [/^随身(.*?)$/,(currency)=>`Carried ${translateUiText(currency)}`],
   [/^【(.*?)】装备【(.*?)】$/,(name,item)=>`${translateUiText(name)} equipped ${itemLabel(item)}.`],
   [/^【(.*?)】使用【(.*?)】$/,(name,item)=>`${translateUiText(name)} used ${itemLabel(item)}.`],
@@ -130,6 +131,7 @@ const terms=['银两','元宝','气血','内力','伤害','命中','暴击','防
 export function translateUiText(value:string):string {
   if(activeLanguage==='zh-CN'){
     let result=contentLabels[value.trim()]??value;
+    if(studyNotice.test(value.trim()))result=result.replace(/「([^」]+)」/,(_,name)=>`「${skillLabel(name)}」`);
     result=result.replace(/([「【])([^」】]+)([」】])/g,(_,left,name,right)=>left+(contentLabels[name]??name)+right);
     result=result.replace(/^([^：]+)：/,(_,name)=>(contentLabels[name]??name)+'：');
     result=result.replace(/^(.*?)(休息调息。|施展「.*|受到 .+|加入队伍.*|离开队伍.*|从\d+级.*)$/,(_,name,action)=>(contentLabels[name]??name)+action);
