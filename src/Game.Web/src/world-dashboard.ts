@@ -43,6 +43,7 @@ export function worldDashboard(state:GameState){
 <span class="eyebrow">${e(copy('Next step','下一步'))}</span>
 <button data-action="quests">${copy('All goals','全部目标')} →</button>
 </header>
+${step?.storyTitle?`<div class="gw-next-story" data-guidance-story><span>${copy('Story','故事')}</span><strong>${e(step.storyTitle)}</strong></div>`:''}
 <h2>${e(step?.title||copy('Choose your next adventure','选择下一段冒险'))}</h2>${step?.detail?`<p>${e(step.detail)}</p>`:''}${academy&&!academy.graduated?`<div class="gw-school-progress">
 <span>${copy('Adventure days elapsed','已度过冒险天数')} <b>${state.adventure?.days||0} / ${academy.academy.graduationAfterDay+1}</b>
 </span>
