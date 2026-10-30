@@ -1,0 +1,46 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "speakerNames": {
+    "酒楼老板": {"en": "Town resident", "zh-CN": "当地居民"},
+    "民女2": {"en": "Town resident", "zh-CN": "当地居民"}
+  },
+  "uiLabels": {
+    "民女2": {"en": "Town resident", "zh-CN": "当地居民"},
+    "洛阳告急！": {"en": "Crossroads under attack!", "zh-CN": "十字镇遇袭！"},
+    "衡阳告急！": {"en": "Rainmarket under attack!", "zh-CN": "雨集镇遇袭！"}
+  },
+  "segments": {
+    "mainStory_紧急.洛阳": {
+      "en": [
+        "Somebody help! They're coming this way!",
+        "Out of my way!",
+        "You'll have to get past us first."
+      ],
+      "zh-CN": [
+        "来人帮帮忙！他们朝这边来了！",
+        "给我让开！",
+        "那得先过我们这一关。"
+      ]
+    },
+    "mainStory_紧急.洛阳胜": {
+      "en": ["They've pulled back. I hope that buys this town some peace."],
+      "zh-CN": ["他们退了。希望镇上能安稳一阵。"]
+    },
+    "mainStory_紧急.衡阳": {
+      "en": [
+        "Please! They're right behind me!",
+        "You can't hide in the market.",
+        "She doesn't need to. We're right here."
+      ],
+      "zh-CN": [
+        "救救我！他们就在我身后！",
+        "躲进集市也没用。",
+        "她不用躲。我们就在这里。"
+      ]
+    },
+    "mainStory_紧急.衡阳胜": {
+      "en": ["The street's clear. Time to move on."],
+      "zh-CN": ["街上没事了。该继续上路了。"]
+    }
+  }
+}
