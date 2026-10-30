@@ -1,0 +1,37 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "uiLabels": {
+    "杭州告急！": {"en": "Canalward under attack!", "zh-CN": "运河城遇袭！"}
+  },
+  "commandText": {
+    "解蒙古大军之围。": {"en": "The attacks on the towns have been repelled. Highbridge is under attack again.", "zh-CN": "各地的围攻已被击退，高桥城却再次告急。"}
+  },
+  "segments": {
+    "mainStory_紧急.杭州": {
+      "en": [
+        "Nowhere left to run, traveler.",
+        "Then it's a good thing I came to stop you."
+      ],
+      "zh-CN": [
+        "旅人，你已经无处可逃了。",
+        "幸好我是来拦住你的，不是来逃命的。"
+      ]
+    },
+    "mainStory_紧急.杭州胜": {
+      "en": [
+        "That's the last of them here. Please tell me the next stop has chairs.",
+        "A scout just brought word: Highbridge is under attack again.",
+        "Then we need to get back there.",
+        "We do, but go prepared. Train your companions and check their gear before returning. This will be a hard fight.",
+        "Right. Everyone ready before we set out."
+      ],
+      "zh-CN": [
+        "这里的敌人总算退了。下一站总该有把椅子吧？",
+        "探子刚送来消息：高桥城又遭到进攻了。",
+        "那我们得赶回去。",
+        "要回去，但得准备好。先培养伙伴、检查装备，再出发。这一战不会轻松。",
+        "明白。大家准备好了再走。"
+      ]
+    }
+  }
+}
