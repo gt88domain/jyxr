@@ -1,6 +1,10 @@
 {
   "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
   "uiLabels": {
+    "歹毒的鞭法": {
+      "en": "A spell that strikes a star-shaped area around you. On a hit, it can apply Poison III for 3 turns. Targets can resist the poison. Unlocks at rank 8; base Rage cost 4 and cooldown 5 turns. Check the live Energy and Rage costs, cooldown, and highlighted targets before casting.",
+      "zh-CN": "8级解锁的范围法术，以施术者为中心形成星形作用区域。命中后可使目标中毒III持续3回合，目标可抵抗。基础怒气消耗4、冷却5回合；施放前请查看战斗中的实际能量、怒气消耗、冷却与高亮目标。"
+    },
     "独孤九剑破剑式": {
       "en": "Can apply Sword Lock to a target you hit for 4 turns, blocking Swordsmanship techniques and their advanced forms. Special abilities are unaffected by this seal. Targets can resist it. Check the live Energy, Rage, cooldown, and highlighted targets before using this technique.",
       "zh-CN": "命中后可施加持续4回合的剑术封锁，阻止剑术及其进阶招式；特殊能力不受此封锁影响。目标可抵抗此状态。使用前请确认战斗中的实际能量、怒气、冷却与高亮目标。"
