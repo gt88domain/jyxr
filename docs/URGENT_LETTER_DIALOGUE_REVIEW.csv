@@ -1,0 +1,4 @@
+﻿segment_id,step_index_0_based,speaker_id,original_text,new_en_US,new_zh_CN
+mainStory_紧急,0,主角,咦？飞鸽传书？肯定又是南贤那个糟老头子。,Another note from Grimm. At least the pigeon knows where to find me.,格林又来信了。至少，这只鸽子还知道去哪里找我。
+mainStory_紧急,1,南贤,“……总之回来跟你说。”,"""Urgent. Come back to my house. I'll explain when you get here. —Grimm""",“有急事，快回我家。见面再说。——格林”
+mainStory_紧急,2,主角,……只能回去看看了。,"The pigeon got a longer briefing than I did. Back to Grimm's, then.",这鸽子知道的，怕是都比我多。得回格林家看看了。

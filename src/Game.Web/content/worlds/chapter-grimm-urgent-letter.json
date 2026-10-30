@@ -1,0 +1,17 @@
+{
+  "sourceSha256": "c348d1bc161dbe3a9f9a321232526da75b8d3c7638db7fb2b089d30981e9bcd3",
+  "segments": {
+    "mainStory_紧急": {
+      "en": [
+        "Another note from Grimm. At least the pigeon knows where to find me.",
+        "\"Urgent. Come back to my house. I'll explain when you get here. —Grimm\"",
+        "The pigeon got a longer briefing than I did. Back to Grimm's, then."
+      ],
+      "zh-CN": [
+        "格林又来信了。至少，这只鸽子还知道去哪里找我。",
+        "“有急事，快回我家。见面再说。——格林”",
+        "这鸽子知道的，怕是都比我多。得回格林家看看了。"
+      ]
+    }
+  }
+}
